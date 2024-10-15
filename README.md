@@ -7,3 +7,5 @@ cd openyourmath
 npm install
 npm run dev -- --open
 ```
+To do :
+- [x] Un bouton pour afficher / masquer les solutions
