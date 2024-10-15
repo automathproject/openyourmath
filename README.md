@@ -8,4 +8,6 @@ npm install
 npm run dev -- --open
 ```
 To do :
-- [x] Un bouton pour afficher / masquer les solutions
+- [ ] Un bouton pour afficher / masquer les solutions
+- [ ] Gérer une liste d'exercices
+- [ ] Faire un moteur de recherche
