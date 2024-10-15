@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts"> // TypeScript
 	import 'katex/dist/katex.min.css';
 	import Exercice from './Exercice.svelte';
 	import image_welcome from '$lib/images/logo.png';
@@ -41,7 +41,7 @@
 	<input
 		type="text"
 		bind:value={exerciseUuid}
-		placeholder="Enter exercise UUID"
+		placeholder="Ab62"
 		on:keydown={(event) => {
 			if (event.key === 'Enter') {
 				loadExerciseData();
@@ -79,7 +79,7 @@
 	.welcome {
 		display: block;
 		position: relative;
-		width: 100%;
+		width: 50%;
 		height: 0;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
