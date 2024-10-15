@@ -1,13 +1,14 @@
 <script lang="ts">
 	import 'katex/dist/katex.min.css';
 	import Exercice from './Exercice.svelte';
+	import image_welcome from '$lib/images/logo.png';
 
 	// Define the structure of the ExerciceData
 
 
 	let exerciseUuid: string = '';
 	let exerciseData: null;
-	let errorMessage: string = 'Erreur';
+	let errorMessage: string = 'Aucun exercice sélectionné';
 
 	// Function to load the JSON data for the exercise
 	async function loadExerciseData() {
@@ -33,16 +34,21 @@
 </script>
 
 <section>
-	<h1>To Open Your Math project app</h1>
+	<h1> <span class="welcome"><img src={image_welcome} alt="Welcome" /></span> </h1>
+
 
 	<!-- Input to accept the exercise UUID -->
 	<input
 		type="text"
 		bind:value={exerciseUuid}
 		placeholder="Enter exercise UUID"
+		on:keydown={(event) => {
+			if (event.key === 'Enter') {
+				loadExerciseData();
+			}
+		}}
 	/>
-	<button on:click={loadExerciseData}>Load Exercise</button>
-
+	<button on:click={loadExerciseData}>Afficher l'exercice</button>
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
 	{/if}
@@ -80,8 +86,8 @@
 
 	.welcome img {
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 50%;
+		height: 50%;
 		top: 0;
 		display: block;
 	}
