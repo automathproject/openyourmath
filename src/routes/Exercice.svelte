@@ -1,5 +1,6 @@
 <!-- src/components/Exercice.svelte -->
 <script>
+  import { macros } from '../macros';
   import MathRenderer from './MathRenderer.svelte';
 
   export let ExerciceData;

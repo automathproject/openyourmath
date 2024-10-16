@@ -1,0 +1,29 @@
+//const fs = require('fs');
+import fs from 'fs';
+
+function extractMacros(texFilePath) {
+  const texContent = fs.readFileSync(texFilePath, 'utf-8');
+
+  // Updated regex to correctly capture the content inside the braces including nested braces
+  const macroRegex = /\\newcommand\{\\([^\}]+)\}\{(.+?)\}/g;
+  let macros = {};
+  let match;
+
+  while ((match = macroRegex.exec(texContent)) !== null) {
+    const macroName = match[1];
+    let macroDefinition = match[2].trim();
+
+    // Ensure all braces are properly closed by checking if the macro definition ends with "}"
+    if (!macroDefinition.endsWith('}')) {
+      macroDefinition += '}';
+    }
+
+    macros[`\\${macroName}`] = macroDefinition;
+  }
+
+  return macros;
+}
+
+// Write the extracted macros to a JavaScript file
+const macros = extractMacros('./static/content/macros.tex');
+fs.writeFileSync('src/macros.js', `export const macros = ${JSON.stringify(macros, null, 2)};`);

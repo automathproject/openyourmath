@@ -197,7 +197,7 @@ function extractLaTeXCommands(latex, commands) {
     // Ajouter les doubles $$ autour des blocs align*
     if (commandObj.isContent) {
       finalContent = wrapAlignWithDollar(finalContent);
-      finalContent = convertEnvironmentsToHTML(finalContent);
+      //finalContent = convertEnvironmentsToHTML(finalContent);
     }
 
     if (commandObj.isContent) {

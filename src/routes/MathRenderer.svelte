@@ -1,5 +1,6 @@
 <!-- src/components/MathRenderer.svelte -->
 <script>
+    import { macros } from '../macros';
     import { onMount, afterUpdate } from 'svelte';
     import renderMathInElement from 'katex/contrib/auto-render';
     import 'katex/dist/katex.min.css';
@@ -8,11 +9,6 @@
   
     let mathContainer;
 
-    const macros = {
-    "\\prob": "\\mathrm{P}",
-    "\\R": "\\mathbb{R}",
-    // Ajoutez d'autres macros ici
-  };
     const renderMath = () => {
       renderMathInElement(mathContainer, {
         delimiters: [
