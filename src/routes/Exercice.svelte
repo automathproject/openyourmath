@@ -5,21 +5,34 @@
   export let ExerciceData;
   const latexTypes = ['texte', 'question', 'reponse'];
 
-  // Nouvelle variable pour contenir le contenu prétraité
+  // Variable pour contenir le contenu prétraité
   let processedContenu = [];
 
   // Instruction réactive pour prétraiter les données
   $: if (ExerciceData) {
+      console.log('ExerciceData reçu:', ExerciceData);
       let counter = 0;
-      processedContenu = ExerciceData.contenu.map(item => {
+      processedContenu = ExerciceData.contenu.map((item, index) => {
           if (item.type === 'question') {
               counter += 1;
-              return { ...item, number: counter };
+              return { 
+                  ...item, 
+                  number: counter, 
+                  key: `${ExerciceData.uuid}-${index}` // Clé unique générée
+              };
           }
-          return item;
+          return { 
+              ...item, 
+              key: `${ExerciceData.uuid}-${index}` // Clé unique générée
+          };
       });
+      console.log('processedContenu:', processedContenu);
+  } else {
+      processedContenu = [];
+      console.log('ExerciceData est null ou undefined');
   }
 </script>
+
 
 <div class="exercice">
   <div class="titre">{ExerciceData.titre}</div>
@@ -28,16 +41,16 @@
   <div class="date">{ExerciceData.date}</div>
   <div class="organisation">{ExerciceData.organisation}</div>
 
-  {#each processedContenu as item, index (index)}
+  {#each processedContenu as item, index (item.key)}
       {#if latexTypes.includes(item.type)}
           {#if item.type === 'question'}
               <div class={item.type}>
                   <strong>Question {item.number} : </strong>
-                  <MathRenderer content="{item.value}" />
+                  <MathRenderer content={item.value} />
               </div>
           {:else}
               <div class={item.type}>
-                  <MathRenderer content="{item.value}" />
+                  <MathRenderer content={item.value} />
               </div>
           {/if}
       {:else}
@@ -47,6 +60,7 @@
       {/if}
   {/each}
 </div>
+
 
 
   
