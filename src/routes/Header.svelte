@@ -19,6 +19,8 @@
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/exercice' ? 'page' : undefined}>
+				<a href="/exercice">Exercices</a>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
@@ -29,7 +31,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/automathproject/openyourmath/tree/main/src">
+		<a href="https://github.com/automathproject/openyourmath/tree/main/">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
