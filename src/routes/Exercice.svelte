@@ -1,6 +1,6 @@
 <!-- src/components/Exercice.svelte -->
 <script>
-  import { macros } from '../macros';
+  import { fade } from 'svelte/transition'; // Import de la transition fade
   import MathRenderer from './MathRenderer.svelte';
 
   export let ExerciceData;
@@ -8,6 +8,14 @@
 
   // Variable pour contenir le contenu prétraité
   let processedContenu = [];
+
+  // Variable d'état pour contrôler la visibilité des réponses
+  let showReponses = false;
+
+  // Fonction pour basculer la visibilité des réponses
+  function toggleReponses() {
+    showReponses = !showReponses;
+  }
 
   // Instruction réactive pour prétraiter les données
   $: if (ExerciceData) {
@@ -34,13 +42,21 @@
   }
 </script>
 
-
 <div class="exercice">
   <div class="titre">{ExerciceData.titre}</div>
   <div class="theme">{ExerciceData.theme}</div>
   <div class="auteur">{ExerciceData.auteur}</div>
   <div class="date">{ExerciceData.date}</div>
   <div class="organisation">{ExerciceData.organisation}</div>
+  
+  <!-- Bouton pour afficher/masquer les réponses -->
+  <button on:click={toggleReponses} class="toggle-button">
+    {#if showReponses}
+      Masquer les réponses
+    {:else}
+      Afficher les réponses
+    {/if}
+  </button>
 
   {#each processedContenu as item, index (item.key)}
       {#if latexTypes.includes(item.type)}
@@ -49,10 +65,12 @@
                   <strong>Question {item.number} : </strong>
                   <MathRenderer content={item.value} />
               </div>
-          {:else}
-              <div class={item.type}>
-                  <MathRenderer content={item.value} />
-              </div>
+          {:else if item.type === 'reponse'}
+              {#if showReponses}
+                  <div class={item.type} transition:fade={{ duration: 500 }}>
+                      <MathRenderer content={item.value} />
+                  </div>
+              {/if}
           {/if}
       {:else}
           <div class={item.type}>
@@ -62,41 +80,53 @@
   {/each}
 </div>
 
+<style>
+  .exercice {
+    /* Styles pour le conteneur de l'exercice */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
 
+  .titre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
 
-  
-  <style>
-    .exercice {
-      /* Styles pour le conteneur de l'exercice */
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-  
-    .titre {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-  
-    .theme, .auteur, .date, .organisation {
-      font-size: 1.2rem;
-      margin-bottom: 0.25rem;
-    }
-  
-    .texte, .question, .reponse {
-      margin-top: 1rem;
-      line-height: 1.6;
-    }
-  
-    .question {
-      font-weight: normal;
-    }
-  
-    .reponse {
-      background-color: #d0ecc9;
-      padding: 0.5rem;
-      border-left: 4px solid #1eff00;
-    }
-  </style>
-  
+  .theme, .auteur, .date, .organisation {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .texte, .question, .reponse {
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .question {
+    font-weight: normal;
+  }
+
+  .reponse {
+    background-color: #d0ecc9;
+    padding: 0.5rem;
+    border-left: 4px solid #1eff00;
+  }
+
+  /* Styles pour le bouton */
+  .toggle-button {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #1eff00;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .toggle-button:hover {
+    background-color: #17c700;
+  }
+</style>

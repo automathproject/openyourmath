@@ -1,86 +1,132 @@
-<script lang="ts"> // TypeScript
-	import 'katex/dist/katex.min.css';
-	import Exercice from '../Exercice.svelte';
-
-	let exerciseUuid: string = '';
-	let exerciseData: null;
-	let errorMessage: string = 'Aucun exercice sélectionné';
-
-	// Function to load the JSON data for the exercise
-	async function loadExerciseData() {
-		if (exerciseUuid) {
-			try {
-				// Fetch the JSON file from the static folder
-				const response = await fetch(`../content/json/${exerciseUuid}.json`);
-				if (response.ok) {
-					exerciseData = await response.json();
-					errorMessage = '';
-				} else {
-					errorMessage = `Error loading exercise: ${response.statusText}`;
-				}
-			} catch (error) {
-				exerciseData = null;
-				errorMessage = `L'exercice ${exerciseUuid} n'a pas pu être chargé`;
-			}
-		} else {
-			exerciseData = null;
-			errorMessage = 'Aucun exercice sélectionné';
-		}
-	}
-</script>
-
-<section>
-	<!-- Input to accept the exercise UUID -->
-	<input
-		type="text"
-		bind:value={exerciseUuid}
-		placeholder="Ab62"
-		on:keydown={(event) => {
-			if (event.key === 'Enter') {
-				loadExerciseData();
-			}
-		}}
-	/>
-	<button on:click={loadExerciseData}>Afficher l'exercice</button>
-	{#if errorMessage}
-		<p class="error">{errorMessage}</p>
-	{/if}
-
-	{#if exerciseData}
-		<!-- Pass the exerciseData as ExerciceData to the Exercice component -->
-		<Exercice ExerciceData={exerciseData} /> <!-- Ensure prop is named "ExerciceData" -->
-	{/if}
-</section>
-
-<style>
-	.error {
-		color: red;
-	}
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 50%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 50%;
-		height: 50%;
-		top: 0;
-		display: block;
-	}
-</style>
+<!-- src/routes/exercice/+page.svelte -->
+<script lang="ts">
+    import { onMount } from 'svelte';
+    import { page } from '$app/stores';
+    import { goto } from '$app/navigation';
+    import 'katex/dist/katex.min.css';
+    import Exercice from '../Exercice.svelte';
+    
+    import { get } from 'svelte/store';
+    
+    let exerciseUuid: string = '';
+    let exerciseData: any = null;
+    let errorMessage: string = 'Aucun exercice sélectionné';
+    
+    // Fonction pour charger les données de l'exercice
+    async function loadExerciseData(uuid: string) {
+      if (uuid) {
+        try {
+          // Utiliser un chemin absolu pour éviter les problèmes de résolution
+          const response = await fetch(`/content/json/${uuid}.json`);
+          if (response.ok) {
+            exerciseData = await response.json();
+            errorMessage = '';
+          } else {
+            exerciseData = null;
+            errorMessage = `Erreur lors du chargement de l'exercice : ${response.statusText}`;
+          }
+        } catch (error) {
+          exerciseData = null;
+          errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
+        }
+      } else {
+        exerciseData = null;
+        errorMessage = 'Aucun exercice sélectionné';
+      }
+    }
+    
+    // Reactive statement pour surveiller les changements dans l'URL
+    $: {
+      const currentUuid = $page.url.searchParams.get('uuid');
+      if (currentUuid && currentUuid !== exerciseUuid) {
+        exerciseUuid = currentUuid;
+        loadExerciseData(exerciseUuid);
+      }
+    }
+    
+    // Fonction pour gérer le chargement et la mise à jour de l'URL
+    async function handleLoadExercise() {
+      if (exerciseUuid) {
+        await loadExerciseData(exerciseUuid);
+        // Mettre à jour l'URL avec le paramètre uuid
+        goto(`?uuid=${exerciseUuid}`, { replaceState: false });
+      }
+    }
+    
+    // Charger l'exercice initial si l'URL contient un uuid
+    onMount(() => {
+      const initialUuid = get(page).url.searchParams.get('uuid');
+      if (initialUuid) {
+        exerciseUuid = initialUuid;
+        loadExerciseData(exerciseUuid);
+      }
+    });
+  </script>
+  
+  <section>
+    <!-- Input pour saisir l'UUID de l'exercice -->
+    <input
+      type="text"
+      bind:value={exerciseUuid}
+      placeholder="Ab62"
+      on:keydown={(event) => {
+        if (event.key === 'Enter') {
+          handleLoadExercise();
+        }
+      }}
+    />
+    <button on:click={handleLoadExercise}>Afficher l'exercice</button>
+    
+    {#if errorMessage && !exerciseData}
+      <p class="error">{errorMessage}</p>
+    {/if}
+  
+    {#if exerciseData}
+      <!-- Passer les données de l'exercice au composant Exercice -->
+      <Exercice ExerciceData={exerciseData} />
+    {/if}
+  </section>
+  
+  <style>
+    .error {
+      color: red;
+      margin-top: 1rem;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0.6;
+      padding: 1rem;
+    }
+  
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #0051ff;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    button:hover {
+      background-color: #17c700;
+    }
+  
+    .error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+  
