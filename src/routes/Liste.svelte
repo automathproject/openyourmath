@@ -17,7 +17,7 @@
         } else {
           error = `Erreur lors du chargement des exercices : ${response.statusText}`;
         }
-      } catch (err) {
+      } catch (err: any) {
         error = `Échec du chargement des exercices : ${err.message}`;
       } finally {
         loading = false;
@@ -32,52 +32,39 @@
   </script>
   
   {#if loading}
-    <p>Chargement des exercices...</p>
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Chargement...</span>
+      </div>
+    </div>
   {:else if error}
-    <p class="error">{error}</p>
+    <div class="alert alert-danger" role="alert">
+      {error}
+    </div>
+  {:else if exercises.length === 0}
+    <div class="alert alert-warning" role="alert">
+      Aucun exercice disponible.
+    </div>
   {:else}
-    <table class="exercise-list">
-      <thead>
-        <tr>
-          <th>UUID</th>
-          <th>Titre</th>
-        </tr>
-      </thead>
-      <tbody>
-        {#each exercises as exercise}
-          <tr on:click={() => handleClick(exercise.uuid)} class="exercise-row">
-            <td>{exercise.uuid}</td>
-            <td>{exercise.titre}</td>
-          </tr>
-        {/each}
-      </tbody>
-    </table>
+    <div class="list-group">
+      {#each exercises as exercise}
+        <button
+          on:click={() => handleClick(exercise.uuid)}
+          class="list-group-item list-group-item-action"
+        >
+          <strong>{exercise.uuid}</strong> : {exercise.titre}
+        </button>
+      {/each}
+    </div>
   {/if}
   
   <style>
-    .exercise-list {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-  
-    .exercise-list th,
-    .exercise-list td {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      text-align: left;
-    }
-  
-    .exercise-row {
+    .list-group-item {
       cursor: pointer;
     }
   
-    .exercise-row:hover {
+    .list-group-item:hover {
       background-color: #f0f0f0;
-    }
-  
-    .error {
-      color: red;
     }
   </style>
   

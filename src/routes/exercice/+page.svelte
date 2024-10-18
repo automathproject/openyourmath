@@ -15,10 +15,12 @@
     let exerciseUuid: string = '';
     let exerciseData: any = null;
     let errorMessage: string = 'Aucun exercice sélectionné';
+    let loadingExercise: boolean = false; // Indicateur de chargement pour l'exercice
     
     // Fonction pour charger les données de l'exercice
     async function loadExerciseData(uuid: string) {
       if (uuid) {
+        loadingExercise = true;
         try {
           // Utiliser un chemin absolu pour éviter les problèmes de résolution
           const response = await fetch(`/content/json/${uuid}.json`);
@@ -29,9 +31,11 @@
             exerciseData = null;
             errorMessage = `Erreur lors du chargement de l'exercice : ${response.statusText}`;
           }
-        } catch (error) {
+        } catch (error: any) {
           exerciseData = null;
           errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
+        } finally {
+          loadingExercise = false;
         }
       } else {
         exerciseData = null;
@@ -75,74 +79,84 @@
     });
   </script>
   
-  <section>
-    <!-- Input pour saisir l'UUID de l'exercice -->
-    <input
-      type="text"
-      bind:value={inputUuid}
-      placeholder="Ab62"
-      on:keydown={(event) => {
-        if (event.key === 'Enter') {
-          handleLoadExercise();
-        }
-      }}
-    />
-    <button on:click={handleLoadExercise}>Afficher l'exercice</button>
-    
-    <!-- Inclure la Liste des exercices -->
-    <Liste onSelect={handleSelect} />
-    
-    {#if errorMessage && !exerciseData}
-      <p class="error">{errorMessage}</p>
-    {/if}
-  
-    {#if exerciseData}
-      <!-- Passer les données de l'exercice au composant Exercice -->
-      <Exercice ExerciceData={exerciseData} />
-    {/if}
+  <section class="container">
+    <div class="row">
+      <!-- Colonne de la Liste des Exercices -->
+      <div class="col-md-4">
+        <h3>Liste des Exercices</h3>
+        <Liste onSelect={handleSelect} />
+      </div>
+      
+      <!-- Colonne de l'Exercice -->
+      <div class="col-md-8">
+        <!-- Input pour saisir l'UUID de l'exercice -->
+        <div class="input-container mb-3">
+          <input
+            type="text"
+            bind:value={inputUuid}
+            class="form-control"
+            placeholder="Ab62"
+            on:keydown={(event) => {
+              if (event.key === 'Enter') {
+                handleLoadExercise();
+              }
+            }}
+          />
+          <button on:click={handleLoadExercise} class="btn btn-primary ms-2">
+            Afficher l'exercice
+          </button>
+        </div>
+        
+        <!-- Indicateur de chargement -->
+        {#if loadingExercise}
+          <div class="alert alert-info" role="alert">
+            Chargement de l'exercice...
+          </div>
+        {/if}
+      
+        {#if errorMessage && !exerciseData}
+          <div class="alert alert-danger" role="alert">
+            {errorMessage}
+          </div>
+        {/if}
+      
+        {#if exerciseData}
+          <!-- Passer les données de l'exercice au composant Exercice -->
+          <Exercice ExerciceData={exerciseData} />
+        {/if}
+      </div>
+    </div>
   </section>
   
   <style>
-    .error {
-      color: red;
-      margin-top: 1rem;
-    }
-    section {
+    /* Optionnel : Styles personnalisés pour améliorer l'apparence */
+    .input-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      flex: 0.6;
-      padding: 1rem;
     }
   
-    input {
-      padding: 0.5rem;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 200px; /* Ajustez la largeur selon vos besoins */
+    .input-container input {
+      flex: 1;
     }
   
-    button {
-      padding: 0.5rem 1rem;
-      background-color: #1eff00;
-      border: none;
-      border-radius: 4px;
-      color: white;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 1rem;
+    .input-container button {
+      flex-shrink: 0;
     }
   
-    button:hover {
-      background-color: #17c700;
+    .container {
+      margin-top: 20px;
     }
   
-    .error {
-      color: red;
-      margin-top: 1rem;
+    @media (max-width: 768px) {
+      .input-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+  
+      .input-container button {
+        margin-top: 10px;
+        width: 100%;
+      }
     }
   </style>
   
