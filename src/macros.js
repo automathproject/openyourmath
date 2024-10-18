@@ -15,6 +15,7 @@ export const macros = {
   "\\im": "{\\mathrm{i}",
   "\\EX": "\\mathbb{E}",
   "\\E": "\\mathbb {E}",
+  "\\var": "\\mathrm{Var}",
   "\\Sol": "\\mathscr{S}",
   "\\PP": "\\mathrm{P}",
   "\\prob": "\\mathrm{P}",

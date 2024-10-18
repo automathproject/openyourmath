@@ -2,6 +2,11 @@
 
 import fs from 'fs';
 import path from 'path';
+import { exec } from 'child_process';
+import util from 'util';
+import os from 'os';
+
+const execPromise = util.promisify(exec);
 
 /**
  * Fonction pour supprimer les commentaires d'une chaîne de caractères LaTeX.
@@ -37,7 +42,7 @@ function isCommandCommented(line, commandPosInLine) {
 function wrapAlignWithDollar(content) {
   // Regex pour trouver tous les blocs \begin{align*}...\end{align*}
   // Utilisation de [\s\S]*? pour correspondre sur plusieurs lignes de manière non-gourmande
-  return content.replace(/\\begin\{align\*\}([\s\S]*?)\\end\{align\*\}/g, '$$\\begin{align*}$1\\end{align*}$$');
+  return content.replace(/\\begin\{align\*\}([\s\S]*?)\\end\{align\*\}/g, '$$$\\begin{align*}$1\\end{align*}$$$');
 }
 
 /**
@@ -123,13 +128,47 @@ function convertEnvironmentsToHTML(content) {
 }
 
 /**
+ * Fonction pour convertir du LaTeX en HTML en utilisant Pandoc.
+ * @param {string} latex - Chaîne de caractères en LaTeX.
+ * @returns {Promise<string>} - Chaîne de caractères en HTML.
+ */
+async function convertLaTeXToHTML(latex) {
+  try {
+    // Créer des fichiers temporaires dans le répertoire temporaire du système
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'latex-convert-'));
+    const tempInputPath = path.join(tempDir, 'temp_input.tex');
+    const tempOutputPath = path.join(tempDir, 'temp_output.html');
+
+    // Écrire le LaTeX dans un fichier temporaire
+    fs.writeFileSync(tempInputPath, latex, 'utf8');
+
+    // Exécuter Pandoc pour convertir le LaTeX en HTML
+    const command = `pandoc "${tempInputPath}" -f latex+smart -t html --css=styles.css --mathjax -o "${tempOutputPath}"`;
+    await execPromise(command);
+
+    // Lire le fichier HTML généré
+    const html = fs.readFileSync(tempOutputPath, 'utf8');
+
+    // Supprimer les fichiers temporaires et le répertoire temporaire
+    fs.unlinkSync(tempInputPath);
+    fs.unlinkSync(tempOutputPath);
+    fs.rmdirSync(tempDir);
+
+    return html;
+  } catch (error) {
+    console.error('Erreur lors de la conversion avec Pandoc :', error);
+    return ''; // Retourner une chaîne vide en cas d'erreur
+  }
+}
+
+/**
  * Fonction générique pour extraire le contenu des commandes LaTeX.
  * Cette version parcourt le contenu LaTeX séquentiellement pour préserver l'ordre des commandes de contenu.
  * @param {string} latex - Contenu complet du fichier LaTeX.
  * @param {Array} commands - Liste des commandes à extraire avec leurs propriétés.
  * @returns {Object} - Objet contenant les champs extraits.
  */
-function extractLaTeXCommands(latex, commands) {
+async function extractLaTeXCommands(latex, commands) {
   const extracted = {
     contenu: []
   };
@@ -197,14 +236,16 @@ function extractLaTeXCommands(latex, commands) {
     // Ajouter les doubles $$ autour des blocs align*
     if (commandObj.isContent) {
       finalContent = wrapAlignWithDollar(finalContent);
-      //finalContent = convertEnvironmentsToHTML(finalContent);
     }
 
     if (commandObj.isContent) {
+      // Convertir le contenu LaTeX en HTML en utilisant Pandoc
+      const htmlContent = await convertLaTeXToHTML(finalContent);
+
       // Ajouter au tableau 'contenu' en respectant l'ordre d'apparition
       extracted.contenu.push({
         type: commandName,
-        value: finalContent
+        value: htmlContent
       });
     } else {
       // Commande unique: assigner si non encore assignée
@@ -224,10 +265,10 @@ function extractLaTeXCommands(latex, commands) {
  * @param {string} outputDir - Répertoire de sortie pour le fichier .json.
  * @param {Array} commandsToExtract - Liste des commandes à extraire.
  */
-function processFile(inputFilePath, outputDir, commandsToExtract) {
+async function processFile(inputFilePath, outputDir, commandsToExtract) {
   try {
     const latexContentRaw = fs.readFileSync(inputFilePath, 'utf8');
-    const extractedData = extractLaTeXCommands(latexContentRaw, commandsToExtract);
+    const extractedData = await extractLaTeXCommands(latexContentRaw, commandsToExtract);
 
     // Assurez-vous que toutes les clés uniques sont présentes
     const outputObject = {
@@ -253,7 +294,7 @@ function processFile(inputFilePath, outputDir, commandsToExtract) {
 /**
  * Fonction principale pour gérer les arguments et traiter les fichiers.
  */
-function main() {
+async function main() {
   const args = process.argv.slice(2);
 
   if (args.length < 1) {
@@ -303,7 +344,7 @@ function main() {
     }
 
     // Traiter le fichier
-    processFile(inputPath, outputDir, commandsToExtract);
+    await processFile(inputPath, outputDir, commandsToExtract);
 
   } else if (stats.isDirectory()) {
     // Si l'entrée est un répertoire, traiter tous les fichiers .tex à l'intérieur
@@ -317,7 +358,7 @@ function main() {
     }
 
     // Lire tous les fichiers du répertoire
-    fs.readdir(dirPath, (err, files) => {
+    fs.readdir(dirPath, async (err, files) => {
       if (err) {
         console.error(`Erreur lors de la lecture du répertoire ${dirPath} :`, err.message);
         process.exit(1);
@@ -331,11 +372,11 @@ function main() {
         return;
       }
 
-      // Traiter chaque fichier .tex
-      texFiles.forEach(file => {
+      // Traiter chaque fichier .tex séquentiellement
+      for (const file of texFiles) {
         const inputFilePath = path.join(dirPath, file);
-        processFile(inputFilePath, outputDir, commandsToExtract);
-      });
+        await processFile(inputFilePath, outputDir, commandsToExtract);
+      }
     });
 
   } else {

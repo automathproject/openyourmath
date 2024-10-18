@@ -8,23 +8,23 @@
   "contenu": [
     {
       "type": "texte",
-      "value": "Une étude des glaciers a montré que la température T à l'instant t (mesuré en jours) à la profondeur $x$ (mesurée en pied) peut être modélisée par la fonction \n$$T(x,t) = T_0 + T_1e^{-\\lambda x}\\sin(\\omega t-\\lambda x)$$\noù $T_0$, $T_1$, $\\omega = \\frac{2\\pi}{365}$ et $\\lambda$ sont des constantes réelles."
+      "value": "<p>Une étude des glaciers a montré que la température T à l’instant t (mesuré en jours) à la profondeur <span class=\"math inline\">\\(x\\)</span> (mesurée en pied) peut être modélisée par la fonction <span class=\"math display\">\\[T(x,t) = T_0 + T_1e^{-\\lambda x}\\sin(\\omega t-\\lambda x)\\]</span> où <span class=\"math inline\">\\(T_0\\)</span>, <span class=\"math inline\">\\(T_1\\)</span>, <span class=\"math inline\">\\(\\omega = \\frac{2\\pi}{365}\\)</span> et <span class=\"math inline\">\\(\\lambda\\)</span> sont des constantes réelles.</p>\n"
     },
     {
       "type": "question",
-      "value": "Exprimer les deux dérivées partielles de $T$."
+      "value": "<p>Exprimer les deux dérivées partielles de <span class=\"math inline\">\\(T\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "Les dérivées partielles sont définies pour tout $(x,t) \\in \\R^2$ :\n\t\t$\\begin{align*}\n\t\t\\frac{\\partial T}{\\partial x}(x,t) &= -\\lambda T_1 e^{-\\lambda x}\\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right)\\\\\n\t\t\\frac{\\partial T}{\\partial t}(x,t) &= \\omega T_1 e^{-\\lambda x} \\cos(\\omega t-\\lambda x)\n\t\t\\end{align*}$"
+      "value": "<p>Les dérivées partielles sont définies pour tout <span class=\"math inline\">\\((x,t) \\in \\R^2\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial T}{\\partial x}(x,t) &amp;= -\\lambda T_1 e^{-\\lambda x}\\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right)\\\\\n        \\frac{\\partial T}{\\partial t}(x,t) &amp;= \\omega T_1 e^{-\\lambda x} \\cos(\\omega t-\\lambda x)\n        \\end{align*}\\]</span></p>\n"
     },
     {
       "type": "question",
-      "value": "Montrer que $T$ vérifie l'équation de la chaleur :\n\t$$\\frac{\\partial T}{\\partial t}(x,t) = k\\frac{\\partial^2 T}{\\partial x^2}(x,t)$$\n\tpour une certaine constante $k$ à déterminer."
+      "value": "<p>Montrer que <span class=\"math inline\">\\(T\\)</span> vérifie l’équation de la chaleur : <span class=\"math display\">\\[\\frac{\\partial T}{\\partial t}(x,t) = k\\frac{\\partial^2 T}{\\partial x^2}(x,t)\\]</span> pour une certaine constante <span class=\"math inline\">\\(k\\)</span> à déterminer.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "Il suffit de dériver une seconde fois par rapport à $x$ l'expression de $\\frac{\\partial T}{\\partial x}(x,t)$ : on trouve\n\t\t$\\begin{align*}\n\t\t\\frac{\\partial^2 T}{\\partial x^2}(x,t) &= \\frac{\\partial}{\\partial x}\\frac{\\partial T}{\\partial x}(x,t) \\\\\n\t\t&= (-\\lambda)^2 T_1 e^{-\\lambda x} \\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right) + (-\\lambda)^2 T_1 e^{-\\lambda x} \\left(\\cos(\\omega t-\\lambda x)- \\sin(\\omega t-\\lambda x)\\right) \\\\\n\t\t&= 2\\lambda^2 T_1 e^{-\\lambda x} \\cos(\\omega t - \\lambda x)\t\n\t\t\\end{align*}$\n\t\tLa constante attendue est donc $k = \\frac{\\omega}{2\\lambda^2}$."
+      "value": "<p>Il suffit de dériver une seconde fois par rapport à <span class=\"math inline\">\\(x\\)</span> l’expression de <span class=\"math inline\">\\(\\frac{\\partial T}{\\partial x}(x,t)\\)</span> : on trouve <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial^2 T}{\\partial x^2}(x,t) &amp;= \\frac{\\partial}{\\partial x}\\frac{\\partial T}{\\partial x}(x,t) \\\\\n        &amp;= (-\\lambda)^2 T_1 e^{-\\lambda x} \\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right) + (-\\lambda)^2 T_1 e^{-\\lambda x} \\left(\\cos(\\omega t-\\lambda x)- \\sin(\\omega t-\\lambda x)\\right) \\\\\n        &amp;= 2\\lambda^2 T_1 e^{-\\lambda x} \\cos(\\omega t - \\lambda x) \n        \\end{align*}\\]</span> La constante attendue est donc <span class=\"math inline\">\\(k = \\frac{\\omega}{2\\lambda^2}\\)</span>.</p>\n"
     }
   ]
 }
