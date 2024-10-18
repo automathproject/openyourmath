@@ -17,28 +17,33 @@
     showReponses = !showReponses;
   }
 
+  // Instruction réactive pour réinitialiser showReponses lorsqu'ExerciceData change
+  $: if (ExerciceData) {
+    showReponses = false; // Réinitialiser à masquer les réponses
+  }
+
   // Instruction réactive pour prétraiter les données
   $: if (ExerciceData) {
-      console.log('ExerciceData reçu:', ExerciceData);
-      let counter = 0;
-      processedContenu = ExerciceData.contenu.map((item, index) => {
-          if (item.type === 'question') {
-              counter += 1;
-              return { 
-                  ...item, 
-                  number: counter, 
-                  key: `${ExerciceData.uuid}-${index}` // Clé unique générée
-              };
-          }
-          return { 
-              ...item, 
-              key: `${ExerciceData.uuid}-${index}` // Clé unique générée
-          };
-      });
-      console.log('processedContenu:', processedContenu);
+    console.log('ExerciceData reçu:', ExerciceData);
+    let counter = 0;
+    processedContenu = ExerciceData.contenu.map((item, index) => {
+      if (item.type === 'question') {
+        counter += 1;
+        return { 
+          ...item, 
+          number: counter, 
+          key: `${ExerciceData.uuid}-${index}` // Clé unique générée
+        };
+      }
+      return { 
+        ...item, 
+        key: `${ExerciceData.uuid}-${index}` // Clé unique générée
+      };
+    });
+    console.log('processedContenu:', processedContenu);
   } else {
-      processedContenu = [];
-      console.log('ExerciceData est null ou undefined');
+    processedContenu = [];
+    console.log('ExerciceData est null ou undefined');
   }
 </script>
 
@@ -59,24 +64,24 @@
   </button>
 
   {#each processedContenu as item, index (item.key)}
-      {#if latexTypes.includes(item.type)}
-          {#if item.type === 'question'}
-              <div class={item.type}>
-                  <strong>Question {item.number} : </strong>
-                  <MathRenderer content={item.value} />
-              </div>
-          {:else if item.type === 'reponse'}
-              {#if showReponses}
-                  <div class={item.type} transition:fade={{ duration: 500 }}>
-                      <MathRenderer content={item.value} />
-                  </div>
-              {/if}
-          {/if}
-      {:else}
-          <div class={item.type}>
-              {item.value}
+    {#if latexTypes.includes(item.type)}
+      {#if item.type === 'question'}
+        <div class={item.type}>
+          <strong>Question {item.number} : </strong>
+          <MathRenderer content={item.value} />
+        </div>
+      {:else if item.type === 'reponse'}
+        {#if showReponses}
+          <div class={item.type} transition:fade={{ duration: 500 }}>
+            <MathRenderer content={item.value} />
           </div>
+        {/if}
       {/if}
+    {:else}
+      <div class={item.type}>
+        {item.value}
+      </div>
+    {/if}
   {/each}
 </div>
 

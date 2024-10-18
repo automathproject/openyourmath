@@ -8,6 +8,9 @@
     
     import { get } from 'svelte/store';
     
+    // Variable liée au champ de saisie
+    let inputUuid: string = '';
+    // Variable représentant l'UUID chargé
     let exerciseUuid: string = '';
     let exerciseData: any = null;
     let errorMessage: string = 'Aucun exercice sélectionné';
@@ -35,21 +38,22 @@
       }
     }
     
-    // Reactive statement pour surveiller les changements dans l'URL
+    // Statement réactif pour surveiller les changements dans l'URL
     $: {
       const currentUuid = $page.url.searchParams.get('uuid');
       if (currentUuid && currentUuid !== exerciseUuid) {
         exerciseUuid = currentUuid;
+        inputUuid = currentUuid; // Synchroniser l'entrée avec l'UUID de l'URL
         loadExerciseData(exerciseUuid);
       }
     }
     
     // Fonction pour gérer le chargement et la mise à jour de l'URL
-    async function handleLoadExercise() {
-      if (exerciseUuid) {
-        await loadExerciseData(exerciseUuid);
+    function handleLoadExercise() {
+      if (inputUuid && inputUuid !== exerciseUuid) {
         // Mettre à jour l'URL avec le paramètre uuid
-        goto(`?uuid=${exerciseUuid}`, { replaceState: false });
+        goto(`?uuid=${inputUuid}`, { replaceState: false });
+        // La logique réactive détectera le changement d'URL et chargera le nouvel exercice
       }
     }
     
@@ -58,6 +62,7 @@
       const initialUuid = get(page).url.searchParams.get('uuid');
       if (initialUuid) {
         exerciseUuid = initialUuid;
+        inputUuid = initialUuid;
         loadExerciseData(exerciseUuid);
       }
     });
@@ -67,7 +72,7 @@
     <!-- Input pour saisir l'UUID de l'exercice -->
     <input
       type="text"
-      bind:value={exerciseUuid}
+      bind:value={inputUuid}
       placeholder="Ab62"
       on:keydown={(event) => {
         if (event.key === 'Enter') {
@@ -111,7 +116,7 @@
   
     button {
       padding: 0.5rem 1rem;
-      background-color: #0051ff;
+      background-color: #1eff00;
       border: none;
       border-radius: 4px;
       color: white;
