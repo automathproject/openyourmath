@@ -5,10 +5,11 @@
     import { goto } from '$app/navigation';
     import 'katex/dist/katex.min.css';
     import Exercice from '../Exercice.svelte';
+    import Liste from '../Liste.svelte';
     
     import { get } from 'svelte/store';
     
-    // Variable liée au champ de saisie
+    // Variables liées au champ de saisie
     let inputUuid: string = '';
     // Variable représentant l'UUID chargé
     let exerciseUuid: string = '';
@@ -38,7 +39,7 @@
       }
     }
     
-    // Statement réactif pour surveiller les changements dans l'URL
+    // Instruction réactive pour surveiller les changements dans l'URL
     $: {
       const currentUuid = $page.url.searchParams.get('uuid');
       if (currentUuid && currentUuid !== exerciseUuid) {
@@ -55,6 +56,12 @@
         goto(`?uuid=${inputUuid}`, { replaceState: false });
         // La logique réactive détectera le changement d'URL et chargera le nouvel exercice
       }
+    }
+    
+    // Fonction pour gérer la sélection dans Liste
+    function handleSelect(uuid: string) {
+      inputUuid = uuid;
+      handleLoadExercise();
     }
     
     // Charger l'exercice initial si l'URL contient un uuid
@@ -81,6 +88,9 @@
       }}
     />
     <button on:click={handleLoadExercise}>Afficher l'exercice</button>
+    
+    <!-- Inclure la Liste des exercices -->
+    <Liste onSelect={handleSelect} />
     
     {#if errorMessage && !exerciseData}
       <p class="error">{errorMessage}</p>
@@ -112,6 +122,7 @@
       margin-bottom: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 4px;
+      width: 200px; /* Ajustez la largeur selon vos besoins */
     }
   
     button {
