@@ -82,7 +82,7 @@
   <section class="container">
     <div class="row">
       <!-- Colonne de la Liste des Exercices -->
-      <div class="col-md-4">
+      <div class="col-md-4 liste-container">
         <h3>Liste des Exercices</h3>
         <Liste onSelect={handleSelect} />
       </div>
@@ -130,6 +130,11 @@
   
   <style>
     /* Optionnel : Styles personnalisés pour améliorer l'apparence */
+    .liste-container {
+    max-height: calc(100vh - 100px); /* Ajuste la hauteur pour s'adapter à la hauteur de la fenêtre */
+    overflow-y: auto; /* Active le défilement vertical si le contenu dépasse la hauteur */
+    padding-bottom: 20px; /* Un peu de marge pour l'espacement visuel */
+  }
     .input-container {
       display: flex;
       align-items: center;
