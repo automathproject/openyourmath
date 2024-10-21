@@ -16,7 +16,8 @@ export const GET: RequestHandler = async () => {
         const data = await readFile(filePath, 'utf-8');
         const json = JSON.parse(data);
         const title = json.titre || 'Sans titre';
-        exercises.push({ uuid, titre: title });
+        const theme = json.theme || 'Sans thème';
+        exercises.push({ uuid, titre: title, theme: theme });
       }
     }
 

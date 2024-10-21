@@ -1,15 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { Exercise } from './types';
+  //import type { Exercise } from './types';
+  import Exercice from './Exercice.svelte';
   import MathRenderer from './MathRenderer.svelte';
 
   export let onSelect: (uuid: string) => void;
 
-  let exercises: Exercise[] = [];
+  let exercises: Exercice[] = [];
   let error: string | null = null;
   let loading: boolean = true;
-  let visibleExercises: Exercise[] = [];
-  let limit: number = 10; // Nombre initial d'exercices à afficher
+  let visibleExercises: Exercice[] = [];
+  let limit: number = 10;
   let offset: number = 0;
 
   onMount(async () => {
@@ -17,7 +18,8 @@
       const response = await fetch('/exercice/list');
       if (response.ok) {
         exercises = await response.json();
-        visibleExercises = exercises.slice(0, limit); // Charge les premiers éléments
+        console.log(exercises); // Affiche la structure des exercices récupérés
+        visibleExercises = exercises.slice(0, limit);
       } else {
         error = `Erreur lors du chargement des exercices : ${response.statusText}`;
       }
@@ -61,7 +63,14 @@
         on:click={() => handleClick(exercise.uuid)}
         class="list-group-item list-group-item-action"
       >
-        <strong>{exercise.uuid}</strong> : <MathRenderer content = {exercise.titre}/>
+        <div class="exercise-info">
+          <div class="exercise-title">
+            <strong>{exercise.uuid}</strong> : <MathRenderer content={exercise.titre} />
+          </div>
+          <div class="exercise-theme">
+            <small>Thème : {exercise.theme}</small>
+          </div>
+        </div>
       </button>
     {/each}
   </div>
@@ -83,5 +92,21 @@
 
   .btn {
       width: 100%;
+  }
+
+  .exercise-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .exercise-title {
+      font-weight: bold;
+  }
+
+  .exercise-theme {
+      color: #6c757d; /* Couleur grisée pour le texte du thème */
+      font-size: 0.875rem; /* Taille de police réduite pour le thème */
+      margin-top: 4px;
   }
 </style>

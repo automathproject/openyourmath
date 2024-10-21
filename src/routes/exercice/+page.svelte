@@ -82,13 +82,13 @@
   <section class="container">
     <div class="row">
       <!-- Colonne de la Liste des Exercices -->
-      <div class="col-md-4 liste-container">
-        <h3>Liste des Exercices</h3>
+      <div class="col-md-3 liste-container">
+        <h3>Liste</h3>
         <Liste onSelect={handleSelect} />
       </div>
       
       <!-- Colonne de l'Exercice -->
-      <div class="col-md-8">
+      <div class="col-md-9">
         <!-- Input pour saisir l'UUID de l'exercice -->
         <div class="input-container mb-3">
           <input
