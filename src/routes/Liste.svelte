@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import type { Exercise } from './types';
+  import MathRenderer from './MathRenderer.svelte';
 
   export let onSelect: (uuid: string) => void;
 
@@ -60,7 +61,7 @@
         on:click={() => handleClick(exercise.uuid)}
         class="list-group-item list-group-item-action"
       >
-        <strong>{exercise.uuid}</strong> : {exercise.titre}
+        <strong>{exercise.uuid}</strong> : <MathRenderer content = {exercise.titre}/>
       </button>
     {/each}
   </div>

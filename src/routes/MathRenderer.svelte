@@ -31,9 +31,9 @@
     });
   </script>
   
-  <div bind:this={mathContainer}>
+  <span bind:this={mathContainer}>
     {@html content}
-  </div>
+  </span>
   
   <style>
     /* Styles spécifiques si nécessaire */
