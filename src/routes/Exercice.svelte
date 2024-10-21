@@ -76,13 +76,13 @@
             <MathRenderer content={item.value} />
           </div>
         {/if}
-      {/if}
-    {:else}
-      <div class={item.type}>
-        {item.value}
-      </div>
+      {:else if item.type === 'texte'}
+        <div class={item.type}>
+          <MathRenderer content={item.value} />
+        </div>
+      {/if}    
     {/if}
-  {/each}
+    {/each}
 </div>
 
 <style>

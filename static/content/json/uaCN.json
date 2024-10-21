@@ -1,0 +1,50 @@
+{
+  "uuid": "uaCN",
+  "titre": "Temps de transport",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Une commune a lancé une étude concernant les problèmes liés au transport. Sur une ligne de bus, une enquête a permis de révéler que le retard (ou l’avance) sur l’horaire officiel du bus à une station donnée est donné par une variable aléatoire <span class=\"math inline\">\\(X\\)</span>, en minutes, suivant une loi normale <span class=\"math inline\">\\(\\mathcal{N}(5,\\sigma)\\)</span> où <span class=\"math inline\">\\(\\sigma &gt;0\\)</span> est pour l’instant indéterminé. Cependant, on sait que la probabilité que le retard soit inférieur à <span class=\"math inline\">\\(7\\)</span> minutes est de <span class=\"math inline\">\\(p=84{,}13\\%\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Justifier que <span class=\"math inline\">\\(\\sigma = 2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait que <span class=\"math inline\">\\(\\prob\\left(X \\leq 7 \\right) = 0{,}8413\\)</span> d’où <span class=\"math inline\">\\(\\prob\\left(\\frac{X-5}{\\sigma} \\leq \\frac{2}{\\sigma}\\right) = 0{,}8413\\)</span>. Par lecture de table, <span class=\"math inline\">\\(\\frac{2}{\\sigma} = 1\\)</span> d’où <span class=\"math inline\">\\(\\sigma = 2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Sachant que le retard est supérieur à <span class=\"math inline\">\\(3\\)</span> minutes, quelle est la probablité que ce retard soit inférieur à <span class=\"math inline\">\\(7\\)</span> minutes ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche <span class=\"math inline\">\\(\\prob(X \\leq 7 \\mid X \\geq 3) = \\frac{\\prob(3 \\leq X \\leq 7)}{\\prob(X \\geq 3)}\\)</span>. Or <span class=\"math inline\">\\(\\prob(3 \\leq X \\leq 7) = \\prob\\left(-1 \\leq \\frac{X-5}{2} \\leq 1\\right) = 2 \\Phi(1) - 1 \\approx 2 \\times 0{,}8413 - 1 = 0{,}6826\\)</span> et <span class=\"math inline\">\\(\\prob(X \\geq 3) = \\prob\\left( \\frac{X-5}{2} \\geq -1\\right) \\approx 0{,}8413\\)</span> d’où <span class=\"math inline\">\\(\\prob(X \\leq 7 \\mid X \\geq 3) \\approx 0{,}8114\\)</span>.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>Une dame fréquente cette ligne de bus une fois par jour pendant 10 jours. On suppose que les retards journaliers sont indépendants. On note <span class=\"math inline\">\\(Y\\)</span> le nombre de jours où la dame a attendu moins de <span class=\"math inline\">\\(7\\)</span> minutes.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la loi de <span class=\"math inline\">\\(Y\\)</span>, son espérance et sa variance.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(Y \\sim \\mathcal{B}(10,p)\\)</span> d’où <span class=\"math inline\">\\(\\E(Y) = 10p = 8{,}413\\)</span> et <span class=\"math inline\">\\(\\var(Y) = 10p(1-p) = 1{,}3351431\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(T\\)</span> la variable aléatoire définie de la manière suivante : si la dame attend moins de <span class=\"math inline\">\\(7\\)</span> minutes chaque jour pendant les 10 jours, <span class=\"math inline\">\\(T\\)</span> prend la valeur <span class=\"math inline\">\\(0\\)</span> ; sinon <span class=\"math inline\">\\(T\\)</span> pend la valeur du <span class=\"math inline\">\\(k\\)</span>-ème jour (<span class=\"math inline\">\\(k \\in \\{1,...,10\\}\\)</span>) où pour la première fois, la dame attend plus de <span class=\"math inline\">\\(7\\)</span> minutes. Déterminer, en fonction de <span class=\"math inline\">\\(p\\)</span>, la loi de probabilité de <span class=\"math inline\">\\(T\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour <span class=\"math inline\">\\(k \\in \\{1,...,10\\}\\)</span>, <span class=\"math inline\">\\(\\prob(X=k) = p^{k-1}(1-p)\\)</span> (on reconnait la loi géométrique de paramètre <span class=\"math inline\">\\(1-p\\)</span> pour ces <span class=\"math inline\">\\(10\\)</span> cas). Pour <span class=\"math inline\">\\(k=0\\)</span>, <span class=\"math inline\">\\(\\prob(T=0) = \\sum_{k=11}^{+\\infty} p^{k-1}(1-p) = (1-p) \\sum_{k=11}^{+\\infty} p^{k-1} = (1-p) \\times \\frac{p^{10}}{1-p} = p^{10}\\)</span>.</p>\n"
+    }
+  ]
+}

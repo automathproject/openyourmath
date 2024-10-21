@@ -1,0 +1,34 @@
+{
+  "uuid": "uGsH",
+  "titre": "Calcul avec une densité de probabilité",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Vérifier que <span class=\"math inline\">\\(f\\)</span> est bien une densité de probabilité. On note <span class=\"math inline\">\\(X\\)</span> une variable aléatoire admettant <span class=\"math inline\">\\(f\\)</span> pour densité de probabilité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour qu’une fonction soit une densité de probabilité, elle doit satisfaire les deux conditions suivantes :</p>\n<ol>\n<li><p><span class=\"math inline\">\\(f(x) \\geq 0\\)</span> pour tout <span class=\"math inline\">\\(x\\)</span> dans l’intervalle de définition.</p></li>\n<li><p>L’intégrale de <span class=\"math inline\">\\(f(x)\\)</span> sur tout l’intervalle <span class=\"math inline\">\\([0, 2]\\)</span> doit être égale à 1.</p></li>\n</ol>\n<p>Vérifions la première condition :<br />\n<span class=\"math inline\">\\(f(x) = \\frac{3}{16}(4 - x^2) \\geq 0\\)</span> sur <span class=\"math inline\">\\([0, 2]\\)</span>, car <span class=\"math inline\">\\(x^2 \\leq 4\\)</span> pour <span class=\"math inline\">\\(0\\leq x \\leq 2\\)</span>.</p>\n<p>Vérifions maintenant la seconde condition :</p>\n<p><span class=\"math display\">\\[\\int_0^2 \\frac{3}{16}(4 - x^2) \\, dx = \\frac{3}{16} \\int_0^2 (4 - x^2) \\, dx = \\frac{3}{16} \\left[ 4x - \\frac{x^3}{3} \\right]_0^2.\\]</span></p>\n<p>En évaluant les bornes :</p>\n<p><span class=\"math display\">\\[\\left[ 4x - \\frac{x^3}{3} \\right]_0^2 = \\left( 8 - \\frac{8}{3} \\right) - (0) = \\frac{24}{3} - \\frac{8}{3} = \\frac{16}{3}.\\]</span></p>\n<p>Ainsi, <span class=\"math display\">\\[\\int_0^2 f(x) \\, dx = \\frac{3}{16} \\times \\frac{16}{3} = 1.\\]</span></p>\n<p>Donc, <span class=\"math inline\">\\(f\\)</span> est bien une densité de probabilité.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la probabilité que <span class=\"math inline\">\\(X\\)</span> prenne une valeur dans l’intervalle <span class=\"math inline\">\\([1, 3]\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche <span class=\"math inline\">\\(\\prob(1 \\leq X \\leq 3)\\)</span>, ce qui revient à calculer l’intégrale de <span class=\"math inline\">\\(f(x)\\)</span> sur l’intervalle <span class=\"math inline\">\\([1, 3]\\)</span> :</p>\n<p><span class=\"math display\">\\[\\prob(1 \\leq X \\leq 3) = \\int_1^3 f(x) \\, dx = \\int_1^2 \\frac{3}{16}(4 - x^2) \\, dx = \\frac{5}{16}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer l’espérance et la variance de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}[X] &amp;= \\int_{0}^{2} x f(x) \\, dx \\\\\n        &amp;= \\int_{0}^{2} x \\left( \\frac{3}{16}(4 - x^2) \\right) dx \\\\\n        &amp;= \\frac{3}{16} \\int_{0}^{2} x (4 - x^2) \\, dx \\\\\n        &amp;= \\frac{3}{16} \\int_{0}^{2} (4x - x^3) \\, dx \\\\\n        &amp;= \\frac{3}{16} \\left( \\int_{0}^{2} 4x \\, dx - \\int_{0}^{2} x^3 \\, dx \\right) \\\\\n        &amp;= \\frac{3}{16} \\left( \\left[2x^2\\right]_{0}^{2} - \\left[\\frac{x^4}{4}\\right]_{0}^{2} \\right) \\\\\n        &amp;= \\frac{3}{16} \\left( \\left(2 \\times 2^2\\right) - \\left(\\frac{2^4}{4}\\right) - \\left(0 - 0\\right) \\right) \\\\\n        &amp;= \\frac{3}{16} \\left( 8 - 4 \\right) \\\\\n        &amp;= \\frac{3}{4}.\n    \\end{align*}\\]</span></p>\n<p><span class=\"math display\">\\[\\begin{align*}\n    \\operatorname{Var}(X) &amp;= \\mathbb{E}[X^2] - (\\mathbb{E}[X])^2 \\\\\n    \\\\\n    \\text{Calcul de } \\mathbb{E}[X^2]: \\\\\n    \\mathbb{E}[X^2] &amp;= \\int_{0}^{2} x^2 f(x) \\, dx \\\\\n    &amp;= \\int_{0}^{2} x^2 \\left( \\frac{3}{16}(4 - x^2) \\right) dx \\\\\n    &amp;= \\frac{3}{16} \\int_{0}^{2} x^2 (4 - x^2) \\, dx \\\\\n    &amp;= \\frac{3}{16} \\int_{0}^{2} (4x^2 - x^4) \\, dx \\\\\n    &amp;= \\frac{3}{16} \\left( \\int_{0}^{2} 4x^2 \\, dx - \\int_{0}^{2} x^4 \\, dx \\right) \\\\\n    &amp;= \\frac{3}{16} \\left( \\left[\\frac{4x^3}{3}\\right]_{0}^{2} - \\left[\\frac{x^5}{5}\\right]_{0}^{2} \\right) \\\\\n    &amp;= \\frac{3}{16} \\left( \\left( \\frac{4 \\times 8}{3} \\right) - \\left( \\frac{32}{5} \\right) - \\left( 0 - 0 \\right) \\right) \\\\\n    &amp;= \\frac{3}{16} \\left( \\frac{32}{3} - \\frac{32}{5} \\right) \\\\\n    &amp;= \\frac{4}{5}.\n\\end{align*}\\]</span></p>\n<p><span class=\"math display\">\\[\\begin{align*}\n    \\text{Calcul de } \\operatorname{Var}(X): \\\\\n    \\operatorname{Var}(X) &amp;= \\mathbb{E}[X^2] - (\\mathbb{E}[X])^2 \\\\\n    &amp;= \\frac{4}{5} - \\left( \\frac{3}{4} \\right)^2 \\\\\n    &amp;= \\frac{4}{5} - \\frac{9}{16} \\\\\n    &amp;= \\frac{64}{80} - \\frac{45}{80} \\\\\n    &amp;= \\frac{19}{80}.\n\\end{align*}\\]</span></p>\n"
+    }
+  ]
+}
