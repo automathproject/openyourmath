@@ -10,7 +10,7 @@
   let error: string | null = null;
   let loading: boolean = true;
   let visibleExercises: Exercice[] = [];
-  let limit: number = 10;
+  let limit: number = 6;
   let offset: number = 0;
 
   onMount(async () => {
