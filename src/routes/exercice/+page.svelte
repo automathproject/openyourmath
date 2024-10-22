@@ -16,6 +16,7 @@
     let exerciseData: any = null;
     let errorMessage: string = 'Aucun exercice sélectionné';
     let loadingExercise: boolean = false; // Indicateur de chargement pour l'exercice
+    let showList = true; // Variable pour contrôler l'affichage de la liste
     
     // Fonction pour charger les données de l'exercice
     async function loadExerciseData(uuid: string) {
@@ -41,8 +42,12 @@
         exerciseData = null;
         errorMessage = 'Aucun exercice sélectionné';
       }
+
+
     }
-    
+    function toggleList() {
+        showList = !showList;
+      }
     // Instruction réactive pour surveiller les changements dans l'URL
     $: {
       const currentUuid = $page.url.searchParams.get('uuid');
@@ -82,13 +87,18 @@
   <section class="container">
     <div class="row">
       <!-- Colonne de la Liste des Exercices -->
+      {#if showList}
       <div class="col-md-4 liste-container">
         <h3>Recherche</h3>
         <Liste onSelect={handleSelect} />
       </div>
-      
+      {/if}
       <!-- Colonne de l'Exercice -->
-      <div class="col-md-8">
+      <div class={showList ? "col-md-8" : "col-md-12"}>
+        <!-- Bouton pour basculer l'affichage de la liste -->
+        <button on:click={toggleList} class="btn btn-primary mb-3">
+          {showList ? '<<<' : '>>>'}
+        </button>
         <!-- Input pour saisir l'UUID de l'exercice -->
         <div class="input-container mb-3">
           <input
