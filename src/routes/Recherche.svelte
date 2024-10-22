@@ -1,3 +1,4 @@
+<!-- Composant de recherche des exercices -->
 <script lang="ts">
   import { onMount } from 'svelte';
   import Exercice from './Exercice.svelte';
@@ -73,13 +74,13 @@
   <div class="themes-list me-3">
     <ul class="list-group">
       {#each themes as theme}
-        <li
-          class="list-group-item {selectedTheme === theme ? 'active' : ''}"
-          on:click={() => selectTheme(theme)}
-          style="cursor: pointer;"
-        >
-          {theme}
-        </li>
+      <li
+      class="list-group-item pointer"
+      class:active={selectedTheme === theme}
+      on:click={() => selectTheme(theme)}
+    >
+      {theme}
+    </li>
       {/each}
     </ul>
   </div>
@@ -165,5 +166,8 @@
       color: #6c757d; /* Couleur grisée pour le texte du thème */
       font-size: 0.875rem; /* Taille de police réduite pour le thème */
       margin-top: 4px;
+  }
+  .pointer {
+      cursor: pointer;
   }
 </style>

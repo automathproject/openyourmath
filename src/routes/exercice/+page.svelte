@@ -1,4 +1,4 @@
-<!-- src/routes/exercice/+page.svelte -->
+<!-- src/routes/exercice/recherche/+page.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
