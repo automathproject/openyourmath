@@ -1,0 +1,50 @@
+{
+  "uuid": "HvSs",
+  "titre": "Calcul de probabilités",
+  "theme": "statistiques",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>On modélise le poids d’une pièce fabriquée par la machine avec une variable aléatoire <span class=\"math inline\">\\(X\\)</span>. Que peut-on dire de la variable <span class=\"math inline\">\\(X\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait donc que <span class=\"math inline\">\\(\\EX=0.5~g\\)</span> et <span class=\"math inline\">\\(\\sigma(X)=0.02~g\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(\\overline{X}\\)</span> la variable aléatoire égale au poids moyen d’une pièce dans un échantillon de <span class=\"math inline\">\\(n\\)</span> pièces. Que peut-on dire de l’espérance et la variance de <span class=\"math inline\">\\(\\overline{X}\\)</span> ? Que peut-on dire de la loi suivie par <span class=\"math inline\">\\(\\overline{X}\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait que <span class=\"math inline\">\\(\\mathbb{E}(\\overline{X})=\\EX = 0.5\\)</span> et <span class=\"math inline\">\\(\\sigma^2(\\overline{X}) = \\frac{\\sigma^2(X)}{n} = \\frac{(0.02)^2}{n}\\)</span></p>\n<p>On ne peut pas déterminer exactement la loi de <span class=\"math inline\">\\(\\overline{X}\\)</span>, mais si l’échantillon est grand, d’après le Théorème Central Limite, on peut approcher la loi de</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Définir une variable aléatoire permettant de modéliser le poids total d’un échantillon de <span class=\"math inline\">\\(n\\)</span> pièces. Que peut-on dire de sa loi de probabilité si <span class=\"math inline\">\\(n\\)</span> est suffisamment grand ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(P\\)</span> le poids total de l’échantillon. Alors <span class=\"math inline\">\\(P=X_1+...+X_n = n \\times \\overline{X}\\)</span>. Or :<br />\n<span class=\"math inline\">\\(\\mathbb{E}(n\\overline{X})=n \\mathbb{E(\\overline{X})}=0.5n\\)</span> et<br />\n<span class=\"math inline\">\\(\\sigma^2(n\\overline{X})=n^2 \\sigma^2(\\overline{X})=n \\times (0.02)^2\\)</span>.</p>\n<p>Donc le poids total de l’échantillon</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On considère deux échantillons de <span class=\"math inline\">\\(1000\\)</span> pièces chacun. Définir une variable aléatoire permettant de modéliser la différence de poids entre ces deux échantillons.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On note <span class=\"math inline\">\\(P_1\\)</span> le poids du premier échantillon de taille 1000, <span class=\"math inline\">\\(P_2\\)</span> le poids du second échantillon de taille 1000. La différence de poids est donc <span class=\"math inline\">\\(P_1\\)</span>-<span class=\"math inline\">\\(P_2\\)</span> si <span class=\"math inline\">\\(P_1\\)</span> plus grand que <span class=\"math inline\">\\(P_2\\)</span>, et <span class=\"math inline\">\\(P_2-P_1\\)</span> si <span class=\"math inline\">\\(P_2\\)</span> plus grand que <span class=\"math inline\">\\(P_1\\)</span>. En résumé, cette différence s’écrit <span class=\"math inline\">\\(|P_1-P_2|\\)</span> (nombre toujours positif).</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la probabilité pour que le poids de deux lots de <span class=\"math inline\">\\(1000\\)</span> pièces chacun diffère de plus de <span class=\"math inline\">\\(2\\)</span> g.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après la question précédente, on sait que <span class=\"math inline\">\\(P_1\\)</span> et <span class=\"math inline\">\\(P_2\\)</span> suivent chacune une loi <span class=\"math inline\">\\(\\mathcal{N}(0.5 \\times 1000,(0.02)^2 \\times 1000)\\)</span>. On va déterminer la loi de <span class=\"math inline\">\\(P_1-P_2\\)</span> en supposant que <span class=\"math inline\">\\(P_1\\)</span> et <span class=\"math inline\">\\(P_2\\)</span> sont indépendantes : pour cela, on calcule :</p>\n<ul>\n<li><p><span class=\"math inline\">\\(\\mathbb{E}(P_1-P_2)=\\mathbb{E}(P_1)-\\mathbb{E}(P_2)=0\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\sigma^2(P_1-P_2)=\\sigma^2(P_1)+\\sigma^2(P_2)=2 \\times (0.02)^2 \\times 1000 = (0.02)^2 \\times 2000\\)</span></p></li>\n</ul>\n<p>On cherche à calculer <span class=\"math inline\">\\(\\PP(|P_1-P_2|&gt;2)\\)</span>. Par symétrie (<span class=\"math inline\">\\(P_1\\)</span> plus grand que <span class=\"math inline\">\\(P_2\\)</span> ou l’inverse), il suffit de calculer <span class=\"math inline\">\\(\\PP(P_1-P_2&gt;2)\\)</span> (cas où <span class=\"math inline\">\\(P_1\\)</span> plus grand que <span class=\"math inline\">\\(P_2\\)</span>) et de multiplier le résultat par 2 (on trouvera le même résultat pour <span class=\"math inline\">\\(\\PP(P_2-P_1&gt;2)\\)</span>)</p>\n<p>La variable <span class=\"math inline\">\\(P_1-P_2\\)</span> suit approximativement une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,(0.02)^2 \\times 2000)\\)</span> donc <span class=\"math inline\">\\(U=\\frac{P_1-P_2}{0.02\\sqrt{2000}}\\)</span> suit approximativement une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(\\PP(U &gt; \\frac{2}{0.02 \\sqrt{2000}})=\\PP(U&gt;\\frac{1}{0.1 \\sqrt{20}})=\\PP(U&gt;2.236)\\)</span>.</p>\n<p>Donc <span class=\"math inline\">\\(\\PP(X_1-X_2&gt;2)=\\PP(U&gt;2.236)=1-\\PP(U&lt;2.236)=0.0129\\)</span>. On en déduit que <span class=\"math display\">\\[\\PP(|P_1-P_2|&gt;2)=2 \\times 0.0129=0.0258\\]</span></p>\n<p>La probabilité que l’écart entre les poids des deux échantillons soit supérieur à 2 g est d’environ <span class=\"math inline\">\\(2.6\\%\\)</span>.</p>\n"
+    }
+  ]
+}

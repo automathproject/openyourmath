@@ -1,0 +1,42 @@
+{
+  "uuid": "6Aqe",
+  "titre": "Loi uniforme sur un triangle",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Déterminer un nombre réel <span class=\"math inline\">\\(k\\)</span> tel que <span class=\"math inline\">\\(f(x,y) = k \\cdot \\mathbf{1}_T(x,y)\\)</span> définisse sur <span class=\"math inline\">\\(\\R^2\\)</span> la densité du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\((x,y) \\in T\\)</span> si et seulement si <span class=\"math inline\">\\(x \\in [0,1]\\)</span>, <span class=\"math inline\">\\(y \\in [0,1]\\)</span> et <span class=\"math inline\">\\(y \\leq 1-x\\)</span>. Donc d’après le théorème de Fubini : <span class=\"math display\">\\[\\begin{align*}\n                \\int_{\\R^2} f(x,y) dx dy &amp;= \\int_0^1 \\int_0^{1-x} k \\,dy dx \\\\\n                &amp;= \\int_0^1 k(1-x) dx \\\\\n                &amp;= k \\left[ x - \\frac{x^2}{2} \\right]_0^1 \\\\\n                &amp;= k \\times \\frac{1}{2}\n            \\end{align*}\\]</span> Pour que <span class=\"math inline\">\\(f\\)</span> soit une densité, il faut que <span class=\"math inline\">\\(\\int_{\\R^2} f(x,y) dx dy = 1\\)</span> et <span class=\"math inline\">\\(f(x,y) \\geq 0\\)</span> pour tout <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span>. Donc <span class=\"math inline\">\\(k = 2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer les lois marginales du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si <span class=\"math inline\">\\((x,y) \\notin T\\)</span>, alors <span class=\"math inline\">\\(f(x,y) = 0\\)</span>. Donc pour tout <span class=\"math inline\">\\(x \\notin [0,1]\\)</span>, <span class=\"math inline\">\\(f_X(x) = 0\\)</span>. De même pour tout <span class=\"math inline\">\\(y \\notin [0,1]\\)</span>, <span class=\"math inline\">\\(f_Y(y) = 0\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x \\in [0,1]\\)</span>, alors <span class=\"math inline\">\\(f_X(x) = \\int_{-\\infty}^{+\\infty}f(x,y)dy = 2 \\int_0^{1-x} dy = 2(1-x)\\)</span>. De même pour tout <span class=\"math inline\">\\(y \\in [0,1]\\)</span>, <span class=\"math inline\">\\(f_Y(y) = 2(1-y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si elles l’étaient, on aurait <span class=\"math inline\">\\(f(x,y) = f_X(x) \\times f_Y(y) = 4(1-x)(1-y)\\)</span> pour tout <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span>. Or <span class=\"math inline\">\\(f(0,0) = 2 \\neq 4\\)</span>. Donc <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ne sont pas indépendantes.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la covariance du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait que <span class=\"math inline\">\\(\\cov(X,Y) = \\E(XY) - \\E(X)\\E(Y)\\)</span>. On a <span class=\"math inline\">\\(\\E(X) = \\int_{-\\infty}^{+\\infty} x f_X(x) dx = \\int_0^1 2x(1-x) dx = \\frac{1}{3}\\)</span>. De même <span class=\"math inline\">\\(\\E(Y) = \\frac{1}{3}\\)</span>.</p>\n<p>De plus, <span class=\"math display\">\\[\\begin{align*}\n                \\E(XY) &amp;= \\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} xy f(x,y) dx dy \\\\\n                &amp;= \\int_0^1 \\int_0^{1-x} 2xy dy dx \\\\\n                &amp;= \\int_0^1 x(1-x)^2 dx \\\\\n                &amp;= \\int_0^1 x - 2x^2 + x^3 dx \\\\\n                &amp;= \\left[ \\frac{x^2}{2} - \\frac{2x^3}{3} + \\frac{x^4}{4} \\right]_0^1 \\\\\n                &amp;= \\frac{1}{12}\n            \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(\\cov(X,Y) = \\frac{1}{12} - \\frac{1}{3} \\times \\frac{1}{3} = -\\frac{1}{36}\\)</span>.</p>\n"
+    }
+  ]
+}

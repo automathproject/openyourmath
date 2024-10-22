@@ -1,0 +1,46 @@
+{
+  "uuid": "Opt101",
+  "titre": "Fonction deux variables",
+  "theme": "Optimisation",
+  "auteur": "Jean-François Culus",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère la fonction <span class=\"math inline\">\\(f(x,y)=x^3+3x^2y+y^3\\)</span>.</p>\n<ol>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n</ol>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer les dérivées partielles de cette fonction.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Les dérivées partielles de <span class=\"math inline\">\\(f(x, y)\\)</span> sont :</p>\n<p><span class=\"math display\">\\[\\frac{\\partial f}{\\partial x} = 3x^2 - 6xy\\]</span></p>\n<p><span class=\"math display\">\\[\\frac{\\partial f}{\\partial y} = -3x^2 + 3y^2\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Rechercher alors les points critiques de cette fonction.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Les points critiques sont obtenus en résolvant le système d’équations suivant :</p>\n<p><span class=\"math display\">\\[3x^2 - 6xy = 0 \\quad \\text{(1)}\\]</span> <span class=\"math display\">\\[-3x^2 + 3y^2 = 0 \\quad \\text{(2)}\\]</span></p>\n<p>Résolvons ce système: De l’équation (1): <span class=\"math inline\">\\(3x(x - 2y) = 0\\)</span> nous déduisons que <span class=\"math inline\">\\(x = 0\\)</span> ou <span class=\"math inline\">\\(x = 2y\\)</span>.<br />\nDe l’équation (2): <span class=\"math inline\">\\(-3x^2 + 3y^2 = 0\\)</span>, nous obtenons <span class=\"math inline\">\\(x^2 = y^2\\)</span>. Etudions alors différents cas:<br />\nCas 1 : <span class=\"math inline\">\\(x = 0\\)</span> alors de <span class=\"math inline\">\\(x^2 = y^2\\)</span>, nous obtenons <span class=\"math inline\">\\(y = 0\\)</span>, d’où <span class=\"math inline\">\\((0,0)\\)</span> est un point critique.<br />\nCas 2 : <span class=\"math inline\">\\(x = 2y\\)</span>: alors de <span class=\"math inline\">\\((2y)^2 = y^2\\)</span>, nous obtenons <span class=\"math inline\">\\(4y^2 = y^2\\)</span> donc <span class=\"math inline\">\\(y = 0\\)</span>. Nous obtenons encore <span class=\"math inline\">\\((0, 0)\\)</span> pour point critique.<br />\nAinsi, l’unique point critique de cette fonction est <span class=\"math inline\">\\((0, 0)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la Hessienne: pouvez-vous alors conclure à la nature du ou des points critiques de cette fonction ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour déterminer si le point critique <span class=\"math inline\">\\((0, 0)\\)</span> est un maximum, minimum ou un point selle, nous utilisons le critère de la matrice Hessienne. La matrice Hessienne de <span class=\"math inline\">\\(f\\)</span> est donnée par :</p>\n<p><span class=\"math display\">\\[H = \\begin{bmatrix}\n\\frac{\\partial^2 f}{\\partial x^2} &amp; \\frac{\\partial^2 f}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 f}{\\partial y \\partial x} &amp; \\frac{\\partial^2 f}{\\partial y^2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n6x - 6y &amp; -6x \\\\\n-6x &amp; 6y\n\\end{bmatrix}\\]</span></p>\n<p>Au point critique <span class=\"math inline\">\\((0, 0)\\)</span>, la matrice Hessienne devient :</p>\n<p><span class=\"math display\">\\[H(0, 0) = \\begin{bmatrix}\n0 &amp; 0 \\\\\n0 &amp; 0\n\\end{bmatrix}\\]</span></p>\n<p>Cette matrice est dégénérée, ce qui signifie que nous ne pouvons pas conclure directement sur la nature du point critique en utilisant les dérivées secondes.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En étudiant <span class=\"math inline\">\\(f(x,x)\\)</span>, montrer que <span class=\"math inline\">\\(f\\)</span> n’admet aucun extremum local.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Nous avons <span class=\"math inline\">\\(f(x,x) = 5x^3\\)</span>: ainsi, <span class=\"math inline\">\\(f\\)</span> change de signe autour de <span class=\"math inline\">\\((0;0)\\)</span>, et donc <span class=\"math inline\">\\(f\\)</span> n’admet pas d’extremum local en <span class=\"math inline\">\\((0,0)\\)</span>. Ainsi, la fonction <span class=\"math inline\">\\(f(x, y) = x^3 - 3x^2y + y^3\\)</span> a un point critique en <span class=\"math inline\">\\((0, 0)\\)</span>, qui est un point selle et non un extremum local (ni maximum ni minimum).</p>\n"
+    }
+  ]
+}

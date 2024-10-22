@@ -1,0 +1,58 @@
+{
+  "uuid": "G5Jt",
+  "titre": "Probabilités et divisibilité",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span>. Une urne contient <span class=\"math inline\">\\(n\\)</span> boules blanches numérotées de <span class=\"math inline\">\\(1\\)</span> à <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\">\\(2\\)</span> boules noires numérotées <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(2\\)</span>. On effectue le tirage de toutes les boules de l’urne, une à une, et sans remise. On appelle <span class=\"math inline\">\\(X\\)</span> le rang d’apparition de la première boule blanche et <span class=\"math inline\">\\(Y\\)</span> celui du premier numéro <span class=\"math inline\">\\(1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’ensemble des valeurs prises par <span class=\"math inline\">\\(X\\)</span> est <span class=\"math inline\">\\(X(\\Omega) = \\{1,2,3\\}\\)</span>. Les boules sont a priori indiscernables au toucher donc le tirage d’un boule parmi les <span class=\"math inline\">\\(n+2\\)</span> suit une loi uniforme, autrement dit la probabilité de tirer une boule en particulier est <span class=\"math inline\">\\(\\frac{1}{n+2}\\)</span>. On en déduit que la probabilité que la première boule tirée soit blanche est <span class=\"math display\">\\[\\prob(X=1) = \\frac{n}{n+2}\\]</span>.</p>\n<p>Par indépendance des tirages et formule de Baye, on a <span class=\"math display\">\\[\\prob(X=2) = \\prob(\\overline{N_1})\\prob(N_2 \\mid \\overline{N_1}) = \\frac{2}{n+2}\\frac{n}{n+1} = \\frac{2n}{(n+2)(n+1)}\\]</span></p>\n<p>De même, on a <span class=\"math display\">\\[\\prob(X=3) = \\frac{2}{n+2}\\frac{1}{n+1}\\frac{n}{n} = \\frac{2}{(n+2)(n+1)}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que les événements <span class=\"math inline\">\\(\\{X=1\\}\\)</span> et <span class=\"math inline\">\\(\\{Y=1\\}\\)</span> sont indépendants si et seulement si <span class=\"math inline\">\\(n=2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(\\prob(X=1,Y=1) = \\frac{1}{n+2}\\)</span>, c’est la probabilité que la première boule tirée soit blanche et qu’elle porte le numéro 1.</p>\n<p>On a <span class=\"math inline\">\\(\\prob(Y=1) = \\frac{2}{n+2}\\)</span> car au premier tirage, <span class=\"math inline\">\\(2\\)</span> boules portent le numéro <span class=\"math inline\">\\(1\\)</span>.</p>\n<p>Les événements <span class=\"math inline\">\\(\\{X=1\\}\\)</span> et <span class=\"math inline\">\\(\\{Y=1\\}\\)</span> sont indépendants si et seulement si : <span class=\"math display\">\\[\\begin{align*}\n\\prob(X=1,Y=1) = \\prob(X=1)\\prob(Y=1) &amp;\\iff \\frac{1}{n+2} = \\frac{n}{n+2} \\times \\frac{2}{n+2} \\\\\n&amp;\\iff 2n = n+2 \\\\\n&amp;\\iff n = 2\n\\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ne sont pas indépenantes.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On compare par exemple <span class=\"math inline\">\\(\\prob(X=3,Y=3)\\)</span> et <span class=\"math inline\">\\(\\prob(X=3)\\times \\prob(Y=3)\\)</span>. Or <span class=\"math inline\">\\(\\prob(X=3,Y=3)=0\\)</span> car pour que la première boule blanche apparaisse au rang <span class=\"math inline\">\\(3\\)</span>, il faut que les deux premières tirées soient noires, dont l’une d’elle porte le numéro <span class=\"math inline\">\\(1\\)</span>.</p>\n<p>Or il est clair que <span class=\"math inline\">\\(\\prob(X=3) \\neq 0\\)</span> et <span class=\"math inline\">\\(\\prob(Y=3)\\neq 0\\)</span>. On en déduit que <span class=\"math inline\">\\(\\prob(X=3,Y=3) \\neq \\prob(X=3)\\times \\prob(Y=3)\\)</span> ce qui permet de conclure que les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ne sont pas indépenantes.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>On suppose maintenant que <span class=\"math inline\">\\(n=2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ont la même loi de probabilité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Sous cette hypothèse, on a <span class=\"math inline\">\\(Y(\\Omega) = \\{1,2,3\\}\\)</span>. De plus, d’après la question 1, on a <span class=\"math display\">\\[\\prob(X=1) = \\frac{1}{2} \\quad \\prob(X=2) = \\frac{1}{3} \\quad \\prob(X=3) = \\frac{1}{6}\\]</span> Par ailleurs :</p>\n<p>Les deux variables <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ont donc la même loi de probabilité.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la loi du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>En utilisant les questions précédentes et en calculant de manière similaire <span class=\"math inline\">\\(\\prob(X=1,Y=2)\\)</span>, <span class=\"math inline\">\\(\\prob(X=1,Y=3)\\)</span>, <span class=\"math inline\">\\(\\prob(X=3,Y=1)\\)</span></p>\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(X \\backslash Y\\)</span></th>\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(1\\)</span></th>\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(2\\)</span></th>\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(3\\)</span></th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(1\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{4}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{6}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{12}\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(2\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{6}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{12}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{12}\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(3\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{12}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\frac{1}{12}\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0\\)</span></td>\n</tr>\n</tbody>\n</table>\n<p>En sommant les lignes et les colonnes, on retrouve les résultats des lois marginales calculées précédemment.</p>\n"
+    }
+  ]
+}

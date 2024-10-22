@@ -1,0 +1,22 @@
+{
+  "uuid": "yTDM",
+  "titre": "Changement de variable",
+  "theme": "probabilité",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire absolument continue dont la densité est donnée par <span class=\"math display\">\\[f(x)=\\frac{1}{2}\\textbf{1}_{[-1;1]}(x)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On cherche à identifier la loi de <span class=\"math inline\">\\(Y=X^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<ol>\n<li><p>pour tout <span class=\"math inline\">\\(t\\)</span>, <span class=\"math inline\">\\(F_Y(t)= \\prob(X^2 \\leq t)\\)</span></p></li>\n<li><p>si <span class=\"math inline\">\\(t \\geq 0\\)</span>, <span class=\"math inline\">\\(\\{X^2 \\leq t\\} = \\{X \\in [-\\sqrt{t};\\sqrt{t}] \\}\\)</span> ;<br />\nsi <span class=\"math inline\">\\(t&lt;0\\)</span> <span class=\"math inline\">\\(\\{X^2 \\leq t\\} = \\emptyset\\)</span></p></li>\n<li><p>donc pour tout <span class=\"math inline\">\\(t \\geq 0\\)</span>, <span class=\"math display\">\\[F_Y(t) = \\prob(X \\in [-\\sqrt{t};\\sqrt{t}]) = \\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2}\\textbf{1}_{[-1;1]}(x) dx\\]</span> si <span class=\"math inline\">\\(0 \\leq t \\leq 1\\)</span> alors <span class=\"math inline\">\\(F_Y(t)=\\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2} dx = \\sqrt{t}\\)</span><br />\nsi <span class=\"math inline\">\\(t&gt;1\\)</span> alors <span class=\"math inline\">\\(F_Y(t)=\\int_{-1}^1 \\frac{1}{2} dx = 1\\)</span></p></li>\n<li><p>pour tout <span class=\"math inline\">\\(t \\in ]0;1[\\)</span>, <span class=\"math inline\">\\(F_Y\\)</span> est dérivable en <span class=\"math inline\">\\(t\\)</span> et <span class=\"math inline\">\\(F_Y&#39;(t) = \\frac{1}{2} \\frac{1}{\\sqrt{t}}\\)</span> donc en intégrant, <span class=\"math inline\">\\(F_Y(t) = \\int_{0}^{t}  \\frac{1}{2} \\frac{1}{\\sqrt{x}} dx\\)</span> de sorte que <span class=\"math inline\">\\(F_Y(0)=0\\)</span> et <span class=\"math inline\">\\(F_Y(1)=1\\)</span>.<br />\nPour résumer ces conditions, on peut écrire que pour tout <span class=\"math inline\">\\(t \\in \\R\\)</span>, <span class=\"math display\">\\[F_Y(t) = \\int_{-\\infty}^t \\frac{1}{2} \\frac{1}{\\sqrt{x}} \\textbf{1}_{[0;1]}(x)dx\\]</span></p>\n<p>On en déduit que <span class=\"math inline\">\\(Y\\)</span> admet pour densité la fonction <span class=\"math inline\">\\(g \\colon x \\mapsto   \\frac{1}{2\\sqrt{x}} \\textbf{1}_{[0;1]}(x)\\)</span></p></li>\n</ol>\n"
+    }
+  ]
+}

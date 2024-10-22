@@ -1,0 +1,26 @@
+{
+  "uuid": "b6cm",
+  "titre": "Autour d'une loi exponentielle",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(\\prob(X \\geq t)\\)</span> pour tout <span class=\"math inline\">\\(t \\in \\R\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span class=\"math inline\">\\(t \\geq 0\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n            \\prob(X \\geq t) &amp;= \\int_t^{+\\infty} f(x) \\d x \\\\\n            &amp;= \\int_t^{+\\infty} 3 e^{-3x} \\d x \\\\\n            &amp;= \\left[ -e^{-3x} \\right]_t^{+\\infty} \\\\\n            &amp;= e^{-3t}.\n        \\end{align*}\\]</span> Si <span class=\"math inline\">\\(t &lt; 0\\)</span>, on a <span class=\"math inline\">\\(\\prob(X \\geq t) = 1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(\\prob(Z \\geq t)\\)</span> pour tout <span class=\"math inline\">\\(t \\in \\R\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span class=\"math inline\">\\(t \\geq 0\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n            \\prob(Z \\geq t) &amp;= \\prob(X \\geq t \\text{ et } Y \\geq t) \\\\\n            &amp;= \\prob(X \\geq t) \\prob(Y \\geq t) \\text{ par indépendance de $X$ et $Y$} \\\\\n            &amp;= e^{-3t} \\times e^{-3t} \\\\\n            &amp;= e^{-6t}.\n        \\end{align*}\\]</span> Si <span class=\"math inline\">\\(t &lt; 0\\)</span>, on a <span class=\"math inline\">\\(\\prob(Z \\geq t) = 1\\)</span>.</p>\n<p>On voit ainsi que <span class=\"math inline\">\\(Z = \\min(X,Y)\\)</span> suit une loi exponentielle <span class=\"math inline\">\\(\\mathcal{E}(6)\\)</span>.</p>\n"
+    }
+  ]
+}

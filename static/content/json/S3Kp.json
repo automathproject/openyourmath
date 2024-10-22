@@ -1,0 +1,34 @@
+{
+  "uuid": "S3Kp",
+  "titre": "Échantillons de pièces usinées",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Chaque pièce fabriquée par une certaine machine pèse en moyenne <span class=\"math inline\">\\(0.50\\)</span> g avec un écart type de <span class=\"math inline\">\\(0.02\\)</span> g.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soient les variables aléatoires <span class=\"math inline\">\\(X_i\\)</span> représentant le poids d’une pièce. Ces variables sont indépendantes et de même loi, d’espérance <span class=\"math inline\">\\(\\mathbb{E}(X_i)=0.5\\)</span> et d’écart-type <span class=\"math inline\">\\(\\sigma(X_i)=0.02\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(\\overline{X}\\)</span> la variable aléatoire égale au poids moyen d’une pièce dans un échantillon de <span class=\"math inline\">\\(n\\)</span> pièces où <span class=\"math inline\">\\(n\\)</span> est un entier naturel non nul quelconque. En fonction de <span class=\"math inline\">\\(n\\)</span>, que peut-on dire de la loi de <span class=\"math inline\">\\(\\overline{X}\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Comme <span class=\"math inline\">\\(\\bar{X}\\)</span> est le poids moyen des pièces sur un échantillon de <span class=\"math inline\">\\(n\\)</span> pièces, on a <span class=\"math inline\">\\(\\displaystyle \\bar{X}=\\frac{1}{n}=\\sum_{i=1}^n X_i\\)</span>. Par le théorème central-limite, pour <span class=\"math inline\">\\(n\\)</span> grand, la variable aléatoire <span class=\"math inline\">\\(\\displaystyle \\sum_{i=1}^n X_i\\)</span> suit approximativement une loi Normale de paramètres <span class=\"math inline\">\\(\\mu=n\\times 0.5\\)</span> et <span class=\"math inline\">\\(\\sigma=\\sqrt{n}\\times 0.02\\)</span>. Par conséquent, la variable <span class=\"math inline\">\\(\\overline{X}\\)</span> suit approximativement la loi <span class=\"math inline\">\\(\\displaystyle\\mathcal{N}\\left(0.50,\\sigma=\\frac{0.02}{\\sqrt{n}}\\right)\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(n\\)</span> est petit (<span class=\"math inline\">\\(n &lt; 30\\)</span> par convention), on ne connaît pas la loi de <span class=\"math inline\">\\(\\overline{X}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On considère deux échantillons de 1000 pièces chacun. Déterminer la probabilité que la différence de poids entre deux lots de 1000 pièces soit supérieure à 2 grammes.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(Y_1\\)</span> et <span class=\"math inline\">\\(Y_2\\)</span> deux variables aléatoires indépendantes et de même loi que <span class=\"math inline\">\\(\\displaystyle \\sum_{i=1}^n X_i\\)</span>, où <span class=\"math inline\">\\(n=1000\\)</span>. Comme <span class=\"math inline\">\\(n\\)</span> est grand, <span class=\"math inline\">\\(Y_1\\)</span> et <span class=\"math inline\">\\(Y_2\\)</span> suivent approximativement la loi <span class=\"math inline\">\\(\\displaystyle\\mathcal{N}\\left(500,\\sigma=0.02\\sqrt{1000}\\right)\\)</span>. Donc <span class=\"math inline\">\\(Y_1-Y_2\\)</span> suit encore une loi Normale de paramètres <span class=\"math inline\">\\(\\mu=\\E(Y_1)-\\E(Y_2)=0\\)</span> et de variance <span class=\"math inline\">\\(\\sigma^2=\\sigma^2(Y_1-Y_2)=2\\sigma^2(Y_1)=0.8\\)</span>, ce que l’on peut résumer par <span class=\"math display\">\\[Y_1-Y_2 \\ \\sim \\ \\mathcal{N}\\left( 0,\\sigma=\\sqrt{0.8} \\right).\\]</span> On cherche à déterminer la probabilité suivante: <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{P}(|Y_1-Y_2|&gt;2) \n            &amp;= \\mathbb{P}\\left( \\left| \\frac{Y_1-Y_2}{\\sqrt{8}}\\right|\\right) \\\\\n            &amp; \\simeq \\mathbb{P}(|Z| &gt; 2.24), \\quad \\text{ où } Z\\sim\\mathcal{N}(0,1) \\\\\n            &amp; \\simeq 1-\\mathbb{P}(|Z|\\leq 2.24) \\\\\n            &amp; \\simeq 1-(2\\mathbb{P}(Z\\leq 2.24)-1) \\\\\n            &amp; \\simeq 2-2\\times 0.9875 \\quad \\text{ par lecture de la table de loi} \\\\\n            &amp; \\simeq 0.025.\n        \\end{align*}\\]</span> La probabilité que le poids de deux lots de <span class=\"math inline\">\\(1000\\)</span> pièces chacun diffèrent entre eux de plus de <span class=\"math inline\">\\(2\\)</span> grammes est d’environ <span class=\"math inline\">\\(2.5\\)</span>%.</p>\n"
+    }
+  ]
+}

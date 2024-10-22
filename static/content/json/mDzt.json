@@ -1,0 +1,18 @@
+{
+  "uuid": "mDzt",
+  "titre": "Modélisation avec des estimateurs",
+  "theme": "statistique",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Lors d’une élection, un candidat a obtenu 65% des voix. On considère deux échantillons de votants. Déterminer la probabilité pour que deux échantillons de 200 votants chacun indiquent plus de 10 points de différence entre les fréquences de gens qui ont voté pour ce candidat.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On note respectivement <span class=\"math inline\">\\(F_1\\)</span> et <span class=\"math inline\">\\(F_2\\)</span> la proportion de votants pour ce candidat dans chaque échantillon de taille 200. En notant <span class=\"math inline\">\\((X_1,...,X_n)\\)</span> le premier échantillon, on sait que <span class=\"math inline\">\\(n=200\\)</span> et que chaque <span class=\"math inline\">\\(X_i\\)</span> suit une loi de Bernoulli <span class=\"math inline\">\\(\\mathcal{B}(p)\\)</span> où <span class=\"math inline\">\\(p = 0{,}65\\)</span>. Ainsi, d’après le Théorème Central Limite, <span class=\"math inline\">\\(F_1 = \\frac{1}{n} \\sum_{i=1}^n X_i\\)</span> suit approximativement une loi normale de moyenne <span class=\"math inline\">\\(p\\)</span> et de variance <span class=\"math inline\">\\(\\frac{p(1-p)}{n}\\)</span>. Il est clair que <span class=\"math inline\">\\(F_2\\)</span> suit la même loi de probabilité que <span class=\"math inline\">\\(F_1\\)</span>.</p>\n<p>Ainsi, on peut s’intéresser à la différence des résultats pour chaque échantillon <span class=\"math inline\">\\(D=F_1-F_2\\)</span>. Par somme de lois normales, cette variable <span class=\"math inline\">\\(D\\)</span> suit une loi normale centrée (moyenne <span class=\"math inline\">\\(p-p=0\\)</span>) de variance <span class=\"math inline\">\\(\\frac{p(1-p)}{n}+\\frac{p(1-p)}{n} = \\frac{2p(1-p)}{n}\\)</span>.</p>\n<p>Il reste donc à calculer <span class=\"math inline\">\\(\\PP(|D|&gt;0.10) = 2 \\times \\PP(D&gt;0.10) = \\PP\\left(\\frac{D}{\\sqrt{\\frac{2p(1-p)}{n}}} &gt; 2.1\\right) = 2 \\times 0.00179 = 0.036\\)</span></p>\n"
+    }
+  ]
+}

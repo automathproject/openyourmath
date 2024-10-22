@@ -1,0 +1,42 @@
+{
+  "uuid": "btWx",
+  "titre": "Consistance d'un $\\theta$-schéma",
+  "theme": "analyse numérique",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Pour une fonction <span class=\"math inline\">\\(f\\)</span> continue par morceaux sur <span class=\"math inline\">\\([a;b]\\)</span>, on pose <span class=\"math inline\">\\(\\theta \\in [0;1]\\)</span> on considère l’approximation : <span class=\"math display\">\\[\\int_a^b f(s)ds \\approx (b-a)(\\theta f(a) + (1-\\theta)f(b))\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Á partir de ce choix d’approximation, construire un schéma de résolution d’une EDO <span class=\"math inline\">\\(y&#39;(t)=f(t,y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>A partir de ce choix d’approximation, construire un schéma de résolution d’une EDO <span class=\"math inline\">\\(y&#39;(t)=f(t,y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(y(t_{n+1}) = y(t_n) + \\int_{t_n}^{t_{n+1}} f\\left(s,y(s)\\right) ds\\)</span> d’où le schéma défini par : <span class=\"math display\">\\[y_{n+1} = y_n + h \\left( \\theta f(t_n,y(t_n)) + (1-\\theta) f(t_{n+1}, y(t_{n+1}))\\right)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Reconnaître des schémas usuels pour les valeurs <span class=\"math inline\">\\(\\theta \\in \\{0,\\frac{1}{2},1\\}\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<ul>\n<li><p>Si <span class=\"math inline\">\\(\\theta =0\\)</span> : méthode d’Euler implicite (rectangle à droite) ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(\\theta = 1\\)</span> : méthode d’Euler explicite (rectangle à gauche) ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(\\theta = 1/2\\)</span> : méthode de Carnk Nikolson.</p></li>\n</ul>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que le schéma est consistant d’ordre 1 si <span class=\"math inline\">\\(\\theta \\neq \\frac12\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule l’erreur de consistance : <span class=\"math display\">\\[\\begin{align*}\n  h\\, e_n(h) &amp;= \\underbrace{y(t_{n+1}) - y(t_n)}_{\\text{développement de Taylor}} - h \\theta \\underbrace{f(t_n, y(t_n))}_{y&#39;(t_n)} - h(1-\\theta) \\underbrace{f(t_{n+1}, y(t_{n+1}))}_{y&#39;(t_{n+1})} \\\\\n             &amp;= h y&#39;(t_n) + \\frac{h^2}{2}y&#39;&#39;(t_n) + \\frac{h^3}{6} y&#39;&#39;&#39;(c_n) - h \\theta y&#39;(t_n) - h(1-\\theta) \\left( y&#39;(t_n) + hy&#39;&#39;(t_n) + \\frac{h^2}{2}y&#39;&#39;&#39;(c&#39;_n)  \\right) \\\\\n             &amp;= h y&#39;(t_n)(1-\\theta - (1-\\theta)) + h^2 \\left( \\frac{y&#39;&#39;(t_n)}{2} - (1-\\theta)y&#39;&#39;(t_n)  \\right) + h^3 \\underbrace{\\left( ... \\right)}_{\\text{borné}} \\\\\n\\end{align*}\\]</span> Donc <span class=\"math display\">\\[|e_n(h)| \\leq h \\left| \\frac{y&#39;&#39;(t_n)}{2} - (1-\\theta)y&#39;&#39;(t_n)  \\right| + h^2 M\\]</span> ce qui permet de conclure que l’ordre de consistance est <span class=\"math inline\">\\(1\\)</span> si <span class=\"math inline\">\\(\\theta \\neq \\frac{1}{2}\\)</span>, l’ordre de consistance est <span class=\"math inline\">\\(2\\)</span> si <span class=\"math inline\">\\(\\theta = \\frac{1}{2}\\)</span>.</p>\n"
+    }
+  ]
+}

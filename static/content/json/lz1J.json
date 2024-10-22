@@ -1,0 +1,38 @@
+{
+  "uuid": "lz1J",
+  "titre": "Loi normale, question de cours",
+  "theme": "probabilité",
+  "auteur": "Maxime NGUYEN",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire dont la loi est déterminée par la fonction densité définie pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span> par : <span class=\"math display\">\\[f_X(x)=\\frac{1}{\\sigma \\sqrt{2 \\pi}} \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right]\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>A l’aide d’un changement de variable, calculer <span class=\"math inline\">\\(\\mathbb{E}(X)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On exprime l’intégrale en posant le changement de variable affine <span class=\"math inline\">\\(u=\\frac{x-\\mu}{\\sigma} \\iff x = \\sigma u + \\mu\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}(X) &amp;= \\int_{-\\infty}^{+\\infty}xf(x)dx \\\\\n        &amp;= \\int_{-\\infty}^{+\\infty} (\\sigma u + \\mu) \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{u^2}{2}} \\sigma du\\\\\n        &amp;= \\frac{\\sigma}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} u e^{-\\frac{u^2}{2}} du + \\mu \\times \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} e^{-\\frac{u^2}{2}}du\\\\\n        &amp;= 0 + \\mu \\times \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} e^{-\\frac{u^2}{2}}du \\\\\n        &amp;= 0 + \\mu \\times 1 \\\\\n        &amp;= \\mu\n\\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la variance de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On utilise le même changement de variable : <span class=\"math display\">\\[\\mathbb{E}\\left((X-\\mu)^2\\right)=\\frac{1}{\\sigma \\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty}(x-\\mu)^2 \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right] \\mathrm{d} x\\]</span> devient, après changement de variables ci-dessus : <span class=\"math display\">\\[E\\left((X-\\mu)^2\\right)=\\frac{\\sigma^2}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} u^2 \\exp \\left[-\\frac{u^2}{2}\\right] \\mathrm{d} u .\\]</span> En intégrant par parties, on trouve directement que <span class=\"math display\">\\[E\\left((X-\\mu)^2\\right)=\\sigma^2 .\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(Z = \\frac{X-\\mu}{\\sigma}\\)</span>. Déterminer la loi de <span class=\"math inline\">\\(Z\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>En effectuant toujours le même changement de variables <span class=\"math inline\">\\(u=\\frac{x-\\mu}{\\sigma}\\)</span>, on a pour tout réel <span class=\"math inline\">\\(t\\)</span> : <span class=\"math display\">\\[\\PP(Z \\leqslant t)=\\PP(X \\leq \\sigma t + \\mu )\\int_{-\\infty}^{\\sigma t + \\mu} \\frac{1}{\\sigma \\sqrt{2 \\pi}} \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right] \\mathrm{d} x=\\int_{-\\infty}^t \\frac{1}{\\sqrt{2 \\pi}} \\exp \\left[-\\frac{u^2}{2}\\right] \\mathrm{d} u .\\]</span> La densité de la variable aléatoire <span class=\"math inline\">\\(Y\\)</span> est donc la fonction <span class=\"math display\">\\[f_Y(u)=\\frac{1}{\\sqrt{2 \\pi}} \\exp \\left[-\\frac{u^2}{2}\\right],\\]</span> qui correspond à celle de la loi normale centrée réduite <span class=\"math inline\">\\(\\mathscr{N}(0,1)\\)</span>.</p>\n"
+    }
+  ]
+}

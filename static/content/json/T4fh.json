@@ -1,0 +1,34 @@
+{
+  "uuid": "T4fh",
+  "titre": "Convergence d'une suite de variables aléatoires",
+  "theme": "probabilité",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Exprimer <span class=\"math inline\">\\(\\mathbb{E}(Y)\\)</span> et <span class=\"math inline\">\\(\\mathbb{E}(Y^2)\\)</span> en fonction de <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\">\\(p\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On considère <span class=\"math inline\">\\(Y = n\\overline{X} = \\sum_{i=1}^n X_i\\)</span> : par définition, <span class=\"math inline\">\\(Y\\)</span> suit une loi binomiale <span class=\"math inline\">\\(\\mathcal{B}(n,p)\\)</span>, ce qui permet d’affirmer que <span class=\"math inline\">\\(\\mathbb{E}(Y) = np\\)</span> et <span class=\"math inline\">\\(V(Y) = np(1-p)\\)</span>. Or on sait que <span class=\"math inline\">\\(V(Y) = \\mathbb{E}(Y^2)-(\\mathbb{E}(Y))^2\\)</span>, donc <span class=\"math inline\">\\(\\mathbb{E}(Y^2) = np(1-p)+(np)^2 = np(1+p(n-1))\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math inline\">\\(Z = \\overline{X}^2\\)</span>. Peut-on dire que <span class=\"math inline\">\\(Z\\)</span> est un estimateur sais biais de <span class=\"math inline\">\\(p^2\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>En voyant la variable <span class=\"math inline\">\\(Z\\)</span> comme un estimateur de <span class=\"math inline\">\\(p^2\\)</span>, on va calculer son biais <span class=\"math inline\">\\(B(Z)=\\mathbb{E}(Z-p^2) = \\mathbb{E}(Z)-p^2\\)</span>. Or <span class=\"math inline\">\\(\\mathbb{E}(Z) = \\mathbb{E}\\left(\\left(\\frac{1}{n}Y\\right)^2\\right) = \\frac{1}{n^2}\\mathbb{E}(Y^2) = \\frac{p}{n} + p^2 \\frac{n-1}{n} \\neq p^2\\)</span> donc <span class=\"math inline\">\\(B(Z) \\neq 0\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math inline\">\\(T = \\frac{Y(Y-1)}{n(n-1)}\\)</span>. Vérifier que <span class=\"math inline\">\\(T\\)</span> est un estimateur sans biais de <span class=\"math inline\">\\(p^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>En revanche, <span class=\"math inline\">\\(\\mathbb{E}(T) = \\frac{1}{n(n-1)}\\mathbb{E}(Y(Y-1)) = \\frac{1}{n(n-1)}(np(1+(n-1)p)-np) = p^2\\)</span> donc <span class=\"math inline\">\\(T\\)</span> est un estimateur non biaisé de la valeur <span class=\"math inline\">\\(p^2\\)</span>.</p>\n"
+    }
+  ]
+}

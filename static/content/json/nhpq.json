@@ -1,0 +1,38 @@
+{
+  "uuid": "nhpq",
+  "titre": "Estimation par intervalle de confiance",
+  "theme": "statistiques",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Dans une base militaire, un nouveau type de radio est en cours de test pour évaluer sa fiabilité en conditions opérationnelles. Un échantillon de 150 radios a été testé durant un exercice, et il a été constaté que 135 de ces radios ont fonctionné sans défaillance tout au long de l’exercice.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Donner une estimation de la proportion de ces nouvelles radios fonctionnant sans défaillance, en précisant l’estimateur utilisé et son biais.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On utilise l’estimateur de fréquence empirique <span class=\"math inline\">\\(F = \\frac{1}{150}\\sum_{i=1}^{150} X_i\\)</span> avec <span class=\"math inline\">\\(X_i \\sim \\mathcal{B}(p)\\)</span>, sans biais pour estimer la proportion <span class=\"math inline\">\\(p\\)</span> de radios sans défaillance : sa réalisation ici est <span class=\"math inline\">\\(p_{obs} = \\frac{130}{150} = 0{,}90\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Donner cette estimation à l’aide d’un intervalle de confiance à 90%, 95% et 99%.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On utilise la formule du cours : <span class=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> avec <span class=\"math inline\">\\(\\alpha = 0.1\\)</span> : <span class=\"math inline\">\\(I_{conf} = [0,859709479 ; 0,940290521]\\)</span></p>\n<p>avec <span class=\"math inline\">\\(\\alpha = 0.05\\)</span> : <span class=\"math inline\">\\(I_{conf} = [0,851990883 ; 0,948009117]\\)</span></p>\n<p>avec <span class=\"math inline\">\\(\\alpha = 0.01\\)</span> : <span class=\"math inline\">\\(I_{conf} = [0,836905325 ; 0,963094675]\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Quelle taille d’échantillon devrait-on choisir pour que l’amplitude de l’intervalle de confiance ne dépasse pas <span class=\"math inline\">\\(0.01\\)</span> avec une erreur de première espèce de <span class=\"math inline\">\\(5\\%\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On utilise la formule simplifiée du cours : <span class=\"math display\">\\[I_{conf}(F(\\omega))=\\left[ f_{obs}-u_{\\alpha/2} \\frac{1}{2 \\sqrt{n}} ~;~ f_{obs} + u_{\\alpha/2} \\frac{1}{2 \\sqrt{n}} \\right]\\]</span> et on cherche <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(u_{\\alpha/2} \\frac{1}{\\sqrt{n}} \\leq 0.01 \\iff \\sqrt{n} \\geq \\frac{1.96}{0.01}\\)</span> soit <span class=\"math inline\">\\(n \\geq 38415\\)</span>.</p>\n"
+    }
+  ]
+}

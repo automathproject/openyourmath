@@ -1,0 +1,62 @@
+{
+  "uuid": "C5Fq",
+  "titre": "Simulation d'une loi normale",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On tire sur une cible munie d’un repère orthonormé centrée sur son origine <span class=\"math inline\">\\(O\\)</span>. On note <span class=\"math inline\">\\((X,Y)\\)</span> les coordonnées cartésiennes d’un tir. On remarque que lorsque le tireur vise le centre de la cible, la loi suivie par <span class=\"math inline\">\\((X,Y)\\)</span> admet une densité</p>\n<p><span class=\"math display\">\\[f(x,y)=\\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}\\]</span></p>\n<p>On note <span class=\"math inline\">\\(R\\)</span> la distance entre le point d’impact et le point visé.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer les lois marginales du couple <span class=\"math inline\">\\((X,Y)\\)</span>. Les variables <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La densité marginale pour <span class=\"math inline\">\\(X\\)</span> est exprimée par <span class=\"math display\">\\[\\begin{align*}\n            f_X(x)&amp;=\\int_\\mathbb{R}f(x,y)dy \\\\\n            &amp;= \\dfrac{\\sqrt{2\\pi}}{2\\pi} e^{\\frac{-x^2}{2}} \\\\\n            &amp;= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-x^2}{2}}\n        \\end{align*}\\]</span> De même, on calcule <span class=\"math inline\">\\(f_Y(y)= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-y^2}{2}}\\)</span>. On a ainsi <span class=\"math inline\">\\(f(x,y)=f_X(x) \\times f_Y(y)\\)</span> ce qui permet de conclure que <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont deux variables indépendantes suivant chacune une loi normale centrée réduite.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Ecrire la fonction de répartition de <span class=\"math inline\">\\(R\\)</span> sous la forme d’une intégrale double, puis effectuer le changement de variables en coordonnées polaires pour simplifier l’expression.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On note <span class=\"math inline\">\\(D_t=\\{(x,y) \\in \\mathbb{R}^2 \\, , \\, x^2+y^2 \\leq t^2\\}\\)</span>. Si <span class=\"math inline\">\\(t \\geq 0\\)</span>, <span class=\"math inline\">\\(F_R(t) = \\mathbb{P}(R \\leq t) = \\mathbb{P}((X,Y) \\in D_t)\\)</span> donc <span class=\"math display\">\\[F_R(t) = \\iint_{D_t} \\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}dxdy\\]</span> On effectue dans l’intégrale double un changement de variables en coordonnées polaires : on a <span class=\"math inline\">\\(dxdy=rdrd\\theta\\)</span> d’où <span class=\"math display\">\\[F_R(t) = \\int_{0}^{2\\pi} \\int_0^t e^{-r^2/2}rdr \\frac{d\\theta}{2\\pi} = \\int_0^t r e^{-r^2/2}dr\\]</span> et <span class=\"math inline\">\\(F_R(t)=0\\)</span> si <span class=\"math inline\">\\(t&lt;0\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire une densité de <span class=\"math inline\">\\(R\\)</span>. La loi obtenue s’appelle la loi de Rayleigh</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On en déduit que la fonction <span class=\"math inline\">\\(f_R(r) = r e^{-r^2/2}1_{\\mathbb{R}_+}\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que <span class=\"math inline\">\\(R^2\\)</span> suit une loi exponentielle <span class=\"math inline\">\\(\\mathcal{E}(1/2)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(h\\)</span> une fonction continue bornée quelconque : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(h(R^2)) &amp;= \\int_0^{+\\infty}  h(r) r e^{-r^2/2}dr \\\\\n            &amp;= \\int_0^{+\\infty} h(u) \\frac{1}{2} e^{-\\frac{u}{2}} du \n        \\end{align*}\\]</span> Par identification, on en déduit une densité de <span class=\"math inline\">\\(R^2\\)</span> définie par <span class=\"math inline\">\\(f_{R^2}(u) = \\frac{1}{2} e^{-\\frac{u}{2}}1_{\\mathbb{R}_+}(u)\\)</span>, on reconnait une loi exponentielle <span class=\"math inline\">\\(\\mathcal{E}(\\frac{1}{2})\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que si <span class=\"math inline\">\\(\\Theta\\)</span> est la variable aléatoire telle que <span class=\"math inline\">\\(X=R\\cos(\\Theta)\\)</span>, <span class=\"math inline\">\\(Y=R\\sin(\\Theta)\\)</span>, alors <span class=\"math inline\">\\(\\Theta\\)</span> suit une loi uniforme sur l’intervalle <span class=\"math inline\">\\([0;2\\pi]\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(h\\)</span> une fonction continue bornée quelconque : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(h(R,\\Theta)) &amp;= \\iint_{} \\dfrac{1}{2\\pi} h(r(x,y),\\theta(x,y)) e^{\\frac{-x^2-y^2}{2}}dxdy \\\\\n            &amp;= \\int_{0}^{2\\pi} \\int_0^{+\\infty} h(r,\\theta) \\frac{1}{2\\pi} e^{-r^2} r drd\\theta \n        \\end{align*}\\]</span> Par identification, on en déduit qu’une densité du couple <span class=\"math inline\">\\((R,\\Theta)\\)</span> est définie pour tout <span class=\"math inline\">\\((r,\\theta) \\in \\R^2\\)</span> par : <span class=\"math display\">\\[g(r,\\theta) = \\frac{1}{2\\pi} re^{-r^2} \\textbf{1}_{\\R_+ \\times [0;2\\pi[}(r,\\theta)\\]</span></p>\n<p>Pour obtenir la loi de <span class=\"math inline\">\\(\\Theta\\)</span>, il suffit de calculer pour tout <span class=\"math inline\">\\(\\theta \\in \\R\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        f_\\Theta(\\theta) &amp;= \\int_\\R g(r,\\theta)dr \\\\\n                         &amp;=  \\frac{1}{2\\pi}\\textbf{1}_{\\times [0;2\\pi[}(r,\\theta)\n        \\end{align*}\\]</span> On en déduit que <span class=\"math inline\">\\((R,\\Theta)\\)</span> est un couple de variables aléatoires indépendantes et que <span class=\"math inline\">\\(\\Theta\\)</span> suit une loi uniforme sur <span class=\"math inline\">\\([0;2\\pi[\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire une simulation de la loi du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>def Normale2(): theta = 2*pi*rand() r = sqrt(-2*log(rand())) return r*cos(theta),r*sin(theta)</p>\n"
+    }
+  ]
+}

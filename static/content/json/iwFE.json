@@ -1,0 +1,42 @@
+{
+  "uuid": "iwFE",
+  "titre": "Construction d'un schéma à deux pas par interpolation",
+  "theme": "analyse numérique",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une fonction <span class=\"math inline\">\\(\\mathcal{C}^1([-1;1])\\)</span>. Écrire le polynôme <span class=\"math inline\">\\(P \\in \\mathbb{R}_2[X]\\)</span> qui interpole <span class=\"math inline\">\\(f\\)</span> aux points <span class=\"math inline\">\\(-1\\)</span>, <span class=\"math inline\">\\(0\\)</span> et <span class=\"math inline\">\\(1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche les coefficients <span class=\"math inline\">\\(a_0\\)</span>, <span class=\"math inline\">\\(a_1\\)</span> et <span class=\"math inline\">\\(a_2\\)</span> du polynôme <span class=\"math inline\">\\(P(X)=a_0+a_1X+a_2X^2\\)</span> tels que <span class=\"math inline\">\\(P(-1)=f(-1)\\)</span>, <span class=\"math inline\">\\(P(0)=f(0)\\)</span>, <span class=\"math inline\">\\(P(1)=f(1)\\)</span>. Après identification, on trouve <span class=\"math display\">\\[a_0 = f(0) \\qquad a_1 = \\frac{f(1)-f(-1)}{2} \\qquad a_2 = \\frac{f(1)-2f(0)+f(-1)}{2}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire une approximation de l’intégrale <span class=\"math inline\">\\(\\int_0^1f(s)ds\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On en déduit <span class=\"math display\">\\[\\int_0^1 f(s)ds \\approx \\int_0^1P(s)ds = a_0 + \\frac{a_1}{2}+\\frac{a_2}{3} = \\frac{-f(-1)+8f(0)+5f(1)}{12}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire par changement de variable une approximation de l’intégrale <span class=\"math inline\">\\(\\int_a^bf(s)ds\\)</span> pour <span class=\"math inline\">\\(f\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^1([a-(b-a);a+(b-a)])\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(\\int_a^bf(s)ds = (b-a)\\int_0^1f(a+(b-a)\\tau) \\approx (b-a)\\frac{-f(2a-b)+8f(a)+5f(b)}{12}\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire un schéma à deux pas implicite pour approcher la solution d’un problème de Cauchy.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour résoudre le problème de Cauchy <span class=\"math display\">\\[\\begin{cases}y&#39;(t)=f(t,y(t)) \\\\ y(0)=a\\end{cases}\\]</span> l’approximation d’intégrale conduit à poser <span class=\"math display\">\\[y_{n+1}=y_n+h \\frac{-f(t_{n-1},y_{n-1})+8f(t_n,y_n)+5f(t_{n+1},y_{n+1})}{12}\\]</span> avec <span class=\"math inline\">\\(y_0=a\\)</span> et <span class=\"math inline\">\\(y_1\\)</span> à déterminer en prenant par exemple <span class=\"math inline\">\\(y_1=y_0+hf(t_0,y_0)\\)</span>.</p>\n"
+    }
+  ]
+}

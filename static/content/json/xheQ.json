@@ -1,0 +1,50 @@
+{
+  "uuid": "xheQ",
+  "titre": "Lois pour les statistiques",
+  "theme": "statistiques",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Déterminer, en justifiant par un calcul, la loi de la variable aléatoire <span class=\"math inline\">\\(T\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Par linéarité, on calcule <span class=\"math inline\">\\(\\mathbb{E}(T) = \\frac{2+3+2}{7} \\times 10  = 10\\)</span>. Par indépendance et propriété de la variance, <span class=\"math inline\">\\(\\sigma^2(\\overline{T}) = \\frac{4+9+4}{49} \\times  4= \\frac{68}{49}\\)</span>. Par somme de lois normales, <span class=\"math inline\">\\(\\overline{X}\\)</span> suit une loi normale <span class=\"math inline\">\\(\\mathcal{N}(10,\\sigma^2 = \\frac{68}{49})\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Vérifier que <span class=\"math inline\">\\(\\overline{X}\\)</span> et <span class=\"math inline\">\\(T\\)</span> sont deux estimateurs sans biais de <span class=\"math inline\">\\(\\mu\\)</span>. Lequel de ces deux estimateurs de <span class=\"math inline\">\\(\\mu\\)</span> est le plus efficace ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour étudier le biais d’un estimateur, on doit calculer leur espérance. Par linéarité, <span class=\"math inline\">\\(\\mathbb{E}(\\overline{X}) = \\mu\\)</span> donc le biais de <span class=\"math inline\">\\(\\overline{X}\\)</span> est <span class=\"math inline\">\\(B(\\overline{X}) = \\mathbb{E}(\\overline{X}-\\mu) = 0\\)</span>. De même, <span class=\"math inline\">\\(B(T)=0\\)</span>.</p>\n<p>Pour comparer l’efficacité de ces deux estimateurs, on peut comparer leurs variances respectives : par indépendance et propriété de la variance, <span class=\"math inline\">\\(\\sigma^2(\\overline{X}) = \\frac{3 \\times 4}{9} = \\frac{4}{3} &lt; \\frac{68}{49} = \\sigma^2(T)\\)</span>. Par conséquent, <span class=\"math inline\">\\(\\overline{X}\\)</span> est plus efficace que <span class=\"math inline\">\\(T\\)</span> pour estimer <span class=\"math inline\">\\(\\mu\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer, en justifiant, la loi de la variable aléatoire <span class=\"math inline\">\\(U\\)</span> et la loi de la variable <span class=\"math inline\">\\(V\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(U = \\frac{1}{4}\\sum_{i=1}^{3}  {(X_i-10)^2} = \\sum_{i=1}^{3}  {  \\left( \\frac{ X_i-10}{2}\\right)^2}\\)</span>. Or les variables aléatoires <span class=\"math inline\">\\(X_i\\)</span> sont indépendantes et <span class=\"math inline\">\\(\\frac{ X_i-10}{2}\\)</span> suit une loi normale centrée réduite donc par définition <span class=\"math inline\">\\(U\\)</span> suit une loi <span class=\"math inline\">\\(\\chi^2(3)\\)</span>.</p>\n<p>Par théorème du cours (Théorème de Fisher), <span class=\"math inline\">\\(V\\)</span> suit une loi <span class=\"math inline\">\\(\\chi^2(2)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>A l’aide des tables de valeurs, déterminer un réel <span class=\"math inline\">\\(t\\)</span> tel que <span class=\"math inline\">\\(\\PP(V&gt;t) = 0.95\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Par lecture de la table d’une loi <span class=\"math inline\">\\(\\chi^2(2)\\)</span>, on a <span class=\"math inline\">\\(\\PP(V \\leq 0.1026) = 0.05\\)</span> donc on peut prendre <span class=\"math inline\">\\(t=0{,}1026\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math display\">\\[Y = \\frac{\\overline{X}-10}{\\sqrt{\\frac{2V}{3}}}\\]</span> Parmi les formules suivantes, laquelle permet de déterminer le réel <span class=\"math inline\">\\(t\\)</span> tel que <span class=\"math inline\">\\(\\prob(Y &gt; t) = 0.025\\)</span> ?</p>\n<ul>\n<li><p><code>=LOI.NORMALE.STANDARD.INVERSE(0.95)</code></p></li>\n<li><p><code>=LOI.KHIDEUX.INVERSE(0,975;2)</code></p></li>\n<li><p><code>=1-LOI.KHIDEUX.INVERSE(0,025;3)</code></p></li>\n<li><p><code>=LOI.STUDENT.INVERSE.N(0,975;2)</code></p></li>\n<li><p><code>=1-LOI.STUDENT.INVERSE.N(0,025;3)</code></p></li>\n</ul>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>on a <span class=\"math display\">\\[Y = \\frac{\\overline{X}-10}{\\sqrt{\\frac{2V}{3}}} = \\frac{\\overline{X}-10}{\\sqrt{\\frac{4}{3} \\frac{V}{2}}} = \n            \\frac{ \\frac{ \\overline{X}-10}{\\sqrt{\\frac43}}}{\\sqrt{\\frac{V}{2}}}\\]</span> et on reconnaît une loi de Student <span class=\"math inline\">\\(St(2)\\)</span>. On cherche <span class=\"math inline\">\\(t\\)</span> tel que <span class=\"math inline\">\\(\\prob(Y &gt; t) = 0.025 \\iff \\prob(Y \\leq t) = 0.975\\)</span> d’où la formule : <span>=LOI.STUDENT.INVERSE.N(0,975;2)</span></p>\n"
+    }
+  ]
+}

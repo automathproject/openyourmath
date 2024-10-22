@@ -1,0 +1,46 @@
+{
+  "uuid": "6n4q",
+  "titre": "Dérivées partielles et règle des chaînes",
+  "theme": "calcul différentiel",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère une boîte dont la longueur <span class=\"math inline\">\\(\\ell\\)</span>, la largeur <span class=\"math inline\">\\(w\\)</span> et la hauteur <span class=\"math inline\">\\(h\\)</span> varient au cours du temps <span class=\"math inline\">\\(t\\)</span>.</p>\n<p>A l’instant <span class=\"math inline\">\\(t_0\\)</span>, les dimensions de la boîte sont <span class=\"math inline\">\\(\\ell = 1\\)</span> m, <span class=\"math inline\">\\(w=h=2\\)</span> m. A ce même instant, on sait que <span class=\"math inline\">\\(\\ell\\)</span> et <span class=\"math inline\">\\(w\\)</span> augmentent de <span class=\"math inline\">\\(2\\)</span>m/s et <span class=\"math inline\">\\(h\\)</span> diminue de <span class=\"math inline\">\\(3\\)</span>m/s.</p>\n<p>On note <span class=\"math inline\">\\(V\\)</span> le volume, <span class=\"math inline\">\\(S\\)</span> la surface et <span class=\"math inline\">\\(D\\)</span> la longueur de la diagonale de cette boîte.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Exprimer <span class=\"math inline\">\\(V\\)</span>, <span class=\"math inline\">\\(S\\)</span> et <span class=\"math inline\">\\(D\\)</span> comme fonction des trois variables <span class=\"math inline\">\\(\\ell\\)</span>, <span class=\"math inline\">\\(w\\)</span>, <span class=\"math inline\">\\(h\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On écrit <span class=\"math inline\">\\(V(\\ell,w,h) = \\ell\\times w \\times h\\)</span>, <span class=\"math inline\">\\(S(\\ell,w,h)=2(wh+w\\ell+h\\ell)\\)</span>, <span class=\"math inline\">\\(D=\\sqrt{\\ell^2+w^2+h^2}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Exprimer <span class=\"math inline\">\\(\\dfrac{\\partial D}{\\partial h}(\\ell,w,h)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(\\dfrac{\\partial D}{\\partial h}(\\ell,w,h) = \\frac{2h}{2\\sqrt{\\ell^2+w^2+h^2}} = \\frac{h}{\\sqrt{\\ell^2+w^2+h^2}}\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Que valent <span class=\"math inline\">\\(\\ell&#39;(t_0)\\)</span>, <span class=\"math inline\">\\(w&#39;(t_0)\\)</span>, <span class=\"math inline\">\\(h&#39;(t_0)\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après l’énoncé, <span class=\"math inline\">\\(\\ell&#39;(t_0) = w&#39;(t_0)=2\\)</span>, <span class=\"math inline\">\\(h&#39;(t_0)=-3\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math inline\">\\(\\tilde{V}(t) = V(\\ell(t),w(t),h(t))\\)</span>. Exprimer <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial \\ell}\\)</span>, <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial w}\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial h}\\)</span> puis en calculant une dérivée partielle, déterminer les taux de variations à l’instant <span class=\"math inline\">\\(t_0\\)</span> du volume, de la surface et de la diagonale de cette boîte.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le taux de variation du volume est modélisé par la dérivée de <span class=\"math inline\">\\(\\tilde{V}\\)</span> par rapport au temps. On peut voir <span class=\"math inline\">\\(V\\)</span> comme la composée de la fonction <span class=\"math inline\">\\(t\\mapsto (\\ell(t),w(t),h(t)\\)</span> avec la fonction de trois variables <span class=\"math inline\">\\((\\ell,w,h) \\mapsto \\ell\\times w \\times h\\)</span>.</p>\n<p>D’après la règle des chaînes, <span class=\"math display\">\\[\\frac{\\partial \\tilde{V}}{\\partial t}(t_0) = \\frac{\\partial V}{\\partial \\ell}(\\ell(t_0),w(t_0),h(t_0)) \\times \\ell&#39;(t_0) + \\frac{\\partial V}{\\partial w}(w(t_0),w(t_0),h(t_0)) \\times w&#39;(t_0) + \\frac{\\partial V}{\\partial h}(h(t_0),w(t_0),h(t_0)) \\times h&#39;(t_0)\\]</span> Or <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial \\ell}(\\ell,w,h) = wh\\)</span>, <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial w}(\\ell,w,h) = \\ell h\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial V}{\\partial h}(\\ell,w,h) = \\ell w\\)</span>.</p>\n<p>Donc en substituant, on obtient : <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial V}{\\partial t}(t_0) &amp;= \\ell&#39;(t_0)w(t_0)h(t_0) + \\ell(t_0)w&#39;(t_0)h(t_0)+\\ell(t_0)w(t_0)h&#39;(t_0) \\\\\n        &amp;= 2 \\times 2 \\times 2 + 1 \\times 2 \\times 2 + 1 \\times 2 \\times (-3)\\\\\n        &amp;= 6m^3/s\n        \\end{align*}\\]</span> En suivant le même raisonnement avec la règle des chaînes, on obtient : <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial S}{\\partial t}(t_0) &amp;= 2\\ell&#39;(t_0)(w(t_0)+h(t_0)) +  2w&#39;(t_0)(\\ell(t_0)+h(t_0)) + 2h&#39;(t_0)(\\ell(t_0)+w(t_0)) \\\\\n        &amp;= 10m^2/s\n        \\end{align*}\\]</span> et enfin <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial D}{\\partial t}(t_0) &amp;= \\frac{\\ell(t_0)\\ell&#39;(t_0)+w(t_0)w&#39;(t_0)+h(t_0)h&#39;(t_0)}{\\sqrt{\\ell^2(t_0)+w^2(t_0)+h^2(t_0)}} \\\\\n        &amp;= 0m/s\n        \\end{align*}\\]</span></p>\n"
+    }
+  ]
+}

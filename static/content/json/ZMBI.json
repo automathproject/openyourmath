@@ -1,0 +1,46 @@
+{
+  "uuid": "ZMBI",
+  "titre": "Estimation par inégalité",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On sait qu’il y a à peu près une chance sur deux d’avoir une fille à chaque naissance, mais on veut avoir une estimation plus précise de cette probabilité <span class=\"math inline\">\\(p\\)</span>.<br />\nOn regarde ce qui se passe sur <span class=\"math inline\">\\(n\\)</span> naissances, et on appelle <span class=\"math inline\">\\(S_n\\)</span> le nombre de filles parmi les <span class=\"math inline\">\\(n\\)</span> naissances.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Que vaut la variable <span class=\"math inline\">\\(Y_n\\)</span> égale à la proportion de filles dans les naissances ? Donner son espérance et sa variance.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(Y_n=\\frac{S_n}{n}\\)</span>, où <span class=\"math inline\">\\(S_n\\)</span> est une variable aléatoire de loi <span class=\"math inline\">\\(\\mathcal{B}(n,p)\\)</span>. On a donc <span class=\"math display\">\\[\\E(Y_n)=\\frac{1}{n}\\E(S_n)=\\frac{1}{n}\\times np=p \\text{ et } \\sigma^2(X)=\\frac{1}{n^2}\\sigma^2(S_n)=\\frac{1}{n^2}\\times np(1-p)=\\frac{p(1-p)}{n}.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(a&gt;0\\)</span>. Montrer que <span class=\"math inline\">\\(\\prob(|Y_n-p|\\geq a)\\leq \\frac{1}{4na^2}\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(a&gt;0\\)</span>. On applique l’inégalité de Bienaymé-Tchebychev à <span class=\"math inline\">\\(Y_n\\)</span>: <span class=\"math display\">\\[\\prob(|Y_n-p|\\geq a)\\leq \\frac{\\sigma^2(Y_n)}{a^2}=\\frac{p(1-p)}{a^2n} \\leq \\frac{1}{4na^2},\\]</span> en utilisant l’indication donnée dans l’énoncé.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer un nombre <span class=\"math inline\">\\(n\\)</span> d’observations à faire pour que l’on puisse déduire de <span class=\"math inline\">\\(Y_n\\)</span>, avec moins de <span class=\"math inline\">\\(1\\)</span>% de chances de se tromper, que <span class=\"math inline\">\\(Y_n-0.01\\leq p\\leq Y_n+0.01\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On souhaite avoir <span class=\"math inline\">\\(\\prob(Y_n-0.01\\leq p \\leq Y_n+0.01)\\geq 0.99\\)</span>. Or <span class=\"math display\">\\[\\begin{align*}\n        \\prob(Y_n-0.01\\leq p \\leq Y_n+0.01)\n        &amp;=\\prob(-0.01\\leq p-Y_n \\leq 0.01)\n        =\\prob(|Y_n-p|\\leq 0.01)\\\\\n        &amp;=1-\\prob(|Y_n-p|\\geq 0.01)\n        \\end{align*}\\]</span> On souhaite donc avoir <span class=\"math inline\">\\(\\prob(|Y_n-p|\\geq 0.01)\\leq 0.01\\)</span>. Or par la question 2., avec <span class=\"math inline\">\\(a=0.01\\)</span>, on a l’inégalité: <span class=\"math display\">\\[\\prob(|Y_n-p|\\geq a)\\leq \\frac{\\sigma^2(Y_n)}{a^2}\\leq \\frac{1}{4n\\times(0.01)^2}.\\]</span> On prend donc <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(\\frac{1}{4n\\times (0.01)^2}\\leq 0.01\\)</span>, c’est-à-dire <span class=\"math inline\">\\(n\\geq 250\\ 000\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Parmi <span class=\"math inline\">\\(\\nombre{250000}\\)</span> naissances, combien faut-il, au minimum, observer de naissances de filles pour conclure avec <span class=\"math inline\">\\(99\\)</span>% de chances de ne pas se tromper, qu’il naît plus de filles que de garçons ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Par la question 3., on sait que <span class=\"math inline\">\\(\\prob(p\\in[Y_n-0.01;Y_n+0.01])\\geq 0.99\\)</span>.<br />\nSoit <span class=\"math inline\">\\(X_0\\)</span> le nombre de filles observées. Avec moins de <span class=\"math inline\">\\(1\\)</span>% de chances de se tromper, on veut que <span class=\"math inline\">\\(p&gt;\\frac{1}{2}\\)</span>, c’est-à-dire <span class=\"math inline\">\\(\\frac{X_0}{n}-0.01&gt;\\frac{1}{2}\\)</span>, donc <span class=\"math inline\">\\(X_0&gt;125\\ 250\\)</span>.<br />\nIl faut donc observer au minimum <span class=\"math inline\">\\(500\\)</span> filles de plus que de garçons pour être sûr à <span class=\"math inline\">\\(99\\)</span>% qu’il y a plus de filles que de garçons.</p>\n"
+    }
+  ]
+}

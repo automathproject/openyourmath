@@ -1,0 +1,38 @@
+{
+  "uuid": "",
+  "titre": "Optimisation quadratique, moindres carrés",
+  "theme": "Optimisation",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span> définie sur <span class=\"math inline\">\\([-1, 1]\\)</span> par <span class=\"math inline\">\\(f(x) = x^3\\)</span>. L’espace <span class=\"math inline\">\\(\\mathcal{C}^0([-1, 1])\\)</span> est muni du produit scalaire <span class=\"math inline\">\\(\\langle h, g \\rangle = \\int_{-1}^{1} h(x)g(x) dx\\)</span> et on note <span class=\"math inline\">\\(\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx\\)</span> la norme associée.</p>\n<p>On cherche à déterminer le polynôme <span class=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui approche le mieux la fonction <span class=\"math inline\">\\(f\\)</span> sur l’intervalle <span class=\"math inline\">\\([-1, 1]\\)</span>, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur <span class=\"math inline\">\\(\\|f - P\\|^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Mettre ce problème sous la forme d’un problème de moindres carrés de dimension finie. Quelle est cette dimension ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le problème est de trouver le polynôme <span class=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui approche le mieux la fonction <span class=\"math inline\">\\(f(x) = x^3\\)</span> sur l’intervalle <span class=\"math inline\">\\([-1, 1]\\)</span>, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur <span class=\"math inline\">\\(\\|f - P\\|^2\\)</span>, où la norme est définie par : <span class=\"math display\">\\[\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx.\\]</span> Le polynôme <span class=\"math inline\">\\(P(x) = ax + b\\)</span> est de degré inférieur ou égal à 1. On doit donc minimiser l’intégrale : <span class=\"math display\">\\[J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b) \\right)^2 dx.\\]</span> Ce problème peut être formulé comme un problème de moindres carrés dans un espace vectoriel de dimension 2 (les paramètres à déterminer étant <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span>).</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Étudier l’existence/l’unicité des solutions de ce problème.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le problème est quadratique en les paramètres <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span>. Par conséquent, il peut être formulé comme la minimisation d’une fonction quadratique définie positive, dont la matrice hessienne associée est définie positive. Cela garantit que le problème possède une solution unique.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Résoudre ce problème.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule l’intégrale de <span class=\"math inline\">\\(J(a, b)\\)</span> : <span class=\"math display\">\\[J(a, b) = \\int_{-1}^{1} \\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\\]</span> En calculant chaque terme séparément, on obtient : <span class=\"math display\">\\[J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0 \\cdot b + 0 \\cdot ab + \\text{termes constants}.\\]</span> Résoudre ce problème d’optimisation quadratique donne les valeurs <span class=\"math inline\">\\(a = \\frac{3}{5}\\)</span> et <span class=\"math inline\">\\(b = 0\\)</span>. Ainsi, le polynôme <span class=\"math inline\">\\(P(x)\\)</span> qui approche le mieux <span class=\"math inline\">\\(f(x) = x^3\\)</span> au sens des moindres carrés est <span class=\"math inline\">\\(P(x) = \\frac{3}{5}x\\)</span>.</p>\n"
+    }
+  ]
+}

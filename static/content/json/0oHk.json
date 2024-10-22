@@ -1,0 +1,78 @@
+{
+  "uuid": "0oHk",
+  "titre": "Calcul de probabilités",
+  "theme": "statistiques, tableur",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>A l’aide des formules du tableur, calculer :</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP(X \\leq 1.2)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.NORMALE.STANDARD(1,2)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP(X \\leq 102)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{N}(120,4)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.NORMALE(102;120;4;1)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>la valeur <span class=\"math inline\">\\(t\\)</span> telle que <span class=\"math inline\">\\(\\PP(X \\leq t) = 90\\%\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{N}(120,4)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.NORMALE.INVERSE.N(0,9;120;4)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP(X \\geq 40)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{N}(50,3)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=1-LOI.NORMALE(40;50;3;1)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP( 90 \\leq X \\leq 120)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{N}(100,15)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.NORMALE(120;100;15;1)-LOI.NORMALE(90;100;15;1)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP(X \\geq 5)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{E}(1/2)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=1-LOI.EXPONENTIELLE.N(5;0,5;1)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\PP(X = 3)\\)</span> et <span class=\"math inline\">\\(\\PP(X \\geq 2)\\)</span> pour <span class=\"math inline\">\\(X\\)</span> suivant une <span class=\"math inline\">\\(\\mathcal{P}(1.5)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.POISSON.N(3;1,5;0)</code> et <code>=1-LOI.POISSON.N(2;1,5;1)</code></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>la valeur <span class=\"math inline\">\\(t\\)</span> telle que <span class=\"math inline\">\\(\\PP(100-t \\leq X \\leq 100+t) = 95\\%\\)</span> où <span class=\"math inline\">\\(X\\)</span> suit une <span class=\"math inline\">\\(\\mathcal{N}(100,15)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><code>=LOI.NORMALE.INVERSE.N(0,975;0;15)</code></p>\n"
+    }
+  ]
+}

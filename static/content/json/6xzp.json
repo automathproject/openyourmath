@@ -1,0 +1,46 @@
+{
+  "uuid": "",
+  "titre": "Optimisation sous contrainte (1)",
+  "theme": "Optimisation",
+  "auteur": "Jean-François Culus",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Nous allons ici étudier, pas à pas, la résolution d’une question d’optimisation sous-contraintes. Nous souhaitons déterminer le maximum de la fonction <span class=\"math inline\">\\(f: (x,y)\\mapsto x^2+y^2\\)</span> sous la contrainte <span class=\"math inline\">\\(x^4+y^4=1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Justifier que la courbe <span class=\"math inline\">\\(\\Gamma\\)</span>: <span class=\"math inline\">\\(x^4+y^4=1\\)</span> est un compact de <span class=\"math inline\">\\(\\R^2\\)</span>.<br />\nQue pouvez-vous en déduire pour la fonction <span class=\"math inline\">\\(f\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Nous allons prouver que <span class=\"math inline\">\\(\\Gamma\\)</span> est un fermé et borné de <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>.</p>\n<p>La courbe <span class=\"math inline\">\\(\\Gamma\\)</span> est donc l’image réciproque de <span class=\"math inline\">\\(\\{1\\}\\)</span> par l’application continue <span class=\"math inline\">\\((x,y)\\mapsto x^4+y^4\\)</span>: aussi, est-ce un fermé (comme image réciproque d’un fermé par une application continue).<br />\nDe plus, si <span class=\"math inline\">\\((x,y)\\in \\Gamma\\)</span>, alors nécessairement <span class=\"math inline\">\\(|x|\\leq 1\\)</span> et <span class=\"math inline\">\\(|y|\\leq 1\\)</span>: aussi, la courbe <span class=\"math inline\">\\(\\Gamma\\)</span> est bornée dans <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>. Aussi est-ce un compact de <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>.</p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> étant continue sur le compact <span class=\"math inline\">\\(\\Gamma\\)</span>, elle y est bornée et atteint ses bornes.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Posons la fonction <span class=\"math inline\">\\(g: (x,y)\\mapsto x^4+y^4-1\\)</span>, représentant la contrainte. Ainsi, <span class=\"math inline\">\\(\\Gamma\\)</span> est l’ensemble des <span class=\"math inline\">\\((x,y)\\in \\mathbb{R}^2\\)</span> tels que <span class=\"math inline\">\\(g(x,y)=0\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\((x_0;y_0)\\in \\Gamma\\)</span> un point tel que <span class=\"math inline\">\\(f \\vert_{\\Gamma}\\)</span> admet un maximum en <span class=\"math inline\">\\((x_0;y_0)\\)</span>. Que pouvez-vous dire (intuitivement) de la dérivée directionnelle de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\((x_0;y_0)\\)</span> dans n’importe quelle direction tangentielle à <span class=\"math inline\">\\(\\Gamma\\)</span> en <span class=\"math inline\">\\((x_0;y_0)\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Puisque <span class=\"math inline\">\\(f \\vert_{\\Gamma}\\)</span> admet un maximum en <span class=\"math inline\">\\((x_0;y_0)\\)</span>, la dérivée directionnelle de <span class=\"math inline\">\\(f \\vert_{\\Gamma}\\)</span> dans n’importe quelle direction tangentielle à <span class=\"math inline\">\\(\\Gamma\\)</span> doit être nulle.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Pour <span class=\"math inline\">\\(u \\in \\mathbb{R}^2\\)</span>, on désigne par <span class=\"math inline\">\\(D_u f(x_0;y_0)\\)</span> la dérivée directionnelle de <span class=\"math inline\">\\(f\\)</span> dans la direction du vecteur <span class=\"math inline\">\\(u\\)</span> et par <span class=\"math inline\">\\(\\nabla f\\)</span> son gradient. On rappelle que <span class=\"math display\">\\[D_u f(x_0;y_0) = \\nabla f(x_0;y_0)\\cdot u\\]</span></p>\n<p>Que pouvez-vous alors dire du gradient de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\((x_0;y_0)\\)</span> par rapport au vecteur <span class=\"math inline\">\\(u\\)</span> si celui-ci est tangent à <span class=\"math inline\">\\(\\Gamma\\)</span> en <span class=\"math inline\">\\((x_0;y_0)\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après la question précédente, la dérivée directionnelle <span class=\"math inline\">\\(D_uf(x_0,y_0)\\)</span> doit être nulle, donc <span class=\"math inline\">\\(\\nabla f(x_0;y_0)\\)</span> doit être orthogonal à <span class=\"math inline\">\\(u\\)</span> (un vecteur tangent à <span class=\"math inline\">\\(\\Gamma\\)</span> en <span class=\"math inline\">\\((x_0;y_0)\\)</span>).</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire alors la colinéarité de <span class=\"math inline\">\\(\\nabla f (x_0;y_0)\\)</span> et <span class=\"math inline\">\\(\\nabla g (x_0:y_0)\\)</span>, et exploiter cette condition pour obtenir les couples solutions possibles du système.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si le gradient de <span class=\"math inline\">\\(f\\)</span> est orthogonal à <span class=\"math inline\">\\(u\\)</span> et que <span class=\"math inline\">\\(u\\)</span> est un vecteur tangent à <span class=\"math inline\">\\(\\Gamma\\)</span> (la courbe des contraintes), alors <span class=\"math inline\">\\(\\nabla f\\)</span> et <span class=\"math inline\">\\(\\nabla g\\)</span> sont colinéaires car tous deux orthogonaux au même vecteur <span class=\"math inline\">\\(u\\)</span>.<br />\n<span><em>De manière informelle, les vecteurs tangents à la courbe de contrainte sont dans un plan: ils n’ont pas d’élévation. Les vecteurs tangents à la courbe <span class=\"math inline\">\\(f \\vert_{\\Gamma}\\)</span>, eux, ont possiblement une élévation (coordonnée en <span class=\"math inline\">\\(z\\)</span>) mais sinon, leur deux premières coordonnées doivent être liées au vecteur tangent à la courbe des contraintes: c’est ce que nous exprimons ici.</em> </span></p>\n<p>Calculons alors les gradients des deux fonctions:<br />\n<span class=\"math inline\">\\(\\nabla f( x_0;y_0) = \\left( \\frac{\\partial f}{\\partial x}(x_0;y_0); \n\\frac{\\partial f}{\\partial y}(x_0;y_0) \\right) = (2x_0;2y_0)\\)</span>.<br />\n<span class=\"math inline\">\\(\\nabla g( x_0;y_0) = \\left( \\frac{\\partial g}{\\partial x}(x_0;y_0); \n\\frac{\\partial f}{\\partial y}(x_0;y_0) \\right) = (4x_0^3;4y_0^3)\\)</span>.</p>\n<p>Ces deux vecteurs étant colinéaires, nous obtenons :</p>\n<p><span class=\"math display\">\\[\\det \\begin{vmatrix}\n2x_0 &amp; 4x_0^3 \\\\ 2y_0 &amp; 4y_0^3\\end{vmatrix} = 0\\]</span></p>\n<p>En ajoutant la contrainte (<span class=\"math inline\">\\(\\Gamma\\)</span>), nous obtenons :</p>\n<p><span class=\"math display\">\\[\\left\\lbrace \n\\begin{array}{ll} \nx_0y_0 (x_0^2 -y_0^2) &amp;= 0 \\\\\nx_0^4+y_0^4 &amp; = 1 \\end{array}\\right.\\]</span></p>\n<p>De la première équation, nous déduisons que soit <span class=\"math inline\">\\(x_0 y_0 =0\\)</span>, soit <span class=\"math inline\">\\(x_0^2-y_0^2=0\\)</span>.<br />\nDans le premier cas, nous obtenons les couples <span class=\"math inline\">\\((0;\\pm 1)\\)</span> et <span class=\"math inline\">\\((\\pm 1;0)\\)</span>.<br />\nDans le second cas, nous avons <span class=\"math inline\">\\(x=\\pm y\\)</span> soit les solutions <span class=\"math inline\">\\(\\left( \\pm \\frac{1}{\\sqrt[4]{2}};\\pm  \\frac{1}{\\sqrt[4]{2}}\\right)\\)</span>.</p>\n<p>Ainsi, nous avons <span class=\"math inline\">\\(8\\)</span> points critiques possibles à étudier. Evaluons <span class=\"math inline\">\\(f\\)</span> en chacun d’eux: nous obtenons pour valeur maximale <span class=\"math inline\">\\(\\sqrt{2}\\)</span> atteints aux points <span class=\"math inline\">\\(\\left( \\pm \\frac{1}{\\sqrt[4]{2}};\\pm  \\frac{1}{\\sqrt[4]{2}}\\right)\\)</span>.</p>\n"
+    }
+  ]
+}

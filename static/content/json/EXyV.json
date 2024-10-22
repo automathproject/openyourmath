@@ -1,0 +1,30 @@
+{
+  "uuid": "EXyV",
+  "titre": "Fonctions périodiques et coefficients de Fourier",
+  "theme": "séries de fourier",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère les fonctions <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(g\\)</span> comme dessinées ci-dessous, que l’on étend à des fonctions de <span class=\"math inline\">\\(\\R\\)</span> dans <span class=\"math inline\">\\(\\R\\)</span> qui sont impaires et <span class=\"math inline\">\\(2\\pi\\)</span>-périodiques.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit un entier <span class=\"math inline\">\\(k_0 \\geq 2\\)</span>. Donner l’expression de <span class=\"math inline\">\\(f(x)\\)</span> et de <span class=\"math inline\">\\(g(x)\\)</span> en fonction de <span class=\"math inline\">\\(x\\in[0;\\pi]\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On définit : <span class=\"math display\">\\[f \\colon x \\mapsto \\begin{cases}\n            1&amp;\\text{si $x \\leq \\frac{\\pi}{k_0}$}\\\\\n            0&amp;\\text{si $x &gt; \\frac{\\pi}{k_0}$}\n        \\end{cases} \\quad \\text{et} \\quad g \\colon x \\mapsto \\begin{cases}\n            \\frac{2x}{\\pi}&amp;\\text{si $x \\leq  \\frac{\\pi}{2}$}\\\\\n            2 - \\frac{2x}{\\pi} &amp;\\text{si $x &gt; \\frac{\\pi}{2}$}\n        \\end{cases}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer les coefficients de Fourier de <span class=\"math inline\">\\(f\\)</span> puis exprimer la série de Fourier de <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> étant impaire, les coefficients de Fourier <span class=\"math inline\">\\(a_n(f)\\)</span> sont nuls et : <span class=\"math display\">\\[\\begin{align*}\n            b_n(f) &amp;= \\frac{2}{\\pi} \\int_0^{\\pi} f(t)\\sin(nt)\\mathrm{d}t \\\\\n            &amp;= \\frac{2}{\\pi} \\int_0^{ \\frac{\\pi}{k_0}} \\sin(nt)\\mathrm{d}t + 0 \\\\\n            &amp;= \\frac{2}{\\pi} \\left[-\\frac{1}{n}\\cos(nt)\\right]_0^{ \\frac{\\pi}{k_0}} \\\\\n            &amp;= \\frac{2}{n\\pi}\\left(1-\\cos\\left(\\frac{n\\pi}{k_0}\\right)\\right)\n        \\end{align*}\\]</span> La série de Fourier est donc <span class=\"math inline\">\\(\\displaystyle S_n(f) = \\sum_{n\\geq 1} \\frac{2}{n\\pi}\\left(1-\\cos\\left(\\frac{n\\pi}{k_0}\\right)\\right) \\sin(nx)\\)</span>. Voir une illustration ici <a href=\"https://replit.com/@ngmaxime/Coef-de-Fourier\">https://replit.com/@ngmaxime/Coef-de-Fourier</a></p>\n"
+    }
+  ]
+}

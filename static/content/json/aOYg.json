@@ -1,0 +1,58 @@
+{
+  "uuid": "aOYg",
+  "titre": "Etude d'une matrice pentadiagonale",
+  "theme": "analyse numérique",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(n \\geq 3\\)</span>, <span class=\"math inline\">\\(\\varepsilon &gt;0\\)</span> et <span class=\"math inline\">\\(A_\\varepsilon\\)</span> la matrice pentadiagonale définie par</p>\n<p><span class=\"math display\">\\[A_\\varepsilon = \\begin{pmatrix}\n    1 &amp; \\varepsilon &amp; \\varepsilon^2  &amp;  &amp;  &amp; \\\\\n    \\varepsilon &amp; 1 &amp; \\varepsilon &amp; \\varepsilon^2     &amp; &amp;  \\\\\n    \\varepsilon^2 &amp; \\ddots &amp; \\ddots &amp; \\ddots &amp; &amp; \\\\\n    &amp;   \\ddots &amp;  &amp;  &amp; \\varepsilon  &amp; \\varepsilon^2 \\\\\n    &amp;  &amp;  &amp; \\varepsilon &amp;1  &amp;\\varepsilon \\\\\n    &amp; &amp; &amp; \\varepsilon^2 &amp; \\varepsilon &amp; 1 \\\\\n\\end{pmatrix}\\]</span> et on s’intéresse au système <span class=\"math inline\">\\(A_\\varepsilon x = b\\)</span> où <span class=\"math inline\">\\(x,b \\in \\mathbb{R}^n\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Ecrire une fonction Python qui génère la matrice <span class=\"math inline\">\\(A_\\varepsilon\\)</span> pour tout <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\">\\(\\varepsilon\\)</span> :</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Donner un intervalle de valeurs de <span class=\"math inline\">\\(\\varepsilon\\)</span> pour lesquelles <span class=\"math inline\">\\(A_\\varepsilon\\)</span> est à diagonale strictement dominante.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La matrice <span class=\"math inline\">\\(A_\\varepsilon\\)</span> est à diagonale strictement dominante si et seulement si <span class=\"math inline\">\\(1 &gt; 2\\varepsilon + 2\\varepsilon^2 \\iff \\varepsilon \\in \\left[0 ; \\frac{\\sqrt{3}-1}{2} \\right]\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Que permet de calculer la fonction suivante où <code>matrice</code> est une matrice carrée de taille <span class=\"math inline\">\\(n\\)</span> quelconque ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On reconnaît le calcul du rayon spectral de la matrice.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Ecrire une fonction Python qui génère la matrice <span class=\"math inline\">\\(b_{\\varepsilon} = A_\\varepsilon\\overline{x}\\)</span> où <span class=\"math inline\">\\(\\overline{x} = (1,...,1) \\in \\mathbb{R}^n\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>La méthode de Jacobi est-elle convergente pour <span class=\"math inline\">\\(n=10\\)</span> et <span class=\"math inline\">\\(\\varepsilon = 0.2\\)</span> ? Si oui, résoudre le système <span class=\"math inline\">\\(A_\\varepsilon x = b_{\\varepsilon}\\)</span> par cette méthode et donner le nombre d’itérations nécessaire pour une erreur de <span class=\"math inline\">\\(10^{-8}\\)</span> et un vecteur initial <span class=\"math inline\">\\(x_0 = 0\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La matrice est à diagonale strictement dominante pour cette valeur de <span class=\"math inline\">\\(\\varepsilon\\)</span>. La résolution demande <span class=\"math inline\">\\(26\\)</span> itérations.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(B\\)</span> la matrice d’itération associée à la méthode de Jacobi pour la matrice <span class=\"math inline\">\\(A_\\varepsilon\\)</span>. Pour <span class=\"math inline\">\\(n=20\\)</span> fixé, représenter graphiquement le rayon spectral de <span class=\"math inline\">\\(B\\)</span> en fonction de <span class=\"math inline\">\\(\\varepsilon \\in [0;1]\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Faire de même pour la méthode de Gauss-Seidel.</p>\n"
+    }
+  ]
+}

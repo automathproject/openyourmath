@@ -1,0 +1,46 @@
+{
+  "uuid": "99Xf",
+  "titre": "Double jeu et probabilités discrètes",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Un joueur effectue une suite de parties de pile ou face indépendantes, avec probabilité <span class=\"math inline\">\\(p\\)</span> d’obtenir pile à chaque partie. Soit <span class=\"math inline\">\\(n\\)</span> un entier. Le joueur peut choisir entre deux jeux :</p>\n<dl>\n<dt>le Jeu 1 :</dt>\n<dd><p>le joueur effectue <span class=\"math inline\">\\(2n-1\\)</span> parties. Il est déclaré vainqueur s’il obtient au moins <span class=\"math inline\">\\(n\\)</span> fois pile ;</p>\n</dd>\n<dt>le Jeu 2 :</dt>\n<dd><p>le joueur effectue <span class=\"math inline\">\\(2n\\)</span> parties. S’il obtient au moins <span class=\"math inline\">\\(n+1\\)</span> fois pile, il est déclaré vainqueur. S’il obtient <span class=\"math inline\">\\(n\\)</span> fois pile exactement, on tire au sort et il est déclaré vainqueur avec probabilité <span class=\"math inline\">\\(\\frac{1}{2}\\)</span>.</p>\n</dd>\n</dl>\n<p>On note <span class=\"math inline\">\\(X\\)</span> le nombre de piles obtenus lorsque le joueur choisit le Jeu 1, et <span class=\"math inline\">\\(Y\\)</span> le nombre de piles obtenus lorsqu’il choisit le Jeu 2. On note <span class=\"math inline\">\\(p_1\\)</span> la probabilité de gagner au Jeu 1 et <span class=\"math inline\">\\(p_2\\)</span> la probabilité de gagner au Jeu 2.</p>\n<p>L’objectif est de savoir s’il vaut mieux jouer au Jeu 1 ou au Jeu 2.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Écrire <span class=\"math inline\">\\(Y=X+U\\)</span> où <span class=\"math inline\">\\(U\\)</span> est une variable aléatoire indépendante de <span class=\"math inline\">\\(X\\)</span> dont la loi reste à préciser.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(U\\)</span> la de Bernoulli égale à <span class=\"math inline\">\\(1\\)</span> si on a choisi le jeu 2 et que le <span class=\"math inline\">\\(2n\\)</span>-ième lancer donne “pile”. Comme les lancers sont indépendants, la <span class=\"math inline\">\\(U\\)</span> est indépendante de <span class=\"math inline\">\\(X\\)</span> et on a bien <span class=\"math inline\">\\(Y=X+U\\)</span>, avec <span class=\"math inline\">\\(U \\sim \\mathcal{B}(p)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que <span class=\"math inline\">\\(\\PP(Y&gt;n) = \\PP(X&gt;n) + p\\PP(X=n)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Comme <span class=\"math inline\">\\(Y=X+U\\)</span>, on a <span class=\"math display\">\\[\\begin{align*}\n                \\p(Y&gt;n)&amp;=\\p(Y&gt;n,X&gt;n) + \\p(Y&gt;n,X=n) + \\p(Y&gt;n,X&lt;n) \\text{ d&#39;après le th. des proba. totales } \\\\\n                &amp;= \\p(X&gt;n)+\\p(X=n,U=1) + 0 \\\\\n                &amp;= \\p(X&gt;n)+\\p(X=n)\\ \\p(U=1) \\text{ par indépendance de $X$ et $U$ }\\\\\n                &amp;= \\p(X&gt;n)+p\\ \\p(X=n).\n                \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Vérifier que <span class=\"math inline\">\\(p_1-p_2 = (1-p)\\PP(X=n) - \\frac{1}{2}\\PP(Y=n)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a: <span class=\"math display\">\\[\\begin{align*}\n                p_1-p_2&amp;=\\p(X\\geq n)-\\left[\\p(Y&gt;n)+\\frac{1}{2}\\ \\p(Y=n)\\right] \\\\\n                \n                &amp;= \\p(X=n)+\\p(X&gt;n)-\\p(X&gt;n)-p\\ \\p(X=n)-\\frac{1}{2}\\ \\p(Y=n) \\\\\n                &amp;= (1-p)\\ \\p(X=n)-\\frac{1}{2}\\ \\p(Y=n).\n                \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Conclure.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Étudions le signe de <span class=\"math inline\">\\(p_1-p_2\\)</span>. Comme <span class=\"math inline\">\\(X \\sim \\mathcal{B}(2n-1,p)\\)</span> et <span class=\"math inline\">\\(Y \\sim \\mathcal{B}(2n,p)\\)</span>, on a <span class=\"math display\">\\[\\begin{align*}\n                p_1-p_2&amp;=(1-p) \\binom{2n-1}{n} p^n (1-p)^{2n-1-n} -\\frac{1}{2} \\binom{n}{2n} p^n (1-p)^{2n-n} \\\\\n                &amp;= \\frac{(2n-1)!}{n!\\times (n-1)!}p^n(1-p)^n -\\frac{1}{2}\\times\\frac{(2n)!}{ n! \\times n!}p^n(1-p)^n \\\\\n                &amp;= \\frac{(2n)!}{(n!)^2}\\left( \\frac{n}{2n}- \\frac{1}{2} \\right) p^n (1-p)^n \\\\\n                &amp;= 0\n                \\end{align*}\\]</span> On en conclut qu’aucun des deux jeux n’est préférable à l’autre.</p>\n"
+    }
+  ]
+}

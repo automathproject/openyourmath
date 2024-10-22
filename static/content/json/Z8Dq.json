@@ -1,0 +1,18 @@
+{
+  "uuid": "Z8Dq",
+  "titre": "Moments de la loi exponentielle",
+  "theme": "probabilité",
+  "auteur": "Maxime NGUYEN",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire suivant une loi exponentielle de paramètre <span class=\"math inline\">\\(\\lambda&gt;0\\)</span>. Démontrer l’existence des moments d’ordre <span class=\"math inline\">\\(n\\)</span> de <span class=\"math inline\">\\(X\\)</span> pour tout <span class=\"math inline\">\\(n \\in \\mathbb{N}\\)</span> puis les calculer.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait par comparaison que la fonction <span class=\"math inline\">\\(x\\mapsto x e^{-\\lambda x}\\)</span> est intégrable au voisinage de <span class=\"math inline\">\\(+\\infty\\)</span> donc on peut calculer par théorème de transfert pour tout <span class=\"math inline\">\\(n \\in \\N^*\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}(X^n) &amp;= \\lambda \\int_0^{+\\infty} x^n e^{-\\lambda x} dx \\\\\n        &amp;= \\lambda \\left[ \\frac{x^n e^{-\\lambda x}}{-\\lambda} \\right]_{0}^{+\\infty} + \\frac{1}{\\lambda} n \\int_{0}^{+\\infty} x^{n-1} \\lambda e^{-\\lambda x} dx \\\\\n        &amp;= \\frac{n}{\\lambda } \\mathbb{E}(X^{n-1})\n    \\end{align*}\\]</span> De plus, on a immédiatement que <span class=\"math inline\">\\(\\mathbb{E}(X^0) = 1\\)</span> donc par récurrence, on obtient : <span class=\"math display\">\\[\\mathbb{E}(X^n) = \\frac{n!}{\\lambda^n}\\]</span></p>\n"
+    }
+  ]
+}

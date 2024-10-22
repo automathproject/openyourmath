@@ -1,0 +1,46 @@
+{
+  "uuid": "KZCb",
+  "titre": "Différents types de convergence",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(n\\)</span> un entier naturel non-nul et soit <span class=\"math inline\">\\(a\\)</span> un réel. On considère la fonction <span class=\"math inline\">\\(f_n\\)</span> définie sur <span class=\"math inline\">\\(\\mathbb R\\)</span> par <span class=\"math display\">\\[f_n(x)=\\frac{an}{\\pi(1+n^2x^2)}.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(a\\)</span> pour que <span class=\"math inline\">\\(f_n\\)</span> soit une densité de variable aléatoire.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f_n\\)</span> étant continue et positive, elle est une densité de variable aléatoire si et seulement si <span class=\"math display\">\\[\\int_{-\\infty}^{+\\infty} f_n(x) d x=1\\]</span> Or, effectuant le changement de variables <span class=\"math inline\">\\(u=n x\\)</span>, on a <span class=\"math display\">\\[\\int_{-\\infty}^{+\\infty} \\frac{a n}{\\pi\\left(1+n^2 x^2\\right)} d x=\\int_{-\\infty}^{+\\infty} \\frac{a}{\\pi\\left(1+u^2\\right)} d u=\\frac{a}{\\pi}[\\arctan (u)]_{-\\infty}^{+\\infty}=\\frac{a}{\\pi} \\times \\pi=a\\]</span> <span class=\"math inline\">\\(f_n\\)</span> est donc une densité de variable aléatoire si et seulement si <span class=\"math inline\">\\(a=1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\((X_n)\\)</span> une suite de variables aléatoires telle que chaque <span class=\"math inline\">\\(X_n\\)</span> admet pour densité <span class=\"math inline\">\\(f_n\\)</span>. Étudier l’existence de moments pour <span class=\"math inline\">\\(X_n\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(x f_n(x) \\sim_{+\\infty} \\frac{1}{\\pi n x}\\)</span> dont l’intégrale est divergente au voisinage de <span class=\"math inline\">\\(+\\infty\\)</span>, et qui est une fonction positive. Ainsi, la variable aléatoire <span class=\"math inline\">\\(X_n\\)</span> n’admet pas d’espérance, ni aucun autre moment.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Étudier la convergence en loi de la suite <span class=\"math inline\">\\((X_n)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(F_n\\)</span> la fonction de répartition de <span class=\"math inline\">\\(X_n\\)</span>, définie pour tout <span class=\"math inline\">\\(x\\)</span> réel par <span class=\"math display\">\\[F_n(x)=\\int_{-\\infty}^x f_n(t) d t=\\frac{1}{\\pi}\\left(\\arctan (n x)+\\frac{\\pi}{2}\\right) .\\]</span> Si <span class=\"math inline\">\\(x&lt;0, \\arctan (n x) \\rightarrow-\\pi / 2\\)</span>, et donc <span class=\"math inline\">\\(F_n(x) \\longrightarrow 0\\)</span>. Si <span class=\"math inline\">\\(x&gt;0, \\arctan (n x) \\longrightarrow \\pi / 2\\)</span> et donc <span class=\"math inline\">\\(F_n(x) \\longrightarrow 1\\)</span>.</p>\n<p>Soit maintenant <span class=\"math inline\">\\(X\\)</span> une variable aléatoire identiquement nulle. Sa fonction de répartition <span class=\"math inline\">\\(F_X\\)</span> vérifie <span class=\"math inline\">\\(F_X(x)=0\\)</span> si <span class=\"math inline\">\\(x&lt;0\\)</span> et <span class=\"math inline\">\\(F_X(x)=1\\)</span> si <span class=\"math inline\">\\(x \\geq 0\\)</span>. Autrement dit, en tout point de continuité de <span class=\"math inline\">\\(F_X\\)</span>, la suite <span class=\"math inline\">\\(\\left(F_n(x)\\right)\\)</span> converge vers <span class=\"math inline\">\\(F_X(x)\\)</span>.</p>\n<p>On en déduit la convergence en loi de la suite <span class=\"math inline\">\\(\\left(X_n\\right)\\)</span> vers <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Étudier la convergence en probabilité de la suite <span class=\"math inline\">\\((X_n)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(\\varepsilon&gt;0\\)</span>. On cherche la limite de <span class=\"math inline\">\\(P\\left(\\left|X_n-x\\right|&lt;\\varepsilon\\right)\\)</span> où <span class=\"math inline\">\\(X\\)</span> est la variable nulle. <span class=\"math display\">\\[\\text { on } \\begin{aligned}\n                P\\left(\\left|X_n\\right|&lt;\\varepsilon\\right) &amp;=\\int_{-\\varepsilon}^{\\varepsilon} \\frac{n}{\\pi\\left(1+n^2 x^2\\right)} d x \\\\\n                &amp;=\\int_{-n \\varepsilon}^{n \\varepsilon} \\frac{d u}{\\pi\\left(1+u^2\\right)} \\\\\n                &amp;=\\frac{1}{\\pi}(\\operatorname{Arctan}(n \\varepsilon)-\\operatorname{Arctan}(-n \\varepsilon)) \\\\\n                &amp;=\\frac{2}{\\pi} \\operatorname{Arctan}(n \\varepsilon) \\underset{n \\to\\infty}{\\longrightarrow} \\frac{2}{\\pi} \\times \\frac{\\pi}{2}=1\n            \\end{aligned}\\]</span> Donc on a bien <span class=\"math inline\">\\(X_n \\underset{\\text { proba }}{\\longrightarrow} 0\\)</span></p>\n"
+    }
+  ]
+}

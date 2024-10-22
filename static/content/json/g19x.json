@@ -1,0 +1,82 @@
+{
+  "uuid": "g19x",
+  "titre": "Méthode itérative d'inversion d'une matrice",
+  "theme": "",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soient <span class=\"math inline\">\\(n \\in \\mathbb{N}\\)</span> tel que <span class=\"math inline\">\\(n \\geq 3\\)</span> et <span class=\"math inline\">\\(b \\in \\mathbb{R}^n\\)</span>, de composantes <span class=\"math inline\">\\((b_1, \\ldots, b_n)\\)</span>. On cherche <span class=\"math inline\">\\(x \\in \\mathbb{R}^n\\)</span>, de composantes <span class=\"math inline\">\\((x_1, \\ldots, x_n)\\)</span>, solution de :</p>\n<p><span class=\"math display\">\\[\\begin{cases}   \n    4x_1 + x_2 &amp;= b_1, \\\\\n    x_{i-1} + 4x_i + x_{i+1} &amp;= b_i, \\quad \\forall i \\in [\\![ 2, n - 1 ]\\!] \\\\  \n    x_{n-1} + 4x_n &amp;= b_n.  \n\\end{cases}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que le système ci-dessus peut s’écrire sous la forme <span class=\"math inline\">\\(Ax=b\\)</span> avec une matrice <span class=\"math inline\">\\(A\\)</span> que l’on donnera pour <span class=\"math inline\">\\(n=4\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(x\\)</span> le vecteur <span class=\"math inline\">\\(\\begin{pmatrix}\nx_1 \\\\ x_2 \\\\ \\vdots{} \\\\ x_n \\end{pmatrix},\\)</span> b le vecteur <span class=\"math inline\">\\(\\begin{pmatrix}\nb_1 \\\\ b_2 \\\\ \\vdots{} \\\\ b_n \\end{pmatrix},\\)</span> le système proposé est donc équivalent à l’égalité matricielle <span class=\"math inline\">\\(Ax=b\\)</span> avec <span class=\"math inline\">\\(A=\\)</span> <span class=\"math inline\">\\(\\begin{pmatrix} 4 &amp; 1 &amp; 0 &amp; 0 \\\\\n1 &amp; 4 &amp; 1 &amp; 0 \\\\\n0 &amp; 1 &amp; 4 &amp; 1 \\\\\n0 &amp; 0 &amp; 1 &amp; 4 \n\\end{pmatrix}.\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que : <span class=\"math inline\">\\(\\forall i \\in [\\![1, n]\\!]\\,, \\quad 4 |x_i| \\leq 2 \\|x\\|_\\infty\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour tout <span class=\"math inline\">\\(i \\in [\\![1, n]\\!]\\,,\\)</span> on a:<br />\n<span class=\"math inline\">\\(4 |x_i|\\leq |x_{i-1}|+|x_{i+1}|\\leq 2 \\|x\\|_\\infty,\\)</span> avec <span class=\"math inline\">\\(4 |x_1|\\leq |x_2|\\leq \\|x\\|_\\infty\\)</span> et <span class=\"math inline\">\\(4 |x_{n}|\\leq |x_2|\\leq \\|x\\|_\\infty,\\)</span> d’où le résultat.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire que <span class=\"math inline\">\\(x = 0\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Ainsi on a pour tout <span class=\"math inline\">\\(i \\in [\\![1, n]\\!]\\,,\\)</span> <span class=\"math inline\">\\(|x_i|\\leq \\frac{1}{2}\\|x\\|_{\\infty}\\)</span>. Or si <span class=\"math inline\">\\(\\|x\\|_{\\infty}\\neq 0,\\)</span> il existe <span class=\"math inline\">\\(i_0  \\in \\{1, \\ldots, n\\}\\)</span> tel que <span class=\"math inline\">\\(\\|x\\|_{\\infty}=|x_{i_{0}}|\\neq 0\\)</span> ce qui contredit l’inégalité précédente.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que dans le cas d’un second membre quelconque <span class=\"math inline\">\\(b\\)</span>, il existe une unique <span class=\"math inline\">\\(x \\in \\mathbb{R}^n\\)</span> solution du système linéaire.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a montré à la question précédente que <span class=\"math inline\">\\(Ker(A)=0\\)</span> avec <span class=\"math inline\">\\(A\\)</span> la matrice carrée définie à la question 2). Ainsi la matrice <span class=\"math inline\">\\(A\\)</span> est inversible et la solution du système est <span class=\"math inline\">\\(x=A^{-1}b\\)</span>.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>Afin de résoudre le système, on considère la méthode itérative suivante : <span class=\"math inline\">\\(x^{(0)} = 0 \\in \\mathbb{R}^n\\)</span> et</p>\n<p><span class=\"math display\">\\[\\begin{cases}   \n        x^{(k+1)}_1 = \\alpha x^{(k)}_1 + \\frac{\\alpha - 1}{4} (x^{(k)}_2 - b_1), \\\\ \n        x^{(k+1)}_i = \\alpha x^{(k)}_i + \\frac{\\alpha - 1}{4} (x^{(k)}_{i-1} + x^{(k)}_{i+1} - b_i), &amp; \\forall i \\in [\\![ 2, n - 1 ]\\!] \\\\  \n        x^{(k+1)}_n = \\alpha x^{(k)}_n + \\frac{\\alpha - 1}{4} (x^{(k)}_{n-1} - b_n).    \n    \\end{cases}\\]</span></p>\n<p>avec pour paramètre <span class=\"math inline\">\\(\\alpha \\in \\mathbb{R}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que pour tout <span class=\"math inline\">\\(\\alpha \\in \\mathbb{R}\\)</span>, on a</p>\n<p><span class=\"math display\">\\[\\|x^{(k+1)} - x\\|_\\infty \\leq \\left(|\\alpha| + \\frac{|\\alpha - 1|}{2}\\right) \\|x^{(k)} - x\\|_\\infty.\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour tout <span class=\"math inline\">\\(i \\in \\{2, \\ldots, n-1\\},\\)</span> on a: <span class=\"math display\">\\[|x^{(k+1)}_{i}-x_i|=|\\alpha x_i^{(k)}+\\frac{(\\alpha-1)}{4}(x_2^{(k)}-b_1)-x_1|\\leq |\\alpha(x_1^{(k)}-x_1)+\\alpha x_1-x_1+(\\frac{\\alpha-1}{4})(b_i-x_{i+1}-x_{i-1})|\\]</span> <span class=\"math display\">\\[\\leq |\\alpha (x_1^{(k)}-x_1)+(\\frac{\\alpha-1}{4})(b_i-x_{i+1}-x_{i-1})+(\\frac{\\alpha-1}{4})(x_{i+1}^{(k)}-x_{i+1}+x_{i+1}^{(k)}-x_{i-1})|\\]</span> <span class=\"math display\">\\[\\leq |\\alpha|\\times\\|x^{(k)}-x\\|_{\\infty}+|\\frac{\\alpha-1}{4}|\\times 2 \\times \\|x^{(k)}-x\\|_{\\infty}\\leq \\big(\\,|\\alpha|+|\\frac{\\alpha-1}{2}|\\,\\big)\\|x^{(k)}-x\\|_{\\infty}.\\]</span> Pour <span class=\"math inline\">\\(j=2\\)</span> et <span class=\"math inline\">\\(j=n\\)</span> on a la majoration suivante: <span class=\"math display\">\\[|x^{(k+1)}_{j}-x_j|\\leq (|\\alpha|+|\\frac{\\alpha-1}{4}|)\\,\\|x^{(k)}-x\\|_{\\infty}.\\]</span> Le passage à la borne supérieure à gauche de l’inégalité achève la preuve.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Trouver <span class=\"math inline\">\\(\\alpha_{\\text{min}}, \\alpha_{\\text{max}} \\in \\mathbb{R}\\)</span>, tels que <span class=\"math inline\">\\(\\alpha \\in ]\\alpha_{\\text{min}}, \\alpha_{\\text{max}}[\\)</span> si et seulement si <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2} &lt; 1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La condition <span class=\"math inline\">\\(|\\alpha|&gt;1\\)</span> n’est pas compatible avec l’inégalité <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2} &lt; 1\\)</span> on cherche l’intervalle <span class=\"math inline\">\\(]\\alpha_{min};\\alpha_{max}[\\)</span> dans l’intervalle <span class=\"math inline\">\\(]-1;1[.\\)</span> Or pour <span class=\"math inline\">\\(\\alpha \\in [0;1]\\)</span> on a: <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2} &lt; 1 \\Longleftrightarrow \\alpha&lt;1\\)</span> et pour <span class=\"math inline\">\\(\\alpha\\in ]-1;0[\\)</span> on a: <span class=\"math inline\">\\(-\\alpha+\\frac{1-\\alpha}{2}&lt;1 \\Longleftrightarrow -3\\alpha&lt;1 \\Longleftrightarrow \\alpha&gt;-\\frac{1}{3}\\)</span>.<br />\nAinsi l’intervalle cherché est <span class=\"math inline\">\\(]-\\frac{1}{3};1[\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que la méthode itérative converge vers <span class=\"math inline\">\\(x\\)</span> pour <span class=\"math inline\">\\(\\alpha \\in ]\\alpha_{\\text{min}}, \\alpha_{\\text{max}}[\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour <span class=\"math inline\">\\(\\alpha \\in ]\\frac{1}{3},1[,\\)</span> on a par récurrence pour tout <span class=\"math inline\">\\(k\\geq 1\\)</span>: <span class=\"math display\">\\[\\|x^{(k)}-x\\|_{\\infty}\\leq \\big(|\\alpha|+|\\frac{\\alpha-1}{4}|\\big)^{k}\\,\\|x^{(0)}-x\\|_{\\infty},\\]</span> et la convergence vers <span class=\"math inline\">\\(0\\)</span> est assurée par la condition sur <span class=\"math inline\">\\(\\alpha\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Trouver <span class=\"math inline\">\\(\\alpha_0 \\in \\mathbb{R}\\)</span> qui minimise la quantité <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2}.\\)</span> Que peut-on déduire de la convergence du système pour ce <span class=\"math inline\">\\(\\alpha_0\\)</span> ? Quelle méthode du cours reconnaissez-vous ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le minimum de la quantité <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2}\\)</span> est le minimum sous la contrainte <span class=\"math inline\">\\(|\\alpha| + \\frac{|\\alpha - 1|}{2} &lt; 1\\)</span>. Ce minimum vaut <span class=\"math inline\">\\(\\frac{1}{2}\\)</span> et est atteint en <span class=\"math inline\">\\(\\alpha_{0}=0\\)</span>. En effet il suffit de minimiser <span class=\"math inline\">\\(\\frac{\\alpha+1}{2}\\)</span> sur <span class=\"math inline\">\\(]0;1[\\)</span> et <span class=\"math inline\">\\(\\frac{-3\\alpha+1}{2}\\)</span> sur <span class=\"math inline\">\\(]-\\frac{1}{3};1[\\)</span>. On reconnait pour <span class=\"math inline\">\\(\\alpha_0=0\\)</span> la méthode de Jacobi.</p>\n"
+    }
+  ]
+}

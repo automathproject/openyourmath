@@ -1,0 +1,38 @@
+{
+  "uuid": "",
+  "titre": "Optimisation quadratique, moindres carrés",
+  "theme": "Optimisation",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(N \\in \\mathbb{N}^*\\)</span>, et <span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}\\)</span> un nuage de points. On cherche à déterminer les coefficients <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(c\\)</span> de la parabole <span class=\"math inline\">\\(P\\)</span> d’équation <span class=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme des carrés des distances des points <span class=\"math inline\">\\((t_i, x_i)\\)</span> à cette parabole.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Écrire ce problème comme un problème de minimisation quadratique, c’est-à-dire un problème de la forme <span class=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec} \\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle,\\]</span> avec <span class=\"math inline\">\\(A \\in \\mathcal{S}_n(\\mathbb{R})\\)</span>, <span class=\"math inline\">\\(b \\in \\mathbb{R}^n\\)</span>. On devra donc expliciter <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(A\\)</span>, et <span class=\"math inline\">\\(b\\)</span>. On utilisera la notation <span class=\"math inline\">\\(S_k = \\sum_{i=1}^{N} t_i^k\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le problème est celui de la régression parabolique pour un nuage de points <span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}\\)</span>, où l’on cherche la parabole <span class=\"math inline\">\\(P\\)</span> d’équation <span class=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme des carrés des distances des points <span class=\"math inline\">\\((t_i, x_i)\\)</span> à cette parabole. Le problème peut s’écrire : <span class=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec} \\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et} \\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\\]</span> En écrivant <span class=\"math inline\">\\(J(X) = \\|MX - k\\|^2\\)</span> avec <span class=\"math inline\">\\(M = \\begin{pmatrix} t_1^2 &amp; t_1 &amp; 1 \\\\ \\vdots &amp; \\vdots &amp; \\vdots \\\\ t_N^2 &amp; t_N &amp; 1 \\end{pmatrix}\\)</span> et <span class=\"math inline\">\\(k = \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}\\)</span>, on obtient <span class=\"math display\">\\[J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle\\]</span> avec <span class=\"math inline\">\\(A = M^T M\\)</span> et <span class=\"math inline\">\\(b = M^T k\\)</span>. La matrice <span class=\"math inline\">\\(A\\)</span> est donc donnée par : <span class=\"math display\">\\[A = \\begin{pmatrix} S_4 &amp; S_3 &amp; S_2 \\\\ S_3 &amp; S_2 &amp; S_1 \\\\ S_2 &amp; S_1 &amp; N \\end{pmatrix}.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Discuter de l’existence des solutions d’un tel problème.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Ce problème est équivalent à celui de minimiser la distance euclidienne de <span class=\"math inline\">\\(k\\)</span> au sous-espace vectoriel <span class=\"math inline\">\\(\\text{Im}(M)\\)</span>, qui est de dimension finie. Il s’agit donc d’un problème de projection orthogonale, qui admet toujours une solution.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On suppose que la matrice <span class=\"math inline\">\\(A\\)</span> est définie positive. Démontrer que ce problème possède une unique solution.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si <span class=\"math inline\">\\(A\\)</span> est définie positive, alors la fonction <span class=\"math inline\">\\(J(X)\\)</span> est strictement convexe. Par conséquent, <span class=\"math inline\">\\(J(X)\\)</span> possède un unique minimum sur <span class=\"math inline\">\\(\\mathbb{R}^n\\)</span>, donc le problème admet une unique solution.</p>\n"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "uuid": "KSes",
+  "titre": "Loi normale et Monte Carlo",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère l’intégrale <span class=\"math display\">\\[I = \\int_0^4 \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer qu’il existe une fonction <span class=\"math inline\">\\(\\varphi \\colon \\R \\to \\R\\)</span> telle que <span class=\"math inline\">\\(I=\\mathbb{E}(\\varphi(Z_1))\\)</span> où <span class=\"math inline\">\\(Z_1\\)</span> est une variable aléatoire normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Il suffit de poser <span class=\"math inline\">\\(\\varphi = 1_{[0;4]}\\)</span> de telle sorte qu’en appliquant le théorème de transfert à <span class=\"math inline\">\\(Z_1\\)</span> admettant pour densité <span class=\"math inline\">\\(f_Z(x) =  \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}\\)</span>, on obtienne <span class=\"math display\">\\[\\mathbb{E}(1_{[0;4]}(Z_1)) = \\int_\\R 1_{[0;4]}(y) \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy = I\\]</span></p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>On définit une suite de variables <span class=\"math inline\">\\((Z_n)_{n \\geq 1}\\)</span> indépendantes et identiquement distribuées selon une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer une fonction <span class=\"math inline\">\\(g \\colon \\R \\to \\R\\)</span> telle que la suite <span class=\"math inline\">\\(\\left( \\frac{1}{n}\\sum_{i=1}^n g(Z_i)  \\right))_{n \\geq 1}\\)</span> converge presque sûrement vers <span class=\"math inline\">\\(I\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Il suffit de poser <span class=\"math inline\">\\(g = \\varphi = 1_{[0;4]}\\)</span> pour que les variables <span class=\"math inline\">\\((g(Z_i))\\)</span> soient i.i.d et admettent une espérance <span class=\"math inline\">\\(I\\)</span>. Ainsi, d’après la Loi Forte des Grands Nombres, on a <span class=\"math display\">\\[\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) \\xrightarrow[n \\to +\\infty]{p.s.} I\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Construire un intervalle de confiance <span class=\"math inline\">\\(I_{conf}\\)</span> tel que <span class=\"math inline\">\\(\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On note <span class=\"math inline\">\\(\\sigma^2 = \\mathbb{V}(g(Z_1))\\)</span>. D’après le Théorème Central Limite, <span class=\"math display\">\\[\\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)\\]</span> Si <span class=\"math inline\">\\(n\\)</span> est grand, on peut considérer que la variable <span class=\"math inline\">\\(Z&#39;_n =     \\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}}\\)</span> suit approximativement une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Par conséquent, d’après la table de loi, <span class=\"math display\">\\[\\PP(-1{,}96 \\leq Z&#39;_n \\leq 1{,}96) \\approx 0{,}95 \\iff  \\mathbb{P}\\left(  Z&#39;_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}}     \\leq  I  \\leq   Z&#39;_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right) \\approx 0{,}95\\]</span> On en déduit un intervalle de confiance <span class=\"math inline\">\\(I_{conf} = \\left[  Z&#39;_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}} ; Z&#39;_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right]\\)</span> qui est en réalité un intervalle de confiance asymptotique. Il resterait à expliciter <span class=\"math inline\">\\(\\sigma = \\sqrt{V(g(Z_1))}\\)</span>.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>On définit une suite de variables <span class=\"math inline\">\\((U_n)\\)</span> indépendantes et identiquement distribuées selon une loi uniforme <span class=\"math inline\">\\(\\mathcal{U}([0;4])\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>A l’aide de cette suite, définir une suite de variables aléatoires <span class=\"math inline\">\\((Y_n)\\)</span> qui converge presque sûrement vers <span class=\"math inline\">\\(I\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après la loi forte des grands nombres, <span class=\"math display\">\\[\\frac{4}{n}\\sum_{i=1}^n \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} \\xrightarrow[n \\to +\\infty]{p.s.} \\mathbb{E}\\left(\\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_1^2}{2}}\\right) = \\int_{\\R}^{} \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}} \\frac{1}{4} 1_{[0;4]}(x)  dx = I\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire une méthode de Monte Carlo permettant d’obtenir une valeur approchée de <span class=\"math inline\">\\(I\\)</span> en complétant l’algorithme suivant : <code>n=1000;S=0 for i in range(n): u = ... S= S + ... print(...)</code></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>u = 4*rand()<br />\nS= S + 1/sqrt(2*pi)*exp(-u**2/2)<br />\nprint(4*S/n)</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Construire un intervalle de confiance <span class=\"math inline\">\\(I_{conf}\\)</span> tel que <span class=\"math inline\">\\(\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On procède de même en posant <span class=\"math inline\">\\(h \\colon x \\mapsto \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}\\)</span>.</p>\n<p>On note <span class=\"math inline\">\\(\\sigma&#39;^2 = \\mathbb{V}(h(Z_1))\\)</span>. D’après le Théorème Central Limite, <span class=\"math display\">\\[\\frac{\\frac{1}{n}\\sum\\limits_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma&#39;}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)\\]</span> Si <span class=\"math inline\">\\(n\\)</span> est grand, on peut considérer que la variable <span class=\"math inline\">\\(Z&#39;&#39;_n =    \\frac{\\frac{1}{n}\\sum_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma&#39;}{\\sqrt{n}}}\\)</span> suit approximativement une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. On en déduit un intervalle de confiance <span class=\"math inline\">\\(I_{conf} = \\left[  Z&#39;&#39;_n - 1{,}96 \\frac{\\sigma&#39;}{\\sqrt{n}} ; Z&#39;&#39;_n + 1{,}96 \\frac{\\sigma&#39;}{\\sqrt{n}} \\right]\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Afin d’obtenir une approximation de <span class=\"math inline\">\\(I\\)</span>, au vu des intervalles de confiance obtenus pour chaque méthode, mieux vaut-il utiliser une méthode de Monte Carlo basée sur la suite <span class=\"math inline\">\\((Z_n)\\)</span> ou la suite <span class=\"math inline\">\\((U_n)\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Il reste à comparer <span class=\"math inline\">\\(\\sigma\\)</span> et <span class=\"math inline\">\\(\\sigma&#39;\\)</span>...</p>\n"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "ptxH",
+  "titre": "Estimation par inégalité",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On sait qu’une personne sur cent est dyslexique. Lors des journées \"citoyens\", on détecte ce problème. Sur <span class=\"math inline\">\\(n\\)</span> jeunes examinés, on note <span class=\"math inline\">\\(Y_n\\)</span> la proportion de dyslexiques.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer l’espérance et la variance de <span class=\"math inline\">\\(Y_n\\)</span>: on introduira la variable <span class=\"math inline\">\\(X_n\\)</span> comptant le nombre de dyslexiques parmi les <span class=\"math inline\">\\(n\\)</span> jeunes.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(X_n\\sim \\mathcal{B}(n,0.01)\\)</span>. Ainsi, <span class=\"math inline\">\\(\\E(X_n)=0.01\\times n\\)</span> et <span class=\"math inline\">\\(\\sigma^2(X)=0.01\\times 0.09 \\times n\\)</span>.<br />\nComme <span class=\"math inline\">\\(Y_n=\\frac{X_n}{n}\\)</span> donc <span class=\"math inline\">\\(\\E(Y_n)=\\frac{1}{n}\\E(X_n)=0.01\\)</span> et <span class=\"math inline\">\\(\\sigma^2(Y_n)=\\frac{1}{n^2}\\sigma^2(X_n)=\\frac{0.0099}{n}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Trouver un entier <span class=\"math inline\">\\(n\\)</span> tel que la probabilité que <span class=\"math inline\">\\(0.009\\leq Y_n\\leq 0.011\\)</span> soit supérieure à <span class=\"math inline\">\\(0.9\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(\\prob(0.009\\leq Y_n\\leq 0.011)\\geq 0.9\\)</span>. On a <span class=\"math display\">\\[\\begin{align*}\n            \\prob(0.009\\leq Y_n\\leq 0.011)&amp;=\\prob(-0.001\\leq Y_n-0.01\\leq 0.001) \\\\\n            &amp;= \\prob(|Y_n-0.01|\\leq 0.001) \\\\\n            &amp;= 1-\\prob(|Y_n-0.01|\\geq 0.001).\n            \\end{align*}\\]</span> On cherche donc <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math display\">\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1.\\]</span> Or par l’inégalité de Bienaymé-Tchebychev, on a <span class=\"math display\">\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq \\frac{\\sigma^2(Y_n)}{(0.001)^2}=\\frac{\\nombre{9900}}{n}.\\]</span> Si on impose que <span class=\"math display\">\\[\\frac{\\nombre{9900}}{n}\\leq 0.10,\\]</span> on obtient bien <span class=\"math inline\">\\(\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1\\)</span>. Il faut donc que <span class=\"math display\">\\[n\\geq \\frac{\\nombre{9900}}{0.1}=\\nombre{99000}.\\]</span> On en conclut qu’il faut au moins examinés <span class=\"math inline\">\\(\\nombre{99000}\\)</span> jeunes pour avoir, dans <span class=\"math inline\">\\(90\\)</span>% des cas, une proportion de dyslexiques comprise entre <span class=\"math inline\">\\(0.9\\)</span>% et <span class=\"math inline\">\\(1.1\\)</span>%.</p>\n"
+    }
+  ]
+}

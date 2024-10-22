@@ -1,0 +1,46 @@
+{
+  "uuid": "oNkJ",
+  "titre": "Changement de variable",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire suivant la loi uniforme <span class=\"math inline\">\\(\\mathcal{U}([0;2])\\)</span>. On pose <span class=\"math inline\">\\(Y=\\max(1,X)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la fonction de répartition de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>C’est du cours : <span class=\"math inline\">\\(F_X(t)= \\begin{cases} 0 &amp; \\text{ si } t&lt;0 \\\\ \n            \\frac{t}{2} &amp; \\text{ si } t\\in]0;2[ \\\\\n            1 &amp; \\text{ si } t\\geq 2\n        \\end{cases}\\)</span> ; <span class=\"math inline\">\\(\\EX = 1\\)</span> et <span class=\"math inline\">\\(V(X) = 4/12 = 1/3\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la fonction de répartition de <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span> : <span class=\"math inline\">\\(F_Y(t) = \\PP(Y \\leq t) = \\PP(\\{1 \\leq t\\} \\cap \\{X \\leq t\\})\\)</span>. On distingue trois cas :<br />\nSi <span class=\"math inline\">\\(t \\geq 2\\)</span> : <span class=\"math inline\">\\(\\PP(Y \\leq t) = 1\\)</span> ;<br />\nSi <span class=\"math inline\">\\(1 \\leq t &lt; 2\\)</span> : <span class=\"math inline\">\\(\\PP(Y \\leq t) = \\PP(X \\leq t) = \\frac{t}{2}\\)</span> ;<br />\nSi <span class=\"math inline\">\\(t&lt;1\\)</span>, <span class=\"math inline\">\\(\\PP(Y \\leq t) = 0\\)</span>.</p>\n<p>On remarque que <span class=\"math inline\">\\(F_Y\\)</span> n’est pas continue en <span class=\"math inline\">\\(1\\)</span> (mais elle est bien continue à droite en <span class=\"math inline\">\\(1\\)</span>.).</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer la probabilité <span class=\"math inline\">\\(\\PP(Y=1)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On remarque que <span class=\"math inline\">\\(Y=1 \\iff X \\leq 1\\)</span> donc <span class=\"math inline\">\\(\\PP(Y=1) = \\PP(X \\leq 1) = 1/2\\)</span>.</p>\n<p>On sait aussi d’après le cours que <span class=\"math inline\">\\(\\PP(Y=1) = \\lim\\limits_{1^+}F_Y-\\lim\\limits_{1^-}F_Y = F_Y(1)-0 = 1/2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>La variable aléatoire <span class=\"math inline\">\\(Y\\)</span> est-elle discrète ? absolument continue ? Justifier.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La variable aléatoire <span class=\"math inline\">\\(Y\\)</span> n’est pas discrète car sa fonction de répartition n’est pas en escalier. Elle n’est pas non plus absolument continue car sa fonction de répartition n’est pas continue partout (discontinuité en <span class=\"math inline\">\\(1\\)</span>).</p>\n"
+    }
+  ]
+}

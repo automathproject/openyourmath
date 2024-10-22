@@ -1,0 +1,42 @@
+{
+  "uuid": "3WGA",
+  "titre": "Introduction à la loi binomiale",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Une urne contient 2 boules noires et 8 boules blanches.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>Un joueur tire successivement 5 boules en remettant la boule dans l’urne après chaque tirage. S’il tire une boule blanche il gagne 2 points dans le cas contraire il perd trois points. Soit <span class=\"math inline\">\\(X\\)</span> le nombre de points obtenus par le joueur en une partie.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Dresser le tableau définissant la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On peut dénombrer les cas possibles en regardant le nombre de boules blanches au sein d’un tirage de 5 boules :<br />\n0 boule blanche : <span class=\"math inline\">\\(X=5 \\times (-3) = -15\\)</span> pts<br />\n1 boule blanche : <span class=\"math inline\">\\(X = 2 + 4 \\times (-3) = -11\\)</span> pts<br />\n2 boules blanches : <span class=\"math inline\">\\(X = 2 \\times 2 + 3 \\times (-3) = -5\\)</span> pts<br />\n3 boules blanches : <span class=\"math inline\">\\(X = 3 \\times 2 + 2 \\times (-3) = 0\\)</span> pts<br />\n4 boules blanches : <span class=\"math inline\">\\(X = 4 \\times 2 + 1 \\times (-3) = 5\\)</span> pts<br />\n5 boules blanches : <span class=\"math inline\">\\(X = 5 \\times 2 = 10\\)</span> pts<br />\nA chaque tirage, la probabilité d’avoir une boule noire est <span class=\"math inline\">\\(0.2\\)</span> et la probabilité d’avoir une boule blanche est <span class=\"math inline\">\\(0.8\\)</span> car il y a remise. La probabilité d’avoir un certain tirage contenant <span class=\"math inline\">\\(k\\)</span> boules blanches et <span class=\"math inline\">\\(5-k\\)</span> boules noires est donc <span class=\"math inline\">\\((0.8)^k \\times (0.2)^{5-k}\\)</span>. Sur un tirage de 5 boules, il y a <span class=\"math inline\">\\(\\binom{5}{k}\\)</span> combinaisons possibles pour avoir <span class=\"math inline\">\\(k\\)</span> boules blanches parmi ces 5 boules. Au final, on a une probabilité d’avoir <span class=\"math inline\">\\(k\\)</span> boules blanches : <span class=\"math inline\">\\(\\binom{5}{k} \\times (0.8)^k \\times (0.2)^{5-k}\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(k=2\\)</span> par exemple, on a une probabilité de <span class=\"math inline\">\\(0.0512\\)</span>. Le nombre de points <span class=\"math inline\">\\(X\\)</span> étant déterminé par le nombre de boules blanches, on en déduit directement la loi de la variable <span class=\"math inline\">\\(X\\)</span> :</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(k\\)</span></th>\n<th style=\"text-align: center;\">-15</th>\n<th style=\"text-align: center;\">-11</th>\n<th style=\"text-align: center;\">-5</th>\n<th style=\"text-align: center;\">0</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">10</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\PP(X=k)\\)</span></td>\n<td style=\"text-align: center;\">0<span>,</span>00032</td>\n<td style=\"text-align: center;\">0<span>,</span>0064</td>\n<td style=\"text-align: center;\">0<span>,</span>0512</td>\n<td style=\"text-align: center;\">0<span>,</span>2048</td>\n<td style=\"text-align: center;\">0<span>,</span>4096</td>\n<td style=\"text-align: center;\">0<span>,</span>32768</td>\n</tr>\n</tbody>\n</table>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer l’espérance et la variance de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’espérance de <span class=\"math inline\">\\(X\\)</span> se calcule à partir du tableau et on trouve <span class=\"math inline\">\\(\\EX = 4\\)</span> : c’est le nombre de points que l’on peut obtenir en moyenne à ce jeu.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Le joueur tire 5 boules simultanément, les 10 boules de l’urne étant numérotées de 1 à 10. Soit <span class=\"math inline\">\\(Y\\)</span> le plus grand des numéros tirés. Déterminer la loi de probabilité de <span class=\"math inline\">\\(Y\\)</span> et calculer son espérance.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La variable <span class=\"math inline\">\\(Y\\)</span> est le plus grand des numéros tirés sur les 5 boules. Sur 5 boules tirées, la plus grande valeur est nécessairement supérieure ou égale à 5. Ainsi, les valeurs possibles prises par <span class=\"math inline\">\\(Y\\)</span> sont <span class=\"math inline\">\\(\\{5,6,7,8,9,10\\}\\)</span>.</p>\n<p>Il y a <span class=\"math inline\">\\(\\binom{10}{5}\\)</span> tirages possibles, ils sont équiprobables.</p>\n<p>Pour obtenir <span class=\"math inline\">\\(Y=5\\)</span>, il n’y a qu’un seul tirage possible : 5 boules parmi les 5 plus petits numéros.<br />\nPour obtenir <span class=\"math inline\">\\(Y \\leq 6\\)</span>, il y a <span class=\"math inline\">\\(\\binom{6}{5}\\)</span> tirages possibles : 5 boules parmi les 6 plus petits numéros.<br />\nOn généralise : pour obtenir <span class=\"math inline\">\\(Y \\leq k\\)</span>, il y a <span class=\"math inline\">\\(\\binom{k}{5}\\)</span> tirages possibles : 5 boules parmi les k plus petits numéros (avec <span class=\"math inline\">\\(k\\)</span> compris entre <span class=\"math inline\">\\(5\\)</span> et <span class=\"math inline\">\\(10\\)</span>). On en déduit la fonction de répartition de <span class=\"math inline\">\\(Y\\)</span> : <span class=\"math display\">\\[\\PP(Y \\leq k) = \\frac{\\binom{k}{5}}{\\binom{10}{5}}\\]</span> puis on obtient <span class=\"math inline\">\\(\\PP(Y=k) = \\PP(Y \\leq k) - \\PP(Y \\leq k-1)\\)</span>. Numériquement, cela donne :</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(k\\)</span></th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">-7</th>\n<th style=\"text-align: center;\">8</th>\n<th style=\"text-align: center;\">9</th>\n<th style=\"text-align: center;\">10</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\PP(Y \\leq k)\\)</span></td>\n<td style=\"text-align: center;\">0<span>,</span>003968</td>\n<td style=\"text-align: center;\">0<span>,</span>0238095</td>\n<td style=\"text-align: center;\">0<span>,</span>083333</td>\n<td style=\"text-align: center;\">0<span>,</span>222222</td>\n<td style=\"text-align: center;\">0<span>,</span>5</td>\n<td style=\"text-align: center;\">1</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\PP(Y=k)\\)</span></td>\n<td style=\"text-align: center;\">0<span>,</span>003968</td>\n<td style=\"text-align: center;\">0<span>,</span>019841</td>\n<td style=\"text-align: center;\">0<span>,</span>059524</td>\n<td style=\"text-align: center;\">0<span>,</span>138889</td>\n<td style=\"text-align: center;\">0<span>,</span>277778</td>\n<td style=\"text-align: center;\">0<span>,</span>5</td>\n</tr>\n</tbody>\n</table>\n"
+    }
+  ]
+}

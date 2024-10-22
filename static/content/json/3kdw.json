@@ -1,0 +1,54 @@
+{
+  "uuid": "3kdw",
+  "titre": "Lois statistiques et étude d'estimateurs",
+  "theme": "statistiques",
+  "auteur": "Maxime NGUYEN",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On considère un échantillon <span class=\"math inline\">\\((X_i)\\)</span> de taille <span class=\"math inline\">\\(n=5\\)</span> dans une population suivant une loi normale de paramètres <span class=\"math inline\">\\(\\mu\\)</span> et <span class=\"math inline\">\\(\\sigma^2\\)</span>. On pose <span class=\"math display\">\\[T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i \\qquad {T_2} = \\frac15(X_1+X_2) +\\frac14 (X_3+X_4+X_5) \\qquad T_3 = \\frac{1}{10}(2X_1+3X_2)+\\frac{1}{8}(X_3+2X_4+X_5)\\]</span> <span class=\"math display\">\\[U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{5}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{5}  {(X_i-T_1)^2}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Quelle est la loi suivie par la variable <span class=\"math inline\">\\(X_1-X_2\\)</span> ? Justifier.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après le cours, <span class=\"math inline\">\\(X_1-X_2\\)</span> suit une loi normale d’espérance <span class=\"math inline\">\\(\\mathbb{E}(X_1-X_2) = \\mu - \\mu = 0\\)</span>. Par indépendance, <span class=\"math inline\">\\(V(X_1-X_2) = V(X_1)+(-1)^2V(X_2) = 2\\sigma^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On cherche à estimer <span class=\"math inline\">\\(\\mu\\)</span> à l’aide des estimateurs <span class=\"math inline\">\\(T_1\\)</span>, <span class=\"math inline\">\\(T_2\\)</span>, <span class=\"math inline\">\\(T_3\\)</span>. Étudier leur biais et comparer l’efficacité des estimateurs sans biais.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Par linéarité de l’espérance, on calcule <span class=\"math inline\">\\(\\mathbb{E}(T_1) = \\frac{5\\mu}{5} = \\mu\\)</span>, <span class=\"math inline\">\\(\\mathbb{E}(T_2) = \\frac{2\\mu}{5}+\\frac{3\\mu}{4}\\)</span>, <span class=\"math inline\">\\(\\mathbb{E}(T_3) = \\mu\\)</span>. Par conséquent, <span class=\"math inline\">\\(B(T_1)=B(T_3)=0\\)</span> et <span class=\"math inline\">\\(B(T_2) = \\mathbb{E}(T_2)-\\mu = \\frac{3\\mu}{20}\\)</span>.</p>\n<p>Pour comparer l’efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :</p>\n<p><span class=\"math inline\">\\(V(T_1) = \\frac{\\sigma^2}{5} &lt; V(T_3) = \\frac{147\\sigma^2}{800}\\)</span>. Le plus efficace est donc l’estimateur <span class=\"math inline\">\\(T_1\\)</span> qui est la moyenne empirique.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Quelle est la loi suivie par la variable <span class=\"math inline\">\\(U\\)</span> ? la variable <span class=\"math inline\">\\(V\\)</span> ? justifier.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(U = \\sum_{i=1}^{5}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2\\)</span> ; or les <span class=\"math inline\">\\(X_i\\)</span> sont des variables aléatoires indépendantes et <span class=\"math inline\">\\(\\frac{X_i-\\mu}{\\sigma}\\)</span> suit une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span> donc par définition, <span class=\"math inline\">\\(U\\)</span> suit une loi de <span class=\"math inline\">\\(\\chi^2(5)\\)</span>.</p>\n<p>De plus, <span class=\"math inline\">\\(T_1 = \\overline{X}\\)</span> est l’estimateur de moyenne empirique donc d’après le théorème de Fisher, <span class=\"math inline\">\\(V\\)</span> suit une loi de <span class=\"math inline\">\\(\\chi^2(5-1) = \\chi^2(4)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(x \\in \\R\\)</span> tel que <span class=\"math inline\">\\(\\PP(U&gt;x) = 0{,}05\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On lit dans la table de loi <span class=\"math inline\">\\(\\PP(U&lt;x) = 0{,}95\\)</span> pour <span class=\"math inline\">\\(x = 11{,}07\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En utilisant <span class=\"math inline\">\\(T_1\\)</span> et <span class=\"math inline\">\\(U\\)</span>, construire une variable <span class=\"math inline\">\\(Y\\)</span> qui suive une loi de Student dont on précisera le paramètre.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pose <span class=\"math inline\">\\(Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{5} }}\\)</span> variable distribuée selon une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Soit alors <span class=\"math inline\">\\(Y = \\frac{Z}{\\sqrt{\\frac{U}{5} }}\\)</span> : par définition, <span class=\"math inline\">\\(Y\\)</span> suit une loi <span class=\"math inline\">\\(St(5)\\)</span>. Après simplification, on peut réécrire <span class=\"math inline\">\\(Y = \\frac{T_1-\\mu}{\\frac{\\sigma \\sqrt{U}}{5}}\\)</span>.</p>\n"
+    }
+  ]
+}

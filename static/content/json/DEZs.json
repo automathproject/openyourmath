@@ -1,0 +1,62 @@
+{
+  "uuid": "DEZs",
+  "titre": "Estimateur et intervalle de confiance",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soient <span class=\"math inline\">\\(X_1,...,X_n\\)</span> des variables aléatoires indépendantes et de même loi ayant pour densité : <span class=\"math display\">\\[f_\\theta \\colon x \\mapsto \\left\\{\n    \\begin{array}{ll}\n        \\frac{1}{2}(1+\\theta x) &amp; \\mbox{si } -1 \\leq x \\leq 1 \\\\\n        0 &amp; \\mbox{sinon.}\n    \\end{array}\n    \\right.\\]</span> où <span class=\"math inline\">\\(\\theta \\in [-1;1]\\)</span> est un paramètre.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que pour tout <span class=\"math inline\">\\(\\theta \\in [-1;1]\\)</span>, <span class=\"math inline\">\\(f_\\theta\\)</span> est une densité de probabilité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le fait que <span class=\"math inline\">\\(\\theta \\in [-1;1]\\)</span> garantit que <span class=\"math inline\">\\(f_{\\theta}(x) \\geq 0\\)</span> pour tout <span class=\"math inline\">\\(x \\in [-1;1]\\)</span>. De plus, <span class=\"math display\">\\[\\begin{align*}\n            \\int f_\\theta(x) dx &amp;= \\int_{-1}^{1} \\frac{1}{2}(1+\\theta x) dx \\\\\n            &amp;= \\int_{-1}^{1} \\frac{1}{2}(1+0) dx \\quad \\text{ par imparité de x} \\\\\n            &amp;= 1\n        \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(f_{\\theta}\\)</span> définit une bien une densité de probabilité.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer <span class=\"math inline\">\\(\\mathbb{E}(X_1)\\)</span> et <span class=\"math inline\">\\(\\mathbb{V}(X_1)\\)</span>. En déduire l’espérance et la variance de la variable aléatoire <span class=\"math inline\">\\(\\overline{X} = \\frac{1}{n}\\sum_{i=1}^n X_i\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule les moments d’ordre 1 et 2 de la variable à densité <span class=\"math inline\">\\(X_1\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(X_1) &amp;= \\int x f_\\theta(x) dx \\\\\n            &amp;= \\int_{-1}^{1} \\frac{1}{2}(x+\\theta x^2) dx \\\\\n            &amp;= \\int_{-1}^{1} \\frac{1}{2}(\\theta x^2) dx \\quad \\text{ par imparité de $x$} \\\\\n            &amp;= 2\\int_{0}^{1} \\frac{1}{2}(\\theta x^2) dx \\quad \\text{ par parité de $x^2$} \\\\\n            &amp;= \\frac{\\theta}{3}\n        \\end{align*}\\]</span> De même, <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(X_1^2) &amp;= \\int x^2 f_\\theta(x) dx \\\\\n            &amp;= \\int_{-1}^{1} \\frac{1}{2}(x^2+\\theta x^3) dx \\\\\n            &amp;= \\int_{-1}^{1} \\frac{1}{2}(x^2) dx \\quad \\text{ par imparité de $x^3$} \\\\\n            &amp;= \\int_{0}^{1}  x^2 dx \\quad \\text{ par parité de $x^2$} \\\\\n            &amp;= \\frac{1}{3}\n        \\end{align*}\\]</span></p>\n<p>Avec la formule de Koenig Huygens, on en déduit que <span class=\"math display\">\\[\\mathbb{V}(X_1) = \\mathbb{E}(X_1^2) -     \\mathbb{E}(X_1)^2 = \\frac{1}{3}-\\frac{\\theta^2}{9} = \\frac{3-\\theta^2}{9}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math inline\">\\(T_n = \\frac{3}{n} \\sum_{i=1}^{n} X_i\\)</span>. Montrer que <span class=\"math inline\">\\(T\\)</span> est un estimateur sans biais et convergent de <span class=\"math inline\">\\(\\theta\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule par linéarité de l’espérance : <span class=\"math inline\">\\(\\mathbb{E}(T_n) = \\frac{3}{n} \\times n \\mathbb{E}(X_1) = \\theta\\)</span>. Donc le biais de <span class=\"math inline\">\\(T_n\\)</span> est <span class=\"math inline\">\\(B(T_n) = \\mathbb{E}(T_n-\\theta) =\\theta - \\theta = 0\\)</span>.</p>\n<p>De plus, par propriétés de la variance et indépendance, <span class=\"math display\">\\[\\mathbb{V}(T_n) =  \\frac{9}{n^2} \\times n \\times \\mathbb{V}(X_1) = \\frac{3-\\theta^2}{n}\\]</span> Or <span class=\"math inline\">\\(EQM(T_n) = \\mathbb{V}(T_n) + B(T_n)^2\\)</span> donc <span class=\"math inline\">\\(EQM(T_n) = \\frac{3-\\theta^2}{n} \\xrightarrow[n \\to +\\infty]{} 0\\)</span> : cela prouve que l’estimateur <span class=\"math inline\">\\(T_n\\)</span> est convergent.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>À l’aide du Théorème Central Limite, donner une approximation de la loi de <span class=\"math inline\">\\(T_n\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pose <span class=\"math inline\">\\(\\mu = \\mathbb{E}(X_1)\\)</span> et <span class=\"math inline\">\\(\\sigma = \\sqrt{\\mathbb{V}(X_1)}\\)</span>. Les variables <span class=\"math inline\">\\((X_i)\\)</span> sont iid, admettent une espérance et une variance donc d’après le théorème central limite, la variable <span class=\"math display\">\\[\\frac{\\sum_{i=1}^n X_i - n\\mu}{\\sigma\\sqrt{n} }\\]</span> converge en loi vers une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. En réécrivant, cela revient à dire que <span class=\"math display\">\\[\\frac{\\frac{3}{n}\\sum_{i=1}^n X_i - 3\\mu}{3\\frac{\\sigma}{\\sqrt{n}} } = \\frac{T_n-\\theta}{\\sqrt{\\frac{3-\\theta^2}{n}}}\\]</span> converge en loi vers une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(n\\)</span> est grand (<span class=\"math inline\">\\(n \\geq 30\\)</span>), cela revient à dire que <span class=\"math inline\">\\(T_n\\)</span> suit approximativement une loi normale <span class=\"math inline\">\\(\\mathcal{N}(\\theta, \\sigma^2 = \\frac{3-\\theta^2}{n})\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer qu’il existe une constante <span class=\"math inline\">\\(M_n\\)</span> ne dépendant pas de <span class=\"math inline\">\\(\\theta\\)</span> telle que si <span class=\"math inline\">\\(\\lambda &gt;0\\)</span>, <span class=\"math display\">\\[\\PP(|T_n-\\theta| &lt; \\lambda) \\geq 1-\\frac{M_n}{\\lambda^2}\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après l’inégalité de Bienaymé Tchebichev, <span class=\"math display\">\\[\\PP(|T_n-\\mathbb{E}(T_n)| \\geq  \\lambda) \\leq \\frac{\\mathbb{V}(T_n)}{\\lambda^2}\\]</span> d’où <span class=\"math display\">\\[\\PP(|T_n-\\theta| \\geq \\lambda) \\leq \\frac{3-\\theta^2}{n\\lambda^2} \\leq \\frac{3}{n\\lambda^2} = \\frac{M_n}{\\lambda^2}\\]</span> en posant <span class=\"math inline\">\\(M_n = \\frac{3}{n}\\)</span>. Par passage au complémentaire, on obtient finalement : <span class=\"math display\">\\[\\PP(|T_n-\\theta| &lt; \\lambda) \\geq 1-\\frac{3}{n\\lambda^2}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer un intervalle de confiance permettant d’estimer <span class=\"math inline\">\\(\\theta\\)</span> avec une confiance d’au moins <span class=\"math inline\">\\(95\\%\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche un intervalle <span class=\"math inline\">\\(I\\)</span> tel que <span class=\"math inline\">\\(\\PP(\\theta \\in I) \\geq 0{,}95\\)</span>. Or d’après ce qui précède,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n            \\PP(|T_n-\\theta| &lt; \\lambda) \\geq 1-\\frac{3}{n\\lambda^2} &amp;\\iff \\PP(-\\lambda &lt; T_n-\\theta &lt; \\lambda ) \\geq 1-\\frac{3}{n\\lambda^2} \\\\\n            &amp;\\iff   \\PP( \\theta \\in ]T_n-\\lambda ; T_n + \\lambda [) \\geq 1-\\frac{3}{n\\lambda^2}     \n        \\end{align*}\\]</span> Or <span class=\"math inline\">\\(1-\\frac{3}{n\\lambda^2} = 0{,}95 \\iff \\frac{3}{n\\lambda^2} = 0{,}05 \\iff \\lambda^2 = \\frac{3}{0{,}05 n}\\)</span> donc <span class=\"math display\">\\[\\PP\\left( \\theta \\in \\left]T_n - \\sqrt{\\frac{3}{0{,}05 n}} ; T_n + \\sqrt{\\frac{3}{0{,}05 n}}  \\right[\\right) \\geq 0{,}95\\]</span> d’où l’intervalle de confiance <span class=\"math inline\">\\(I = \\left]T_n - \\sqrt{\\frac{3}{0{,}05 n}} ; T_n + \\sqrt{\\frac{3}{0{,}05 n}}  \\right[\\)</span>.</p>\n"
+    }
+  ]
+}

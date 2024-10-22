@@ -1,0 +1,38 @@
+{
+  "uuid": "vnXU",
+  "titre": "Loi log-normale",
+  "theme": "probabilités",
+  "auteur": "Djessy Vianne",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire réelle définie sur un espace probabilisé <span class=\"math inline\">\\((\\Omega, \\mathcal{T}, \\prob)\\)</span>. On suppose que <span class=\"math inline\">\\(X(\\Omega) = ]0,+\\infty[\\)</span> et que <span class=\"math inline\">\\(\\ln(X)\\)</span> suit une loi normale d’espérance <span class=\"math inline\">\\(\\mu = 1\\)</span> et d’écart-type <span class=\"math inline\">\\(\\sigma = 2\\)</span>. On note <span class=\"math inline\">\\(\\Phi\\)</span> la fonction de répartition de la loi normale centrée réduite <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Donner une valeur approchée, à <span class=\"math inline\">\\(10^{-2}\\)</span> près, de <span class=\"math inline\">\\(\\prob(-0{,}5 \\leq \\ln(X) \\leq 2{,}5)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(\\prob(-0{,}5 \\leq \\ln(X) \\leq 2{,}5) = \\prob\\left(\\frac{-0{,}5 - 1}{2} \\leq \\frac{\\ln(X) - 1}{2} \\leq \\frac{2{,}5 - 1}{2}\\right) = \\prob(-0{,}75 \\leq Z \\leq 0{,}75)\\)</span>.</p>\n<p>On a <span class=\"math inline\">\\(\\Phi(0{,}75) \\approx 0{,}7734\\)</span> et <span class=\"math inline\">\\(\\prob(-0{,}75 \\leq Z \\leq 0{,}75) = 2 \\Phi(0{,}75) - 1 \\approx 0{,}55\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On note <span class=\"math inline\">\\(F_X\\)</span> la fonction de répartition de <span class=\"math inline\">\\(X\\)</span>. Exprimer <span class=\"math inline\">\\(F_X\\)</span> en fonction de <span class=\"math inline\">\\(\\Phi\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span class=\"math inline\">\\(t \\leq 0\\)</span>, alors <span class=\"math inline\">\\(F_X(t) = \\prob(X \\leq t) = 0\\)</span> car <span class=\"math inline\">\\(X(\\Omega) = ]0,+\\infty[\\)</span>. Si <span class=\"math inline\">\\(t &gt; 0\\)</span>, alors : <span class=\"math display\">\\[\\begin{align*}\n                F_X(t) &amp;= \\prob(X \\leq t) \\\\\n                &amp;= \\prob(\\ln(X) \\leq \\ln(t)) \\\\\n                &amp;= \\prob\\left(\\frac{\\ln(X) - 1}{2} \\leq \\frac{\\ln(t) - 1}{2}\\right) \\\\\n                &amp;= \\Phi\\left(\\frac{\\ln(t) - 1}{2}\\right)\n            \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La fonction <span class=\"math inline\">\\(F_X\\)</span> est dérivable presque partout, sa dérivée est une densité de probabilité que l’on note <span class=\"math inline\">\\(f\\)</span>. On note au passage que pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span>, <span class=\"math inline\">\\(\\Phi&#39;(x) = \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{x^2}{2}}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x \\leq 0\\)</span>, alors <span class=\"math inline\">\\(f(x) = 0\\)</span>. Si <span class=\"math inline\">\\(x &gt; 0\\)</span>, alors par dérivation d’une fonction composée : <span class=\"math display\">\\[f(x) = \\frac{1}{2x} \\times \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{(\\ln(x) - 1)^2}{2}}.\\]</span></p>\n"
+    }
+  ]
+}

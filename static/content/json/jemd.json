@@ -1,0 +1,54 @@
+{
+  "uuid": "jemd",
+  "titre": "Maximum de vraisemblance pour une loi géométrique",
+  "theme": "statistiques",
+  "auteur": "Maxime NGUYEN",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On rappelle qu’une variable <span class=\"math inline\">\\(X\\)</span> suit une loi géométrique de paramètre <span class=\"math inline\">\\(p \\in ]0;1[\\)</span> si <span class=\"math inline\">\\(X\\)</span> est à valeurs dans <span class=\"math inline\">\\(\\N^*=\\{1;2;3;...\\}\\)</span> et si pour tout <span class=\"math inline\">\\(k \\in \\N^*\\)</span>, <span class=\"math display\">\\[\\PP(X=k)=p(1-p)^{k-1}\\]</span></p>\n<p>On cherche à estimer ce paramètre <span class=\"math inline\">\\(p\\)</span> à partir d’un échantillon.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>On considère un échantillon <span class=\"math inline\">\\((X_1,X_2,X_3,X_4,X_5)\\)</span> ayant pour loi mère une loi géométrique de paramètre <span class=\"math inline\">\\(p\\)</span> et on suppose que la suite <span class=\"math inline\">\\((3;4;4;2;3)\\)</span> constitue une réalisation de cet échantillon.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Exprimer la fonction de vraisemblance associée à cet échantillon.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après le cours, la fonction de vraisemblance associée à cet échantillon est donnée par : <span class=\"math display\">\\[\\begin{align*}\n            L(p) &amp;= \\PP(X_1=3) \\times \\PP(X_2=4) \\times \\PP(X_3=4) \\times \\PP(X_4=2) \\times \\PP(X_5=3) \\\\\n            &amp;= p(1-p)^2 \\times p(1-p)^3 \\times p(1-p)^3 \\times p(1-p) \\times p(1-p)^2 \\\\\n            &amp;= p^5(1-p)^{11}\n        \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire une estimation de <span class=\"math inline\">\\(p\\)</span> par la méthode du maximum de vraisemblance.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche à maximiser la fonction <span class=\"math inline\">\\(L\\)</span> sur <span class=\"math inline\">\\(]0;1[\\)</span>. Pour cela, on calcule la dérivée de <span class=\"math inline\">\\(L\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            L&#39;(p) &amp;= 5p^4(1-p)^{11} - 11p^5(1-p)^{10} \\\\\n            &amp;= p^4(1-p)^{10}(5-11p)\n        \\end{align*}\\]</span> La fonction <span class=\"math inline\">\\(L\\)</span> est dérivable sur <span class=\"math inline\">\\(]0;1[\\)</span> et <span class=\"math inline\">\\(L&#39;(p)=0\\)</span> si et seulement si <span class=\"math inline\">\\(p=0\\)</span>, <span class=\"math inline\">\\(p=1\\)</span> ou <span class=\"math inline\">\\(p=\\frac{5}{11}\\)</span>.<br />\nOr, <span class=\"math inline\">\\(L(0)=0\\)</span>, <span class=\"math inline\">\\(L(1)=0\\)</span> et <span class=\"math inline\">\\(L(\\frac{5}{11})&gt;0\\)</span>.<br />\nDonc, <span class=\"math inline\">\\(L\\)</span> admet un maximum en <span class=\"math inline\">\\(p=\\frac{5}{11}\\)</span>.</p>\n<p>En conclusion, la valeur la plus vraisemblable pour <span class=\"math inline\">\\(p\\)</span> est <span class=\"math inline\">\\(\\frac{5}{11}\\)</span>. Il s’agit donc d’une estimation du paramètre <span class=\"math inline\">\\(p\\)</span> par la méthode du maximum de vraisemblance.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>Afin de déterminer un estimateur de <span class=\"math inline\">\\(p\\)</span>, on considère maintenant un <span class=\"math inline\">\\(n\\)</span>-échantillon <span class=\"math inline\">\\((X_1,...,X_n)\\)</span> ayant pour loi mère une loi géométrique de paramètre <span class=\"math inline\">\\(p\\)</span> et <span class=\"math inline\">\\(n\\)</span> entiers non nuls <span class=\"math inline\">\\((x_1,...,x_n)\\)</span> constituant une réalisation de cet échantillon.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Exprimer la fonction de vraisemblance associée à cet échantillon.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{align*}\n            L(x_1,...,x_n,p) &amp;= \\PP(X_1=x_1) \\times ... \\times \\PP(X_n=x_n) \\\\\n            &amp;= p(1-p)^{x_1-1} \\times ... \\times p(1-p)^{x_n-1} \\\\\n            &amp;= p^n(1-p)^{x_1+...+x_n-n}\n        \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En utilisant la méthode du maximum de vraisemblance, déterminer un estimateur du paramètre <span class=\"math inline\">\\(p\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On cherche à maximiser la fonction <span class=\"math inline\">\\(L\\)</span> sur <span class=\"math inline\">\\(]0;1[\\)</span>. Pour cela, on calcule la dérivée partielle de <span class=\"math inline\">\\(L\\)</span> par rapport à <span class=\"math inline\">\\(p\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            \\frac{\\partial L}{\\partial p}(x_1,...,x_n,p) &amp;= np^{n-1}(1-p)^{x_1+...+x_n-n} - p^n(x_1+...+x_n-n)(1-p)^{x_1+...+x_n-n-1} \\\\\n            &amp;= p^{n-1}(1-p)^{x_1+...+x_n-n-1}(n-(x_1+...+x_n-n)p)\n        \\end{align*}\\]</span> La fonction <span class=\"math inline\">\\(L\\)</span> est dérivable sur <span class=\"math inline\">\\(]0;1[\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial L}{\\partial p}(p)=0\\)</span> si et seulement si <span class=\"math inline\">\\(p=0\\)</span>, <span class=\"math inline\">\\(p=1\\)</span> ou <span class=\"math inline\">\\(p=\\frac{n}{\\sum\\limits_{i=1}^n x_i}\\)</span>.<br />\nOr, <span class=\"math inline\">\\(L(0)=0\\)</span>, <span class=\"math inline\">\\(L(1)=0\\)</span> et <span class=\"math inline\">\\(L\\left(\\frac{n}{\\sum\\limits_{i=1}^n x_i}\\right)&gt;0\\)</span>.<br />\nDonc, <span class=\"math inline\">\\(L\\)</span> admet un maximum en <span class=\"math inline\">\\(p=\\frac{n}{\\sum\\limits_{i=1}^n x_i}\\)</span>.</p>\n<p>Ceci étant vrai pour toute réalisation <span class=\"math inline\">\\((x_1,...,x_n)\\)</span> de l’échantillon, on en déduit que <span class=\"math inline\">\\(\\widehat{p}=\\frac{n}{\\sum\\limits_{i=1}^n X_i}\\)</span> est un estimateur du paramètre <span class=\"math inline\">\\(p\\)</span> par la méthode du maximum de vraisemblance.</p>\n"
+    }
+  ]
+}

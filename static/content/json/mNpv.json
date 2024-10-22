@@ -1,0 +1,30 @@
+{
+  "uuid": "",
+  "titre": "Calcul différentiel",
+  "theme": "Optimisation",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Cet exercice traite des notions de dérivées partielles, continuité et différentiabilité.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un <span class=\"math inline\">\\(\\mathbb{R}\\)</span>-espace vectoriel muni d’un produit scalaire <span class=\"math inline\">\\(\\langle \\cdot, \\cdot \\rangle\\)</span>. Montrer la continuité, puis la différentiabilité et calculer la différentielle de l’application \"produit scalaire\" <span class=\"math inline\">\\(\\Phi : E^2 \\to \\mathbb{R}\\)</span> définie par <span class=\"math inline\">\\(\\Phi(x, y) = \\langle x, y \\rangle\\)</span> pour tous <span class=\"math inline\">\\((x, y) \\in E^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’application <span class=\"math inline\">\\(\\Phi\\)</span> est bilinéaire, donc sa continuité sur <span class=\"math inline\">\\(E^2\\)</span> équivaut à sa continuité en <span class=\"math inline\">\\((0, 0)\\)</span>. D’après l’inégalité de Cauchy-Schwarz, on a <span class=\"math display\">\\[|\\Phi(x, y)| \\leq \\|x\\| \\cdot \\|y\\| \\quad \\text{pour tous } (x, y) \\in E^2.\\]</span></p>\n<p>Pour la différentiabilité, fixons <span class=\"math inline\">\\((x, y) \\in E^2\\)</span> et <span class=\"math inline\">\\((h, k) \\in E^2\\)</span>. On a : <span class=\"math display\">\\[\\Phi(x + h, y + k) = \\Phi(x, y) + \\Phi(x, k) + \\Phi(h, y) + \\Phi(h, k),\\]</span> donc la différentielle de <span class=\"math inline\">\\(\\Phi\\)</span> en <span class=\"math inline\">\\((x, y)\\)</span> est donnée par <span class=\"math inline\">\\(d\\Phi_{(x, y)}(h, k) = \\langle x, k \\rangle + \\langle y, h \\rangle\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(A \\in \\mathcal{M}_{n,m}(\\mathbb{R})\\)</span>. Montrer que l’application <span class=\"math inline\">\\(J : \\mathbb{R}^m \\to \\mathbb{R}\\)</span> définie par <span class=\"math inline\">\\(J(X) = \\|AX\\|^2\\)</span> est différentiable et calculer sa différentielle. Montrer ensuite que l’application <span class=\"math inline\">\\(G : \\mathbb{R}^m \\to \\mathbb{R}\\)</span> définie par <span class=\"math inline\">\\(G(X) = f(J(X))\\)</span> pour une fonction <span class=\"math inline\">\\(f \\in C^1(\\mathbb{R})\\)</span> est différentiable et calculer sa différentielle.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’application <span class=\"math inline\">\\(X \\mapsto \\|AX\\|^2\\)</span> est polynomiale, donc elle est différentiable sur <span class=\"math inline\">\\(\\mathbb{R}^m\\)</span>. En particulier, on a <span class=\"math display\">\\[J(X) = \\langle AX, AX \\rangle = \\langle A^TAX, X \\rangle,\\]</span> et la différentielle de <span class=\"math inline\">\\(J\\)</span> en <span class=\"math inline\">\\(X\\)</span> est donnée par <span class=\"math inline\">\\(d_X J(h) = 2 \\langle A^TAX, h \\rangle\\)</span> pour tout <span class=\"math inline\">\\(h \\in \\mathbb{R}^m\\)</span>.</p>\n<p>Pour l’application <span class=\"math inline\">\\(G\\)</span>, on applique le théorème de composition des différentielles. On obtient : <span class=\"math display\">\\[d_X G(h) = f&#39;(J(X)) \\cdot d_X J(h) = 2 f&#39;(J(X)) \\langle A^TAX, h \\rangle.\\]</span></p>\n"
+    }
+  ]
+}

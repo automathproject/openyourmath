@@ -1,0 +1,42 @@
+{
+  "uuid": "d4sm",
+  "titre": "Loi de Pareto",
+  "theme": "Probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Vérifier que la fonction <span class=\"math inline\">\\(f\\)</span> définit bien une densité de probabilité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Pour que <span class=\"math inline\">\\(f\\)</span> soit une densité, l’intégrale de <span class=\"math inline\">\\(f\\)</span> doit être égale à 1. On a : <span class=\"math display\">\\[\\begin{align*}\n            \\int_1^{+\\infty} \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx &amp;= \\alpha \\int_1^{+\\infty} x^{-(\\alpha+1)} dx \\\\\n            &amp;= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^{+\\infty} \\\\\n            &amp;= \\frac{\\alpha}{\\alpha} = 1\n        \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(f\\)</span> est positive et <span class=\"math inline\">\\(\\int f = 1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la fonction de répartition de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span class=\"math inline\">\\(t \\leq 1\\)</span>, alors <span class=\"math inline\">\\(F_X(t) = 0\\)</span>. Si <span class=\"math inline\">\\(t &gt; 1\\)</span>, alors : <span class=\"math display\">\\[\\begin{align*}\n                F_X(t) &amp;= \\int_1^t \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx \\\\\n                &amp;= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^t \\\\\n                &amp;= 1 - \\frac{1}{t^\\alpha}\n            \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Étudier l’existence de <span class=\"math inline\">\\(\\E(X)\\)</span> en fonction de la valeur du paramètre <span class=\"math inline\">\\(\\alpha\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si elle existe, l’espérance de <span class=\"math inline\">\\(X\\)</span> est <span class=\"math inline\">\\(\\int_1^{+\\infty} x \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx\\)</span>. Or cette intégrale existe si et seulement si <span class=\"math inline\">\\(\\alpha &gt; 1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la loi de la variable aléatoire <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span class=\"math inline\">\\(t \\leq s+1\\)</span>, alors <span class=\"math inline\">\\(F_Y(t) = 0\\)</span>. Si <span class=\"math inline\">\\(t &gt; s+1\\)</span>, alors : <span class=\"math display\">\\[\\begin{align*}\n                F_Y(t) &amp;= \\prob(Y \\leq t) \\\\\n                &amp;= \\prob(rX + s \\leq t) \\\\\n                &amp;= \\prob(X \\leq \\frac{t-s}{r}) \\\\\n                &amp;= F_X\\left( \\frac{t-s}{r} \\right) \\\\\n                &amp;= 1 - \\frac{1}{\\left( \\frac{t-s}{r} \\right)^\\alpha} \\\\\n                &amp;= 1 - \\left( \\frac{r}{t-s} \\right)^\\alpha\n            \\end{align*}\\]</span> Par dérivation, on trouve que <span class=\"math inline\">\\(Y\\)</span> est une variable aléatoire absolument continue et que la densité de <span class=\"math inline\">\\(Y\\)</span> est <span class=\"math inline\">\\(f_Y(x) = \\mathbf{1}_{]s+1;+\\infty[}(x) \\frac{\\alpha}{r} \\left( \\frac{r}{x-s} \\right)^{\\alpha+1}\\)</span>. On trouve une loi de Pareto de paramètre <span class=\"math inline\">\\((\\alpha, r, s+1)\\)</span>.</p>\n"
+    }
+  ]
+}

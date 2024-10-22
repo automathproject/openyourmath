@@ -1,0 +1,26 @@
+{
+  "uuid": "buE8",
+  "titre": "Choix d'estimateur",
+  "theme": "statistiques",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire suivant une loi de Poisson <span class=\"math inline\">\\(\\mathcal{P}(\\lambda)\\)</span>. On rappelle que dans ce cas, quelque soit l’entier <span class=\"math inline\">\\(k \\in \\N\\)</span>, <span class=\"math inline\">\\(\\PP(X=k) = e^{-\\lambda} \\frac{\\lambda^k}{k!}\\)</span>.</p>\n<p>On observe la réalisation d’un échantillon de taille 6 de cette loi : <span class=\"math inline\">\\(1,5,2,2,3,1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>À l’aide de la méthode du maximum de vraisemblance, donner une estimation de <span class=\"math inline\">\\(\\lambda\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Généraliser le procédé pour obtenir un estimateur de <span class=\"math inline\">\\(\\lambda\\)</span> et déterminer son biais.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<ol>\n<li><p>Soit <span class=\"math inline\">\\((x_1,...,x_n)\\)</span> une réalisation quelconque de l’échantillon <span class=\"math inline\">\\((X_1,...X_n)\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        \\mathcal{L}(\\lambda) &amp;= \\PP(X_1=x_1,X_2=2,...,X_n=x_n) \\\\\n        &amp;= \\PP(X_1=x_1)\\PP(X_2=2),...,\\PP(X_n=x_n) \\text{ par indépendance des va} \\\\\n        &amp;= e^{-\\lambda} \\frac{\\lambda^{x_1}}{x_1!} \\times e^{-\\lambda} \\frac{\\lambda^{x_2}}{x_2!}  \\times ,..., \\times e^{-\\lambda} \\frac{\\lambda^{x_n}}{x_n!} \\\\\n        &amp;=e^{-n\\lambda} \\frac{\\lambda^{\\sum_{i=1}^n x_i }}{x_1!...x_n!}\n    \\end{align*}\\]</span></p></li>\n<li><p>On cherche la valeur de <span class=\"math inline\">\\(\\lambda\\)</span> qui maximise la fonction de vraisemblance via la log vraisemblance : <span class=\"math display\">\\[\\begin{align*}\n        \\ln \\mathcal{L}(\\lambda) &amp;= -n \\lambda + \\left(\\sum_{i=1}^n x_i\\right)\\ln(\\lambda) - \\ln(x_1!...x_n!) \n    \\end{align*}\\]</span> que l’on dérive afin de voir pour quelle valeur de <span class=\"math inline\">\\(p \\in ]0;1[\\)</span> cette expression est maximale : <span class=\"math display\">\\[\\begin{align*}\n        \\ln \\mathcal{L}(p) =0 \n        &amp;\\iff  -n+ \\left(\\sum_{i=1}^n x_i\\right) \\times \\frac{1}{\\lambda} = 0 \\\\\n        &amp;\\iff \\lambda = \\frac{\\sum_{i=1}^n x_i}{n}\n    \\end{align*}\\]</span></p>\n<p>En remplaçant par les valeurs de la réalisation de l’échantillon, on trouve comme estimation de <span class=\"math inline\">\\(\\lambda\\)</span> la valeur <span class=\"math inline\">\\(\\frac{14}{6}\\)</span>.</p>\n<p>On trouve en général l’estimateur de moyenne empirique, il est sans biais car <span class=\"math inline\">\\(\\E(X) = \\lambda\\)</span> pour une loi de Poisson de paramètre <span class=\"math inline\">\\(\\lambda\\)</span>.</p></li>\n</ol>\n"
+    }
+  ]
+}

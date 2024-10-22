@@ -1,0 +1,30 @@
+{
+  "uuid": "dsIx",
+  "titre": "Estimation et loi puissance",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>En 2008, le célèbre opérateur FSR proposait un forfait téléphonique de 1 heure mensuelle. Pour étudier la consommation des clients ayant opté pour ce forfait, il a relevé la proportion mensuelle du forfait consommé par 15 clients et a obtenu, après avoir ordonné les résultats :</p>\n<p><span class=\"math display\">\\[0.29 \\qquad 0.46 \\qquad 0.51 \\qquad 0.61 \\qquad 0.70 \\qquad 0.72 \\qquad 0.76 \\qquad 0.79\\]</span> <span class=\"math display\">\\[0.84 \\qquad 0.85 \\qquad 0.86 \\qquad 0.92 \\qquad 0.94 \\qquad 0.96 \\qquad 1\\]</span></p>\n<p>Cette répartition suggère de modéliser les observations à l’aide d’une loi puissance de paramètre <span class=\"math inline\">\\((\\lambda,1)\\)</span> avec <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> dont la fonction densité est : <span class=\"math display\">\\[f_\\lambda(x) = \\lambda \\, x^{\\lambda-1}\\textbf{1}_{[0;1]}(x)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Á l’aide de la méthode du maximum de vraisemblance, construire un estimateur du paramètre <span class=\"math inline\">\\(\\lambda\\)</span>, pour un <span class=\"math inline\">\\(n\\)</span>-échantillon <span class=\"math inline\">\\((X_1,...,X_n)\\)</span>. On notera cet estimateur <span class=\"math inline\">\\(\\widehat{\\lambda_n}\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Avec la log-vraisemblance, on obtient l’estimateur <span class=\"math inline\">\\(\\widehat{\\lambda_n} = \\frac{n}{-\\sum \\ln(x_i)}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On admet que la variable aléatoire <span class=\"math inline\">\\(2n\\, \\frac{\\lambda}{\\widehat{\\lambda_n}}\\)</span> suit une loi <span class=\"math inline\">\\(\\chi^2(2n)\\)</span>. En déduire l’expression d’un intervalle de confiance de niveau <span class=\"math inline\">\\(1-\\alpha\\)</span> sous la forme <span class=\"math inline\">\\(]-\\infty~;~T]\\)</span> pour le paramètre <span class=\"math inline\">\\(\\lambda\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Si on note <span class=\"math inline\">\\(q_{\\alpha,n}\\)</span> le quantile tel que <span class=\"math inline\">\\(\\PP(Z&lt;q_{\\alpha,n}) = 1-\\alpha\\)</span> où <span class=\"math inline\">\\(Z \\sim \\chi^2(n)\\)</span>, on obtient un intervalle de confiance <span class=\"math display\">\\[]-\\infty~;~q_{\\alpha,2n}\\,\\frac{\\widehat{\\lambda_n}}{2n}]\\]</span></p>\n"
+    }
+  ]
+}

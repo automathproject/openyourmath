@@ -1,0 +1,42 @@
+{
+  "uuid": "hqXo",
+  "titre": "Différentiabilité",
+  "theme": "calcul différentiel",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle continue sur <span class=\"math inline\">\\(\\R^2\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Tout d’abord, on remarque que <span class=\"math inline\">\\(f\\)</span> est bien définie sur <span class=\"math inline\">\\(\\R^2\\)</span>. Elle est continue (et même <span class=\"math inline\">\\(C^{\\infty}\\)</span> sur <span class=\"math inline\">\\(\\R^2-\\{(0,0)\\}\\)</span> en tant que fraction rationnelle. Pour étudier la continuité en <span class=\"math inline\">\\((0,0)\\)</span>, on passe en polaires : <span class=\"math display\">\\[\\begin{align*}\n        f(r\\cos\\theta, r\\sin\\theta) - f(0,0) &amp;= \\frac{(r\\cos\\theta)^2(r\\sin\\theta)^3}{ (r\\cos\\theta)^2 + (r\\sin\\theta)^2 } \\\\\n        &amp;= r\\cos^2\\theta \\sin^3\\theta\n        \\end{align*}\\]</span> Il suit <span class=\"math display\">\\[\\begin{align*}\n        |f(r\\cos\\theta, r\\sin\\theta) - f(0,0)| &amp;\\leq r \\\\\n        &amp; \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$} \n        \\end{align*}\\]</span> Ainsi <span class=\"math inline\">\\(f\\)</span> est continue en <span class=\"math inline\">\\((0,0)\\)</span>, et finalement</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer <span class=\"math inline\">\\(\\overrightarrow{\\textup{grad}}\\ f (x,y)\\)</span> pour <span class=\"math inline\">\\((x,y) \\neq (0,0)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>pour <span class=\"math inline\">\\((x,y) \\neq (0,0)\\)</span> <span class=\"math display\">\\[\\begin{align*}\n        \\overrightarrow{\\textup{grad}}\\ f(x,y) &amp;= \\left[ \\begin{array}{c}\n        \\dpa{}{x}\\left[ \\dfrac{x^2 y^3}{x^2+y^2}\\right]  \\\\ \\dpa{}{y}\\left[ \\dfrac{x^2 y^3}{x^2+y^2}\\right] \n        \\end{array} \\right] \\\\\n        &amp;= \\left[ \\begin{array}{c}\n        \\dfrac{(2xy^3)(x^2+y^2) -(x^2 y^3)(2x)}{(x^2+y^2)^2}  \\\\ \\dfrac{(3x^2y^2)(x^2+y^2) -(x^2 y^3)(2y)}{(x^2+y^2)^2}\n        \\end{array} \\right] \\\\\n        &amp;= \\frac{1}{(x^2+y^2)^2}\\left[ \\begin{array}{c} 2xy^5 \\\\ x^4y^2 + x^2y^4 \\end{array} \\right]\n        \n        \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\R^2\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Nous avons</p>\n<ul>\n<li><p>existence des dérivées partielles<br />\n<span class=\"math display\">\\[\\dfrac{f(h,0) - f(0,0)}{h} = 0 \\tvq{0}{h}{0}\\hspace*{5mm} \\text{ donc $\\dpa{f}{x}(0,0)$ existe et vaut $0$}\\]</span> <span class=\"math display\">\\[\\dfrac{f(0,h) - f(0,0)}{h} = 0 \\tvq{0}{h}{0}\\hspace*{5mm} \\text{ donc $\\dpa{f}{y}(0,0)$ existe et vaut $0$}\\]</span></p></li>\n<li><p>continuité des dérivées partielles <span class=\"math display\">\\[\\begin{align*}\n            \\dpa{f}{x}(x,y) - \\dpa{f}{x}(0,0) &amp;= \\frac{2xy^5}{(x^2+y^2)^2} \\\\\n            &amp; \\text{ (passage en polaires)} \\\\\n            &amp;= 2r^2 \\cos\\theta \\sin^5\\theta\n            \\end{align*}\\]</span> Donc <span class=\"math display\">\\[\\left| \\dpa{f}{x}(x,y) - \\dpa{f}{x}(0,0) \\right| \\leq 2r^2 \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$}\\]</span> De manière analogue, <span class=\"math display\">\\[\\begin{align*}\n            \\dpa{f}{y}(x,y) - \\dpa{f}{y}(0,0) &amp;= \\frac{x^4y^2 + x^2y^4}{(x^2+y^2)^2} \\\\\n            &amp; \\text{ (passage en polaires)} \\\\\n            &amp;= r^2 \\cos^2\\theta \\sin^2\\theta\n            \\end{align*}\\]</span> Donc <span class=\"math display\">\\[\\left| \\dpa{f}{y}(x,y) - \\dpa{f}{y}(0,0) \\right| \\leq r^2  \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$}\\]</span></p></li>\n</ul>\n<p>On conclut que <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(C^1\\)</span> en <span class=\"math inline\">\\((0,0)\\)</span>. Par ailleurs, <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\R^2-\\{(0,0)\\}\\)</span>. Au final</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle différentiable sur <span class=\"math inline\">\\(\\R^2\\)</span> ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>car elle est <span class=\"math inline\">\\(C^1\\)</span>. C’est l’application du théorème 2.9 du poly.</p>\n"
+    }
+  ]
+}

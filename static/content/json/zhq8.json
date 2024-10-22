@@ -1,0 +1,38 @@
+{
+  "uuid": "zhq8",
+  "titre": "Construction de la loi du $\\chi^2$",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On appelle loi Gamma <span class=\"math inline\">\\(\\Gamma(\\alpha,\\lambda)\\)</span> où <span class=\"math inline\">\\(\\alpha&gt;0\\)</span>, <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> la loi dont la densité est définie par <span class=\"math display\">\\[f(t) = \\frac{\\lambda^\\alpha}{\\Gamma(\\alpha)}t^{\\alpha-1}e^{-\\lambda t}\\textbf{1}_{[0;+\\infty[}(t)\\]</span> où <span class=\"math display\">\\[\\Gamma(\\alpha) = \\int_0^{+\\infty} x^{\\alpha-1}e^{-x}dx\\]</span> Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire suivant une loi normale centrée réduite. On pose <span class=\"math inline\">\\(Y=X^2\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En étudiant sa fonction de répartition, montrer que <span class=\"math inline\">\\(Y\\)</span> suit une loi <span class=\"math inline\">\\(\\Gamma(\\frac12,\\frac12)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(F_Y\\)</span> la fonction de répartition de <span class=\"math inline\">\\(Y\\)</span>. Puisque <span class=\"math inline\">\\(Y\\)</span> ne prend que des valeurs positives, <span class=\"math inline\">\\(F_Y(t)=0\\)</span> pour tout <span class=\"math inline\">\\(t&lt;0\\)</span>. Soit <span class=\"math inline\">\\(t \\geq 0\\)</span> : alors <span class=\"math display\">\\[\\begin{align*}\n            \\PP(Y&lt;t) &amp;= \\PP(|X_1|&lt; \\sqrt{t}) \\\\\n            &amp;= 2\\, \\PP(0&lt;X_1 &lt; \\sqrt{t}) \\text{ par symétrie de la variable $X_1$} \\\\\n            &amp;= 2 \\int_0^{\\sqrt{t}} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{u^2}{2}} \\,du \\\\\n            &amp;= 2 \\int_0^{t} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{x}{2}} \\frac{1}{2\\sqrt{x}}\\,dx \\\\\n            &amp;=  \\int_0^{t} \\frac{1}{\\sqrt{2\\pi x}} e^{-\\frac{x}{2}}\\,dx\n        \\end{align*}\\]</span> La variable <span class=\"math inline\">\\(Y\\)</span> admet donc pour densité <span class=\"math inline\">\\(f_Y(x) =  \\frac{1}{\\sqrt{2\\pi x}} e^{-\\frac{x}{2}}\\)</span> pour tout <span class=\"math inline\">\\(x&gt;0\\)</span> : en remarquant que <span class=\"math inline\">\\(f_Y(x) = \\frac{1}{\\Gamma(1/2) 2^{1/2}} x^{1/2-1} e^{-x/2}\\)</span>, on voit qu’il s’agit d’une loi <span class=\"math inline\">\\(\\Gamma\\left(\\frac{1}{2},\\frac{1}{2}\\right)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit un entier <span class=\"math inline\">\\(n \\geq 1\\)</span> et soit <span class=\"math inline\">\\(U_n\\)</span> une variable aléatoire suivant une loi <span class=\"math inline\">\\(\\Gamma(\\frac{n}{2},\\frac12)\\)</span>. Déterminer la fonction génératrice de <span class=\"math inline\">\\(U_1\\)</span> puis celle de <span class=\"math inline\">\\(U_n\\)</span> pour <span class=\"math inline\">\\(n \\geq 1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule directement : <span class=\"math display\">\\[\\begin{align*}\n            m_Y(t) &amp;= \\mathbb{E}(e^{tY}) \\\\\n            &amp;= \\int_0^{+\\infty} e^{xt} \\frac{1}{\\Gamma(1/2) 2^{1/2}} x^{1/2-1} e^{-x/2} dx \\\\\n            &amp;= \\int_0^{+\\infty} \\frac{1}{\\Gamma(1/2) 2^{1/2}} x^{1/2-1} e^{-\\frac{x}{2}(1-2t)} dx  \\text{ (l&#39;intégrale converge ssi $1-2t&gt;0$)}\\\\\n            &amp;= \\int_0^{+\\infty} \\frac{1}{\\Gamma(1/2) 2^{1/2}} y^{1/2-1} e^{-\\frac{y}{2}} (1-2t)^{-1/2}dy \\\\\n            &amp;= (1-2t)^{-1/2}\n    \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soient <span class=\"math inline\">\\((Z_1,...,Z_n)\\)</span> des variables i.i.d selon une loi normale centrée réduite. Déterminer la loi de probabilité de la variable aléatoire <span class=\"math display\">\\[\\sum_{i=1}^{n}Z_i^2\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Par somme de variables indépendantes, la fonction génératrice de <span class=\"math inline\">\\(\\chi^2\\)</span> est <span class=\"math inline\">\\(m_{\\chi^2}(t) = (1-2t)^{-n/2}\\)</span>. En refaisant le même calcul que précédemment, on reconnaît la fonction génératrice d’une variable admettant pour densité <span class=\"math inline\">\\(\\frac{1}{\\Gamma(n/2) 2^{n/2}} x^{n/2-1} e^{-x/2}\\)</span>, donc une variable suivant une loi <span class=\"math inline\">\\(\\Gamma\\left(\\frac{n}{2},\\frac{1}{2}\\right)\\)</span>.</p>\n"
+    }
+  ]
+}

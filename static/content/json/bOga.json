@@ -1,0 +1,54 @@
+{
+  "uuid": "bOga",
+  "titre": "Loi d'un couple de variables aléatoires",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\((X,Y)\\)</span> un couple de variables aléatoires admettant pour densité la fonction <span class=\"math inline\">\\(f\\)</span> définie par <span class=\"math display\">\\[f(x,y) = k \\cdot \\textbf{1}_{\\mathcal{C}}(x,y)\\]</span> où <span class=\"math inline\">\\(\\mathcal{C} = \\{(x,y) \\in \\mathbb{R}^2 \\mid |x|+|y| \\leq 1 \\}\\)</span> et <span class=\"math inline\">\\(k \\in \\R\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Dire lequel de ces trois domaines de <span class=\"math inline\">\\(\\R^2\\)</span> représentés ci-dessous est le domaine <span class=\"math inline\">\\(\\mathcal{C}\\)</span>.</p>\n<p><br />\nD1</p>\n<p><br />\nD2</p>\n<p><br />\nD3</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le domaine <span class=\"math inline\">\\(\\mathcal{C}\\)</span> est représenté en <span class=\"math inline\">\\(D2\\)</span>. C’est un carré d’aire = 2</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la valeur de <span class=\"math inline\">\\(k \\in \\R\\)</span> telle que <span class=\"math inline\">\\(f\\)</span> définisse bien une fonction densité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On choisit <span class=\"math inline\">\\(k\\)</span> de telle sorte que <span class=\"math inline\">\\(f \\geq 0\\)</span> et <span class=\"math inline\">\\(\\iint f(x,y)dxdy = 1\\)</span>. Or <span class=\"math inline\">\\(\\iint f(x,y)dxdy = k \\iint_{\\mathcal{C}} dxdy = k \\times aire(\\mathcal{C}) = 2k\\)</span>. Donc il faut prendre .</p>\n<p>On peut aussi faire calcul de manière analytique en utilisant la relation de Chasles (on distingue selon le signe de <span class=\"math inline\">\\(x\\)</span> et on encadre <span class=\"math inline\">\\(y\\)</span>) et le théorème de Fubini :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n            \\iint_{\\mathcal{C}} dxdy &amp;= \\int_{-1}^{0} \\left( \\int_{-1-x}^{1+x} dy\\right)dx + \\int_{0}^{1} \\left( \\int_{-1+x}^{1-x} dy\\right)dx \\\\\n            &amp;= \\int_{-1}^{0} \\left( 2+2x\\right)dx + \\int_{0}^{1} \\left(2-2x\\right)dx \\\\\n            &amp;= 2 \n        \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer les lois marginales du couple <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule les densités marginales : pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span> : Si <span class=\"math inline\">\\(x &gt;1\\)</span> ou si <span class=\"math inline\">\\(x&lt;-1\\)</span> : <span class=\"math inline\">\\(f_X(x) = \\int_\\R f(x,y)dy = \\int_\\R 0 = 0\\)</span> ;</p>\n<p>Si <span class=\"math inline\">\\(x \\in [0;1]\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            f_X(x) &amp;= \\int_\\R f(x,y)dy \\\\\n            &amp;= \\frac{1}{2}\\int_{-1+x}^{1-x} dy \\\\\n            &amp;= 1-x\n        \\end{align*}\\]</span></p>\n<p>Si <span class=\"math inline\">\\(x \\in [-1;0]\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            f_X(x) &amp;= \\int_\\R f(x,y)dy \\\\\n            &amp;= \\frac{1}{2}\\int_{-1-x}^{1+x} dy \\\\\n            &amp;= 1+x\n        \\end{align*}\\]</span></p>\n<p>Avec des fonctions indicatrices, cela se réécrit pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span> :</p>\n<p><span class=\"math display\">\\[f_X(x) = \\textbf{1}_{[-1;0[}(x)(1+x) + \\textbf{1}_{[0;1[}(x)(1-x) = \\textbf{1}_{[-1;1]}(x)(1-|x|)\\]</span></p>\n<p>Les rôles étant symétriques en <span class=\"math inline\">\\(x\\)</span> et en <span class=\"math inline\">\\(y\\)</span>, on obtient de manière similaire que pour tout <span class=\"math inline\">\\(y \\in \\R\\)</span> : <span class=\"math display\">\\[f_Y(y) = \\textbf{1}_{[-1;0[}(y)(1+y) + \\textbf{1}_{[0;1[}(y)(1-y) = \\textbf{1}_{[-1;1]}(y)(1-|y|)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(cov(X,Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On utilise la formule de Huygens : <span class=\"math inline\">\\(cov(X,Y) = \\mathbb{E}(XY)-\\mathbb{E}(X)\\mathbb{E}(Y)\\)</span>. Ainsi, on calcule : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(X) &amp;= \\int_\\R xf_X(x)dx \\\\\n            &amp;= \\int_{-1}^{0} x(1+x)dx + \\int_{0}^{1} x(1-x)dx \\\\\n            &amp;= -\\frac{1}{6}+\\frac{1}{6} \\\\\n            &amp;=0\n        \\end{align*}\\]</span></p>\n<p>Du fait que <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> suivent la même loi, on déduit que <span class=\"math inline\">\\(\\mathbb{E}(Y) = 0\\)</span>.</p>\n<p>Il reste à calculer : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(XY) &amp;= \\iint_{\\R^2} xyf(x,y)dxdy \\\\\n            &amp;= \\frac{1}{2}\\iint_{\\mathcal{C}} dxdy \\\\\n            &amp;= \\frac{1}{2}\\int_{-1}^{0} \\left( \\int_{-1-x}^{1+x} xydy\\right)dx + \\frac{1}{2}\\int_{0}^{1} \\left( \\int_{-1+x}^{1-x} xydy\\right)dx \\\\ \n            &amp;= \\frac{1}{2}\\int_{-1}^{0} x \\left[\\frac{y^2}{2}\\right]_{-1-x}^{1+x} dx + \\frac{1}{2}\\int_{0}^{1}   x\\left[\\frac{y^2}{2}\\right]_{-1+x}^{1-x}dydx \\\\ \n            &amp;= \\frac{1}{2}\\int_{-1}^{0} (x \\times 0) dx + \\frac{1}{2}\\int_{0}^{1}   (x \\times 0) dx \\\\\n            &amp;= 0\n        \\end{align*}\\]</span></p>\n<p>On en déduit que <span class=\"math inline\">\\(\\fbox{cov(X,Y) = 0}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Étudier l’indépendance des variables <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pourrait penser que les variables sont indépendantes car leur covariance est nulle. Cependant, ce n’est pas une condition suffisante et on observe que <span class=\"math inline\">\\(f_X(x)f_Y(y) \\neq f(x,y)\\)</span>. La conclusion est que .</p>\n"
+    }
+  ]
+}

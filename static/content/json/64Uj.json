@@ -1,0 +1,54 @@
+{
+  "uuid": "64Uj",
+  "titre": "Résolution d'une EDO par un schéma numérique",
+  "theme": "",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit l’équation différentielle sur <span class=\"math inline\">\\([0,1]\\)</span>: <span class=\"math display\">\\[(E)   \\begin{cases} \n    y&#39;(t) = f(t,y(t)) \\\\\n    y(0) = 0,\n\\end{cases}\\]</span> où <span class=\"math display\">\\[f(t,y)=\\sin\\left((t+y)^2\\right).\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Justifier l’existence et l’unicité locale d’une solution <span class=\"math inline\">\\(y\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(C^1\\)</span>: Théorème de Cauchy-Lipschitz.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Justifier le caractère borné de <span class=\"math inline\">\\(y\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(|y&#39;(t)|\\leq 1\\)</span>, donc <span class=\"math inline\">\\(|y(t)|\\leq a+T=1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Principe de prolongement.</p>\n"
+    },
+    {
+      "type": "texte",
+      "value": "<p>Pour approcher la solution de <span class=\"math inline\">\\((E)\\)</span>, on propose le schéma numérique suivant : <span class=\"math inline\">\\(h=1/N\\)</span>, <span class=\"math inline\">\\(t_n=nh\\)</span>, <span class=\"math inline\">\\(y_0=0\\)</span> et <span class=\"math display\">\\[(S) \\colon y_{n+1} = y_n +  \\frac{h}{4}\\left( f(t_n,y_n)+3f\\left(t_n+ \\frac{2h}{3},y_n+\\frac{2h}{3}f(t_n,y_n) \\right) \\right)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que ce schéma est convergent.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On vérifie qu’il est consistant en appliquant le résultat du cours : on écrit le schéma sous la forme standard <span class=\"math inline\">\\(y_{n+1} = y_n+hF(t_n,y_n,h)\\)</span> et on vérifie que <span class=\"math inline\">\\(F(t,y,0) = f(t,y)\\)</span>.</p>\n<p>Par ailleurs, on vérifie facilement que <span class=\"math inline\">\\(F\\)</span> est lipschitzienne par rapport à la deuxième variable <span class=\"math inline\">\\(y\\)</span>, c’est une condition suffisante de stabilité du schéma.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Vérifier que ce schéma est consistant d’ordre 2.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On applique le critère énoncé et admis ci-dessus en calculant <span class=\"math inline\">\\(\\frac{1}{2}f^{[1]}(t,y)\\)</span>.</p>\n"
+    }
+  ]
+}

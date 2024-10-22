@@ -1,0 +1,38 @@
+{
+  "uuid": "1fDE",
+  "titre": "Approximation par une loi normale",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On effectue un contrôle sur des pièces de un euro dont une proportion <span class=\"math inline\">\\(p=0.05\\)</span> est fausse et sur des pièces de deux euros dont une proportion <span class=\"math inline\">\\(p&#39;=0.02\\)</span> est fausse. On considère un lot de <span class=\"math inline\">\\(500\\)</span> pièces dont <span class=\"math inline\">\\(150\\)</span> pièces de un euro et <span class=\"math inline\">\\(350\\)</span> pièces de deux euros.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On prend une pièce au hasard dans ce lot: quelle est la probabilité qu’elle soit fausse ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On peut utiliser un arbre de probabilité pour modéliser la situation. En notant <span class=\"math inline\">\\(F\\)</span> l’événement “obtenir une pièce fausse” et <span class=\"math inline\">\\(A\\)</span> (resp. <span class=\"math inline\">\\(B\\)</span>) l’événement “obtenir une pièce de un euro (resp. deux euros)”, on a <span class=\"math display\">\\[\\prob(F)=\\prob(F\\cap A)+\\prob(F\\cap B)=\\prob(A)\\prob(F|A)+\\prob(B)\\prob(F|B)=\\frac{150}{500}\\times 0.05+\\frac{350}{500}\\times 0.02=0.029.\\]</span> On a environ <span class=\"math inline\">\\(2.9\\)</span>% d’avoir une pièce fausse.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Sachant que cette pièce est fausse, quelle est la probabilité qu’elle soit de un euro ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule : <span class=\"math display\">\\[\\prob(A|F)=\\frac{\\prob(A\\cap F)}{\\prob(F)}=\\frac{\\prob(A)\\prob(F|A)}{\\prob(F)}=\\frac{\\frac{150}{500}\\times 0.05}{0.029}=0.5172.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On contrôle à présent un lot de <span class=\"math inline\">\\(\\nombre{1000}\\)</span> pièces de un euro. Soit <span class=\"math inline\">\\(X\\)</span> la variable aléatoire égale au nombre de pièces fausses parmi les <span class=\"math inline\">\\(\\nombre{1000}\\)</span>.<br />\nQuelle est la loi de <span class=\"math inline\">\\(X\\)</span> ? Quelle est son espérance ? Son écart-type ?<br />\nEn approchant cette loi par celle d’une loi normale adaptée, donner une approximation de la probabilité pour que <span class=\"math inline\">\\(X\\)</span> soit compris entre <span class=\"math inline\">\\(48\\)</span> et <span class=\"math inline\">\\(52\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a: <span class=\"math inline\">\\(X\\sim \\mathcal{B}(\\nombre{1000},0.05)\\)</span>, <span class=\"math inline\">\\(\\E(X)=\\nombre{1000}\\times 0.05=50\\)</span> et <span class=\"math inline\">\\(\\sigma^2(X)=\\nombre{1000}\\times 0.05\\times 0.95=47.5\\)</span>.<br />\nLa <span class=\"math inline\">\\(X\\)</span> peut être approchée (avec correction de continuité) par la <span class=\"math inline\">\\(Y\\)</span> de loi <span class=\"math inline\">\\(\\mathcal{N}(50,\\sigma^2=47.5)\\)</span>. Ainsi, on a <span class=\"math display\">\\[\\begin{align*}\n        \\prob(48\\leq X\\leq 52)\n        &amp;= \\prob(47.5\\leq X\\leq 52.5) \\\\\n        &amp;\\simeq \\prob(47.5\\leq Y\\leq 52.5) \\\\\n        &amp; \\simeq \\prob(-0.36 \\leq Z \\leq 0.36) \\quad \\text{ avec } Z=\\frac{Y-50}{\\sqrt{47.5}} \\sim \\mathcal{N}(0,1) \\\\\n        &amp;\\simeq 2\\prob(Z\\leq 0.36)-1 \\\\\n        &amp; \\simeq 2\\times 0.6406 - 1\\\\\n        1\\simeq 0.2812\n        \\end{align*}\\]</span></p>\n"
+    }
+  ]
+}

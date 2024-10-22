@@ -1,0 +1,38 @@
+{
+  "uuid": "Ajfy",
+  "titre": "Deux approximations",
+  "theme": "probabilités",
+  "auteur": "Maxime Nguyen",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Une machine produit des rondelles métalliques en grande série. Une rondelle est acceptée si son diamètre extérieur est compris entre <span class=\"math inline\">\\(21.9\\)</span> et <span class=\"math inline\">\\(22.1\\)</span> mm. On suppose que sur l’ensemble de la production, le diamètre extérieur des rondelles est une variable aléatoire <span class=\"math inline\">\\(X\\)</span> qui suit une loi normale de moyenne <span class=\"math inline\">\\(22\\)</span> mm et d’écart-type <span class=\"math inline\">\\(0.05\\)</span> mm.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Quelle est la probabilité <span class=\"math inline\">\\(p\\)</span> qu’une pièce soit refusée ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule la probabilité qu’une pièce soit acceptée <span class=\"math display\">\\[\\begin{align*}\n        \\prob(21.9\\leq X\\leq 22.1)\n        &amp;= \\prob(-2\\leq \\frac{X-22}{0.05}\\leq 2)\n        =2\\prob(\\frac{X-22}{0.05}\\leq 2)-1\n        =2\\times 0.9772-1\n        =0.9544.\n        \\end{align*}\\]</span> Ainsi, la probabilité qu’une pièce soit refusée est <span class=\"math inline\">\\(p=1-0.9544=0.0456\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On prélève <span class=\"math inline\">\\(100\\)</span> pièces. En utilisant une approximation par la loi de Poisson, donner une approximation de la probabilité qu’il y ait <span class=\"math inline\">\\(k\\)</span> rondelles refusées, pour <span class=\"math inline\">\\(k\\in\\{0,1,2,3,4\\}\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(Y\\)</span> le nombre de rondelles refusées sur les <span class=\"math inline\">\\(100\\)</span> pièces. On a <span class=\"math inline\">\\(Y\\sim \\mathcal{B}(100,p)\\)</span> et <span class=\"math inline\">\\(\\E(Y)=100\\times p = 4.56\\)</span> donc <span class=\"math inline\">\\(Y\\)</span> peut être approchée par la variable aléatoire <span class=\"math inline\">\\(Z\\)</span> de loi <span class=\"math inline\">\\(\\mathcal{P}(4.56)\\)</span>. Ainsi, <span class=\"math display\">\\[\\forall k \\in\\{0,\\cdots , 4\\},\\quad \\prob(Y=k)\\simeq \\prob(Z=k)=\\frac{4.56^k}{k!}e^{-4.56}.\\]</span> Les résultats demandés sont dans le tableau suivant:</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(k\\)</span></th>\n<th style=\"text-align: center;\">0</th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(\\prob(Y=k)\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0.0105\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0.0477\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0.1088\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0.1653\\)</span></td>\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(0.1885\\)</span></td>\n</tr>\n</tbody>\n</table>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On prélève <span class=\"math inline\">\\(\\nombre{1000}\\)</span> pièces. Proposer une approximation de la probabilité qu’il y ait au moins <span class=\"math inline\">\\(50\\)</span> pièces refusées.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(R\\)</span> le nombre de pièces refusées parmi les <span class=\"math inline\">\\(\\nombre{1000}\\)</span> pièces. Alors <span class=\"math inline\">\\(Z\\sim \\mathcal{B}(\\nombre{1000},p)\\)</span> qui peut être approchée par une loi Normale: <span class=\"math display\">\\[\\begin{align*}\n        \\prob(Y\\geq 50) \n        &amp;\\simeq \\prob(Z\\geq 49.5) \\quad \\text{ où } Z \\sim \\mathcal{N}(45.6,\\sigma^2=43.52) \\\\\n        &amp;\\simeq \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\geq 0.59\\right) \\\\\n        &amp; \\simeq 1- \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\leq 0.59\\right) \\\\\n        &amp;\\simeq 1-0.7224 \\\\\n        &amp;\\simeq 0.2776\n        \\end{align*}\\]</span> Il y a donc environ <span class=\"math inline\">\\(27.76\\)</span>% de chances d’avoir au moins <span class=\"math inline\">\\(50\\)</span> pièces refusées dans le lot de <span class=\"math inline\">\\(\\nombre{1000}\\)</span> pièces.</p>\n"
+    }
+  ]
+}

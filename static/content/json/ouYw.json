@@ -1,0 +1,38 @@
+{
+  "uuid": "ouYw",
+  "titre": "Calcul d'intégrale",
+  "theme": "séries entières",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Le but de l’exercice est de calculer l’intégrale : <span class=\"math display\">\\[I = \\int_0^1 \\ln(t)\\ln(1-t)\\mathrm{d}t\\]</span> à l’aide d’un développement en série entière. On admet que <span class=\"math inline\">\\(\\displaystyle \\sum_{n=1}^{+\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que pour tout entier <span class=\"math inline\">\\(n \\geq 1\\)</span>, <span class=\"math display\">\\[\\int_0^1 \\frac{-t^n \\ln(t)}{n} \\mathrm{d}t = \\frac{1}{n(n+1)^2}\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On réalise une intégration par parties en posant <span class=\"math inline\">\\(u&#39;(t) = \\frac{t^n}{n}\\)</span> et <span class=\"math inline\">\\(v(t) = \\ln(t)\\)</span>. <span class=\"math display\">\\[\\begin{align*}\n            \\int_0^1 \\frac{t^n \\ln(t)}{n} \\mathrm{d}t &amp;= \\left[\\frac{t^{n+1}}{n(n+1)}\\ln(t)\\right]_0^1 - \\int_0^1 \\frac{t^n}{n(n+1)}\\mathrm{d}t\\\\\n            &amp;= 0 - \\left[\\frac{t^{n+1}}{n(n+1)^2}\\right]_0^1 \\\\\n            &amp;= - \\frac{1}{n(n+1)^2}\n            \\end{align*}\\]</span> d’où le résultat.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer <span class=\"math inline\">\\(a,b,c \\in \\R\\)</span> tels que <span class=\"math display\">\\[\\frac{1}{n(n+1)^2} = \\frac{a}{n} + \\frac{b}{n+1} + \\frac{c}{(n+1)^2}\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On trouve <span class=\"math display\">\\[\\frac{1}{n(n+1)^2} = \\frac{1}{n} - \\frac{1}{n+1} - \\frac{1}{(n+1)^2}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>À l’aide d’un développement en série entière et des résultats des questions précédentes, déterminer la valeur exacte de <span class=\"math inline\">\\(I\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On rappelle d’abord que pour tout <span class=\"math inline\">\\(t \\in ]-1;1[\\)</span> : <span class=\"math display\">\\[\\ln(1-t) = \\sum_{n=1}^{+\\infty} \\frac{-t^n}{n}\\]</span> Par théorème d’intégration terme à terme pour une série entière, la variable <span class=\"math inline\">\\(t\\)</span> variant dans <span class=\"math inline\">\\(]0;1[ \\subset ]-1;1[\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n            \\int_0^1 \\ln(t)\\ln(1-t)\\mathrm{d}t &amp;= \\int_0^1 \\ln(t) \\sum_{n=1}^{+\\infty} \\frac{-t^n}{n} \\mathrm{d}t \\\\\n            &amp;= \\sum_{n=1}^{+\\infty} \\int_0^1 \\ln(t) \\times \\frac{-t^n}{n} \\mathrm{d}t \\\\\n            &amp;= \\sum_{n=1}^{+\\infty} \\frac{1}{n(n+1)^2} \\\\\n            &amp;= \\sum_{n=1}^{+\\infty} \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) - \\sum_{n=1}^{+\\infty} \\frac{1}{(n+1)^2} \\\\\n            &amp;= 1 - \\sum_{n=2}^{+\\infty} \\frac{1}{n^2} \\\\\n            &amp;= 1 + 1 - \\sum_{n=1}^{+\\infty} \\frac{1}{n^2}\n            \\end{align*}\\]</span> Donc .</p>\n"
+    }
+  ]
+}

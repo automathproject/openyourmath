@@ -1,0 +1,30 @@
+{
+  "uuid": "LnaN",
+  "titre": "Comparaison de lois normales",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> la note obtenue par un étudiant: <span class=\"math inline\">\\(X\\sim\\mathcal{N}(7,\\sigma^2=3^2)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer le pourcentage d’individus ayant plus de <span class=\"math inline\">\\(10\\)</span> et la note en dessous de laquelle se trouvent <span class=\"math inline\">\\(10\\)</span>% des étudiants.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Comme <span class=\"math inline\">\\(\\frac{X-7}{3} \\sim \\mathcal{N}(0,1)\\)</span>, on a <span class=\"math display\">\\[\\prob(X\\geq 10)=\\prob\\left(\\frac{X-7}{3}\\geq 1\\right)=1-\\prob\\left(\\frac{X-7}{3}\\leq 1\\right)\\simeq 1-0.8413 \\simeq 0.1587\\]</span> soit environ <span class=\"math inline\">\\(15.87\\)</span>% des étudiants ont plus de <span class=\"math inline\">\\(10\\)</span>.</p>\n<p>On cherche <span class=\"math inline\">\\(\\alpha\\)</span> la note telle que <span class=\"math inline\">\\(\\prob(X\\leq \\alpha )=0.10\\)</span>. On note que <span class=\"math display\">\\[\\begin{align*}\n            \\prob(X\\leq \\alpha )=0.1 &amp; \\quad \\Leftrightarrow \\quad \n            \\prob\\left(\\frac{X-7}{3} \\leq \\frac{\\alpha-7}{3}\\right)=0.1 \\\\\n            &amp; \\quad \\Leftrightarrow \\quad\n            \\prob\\left(\\frac{X-7}{3} \\geq \\frac{-\\alpha+7}{3}\\right)=0.1 \\\\\n            &amp; \\quad \\Leftrightarrow \\quad\n            \\prob\\left(\\frac{X-7}{3}\\leq \\frac{-\\alpha+7}{3}\\right)=0.9,\n        \\end{align*}\\]</span> ce qui donne par lecture de table de la loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>, <span class=\"math inline\">\\(\\frac{-\\alpha+7}{3}\\simeq 1.3\\)</span>, soit <span class=\"math inline\">\\(\\alpha \\simeq 3.1\\)</span>. Donc <span class=\"math inline\">\\(10\\)</span>% des étudiants ont en-dessous de <span class=\"math inline\">\\(3.1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Compte tenu de ces résultats, on décide de revaloriser l’ensemble des notes par une transformation linéaire <span class=\"math inline\">\\(Z=aX+b\\)</span>. Quelles valeurs doit-on donner à <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> pour que les valeurs précédentes passent respectivement à <span class=\"math inline\">\\(50\\)</span>% et <span class=\"math inline\">\\(7\\)</span>.<br />\n<em>Indication: calculer <span class=\"math inline\">\\(\\E(Z)\\)</span> et <span class=\"math inline\">\\(\\var(Z)\\)</span> en fonction de <span class=\"math inline\">\\(\\E(X)\\)</span> et de <span class=\"math inline\">\\(\\var(X)\\)</span>.</em></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(Z=aX+b\\)</span> donc <span class=\"math display\">\\[\\begin{aligned}\n            \\E(Z) &amp;=&amp; a\\E(X)+b \\, =\\, 7a+b \\\\\n            \\var(Z) &amp;=&amp; \\var(aX) \\,=\\, a^2\\var(X) \\,=\\, 9a^2 \\text{.}\n        \\end{aligned}\\]</span> On souhaite avoir <span class=\"math inline\">\\(50\\)</span>% des étudiants ayant plus de <span class=\"math inline\">\\(10\\)</span>. Comme la loi normale est symétrique par rapport à sa moyenne, cela revient à prendre <span class=\"math inline\">\\(\\E(Z)=10\\)</span> donc <span class=\"math inline\">\\(10=7a+b\\)</span>.<br />\nEnsuite, on souhaite avoir <span class=\"math inline\">\\(\\prob(Z\\leq 7)=0.1\\)</span>. On a <span class=\"math display\">\\[\\prob\\left( \\frac{Z-10}{3a}\\leq \\frac{7-10}{3a}\\right)=0.1 \n        \\quad \\Leftrightarrow \\quad \\prob\\left( \\frac{Z-10}{3a}\\leq \\frac{1}{a}\\right)=0.9\n        \\quad \\Leftrightarrow \\quad \\frac{1}{a}\\simeq 1.29\n        \\quad \\Leftrightarrow \\quad a\\simeq 0.775\\text{.}\\]</span> Par conséquent, <span class=\"math inline\">\\(b=10-7a\\simeq 4.573\\)</span>.</p>\n"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "uuid": "urL7",
+  "titre": "Etude de diverses séries",
+  "theme": "séries",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Dans chacun des cas, dire si la série est absolument convergente, semi-convergente, divergente ou grossièrement divergente.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum (\\sqrt{n+1}-\\sqrt{n})\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n=\\sqrt{n+1}-\\sqrt{n}\\)</span> pour <span class=\"math inline\">\\(n\\in\\N\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. Il s’agit d’une série télescopique: pour <span class=\"math inline\">\\(n\\geq 1\\)</span>, <span class=\"math display\">\\[\\begin{align*}\n        S_n=&amp;\\sum_{k=0}^n (\\sqrt{k+1}-\\sqrt{k}) =\\sum_{k=0}^n \\sqrt{k+1}- \\sum_{k=0}^n\\sqrt{k} \n        =\\sum_{k=1}^{n+1} \\sqrt{k}- \\sum_{k=0}^n\\sqrt{k} \\\\\n        =&amp; (1+\\sqrt{2}+\\cdots + \\sqrt{n} +\\sqrt{n+1})-(0+1+\\sqrt{2}+\\cdots + \\sqrt{n}) \\\\\n        =&amp; \\sqrt{n+1}.\n        \\end{align*}\\]</span> En faisant tendre <span class=\"math inline\">\\(n\\)</span> vers l’infini, on obtient que la suite des sommes partielles de la série <span class=\"math inline\">\\(\\sum u_n\\)</span> tend vers l’infini. Par conséquent, la série <span class=\"math inline\">\\(\\sum (\\sqrt{n+1}-\\sqrt{n})\\)</span> est une <strong>série divergente</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\left(1-\\cos \\left(\\frac{\\pi}{n}\\right)\\right)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n=1-\\cos(\\frac{\\pi}{n})\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est une série à termes positifs. Quand <span class=\"math inline\">\\(n\\)</span> tend vers l’infini, on a l’équivalence suivante: <span class=\"math display\">\\[1- \\cos\\Big(\\frac{\\pi}{n}\\Big) \\sim \\frac{\\pi^2}{n^2}.\\]</span> Or <span class=\"math inline\">\\(\\sum \\frac{1}{n^2}\\)</span> est une série de Riemann convergente donc <span class=\"math inline\">\\(\\sum \\frac{\\pi^2}{n^2}\\)</span> est également convergente.<br />\nPar le théorème d’équivalence, on en déduit que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> est convergente. Comme cette série est à termes positifs, cela revient à dire que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> est une <strong>série absolument convergente</strong>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n=\\frac{2^n+100}{3^n+1}\\)</span> pour <span class=\"math inline\">\\(n\\in\\N\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. On a: <span class=\"math display\">\\[\\frac{2^n+100}{3^n+1} \\sim \\frac{2^n}{3^n}=\\Big(\\frac{2}{3}\\Big)^n,\\]</span> qui est le terme général d’une série géométrique de raison <span class=\"math inline\">\\(\\frac{2}{3}&lt;1\\)</span> donc convergente. Par équivalence, on en déduit que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> est convergente. Comme <span class=\"math inline\">\\(u_n\\geq 0\\)</span> pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>, la série <span class=\"math inline\">\\(\\sum u_n\\)</span> est <strong>absolument convergente</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\Big(1-(1-\\frac{1}{\\sqrt{n}})^n\\Big)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n=1-(1-\\frac{1}{\\sqrt{n}})^n\\)</span> pour <span class=\"math inline\">\\(n\\geq 1\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. On a: <span class=\"math display\">\\[\\begin{align*}\n        1-\\Big(1-\\frac{1}{\\sqrt{n}}\\Big)^n=1-e^{n\\ln\\Big(1-\\frac{1}{\\sqrt{n}}\\Big)}\n        \\end{align*}\\]</span> On utilise ensuite un développement limité (car l’utilisation d’équivalent n’est pas possible dans l’exponentielle): <span class=\"math display\">\\[\\begin{align*}\n        1-\\Big(1-\\frac{1}{\\sqrt{n}}\\Big)^n=&amp;1-e^{n\\Big(\\frac{-1}{\\sqrt{n}}-\\frac{1}{2n} +o(\\frac{1}{n})\\Big)} \n        =1-e^{\\frac{-n}{\\sqrt{n}}-\\frac{n}{2n} +o(\\frac{n}{n})} \n        =1-e^{-\\sqrt{n}-\\frac{1}{2}+o(1)}, \n        \\end{align*}\\]</span> qui a pour limite <span class=\"math inline\">\\(1\\)</span> quand <span class=\"math inline\">\\(n\\)</span> vers plus l’infini.<br />\nLe terme général de la série <span class=\"math inline\">\\(\\sum u_n\\)</span> ne tend donc pas vers <span class=\"math inline\">\\(0\\)</span>. Par conséquent, cette série <strong>diverge grossièrement</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\Big(\\frac{1}{n}-\\ln\\Big(1+\\frac{1}{n}\\Big) \\Big)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n=\\frac{1}{n}-\\ln(1+\\frac{1}{n})\\)</span> pour <span class=\"math inline\">\\(n\\geq 1\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. On utilise un développement limité (car on ne peut pas sommer des équivalents): <span class=\"math display\">\\[\\begin{align*}\n        u_n=\\frac{1}{n}-\\Big(\\frac{1}{n}-\\frac{1}{2n^2}+o(\\frac{1}{n^2})\\Big) \n        = \\frac{1}{2n^2}+o(\\frac{1}{n^2})\n        \\end{align*}\\]</span> ce qui donne l’équivalence: <span class=\"math display\">\\[u_n \\sim_{+\\infty} \\frac{1}{2n^2},\\]</span> qui est le terme d’une série de Riemann convergente. On en déduit que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> converge. De plus, cette série étant à termes positifs, elle <strong>converge absolument</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\frac{1}{\\sqrt{n}}(\\sqrt{n+1}-\\sqrt{n})^2\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n= \\frac{1}{\\sqrt{n}}(\\sqrt{n+1}-\\sqrt{n})^2\\)</span> pour <span class=\"math inline\">\\(n\\geq 1\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. On a: <span class=\"math display\">\\[\\begin{align*}\n        u_n&amp;=  \\frac{1}{\\sqrt{n}}(\\sqrt{n+1}-\\sqrt{n})^2 \\\\\n        &amp;= \\frac{1}{\\sqrt{n}}\\Big(\\frac{(\\sqrt{n+1}-\\sqrt{n})(\\sqrt{n+1}+\\sqrt{n})}{(\\sqrt{n+1}+\\sqrt{n})}\\Big)^2 \\\\\n        &amp;= \\frac{1}{\\sqrt{n}}\\Big(\\frac{\\sqrt{n+1}^2-\\sqrt{n}^2}{(\\sqrt{n+1}+\\sqrt{n}) }\\Big)^2\\\\\n        &amp;= \\frac{1}{\\sqrt{n}}\\Big(\\frac{1}{(\\sqrt{n+1}+\\sqrt{n}) }\\Big)^2\\\\\n        \\end{align*}\\]</span> ce qui nous donne l’équivalence suivante: <span class=\"math display\">\\[u_n \\sim_{+\\infty} \\frac{1}{\\sqrt{n}}\\Big(\\frac{1}{2\\sqrt{n}}\\Big)^2=\\frac{1}{4n\\sqrt{n}}=\\frac{1}{4n^{\\frac{3}{2}}}.\\]</span> Or la série <span class=\"math inline\">\\(\\sum \\frac{1}{4n^{\\frac{3}{2}}}\\)</span> est une série de Riemann convergente. Par le théorème d’équivalence, on en déduit que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> converge.<br />\nComme cette série est à termes positifs, cette série <strong>converge absolument</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\cos(\\pi n) \\sin\\Big(\\frac{\\pi}{n}\\Big)\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n= \\cos(\\pi n) \\sin(\\frac{\\pi}{n})\\)</span> pour <span class=\"math inline\">\\(n\\geq 1\\)</span>. On a <span class=\"math display\">\\[u_n=(-1)^n \\sin \\Big(\\frac{\\pi}{n}\\Big).\\]</span> Il s’agit d’une série alternée car pour tout <span class=\"math inline\">\\(n\\in\\N^*\\)</span>, <span class=\"math inline\">\\(\\sin(\\frac{\\pi}{n})\\geq 0\\)</span>.<br />\nOn étudie d’abord la convergence absolue de la série <span class=\"math inline\">\\(\\sum u_n\\)</span>: <span class=\"math display\">\\[|u_n|=\\Big | (-1)^n \\sin \\Big(\\frac{\\pi}{n}\\Big)\\Big |=\\Big | \\sin \\Big(\\frac{\\pi}{n}\\Big)\\Big |\n        \\sim_{+\\infty} \\frac{\\pi}{n}.\\]</span> Or la série <span class=\"math inline\">\\(\\sum \\frac{\\pi}{n}\\)</span> est une série de Riemann divergente donc la série <span class=\"math inline\">\\(\\sum |u_n|\\)</span> diverge, ce qui revient à dire que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> ne converge pas absolument.<br />\nIl nous reste donc à étudier la convergence de la série <span class=\"math inline\">\\(\\sum u_n\\)</span>. On utilise le critère des séries alternées: soit <span class=\"math inline\">\\(v_n=\\sin(\\frac{\\pi}{n})\\)</span>. La suite <span class=\"math inline\">\\((v_n)\\)</span> est décroissante pour <span class=\"math inline\">\\(n\\geq 2\\)</span> et sa limite vaut <span class=\"math inline\">\\(\\sin(0)=0\\)</span>. Par le théorème des séries alternées, on en conclut que la série <span class=\"math inline\">\\(\\sum u_n\\)</span> converge.<br />\nFinalement, la série <span class=\"math inline\">\\(\\sum u_n\\)</span> converge mais ne converge pas absolument; elle est donc <strong>semi-convergente</strong>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\sum \\frac{n!}{n^n}\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(u_n= \\frac{n!}{n^n}\\)</span> pour <span class=\"math inline\">\\(n\\geq 1\\)</span>. La série <span class=\"math inline\">\\(\\sum u_n\\)</span> est à termes positifs. Appliquons la règle de D’Alembert: <span class=\"math display\">\\[\\begin{align*}\n        \\frac{u_{n+1}}{u_n}&amp;=\\frac{(n+1)!}{(n+1)^{n+1}}\\times \\frac{n^n}{n!}=\\frac{(n+1) \\times n^n}{(n+1)^{n+1}}\n        =\\Big(\\frac{n}{n+1}\\Big)^n=\\Big(\\frac{n+1-1}{n+1}\\Big)^n \\\\\n        &amp;=\\Big(1-\\frac{1}{n+1}\\Big)^n\n        = e^{n \\ln(1-\\frac{1}{n+1})}\n        =e^{n(\\frac{-1}{n+1}+o(\\frac{1}{n}))}\n        =e^{\\frac{-n}{n+1}+o(1))} \\\\\n        &amp;\\longrightarrow_{n\\rightarrow +\\infty}\\  e^{-1}.\n        \\end{align*}\\]</span> Or <span class=\"math inline\">\\(e^{-1}&lt;1\\)</span> donc par la règle de D’Alembert, la série <span class=\"math inline\">\\(\\sum u_n\\)</span> converge. Elle est également <strong>absolument convergente</strong> (en tant que série à terme général positif).</p>\n"
+    }
+  ]
+}

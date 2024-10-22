@@ -1,0 +1,46 @@
+{
+  "uuid": "WCGV",
+  "titre": "Fiabilité",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Une usine produit des circuits imprimés dont <span class=\"math inline\">\\(1\\)</span>% sont défectueux.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On fait un prélèvement de <span class=\"math inline\">\\(100\\)</span> circuits imprimés. Quelle est la probabilité qu’il n’y ait pas de circuit imprimé défectueux dans ce prélèvement ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> le nombre de circuits défectueux dans ce prélèvement. Alors <span class=\"math inline\">\\(X\\sim \\mathcal{B}(100,0.01)\\)</span>. La probabilité qu’il n’y ait pas de circuit défectueux est: <span class=\"math display\">\\[\\prob(X=0)=\\binom{100}{0}\\times 0.01^{0}\\times 0.99^{100}=0.99^{100} \\simeq 0.366.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Quelle est la probabilité qu’il y ait deux circuits imprimés défectueux dans un prélèvement de <span class=\"math inline\">\\(100\\)</span> circuits imprimés ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math inline\">\\(\\prob(X=2)=\\binom{100}{2}\\times 0.01^{2}\\times 0.99^{98}\\simeq 0.185\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On prélève les circuits imprimés un par un et on les teste immédiatement. Quelle est la probabilité que le premier circuit imprimé défectueux apparaisse au <span class=\"math inline\">\\(100\\)</span> tirage ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(Y\\)</span> le rang du premier circuit imprimé défectueux. Alors <span class=\"math inline\">\\(Y\\sim \\mathcal{G}(0.01)\\)</span> et on a: <span class=\"math display\">\\[\\prob(Y=100)=0.99^{99}\\times 0.01 \\simeq 0.0037,\\]</span> soit environ <span class=\"math inline\">\\(0.37\\)</span>% de chance de rencontrer le premier circuit défectueux au dernier tirage.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Sur <span class=\"math inline\">\\(N=10\\ 000\\)</span> circuits imprimés en stock dont <span class=\"math inline\">\\(d=100\\)</span> sont défectueux, on en choisit <span class=\"math inline\">\\(500\\)</span>. Quelle est la probabilité que sur les <span class=\"math inline\">\\(500\\)</span> prélevés il y en ait cinq défectueux ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Soit <span class=\"math inline\">\\(Z\\)</span> le nombre de circuits défectueux sur les <span class=\"math inline\">\\(500\\)</span> prélevés. Alors <span class=\"math inline\">\\(Z\\sim \\mathcal{H}(500,0.01,10\\ 000)\\)</span> et on a <span class=\"math display\">\\[\\prob(Z=5)=\\frac{\\binom{100}{5}\\binom{9900}{495}}{\\binom{10\\ 000}{500}}.\\]</span> Quand le paramètre <span class=\"math inline\">\\(N\\)</span> est grand (dans les faits, quand <span class=\"math inline\">\\(\\frac n N &lt; 0,1\\)</span>), on peut approcher une loi hypergéométrique <span class=\"math inline\">\\(\\mathcal{H}(n,p,N)\\)</span> par une loi binomiale <span class=\"math inline\">\\(\\mathcal{B}(n,p)\\)</span>. Ici, on obtient une approximation de <span class=\"math inline\">\\(\\prob(X=5)\\)</span> par <span class=\"math inline\">\\(\\binom{500}{5}\\times 0.01^5 \\times 0.99^{495} \\simeq 0.18\\)</span>.</p>\n"
+    }
+  ]
+}

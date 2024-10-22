@@ -1,0 +1,38 @@
+{
+  "uuid": "cpBJ",
+  "titre": "Complexes et matrices",
+  "theme": "calcul matriciel",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>L’ensemble des nombres complexes est défini par <span class=\"math inline\">\\(\\mathbb{C}=\\{a+i b / a \\in \\mathbb{R}, b \\in \\mathbb{R}\\}\\)</span> avec <span class=\"math inline\">\\(i^2=-1\\)</span>. L’addition est définie par: <span class=\"math inline\">\\((a+i b)+(c+i d)=(a+c)+i(b+d)\\)</span> et la multiplication est donnée par : <span class=\"math inline\">\\((a+i b) \\times(c+i d)=(a . c-b . d)+i(a d+b c)\\)</span>. A chaque nombre complexe <span class=\"math inline\">\\(a+i b\\)</span>, on associe la matrice <span class=\"math inline\">\\(M(a, b)=\\left(\\begin{array}{cc}a &amp; b \\\\ -b &amp; a\\end{array}\\right)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On note par <span class=\"math inline\">\\(J\\)</span> la matrice associée au nombre <span class=\"math inline\">\\(i\\)</span>. Montrer que <span class=\"math inline\">\\(J^2=-I_2\\)</span>, où <span class=\"math inline\">\\(I\\)</span> est la matrice identité.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{aligned}\n            &amp; J=M(0,1)=\\left(\\begin{array}{cc}\n                0 &amp; 1 \\\\\n                -1 &amp; 0\n            \\end{array}\\right) \\\\\n            &amp; J^2=\\left(\\begin{array}{cc}\n                0 &amp; 1 \\\\\n                -1 &amp; 0\n            \\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n                0 &amp; 1 \\\\\n                -1 &amp; 0\n            \\end{array}\\right)=\\left(\\begin{array}{cc}\n                -1 &amp; 0 \\\\\n                0 &amp; -1\n            \\end{array}\\right)=-I_2=-M(1,0)=M(-1,0)\n        \\end{aligned}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Si les matrices <span class=\"math inline\">\\(M(a, b)\\)</span> et <span class=\"math inline\">\\(M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)\\)</span> sont associées respectivement aux nombres <span class=\"math inline\">\\(z=(a+i b)\\)</span> et <span class=\"math inline\">\\(z^{\\prime}=\\left(a^{\\prime}+i b^{\\prime}\\right)\\)</span>, montrer que <span class=\"math inline\">\\(M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)\\)</span> correspond au produit des nombres complexes : <span class=\"math inline\">\\(z . z^{\\prime}\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{aligned}\n            &amp; M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n                a &amp; b \\\\\n                -b &amp; a\n            \\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n                a^{\\prime} &amp; b^{\\prime} \\\\\n                -b^{\\prime} &amp; a^{\\prime}\n            \\end{array}\\right)=\\left(\\begin{array}{cc}\n                a \\cdot a^{\\prime}-b \\cdot b^{\\prime} &amp; a b^{\\prime}+b a^{\\prime} \\\\\n                -a b^{\\prime}-b a^{\\prime} &amp; a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n            \\end{array}\\right) \\\\\n            &amp; z . z^{\\prime}=(a+i b) \\times\\left(a^{\\prime}+i b^{\\prime}\\right)=\\left(\\begin{array}{ll}\n                \\left.a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\\right)+i\\left(a b^{\\prime}+b a^{\\prime}\\right)\n            \\end{array} \\quad \\text { a } \\quad \\text { pour } \\quad\\right. \\text { matrice associée : } \\\\\n            &amp; M\\left(a \\cdot a^{\\prime}-b \\cdot b^{\\prime}, a b^{\\prime}+b a^{\\prime}\\right)=\\left(\\begin{array}{ll}\n                a \\cdot a^{\\prime}-b \\cdot b^{\\prime} &amp; a b^{\\prime}+b a^{\\prime} \\\\\n                -a b^{\\prime}-b a^{\\prime} &amp; a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n            \\end{array}\\right)=M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)\n        \\end{aligned}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Pour <span class=\"math inline\">\\(A=\\left(\\begin{array}{cc}a &amp; b \\\\ -b &amp; a\\end{array}\\right)\\)</span> non nulle, évaluer la matrice inverse <span class=\"math inline\">\\(A^{-1}\\)</span>. Identifier le nombre complexe correspondant.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{gathered}\n            M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n                a &amp; b \\\\\n                -b &amp; a\n            \\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n                a^{\\prime} &amp; b^{\\prime} \\\\\n                -b^{\\prime} &amp; a^{\\prime}\n            \\end{array}\\right)=\\left(\\begin{array}{cc}\n                a \\cdot a^{\\prime}-b \\cdot b^{\\prime} &amp; a b^{\\prime}+b a^{\\prime} \\\\\n                -a b^{\\prime}-b a^{\\prime} &amp; a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n            \\end{array}\\right)=I_2=\\left(\\begin{array}{ll}\n                1 &amp; 0 \\\\\n                0 &amp; 1\n            \\end{array}\\right) \\\\\n            \\Leftrightarrow\\left\\{\\begin{array} { l } \n                { a \\cdot a ^ { \\prime } - b \\cdot b ^ { \\prime } = 1 } \\\\\n                { a b ^ { \\prime } + b a ^ { \\prime } = 0 }\n            \\end{array} \\Leftrightarrow \\left\\{\\begin{array} { l } \n                { a \\cdot a ^ { \\prime } - b \\cdot b ^ { \\prime } = 1 } \\\\\n                { b a ^ { \\prime } + a b ^ { \\prime } = 0 }\n            \\end{array} \\Leftrightarrow \\begin{array} { c } \n                { a \\ell _ { 1 } + b \\ell _ { 2 } } \\\\\n                { b \\ell _ { 1 } - a \\ell _ { 2 } }\n            \\end{array} \\left\\{\\begin{array}{l}\n                \\left(a^2+b^2\\right) a^{\\prime}=a \\\\\n                \\left(-a^2-b^2\\right) b^{\\prime}=b\n            \\end{array}\\right.\\right.\\right. \\\\\n            \\Leftrightarrow\\left\\{\\begin{array}{l}\n                a^{\\prime}=\\frac{a}{a^2+b^2} \\\\\n                b^{\\prime}=-\\frac{b}{a^2+b^2}\n            \\end{array}\\right.\n        \\end{gathered}\\]</span> L’inverse de <span class=\"math inline\">\\(M(a, b)=A=\\left(\\begin{array}{cc}a &amp; b \\\\ -b &amp; a\\end{array}\\right)\\)</span>, associé au nombre complexe <span class=\"math inline\">\\(z=a+i . b\\)</span> est définie à condition que <span class=\"math inline\">\\(a^2+b^2 \\neq 0\\)</span> autrement dit si <span class=\"math inline\">\\(A \\neq\\left(\\begin{array}{ll}0 &amp; 0 \\\\ 0 &amp; 0\\end{array}\\right)\\)</span>. Cette inverse est : <span class=\"math display\">\\[A^{-1}=M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n            a^{\\prime} &amp; b^{\\prime} \\\\\n            -b^{\\prime} &amp; a^{\\prime}\n        \\end{array}\\right)=\\left(\\begin{array}{cc}\n            \\frac{a}{a^2+b^2} &amp; -\\frac{b}{a^2+b^2} \\\\\n            \\frac{b}{a^2+b^2} &amp; \\frac{a}{a^2+b^2}\n        \\end{array}\\right)=M\\left(\\frac{a}{a^2+b^2},-\\frac{b}{a^2+b^2}\\right)\\]</span> C’est la matrice associée à <span class=\"math inline\">\\(z^{-1}=\\frac{1}{a^2+b^2}(a-i b)\\)</span>.</p>\n"
+    }
+  ]
+}

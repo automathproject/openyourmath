@@ -1,0 +1,50 @@
+{
+  "uuid": "zhwJ",
+  "titre": "Etude d'extrema",
+  "theme": "calcul différentiel",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>Déterminer l’ensemble de définition de la fonction <span class=\"math inline\">\\(f\\)</span> et vérifier que <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> sur son ensemble de définition.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’ensemble de définition de <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(D_f = \\{(x,y) \\in \\R^2\\, , \\, x&gt;0, y&gt;0 \\}\\)</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math inline\">\\(h(t) = t-\\ln(t)-\\frac{1}{t}\\)</span> : déterminer l’ensemble de définition de <span class=\"math inline\">\\(h\\)</span> et étudier ses variations.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>L’ensemble de définition de <span class=\"math inline\">\\(h\\)</span> est <span class=\"math inline\">\\(D_h = \\{t \\in \\R\\, , \\, t&gt;0\\}= \\R_+^*\\)</span>. La fonction <span class=\"math inline\">\\(h\\)</span> est dérivable sur son ensemble de définition et <span class=\"math inline\">\\(\\forall t \\in \\R_+^*\\)</span> : <span class=\"math display\">\\[h&#39;(t) = 1-\\frac{1}{t}+\\frac{1}{t^2} = \\frac{t^2-t+1}{t^2} = \\frac{(t+1)^2+t}{t^2} &gt; 0\\]</span> Par conséquent, <span class=\"math inline\">\\(h\\)</span> est strictement croissante sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que <span class=\"math inline\">\\(\\mathrm{grad}_f(x,y)=(0,0) \\iff  \\begin{cases}\n            h\\left(\\frac{x}{y}\\right) = 0\\\\\n            \\frac{x}{y} - \\ln(x) =0\n        \\end{cases}\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p><span class=\"math display\">\\[\\begin{align*}\n                \\begin{cases}\n                    \\frac{\\partial f}{\\partial x}(x,y) = 0\\\\\n                    \\frac{\\partial f}{\\partial y}(x,y) =0\n                \\end{cases}\n                \\Leftrightarrow\n                \\begin{cases}\n                    \\ln(y) - \\frac{y}{x} = 0\\\\\n                    \\frac{x}{y} - \\ln(x)=0\n                \\end{cases}     \n                \\Leftrightarrow\n                \\begin{cases}\n                    \\ln(y) - \\ln(x) +  \\frac{x}{y}  - \\frac{y}{x} = 0            \\\\\n                    \\frac{x}{y} - \\ln(x) = 0\n                \\end{cases}     \n                \\Leftrightarrow\n                \\begin{cases}\n                    h\\left(\\frac{x}{y}\\right) = 0            \\\\\n                    \\frac{x}{y} - \\ln(x) = 0\n                \\end{cases}         \n        \\end{align*}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire l’ensemble des points stationnaires de <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La fonction <span class=\"math inline\">\\(h\\)</span> s’annule une et une seule fois sur son ensemble définition en <span class=\"math inline\">\\(t=1\\)</span> donc <span class=\"math inline\">\\((x,y)\\)</span> est un point stationnaire si et seulement si <span class=\"math inline\">\\(x=y=e\\)</span>. Il existe un unique point stationnaire qui est le point <span class=\"math inline\">\\((e,e)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer l’ensemble des points extrémaux (locaux et globaux) de <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Il est clair que <span class=\"math inline\">\\(f\\)</span> n’admet pas d’extremum global. En effet, on peut voir par exemple que <span class=\"math inline\">\\(\\lim\\limits_{x \\to +\\infty}f(x,1) = -\\infty\\)</span> et <span class=\"math inline\">\\(\\lim\\limits_{y \\to +\\infty}f(1,y) = +\\infty\\)</span>.</p>\n<p>De plus, au voisinage du point stationnaire <span class=\"math inline\">\\((e,e)\\)</span>, on peut étudier les conditions du second ordre en formant la matrice hessienne :</p>\n<p><span class=\"math display\">\\[Hess_f(x,y)=\\begin{pmatrix} \n                \\frac{\\partial^2 f}{\\partial x^2}(x,y) = 1/x^2 &amp; \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) = 1/y-1/x \\\\\n                \\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) = 1/y-1/x &amp; \\frac{\\partial^2 f}{\\partial y^2}(x,y) = -1/y^2 \n            \\end{pmatrix}\\]</span> d’où <span class=\"math display\">\\[Hess_f(e,e)=\\begin{pmatrix} \n                1/e^2 &amp;  0 \\\\\n                0 &amp; -1/e^2 \n            \\end{pmatrix}\\]</span></p>\n<p>On a un déterminant négatif, donc le point <span class=\"math inline\">\\((e,e)\\)</span> est un point selle.</p>\n"
+    }
+  ]
+}

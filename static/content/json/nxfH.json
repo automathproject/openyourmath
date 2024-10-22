@@ -1,0 +1,62 @@
+{
+  "uuid": "nxfH",
+  "titre": "Convergence d'une suite de variables aléatoires",
+  "theme": "probabilité",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire de densité <span class=\"math inline\">\\(f_{\\theta}\\)</span> définie par : <span class=\"math display\">\\[f_{\\theta}(x) = \\theta x^{\\theta-1} 1_{]0;1[}(x)\\]</span> où <span class=\"math inline\">\\(\\theta &gt;0\\)</span>. Soit une suite <span class=\"math inline\">\\((X_n)\\)</span> de variables aléatoires indépendantes suivant chacune la même loi que <span class=\"math inline\">\\(X\\)</span>. On pose <span class=\"math display\">\\[\\overline{X}_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\qquad \\text{} \\qquad U_n = \\frac{\\overline{X}_n}{1-\\overline{X}_n}\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer <span class=\"math inline\">\\(\\mathbb{E}(X)\\)</span> et <span class=\"math inline\">\\(V(X)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On calcule les moments d’ordre 1 et 2 : <span class=\"math inline\">\\(\\mathbb{E}(X) = \\int_0^1 \\theta x^{\\theta} dx = \\frac{\\theta}{\\theta+1}\\)</span> et <span class=\"math inline\">\\(\\mathbb{E}(X^2) = \\int_0^1 \\theta x^{\\theta+1} dx = \\frac{\\theta}{\\theta+2}\\)</span> d’où <span class=\"math inline\">\\(V(X) = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que la suite <span class=\"math inline\">\\((\\overline{X}_n)\\)</span> converge en probabilité vers un réel <span class=\"math inline\">\\(g(\\theta)\\)</span> que l’on précisera.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après la loi faible des grands nombres, <span class=\"math inline\">\\(\\overline{X}_n  \\xrightarrow[]{\\mathcal{P}} \\mathbb{E}(X) = \\frac{\\theta}{\\theta+1}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire que la suite <span class=\"math inline\">\\((U_n)\\)</span> converge en probabilité vers le réel <span class=\"math inline\">\\(\\theta\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La fonction <span class=\"math inline\">\\(f \\colon y \\mapsto \\frac{y}{1-y}\\)</span> est continue sur <span class=\"math inline\">\\(]0;1[\\)</span> donc par composition, <span class=\"math inline\">\\(f(\\overline{X}_n) = U_n  \\xrightarrow[n \\to +\\infty]{\\mathcal{P}} h(g(\\theta)) = \\theta\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>On pose <span class=\"math display\">\\[T_n = \\frac{1}{1+U_n} \\sqrt{ \\frac{U_n}{U_n+2} }\\]</span> La suite <span class=\"math inline\">\\((T_n)\\)</span> converge-t-elle en probabilité ? Si oui, déterminer sa limite.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>De même, <span class=\"math inline\">\\(T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{P}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} }\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Vérifier que la suite <span class=\"math inline\">\\((V_n)\\)</span> définie par <span class=\"math display\">\\[V_n = \\sqrt{n}\\left(\\overline{X}_n - \\frac{\\theta}{\\theta+1}  \\right)\\]</span> converge en loi vers une loi normale dont on précisera les paramètres.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>D’après le Théorème Central Limite, <span class=\"math display\">\\[\\frac{\\overline{X}_n- \\mathbb{E}(\\overline{X}_n) }{\\sqrt{V(\\overline{X}_n)}}  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)\\]</span> avec <span class=\"math inline\">\\(\\mathbb{E}(\\overline{X}_n) = n \\times \\frac{\\theta}{n(\\theta+1)} = \\frac{\\theta}{\\theta+1}\\)</span> et <span class=\"math inline\">\\(V(\\overline{X}_n) = \\frac{1}{n^2} \\times n \\times\\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\)</span>. Donc <span class=\"math display\">\\[\\frac{\\overline{X}_n-  \\frac{\\theta}{\\theta+1} }{\\sqrt{ \\frac{\\theta}{n(\\theta+1)^2(\\theta+2)}  }}  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)\\]</span> donc <span class=\"math display\">\\[\\sqrt{n}\\left(\\overline{X}_n-  \\frac{\\theta}{\\theta+1} \\right)  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}\\left(0,\\sigma^2 = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\right)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer une suite de réels <span class=\"math inline\">\\((a_n)\\)</span> et un un réel <span class=\"math inline\">\\(m(\\theta)\\)</span> tels que la suite de variables aléatoires <span class=\"math inline\">\\((Z_n)\\)</span> définie par <span class=\"math display\">\\[Z_n = a_n \\frac{ \\overline{X}_n - m(\\theta)}{T_n}\\]</span> converge en loi vers une limite à préciser.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On sait que <span class=\"math inline\">\\(T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{P}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} }\\)</span> donc <span class=\"math inline\">\\(T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{L}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} }\\)</span> et d’après la propriété de Slutsky, la suite de variables <span class=\"math inline\">\\(\\left( \\frac{V_n}{T_n} \\right)\\)</span> converge vers <span class=\"math inline\">\\(\\frac{V}{\\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } }\\)</span> où <span class=\"math inline\">\\(V\\)</span> suit une loi <span class=\"math inline\">\\(\\mathcal{N}\\left(0,\\sigma^2 = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\right)\\)</span>. Donc <span class=\"math inline\">\\(\\frac{V}{\\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } }\\)</span> suit une loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+    }
+  ]
+}

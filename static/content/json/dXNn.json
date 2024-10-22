@@ -1,0 +1,22 @@
+{
+  "uuid": "dXNn",
+  "titre": "Estimation du paramètre d'une loi",
+  "theme": "statistiques",
+  "auteur": "Maxime NGUYEN",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>On fixe un réel <span class=\"math inline\">\\(a&gt;0\\)</span> et on définit une variable aléatoire <span class=\"math inline\">\\(X\\)</span> sur <span class=\"math inline\">\\(\\mathbb{N}\\)</span> dont la loi de probabilité est définie par <span class=\"math display\">\\[\\PP(X=k)=\\frac{a^k}{(1+a)^{k+1}}\\]</span> pour tout <span class=\"math inline\">\\(k \\in \\mathbb{N}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>A l’aide de la méthode du maximum de vraisemblance, définir un estimateur de <span class=\"math inline\">\\(a\\)</span> et déterminer son biais.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On définit un échantillon <span class=\"math inline\">\\(X_1,...,X_n\\)</span> et on considère la probabilité que cet échantillon réalise un ensemble de valeurs <span class=\"math inline\">\\(V=\\{x_1,...,x_n\\}\\)</span>. La fonction de vraisemblance s’écrit alors <span class=\"math display\">\\[L(x_1,...,x_n,a) = \\PP(X_1=x_1,...,X_n=x_n) = \\prod_{k=1}^{n} \\PP(X=x_k) = \\prod_{k=1}^n \\frac{a^{x_k}}{(1+a)^{x_k+1}} = \\frac{a^{\\sum x_k}}{(1+a)^{\\sum x_k+1}}\\]</span></p>\n<p>On dérive ce quotient par rapport à <span class=\"math inline\">\\(a\\)</span>, on factorise par <span class=\"math inline\">\\(a^{\\sum x_k-1}(1+a)^{n+\\sum x_k -1}\\)</span> et on trouve que <span class=\"math display\">\\[\\frac{\\partial L}{\\partial a}(x_1,...,x_n,a) = 0 \\iff \\sum_{k=0}^n x_k(1+a) - a(n+\\sum_{k=0}^n x_k) = 0 \\iff a = \\frac{1}{n} \\sum_{k=0}^n x_k\\]</span></p>\n<p>On a donc trouvé un meilleur estimateur du paramètre <span class=\"math inline\">\\(a\\)</span> selon la méthode du maximum de vraisemblance : il s’agit de l’estimateur <span class=\"math inline\">\\(T = \\frac{1}{n} \\sum_{k=0}^n X_k\\)</span>.</p>\n<p>Reste à calculer le biais de cet estimateur, autrement dit à calculer <span class=\"math inline\">\\(B(T) = \\mathbb{E}(T-a)\\)</span>. Or pour tout entier <span class=\"math inline\">\\(i\\)</span>, <span class=\"math inline\">\\(X_i\\)</span> suit la loi définie ci-dessus et on espérance se calcule de la manière suivante : <span class=\"math display\">\\[\\mathbb{E}(X_i) = \\sum_{k=0}^n k\\PP(X_i=k) = \\sum_{k=0}^n k \\left( \\frac{a}{1+a}  \\right)^{k-1} \\frac{a}{(1+a)^2} = \\frac{1}{\\left(1-\\frac{a}{1+a}\\right)^2} \\times \\frac{a}{(1+a)^2} = a\\]</span> Donc <span class=\"math inline\">\\(B(T) = \\frac{1}{n} \\times n \\times a - a = 0\\)</span> : la variable <span class=\"math inline\">\\(T\\)</span> est donc un estimateur sans biais du paramètre <span class=\"math inline\">\\(a\\)</span>.</p>\n"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "uuid": "urin",
+  "titre": "Calcul d'une somme de série entière",
+  "theme": "séries",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "question",
+      "value": "<p>En utilisant le résultat de la somme de la série entière <span class=\"math inline\">\\(\\sum_{k=0}^{+\\infty} x^k = \\frac{1}{1-x}\\)</span>, déterminer la somme de la série entière à valeurs réelles <span class=\"math inline\">\\(\\displaystyle S_1(x)=\\sum_{k=0}^{+\\infty} k x^k\\)</span>. On précisera son domaine de convergence.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On dérive <span class=\"math inline\">\\(\\frac{1}{1-x}\\)</span> : <span class=\"math inline\">\\(\\displaystyle \\frac{1}{(1-x)^2}=\\sum_{k=0}^{+\\infty} k x^{k-1}\\)</span>. En multipliant par <span class=\"math inline\">\\(x\\)</span>, on obtient : <span class=\"math display\">\\[\\forall x \\in ]-1;1[, \\quad S_1(x)=\\frac{x}{(1-x)^2}.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer la somme de la série entière à valeurs réelles <span class=\"math inline\">\\(\\displaystyle S_2(x)= \\sum_{k=0}^{+\\infty} (k+1)^2x^k\\)</span>. On précisera son domaine de convergence.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On dérive deux fois <span class=\"math inline\">\\(\\frac{1}{1-x}\\)</span> : <span class=\"math inline\">\\(\\displaystyle \\frac{2}{(1-x)^3}=\\sum_{k=0}^{+\\infty} k(k-1)x^{k-2} = \\sum_{k=2}^{+\\infty} k(k-1)x^{k-2}\\)</span> car les deux premiers termes sont nuls. Par changement d’indice, on obtient : <span class=\"math display\">\\[\\forall x \\in ]-1;1[, \\quad \\frac{2}{(1-x)^3} = \\sum_{k=0}^{+\\infty} (k+1)k x^{k-1}.\\]</span> d’où : <span class=\"math display\">\\[\\forall x \\in ]-1;1[, \\quad \\frac{2x}{(1-x)^3} = \\sum_{k=0}^{+\\infty} (k+1)k x^k.\\]</span> Or <span class=\"math inline\">\\((k+1)^2 = k(k+1) + (k+1)\\)</span> donc : <span class=\"math display\">\\[\\forall x \\in ]-1;1[,\\quad S_2(x) = \\sum_{k=0}^{+\\infty} k(k+1)x^k + \\sum_{k=0}^{+\\infty} (k+1)x^k = \\frac{2x}{(1-x)^3} + \\frac{1}{(1-x)^2} = \\frac{x+1}{(1-x)^3}.\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Après avoir décomposé la fraction rationnelle <span class=\"math inline\">\\(\\displaystyle \\frac{1}{n(n+2)}\\)</span> en éléments simples, déterminer la somme de la série entière à valeurs réelles <span class=\"math inline\">\\(\\displaystyle S_3(x)=\\sum_{n= 1}^{+\\infty} \\frac{x^n}{n(n+2)}\\)</span>. On précisera son rayon de convergence.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Ici, <span class=\"math inline\">\\(R=1\\)</span> : <span class=\"math display\">\\[\\forall x \\in ]-1;1[, \\quad S_3(x)=\\frac{1}{2}\\left( -\\ln(1-x)+\\frac{1}{x^2}\\left[\\ln(1-x)+x+\\frac{x^2}{2}\\right]\\right).\\]</span></p>\n"
+    }
+  ]
+}

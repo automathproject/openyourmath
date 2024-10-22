@@ -1,0 +1,30 @@
+{
+  "uuid": "aK0v",
+  "titre": "Densité, loi, indépendance dans un couple",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\((X,Y)\\)</span> un couple de variables aléatoires admettant une densité <span class=\"math inline\">\\(f\\)</span> définie pour tout <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> par : <span class=\"math display\">\\[f(x,y)= \\frac{3}{8}(x^2+y^2) \\textbf{1}_{[-1;1]^2}(x,y)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Déterminer les lois marginales du couple <span class=\"math inline\">\\((X,Y)\\)</span>. Les variables <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>La densité de <span class=\"math inline\">\\(X\\)</span> se calcule de la manière suivante : pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span>, <span class=\"math display\">\\[\\begin{align*}\n            f_X(x)&amp;=\\int_\\R f(x,y) dy \\\\\n            &amp;=\\frac{3}{8}\\mathbf{1}_{[-1;1]}(x) \\int_{-1}^{1} (x^2+y^2)dy \\\\\n            &amp;=\\frac{3}{8}\\mathbf{1}_{[-1;1]}(x) \\left[x^2y+\\frac{1}{3}y^3 \\right]_{y=-1}^{y=1} \\\\\n            &amp;=\\frac{1}{4}(3x^2+1)\\mathbf{1}_{[-1;1]}(x).\n        \\end{align*}\\]</span> On a ainsi déterminé la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(Y\\)</span>, on obtient la même loi car les rôles de <span class=\"math inline\">\\(x\\)</span> et de <span class=\"math inline\">\\(y\\)</span> sont symétriques.</p>\n<p>Enfin, les <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ne sont pas indépendantes car il existe <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> tel que <span class=\"math inline\">\\(f(x,y)\\neq f_X(x)f_Y(y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Calculer <span class=\"math inline\">\\(\\mathbb{E}(XY)\\)</span> et <span class=\"math inline\">\\(\\mathbb{E}(X) \\times \\mathbb{E}(Y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On applique le théorème de transfert au couple <span class=\"math inline\">\\((X,Y)\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n            \\E(XY)&amp;=\\int_{\\R^2} xy\\times \\frac{3}{8}(x^2+y^2) \\textbf{1}_{[-1;1]^2}(x,y) \\dx\\dy \\\\\n            &amp;=\\int_{-1}^1 \\int_{-1}^1 \\frac{3}{8}(x^3y+xy^3) \\dx \\dy \\\\\n            &amp;= \\int_{-1}^1 \\left[ \\frac{3}{32}x^4y+\\frac{3}{16}x^2y^3 \\right]_{x=-1}^{x=1} \\dy \\\\\n            &amp;=0.\n        \\end{align*}\\]</span> Pour l’espérance de la <span class=\"math inline\">\\(X\\)</span>, on a <span class=\"math display\">\\[\\begin{align*}\n            \\E(X)\n            &amp;= \\int_\\R xf_X(x) \\dx \\\\\n            &amp;= \\int_{-1}^1 \\frac{1}{4}(3x^3+x) \\dx \\\\\n            &amp;= \\left[ \\frac{3}{16}x^4+\\frac{1}{8}x^2y^2 \\right]_{-1}^1 \\\\\n            &amp;=0.\n        \\end{align*}\\]</span> De la même manière, on obtient <span class=\"math inline\">\\(\\E(Y)=0\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(\\E(XY)=\\E(X)\\E(Y)\\)</span> bien que <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> ne soient pas indépendantes.</p>\n"
+    }
+  ]
+}

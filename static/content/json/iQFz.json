@@ -1,0 +1,46 @@
+{
+  "uuid": "iQFz",
+  "titre": "Etude de séries entières",
+  "theme": "séries entières",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Déterminer le rayon de convergence des séries entières réelles suivantes :</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0} \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pose <span class=\"math inline\">\\(u_n(x) = \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n\\)</span> et on utilise le théorème de d’Alembert : <span class=\"math display\">\\[\\begin{align*}\n            \\frac{|u_{n+1}(x)|}{|u_n(x)|} &amp;= \\frac{(3(n+1)^2-1) \\times 2^{2n+1}\\sqrt{n+1}}{\\left(2^{2(n+1)+1}\\sqrt{n+1+1}\\right)(3n^2-1)}\\frac{|x^{n+1}|}{|x^n|} \\\\\n            &amp;= \\frac{1}{2^2}\\sqrt{\\frac{n+1}{n+2}} \\frac{3n^2+6n+3-1}{3n^2-1} |x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{} \\frac{1}{4}|x|\n            \\end{align*}\\]</span> Or <span class=\"math inline\">\\(\\frac{1}{4}|x| &lt;1 \\iff |x| &lt; 4\\)</span> donc le rayon de convergence est <span class=\"math inline\">\\(R=4\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p><span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} 9^n \\left(\\frac{n-1}{n}\\right)^nx^{n}\\)</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pose <span class=\"math inline\">\\(u_n(x) = 9^n \\left(\\frac{n-1}{n}\\right)^nx^{2n}\\)</span> et on utilise le théorème de Cauchy : <span class=\"math display\">\\[\\begin{align*}\n            \\left(|u_n(x)|\\right)^{\\frac{1}{n}} &amp;= \\left(9^n \\left(\\frac{n-1}{n}\\right)^n|x|^{2n}\\right)^{\\frac{1}{n}} \\\\\n            &amp;= 9 \\left(\\frac{n-1}{n}\\right) |x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{} 9|x|\n            \\end{align*}\\]</span> Or <span class=\"math inline\">\\(9|x| &lt;1 \\iff |x| &lt; \\frac{1}{9}\\)</span> donc le rayon de convergence est <span class=\"math inline\">\\(R=\\frac{1}{9}\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Que peut-on dire de la série <span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0} \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} \\left(-\\frac{9}{8}\\right)^n\\)</span> ? Justifier.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On reconnaît la série entière de la question 1.(a) évaluée en <span class=\"math inline\">\\(x = -\\frac{9}{8}\\)</span>. Or <span class=\"math inline\">\\(-\\frac{9}{8} \\in ]-4;4[\\)</span> donc la série est absolument convergente.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Que peut-on dire de la série <span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} 9^n \\left(\\frac{2n-2}{3n}\\right)^n\\)</span> ? Justifier.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On reconnaît la série entière de la question 1.(b) évaluée en <span class=\"math inline\">\\(x = \\frac{2}{3}\\)</span>. Or <span class=\"math inline\">\\(\\frac{2}{3} \\notin ]-\\frac{1}{9};\\frac{1}{9}[\\)</span> donc la série est grossièrement divergente.</p>\n"
+    }
+  ]
+}

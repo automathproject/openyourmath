@@ -1,0 +1,46 @@
+{
+  "uuid": "g9JP",
+  "titre": "Etude d'un schéma à un pas",
+  "theme": "analyse numérique",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit l’équation différentielle sur <span class=\"math inline\">\\([0,T]\\)</span> : <span class=\"math display\">\\[(E)   \\begin{cases} \n    y&#39;(t) = f(t,y(t)) \\\\\n    y(0) = a,\n\\end{cases}\\]</span> où <span class=\"math display\">\\[f(t,y)=\\cos(t^2+y),\\quad a=0,\\quad T=1.\\]</span></p>\n<p>Pour approcher la solution de <span class=\"math inline\">\\((E)\\)</span>, on propose le schéma numérique suivant : <span class=\"math inline\">\\(h=T/N\\)</span>, <span class=\"math inline\">\\(t_n=nh\\)</span>, <span class=\"math inline\">\\(y_0=a\\)</span> et <span class=\"math display\">\\[(S) \\colon y_{n+1} = y_n +  \\frac{h}{3}\\left( f(t_n,y_n)+2f\\left(t_n+ \\frac{3h}{4},y_n+\\frac{3h}{4}f(t_n,y_n) \\right) \\right)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> est globablement lipschitzienne par rapport à la variable <span class=\"math inline\">\\(y\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On a <span class=\"math inline\">\\(\\left|\\frac{\\partial f }{\\partial y}(t,y)\\right| = |\\cos(t^2 + y)| \\leq 1\\)</span> pour tout <span class=\"math inline\">\\((t,y) \\in [0,T]\\times\\R\\)</span> donc par théorème des accroisements finis, <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(1\\)</span>-lipschitzienne par rapport <span class=\"math inline\">\\(y\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>En déduire que le schéma numérique proposé est zéro-stable.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On pose <span class=\"math inline\">\\(F(t,y,h) = \\frac{1}{3}\\left( f(t,y)+2f\\left(t+ \\frac{3h}{4},y+\\frac{3h}{4}f(t,y) \\right) \\right)\\)</span>. On a <span class=\"math display\">\\[\\begin{align*}\n            |F(t,y,h) - F(t,u,h)| &amp;\\leq \\frac{1}{3}|\\left(f(t,y,h) - f(t,u,h)\\right)|\\\\  &amp;+ \\frac{2}{3}\\left|f\\left(t+ \\frac{3h}{4},y+\\frac{3h}{4}f(t,y) \\right)- f\\left(t+ \\frac{3h}{4},u+\\frac{3h}{4}f(t,u) \\right) \\right| \\\\\n            &amp; \\leq \\frac{1}{3}|y-u| + \\frac{2}{3} \\left|y+\\frac{3h}{4}f(t,y) - u+\\frac{3h}{4}f(t,u)\\right| \\\\\n            &amp; \\leq \\frac{1}{3}|y-u| + \\frac{2}{3}|y-u| + \\frac{6h}{12}|y-u|\n            \\end{align*}\\]</span> Puisque <span class=\"math inline\">\\(h\\)</span> est borné (par exemple par <span class=\"math inline\">\\(1\\)</span>), on en déduit que la fonction <span class=\"math inline\">\\(F\\)</span> définissant le schéma numérique est globalement lipschizienne par rapport à la deuxième variable.</p>\n<p>Par propriété du cours, le schéma numérique est donc zéro-stable.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Montrer que le schéma numérique est consistant d’ordre au moins <span class=\"math inline\">\\(2\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On vérifie qu’il est consistant d’ordre 1 en appliquant le résultat du cours : on écrit le schéma sous la forme standard <span class=\"math inline\">\\(y_{n+1} = y_n+hF(t_n,y_n,h)\\)</span> et on vérifie que <span class=\"math inline\">\\(F(t,y,0) = f(t,y)\\)</span>.</p>\n<p>Pour voir qu’il est au moins d’ordre <span class=\"math inline\">\\(2\\)</span>, on applique le critère de consistance en calculant <span class=\"math inline\">\\(\\frac{1}{2}f^{[1]}(t,y)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Le schéma est-il convergent ?</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Le schéma est consistant et stable, donc convergent.</p>\n"
+    }
+  ]
+}

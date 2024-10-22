@@ -1,0 +1,46 @@
+{
+  "uuid": "4CI9",
+  "titre": "Fonctions homogènes",
+  "theme": "calcul différentiel",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(\\alpha \\in \\R\\)</span>. Soit <span class=\"math inline\">\\(f \\colon \\R^* \\times \\R^* \\to \\R\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span>. On dit que <span class=\"math inline\">\\(f\\)</span> est homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span> si pour tout <span class=\"math inline\">\\((x,y,t) \\in \\left(\\R^*\\right)^3\\)</span> : <span class=\"math display\">\\[f(tx,ty) = t^\\alpha f(x,y)\\]</span></p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Donner un exemple de fonction de deux variables homogène de degré 2 et vérifier que ses dérivées partielles sont homogènes de degré 1.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Posons par exemple <span class=\"math inline\">\\(f(x,y) = x^2+xy+y^2\\)</span> : on observe que que pour tout <span class=\"math inline\">\\(t \\in \\R^*\\)</span>, <span class=\"math inline\">\\(f(tx,ty) = t^2x^2+t^2xy+t^2y^2 = t^2(x^2+xy+y^2) = t^2f(x,y)\\)</span> ce qui prouve que <span class=\"math inline\">\\(f\\)</span> est homogène de degré 2.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Soit <span class=\"math inline\">\\(f \\colon \\R^* \\times \\R^* \\to \\R\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> et <span class=\"math inline\">\\(t \\in \\R^*\\)</span>. Pour tout <span class=\"math inline\">\\((x,y) \\in \\R^* \\times \\R^*\\)</span>, on pose <span class=\"math inline\">\\(g_t(x,y) = f(tx,ty)\\)</span>. En calculant les dérivées partielles de <span class=\"math inline\">\\(g\\)</span> de deux manières différentes, montrer que si <span class=\"math inline\">\\(f\\)</span> est homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span> alors <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}\\)</span> sont homogènes de degré <span class=\"math inline\">\\(\\alpha-1\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On dérive l’expression qui caractérise les fonctions homogènes pour faire apparaître des relations mettant en jeu les dérivées partielles de <span class=\"math inline\">\\(f\\)</span>. D’une part, on a en vertu de la règle des chaînes : <span class=\"math display\">\\[\\frac{\\partial}{\\partial x}\\left( f(tx,ty) \\right) = t\\frac{\\partial f}{\\partial x}(tx,ty)\\]</span> D’autre part, on a <span class=\"math display\">\\[\\frac{\\partial}{\\partial x}\\left( t^\\alpha f(x,y) \\right) = t^\\alpha\\frac{\\partial f}{\\partial x}(x,y)\\]</span> Si <span class=\"math inline\">\\(f\\)</span> est homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span>, alors on peut égaliser ces deux expressions, ce qui donne <span class=\"math display\">\\[t\\frac{\\partial f}{\\partial x}(tx,ty) = t^\\alpha\\frac{\\partial f}{\\partial x}(x,y)\\]</span> Comme <span class=\"math inline\">\\(t\\)</span> est supposé non nul, on en déduit que <span class=\"math display\">\\[\\frac{\\partial f}{\\partial x}(tx,ty) = t^{\\alpha-1}\\frac{\\partial f}{\\partial x}(x,y)\\]</span> Ceci étant vrai pour tout <span class=\"math inline\">\\((x,y,t) \\in \\left(\\R^*\\right)^3\\)</span>, on en déduit que <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}\\)</span> est bien une fonction homogène de degré <span class=\"math inline\">\\(\\alpha-1\\)</span>.</p>\n<p>De même, on démontre que <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}\\)</span> est bien une fonction homogène de degré <span class=\"math inline\">\\(\\alpha-1\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que si <span class=\"math inline\">\\(f\\)</span> est homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span> alors <span class=\"math inline\">\\(f\\)</span> vérifie la relation d’Euler : <span class=\"math display\">\\[\\forall (x,y) \\in \\R^* \\times \\R^* \\qquad x \\frac{\\partial f}{\\partial x}(x,y) + y \\frac{\\partial f}{\\partial y}(x,y) = \\alpha f(x,y)\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On dérive cette fois-ci par rapport à <span class=\"math inline\">\\(t\\)</span> : d’après la règle des chaînes, on obtient d’une part : <span class=\"math display\">\\[\\frac{\\partial}{\\partial t}\\left( f(tx,ty) \\right) = x\\frac{\\partial f}{\\partial x}(tx,ty) +y\\frac{\\partial f}{\\partial y}(tx,ty)\\]</span> et d’autre part : <span class=\"math display\">\\[\\frac{\\partial}{\\partial t}\\left( t^\\alpha f(x,y) \\right) = \\alpha t^{\\alpha-1}f(x,y)\\]</span> Supposons que <span class=\"math inline\">\\(f\\)</span> est homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span>, alors ces deux expressions sont égales pour tout <span class=\"math inline\">\\((x,y,t) \\in \\left(\\R^*\\right)^3\\)</span> : <span class=\"math display\">\\[x\\frac{\\partial f}{\\partial x}(tx,ty) +y\\frac{\\partial f}{\\partial y}(tx,ty) = \\alpha t^{\\alpha-1}f(x,y)\\]</span> D’après la question précédente, on sait que les dérivées partielles sont homogènes de degré <span class=\"math inline\">\\(\\alpha-1\\)</span> donc par définition : <span class=\"math display\">\\[xt^{\\alpha-1}\\frac{\\partial f}{\\partial x}(x,y) +yt^{\\alpha-1}\\frac{\\partial f}{\\partial y}(x,y) = \\alpha t^{\\alpha-1}f(x,y)\\]</span> On divise par <span class=\"math inline\">\\(t^{\\alpha-1} \\neq 0\\)</span> et on obtient la relation d’Euler attendue.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Démontrer que si <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> et homogène de degré <span class=\"math inline\">\\(\\alpha\\)</span> alors <span class=\"math display\">\\[\\forall (x,y) \\in \\R^* \\times \\R^* \\qquad x^2 \\frac{\\partial^2 f}{\\partial x^2}(x,y) + 2xy \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) + y^2 \\frac{\\partial^2 f}{\\partial y^2}(x,y) = \\alpha (\\alpha-1) f(x,y)\\]</span></p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>On exploite les questions précédentes : on sait désormais que <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}\\)</span> est une fonction homogène de degré <span class=\"math inline\">\\(\\alpha-1\\)</span>, on en déduit que <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}\\)</span> vérifie la relation d’Euler : <span class=\"math display\">\\[x \\frac{\\partial^2 f}{\\partial x^2}(x,y) + y \\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) = (\\alpha-1) \\frac{\\partial f}{\\partial x}(x,y)\\]</span> De même, <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}\\)</span> vérifie la relation d’Euler : <span class=\"math display\">\\[x \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) + y \\frac{\\partial^2 f}{\\partial y^2}(x,y) = (\\alpha-1) \\frac{\\partial f}{\\partial y}(x,y)\\]</span> Or <span class=\"math inline\">\\(f\\)</span> vérifie également la relation d’Euler et en multipliant celle-ci par <span class=\"math inline\">\\((\\alpha-1)\\)</span> on obtient : <span class=\"math display\">\\[(\\alpha-1)x \\frac{\\partial f}{\\partial x}(x,y) + (\\alpha-1)y \\frac{\\partial f}{\\partial y}(x,y) = (\\alpha-1)\\alpha f(x,y)\\]</span> En y substituant les égalités précédentes, on obtient : <span class=\"math display\">\\[x^2 \\frac{\\partial^2 f}{\\partial x^2}(x,y) + xy \\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) +  yx \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) + y^2 \\frac{\\partial^2 f}{\\partial y^2}(x,y)\\]</span> Or <span class=\"math inline\">\\(xy=yx\\)</span> et d’après le théorème de Schwarz (Th 2.10 du cours) : <span class=\"math inline\">\\(\\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) = \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y)\\)</span> d’où l’égalité attendue : <span class=\"math display\">\\[x^2 \\frac{\\partial^2 f}{\\partial x^2}(x,y) + 2xy \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) + y^2 \\frac{\\partial^2 f}{\\partial y^2}(x,y) = \\alpha (\\alpha-1) f(x,y)\\]</span></p>\n"
+    }
+  ]
+}

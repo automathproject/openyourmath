@@ -1,0 +1,22 @@
+{
+  "uuid": "X3XR",
+  "titre": "Fonction de répartition",
+  "theme": "probabilités",
+  "auteur": "",
+  "date": "",
+  "organisation": "AMSCC",
+  "contenu": [
+    {
+      "type": "texte",
+      "value": "<p>Soit <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> et <span class=\"math inline\">\\(X\\)</span> une variable aléatoire admettant pour densité <span class=\"math inline\">\\(f(x)=\\lambda e^{-\\lambda x}1_{[0;+\\infty[}(x)\\)</span>.</p>\n"
+    },
+    {
+      "type": "question",
+      "value": "<p>Vérifier que <span class=\"math inline\">\\(f\\)</span> définit bien une fonction densité, puis déterminer la fonction de répartition <span class=\"math inline\">\\(F_X\\)</span> de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+    },
+    {
+      "type": "reponse",
+      "value": "<p>Il suffit de vérifier que <span class=\"math inline\">\\(f(x) \\geq 0\\)</span> pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span> puis de calculer : <span class=\"math display\">\\[\\begin{align*}\n    \\int_{-\\infty}^{+\\infty} f(x)dx &amp;= \\int_0^{+\\infty} \\lambda e^{-\\lambda x} dx \\\\\n                                   &amp;= \\left[-e^{-\\lambda x}\\right]_0^{+\\infty} \\\\\n                                   &amp;= 1\n    \\end{align*}\\]</span> On détermine maintenant la fonction de répartition : soit <span class=\"math inline\">\\(t \\in \\R\\)</span> ;</p>\n<ul>\n<li><p>si <span class=\"math inline\">\\(t&lt;0\\)</span>, alors <span class=\"math inline\">\\(F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^t 0 dx = 0\\)</span> ;</p></li>\n<li><p>si <span class=\"math inline\">\\(t \\geq 0\\)</span>, alors <span class=\"math inline\">\\(F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^0 0 dx + \\int_0^t \\lambda e^{-\\lambda x} dx = 0 + \\left[-e^{-\\lambda x}\\right]_0^t = 1 - e^{-\\lambda t}\\)</span>.</p></li>\n</ul>\n"
+    }
+  ]
+}
