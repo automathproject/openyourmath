@@ -48,8 +48,16 @@
 </script>
 
 <div class="exercice">
-  <div class="titre">{ExerciceData.titre}</div>
-  <div class="theme">{ExerciceData.theme}</div>
+  <div class="titre-container">
+    <div class="titre">{ExerciceData.titre}</div>
+    <a
+      href={`https://github.com/automathproject/openyourmath/blob/main/static/content/latex/${ExerciceData.uuid}.tex`}
+      target="_blank"
+      class="tex-link"
+    >
+      TeX
+    </a>
+  </div>  <div class="theme">{ExerciceData.theme}</div>
   <div class="auteur">{ExerciceData.auteur}</div>
   <div class="date">{ExerciceData.date}</div>
   <div class="organisation">{ExerciceData.organisation}</div>
@@ -134,4 +142,22 @@
   .toggle-button:hover {
     background-color: #17c700;
   }
+
+  .titre-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titre {
+  flex: 1;
+}
+
+.tex-link {
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
 </style>
