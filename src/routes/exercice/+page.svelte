@@ -5,7 +5,7 @@
     import { goto } from '$app/navigation';
     import 'katex/dist/katex.min.css';
     import Exercice from '../Exercice.svelte';
-    import Liste from '../Liste.svelte';
+    import Recherche from '../Recherche.svelte';
     
     import { get } from 'svelte/store';
     
@@ -90,7 +90,7 @@
       {#if showList}
       <div class="col-md-4 liste-container">
         <h3>Recherche</h3>
-        <Liste onSelect={handleSelect} />
+        <Recherche onSelect={handleSelect} />
       </div>
       {/if}
       <!-- Colonne de l'Exercice -->

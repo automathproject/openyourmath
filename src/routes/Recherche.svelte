@@ -5,11 +5,7 @@
 
   export let onSelect: (uuid: string) => void;
 
-  type Exercice = {
-    uuid: string;
-    titre: string;
-    theme: string;
-  };
+
 
   let exercises: Exercice[] = [];
   let filteredExercises: Exercice[] = [];
@@ -23,7 +19,7 @@
 
   onMount(async () => {
     try {
-      const response = await fetch('/exercice/list');
+      const response = await fetch('/exercice/recherche');
       if (response.ok) {
         exercises = await response.json();
         console.log(exercises); // Affiche la structure des exercices récupérés
