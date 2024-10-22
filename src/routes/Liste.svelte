@@ -113,10 +113,10 @@
         >
           <div class="exercise-info">
             <div class="exercise-title">
-              <strong>{exercise.uuid}</strong> : <MathRenderer content={exercise.titre} />
+              <MathRenderer content={exercise.titre} />
             </div>
             <div class="exercise-theme">
-              <small>Thème : {exercise.theme}</small>
+              <small>{exercise.theme}</small>
             </div>
           </div>
         </button>
