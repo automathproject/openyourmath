@@ -91,7 +91,7 @@
       {#if showList}
       <div class="col-md-4 liste-container">
         <h3>Recherche</h3>
-        <Liste onSelect={handleSelect} />
+        <Recherche onSelect={handleSelect} />
       </div>
       {/if}
       <!-- Colonne de l'Exercice -->

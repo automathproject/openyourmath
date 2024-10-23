@@ -1,6 +1,10 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import MathRenderer from './MathRenderer.svelte';
+    import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
+    import { page } from '$app/stores';
+    import type { Exercice } from './types'; // Assurez-vous d'avoir un type Exercice défini
+    import { get } from 'svelte/store';
   
     export let onSelect: (uuid: string) => void;
   
@@ -9,81 +13,74 @@
     let error: string | null = null;
     let loading: boolean = false;
   
-    function validateUUIDs(uuids: string[]): { valid: boolean; errorMessage: string | null } {
-      const uniqueUUIDs = new Set(uuids);
-      if (uniqueUUIDs.size !== uuids.length) {
-        return {
-          valid: false,
-          errorMessage: 'La liste contient des doublons. Les doublons ont été supprimés.',
-        };
+    // Charger la liste d'UUIDs depuis l'URL au montage du composant
+    onMount(() => {
+      const currentList = get(page).url.searchParams.get('list');
+      if (currentList) {
+        uuidInput = currentList;
+        loadExercises();
       }
-      // Vous pouvez ajouter d'autres validations ici (par exemple, vérifier le format des UUIDs).
-      return { valid: true, errorMessage: null };
-    }
+    });
   
-    async function fetchExercises() {
+    // Fonction pour charger les exercices à partir de la liste
+    async function loadExercises() {
+      if (!uuidInput) {
+        error = 'Veuillez entrer au moins un UUID.';
+        exercises = [];
+        return;
+      }
+  
       loading = true;
       error = null;
       exercises = [];
       try {
-        const uuids = uuidInput.split(',').map(s => s.trim()).filter(s => s !== '');
-        console.log('Parsed UUIDs:', uuids);
-  
-        // Valider la liste des UUIDs
-        const { valid, errorMessage } = validateUUIDs(uuids);
-  
-        if (!valid) {
-          error = errorMessage;
-          // Supprimer les doublons
-          const uniqueUUIDs = Array.from(new Set(uuids));
-          uuidInput = uniqueUUIDs.join(', ');
-          loading = false;
+        const uuids = uuidInput.split(',').map(u => u.trim()).filter(u => u !== '');
+        if (uuids.length === 0) {
+          error = 'Aucun UUID valide trouvé.';
           return;
         }
   
-        if (uuids.length === 0) {
-          error = 'Veuillez entrer au moins un UUID.';
-        } else {
-          const fetchPromises = uuids.map(uuid => {
-            console.log(`Fetching exercice with UUID: ${uuid}`);
-            return fetch(`/exercice/${uuid}`)
-              .then(response => {
-                if (response.ok) {
-                  return response.json().then(exercise => {
-                    exercise.uuid = uuid;
-                    return exercise;
-                  });
-                } else if (response.status === 404) {
-                  console.error(`Exercice non trouvé pour UUID ${uuid}`);
-                  return null;
-                } else {
-                  throw new Error(`Erreur pour UUID ${uuid}: ${response.statusText}`);
-                }
-              })
-              .catch(err => {
-                console.error(`Erreur lors de la requête pour UUID ${uuid}:`, err);
-                return null;
-              });
-          });
+        // Supprimer les doublons
+        const uniqueUUIDs = Array.from(new Set(uuids));
+        uuidInput = uniqueUUIDs.join(','); // Mettre à jour l'entrée sans doublons
   
-          const results = await Promise.all(fetchPromises);
-          exercises = results.filter(exercise => exercise !== null);
-          console.log('Exercices après filtrage:', exercises);
+        // Mettre à jour l'URL avec la liste des UUIDs
+        goto(`?list=${uuidInput}`, { replaceState: true });
   
-          if (exercises.length === 0) {
-            error = 'Aucun exercice trouvé pour les UUID fournis.';
-          }
+        const fetchPromises = uniqueUUIDs.map(uuid =>
+          fetch(`/exercice/${uuid}`)
+            .then(response => {
+              if (response.ok) {
+                return response.json().then(ex => ({ ...ex, uuid }));
+              } else {
+                throw new Error(`Erreur pour UUID ${uuid}: ${response.statusText}`);
+              }
+            })
+            .catch(err => {
+              console.error(`Erreur lors de la récupération de l'exercice ${uuid}:`, err);
+              return null;
+            })
+        );
+  
+        const results = await Promise.all(fetchPromises);
+        exercises = results.filter(ex => ex !== null);
+  
+        if (exercises.length === 0) {
+          error = 'Aucun exercice trouvé pour les UUIDs fournis.';
         }
       } catch (err: any) {
-        error = `Échec du chargement des exercices : ${err.message}`;
-        console.error('Erreur dans fetchExercises:', err);
+        error = `Erreur lors du chargement de la liste : ${err.message}`;
       } finally {
         loading = false;
       }
     }
   
-    function handleClick(uuid: string) {
-      console.log('Exercice cliqué:', uuid);
+    function handleInputChange(event: Event) {
+      const target = event.target as HTMLInputElement;
+      uuidInput = target.value;
+    }
+  
+    function handleSelect(uuid: string) {
       if (onSelect) {
         onSelect(uuid);
       }
@@ -91,21 +88,19 @@
   </script>
   
   <div>
-    <div class="input-group mb-3">
+    <!-- Champ de saisie pour les UUIDs -->
+    <div class="input-container mb-3">
       <input
         type="text"
-        class="form-control"
         bind:value={uuidInput}
-        placeholder="Entrez des UUID séparés par des virgules"
+        class="form-control"
+        placeholder="Entrez des UUIDs séparés par des virgules"
+        on:input={handleInputChange}
       />
-      <button class="btn btn-primary" on:click={fetchExercises}>Charger</button>
+      <button on:click={loadExercises} class="btn btn-primary mt-2">
+        Charger la Liste
+      </button>
     </div>
-  
-    {#if error}
-      <div class="alert alert-danger" role="alert">
-        {error}
-      </div>
-    {/if}
   
     {#if loading}
       <div class="d-flex justify-content-center align-items-center">
@@ -113,11 +108,15 @@
           <span class="visually-hidden">Chargement...</span>
         </div>
       </div>
-    {:else if exercises.length > 0}
+    {:else if error}
+      <div class="alert alert-danger" role="alert">
+        {error}
+      </div>
+    {:else}
       <div class="list-group">
         {#each exercises as exercise (exercise.uuid)}
           <button
-            on:click={() => handleClick(exercise.uuid)}
+            on:click={() => handleSelect(exercise.uuid)}
             class="list-group-item list-group-item-action"
           >
             <div class="exercise-info">
@@ -160,12 +159,17 @@
       margin-top: 4px;
     }
   
-    .input-group .form-control {
-      flex: 1 1 auto;
+    .input-container {
+      display: flex;
+      flex-direction: column;
     }
   
-    .input-group .btn {
-      flex: 0 0 auto;
+    .form-control {
+      width: 100%;
+    }
+  
+    .btn {
+      align-self: flex-start;
     }
   </style>
   
