@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>openyourmath.org</p>
+		<p>openyourmath.org - 2024 - Licence GNU AGPL v3</p>
 	</footer>
 </div>
 
