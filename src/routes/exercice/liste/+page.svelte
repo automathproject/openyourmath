@@ -44,18 +44,25 @@
 
     // Instruction réactive pour surveiller les changements dans l'URL
     $: {
-      const currentUuid = $page.url.searchParams.get('uuid');
-      if (currentUuid && currentUuid !== exerciseUuid) {
-        exerciseUuid = currentUuid;
-        loadExerciseData(exerciseUuid);
-      }
-    }
+  const currentUuid = $page.url.searchParams.get('uuid');
+  if (currentUuid && currentUuid !== exerciseUuid) {
+    exerciseUuid = currentUuid;
+    loadExerciseData(exerciseUuid);
+  }
+}
 
     // Fonction pour gérer la sélection dans Liste
     function handleSelect(uuid: string) {
-      exerciseUuid = uuid;
-      goto(`?list=${$page.url.searchParams.get('list')}&uuid=${uuid}`, { replaceState: false });
-    }
+  if (uuid !== exerciseUuid) {
+    exerciseUuid = uuid; // Met à jour l'UUID localement
+    goto(`?list=${$page.url.searchParams.get('list')}&uuid=${uuid}`, { replaceState: false })
+      .then(() => {
+        // Assurez-vous que la logique réactive détecte le changement d'URL
+        loadExerciseData(uuid);
+      });
+  }
+}
+
 
     // Charger l'exercice initial si l'URL contient un uuid
     onMount(() => {

@@ -96,6 +96,12 @@
         class="form-control"
         placeholder="Entrez des UUIDs séparés par des virgules"
         on:input={handleInputChange}
+        on:keydown={(event) => {
+          if (event.key === 'Enter') {
+            loadExercises();
+          }
+        }}
+      
       />
       <button on:click={loadExercises} class="btn btn-primary mt-2">
         Charger la Liste
@@ -114,14 +120,14 @@
       </div>
     {:else}
       <div class="list-group">
-        {#each exercises as exercise (exercise.uuid)}
+        {#each exercises as exercise, index (exercise.uuid)}
           <button
             on:click={() => handleSelect(exercise.uuid)}
             class="list-group-item list-group-item-action"
           >
             <div class="exercise-info">
               <div class="exercise-title">
-                <MathRenderer content={exercise.titre} />
+                {index + 1}. <MathRenderer content={exercise.titre} />
               </div>
               <div class="exercise-theme">
                 <small>{exercise.theme}</small>
