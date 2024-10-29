@@ -2,7 +2,9 @@
 
 Cette application a pour but de partager une base d'exercices de mathématiques sous différents formats. 
 
-Pour tester l'application, vérifier que node est bien installé sur votre machine puis : 
+Pour tester l'application, voir ici : https://openyourmath.org
+
+Pour tester l'application en local, vérifier que node est bien installé sur votre machine puis : 
 ```
 git clone https://github.com/automathproject/openyourmath.git
 cd openyourmath
