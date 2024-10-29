@@ -57,7 +57,7 @@
     >
     {ExerciceData.uuid}.tex
     </a>
-  </div>  <div class="theme">{ExerciceData.theme}</div>
+  </div>  <div class="tags"> <span class="tag">{ExerciceData.theme} </span></div>
   <div class="auteur">{ExerciceData.auteur}</div>
   <div class="date">{ExerciceData.date}</div>
   <div class="organisation">{ExerciceData.organisation}</div>
@@ -158,6 +158,28 @@
   margin-left: 1rem;
   font-size: 0.9rem;
   color: #007bff;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  background-color: #e0e0e0; /* Couleur de fond du tag */
+  color: #333; /* Couleur du texte du tag */
+  padding: 5px 10px; /* Espacement autour du texte */
+  border-radius: 15px; /* Coins arrondis pour un effet de badge */
+  font-size: 14px; /* Taille de la police */
+  font-weight: 500; /* Épaisseur du texte */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #333; /* Couleur de fond au survol */
+  color: #fff; /* Couleur du texte au survol */
 }
 
 </style>
