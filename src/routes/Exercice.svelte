@@ -1,6 +1,6 @@
 <!-- src/components/Exercice.svelte -->
 <script>
-  import { fade } from 'svelte/transition'; // Import de la transition fade
+  import { fade, fly, slide, scale } from 'svelte/transition'; // Import de plusieurs transitions
   import MathRenderer from './MathRenderer.svelte';
 
   export let ExerciceData;
@@ -55,7 +55,7 @@
       target="_blank"
       class="tex-link"
     >
-      TeX
+    {ExerciceData.uuid}.tex
     </a>
   </div>  <div class="theme">{ExerciceData.theme}</div>
   <div class="auteur">{ExerciceData.auteur}</div>
@@ -80,7 +80,7 @@
         </div>
       {:else if item.type === 'reponse'}
         {#if showReponses}
-          <div class={item.type} transition:fade={{ duration: 500 }}>
+          <div class={item.type} transition:slide={{ duration: 500 }}>
             <MathRenderer content={item.value} />
           </div>
         {/if}
