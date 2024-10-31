@@ -9,6 +9,7 @@
     import Liste from '../Liste.svelte';
     
     import { get } from 'svelte/store';
+    import ExerciceRenderer from '../ExerciceRenderer.svelte';
     
     // Variables liées au champ de saisie
     let inputUuid: string = '';
@@ -25,7 +26,7 @@
         loadingExercise = true;
         try {
           // Utiliser un chemin absolu pour éviter les problèmes de résolution
-          const response = await fetch(`/content/json/${uuid}.json`);
+          const response = await fetch(`/content/json2/${uuid}.json`);
           if (response.ok) {
             exerciseData = await response.json();
             errorMessage = '';
@@ -106,7 +107,7 @@
             type="text"
             bind:value={inputUuid}
             class="form-control"
-            placeholder="Ab62"
+            placeholder="Ab62,..."
             on:keydown={(event) => {
               if (event.key === 'Enter') {
                 handleLoadExercise();
@@ -133,7 +134,7 @@
       
         {#if exerciseData}
           <!-- Passer les données de l'exercice au composant Exercice -->
-          <Exercice ExerciceData={exerciseData} />
+          <ExerciceRenderer ExerciceData={exerciseData} />
         {/if}
       </div>
     </div>

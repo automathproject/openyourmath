@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 export const GET: RequestHandler = async ({ params }) => {
   try {
     const { uuid } = params;
-    const jsonDir = path.resolve('static/content/json');
+    const jsonDir = path.resolve('static/content/json2');
     const filePath = path.join(jsonDir, `${uuid}.json`);
 
     const data = await readFile(filePath, 'utf-8');

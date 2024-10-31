@@ -5,6 +5,7 @@
     import Exercice from '../../Exercice.svelte';
     import Liste from '../../Liste.svelte';
     import { get } from 'svelte/store';
+    import ExerciceRenderer from '../../ExerciceRenderer.svelte';
 
     // Variable représentant l'UUID chargé
     let exerciseUuid: string = '';
@@ -100,7 +101,7 @@
       {/if}
     
       {#if exerciseData}
-        <Exercice ExerciceData={exerciseData} />
+        <ExerciceRenderer ExerciceData={exerciseData} />
       {/if}
     </div>
   </div>

@@ -5,7 +5,7 @@ import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async () => {
   try {
-    const jsonDir = path.resolve('static/content/json');
+    const jsonDir = path.resolve('static/content/json2');
     const files = await readdir(jsonDir);
     const exercises = [];
 
