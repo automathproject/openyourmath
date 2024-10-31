@@ -1,0 +1,80 @@
+{
+  "uuid": "Vss4",
+  "titre": "Contrôle de qualité sur des pièces d'un euro",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T12:46:05.123Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T12:46:05.123Z"
+  },
+  "contenu": [
+    {
+      "id": "6b2bfd47-96c1-414c-9d84-6de3edc5915e",
+      "type": "question",
+      "value": {
+        "latex": "Quelle est la loi de la variable aléatoire $X$ ? Quelle est son espérance, son écart-type ?",
+        "html": "<p>Quelle est la loi de la variable aléatoire <span\nclass=\"math inline\">\\(X\\)</span> ? Quelle est son espérance, son\nécart-type ?</p>\n"
+      }
+    },
+    {
+      "id": "1e9176e8-86d5-4beb-8145-c5239be37be0",
+      "type": "reponse",
+      "value": {
+        "latex": "La variable aléatoire $X$ suit une loi binomiale de paramètres $n = 1000$ et $p = 0{,}05$, ce qui se note $X \\hookrightarrow \\mathcal{B}(1000, 0{,}05)$. On a $\\mathbb{E}(X) = n \\times p = 1000 \\times 0{,}05 = 50$ et $\\sigma(X) = \\sqrt{n \\times p \\times (1-p)} = \\sqrt{1000 \\times 0{,}05 \\times 0{,}95} = \\sqrt{47{,}5}$.",
+        "html": "<p>La variable aléatoire <span class=\"math inline\">\\(X\\)</span> suit une\nloi binomiale de paramètres <span class=\"math inline\">\\(n =\n1000\\)</span> et <span class=\"math inline\">\\(p = 0{,}05\\)</span>, ce qui\nse note <span class=\"math inline\">\\(X \\hookrightarrow \\mathcal{B}(1000,\n0{,}05)\\)</span>. On a <span class=\"math inline\">\\(\\mathbb{E}(X) = n\n\\times p = 1000 \\times 0{,}05 = 50\\)</span> et <span\nclass=\"math inline\">\\(\\sigma(X) = \\sqrt{n \\times p \\times (1-p)} =\n\\sqrt{1000 \\times 0{,}05 \\times 0{,}95} = \\sqrt{47{,}5}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9e01f85f-164a-4ebe-8572-61ccc23f6349",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant l'inégalité de Bienaymé-Tchebychev, majorer la probabilité que le nombre de pièces fausses soit supérieur à 100.",
+        "html": "<p>En utilisant l’inégalité de Bienaymé-Tchebychev, majorer la\nprobabilité que le nombre de pièces fausses soit supérieur à 100.</p>\n"
+      }
+    },
+    {
+      "id": "81fba14e-991b-436f-88e1-a24c2e0c42ec",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après l'inégalité de Bienaymé-Tchebychev appliquée à la variable aléatoire $X$ admettant une espérance $50$, on a pour tout $k > 0$ :\n        \\[\n        \\prob(|X - \\mathbb{E}(X)| > k) \\leq \\frac{\\sigma(X)^2}{k^2}.\n        \\]\n        Donc, pour $k = 50$, on a :\n        \\[\n        \\prob(|X - 50| > 50) \\leq \\frac{47{,}5}{50^2} = 0{,}019.\n        \\]\n        Donc, $\\prob(X > 100) = \\prob(X - 50 > 50) \\leq \\prob(|X - 50| > 50) \\leq 0{,}019$.",
+        "html": "<p>D’après l’inégalité de Bienaymé-Tchebychev appliquée à la variable\naléatoire <span class=\"math inline\">\\(X\\)</span> admettant une espérance\n<span class=\"math inline\">\\(50\\)</span>, on a pour tout <span\nclass=\"math inline\">\\(k &gt; 0\\)</span> : <span\nclass=\"math display\">\\[\\prob(|X - \\mathbb{E}(X)| &gt; k) \\leq\n\\frac{\\sigma(X)^2}{k^2}.\\]</span> Donc, pour <span\nclass=\"math inline\">\\(k = 50\\)</span>, on a : <span\nclass=\"math display\">\\[\\prob(|X - 50| &gt; 50) \\leq \\frac{47{,}5}{50^2}\n= 0{,}019.\\]</span> Donc, <span class=\"math inline\">\\(\\prob(X &gt; 100)\n= \\prob(X - 50 &gt; 50) \\leq \\prob(|X - 50| &gt; 50) \\leq\n0{,}019\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "12baa00f-f5cb-4e8d-a871-276032fd5491",
+      "type": "question",
+      "value": {
+        "latex": "Justifier que $X$ peut être approchée par une variable suivant une loi normale de moyenne $\\mu = 50$ et d’écart-type $\\sigma = \\sqrt{47{,}5}$.",
+        "html": "<p>Justifier que <span class=\"math inline\">\\(X\\)</span> peut être\napprochée par une variable suivant une loi normale de moyenne <span\nclass=\"math inline\">\\(\\mu = 50\\)</span> et d’écart-type <span\nclass=\"math inline\">\\(\\sigma = \\sqrt{47{,}5}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5e6839e6-cfeb-4ebc-8e6f-f2b01d61b5c0",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $S_n = X_1+\\cdots X_n$ une somme de variables aléatoires indépendantes et identiquement distribuées suivant une loi de Bernoulli de paramètre $p = 0{,}05$. D'après le théorème central limite, la variable aléatoire $\\frac{S_n - 0.05n}{\\sqrt{n\\times 0.05 \\times 0.95}}$ suit approximativement une loi normale centrée réduite pour $n$ grand (supérieur à $30$ en pratique), donc $S_n$ suit approximativement une loi normale de moyenne $0.05n$ et d'écart-type $\\sqrt{n\\times 0.05 \\times 0.95}$.\n\n        Or $X$ suit la même loi que $S_{1000}$ donc $X$ peut être approchée par une variable suivant une loi normale de moyenne $\\mu = 50$ et d’écart-type $\\sigma = \\sqrt{47{,}5}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(S_n = X_1+\\cdots X_n\\)</span> une\nsomme de variables aléatoires indépendantes et identiquement distribuées\nsuivant une loi de Bernoulli de paramètre <span class=\"math inline\">\\(p\n= 0{,}05\\)</span>. D’après le théorème central limite, la variable\naléatoire <span class=\"math inline\">\\(\\frac{S_n - 0.05n}{\\sqrt{n\\times\n0.05 \\times 0.95}}\\)</span> suit approximativement une loi normale\ncentrée réduite pour <span class=\"math inline\">\\(n\\)</span> grand\n(supérieur à <span class=\"math inline\">\\(30\\)</span> en pratique), donc\n<span class=\"math inline\">\\(S_n\\)</span> suit approximativement une loi\nnormale de moyenne <span class=\"math inline\">\\(0.05n\\)</span> et\nd’écart-type <span class=\"math inline\">\\(\\sqrt{n\\times 0.05 \\times\n0.95}\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(X\\)</span> suit la même loi que <span\nclass=\"math inline\">\\(S_{1000}\\)</span> donc <span\nclass=\"math inline\">\\(X\\)</span> peut être approchée par une variable\nsuivant une loi normale de moyenne <span class=\"math inline\">\\(\\mu =\n50\\)</span> et d’écart-type <span class=\"math inline\">\\(\\sigma =\n\\sqrt{47{,}5}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f9652678-7613-4c11-bfff-4b803d666db7",
+      "type": "question",
+      "value": {
+        "latex": "À l’aide de cette approximation, estimer la probabilité que le nombre de pièces fausses soit compris entre 48 et 52.",
+        "html": "<p>À l’aide de cette approximation, estimer la probabilité que le nombre\nde pièces fausses soit compris entre 48 et 52.</p>\n"
+      }
+    },
+    {
+      "id": "8e113d43-549d-479d-bfc7-0ad515f930b9",
+      "type": "reponse",
+      "value": {
+        "latex": "On calcule : \n        $$\\begin{align*}\n            \\prob\\left( 48 \\leq X \\leq 52 \\right) & = \\prob\\left( \\frac{48 - 50}{\\sqrt{47{,}5}} \\leq \\frac{X - 50}{\\sqrt{47{,}5}} \\leq \\frac{52 - 50}{\\sqrt{47{,}5}} \\right) \\\\\n            & = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq \\frac{X - 50}{\\sqrt{47{,}5}} \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            & = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq Z \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            &= 2 \\times \\prob\\left( Z \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) - 1 \\\\\n            & = 2 \\times \\Phi\\left( \\frac{2}{\\sqrt{47{,}5}} \\right) - 1 \\\\\n            & \\approx 2 \\times 0{,}6142 - 1 \\\\\n            & \\approx 0{,}2283.\n        \\end{align*}$$",
+        "html": "<p>On calcule : <span class=\"math display\">\\[\\begin{align*}\n            \\prob\\left( 48 \\leq X \\leq 52 \\right) &amp; = \\prob\\left(\n\\frac{48 - 50}{\\sqrt{47{,}5}} \\leq \\frac{X - 50}{\\sqrt{47{,}5}} \\leq\n\\frac{52 - 50}{\\sqrt{47{,}5}} \\right) \\\\\n            &amp; = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq \\frac{X -\n50}{\\sqrt{47{,}5}} \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            &amp; = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq Z \\leq\n\\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            &amp;= 2 \\times \\prob\\left( Z \\leq \\frac{2}{\\sqrt{47{,}5}}\n\\right) - 1 \\\\\n            &amp; = 2 \\times \\Phi\\left( \\frac{2}{\\sqrt{47{,}5}} \\right)\n- 1 \\\\\n            &amp; \\approx 2 \\times 0{,}6142 - 1 \\\\\n            &amp; \\approx 0{,}2283.\n        \\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}
