@@ -8,27 +8,27 @@
   "contenu": [
     {
       "type": "texte",
-      "value": "<p>On considère <span class=\"math inline\">\\(n\\)</span> lampes, <span class=\"math inline\">\\(n \\in \\mathbb{N}^*\\)</span>. La durée de vie (en années) d’une lampe est une variable aléatoire absolument continue dont la densité <span class=\"math inline\">\\(f\\)</span> est définie sur <span class=\"math inline\">\\(\\mathbb{R}\\)</span> par <span class=\"math display\">\\[f \\colon t \\mapsto \\frac{1}{16} t e^{-\\frac{t}{4}} 1_{[0;+\\infty[}(t)\\]</span> On suppose que les lampes évoluent de manière indépendante.</p>\n<p>Pour tout entier <span class=\"math inline\">\\(i \\in \\{1,...,n\\}\\)</span>, on note <span class=\"math inline\">\\(X_i\\)</span> la variable aléatoire égale à la durée de vie de la <span class=\"math inline\">\\(i\\)</span>-ème lampe.</p>\n"
+      "value": "<p>On considère <span class=\"math inline\">\\(n\\)</span> lampes, <span\nclass=\"math inline\">\\(n \\in \\mathbb{N}^*\\)</span>. La durée de vie (en\nannées) d’une lampe est une variable aléatoire absolument continue dont\nla densité <span class=\"math inline\">\\(f\\)</span> est définie sur <span\nclass=\"math inline\">\\(\\mathbb{R}\\)</span> par <span\nclass=\"math display\">\\[f \\colon t \\mapsto \\frac{1}{16} t\ne^{-\\frac{t}{4}} 1_{[0;+\\infty[}(t)\\]</span> On suppose que les lampes\névoluent de manière indépendante.</p>\n<p>Pour tout entier <span class=\"math inline\">\\(i \\in\n\\{1,...,n\\}\\)</span>, on note <span class=\"math inline\">\\(X_i\\)</span>\nla variable aléatoire égale à la durée de vie de la <span\nclass=\"math inline\">\\(i\\)</span>-ème lampe.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Déterminer la fonction de répartition de la variable aléatoire <span class=\"math inline\">\\(X_1\\)</span>.</p>\n"
+      "value": "<p>Déterminer la fonction de répartition de la variable aléatoire <span\nclass=\"math inline\">\\(X_1\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On note <span class=\"math inline\">\\(F_{X_1}\\)</span> la fonction de répartition de la variable aléatoire <span class=\"math inline\">\\(X_1\\)</span>. Par définition, <span class=\"math display\">\\[\\begin{align*}\n        \\forall t\\in\\R, F_{X_1}(t) &amp;= \\int_{-\\infty}^t f(x)dx \\\\\n        &amp;=\\begin{cases}\n            0 &amp; \\text{ si } t&lt;0 \\\\\n            \\int_0^t \\frac{1}{16}xe^{-\\frac{x}{4}}dx &amp; \\text{ si } t\\geq 0\n        \\end{cases}\n    \\end{align*}\\]</span> c’est-à-dire pour <span class=\"math inline\">\\(t\\in\\R^+\\)</span>, <span class=\"math display\">\\[\\begin{align*}\n        F_{X_1}(t) &amp;=\\left[ \\frac{-1}{4}xe^{-\\frac{x}{4}}\\right]_0^t +\\int_0^t \\frac{1}{4}e^{-\\frac{x}{4}} dx \\quad \\text{ par une I.P.P.}\\\\\n        &amp;=\\frac{-1}{4}te^{-\\frac{t}{4}} +\\left[-e^{-\\frac{x}{4}} \\right]_0^t \\\\\n        &amp;=1-e^{-\\frac{t}{4}} \\left(\\frac{t}{4}+1 \\right)\n    \\end{align*}\\]</span> Finalement on a : <span class=\"math display\">\\[\\forall t\\in\\R, \\quad F_{X_1}(t)=\\left(1-e^{-\\frac{t}{4}} \\left(\\frac{t}{4}+1 \\right)\\right) \\mathbf{1}_{[0;+\\infty[}(t)\\]</span></p>\n"
+      "value": "<p>On note <span class=\"math inline\">\\(F_{X_1}\\)</span> la fonction de\nrépartition de la variable aléatoire <span\nclass=\"math inline\">\\(X_1\\)</span>. Par définition, <span\nclass=\"math display\">\\[\\begin{align*}\n        \\forall t\\in\\R, F_{X_1}(t) &amp;= \\int_{-\\infty}^t f(x)dx \\\\\n        &amp;=\\begin{cases}\n            0 &amp; \\text{ si } t&lt;0 \\\\\n            \\int_0^t \\frac{1}{16}xe^{-\\frac{x}{4}}dx &amp; \\text{ si }\nt\\geq 0\n        \\end{cases}\n    \\end{align*}\\]</span> c’est-à-dire pour <span\nclass=\"math inline\">\\(t\\in\\R^+\\)</span>, <span\nclass=\"math display\">\\[\\begin{align*}\n        F_{X_1}(t) &amp;=\\left[ \\frac{-1}{4}xe^{-\\frac{x}{4}}\\right]_0^t\n+\\int_0^t \\frac{1}{4}e^{-\\frac{x}{4}} dx \\quad \\text{ par une I.P.P.}\\\\\n        &amp;=\\frac{-1}{4}te^{-\\frac{t}{4}} +\\left[-e^{-\\frac{x}{4}}\n\\right]_0^t \\\\\n        &amp;=1-e^{-\\frac{t}{4}} \\left(\\frac{t}{4}+1 \\right)\n    \\end{align*}\\]</span> Finalement on a : <span\nclass=\"math display\">\\[\\forall t\\in\\R, \\quad\nF_{X_1}(t)=\\left(1-e^{-\\frac{t}{4}} \\left(\\frac{t}{4}+1 \\right)\\right)\n\\mathbf{1}_{[0;+\\infty[}(t)\\]</span></p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>Un appareil de type <span class=\"math inline\">\\(A\\)</span> comporte 6 lampes, toutes nécessaires à son fonctionement. On note <span class=\"math inline\">\\(T = \\min\\limits_{i \\in \\{1,...,6\\} }(X_i)\\)</span>.</p>\n"
+      "value": "<p>Un appareil de type <span class=\"math inline\">\\(A\\)</span> comporte 6\nlampes, toutes nécessaires à son fonctionement. On note <span\nclass=\"math inline\">\\(T = \\min\\limits_{i \\in \\{1,...,6\\}\n}(X_i)\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Que modélise la variable aléatoire <span class=\"math inline\">\\(T\\)</span> ?</p>\n"
+      "value": "<p>Que modélise la variable aléatoire <span\nclass=\"math inline\">\\(T\\)</span> ?</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>La variable aléatoire <span class=\"math inline\">\\(T\\)</span> modélise la durée de fonctionnement de l’appareil de type <span class=\"math inline\">\\(A\\)</span>.</p>\n"
+      "value": "<p>La variable aléatoire <span class=\"math inline\">\\(T\\)</span> modélise\nla durée de fonctionnement de l’appareil de type <span\nclass=\"math inline\">\\(A\\)</span>.</p>\n"
     },
     {
       "type": "question",
@@ -36,23 +36,23 @@
     },
     {
       "type": "reponse",
-      "value": "<p>On détermine la fonction de répartition de <span class=\"math inline\">\\(T\\)</span>: <span class=\"math display\">\\[\\forall t \\in \\mathbb{R}, \\quad F_T(t)=\\p(T\\leq t).\\]</span> Si <span class=\"math inline\">\\(t\\leq 0\\)</span>,  <span class=\"math inline\">\\(F(t)=0\\)</span>. Soit <span class=\"math inline\">\\(t\\in\\R^+\\)</span>. Alors <span class=\"math display\">\\[\\begin{align*}\n                F_T(t) &amp;= \\p(  \\min\\limits_{i \\in \\{1,...,6\\} }(X_i) \\leq t) \\\\\n                &amp;= 1- \\p( \\min\\limits_{i \\in \\{1,...,6\\} }(X_i)&gt;t) \\\\\n                &amp;=1-\\p(\\{X_1&gt;t\\}\\cap \\cdots \\cap \\{X_6&gt;t\\}) \\\\\n                &amp;=1-\\prod_{i=1}^6 \\p(X_i&gt;t) \\quad \\text{ par indépendance des } (X_i)_{i\\in\\{1,\\cdots,6\\}} \\\\\n                &amp;=1-\\p(X_1&gt;t)^6 \\quad \\text{ car les } (X_i)_{i\\in\\{1,\\cdots,6\\}} \\text{ sont de même loi} \\\\\n                &amp;=1-(1-F_{X_1}(t))^6.\n            \\end{align*}\\]</span> En utilisant la question 1, on en déduit que : <span class=\"math display\">\\[\\forall t \\in \\R, \\quad \n        F_T(t)=\\left(1-e^{-\\frac{3t}{2}}\\left(1+\\frac{t}{4}\\right)^6 \\right)\\mathbf{1}_{[0;+\\infty[}(t).\\]</span></p>\n"
+      "value": "<p>On détermine la fonction de répartition de <span\nclass=\"math inline\">\\(T\\)</span>: <span class=\"math display\">\\[\\forall t\n\\in \\mathbb{R}, \\quad F_T(t)=\\p(T\\leq t).\\]</span> Si <span\nclass=\"math inline\">\\(t\\leq 0\\)</span>,  <span\nclass=\"math inline\">\\(F(t)=0\\)</span>. Soit <span\nclass=\"math inline\">\\(t\\in\\R^+\\)</span>. Alors <span\nclass=\"math display\">\\[\\begin{align*}\n                F_T(t) &amp;= \\p(  \\min\\limits_{i \\in \\{1,...,6\\} }(X_i)\n\\leq t) \\\\\n                &amp;= 1- \\p( \\min\\limits_{i \\in \\{1,...,6\\}\n}(X_i)&gt;t) \\\\\n                &amp;=1-\\p(\\{X_1&gt;t\\}\\cap \\cdots \\cap \\{X_6&gt;t\\}) \\\\\n                &amp;=1-\\prod_{i=1}^6 \\p(X_i&gt;t) \\quad \\text{ par\nindépendance des } (X_i)_{i\\in\\{1,\\cdots,6\\}} \\\\\n                &amp;=1-\\p(X_1&gt;t)^6 \\quad \\text{ car les }\n(X_i)_{i\\in\\{1,\\cdots,6\\}} \\text{ sont de même loi} \\\\\n                &amp;=1-(1-F_{X_1}(t))^6.\n            \\end{align*}\\]</span> En utilisant la question 1, on en\ndéduit que : <span class=\"math display\">\\[\\forall t \\in \\R, \\quad\n        F_T(t)=\\left(1-e^{-\\frac{3t}{2}}\\left(1+\\frac{t}{4}\\right)^6\n\\right)\\mathbf{1}_{[0;+\\infty[}(t).\\]</span></p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Calculer la probabilité que l’appareil de type <span class=\"math inline\">\\(A\\)</span> fonctionne de manière continue pendant au moins 4 ans à partir de sa mise en marche, sans changer de lampe.</p>\n"
+      "value": "<p>Calculer la probabilité que l’appareil de type <span\nclass=\"math inline\">\\(A\\)</span> fonctionne de manière continue pendant\nau moins 4 ans à partir de sa mise en marche, sans changer de lampe.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On cherche à déterminer la probabilité <span class=\"math inline\">\\(\\PP(T\\geq 4)\\)</span>: <span class=\"math display\">\\[\\PP(T\\geq 4)=1-\\p(T&lt;4)=1-F_T(4)=2^6e^{-6} \\simeq 0.1586.\\]</span> La probabilité que l’appareil de type <span class=\"math inline\">\\(A\\)</span> fonctionne de manière continue pendant au moins <span class=\"math inline\">\\(4\\)</span> ans à partir de sa mise en marche est d’environ <span class=\"math inline\">\\(15.86\\)</span>%.</p>\n"
+      "value": "<p>On cherche à déterminer la probabilité <span\nclass=\"math inline\">\\(\\PP(T\\geq 4)\\)</span>: <span\nclass=\"math display\">\\[\\PP(T\\geq 4)=1-\\p(T&lt;4)=1-F_T(4)=2^6e^{-6}\n\\simeq 0.1586.\\]</span> La probabilité que l’appareil de type <span\nclass=\"math inline\">\\(A\\)</span> fonctionne de manière continue pendant\nau moins <span class=\"math inline\">\\(4\\)</span> ans à partir de sa mise\nen marche est d’environ <span class=\"math inline\">\\(15.86\\)</span>%.</p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>Un appareil de type <span class=\"math inline\">\\(B\\)</span> fonctionne avec une lampe seulement. On dispose cette fois d’une lampe de remplacement. Lorsque l’appareil fonctionne et que la lampe tombe en panne, celle-ci est immédiatement remplacée par la lampe de remplacement. Soit <span class=\"math inline\">\\(U\\)</span> la variable aléatoire donnant la durée de fonctionnement d’un appareil de type <span class=\"math inline\">\\(B\\)</span> avec une lampe de remplacement.</p>\n"
+      "value": "<p>Un appareil de type <span class=\"math inline\">\\(B\\)</span> fonctionne\navec une lampe seulement. On dispose cette fois d’une lampe de\nremplacement. Lorsque l’appareil fonctionne et que la lampe tombe en\npanne, celle-ci est immédiatement remplacée par la lampe de\nremplacement. Soit <span class=\"math inline\">\\(U\\)</span> la variable\naléatoire donnant la durée de fonctionnement d’un appareil de type <span\nclass=\"math inline\">\\(B\\)</span> avec une lampe de remplacement.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Exprimer <span class=\"math inline\">\\(U\\)</span> en fonction de <span class=\"math inline\">\\(X_1\\)</span> et <span class=\"math inline\">\\(X_2\\)</span>.</p>\n"
+      "value": "<p>Exprimer <span class=\"math inline\">\\(U\\)</span> en fonction de <span\nclass=\"math inline\">\\(X_1\\)</span> et <span\nclass=\"math inline\">\\(X_2\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
@@ -64,19 +64,19 @@
     },
     {
       "type": "reponse",
-      "value": "<p>Comme <span class=\"math inline\">\\(U\\)</span> est une somme de deux variables aléatoires indépendantes de densité <span class=\"math inline\">\\(f\\)</span>, une densité de <span class=\"math inline\">\\(U\\)</span> se calcule à l’aide du produit de convolution : pour <span class=\"math inline\">\\(s\\in\\R\\)</span>, <span class=\"math display\">\\[\\begin{align*}\n        f_U(s)&amp;=f * f(s) \\\\\n              &amp;= \\int_{\\R} f(s-x)f(x) dx \\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s) \\int_0^s x(s-x)dx\\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s) \\left[ \\frac{1}{2}x^2s-\\frac{1}{3}x^3\\right]_{x=0}^{x=s} \\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s) \\left( \\frac{1}{2}-\\frac{1}{3}\\right)s^3 \\\\\n                &amp;=\\frac{1}{16^2\\times 6}s^3e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s) \\\\\n                &amp;=\\frac{1}{1536}s^3e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s),\n        \\end{align*}\\]</span> ce qui détermine la loi de <span class=\"math inline\">\\(U\\)</span>.</p>\n"
+      "value": "<p>Comme <span class=\"math inline\">\\(U\\)</span> est une somme de deux\nvariables aléatoires indépendantes de densité <span\nclass=\"math inline\">\\(f\\)</span>, une densité de <span\nclass=\"math inline\">\\(U\\)</span> se calcule à l’aide du produit de\nconvolution : pour <span class=\"math inline\">\\(s\\in\\R\\)</span>, <span\nclass=\"math display\">\\[\\begin{align*}\n        f_U(s)&amp;=f * f(s) \\\\\n              &amp;= \\int_{\\R} f(s-x)f(x) dx \\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s)\n\\int_0^s x(s-x)dx\\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s)\n\\left[ \\frac{1}{2}x^2s-\\frac{1}{3}x^3\\right]_{x=0}^{x=s} \\\\\n                &amp;=\\frac{1}{16^2}e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s)\n\\left( \\frac{1}{2}-\\frac{1}{3}\\right)s^3 \\\\\n                &amp;=\\frac{1}{16^2\\times\n6}s^3e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s) \\\\\n                &amp;=\\frac{1}{1536}s^3e^{-\\frac{s}{4}}\\mathbf{1}_{[0;+\\infty[}(s),\n        \\end{align*}\\]</span> ce qui détermine la loi de <span\nclass=\"math inline\">\\(U\\)</span>.</p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>On dispose de 4 appareils de type <span class=\"math inline\">\\(B\\)</span>, sans aucune lampe de remplacement. On met en marche ces 4 appareils simultanément. On note <span class=\"math inline\">\\(V\\)</span> le temps durant lequel au moins un des 4 appareils fonctionne.</p>\n"
+      "value": "<p>On dispose de 4 appareils de type <span\nclass=\"math inline\">\\(B\\)</span>, sans aucune lampe de remplacement. On\nmet en marche ces 4 appareils simultanément. On note <span\nclass=\"math inline\">\\(V\\)</span> le temps durant lequel au moins un des\n4 appareils fonctionne.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Exprimer <span class=\"math inline\">\\(V\\)</span> en fonction de <span class=\"math inline\">\\(X_1\\)</span>, <span class=\"math inline\">\\(X_2\\)</span>, <span class=\"math inline\">\\(X_3\\)</span>, <span class=\"math inline\">\\(X_4\\)</span>.</p>\n"
+      "value": "<p>Exprimer <span class=\"math inline\">\\(V\\)</span> en fonction de <span\nclass=\"math inline\">\\(X_1\\)</span>, <span\nclass=\"math inline\">\\(X_2\\)</span>, <span\nclass=\"math inline\">\\(X_3\\)</span>, <span\nclass=\"math inline\">\\(X_4\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>D’après l’énoncé, <span class=\"math inline\">\\(V=\\max\\limits_{i \\in \\{1,...,4\\} }(X_i)\\)</span>.</p>\n"
+      "value": "<p>D’après l’énoncé, <span class=\"math inline\">\\(V=\\max\\limits_{i \\in\n\\{1,...,4\\} }(X_i)\\)</span>.</p>\n"
     },
     {
       "type": "question",
@@ -84,7 +84,7 @@
     },
     {
       "type": "reponse",
-      "value": "<p>Pour tout <span class=\"math inline\">\\(t\\in\\R\\)</span>, on a: <span class=\"math display\">\\[\\begin{align*}\n                F_V(t) &amp;= \\p(  \\max\\limits_{i \\in \\{1,...,4\\} }(X_i) \\leq t) \\\\\n                &amp;=\\p(\\{X_1\\leq t\\}\\cap \\cdots \\cap \\{X_4\\leq t\\}) \\\\\n                &amp;=\\prod_{i=1}^4 \\p(X_i\\leq t) \\quad \\text{ par indépendance des } (X_i)_{i\\in\\{1,\\cdots,4\\}} \\\\\n                &amp;=F_{X_1}(t)^4 \\quad \\text{ car les } (X_i)_{i\\in\\{1,\\cdots,4\\}} \\text{ sont de même loi} \\\\\n                &amp;= \\left(1-e^{-\\frac{t}{4}} \\left(1+\\frac{t}{4} \\right)\\right)^4 \\mathbf{1}_{[0;+\\infty[}(t)\n            \\end{align*}\\]</span></p>\n"
+      "value": "<p>Pour tout <span class=\"math inline\">\\(t\\in\\R\\)</span>, on a: <span\nclass=\"math display\">\\[\\begin{align*}\n                F_V(t) &amp;= \\p(  \\max\\limits_{i \\in \\{1,...,4\\} }(X_i)\n\\leq t) \\\\\n                &amp;=\\p(\\{X_1\\leq t\\}\\cap \\cdots \\cap \\{X_4\\leq t\\}) \\\\\n                &amp;=\\prod_{i=1}^4 \\p(X_i\\leq t) \\quad \\text{ par\nindépendance des } (X_i)_{i\\in\\{1,\\cdots,4\\}} \\\\\n                &amp;=F_{X_1}(t)^4 \\quad \\text{ car les }\n(X_i)_{i\\in\\{1,\\cdots,4\\}} \\text{ sont de même loi} \\\\\n                &amp;= \\left(1-e^{-\\frac{t}{4}} \\left(1+\\frac{t}{4}\n\\right)\\right)^4 \\mathbf{1}_{[0;+\\infty[}(t)\n            \\end{align*}\\]</span></p>\n"
     }
   ]
 }

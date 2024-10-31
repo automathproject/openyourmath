@@ -8,31 +8,31 @@
   "contenu": [
     {
       "type": "texte",
-      "value": "<p>Une entreprise compte <span class=\"math inline\">\\(300\\)</span> employés. Chaque employé utilise son téléphone de manière aléatoire, en moyenne <span class=\"math inline\">\\(6\\)</span> minutes par heure. Cela implique qu’à un instant donné, la probabilité qu’il soit au téléphone est de <span class=\"math inline\">\\(\\frac{6}{60} =  0{,}1\\)</span>. On suppose que l’utilisation du téléphone par un employé est indépendante de celle des autres employés.</p>\n"
+      "value": "<p>Une entreprise compte <span class=\"math inline\">\\(300\\)</span>\nemployés. Chaque employé utilise son téléphone de manière aléatoire, en\nmoyenne <span class=\"math inline\">\\(6\\)</span> minutes par heure. Cela\nimplique qu’à un instant donné, la probabilité qu’il soit au téléphone\nest de <span class=\"math inline\">\\(\\frac{6}{60} =  0{,}1\\)</span>. On\nsuppose que l’utilisation du téléphone par un employé est indépendante\nde celle des autres employés.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Il est 10h00. Soit <span class=\"math inline\">\\(X\\)</span> le nombre d’employés qui téléphonent à cet instant. Déterminer la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+      "value": "<p>Il est 10h00. Soit <span class=\"math inline\">\\(X\\)</span> le nombre\nd’employés qui téléphonent à cet instant. Déterminer la loi de <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On a <span class=\"math inline\">\\(X \\sim \\mathcal{B}(300,0{,}1)\\)</span>.</p>\n"
+      "value": "<p>On a <span class=\"math inline\">\\(X \\sim\n\\mathcal{B}(300,0{,}1)\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Justifier que la loi de <span class=\"math inline\">\\(X\\)</span> peut être approchée par une loi normale <span class=\"math inline\">\\(\\mathcal{N}(30;\\sqrt{27})\\)</span>.</p>\n"
+      "value": "<p>Justifier que la loi de <span class=\"math inline\">\\(X\\)</span> peut\nêtre approchée par une loi normale <span\nclass=\"math inline\">\\(\\mathcal{N}(30;\\sqrt{27})\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On a <span class=\"math inline\">\\(np = 300 \\times 0{,}1 = 30\\)</span> et <span class=\"math inline\">\\(np(1-p) = 300 \\times 0{,}1 \\times 0{,}9 = 27\\)</span>. Le paramètre <span class=\"math inline\">\\(n\\)</span> est considéré comme grand (<span class=\"math inline\">\\(&gt;30\\)</span>) donc les conditions d’application du théorème de Moivre-Laplace sont vérifiées. On peut donc approcher la loi de <span class=\"math inline\">\\(\\frac{X-30}{\\sqrt{27}}\\)</span> par une loi normale centrée réduite, ce qui revient à approcher <span class=\"math inline\">\\(X\\)</span> par une loi normale <span class=\"math inline\">\\(\\mathcal{N}(30;\\sqrt{27})\\)</span>.</p>\n"
+      "value": "<p>On a <span class=\"math inline\">\\(np = 300 \\times 0{,}1 = 30\\)</span>\net <span class=\"math inline\">\\(np(1-p) = 300 \\times 0{,}1 \\times 0{,}9 =\n27\\)</span>. Le paramètre <span class=\"math inline\">\\(n\\)</span> est\nconsidéré comme grand (<span class=\"math inline\">\\(&gt;30\\)</span>) donc\nles conditions d’application du théorème de Moivre-Laplace sont\nvérifiées. On peut donc approcher la loi de <span\nclass=\"math inline\">\\(\\frac{X-30}{\\sqrt{27}}\\)</span> par une loi\nnormale centrée réduite, ce qui revient à approcher <span\nclass=\"math inline\">\\(X\\)</span> par une loi normale <span\nclass=\"math inline\">\\(\\mathcal{N}(30;\\sqrt{27})\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Estimer le nombre <span class=\"math inline\">\\(\\ell\\)</span> de lignes que l’entreprise doit installer pour que la probabilité que toutes les lignes soient occupées soit au plus égale à <span class=\"math inline\">\\(2{,}5\\%\\)</span>.</p>\n"
+      "value": "<p>Estimer le nombre <span class=\"math inline\">\\(\\ell\\)</span> de lignes\nque l’entreprise doit installer pour que la probabilité que toutes les\nlignes soient occupées soit au plus égale à <span\nclass=\"math inline\">\\(2{,}5\\%\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On cherche <span class=\"math inline\">\\(\\ell\\)</span> tel que <span class=\"math inline\">\\(\\prob(X \\geq \\ell) \\leq 0{,}025\\)</span>. On a : <span class=\"math display\">\\[\\begin{align*}\n                \\prob\\left( X \\geq \\ell \\right) &amp;= \\prob\\left( \\frac{X - 30}{\\sqrt{27}} \\geq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n                &amp;= 1- \\prob\\left( \\frac{X - 30}{\\sqrt{27}} \\leq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n            \\end{align*}\\]</span> On cherche donc <span class=\"math inline\">\\(\\ell\\)</span> tel que <span class=\"math inline\">\\(\\prob \\left( \\frac{X - 30}{\\sqrt{27}} \\leq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\geq 0{,}975\\)</span>. Par lecture inverse de table, on en déduit que <span class=\"math inline\">\\(\\frac{\\ell - 30}{\\sqrt{27}} \\geq 1{,}96\\)</span> donc <span class=\"math inline\">\\(\\ell \\geq 30 + 1{,}96 \\times \\sqrt{27} \\approx 38{,}8\\)</span>. On en déduit que <span class=\"math inline\">\\(\\ell = 39\\)</span>.</p>\n"
+      "value": "<p>On cherche <span class=\"math inline\">\\(\\ell\\)</span> tel que <span\nclass=\"math inline\">\\(\\prob(X \\geq \\ell) \\leq 0{,}025\\)</span>. On a :\n<span class=\"math display\">\\[\\begin{align*}\n                \\prob\\left( X \\geq \\ell \\right) &amp;= \\prob\\left(\n\\frac{X - 30}{\\sqrt{27}} \\geq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n                &amp;= 1- \\prob\\left( \\frac{X - 30}{\\sqrt{27}} \\leq\n\\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n            \\end{align*}\\]</span> On cherche donc <span\nclass=\"math inline\">\\(\\ell\\)</span> tel que <span\nclass=\"math inline\">\\(\\prob \\left( \\frac{X - 30}{\\sqrt{27}} \\leq\n\\frac{\\ell - 30}{\\sqrt{27}} \\right) \\geq 0{,}975\\)</span>. Par lecture\ninverse de table, on en déduit que <span\nclass=\"math inline\">\\(\\frac{\\ell - 30}{\\sqrt{27}} \\geq 1{,}96\\)</span>\ndonc <span class=\"math inline\">\\(\\ell \\geq 30 + 1{,}96 \\times \\sqrt{27}\n\\approx 38{,}8\\)</span>. On en déduit que <span\nclass=\"math inline\">\\(\\ell = 39\\)</span>.</p>\n"
     }
   ]
 }

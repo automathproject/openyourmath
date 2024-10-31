@@ -29,7 +29,6 @@ declare module '$env/static/private' {
 	export const LESSOPEN: string;
 	export const USER: string;
 	export const npm_config_user_agent: string;
-	export const SSH_AGENT_PID: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_node_execpath: string;
 	export const SHLVL: string;
@@ -45,6 +44,7 @@ declare module '$env/static/private' {
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
 	export const SYSTEMD_EXEC_PID: string;
+	export const IM_CONFIG_CHECK_ENV: string;
 	export const GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const COLORTERM: string;
@@ -100,7 +100,6 @@ declare module '$env/static/private' {
 	export const npm_command: string;
 	export const MEMORY_PRESSURE_WRITE: string;
 	export const VTE_VERSION: string;
-	export const NVM_RC_VERSION: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
 	export const NODE_ENV: string;
@@ -138,7 +137,6 @@ declare module '$env/dynamic/private' {
 		LESSOPEN: string;
 		USER: string;
 		npm_config_user_agent: string;
-		SSH_AGENT_PID: string;
 		XDG_SESSION_TYPE: string;
 		npm_node_execpath: string;
 		SHLVL: string;
@@ -154,6 +152,7 @@ declare module '$env/dynamic/private' {
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
 		SYSTEMD_EXEC_PID: string;
+		IM_CONFIG_CHECK_ENV: string;
 		GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		COLORTERM: string;
@@ -209,7 +208,6 @@ declare module '$env/dynamic/private' {
 		npm_command: string;
 		MEMORY_PRESSURE_WRITE: string;
 		VTE_VERSION: string;
-		NVM_RC_VERSION: string;
 		INIT_CWD: string;
 		EDITOR: string;
 		NODE_ENV: string;

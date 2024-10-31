@@ -1,22 +1,22 @@
 {
   "uuid": "kzan",
   "titre": "Convergence d'une suite de variables aléatoires",
-  "theme": "probabilité",
+  "theme": "probabilités",
   "auteur": "",
   "date": "",
   "organisation": "AMSCC",
   "contenu": [
     {
       "type": "texte",
-      "value": "<p>Soit <span class=\"math inline\">\\((X_n)\\)</span> une suite de variables aléatoires i.i.d. selon une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. On définit la suite de variables aléatoires <span class=\"math inline\">\\((Y_n)\\)</span> par <span class=\"math display\">\\[Y_n = \\frac{1}{n} \\sum_{k=1}^n \\sqrt{k} X_k\\]</span></p>\n"
+      "value": "<p>Soit <span class=\"math inline\">\\((X_n)\\)</span> une suite de\nvariables aléatoires i.i.d. selon une loi normale <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. On définit la suite de\nvariables aléatoires <span class=\"math inline\">\\((Y_n)\\)</span> par\n<span class=\"math display\">\\[Y_n = \\frac{1}{n} \\sum_{k=1}^n \\sqrt{k}\nX_k\\]</span></p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Etudier le comportement asymptotique en loi de la suite <span class=\"math inline\">\\((Y_n)\\)</span>.</p>\n"
+      "value": "<p>Etudier le comportement asymptotique en loi de la suite <span\nclass=\"math inline\">\\((Y_n)\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>Les variables <span class=\"math inline\">\\(\\sqrt{k}X_k\\)</span> ne sont pas identiquement distribuées ! on se lance donc dans un calcul de limite &lt;&lt; à la main &gt;&gt;.</p>\n<p>Par indépendance, <span class=\"math inline\">\\(Y_n\\)</span> suit une loi normale d’espérance <span class=\"math inline\">\\(0\\)</span> et de variance <span class=\"math inline\">\\(\\frac{1}{n^2}\\sum_{k=1}^n \\sqrt{k}^2 \\times 1 = \\frac{1}{n^2} \\times \\frac{n(n+1)}{2}\\)</span>. On peut donc écrire <span class=\"math inline\">\\(Y_n = \\sqrt\\frac{n(n+1)}{2n^2} Z_n\\)</span> où <span class=\"math inline\">\\(Z_n\\)</span> suit une loi normale <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(\\varphi_{Y_n}(t)\\)</span> la fonction caractéristique de <span class=\"math inline\">\\(Y_n\\)</span>. On sait que <span class=\"math inline\">\\(\\varphi_{Z_n}(t) = e^{\\frac{-t^2}{2}}\\)</span> donc <span class=\"math display\">\\[\\varphi_{Y_n}(t) = \\varphi_{Z_n}\\left( \\sqrt\\frac{n(n+1)}{2n^2} t \\right) = e^{- \\frac{-n(n+1)}{2n^2}t^2}\\]</span>.</p>\n<p>En passant à la limite, <span class=\"math inline\">\\(\\varphi_{Y_n}(t) \\xrightarrow[n \\to +\\infty]{} e^{- \\frac{t^2}{4}}\\)</span>. On reconnait la fonction caractéristique de <span class=\"math inline\">\\(\\frac{1}{\\sqrt{2}}Z_n\\)</span> qui suit une loi normale <span class=\"math inline\">\\(\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})\\)</span>.</p>\n<p>On a ainsi démontré que la suite <span class=\"math inline\">\\((Y_n)\\)</span> converge en loi vers une loi normale <span class=\"math inline\">\\(\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})\\)</span>.</p>\n"
+      "value": "<p>Les variables <span class=\"math inline\">\\(\\sqrt{k}X_k\\)</span> ne\nsont pas identiquement distribuées ! on se lance donc dans un calcul de\nlimite &lt;&lt; à la main &gt;&gt;.</p>\n<p>Par indépendance, <span class=\"math inline\">\\(Y_n\\)</span> suit une\nloi normale d’espérance <span class=\"math inline\">\\(0\\)</span> et de\nvariance <span class=\"math inline\">\\(\\frac{1}{n^2}\\sum_{k=1}^n\n\\sqrt{k}^2 \\times 1 = \\frac{1}{n^2} \\times \\frac{n(n+1)}{2}\\)</span>. On\npeut donc écrire <span class=\"math inline\">\\(Y_n =\n\\sqrt\\frac{n(n+1)}{2n^2} Z_n\\)</span> où <span\nclass=\"math inline\">\\(Z_n\\)</span> suit une loi normale <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(\\varphi_{Y_n}(t)\\)</span> la\nfonction caractéristique de <span class=\"math inline\">\\(Y_n\\)</span>. On\nsait que <span class=\"math inline\">\\(\\varphi_{Z_n}(t) =\ne^{\\frac{-t^2}{2}}\\)</span> donc <span\nclass=\"math display\">\\[\\varphi_{Y_n}(t) = \\varphi_{Z_n}\\left(\n\\sqrt\\frac{n(n+1)}{2n^2} t \\right) = e^{-\n\\frac{-n(n+1)}{2n^2}t^2}\\]</span>.</p>\n<p>En passant à la limite, <span class=\"math inline\">\\(\\varphi_{Y_n}(t)\n\\xrightarrow[n \\to +\\infty]{} e^{- \\frac{t^2}{4}}\\)</span>. On reconnait\nla fonction caractéristique de <span\nclass=\"math inline\">\\(\\frac{1}{\\sqrt{2}}Z_n\\)</span> qui suit une loi\nnormale <span class=\"math inline\">\\(\\mathcal{N}(\\mu=0,\\sigma^2 =\n\\frac{1}{2})\\)</span>.</p>\n<p>On a ainsi démontré que la suite <span\nclass=\"math inline\">\\((Y_n)\\)</span> converge en loi vers une loi\nnormale <span class=\"math inline\">\\(\\mathcal{N}(\\mu=0,\\sigma^2 =\n\\frac{1}{2})\\)</span>.</p>\n"
     }
   ]
 }

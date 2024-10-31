@@ -1,82 +1,82 @@
 {
   "uuid": "eTDu",
   "titre": "Calcul approché de $\\frac{\\pi}{4}$.",
-  "theme": "probabilité",
+  "theme": "probabilités",
   "auteur": "",
   "date": "",
   "organisation": "AMSCC",
   "contenu": [
     {
       "type": "texte",
-      "value": "<p>On construit différentes méthodes de Monte Carlo afin de donner une valeur approchée de <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>. Afin de les comparer, on donnera la variance de l’estimation sous la forme <span class=\"math inline\">\\(\\frac{C}{n}\\)</span> où <span class=\"math inline\">\\(n\\)</span> est la taille de l’échantillon. On souhaite avoir la variance la plus faible possible.</p>\n"
+      "value": "<p>On construit différentes méthodes de Monte Carlo afin de donner une\nvaleur approchée de <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.\nAfin de les comparer, on donnera la variance de l’estimation sous la\nforme <span class=\"math inline\">\\(\\frac{C}{n}\\)</span> où <span\nclass=\"math inline\">\\(n\\)</span> est la taille de l’échantillon. On\nsouhaite avoir la variance la plus faible possible.</p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>On considère le carré <span class=\"math inline\">\\([0;1]^2\\)</span> et on note <span class=\"math inline\">\\(D\\)</span> le quart de disque centré en <span class=\"math inline\">\\(0\\)</span> et de rayon <span class=\"math inline\">\\(1\\)</span> : <span class=\"math display\">\\[D = \\{(x,y) \\in \\R_+^2 \\, , \\, x^2 + y^2 \\leq 1\\}\\]</span></p>\n<p>L’aire de <span class=\"math inline\">\\(D\\)</span> vaut <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\((X_i,Y_i)\\)</span> une suite de couples variables aléatoires indépendantes, identiquement distribuées selon une loi uniforme sur <span class=\"math inline\">\\([0;1]^2\\)</span>. Pour tout entier <span class=\"math inline\">\\(i \\geq 1\\)</span>, on pose <span class=\"math display\">\\[Z_i = \\textbf{1}_{(X_i,Y_i) \\in D}\\]</span></p>\n<p>Ainsi, les variables <span class=\"math inline\">\\((Z_i)_{i \\geq 1}\\)</span> sont indépendantes.</p>\n"
+      "value": "<p>On considère le carré <span class=\"math inline\">\\([0;1]^2\\)</span> et\non note <span class=\"math inline\">\\(D\\)</span> le quart de disque centré\nen <span class=\"math inline\">\\(0\\)</span> et de rayon <span\nclass=\"math inline\">\\(1\\)</span> : <span class=\"math display\">\\[D =\n\\{(x,y) \\in \\R_+^2 \\, , \\, x^2 + y^2 \\leq 1\\}\\]</span></p>\n<p>L’aire de <span class=\"math inline\">\\(D\\)</span> vaut <span\nclass=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\((X_i,Y_i)\\)</span> une suite de\ncouples variables aléatoires indépendantes, identiquement distribuées\nselon une loi uniforme sur <span class=\"math inline\">\\([0;1]^2\\)</span>.\nPour tout entier <span class=\"math inline\">\\(i \\geq 1\\)</span>, on pose\n<span class=\"math display\">\\[Z_i = \\textbf{1}_{(X_i,Y_i) \\in\nD}\\]</span></p>\n<p>Ainsi, les variables <span class=\"math inline\">\\((Z_i)_{i \\geq\n1}\\)</span> sont indépendantes.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Déterminer la loi de <span class=\"math inline\">\\(Z_1\\)</span> et en déduire que <span class=\"math inline\">\\(\\mathbb{E}(Z_1) = \\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>Déterminer la loi de <span class=\"math inline\">\\(Z_1\\)</span> et en\ndéduire que <span class=\"math inline\">\\(\\mathbb{E}(Z_1) =\n\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On remarque que <span class=\"math inline\">\\(Z_1\\)</span> prend se valeurs dans <span class=\"math inline\">\\(\\{0,1\\}\\)</span> donc <span class=\"math inline\">\\(Z_1\\)</span> suit une loi de Bernoulli. Or <span class=\"math display\">\\[\\begin{align*}\n\\PP(Z_1 = 1) &amp;= \\PP((X_1,Y_1) \\in D) \\\\\n             &amp;= \\iint_{D} dxdy \\\\\n             &amp;= \\frac{\\pi}{4}\n\\end{align*}\\]</span> Donc <span class=\"math inline\">\\(Z_1\\)</span> suit une loi de Bernoulli de paramètre <span class=\"math inline\">\\(p = \\frac{\\pi}{4}\\)</span> et son espérance vaut <span class=\"math inline\">\\(\\E(Z_1) = \\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>On remarque que <span class=\"math inline\">\\(Z_1\\)</span> prend se\nvaleurs dans <span class=\"math inline\">\\(\\{0,1\\}\\)</span> donc <span\nclass=\"math inline\">\\(Z_1\\)</span> suit une loi de Bernoulli. Or <span\nclass=\"math display\">\\[\\begin{align*}\n\\PP(Z_1 = 1) &amp;= \\PP((X_1,Y_1) \\in D) \\\\\n             &amp;= \\iint_{D} dxdy \\\\\n             &amp;= \\frac{\\pi}{4}\n\\end{align*}\\]</span> Donc <span class=\"math inline\">\\(Z_1\\)</span> suit\nune loi de Bernoulli de paramètre <span class=\"math inline\">\\(p =\n\\frac{\\pi}{4}\\)</span> et son espérance vaut <span\nclass=\"math inline\">\\(\\E(Z_1) = \\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, on pose : <span class=\"math display\">\\[T_n^{(1)} = \\frac{1}{n} \\sum_{i=1}^{n} Z_i\\]</span> Justifier que <span class=\"math inline\">\\(T_n^{(1)}\\)</span> est un estimateur sans biais de <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, on pose : <span\nclass=\"math display\">\\[T_n^{(1)} = \\frac{1}{n} \\sum_{i=1}^{n}\nZ_i\\]</span> Justifier que <span\nclass=\"math inline\">\\(T_n^{(1)}\\)</span> est un estimateur sans biais de\n<span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>On remarque que <span class=\"math inline\">\\(\\E(T_n^{(1)}) = \\E(Z_1) = \\frac{\\pi}{4}\\)</span> donc par linéarité, <span class=\"math inline\">\\(B(T_n^{(1)}) = \\frac{\\pi}{4} - \\frac{\\pi}{4} = 0\\)</span>.</p>\n"
+      "value": "<p>On remarque que <span class=\"math inline\">\\(\\E(T_n^{(1)}) = \\E(Z_1) =\n\\frac{\\pi}{4}\\)</span> donc par linéarité, <span\nclass=\"math inline\">\\(B(T_n^{(1)}) = \\frac{\\pi}{4} - \\frac{\\pi}{4} =\n0\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Justifier que la suite de variables aléatoires <span class=\"math inline\">\\(\\left(T_n^{(1)}\\right)_{n \\geq 1}\\)</span> converge presque sûrement vers <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span> lorsque <span class=\"math inline\">\\(n\\)</span> tend vers l’infini.</p>\n"
+      "value": "<p>Justifier que la suite de variables aléatoires <span\nclass=\"math inline\">\\(\\left(T_n^{(1)}\\right)_{n \\geq 1}\\)</span>\nconverge presque sûrement vers <span\nclass=\"math inline\">\\(\\frac{\\pi}{4}\\)</span> lorsque <span\nclass=\"math inline\">\\(n\\)</span> tend vers l’infini.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>Les variables aléatoires <span class=\"math inline\">\\((Z_i)\\)</span> sont indépendantes, identiquement distribuées, admettent une espérance donc par application directe de la loi forte des grands nombres, la suite <span class=\"math inline\">\\(\\left(T_n^{(1)}\\right)_{n \\geq 1}\\)</span> converge presque sûrement vers <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>Les variables aléatoires <span class=\"math inline\">\\((Z_i)\\)</span>\nsont indépendantes, identiquement distribuées, admettent une espérance\ndonc par application directe de la loi forte des grands nombres, la\nsuite <span class=\"math inline\">\\(\\left(T_n^{(1)}\\right)_{n \\geq\n1}\\)</span> converge presque sûrement vers <span\nclass=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Montrer qu’il existe <span class=\"math inline\">\\(C^{(1)} \\in \\R\\)</span> tel que <span class=\"math inline\">\\(\\V\\left(T_n^{(1)}\\right) = \\frac{C^{(1)}}{n}\\)</span> et donner une valeur numérique approchée de <span class=\"math inline\">\\(C^{(1)}\\)</span> à <span class=\"math inline\">\\(10^{-4}\\)</span>.</p>\n"
+      "value": "<p>Montrer qu’il existe <span class=\"math inline\">\\(C^{(1)} \\in\n\\R\\)</span> tel que <span class=\"math inline\">\\(\\V\\left(T_n^{(1)}\\right)\n= \\frac{C^{(1)}}{n}\\)</span> et donner une valeur numérique approchée de\n<span class=\"math inline\">\\(C^{(1)}\\)</span> à <span\nclass=\"math inline\">\\(10^{-4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>Par indépendance, <span class=\"math inline\">\\(\\V\\left(T_n^{(1)}\\right) = \\frac{\\V(Z_1)}{n}\\)</span> or <span class=\"math inline\">\\(V(Z_1) = \\frac{\\pi}{4}\\left(1- \\frac{\\pi}{4}\\right) \\approx 0{,}1685\\)</span>.</p>\n"
+      "value": "<p>Par indépendance, <span\nclass=\"math inline\">\\(\\V\\left(T_n^{(1)}\\right) =\n\\frac{\\V(Z_1)}{n}\\)</span> or <span class=\"math inline\">\\(V(Z_1) =\n\\frac{\\pi}{4}\\left(1- \\frac{\\pi}{4}\\right) \\approx\n0{,}1685\\)</span>.</p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>On définit une fonction <span class=\"math inline\">\\(g \\colon [0;1] \\to [0;+\\infty[\\)</span> par : <span class=\"math display\">\\[g(x) = \\sqrt{1-x^2}\\]</span></p>\n<p>Soit <span class=\"math inline\">\\((U_i)\\)</span> une suite de variables aléatoires indépendantes, identiquement distribuées selon une loi uniforme sur <span class=\"math inline\">\\([0;1]\\)</span>.</p>\n"
+      "value": "<p>On définit une fonction <span class=\"math inline\">\\(g \\colon [0;1]\n\\to [0;+\\infty[\\)</span> par : <span class=\"math display\">\\[g(x) =\n\\sqrt{1-x^2}\\]</span></p>\n<p>Soit <span class=\"math inline\">\\((U_i)\\)</span> une suite de\nvariables aléatoires indépendantes, identiquement distribuées selon une\nloi uniforme sur <span class=\"math inline\">\\([0;1]\\)</span>.</p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Justifier que <span class=\"math inline\">\\(\\E(g(U_1)) = \\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>Justifier que <span class=\"math inline\">\\(\\E(g(U_1)) =\n\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>Par application du théorème de transfert, <span class=\"math display\">\\[\\E(g(U_1)) = \\int g(x) \\textbf{1}_{[0,1]}(x) dx = \\int_0^1 \\sqrt{1-x^2}dx = \\frac{\\pi}{4}\\]</span></p>\n"
+      "value": "<p>Par application du théorème de transfert, <span\nclass=\"math display\">\\[\\E(g(U_1)) = \\int g(x) \\textbf{1}_{[0,1]}(x) dx =\n\\int_0^1 \\sqrt{1-x^2}dx = \\frac{\\pi}{4}\\]</span></p>\n"
     },
     {
       "type": "question",
-      "value": "<p>En déduire une suite de variables aléatoires convergeant presque sûrement vers <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>En déduire une suite de variables aléatoires convergeant presque\nsûrement vers <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>En posant <span class=\"math inline\">\\(T_n^{(2)} = \\frac{1}{n} \\sum_{i=1}^{n} g(U_i)\\)</span> alors d’après la loi forte des grands nombres, la suite <span class=\"math inline\">\\(\\left(T_n^{(2)}\\right)\\)</span> converge presque sûrement vers <span class=\"math inline\">\\(\\E(g(U_1)) = \\frac{\\pi}{4}\\)</span>.</p>\n"
+      "value": "<p>En posant <span class=\"math inline\">\\(T_n^{(2)} = \\frac{1}{n}\n\\sum_{i=1}^{n} g(U_i)\\)</span> alors d’après la loi forte des grands\nnombres, la suite <span\nclass=\"math inline\">\\(\\left(T_n^{(2)}\\right)\\)</span> converge presque\nsûrement vers <span class=\"math inline\">\\(\\E(g(U_1)) =\n\\frac{\\pi}{4}\\)</span>.</p>\n"
     },
     {
       "type": "texte",
-      "value": "<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, on pose : <span class=\"math display\">\\[T_n^{(2)} = \\frac{1}{n} \\sum_{i=1}^{n} g(U_i)\\]</span></p>\n"
+      "value": "<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, on pose : <span\nclass=\"math display\">\\[T_n^{(2)} = \\frac{1}{n} \\sum_{i=1}^{n}\ng(U_i)\\]</span></p>\n"
     },
     {
       "type": "question",
-      "value": "<p>Montrer qu’il existe <span class=\"math inline\">\\(C^{(2)} \\in \\R\\)</span> tel que <span class=\"math inline\">\\(\\V\\left(T_n^{(2)}\\right) = \\frac{C^{(2)}}{n}\\)</span> et donner une valeur numérique approchée de <span class=\"math inline\">\\(C^{(2)}\\)</span> à <span class=\"math inline\">\\(10^{-4}\\)</span>.</p>\n"
+      "value": "<p>Montrer qu’il existe <span class=\"math inline\">\\(C^{(2)} \\in\n\\R\\)</span> tel que <span class=\"math inline\">\\(\\V\\left(T_n^{(2)}\\right)\n= \\frac{C^{(2)}}{n}\\)</span> et donner une valeur numérique approchée de\n<span class=\"math inline\">\\(C^{(2)}\\)</span> à <span\nclass=\"math inline\">\\(10^{-4}\\)</span>.</p>\n"
     },
     {
       "type": "reponse",
-      "value": "<p>Il s’agit comme en partie 1 de calculer <span class=\"math inline\">\\(\\V(g(U_1)) = \\E(g(U_1)^2) - \\left(\\frac{\\pi}{4}\\right)^2\\)</span>. Or : <span class=\"math display\">\\[\\begin{align*}\n    \\E(g(U_1)^2) &amp;= \\int_0^1 g(x)^2 dx \\\\\n                 &amp;= \\int_0^1 (1-x^2) dx \\\\\n                 &amp;= \\frac{2}{3}\n\\end{align*}\\]</span> On a donc <span class=\"math inline\">\\(\\V\\left(T_n^{(2)}\\right) = \\frac{C^{(2)}}{n}\\)</span> avec <span class=\"math inline\">\\(C^{(2)} =  \\frac{2}{3} - \\left(\\frac{\\pi}{4}\\right)^2 \\approx 0.0498\\)</span>.</p>\n"
+      "value": "<p>Il s’agit comme en partie 1 de calculer <span\nclass=\"math inline\">\\(\\V(g(U_1)) = \\E(g(U_1)^2) -\n\\left(\\frac{\\pi}{4}\\right)^2\\)</span>. Or : <span\nclass=\"math display\">\\[\\begin{align*}\n    \\E(g(U_1)^2) &amp;= \\int_0^1 g(x)^2 dx \\\\\n                 &amp;= \\int_0^1 (1-x^2) dx \\\\\n                 &amp;= \\frac{2}{3}\n\\end{align*}\\]</span> On a donc <span\nclass=\"math inline\">\\(\\V\\left(T_n^{(2)}\\right) =\n\\frac{C^{(2)}}{n}\\)</span> avec <span class=\"math inline\">\\(C^{(2)}\n=  \\frac{2}{3} - \\left(\\frac{\\pi}{4}\\right)^2 \\approx\n0.0498\\)</span>.</p>\n"
     },
     {
       "type": "question",
@@ -84,7 +84,7 @@
     },
     {
       "type": "reponse",
-      "value": "<p>Des deux estimateurs de <span class=\"math inline\">\\(\\frac{\\pi}{4}\\)</span> présentés ici, le plus efficace est celui qui a la plus petite variance, c’est <span class=\"math inline\">\\(T_n^{(2)}\\)</span>.</p>\n"
+      "value": "<p>Des deux estimateurs de <span\nclass=\"math inline\">\\(\\frac{\\pi}{4}\\)</span> présentés ici, le plus\nefficace est celui qui a la plus petite variance, c’est <span\nclass=\"math inline\">\\(T_n^{(2)}\\)</span>.</p>\n"
     }
   ]
 }
