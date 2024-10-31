@@ -1,0 +1,48 @@
+{
+  "uuid": "hGun",
+  "titre": "Norme d'un vecteur gaussien et somme de variables exponentielles",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Quentin Liard",
+    "createdAt": "2024-10-31T14:47:35.656Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:35.656Z"
+  },
+  "contenu": [
+    {
+      "id": "12032cd4-0e58-40e5-a20b-867855de3def",
+      "type": "question",
+      "value": {
+        "latex": "Soient $X$ et $Y$ deux variables aléatoires indépendantes. Démontrer que  pour tout $t\\geq 0$ : $$\\mathcal{L}_t(X+Y)=\\mathcal{L}_t(X)\\mathcal{L}_t(Y).$$",
+        "html": "<p>Soient <span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> deux variables aléatoires\nindépendantes. Démontrer que pour tout <span class=\"math inline\">\\(t\\geq\n0\\)</span> : <span\nclass=\"math display\">\\[\\mathcal{L}_t(X+Y)=\\mathcal{L}_t(X)\\mathcal{L}_t(Y).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "51243cef-2676-44e7-bc45-c08d4e497bbd",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\mathcal{L}_t(Z) = \\mathbb{E}(e^{-tZ}) = \\int_0^{+\\infty} e^{-tz} \\frac{1}{2} e^{-\\frac{z}{2}} dz = \\frac{1}{2} \\int_0^{+\\infty} e^{-\\frac{z}{2}(2t+1)} dz = \\frac{1}{2} \\left[ \\frac{e^{-\\frac{z}{2}(2t+1)}}{-\\frac{2t+1}{2}} \\right]_0^{+\\infty} = \\frac{1}{2t+1}$. \n    On a $\\mathcal{L}_t(S_n) = \\prod_{i=1}^n \\mathcal{L}_t(Z_i) = \\prod_{i=1}^n \\frac{1}{2t+1} = \\left( \\frac{1}{2t+1} \\right)^n$.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\mathcal{L}_t(Z) =\n\\mathbb{E}(e^{-tZ}) = \\int_0^{+\\infty} e^{-tz} \\frac{1}{2}\ne^{-\\frac{z}{2}} dz = \\frac{1}{2} \\int_0^{+\\infty}\ne^{-\\frac{z}{2}(2t+1)} dz = \\frac{1}{2} \\left[\n\\frac{e^{-\\frac{z}{2}(2t+1)}}{-\\frac{2t+1}{2}} \\right]_0^{+\\infty} =\n\\frac{1}{2t+1}\\)</span>. On a <span\nclass=\"math inline\">\\(\\mathcal{L}_t(S_n) = \\prod_{i=1}^n\n\\mathcal{L}_t(Z_i) = \\prod_{i=1}^n \\frac{1}{2t+1} = \\left(\n\\frac{1}{2t+1} \\right)^n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "256181e3-c486-4084-9d98-503818af9148",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\int_{\\R} f_U(x) dx = \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx = \\int_0^{+\\infty} \\frac{y^{n-1}}{n-1!} e^{-y} dy = 1$. Donc $f_U$ est bien une densité de probabilité.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\int_{\\R} f_U(x) dx = \\frac{1}{2^n}\n\\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx =\n\\int_0^{+\\infty} \\frac{y^{n-1}}{n-1!} e^{-y} dy = 1\\)</span>. Donc <span\nclass=\"math inline\">\\(f_U\\)</span> est bien une densité de\nprobabilité.</p>\n"
+      }
+    },
+    {
+      "id": "295d6563-ac31-4302-8654-d2d5f4b1d0d3",
+      "type": "reponse",
+      "value": {
+        "latex": "On a \n    $$\\begin{align*}\n        \\mathcal{L}_t(U) &= \\int_0^{+\\infty} e^{-tx} \\frac{1}{2^n} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx \\\\ \n        &= \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}(2t+1)} dx \\\\\n        &= \\int_0^{+\\infty} \\frac{1}{2^n} \\left(\\frac{2}{2t+1}\\right)^{n-1}\\frac{y^{n-1}}{n-1!} e^{-y} \\frac{2}{2t+1} dy \\\\\n         &= \\frac{1}{(2t+1)^n}\n    \\end{align*}$$\n    Donc $U$ et $S_n$ suivent la même loi définie par la densité $f_U$.",
+        "html": "<p>On a <span class=\"math display\">\\[\\begin{align*}\n        \\mathcal{L}_t(U) &amp;= \\int_0^{+\\infty} e^{-tx} \\frac{1}{2^n}\n\\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx \\\\\n        &amp;= \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!}\ne^{-\\frac{x}{2}(2t+1)} dx \\\\\n        &amp;= \\int_0^{+\\infty} \\frac{1}{2^n}\n\\left(\\frac{2}{2t+1}\\right)^{n-1}\\frac{y^{n-1}}{n-1!} e^{-y}\n\\frac{2}{2t+1} dy \\\\\n         &amp;= \\frac{1}{(2t+1)^n}\n    \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(U\\)</span> et\n<span class=\"math inline\">\\(S_n\\)</span> suivent la même loi définie par\nla densité <span class=\"math inline\">\\(f_U\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

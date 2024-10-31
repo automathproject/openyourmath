@@ -1,0 +1,120 @@
+{
+  "uuid": "fGoC",
+  "titre": "Estimation d'un paramètre de Pareto",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:34.444Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:34.444Z"
+  },
+  "contenu": [
+    {
+      "id": "af8a07f1-7c26-4149-9ef6-5585e1fd77c5",
+      "type": "description",
+      "value": {
+        "latex": "Soient $a = 3$ et $b$ deux réels strictement positifs. Soit $X$ une variable aléatoire suivant une loi de Pareto de paramètres $(3,b)$. Alors $X$ admet pour densité  la fonction $f$ définie pour tout $x \\in \\R$ par : \n$$f(x)=\\frac{3 b^3}{x^{4}} \\mathbf{1}_{[b;+\\infty[}(x).$$\nSoit $n \\in \\N^*$ et soit $X_1,X_2,\\cdots{},X_n$ un échantillon de $n$ variables aléatoires indépendantes suivant chacune la loi de Pareto de paramètres $(3,b)$. On définit alors les deux variables aléatoires : $$Y_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\quad \\text{et} \\quad Z_n = \\min(X_1,X_2,\\cdots{},X_n).$$\n\nLe but de l'exercice est de construire un bon estimateur du paramètre $b$ de la loi de Pareto.",
+        "html": "<p>Soient <span class=\"math inline\">\\(a = 3\\)</span> et <span\nclass=\"math inline\">\\(b\\)</span> deux réels strictement positifs. Soit\n<span class=\"math inline\">\\(X\\)</span> une variable aléatoire suivant\nune loi de Pareto de paramètres <span\nclass=\"math inline\">\\((3,b)\\)</span>. Alors <span\nclass=\"math inline\">\\(X\\)</span> admet pour densité la fonction <span\nclass=\"math inline\">\\(f\\)</span> définie pour tout <span\nclass=\"math inline\">\\(x \\in \\R\\)</span> par : <span\nclass=\"math display\">\\[f(x)=\\frac{3 b^3}{x^{4}}\n\\mathbf{1}_{[b;+\\infty[}(x).\\]</span> Soit <span class=\"math inline\">\\(n\n\\in \\N^*\\)</span> et soit <span\nclass=\"math inline\">\\(X_1,X_2,\\cdots{},X_n\\)</span> un échantillon de\n<span class=\"math inline\">\\(n\\)</span> variables aléatoires\nindépendantes suivant chacune la loi de Pareto de paramètres <span\nclass=\"math inline\">\\((3,b)\\)</span>. On définit alors les deux\nvariables aléatoires : <span class=\"math display\">\\[Y_n = \\frac{1}{n}\n\\sum_{i=1}^n X_i \\quad \\text{et} \\quad Z_n =\n\\min(X_1,X_2,\\cdots{},X_n).\\]</span></p>\n<p>Le but de l’exercice est de construire un bon estimateur du paramètre\n<span class=\"math inline\">\\(b\\)</span> de la loi de Pareto.</p>\n"
+      }
+    },
+    {
+      "id": "a6aa2a69-77c9-4a06-9690-a2bba79a0145",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer l'espérance et la variance de $Y_n$.",
+        "html": "<p>Déterminer l’espérance et la variance de <span\nclass=\"math inline\">\\(Y_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "df2ccaca-ee75-4151-a8e8-1bd094e85abe",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\E(Y_n) = \\frac{1}{n} \\sum_{i=1}^n \\E(X_i) = \\frac{1}{n} \\sum_{i=1}^n \\frac{3b}{2} = \\frac{3b}{2}$.\n        On calcule d'abord $\\E(X_i^2)$ pour tout $i \\in \\{1,...,n\\}$ : \n        $$\\begin{align*}\n            \\E(X_i^2) &= \\int_b^{+\\infty} \\frac{3 b^3}{x^{4}} x^2 dx \\\\\n            &= \\left[ -\\frac{3 b^3}{x} \\right]_b^{+\\infty} \\\\\n            &= 3b^2\n        \\end{align*}$$\n        Donc $\\var(X_i) = \\E(X_i^2) - \\E(X_i)^2 = 3b^2 - \\left(\\frac{3b}{2}\\right)^2 = \\frac{3b^2}{4}$.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\E(Y_n) = \\frac{1}{n} \\sum_{i=1}^n\n\\E(X_i) = \\frac{1}{n} \\sum_{i=1}^n \\frac{3b}{2} = \\frac{3b}{2}\\)</span>.\nOn calcule d’abord <span class=\"math inline\">\\(\\E(X_i^2)\\)</span> pour\ntout <span class=\"math inline\">\\(i \\in \\{1,...,n\\}\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n            \\E(X_i^2) &amp;= \\int_b^{+\\infty} \\frac{3 b^3}{x^{4}} x^2 dx\n\\\\\n            &amp;= \\left[ -\\frac{3 b^3}{x} \\right]_b^{+\\infty} \\\\\n            &amp;= 3b^2\n        \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(\\var(X_i)\n= \\E(X_i^2) - \\E(X_i)^2 = 3b^2 - \\left(\\frac{3b}{2}\\right)^2 =\n\\frac{3b^2}{4}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e98bfe0e-56c2-47cd-9a65-180b7ff0cd78",
+      "type": "question",
+      "value": {
+        "latex": "En déduire un estimateur sans biais de $b$ sous la forme $\\alpha_n Y_n$ où $\\alpha_n$ est un réel à déterminer.",
+        "html": "<p>En déduire un estimateur sans biais de <span\nclass=\"math inline\">\\(b\\)</span> sous la forme <span\nclass=\"math inline\">\\(\\alpha_n Y_n\\)</span> où <span\nclass=\"math inline\">\\(\\alpha_n\\)</span> est un réel à déterminer.</p>\n"
+      }
+    },
+    {
+      "id": "de7ab3ab-d98b-4614-99b4-187206e33b5f",
+      "type": "reponse",
+      "value": {
+        "latex": "Il suffit de prendre $\\alpha_n = \\frac{2}{3}$ pour que $\\alpha_n Y_n$ soit un estimateur sans biais de $b$.",
+        "html": "<p>Il suffit de prendre <span class=\"math inline\">\\(\\alpha_n =\n\\frac{2}{3}\\)</span> pour que <span class=\"math inline\">\\(\\alpha_n\nY_n\\)</span> soit un estimateur sans biais de <span\nclass=\"math inline\">\\(b\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "16c8c156-a218-463d-bae1-d283a8c4c330",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la fonction de répartition de $Z_n$.",
+        "html": "<p>Déterminer la fonction de répartition de <span\nclass=\"math inline\">\\(Z_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ba43c339-23b3-46bd-82bd-51fa1ed6c710",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $t \\geq b$. On a : \n        $$\\begin{align*}\n            \\prob(Z_n \\leq t) &= \\prob(\\min(X_1,X_2,\\cdots{},X_n) \\leq t) \\\\\n            &= 1 - \\prob(\\min(X_1,X_2,\\cdots{},X_n) > t) \\\\\n            &= 1 - \\prob(X_1 > t, X_2 > t, \\cdots{}, X_n > t) \\\\\n            &= 1 - \\prod_{i=1}^n \\prob(X_i > t) \\\\\n            &= 1 - \\left(1 - \\prob(X_1 \\leq t)\\right)^n \\\\\n            &= 1 - \\left(1 - F_{X_1}(t)\\right)^n \\\\\n            &= 1 - \\left(1 - \\left(1 - \\frac{b^3}{t^3}\\right)\\right)^n \\\\\n            &= 1 - \\left(\\frac{b^3}{t^3}\\right)^n \\\\\n            &= 1 - \\frac{b^{3n}}{t^{3n}}\n        \\end{align*}$$\n        et si $t < b$, $\\prob(Z_n \\leq t) = 0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(t \\geq b\\)</span>. On a : <span\nclass=\"math display\">\\[\\begin{align*}\n            \\prob(Z_n \\leq t) &amp;= \\prob(\\min(X_1,X_2,\\cdots{},X_n)\n\\leq t) \\\\\n            &amp;= 1 - \\prob(\\min(X_1,X_2,\\cdots{},X_n) &gt; t) \\\\\n            &amp;= 1 - \\prob(X_1 &gt; t, X_2 &gt; t, \\cdots{}, X_n &gt;\nt) \\\\\n            &amp;= 1 - \\prod_{i=1}^n \\prob(X_i &gt; t) \\\\\n            &amp;= 1 - \\left(1 - \\prob(X_1 \\leq t)\\right)^n \\\\\n            &amp;= 1 - \\left(1 - F_{X_1}(t)\\right)^n \\\\\n            &amp;= 1 - \\left(1 - \\left(1 -\n\\frac{b^3}{t^3}\\right)\\right)^n \\\\\n            &amp;= 1 - \\left(\\frac{b^3}{t^3}\\right)^n \\\\\n            &amp;= 1 - \\frac{b^{3n}}{t^{3n}}\n        \\end{align*}\\]</span> et si <span class=\"math inline\">\\(t &lt;\nb\\)</span>, <span class=\"math inline\">\\(\\prob(Z_n \\leq t) =\n0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "13108c08-e6af-48ee-9699-7f1c8d461254",
+      "type": "question",
+      "value": {
+        "latex": "En déduire que $Z_n$ suit une loi de Pareto de paramètres $(3n, b)$.",
+        "html": "<p>En déduire que <span class=\"math inline\">\\(Z_n\\)</span> suit une loi\nde Pareto de paramètres <span class=\"math inline\">\\((3n,\nb)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bb743ad2-858f-4647-a9d4-d4758fc5440a",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après la partie 1, question 2, on reconnait la fonction de répartition d'une loi de Pareto de paramètres $(3n, b)$.",
+        "html": "<p>D’après la partie 1, question 2, on reconnait la fonction de\nrépartition d’une loi de Pareto de paramètres <span\nclass=\"math inline\">\\((3n, b)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d76bd395-8557-4263-99af-1e1c37e26991",
+      "type": "question",
+      "value": {
+        "latex": "En déduire un estimateur sans biais de $b$ sous la forme $\\beta_n Z_n$ où $\\beta_n$ est un réel à déterminer.",
+        "html": "<p>En déduire un estimateur sans biais de <span\nclass=\"math inline\">\\(b\\)</span> sous la forme <span\nclass=\"math inline\">\\(\\beta_n Z_n\\)</span> où <span\nclass=\"math inline\">\\(\\beta_n\\)</span> est un réel à déterminer.</p>\n"
+      }
+    },
+    {
+      "id": "5a3e8a8b-3dde-4f9d-a1c0-a99d5501e81f",
+      "type": "reponse",
+      "value": {
+        "latex": "L'espérance de $Z_n$ est donnée par $\\E(Z_n) = \\frac{3nb}{3n-1}$. Donc on pose $\\beta_n = \\frac{3n-1}{3n}$ pour que $\\beta_n Z_n$ soit un estimateur sans biais de $b$.",
+        "html": "<p>L’espérance de <span class=\"math inline\">\\(Z_n\\)</span> est donnée\npar <span class=\"math inline\">\\(\\E(Z_n) = \\frac{3nb}{3n-1}\\)</span>.\nDonc on pose <span class=\"math inline\">\\(\\beta_n =\n\\frac{3n-1}{3n}\\)</span> pour que <span class=\"math inline\">\\(\\beta_n\nZ_n\\)</span> soit un estimateur sans biais de <span\nclass=\"math inline\">\\(b\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "96bfd41a-3a74-496b-a59d-687082da95c0",
+      "type": "question",
+      "value": {
+        "latex": "Lequel des deux estimateurs de $b$ est le meilleur ? Justifier.",
+        "html": "<p>Lequel des deux estimateurs de <span class=\"math inline\">\\(b\\)</span>\nest le meilleur ? Justifier.</p>\n"
+      }
+    },
+    {
+      "id": "033acbe3-3da5-499b-b2fb-dc3aff350135",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\var(\\alpha_n Y_n) = \\alpha_n^2 \\var(Y_n) = \\frac{4}{9} \\frac{3b^2}{4n} = \\frac{b^2}{3n}$. \n\n        Pour calculer la variance de $\\beta_n Z_n$, on doit d'abord connaître la variance d'une loi de Pareto de paramètres $(3n, b)$. Après calculs, on a $\\var(Z_n) = \\frac{3nb^2}{(3n-1)^2(3n-2)}$. \n        \n        D'autre part,  $\\var(\\beta_n Z_n) = \\beta_n^2 \\var(Z_n) = \\frac{b^2}{3n(3n-2)}$ < $\\frac{b^2}{3n}$. \n\n        Donc $\\beta_n Z_n$ est un meilleur estimateur de $b$ que $\\alpha_n Y_n$.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\var(\\alpha_n Y_n) = \\alpha_n^2\n\\var(Y_n) = \\frac{4}{9} \\frac{3b^2}{4n} = \\frac{b^2}{3n}\\)</span>.</p>\n<p>Pour calculer la variance de <span class=\"math inline\">\\(\\beta_n\nZ_n\\)</span>, on doit d’abord connaître la variance d’une loi de Pareto\nde paramètres <span class=\"math inline\">\\((3n, b)\\)</span>. Après\ncalculs, on a <span class=\"math inline\">\\(\\var(Z_n) =\n\\frac{3nb^2}{(3n-1)^2(3n-2)}\\)</span>.</p>\n<p>D’autre part, <span class=\"math inline\">\\(\\var(\\beta_n Z_n) =\n\\beta_n^2 \\var(Z_n) = \\frac{b^2}{3n(3n-2)}\\)</span> &lt; <span\nclass=\"math inline\">\\(\\frac{b^2}{3n}\\)</span>.</p>\n<p>Donc <span class=\"math inline\">\\(\\beta_n Z_n\\)</span> est un meilleur\nestimateur de <span class=\"math inline\">\\(b\\)</span> que <span\nclass=\"math inline\">\\(\\alpha_n Y_n\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

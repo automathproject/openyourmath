@@ -1,0 +1,88 @@
+{
+  "uuid": "iQFz",
+  "titre": "Etude de séries entières",
+  "theme": [
+    "séries entières"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:36.482Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:36.482Z"
+  },
+  "contenu": [
+    {
+      "id": "33f65e77-7645-443a-9544-9bb17bcac196",
+      "type": "description",
+      "value": {
+        "latex": "Déterminer le rayon de convergence des séries entières réelles suivantes :",
+        "html": "<p>Déterminer le rayon de convergence des séries entières réelles\nsuivantes :</p>\n"
+      }
+    },
+    {
+      "id": "fd524dec-bfd8-41ee-89ec-0ab65df48217",
+      "type": "question",
+      "value": {
+        "latex": "$\\displaystyle \\sum_{n \\geq 0} \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n$",
+        "html": "<p><span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0}\n\\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "ec9dcd52-2da7-4b6b-a644-39b3dbdb3444",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $u_n(x) = \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n$ et on utilise le théorème de d'Alembert : \n\t\t\t$$\\begin{align*}\n\t\t\t\\frac{|u_{n+1}(x)|}{|u_n(x)|} &= \\frac{(3(n+1)^2-1) \\times 2^{2n+1}\\sqrt{n+1}}{\\left(2^{2(n+1)+1}\\sqrt{n+1+1}\\right)(3n^2-1)}\\frac{|x^{n+1}|}{|x^n|} \\\\\n\t\t\t&= \\frac{1}{2^2}\\sqrt{\\frac{n+1}{n+2}} \\frac{3n^2+6n+3-1}{3n^2-1} |x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{} \\frac{1}{4}|x|\n\t\t\t\\end{align*}$$\t\n\t\t\tOr $ \\frac{1}{4}|x| <1 \\iff |x| < 4$ donc le rayon de convergence est $R=4$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(u_n(x) =\n\\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} x^n\\)</span> et on utilise le théorème\nde d’Alembert : <span class=\"math display\">\\[\\begin{align*}\n            \\frac{|u_{n+1}(x)|}{|u_n(x)|} &amp;= \\frac{(3(n+1)^2-1)\n\\times\n2^{2n+1}\\sqrt{n+1}}{\\left(2^{2(n+1)+1}\\sqrt{n+1+1}\\right)(3n^2-1)}\\frac{|x^{n+1}|}{|x^n|}\n\\\\\n            &amp;= \\frac{1}{2^2}\\sqrt{\\frac{n+1}{n+2}}\n\\frac{3n^2+6n+3-1}{3n^2-1} |x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{} \\frac{1}{4}|x|\n            \\end{align*}\\]</span> Or <span\nclass=\"math inline\">\\(\\frac{1}{4}|x| &lt;1 \\iff |x| &lt; 4\\)</span> donc\nle rayon de convergence est <span\nclass=\"math inline\">\\(R=4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "27e8e6cd-a554-45db-a41d-624ca7b6510b",
+      "type": "question",
+      "value": {
+        "latex": "$\\displaystyle \\sum_{n \\geq 1} 9^n \\left(\\frac{n-1}{n}\\right)^nx^{n}$",
+        "html": "<p><span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} 9^n\n\\left(\\frac{n-1}{n}\\right)^nx^{n}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "f7e0ec19-6b7e-4655-b31c-25074aac655c",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $u_n(x) = 9^n \\left(\\frac{n-1}{n}\\right)^nx^{2n}$ et on utilise le théorème de Cauchy : \n\t\t\t$$\\begin{align*}\n\t\t\t\\left(|u_n(x)|\\right)^{\\frac{1}{n}} &= \\left(9^n \\left(\\frac{n-1}{n}\\right)^n|x|^{2n}\\right)^{\\frac{1}{n}} \\\\\n\t\t\t&= 9 \\left(\\frac{n-1}{n}\\right) |x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{} 9|x|\n\t\t\t\\end{align*}$$\t\n\t\t\tOr $ 9|x| <1 \\iff |x| < \\frac{1}{9}$ donc le rayon de convergence est $R=\\frac{1}{9}$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(u_n(x) = 9^n\n\\left(\\frac{n-1}{n}\\right)^nx^{2n}\\)</span> et on utilise le théorème de\nCauchy : <span class=\"math display\">\\[\\begin{align*}\n            \\left(|u_n(x)|\\right)^{\\frac{1}{n}} &amp;= \\left(9^n\n\\left(\\frac{n-1}{n}\\right)^n|x|^{2n}\\right)^{\\frac{1}{n}} \\\\\n            &amp;= 9 \\left(\\frac{n-1}{n}\\right) |x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{} 9|x|\n            \\end{align*}\\]</span> Or <span class=\"math inline\">\\(9|x|\n&lt;1 \\iff |x| &lt; \\frac{1}{9}\\)</span> donc le rayon de convergence\nest <span class=\"math inline\">\\(R=\\frac{1}{9}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ff608517-bad4-4127-a67c-d53fc45cc915",
+      "type": "question",
+      "value": {
+        "latex": "Que peut-on dire de la série $\\displaystyle \\sum_{n \\geq 0} \\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} \\left(-\\frac{9}{8}\\right)^n$ ? Justifier.",
+        "html": "<p>Que peut-on dire de la série <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0}\n\\frac{3n^2-1}{2^{2n+1}\\sqrt{n+1}} \\left(-\\frac{9}{8}\\right)^n\\)</span> ?\nJustifier.</p>\n"
+      }
+    },
+    {
+      "id": "7d5b57c5-13d7-4c02-91a5-854356ef7334",
+      "type": "reponse",
+      "value": {
+        "latex": "On reconnaît la série entière de la question 1.(a) évaluée en $x = -\\frac{9}{8}$. Or $-\\frac{9}{8} \\in ]-4;4[$ donc la série est absolument convergente.",
+        "html": "<p>On reconnaît la série entière de la question 1.(a) évaluée en <span\nclass=\"math inline\">\\(x = -\\frac{9}{8}\\)</span>. Or <span\nclass=\"math inline\">\\(-\\frac{9}{8} \\in ]-4;4[\\)</span> donc la série est\nabsolument convergente.</p>\n"
+      }
+    },
+    {
+      "id": "ad1678b4-022c-47c4-8184-0be336255666",
+      "type": "question",
+      "value": {
+        "latex": "Que peut-on dire de la série $\\displaystyle \\sum_{n \\geq 1} 9^n \\left(\\frac{2n-2}{3n}\\right)^n$ ? Justifier.",
+        "html": "<p>Que peut-on dire de la série <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} 9^n\n\\left(\\frac{2n-2}{3n}\\right)^n\\)</span> ? Justifier.</p>\n"
+      }
+    },
+    {
+      "id": "ee1be6ee-015d-4e34-a706-49202281f618",
+      "type": "reponse",
+      "value": {
+        "latex": "On reconnaît la série entière de la question 1.(b) évaluée en $x = \\frac{2}{3}$. Or $\\frac{2}{3} \\notin ]-\\frac{1}{9};\\frac{1}{9}[$ donc la série est grossièrement divergente.",
+        "html": "<p>On reconnaît la série entière de la question 1.(b) évaluée en <span\nclass=\"math inline\">\\(x = \\frac{2}{3}\\)</span>. Or <span\nclass=\"math inline\">\\(\\frac{2}{3} \\notin\n]-\\frac{1}{9};\\frac{1}{9}[\\)</span> donc la série est grossièrement\ndivergente.</p>\n"
+      }
+    }
+  ]
+}

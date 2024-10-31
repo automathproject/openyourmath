@@ -1,0 +1,120 @@
+{
+  "uuid": "C5Fq",
+  "titre": "Simulation d'une loi normale",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:11.906Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:11.906Z"
+  },
+  "contenu": [
+    {
+      "id": "e4900b7a-79c2-4244-a26e-f4aef5abece8",
+      "type": "description",
+      "value": {
+        "latex": "On tire sur une cible munie d'un repère orthonormé centrée sur son origine $O$. On note $(X,Y)$ les coordonnées cartésiennes d'un tir. On remarque que lorsque le tireur vise le centre de la cible, la loi suivie par $(X,Y)$ admet une densité \n\t\n\t$$f(x,y)=\\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}$$\n\t\n\tOn note $R$ la distance entre le point d'impact et le point visé.",
+        "html": "<p>On tire sur une cible munie d’un repère orthonormé centrée sur son\norigine <span class=\"math inline\">\\(O\\)</span>. On note <span\nclass=\"math inline\">\\((X,Y)\\)</span> les coordonnées cartésiennes d’un\ntir. On remarque que lorsque le tireur vise le centre de la cible, la\nloi suivie par <span class=\"math inline\">\\((X,Y)\\)</span> admet une\ndensité</p>\n<p><span class=\"math display\">\\[f(x,y)=\\dfrac{1}{2\\pi}\ne^{\\frac{-x^2-y^2}{2}}\\]</span></p>\n<p>On note <span class=\"math inline\">\\(R\\)</span> la distance entre le\npoint d’impact et le point visé.</p>\n"
+      }
+    },
+    {
+      "id": "c8faa260-f302-4a2e-ac0b-5a3532d74a8b",
+      "type": "question",
+      "value": {
+        "latex": "Calculer les lois marginales du couple $(X,Y)$. Les variables $X$ et $Y$ sont-elles indépendantes ?",
+        "html": "<p>Calculer les lois marginales du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>. Les variables <span\nclass=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+      }
+    },
+    {
+      "id": "15b86026-db40-49fc-9f30-b23d4e3f53b6",
+      "type": "reponse",
+      "value": {
+        "latex": "La densité marginale pour $X$ est exprimée par \n\t\t$$\\begin{align*}\n\t\t\tf_X(x)&=\\int_\\mathbb{R}f(x,y)dy \\\\\n\t\t\t&= \\dfrac{\\sqrt{2\\pi}}{2\\pi} e^{\\frac{-x^2}{2}} \\\\\n\t\t\t&= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-x^2}{2}}\n\t\t\\end{align*}$$\n\t\tDe même, on calcule $f_Y(y)= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-y^2}{2}}$. On a ainsi $f(x,y)=f_X(x) \\times f_Y(y)$ ce qui permet de conclure que $X$ et $Y$ sont deux variables indépendantes suivant chacune une loi normale centrée réduite.",
+        "html": "<p>La densité marginale pour <span class=\"math inline\">\\(X\\)</span> est\nexprimée par <span class=\"math display\">\\[\\begin{align*}\n            f_X(x)&amp;=\\int_\\mathbb{R}f(x,y)dy \\\\\n            &amp;= \\dfrac{\\sqrt{2\\pi}}{2\\pi} e^{\\frac{-x^2}{2}} \\\\\n            &amp;= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-x^2}{2}}\n        \\end{align*}\\]</span> De même, on calcule <span\nclass=\"math inline\">\\(f_Y(y)= \\dfrac{1}{\\sqrt{2\\pi}}\ne^{\\frac{-y^2}{2}}\\)</span>. On a ainsi <span\nclass=\"math inline\">\\(f(x,y)=f_X(x) \\times f_Y(y)\\)</span> ce qui permet\nde conclure que <span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont deux variables indépendantes\nsuivant chacune une loi normale centrée réduite.</p>\n"
+      }
+    },
+    {
+      "id": "f7fe9376-ac26-4145-8ff5-5a18d856d4bc",
+      "type": "question",
+      "value": {
+        "latex": "Ecrire la fonction de répartition de $R$ sous la forme d'une intégrale double, puis effectuer le changement de variables en coordonnées polaires pour simplifier l'expression.",
+        "html": "<p>Ecrire la fonction de répartition de <span\nclass=\"math inline\">\\(R\\)</span> sous la forme d’une intégrale double,\npuis effectuer le changement de variables en coordonnées polaires pour\nsimplifier l’expression.</p>\n"
+      }
+    },
+    {
+      "id": "ffdb4385-4ea4-4fc6-9154-353435f9ef7c",
+      "type": "reponse",
+      "value": {
+        "latex": "On note $D_t=\\{(x,y) \\in \\mathbb{R}^2 \\, , \\, x^2+y^2 \\leq t^2\\}$. Si $t \\geq 0$, $F_R(t) = \\mathbb{P}(R \\leq t) = \\mathbb{P}((X,Y) \\in D_t)$ donc \n\t\t$$F_R(t) = \\iint_{D_t} \\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}dxdy$$\n\t\tOn effectue dans l'intégrale double un changement de variables en coordonnées polaires : on a $dxdy=rdrd\\theta$ d'où \n\t\t$$F_R(t) = \\int_{0}^{2\\pi} \\int_0^t e^{-r^2/2}rdr \\frac{d\\theta}{2\\pi} = \\int_0^t r e^{-r^2/2}dr $$\n\t\tet $F_R(t)=0$ si $t<0$.",
+        "html": "<p>On note <span class=\"math inline\">\\(D_t=\\{(x,y) \\in \\mathbb{R}^2 \\, ,\n\\, x^2+y^2 \\leq t^2\\}\\)</span>. Si <span class=\"math inline\">\\(t \\geq\n0\\)</span>, <span class=\"math inline\">\\(F_R(t) = \\mathbb{P}(R \\leq t) =\n\\mathbb{P}((X,Y) \\in D_t)\\)</span> donc <span\nclass=\"math display\">\\[F_R(t) = \\iint_{D_t} \\dfrac{1}{2\\pi}\ne^{\\frac{-x^2-y^2}{2}}dxdy\\]</span> On effectue dans l’intégrale double\nun changement de variables en coordonnées polaires : on a <span\nclass=\"math inline\">\\(dxdy=rdrd\\theta\\)</span> d’où <span\nclass=\"math display\">\\[F_R(t) = \\int_{0}^{2\\pi} \\int_0^t e^{-r^2/2}rdr\n\\frac{d\\theta}{2\\pi} = \\int_0^t r e^{-r^2/2}dr\\]</span> et <span\nclass=\"math inline\">\\(F_R(t)=0\\)</span> si <span\nclass=\"math inline\">\\(t&lt;0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e46dba37-9b0a-4fda-828a-862db48b3c72",
+      "type": "question",
+      "value": {
+        "latex": "En déduire une densité de $R$. La loi obtenue s'appelle la loi de Rayleigh",
+        "html": "<p>En déduire une densité de <span class=\"math inline\">\\(R\\)</span>. La\nloi obtenue s’appelle la loi de Rayleigh</p>\n"
+      }
+    },
+    {
+      "id": "e7ae4858-dae4-4660-95e2-9af3b2cb1492",
+      "type": "reponse",
+      "value": {
+        "latex": "On en déduit que la fonction $f_R(r) = r e^{-r^2/2}1_{\\mathbb{R}_+} $",
+        "html": "<p>On en déduit que la fonction <span class=\"math inline\">\\(f_R(r) = r\ne^{-r^2/2}1_{\\mathbb{R}_+}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "1def8715-adbe-492e-9fad-246ddf7e5a83",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $R^2$ suit une loi exponentielle $\\mathcal{E}(1/2)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(R^2\\)</span> suit une loi\nexponentielle <span class=\"math inline\">\\(\\mathcal{E}(1/2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a78ed8b3-1e98-4774-bb3a-836d11d95e37",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(R^2)) &= \\int_0^{+\\infty}  h(r) r e^{-r^2/2}dr \\\\\n\t\t\t&= \\int_0^{+\\infty} h(u) \\frac{1}{2} e^{-\\frac{u}{2}} du \n\t\t\\end{align*}$$\t\n\t\tPar identification, on en déduit une densité de $R^2$ définie par $f_{R^2}(u) = \\frac{1}{2} e^{-\\frac{u}{2}}1_{\\mathbb{R}_+}(u)$, on reconnait une loi exponentielle $\\mathcal{E}(\\frac{1}{2})$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(h\\)</span> une fonction continue\nbornée quelconque : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(h(R^2)) &amp;= \\int_0^{+\\infty}  h(r) r\ne^{-r^2/2}dr \\\\\n            &amp;= \\int_0^{+\\infty} h(u) \\frac{1}{2} e^{-\\frac{u}{2}} du\n        \\end{align*}\\]</span> Par identification, on en déduit une\ndensité de <span class=\"math inline\">\\(R^2\\)</span> définie par <span\nclass=\"math inline\">\\(f_{R^2}(u) = \\frac{1}{2}\ne^{-\\frac{u}{2}}1_{\\mathbb{R}_+}(u)\\)</span>, on reconnait une loi\nexponentielle <span\nclass=\"math inline\">\\(\\mathcal{E}(\\frac{1}{2})\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a8d35242-67cf-4d18-a02c-be25a020076f",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que si $\\Theta$ est la variable aléatoire telle que $X=R\\cos(\\Theta)$, $Y=R\\sin(\\Theta)$, alors $\\Theta$ suit une loi uniforme sur l'intervalle $[0;2\\pi]$.",
+        "html": "<p>Montrer que si <span class=\"math inline\">\\(\\Theta\\)</span> est la\nvariable aléatoire telle que <span\nclass=\"math inline\">\\(X=R\\cos(\\Theta)\\)</span>, <span\nclass=\"math inline\">\\(Y=R\\sin(\\Theta)\\)</span>, alors <span\nclass=\"math inline\">\\(\\Theta\\)</span> suit une loi uniforme sur\nl’intervalle <span class=\"math inline\">\\([0;2\\pi]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ec557fa8-823c-4afc-8722-71afb47e16bb",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(R,\\Theta)) &= \\iint_{} \\dfrac{1}{2\\pi} h(r(x,y),\\theta(x,y)) e^{\\frac{-x^2-y^2}{2}}dxdy \\\\\n\t\t\t&= \\int_{0}^{2\\pi} \\int_0^{+\\infty} h(r,\\theta) \\frac{1}{2\\pi} e^{-r^2} r drd\\theta \n\t\t\\end{align*}$$\n\t\tPar identification, on en déduit qu'une densité du couple $(R,\\Theta)$ est définie pour tout $(r,\\theta) \\in \\R^2$ par :\n\t\t$$g(r,\\theta) = \\frac{1}{2\\pi} re^{-r^2} \\textbf{1}_{\\R_+ \\times [0;2\\pi[}(r,\\theta)$$\n\t\t\n\t\tPour obtenir la loi de $\\Theta$, il suffit de calculer pour tout $\\theta \\in \\R$ : \n\t\t$$\\begin{align*}\n\t\tf_\\Theta(\\theta) &= \\int_\\R g(r,\\theta)dr \\\\\n\t\t                 &=  \\frac{1}{2\\pi}\\textbf{1}_{\\times [0;2\\pi[}(r,\\theta)\n\t\t\\end{align*}$$\n\t\t On en déduit que $(R,\\Theta)$ est un couple de variables aléatoires indépendantes et que $\\Theta$ suit une loi uniforme sur $[0;2\\pi[$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(h\\)</span> une fonction continue\nbornée quelconque : <span class=\"math display\">\\[\\begin{align*}\n            \\mathbb{E}(h(R,\\Theta)) &amp;= \\iint_{} \\dfrac{1}{2\\pi}\nh(r(x,y),\\theta(x,y)) e^{\\frac{-x^2-y^2}{2}}dxdy \\\\\n            &amp;= \\int_{0}^{2\\pi} \\int_0^{+\\infty} h(r,\\theta)\n\\frac{1}{2\\pi} e^{-r^2} r drd\\theta\n        \\end{align*}\\]</span> Par identification, on en déduit qu’une\ndensité du couple <span class=\"math inline\">\\((R,\\Theta)\\)</span> est\ndéfinie pour tout <span class=\"math inline\">\\((r,\\theta) \\in\n\\R^2\\)</span> par : <span class=\"math display\">\\[g(r,\\theta) =\n\\frac{1}{2\\pi} re^{-r^2} \\textbf{1}_{\\R_+ \\times\n[0;2\\pi[}(r,\\theta)\\]</span></p>\n<p>Pour obtenir la loi de <span class=\"math inline\">\\(\\Theta\\)</span>,\nil suffit de calculer pour tout <span class=\"math inline\">\\(\\theta \\in\n\\R\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n        f_\\Theta(\\theta) &amp;= \\int_\\R g(r,\\theta)dr \\\\\n                         &amp;=  \\frac{1}{2\\pi}\\textbf{1}_{\\times\n[0;2\\pi[}(r,\\theta)\n        \\end{align*}\\]</span> On en déduit que <span\nclass=\"math inline\">\\((R,\\Theta)\\)</span> est un couple de variables\naléatoires indépendantes et que <span\nclass=\"math inline\">\\(\\Theta\\)</span> suit une loi uniforme sur <span\nclass=\"math inline\">\\([0;2\\pi[\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "962bbb4e-83f1-49d5-8e24-5fc2ffe8a5ee",
+      "type": "question",
+      "value": {
+        "latex": "En déduire une simulation de la loi du couple $(X,Y)$.",
+        "html": "<p>En déduire une simulation de la loi du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d8a4aee8-a123-464a-ab5e-81c9922d850d",
+      "type": "reponse",
+      "value": {
+        "latex": "def Normale2():\n\t\ttheta = 2*pi*rand()\n\t\tr = sqrt(-2*log(rand()))\n\t\treturn r*cos(theta),r*sin(theta)",
+        "html": "<p>def Normale2(): theta = 2*pi*rand() r = sqrt(-2*log(rand())) return\nr*cos(theta),r*sin(theta)</p>\n"
+      }
+    }
+  ]
+}

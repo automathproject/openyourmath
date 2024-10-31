@@ -1,0 +1,56 @@
+{
+  "uuid": "uPmr",
+  "titre": "Calculs avec une loi normale",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:47.539Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:47.539Z"
+  },
+  "contenu": [
+    {
+      "id": "c49e8661-e3d4-44ee-a39b-c833791e62bc",
+      "type": "description",
+      "value": {
+        "latex": "On suppose que la température (en degré Celsius) dans la ville de Rennes au mois de janvier est une variable aléatoire $T$ qui suit une loi normale $\\mathcal{N}(\\mu,\\sigma)$, d'écart-type $\\sigma=4$.",
+        "html": "<p>On suppose que la température (en degré Celsius) dans la ville de\nRennes au mois de janvier est une variable aléatoire <span\nclass=\"math inline\">\\(T\\)</span> qui suit une loi normale <span\nclass=\"math inline\">\\(\\mathcal{N}(\\mu,\\sigma)\\)</span>, d’écart-type\n<span class=\"math inline\">\\(\\sigma=4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e6f4b095-eac9-465c-b95c-3cc224271516",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer $\\mu$ lorsque $\\prob(T>2)=0.33$.",
+        "html": "<p>Déterminer <span class=\"math inline\">\\(\\mu\\)</span> lorsque <span\nclass=\"math inline\">\\(\\prob(T&gt;2)=0.33\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "08345259-761b-49e2-bfa3-456ba709b8df",
+      "type": "reponse",
+      "value": {
+        "latex": "$T\\sim \\mathcal{N}(\\mu,\\sigma=4)$ \n\t\t$$\\begin{align*}\n\t\t\t\\prob(T>2)=0.33 \\quad & \\Leftrightarrow \\quad \\p\\left(\\frac{T-\\mu}{4}>\\frac{2-\\mu}{4}\\right)=0.33 \\\\\n\t\t\t& \\Leftrightarrow \\quad \\p\\left(Z>\\frac{2-\\mu}{4}\\right)=0.33 \\quad \\text{ où } Z\\sim\\mathcal{N}(0,1) \\\\\n\t\t\t& \\Leftrightarrow \\quad \\p\\left(Z\\leq \\frac{2-\\mu}{4}\\right)=0.67\n\t\t\\end{align*}$$\n\t\tdonc $\\frac{2-\\mu}{4}=0.44$ par lecture de la table de loi $\\mathcal{N}(0,1)$.\n\t\tD'où $\\mu=0.24$.",
+        "html": "<p><span class=\"math inline\">\\(T\\sim \\mathcal{N}(\\mu,\\sigma=4)\\)</span>\n<span class=\"math display\">\\[\\begin{align*}\n            \\prob(T&gt;2)=0.33 \\quad &amp; \\Leftrightarrow \\quad\n\\p\\left(\\frac{T-\\mu}{4}&gt;\\frac{2-\\mu}{4}\\right)=0.33 \\\\\n            &amp; \\Leftrightarrow \\quad\n\\p\\left(Z&gt;\\frac{2-\\mu}{4}\\right)=0.33 \\quad \\text{ où }\nZ\\sim\\mathcal{N}(0,1) \\\\\n            &amp; \\Leftrightarrow \\quad \\p\\left(Z\\leq\n\\frac{2-\\mu}{4}\\right)=0.67\n        \\end{align*}\\]</span> donc <span\nclass=\"math inline\">\\(\\frac{2-\\mu}{4}=0.44\\)</span> par lecture de la\ntable de loi <span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. D’où\n<span class=\"math inline\">\\(\\mu=0.24\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7082d98b-caf1-4da8-9d82-2b70b8f227af",
+      "type": "question",
+      "value": {
+        "latex": "Pour la valeur de $\\mu$ ainsi obtenue, déterminer $\\prob(T\\leq 0)$.",
+        "html": "<p>Pour la valeur de <span class=\"math inline\">\\(\\mu\\)</span> ainsi\nobtenue, déterminer <span class=\"math inline\">\\(\\prob(T\\leq\n0)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "df4e8288-747e-4aa7-b5c6-47d050e86f7b",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\t\t\t\\prob(T\\leq 0)\n\t\t\t&=\\p\\left(\\frac{T-\\mu}{4}\\leq \\frac{-\\mu}{4}\\right) \\\\\n\t\t\t&=\\p\\left(\\frac{T-0.24}{4}\\leq -0.06\\right) \\\\\n\t\t\t&=\\prob(Z\\leq -0.06) \\quad \\text{ en posant } Z=\\frac{T-0.24}{4}, \\quad \\text{ ainsi } Z \\sim \\mathcal{N}(0,1) \\\\\n\t\t\t&= \\prob(Z\\geq 0.06) \\\\\n\t\t\t&= 1-\\prob(Z\\leq 0.06) \\\\\n\t\t\t&= 1- 0.5239 \\\\\n\t\t\t&= 0.4761\n\t\t\\end{align*}$$",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n            \\prob(T\\leq 0)\n            &amp;=\\p\\left(\\frac{T-\\mu}{4}\\leq \\frac{-\\mu}{4}\\right) \\\\\n            &amp;=\\p\\left(\\frac{T-0.24}{4}\\leq -0.06\\right) \\\\\n            &amp;=\\prob(Z\\leq -0.06) \\quad \\text{ en posant }\nZ=\\frac{T-0.24}{4}, \\quad \\text{ ainsi } Z \\sim \\mathcal{N}(0,1) \\\\\n            &amp;= \\prob(Z\\geq 0.06) \\\\\n            &amp;= 1-\\prob(Z\\leq 0.06) \\\\\n            &amp;= 1- 0.5239 \\\\\n            &amp;= 0.4761\n        \\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

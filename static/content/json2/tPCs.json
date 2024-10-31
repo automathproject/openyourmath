@@ -1,0 +1,56 @@
+{
+  "uuid": "tPCs",
+  "titre": "Etude d'une méthode itérative",
+  "theme": [
+    "analyse numérique"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:46.468Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:46.468Z"
+  },
+  "contenu": [
+    {
+      "id": "24397e7a-426e-437c-b9a5-cc2ab8e04e94",
+      "type": "description",
+      "value": {
+        "latex": "Soit $A \\in \\mathcal{M}_N(\\R)$ une matrice réelle symétrique définie positive et $b\\in \\R^N$. On note $\\rho(A)$ le rayon spectral de la matrice $A$.  Pour résoudre le système \n$$Ax=b$$\non considère la suite définie par $x_0 \\in \\R^N$ et $\\sigma \\in \\R$ :\n$$x_{n+1} = x_n - \\sigma(Ax_n-b)$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(A \\in \\mathcal{M}_N(\\R)\\)</span> une\nmatrice réelle symétrique définie positive et <span\nclass=\"math inline\">\\(b\\in \\R^N\\)</span>. On note <span\nclass=\"math inline\">\\(\\rho(A)\\)</span> le rayon spectral de la matrice\n<span class=\"math inline\">\\(A\\)</span>. Pour résoudre le système <span\nclass=\"math display\">\\[Ax=b\\]</span> on considère la suite définie par\n<span class=\"math inline\">\\(x_0 \\in \\R^N\\)</span> et <span\nclass=\"math inline\">\\(\\sigma \\in \\R\\)</span> : <span\nclass=\"math display\">\\[x_{n+1} = x_n - \\sigma(Ax_n-b)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "5b74b7ef-2fd0-4fa3-af4d-48c5812f4223",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que la méthode converge vers la solution $x$ du système si et seulement si :\n\t$$0 < \\sigma < \\frac{2}{\\rho(A)}$$",
+        "html": "<p>Montrer que la méthode converge vers la solution <span\nclass=\"math inline\">\\(x\\)</span> du système si et seulement si : <span\nclass=\"math display\">\\[0 &lt; \\sigma &lt; \\frac{2}{\\rho(A)}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "94452dcd-8c06-469f-b7e5-539e3db56c47",
+      "type": "reponse",
+      "value": {
+        "latex": "On vérifie dans un premier temps que si la méthode converge vers un vecteur $y \\in \\R^n$, alors $y$ vérifie $y=y-\\sigma(Ay-b) \\iff Ay=b$ à condition que $\\sigma \\neq 0$.\n\t\t\n\t\tPour que la méthode converge, le cours dit qu'il est nécessaire et suffisant que la matrice d'itération $B$ vérifie $\\rho(B)<1$. Ici, $B = I-\\sigma A$, le spectre de $B$ est $sp(B) = \\{1- \\sigma\\lambda \\mid \\lambda \\in sp(A)\\}$.",
+        "html": "<p>On vérifie dans un premier temps que si la méthode converge vers un\nvecteur <span class=\"math inline\">\\(y \\in \\R^n\\)</span>, alors <span\nclass=\"math inline\">\\(y\\)</span> vérifie <span\nclass=\"math inline\">\\(y=y-\\sigma(Ay-b) \\iff Ay=b\\)</span> à condition\nque <span class=\"math inline\">\\(\\sigma \\neq 0\\)</span>.</p>\n<p>Pour que la méthode converge, le cours dit qu’il est nécessaire et\nsuffisant que la matrice d’itération <span\nclass=\"math inline\">\\(B\\)</span> vérifie <span\nclass=\"math inline\">\\(\\rho(B)&lt;1\\)</span>. Ici, <span\nclass=\"math inline\">\\(B = I-\\sigma A\\)</span>, le spectre de <span\nclass=\"math inline\">\\(B\\)</span> est <span class=\"math inline\">\\(sp(B) =\n\\{1- \\sigma\\lambda \\mid \\lambda \\in sp(A)\\}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c59b1da3-4997-409d-996c-24fefc4a533c",
+      "type": "question",
+      "value": {
+        "latex": "Comment choisir $\\sigma$ pour que optimiser la vitesse de convergence de cette méthode ? Exprimer le résultat en fonction de $\\rho(A)$ et $\\rho(A^{-1})$.",
+        "html": "<p>Comment choisir <span class=\"math inline\">\\(\\sigma\\)</span> pour que\noptimiser la vitesse de convergence de cette méthode ? Exprimer le\nrésultat en fonction de <span class=\"math inline\">\\(\\rho(A)\\)</span> et\n<span class=\"math inline\">\\(\\rho(A^{-1})\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c48af0e7-b5c5-46f5-b8f5-8fad28173c3e",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche $\\sigma$ tel que $\\rho(B)$ soit minimal. Or $\\rho(B) = \\max_i|1-\\sigma\\lambda_i|$. On sait que les valeurs propres de $A$ sont strictement positives, on peut les ranger dans l'ordre croissant $0 < \\lambda _1 \\leq ... \\leq \\lambda _n$, ce qui permet d'affirmer que $\\rho(B) = \\max\\{1-\\sigma \\lambda_1 ; \\sigma \\lambda_n -1 \\}$. \\'Etant donné que cette  fonction est décroissante jusqu'au point $\\sigma$ tel que $1-\\sigma \\lambda_1 = \\sigma \\lambda_n-1$, puis croissante au delà, la solution est $\\sigma = \\frac{2}{\\lambda_1+\\lambda_n}$. Or $\\lambda_1 = \\frac{1}{\\rho(A^{-1})}$ et $\\lambda_n = \\rho(A)$ d'où  \n\t\t$$\\sigma = \\frac{2}{\\frac{1}{\\rho(A^{-1})} + \\rho(A)}$$",
+        "html": "<p>On cherche <span class=\"math inline\">\\(\\sigma\\)</span> tel que <span\nclass=\"math inline\">\\(\\rho(B)\\)</span> soit minimal. Or <span\nclass=\"math inline\">\\(\\rho(B) = \\max_i|1-\\sigma\\lambda_i|\\)</span>. On\nsait que les valeurs propres de <span class=\"math inline\">\\(A\\)</span>\nsont strictement positives, on peut les ranger dans l’ordre croissant\n<span class=\"math inline\">\\(0 &lt; \\lambda _1 \\leq ... \\leq \\lambda\n_n\\)</span>, ce qui permet d’affirmer que <span\nclass=\"math inline\">\\(\\rho(B) = \\max\\{1-\\sigma \\lambda_1 ; \\sigma\n\\lambda_n -1 \\}\\)</span>. Étant donné que cette fonction est\ndécroissante jusqu’au point <span class=\"math inline\">\\(\\sigma\\)</span>\ntel que <span class=\"math inline\">\\(1-\\sigma \\lambda_1 = \\sigma\n\\lambda_n-1\\)</span>, puis croissante au delà, la solution est <span\nclass=\"math inline\">\\(\\sigma = \\frac{2}{\\lambda_1+\\lambda_n}\\)</span>.\nOr <span class=\"math inline\">\\(\\lambda_1 =\n\\frac{1}{\\rho(A^{-1})}\\)</span> et <span class=\"math inline\">\\(\\lambda_n\n= \\rho(A)\\)</span> d’où <span class=\"math display\">\\[\\sigma =\n\\frac{2}{\\frac{1}{\\rho(A^{-1})} + \\rho(A)}\\]</span></p>\n"
+      }
+    }
+  ]
+}

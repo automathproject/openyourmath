@@ -1,0 +1,80 @@
+{
+  "uuid": "rvC6",
+  "titre": "Calcul de racine carrée",
+  "theme": [
+    "méthodes numériques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:45.602Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:45.602Z"
+  },
+  "contenu": [
+    {
+      "id": "1e065852-51e8-4c35-b8b9-415d01bb75c5",
+      "type": "description",
+      "value": {
+        "latex": "La méthode de la corde pour résoudre une équation du type $f(x)=0$ consiste à construire la suite $(x_k)$ définie par\n$$\\forall k \\in \\mathbb{N} : \\quad x_{k+1}=x_k-\\frac{f(x_k)}{f'(x_0)}$$",
+        "html": "<p>La méthode de la corde pour résoudre une équation du type <span\nclass=\"math inline\">\\(f(x)=0\\)</span> consiste à construire la suite\n<span class=\"math inline\">\\((x_k)\\)</span> définie par <span\nclass=\"math display\">\\[\\forall k \\in \\mathbb{N} : \\quad\nx_{k+1}=x_k-\\frac{f(x_k)}{f&#39;(x_0)}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "71c7c389-4ddc-4ce7-85d8-e49cc13f3766",
+      "type": "question",
+      "value": {
+        "latex": "Sur un graphique, construire les premières itérations de cette méthode en prenant $f(x)=x^2$ et $x_0=1$.",
+        "html": "<p>Sur un graphique, construire les premières itérations de cette\nméthode en prenant <span class=\"math inline\">\\(f(x)=x^2\\)</span> et\n<span class=\"math inline\">\\(x_0=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ab5b4735-f841-4e06-bc3f-1c096688bd69",
+      "type": "reponse",
+      "value": {
+        "latex": "Le principe de construction du point $x_{k+1}$ est le suivant: on prend l'intersection de l'axe des abscisses avec la droite passant par le point $(x_k,f(x_k))$ de pente $f'(x_0)=2x_0=2$. \n\t\t\t\\begin{center} \n\t\t\t\t\\newcommand\\newtfonc[1]{#1*#1) } \n\t\t\t\t\\begin{tikzpicture}[scale=.5]\n\t\t\t\t\\begin{axis}[\n\t\t\t\twidth=14cm, height=10cm,\n\t\t\t\taxis x line=center, \n\t\t\t\taxis y line=middle,\n\t\t\t\txlabel =$x$,\n\t\t\t\tevery axis x label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1.0)},\n\t\t\t\t\tanchor=west,\n\t\t\t\t},\n\t\t\t\tylabel = $y$,\n\t\t\t\tevery axis y label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1)},\n\t\t\t\t\tanchor=south,},\n\t\t\t\tlegend style={draw=none,at={(-.1,1)},anchor=north west,font=\\large },\n\t\t\t\tsamples=100,\n\t\t\t\tymin=-0.6, ymax=1.5,\n\t\t\t\txmin=-1.8, xmax=2.1,\n\t\t\t\tytick={0 },\n\t\t\t\txtick={0 },\n\t\t\t\tlegend cell align=left,\n\t\t\t\t]\n\t\t\t\t\\addplot [mark=none,line width=.5mm,blue,domain= -1.7:2 ]{\\newtfonc{x} };\n\t\t\t\t\\node[label={-90:{\\large{$x_0$}}},circle,fill,red,inner sep=2pt] at (axis cs:1,0) {};\n\t\t\t\t\\node[label={-80:{\\large{$x_1$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.5 ,0) {};\n\t\t\t\t\\node[label={-120:{\\large{$x_2$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.375 ,0) {};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (1,0) (1,1)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-1};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (0.5,0) (0.5,0.25)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-0.75};\n\t\t\t\t\\end{axis}\n\t\t\t\t\\end{tikzpicture}\n\t\t\\end{center}",
+        "html": "<p>Le principe de construction du point <span\nclass=\"math inline\">\\(x_{k+1}\\)</span> est le suivant: on prend\nl’intersection de l’axe des abscisses avec la droite passant par le\npoint <span class=\"math inline\">\\((x_k,f(x_k))\\)</span> de pente <span\nclass=\"math inline\">\\(f&#39;(x_0)=2x_0=2\\)</span>.</p>\n<div class=\"center\">\n\n</div>\n"
+      }
+    },
+    {
+      "id": "e22a0563-eec3-4565-b276-fe281cae7813",
+      "type": "question",
+      "value": {
+        "latex": "De quelle méthode générale la méthode de la corde est-elle un cas particulier ? Justifier.",
+        "html": "<p>De quelle méthode générale la méthode de la corde est-elle un cas\nparticulier ? Justifier.</p>\n"
+      }
+    },
+    {
+      "id": "61c5be45-8bbe-4727-a8ef-9ff0f5888c87",
+      "type": "reponse",
+      "value": {
+        "latex": "La méthode de la corde est un cas particulier de la méthode de point fixe : on a $x_{k+1}=g(x_k)$, où $g$ est la fonction définie par $g(x)=x-\\frac{f(x)}{f'(x_0)}$.",
+        "html": "<p>La méthode de la corde est un cas particulier de la méthode de point\nfixe : on a <span class=\"math inline\">\\(x_{k+1}=g(x_k)\\)</span>, où\n<span class=\"math inline\">\\(g\\)</span> est la fonction définie par <span\nclass=\"math inline\">\\(g(x)=x-\\frac{f(x)}{f&#39;(x_0)}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c6996217-6ce0-4516-8885-d696d984feff",
+      "type": "question",
+      "value": {
+        "latex": "En déduire l'ordre minimal de convergence de la méthode de la corde, quand celle-ci converge.",
+        "html": "<p>En déduire l’ordre minimal de convergence de la méthode de la corde,\nquand celle-ci converge.</p>\n"
+      }
+    },
+    {
+      "id": "97742450-13f4-4a7c-a912-9ffab278c4d2",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand une méthode de point fixe converge, elle est au minimum d'ordre $1$.",
+        "html": "<p>Quand une méthode de point fixe converge, elle est au minimum d’ordre\n<span class=\"math inline\">\\(1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "204e9168-42d3-47d6-9251-4a5a1b9bf94b",
+      "type": "description",
+      "value": {
+        "latex": "On souhaite trouver une méthode efficace pour trouver une approximation de la racine carrée d'un nombre positif $A$ donné. Considérons tout d'abord l'algorithme suivant: étant donné une valeur $x_0$, on calcule\n\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad k=0,1,2,... \\]",
+        "html": "<p>On souhaite trouver une méthode efficace pour trouver une\napproximation de la racine carrée d’un nombre positif <span\nclass=\"math inline\">\\(A\\)</span> donné. Considérons tout d’abord\nl’algorithme suivant: étant donné une valeur <span\nclass=\"math inline\">\\(x_0\\)</span>, on calcule <span\nclass=\"math display\">\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad\nk=0,1,2,...\\]</span></p>\n"
+      }
+    }
+  ]
+}

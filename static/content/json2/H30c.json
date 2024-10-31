@@ -1,0 +1,38 @@
+{
+  "uuid": "H30c",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:15.081Z",
+    "organisation": "",
+    "updatedAt": "2024-10-31T14:47:15.081Z"
+  },
+  "contenu": [
+    {
+      "id": "f93f6aab-70ec-45d1-aea5-384b9f0870cd",
+      "type": "description",
+      "value": {
+        "latex": "En lançant successivement 60 fois un dé, un joueur obtient les résultats suivants :\n\t\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\\hline\n\\end{tabular}\n\\end{center}",
+        "html": "<p>En lançant successivement 60 fois un dé, un joueur obtient les\nrésultats suivants :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+      }
+    },
+    {
+      "id": "28dbb5a7-63f1-4090-9da8-c2c0985898ec",
+      "type": "question",
+      "value": {
+        "latex": "Le dé est-il truqué?",
+        "html": "<p>Le dé est-il truqué?</p>\n"
+      }
+    },
+    {
+      "id": "f29c4d9a-776f-47ae-b0c8-66b696d554df",
+      "type": "reponse",
+      "value": {
+        "latex": "On réalise un test d'adéquation du $\\chi^2$ pour répondre à la question. Un dé non truqué devrait produire une distribution uniforme des effectifs de chaque face. Cela donne le tableau des effectifs théoriques : \n\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\t\\hline Effectifs $e_i$ & 10 & 10 & 10 & 10 & 10 & 10 \\\\\n\t\t\\hline\n\t\\end{tabular}\n\\end{center} \n\nOn pose pour variable de décision $$Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}$$ où $O_i$ est la variable aléatoire donnant l'effectif de la $i$-ème classe pour l'échantillon de taille $60$. D'après le cours, $Q$ suit une loi $\\chi^2(5)$. \n\nD'après la table de $\\chi^2(5)$, l'intervalle de rejet pour $\\alpha=5\\%$ est $[11.07~;~+\\infty[$.\n\nOn trouve $Q_{obs} = 13.6 \\in W$ (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c}{fichier tableur})donc on peut rejeter l'hypothèse $H_0$ avec un risque de première espèce de $5\\%$ : on peut suspecter que le dé est truqué.",
+        "html": "<p>On réalise un test d’adéquation du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> pour répondre à la question. Un dé\nnon truqué devrait produire une distribution uniforme des effectifs de\nchaque face. Cela donne le tableau des effectifs théoriques :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(e_i\\)</span></td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>On pose pour variable de décision <span\nclass=\"math display\">\\[Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}\\]</span>\noù <span class=\"math inline\">\\(O_i\\)</span> est la variable aléatoire\ndonnant l’effectif de la <span class=\"math inline\">\\(i\\)</span>-ème\nclasse pour l’échantillon de taille <span\nclass=\"math inline\">\\(60\\)</span>. D’après le cours, <span\nclass=\"math inline\">\\(Q\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\chi^2(5)\\)</span>.</p>\n<p>D’après la table de <span class=\"math inline\">\\(\\chi^2(5)\\)</span>,\nl’intervalle de rejet pour <span\nclass=\"math inline\">\\(\\alpha=5\\%\\)</span> est <span\nclass=\"math inline\">\\([11.07~;~+\\infty[\\)</span>.</p>\n<p>On trouve <span class=\"math inline\">\\(Q_{obs} = 13.6 \\in W\\)</span>\n(<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c\">fichier\ntableur</a>)donc on peut rejeter l’hypothèse <span\nclass=\"math inline\">\\(H_0\\)</span> avec un risque de première espèce de\n<span class=\"math inline\">\\(5\\%\\)</span> : on peut suspecter que le dé\nest truqué.</p>\n"
+      }
+    }
+  ]
+}

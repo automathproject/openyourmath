@@ -1,0 +1,96 @@
+{
+  "uuid": "8mM7",
+  "titre": "Lancers de dé",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:09.159Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:09.159Z"
+  },
+  "contenu": [
+    {
+      "id": "985094d1-6e28-4e63-9f35-e1b3700b88ad",
+      "type": "description",
+      "value": {
+        "latex": "On lance $720$ fois un dé équilibré.",
+        "html": "<p>On lance <span class=\"math inline\">\\(720\\)</span> fois un dé\néquilibré.</p>\n"
+      }
+    },
+    {
+      "id": "e985df36-6be7-4066-9e8b-707665e059b7",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $X$ le nombre de fois où le nombre $6$ est apparu sur les $720$ lancers. La \\va $X$ suit donc la loi $\\mathcal{B}(720,\\frac{1}{6})$. En particulier, $\\E(X)=720\\times \\frac{1}{6}=120$ et  $\\V(X)=720\\times \\frac{1}{6}\\times (1-\\frac{1}{6})=100$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> le nombre de fois où le\nnombre <span class=\"math inline\">\\(6\\)</span> est apparu sur les <span\nclass=\"math inline\">\\(720\\)</span> lancers. La <span\nclass=\"math inline\">\\(X\\)</span> suit donc la loi <span\nclass=\"math inline\">\\(\\mathcal{B}(720,\\frac{1}{6})\\)</span>. En\nparticulier, <span class=\"math inline\">\\(\\E(X)=720\\times\n\\frac{1}{6}=120\\)</span> et <span class=\"math inline\">\\(\\V(X)=720\\times\n\\frac{1}{6}\\times (1-\\frac{1}{6})=100\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2a057c21-edd2-42e5-9e75-53dbc10e2d87",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant l'inégalité de Bienaymé-Tchebytchev, que peut-on dire de la probabilité que le nombre $6$ soit apparu entre $100$ et $140$ fois ?",
+        "html": "<p>En utilisant l’inégalité de Bienaymé-Tchebytchev, que peut-on dire de\nla probabilité que le nombre <span class=\"math inline\">\\(6\\)</span> soit\napparu entre <span class=\"math inline\">\\(100\\)</span> et <span\nclass=\"math inline\">\\(140\\)</span> fois ?</p>\n"
+      }
+    },
+    {
+      "id": "af9f644e-1a89-47f1-9a77-878fffaa86bc",
+      "type": "reponse",
+      "value": {
+        "latex": "En utilisant l'inégalité de Bienaymé-Tchebytchev, on a\n\t\t\t\\[ \\p(|X-\\E(X)|\\geq 20)\\leq \\frac{\\V(X)}{20^2}=\\frac{100}{400}=\\frac{1}{4}.\\]\n\t\t\tOn en conclut\n\t\t\t\\[ \\p(100\\leq X\\leq 140)=\\p(|X-120|\\leq 20)=1-\\p(|X-120|>20)\\geq 1-\\frac{1}{4}=\\frac{3}{4}.\\]",
+        "html": "<p>En utilisant l’inégalité de Bienaymé-Tchebytchev, on a <span\nclass=\"math display\">\\[\\p(|X-\\E(X)|\\geq 20)\\leq\n\\frac{\\V(X)}{20^2}=\\frac{100}{400}=\\frac{1}{4}.\\]</span> On en conclut\n<span class=\"math display\">\\[\\p(100\\leq X\\leq 140)=\\p(|X-120|\\leq\n20)=1-\\p(|X-120|&gt;20)\\geq 1-\\frac{1}{4}=\\frac{3}{4}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8d42d3ed-2153-42b9-80fd-2bd92f5c6a26",
+      "type": "question",
+      "value": {
+        "latex": "Que peut-on dire de cette même probabilité en utilisant une approximation par la loi Normale ?",
+        "html": "<p>Que peut-on dire de cette même probabilité en utilisant une\napproximation par la loi Normale ?</p>\n"
+      }
+    },
+    {
+      "id": "12a09889-2f3e-4adc-8fdd-ef7f600b4407",
+      "type": "reponse",
+      "value": {
+        "latex": "On approxime la loi de $X$ par la loi $\\mathcal{N}(120,\\sigma^2=10^2)$. Alors\n\t\t\t$$\\begin{align*}\n\t\t\t\t\\p(100\\leq X\\leq 140)&=\\p(-2\\leq \\frac{X-120}{10}\\leq 2) \\\\\n\t\t\t\t&\\simeq \\p(-2\\leq Z\\leq 2), \\quad \\text{où} \\ Z\\sim \\mathcal{N}(0,1) \\\\\n\t\t\t\t&\\simeq 2\\p(Z\\leq 2)-1 \\\\\n\t\t\t\t&\\simeq 2* 0.9772-1, \\quad \\text{par lecture de la table de loi } \\mathcal{N}(0,1)  \\\\\n\t\t\t\t& \\simeq 0.9544.\n\t\t\\end{align*}$$",
+        "html": "<p>On approxime la loi de <span class=\"math inline\">\\(X\\)</span> par la\nloi <span class=\"math inline\">\\(\\mathcal{N}(120,\\sigma^2=10^2)\\)</span>.\nAlors <span class=\"math display\">\\[\\begin{align*}\n                \\p(100\\leq X\\leq 140)&amp;=\\p(-2\\leq\n\\frac{X-120}{10}\\leq 2) \\\\\n                &amp;\\simeq \\p(-2\\leq Z\\leq 2), \\quad \\text{où} \\ Z\\sim\n\\mathcal{N}(0,1) \\\\\n                &amp;\\simeq 2\\p(Z\\leq 2)-1 \\\\\n                &amp;\\simeq 2* 0.9772-1, \\quad \\text{par lecture de la\ntable de loi } \\mathcal{N}(0,1)  \\\\\n                &amp; \\simeq 0.9544.\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "cb7e5c13-11c6-4176-9881-28ecdcf085d2",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer le plus petit entier $n$ tel que $\\mathbb{P}(|X-120|\\leq n)\\geq 0.9$, où $X$ est la variable aléatoire égale au nombre d'apparition du $6$ sur $720$ lancers, que l'on puisse obtenir:\n\t\t\\begin{enumerate}\n\t\t\t\\item par l'inégalité de Bienaymé-Tchebytchev,\n\t\t\t\\item par le théorème central-limite.\n\t\\end{enumerate}",
+        "html": "<p>Déterminer le plus petit entier <span\nclass=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math inline\">\\(\\mathbb{P}(|X-120|\\leq n)\\geq 0.9\\)</span>, où\n<span class=\"math inline\">\\(X\\)</span> est la variable aléatoire égale\nau nombre d’apparition du <span class=\"math inline\">\\(6\\)</span> sur\n<span class=\"math inline\">\\(720\\)</span> lancers, que l’on puisse\nobtenir:</p>\n<ol>\n<li><p>par l’inégalité de Bienaymé-Tchebytchev,</p></li>\n<li><p>par le théorème central-limite.</p></li>\n</ol>\n"
+      }
+    },
+    {
+      "id": "01ad97ad-2ccc-4008-b645-3b428a80a38d",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}\n\t\t\t\\item Par l'inégalité de Bienaymé-Tchebytchev, on a  \n\t\t\t\\[\\p(|X-120|\\geq n) \\leq \\frac{100}{n^2}.\\]\n\t\t\tSi on impose $\\frac{100}{n^2}<0.1$, alors on a bien l'inégalité recherchée, à savoir $ \\p(|X-120|\\leq n) \\geq 0.9$.\n\t\t\tOr \n\t\t\t\\[ \\frac{100}{n^2}<0.1 \\Leftrightarrow n>\\sqrt{1000}\\simeq 31.62.\\]\n\t\t\tLa valeur minimale de $n$ obtenue est donc $n=32$.\n\t\t\t\\item $\\p(|X-120|\\leq n)=\\p(|\\frac{X-120}{10}|\\leq \\frac{n}{10})\\simeq \\p(Z\\leq \\frac{n}{10})-1$, où $Z\\sim \\mathcal{N}(0,1)$.\n\t\t\tAinsi la condition $ \\p(|X-120|\\leq n) \\geq 0.9$ devient $\\p(Z\\leq \\frac{n}{10})\\leq 0.95$, c'est-à-dire \n\t\t\t$\\frac{n}{10}\\geq 1.64$. La valeur minimale de $n$ obtenue est donc $n=17$.\n\t\\end{enumerate}",
+        "html": "<ol>\n<li><p>Par l’inégalité de Bienaymé-Tchebytchev, on a <span\nclass=\"math display\">\\[\\p(|X-120|\\geq n) \\leq \\frac{100}{n^2}.\\]</span>\nSi on impose <span\nclass=\"math inline\">\\(\\frac{100}{n^2}&lt;0.1\\)</span>, alors on a bien\nl’inégalité recherchée, à savoir <span\nclass=\"math inline\">\\(\\p(|X-120|\\leq n) \\geq 0.9\\)</span>. Or <span\nclass=\"math display\">\\[\\frac{100}{n^2}&lt;0.1 \\Leftrightarrow\nn&gt;\\sqrt{1000}\\simeq 31.62.\\]</span> La valeur minimale de <span\nclass=\"math inline\">\\(n\\)</span> obtenue est donc <span\nclass=\"math inline\">\\(n=32\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\p(|X-120|\\leq\nn)=\\p(|\\frac{X-120}{10}|\\leq \\frac{n}{10})\\simeq \\p(Z\\leq\n\\frac{n}{10})-1\\)</span>, où <span class=\"math inline\">\\(Z\\sim\n\\mathcal{N}(0,1)\\)</span>. Ainsi la condition <span\nclass=\"math inline\">\\(\\p(|X-120|\\leq n) \\geq 0.9\\)</span> devient <span\nclass=\"math inline\">\\(\\p(Z\\leq \\frac{n}{10})\\leq 0.95\\)</span>,\nc’est-à-dire <span class=\"math inline\">\\(\\frac{n}{10}\\geq 1.64\\)</span>.\nLa valeur minimale de <span class=\"math inline\">\\(n\\)</span> obtenue est\ndonc <span class=\"math inline\">\\(n=17\\)</span>.</p></li>\n</ol>\n"
+      }
+    },
+    {
+      "id": "528fb24a-b790-4cb4-89d8-c7c9dd758b18",
+      "type": "question",
+      "value": {
+        "latex": "Commenter les résultats.",
+        "html": "<p>Commenter les résultats.</p>\n"
+      }
+    },
+    {
+      "id": "9c54e5e7-e789-4568-a177-374977e033f2",
+      "type": "reponse",
+      "value": {
+        "latex": "Le théorème central-limite est plus efficace que l'inégalité de Bienaymé-Tchebytchev.",
+        "html": "<p>Le théorème central-limite est plus efficace que l’inégalité de\nBienaymé-Tchebytchev.</p>\n"
+      }
+    }
+  ]
+}

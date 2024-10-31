@@ -1,0 +1,56 @@
+{
+  "uuid": "Opt103",
+  "titre": "Un problème d'extrema",
+  "theme": [
+    "Optimisation"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Jean-François Culus",
+    "createdAt": "2024-10-31T14:47:20.442Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:20.442Z"
+  },
+  "contenu": [
+    {
+      "id": "b4fa622a-32e0-4981-9ad2-54b29f4b8b83",
+      "type": "description",
+      "value": {
+        "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n$$f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &  ~~~\\text{ si } x \\neq 0 \\\\\ny & ~~~\\text{ si } x=0 \n\\end{array}\\right.$$\n\n\\begin{enumerate}\n\\item \n\\question{Montrer que $f$ n'est pas continue en $(0,0)$.\n}\n\\reponse{Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.}\n\n\\item \n\\question{Montrer que $f$ admet des dérivées partielles au point $(0;0)$.}\n\\reponse{Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}\n\n}\n\\end{enumerate}",
+        "html": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span>\ndéfinie sur <span class=\"math inline\">\\(\\R^2\\)</span> par <span\nclass=\"math display\">\\[f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &amp;  ~~~\\text{ si } x \\neq 0 \\\\\ny &amp; ~~~\\text{ si } x=0\n\\end{array}\\right.\\]</span></p>\n<ol>\n<li></li>\n<li></li>\n</ol>\n"
+      }
+    },
+    {
+      "id": "c86edfa3-f501-49cb-861b-e589f5d76858",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f$ n'est pas continue en $(0,0)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> n’est pas continue\nen <span class=\"math inline\">\\((0,0)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4c7ba418-d0e1-48bb-8302-b182321dbf0b",
+      "type": "reponse",
+      "value": {
+        "latex": "Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.",
+        "html": "<p>Il est clair que cette fonction n’est pas continue en <span\nclass=\"math inline\">\\((0;0)\\)</span> puisque pour <span\nclass=\"math inline\">\\(y\\)</span> quelconque fixé, quand <span\nclass=\"math inline\">\\(x\\to 0\\)</span>, <span\nclass=\"math inline\">\\(f(x,y)\\to \\pm \\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dbf95dfe-f9fe-4536-b6de-eb615b5453ef",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f$ admet des dérivées partielles au point $(0;0)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> admet des dérivées\npartielles au point <span class=\"math inline\">\\((0;0)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "29b46f69-b6fe-45a5-a05c-1df842eeb422",
+      "type": "reponse",
+      "value": {
+        "latex": "Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}",
+        "html": "<p>Etudions les dérivées partielles. Pour tout <span\nclass=\"math inline\">\\(x \\in \\R^*\\)</span>, nous avons: <span\nclass=\"math inline\">\\(f(x,0)-f(0,0)=0\\)</span> d’où <span\nclass=\"math inline\">\\(\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0\\)</span>\nexiste. Ainsi, <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial\nx}(0;0)=0\\)</span>. De même pour tout <span class=\"math inline\">\\(y\\in\n\\R^*\\)</span>, nous avons: <span\nclass=\"math inline\">\\(f(0,y)-f(0,0)=y\\)</span> d’où <span\nclass=\"math inline\">\\(\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1\\)</span> et\ndonc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial\nf}{\\partial y}(0,0)\\)</span> existe est est égale à <span\nclass=\"math inline\">\\(1\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

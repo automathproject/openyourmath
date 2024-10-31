@@ -1,0 +1,32 @@
+{
+  "uuid": "j7Pn",
+  "titre": "Paramètres de la loi uniforme",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime NGUYEN",
+    "createdAt": "2024-10-31T14:47:37.736Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:37.736Z"
+  },
+  "contenu": [
+    {
+      "id": "859b8d06-cabb-4a33-a8f8-8c1321c7cab0",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire suivant une loi uniforme sur $[a;b]$. Calculer $\\EX$ et $\\mathbb{V}(X)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nsuivant une loi uniforme sur <span class=\"math inline\">\\([a;b]\\)</span>.\nCalculer <span class=\"math inline\">\\(\\EX\\)</span> et <span\nclass=\"math inline\">\\(\\mathbb{V}(X)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4f96101a-aa52-4f4f-ba8f-14d0b3daaef1",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $f$ une fonction densité de $X$. Il suffit de calculer \n \t$$\\begin{align*}\n \t\t\\mathbb{E}(X) &= \\int_{-\\infty}^{+\\infty} xf(x)dx \\\\\n \t\t&= \\int_a^b x \\times \\frac{1}{b-a} dx \\\\\n \t\t&=  \\frac{1}{b-a} \\times \\left( \\frac{b^2}{2} - \\frac{a^2}{2} \\right) \\\\\n \t\t&=  \\frac{(b+a)(b-a)}{2(b-a)}\\\\\n \t\t&= \\frac{a+b}{2}\n \t\\end{align*}$$\n \t\n \tPour calculer la variance $\\mathbb{V}(X)$, il reste à calculer :\n \t$$\\begin{align*}\n \t\t\\mathbb{E}(X^2) &= \\int_{-\\infty}^{+\\infty} x^2f(x)dx \\\\\n \t\t&= \\int_a^b x^2 \\times \\frac{1}{b-a} dx \\\\\n \t\t&=  \\frac{1}{b-a} \\times \\left( \\frac{b^3}{3} - \\frac{a^3}{3} \\right) \\\\\n \t\t&= \\frac{a^2+2ab+b^2}{3}\n \t\\end{align*}$$\n \tpuis on applique la formule de Huygens :\n \t$$\\begin{align*}\n \t\t\\mathbb{V}(X)&= \\mathbb{E}(X^2) - \\mathbb{E}(X)^2 \\\\\n \t\t&= \\frac{a^2+2ab+b^2}{3} - \\left(\\frac{a+b}{2}\\right)^2 \\\\\n \t\t&= \\frac{(b-a)^2}{12}\n \\end{align*}$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une fonction densité de\n<span class=\"math inline\">\\(X\\)</span>. Il suffit de calculer <span\nclass=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}(X) &amp;= \\int_{-\\infty}^{+\\infty} xf(x)dx \\\\\n        &amp;= \\int_a^b x \\times \\frac{1}{b-a} dx \\\\\n        &amp;=  \\frac{1}{b-a} \\times \\left( \\frac{b^2}{2} -\n\\frac{a^2}{2} \\right) \\\\\n        &amp;=  \\frac{(b+a)(b-a)}{2(b-a)}\\\\\n        &amp;= \\frac{a+b}{2}\n    \\end{align*}\\]</span></p>\n<p>Pour calculer la variance <span\nclass=\"math inline\">\\(\\mathbb{V}(X)\\)</span>, il reste à calculer :\n<span class=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}(X^2) &amp;= \\int_{-\\infty}^{+\\infty} x^2f(x)dx \\\\\n        &amp;= \\int_a^b x^2 \\times \\frac{1}{b-a} dx \\\\\n        &amp;=  \\frac{1}{b-a} \\times \\left( \\frac{b^3}{3} -\n\\frac{a^3}{3} \\right) \\\\\n        &amp;= \\frac{a^2+2ab+b^2}{3}\n    \\end{align*}\\]</span> puis on applique la formule de Huygens : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\mathbb{V}(X)&amp;= \\mathbb{E}(X^2) - \\mathbb{E}(X)^2 \\\\\n        &amp;= \\frac{a^2+2ab+b^2}{3} - \\left(\\frac{a+b}{2}\\right)^2 \\\\\n        &amp;= \\frac{(b-a)^2}{12}\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

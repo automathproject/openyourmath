@@ -1,0 +1,96 @@
+{
+  "uuid": "LBLK",
+  "titre": "Différentiabilité",
+  "theme": [
+    "calcul différentiel"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:18.392Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:18.392Z"
+  },
+  "contenu": [
+    {
+      "id": "1dfad5b2-8462-48fa-a565-ad9f094c9a0d",
+      "type": "question",
+      "value": {
+        "latex": "La fonction $f$ est-elle continue en $(0,0)$~?",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle continue\nen <span class=\"math inline\">\\((0,0)\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "03133071-e566-47ff-a4c0-4148ef242299",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons tout d'abord que $f$ est une fraction rationnelle sur $\\R^2-\\{(0,0)\\}$ donc elle y est définie et $C^{\\infty}$. Comme $f$ est par ailleurs définie en $(0,0)$, on a $\\mathcal{D}_f = \\R^2$.\n\t\t\n\t\tPour étudier la continuité en $(0,0)$, on étudie la différence $f(x,y) - f(0,0)$ et on passe comme souvent en coordonnées polaires. \n\t\t$$\\begin{align*}\n\t\tf(r \\cos\\theta, r \\sin\\theta) - f(0,0) &= \\frac{-3(r\\cos\\theta)^3+5(r\\sin\\theta)^3}{(r\\cos\\theta)^ +(r\\sin\\theta)^2} \\\\\n\t\t&= \\frac{r^3 (-3\\cos^3\\theta + 5\\sin^3\\theta)}{r^2} \\\\\n\t\t&= r(-3\\cos^3\\theta + 5\\sin^3\\theta)\n\t\t\\end{align*}$$\n\t\tOn obtient la majoration\n\t\t$$\\begin{align*}\n\t\t|f(r \\cos\\theta, r \\sin\\theta) - f(0,0)| &\\leq r(|-3\\cos^3\\theta| + 5 |\\sin^3\\theta)|) \\\\\n\t\t&\\leq (3+5)r \\\\\n\t\t& \\underset{r \\to 0_+}{\\longrightarrow} 0 \\text{ indépendamment de $\\theta$}\n\t\t\\end{align*}$$\n\t\tAinsi $f(x,y) \\underset{(x,y) \\to (0,0)}{\\longrightarrow} f(0,0)$, ce qui prouve que \\fbox{$f$ est continue en $(0,0)$.}",
+        "html": "<p>Notons tout d’abord que <span class=\"math inline\">\\(f\\)</span> est\nune fraction rationnelle sur <span\nclass=\"math inline\">\\(\\R^2-\\{(0,0)\\}\\)</span> donc elle y est définie et\n<span class=\"math inline\">\\(C^{\\infty}\\)</span>. Comme <span\nclass=\"math inline\">\\(f\\)</span> est par ailleurs définie en <span\nclass=\"math inline\">\\((0,0)\\)</span>, on a <span\nclass=\"math inline\">\\(\\mathcal{D}_f = \\R^2\\)</span>.</p>\n<p>Pour étudier la continuité en <span\nclass=\"math inline\">\\((0,0)\\)</span>, on étudie la différence <span\nclass=\"math inline\">\\(f(x,y) - f(0,0)\\)</span> et on passe comme souvent\nen coordonnées polaires. <span class=\"math display\">\\[\\begin{align*}\n        f(r \\cos\\theta, r \\sin\\theta) - f(0,0) &amp;=\n\\frac{-3(r\\cos\\theta)^3+5(r\\sin\\theta)^3}{(r\\cos\\theta)^\n+(r\\sin\\theta)^2} \\\\\n        &amp;= \\frac{r^3 (-3\\cos^3\\theta + 5\\sin^3\\theta)}{r^2} \\\\\n        &amp;= r(-3\\cos^3\\theta + 5\\sin^3\\theta)\n        \\end{align*}\\]</span> On obtient la majoration <span\nclass=\"math display\">\\[\\begin{align*}\n        |f(r \\cos\\theta, r \\sin\\theta) - f(0,0)| &amp;\\leq\nr(|-3\\cos^3\\theta| + 5 |\\sin^3\\theta)|) \\\\\n        &amp;\\leq (3+5)r \\\\\n        &amp; \\underset{r \\to 0_+}{\\longrightarrow} 0 \\text{\nindépendamment de $\\theta$}\n        \\end{align*}\\]</span> Ainsi <span class=\"math inline\">\\(f(x,y)\n\\underset{(x,y) \\to (0,0)}{\\longrightarrow} f(0,0)\\)</span>, ce qui\nprouve que</p>\n"
+      }
+    },
+    {
+      "id": "5b792005-73e1-45f5-a2f3-25675e593017",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\dpa{f}{x}$ et $\\dpa{f}{y}$ pour $(x,y) \\neq (0,0)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\dpa{f}{x}\\)</span> et <span\nclass=\"math inline\">\\(\\dpa{f}{y}\\)</span> pour <span\nclass=\"math inline\">\\((x,y) \\neq (0,0)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d83e2c26-6c88-40fe-b5c2-1db40b75f4be",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $(x,y) \\neq (0,0)$, on est dans le cas d'un point sans problème. Les dérivées partielles existent et se calculent en appliquant les formules classiques de dérivation\n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{x}(x,y) &= \\frac{ \\dpa{}{x} \\left[ -3x^3+5y^3 \\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{x} \\left[ x^2+y^2 \\right]}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{ (-9x^2)(x^2+y^2) - (-3x^3+5y^3)(2x)}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{-3x^4 - 9x^2y^2 - 10xy^3}{(x^2+y^2)^2}\n\t\t\\end{align*}$$\n\t\tet\n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{y}(x,y) &= \\frac{ \\dpa{}{y} \\left[ -3x^3+5y^3 \\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{y} \\left[ x^2+y^2 \\right]}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{ (15y^2)(x^2+y^2) - (-3x^3+5y^3)(2y)}{(x^2+y^2)^2}\\\\\n\t\t&= \\frac{6x^3y + 15x^2y^2 +5 y^4}{(x^2+y^2)^2}\n\t\t\\end{align*}$$",
+        "html": "<p>Pour <span class=\"math inline\">\\((x,y) \\neq (0,0)\\)</span>, on est\ndans le cas d’un point sans problème. Les dérivées partielles existent\net se calculent en appliquant les formules classiques de dérivation\n<span class=\"math display\">\\[\\begin{align*}\n        \\dpa{f}{x}(x,y) &amp;= \\frac{ \\dpa{}{x} \\left[ -3x^3+5y^3\n\\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{x} \\left[ x^2+y^2\n\\right]}{(x^2+y^2)^2} \\\\\n        &amp;= \\frac{ (-9x^2)(x^2+y^2) - (-3x^3+5y^3)(2x)}{(x^2+y^2)^2}\n\\\\\n        &amp;= \\frac{-3x^4 - 9x^2y^2 - 10xy^3}{(x^2+y^2)^2}\n        \\end{align*}\\]</span> et <span\nclass=\"math display\">\\[\\begin{align*}\n        \\dpa{f}{y}(x,y) &amp;= \\frac{ \\dpa{}{y} \\left[ -3x^3+5y^3\n\\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{y} \\left[ x^2+y^2\n\\right]}{(x^2+y^2)^2} \\\\\n        &amp;= \\frac{ (15y^2)(x^2+y^2) -\n(-3x^3+5y^3)(2y)}{(x^2+y^2)^2}\\\\\n        &amp;= \\frac{6x^3y + 15x^2y^2 +5 y^4}{(x^2+y^2)^2}\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "62a75339-91aa-4440-a769-fcc0adc642ce",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\dpa{f}{x}(0,0)$ et $\\dpa{f}{y}(0,0)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\dpa{f}{x}(0,0)\\)</span> et\n<span class=\"math inline\">\\(\\dpa{f}{y}(0,0)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cbac08bd-ef2a-4476-8e1f-6c4c7a5ef6b7",
+      "type": "reponse",
+      "value": {
+        "latex": "Le point $(0,0)$ est un point à problème. Comme précédemment, hors de question d'utiliser la question 2 et de remplacer $x$ et $y$ par $0$, ou de les faire tendre vers $0$. Cette méthode serait pertinente si on savait \\textbf{a priori} que les dérivées partielles sont prolongeables par continuité, mais ce n'est pas le cas et cela fait d'ailleurs l'bjet de la question suivante. \\\\\n\t\t\\emph{On retiendra qu'en général ce n'est pas un très bon réflexe de se lancer dans cette voie.}\\\\ \n\t\tLe plus propre et le plus sur est de revenir à la définition en étudiant les taux d'accroissement.\n\t\t\\[ \\frac{f(h,0) - f(0,0)}{h} = \\frac{-3h^3/h^2 - 0}{h} = -3 \\tvq{-3}{h}{0}, \\text{ donc  \\fbox{$\\dpa{f}{x}(0,0) = -3$}} \\]\n\t\tet \n\t\t\\[ \\frac{f(0,k) - f(0,0)}{k} = \\frac{5k^3/k^2}{h} = 5 \\tvq{5}{k}{0} \\text{ donc } \\dpa{f}{y}(0,0) = 5 \\]",
+        "html": "<p>Le point <span class=\"math inline\">\\((0,0)\\)</span> est un point à\nproblème. Comme précédemment, hors de question d’utiliser la question 2\net de remplacer <span class=\"math inline\">\\(x\\)</span> et <span\nclass=\"math inline\">\\(y\\)</span> par <span\nclass=\"math inline\">\\(0\\)</span>, ou de les faire tendre vers <span\nclass=\"math inline\">\\(0\\)</span>. Cette méthode serait pertinente si on\nsavait <strong>a priori</strong> que les dérivées partielles sont\nprolongeables par continuité, mais ce n’est pas le cas et cela fait\nd’ailleurs l’bjet de la question suivante.<br />\n<em>On retiendra qu’en général ce n’est pas un très bon réflexe de se\nlancer dans cette voie.</em><br />\nLe plus propre et le plus sur est de revenir à la définition en étudiant\nles taux d’accroissement. <span class=\"math display\">\\[\\frac{f(h,0) -\nf(0,0)}{h} = \\frac{-3h^3/h^2 - 0}{h} = -3 \\tvq{-3}{h}{0}, \\text{\ndonc  \\fbox{$\\dpa{f}{x}(0,0) = -3$}}\\]</span> et <span\nclass=\"math display\">\\[\\frac{f(0,k) - f(0,0)}{k} = \\frac{5k^3/k^2}{h} =\n5 \\tvq{5}{k}{0} \\text{ donc } \\dpa{f}{y}(0,0) = 5\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "205e014b-0ca9-42f0-aef9-1badcb7639a9",
+      "type": "question",
+      "value": {
+        "latex": "La fonction $f$ est-elle de classe $C^1$ en $(0,0)$~?",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle de classe\n<span class=\"math inline\">\\(C^1\\)</span> en <span\nclass=\"math inline\">\\((0,0)\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "25efe8a3-1aa5-401e-881c-eff866c6b18d",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour établir si $f$ est $C^1$ en $(0,0)$, nous devons étudier\n\t\t\\begin{itemize}\n\t\t\t\\item si $\\dpa{f}{x}(x,y)$ (resp. $\\dpa{f}{y}(x,y)$) admet une limite quand $(x,y) \\to (0,0)$ puis\n\t\t\t\\item si cette limite est égale à $\\dpa{f}{x}(0,0) = -3$ (resp. à $\\dpa{f}{y}(0,0) = 5$)\n\t\t\\end{itemize}\n\t\tRegardons les limites de $\\dpa{f}{x}$ et $\\dpa{f}{y}(x,y)$ quand $(x,y) \\to (0,0)$ selon 3 chemins~: la droite $y=0$, la droite $x=0$, la droite $x=y$. Nous avons~:\n\t\t\\[ \\dpa{f}{x}(x,0) \\to -3,\\ \\ \\dpa{f}{x}(0,y) \\to 0,\\ \\ \\dpa{f}{x}(x,x) \\to -\\frac{11}{2} \\]\n\t\t\\[ \\dpa{f}{y}(x,0) \\to 0,\\ \\ \\dpa{f}{y}(0,y) \\to 5, \\ \\ \\dpa{f}{y}(x,x) \\to -\\frac{13}{2} \\]\n\t\tAinsi ni $\\dpa{f}{x}(x,y)$ ni $\\dpa{f}{y}(x,y)$ n'admettent de limites quand $(x,y) \\to (0,0)$. A fortiori elles ne sont pas continues en $(0,0)$ donc \n\t\t\\fbox{$f$ n'est pas $C^1$ en $(0,0)$}",
+        "html": "<p>Pour établir si <span class=\"math inline\">\\(f\\)</span> est <span\nclass=\"math inline\">\\(C^1\\)</span> en <span\nclass=\"math inline\">\\((0,0)\\)</span>, nous devons étudier</p>\n<ul>\n<li><p>si <span class=\"math inline\">\\(\\dpa{f}{x}(x,y)\\)</span> (resp.\n<span class=\"math inline\">\\(\\dpa{f}{y}(x,y)\\)</span>) admet une limite\nquand <span class=\"math inline\">\\((x,y) \\to (0,0)\\)</span> puis</p></li>\n<li><p>si cette limite est égale à <span\nclass=\"math inline\">\\(\\dpa{f}{x}(0,0) = -3\\)</span> (resp. à <span\nclass=\"math inline\">\\(\\dpa{f}{y}(0,0) = 5\\)</span>)</p></li>\n</ul>\n<p>Regardons les limites de <span\nclass=\"math inline\">\\(\\dpa{f}{x}\\)</span> et <span\nclass=\"math inline\">\\(\\dpa{f}{y}(x,y)\\)</span> quand <span\nclass=\"math inline\">\\((x,y) \\to (0,0)\\)</span> selon 3 chemins : la\ndroite <span class=\"math inline\">\\(y=0\\)</span>, la droite <span\nclass=\"math inline\">\\(x=0\\)</span>, la droite <span\nclass=\"math inline\">\\(x=y\\)</span>. Nous avons : <span\nclass=\"math display\">\\[\\dpa{f}{x}(x,0) \\to -3,\\ \\ \\dpa{f}{x}(0,y) \\to\n0,\\ \\ \\dpa{f}{x}(x,x) \\to -\\frac{11}{2}\\]</span> <span\nclass=\"math display\">\\[\\dpa{f}{y}(x,0) \\to 0,\\ \\ \\dpa{f}{y}(0,y) \\to 5,\n\\ \\ \\dpa{f}{y}(x,x) \\to -\\frac{13}{2}\\]</span> Ainsi ni <span\nclass=\"math inline\">\\(\\dpa{f}{x}(x,y)\\)</span> ni <span\nclass=\"math inline\">\\(\\dpa{f}{y}(x,y)\\)</span> n’admettent de limites\nquand <span class=\"math inline\">\\((x,y) \\to (0,0)\\)</span>. A fortiori\nelles ne sont pas continues en <span\nclass=\"math inline\">\\((0,0)\\)</span> donc</p>\n"
+      }
+    },
+    {
+      "id": "36c11bf1-7a6e-42bc-92ba-ffd4a8c68df2",
+      "type": "question",
+      "value": {
+        "latex": "La fonction $f$ est-elle différentiable en $(0,0)$~?",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est-elle\ndifférentiable en <span class=\"math inline\">\\((0,0)\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "6d1fad48-bc34-4fd5-b6fd-12ae19370a16",
+      "type": "reponse",
+      "value": {
+        "latex": "On suit la méthode du poly, chap.~2, \\S~II.6. Comme $f$ admet des dérivées partielles en $(0,0)$, $f$ \\underline{peut} être différentiable en $(0,0)$ et si elle l'est sa différentielle $\\dd f(0,0)$ sera nécessairement égale à $-3 \\dd x + 5 \\dd y$. Puisque $f$ n'est pas $C^1$, on ne peut pas conclure directement à la différentiabilité et il faut étudier la limite de\n\t\t\\[ \\frac{f(h,k) - f(0,0) - [(-3)h + 5k]}{\\sqrt{h^2+k^2}} \\]\n\t\tquand $(h,k) \\to (0,0)$. Or \n\t\t$$\\begin{align*}\n\t\t\\frac{f(h,k) - f(0,0) - (-3h + 5k)}{\\sqrt{h^2+k^2}} &= \\text{(passage en polaires $h = r\\cos\\theta, k=r\\sin\\theta$)} \\\\\n\t\t&= \\frac{r(-3\\cos^3\\theta + 5\\sin^3\\theta) + 3r\\cos\\theta -5r\\sin\\theta}{r} \\\\\n\t\t&= -3\\cos^3\\theta + 5\\sin^3\\theta +3\\cos\\theta -5\\sin\\theta\n\t\t\\end{align*}$$\n\t\tCette quantité n'a pas de limite quand $r \\to 0_+$ puisqu'elle dépend de $\\theta$. A fortiori, elle ne tend pas vers $0$, ce qui signifie par définition que \\fbox{$f$ n'est pas différentiable en $(0,0)$.}",
+        "html": "<p>On suit la méthode du poly, chap. 2, § II.6. Comme <span\nclass=\"math inline\">\\(f\\)</span> admet des dérivées partielles en <span\nclass=\"math inline\">\\((0,0)\\)</span>, <span\nclass=\"math inline\">\\(f\\)</span> <u>peut</u> être différentiable en\n<span class=\"math inline\">\\((0,0)\\)</span> et si elle l’est sa\ndifférentielle <span class=\"math inline\">\\(\\dd f(0,0)\\)</span> sera\nnécessairement égale à <span class=\"math inline\">\\(-3 \\dd x + 5 \\dd\ny\\)</span>. Puisque <span class=\"math inline\">\\(f\\)</span> n’est pas\n<span class=\"math inline\">\\(C^1\\)</span>, on ne peut pas conclure\ndirectement à la différentiabilité et il faut étudier la limite de <span\nclass=\"math display\">\\[\\frac{f(h,k) - f(0,0) - [(-3)h +\n5k]}{\\sqrt{h^2+k^2}}\\]</span> quand <span class=\"math inline\">\\((h,k)\n\\to (0,0)\\)</span>. Or <span class=\"math display\">\\[\\begin{align*}\n        \\frac{f(h,k) - f(0,0) - (-3h + 5k)}{\\sqrt{h^2+k^2}} &amp;=\n\\text{(passage en polaires $h = r\\cos\\theta, k=r\\sin\\theta$)} \\\\\n        &amp;= \\frac{r(-3\\cos^3\\theta + 5\\sin^3\\theta) + 3r\\cos\\theta\n-5r\\sin\\theta}{r} \\\\\n        &amp;= -3\\cos^3\\theta + 5\\sin^3\\theta +3\\cos\\theta -5\\sin\\theta\n        \\end{align*}\\]</span> Cette quantité n’a pas de limite quand\n<span class=\"math inline\">\\(r \\to 0_+\\)</span> puisqu’elle dépend de\n<span class=\"math inline\">\\(\\theta\\)</span>. A fortiori, elle ne tend\npas vers <span class=\"math inline\">\\(0\\)</span>, ce qui signifie par\ndéfinition que</p>\n"
+      }
+    }
+  ]
+}

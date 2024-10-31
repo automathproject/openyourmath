@@ -1,0 +1,72 @@
+{
+  "uuid": "51mL",
+  "titre": "Calcul de probabilité",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime Nguyen",
+    "createdAt": "2024-10-31T14:47:05.665Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:05.665Z"
+  },
+  "contenu": [
+    {
+      "id": "b0358d89-8aac-4ed0-8fb3-2ad35e081400",
+      "type": "description",
+      "value": {
+        "latex": "Soit une fonction $f \\colon x \\mapsto \\begin{cases}\n        2x & \\text{ si } x \\in [0;1] \\\\\n        0 & \\text{ sinon }\n    \\end{cases}$.",
+        "html": "<p>Soit une fonction <span class=\"math inline\">\\(f \\colon x \\mapsto\n\\begin{cases}\n        2x &amp; \\text{ si } x \\in [0;1] \\\\\n        0 &amp; \\text{ sinon }\n    \\end{cases}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "48129d18-16d0-4035-9c3f-f6253706212f",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f$ est une densité de probabilité.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> est une densité de\nprobabilité.</p>\n"
+      }
+    },
+    {
+      "id": "43cfdbe9-6f25-4df4-81f8-c8dec10aaf53",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}\n                \\item $f$ est positive sur $\\R$.\n                \\item $\\int_{-\\infty}^{+\\infty} f(x) \\mathrm{d}x = \\int_0^1 2x \\mathrm{d}x = \\left[ x^2 \\right]_0^1 = 1$.\n            \\end{enumerate}\n            Donc $f$ est une densité de probabilité.",
+        "html": "<ol>\n<li><p><span class=\"math inline\">\\(f\\)</span> est positive sur <span\nclass=\"math inline\">\\(\\R\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(\\int_{-\\infty}^{+\\infty} f(x)\n\\mathrm{d}x = \\int_0^1 2x \\mathrm{d}x = \\left[ x^2 \\right]_0^1 =\n1\\)</span>.</p></li>\n</ol>\n<p>Donc <span class=\"math inline\">\\(f\\)</span> est une densité de\nprobabilité.</p>\n"
+      }
+    },
+    {
+      "id": "440533c6-14e8-4b4e-9929-2a8a702d645d",
+      "type": "question",
+      "value": {
+        "latex": "\\'Ecrire $f$ à l'aide d'une fonction indicatrice $x \\mapsto \\textbf{1}_A(x)$ où $A$ est un ensemble à préciser.",
+        "html": "<p>Écrire <span class=\"math inline\">\\(f\\)</span> à l’aide d’une fonction\nindicatrice <span class=\"math inline\">\\(x \\mapsto\n\\textbf{1}_A(x)\\)</span> où <span class=\"math inline\">\\(A\\)</span> est\nun ensemble à préciser.</p>\n"
+      }
+    },
+    {
+      "id": "cccbb93f-fbd4-47a8-9c42-210a47d774ba",
+      "type": "reponse",
+      "value": {
+        "latex": "$f(x) = 2x \\textbf{1}_{[0;1]}(x)$.",
+        "html": "<p><span class=\"math inline\">\\(f(x) = 2x\n\\textbf{1}_{[0;1]}(x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "95bb1ce8-862a-4894-aab1-80f677804b8a",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire admettant $f$ pour densité de probabilité. Calculer $\\prob(X \\leq \\frac{1}{2})$ et $\\prob(-1 \\leq X \\leq 0.2)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nadmettant <span class=\"math inline\">\\(f\\)</span> pour densité de\nprobabilité. Calculer <span class=\"math inline\">\\(\\prob(X \\leq\n\\frac{1}{2})\\)</span> et <span class=\"math inline\">\\(\\prob(-1 \\leq X\n\\leq 0.2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d7c27028-9a60-4c04-9b15-5ba2962e4469",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n                \\prob(X \\leq \\frac{1}{2}) &= \\int_{-\\infty}^{\\frac{1}{2}} f(x) \\mathrm{d}x \\\\\n                &= \\int_0^{\\frac{1}{2}} 2x \\mathrm{d}x \\\\\n                &= \\left[ x^2 \\right]_0^{\\frac{1}{2}} \\\\\n                &= \\frac{1}{4}\n            \\end{align*}$$\n            $$\\begin{align*}\n                \\prob(-1 \\leq X \\leq 0.2) &= \\int_{-1}^{0.2} f(x) \\mathrm{d}x \\\\\n                &= \\int_0^{0.2} 2x \\mathrm{d}x \\\\\n                &= \\left[ x^2 \\right]_0^{0.2} \\\\\n                &= 0.04\n            \\end{align*}$$",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n                \\prob(X \\leq \\frac{1}{2}) &amp;=\n\\int_{-\\infty}^{\\frac{1}{2}} f(x) \\mathrm{d}x \\\\\n                &amp;= \\int_0^{\\frac{1}{2}} 2x \\mathrm{d}x \\\\\n                &amp;= \\left[ x^2 \\right]_0^{\\frac{1}{2}} \\\\\n                &amp;= \\frac{1}{4}\n            \\end{align*}\\]</span> <span\nclass=\"math display\">\\[\\begin{align*}\n                \\prob(-1 \\leq X \\leq 0.2) &amp;= \\int_{-1}^{0.2} f(x)\n\\mathrm{d}x \\\\\n                &amp;= \\int_0^{0.2} 2x \\mathrm{d}x \\\\\n                &amp;= \\left[ x^2 \\right]_0^{0.2} \\\\\n                &amp;= 0.04\n            \\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

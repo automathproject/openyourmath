@@ -1,0 +1,104 @@
+{
+  "uuid": "jemd",
+  "titre": "Maximum de vraisemblance pour une loi géométrique",
+  "theme": [
+    "statistiques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime NGUYEN",
+    "createdAt": "2024-10-31T14:47:38.220Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:38.220Z"
+  },
+  "contenu": [
+    {
+      "id": "25e2f426-b8e9-4038-a2d9-0861f44ccef9",
+      "type": "description",
+      "value": {
+        "latex": "On rappelle qu'une variable $X$ suit une loi géométrique de paramètre $p \\in ]0;1[$ si $X$ est à valeurs dans $\\N^*=\\{1;2;3;...\\}$ et si pour tout $k \\in \\N^*$, \n$$\\PP(X=k)=p(1-p)^{k-1}$$\n\nOn cherche à estimer ce paramètre $p$ à partir d'un échantillon.",
+        "html": "<p>On rappelle qu’une variable <span class=\"math inline\">\\(X\\)</span>\nsuit une loi géométrique de paramètre <span class=\"math inline\">\\(p \\in\n]0;1[\\)</span> si <span class=\"math inline\">\\(X\\)</span> est à valeurs\ndans <span class=\"math inline\">\\(\\N^*=\\{1;2;3;...\\}\\)</span> et si pour\ntout <span class=\"math inline\">\\(k \\in \\N^*\\)</span>, <span\nclass=\"math display\">\\[\\PP(X=k)=p(1-p)^{k-1}\\]</span></p>\n<p>On cherche à estimer ce paramètre <span\nclass=\"math inline\">\\(p\\)</span> à partir d’un échantillon.</p>\n"
+      }
+    },
+    {
+      "id": "458d692a-d38b-42dd-ac48-3c3c6482c17a",
+      "type": "description",
+      "value": {
+        "latex": "On considère un échantillon $(X_1,X_2,X_3,X_4,X_5)$  ayant pour loi mère une loi géométrique de paramètre $p$ et on suppose que la suite  $(3;4;4;2;3)$ constitue une réalisation de cet échantillon.",
+        "html": "<p>On considère un échantillon <span\nclass=\"math inline\">\\((X_1,X_2,X_3,X_4,X_5)\\)</span> ayant pour loi mère\nune loi géométrique de paramètre <span class=\"math inline\">\\(p\\)</span>\net on suppose que la suite <span\nclass=\"math inline\">\\((3;4;4;2;3)\\)</span> constitue une réalisation de\ncet échantillon.</p>\n"
+      }
+    },
+    {
+      "id": "45382e30-d211-46d1-95c2-996ff9e59322",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer la fonction de vraisemblance associée à cet échantillon.",
+        "html": "<p>Exprimer la fonction de vraisemblance associée à cet échantillon.</p>\n"
+      }
+    },
+    {
+      "id": "1f861096-13d9-410d-9650-dc81d0186f96",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après le cours, la fonction de vraisemblance associée à cet échantillon est donnée par :\n\t\t$$\\begin{align*}\n\t\t\tL(p) &= \\PP(X_1=3) \\times \\PP(X_2=4) \\times \\PP(X_3=4) \\times \\PP(X_4=2) \\times \\PP(X_5=3) \\\\\n\t\t\t&= p(1-p)^2 \\times p(1-p)^3 \\times p(1-p)^3 \\times p(1-p) \\times p(1-p)^2 \\\\\n\t\t\t&= p^5(1-p)^{11}\n\t\t\\end{align*}$$",
+        "html": "<p>D’après le cours, la fonction de vraisemblance associée à cet\néchantillon est donnée par : <span class=\"math display\">\\[\\begin{align*}\n            L(p) &amp;= \\PP(X_1=3) \\times \\PP(X_2=4) \\times \\PP(X_3=4)\n\\times \\PP(X_4=2) \\times \\PP(X_5=3) \\\\\n            &amp;= p(1-p)^2 \\times p(1-p)^3 \\times p(1-p)^3 \\times\np(1-p) \\times p(1-p)^2 \\\\\n            &amp;= p^5(1-p)^{11}\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "c3160ed1-eda8-4ee6-8e0c-2cd575485ae1",
+      "type": "question",
+      "value": {
+        "latex": "En déduire une estimation de $p$ par la méthode du maximum de vraisemblance.",
+        "html": "<p>En déduire une estimation de <span class=\"math inline\">\\(p\\)</span>\npar la méthode du maximum de vraisemblance.</p>\n"
+      }
+    },
+    {
+      "id": "d98fb538-fb98-400f-9835-2ef7ab98756b",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche à maximiser la fonction $L$ sur $]0;1[$. Pour cela, on calcule la dérivée de $L$ :\n\t\t$$\\begin{align*}\n\t\t\tL'(p) &= 5p^4(1-p)^{11} - 11p^5(1-p)^{10} \\\\\n\t\t\t&= p^4(1-p)^{10}(5-11p)\n\t\t\\end{align*}$$\n\t\tLa fonction $L$ est dérivable sur $]0;1[$ et $L'(p)=0$ si et seulement si $p=0$, $p=1$ ou $p=\\frac{5}{11}$. \\\\\n\t\tOr, $L(0)=0$, $L(1)=0$ et $L(\\frac{5}{11})>0$. \\\\\n\t\tDonc, $L$ admet un maximum en $p=\\frac{5}{11}$.  \n\n\t\tEn conclusion, la valeur la plus vraisemblable pour $p$ est $\\frac{5}{11}$. Il s'agit donc d'une estimation du paramètre $p$ par la méthode du maximum de vraisemblance.",
+        "html": "<p>On cherche à maximiser la fonction <span\nclass=\"math inline\">\\(L\\)</span> sur <span\nclass=\"math inline\">\\(]0;1[\\)</span>. Pour cela, on calcule la dérivée\nde <span class=\"math inline\">\\(L\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n            L&#39;(p) &amp;= 5p^4(1-p)^{11} - 11p^5(1-p)^{10} \\\\\n            &amp;= p^4(1-p)^{10}(5-11p)\n        \\end{align*}\\]</span> La fonction <span\nclass=\"math inline\">\\(L\\)</span> est dérivable sur <span\nclass=\"math inline\">\\(]0;1[\\)</span> et <span\nclass=\"math inline\">\\(L&#39;(p)=0\\)</span> si et seulement si <span\nclass=\"math inline\">\\(p=0\\)</span>, <span\nclass=\"math inline\">\\(p=1\\)</span> ou <span\nclass=\"math inline\">\\(p=\\frac{5}{11}\\)</span>.<br />\nOr, <span class=\"math inline\">\\(L(0)=0\\)</span>, <span\nclass=\"math inline\">\\(L(1)=0\\)</span> et <span\nclass=\"math inline\">\\(L(\\frac{5}{11})&gt;0\\)</span>.<br />\nDonc, <span class=\"math inline\">\\(L\\)</span> admet un maximum en <span\nclass=\"math inline\">\\(p=\\frac{5}{11}\\)</span>.</p>\n<p>En conclusion, la valeur la plus vraisemblable pour <span\nclass=\"math inline\">\\(p\\)</span> est <span\nclass=\"math inline\">\\(\\frac{5}{11}\\)</span>. Il s’agit donc d’une\nestimation du paramètre <span class=\"math inline\">\\(p\\)</span> par la\nméthode du maximum de vraisemblance.</p>\n"
+      }
+    },
+    {
+      "id": "a80037b4-8007-4f59-81b4-0eda59c55df8",
+      "type": "description",
+      "value": {
+        "latex": "Afin de déterminer un estimateur de $p$, on considère maintenant un $n$-échantillon $(X_1,...,X_n)$ ayant pour loi mère une loi géométrique de paramètre $p$ et $n$ entiers non nuls $(x_1,...,x_n)$ constituant une réalisation de cet échantillon.",
+        "html": "<p>Afin de déterminer un estimateur de <span\nclass=\"math inline\">\\(p\\)</span>, on considère maintenant un <span\nclass=\"math inline\">\\(n\\)</span>-échantillon <span\nclass=\"math inline\">\\((X_1,...,X_n)\\)</span> ayant pour loi mère une loi\ngéométrique de paramètre <span class=\"math inline\">\\(p\\)</span> et <span\nclass=\"math inline\">\\(n\\)</span> entiers non nuls <span\nclass=\"math inline\">\\((x_1,...,x_n)\\)</span> constituant une réalisation\nde cet échantillon.</p>\n"
+      }
+    },
+    {
+      "id": "e6fd931d-e43c-4285-97c5-d8714b81c072",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer la fonction de vraisemblance associée à cet échantillon.",
+        "html": "<p>Exprimer la fonction de vraisemblance associée à cet échantillon.</p>\n"
+      }
+    },
+    {
+      "id": "f62197d0-2383-4c3c-b244-9e647a8549f8",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\t\t\tL(x_1,...,x_n,p) &= \\PP(X_1=x_1) \\times ... \\times \\PP(X_n=x_n) \\\\\n\t\t\t&= p(1-p)^{x_1-1} \\times ... \\times p(1-p)^{x_n-1} \\\\\n\t\t\t&= p^n(1-p)^{x_1+...+x_n-n}\n\t\t\\end{align*}$$",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n            L(x_1,...,x_n,p) &amp;= \\PP(X_1=x_1) \\times ... \\times\n\\PP(X_n=x_n) \\\\\n            &amp;= p(1-p)^{x_1-1} \\times ... \\times p(1-p)^{x_n-1} \\\\\n            &amp;= p^n(1-p)^{x_1+...+x_n-n}\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "4df222da-2ee2-49b5-bf12-364cfa1f0f28",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant la méthode du maximum de vraisemblance, déterminer un estimateur du paramètre $p$.",
+        "html": "<p>En utilisant la méthode du maximum de vraisemblance, déterminer un\nestimateur du paramètre <span class=\"math inline\">\\(p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "569cb7ef-9b44-4b4b-ab59-77adb5ebbf4d",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche à maximiser la fonction $L$ sur $]0;1[$. Pour cela, on calcule la dérivée partielle de $L$ par rapport à $p$ : \n\t\t$$\\begin{align*}\n\t\t\t\\frac{\\partial L}{\\partial p}(x_1,...,x_n,p) &= np^{n-1}(1-p)^{x_1+...+x_n-n} - p^n(x_1+...+x_n-n)(1-p)^{x_1+...+x_n-n-1} \\\\\n\t\t\t&= p^{n-1}(1-p)^{x_1+...+x_n-n-1}(n-(x_1+...+x_n-n)p)\n\t\t\\end{align*}$$\n\t\tLa fonction $L$ est dérivable sur $]0;1[$ et $\\frac{\\partial L}{\\partial p}(p)=0$ si et seulement si $p=0$, $p=1$ ou $p=\\frac{n}{\\sum\\limits_{i=1}^n x_i}$. \\\\\n\t\tOr, $L(0)=0$, $L(1)=0$ et $L\\left(\\frac{n}{\\sum\\limits_{i=1}^n x_i}\\right)>0$. \\\\\n\t\tDonc, $L$ admet un maximum en $p=\\frac{n}{\\sum\\limits_{i=1}^n x_i}$. \n\n\t\tCeci étant vrai pour toute réalisation $(x_1,...,x_n)$ de l'échantillon, on en déduit que $\\widehat{p}=\\frac{n}{\\sum\\limits_{i=1}^n X_i}$ est un estimateur du paramètre $p$ par la méthode du maximum de vraisemblance.",
+        "html": "<p>On cherche à maximiser la fonction <span\nclass=\"math inline\">\\(L\\)</span> sur <span\nclass=\"math inline\">\\(]0;1[\\)</span>. Pour cela, on calcule la dérivée\npartielle de <span class=\"math inline\">\\(L\\)</span> par rapport à <span\nclass=\"math inline\">\\(p\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n            \\frac{\\partial L}{\\partial p}(x_1,...,x_n,p) &amp;=\nnp^{n-1}(1-p)^{x_1+...+x_n-n} -\np^n(x_1+...+x_n-n)(1-p)^{x_1+...+x_n-n-1} \\\\\n            &amp;= p^{n-1}(1-p)^{x_1+...+x_n-n-1}(n-(x_1+...+x_n-n)p)\n        \\end{align*}\\]</span> La fonction <span\nclass=\"math inline\">\\(L\\)</span> est dérivable sur <span\nclass=\"math inline\">\\(]0;1[\\)</span> et <span\nclass=\"math inline\">\\(\\frac{\\partial L}{\\partial p}(p)=0\\)</span> si et\nseulement si <span class=\"math inline\">\\(p=0\\)</span>, <span\nclass=\"math inline\">\\(p=1\\)</span> ou <span\nclass=\"math inline\">\\(p=\\frac{n}{\\sum\\limits_{i=1}^n\nx_i}\\)</span>.<br />\nOr, <span class=\"math inline\">\\(L(0)=0\\)</span>, <span\nclass=\"math inline\">\\(L(1)=0\\)</span> et <span\nclass=\"math inline\">\\(L\\left(\\frac{n}{\\sum\\limits_{i=1}^n\nx_i}\\right)&gt;0\\)</span>.<br />\nDonc, <span class=\"math inline\">\\(L\\)</span> admet un maximum en <span\nclass=\"math inline\">\\(p=\\frac{n}{\\sum\\limits_{i=1}^n x_i}\\)</span>.</p>\n<p>Ceci étant vrai pour toute réalisation <span\nclass=\"math inline\">\\((x_1,...,x_n)\\)</span> de l’échantillon, on en\ndéduit que <span\nclass=\"math inline\">\\(\\widehat{p}=\\frac{n}{\\sum\\limits_{i=1}^n\nX_i}\\)</span> est un estimateur du paramètre <span\nclass=\"math inline\">\\(p\\)</span> par la méthode du maximum de\nvraisemblance.</p>\n"
+      }
+    }
+  ]
+}

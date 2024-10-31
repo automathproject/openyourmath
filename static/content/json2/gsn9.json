@@ -1,0 +1,56 @@
+{
+  "uuid": "gsn9",
+  "titre": "Fonction de répartition",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:35.520Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:35.520Z"
+  },
+  "contenu": [
+    {
+      "id": "0b64b957-b091-4a8b-89de-75e359db7ab8",
+      "type": "description",
+      "value": {
+        "latex": "Soit $\\lambda>0$ et $X$ une variable aléatoire admettant pour densité $f(x)=\\lambda e^{-\\lambda x}1_{[0;+\\infty[}(x)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> et <span\nclass=\"math inline\">\\(X\\)</span> une variable aléatoire admettant pour\ndensité <span class=\"math inline\">\\(f(x)=\\lambda e^{-\\lambda\nx}1_{[0;+\\infty[}(x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4da256d7-97e2-40f1-b010-10abe862d09f",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que $f$ définit bien une fonction densité, puis déterminer la fonction de répartition $F_X$ de $X$.",
+        "html": "<p>Vérifier que <span class=\"math inline\">\\(f\\)</span> définit bien une\nfonction densité, puis déterminer la fonction de répartition <span\nclass=\"math inline\">\\(F_X\\)</span> de <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6a3aff26-eb29-4a21-b918-059e4e489f92",
+      "type": "reponse",
+      "value": {
+        "latex": "Il suffit de vérifier que $f(x) \\geq 0$ pour tout $x \\in \\R$ puis de calculer :\n        $$\\begin{align*}\n        \\int_{-\\infty}^{+\\infty} f(x)dx &= \\int_0^{+\\infty} \\lambda e^{-\\lambda x} dx \\\\\n                                       &= \\left[-e^{-\\lambda x}\\right]_0^{+\\infty} \\\\\n                                       &= 1\n        \\end{align*}$$\n   On détermine maintenant la fonction de répartition : soit $t \\in \\R$ ;\n   \\begin{itemize}\n       \\item si $t<0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^t 0 dx = 0$ ;\n       \\item si $t \\geq 0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^0 0 dx + \\int_0^t \\lambda e^{-\\lambda x} dx = 0 + \\left[-e^{-\\lambda x}\\right]_0^t = 1 - e^{-\\lambda t}$.\n   \\end{itemize}",
+        "html": "<p>Il suffit de vérifier que <span class=\"math inline\">\\(f(x) \\geq\n0\\)</span> pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span> puis\nde calculer : <span class=\"math display\">\\[\\begin{align*}\n        \\int_{-\\infty}^{+\\infty} f(x)dx &amp;= \\int_0^{+\\infty} \\lambda\ne^{-\\lambda x} dx \\\\\n                                       &amp;= \\left[-e^{-\\lambda\nx}\\right]_0^{+\\infty} \\\\\n                                       &amp;= 1\n        \\end{align*}\\]</span> On détermine maintenant la fonction de\nrépartition : soit <span class=\"math inline\">\\(t \\in \\R\\)</span> ;</p>\n<ul>\n<li><p>si <span class=\"math inline\">\\(t&lt;0\\)</span>, alors <span\nclass=\"math inline\">\\(F_X(t) = \\int_{-\\infty}^t f(x)dx =\n\\int_{-\\infty}^t 0 dx = 0\\)</span> ;</p></li>\n<li><p>si <span class=\"math inline\">\\(t \\geq 0\\)</span>, alors <span\nclass=\"math inline\">\\(F_X(t) = \\int_{-\\infty}^t f(x)dx =\n\\int_{-\\infty}^0 0 dx + \\int_0^t \\lambda e^{-\\lambda x} dx = 0 +\n\\left[-e^{-\\lambda x}\\right]_0^t = 1 - e^{-\\lambda t}\\)</span>.</p></li>\n</ul>\n"
+      }
+    },
+    {
+      "id": "f49968d8-f69d-4b40-83af-04843d1deaa4",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer $\\prob(-1 \\leq X \\leq 1)$ en fonction de $F_X$ et en déduire une valeur numérique.",
+        "html": "<p>Exprimer <span class=\"math inline\">\\(\\prob(-1 \\leq X \\leq 1)\\)</span>\nen fonction de <span class=\"math inline\">\\(F_X\\)</span> et en déduire\nune valeur numérique.</p>\n"
+      }
+    },
+    {
+      "id": "0099955c-6d1c-4c52-8208-be4ec472e236",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n            \\prob(-1 \\leq X \\leq 1) &= F_X(1) - F_X(-1) \\\\\n                                    &= (1-e^{-\\lambda}) - 0 \\\\\n                                    &= 1-e^{-\\lambda}\n        \\end{align*}$$",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n            \\prob(-1 \\leq X \\leq 1) &amp;= F_X(1) - F_X(-1) \\\\\n                                    &amp;= (1-e^{-\\lambda}) - 0 \\\\\n                                    &amp;= 1-e^{-\\lambda}\n        \\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

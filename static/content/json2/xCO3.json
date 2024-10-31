@@ -1,0 +1,72 @@
+{
+  "uuid": "xCO3",
+  "titre": "Lois, fonctions caractéristiques pour un couple",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:49.944Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:49.944Z"
+  },
+  "contenu": [
+    {
+      "id": "79f28018-2c76-48af-b5d1-222773a6f641",
+      "type": "description",
+      "value": {
+        "latex": "Pour tout $(x,y) \\in \\R^2$, on pose : $$f(x,y)=k(1+xy(x^2-y^2)) \\textbf{1}_{[-1;1]^2}(x,y).$$",
+        "html": "<p>Pour tout <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span>, on\npose : <span class=\"math display\">\\[f(x,y)=k(1+xy(x^2-y^2))\n\\textbf{1}_{[-1;1]^2}(x,y).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b805b26d-8bba-466d-a1d8-5767ea54a680",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la valeur de $k$ pour que $f$ soit une densité de probabilité associée à un couple de variables aléatoires $(X,Y)$.",
+        "html": "<p>Déterminer la valeur de <span class=\"math inline\">\\(k\\)</span> pour\nque <span class=\"math inline\">\\(f\\)</span> soit une densité de\nprobabilité associée à un couple de variables aléatoires <span\nclass=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bb8c79f5-239e-43e3-85f6-45b4afbdb8f6",
+      "type": "reponse",
+      "value": {
+        "latex": "$f$ est positive sur $\\mathbb{R}$ si $k\\geq 0$. Par ailleurs,\n\t\t$$\\begin{align*}\n\t\t\t\\int_{\\mathbb{R}^2} f(x,y) dxdy\n\t\t\t&= \\int_{-1}^1\\int_{-1}^1 k(1+x^3y-xy^3) dxdy \\\\\n\t\t\t&=\\int_{-1}^1 k \\left[ x+\\frac{1}{4}x^4y-\\frac{1}{2}x^2y^3\\right]_{x=-1}^1 dy \\\\\n\t\t\t&=\\int_{-1}^1 2kdy \\\\\n\t\t\t&=4k.\n\t\t\\end{align*}$$\n\t\tPour $\\displaystyle k=\\frac{1}{4}$, $f$ est positive sur $\\mathbb{R}$ et $\\displaystyle \\int_\\mathbb{R} f(x)dx=1$ donc $f$ est une densité de probabilité.",
+        "html": "<p><span class=\"math inline\">\\(f\\)</span> est positive sur <span\nclass=\"math inline\">\\(\\mathbb{R}\\)</span> si <span\nclass=\"math inline\">\\(k\\geq 0\\)</span>. Par ailleurs, <span\nclass=\"math display\">\\[\\begin{align*}\n            \\int_{\\mathbb{R}^2} f(x,y) dxdy\n            &amp;= \\int_{-1}^1\\int_{-1}^1 k(1+x^3y-xy^3) dxdy \\\\\n            &amp;=\\int_{-1}^1 k \\left[\nx+\\frac{1}{4}x^4y-\\frac{1}{2}x^2y^3\\right]_{x=-1}^1 dy \\\\\n            &amp;=\\int_{-1}^1 2kdy \\\\\n            &amp;=4k.\n        \\end{align*}\\]</span> Pour <span\nclass=\"math inline\">\\(\\displaystyle k=\\frac{1}{4}\\)</span>, <span\nclass=\"math inline\">\\(f\\)</span> est positive sur <span\nclass=\"math inline\">\\(\\mathbb{R}\\)</span> et <span\nclass=\"math inline\">\\(\\displaystyle \\int_\\mathbb{R} f(x)dx=1\\)</span>\ndonc <span class=\"math inline\">\\(f\\)</span> est une densité de\nprobabilité.</p>\n"
+      }
+    },
+    {
+      "id": "0796d282-caf6-4a9d-8539-6c55bd840444",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer les densités marginales du couple $(X,Y)$, ainsi que leurs fonctions caractéristiques. Les variables $X$ et $Y$ sont-elles indépendantes ?",
+        "html": "<p>Déterminer les densités marginales du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>, ainsi que leurs fonctions\ncaractéristiques. Les variables <span class=\"math inline\">\\(X\\)</span>\net <span class=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+      }
+    },
+    {
+      "id": "0c0f5391-2c34-4d6e-9d91-570c715b7ac8",
+      "type": "reponse",
+      "value": {
+        "latex": "Les lois marginales de $X$ et de $Y$ sont\n\t\t$$\\begin{align*}\n\t\t\tf_X(x)&=\\int_\\mathbb{R} f(x,y)dy \\\\\n\t\t\t&=\\frac{1}{4}\\textbf{1}_{[-1;1]}(x) \\ \\int_{-1}^1 (1+x^3y-xy^3) dy \\\\\n\t\t\t&= \\frac{1}{2}\\textbf{1}_{[-1;1]}(x).\n\t\t\\end{align*}$$\n\t\tPar symétrie, on obtient\n\t\t$f_Y(y)=\\frac{1}{2}\\chi_{[-1;1]}(y)$. Donc $X$ et $Y$ sont deux variables aléatoires de loi uniforme sur $[-1;1]$.\n\t\t\n\t\tSoit $t\\in\\mathbb{R}$.\n\t\t$$\\begin{align*}\n\t\t\t\\phi_X(t) &= \\mathbb{E}(e^{itX}) \\\\\n\t\t\t&= \\int_\\mathbb{R} e^{itx}f_X(x)dx \\quad \\text{(théorème de transfert)} \\\\\n\t\t\t&= \\frac{1}{2}\\int_{-1}^1 e^{itx} dx \\\\\n\t\t\t&=\\frac{1}{2}\\left[ \\frac{1}{it}e^{itx}\\right]_{x=-1}^{x=1} \\quad \\text{si } t\\neq 0\\\\\n\t\t\t&= \\frac{1}{2it}(e^{it}-e^{-it}) \\quad \\text{si } t\\neq 0 \\\\\n\t\t\t&= \\frac{\\sin t}{t} \\quad \\text{si } t\\neq 0.\n\t\t\\end{align*}$$\n\t\tPour $t=0$, $\\phi_X(t)=\\mathbb{E}(1)=1 = \\underset{t \\to 0}\\lim \\frac{\\sin t}{t}$ donc pour tout $t\\in\\mathbb{R}$, $\\phi_X(t)=\\frac{\\sin t}{t}.$\n\t\tComme $X$ et $Y$ sont de même loi, on a également pour tout $t\\in\\mathbb{R}$, $\\phi_Y(t)=\\frac{\\sin t}{t}$.\n\t\t\n\t\tLes variables aléatoires $X$ et $Y$ ne sont pas indépendantes car leur densité jointe n'est pas le produit de leurs densités marginales.",
+        "html": "<p>Les lois marginales de <span class=\"math inline\">\\(X\\)</span> et de\n<span class=\"math inline\">\\(Y\\)</span> sont <span\nclass=\"math display\">\\[\\begin{align*}\n            f_X(x)&amp;=\\int_\\mathbb{R} f(x,y)dy \\\\\n            &amp;=\\frac{1}{4}\\textbf{1}_{[-1;1]}(x) \\ \\int_{-1}^1\n(1+x^3y-xy^3) dy \\\\\n            &amp;= \\frac{1}{2}\\textbf{1}_{[-1;1]}(x).\n        \\end{align*}\\]</span> Par symétrie, on obtient <span\nclass=\"math inline\">\\(f_Y(y)=\\frac{1}{2}\\chi_{[-1;1]}(y)\\)</span>. Donc\n<span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont deux variables aléatoires de loi\nuniforme sur <span class=\"math inline\">\\([-1;1]\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(t\\in\\mathbb{R}\\)</span>. <span\nclass=\"math display\">\\[\\begin{align*}\n            \\phi_X(t) &amp;= \\mathbb{E}(e^{itX}) \\\\\n            &amp;= \\int_\\mathbb{R} e^{itx}f_X(x)dx \\quad \\text{(théorème\nde transfert)} \\\\\n            &amp;= \\frac{1}{2}\\int_{-1}^1 e^{itx} dx \\\\\n            &amp;=\\frac{1}{2}\\left[\n\\frac{1}{it}e^{itx}\\right]_{x=-1}^{x=1} \\quad \\text{si } t\\neq 0\\\\\n            &amp;= \\frac{1}{2it}(e^{it}-e^{-it}) \\quad \\text{si } t\\neq\n0 \\\\\n            &amp;= \\frac{\\sin t}{t} \\quad \\text{si } t\\neq 0.\n        \\end{align*}\\]</span> Pour <span\nclass=\"math inline\">\\(t=0\\)</span>, <span\nclass=\"math inline\">\\(\\phi_X(t)=\\mathbb{E}(1)=1 = \\underset{t \\to 0}\\lim\n\\frac{\\sin t}{t}\\)</span> donc pour tout <span\nclass=\"math inline\">\\(t\\in\\mathbb{R}\\)</span>, <span\nclass=\"math inline\">\\(\\phi_X(t)=\\frac{\\sin t}{t}.\\)</span> Comme <span\nclass=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont de même loi, on a également pour\ntout <span class=\"math inline\">\\(t\\in\\mathbb{R}\\)</span>, <span\nclass=\"math inline\">\\(\\phi_Y(t)=\\frac{\\sin t}{t}\\)</span>.</p>\n<p>Les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et\n<span class=\"math inline\">\\(Y\\)</span> ne sont pas indépendantes car\nleur densité jointe n’est pas le produit de leurs densités\nmarginales.</p>\n"
+      }
+    },
+    {
+      "id": "7aa2a8ae-5964-43e1-a0ab-2fe40c55e57b",
+      "type": "question",
+      "value": {
+        "latex": "Calculer la fonction caractéristique de $X+Y$.",
+        "html": "<p>Calculer la fonction caractéristique de <span\nclass=\"math inline\">\\(X+Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "370712a4-7041-47fa-87d7-b473c6500db8",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $t\\in\\mathbb{R}^*$. On a\n\t\t$$\\begin{align*}\n\t\t\t\\phi_{X+Y}(t)&= \\mathbb{E}(e^{itX}e^{itY}) \\\\\n\t\t\t&= \\int_{\\mathbb{R}^2} e^{itx}e^{ity} f(x,y) dxdy\\quad \\text{(théorème de transfert)} \\\\\n\t\t\t&= \\frac{1}{4}\\int_{-1}^1\\int_{-1}^1 e^{itx}e^{ity}dxdy + \\frac{1}{4} \\left(\\int_{-1}^1\\int{-1}^1 x^3ye^{itx}e^{ity} dxdy -\\int_{-1}^1\\int{-1}^1 xy^3e^{itx}e^{ity} dxdy\\right) \\\\\n\t\t\t&=\\frac{1}{4}\\int_{-1}^1 e^{itx}dx \\int_{-1}^1 e^{ity}dy +0 \\\\\n\t\t\t&= \\left[ \\frac{1}{2it}(e^{it}-e^{-it})\\right]^2 \\\\\n\t\t\t&= \\left(\\frac{\\sin t}{t}\\right)^2\n\t\t\\end{align*}$$\n\t\tet par continuité de la fonction $t\\mapsto \\frac{\\sin t}{t}$ en $0$, on obtient:\n\t\t\\[ \\forall t \\in \\mathbb{R}, \\quad \\phi_{X+Y}(t)=\\left(\\frac{\\sin t}{t}\\right)^2.\\]\n\t\tIci, on peut remarquer que nous avons l'égalité $\\phi_{X+Y}=\\phi_X\\phi_Y$ malgré le fait que les variables aléatoires $X$ et $Y$ ne soient pas indépendantes.",
+        "html": "<p>Soit <span class=\"math inline\">\\(t\\in\\mathbb{R}^*\\)</span>. On a\n<span class=\"math display\">\\[\\begin{align*}\n            \\phi_{X+Y}(t)&amp;= \\mathbb{E}(e^{itX}e^{itY}) \\\\\n            &amp;= \\int_{\\mathbb{R}^2} e^{itx}e^{ity} f(x,y) dxdy\\quad\n\\text{(théorème de transfert)} \\\\\n            &amp;= \\frac{1}{4}\\int_{-1}^1\\int_{-1}^1 e^{itx}e^{ity}dxdy\n+ \\frac{1}{4} \\left(\\int_{-1}^1\\int{-1}^1 x^3ye^{itx}e^{ity} dxdy\n-\\int_{-1}^1\\int{-1}^1 xy^3e^{itx}e^{ity} dxdy\\right) \\\\\n            &amp;=\\frac{1}{4}\\int_{-1}^1 e^{itx}dx \\int_{-1}^1 e^{ity}dy\n+0 \\\\\n            &amp;= \\left[ \\frac{1}{2it}(e^{it}-e^{-it})\\right]^2 \\\\\n            &amp;= \\left(\\frac{\\sin t}{t}\\right)^2\n        \\end{align*}\\]</span> et par continuité de la fonction <span\nclass=\"math inline\">\\(t\\mapsto \\frac{\\sin t}{t}\\)</span> en <span\nclass=\"math inline\">\\(0\\)</span>, on obtient: <span\nclass=\"math display\">\\[\\forall t \\in \\mathbb{R}, \\quad\n\\phi_{X+Y}(t)=\\left(\\frac{\\sin t}{t}\\right)^2.\\]</span> Ici, on peut\nremarquer que nous avons l’égalité <span\nclass=\"math inline\">\\(\\phi_{X+Y}=\\phi_X\\phi_Y\\)</span> malgré le fait\nque les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et\n<span class=\"math inline\">\\(Y\\)</span> ne soient pas indépendantes.</p>\n"
+      }
+    }
+  ]
+}

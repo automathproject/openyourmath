@@ -1,0 +1,88 @@
+{
+  "uuid": "jK62",
+  "titre": "Jeu de boules",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:37.974Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:37.974Z"
+  },
+  "contenu": [
+    {
+      "id": "d3394488-215b-41ed-98ea-0debd363a9a8",
+      "type": "description",
+      "value": {
+        "latex": "On tire $4$ boules avec remise dans une urne contenant des boules numérotées de $1$ à $5$. On dit que $i\\in{1,2,3,4,5}$ est une valeur gagnante si la boule numéro $i$ est tirée au moins une fois.",
+        "html": "<p>On tire <span class=\"math inline\">\\(4\\)</span> boules avec remise\ndans une urne contenant des boules numérotées de <span\nclass=\"math inline\">\\(1\\)</span> à <span\nclass=\"math inline\">\\(5\\)</span>. On dit que <span\nclass=\"math inline\">\\(i\\in{1,2,3,4,5}\\)</span> est une valeur gagnante\nsi la boule numéro <span class=\"math inline\">\\(i\\)</span> est tirée au\nmoins une fois.</p>\n"
+      }
+    },
+    {
+      "id": "382b4333-e787-40d0-80fc-51249055bb18",
+      "type": "question",
+      "value": {
+        "latex": "Pour $i=1,...,5$, soit $X_i$ la variable aléatoire qui est égale à $1$ si le numéro $i$ est une valeur gagnante, et $0$ sinon. Trouver $\\prob(X_i=0)$. Déterminer la loi, l'espérance et la variance de $X_i$ pour $i=1,...,5$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(i=1,...,5\\)</span>, soit <span\nclass=\"math inline\">\\(X_i\\)</span> la variable aléatoire qui est égale à\n<span class=\"math inline\">\\(1\\)</span> si le numéro <span\nclass=\"math inline\">\\(i\\)</span> est une valeur gagnante, et <span\nclass=\"math inline\">\\(0\\)</span> sinon. Trouver <span\nclass=\"math inline\">\\(\\prob(X_i=0)\\)</span>. Déterminer la loi,\nl’espérance et la variance de <span class=\"math inline\">\\(X_i\\)</span>\npour <span class=\"math inline\">\\(i=1,...,5\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6899e90a-7fcf-4011-9aa0-2beb1fe4a88f",
+      "type": "reponse",
+      "value": {
+        "latex": "On a \\qquad $X_i=\\begin{cases} 1 & \\text{ si } i \\text{ valeur gagnante} \\\\\n\t\t0 & \\text{ sinon}\n\t\t\\end{cases}$ \\qquad \n\t\tdonc \n\t\t\\[ \\prob(X_i=0)=\\prob(\\text{''La boule numérotée $i$ n'a jamais été tirée``})=\\left(\\frac{4}{5}\\right)^4.\\]\n\t\tComme $X_i$ ne peut prendre que deux valeurs: $0$ ou $1$, on en déduit:\n\t\t\\[ \\prob(X_i=1)=1-\\prob(X_i=0)=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625},\\]\n\t\tce qui revient à dire que $X_i\\sim \\mathcal{B}\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)$. Ainsi, on a\n\t\t$$\\begin{align*}\n\t\t\\E(X_i)&=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625}, \\\\\n\t\t\\V(X_i)&=\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)\\times \\left(\\frac{4}{5}\\right)^4=\\frac{94\\ 464}{390\\ 625}.\n\t\t\\end{align*}$$",
+        "html": "<p>On a <span class=\"math inline\">\\(X_i=\\begin{cases} 1 &amp; \\text{ si\n} i \\text{ valeur gagnante} \\\\\n        0 &amp; \\text{ sinon}\n        \\end{cases}\\)</span> donc <span\nclass=\"math display\">\\[\\prob(X_i=0)=\\prob(\\text{&#39;&#39;La boule\nnumérotée $i$ n&#39;a jamais été\ntirée``})=\\left(\\frac{4}{5}\\right)^4.\\]</span> Comme <span\nclass=\"math inline\">\\(X_i\\)</span> ne peut prendre que deux valeurs:\n<span class=\"math inline\">\\(0\\)</span> ou <span\nclass=\"math inline\">\\(1\\)</span>, on en déduit: <span\nclass=\"math display\">\\[\\prob(X_i=1)=1-\\prob(X_i=0)=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625},\\]</span>\nce qui revient à dire que <span class=\"math inline\">\\(X_i\\sim\n\\mathcal{B}\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)\\)</span>. Ainsi, on\na <span class=\"math display\">\\[\\begin{align*}\n        \\E(X_i)&amp;=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625}, \\\\\n        \\V(X_i)&amp;=\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)\\times\n\\left(\\frac{4}{5}\\right)^4=\\frac{94\\ 464}{390\\ 625}.\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "839dd580-0011-4585-afc4-a17de51b1694",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\prob((X_1=0)\\cap(X_2=0))$. Les variables aléatoires $X_1$ et $X_2$ sont-elles indépendantes ?",
+        "html": "<p>Calculer <span\nclass=\"math inline\">\\(\\prob((X_1=0)\\cap(X_2=0))\\)</span>. Les variables\naléatoires <span class=\"math inline\">\\(X_1\\)</span> et <span\nclass=\"math inline\">\\(X_2\\)</span> sont-elles indépendantes ?</p>\n"
+      }
+    },
+    {
+      "id": "ad4aca62-bd23-415b-8503-1ce44e0aba98",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\t\t\\prob((X_1=0)\\cap(X_2=0))&=\\prob(\\text{''Les boules numérotées $1$ et $2$ n'ont jamais été tirées``}) \\\\\n\t\t&= \\left(\\frac{3}{5}\\right)^4=\\frac{81}{625}\n\t\t\\end{align*}$$\n\t\tor $\\prob(X_1=0)\\prob(X_2=0)=\\left(\\frac{4}{5}\\right)^4 \\times \\left(\\frac{4}{5}\\right)^4$ donc $\\prob((X_1=0)\\cap(X_2=0)) \\neq \\prob(X_1=0)\\prob(X_2=0)$. On en conclut que les variables $X_1$ et $X_2$ ne sont pas indépendantes.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n        \\prob((X_1=0)\\cap(X_2=0))&amp;=\\prob(\\text{&#39;&#39;Les boules\nnumérotées $1$ et $2$ n&#39;ont jamais été tirées``}) \\\\\n        &amp;= \\left(\\frac{3}{5}\\right)^4=\\frac{81}{625}\n        \\end{align*}\\]</span> or <span\nclass=\"math inline\">\\(\\prob(X_1=0)\\prob(X_2=0)=\\left(\\frac{4}{5}\\right)^4\n\\times \\left(\\frac{4}{5}\\right)^4\\)</span> donc <span\nclass=\"math inline\">\\(\\prob((X_1=0)\\cap(X_2=0)) \\neq\n\\prob(X_1=0)\\prob(X_2=0)\\)</span>. On en conclut que les variables <span\nclass=\"math inline\">\\(X_1\\)</span> et <span\nclass=\"math inline\">\\(X_2\\)</span> ne sont pas indépendantes.</p>\n"
+      }
+    },
+    {
+      "id": "9cfbca40-3d90-473a-b9b0-acc8e20a7090",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la loi jointe de $(X_1,X_2)$.",
+        "html": "<p>Déterminer la loi jointe de <span\nclass=\"math inline\">\\((X_1,X_2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "226fd8e4-5e8f-4873-8a05-101fb1cbf4d7",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c||c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $0$ & $1$ & $\\prob_{X_2}$ (loi de $X_2$)  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$0$ & $\\frac{81}{625}$ & $\\frac{175}{625}$ & $\\frac{256}{625}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $\\frac{175}{625}$ & $\\frac{194}{625}$ & $\\frac{369}{625}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t\\hline\n\t\t\t\t$\\prob_{X_1}$ (loi de $X_1$) & $\\frac{256}{625}$ & $\\frac{369}{625}$ & $1$  \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}",
+        "html": "<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(X \\backslash\nY\\)</span></th>\n<th style=\"text-align: center;\"><span\nclass=\"math inline\">\\(0\\)</span></th>\n<th style=\"text-align: center;\"><span\nclass=\"math inline\">\\(1\\)</span></th>\n<th style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob_{X_2}\\)</span> (loi de <span\nclass=\"math inline\">\\(X_2\\)</span>)</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(0\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{81}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{175}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{256}{625}\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(1\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{175}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{194}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{369}{625}\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob_{X_1}\\)</span> (loi de <span\nclass=\"math inline\">\\(X_1\\)</span>)</td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{256}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\frac{369}{625}\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(1\\)</span></td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+      }
+    },
+    {
+      "id": "e5cf978e-c28c-4423-b136-ba2517071ddd",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ la variable aléatoire égale au nombre de valeurs gagnantes. Exprimer $X$ en fonction de $X_1$,...,$X_5$. Déterminer l'espérance de $X$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> la variable aléatoire\négale au nombre de valeurs gagnantes. Exprimer <span\nclass=\"math inline\">\\(X\\)</span> en fonction de <span\nclass=\"math inline\">\\(X_1\\)</span>,...,<span\nclass=\"math inline\">\\(X_5\\)</span>. Déterminer l’espérance de <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d1eafead-5be8-4691-8087-7b6b8833578e",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $X=X_1+X_2+X_3+X_4+X_5$. Comme les variables aléatoires $X_i$ sont de même loi, on obtient\n\t\t\\[ \\E(X)=\\sum_{i=1}^5 \\E(X_i)=5\\E(X_1)=5\\times \\frac{369}{625}=\\frac{369}{125}\\simeq 2.95.\\]\n\t\tEn moyenne, on aura quasiment $3$ valeurs gagnantes par jeu.",
+        "html": "<p>On a <span class=\"math inline\">\\(X=X_1+X_2+X_3+X_4+X_5\\)</span>.\nComme les variables aléatoires <span class=\"math inline\">\\(X_i\\)</span>\nsont de même loi, on obtient <span\nclass=\"math display\">\\[\\E(X)=\\sum_{i=1}^5 \\E(X_i)=5\\E(X_1)=5\\times\n\\frac{369}{625}=\\frac{369}{125}\\simeq 2.95.\\]</span> En moyenne, on aura\nquasiment <span class=\"math inline\">\\(3\\)</span> valeurs gagnantes par\njeu.</p>\n"
+      }
+    }
+  ]
+}

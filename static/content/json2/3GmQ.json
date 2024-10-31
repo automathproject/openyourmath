@@ -1,0 +1,72 @@
+{
+  "uuid": "3GmQ",
+  "titre": "Contrôle qualité",
+  "theme": [
+    "statistiques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:04.419Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:04.419Z"
+  },
+  "contenu": [
+    {
+      "id": "41cddc07-ec04-4e53-a90d-70a4efca1dec",
+      "type": "description",
+      "value": {
+        "latex": "Une entreprise fabrique  des pièces en sous-traitance. Au sein d'une démarche qualité,  toutes  les  machines  ont  été  systématiquement révisées  et  on  a  défini  une  nouvelle  organisation  dans  l'atelier  :  les  tâches  de  contrôle  sont  réparties  à  chaque  étape  du  processus  de  fabrication et le taux de pièces défectueuses est tombé à 1\\%. \n\nQuelques  mois  plus  tard,  une  opération  de  contrôle  est  effectuée  pour  vérifier  si  la  norme  de  1\\%  (hypothèse  $H_0$)  de  pièces  défectueuses reste valable. Sur les 5 000 pièces contrôlées 100 s'avèrent défectueuses, soit 2\\% (hypothèse $H_1$). \n\nMme de Mainard, chef d'entreprise, décide que si l'hypothèse nulle est vérifiée, elle ne modifiera plus son processus de production (décision $D0$) et au contraire, si c'est l'hypothèse alternative, elle entreprendra une action de sensibilisation des salariés de cet atelier au problème de la qualité (décision $D1$). \n\nPour choisir entre ces deux hypothèses, elle tire un échantillon de 1 500 pièces.",
+        "html": "<p>Une entreprise fabrique des pièces en sous-traitance. Au sein d’une\ndémarche qualité, toutes les machines ont été systématiquement révisées\net on a défini une nouvelle organisation dans l’atelier : les tâches de\ncontrôle sont réparties à chaque étape du processus de fabrication et le\ntaux de pièces défectueuses est tombé à 1%.</p>\n<p>Quelques mois plus tard, une opération de contrôle est effectuée pour\nvérifier si la norme de 1% (hypothèse <span\nclass=\"math inline\">\\(H_0\\)</span>) de pièces défectueuses reste\nvalable. Sur les 5 000 pièces contrôlées 100 s’avèrent défectueuses,\nsoit 2% (hypothèse <span class=\"math inline\">\\(H_1\\)</span>).</p>\n<p>Mme de Mainard, chef d’entreprise, décide que si l’hypothèse nulle\nest vérifiée, elle ne modifiera plus son processus de production\n(décision <span class=\"math inline\">\\(D0\\)</span>) et au contraire, si\nc’est l’hypothèse alternative, elle entreprendra une action de\nsensibilisation des salariés de cet atelier au problème de la qualité\n(décision <span class=\"math inline\">\\(D1\\)</span>).</p>\n<p>Pour choisir entre ces deux hypothèses, elle tire un échantillon de 1\n500 pièces.</p>\n"
+      }
+    },
+    {
+      "id": "06ce1ef4-7de2-402e-8bd4-b40fabb66158",
+      "type": "question",
+      "value": {
+        "latex": "Si la chef d'entreprise se fixe un risque de 1\\% d'entreprendre une action de sensibilisation des salariés à tort, quel sera le taux critique de pièces défectueuses qui fera prendre une décision ?",
+        "html": "<p>Si la chef d’entreprise se fixe un risque de 1% d’entreprendre une\naction de sensibilisation des salariés à tort, quel sera le taux\ncritique de pièces défectueuses qui fera prendre une décision ?</p>\n"
+      }
+    },
+    {
+      "id": "cea4e514-af19-4a30-bab3-8f1284e3d5ee",
+      "type": "reponse",
+      "value": {
+        "latex": "On réalise les premières étapes d'un test de conformité d'une proportion : \n\\begin{enumerate}\n\t\\item Hypothèses : $\\begin{cases}\n\t\tH_0 \\colon p = 0.01 \\\\\n\t\tH_1 \\colon p > 0.01\n\t\t\\end{cases}$\n\t\\item Variable de décision : $Z = \\dfrac{F-0.01}{\\sqrt{\\frac{0.01\\times 0.99}{1500}}} \\sim \\mathcal{N}(0,1)$\n\t\\item Zone de rejet : $W = [2.326 ; +\\infty][$ pour une erreur de première espèce $\\alpha = 1\\%$\n\t\\item proporition critique : on cherche $p_C$ tel que $ \\dfrac{F-0.01}{\\sqrt{\\frac{0.01\\times 0.99}{1500}}} = 2.326$ et on trouve $p_C = 0.016 = 1{,}6\\%$. \t\n\\end{enumerate}\t\nAu delà de $1{,}6\\%$ de pièces défectueses observées, on rejette l'hypothèse $H_0$ avec un risque de première espèce $\\alpha = 1\\%$.",
+        "html": "<p>On réalise les premières étapes d’un test de conformité d’une\nproportion :</p>\n<ol>\n<li><p>Hypothèses : <span class=\"math inline\">\\(\\begin{cases}\n        H_0 \\colon p = 0.01 \\\\\n        H_1 \\colon p &gt; 0.01\n        \\end{cases}\\)</span></p></li>\n<li><p>Variable de décision : <span class=\"math inline\">\\(Z =\n\\dfrac{F-0.01}{\\sqrt{\\frac{0.01\\times 0.99}{1500}}} \\sim\n\\mathcal{N}(0,1)\\)</span></p></li>\n<li><p>Zone de rejet : <span class=\"math inline\">\\(W = [2.326 ;\n+\\infty][\\)</span> pour une erreur de première espèce <span\nclass=\"math inline\">\\(\\alpha = 1\\%\\)</span></p></li>\n<li><p>proporition critique : on cherche <span\nclass=\"math inline\">\\(p_C\\)</span> tel que <span\nclass=\"math inline\">\\(\\dfrac{F-0.01}{\\sqrt{\\frac{0.01\\times\n0.99}{1500}}} = 2.326\\)</span> et on trouve <span\nclass=\"math inline\">\\(p_C = 0.016 = 1{,}6\\%\\)</span>.</p></li>\n</ol>\n<p>Au delà de <span class=\"math inline\">\\(1{,}6\\%\\)</span> de pièces\ndéfectueses observées, on rejette l’hypothèse <span\nclass=\"math inline\">\\(H_0\\)</span> avec un risque de première espèce\n<span class=\"math inline\">\\(\\alpha = 1\\%\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "92c8f990-f56a-4434-90a9-dc8afdcaa6b4",
+      "type": "question",
+      "value": {
+        "latex": "Si dans l'échantillon prélevé, le nombre de pièces défectueuses est 18, quelle sera la décision de la chef d'entreprise ?",
+        "html": "<p>Si dans l’échantillon prélevé, le nombre de pièces défectueuses est\n18, quelle sera la décision de la chef d’entreprise ?</p>\n"
+      }
+    },
+    {
+      "id": "eb0ca920-ac91-4116-91e1-0e51bdb17eb2",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $F_{obs} = \\frac{18}{1500} = 0.012$ : la décision prise est donc $D0$ (on ne rejette pas $H_0$).",
+        "html": "<p>On a <span class=\"math inline\">\\(F_{obs} = \\frac{18}{1500} =\n0.012\\)</span> : la décision prise est donc <span\nclass=\"math inline\">\\(D0\\)</span> (on ne rejette pas <span\nclass=\"math inline\">\\(H_0\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "3148b07e-90a8-429b-97fc-81b4be119401",
+      "type": "question",
+      "value": {
+        "latex": "Calculer alors le risque de l'acheteur, c'est-à-dire ne pas modifier le processus de production alors qu'on le devrait. Comment s'appelle ce risque ?",
+        "html": "<p>Calculer alors le risque de l’acheteur, c’est-à-dire ne pas modifier\nle processus de production alors qu’on le devrait. Comment s’appelle ce\nrisque ?</p>\n"
+      }
+    },
+    {
+      "id": "fa4a82aa-5b2e-44ff-83dd-382c9d0207f5",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche la probabilité de prendre la décision $D0$ par erreur, c'est-à-dire si $H_1$ est vraie. Sous l'hypothèse $p=0.02$, on a la variable $Z_2 = \\dfrac{F-0.02}{\\sqrt{\\frac{0.02\\times 0.98}{1500}}}$ qui suit une loi $ \\mathcal{N}(0,1)$.",
+        "html": "<p>On cherche la probabilité de prendre la décision <span\nclass=\"math inline\">\\(D0\\)</span> par erreur, c’est-à-dire si <span\nclass=\"math inline\">\\(H_1\\)</span> est vraie. Sous l’hypothèse <span\nclass=\"math inline\">\\(p=0.02\\)</span>, on a la variable <span\nclass=\"math inline\">\\(Z_2 = \\dfrac{F-0.02}{\\sqrt{\\frac{0.02\\times\n0.98}{1500}}}\\)</span> qui suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

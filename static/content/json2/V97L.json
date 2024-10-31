@@ -1,0 +1,88 @@
+{
+  "uuid": "V97L",
+  "titre": "\\'Etude d'un gain",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:24.342Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:24.342Z"
+  },
+  "contenu": [
+    {
+      "id": "d24b2315-fc70-4392-a5cd-be8e80893855",
+      "type": "description",
+      "value": {
+        "latex": "On lance un dé équilibré. On gagne 1 euro si le résultat est pair, on pert 1 euro si le résultat est impair. Ŝoit $n \\geq 1$ le nombre de parties. On note $X$ le nombre le nombre de lancers pairs obtenus au bout de $n$ parties et $G$ le gain obtenu au bout de $n$ parties.",
+        "html": "<p>On lance un dé équilibré. On gagne 1 euro si le résultat est pair, on\npert 1 euro si le résultat est impair. Ŝoit <span\nclass=\"math inline\">\\(n \\geq 1\\)</span> le nombre de parties. On note\n<span class=\"math inline\">\\(X\\)</span> le nombre le nombre de lancers\npairs obtenus au bout de <span class=\"math inline\">\\(n\\)</span> parties\net <span class=\"math inline\">\\(G\\)</span> le gain obtenu au bout de\n<span class=\"math inline\">\\(n\\)</span> parties.</p>\n"
+      }
+    },
+    {
+      "id": "18a16498-d810-4482-92a1-60384983586f",
+      "type": "question",
+      "value": {
+        "latex": "Donner la loi de $X$, son espérance et sa variance.",
+        "html": "<p>Donner la loi de <span class=\"math inline\">\\(X\\)</span>, son\nespérance et sa variance.</p>\n"
+      }
+    },
+    {
+      "id": "2cb302bd-f10f-453b-8368-0ba843123a49",
+      "type": "reponse",
+      "value": {
+        "latex": "La variable aléatoire $X$ donne le nombre de succès à l'issue de $n$ expériences indépendantes de Bernoulli où le succès est l'obtention d'un résultat pair, de probabilité $p=0.5$. On a donc $X\\sim\\mathcal{B}(n,0.5)$, $\\E(X) = n\\times0.5 = \\frac{n}{2}$ et $\\V(X) = n\\times0.5\\times0.5 = \\frac{n}{4}$.",
+        "html": "<p>La variable aléatoire <span class=\"math inline\">\\(X\\)</span> donne le\nnombre de succès à l’issue de <span class=\"math inline\">\\(n\\)</span>\nexpériences indépendantes de Bernoulli où le succès est l’obtention d’un\nrésultat pair, de probabilité <span\nclass=\"math inline\">\\(p=0.5\\)</span>. On a donc <span\nclass=\"math inline\">\\(X\\sim\\mathcal{B}(n,0.5)\\)</span>, <span\nclass=\"math inline\">\\(\\E(X) = n\\times0.5 = \\frac{n}{2}\\)</span> et <span\nclass=\"math inline\">\\(\\V(X) = n\\times0.5\\times0.5 =\n\\frac{n}{4}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "220759d8-09ab-4202-8ac1-1f24ced282c7",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer $G$ en fonction de $X$.",
+        "html": "<p>Exprimer <span class=\"math inline\">\\(G\\)</span> en fonction de <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c1ca1ebe-6799-4963-b72e-fac76be4c3bc",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $G = X - (n-X) = 2X-n$.",
+        "html": "<p>On a <span class=\"math inline\">\\(G = X - (n-X) = 2X-n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0caa209e-52ad-426b-b5ea-42dbed5a4502",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} en fonction de $X$.",
+        "html": "<p>Exprimer l’événement le gain ou la perte n’excède pas 20 euros en\nfonction de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d743b3d5-cf36-4d8d-8587-8e1a64d765e5",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $-20 \\leq G \\leq 20 \\iff -20 \\leq 2X-n \\leq 20 \\iff -10 \\leq X-\\frac{n}{2} \\leq 10$. Donc l'événement considéré est $\\{|X - \\frac{n}{2}| \\leq 10\\}$ ou encore $\\{-10 \\leq X - \\frac{n}{2} \\leq 10\\}$.",
+        "html": "<p>On a <span class=\"math inline\">\\(-20 \\leq G \\leq 20 \\iff -20 \\leq\n2X-n \\leq 20 \\iff -10 \\leq X-\\frac{n}{2} \\leq 10\\)</span>. Donc\nl’événement considéré est <span class=\"math inline\">\\(\\{|X -\n\\frac{n}{2}| \\leq 10\\}\\)</span> ou encore <span\nclass=\"math inline\">\\(\\{-10 \\leq X - \\frac{n}{2} \\leq 10\\}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9340bea4-f7bb-451e-a87b-f5a686eee06b",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant le théorème central limite sans correction de continuité, déterminer le nombre maximal de lancers $n$ à effectuer pour que la probabilité de l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} soit supérieure à $0.9544$.",
+        "html": "<p>En utilisant le théorème central limite sans correction de\ncontinuité, déterminer le nombre maximal de lancers <span\nclass=\"math inline\">\\(n\\)</span> à effectuer pour que la probabilité de\nl’événement le gain ou la perte n’excède pas 20 euros soit supérieure à\n<span class=\"math inline\">\\(0.9544\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cc5a5497-e433-45ca-8076-656b45e616ae",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche $n$ tel que $\\prob(|X - \\frac{n}{2}| \\leq 10) \\geq 0.9544$. On sait que $\\E(X) = \\frac{n}{2}$ et $\\V(X) = \\frac{n}{4}$. D'après le théorème central limite, la variable aléatoire $Z = \\frac{X-\\frac{n}{2}}{\\frac{\\sqrt{n}}{2}}$ suit approximativement une loi normale centrée réduite. On a donc : \n            $$\\prob(|X - \\frac{n}{2}| \\leq 10) = \\prob\\left(\\frac{|X - \\frac{n}{2}|}{\\frac{\\sqrt{n}}{2}} \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right) = \\prob\\left(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right)$$\n            On cherche donc $n$ tel que $\\prob(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}) = 2 \\times \\Phi(\\frac{10}{\\frac{\\sqrt{n}}{2}}) - 1 = 2 \\times \\Phi(\\frac{20}{\\sqrt{n}}) - 1 \\geq 0.9544$ soit encore $\\Phi(\\frac{20}{\\sqrt{n}}) \\geq 0.9772$.\n\n            Par lecture de table, on trouve $\\frac{20}{\\sqrt{n}} \\geq 2$ soit $n \\leq 100$.",
+        "html": "<p>On cherche <span class=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math inline\">\\(\\prob(|X - \\frac{n}{2}| \\leq 10) \\geq\n0.9544\\)</span>. On sait que <span class=\"math inline\">\\(\\E(X) =\n\\frac{n}{2}\\)</span> et <span class=\"math inline\">\\(\\V(X) =\n\\frac{n}{4}\\)</span>. D’après le théorème central limite, la variable\naléatoire <span class=\"math inline\">\\(Z =\n\\frac{X-\\frac{n}{2}}{\\frac{\\sqrt{n}}{2}}\\)</span> suit approximativement\nune loi normale centrée réduite. On a donc : <span\nclass=\"math display\">\\[\\prob(|X - \\frac{n}{2}| \\leq 10) =\n\\prob\\left(\\frac{|X - \\frac{n}{2}|}{\\frac{\\sqrt{n}}{2}} \\leq\n\\frac{10}{\\frac{\\sqrt{n}}{2}}\\right) = \\prob\\left(|Z| \\leq\n\\frac{10}{\\frac{\\sqrt{n}}{2}}\\right)\\]</span> On cherche donc <span\nclass=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math inline\">\\(\\prob(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}) = 2\n\\times \\Phi(\\frac{10}{\\frac{\\sqrt{n}}{2}}) - 1 = 2 \\times\n\\Phi(\\frac{20}{\\sqrt{n}}) - 1 \\geq 0.9544\\)</span> soit encore <span\nclass=\"math inline\">\\(\\Phi(\\frac{20}{\\sqrt{n}}) \\geq\n0.9772\\)</span>.</p>\n<p>Par lecture de table, on trouve <span\nclass=\"math inline\">\\(\\frac{20}{\\sqrt{n}} \\geq 2\\)</span> soit <span\nclass=\"math inline\">\\(n \\leq 100\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

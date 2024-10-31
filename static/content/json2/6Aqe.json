@@ -1,0 +1,80 @@
+{
+  "uuid": "6Aqe",
+  "titre": "Loi uniforme sur un triangle",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime Nguyen",
+    "createdAt": "2024-10-31T14:47:07.004Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:07.004Z"
+  },
+  "contenu": [
+    {
+      "id": "8a2cc663-3e81-4721-b1d4-7383b99158ed",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer un nombre réel $k$ tel que $f(x,y) = k \\cdot \\mathbf{1}_T(x,y)$ définisse sur $\\R^2$ la densité du couple $(X,Y)$.",
+        "html": "<p>Déterminer un nombre réel <span class=\"math inline\">\\(k\\)</span> tel\nque <span class=\"math inline\">\\(f(x,y) = k \\cdot\n\\mathbf{1}_T(x,y)\\)</span> définisse sur <span\nclass=\"math inline\">\\(\\R^2\\)</span> la densité du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "00661982-746a-4606-830a-25ffbd310e95",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $(x,y) \\in T$ si et seulement si $x \\in [0,1]$, $y \\in [0,1]$ et $y \\leq 1-x$. Donc d'après le théorème de Fubini : \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\int_{\\R^2} f(x,y) dx dy &= \\int_0^1 \\int_0^{1-x} k \\,dy dx \\\\\n\t\t\t\t&= \\int_0^1 k(1-x) dx \\\\\n\t\t\t\t&= k \\left[ x - \\frac{x^2}{2} \\right]_0^1 \\\\\n\t\t\t\t&= k \\times \\frac{1}{2}\n\t\t\t\\end{align*}$$\n\t\t\tPour que $f$ soit une densité, il faut que $\\int_{\\R^2} f(x,y) dx dy = 1$ et $f(x,y) \\geq 0$ pour tout $(x,y) \\in \\R^2$. Donc $k = 2$.",
+        "html": "<p>On a <span class=\"math inline\">\\((x,y) \\in T\\)</span> si et seulement\nsi <span class=\"math inline\">\\(x \\in [0,1]\\)</span>, <span\nclass=\"math inline\">\\(y \\in [0,1]\\)</span> et <span\nclass=\"math inline\">\\(y \\leq 1-x\\)</span>. Donc d’après le théorème de\nFubini : <span class=\"math display\">\\[\\begin{align*}\n                \\int_{\\R^2} f(x,y) dx dy &amp;= \\int_0^1 \\int_0^{1-x} k\n\\,dy dx \\\\\n                &amp;= \\int_0^1 k(1-x) dx \\\\\n                &amp;= k \\left[ x - \\frac{x^2}{2} \\right]_0^1 \\\\\n                &amp;= k \\times \\frac{1}{2}\n            \\end{align*}\\]</span> Pour que <span\nclass=\"math inline\">\\(f\\)</span> soit une densité, il faut que <span\nclass=\"math inline\">\\(\\int_{\\R^2} f(x,y) dx dy = 1\\)</span> et <span\nclass=\"math inline\">\\(f(x,y) \\geq 0\\)</span> pour tout <span\nclass=\"math inline\">\\((x,y) \\in \\R^2\\)</span>. Donc <span\nclass=\"math inline\">\\(k = 2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "55b814f3-6f16-4648-8daf-2bcd3c714977",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
+        "html": "<p>Déterminer les lois marginales du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "66bb2baf-24c8-4d77-9a2c-9a137f6e6a19",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $(x,y) \\notin T$, alors $f(x,y) = 0$. Donc pour tout $x \\notin [0,1]$, $f_X(x) = 0$. De même pour tout $y \\notin [0,1]$, $f_Y(y) = 0$. \n\n\t\t\tSi $x \\in [0,1]$, alors $f_X(x) = \\int_{-\\infty}^{+\\infty}f(x,y)dy = 2 \\int_0^{1-x} dy = 2(1-x)$. De même pour tout $y \\in [0,1]$, $f_Y(y) = 2(1-y)$.",
+        "html": "<p>Si <span class=\"math inline\">\\((x,y) \\notin T\\)</span>, alors <span\nclass=\"math inline\">\\(f(x,y) = 0\\)</span>. Donc pour tout <span\nclass=\"math inline\">\\(x \\notin [0,1]\\)</span>, <span\nclass=\"math inline\">\\(f_X(x) = 0\\)</span>. De même pour tout <span\nclass=\"math inline\">\\(y \\notin [0,1]\\)</span>, <span\nclass=\"math inline\">\\(f_Y(y) = 0\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x \\in [0,1]\\)</span>, alors <span\nclass=\"math inline\">\\(f_X(x) = \\int_{-\\infty}^{+\\infty}f(x,y)dy = 2\n\\int_0^{1-x} dy = 2(1-x)\\)</span>. De même pour tout <span\nclass=\"math inline\">\\(y \\in [0,1]\\)</span>, <span\nclass=\"math inline\">\\(f_Y(y) = 2(1-y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "398f3704-ed89-4f94-a85e-25a336dd6661",
+      "type": "question",
+      "value": {
+        "latex": "Les variables aléatoires $X$ et $Y$ sont-elles indépendantes ?",
+        "html": "<p>Les variables aléatoires <span class=\"math inline\">\\(X\\)</span> et\n<span class=\"math inline\">\\(Y\\)</span> sont-elles indépendantes ?</p>\n"
+      }
+    },
+    {
+      "id": "15ec14fe-4f07-429f-980b-d8c2d834fa1f",
+      "type": "reponse",
+      "value": {
+        "latex": "Si elles l'étaient, on aurait $f(x,y) = f_X(x) \\times f_Y(y) = 4(1-x)(1-y)$ pour tout $(x,y) \\in \\R^2$. Or $f(0,0) = 2 \\neq 4$. Donc $X$ et $Y$ ne sont pas indépendantes.",
+        "html": "<p>Si elles l’étaient, on aurait <span class=\"math inline\">\\(f(x,y) =\nf_X(x) \\times f_Y(y) = 4(1-x)(1-y)\\)</span> pour tout <span\nclass=\"math inline\">\\((x,y) \\in \\R^2\\)</span>. Or <span\nclass=\"math inline\">\\(f(0,0) = 2 \\neq 4\\)</span>. Donc <span\nclass=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> ne sont pas indépendantes.</p>\n"
+      }
+    },
+    {
+      "id": "16832c60-28bd-4b41-a975-66db17673348",
+      "type": "question",
+      "value": {
+        "latex": "Calculer la covariance du couple $(X,Y)$.",
+        "html": "<p>Calculer la covariance du couple <span\nclass=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cff75a3d-59a5-4417-993d-006bfb751d7c",
+      "type": "reponse",
+      "value": {
+        "latex": "On sait que $\\cov(X,Y) = \\E(XY) - \\E(X)\\E(Y)$. On a $\\E(X) = \\int_{-\\infty}^{+\\infty} x f_X(x) dx = \\int_0^1 2x(1-x) dx = \\frac{1}{3}$. De même $\\E(Y) = \\frac{1}{3}$. \n\n\t\t\tDe plus, \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\E(XY) &= \\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} xy f(x,y) dx dy \\\\\n\t\t\t\t&= \\int_0^1 \\int_0^{1-x} 2xy dy dx \\\\\n\t\t\t\t&= \\int_0^1 x(1-x)^2 dx \\\\\n\t\t\t\t&= \\int_0^1 x - 2x^2 + x^3 dx \\\\\n\t\t\t\t&= \\left[ \\frac{x^2}{2} - \\frac{2x^3}{3} + \\frac{x^4}{4} \\right]_0^1 \\\\\n\t\t\t\t&= \\frac{1}{12}\n\t\t\t\\end{align*}$$\nDonc $\\cov(X,Y) = \\frac{1}{12} - \\frac{1}{3} \\times \\frac{1}{3} = -\\frac{1}{36}$.",
+        "html": "<p>On sait que <span class=\"math inline\">\\(\\cov(X,Y) = \\E(XY) -\n\\E(X)\\E(Y)\\)</span>. On a <span class=\"math inline\">\\(\\E(X) =\n\\int_{-\\infty}^{+\\infty} x f_X(x) dx = \\int_0^1 2x(1-x) dx =\n\\frac{1}{3}\\)</span>. De même <span class=\"math inline\">\\(\\E(Y) =\n\\frac{1}{3}\\)</span>.</p>\n<p>De plus, <span class=\"math display\">\\[\\begin{align*}\n                \\E(XY) &amp;= \\int_{-\\infty}^{+\\infty}\n\\int_{-\\infty}^{+\\infty} xy f(x,y) dx dy \\\\\n                &amp;= \\int_0^1 \\int_0^{1-x} 2xy dy dx \\\\\n                &amp;= \\int_0^1 x(1-x)^2 dx \\\\\n                &amp;= \\int_0^1 x - 2x^2 + x^3 dx \\\\\n                &amp;= \\left[ \\frac{x^2}{2} - \\frac{2x^3}{3} +\n\\frac{x^4}{4} \\right]_0^1 \\\\\n                &amp;= \\frac{1}{12}\n            \\end{align*}\\]</span> Donc <span\nclass=\"math inline\">\\(\\cov(X,Y) = \\frac{1}{12} - \\frac{1}{3} \\times\n\\frac{1}{3} = -\\frac{1}{36}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

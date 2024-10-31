@@ -1,0 +1,128 @@
+{
+  "uuid": "aYzL",
+  "titre": "\\'Etude d'une méthode de Monte Carlo",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime Nguyen",
+    "createdAt": "2024-10-31T14:47:28.956Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:28.956Z"
+  },
+  "contenu": [
+    {
+      "id": "38488ddc-dc09-4d8b-b85e-dafd1fb442ab",
+      "type": "description",
+      "value": {
+        "latex": "On souhaite calculer à l'aide d'une méthode de Monte Carlo une approximation de l'intégrale $$I=\\int_0^1 \\sin(\\sqrt{x})dx$$ \n\tSoit $(X_i)_{i \\in \\mathbb{N}^*}$ une suite de variables aléatoires indépendantes identiquement distribuées selon une loi uniforme $\\mathcal{U}([0;1])$.",
+        "html": "<p>On souhaite calculer à l’aide d’une méthode de Monte Carlo une\napproximation de l’intégrale <span class=\"math display\">\\[I=\\int_0^1\n\\sin(\\sqrt{x})dx\\]</span> Soit <span class=\"math inline\">\\((X_i)_{i \\in\n\\mathbb{N}^*}\\)</span> une suite de variables aléatoires indépendantes\nidentiquement distribuées selon une loi uniforme <span\nclass=\"math inline\">\\(\\mathcal{U}([0;1])\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2f03c996-e4d0-49d3-a9d6-0b28f0308761",
+      "type": "question",
+      "value": {
+        "latex": "Démontrer que si on définit la suite de variables aléatoires $(I_n)$ par \n\t\t$$I_n = \\frac{1}{n}\\sum_{k=1}^n \\sin\\left( \\sqrt{X_k} \\right)$$\n\t\talors la suite $(I_n)$ converge presque sûrement vers la constante $I$.",
+        "html": "<p>Démontrer que si on définit la suite de variables aléatoires <span\nclass=\"math inline\">\\((I_n)\\)</span> par <span\nclass=\"math display\">\\[I_n = \\frac{1}{n}\\sum_{k=1}^n \\sin\\left(\n\\sqrt{X_k} \\right)\\]</span> alors la suite <span\nclass=\"math inline\">\\((I_n)\\)</span> converge presque sûrement vers la\nconstante <span class=\"math inline\">\\(I\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2cd92bdc-cc89-4f41-aa80-2e9bce391959",
+      "type": "reponse",
+      "value": {
+        "latex": "Les variables $\\left(\\sin\\left( \\sqrt{X_k} \\right) \\right)_i$ sont indépendantes et identiquement distribuées, elles admettent en outre une espérance qui se calcule à l'aide du théorème de transfert. Soit $f$ la densité d'une loi uniforme sur $[0;1]$. Alors $\\mathbb{E}(X_1) = \\int \\sin\\left( \\sqrt{x} \\right) f(x)dx = \\int_0^1 \\sin\\left( \\sqrt{x} \\right)dx = I$.\n\t\t\n\t\tD'après la loi forte de grands nombres, la suite de variables aléatoires $(I_n)$ converge donc presque sûrement vers $\\mathbb{E}(X_1) = I$.",
+        "html": "<p>Les variables <span class=\"math inline\">\\(\\left(\\sin\\left( \\sqrt{X_k}\n\\right) \\right)_i\\)</span> sont indépendantes et identiquement\ndistribuées, elles admettent en outre une espérance qui se calcule à\nl’aide du théorème de transfert. Soit <span\nclass=\"math inline\">\\(f\\)</span> la densité d’une loi uniforme sur <span\nclass=\"math inline\">\\([0;1]\\)</span>. Alors <span\nclass=\"math inline\">\\(\\mathbb{E}(X_1) = \\int \\sin\\left( \\sqrt{x} \\right)\nf(x)dx = \\int_0^1 \\sin\\left( \\sqrt{x} \\right)dx = I\\)</span>.</p>\n<p>D’après la loi forte de grands nombres, la suite de variables\naléatoires <span class=\"math inline\">\\((I_n)\\)</span> converge donc\npresque sûrement vers <span class=\"math inline\">\\(\\mathbb{E}(X_1) =\nI\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d548a790-c46f-46f5-9f47-609ac3be4b93",
+      "type": "question",
+      "value": {
+        "latex": "Compléter le code Python ci-dessous, comportant deux champs manquants, afin qu'il affiche une approximation de $I$.\n\t\t\n\t{\\centering \\fbox{\\BUseVerbatim{aYzLpython}}\\par}",
+        "html": "<p>Compléter le code Python ci-dessous, comportant deux champs\nmanquants, afin qu’il affiche une approximation de <span\nclass=\"math inline\">\\(I\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2dd2be62-6ff4-451d-8dda-3c106f00c71f",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\centering \\fbox{\\BUseVerbatim{aYzLpythonsolution}}\\par}",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "50a3ad71-86e9-4393-8fbd-5b7874071028",
+      "type": "description",
+      "value": {
+        "latex": "Pour tout $k \\in \\mathbb{N}^*$, on pose $Y_k= \\sin\\left( \\sqrt{X_k} \\right)$. Les variables aléatoires $(X_k)$ étant i.i.d., les variables aléatoires $(Y_k)$ le sont aussi et on note $\\mu$ leur espérance et $\\sigma^2$ leur variance.",
+        "html": "<p>Pour tout <span class=\"math inline\">\\(k \\in \\mathbb{N}^*\\)</span>, on\npose <span class=\"math inline\">\\(Y_k= \\sin\\left( \\sqrt{X_k}\n\\right)\\)</span>. Les variables aléatoires <span\nclass=\"math inline\">\\((X_k)\\)</span> étant i.i.d., les variables\naléatoires <span class=\"math inline\">\\((Y_k)\\)</span> le sont aussi et\non note <span class=\"math inline\">\\(\\mu\\)</span> leur espérance et <span\nclass=\"math inline\">\\(\\sigma^2\\)</span> leur variance.</p>\n"
+      }
+    },
+    {
+      "id": "15aaa283-de4c-49b7-9e6a-e02c52e240e4",
+      "type": "question",
+      "value": {
+        "latex": "Calculer l'espérance et la variance de la variable aléatoire $I_n$ en fonction de $\\mu$, $\\sigma$ et $n$.",
+        "html": "<p>Calculer l’espérance et la variance de la variable aléatoire <span\nclass=\"math inline\">\\(I_n\\)</span> en fonction de <span\nclass=\"math inline\">\\(\\mu\\)</span>, <span\nclass=\"math inline\">\\(\\sigma\\)</span> et <span\nclass=\"math inline\">\\(n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1a5a90c5-a6bc-4dc1-b662-304ab7593daa",
+      "type": "reponse",
+      "value": {
+        "latex": "Par linéarité de l'espérance, $\\mathbb{E}(I_n) = \\frac{1}{n} \\times n \\times I =I $.\n\t\t\tPar propriétés de la variance et indépendance des variables dans la somme, $V(I_n) = \\frac{1}{n^2} \\times n \\times V(Y_1) = \\frac{V(Y_1)}{n} = \\frac{\\sigma^2}{n}$.",
+        "html": "<p>Par linéarité de l’espérance, <span\nclass=\"math inline\">\\(\\mathbb{E}(I_n) = \\frac{1}{n} \\times n \\times I\n=I\\)</span>. Par propriétés de la variance et indépendance des variables\ndans la somme, <span class=\"math inline\">\\(V(I_n) = \\frac{1}{n^2} \\times\nn \\times V(Y_1) = \\frac{V(Y_1)}{n} = \\frac{\\sigma^2}{n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4e5fe8fe-ebc6-4588-a955-12c6e408e9af",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer, en justifiant, une approximation de la loi de la variable aléatoire $$\\frac{\\sqrt{n}}{\\sigma}(I_n-I)$$\n\t\t\tlorsque $n$ est suffisamment grand.",
+        "html": "<p>Déterminer, en justifiant, une approximation de la loi de la variable\naléatoire <span\nclass=\"math display\">\\[\\frac{\\sqrt{n}}{\\sigma}(I_n-I)\\]</span> lorsque\n<span class=\"math inline\">\\(n\\)</span> est suffisamment grand.</p>\n"
+      }
+    },
+    {
+      "id": "578b9ef5-cbd0-4116-ad33-a2f2b83e2913",
+      "type": "reponse",
+      "value": {
+        "latex": "Les variables $Y_k$ sont indépendantes, identiquement distribuées, admettent une espérance et une variance finies, donc d'après le Théorème Central Limite, la variable \n\t\t\t$$\\frac{\\frac{1}{n}\\sum_{k=1}^n Y_k - I  }{\\frac{\\sigma}{\\sqrt{n}}} = \n\t\t\t\\frac{ \\sum_{k=1}^n \\frac{Y_k}{n} - \\mathbb{E}\\left(\\sum_{k=1}^n \\frac{Y_k}{n}  \\right) }{\\sigma\\left(\\sum_{k=1}^n \\frac{Y_k}{n}  \\right)}$$\n\t\t\tsuit approximativement une loi normale centrée réduite.",
+        "html": "<p>Les variables <span class=\"math inline\">\\(Y_k\\)</span> sont\nindépendantes, identiquement distribuées, admettent une espérance et une\nvariance finies, donc d’après le Théorème Central Limite, la variable\n<span class=\"math display\">\\[\\frac{\\frac{1}{n}\\sum_{k=1}^n Y_k -\nI  }{\\frac{\\sigma}{\\sqrt{n}}} =\n            \\frac{ \\sum_{k=1}^n \\frac{Y_k}{n} -\n\\mathbb{E}\\left(\\sum_{k=1}^n \\frac{Y_k}{n}  \\right)\n}{\\sigma\\left(\\sum_{k=1}^n \\frac{Y_k}{n}  \\right)}\\]</span> suit\napproximativement une loi normale centrée réduite.</p>\n"
+      }
+    },
+    {
+      "id": "444c30b0-945e-41e9-be5f-34a936e543e4",
+      "type": "question",
+      "value": {
+        "latex": "En déduire le nombre d'itérations $N_0$ (dépendant de $\\sigma$) à partir duquel la suite $(I_n)$ réalise une approximation de $I$ à $10^{-3}$ près avec une confiance de $95\\%$.",
+        "html": "<p>En déduire le nombre d’itérations <span\nclass=\"math inline\">\\(N_0\\)</span> (dépendant de <span\nclass=\"math inline\">\\(\\sigma\\)</span>) à partir duquel la suite <span\nclass=\"math inline\">\\((I_n)\\)</span> réalise une approximation de <span\nclass=\"math inline\">\\(I\\)</span> à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près avec une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6273e222-834a-40d8-a77c-b70c59c9e712",
+      "type": "reponse",
+      "value": {
+        "latex": "On cherche le rang à partir duquel $\\PP(|I_n-I|<\\varepsilon) \\geq 0.95$ où $\\varepsilon = 10^{-3}$. Or \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\PP(|I_n-I|<\\varepsilon) &= \\PP(-\\varepsilon < I_n-I < \\varepsilon) \\\\\n\t\t\t\t&= \\PP\\left(-\\frac{\\sqrt{n}}{\\sigma}\\varepsilon < \\frac{\\sqrt{n}}{\\sigma} (I_n-I) < \\frac{\\sqrt{n}}{\\sigma}\\varepsilon \\right) \\\\\n\t\t\t\t&\\approx \\PP\\left(-\\frac{\\sqrt{n}}{\\sigma}\\varepsilon < Z < \\frac{\\sqrt{n}}{\\sigma}\\varepsilon \\right) \\text{ où } Z \\sim \\mathcal{N}(0,1)\n\t\t\t\\end{align*}$$\n\t\t\tOr par lecture de tables, $\\PP(-1.96 < Z < 1.96) \\approx 0.95$ donc il suffit de prendre $n$ tel que $\\frac{\\sqrt{n}}{\\sigma}\\varepsilon \\geq 1.96$ i.e.\n\t\t\t$$n \\geq 10^6 \\left(1.96 \\sigma\\right)^2$$",
+        "html": "<p>On cherche le rang à partir duquel <span\nclass=\"math inline\">\\(\\PP(|I_n-I|&lt;\\varepsilon) \\geq 0.95\\)</span> où\n<span class=\"math inline\">\\(\\varepsilon = 10^{-3}\\)</span>. Or <span\nclass=\"math display\">\\[\\begin{align*}\n                \\PP(|I_n-I|&lt;\\varepsilon) &amp;= \\PP(-\\varepsilon &lt;\nI_n-I &lt; \\varepsilon) \\\\\n                &amp;= \\PP\\left(-\\frac{\\sqrt{n}}{\\sigma}\\varepsilon &lt;\n\\frac{\\sqrt{n}}{\\sigma} (I_n-I) &lt; \\frac{\\sqrt{n}}{\\sigma}\\varepsilon\n\\right) \\\\\n                &amp;\\approx\n\\PP\\left(-\\frac{\\sqrt{n}}{\\sigma}\\varepsilon &lt; Z &lt;\n\\frac{\\sqrt{n}}{\\sigma}\\varepsilon \\right) \\text{ où } Z \\sim\n\\mathcal{N}(0,1)\n            \\end{align*}\\]</span> Or par lecture de tables, <span\nclass=\"math inline\">\\(\\PP(-1.96 &lt; Z &lt; 1.96) \\approx 0.95\\)</span>\ndonc il suffit de prendre <span class=\"math inline\">\\(n\\)</span> tel que\n<span class=\"math inline\">\\(\\frac{\\sqrt{n}}{\\sigma}\\varepsilon \\geq\n1.96\\)</span> i.e. <span class=\"math display\">\\[n \\geq 10^6 \\left(1.96\n\\sigma\\right)^2\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "d85cbce8-a60e-4b2f-af40-aa0fe5d71155",
+      "type": "question",
+      "value": {
+        "latex": "Soit la variable \n\t\t\t$$V_n = \\frac{1}{2n} \\sum_{k=1}^n (Y_{2k}-Y_{2k-1})^2$$\n\t\t\tVérifier que la suite $(V_n)$ permet d'approcher la valeur de $\\sigma^2$.",
+        "html": "<p>Soit la variable <span class=\"math display\">\\[V_n = \\frac{1}{2n}\n\\sum_{k=1}^n (Y_{2k}-Y_{2k-1})^2\\]</span> Vérifier que la suite <span\nclass=\"math inline\">\\((V_n)\\)</span> permet d’approcher la valeur de\n<span class=\"math inline\">\\(\\sigma^2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ebfad792-8db7-4b2a-b7e8-d17b2f3e9663",
+      "type": "reponse",
+      "value": {
+        "latex": "On calcule \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\mathbb{E}((Y_{2k}-Y_{2k-1})^2) &= \\mathbb{E}(Y_{2k}^2-2Y_{2k}Y_{2k-1} + Y_{2k-1}^2) \\\\\n\t\t\t\t&= \\mathbb{E}(Y_{2k}^2) - 2 \\mathbb{E}(Y_{2k}Y_{2k-1}) +\\mathbb{E}(Y_{2k-1}^2) \\text{ par linéarité } \\\\\n\t\t\t\t&= 2\\mathbb{E}(Y_{2k}^2)- 2 \\mathbb{E}(Y_{2k}Y_{2k-1}) \\text{ par identique distribution } \\\\\n\t\t\t\t&= 2\\mathbb{E}(Y_{2k}^2)- 2 \\mathbb{E}(Y_{2k})  \\mathbb{E}(Y_{2k-1}) \\text{ par indépendance} \\\\\n\t\t\t\t&= 2\\mathbb{E}(Y_{2k}^2)- 2 \\mathbb{E}(Y_{2k})^2 \\\\\n\t\t\t\t&= 2\\mathbb{E}(Y_{1}^2)- 2 \\mathbb{E}(Y_{1})^2 \\\\\n\t\t\t\t&= 2V(Y_1) \n\t\t\t\\end{align*}$$\n\t\t\tdonc d'après la loi forte des grands nombres, $\\frac{1}{n} \\sum_{k=1}^n (Y_{2k}-Y_{2k-1})^2$ converge simplement vers $2V(Y_1)$, ce qui répond à la question posée.",
+        "html": "<p>On calcule <span class=\"math display\">\\[\\begin{align*}\n                \\mathbb{E}((Y_{2k}-Y_{2k-1})^2) &amp;=\n\\mathbb{E}(Y_{2k}^2-2Y_{2k}Y_{2k-1} + Y_{2k-1}^2) \\\\\n                &amp;= \\mathbb{E}(Y_{2k}^2) - 2\n\\mathbb{E}(Y_{2k}Y_{2k-1}) +\\mathbb{E}(Y_{2k-1}^2) \\text{ par linéarité\n} \\\\\n                &amp;= 2\\mathbb{E}(Y_{2k}^2)- 2\n\\mathbb{E}(Y_{2k}Y_{2k-1}) \\text{ par identique distribution } \\\\\n                &amp;= 2\\mathbb{E}(Y_{2k}^2)- 2\n\\mathbb{E}(Y_{2k})  \\mathbb{E}(Y_{2k-1}) \\text{ par indépendance} \\\\\n                &amp;= 2\\mathbb{E}(Y_{2k}^2)- 2 \\mathbb{E}(Y_{2k})^2 \\\\\n                &amp;= 2\\mathbb{E}(Y_{1}^2)- 2 \\mathbb{E}(Y_{1})^2 \\\\\n                &amp;= 2V(Y_1)\n            \\end{align*}\\]</span> donc d’après la loi forte des grands\nnombres, <span class=\"math inline\">\\(\\frac{1}{n} \\sum_{k=1}^n\n(Y_{2k}-Y_{2k-1})^2\\)</span> converge simplement vers <span\nclass=\"math inline\">\\(2V(Y_1)\\)</span>, ce qui répond à la question\nposée.</p>\n"
+      }
+    }
+  ]
+}

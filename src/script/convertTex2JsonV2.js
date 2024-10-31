@@ -91,6 +91,25 @@ async function convertLaTeXToHTML(latex) {
  * @returns {Object} - Objet contenant les champs extraits.
  */
 async function extractLaTeXCommands(latex, commands) {
+    /**
+     * @typedef {Object} ContenuItem
+     * @property {string} id
+     * @property {string} type
+     * @property {Object} value
+     * @property {string} value.latex
+     * @property {string} value.html
+     */
+
+    /**
+     * @type {{
+     *   uuid: string,
+     *   titre: string,
+     *   theme: string[],
+     *   niveau: string,
+     *   metadata: Object,
+     *   contenu: ContenuItem[]
+     * }}
+     */
     const extracted = {
       uuid: "",
       titre: "",
@@ -183,7 +202,7 @@ async function extractLaTeXCommands(latex, commands) {
         // Ajouter au tableau 'contenu'
         extracted.contenu.push({
           id: id,
-          type: commandName,
+          type: commandName === 'texte' ? 'description' : commandName,
           value: {
             latex: finalContent,
             html: htmlContent
@@ -274,7 +293,7 @@ async function main() {
         { name: 'date', jsonKey: 'metadata.createdAt', isContent: false, isVerbatim: false },
         { name: 'organisation', jsonKey: 'metadata.organisation', isContent: false, isVerbatim: false },
         // Champs de contenu
-        { name: 'description', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+        { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
         { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
         { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
         { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },

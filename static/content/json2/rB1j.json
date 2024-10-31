@@ -1,0 +1,32 @@
+{
+  "uuid": "rB1j",
+  "titre": "Résolution de système linéaire",
+  "theme": [
+    "systèmes linéaires"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:45.235Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:45.235Z"
+  },
+  "contenu": [
+    {
+      "id": "dd4ae24f-bbfa-41b4-8846-b6e718bf4b8f",
+      "type": "question",
+      "value": {
+        "latex": "Résoudre le système :\n$$\n\\left\\{\\begin{aligned}\n2 x+4 y+3 z-t & =5 \\\\\nx+2 y+4 z-3 t & =10 \\\\\n-x+4 y+3 z-2 t & =1 \\\\\n3 x+y-z+2 t & =0\n\\end{aligned}\\right.\n$$",
+        "html": "<p>Résoudre le système : <span\nclass=\"math display\">\\[\\left\\{\\begin{aligned}\n2 x+4 y+3 z-t &amp; =5 \\\\\nx+2 y+4 z-3 t &amp; =10 \\\\\n-x+4 y+3 z-2 t &amp; =1 \\\\\n3 x+y-z+2 t &amp; =0\n\\end{aligned}\\right.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "4d04b323-f5f5-4019-a657-e5705e3a4826",
+      "type": "reponse",
+      "value": {
+        "latex": "On résout par opérations sur les lignes afin de faire apparaître un système triangulaire (principe du pivot de Gauss)et achever la résolution par substitution :\n$$\n\\begin{aligned}\n& \\left\\{\\begin{aligned}\n2 x+4 y+3 z-t & =5 \\\\\nx+2 y+4 z-3 t & =10 \\\\\n-x+4 y+3 z-2 t & =1 \\\\\n3 x+y-z+2 t & =0\n\\end{aligned}\\right. \\\\\n& \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_3+\\ell_4 \\\\\n\\ell_3 \\leftarrow-\\frac{1}{5} \\ell_2 \\\\\n\\ell_4 \\leftarrow \\ell_4\n\\end{array}\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t & =10 \\\\\ny-6 z+6 t & =-19 \\\\\nz-t & =3 \\\\\n-5 y-13 z+11 t & =-30\n\\end{aligned}\\right. \\\\\n& \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_2 \\\\\n\\ell_3 \\leftarrow \\ell_3 \\\\\n\\ell_4 \\leftarrow \\ell_4+5 \\ell_2\n\\end{array} \\quad\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t & =10 \\\\\ny-6 z+6 t & =-19 \\\\\nz-t & =3 \\\\\n-43 z+41 t & =-125\n\\end{aligned}\\right. \\\\\n& \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_2 \\\\\n\\ell_3 \\leftarrow \\ell_3 \\\\\n\\ell_4 \\leftarrow \\ell_4+43 \\ell_3\n\\end{array}\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t & =10 \\\\\ny-6 z+6 t & =-19 \\\\\nz-t & =3 \\\\\n-2 t & =4\n\\end{aligned}\\right. \\\\\n&\n\\end{aligned}\n$$\n\n$$\\mathcal{S}  = \\{(2,-1,1,-2)\\}$$",
+        "html": "<p>On résout par opérations sur les lignes afin de faire apparaître un\nsystème triangulaire (principe du pivot de Gauss)et achever la\nrésolution par substitution : <span\nclass=\"math display\">\\[\\begin{aligned}\n&amp; \\left\\{\\begin{aligned}\n2 x+4 y+3 z-t &amp; =5 \\\\\nx+2 y+4 z-3 t &amp; =10 \\\\\n-x+4 y+3 z-2 t &amp; =1 \\\\\n3 x+y-z+2 t &amp; =0\n\\end{aligned}\\right. \\\\\n&amp; \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_3+\\ell_4 \\\\\n\\ell_3 \\leftarrow-\\frac{1}{5} \\ell_2 \\\\\n\\ell_4 \\leftarrow \\ell_4\n\\end{array}\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t &amp; =10 \\\\\ny-6 z+6 t &amp; =-19 \\\\\nz-t &amp; =3 \\\\\n-5 y-13 z+11 t &amp; =-30\n\\end{aligned}\\right. \\\\\n&amp; \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_2 \\\\\n\\ell_3 \\leftarrow \\ell_3 \\\\\n\\ell_4 \\leftarrow \\ell_4+5 \\ell_2\n\\end{array} \\quad\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t &amp; =10 \\\\\ny-6 z+6 t &amp; =-19 \\\\\nz-t &amp; =3 \\\\\n-43 z+41 t &amp; =-125\n\\end{aligned}\\right. \\\\\n&amp; \\begin{array}{l}\n\\ell_1 \\leftarrow \\ell_1 \\\\\n\\ell_2 \\leftarrow \\ell_2 \\\\\n\\ell_3 \\leftarrow \\ell_3 \\\\\n\\ell_4 \\leftarrow \\ell_4+43 \\ell_3\n\\end{array}\\left\\{\\begin{aligned}\nx+2 y+4 z-3 t &amp; =10 \\\\\ny-6 z+6 t &amp; =-19 \\\\\nz-t &amp; =3 \\\\\n-2 t &amp; =4\n\\end{aligned}\\right. \\\\\n&amp;\n\\end{aligned}\\]</span></p>\n<p><span class=\"math display\">\\[\\mathcal{S}  =\n\\{(2,-1,1,-2)\\}\\]</span></p>\n"
+      }
+    }
+  ]
+}

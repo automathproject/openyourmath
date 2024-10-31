@@ -1,0 +1,72 @@
+{
+  "uuid": "9ty1",
+  "titre": "Utilisation d'une table de loi normale",
+  "theme": [
+    "statistiques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:10.270Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:10.270Z"
+  },
+  "contenu": [
+    {
+      "id": "952a4b34-bed7-49a8-ba82-3ff14c84809d",
+      "type": "description",
+      "value": {
+        "latex": "\\`A l'aide des tables de valeurs, effectuer les calculs suivants à $10^{-2}$ près.",
+        "html": "<p>À l’aide des tables de valeurs, effectuer les calculs suivants à\n<span class=\"math inline\">\\(10^{-2}\\)</span> près.</p>\n"
+      }
+    },
+    {
+      "id": "abe08558-969f-4e25-8d78-87e0b2b13c53",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\PP(-1.2 \\leq Z \\leq 1.1)$ où $Z$ suit une loi $\\mathcal{N}(0,1)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\PP(-1.2 \\leq Z \\leq\n1.1)\\)</span> où <span class=\"math inline\">\\(Z\\)</span> suit une loi\n<span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4fc6120b-10ef-48a7-b87f-138fde32a9ad",
+      "type": "reponse",
+      "value": {
+        "latex": "On exprime la probabilité à l'aide de la fonction de répartition de la loi normale centrée réduite notée $\\Phi$ : \n$$\\begin{align*}\n\\PP(-1.2 \\leq Z \\leq 1.1) &= \\PP(Z \\leq 1.1) - \\PP(Z < -1.2) \\\\\n                          &= \\PP(Z \\leq 1.1) - \\PP(Z > 1.2) &\\text{par symétrie}\\\\\n                          &= \\PP(Z \\leq 1.1) - (1-\\PP(Z \\leq 1.2)) \\\\\n                          &= \\Phi(1.1)+\\Phi(1.2)-1 \\\\\n                          &\\approx 0{,}75\n\\end{align*}$$",
+        "html": "<p>On exprime la probabilité à l’aide de la fonction de répartition de\nla loi normale centrée réduite notée <span\nclass=\"math inline\">\\(\\Phi\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n\\PP(-1.2 \\leq Z \\leq 1.1) &amp;= \\PP(Z \\leq 1.1) - \\PP(Z &lt; -1.2) \\\\\n                          &amp;= \\PP(Z \\leq 1.1) - \\PP(Z &gt; 1.2)\n&amp;\\text{par symétrie}\\\\\n                          &amp;= \\PP(Z \\leq 1.1) - (1-\\PP(Z \\leq 1.2))\n\\\\\n                          &amp;= \\Phi(1.1)+\\Phi(1.2)-1 \\\\\n                          &amp;\\approx 0{,}75\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "a11a4d8f-00c1-44e8-8936-c4dbd8235255",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\PP(70 \\leq QI \\leq 130)$ où $QI$ suit une loi $\\mathcal{N}(100,\\sigma=15)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\PP(70 \\leq QI \\leq\n130)\\)</span> où <span class=\"math inline\">\\(QI\\)</span> suit une loi\n<span class=\"math inline\">\\(\\mathcal{N}(100,\\sigma=15)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3282f237-6ca2-4d12-8a8e-a21e5f5b9dfa",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $Z = \\frac{QI-100}{15}$ de telle sorte que $Z$ suit une loi normale centrée réduite. On exprime alors\n  $$\\begin{align*}\n  \\PP(70 \\leq QI \\leq 130) &= \\PP\\left(\\frac{70-100}{15} \\leq \\frac{QI-100}{15} \\leq \\frac{130-100}{15}\\right) \\\\\n                           &= \\PP(-2 \\leq Z \\leq 2) \\\\\n                           &= 2\\times \\Phi(2) -1 \\\\\n                           &\\approx 0{,}95\n  \\end{align*}$$",
+        "html": "<p>On pose <span class=\"math inline\">\\(Z = \\frac{QI-100}{15}\\)</span> de\ntelle sorte que <span class=\"math inline\">\\(Z\\)</span> suit une loi\nnormale centrée réduite. On exprime alors <span\nclass=\"math display\">\\[\\begin{align*}\n  \\PP(70 \\leq QI \\leq 130) &amp;= \\PP\\left(\\frac{70-100}{15} \\leq\n\\frac{QI-100}{15} \\leq \\frac{130-100}{15}\\right) \\\\\n                           &amp;= \\PP(-2 \\leq Z \\leq 2) \\\\\n                           &amp;= 2\\times \\Phi(2) -1 \\\\\n                           &amp;\\approx 0{,}95\n  \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8b1cb07b-2ad8-4c31-8b78-c99184fe4659",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer un réel $t$ tel que $\\PP(|X-5|<t) = 95\\%$ où \n  $X$ suit une loi $\\mathcal{N}(5,\\sigma=1)$.",
+        "html": "<p>Déterminer un réel <span class=\"math inline\">\\(t\\)</span> tel que\n<span class=\"math inline\">\\(\\PP(|X-5|&lt;t) = 95\\%\\)</span> où <span\nclass=\"math inline\">\\(X\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(5,\\sigma=1)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ef9409ba-8146-40a1-b07e-39edd6769d74",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $Z = {X-5}$ de telle sorte que $Z$ suit une loi normale centrée réduite. On exprime alors\n $$\\begin{align*}\n\\PP(|X-5| <t) &= \\PP\\left( -t<X-5<t\\right) \\\\\n&= \\PP\\left( -t \\leq Z \\leq t\\right) \\\\\n&= 2\\times \\Phi(t) -1 \\\\\n\\end{align*}$$ \nOn cherche $t \\in \\R$ tel que \n$$\\begin{align*}\n\\PP(|X-5| <t) = 0.95 &\\iff 2\\times \\Phi(t) -1 = 0.95 \\\\\n                     &\\iff \\Phi(t) = 0.975 \\\\\n                     &\\iff t \\approx 1{,}96 &\\text{par lecture inverse de la table}\n\\end{align*}$$",
+        "html": "<p>On pose <span class=\"math inline\">\\(Z = {X-5}\\)</span> de telle sorte\nque <span class=\"math inline\">\\(Z\\)</span> suit une loi normale centrée\nréduite. On exprime alors <span class=\"math display\">\\[\\begin{align*}\n\\PP(|X-5| &lt;t) &amp;= \\PP\\left( -t&lt;X-5&lt;t\\right) \\\\\n&amp;= \\PP\\left( -t \\leq Z \\leq t\\right) \\\\\n&amp;= 2\\times \\Phi(t) -1 \\\\\n\\end{align*}\\]</span> On cherche <span class=\"math inline\">\\(t \\in\n\\R\\)</span> tel que <span class=\"math display\">\\[\\begin{align*}\n\\PP(|X-5| &lt;t) = 0.95 &amp;\\iff 2\\times \\Phi(t) -1 = 0.95 \\\\\n                     &amp;\\iff \\Phi(t) = 0.975 \\\\\n                     &amp;\\iff t \\approx 1{,}96 &amp;\\text{par lecture\ninverse de la table}\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "uuid": "Louq",
+  "titre": "Fonctions de répartition et changement de variable",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:19.084Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:19.084Z"
+  },
+  "contenu": [
+    {
+      "id": "ab6d099d-18a0-46ae-9d12-ed8a072a0193",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire suivant une loi uniforme sur $[0;1]$. On rappelle que $X$ admet pour densité : $$f(x)=\\textbf{1}_{[0;1]}(x)$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nsuivant une loi uniforme sur <span class=\"math inline\">\\([0;1]\\)</span>.\nOn rappelle que <span class=\"math inline\">\\(X\\)</span> admet pour\ndensité : <span\nclass=\"math display\">\\[f(x)=\\textbf{1}_{[0;1]}(x)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "0642bd67-76b2-40cd-b7a6-69ad64905d4d",
+      "type": "question",
+      "value": {
+        "latex": "A l'aide d'une fonction de répartition, déterminer la loi de la variable aléatoire $2X$.",
+        "html": "<p>A l’aide d’une fonction de répartition, déterminer la loi de la\nvariable aléatoire <span class=\"math inline\">\\(2X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6f24b985-10e5-4702-9c96-b17459a02ac1",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $t \\in \\R$ et $F_{2X}$ la fonction de répartition de la variable aléatoire $2X$ : alors\n $$\\begin{align*}\n F_{2X}(t) &= \\PP(2X \\leq t) \\\\\n           &= \\PP\\left(X \\leq \\frac{t}{2}\\right)\\\\\n           &= \\int_{-\\infty}^{\\frac{t}{2}} 1_{[0;1]}(x) dx\\\\\n           &=\\begin{cases}\n           0& \\text{ si } t \\leq 0 \\\\\n           \\frac{t}{2} & \\text{ si } 0 < t \\leq 2 \\\\\n           1 & \\text{ si } t \\geq 2\n           \\end{cases}\n \\end{align*}$$\t\nLa fonction $F_{2X}$ est dérivable presque partout (sauf en ${0}$ et en $2$). Sa dérivée coïncide donc presque partout avec une fonction densité $g$ de la variable $2X$. On peut donc poser \n$$g(x)=\\frac{1}{2}\\textbf{1}_{[0;2]}(x)$$\net on conclut que $2X$ suit une loi uniforme sur $[0;2]$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span> et <span\nclass=\"math inline\">\\(F_{2X}\\)</span> la fonction de répartition de la\nvariable aléatoire <span class=\"math inline\">\\(2X\\)</span> : alors <span\nclass=\"math display\">\\[\\begin{align*}\nF_{2X}(t) &amp;= \\PP(2X \\leq t) \\\\\n           &amp;= \\PP\\left(X \\leq \\frac{t}{2}\\right)\\\\\n           &amp;= \\int_{-\\infty}^{\\frac{t}{2}} 1_{[0;1]}(x) dx\\\\\n           &amp;=\\begin{cases}\n           0&amp; \\text{ si } t \\leq 0 \\\\\n           \\frac{t}{2} &amp; \\text{ si } 0 &lt; t \\leq 2 \\\\\n           1 &amp; \\text{ si } t \\geq 2\n           \\end{cases}\n\\end{align*}\\]</span> La fonction <span\nclass=\"math inline\">\\(F_{2X}\\)</span> est dérivable presque partout\n(sauf en <span class=\"math inline\">\\({0}\\)</span> et en <span\nclass=\"math inline\">\\(2\\)</span>). Sa dérivée coïncide donc presque\npartout avec une fonction densité <span class=\"math inline\">\\(g\\)</span>\nde la variable <span class=\"math inline\">\\(2X\\)</span>. On peut donc\nposer <span\nclass=\"math display\">\\[g(x)=\\frac{1}{2}\\textbf{1}_{[0;2]}(x)\\]</span> et\non conclut que <span class=\"math inline\">\\(2X\\)</span> suit une loi\nuniforme sur <span class=\"math inline\">\\([0;2]\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "uuid": "1lAn",
+  "titre": "Calcul de dérivées partielles",
+  "theme": [
+    "calcul différentiel"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:03.682Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:03.682Z"
+  },
+  "contenu": [
+    {
+      "id": "2a7b4377-9808-4aa5-b302-305e1be9298b",
+      "type": "description",
+      "value": {
+        "latex": "Une étude des glaciers a montré que la température T à l'instant t (mesuré en jours) à la profondeur $x$ (mesurée en pied) peut être modélisée par la fonction \n$$T(x,t) = T_0 + T_1e^{-\\lambda x}\\sin(\\omega t-\\lambda x)$$\noù $T_0$, $T_1$, $\\omega = \\frac{2\\pi}{365}$ et $\\lambda$ sont des constantes réelles.",
+        "html": "<p>Une étude des glaciers a montré que la température T à l’instant t\n(mesuré en jours) à la profondeur <span class=\"math inline\">\\(x\\)</span>\n(mesurée en pied) peut être modélisée par la fonction <span\nclass=\"math display\">\\[T(x,t) = T_0 + T_1e^{-\\lambda x}\\sin(\\omega\nt-\\lambda x)\\]</span> où <span class=\"math inline\">\\(T_0\\)</span>, <span\nclass=\"math inline\">\\(T_1\\)</span>, <span class=\"math inline\">\\(\\omega =\n\\frac{2\\pi}{365}\\)</span> et <span\nclass=\"math inline\">\\(\\lambda\\)</span> sont des constantes réelles.</p>\n"
+      }
+    },
+    {
+      "id": "a1a2229b-cc75-4982-a2ed-61bd6e794f52",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer les deux dérivées partielles de $T$.",
+        "html": "<p>Exprimer les deux dérivées partielles de <span\nclass=\"math inline\">\\(T\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4538a1e7-ae24-47c1-85b4-0e2031eebda3",
+      "type": "reponse",
+      "value": {
+        "latex": "Les dérivées partielles sont définies pour tout $(x,t) \\in \\R^2$ :\n\t\t$$\\begin{align*}\n\t\t\\frac{\\partial T}{\\partial x}(x,t) &= -\\lambda T_1 e^{-\\lambda x}\\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right)\\\\\n\t\t\\frac{\\partial T}{\\partial t}(x,t) &= \\omega T_1 e^{-\\lambda x} \\cos(\\omega t-\\lambda x)\n\t\t\\end{align*}$$",
+        "html": "<p>Les dérivées partielles sont définies pour tout <span\nclass=\"math inline\">\\((x,t) \\in \\R^2\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial T}{\\partial x}(x,t) &amp;= -\\lambda T_1\ne^{-\\lambda x}\\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda\nx)  \\right)\\\\\n        \\frac{\\partial T}{\\partial t}(x,t) &amp;= \\omega T_1 e^{-\\lambda\nx} \\cos(\\omega t-\\lambda x)\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "a9bfc985-7766-4a13-b556-54cc8b4cce91",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $T$ vérifie l'équation de la chaleur :\n\t$$\\frac{\\partial T}{\\partial t}(x,t) = k\\frac{\\partial^2 T}{\\partial x^2}(x,t)$$\n\tpour une certaine constante $k$ à déterminer.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(T\\)</span> vérifie l’équation\nde la chaleur : <span class=\"math display\">\\[\\frac{\\partial T}{\\partial\nt}(x,t) = k\\frac{\\partial^2 T}{\\partial x^2}(x,t)\\]</span> pour une\ncertaine constante <span class=\"math inline\">\\(k\\)</span> à\ndéterminer.</p>\n"
+      }
+    },
+    {
+      "id": "2a8227bd-659e-4ef9-bab3-76ac1eec949b",
+      "type": "reponse",
+      "value": {
+        "latex": "Il suffit de dériver une seconde fois par rapport à $x$ l'expression de $\\frac{\\partial T}{\\partial x}(x,t)$ : on trouve\n\t\t$$\\begin{align*}\n\t\t\\frac{\\partial^2 T}{\\partial x^2}(x,t) &= \\frac{\\partial}{\\partial x}\\frac{\\partial T}{\\partial x}(x,t) \\\\\n\t\t&= (-\\lambda)^2 T_1 e^{-\\lambda x} \\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right) + (-\\lambda)^2 T_1 e^{-\\lambda x} \\left(\\cos(\\omega t-\\lambda x)- \\sin(\\omega t-\\lambda x)\\right) \\\\\n\t\t&= 2\\lambda^2 T_1 e^{-\\lambda x} \\cos(\\omega t - \\lambda x)\t\n\t\t\\end{align*}$$\n\t\tLa constante attendue est donc $k = \\frac{\\omega}{2\\lambda^2}$.",
+        "html": "<p>Il suffit de dériver une seconde fois par rapport à <span\nclass=\"math inline\">\\(x\\)</span> l’expression de <span\nclass=\"math inline\">\\(\\frac{\\partial T}{\\partial x}(x,t)\\)</span> : on\ntrouve <span class=\"math display\">\\[\\begin{align*}\n        \\frac{\\partial^2 T}{\\partial x^2}(x,t) &amp;=\n\\frac{\\partial}{\\partial x}\\frac{\\partial T}{\\partial x}(x,t) \\\\\n        &amp;= (-\\lambda)^2 T_1 e^{-\\lambda x} \\left( \\sin(\\omega\nt-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right) + (-\\lambda)^2 T_1\ne^{-\\lambda x} \\left(\\cos(\\omega t-\\lambda x)- \\sin(\\omega t-\\lambda\nx)\\right) \\\\\n        &amp;= 2\\lambda^2 T_1 e^{-\\lambda x} \\cos(\\omega t - \\lambda x)\n        \\end{align*}\\]</span> La constante attendue est donc <span\nclass=\"math inline\">\\(k = \\frac{\\omega}{2\\lambda^2}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "uuid": "ZMBI",
+  "titre": "Estimation par inégalité",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime Nguyen",
+    "createdAt": "2024-10-31T14:47:27.227Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:27.227Z"
+  },
+  "contenu": [
+    {
+      "id": "e913430b-cff2-43b4-8857-1f959588e06c",
+      "type": "description",
+      "value": {
+        "latex": "On sait qu'il y a à peu près une chance sur deux d'avoir une fille à chaque naissance, mais on veut avoir une estimation plus précise de cette probabilité $p$. \\\\\nOn regarde ce qui se passe sur $n$ naissances, et on appelle $S_n$ le nombre de filles parmi les $n$ naissances.",
+        "html": "<p>On sait qu’il y a à peu près une chance sur deux d’avoir une fille à\nchaque naissance, mais on veut avoir une estimation plus précise de\ncette probabilité <span class=\"math inline\">\\(p\\)</span>.<br />\nOn regarde ce qui se passe sur <span class=\"math inline\">\\(n\\)</span>\nnaissances, et on appelle <span class=\"math inline\">\\(S_n\\)</span> le\nnombre de filles parmi les <span class=\"math inline\">\\(n\\)</span>\nnaissances.</p>\n"
+      }
+    },
+    {
+      "id": "6272ec63-ebdf-4805-bf44-eb39bd0b7c31",
+      "type": "question",
+      "value": {
+        "latex": "Que vaut la variable $Y_n$ égale à la proportion de filles dans les naissances ? Donner son espérance et sa variance.",
+        "html": "<p>Que vaut la variable <span class=\"math inline\">\\(Y_n\\)</span> égale à\nla proportion de filles dans les naissances ? Donner son espérance et sa\nvariance.</p>\n"
+      }
+    },
+    {
+      "id": "cfd6dd92-dc10-4bdd-8cd7-bd4ae9032b32",
+      "type": "reponse",
+      "value": {
+        "latex": "$Y_n=\\frac{S_n}{n}$, où $S_n$ est une variable aléatoire de loi $\\mathcal{B}(n,p)$. On a donc \n\t\t\\[\\E(Y_n)=\\frac{1}{n}\\E(S_n)=\\frac{1}{n}\\times np=p \\text{ et } \\sigma^2(X)=\\frac{1}{n^2}\\sigma^2(S_n)=\\frac{1}{n^2}\\times np(1-p)=\\frac{p(1-p)}{n}.\\]",
+        "html": "<p><span class=\"math inline\">\\(Y_n=\\frac{S_n}{n}\\)</span>, où <span\nclass=\"math inline\">\\(S_n\\)</span> est une variable aléatoire de loi\n<span class=\"math inline\">\\(\\mathcal{B}(n,p)\\)</span>. On a donc <span\nclass=\"math display\">\\[\\E(Y_n)=\\frac{1}{n}\\E(S_n)=\\frac{1}{n}\\times np=p\n\\text{ et } \\sigma^2(X)=\\frac{1}{n^2}\\sigma^2(S_n)=\\frac{1}{n^2}\\times\nnp(1-p)=\\frac{p(1-p)}{n}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8ef70ef8-14b4-4328-a3c2-a2377f3aeca8",
+      "type": "question",
+      "value": {
+        "latex": "Soit $a>0$. Montrer que $\\prob(|Y_n-p|\\geq a)\\leq \\frac{1}{4na^2}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a&gt;0\\)</span>. Montrer que <span\nclass=\"math inline\">\\(\\prob(|Y_n-p|\\geq a)\\leq\n\\frac{1}{4na^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "47e992cc-419d-4bf0-98f3-ba9a1fbc4c02",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $a>0$. On applique l'inégalité de Bienaymé-Tchebychev à $Y_n$:\n\t\t\\[ \\prob(|Y_n-p|\\geq a)\\leq \\frac{\\sigma^2(Y_n)}{a^2}=\\frac{p(1-p)}{a^2n} \\leq \\frac{1}{4na^2},\\]\n\t\ten utilisant l'indication donnée dans l'énoncé.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a&gt;0\\)</span>. On applique\nl’inégalité de Bienaymé-Tchebychev à <span\nclass=\"math inline\">\\(Y_n\\)</span>: <span\nclass=\"math display\">\\[\\prob(|Y_n-p|\\geq a)\\leq\n\\frac{\\sigma^2(Y_n)}{a^2}=\\frac{p(1-p)}{a^2n} \\leq\n\\frac{1}{4na^2},\\]</span> en utilisant l’indication donnée dans\nl’énoncé.</p>\n"
+      }
+    },
+    {
+      "id": "b761020d-a34e-4946-8811-b8f19023a0f8",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer un nombre $n$ d'observations à faire pour que l'on puisse déduire de $Y_n$, avec moins de $1$\\% de chances de se tromper, que $Y_n-0.01\\leq p\\leq Y_n+0.01$.",
+        "html": "<p>Déterminer un nombre <span class=\"math inline\">\\(n\\)</span>\nd’observations à faire pour que l’on puisse déduire de <span\nclass=\"math inline\">\\(Y_n\\)</span>, avec moins de <span\nclass=\"math inline\">\\(1\\)</span>% de chances de se tromper, que <span\nclass=\"math inline\">\\(Y_n-0.01\\leq p\\leq Y_n+0.01\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "04e58b0c-30d0-4b00-8f7d-634d5b2e802a",
+      "type": "reponse",
+      "value": {
+        "latex": "On souhaite avoir $\\prob(Y_n-0.01\\leq p \\leq Y_n+0.01)\\geq 0.99$. Or\n\t\t$$\\begin{align*}\n\t\t\\prob(Y_n-0.01\\leq p \\leq Y_n+0.01)\n\t\t&=\\prob(-0.01\\leq p-Y_n \\leq 0.01)\n\t\t=\\prob(|Y_n-p|\\leq 0.01)\\\\\n\t\t&=1-\\prob(|Y_n-p|\\geq 0.01)\n\t\t\\end{align*}$$\n\t\tOn souhaite donc avoir $\\prob(|Y_n-p|\\geq 0.01)\\leq 0.01$.\n\t\tOr par la question 2., avec $a=0.01$, on a l'inégalité:\n\t\t\\[\\prob(|Y_n-p|\\geq a)\\leq \\frac{\\sigma^2(Y_n)}{a^2}\\leq \\frac{1}{4n\\times(0.01)^2}. \\]\n\t\tOn prend donc $n$ tel que $\\frac{1}{4n\\times (0.01)^2}\\leq 0.01$, c'est-à-dire $n\\geq 250\\ 000$.",
+        "html": "<p>On souhaite avoir <span class=\"math inline\">\\(\\prob(Y_n-0.01\\leq p\n\\leq Y_n+0.01)\\geq 0.99\\)</span>. Or <span\nclass=\"math display\">\\[\\begin{align*}\n        \\prob(Y_n-0.01\\leq p \\leq Y_n+0.01)\n        &amp;=\\prob(-0.01\\leq p-Y_n \\leq 0.01)\n        =\\prob(|Y_n-p|\\leq 0.01)\\\\\n        &amp;=1-\\prob(|Y_n-p|\\geq 0.01)\n        \\end{align*}\\]</span> On souhaite donc avoir <span\nclass=\"math inline\">\\(\\prob(|Y_n-p|\\geq 0.01)\\leq 0.01\\)</span>. Or par\nla question 2., avec <span class=\"math inline\">\\(a=0.01\\)</span>, on a\nl’inégalité: <span class=\"math display\">\\[\\prob(|Y_n-p|\\geq a)\\leq\n\\frac{\\sigma^2(Y_n)}{a^2}\\leq \\frac{1}{4n\\times(0.01)^2}.\\]</span> On\nprend donc <span class=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math inline\">\\(\\frac{1}{4n\\times (0.01)^2}\\leq 0.01\\)</span>,\nc’est-à-dire <span class=\"math inline\">\\(n\\geq 250\\ 000\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2332ec0f-e1da-4f59-840d-4533482951db",
+      "type": "question",
+      "value": {
+        "latex": "Parmi $\\nombre{250000}$ naissances, combien faut-il, au minimum, observer de naissances de filles pour conclure avec $99$\\% de chances de ne pas se tromper, qu'il naît plus de filles que de garçons ?",
+        "html": "<p>Parmi <span class=\"math inline\">\\(\\nombre{250000}\\)</span>\nnaissances, combien faut-il, au minimum, observer de naissances de\nfilles pour conclure avec <span class=\"math inline\">\\(99\\)</span>% de\nchances de ne pas se tromper, qu’il naît plus de filles que de garçons\n?</p>\n"
+      }
+    },
+    {
+      "id": "ab047c59-2e10-4f43-b3b0-0bbf1063173e",
+      "type": "reponse",
+      "value": {
+        "latex": "Par la question 3., on sait que $\\prob(p\\in[Y_n-0.01;Y_n+0.01])\\geq 0.99$. \\\\\n\t\tSoit $X_0$ le nombre de filles observées.\n\t\tAvec moins de $1$\\% de chances de se tromper, on veut que $p>\\frac{1}{2}$, c'est-à-dire $\\frac{X_0}{n}-0.01>\\frac{1}{2}$, donc $X_0>125\\ 250$. \\\\\n\t\tIl faut donc observer au minimum $500$ filles de plus que de garçons pour être sûr à $99$\\% qu'il y a plus de filles que de garçons.",
+        "html": "<p>Par la question 3., on sait que <span\nclass=\"math inline\">\\(\\prob(p\\in[Y_n-0.01;Y_n+0.01])\\geq\n0.99\\)</span>.<br />\nSoit <span class=\"math inline\">\\(X_0\\)</span> le nombre de filles\nobservées. Avec moins de <span class=\"math inline\">\\(1\\)</span>% de\nchances de se tromper, on veut que <span\nclass=\"math inline\">\\(p&gt;\\frac{1}{2}\\)</span>, c’est-à-dire <span\nclass=\"math inline\">\\(\\frac{X_0}{n}-0.01&gt;\\frac{1}{2}\\)</span>, donc\n<span class=\"math inline\">\\(X_0&gt;125\\ 250\\)</span>.<br />\nIl faut donc observer au minimum <span\nclass=\"math inline\">\\(500\\)</span> filles de plus que de garçons pour\nêtre sûr à <span class=\"math inline\">\\(99\\)</span>% qu’il y a plus de\nfilles que de garçons.</p>\n"
+      }
+    }
+  ]
+}

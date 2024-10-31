@@ -1,0 +1,48 @@
+{
+  "uuid": "J4Ag",
+  "titre": "Fonction caractéristique et loi de Poisson",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:16.491Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:16.491Z"
+  },
+  "contenu": [
+    {
+      "id": "b7d5a3be-7e99-490e-8959-c462248728ea",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire de loi de Poisson de paramètre $\\lambda$. Calculer sa fonction caractéristique.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire de\nloi de Poisson de paramètre <span\nclass=\"math inline\">\\(\\lambda\\)</span>. Calculer sa fonction\ncaractéristique.</p>\n"
+      }
+    },
+    {
+      "id": "c4ff0c32-ef2a-43a3-82ee-986ceeeef754",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $t\\in\\mathbb{R}$.\n\t\t      \t$$\\begin{align*}\n\t\t      \t\\phi_X(t)=\\mathbb{E}(e^{itX})\n\t\t      \t=\\sum_{k\\geq 0} e^{itk}\\p(X=k)\n\t\t      \t=\\sum_{k\\geq 0} e^{itk}\\frac{\\lambda^k}{k!}e^{-\\lambda}\n\t\t      \t=e^{-\\lambda}\\sum_{k\\geq 0} \\frac{(\\lambda e^{it})^k}{k!}\n\t\t      \t=e^{\\lambda(e^{it}-1)}\n\t\t      \t\\end{align*}$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(t\\in\\mathbb{R}\\)</span>. <span\nclass=\"math display\">\\[\\begin{align*}\n                \\phi_X(t)=\\mathbb{E}(e^{itX})\n                =\\sum_{k\\geq 0} e^{itk}\\p(X=k)\n                =\\sum_{k\\geq 0} e^{itk}\\frac{\\lambda^k}{k!}e^{-\\lambda}\n                =e^{-\\lambda}\\sum_{k\\geq 0} \\frac{(\\lambda\ne^{it})^k}{k!}\n                =e^{\\lambda(e^{it}-1)}\n                \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b2b2c501-a35a-456a-9f25-f2054738c0a2",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ et $Y$ deux variables aléatoires indépendantes de loi de Poisson de paramètres respectifs $\\lambda$ et $\\mu$. En utilisant la fonction caractéristique, montrer que la variable $X+Y$ suit une loi de Poisson de paramètre à déterminer.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> deux variables aléatoires indépendantes\nde loi de Poisson de paramètres respectifs <span\nclass=\"math inline\">\\(\\lambda\\)</span> et <span\nclass=\"math inline\">\\(\\mu\\)</span>. En utilisant la fonction\ncaractéristique, montrer que la variable <span\nclass=\"math inline\">\\(X+Y\\)</span> suit une loi de Poisson de paramètre\nà déterminer.</p>\n"
+      }
+    },
+    {
+      "id": "c950b3d6-ddef-4290-923f-79d48dcecbb9",
+      "type": "reponse",
+      "value": {
+        "latex": "Comme les variables aléatoires $X$ et $Y$ sont indépendantes, on a pour tout $t\\in\\mathbb{R}$,\n\t\t      \t\\[ \\phi_{X+Y}(t)=\\phi_X(t) \\phi_Y(t)=e^{(\\lambda + \\mu)(e^{it}-1)},\\]\n\t\t      \tce qui correspond à la fonction caractéristique d'une loi de Poisson de paramètre $\\lambda+\\mu$. Donc $X+Y \\sim \\mathcal{P}(\\lambda+\\mu)$.",
+        "html": "<p>Comme les variables aléatoires <span class=\"math inline\">\\(X\\)</span>\net <span class=\"math inline\">\\(Y\\)</span> sont indépendantes, on a pour\ntout <span class=\"math inline\">\\(t\\in\\mathbb{R}\\)</span>, <span\nclass=\"math display\">\\[\\phi_{X+Y}(t)=\\phi_X(t) \\phi_Y(t)=e^{(\\lambda +\n\\mu)(e^{it}-1)},\\]</span> ce qui correspond à la fonction\ncaractéristique d’une loi de Poisson de paramètre <span\nclass=\"math inline\">\\(\\lambda+\\mu\\)</span>. Donc <span\nclass=\"math inline\">\\(X+Y \\sim \\mathcal{P}(\\lambda+\\mu)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "AGDn",
+  "titre": "Calcul de déterminant",
+  "theme": [
+    "calcul déterminant"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:10.426Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:10.426Z"
+  },
+  "contenu": [
+    {
+      "id": "f44f8aa4-b6bd-4102-ad6a-b179b119eb97",
+      "type": "question",
+      "value": {
+        "latex": "Calculer :\n$$\n\\Delta=\\left|\\begin{array}{cccc}\n\ta^2 & a b & a b & b^2 \\\\\n\ta b & a^2 & b^2 & a b \\\\\n\ta b & b^2 & a^2 & a b \\\\\n\tb^2 & a b & a b & a^2\n\\end{array}\\right|,\n$$\noù $a$ et $b$ sont deux réels non nuls.",
+        "html": "<p>Calculer : <span\nclass=\"math display\">\\[\\Delta=\\left|\\begin{array}{cccc}\n    a^2 &amp; a b &amp; a b &amp; b^2 \\\\\n    a b &amp; a^2 &amp; b^2 &amp; a b \\\\\n    a b &amp; b^2 &amp; a^2 &amp; a b \\\\\n    b^2 &amp; a b &amp; a b &amp; a^2\n\\end{array}\\right|,\\]</span> où <span class=\"math inline\">\\(a\\)</span>\net <span class=\"math inline\">\\(b\\)</span> sont deux réels non nuls.</p>\n"
+      }
+    },
+    {
+      "id": "d2f37828-9e63-4b45-b6ac-bf32edb0709f",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\n\\begin{aligned}\n\t& \\Delta=\\left|\\begin{array}{cccc}\n\t\ta^2 & a b & a b & b^2 \\\\\n\t\ta b & a^2 & b^2 & a b \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=\\ell_2-\\ell_3\\left|\\begin{array}{cccc} \n\t\t& \\ell_4 \\\\\n\t\ta^2-b^2 & 0 & 0 & b^2-a^2 \\\\\n\t\t0 & a^2-b^2 & b^2-a^2 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =\\left(a^2-b^2\\right)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& c_1+c_2+c_3+c_4 \\\\\n\t& =(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t(a+b)^2 & b^2 & a^2 & a b \\\\\n\t\t(a+b)^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t1 & b^2 & a^2 & a b \\\\\n\t\t1 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right| \\\\\n\t& \\Delta^{\\prime}=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right|=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & 0 \\\\\n\t\t1 & b^2 & a^2+b^2 \\\\\n\t\t1 & a b & 2 a b\n\t\\end{array}\\right|=-\\left|\\begin{array}{cc}\n\t\t1 & a^2+b^2 \\\\\n\t\t1 & 2 a b\n\t\\end{array}\\right|=a^2+b^2-2 a b \\\\\n\t& \\Delta=(a-b)^4 \\cdot(a+b)^4 \\\\\n\t&\n\\end{aligned}\n$$",
+        "html": "<p><span class=\"math display\">\\[\\begin{aligned}\n    &amp; \\Delta=\\left|\\begin{array}{cccc}\n        a^2 &amp; a b &amp; a b &amp; b^2 \\\\\n        a b &amp; a^2 &amp; b^2 &amp; a b \\\\\n        a b &amp; b^2 &amp; a^2 &amp; a b \\\\\n        b^2 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right|=\\ell_2-\\ell_3\\left|\\begin{array}{cccc}\n        &amp; \\ell_4 \\\\\n        a^2-b^2 &amp; 0 &amp; 0 &amp; b^2-a^2 \\\\\n        0 &amp; a^2-b^2 &amp; b^2-a^2 &amp; 0 \\\\\n        a b &amp; b^2 &amp; a^2 &amp; a b \\\\\n        b^2 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right| \\\\\n    &amp; =\\left(a^2-b^2\\right)^2 \\cdot\\left|\\begin{array}{cccc}\n        1 &amp; 0 &amp; 0 &amp; -1 \\\\\n        0 &amp; 1 &amp; -1 &amp; 0 \\\\\n        a b &amp; b^2 &amp; a^2 &amp; a b \\\\\n        b^2 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right|=(a-b)^2 \\cdot(a+b)^2\n\\cdot\\left|\\begin{array}{cccc}\n        1 &amp; 0 &amp; 0 &amp; -1 \\\\\n        0 &amp; 1 &amp; -1 &amp; 0 \\\\\n        a b &amp; b^2 &amp; a^2 &amp; a b \\\\\n        b^2 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right| \\\\\n    &amp; c_1+c_2+c_3+c_4 \\\\\n    &amp; =(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n        0 &amp; 0 &amp; 0 &amp; -1 \\\\\n        0 &amp; 1 &amp; -1 &amp; 0 \\\\\n        (a+b)^2 &amp; b^2 &amp; a^2 &amp; a b \\\\\n        (a+b)^2 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right| \\\\\n    &amp; =(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{cccc}\n        0 &amp; 0 &amp; 0 &amp; -1 \\\\\n        0 &amp; 1 &amp; -1 &amp; 0 \\\\\n        1 &amp; b^2 &amp; a^2 &amp; a b \\\\\n        1 &amp; a b &amp; a b &amp; a^2\n    \\end{array}\\right|=(a-b)^2 \\cdot(a+b)^4\n\\cdot\\left|\\begin{array}{ccc}\n        0 &amp; 1 &amp; -1 \\\\\n        1 &amp; b^2 &amp; a^2 \\\\\n        1 &amp; a b &amp; a b\n    \\end{array}\\right| \\\\\n    &amp; \\Delta^{\\prime}=\\left|\\begin{array}{ccc}\n        0 &amp; 1 &amp; -1 \\\\\n        1 &amp; b^2 &amp; a^2 \\\\\n        1 &amp; a b &amp; a b\n    \\end{array}\\right|=\\left|\\begin{array}{ccc}\n        0 &amp; 1 &amp; 0 \\\\\n        1 &amp; b^2 &amp; a^2+b^2 \\\\\n        1 &amp; a b &amp; 2 a b\n    \\end{array}\\right|=-\\left|\\begin{array}{cc}\n        1 &amp; a^2+b^2 \\\\\n        1 &amp; 2 a b\n    \\end{array}\\right|=a^2+b^2-2 a b \\\\\n    &amp; \\Delta=(a-b)^4 \\cdot(a+b)^4 \\\\\n    &amp;\n\\end{aligned}\\]</span></p>\n"
+      }
+    }
+  ]
+}

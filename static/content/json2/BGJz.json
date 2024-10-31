@@ -1,0 +1,40 @@
+{
+  "uuid": "BGJz",
+  "titre": "Densité et transformation affine",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:11.385Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:11.385Z"
+  },
+  "contenu": [
+    {
+      "id": "c3096b0e-9e0d-4946-a728-9487bab6194f",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire absolument continue admettant pour densité $f$. Soit $(a,b) \\in \\mathbb{R}^2$ avec $a>0$ et $Y=aX+b$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nabsolument continue admettant pour densité <span\nclass=\"math inline\">\\(f\\)</span>. Soit <span class=\"math inline\">\\((a,b)\n\\in \\mathbb{R}^2\\)</span> avec <span\nclass=\"math inline\">\\(a&gt;0\\)</span> et <span\nclass=\"math inline\">\\(Y=aX+b\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f31ecca0-f1d6-4adf-aed8-11fc29c02ae3",
+      "type": "question",
+      "value": {
+        "latex": "Démontrer que $Y$ est une variable aléatoire absolument continue en exprimant sa densité en fonction de $f$.",
+        "html": "<p>Démontrer que <span class=\"math inline\">\\(Y\\)</span> est une variable\naléatoire absolument continue en exprimant sa densité en fonction de\n<span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6b190bb8-168b-403a-a773-42b8c98e4d78",
+      "type": "reponse",
+      "value": {
+        "latex": "On utilise le théorème d'identification. La densité $f_Y$ de $Y$ est l'unique fonction telle que pour toute fonction $h$ continue bornée, on ait\n\t\\[ \\E(h(Y))=\\int_\\R h(y)f_Y(y)\\ dy.\\]\n\tOr, étant donné $h$, on a\n\t$$\\begin{align*}\n\t\t\\E(h(Y))&=\\E(h(aX+b)) \\\\\n\t\t&= \\int_\\R h(ax+b) f_X(x) \\ dx \\quad \\text{(par le théorème de transfert)} \\\\\n\t\t&= \\int_\\R h(y) f_X\\left(\\frac{y-b}{a}\\right) \\frac{1}{a} dy \\quad \\text{(par changement de variable } y=ax+b \\text{)}\n\t\\end{align*}$$\n\td'où son identification\n\t\\[ f_Y(y)=\\frac{1}{a}f_X\\left(\\frac{y-b}{a}\\right).\\]",
+        "html": "<p>On utilise le théorème d’identification. La densité <span\nclass=\"math inline\">\\(f_Y\\)</span> de <span\nclass=\"math inline\">\\(Y\\)</span> est l’unique fonction telle que pour\ntoute fonction <span class=\"math inline\">\\(h\\)</span> continue bornée,\non ait <span class=\"math display\">\\[\\E(h(Y))=\\int_\\R h(y)f_Y(y)\\\ndy.\\]</span> Or, étant donné <span class=\"math inline\">\\(h\\)</span>, on\na <span class=\"math display\">\\[\\begin{align*}\n        \\E(h(Y))&amp;=\\E(h(aX+b)) \\\\\n        &amp;= \\int_\\R h(ax+b) f_X(x) \\ dx \\quad \\text{(par le théorème\nde transfert)} \\\\\n        &amp;= \\int_\\R h(y) f_X\\left(\\frac{y-b}{a}\\right) \\frac{1}{a} dy\n\\quad \\text{(par changement de variable } y=ax+b \\text{)}\n    \\end{align*}\\]</span> d’où son identification <span\nclass=\"math display\">\\[f_Y(y)=\\frac{1}{a}f_X\\left(\\frac{y-b}{a}\\right).\\]</span></p>\n"
+      }
+    }
+  ]
+}

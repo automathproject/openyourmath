@@ -1,0 +1,32 @@
+{
+  "uuid": "Z8Dq",
+  "titre": "Moments de la loi exponentielle",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime NGUYEN",
+    "createdAt": "2024-10-31T14:47:26.987Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:26.987Z"
+  },
+  "contenu": [
+    {
+      "id": "04ac128d-4b95-4c69-85f1-11e398ec9aac",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire suivant une loi exponentielle  de paramètre $\\lambda>0$. Démontrer l'existence des moments d'ordre $n$ de $X$ pour tout $n \\in \\mathbb{N}$ puis les calculer.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nsuivant une loi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda&gt;0\\)</span>. Démontrer l’existence des\nmoments d’ordre <span class=\"math inline\">\\(n\\)</span> de <span\nclass=\"math inline\">\\(X\\)</span> pour tout <span class=\"math inline\">\\(n\n\\in \\mathbb{N}\\)</span> puis les calculer.</p>\n"
+      }
+    },
+    {
+      "id": "9ad3ad3d-e0b0-4fca-bbd0-89e45f9ed55c",
+      "type": "reponse",
+      "value": {
+        "latex": "On sait par comparaison que la fonction $x\\mapsto x e^{-\\lambda x}$ est intégrable au voisinage de $+\\infty$ donc on peut calculer par théorème de transfert pour tout $n \\in \\N^*$ : \n\t$$\\begin{align*}\n\t\t\\mathbb{E}(X^n) &= \\lambda \\int_0^{+\\infty} x^n e^{-\\lambda x} dx \\\\\n\t\t&= \\lambda \\left[ \\frac{x^n e^{-\\lambda x}}{-\\lambda} \\right]_{0}^{+\\infty} + \\frac{1}{\\lambda} n \\int_{0}^{+\\infty} x^{n-1} \\lambda e^{-\\lambda x} dx \\\\\n\t\t&= \\frac{n}{\\lambda } \\mathbb{E}(X^{n-1})\n\t\\end{align*}$$\n\tDe plus, on a immédiatement que $\\mathbb{E}(X^0) = 1$ donc par récurrence, on obtient :\n\t$$\\mathbb{E}(X^n) = \\frac{n!}{\\lambda^n}$$",
+        "html": "<p>On sait par comparaison que la fonction <span\nclass=\"math inline\">\\(x\\mapsto x e^{-\\lambda x}\\)</span> est intégrable\nau voisinage de <span class=\"math inline\">\\(+\\infty\\)</span> donc on\npeut calculer par théorème de transfert pour tout <span\nclass=\"math inline\">\\(n \\in \\N^*\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\mathbb{E}(X^n) &amp;= \\lambda \\int_0^{+\\infty} x^n e^{-\\lambda\nx} dx \\\\\n        &amp;= \\lambda \\left[ \\frac{x^n e^{-\\lambda x}}{-\\lambda}\n\\right]_{0}^{+\\infty} + \\frac{1}{\\lambda} n \\int_{0}^{+\\infty} x^{n-1}\n\\lambda e^{-\\lambda x} dx \\\\\n        &amp;= \\frac{n}{\\lambda } \\mathbb{E}(X^{n-1})\n    \\end{align*}\\]</span> De plus, on a immédiatement que <span\nclass=\"math inline\">\\(\\mathbb{E}(X^0) = 1\\)</span> donc par récurrence,\non obtient : <span class=\"math display\">\\[\\mathbb{E}(X^n) =\n\\frac{n!}{\\lambda^n}\\]</span></p>\n"
+      }
+    }
+  ]
+}

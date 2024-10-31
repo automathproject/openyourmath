@@ -1,0 +1,64 @@
+{
+  "uuid": "T4fh",
+  "titre": "Convergence d'une suite de variables aléatoires",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:23.343Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:23.343Z"
+  },
+  "contenu": [
+    {
+      "id": "64a4a524-0a34-4ba3-b6dc-2e67d6d83e7f",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer $\\mathbb{E}(Y)$ et $\\mathbb{E}(Y^2)$ en fonction de $n$ et $p$.",
+        "html": "<p>Exprimer <span class=\"math inline\">\\(\\mathbb{E}(Y)\\)</span> et <span\nclass=\"math inline\">\\(\\mathbb{E}(Y^2)\\)</span> en fonction de <span\nclass=\"math inline\">\\(n\\)</span> et <span\nclass=\"math inline\">\\(p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1d5cac8e-fe02-47a2-b4b9-d829ae167cb2",
+      "type": "reponse",
+      "value": {
+        "latex": "On considère $Y = n\\overline{X} = \\sum_{i=1}^n X_i$ : par définition, $Y$ suit une loi binomiale $\\mathcal{B}(n,p)$, ce qui permet d'affirmer que $\\mathbb{E}(Y) = np$ et $V(Y) = np(1-p)$. Or on sait que $V(Y) = \\mathbb{E}(Y^2)-(\\mathbb{E}(Y))^2$, donc $\\mathbb{E}(Y^2) = np(1-p)+(np)^2 = np(1+p(n-1))$",
+        "html": "<p>On considère <span class=\"math inline\">\\(Y = n\\overline{X} =\n\\sum_{i=1}^n X_i\\)</span> : par définition, <span\nclass=\"math inline\">\\(Y\\)</span> suit une loi binomiale <span\nclass=\"math inline\">\\(\\mathcal{B}(n,p)\\)</span>, ce qui permet\nd’affirmer que <span class=\"math inline\">\\(\\mathbb{E}(Y) = np\\)</span>\net <span class=\"math inline\">\\(V(Y) = np(1-p)\\)</span>. Or on sait que\n<span class=\"math inline\">\\(V(Y) =\n\\mathbb{E}(Y^2)-(\\mathbb{E}(Y))^2\\)</span>, donc <span\nclass=\"math inline\">\\(\\mathbb{E}(Y^2) = np(1-p)+(np)^2 =\nnp(1+p(n-1))\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "72dacf9a-5edd-467c-be34-a9f23758256f",
+      "type": "question",
+      "value": {
+        "latex": "On pose $Z = \\overline{X}^2$. Peut-on dire que $Z$ est un estimateur sais biais de $p^2$ ?",
+        "html": "<p>On pose <span class=\"math inline\">\\(Z = \\overline{X}^2\\)</span>.\nPeut-on dire que <span class=\"math inline\">\\(Z\\)</span> est un\nestimateur sais biais de <span class=\"math inline\">\\(p^2\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "43148bde-2f5f-4a8a-b03a-5ef2d4162dd6",
+      "type": "reponse",
+      "value": {
+        "latex": "En voyant la variable $Z$ comme un estimateur de $p^2$, on va calculer son biais $B(Z)=\\mathbb{E}(Z-p^2) = \\mathbb{E}(Z)-p^2$. Or $\\mathbb{E}(Z) = \\mathbb{E}\\left(\\left(\\frac{1}{n}Y\\right)^2\\right) = \\frac{1}{n^2}\\mathbb{E}(Y^2) = \\frac{p}{n} + p^2 \\frac{n-1}{n} \\neq p^2$ donc $B(Z) \\neq 0$.",
+        "html": "<p>En voyant la variable <span class=\"math inline\">\\(Z\\)</span> comme un\nestimateur de <span class=\"math inline\">\\(p^2\\)</span>, on va calculer\nson biais <span class=\"math inline\">\\(B(Z)=\\mathbb{E}(Z-p^2) =\n\\mathbb{E}(Z)-p^2\\)</span>. Or <span class=\"math inline\">\\(\\mathbb{E}(Z)\n= \\mathbb{E}\\left(\\left(\\frac{1}{n}Y\\right)^2\\right) =\n\\frac{1}{n^2}\\mathbb{E}(Y^2) = \\frac{p}{n} + p^2 \\frac{n-1}{n} \\neq\np^2\\)</span> donc <span class=\"math inline\">\\(B(Z) \\neq 0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "70a37f47-b29f-4ac3-b3d4-8c9b2a074517",
+      "type": "question",
+      "value": {
+        "latex": "On pose $T = \\frac{Y(Y-1)}{n(n-1)}$. Vérifier que $T$ est un estimateur sans biais de $p^2$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(T =\n\\frac{Y(Y-1)}{n(n-1)}\\)</span>. Vérifier que <span\nclass=\"math inline\">\\(T\\)</span> est un estimateur sans biais de <span\nclass=\"math inline\">\\(p^2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "600e306e-3f2c-41b2-bf7a-3c8b68b43298",
+      "type": "reponse",
+      "value": {
+        "latex": "En revanche, $\\mathbb{E}(T) = \\frac{1}{n(n-1)}\\mathbb{E}(Y(Y-1)) = \\frac{1}{n(n-1)}(np(1+(n-1)p)-np) = p^2$ donc $T$ est un estimateur non biaisé de la valeur $p^2$.",
+        "html": "<p>En revanche, <span class=\"math inline\">\\(\\mathbb{E}(T) =\n\\frac{1}{n(n-1)}\\mathbb{E}(Y(Y-1)) = \\frac{1}{n(n-1)}(np(1+(n-1)p)-np) =\np^2\\)</span> donc <span class=\"math inline\">\\(T\\)</span> est un\nestimateur non biaisé de la valeur <span\nclass=\"math inline\">\\(p^2\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

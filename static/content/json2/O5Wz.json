@@ -1,0 +1,136 @@
+{
+  "uuid": "O5Wz",
+  "titre": "Temps de fonctionnement de machines",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:20.015Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:20.015Z"
+  },
+  "contenu": [
+    {
+      "id": "600afd83-371b-41e2-8f6e-c12591c4f276",
+      "type": "description",
+      "value": {
+        "latex": "Le fonctionnement d’une machine est perturbé par des pannes. On considère les variables aléatoires $X_1, X_2, X_3$ définies par : $X_1$ est le temps, exprimé en heures, écoulé entre la mise en route de la machine et la première panne. $X_2$ (resp. $X_3$) est le temps, en heures, écoulé entre la remise en route de la machine après la première (resp. la deuxième) panne et la panne suivante. On suppose que les variables aléatoires $X_1, X_2, X_3$ sont indépendantes et suivent la même loi exponentielle de paramètre $\\lambda = \\frac{1}{2}$, autrement dit de densité :\n\n$$\nf(t) = \n\\begin{cases} \n\\frac{1}{2} e^{-\\frac{t}{2}} & \\text{si } t \\geq 0 \\\\\n0 & \\text{si } t < 0\n\\end{cases}\n$$",
+        "html": "<p>Le fonctionnement d’une machine est perturbé par des pannes. On\nconsidère les variables aléatoires <span class=\"math inline\">\\(X_1, X_2,\nX_3\\)</span> définies par : <span class=\"math inline\">\\(X_1\\)</span> est\nle temps, exprimé en heures, écoulé entre la mise en route de la machine\net la première panne. <span class=\"math inline\">\\(X_2\\)</span> (resp.\n<span class=\"math inline\">\\(X_3\\)</span>) est le temps, en heures,\nécoulé entre la remise en route de la machine après la première (resp.\nla deuxième) panne et la panne suivante. On suppose que les variables\naléatoires <span class=\"math inline\">\\(X_1, X_2, X_3\\)</span> sont\nindépendantes et suivent la même loi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda = \\frac{1}{2}\\)</span>, autrement dit de\ndensité :</p>\n<p><span class=\"math display\">\\[f(t) =\n\\begin{cases}\n\\frac{1}{2} e^{-\\frac{t}{2}} &amp; \\text{si } t \\geq 0 \\\\\n0 &amp; \\text{si } t &lt; 0\n\\end{cases}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "da5002b5-37d1-4372-a5d9-c9931cd01be5",
+      "type": "question",
+      "value": {
+        "latex": "Calculer l'espérance de chaque variable $X_i$ pour $i \\in \\{1,2,3\\}$ et interpréter.",
+        "html": "<p>Calculer l’espérance de chaque variable <span\nclass=\"math inline\">\\(X_i\\)</span> pour <span class=\"math inline\">\\(i\n\\in \\{1,2,3\\}\\)</span> et interpréter.</p>\n"
+      }
+    },
+    {
+      "id": "1e4c65f4-f7d0-4994-812f-9a8716ff8dfa",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après le cours, l'espérance d'une variable aléatoire suivant une loi exponentielle de paramètre $\\lambda$ est $\\frac{1}{\\lambda}$. Donc, l'espérance de chaque variable $X_i$ est $\\frac{1}{\\frac{1}{2}} = 2$ heures. Cela signifie que la durée moyenne entre deux pannes successives est de 2 heures.",
+        "html": "<p>D’après le cours, l’espérance d’une variable aléatoire suivant une\nloi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda\\)</span> est <span\nclass=\"math inline\">\\(\\frac{1}{\\lambda}\\)</span>. Donc, l’espérance de\nchaque variable <span class=\"math inline\">\\(X_i\\)</span> est <span\nclass=\"math inline\">\\(\\frac{1}{\\frac{1}{2}} = 2\\)</span> heures. Cela\nsignifie que la durée moyenne entre deux pannes successives est de 2\nheures.</p>\n"
+      }
+    },
+    {
+      "id": "0986339f-42b4-4420-95cd-886a76e491c4",
+      "type": "question",
+      "value": {
+        "latex": "Pour tout $t >0 $ et $i \\in \\{1,2,3\\}$, calculer $\\prob(X_i > t)$.",
+        "html": "<p>Pour tout <span class=\"math inline\">\\(t &gt;0\\)</span> et <span\nclass=\"math inline\">\\(i \\in \\{1,2,3\\}\\)</span>, calculer <span\nclass=\"math inline\">\\(\\prob(X_i &gt; t)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "499cc0c1-d6c6-4470-b83e-78da2bf2934b",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après le cours, la fonction de répartition d'une variable aléatoire suivant une loi exponentielle de paramètre $\\lambda$ est $F(t) = 1 - e^{-\\lambda t}$ si $t \\geq 0$. Donc, pour tout $t > 0$ et $i \\in \\{1,2,3\\}$, on a :\n        \\[\n        \\prob(X_i > t) = 1 - \\prob(X_i \\leq t) = 1 - F(t) = 1 - (1 - e^{-\\frac{t}{2}}) = e^{-\\frac{t}{2}}.\n        \\]",
+        "html": "<p>D’après le cours, la fonction de répartition d’une variable aléatoire\nsuivant une loi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda\\)</span> est <span\nclass=\"math inline\">\\(F(t) = 1 - e^{-\\lambda t}\\)</span> si <span\nclass=\"math inline\">\\(t \\geq 0\\)</span>. Donc, pour tout <span\nclass=\"math inline\">\\(t &gt; 0\\)</span> et <span class=\"math inline\">\\(i\n\\in \\{1,2,3\\}\\)</span>, on a : <span class=\"math display\">\\[\\prob(X_i\n&gt; t) = 1 - \\prob(X_i \\leq t) = 1 - F(t) = 1 - (1 - e^{-\\frac{t}{2}})\n= e^{-\\frac{t}{2}}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "fb9fece7-44bc-44e4-a45c-75c6029f24a5",
+      "type": "question",
+      "value": {
+        "latex": "Soit $E$ l’événement : « Chacune des 3 périodes de fonctionnement de la machine dure plus de 2 heures ». Exprimer $E$ en fonction des événements $A_i = \\{X_i > 2\\}$ pour $i \\in \\{1,2,3\\}$ et calculer $\\prob(E)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(E\\)</span> l’événement : « Chacune\ndes 3 périodes de fonctionnement de la machine dure plus de 2 heures ».\nExprimer <span class=\"math inline\">\\(E\\)</span> en fonction des\névénements <span class=\"math inline\">\\(A_i = \\{X_i &gt; 2\\}\\)</span>\npour <span class=\"math inline\">\\(i \\in \\{1,2,3\\}\\)</span> et calculer\n<span class=\"math inline\">\\(\\prob(E)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a3c1a638-e168-4944-be56-ec6f694fd837",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $E = A_1 \\cap A_2 \\cap A_3$. Or les variables $X_i$ sont indépendantes donc les événements $A_i$ sont indépendants. Donc, $\\prob(E) = \\prob(A_1) \\times \\prob(A_2) \\times \\prob(A_3) = e^{-\\frac{2}{2}} \\times e^{-\\frac{2}{2}} \\times e^{-\\frac{2}{2}} = e^{-3}$.",
+        "html": "<p>On a <span class=\"math inline\">\\(E = A_1 \\cap A_2 \\cap A_3\\)</span>.\nOr les variables <span class=\"math inline\">\\(X_i\\)</span> sont\nindépendantes donc les événements <span\nclass=\"math inline\">\\(A_i\\)</span> sont indépendants. Donc, <span\nclass=\"math inline\">\\(\\prob(E) = \\prob(A_1) \\times \\prob(A_2) \\times\n\\prob(A_3) = e^{-\\frac{2}{2}} \\times e^{-\\frac{2}{2}} \\times\ne^{-\\frac{2}{2}} = e^{-3}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e1571cdf-9e1d-4d7e-a3ff-90894966c816",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer $Y$ en fonction de $X_1,X_2,X_3$ puis montrer que $\\prob(Y \\leq t) = \\left(1 - e^{-\\frac{t}{2}}\\right)^3$ pour tout $t \\geq 0$.",
+        "html": "<p>Exprimer <span class=\"math inline\">\\(Y\\)</span> en fonction de <span\nclass=\"math inline\">\\(X_1,X_2,X_3\\)</span> puis montrer que <span\nclass=\"math inline\">\\(\\prob(Y \\leq t) = \\left(1 -\ne^{-\\frac{t}{2}}\\right)^3\\)</span> pour tout <span\nclass=\"math inline\">\\(t \\geq 0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5ed94eed-39b3-4281-96a1-b946021e96d5",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $Y = \\max(X_1,X_2,X_3)$. Donc, pour tout $t \\geq 0$, on a :\n            $$\\begin{align*}\n                \\prob(Y \\leq t) & = \\prob(\\max(X_1,X_2,X_3) \\leq t) \\\\\n                & = \\prob(X_1 \\leq t \\cap X_2 \\leq t \\cap X_3 \\leq t) \\\\\n                & = \\prob(X_1 \\leq t) \\times \\prob(X_2 \\leq t) \\times \\prob(X_3 \\leq t) \\\\\n                & = (1 - e^{-\\frac{t}{2}})^3.\n            \\end{align*}$$",
+        "html": "<p>On a <span class=\"math inline\">\\(Y = \\max(X_1,X_2,X_3)\\)</span>.\nDonc, pour tout <span class=\"math inline\">\\(t \\geq 0\\)</span>, on a :\n<span class=\"math display\">\\[\\begin{align*}\n                \\prob(Y \\leq t) &amp; = \\prob(\\max(X_1,X_2,X_3) \\leq t)\n\\\\\n                &amp; = \\prob(X_1 \\leq t \\cap X_2 \\leq t \\cap X_3 \\leq\nt) \\\\\n                &amp; = \\prob(X_1 \\leq t) \\times \\prob(X_2 \\leq t)\n\\times \\prob(X_3 \\leq t) \\\\\n                &amp; = (1 - e^{-\\frac{t}{2}})^3.\n            \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "7c55f6a8-87ee-404d-bea3-4d4203fa35ab",
+      "type": "question",
+      "value": {
+        "latex": "En déduire une fonction densité $f_Y(t)$ de $Y$.",
+        "html": "<p>En déduire une fonction densité <span\nclass=\"math inline\">\\(f_Y(t)\\)</span> de <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2dc8f647-90ff-4bca-bc2e-b15068f30dd4",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour tout $t < 0$, $\\prob(Y \\leq t) = 0$. D'après le résultat de la question précédente, pour tout $t \\geq 0$, on a :\n            \\[\n            f_Y(t) = \\frac{d}{dt} \\prob(Y \\leq t) = \\frac{d}{dt} \\left(1 - e^{-\\frac{t}{2}}\\right)^3 = 3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2.\n            \\]\n            On en déduit qu'une densité de probabilité de $Y$ est : \\[f_Y(t) = \n                \\begin{cases} \n                    0 & \\text{si } t < 0 \\\\\n                    3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2 & \\text{si } t \\geq 0\n                \\end{cases}\n            \\].",
+        "html": "<p>Pour tout <span class=\"math inline\">\\(t &lt; 0\\)</span>, <span\nclass=\"math inline\">\\(\\prob(Y \\leq t) = 0\\)</span>. D’après le résultat\nde la question précédente, pour tout <span class=\"math inline\">\\(t \\geq\n0\\)</span>, on a : <span class=\"math display\">\\[f_Y(t) = \\frac{d}{dt}\n\\prob(Y \\leq t) = \\frac{d}{dt} \\left(1 - e^{-\\frac{t}{2}}\\right)^3 = 3\n\\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 -\ne^{-\\frac{t}{2}}\\right)^2.\\]</span> On en déduit qu’une densité de\nprobabilité de <span class=\"math inline\">\\(Y\\)</span> est : <span\nclass=\"math display\">\\[f_Y(t) =\n                \\begin{cases}\n                    0 &amp; \\text{si } t &lt; 0 \\\\\n                    3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1\n- e^{-\\frac{t}{2}}\\right)^2 &amp; \\text{si } t \\geq 0\n                \\end{cases}\\]</span>.</p>\n"
+      }
+    },
+    {
+      "id": "99464049-a1ad-42d2-9a44-6cbddb1c553a",
+      "type": "question",
+      "value": {
+        "latex": "En intégrant par parties, montrer que pour tout $a <0$ : \n        $$\n        \\int_0^{+\\infty} t e^{at} \\, dt = \\frac{1}{a^2}.\n        $$",
+        "html": "<p>En intégrant par parties, montrer que pour tout <span\nclass=\"math inline\">\\(a &lt;0\\)</span> : <span\nclass=\"math display\">\\[\\int_0^{+\\infty} t e^{at} \\, dt =\n\\frac{1}{a^2}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "49ef9ad8-620f-4a27-8425-425a76fe4a3a",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\int_0^{+\\infty} t e^{at} \\, dt = \\left[ t \\frac{e^{at}}{a} \\right]_0^{+\\infty} - \\int_0^{+\\infty} \\frac{e^{at}}{a} \\, dt = 0 - \\frac{1}{a} \\int_0^{+\\infty} e^{at} \\, dt = -\\frac{1}{a} \\left[ \\frac{e^{at}}{a} \\right]_0^{+\\infty} = -\\frac{1}{a} \\left(0 - \\frac{1}{a}\\right) = \\frac{1}{a^2}$.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\int_0^{+\\infty} t e^{at} \\, dt =\n\\left[ t \\frac{e^{at}}{a} \\right]_0^{+\\infty} - \\int_0^{+\\infty}\n\\frac{e^{at}}{a} \\, dt = 0 - \\frac{1}{a} \\int_0^{+\\infty} e^{at} \\, dt =\n-\\frac{1}{a} \\left[ \\frac{e^{at}}{a} \\right]_0^{+\\infty} = -\\frac{1}{a}\n\\left(0 - \\frac{1}{a}\\right) = \\frac{1}{a^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2448737e-5a4a-494b-b025-018748c8cbb2",
+      "type": "question",
+      "value": {
+        "latex": "Démontrer que la variable aléatoire $Y$ admet une espérance, que l’on calculera. Exprimer la valeur en heures et minutes.",
+        "html": "<p>Démontrer que la variable aléatoire <span\nclass=\"math inline\">\\(Y\\)</span> admet une espérance, que l’on\ncalculera. Exprimer la valeur en heures et minutes.</p>\n"
+      }
+    },
+    {
+      "id": "26a1d331-2ebc-4d6a-ad71-500f39e978ba",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $f_Y(t) = 3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2$. Donc on a :\n            $$\\begin{align*}\n                \\mathbb{E}(Y) & = \\int_0^{+\\infty} t f_Y(t) \\, dt \\\\\n                & = 3 \\times \\frac{1}{2} \\int_0^{+\\infty} t e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2 \\, dt \\\\\n                & = \\frac{3}{2} \\int_0^{+\\infty} t e^{-\\frac{t}{2}} \\, dt -2t e^{-t} + t e^{-\\frac{3t}{2}} \\, dt \\\\\n                &= \\frac{3}{2} \\times \\left( \\frac{1}{\\left(\\frac{1}{2}\\right)^2}  - 2 \\times  \\frac{1}{1^2}  +  \\frac{1}{\\left(\\frac{3}{2}\\right)^2} \\right) \\\\\n                &= \\frac{11}{3} = 3 + \\frac{2}{3}.\n            \\end{align*}$$\n            Donc, l'espérance de $Y$ est de 3 heures et 40 minutes. Cela signifie que la durée moyenne de fonctionnement de la machine sans interruption est de 3 heures et 40 minutes.",
+        "html": "<p>On a <span class=\"math inline\">\\(f_Y(t) = 3 \\times \\frac{1}{2}\ne^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2\\)</span>.\nDonc on a : <span class=\"math display\">\\[\\begin{align*}\n                \\mathbb{E}(Y) &amp; = \\int_0^{+\\infty} t f_Y(t) \\, dt \\\\\n                &amp; = 3 \\times \\frac{1}{2} \\int_0^{+\\infty} t\ne^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2 \\, dt \\\\\n                &amp; = \\frac{3}{2} \\int_0^{+\\infty} t e^{-\\frac{t}{2}}\n\\, dt -2t e^{-t} + t e^{-\\frac{3t}{2}} \\, dt \\\\\n                &amp;= \\frac{3}{2} \\times \\left(\n\\frac{1}{\\left(\\frac{1}{2}\\right)^2}  - 2\n\\times  \\frac{1}{1^2}  +  \\frac{1}{\\left(\\frac{3}{2}\\right)^2} \\right)\n\\\\\n                &amp;= \\frac{11}{3} = 3 + \\frac{2}{3}.\n            \\end{align*}\\]</span> Donc, l’espérance de <span\nclass=\"math inline\">\\(Y\\)</span> est de 3 heures et 40 minutes. Cela\nsignifie que la durée moyenne de fonctionnement de la machine sans\ninterruption est de 3 heures et 40 minutes.</p>\n"
+      }
+    }
+  ]
+}

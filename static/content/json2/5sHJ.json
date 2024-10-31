@@ -1,0 +1,40 @@
+{
+  "uuid": "5sHJ",
+  "titre": "Gain au loto",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:06.384Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:06.384Z"
+  },
+  "contenu": [
+    {
+      "id": "d66dfbe1-e212-4f45-8d52-3c72d6fcee65",
+      "type": "description",
+      "value": {
+        "latex": "Le loto est un jeu consistant à choisir six numéros différents compris entre 1 et 49.\nAu dernier tirage, il fallait jouer les numéros: $4$, $8$, $21$, $23$, $42$ et $49$. Le gain était de $\\nombre{700000}$ euros avec les six bons numéros, de $\\nombre{1100}$ euros avec cinq bons numéros, de $20$ euros avec quatre bons numéros et de $1$ euro avec trois bons numéros.",
+        "html": "<p>Le loto est un jeu consistant à choisir six numéros différents\ncompris entre 1 et 49. Au dernier tirage, il fallait jouer les numéros:\n<span class=\"math inline\">\\(4\\)</span>, <span\nclass=\"math inline\">\\(8\\)</span>, <span\nclass=\"math inline\">\\(21\\)</span>, <span\nclass=\"math inline\">\\(23\\)</span>, <span\nclass=\"math inline\">\\(42\\)</span> et <span\nclass=\"math inline\">\\(49\\)</span>. Le gain était de <span\nclass=\"math inline\">\\(\\nombre{700000}\\)</span> euros avec les six bons\nnuméros, de <span class=\"math inline\">\\(\\nombre{1100}\\)</span> euros\navec cinq bons numéros, de <span class=\"math inline\">\\(20\\)</span> euros\navec quatre bons numéros et de <span class=\"math inline\">\\(1\\)</span>\neuro avec trois bons numéros.</p>\n"
+      }
+    },
+    {
+      "id": "fc2bda26-59c3-4d17-9149-dda062f67b86",
+      "type": "question",
+      "value": {
+        "latex": "Pour un jeu simple, calculer l'espérance de gain.",
+        "html": "<p>Pour un jeu simple, calculer l’espérance de gain.</p>\n"
+      }
+    },
+    {
+      "id": "39607ae3-81ba-450b-9527-fe24e3ebf403",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $X$ le nombre de bons numéros trouvés par le joueur. Alors $X$ suit une loi hypergéométrique de paramètres: $\\mathcal{H}(6,\\frac{1}{46},49)$. Une loi hypergéométrique de paramètres $(N,p,n)$ est une loi de probabilité sur $\\{0,1,\\ldots,N\\}$ dont la loi de probabilité e est donnée par : \n    \\[ \\forall k \\in \\{0,1,\\ldots,N\\}, \\prob(X=k)=\\frac{\\binom{n}{k}\\binom{N-n}{n-k}}{\\binom{N}{n}}.\\]\n    Elle permet de modéliser le tirage sans remise de $n$ boules parmi $N$ boules dont $n$ sont marquées. Ici, $N=49$, $n=6$ et $p=\\frac{1}{46}$.\n    \n    Soit $Y$ le gain du joueur. Alors on a\n\\begin{center}\n\\begin{tabular}{|c|c|c|c|c|c|c|c|}\n \\hline\n $k$ & 0 & 0 & 0 & 1 & 20 & 1100 & $700\\ 000$ \\\\\n \\hline\n $\\prob(Y=k)$ & $\\prob(X=0)$ & $\\prob(X=1)$ & $\\prob(X=2)$ & $\\prob(X=3)$ & $\\prob(X=4)$ & $\\prob(X=5)$ & $\\prob(X=6)$ \\\\\n \\hline\n\\end{tabular}\n\\end{center}\nOn a donc\n\\[ \\E(Y)=\\prob(X=3)+20\\times \\prob(X=4)+\\nombre{1100}\\times \\prob(X=5) + {700000}\\times \\prob(X=6).\\]\nOr\n$$\\begin{align*}\n & \\prob(X=3)=\\frac{\\binom{6}{3}\\binom{43}{3}}{\\binom{49}{6}}= \\frac{246\\ 820}{13\\ 983\\ 816} \\\\\n & \\prob(X=4)=\\frac{\\binom{6}{4}\\binom{43}{2}}{\\binom{49}{6}}= \\frac{13\\ 545}{13\\ 983\\ 816} \\\\\n & \\prob(X=5)=\\frac{\\binom{6}{5}\\binom{6}{1}}{\\binom{49}{6}}= \\frac{258}{13\\ 983\\ 816} \\\\\n & \\prob(X=6)=\\frac{\\binom{6}{6}\\binom{43}{0}}{\\binom{49}{6}}= \\frac{1}{13\\ 983\\ 816} \n\\end{align*}$$\ndonc \n\\[ \\E(Y)=\\frac{1}{13\\ 983\\ 816} (246\\ 820+ 20\\times 13\\ 545+ 1\\ 100\\times 258+700\\ 000)\n =\\frac{1\\ 501 520}{13\\ 983\\ 816}\n \\simeq 0.1074\n\\]\nL'espérance du gain du joueur (sans compter sa mise de départ) est d'environ $0.11$ euros.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> le nombre de bons numéros\ntrouvés par le joueur. Alors <span class=\"math inline\">\\(X\\)</span> suit\nune loi hypergéométrique de paramètres: <span\nclass=\"math inline\">\\(\\mathcal{H}(6,\\frac{1}{46},49)\\)</span>. Une loi\nhypergéométrique de paramètres <span\nclass=\"math inline\">\\((N,p,n)\\)</span> est une loi de probabilité sur\n<span class=\"math inline\">\\(\\{0,1,\\ldots,N\\}\\)</span> dont la loi de\nprobabilité e est donnée par : <span class=\"math display\">\\[\\forall k\n\\in \\{0,1,\\ldots,N\\},\n\\prob(X=k)=\\frac{\\binom{n}{k}\\binom{N-n}{n-k}}{\\binom{N}{n}}.\\]</span>\nElle permet de modéliser le tirage sans remise de <span\nclass=\"math inline\">\\(n\\)</span> boules parmi <span\nclass=\"math inline\">\\(N\\)</span> boules dont <span\nclass=\"math inline\">\\(n\\)</span> sont marquées. Ici, <span\nclass=\"math inline\">\\(N=49\\)</span>, <span\nclass=\"math inline\">\\(n=6\\)</span> et <span\nclass=\"math inline\">\\(p=\\frac{1}{46}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(Y\\)</span> le gain du joueur. Alors\non a</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span\nclass=\"math inline\">\\(k\\)</span></th>\n<th style=\"text-align: center;\">0</th>\n<th style=\"text-align: center;\">0</th>\n<th style=\"text-align: center;\">0</th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">20</th>\n<th style=\"text-align: center;\">1100</th>\n<th style=\"text-align: center;\"><span class=\"math inline\">\\(700\\\n000\\)</span></th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(Y=k)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=0)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=1)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=2)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=3)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=4)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=5)\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(\\prob(X=6)\\)</span></td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>On a donc <span class=\"math display\">\\[\\E(Y)=\\prob(X=3)+20\\times\n\\prob(X=4)+\\nombre{1100}\\times \\prob(X=5) + {700000}\\times\n\\prob(X=6).\\]</span> Or <span class=\"math display\">\\[\\begin{align*}\n&amp; \\prob(X=3)=\\frac{\\binom{6}{3}\\binom{43}{3}}{\\binom{49}{6}}=\n\\frac{246\\ 820}{13\\ 983\\ 816} \\\\\n&amp; \\prob(X=4)=\\frac{\\binom{6}{4}\\binom{43}{2}}{\\binom{49}{6}}=\n\\frac{13\\ 545}{13\\ 983\\ 816} \\\\\n&amp; \\prob(X=5)=\\frac{\\binom{6}{5}\\binom{6}{1}}{\\binom{49}{6}}=\n\\frac{258}{13\\ 983\\ 816} \\\\\n&amp; \\prob(X=6)=\\frac{\\binom{6}{6}\\binom{43}{0}}{\\binom{49}{6}}=\n\\frac{1}{13\\ 983\\ 816}\n\\end{align*}\\]</span> donc <span\nclass=\"math display\">\\[\\E(Y)=\\frac{1}{13\\ 983\\ 816} (246\\ 820+ 20\\times\n13\\ 545+ 1\\ 100\\times 258+700\\ 000)\n=\\frac{1\\ 501 520}{13\\ 983\\ 816}\n\\simeq 0.1074\\]</span> L’espérance du gain du joueur (sans compter sa\nmise de départ) est d’environ <span class=\"math inline\">\\(0.11\\)</span>\neuros.</p>\n"
+      }
+    }
+  ]
+}

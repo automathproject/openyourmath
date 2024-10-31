@@ -1,0 +1,112 @@
+{
+  "uuid": "FH8I",
+  "titre": "Convergence de la descente de gradient",
+  "theme": [
+    "Optimisation"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Erwan HILLION",
+    "createdAt": "2024-10-31T14:47:13.737Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:13.737Z"
+  },
+  "contenu": [
+    {
+      "id": "c453a1e8-fea6-482c-b3f5-b6efbc19fe81",
+      "type": "description",
+      "value": {
+        "latex": "On va prouver le théorème suivant : \n\n\\medskip\n\n\\textbf{Théorème : } Soit $f : \\Rr \\rightarrow \\Rr$ une fonction de classe $\\mathcal{C}^2$ telle qu'il existe deux constantes $K,c >0$ vérifiant $c < f''(x) \\leq K$ pour tout $x \\in \\Rr$. On considère la suite $(x_n)_{n \\geq 0}$ d\\'efinie par $x_0 \\in \\Rr$ et par $x_{n+1} = x_n - \\gamma f'(x_n)$, où le pas $\\gamma$ vérifie $0 < \\gamma < 2/K$. Alors :\n\\begin{itemize}\n\\item La suite $(f(x_n))_{n \\ge 0}$ est décroissante.\n\\item La suite $(x_n)_{n \\ge 0}$ converge vers l'unique point critique de $f$.\n\\end{itemize}",
+        "html": "<p>On va prouver le théorème suivant :</p>\n<p><strong>Théorème :</strong> Soit <span class=\"math inline\">\\(f : \\Rr\n\\rightarrow \\Rr\\)</span> une fonction de classe <span\nclass=\"math inline\">\\(\\mathcal{C}^2\\)</span> telle qu’il existe deux\nconstantes <span class=\"math inline\">\\(K,c &gt;0\\)</span> vérifiant\n<span class=\"math inline\">\\(c &lt; f&#39;&#39;(x) \\leq K\\)</span> pour\ntout <span class=\"math inline\">\\(x \\in \\Rr\\)</span>. On considère la\nsuite <span class=\"math inline\">\\((x_n)_{n \\geq 0}\\)</span> définie par\n<span class=\"math inline\">\\(x_0 \\in \\Rr\\)</span> et par <span\nclass=\"math inline\">\\(x_{n+1} = x_n - \\gamma f&#39;(x_n)\\)</span>, où le\npas <span class=\"math inline\">\\(\\gamma\\)</span> vérifie <span\nclass=\"math inline\">\\(0 &lt; \\gamma &lt; 2/K\\)</span>. Alors :</p>\n<ul>\n<li><p>La suite <span class=\"math inline\">\\((f(x_n))_{n \\ge 0}\\)</span>\nest décroissante.</p></li>\n<li><p>La suite <span class=\"math inline\">\\((x_n)_{n \\ge 0}\\)</span>\nconverge vers l’unique point critique de <span\nclass=\"math inline\">\\(f\\)</span>.</p></li>\n</ul>\n"
+      }
+    },
+    {
+      "id": "89f83619-a98f-4e75-9740-af9a35d476c2",
+      "type": "description",
+      "value": {
+        "latex": "Pour $n \\geq 0$ fix\\'e, on pose $\\phi(t) = f(x_n- t f'(x_n))$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n \\geq 0\\)</span> fixé, on pose\n<span class=\"math inline\">\\(\\phi(t) = f(x_n- t\nf&#39;(x_n))\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dbef5acd-3781-4924-8671-d60a648f7d1a",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'il existe $\\theta \\in ]0,t[$ tel que $\\phi(t) = \\phi(0)+t\\phi'(0)+\\frac{t^2}{2} \\phi''(\\theta)$.",
+        "html": "<p>Montrer qu’il existe <span class=\"math inline\">\\(\\theta \\in\n]0,t[\\)</span> tel que <span class=\"math inline\">\\(\\phi(t) =\n\\phi(0)+t\\phi&#39;(0)+\\frac{t^2}{2} \\phi&#39;&#39;(\\theta)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7a3638a2-0de8-4db9-8862-e0435fbd2914",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\phi'(0) = -f'(x_n)^2$ et $\\phi''(\\theta) \\leq f'(x_n)^2 K$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\phi&#39;(0) =\n-f&#39;(x_n)^2\\)</span> et <span\nclass=\"math inline\">\\(\\phi&#39;&#39;(\\theta) \\leq f&#39;(x_n)^2\nK\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6c5b1160-e2d0-41ca-a088-805caeecade0",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\phi(t) \\leq \\phi(0)$ pour tout $0 \\leq t < 2/K$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\phi(t) \\leq \\phi(0)\\)</span>\npour tout <span class=\"math inline\">\\(0 \\leq t &lt; 2/K\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9512c660-8959-42d7-9c63-65de56d827ba",
+      "type": "question",
+      "value": {
+        "latex": "En d\\'eduire que $f(x_{n+1}) \\leq f(x_n)$.",
+        "html": "<p>En déduire que <span class=\"math inline\">\\(f(x_{n+1}) \\leq\nf(x_n)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a3b2eb3e-a86f-4670-b583-141fa244511b",
+      "type": "description",
+      "value": {
+        "latex": "On introduit la fonction $g(x) = x - \\gamma f'(x)$.",
+        "html": "<p>On introduit la fonction <span class=\"math inline\">\\(g(x) = x -\n\\gamma f&#39;(x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dcc68a64-60a0-49b3-a160-852bd3475bb9",
+      "type": "question",
+      "value": {
+        "latex": "On pose $M = \\sup_{x \\in \\Rr} |g'(x)|$. Montrer que $M \\leq \\max\\left( |1-\\gamma c|, |1- \\gamma K|\\right)$, puis que $M < 1$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(M = \\sup_{x \\in \\Rr}\n|g&#39;(x)|\\)</span>. Montrer que <span class=\"math inline\">\\(M \\leq\n\\max\\left( |1-\\gamma c|, |1- \\gamma K|\\right)\\)</span>, puis que <span\nclass=\"math inline\">\\(M &lt; 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cbba0223-94d6-4b04-afa1-97a7fdbd81d2",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que pour tout $n \\geq 1$, on a $|x_{n+1}-x_n| = |g(x_n)-g(x_{n-1})| < M |x_n-x_{n-1}|$.",
+        "html": "<p>Montrer que pour tout <span class=\"math inline\">\\(n \\geq 1\\)</span>,\non a <span class=\"math inline\">\\(|x_{n+1}-x_n| = |g(x_n)-g(x_{n-1})|\n&lt; M |x_n-x_{n-1}|\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "524d63b8-b669-4be1-be1c-36b1dd9a94ed",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que la suite $(x_n)_{n \\geq 0}$ est convergente (on pourra considérer la série $\\sum x_{n+1}-x_n$).",
+        "html": "<p>Montrer que la suite <span class=\"math inline\">\\((x_n)_{n \\geq\n0}\\)</span> est convergente (on pourra considérer la série <span\nclass=\"math inline\">\\(\\sum x_{n+1}-x_n\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "0a22ca5a-4b5b-42fd-85ff-c89292f53e20",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que la limite $l$ de la suite $(x_n)_{n \\geq 0}$. Montrer que $f'(l)=0$.",
+        "html": "<p>Montrer que la limite <span class=\"math inline\">\\(l\\)</span> de la\nsuite <span class=\"math inline\">\\((x_n)_{n \\geq 0}\\)</span>. Montrer que\n<span class=\"math inline\">\\(f&#39;(l)=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "318d58ca-fcc3-4e72-ba4c-1ed3f5098a05",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f$ ne possède qu'un seul point critique.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> ne possède qu’un\nseul point critique.</p>\n"
+      }
+    }
+  ]
+}

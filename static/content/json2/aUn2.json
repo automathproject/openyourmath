@@ -1,0 +1,56 @@
+{
+  "uuid": "aUn2",
+  "titre": "Contrôle qualité",
+  "theme": [
+    "statistiques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:28.331Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:28.331Z"
+  },
+  "contenu": [
+    {
+      "id": "375e7e51-0c0d-4d89-99a9-71c72262027e",
+      "type": "description",
+      "value": {
+        "latex": "Désirant juger le travail d'un ouvrier ajusteur, un chef d'atelier prélève un échantillon de 50 pièces métalliques dans sa production. On note $X$ l'épaisseur de ses pièces. L'objectif est d'avoir $\\EX = 5~mm$. Les résultats des mesures sur cet échantillon sont portés dans le tableau suivant :\n\t\\begin{center}\t\n\t\\begin{tabular}{|c|c|c|c|c|}\n\t\t\\hline $n_i$ & 5 & 15 & 20 & 10 \\\\ \n\t\t\\hline $x_i$ en mm & 4.8 & 4.9 & 5.0 & 5.1 \\\\ \n\t\t\\hline \n\t\\end{tabular} \n\t\\end{center}",
+        "html": "<p>Désirant juger le travail d’un ouvrier ajusteur, un chef d’atelier\nprélève un échantillon de 50 pièces métalliques dans sa production. On\nnote <span class=\"math inline\">\\(X\\)</span> l’épaisseur de ses pièces.\nL’objectif est d’avoir <span class=\"math inline\">\\(\\EX = 5~mm\\)</span>.\nLes résultats des mesures sur cet échantillon sont portés dans le\ntableau suivant :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"><span\nclass=\"math inline\">\\(n_i\\)</span></th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">15</th>\n<th style=\"text-align: center;\">20</th>\n<th style=\"text-align: center;\">10</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span class=\"math inline\">\\(x_i\\)</span>\nen mm</td>\n<td style=\"text-align: center;\">4.8</td>\n<td style=\"text-align: center;\">4.9</td>\n<td style=\"text-align: center;\">5.0</td>\n<td style=\"text-align: center;\">5.1</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+      }
+    },
+    {
+      "id": "7642455f-ac2d-4cbd-b1d2-a99c3ecbd316",
+      "type": "question",
+      "value": {
+        "latex": "Cette vérification permet-elle de conclure que le résultat est conforme aux exigences, au seuil de confiance de $99\\%$ ?",
+        "html": "<p>Cette vérification permet-elle de conclure que le résultat est\nconforme aux exigences, au seuil de confiance de <span\nclass=\"math inline\">\\(99\\%\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "5e70d93b-44e0-4547-98b9-7608659c9c77",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\t\t\t\\bar{x} & = \\frac{1}{50} \\sum_{i=1}^4 n_i x_i \\\\\n\t\t\t& = \\frac{1}{50} (5 \\times 4.8 + 15 \\times 4.9 + 20 \\times 5.0 + 10 \\times 5.1) \\\\\n\t\t\t& = 4.98 \\\\\n\t\t\\end{align*}$$\n\t\tdonc une estimation sans biais de l'épaisseur moyenne des pièces est $\\bar{x} = 4.98~mm$. \n\n\t\tDe plus, la variance observée dans cet échantillon est : \n\t\t$$\\begin{align*}\n\t\t\t\\sigma^2 & = \\frac{1}{50} \\sum_{i=1}^4 n_i (x_i - \\bar{x})^2 \\\\\n\t\t\t& = \\frac{1}{50} (5 \\times (4.8 - 4.98)^2 + 15 \\times (4.9 - 4.98)^2 + 20 \\times (5.0 - 4.98)^2 + 10 \\times (5.1 - 4.98)^2) \\\\\n\t\t\t& = 0.081 \\\\\n\t\t\\end{align*}$$\n\t\tdonc une estimation sans biais de la variance de l'épaisseur des pièces est $s^2 = \\frac{50}{49} \\sigma^2 = 0.083$.\n\n\t\tOn réalise le test d'hypothèse suivant :\n\t\t$$\\begin{align*}\n\t\t\tH_0 &: \\EX = 5 \\\\\n\t\t\tH_1 &: \\EX \\neq 5\n\t\t\\end{align*}$$\n\t\tavec un risque de première espèce de $1\\%$. \n\n\t\tLa variable de décision est $Z = \\frac{\\bar{X} - 5}{\\frac{S}{\\sqrt{n}}} \\sim \\mathcal{N}(0,1)$.\t\n\t\t\n\t\tOn fait un test bilatéral, donc on rejette $H_0$ si $|Z| > z_{\\frac{\\alpha}{2}} = 2.58$ par lecture de la table de la loi normale. Or la valeur observée est $Z_{obs} = \\frac{4.98 - 5}{\\frac{\\sqrt{0.083}}{\\sqrt{50}}} = -2{,}33$. Donc on ne rejette pas $H_0$. On peut donc conclure que le résultat est conforme aux exigences, au seuil de confiance de $99\\%$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n            \\bar{x} &amp; = \\frac{1}{50} \\sum_{i=1}^4 n_i x_i \\\\\n            &amp; = \\frac{1}{50} (5 \\times 4.8 + 15 \\times 4.9 + 20\n\\times 5.0 + 10 \\times 5.1) \\\\\n            &amp; = 4.98 \\\\\n        \\end{align*}\\]</span> donc une estimation sans biais de\nl’épaisseur moyenne des pièces est <span class=\"math inline\">\\(\\bar{x} =\n4.98~mm\\)</span>.</p>\n<p>De plus, la variance observée dans cet échantillon est : <span\nclass=\"math display\">\\[\\begin{align*}\n            \\sigma^2 &amp; = \\frac{1}{50} \\sum_{i=1}^4 n_i (x_i -\n\\bar{x})^2 \\\\\n            &amp; = \\frac{1}{50} (5 \\times (4.8 - 4.98)^2 + 15 \\times\n(4.9 - 4.98)^2 + 20 \\times (5.0 - 4.98)^2 + 10 \\times (5.1 - 4.98)^2) \\\\\n            &amp; = 0.081 \\\\\n        \\end{align*}\\]</span> donc une estimation sans biais de la\nvariance de l’épaisseur des pièces est <span class=\"math inline\">\\(s^2 =\n\\frac{50}{49} \\sigma^2 = 0.083\\)</span>.</p>\n<p>On réalise le test d’hypothèse suivant : <span\nclass=\"math display\">\\[\\begin{align*}\n            H_0 &amp;: \\EX = 5 \\\\\n            H_1 &amp;: \\EX \\neq 5\n        \\end{align*}\\]</span> avec un risque de première espèce de <span\nclass=\"math inline\">\\(1\\%\\)</span>.</p>\n<p>La variable de décision est <span class=\"math inline\">\\(Z =\n\\frac{\\bar{X} - 5}{\\frac{S}{\\sqrt{n}}} \\sim\n\\mathcal{N}(0,1)\\)</span>.</p>\n<p>On fait un test bilatéral, donc on rejette <span\nclass=\"math inline\">\\(H_0\\)</span> si <span class=\"math inline\">\\(|Z|\n&gt; z_{\\frac{\\alpha}{2}} = 2.58\\)</span> par lecture de la table de la\nloi normale. Or la valeur observée est <span\nclass=\"math inline\">\\(Z_{obs} = \\frac{4.98 -\n5}{\\frac{\\sqrt{0.083}}{\\sqrt{50}}} = -2{,}33\\)</span>. Donc on ne\nrejette pas <span class=\"math inline\">\\(H_0\\)</span>. On peut donc\nconclure que le résultat est conforme aux exigences, au seuil de\nconfiance de <span class=\"math inline\">\\(99\\%\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6d3d37a9-dff1-44ee-9d76-67fb3c2effad",
+      "type": "question",
+      "value": {
+        "latex": "Quel risque de première espèce devrait-on prendre pour que la prise de décision soit différente ?",
+        "html": "<p>Quel risque de première espèce devrait-on prendre pour que la prise\nde décision soit différente ?</p>\n"
+      }
+    },
+    {
+      "id": "d0d72476-3c4b-4055-984a-007c81c83bf5",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour que la prise de décision soit différente, il faudrait que la valeur critique soit $2.33$, ce qui correspond, par lecture de table, à un risque de première espèce de $1.98\\%$.",
+        "html": "<p>Pour que la prise de décision soit différente, il faudrait que la\nvaleur critique soit <span class=\"math inline\">\\(2.33\\)</span>, ce qui\ncorrespond, par lecture de table, à un risque de première espèce de\n<span class=\"math inline\">\\(1.98\\%\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "uuid": "BAmc",
+  "titre": "Calcul de dérivées partielles",
+  "theme": [
+    "calcul différentiel"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:11.337Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:11.337Z"
+  },
+  "contenu": [
+    {
+      "id": "8cab14d4-372c-4515-a515-80d54ee5a901",
+      "type": "description",
+      "value": {
+        "latex": "On pose $f: \\R^2 \\to \\R,\\ (x,y) \\mapsto \\dfrac{x^2+xy}{y^2}$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(f: \\R^2 \\to \\R,\\ (x,y) \\mapsto\n\\dfrac{x^2+xy}{y^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c2b0e611-47b1-4a71-98e7-c6a922f6f2ca",
+      "type": "question",
+      "value": {
+        "latex": "\\label{Q1} Préciser l'ensemble de dérivabilité de $f$ et calculer $\\dpa{f}{x}(x,y)$ et $\\dpa{f}{y}(x,y)$.",
+        "html": "<p><span id=\"Q1\" label=\"Q1\"></span> Préciser l’ensemble de dérivabilité\nde <span class=\"math inline\">\\(f\\)</span> et calculer <span\nclass=\"math inline\">\\(\\dpa{f}{x}(x,y)\\)</span> et <span\nclass=\"math inline\">\\(\\dpa{f}{y}(x,y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "000eea1b-e4fd-4659-aced-9a0eaf080818",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f$ admet des dérivées partielles en tout point $(x,y)\\in \\R^2$ tel que $y \\neq 0$ :\n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{x}(x,y) &= \\frac{2x+y}{y^2} \\\\\n\t\t\\dpa{f}{y}(x,y) &= -\\frac{2x^2}{y^3}-\\frac{x}{y^2} \\\\\n\t\t&= \\frac{-2x^2-xy}{y^3}\n\t\t\\end{align*}$$",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> admet des dérivées\npartielles en tout point <span class=\"math inline\">\\((x,y)\\in\n\\R^2\\)</span> tel que <span class=\"math inline\">\\(y \\neq 0\\)</span> :\n<span class=\"math display\">\\[\\begin{align*}\n        \\dpa{f}{x}(x,y) &amp;= \\frac{2x+y}{y^2} \\\\\n        \\dpa{f}{y}(x,y) &amp;= -\\frac{2x^2}{y^3}-\\frac{x}{y^2} \\\\\n        &amp;= \\frac{-2x^2-xy}{y^3}\n        \\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "a56879a1-c17f-4a07-bcce-6627b16936ad",
+      "type": "question",
+      "value": {
+        "latex": "On note $F: \\R \\to \\R,\\ t \\mapsto t^2+t$. En remarquant que $f(x,y) = F\\left(\\dfrac{x}{y}\\right)$, et en utilisant les règles de dérivation composée, retrouver les expressions obtenues à la question~\\ref{Q1}.",
+        "html": "<p>On note <span class=\"math inline\">\\(F: \\R \\to \\R,\\ t \\mapsto\nt^2+t\\)</span>. En remarquant que <span class=\"math inline\">\\(f(x,y) =\nF\\left(\\dfrac{x}{y}\\right)\\)</span>, et en utilisant les règles de\ndérivation composée, retrouver les expressions obtenues à la question <a\nhref=\"#Q1\" data-reference-type=\"ref\" data-reference=\"Q1\">[Q1]</a>.</p>\n"
+      }
+    },
+    {
+      "id": "0a6f07fe-ad78-4819-b36d-1447028011a4",
+      "type": "reponse",
+      "value": {
+        "latex": "Dans un premier temps, on remarque que $F$ est dérivable en tout point $t \\in \\R$ et $F'(t) = 2t+1$. \n\t\t\n\t\tD'autre part, par application de la règle des chaînes, on peut calculer \n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{x}(x,y) &= \\dpa{}{x}\\left( F\\left(\\dfrac{x}{y}\\right)\\right) \\\\\n\t\t&= \\left( F'\\left(\\dfrac{x}{y}\\right)\\right) \\times \\dpa{}{x}\\left( \\frac{x}{y} \\right)  \\\\\n\t\t&= \\left(2\\left(\\dfrac{x}{y}\\right)+1\\right) \\times \\frac{1}{y} \\\\\n\t\t&= \\frac{2x+y}{y^2}\n\t\t\\end{align*}$$\n\t\tDe même, \n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{y}(x,y) &= \\dpa{}{y}\\left( F\\left(\\dfrac{x}{y}\\right)\\right) \\\\\n\t\t&= \\left( F'\\left(\\dfrac{x}{y}\\right)\\right) \\times \\dpa{}{y}\\left( \\frac{x}{y} \\right)  \\\\\n\t\t&= \\left(2\\left(\\dfrac{x}{y}\\right)+1\\right) \\times \\frac{-x}{y^2} \\\\\n\t\t&= \\frac{-2x^2-xy}{y^3}\n\t\t\\end{align*}$$",
+        "html": "<p>Dans un premier temps, on remarque que <span\nclass=\"math inline\">\\(F\\)</span> est dérivable en tout point <span\nclass=\"math inline\">\\(t \\in \\R\\)</span> et <span\nclass=\"math inline\">\\(F&#39;(t) = 2t+1\\)</span>.</p>\n<p>D’autre part, par application de la règle des chaînes, on peut\ncalculer <span class=\"math display\">\\[\\begin{align*}\n        \\dpa{f}{x}(x,y) &amp;= \\dpa{}{x}\\left(\nF\\left(\\dfrac{x}{y}\\right)\\right) \\\\\n        &amp;= \\left( F&#39;\\left(\\dfrac{x}{y}\\right)\\right) \\times\n\\dpa{}{x}\\left( \\frac{x}{y} \\right)  \\\\\n        &amp;= \\left(2\\left(\\dfrac{x}{y}\\right)+1\\right) \\times\n\\frac{1}{y} \\\\\n        &amp;= \\frac{2x+y}{y^2}\n        \\end{align*}\\]</span> De même, <span\nclass=\"math display\">\\[\\begin{align*}\n        \\dpa{f}{y}(x,y) &amp;= \\dpa{}{y}\\left(\nF\\left(\\dfrac{x}{y}\\right)\\right) \\\\\n        &amp;= \\left( F&#39;\\left(\\dfrac{x}{y}\\right)\\right) \\times\n\\dpa{}{y}\\left( \\frac{x}{y} \\right)  \\\\\n        &amp;= \\left(2\\left(\\dfrac{x}{y}\\right)+1\\right) \\times\n\\frac{-x}{y^2} \\\\\n        &amp;= \\frac{-2x^2-xy}{y^3}\n        \\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

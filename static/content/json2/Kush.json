@@ -1,0 +1,88 @@
+{
+  "uuid": "Kush",
+  "titre": "Egalité à une série de Fourier",
+  "theme": [
+    "séries de fourier"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:18.240Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:18.240Z"
+  },
+  "contenu": [
+    {
+      "id": "2db61965-69e6-4df5-b64d-77b0dfddd181",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f:\\R\\rightarrow \\R$, impaire, $2\\pi$-p\\'eriodique, d\\'efinie par $f(x)=1$ pour tout $x\\in]0,\\pi[ $.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f:\\R\\rightarrow \\R\\)</span>,\nimpaire, <span class=\"math inline\">\\(2\\pi\\)</span>-périodique, définie\npar <span class=\"math inline\">\\(f(x)=1\\)</span> pour tout <span\nclass=\"math inline\">\\(x\\in]0,\\pi[\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8b4fa7fe-6fe6-442d-8801-4c4539257780",
+      "type": "question",
+      "value": {
+        "latex": "Dessiner le graphe de $f$. Quelle est la r\\'egularit\\'e de $f$ ?",
+        "html": "<p>Dessiner le graphe de <span class=\"math inline\">\\(f\\)</span>. Quelle\nest la régularité de <span class=\"math inline\">\\(f\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "78d71c01-a929-4a22-a162-4dd0302e99c9",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{center}\n\t\t\t\\begin{tikzpicture}[xscale=0.5]\n\t\t\t\t\\draw[->] (-4,0) -- (8,0);\n\t\t\t\t\\draw (8,0) node[right] {$x$};\n\t\t\t\t\\draw (6.28,0) node[below] {$2\\pi$};\n\t\t\t\t\\draw (3.14,0) node[below] {$\\pi$};\n\t\t\t\t\\draw (-3.14,0) node[below] {$-\\pi$};\n\t\t\t\t\\draw [->] (0,-1) -- (0,1.2);\n\t\t\t\t\\draw (0,1.2) node[above] {$y$};\n\t\t\t\t\\draw[line width=3pt, color=red] (7,1) -- (6.28,1);\n\t\t\t\t\\draw[line width=3pt, color=red] (3.14,-1) -- (6.28,-1);\n\t\t\t\t\\draw[line width=3pt, color=red] (0,1) -- (3.14,1);\n\t\t\t\t\\draw[color=red] (0,0) node {$\\bullet$} ;\n\t\t\t\t\\draw[color=red] (-3.14,0) node {$\\bullet$} ;\n\t\t\t\t\\draw[color=red] (3.14,0) node {$\\bullet$} ;\n\t\t\t\t\\draw[color=red] (6.28,0) node {$\\bullet$} ;\n\t\t\t\t\\draw[line width=3pt, color=red] (0,-1) -- (-3.14,-1);\n\t\t\t\t\\draw[line width=3pt, color=red] (-4,1) -- (-3.14,1);\n\t\t\t\\end{tikzpicture}\n\t\t\\end{center}\n\t\tLa fonction $f$ est continue par morceaux, discontinue aux points $(k\\pi), \\, k\\in \\Z$. Elle est impaire donc $f(0)=0$.",
+        "html": "<div class=\"center\">\n\n</div>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est continue par\nmorceaux, discontinue aux points <span class=\"math inline\">\\((k\\pi), \\,\nk\\in \\Z\\)</span>. Elle est impaire donc <span\nclass=\"math inline\">\\(f(0)=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9e9cc3ca-37ec-4c58-ab53-991d2cae07bf",
+      "type": "question",
+      "value": {
+        "latex": "D\\'eterminer les coefficients de Fourier trigonom\\'etriques de $f$.",
+        "html": "<p>Déterminer les coefficients de Fourier trigonométriques de <span\nclass=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "29640efe-00b0-4ad6-a559-7cc1eee7ed03",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f$ étant impaire, les coefficients de Fourier $a_n(f)$ sont nuls et : \n\t\t$$\\begin{align*}\n\t\t\tb_n(f) &= \\frac{2}{\\pi} \\int_0^{\\pi} f(t)\\sin(nt)\\mathrm{d}t \\\\\n\t\t\t&= \\frac{2}{\\pi} \\int_0^{ {\\pi}} \\sin(nt)\\mathrm{d}t \\\\\n\t\t\t&= \\frac{2}{\\pi} \\left[-\\frac{1}{n}\\cos(nt)\\right]_0^{ {\\pi}} \\\\\n\t\t\t&= \\frac{2}{n\\pi}\\left(1-\\cos\\left({n\\pi}\\right)\\right)\\\\\n\t\t\t&= \\frac{2}{n\\pi}\\left(1-(-1)^n\\right)\n\t\t\\end{align*}$$\t\n\t\tLa série de Fourier est donc $\\displaystyle S_n(f) = \\sum_{n\\geq 1} \\frac{2}{n\\pi}\\left(1-(-1)^n\\right)\\sin(nx) = \\sum_{k \\geq 0} \\frac{4}{(2k+1)\\pi}\\sin((2k+1)x)$.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> étant impaire, les\ncoefficients de Fourier <span class=\"math inline\">\\(a_n(f)\\)</span> sont\nnuls et : <span class=\"math display\">\\[\\begin{align*}\n            b_n(f) &amp;= \\frac{2}{\\pi} \\int_0^{\\pi}\nf(t)\\sin(nt)\\mathrm{d}t \\\\\n            &amp;= \\frac{2}{\\pi} \\int_0^{ {\\pi}} \\sin(nt)\\mathrm{d}t \\\\\n            &amp;= \\frac{2}{\\pi} \\left[-\\frac{1}{n}\\cos(nt)\\right]_0^{\n{\\pi}} \\\\\n            &amp;=\n\\frac{2}{n\\pi}\\left(1-\\cos\\left({n\\pi}\\right)\\right)\\\\\n            &amp;= \\frac{2}{n\\pi}\\left(1-(-1)^n\\right)\n        \\end{align*}\\]</span> La série de Fourier est donc <span\nclass=\"math inline\">\\(\\displaystyle S_n(f) = \\sum_{n\\geq 1}\n\\frac{2}{n\\pi}\\left(1-(-1)^n\\right)\\sin(nx) = \\sum_{k \\geq 0}\n\\frac{4}{(2k+1)\\pi}\\sin((2k+1)x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d8378f58-a6b2-4622-8df6-3bef5fc933e9",
+      "type": "question",
+      "value": {
+        "latex": "Calculer les sommes :\n\t$$\\sum_{n=0}^{+\\infty} \\frac{(-1)^n }{2n+1 } \\qquad \\text{ et } \\qquad  \\sum_{n=0}^{+\\infty} \\frac{1 }{(2n+1)^2 }.$$",
+        "html": "<p>Calculer les sommes : <span\nclass=\"math display\">\\[\\sum_{n=0}^{+\\infty} \\frac{(-1)^n }{2n+1 } \\qquad\n\\text{ et } \\qquad  \\sum_{n=0}^{+\\infty} \\frac{1 }{(2n+1)^2\n}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "dc1c48d3-c9fe-4968-9a3a-bd52eeca900e",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f$ étant continue en $\\frac{\\pi}{2}$, d'après le théorème de Dirichlet on a :\n\t\t$$f\\left(\\frac{\\pi}{2}\\right) = \\sum_{k=0}^{+\\infty }\t\\frac{4}{(2k+1)\\pi}\\sin\\left((2k+1)\\frac{\\pi}{2}\\right) = \\sum_{k=0}^{+\\infty }\t\\frac{4}{(2k+1)\\pi} \\times (-1)^k$$\n\t\td'où $\\sum_{n=0}^{+\\infty} \\frac{(-1)^n }{2n+1 } = \\frac{4}{\\pi}$. \n\t\t\n\t\tD'après la formule de Parseval,\n\t\t$$\\frac{1}{2\\pi}\\int_0^{2\\pi}f(t)^2 \\mathrm{d}t = 0 + \\frac{1}{2} \\sum_{k=0}^{+\\infty }\t\\left(\\frac{4}{(2k+1)\\pi}\\right)^2$$\n\t\tOr par définition de $f$, $\\frac{1}{2\\pi}\\int_0^{2\\pi}f(t)^2 \\mathrm{d}t = \\frac{1}{2\\pi}\\int_0^{2\\pi}1 \\mathrm{d}t = 1$ donc $\\displaystyle \\sum_{n=0}^{+\\infty} \\frac{1 }{(2n+1)^2 } = 2 \\times \\frac{\\pi^2}{4^2} = \\frac{\\pi^2}{8}$.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> étant continue en\n<span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>, d’après le théorème\nde Dirichlet on a : <span\nclass=\"math display\">\\[f\\left(\\frac{\\pi}{2}\\right) = \\sum_{k=0}^{+\\infty\n}   \\frac{4}{(2k+1)\\pi}\\sin\\left((2k+1)\\frac{\\pi}{2}\\right) =\n\\sum_{k=0}^{+\\infty } \\frac{4}{(2k+1)\\pi} \\times (-1)^k\\]</span> d’où\n<span class=\"math inline\">\\(\\sum_{n=0}^{+\\infty} \\frac{(-1)^n }{2n+1 } =\n\\frac{4}{\\pi}\\)</span>.</p>\n<p>D’après la formule de Parseval, <span\nclass=\"math display\">\\[\\frac{1}{2\\pi}\\int_0^{2\\pi}f(t)^2 \\mathrm{d}t = 0\n+ \\frac{1}{2} \\sum_{k=0}^{+\\infty }\n\\left(\\frac{4}{(2k+1)\\pi}\\right)^2\\]</span> Or par définition de <span\nclass=\"math inline\">\\(f\\)</span>, <span\nclass=\"math inline\">\\(\\frac{1}{2\\pi}\\int_0^{2\\pi}f(t)^2 \\mathrm{d}t =\n\\frac{1}{2\\pi}\\int_0^{2\\pi}1 \\mathrm{d}t = 1\\)</span> donc <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n=0}^{+\\infty} \\frac{1\n}{(2n+1)^2 } = 2 \\times \\frac{\\pi^2}{4^2} =\n\\frac{\\pi^2}{8}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "351af44f-5275-4b88-9b52-11732412bb3d",
+      "type": "question",
+      "value": {
+        "latex": "En d\\'eduire la valeur exacte de  $ \\displaystyle  \\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 }$.",
+        "html": "<p>En déduire la valeur exacte de <span\nclass=\"math inline\">\\(\\displaystyle  \\sum_{n=1}^{+\\infty} \\frac{1 }{n^2\n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4be23d57-52ea-4a90-9303-b1e86910b8cb",
+      "type": "reponse",
+      "value": {
+        "latex": "On remarque que \n\t\t$$\\begin{align*} \\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } &= \\sum_{k=1}^{+\\infty} \\frac{1 }{(2k)^2} + \\sum_{k=0}^{+\\infty} \\frac{1 }{(2k+1)^2} \\\\\n\t\t\t&= \\frac{1}{4} \\sum_{k=1}^{+\\infty} \\frac{1 }{k^2} + \\frac{\\pi^2}{8}\n\t\t\\end{align*}$$\n\t\td'où $\\frac{3}{4} \\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } = \\frac{\\pi^2}{8}$ d'où $$\\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } = \\frac{\\pi^2}{6}$$",
+        "html": "<p>On remarque que <span class=\"math display\">\\[\\begin{align*}\n\\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } &amp;= \\sum_{k=1}^{+\\infty} \\frac{1\n}{(2k)^2} + \\sum_{k=0}^{+\\infty} \\frac{1 }{(2k+1)^2} \\\\\n            &amp;= \\frac{1}{4} \\sum_{k=1}^{+\\infty} \\frac{1 }{k^2} +\n\\frac{\\pi^2}{8}\n        \\end{align*}\\]</span> d’où <span\nclass=\"math inline\">\\(\\frac{3}{4} \\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } =\n\\frac{\\pi^2}{8}\\)</span> d’où <span\nclass=\"math display\">\\[\\sum_{n=1}^{+\\infty} \\frac{1 }{n^2 } =\n\\frac{\\pi^2}{6}\\]</span></p>\n"
+      }
+    }
+  ]
+}

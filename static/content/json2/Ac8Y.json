@@ -1,0 +1,56 @@
+{
+  "uuid": "Ac8Y",
+  "titre": "",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:10.623Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:10.623Z"
+  },
+  "contenu": [
+    {
+      "id": "e77e7534-434d-4743-bdf8-c55ef2d53780",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ une variablea aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)",
+        "html": ""
+      }
+    },
+    {
+      "id": "ead5d66c-a22b-4bf9-85ef-40b8d650cf85",
+      "type": "question",
+      "value": {
+        "latex": "On pose $Y = e^X$. Calculer l'espérance et la variance de $Y$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(Y = e^X\\)</span>. Calculer\nl’espérance et la variance de <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b2d8a646-a8fe-4c69-a772-51ec769d5d41",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu e^{\\sigma Z}$. D'après le théorème de transfert, \n$$\\begin{align*}\n    \\E(e^{\\sigma Z}) & = \\int_{-\\infty}^{+\\infty} e^{\\sigma z} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2 - 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\\\ \n\\end{align*}$$\nDonc par linéarité, $\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}$. \n\nDe même, on s'intéresse à $\\E(Y^2) = \\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma Z})$. D'après le calcul précédent, $\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}$. Donc $\\E(Y^2) = e^{2\\mu + 2\\sigma^2}$ et par théorème de Koenig-Huygens, \n$$\\begin{align*}\n  \\var(Y) & = \\E(Y^2) - \\E(Y)^2 \\\\\n  & = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  & = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1) \n\\end{align*}$$",
+        "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu\ne^{\\sigma Z}\\)</span>. D’après le théorème de transfert, <span\nclass=\"math display\">\\[\\begin{align*}\n    \\E(e^{\\sigma Z}) &amp; = \\int_{-\\infty}^{+\\infty} e^{\\sigma z}\n\\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2\n- 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}\ne^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}}\n\\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\\\\n\\end{align*}\\]</span> Donc par linéarité, <span\nclass=\"math inline\">\\(\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}\\)</span>.</p>\n<p>De même, on s’intéresse à <span class=\"math inline\">\\(\\E(Y^2) =\n\\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma\nZ})\\)</span>. D’après le calcul précédent, <span\nclass=\"math inline\">\\(\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}\\)</span>. Donc\n<span class=\"math inline\">\\(\\E(Y^2) = e^{2\\mu + 2\\sigma^2}\\)</span> et\npar théorème de Koenig-Huygens, <span\nclass=\"math display\">\\[\\begin{align*}\n  \\var(Y) &amp; = \\E(Y^2) - \\E(Y)^2 \\\\\n  &amp; = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  &amp; = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1)\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "1dd26c7a-5c33-4518-8306-96824073fe2a",
+      "type": "question",
+      "value": {
+        "latex": "On suppose que $m=0$ et $\\sigma = 1$. Déterminer une fonction densité de la variable $Y$.",
+        "html": "<p>On suppose que <span class=\"math inline\">\\(m=0\\)</span> et <span\nclass=\"math inline\">\\(\\sigma = 1\\)</span>. Déterminer une fonction\ndensité de la variable <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4fb15528-daa2-4910-9bf4-6275275f01ad",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $Y = e^X = e^{\\sigma Z} = e^Z$. Donc $Y$ est une variable aléatoire positive. Si $t >0$, on a :\n      $$\\begin{align*}\n          \\prob(Y \\leq t) & = \\prob(e^Z \\leq t) \\\\\n          & = \\prob(Z \\leq \\ln(t)) \\\\\n          &= F_Z(\\ln(t))\n      \\end{align*}$$\n      Donc la fonction de répartition de $Y$ est $F_Y(t) = \\begin{cases}\n          0 & \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) & \\text{ si } t > 0 \\\\\n      \\end{cases}$. \n      Par dérivation, on obtient la densité de $Y$ : \n         $$ f_Y(x)  = \\begin{cases}\n              0 & \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} & \\text{ si } x > 0 \\\\\n          \\end{cases} $$",
+        "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\sigma Z} =\ne^Z\\)</span>. Donc <span class=\"math inline\">\\(Y\\)</span> est une\nvariable aléatoire positive. Si <span class=\"math inline\">\\(t\n&gt;0\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n          \\prob(Y \\leq t) &amp; = \\prob(e^Z \\leq t) \\\\\n          &amp; = \\prob(Z \\leq \\ln(t)) \\\\\n          &amp;= F_Z(\\ln(t))\n      \\end{align*}\\]</span> Donc la fonction de répartition de <span\nclass=\"math inline\">\\(Y\\)</span> est <span class=\"math inline\">\\(F_Y(t)\n= \\begin{cases}\n          0 &amp; \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) &amp; \\text{ si } t &gt; 0 \\\\\n      \\end{cases}\\)</span>. Par dérivation, on obtient la densité de\n<span class=\"math inline\">\\(Y\\)</span> : <span\nclass=\"math display\">\\[f_Y(x)  = \\begin{cases}\n              0 &amp; \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} &amp;\n\\text{ si } x &gt; 0 \\\\\n          \\end{cases}\\]</span></p>\n"
+      }
+    }
+  ]
+}

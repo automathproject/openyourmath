@@ -1,0 +1,72 @@
+{
+  "uuid": "4Idt",
+  "titre": "Inégalités et loi de Poisson",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "Maxime Nguyen",
+    "createdAt": "2024-10-31T14:47:04.992Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:04.992Z"
+  },
+  "contenu": [
+    {
+      "id": "dd29ca08-4c1e-477b-89c3-1a057475ba5d",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ une variable aléatoire de loi de Poisson de paramètre $\\lambda>0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire de\nloi de Poisson de paramètre <span\nclass=\"math inline\">\\(\\lambda&gt;0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "24c34c69-99a3-43a9-a6f2-743bef8c5b04",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant l'inégalité de Markov, montrer que: $\\prob(X\\geq 2\\lambda)\\leq\\frac{1}{2}$.",
+        "html": "<p>En utilisant l’inégalité de Markov, montrer que: <span\nclass=\"math inline\">\\(\\prob(X\\geq 2\\lambda)\\leq\\frac{1}{2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "583af1ac-e65d-4550-98be-5d03650b059e",
+      "type": "reponse",
+      "value": {
+        "latex": "Par l'inégalité de Markov, on a:\n\t\t\\[ \\prob(|X|\\geq 2\\lambda)\\leq \\frac{\\E(|X|)}{2\\lambda}\\]\n\t\tor $X\\sim\\mathcal{P}(\\lambda)$ donc $X(\\Omega)=\\N$ et on a\n\t\t\\[ \\prob(X\\leq 2\\lambda) \\geq \\frac{\\E(X)}{2\\lambda}=\\frac{\\lambda}{2\\lambda}=\\frac{1}{2}.\\]",
+        "html": "<p>Par l’inégalité de Markov, on a: <span\nclass=\"math display\">\\[\\prob(|X|\\geq 2\\lambda)\\leq\n\\frac{\\E(|X|)}{2\\lambda}\\]</span> or <span\nclass=\"math inline\">\\(X\\sim\\mathcal{P}(\\lambda)\\)</span> donc <span\nclass=\"math inline\">\\(X(\\Omega)=\\N\\)</span> et on a <span\nclass=\"math display\">\\[\\prob(X\\leq 2\\lambda) \\geq\n\\frac{\\E(X)}{2\\lambda}=\\frac{\\lambda}{2\\lambda}=\\frac{1}{2}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "3ae12466-6993-46f3-8c11-1db146337aed",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\prob(|X-\\lambda| \\geq \\lambda) \\leq \\frac{1}{\\lambda}$ et en déduire que $\\prob(X\\geq 2\\lambda)\\leq \\frac{1}{\\lambda}$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\prob(|X-\\lambda| \\geq\n\\lambda) \\leq \\frac{1}{\\lambda}\\)</span> et en déduire que <span\nclass=\"math inline\">\\(\\prob(X\\geq 2\\lambda)\\leq\n\\frac{1}{\\lambda}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1067b1dd-1531-4ee2-a32a-c11af4a18424",
+      "type": "reponse",
+      "value": {
+        "latex": "Par l'inégalité de Bienaymé-Tchebychev, on a\n\t\t\\[ \\prob(|X-\\E(X)|\\geq \\lambda)\\leq \\frac{\\sigma^2(X)}{\\lambda^2}=\\frac{\\lambda}{\\lambda^2}=\\frac{1}{\\lambda}\\]\n\t\tdonc\n\t\t\\[ \\prob(|X-\\lambda|)\\geq \\frac{1}{\\lambda}.\\]\n\t\tOr\n\t\t\\[ \\prob(X\\geq 2\\lambda)=\\prob(X-\\lambda \\geq \\lambda)\n\t\t\\leq \\prob(|X-\\lambda|\\geq \\lambda)\\leq \\frac{1}{\\lambda},\n\t\t\\]\n\t\td'où\n\t\t\\[ \\prob(X\\geq 2\\lambda) \\leq \\frac{1}{\\lambda}.\\]",
+        "html": "<p>Par l’inégalité de Bienaymé-Tchebychev, on a <span\nclass=\"math display\">\\[\\prob(|X-\\E(X)|\\geq \\lambda)\\leq\n\\frac{\\sigma^2(X)}{\\lambda^2}=\\frac{\\lambda}{\\lambda^2}=\\frac{1}{\\lambda}\\]</span>\ndonc <span class=\"math display\">\\[\\prob(|X-\\lambda|)\\geq\n\\frac{1}{\\lambda}.\\]</span> Or <span class=\"math display\">\\[\\prob(X\\geq\n2\\lambda)=\\prob(X-\\lambda \\geq \\lambda)\n        \\leq \\prob(|X-\\lambda|\\geq \\lambda)\\leq\n\\frac{1}{\\lambda},\\]</span> d’où <span\nclass=\"math display\">\\[\\prob(X\\geq 2\\lambda) \\leq\n\\frac{1}{\\lambda}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "1daaa815-c39c-461b-a133-b2042b1423fb",
+      "type": "question",
+      "value": {
+        "latex": "Pour $\\lambda$ assez grand, laquelle des deux inégalités est la meilleure ?",
+        "html": "<p>Pour <span class=\"math inline\">\\(\\lambda\\)</span> assez grand,\nlaquelle des deux inégalités est la meilleure ?</p>\n"
+      }
+    },
+    {
+      "id": "6b273216-fb45-4ea6-8a68-ef27545e5530",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $\\lambda \\geq 2$, $\\frac{1}{\\lambda}\\leq \\frac{1}{2}$ donc l'inégalité de Bienaymé-Tchebychev est meilleure que celle de Markov.",
+        "html": "<p>Pour <span class=\"math inline\">\\(\\lambda \\geq 2\\)</span>, <span\nclass=\"math inline\">\\(\\frac{1}{\\lambda}\\leq \\frac{1}{2}\\)</span> donc\nl’inégalité de Bienaymé-Tchebychev est meilleure que celle de\nMarkov.</p>\n"
+      }
+    }
+  ]
+}

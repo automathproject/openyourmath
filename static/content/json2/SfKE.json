@@ -1,0 +1,88 @@
+{
+  "uuid": "SfKE",
+  "titre": "Etude de séries entières",
+  "theme": [
+    "séries entières"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:22.971Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:22.971Z"
+  },
+  "contenu": [
+    {
+      "id": "c9613488-bf20-437b-a994-3af77ae0a122",
+      "type": "description",
+      "value": {
+        "latex": "On considère la série entière réelle $\\displaystyle \\sum_{n \\geq 0} \\dfrac{(n+1)x^n}{2^n}$.",
+        "html": "<p>On considère la série entière réelle <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0}\n\\dfrac{(n+1)x^n}{2^n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6cacf0c6-8cd2-4559-822f-659e45836303",
+      "type": "question",
+      "value": {
+        "latex": "Calculer le rayon de convergence $R$ de cette série entière.",
+        "html": "<p>Calculer le rayon de convergence <span\nclass=\"math inline\">\\(R\\)</span> de cette série entière.</p>\n"
+      }
+    },
+    {
+      "id": "2a3bf9e2-1e8e-4de5-b837-7372aab6f888",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $u_n(x) = \\frac{(n+1)x^n}{2^n}$ et on utilise le théorème de d'Alembert : \n\t\t$$\\begin{align*}\n\t\t\t\\frac{|u_{n+1}(x)|}{|u_n(x)|} &= \\frac{(n+2)|x|^{n+1}}{2^{n+1}} \\times \\frac{2^n}{(n+1)|x|^n} \\\\\n\t\t\t&= \\frac{(n+2)}{2(n+1)}|x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{} \\frac{1}{2}|x|\n\t\t\\end{align*}$$\n\t\tDonc la série converge absolument si et seulement si $\\frac{1}{2}|x|<1 \\iff |x|<2$, cela revient à dire que le rayon de convergence est $R=2$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(u_n(x) =\n\\frac{(n+1)x^n}{2^n}\\)</span> et on utilise le théorème de d’Alembert :\n<span class=\"math display\">\\[\\begin{align*}\n            \\frac{|u_{n+1}(x)|}{|u_n(x)|} &amp;=\n\\frac{(n+2)|x|^{n+1}}{2^{n+1}} \\times \\frac{2^n}{(n+1)|x|^n} \\\\\n            &amp;= \\frac{(n+2)}{2(n+1)}|x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{} \\frac{1}{2}|x|\n        \\end{align*}\\]</span> Donc la série converge absolument si et\nseulement si <span class=\"math inline\">\\(\\frac{1}{2}|x|&lt;1 \\iff\n|x|&lt;2\\)</span>, cela revient à dire que le rayon de convergence est\n<span class=\"math inline\">\\(R=2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "beddb011-5f2f-4815-a853-7cd4e8777a0d",
+      "type": "question",
+      "value": {
+        "latex": "\\'Etudier la série évaluée en $x=R$ et $x=-R$. En déduire le domaine de convergence de cette série entière.",
+        "html": "<p>Étudier la série évaluée en <span class=\"math inline\">\\(x=R\\)</span>\net <span class=\"math inline\">\\(x=-R\\)</span>. En déduire le domaine de\nconvergence de cette série entière.</p>\n"
+      }
+    },
+    {
+      "id": "911dc46d-890f-43ba-81cc-e23fad4bba89",
+      "type": "reponse",
+      "value": {
+        "latex": "D'après le cours, la série converge absolument si $x \\in ]-2,2[$.\n\t\t\n\t\tSi $x=2$ ou $x=-2$, on a un terme général $|u_n(2)|=|u_n(-2)| = n+1$ donc $\\lim\\limits_{n\\to +\\infty}u_n(2) \\neq 0$ et $\\lim\\limits_{n\\to +\\infty}u_n(-2) \\neq 0$.\n\t\t\n\t\tLa série diverge donc grossièrement pour $x=2$ et $x=-2$.",
+        "html": "<p>D’après le cours, la série converge absolument si <span\nclass=\"math inline\">\\(x \\in ]-2,2[\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x=2\\)</span> ou <span\nclass=\"math inline\">\\(x=-2\\)</span>, on a un terme général <span\nclass=\"math inline\">\\(|u_n(2)|=|u_n(-2)| = n+1\\)</span> donc <span\nclass=\"math inline\">\\(\\lim\\limits_{n\\to +\\infty}u_n(2) \\neq 0\\)</span>\net <span class=\"math inline\">\\(\\lim\\limits_{n\\to +\\infty}u_n(-2) \\neq\n0\\)</span>.</p>\n<p>La série diverge donc grossièrement pour <span\nclass=\"math inline\">\\(x=2\\)</span> et <span\nclass=\"math inline\">\\(x=-2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9ce1da25-4fca-48fb-9b97-6c5c797daf1b",
+      "type": "question",
+      "value": {
+        "latex": "Soit la série $\\displaystyle \\sum_{n \\geq 0} \\left( \\frac{x}{2} \\right)^n$ et $R'$ son rayon de convergence. Calculer $R'$ puis calculer la somme de cette série pour tout $x\\in ]-R',R'[$.",
+        "html": "<p>Soit la série <span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq\n0} \\left( \\frac{x}{2} \\right)^n\\)</span> et <span\nclass=\"math inline\">\\(R&#39;\\)</span> son rayon de convergence. Calculer\n<span class=\"math inline\">\\(R&#39;\\)</span> puis calculer la somme de\ncette série pour tout <span class=\"math inline\">\\(x\\in\n]-R&#39;,R&#39;[\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7ea82bad-c16a-4ed7-b69e-3c50b2d35100",
+      "type": "reponse",
+      "value": {
+        "latex": "On reconnaît une série géométrique qui converge si $\\frac{|x|}{2}<1$ d'où un rayon de convergence $R'=2$. La somme vaut \n\t\t$$ \\sum_{n = 0}^{+\\infty}\\left( \\frac{x}{2} \\right)^n = \\frac{1}{1-\\frac{x}{2}} = \\frac{2}{2-x}$$",
+        "html": "<p>On reconnaît une série géométrique qui converge si <span\nclass=\"math inline\">\\(\\frac{|x|}{2}&lt;1\\)</span> d’où un rayon de\nconvergence <span class=\"math inline\">\\(R&#39;=2\\)</span>. La somme vaut\n<span class=\"math display\">\\[\\sum_{n = 0}^{+\\infty}\\left( \\frac{x}{2}\n\\right)^n = \\frac{1}{1-\\frac{x}{2}} = \\frac{2}{2-x}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "1623c2d6-2422-432d-bf87-c5271211d7fd",
+      "type": "question",
+      "value": {
+        "latex": "En déduire la somme de la série       $\\displaystyle \\sum_{n \\geq 0} \\frac{(n+1)x^n}{2^n}$.",
+        "html": "<p>En déduire la somme de la série <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 0}\n\\frac{(n+1)x^n}{2^n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3fbf7d43-fda5-4de6-a11b-62bd1fdb2d21",
+      "type": "reponse",
+      "value": {
+        "latex": "Par dérivation d'une série entière sur son intervalle ouvert de convergence, on obtient pour tout $x \\in ]-2;2[$ : \n\t\t$$ \\sum_{n = 0}^{+\\infty} \\frac{nx^{n-1}}{2^n} = \\frac{2}{\\left(2-x\\right)^{2}}$$\n\t\tOr $$ \\sum_{n = 0}^{+\\infty} \\frac{nx^{n-1}}{2^n} =  \\sum_{n = 1}^{+\\infty} \\frac{nx^{n-1}}{2^n} = \\sum_{n = 0}^{+\\infty} \\frac{(n+1)x^{n}}{2^{n+1}} = \\frac{1}{2}\\sum_{n = 0}^{+\\infty} \\frac{(n+1)x^{n}}{2^{n}} $$\n\t\tdonc \n\t\t$$\\sum_{n = 0}^{+\\infty} \\frac{(n+1)x^{n}}{2^{n}} = \\frac{4}{\\left(2-x\\right)^{2}}$$",
+        "html": "<p>Par dérivation d’une série entière sur son intervalle ouvert de\nconvergence, on obtient pour tout <span class=\"math inline\">\\(x \\in\n]-2;2[\\)</span> : <span class=\"math display\">\\[\\sum_{n = 0}^{+\\infty}\n\\frac{nx^{n-1}}{2^n} = \\frac{2}{\\left(2-x\\right)^{2}}\\]</span> Or <span\nclass=\"math display\">\\[\\sum_{n = 0}^{+\\infty} \\frac{nx^{n-1}}{2^n}\n=  \\sum_{n = 1}^{+\\infty} \\frac{nx^{n-1}}{2^n} = \\sum_{n = 0}^{+\\infty}\n\\frac{(n+1)x^{n}}{2^{n+1}} = \\frac{1}{2}\\sum_{n = 0}^{+\\infty}\n\\frac{(n+1)x^{n}}{2^{n}}\\]</span> donc <span\nclass=\"math display\">\\[\\sum_{n = 0}^{+\\infty} \\frac{(n+1)x^{n}}{2^{n}} =\n\\frac{4}{\\left(2-x\\right)^{2}}\\]</span></p>\n"
+      }
+    }
+  ]
+}

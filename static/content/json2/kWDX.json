@@ -1,0 +1,88 @@
+{
+  "uuid": "kWDX",
+  "titre": "Fiabilité d'un système électronique",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:38.977Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:38.977Z"
+  },
+  "contenu": [
+    {
+      "id": "f38ee2ba-1881-457f-a92a-9879ec717d0c",
+      "type": "description",
+      "value": {
+        "latex": "Un système électronique est constitué de $n$ composants disposés en série. Cela implique que la panne d'un composant entraîne la panne de tout le système. Chacun des composants a une durée de vie $T_k$ qui suit une loi exponentielle de paramètre $\\lambda = 1$, pour tout $k \\in \\{1, \\ldots, n\\}$. On admet que les variables aléatoires $T_1, \\ldots, T_n$ sont indépendantes. On note $S$ la durée de vie du système et on note $t \\geq 0$ la variable de temps.",
+        "html": "<p>Un système électronique est constitué de <span\nclass=\"math inline\">\\(n\\)</span> composants disposés en série. Cela\nimplique que la panne d’un composant entraîne la panne de tout le\nsystème. Chacun des composants a une durée de vie <span\nclass=\"math inline\">\\(T_k\\)</span> qui suit une loi exponentielle de\nparamètre <span class=\"math inline\">\\(\\lambda = 1\\)</span>, pour tout\n<span class=\"math inline\">\\(k \\in \\{1, \\ldots, n\\}\\)</span>. On admet\nque les variables aléatoires <span class=\"math inline\">\\(T_1, \\ldots,\nT_n\\)</span> sont indépendantes. On note <span\nclass=\"math inline\">\\(S\\)</span> la durée de vie du système et on note\n<span class=\"math inline\">\\(t \\geq 0\\)</span> la variable de temps.</p>\n"
+      }
+    },
+    {
+      "id": "a95dff8f-0d10-4525-a65c-7f0cbd4a3eaf",
+      "type": "question",
+      "value": {
+        "latex": "Soit $t \\geq 0$. Pour tout $k \\in \\{1, \\ldots, n \\}$, on note $R_k(t) = \\prob(T_k > t)$ la fiabilité du composant $k$ à l'instant $t$. C'est la probabilité que le composant $k$ fonctionne encore après un temps d'utilisation $t$. Déterminer $R_k(t)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(t \\geq 0\\)</span>. Pour tout <span\nclass=\"math inline\">\\(k \\in \\{1, \\ldots, n \\}\\)</span>, on note <span\nclass=\"math inline\">\\(R_k(t) = \\prob(T_k &gt; t)\\)</span> la fiabilité\ndu composant <span class=\"math inline\">\\(k\\)</span> à l’instant <span\nclass=\"math inline\">\\(t\\)</span>. C’est la probabilité que le composant\n<span class=\"math inline\">\\(k\\)</span> fonctionne encore après un temps\nd’utilisation <span class=\"math inline\">\\(t\\)</span>. Déterminer <span\nclass=\"math inline\">\\(R_k(t)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b9acbc13-a149-4f3b-af33-a0e4dd415921",
+      "type": "reponse",
+      "value": {
+        "latex": "$R_k(t) = \\int_{t}^{+\\infty} e^{-x} dx = e^{-t}$ pour tout $t \\geq 0$.",
+        "html": "<p><span class=\"math inline\">\\(R_k(t) = \\int_{t}^{+\\infty} e^{-x} dx =\ne^{-t}\\)</span> pour tout <span class=\"math inline\">\\(t \\geq\n0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "969f0b82-c1b9-4e0d-a28a-70059d21c649",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\E(T_k)$ et déterminer la probabilité que le composant $k$ fonctionne après un temps d'utilisation égal à $\\E(T_k)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\E(T_k)\\)</span> et déterminer\nla probabilité que le composant <span class=\"math inline\">\\(k\\)</span>\nfonctionne après un temps d’utilisation égal à <span\nclass=\"math inline\">\\(\\E(T_k)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "fdb8aec4-77da-41be-ae1d-82728e086964",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\E(T_k) = \\frac{1}{\\lambda} = 1$ et $R_k(\\E(T_k)) = e^{-\\E(T_k)} = e^{-1} \\approx 0,37$.",
+        "html": "<p><span class=\"math inline\">\\(\\E(T_k) = \\frac{1}{\\lambda} = 1\\)</span>\net <span class=\"math inline\">\\(R_k(\\E(T_k)) = e^{-\\E(T_k)} = e^{-1}\n\\approx 0,37\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9ac50120-c29c-4ef9-be8f-d8c444ea76b1",
+      "type": "question",
+      "value": {
+        "latex": "On note $R(t) = \\prob(S > t)$ la fiabilité du système à l'instant $t$. C'est la probabilité que le système fonctionne encore après un temps d'utilisation $t$. Exprimer $R(t)$ en fonction de $R_1(t), \\ldots, R_n(t)$ et en déduire que $S$ suit une loi exponentielle dont on précisera le paramètre.",
+        "html": "<p>On note <span class=\"math inline\">\\(R(t) = \\prob(S &gt; t)\\)</span>\nla fiabilité du système à l’instant <span\nclass=\"math inline\">\\(t\\)</span>. C’est la probabilité que le système\nfonctionne encore après un temps d’utilisation <span\nclass=\"math inline\">\\(t\\)</span>. Exprimer <span\nclass=\"math inline\">\\(R(t)\\)</span> en fonction de <span\nclass=\"math inline\">\\(R_1(t), \\ldots, R_n(t)\\)</span> et en déduire que\n<span class=\"math inline\">\\(S\\)</span> suit une loi exponentielle dont\non précisera le paramètre.</p>\n"
+      }
+    },
+    {
+      "id": "f3846c73-4a3d-4067-a11d-f65aa631a919",
+      "type": "reponse",
+      "value": {
+        "latex": "$R(t) = \\prob(S > t) = \\prob(T_1 > t, \\ldots, T_n > t) = \\prod_{k=1}^{n} \\prob(T_k > t) = \\prod_{k=1}^{n} R_k(t) = e^{-nt}$ pour tout $t \\geq 0$. Donc $S$ suit une loi exponentielle de paramètre $n$.",
+        "html": "<p><span class=\"math inline\">\\(R(t) = \\prob(S &gt; t) = \\prob(T_1 &gt;\nt, \\ldots, T_n &gt; t) = \\prod_{k=1}^{n} \\prob(T_k &gt; t) =\n\\prod_{k=1}^{n} R_k(t) = e^{-nt}\\)</span> pour tout <span\nclass=\"math inline\">\\(t \\geq 0\\)</span>. Donc <span\nclass=\"math inline\">\\(S\\)</span> suit une loi exponentielle de paramètre\n<span class=\"math inline\">\\(n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ee3aeef7-072e-4ce3-bb70-50c411d6d59c",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer le temps moyen de bon fonctionnement du système.",
+        "html": "<p>Déterminer le temps moyen de bon fonctionnement du système.</p>\n"
+      }
+    },
+    {
+      "id": "323768cd-45ee-407e-acbb-49f194b043ae",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\E(S) = \\frac{1}{\\lambda} = \\frac{1}{n}$.",
+        "html": "<p><span class=\"math inline\">\\(\\E(S) = \\frac{1}{\\lambda} =\n\\frac{1}{n}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

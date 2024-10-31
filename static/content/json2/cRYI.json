@@ -1,0 +1,144 @@
+{
+  "uuid": "cRYI",
+  "titre": "Mélange de lois, fonction de répartition",
+  "theme": [
+    "probabilités"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:31.809Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:31.809Z"
+  },
+  "contenu": [
+    {
+      "id": "f03ea71d-8490-49e8-a7f6-16952a1ef383",
+      "type": "description",
+      "value": {
+        "latex": "Soit $Z$ une variable aléatoire admettant une fonction de répartition $F_Z$ définie par :\n\t$$F_Z(x)=\\begin{cases}\n\t\t\\frac{1}{(2-x)^2} & \\text{si } x<0 \\\\\n\t\t\\frac{1}{2}  & \\text{si } 0 \\leq x<1 \\\\\n\t\t1-\\frac{1}{3x} &   \\text{si } x \\geq 1 \\\\\n\t\\end{cases}$$\n\t\n\tGraphique : \\url{https://www.geogebra.org/m/vat8nub8}",
+        "html": "<p>Soit <span class=\"math inline\">\\(Z\\)</span> une variable aléatoire\nadmettant une fonction de répartition <span\nclass=\"math inline\">\\(F_Z\\)</span> définie par : <span\nclass=\"math display\">\\[F_Z(x)=\\begin{cases}\n        \\frac{1}{(2-x)^2} &amp; \\text{si } x&lt;0 \\\\\n        \\frac{1}{2}  &amp; \\text{si } 0 \\leq x&lt;1 \\\\\n        1-\\frac{1}{3x} &amp;   \\text{si } x \\geq 1 \\\\\n    \\end{cases}\\]</span></p>\n<p>Graphique : <a href=\"https://www.geogebra.org/m/vat8nub8\"\nclass=\"uri\">https://www.geogebra.org/m/vat8nub8</a></p>\n"
+      }
+    },
+    {
+      "id": "af0f0930-ad1d-4f5d-85f9-3367a634dd94",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que $F_Z$ définit bien une fonction de répartition.",
+        "html": "<p>Vérifier que <span class=\"math inline\">\\(F_Z\\)</span> définit bien\nune fonction de répartition.</p>\n"
+      }
+    },
+    {
+      "id": "016a9245-ceff-4ddb-aa96-e7d5b67e2b91",
+      "type": "reponse",
+      "value": {
+        "latex": "$F_Z$ est définie continue à droite et croissante sur $\\R$. De plus, on a $\\lim\\limits_{x \\to -\\infty}F_Z(x)=0$ et $\\lim\\limits_{x\\to+\\infty} F_Z(x)=1$. Il s'agit donc bien d'une fonction de répartition.",
+        "html": "<p><span class=\"math inline\">\\(F_Z\\)</span> est définie continue à\ndroite et croissante sur <span class=\"math inline\">\\(\\R\\)</span>. De\nplus, on a <span class=\"math inline\">\\(\\lim\\limits_{x \\to\n-\\infty}F_Z(x)=0\\)</span> et <span\nclass=\"math inline\">\\(\\lim\\limits_{x\\to+\\infty} F_Z(x)=1\\)</span>. Il\ns’agit donc bien d’une fonction de répartition.</p>\n"
+      }
+    },
+    {
+      "id": "685f6015-6471-4184-b7ae-dd1823ad570a",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\PP(Z=0)$ et $\\PP(Z=1)$. Peut-on dire que $Z$ est une variable aléatoire absolument continue ?",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\PP(Z=0)\\)</span> et <span\nclass=\"math inline\">\\(\\PP(Z=1)\\)</span>. Peut-on dire que <span\nclass=\"math inline\">\\(Z\\)</span> est une variable aléatoire absolument\ncontinue ?</p>\n"
+      }
+    },
+    {
+      "id": "ae764c37-3cfb-4441-b4a4-f15dd074fe2e",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\p(Z=0)=F_Z(0^+)-F_Z(0^-)=\\frac{1}{2}-\\frac{1}{4}=\\frac{1}{4}$.\n\t\tet $\\p(Z=1)=F_Z(1^+)-F_Z(1^-)=\\frac{2}{3}-\\frac{1}{2}=\\frac{1}{6}$. Comme $\\p(Z=0)\\neq 0$, la variable $Z$ n'est pas absolument continue.",
+        "html": "<p><span\nclass=\"math inline\">\\(\\p(Z=0)=F_Z(0^+)-F_Z(0^-)=\\frac{1}{2}-\\frac{1}{4}=\\frac{1}{4}\\)</span>.\net <span\nclass=\"math inline\">\\(\\p(Z=1)=F_Z(1^+)-F_Z(1^-)=\\frac{2}{3}-\\frac{1}{2}=\\frac{1}{6}\\)</span>.\nComme <span class=\"math inline\">\\(\\p(Z=0)\\neq 0\\)</span>, la variable\n<span class=\"math inline\">\\(Z\\)</span> n’est pas absolument\ncontinue.</p>\n"
+      }
+    },
+    {
+      "id": "d54f8739-deba-4b46-9f05-d2cc3e5fcd93",
+      "type": "description",
+      "value": {
+        "latex": "On considère $Y \\colon \\Omega \\rightarrow \\{0;1\\}$ une variable aléatoire discrète dont la loi est définie par $\\PP(Y = k) = \\alpha \\PP(Z=k)$ pour tout $k \\in \\{0;1\\}$ où $\\alpha$ est un paramètre réel à déterminer.",
+        "html": "<p>On considère <span class=\"math inline\">\\(Y \\colon \\Omega \\rightarrow\n\\{0;1\\}\\)</span> une variable aléatoire discrète dont la loi est définie\npar <span class=\"math inline\">\\(\\PP(Y = k) = \\alpha \\PP(Z=k)\\)</span>\npour tout <span class=\"math inline\">\\(k \\in \\{0;1\\}\\)</span> où <span\nclass=\"math inline\">\\(\\alpha\\)</span> est un paramètre réel à\ndéterminer.</p>\n"
+      }
+    },
+    {
+      "id": "f196e0a4-a548-462b-bb5a-0d09ed559e76",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que nécessairement, $\\alpha = \\frac{12}{5}$.",
+        "html": "<p>Montrer que nécessairement, <span class=\"math inline\">\\(\\alpha =\n\\frac{12}{5}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cbc8bc76-6412-4c4a-aff0-021e7c3faeaa",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\p(Y=0)=\\alpha \\p(Z=0)=\\frac{1}{4}\\alpha$ et $\\p(Y=1)=\\alpha \\p(Z=1)=\\frac{1}{6}\\alpha$. Comme $\\p(Y=0)+\\p(Y=1)=1$, on en déduit que $\\alpha=\\frac{12}{5}$.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\p(Y=0)=\\alpha\n\\p(Z=0)=\\frac{1}{4}\\alpha\\)</span> et <span\nclass=\"math inline\">\\(\\p(Y=1)=\\alpha \\p(Z=1)=\\frac{1}{6}\\alpha\\)</span>.\nComme <span class=\"math inline\">\\(\\p(Y=0)+\\p(Y=1)=1\\)</span>, on en\ndéduit que <span class=\"math inline\">\\(\\alpha=\\frac{12}{5}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ca1e96a4-527c-417e-8e14-44f1f1ec789c",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la fonction de répartition $F_Y$ de la variable aléatoire $Y$.",
+        "html": "<p>Déterminer la fonction de répartition <span\nclass=\"math inline\">\\(F_Y\\)</span> de la variable aléatoire <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3bddf160-5eed-484a-aa5d-c838207e262c",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction de répartition de $Y$ vaut\n\t\t\t$ F_Y(t)=\n\t\t\t\\begin{cases}\n\t\t\t\t0 \\text{ pour } t<0 \\\\\n\t\t\t\t\\p(Y=0) \\text{ pour } 0\\leq t <1 \\\\\n\t\t\t\t\\p(Y=0)+\\p(Y=1) \\text{ pour } t \\geq 1.\n\t\t\t\\end{cases}\n\t\t\t$ donc\n\t\t\t$ F_Y(t)=\n\t\t\t\\begin{cases}\n\t\t\t\t0 \\text{ pour } t<0 \\\\\n\t\t\t\t\\frac{3}{5} \\text{ pour } 0\\leq t <1 \\\\\n\t\t\t\t1 \\text{ pour } t \\geq 1.\n\t\t\t\\end{cases}\n\t\t\t$",
+        "html": "<p>La fonction de répartition de <span class=\"math inline\">\\(Y\\)</span>\nvaut <span class=\"math inline\">\\(F_Y(t)=\n            \\begin{cases}\n                0 \\text{ pour } t&lt;0 \\\\\n                \\p(Y=0) \\text{ pour } 0\\leq t &lt;1 \\\\\n                \\p(Y=0)+\\p(Y=1) \\text{ pour } t \\geq 1.\n            \\end{cases}\\)</span> donc <span\nclass=\"math inline\">\\(F_Y(t)=\n            \\begin{cases}\n                0 \\text{ pour } t&lt;0 \\\\\n                \\frac{3}{5} \\text{ pour } 0\\leq t &lt;1 \\\\\n                1 \\text{ pour } t \\geq 1.\n            \\end{cases}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "122ae040-2e4b-4406-a242-b377550ed907",
+      "type": "question",
+      "value": {
+        "latex": "On pose $F(x)=F_Z(x)-\\frac{5}{12}F_Y(x)$ pour tout $x \\in \\R$. Tracer le graphe de la fonction $F$.",
+        "html": "<p>On pose <span\nclass=\"math inline\">\\(F(x)=F_Z(x)-\\frac{5}{12}F_Y(x)\\)</span> pour tout\n<span class=\"math inline\">\\(x \\in \\R\\)</span>. Tracer le graphe de la\nfonction <span class=\"math inline\">\\(F\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "85965b38-986d-4a33-9060-2ee6e1899138",
+      "type": "reponse",
+      "value": {
+        "latex": "$ F(x)=F_Z(x)-\\frac{5}{12}F_Y(x)=\n\t\t\\begin{cases}\n\t\t\t\\frac{1}{(2-x)^2} \\text{ pour } x<0 \\\\\n\t\t\t\\frac{1}{4} \\text{ pour } 0 \\leq x <1 \\\\\n\t\t\t\\frac{7}{12}-\\frac{1}{3x} \\text{ pour } x\\geq 1.\n\t\t\\end{cases}\n\t\t$",
+        "html": "<p><span class=\"math inline\">\\(F(x)=F_Z(x)-\\frac{5}{12}F_Y(x)=\n        \\begin{cases}\n            \\frac{1}{(2-x)^2} \\text{ pour } x&lt;0 \\\\\n            \\frac{1}{4} \\text{ pour } 0 \\leq x &lt;1 \\\\\n            \\frac{7}{12}-\\frac{1}{3x} \\text{ pour } x\\geq 1.\n        \\end{cases}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "20d8b4ab-a720-4abf-aba6-0d3d950f1bff",
+      "type": "question",
+      "value": {
+        "latex": "Démontrer qu'en multipliant $F$ par une constante, on obtient la fonction de répartition d'une variable aléatoire que l'on notera $X$.",
+        "html": "<p>Démontrer qu’en multipliant <span class=\"math inline\">\\(F\\)</span>\npar une constante, on obtient la fonction de répartition d’une variable\naléatoire que l’on notera <span class=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "171d5f00-f06d-4f3b-89cf-5ff3cc7e179c",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $\\frac{12}{7}F_Z$ est définie continue et croissante sur $\\R$. De plus, on a $\\lim\\limits_{x \\to -\\infty}\\frac{12}{7}F_Z(x)=0$ et $\\lim\\limits_{x\\to+\\infty}\\frac{12}{7} F_Z(x)=1$. Il est donc clair que $\\frac{12}{7} F$ est la fonction de répartition d'une \\va $X$, qui est absolument continue.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(\\frac{12}{7}F_Z\\)</span> est\ndéfinie continue et croissante sur <span\nclass=\"math inline\">\\(\\R\\)</span>. De plus, on a <span\nclass=\"math inline\">\\(\\lim\\limits_{x \\to\n-\\infty}\\frac{12}{7}F_Z(x)=0\\)</span> et <span\nclass=\"math inline\">\\(\\lim\\limits_{x\\to+\\infty}\\frac{12}{7}\nF_Z(x)=1\\)</span>. Il est donc clair que <span\nclass=\"math inline\">\\(\\frac{12}{7} F\\)</span> est la fonction de\nrépartition d’une <span class=\"math inline\">\\(X\\)</span>, qui est\nabsolument continue.</p>\n"
+      }
+    },
+    {
+      "id": "418bc8ae-2913-4e25-95b4-e5eef4cd880d",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer une densité de probabilité de la variable $X$.",
+        "html": "<p>Déterminer une densité de probabilité de la variable <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "02ee4b33-4465-4be1-8860-5653ceeaaf0b",
+      "type": "reponse",
+      "value": {
+        "latex": "Par dérivation,  \n\t\t\\[ f_X(x)= \\frac{12}{7}F'_X(x)\n\t\t\\begin{cases}\n\t\t\t\\frac{24}{7(2-x)^3} \\text{ pour } x<0 \\\\\n\t\t\t0 \\text{ pour } 0 \\leq x <1 \\\\\n\t\t\t\\frac{4}{7x^2} \\text{ pour } x\\geq 1\n\t\t\\end{cases}\n\t\t.\\]",
+        "html": "<p>Par dérivation, <span class=\"math display\">\\[f_X(x)=\n\\frac{12}{7}F&#39;_X(x)\n        \\begin{cases}\n            \\frac{24}{7(2-x)^3} \\text{ pour } x&lt;0 \\\\\n            0 \\text{ pour } 0 \\leq x &lt;1 \\\\\n            \\frac{4}{7x^2} \\text{ pour } x\\geq 1\n        \\end{cases}\n        .\\]</span></p>\n"
+      }
+    }
+  ]
+}

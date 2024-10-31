@@ -1,0 +1,104 @@
+{
+  "uuid": "b1T2",
+  "titre": "Etude d'une matrice tridiagonale",
+  "theme": [
+    "analyse numérique"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:30.300Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:30.300Z"
+  },
+  "contenu": [
+    {
+      "id": "86d7111b-01a8-4285-8106-1b65ffd8cc1c",
+      "type": "description",
+      "value": {
+        "latex": "Soit $A \\in \\mathcal{M}_{n}(\\mathbb{R})$ la matrice tridiagonale d'ordre $n > 2$ définie par \n$$A = \\begin{pmatrix}\n\t2 & -1 &  &  & & \\\\\n\t-1 & 2 & -1 &      & &\\\\\n\t&   \\ddots & \\ddots & \\ddots  && \\\\\n\t& & -1 &2 &-1 \\\\\n\t& & & -1 & 2 \\\\\n\\end{pmatrix}\n$$\n\nOn admet que l'ensemble des valeurs propres de $A$ est $$sp(A) = \\left\\{ \\lambda_k = 4 \\sin^2\\left(\\frac{k\\pi}{2(n+1)} \\right) \\, , \\, k \\in \\{1,...,n \\} \\right\\}$$\n\nOn souhaite résoudre un système linéaire $AX=b$ à l'aide d'une méthode itérative et on note $X$ sa solution.",
+        "html": "<p>Soit <span class=\"math inline\">\\(A \\in\n\\mathcal{M}_{n}(\\mathbb{R})\\)</span> la matrice tridiagonale d’ordre\n<span class=\"math inline\">\\(n &gt; 2\\)</span> définie par <span\nclass=\"math display\">\\[A = \\begin{pmatrix}\n    2 &amp; -1 &amp;  &amp;  &amp; &amp; \\\\\n    -1 &amp; 2 &amp; -1 &amp;      &amp; &amp;\\\\\n    &amp;   \\ddots &amp; \\ddots &amp; \\ddots  &amp;&amp; \\\\\n    &amp; &amp; -1 &amp;2 &amp;-1 \\\\\n    &amp; &amp; &amp; -1 &amp; 2 \\\\\n\\end{pmatrix}\\]</span></p>\n<p>On admet que l’ensemble des valeurs propres de <span\nclass=\"math inline\">\\(A\\)</span> est <span class=\"math display\">\\[sp(A)\n= \\left\\{ \\lambda_k = 4 \\sin^2\\left(\\frac{k\\pi}{2(n+1)} \\right) \\, , \\,\nk \\in \\{1,...,n \\} \\right\\}\\]</span></p>\n<p>On souhaite résoudre un système linéaire <span\nclass=\"math inline\">\\(AX=b\\)</span> à l’aide d’une méthode itérative et\non note <span class=\"math inline\">\\(X\\)</span> sa solution.</p>\n"
+      }
+    },
+    {
+      "id": "ce9ff538-ebe3-4cf4-99ba-f92cb7114f97",
+      "type": "question",
+      "value": {
+        "latex": "Exprimer la suite des itérés de la méthode de Jacobi sous la forme $X^{(k+1)}=BX^{(k)}+C$ en exprimant la matrice $B$ en fonction de la matrice identité $I_n$ et de la matrice $A$. La matrice $A$ est-elle à diagonale strictement dominante ?",
+        "html": "<p>Exprimer la suite des itérés de la méthode de Jacobi sous la forme\n<span class=\"math inline\">\\(X^{(k+1)}=BX^{(k)}+C\\)</span> en exprimant\nla matrice <span class=\"math inline\">\\(B\\)</span> en fonction de la\nmatrice identité <span class=\"math inline\">\\(I_n\\)</span> et de la\nmatrice <span class=\"math inline\">\\(A\\)</span>. La matrice <span\nclass=\"math inline\">\\(A\\)</span> est-elle à diagonale strictement\ndominante ?</p>\n"
+      }
+    },
+    {
+      "id": "8b362ee7-bf82-43c7-a469-6f6c56f9bfc5",
+      "type": "reponse",
+      "value": {
+        "latex": "Avec les notations du cours, $A=M-N$ avec $M=2I$ d'où la suite de Jacobi $x^{(k+1)}=M^{-1}Nx^{(k)}+M^{-1}b = (I-\\frac{1}{2}A) x^{(k)} + \\frac{1}{2}b$.\n\t\tLa matrice $A$ n'est pas à diagonale strictement dominante donc la convergence de la méthode de Jacobi n'est pas acquise.",
+        "html": "<p>Avec les notations du cours, <span\nclass=\"math inline\">\\(A=M-N\\)</span> avec <span\nclass=\"math inline\">\\(M=2I\\)</span> d’où la suite de Jacobi <span\nclass=\"math inline\">\\(x^{(k+1)}=M^{-1}Nx^{(k)}+M^{-1}b =\n(I-\\frac{1}{2}A) x^{(k)} + \\frac{1}{2}b\\)</span>. La matrice <span\nclass=\"math inline\">\\(A\\)</span> n’est pas à diagonale strictement\ndominante donc la convergence de la méthode de Jacobi n’est pas\nacquise.</p>\n"
+      }
+    },
+    {
+      "id": "adab007c-f272-4f0e-9639-e3355b950348",
+      "type": "question",
+      "value": {
+        "latex": "On définit l'erreur $e^{(k)}=X^{(k)}-X$ à la $k$-ème itération. Exprimer $e^{(k)}$ en fonction de $e^{(k-1)}$ et en déduire que $\\Vert e^{(k)}\\Vert \\leq \\vvvert B\\vvvert^k\\Vert e^{(0)}\\Vert$ où $\\Vert.\\Vert$ est une norme quelconque sur $\\mathbb{R}^{n}$ et $\\vvvert.\\vvvert$ la norme induite sur $\\mathcal{M}_{n}(\\mathbb{R})$.",
+        "html": "<p>On définit l’erreur <span\nclass=\"math inline\">\\(e^{(k)}=X^{(k)}-X\\)</span> à la <span\nclass=\"math inline\">\\(k\\)</span>-ème itération. Exprimer <span\nclass=\"math inline\">\\(e^{(k)}\\)</span> en fonction de <span\nclass=\"math inline\">\\(e^{(k-1)}\\)</span> et en déduire que <span\nclass=\"math inline\">\\(\\Vert e^{(k)}\\Vert \\leq \\vvvert B\\vvvert^k\\Vert\ne^{(0)}\\Vert\\)</span> où <span\nclass=\"math inline\">\\(\\Vert.\\Vert\\)</span> est une norme quelconque sur\n<span class=\"math inline\">\\(\\mathbb{R}^{n}\\)</span> et <span\nclass=\"math inline\">\\(\\vvvert.\\vvvert\\)</span> la norme induite sur\n<span class=\"math inline\">\\(\\mathcal{M}_{n}(\\mathbb{R})\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2b1405b8-894c-40b8-bf94-8607bbdd9c7c",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\t\t\te^{(k)} &= X^{k}-X\\\\\n\t\t\t&=(BX^{k-1}+ C) - (BX+C) \\\\\n\t\t\t&= B(X^{(k-1)}-X) \\\\\n\t\t\t&=B e^{(k-1)} \n\t\t\\end{align*}$$\n\t\tdonc par récurrence $e^{(k)}=B^ke^{(0)}$.\tEn passant à la norme et par inégalité des normes induites, $|| e^{(k)}|| \\leq \\vvvert B\\vvvert^k || e^{(0)}||$",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n            e^{(k)} &amp;= X^{k}-X\\\\\n            &amp;=(BX^{k-1}+ C) - (BX+C) \\\\\n            &amp;= B(X^{(k-1)}-X) \\\\\n            &amp;=B e^{(k-1)}\n        \\end{align*}\\]</span> donc par récurrence <span\nclass=\"math inline\">\\(e^{(k)}=B^ke^{(0)}\\)</span>. En passant à la norme\net par inégalité des normes induites, <span class=\"math inline\">\\(||\ne^{(k)}|| \\leq \\vvvert B\\vvvert^k || e^{(0)}||\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "4b33feb9-fbbf-4c81-a040-763f076b3499",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\vvvert B\\vvvert_{\\infty}$. Qu'en conclure ?",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\vvvert\nB\\vvvert_{\\infty}\\)</span>. Qu’en conclure ?</p>\n"
+      }
+    },
+    {
+      "id": "6fc869df-446f-4a68-a49d-203436a5bf60",
+      "type": "reponse",
+      "value": {
+        "latex": "On calcule $B = \\begin{pmatrix}\n\t\t\t0 & \\frac{1}{2} &  &  & & \\\\\n\t\t\t\\frac{1}{2} & 0 & \\frac{1}{2} &      & &\\\\\n\t\t\t&   \\ddots & \\ddots & \\ddots  && \\\\\n\t\t\t& & \\frac{1}{2} &0 &\\frac{1}{2} \\\\\n\t\t\t& & & \\frac{1}{2} & 0 \\\\\n\t\t\\end{pmatrix}\n\t\t$ D'après le cours,   $\\displaystyle\\vvvert B\\vvvert_{\\infty} =  \\sup\\limits_{1 \\leq i \\leq N} \\sum_{j=1}^N|b_{i,j}| = \\frac{1}{2}+\\frac{1}{2} = 1$. Donc ce choix de norme ne permet pas de conclure que l'erreur tend vers $0$.",
+        "html": "<p>On calcule <span class=\"math inline\">\\(B = \\begin{pmatrix}\n            0 &amp; \\frac{1}{2} &amp;  &amp;  &amp; &amp; \\\\\n            \\frac{1}{2} &amp; 0 &amp; \\frac{1}{2} &amp;      &amp;\n&amp;\\\\\n            &amp;   \\ddots &amp; \\ddots &amp; \\ddots  &amp;&amp; \\\\\n            &amp; &amp; \\frac{1}{2} &amp;0 &amp;\\frac{1}{2} \\\\\n            &amp; &amp; &amp; \\frac{1}{2} &amp; 0 \\\\\n        \\end{pmatrix}\\)</span> D’après le cours, <span\nclass=\"math inline\">\\(\\displaystyle\\vvvert B\\vvvert_{\\infty}\n=  \\sup\\limits_{1 \\leq i \\leq N} \\sum_{j=1}^N|b_{i,j}| =\n\\frac{1}{2}+\\frac{1}{2} = 1\\)</span>. Donc ce choix de norme ne permet\npas de conclure que l’erreur tend vers <span\nclass=\"math inline\">\\(0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "585def2e-cffa-44ee-8803-22d66646e21d",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que le rayon spectral de $B$ est  $\\rho(B)=\\cos\\left(\\frac{\\pi}{n+1}\\right)$.",
+        "html": "<p>Vérifier que le rayon spectral de <span\nclass=\"math inline\">\\(B\\)</span> est <span\nclass=\"math inline\">\\(\\rho(B)=\\cos\\left(\\frac{\\pi}{n+1}\\right)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a4dc8043-4c7e-40bd-9556-a59396c42097",
+      "type": "reponse",
+      "value": {
+        "latex": "Les valeurs propres de $B=I-\\frac{1}{2}A$ sont les valeurs $\\mu_k = 1-2 \\sin^2\\left(\\frac{k\\pi}{2(n+1)}\\right) = \\cos\\left(\\frac{k\\pi}{n+1}\\right)$ donc $\\rho(B) = \\max\\{|\\mu_k|\\} = \\cos\\left(\\frac{\\pi}{n+1}\\right)$.",
+        "html": "<p>Les valeurs propres de <span\nclass=\"math inline\">\\(B=I-\\frac{1}{2}A\\)</span> sont les valeurs <span\nclass=\"math inline\">\\(\\mu_k = 1-2 \\sin^2\\left(\\frac{k\\pi}{2(n+1)}\\right)\n= \\cos\\left(\\frac{k\\pi}{n+1}\\right)\\)</span> donc <span\nclass=\"math inline\">\\(\\rho(B) = \\max\\{|\\mu_k|\\} =\n\\cos\\left(\\frac{\\pi}{n+1}\\right)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1d7314e0-4517-4ee0-9672-3d14e83c318f",
+      "type": "question",
+      "value": {
+        "latex": "En déduire que la méthode de Jacobi converge pour la matrice $A$ quelque soit l'initialisation.",
+        "html": "<p>En déduire que la méthode de Jacobi converge pour la matrice <span\nclass=\"math inline\">\\(A\\)</span> quelque soit l’initialisation.</p>\n"
+      }
+    },
+    {
+      "id": "d2555aa0-b8ac-47e0-a7c5-866bee7b20f8",
+      "type": "reponse",
+      "value": {
+        "latex": "On remarque que $A$ est une matrice symétrique donc $B$ est une matrice symétrique. D'après la propriété 1 admise, $||B||_2 =\\rho(B) =  \\cos\\left(\\frac{\\pi}{n+1}\\right)$ donc $0<||B||_2<1$. Donc d'après la question 2, $|| e^{(k)}||_2 \\to 0$ quelque soit l'erreur $e^{(0)}$.\n\t\tcommise au départ, autrement dit la méthode converge.",
+        "html": "<p>On remarque que <span class=\"math inline\">\\(A\\)</span> est une\nmatrice symétrique donc <span class=\"math inline\">\\(B\\)</span> est une\nmatrice symétrique. D’après la propriété 1 admise, <span\nclass=\"math inline\">\\(||B||_2 =\\rho(B)\n=  \\cos\\left(\\frac{\\pi}{n+1}\\right)\\)</span> donc <span\nclass=\"math inline\">\\(0&lt;||B||_2&lt;1\\)</span>. Donc d’après la\nquestion 2, <span class=\"math inline\">\\(|| e^{(k)}||_2 \\to 0\\)</span>\nquelque soit l’erreur <span class=\"math inline\">\\(e^{(0)}\\)</span>.\ncommise au départ, autrement dit la méthode converge.</p>\n"
+      }
+    }
+  ]
+}

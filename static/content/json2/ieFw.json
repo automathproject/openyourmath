@@ -1,0 +1,56 @@
+{
+  "uuid": "ieFw",
+  "titre": "Domaine de convergence de séries sentières",
+  "theme": [
+    "séries"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:36.788Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:36.788Z"
+  },
+  "contenu": [
+    {
+      "id": "adfa1485-20df-409d-b1ac-acbe1fe31a87",
+      "type": "description",
+      "value": {
+        "latex": "On considère la série entière de la variable réelle $x$ : \n$$\\sum_{n \\geq 1} \\frac{(-1)^n}{\\sqrt{n}+1}x^n$$",
+        "html": "<p>On considère la série entière de la variable réelle <span\nclass=\"math inline\">\\(x\\)</span> : <span class=\"math display\">\\[\\sum_{n\n\\geq 1} \\frac{(-1)^n}{\\sqrt{n}+1}x^n\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "ffb063bb-e400-4f70-8626-6d2becfb1896",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que le rayon de convergence est égal à $1$.",
+        "html": "<p>Vérifier que le rayon de convergence est égal à <span\nclass=\"math inline\">\\(1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3fca17b8-76fb-4755-a7d4-1f2c1bd8e4de",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $u_n(x) = \\frac{(-1)^n}{\\sqrt{n}+1}x^n$ et on utilise le théorème de d'Alembert : \n\t\t$$\\begin{align*}\n\t\t\t\\frac{|u_{n+1}(x)|}{|u_n(x)|} &= \\frac{ \\sqrt{n}+1 }{\\sqrt{n+1}+1}\\frac{|x^{n+1}|}{|x^{n}|} \\\\\n\t\t\t& \\sim  \\frac{\\sqrt{n}}{\\sqrt{n}} |x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{}  |x|\n\t\t\\end{align*}$$\n\t\tDonc la série converge si et seulemlent si $|x|<1$. Donc le rayon de convergence est bien $R=1$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(u_n(x) =\n\\frac{(-1)^n}{\\sqrt{n}+1}x^n\\)</span> et on utilise le théorème de\nd’Alembert : <span class=\"math display\">\\[\\begin{align*}\n            \\frac{|u_{n+1}(x)|}{|u_n(x)|} &amp;= \\frac{ \\sqrt{n}+1\n}{\\sqrt{n+1}+1}\\frac{|x^{n+1}|}{|x^{n}|} \\\\\n            &amp; \\sim  \\frac{\\sqrt{n}}{\\sqrt{n}} |x| \\\\\n            &amp;\\xrightarrow[n\\to+\\infty]{}  |x|\n        \\end{align*}\\]</span> Donc la série converge si et seulemlent si\n<span class=\"math inline\">\\(|x|&lt;1\\)</span>. Donc le rayon de\nconvergence est bien <span class=\"math inline\">\\(R=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a4560e44-1be1-448f-aef4-97f80b98657f",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer le domaine de convergence de cette série entière.",
+        "html": "<p>Déterminer le domaine de convergence de cette série entière.</p>\n"
+      }
+    },
+    {
+      "id": "070ad848-b4db-4f87-aac5-c198ea7135d9",
+      "type": "reponse",
+      "value": {
+        "latex": "On sait que la série converge sur l'intervalle $]-R;R[ = ]-1;1[$. Il reste à étudier le cas où $x=-1$ et $x=1$. \n\t\t\n\t\tOr $u_n(-1) = \\frac{1}{\\sqrt{n}+1} \\sum \\frac{1}{n^{\\frac{1}{2}}}$ : la série $\\sum u_n(-1)$ est donc une série à termes positifs et le terme général est équvalent au terme général d'une série de Riemann divergente ($\\alpha = 1/2<1$) donc la série $\\sum u_n(-1)$ diverge. \n\t\t\n\t\tDe plus, \t$u_n(1) = \\frac{(-1)^n}{\\sqrt{n}+1} = (-1)^n a_n$ avec $a_n = \\frac{1}{\\sqrt{n}+1} >0$ pour tout $n \\geq 1$. Donc $u_n(1)$ est le terme général d'une série alternée. Or il est clair que $(a_n)$ est une suite décroissante et $\\lim\\limits_{n\\to+\\infty} a_n = 0$ donc d'après le théorème des séries alternées, la série $\\sum u_n(1)$ converge.\n\t\t\n\t\tEn définitive, le domaine de convergence est \n\t\t$$D = ]-1;1]$$",
+        "html": "<p>On sait que la série converge sur l’intervalle <span\nclass=\"math inline\">\\(]-R;R[ = ]-1;1[\\)</span>. Il reste à étudier le\ncas où <span class=\"math inline\">\\(x=-1\\)</span> et <span\nclass=\"math inline\">\\(x=1\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(u_n(-1) = \\frac{1}{\\sqrt{n}+1} \\sum\n\\frac{1}{n^{\\frac{1}{2}}}\\)</span> : la série <span\nclass=\"math inline\">\\(\\sum u_n(-1)\\)</span> est donc une série à termes\npositifs et le terme général est équvalent au terme général d’une série\nde Riemann divergente (<span class=\"math inline\">\\(\\alpha =\n1/2&lt;1\\)</span>) donc la série <span class=\"math inline\">\\(\\sum\nu_n(-1)\\)</span> diverge.</p>\n<p>De plus, <span class=\"math inline\">\\(u_n(1) =\n\\frac{(-1)^n}{\\sqrt{n}+1} = (-1)^n a_n\\)</span> avec <span\nclass=\"math inline\">\\(a_n = \\frac{1}{\\sqrt{n}+1} &gt;0\\)</span> pour\ntout <span class=\"math inline\">\\(n \\geq 1\\)</span>. Donc <span\nclass=\"math inline\">\\(u_n(1)\\)</span> est le terme général d’une série\nalternée. Or il est clair que <span class=\"math inline\">\\((a_n)\\)</span>\nest une suite décroissante et <span\nclass=\"math inline\">\\(\\lim\\limits_{n\\to+\\infty} a_n = 0\\)</span> donc\nd’après le théorème des séries alternées, la série <span\nclass=\"math inline\">\\(\\sum u_n(1)\\)</span> converge.</p>\n<p>En définitive, le domaine de convergence est <span\nclass=\"math display\">\\[D = ]-1;1]\\]</span></p>\n"
+      }
+    }
+  ]
+}

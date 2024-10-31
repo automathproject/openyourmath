@@ -1,0 +1,88 @@
+{
+  "uuid": "qGet",
+  "titre": "Etude de point fixe",
+  "theme": [
+    "méthodes numériques"
+  ],
+  "niveau": "",
+  "metadata": {
+    "auteur": "",
+    "createdAt": "2024-10-31T14:47:44.026Z",
+    "organisation": "AMSCC",
+    "updatedAt": "2024-10-31T14:47:44.026Z"
+  },
+  "contenu": [
+    {
+      "id": "a61eef2b-c21b-4fc4-ab6a-032ec4dc64b2",
+      "type": "description",
+      "value": {
+        "latex": "On s'intéresse au calcul de $\\ell\\in[0;\\pi]$ tel que $\\ell=\\ell-\\frac{1}{4}\\cos(\\ell)$. \n\nOn considère la méthode de point fixe suivante: $x_0\\in[0;\\pi]$ et $x_{k+1}=\\phi(x_k)$ pour tout $k\\geq 0$, où $\\phi$ est la fonction définie sur l'intervalle $[0;\\pi]$ par $\\phi(x)=1-\\frac{1}{4}\\cos(x)$.",
+        "html": "<p>On s’intéresse au calcul de <span\nclass=\"math inline\">\\(\\ell\\in[0;\\pi]\\)</span> tel que <span\nclass=\"math inline\">\\(\\ell=\\ell-\\frac{1}{4}\\cos(\\ell)\\)</span>.</p>\n<p>On considère la méthode de point fixe suivante: <span\nclass=\"math inline\">\\(x_0\\in[0;\\pi]\\)</span> et <span\nclass=\"math inline\">\\(x_{k+1}=\\phi(x_k)\\)</span> pour tout <span\nclass=\"math inline\">\\(k\\geq 0\\)</span>, où <span\nclass=\"math inline\">\\(\\phi\\)</span> est la fonction définie sur\nl’intervalle <span class=\"math inline\">\\([0;\\pi]\\)</span> par <span\nclass=\"math inline\">\\(\\phi(x)=1-\\frac{1}{4}\\cos(x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7209b3a6-5c60-45f1-841b-b7740e611d9c",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que la méthode converge pour tout $x_0\\in[0;\\pi]$.",
+        "html": "<p>Montrer que la méthode converge pour tout <span\nclass=\"math inline\">\\(x_0\\in[0;\\pi]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4d0bb034-d1d2-4480-8393-2f3f28679be4",
+      "type": "reponse",
+      "value": {
+        "latex": "La dérivée de la fonction $g$ vérifie $\\forall x\\in[0;\\pi]$, $|\\phi'(x)|\\leq \\frac{1}{4}<1$. De plus, $\\phi([0;\\pi])=[\\frac{3}{4};\\frac{5}{4}]\\subset[0;\\pi]$. Par conséquent, la méthode de point fixe converge vers le point fixe $l$ pour tout $x_0\\in[0;\\pi]$.",
+        "html": "<p>La dérivée de la fonction <span class=\"math inline\">\\(g\\)</span>\nvérifie <span class=\"math inline\">\\(\\forall x\\in[0;\\pi]\\)</span>, <span\nclass=\"math inline\">\\(|\\phi&#39;(x)|\\leq \\frac{1}{4}&lt;1\\)</span>. De\nplus, <span\nclass=\"math inline\">\\(\\phi([0;\\pi])=[\\frac{3}{4};\\frac{5}{4}]\\subset[0;\\pi]\\)</span>.\nPar conséquent, la méthode de point fixe converge vers le point fixe\n<span class=\"math inline\">\\(l\\)</span> pour tout <span\nclass=\"math inline\">\\(x_0\\in[0;\\pi]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b6ea7619-860d-4e5f-a6b0-3dce9713efa0",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'il existe une constante $C \\in ]0;1[$ telle que pour tout $k \\in \\N$,  $|x_k-\\ell|\\leq C^k|x_0-\\ell|$ et donner une valeur de $C$.",
+        "html": "<p>Montrer qu’il existe une constante <span class=\"math inline\">\\(C \\in\n]0;1[\\)</span> telle que pour tout <span class=\"math inline\">\\(k \\in\n\\N\\)</span>, <span class=\"math inline\">\\(|x_k-\\ell|\\leq\nC^k|x_0-\\ell|\\)</span> et donner une valeur de <span\nclass=\"math inline\">\\(C\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2002e608-1125-4d45-994a-8c47ae6b8088",
+      "type": "question",
+      "value": {
+        "latex": "En déduire le nombre d'itérations nécessaires pour approcher $\\ell$ à $10^{-3}$ près.",
+        "html": "<p>En déduire le nombre d’itérations nécessaires pour approcher <span\nclass=\"math inline\">\\(\\ell\\)</span> à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près.</p>\n"
+      }
+    },
+    {
+      "id": "f6669a73-740f-469c-8136-77fc0319cefe",
+      "type": "reponse",
+      "value": {
+        "latex": "Par le théorème des accroissements finis, on a l'existence de $\\zeta_k$ compris entre $\\ell$ et $x_{k}$ tel que\n\t\t\\[ |x_k-\\ell|=|\\phi(x_{k-1})-g(\\ell)|=|\\phi'(\\zeta_k)| |x_{k-1}-\\ell| \\leq \\frac{1}{4}|x_{k-1}-\\ell|.\\]\n\t\tPar récurrence, on montre ainsi \n\t\t\\[ |x_k-\\ell|\\leq \\frac{1}{4^k}|x_0-\\ell|.\\]\n\t\tOn a donc $|x_k-\\ell|\\leq \\frac{\\pi}{4^k}$. Pour approcher $\\ell$ à $10^{-3}$ près, il faut\n\t\t\\[ \\frac{\\pi}{4^k}\\leq 10^{-3} \\quad \\Leftrightarrow \\quad k\\geq \\frac{\\ln(\\pi 10^3)}{\\ln(2)}\\simeq 5.9,\\]\n\t\tsoit $6$ itérations.",
+        "html": "<p>Par le théorème des accroissements finis, on a l’existence de <span\nclass=\"math inline\">\\(\\zeta_k\\)</span> compris entre <span\nclass=\"math inline\">\\(\\ell\\)</span> et <span\nclass=\"math inline\">\\(x_{k}\\)</span> tel que <span\nclass=\"math display\">\\[|x_k-\\ell|=|\\phi(x_{k-1})-g(\\ell)|=|\\phi&#39;(\\zeta_k)|\n|x_{k-1}-\\ell| \\leq \\frac{1}{4}|x_{k-1}-\\ell|.\\]</span> Par récurrence,\non montre ainsi <span class=\"math display\">\\[|x_k-\\ell|\\leq\n\\frac{1}{4^k}|x_0-\\ell|.\\]</span> On a donc <span\nclass=\"math inline\">\\(|x_k-\\ell|\\leq \\frac{\\pi}{4^k}\\)</span>. Pour\napprocher <span class=\"math inline\">\\(\\ell\\)</span> à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près, il faut <span\nclass=\"math display\">\\[\\frac{\\pi}{4^k}\\leq 10^{-3} \\quad \\Leftrightarrow\n\\quad k\\geq \\frac{\\ln(\\pi 10^3)}{\\ln(2)}\\simeq 5.9,\\]</span> soit <span\nclass=\"math inline\">\\(6\\)</span> itérations.</p>\n"
+      }
+    },
+    {
+      "id": "c3aa9e5c-687a-4090-aecd-e664dacc0c46",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que pour tout $k \\in \\N$, $|x_k - \\ell| \\leq \\frac{4}{3} |x_{k+1}-x_{k}|$.",
+        "html": "<p>Montrer que pour tout <span class=\"math inline\">\\(k \\in \\N\\)</span>,\n<span class=\"math inline\">\\(|x_k - \\ell| \\leq \\frac{4}{3}\n|x_{k+1}-x_{k}|\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "10f5a2e6-c809-4d33-90ed-f37b6ea90ea1",
+      "type": "question",
+      "value": {
+        "latex": "En déduire la valeur $\\varepsilon$ du contrôle de l'incrément (en tant que critère d'arrêt) pour approcher $\\ell$ à $10^{-3}$ près.",
+        "html": "<p>En déduire la valeur <span class=\"math inline\">\\(\\varepsilon\\)</span>\ndu contrôle de l’incrément (en tant que critère d’arrêt) pour approcher\n<span class=\"math inline\">\\(\\ell\\)</span> à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près.</p>\n"
+      }
+    },
+    {
+      "id": "03da1ebe-3289-442e-8775-ad946be2a0e8",
+      "type": "reponse",
+      "value": {
+        "latex": "On a\n\t\t$$\\begin{align*}\n\t\t|x_k-l|-|x_{k+1}-x_k| & \\leq |x_k-l+x_{k+1}-x_k|=|x_{k+1}-l| \\\\\n\t\t& \\leq C |x_k-l|\n\t\t\\end{align*}$$\n\t\td'où $|x_k-l|-C|x_k-l|\\leq |x_{k+1}-x_k|$ qui implique\n\t\t$$\\begin{align*}\n\t\t|x_k-l| \\leq \\frac{1}{1-C}|x_{k+1}-x_k| \\leq \\frac{\\varepsilon}{1-C}.\n\t\t\\end{align*}$$\n\t\tIl faut choisir $\\varepsilon$ tel que $\\frac{\\varepsilon}{1-C}<10^{-3}$ pour approcher $l$ à $10^{-3}$ près.",
+        "html": "<p>On a <span class=\"math display\">\\[\\begin{align*}\n        |x_k-l|-|x_{k+1}-x_k| &amp; \\leq |x_k-l+x_{k+1}-x_k|=|x_{k+1}-l|\n\\\\\n        &amp; \\leq C |x_k-l|\n        \\end{align*}\\]</span> d’où <span\nclass=\"math inline\">\\(|x_k-l|-C|x_k-l|\\leq |x_{k+1}-x_k|\\)</span> qui\nimplique <span class=\"math display\">\\[\\begin{align*}\n        |x_k-l| \\leq \\frac{1}{1-C}|x_{k+1}-x_k| \\leq\n\\frac{\\varepsilon}{1-C}.\n        \\end{align*}\\]</span> Il faut choisir <span\nclass=\"math inline\">\\(\\varepsilon\\)</span> tel que <span\nclass=\"math inline\">\\(\\frac{\\varepsilon}{1-C}&lt;10^{-3}\\)</span> pour\napprocher <span class=\"math inline\">\\(l\\)</span> à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près.</p>\n"
+      }
+    }
+  ]
+}
