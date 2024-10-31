@@ -1,5 +1,5 @@
 <!-- src/components/Exercice.svelte -->
-<script>
+<script lang="ts">
     import { fade, fly, slide, scale } from 'svelte/transition'; // Import de plusieurs transitions
     import MathRenderer from './MathRenderer.svelte';
   
@@ -45,6 +45,20 @@
       processedContenu = [];
       console.log('ExerciceData est null ou undefined');
     }
+
+/**
+ * Format a date string into a more readable French date format.
+ * @param dateString - The ISO date string to format.
+ * @returns A formatted date string in the format "31 octobre 2024".
+ */
+ function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("fr-FR", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+}
   </script>
   
   <div class="exercice">
@@ -59,8 +73,7 @@
       </a>
     </div>  <div class="tags"> <span class="tag">{ExerciceData.theme} </span></div>
     <div class="auteur">{ExerciceData.metadata.auteur}</div>
-    <div class="date">{ExerciceData.metadata.createdAt}</div>
-    <div class="organisation">{ExerciceData.metadata.organisation}</div>
+    <div class="date">{formatDate(ExerciceData.metadata.createdAt)}</div>    <div class="organisation">{ExerciceData.metadata.organisation}</div>
     
     <!-- Bouton pour afficher/masquer les réponses -->
     <button on:click={toggleReponses} class="toggle-button">
@@ -107,10 +120,18 @@
       margin-bottom: 0.5rem;
     }
   
-    .theme, .auteur, .date, .organisation {
+    .theme, .auteur, .organisation {
       font-size: 1.2rem;
       margin-bottom: 0.25rem;
     }
+
+    .date {
+  font-size: 1rem; /* Taille du texte */
+  font-weight: 500; /* Légèrement en gras */
+  color: #555; /* Gris foncé pour un style subtil */
+  font-style: italic; /* Style italique */
+  margin-top: 0.5rem; /* Marge au-dessus */
+}
   
     .description, .question, .reponse {
       margin-top: 1rem;
