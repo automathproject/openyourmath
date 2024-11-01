@@ -185,8 +185,7 @@
                         role="button"
                     >
                         <div class="card-body">
-                            <h3 class="h5 mb-2">{result.exercise.titre}</h3>
-                            <p class="text-muted mb-2">Niveau: {result.exercise.niveau}</p>
+                            <h4 class="h5 mb-2">{result.exercise.titre}</h4>
                             <div class="tags">
                                 {#each normalizeThemes(result.exercise.theme) as theme}
                                     <span 
