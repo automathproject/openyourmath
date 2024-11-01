@@ -10,31 +10,32 @@
     let query = '';
     let results: Array<{ exercise: Exercice; score: number }> = [];
 
-    // Initialisation du moteur de recherche
     onMount(() => {
         searchEngine = new ExerciceSearchEngine();
         searchEngine.initialize(data.exercises);
-        // Au début, montrer tous les exercices
-        results = data.exercises.map(exercise => ({ 
-            exercise,
-            score: 1
-        }));
+        updateResults(); // Affichage initial
     });
 
-    // Réactivité de la recherche
-    $: if (searchEngine && query.trim()) {
-        results = searchEngine.search(query);
-    } else if (searchEngine) {
-        // Si la recherche est vide, montrer tous les exercices
-        results = data.exercises.map(exercise => ({ 
-            exercise,
-            score: 1
-        }));
+    function updateResults() {
+        if (!searchEngine) return;
+        
+        if (query.trim()) {
+            console.log('Searching for:', query);
+            const searchResults = searchEngine.search(query);
+            console.log('Found results:', searchResults.length);
+            results = searchResults;
+        } else {
+            results = data.exercises.map(exercise => ({ 
+                exercise,
+                score: 1
+            }));
+        }
     }
+
+    $: query, updateResults();
 </script>
 
 <div class="container mx-auto p-4">
-    <!-- Barre de recherche -->
     <div class="mb-4">
         <input
             type="text"
@@ -44,18 +45,18 @@
         />
     </div>
 
-    <!-- Compteur de résultats -->
     <div class="mb-4">
         <p>{results.length} exercice(s) trouvé(s)</p>
     </div>
 
-    <!-- Résultats -->
     <div class="space-y-4">
-        {#each results as { exercise }}
+        {#each results as result}
+            {@const exercise = result.exercise}
             <div class="border rounded p-4">
                 <h3 class="font-bold">{exercise.titre}</h3>
                 <p>Niveau: {exercise.niveau}</p>
-                <p>Thèmes: {exercise.theme.join(', ')}</p>
+                <!-- Vérification que theme est un tableau avant d'utiliser join -->
+                <p>Thèmes: {Array.isArray(exercise.theme) ? exercise.theme.join(', ') : exercise.theme}</p>
             </div>
         {/each}
     </div>

@@ -4,7 +4,6 @@ import type { Exercice } from '../types/types';
 
 export class ExerciceSearchEngine {
     private fuse: Fuse<Exercice>;
-    private exercises: Exercice[];
 
     constructor() {
         const options: Fuse.IFuseOptions<Exercice> = {
@@ -34,24 +33,29 @@ export class ExerciceSearchEngine {
             includeScore: true
         };
 
-        this.exercises = [];
         this.fuse = new Fuse([], options);
     }
 
     initialize(exercises: Exercice[]) {
-        this.exercises = exercises;
-        this.fuse.setCollection(exercises);
+        // Réinitialiser Fuse avec la nouvelle collection
+        this.fuse = new Fuse(exercises, this.fuse.options);
+        console.log('Search engine initialized with', exercises.length, 'exercises'); // Debug
     }
 
     search(query: string) {
+        console.log('Performing search for:', query); // Debug
+        
         if (!query.trim()) {
-            return this.exercises.map(exercise => ({
+            return this.fuse.getIndex().docs.map(exercise => ({
                 exercise,
                 score: 1
             }));
         }
 
-        return this.fuse.search(query).map(result => ({
+        const searchResults = this.fuse.search(query);
+        console.log('Found', searchResults.length, 'results'); // Debug
+        
+        return searchResults.map(result => ({
             exercise: result.item,
             score: result.score || 1
         }));
