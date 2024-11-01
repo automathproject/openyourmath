@@ -18,4 +18,6 @@ https://github.com/smaxx73/Exercices
 To do :
 - [x] Un bouton pour afficher / masquer les solutions
 - [x] Gérer une liste d'exercices
-- [ ] Faire un moteur de recherche
+- [x] Faire un moteur de recherche
+- [ ] Améliorer l'ergonomie du moteur de recherche
+- [ ] Gérer automatiquement les images depuis le LaTeX
