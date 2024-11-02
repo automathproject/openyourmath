@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:25.483Z",
+    "createdAt": "2024-11-02T12:27:39.322Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:25.483Z"
+    "updatedAt": "2024-11-02T12:27:39.322Z"
   },
   "contenu": [
     {
-      "id": "3abd5e55-14ed-44d0-a822-5d97c2afd7de",
+      "id": "f5adee9a-8e68-4449-89d8-5912cf358e50",
       "type": "description",
       "value": {
         "latex": "La méthode d'Euler explicite est convergente et consistante d'ordre 1. On considère l'approximation suivante :\n\t $$\\int_{t_n}^{t_{n+1}}f(s,y(s))ds \\approx h\\cdot f\\left( t_n+\\frac{h}{2},y\\left( t_n+\\frac{h}{2} \\right)  \\right).$$\n\nLa méthode qui en découle s'écrit donc sous la forme \n$$y_{n+1} = y_n + h\\cdot f\\left( t_n + \\frac{h}{2},y_{n+1/2} \\right)$$\noù $y_{n+1/2}$ reste à définir sous la forme \n$$y_{n+1/2} = y_n + \\frac{h}{2}G(t_n,y_n,h)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "7c238c9c-1461-417a-932d-0d6905fdbadc",
+      "id": "b1ebcc4c-5dae-4d21-9ed1-21c46b2a53f2",
       "type": "question",
       "value": {
         "latex": "Déterminer une fonction $G$ permettant à ce schéma d'être consistant d'ordre 2.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "078e77b0-5657-43a2-8cf8-87d9c666871c",
+      "id": "be9dd738-493f-4523-a68f-d2d2f3c3809e",
       "type": "reponse",
       "value": {
         "latex": "La méthode s'écrit donc sous la forme $y_{n+1} = y_n + H(t_n,y_n,h)$ avec $H(t,y,h) = f\\left(t+\\frac{h}{2},y+\\frac{h}{2}G(t,y,h)  \\right)$\n\nQuel que soit le choix de $G$, on obtient $H(t,y,0) = f(t,y)$ de sorte que par théorème, la méthode est consistante au moins d'ordre 1.\n\nOn dérive $H$ par rapport à $h$ :\n...\n\net on trouve que $\\frac{\\partial H}{\\partial h}(t,y,0) = \\frac{1}{2} f^{[1]}(t,y)$ si et seulement si $G(t,y,0)=f(t,y)$. On prend donc $G(t,y,h)=f(t,y)$.",

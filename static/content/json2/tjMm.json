@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-10-31T14:47:47.090Z",
+    "createdAt": "2024-11-02T11:26:42.443Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:47.090Z"
+    "updatedAt": "2024-11-02T11:26:42.443Z"
   },
   "contenu": [
     {
-      "id": "ee675560-74c1-4dc3-ac97-590ca1584e9c",
+      "id": "606fbfdb-1307-4ed2-8826-414fa1f2a657",
       "type": "question",
       "value": {
         "latex": "Proposer au moins deux méthodes de Monte Carlo permettant de fournir une valeur approchée de l'intégrale :\n\t$$I = \\int_0^1 \\cos(x^3)e^{-x}dx$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "2766b13e-5429-47d5-a2a0-412a4040c226",
+      "id": "d56aea42-cf2e-46a1-95fe-e92e6bfac76d",
       "type": "reponse",
       "value": {
         "latex": "On voit que $I=  \\int \\cos(x^3)e^{-x} \\chi_{[0;1]}(x)dx = \\mathbb{E}\\left( \\cos(U^3)e^{-U} \\right)$ où $U$ suit une loi $\\mathcal{U}([0;1])$. Donc si $U_1,U_2...$ est une suite de VA iid selon la loi  $\\mathcal{U}([0;1])$, alors la loi des grands nombres donne la convergence presque sûre :\n\t$$\\frac{\\cos(U_1^3)e^{-U_1}+...+\\cos(U_n^3)e^{-U_n}}{n} \\longrightarrow I$$\n\t\n\tIl suffit donc de programmer l'algorithme suivant :\n\t\n\t\\begin{itemize}\n\t\t\\item N=1000\n\t\t\\item S = 0\n\t\t\\item Pour i variant de 1 à N : \\\\ \n\t\tU = réalisation d'une loi $\\mathcal{U}([0;1])$ \\\\\n\t\t$S = S+ \\cos(U^3) \\times \\exp(-U)$\n\t\t\\item Afficher $S/N$\n\t\\end{itemize}\n\t\n\tOn voit aussi que $I=  \\int \\cos(x^3) \\chi_{[0;1]}(x)  \\chi_{[0;+\\infty[}(x) e^{-x}dx = \\mathbb{E}\\left(\\cos(V^3) \\chi_{[0;1]}(V) \\right)  $ où $V$ suit une loi $\\mathcal{E}(1)$.",

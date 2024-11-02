@@ -64,6 +64,8 @@
         dynamicTagCounts = new Map(dynamicTagCounts);
     }
 
+    let updateCounter = 0;
+
     function updateResults() {
         let filteredResults;
         
@@ -85,10 +87,14 @@
             });
         }
 
-        results = filteredResults;
-        
-        // Mettre à jour les compteurs dynamiques
-        updateDynamicCounts(filteredResults);
+        // Force le rafraîchissement complet des résultats
+        results = [];
+        // Attend le prochain cycle pour mettre à jour les résultats
+        setTimeout(() => {
+            results = filteredResults;
+            updateCounter++; // Incrémente le compteur pour forcer le rafraîchissement
+            updateDynamicCounts(filteredResults);
+        }, 0);
     }
 
     onMount(() => {
@@ -128,7 +134,7 @@
             selectedTags.add(tag);
         }
         selectedTags = selectedTags;
-        updateResults(); // Mettre à jour les résultats après le changement de tag
+        updateResults();
     }
 
     // Réagir aux changements de la recherche
@@ -217,41 +223,43 @@
 
         <!-- Colonne de droite : Résultats -->
         <div class="col-12 col-md-8 col-lg-9">
-            <div class="alert alert-info mb-4">
+            <div class="alert alert-info">
                 <div class="d-flex justify-content-between align-items-center">
                     <strong>{results.length} exercice(s) trouvé(s)</strong>
                     {#if selectedTags.size > 0}
                         <small class="text-muted">
-                            Filtres actifs : {Array.from(selectedTags).join(', ')}
+                            Filtres : {Array.from(selectedTags).join(', ')}
                         </small>
                     {/if}
                 </div>
             </div>
-
-            <div class="d-flex flex-column gap-3">
-                {#each results as result}
-                    <div 
-                        class="card cursor-pointer hover-card"
-                        on:click={() => handleExerciseClick(result.exercise)}
-                    >
-                        <div class="card-body">
-                            <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
-                            {#if result.exercise.theme}
-                                <div class="tags">
-                                    {#each normalizeThemes(result.exercise.theme) as theme}
-                                        <span 
-                                            class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
-                                            on:click|stopPropagation={() => toggleTag(theme)}
-                                        >
-                                            {theme}
-                                        </span>
-                                    {/each}
-                                </div>
-                            {/if}
+        
+            {#key updateCounter}
+                <div class="d-flex flex-column gap-3">
+                    {#each results as result (result.exercise.uuid)}
+                        <div 
+                            class="card cursor-pointer hover-card"
+                            on:click={() => handleExerciseClick(result.exercise)}
+                        >
+                            <div class="card-body">
+                                <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
+                                {#if result.exercise.theme}
+                                    <div class="tags">
+                                        {#each normalizeThemes(result.exercise.theme) as theme}
+                                            <span 
+                                                class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
+                                                on:click|stopPropagation={() => toggleTag(theme)}
+                                            >
+                                                {theme}
+                                            </span>
+                                        {/each}
+                                    </div>
+                                {/if}
+                            </div>
                         </div>
-                    </div>
-                {/each}
-            </div>
+                    {/each}
+                </div>
+            {/key}
         </div>
     </div>
 </div>

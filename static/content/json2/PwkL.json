@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-10-31T14:47:21.541Z",
+    "createdAt": "2024-11-02T12:27:35.031Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:21.541Z"
+    "updatedAt": "2024-11-02T12:27:35.031Z"
   },
   "contenu": [
     {
-      "id": "52444498-81c0-4560-96fb-bdd4511efe28",
+      "id": "832aa1e9-6ecb-4880-93b5-905edd40fa9a",
       "type": "description",
       "value": {
         "latex": "On considère un échantillon $X_1,...,X_n$ suivant une loi normale $\\mathcal{N}(\\mu,\\sigma^2)$. On cherche un estimateur de $\\mu$ et de $\\sigma$ par la méthode du maximum de vraisemblance. On note $(x_1,...,x_n)$ une réalisation de cet échantillon. On rappelle que la densité d'une loi normale est $$f(x)=\\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5248f973-35e9-46ec-99a1-0057256a9400",
+      "id": "0cd13de7-13e5-4273-98ae-6b8f89397783",
       "type": "question",
       "value": {
         "latex": "Exprimer la fonction de vraisemblance $L(x_1,...,x_n,\\mu,\\sigma)$, puis son logarithme.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "bb19295b-d293-4ab1-9ad1-d17f0326b173",
+      "id": "921839a7-ae7c-4fb3-81b3-91399586b082",
       "type": "reponse",
       "value": {
         "latex": "$$L(x_1,...,x_n,\\mu,\\sigma) = \\prod_{i=1}^n f(x_i) = \\prod_{i=1}^n \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}$$\n\t\t$$\\ln L(x_1,...,x_n,\\mu,\\sigma) = \\sum_{i=1}^n \\ln \\left(\\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}\\right) = -n\\ln(\\sigma \\sqrt{2\\pi}) - \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{2\\sigma^2}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "bf70a058-583f-45b8-9b57-9a448b472ea9",
+      "id": "4007510f-2d47-4508-bf31-e174fb75b9d4",
       "type": "question",
       "value": {
         "latex": "Dériver $\\ln L(x_1,...,x_n,\\mu,\\sigma)$ par rapport à $\\mu$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "259724bf-9997-4e3d-be7e-0fb9001f6e40",
+      "id": "7f151153-931f-400a-90f9-194788a8a566",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\mu} = \\sum_{i=1}^n \\frac{x_i-\\mu}{\\sigma^2}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "3a591f4a-589f-4324-bd9c-9c4236a263eb",
+      "id": "153001b9-987b-4088-8a77-4a56429f68ee",
       "type": "question",
       "value": {
         "latex": "En déduire un estimateur de $\\mu$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "77b8b07c-9e79-40e3-b037-719cb2e1196f",
+      "id": "fb88b003-5cf0-431b-8cb8-2edce973d8ad",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\mu} = 0 \\Leftrightarrow \\sum_{i=1}^n \\frac{x_i-\\mu}{\\sigma^2} = 0 \\Leftrightarrow \\sum_{i=1}^n x_i - n\\mu = 0 \\Leftrightarrow \\mu = \\frac{1}{n}\\sum_{i=1}^n x_i$$\n\t\tdonc $\\hat{\\mu} = \\frac{1}{n}\\sum_{i=1}^n x_i$ est un estimateur de $\\mu$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f46d44b8-93ff-4219-b0d4-0ed73ca3333c",
+      "id": "7e80eafd-0dd8-4518-9957-c5a7cece9362",
       "type": "question",
       "value": {
         "latex": "Déterminer un estimateur de $\\sigma$ avec une démarche analogue.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "71feb7cc-180d-4f43-b110-17a84c01dae8",
+      "id": "630de971-f99d-499d-b0fa-e0b1da544256",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\sigma} = \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{\\sigma^3} - \\frac{n}{\\sigma}$$\n\t\t$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\sigma} = 0 \\Leftrightarrow \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{\\sigma^3} - \\frac{n}{\\sigma} = 0 \\Leftrightarrow \\sum_{i=1}^n (x_i-\\mu)^2 = n\\sigma^2$$\n\t\t$$\\Leftrightarrow \\sigma^2 = \\frac{1}{n}\\sum_{i=1}^n (x_i-\\mu)^2$$\n\t\tdonc $\\hat{\\sigma} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n (x_i-\\mu)^2}$ est un estimateur de $\\sigma$.",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-10-31T14:47:07.114Z",
+    "createdAt": "2024-11-02T12:27:20.122Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:07.114Z"
+    "updatedAt": "2024-11-02T12:27:20.122Z"
   },
   "contenu": [
     {
-      "id": "32c03d0c-9c7e-4236-87e9-abc4242998a1",
+      "id": "c1a709f9-8f50-497e-a5f5-b134ed6b97ca",
       "type": "description",
       "value": {
         "latex": "Un fournisseur d'accès internet met en place un point local d'accès qui dessert $\\nombre{5000}$ abonnés. À un instant donné, chaque abonné a une probabilité égale à $0.20$ d'être connecté. Les comportements des abonnés sont supposés indépendants les uns des autres.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5c492776-79fa-428e-a410-5e8aa867a0ad",
+      "id": "c3bdb95b-fa73-40d9-97b5-c02341267bbd",
       "type": "question",
       "value": {
         "latex": "On note $X$ la variable aléatoire égale au nombre d'abonnés connectés à un instant $t$. Quelle est la loi de $X$ ? Quelle est son espérance ? Son écart-type ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "be355553-8e78-40a1-a3d8-af42c425edfc",
+      "id": "631dc19e-1c4f-4f89-9539-047830c97d42",
       "type": "reponse",
       "value": {
         "latex": "$X\\sim \\mathcal{B}(\\nombre{5000},0.2)$, $\\E(X)=\\nombre{1000}$ et $\\sigma^2(X)=800$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "c30f1776-a7dc-4e98-ab72-f6c31ca75b81",
+      "id": "a744a645-7e23-4d74-bfb1-483192ae4738",
       "type": "question",
       "value": {
         "latex": "On pose $Y=\\frac{X-\\nombre{1000}}{\\sqrt{800}}$. Justifier précisément que l'on peut approcher la loi de $Y$ par la loi normale centrée réduite.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "94ca0328-eea3-4bd5-a58d-e8292944a0fa",
+      "id": "c9f6bc94-b8c0-4ab5-a7ed-a24c747769ec",
       "type": "reponse",
       "value": {
         "latex": "$X$ peut être approchée par une loi $\\mathcal{N}(\\nombre{1000},\\sigma=\\sqrt{800})$ donc en centrant et en réduisant, on obtient que $Y\\sim \\mathcal{N}(0,1)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "2228387b-3f1e-42a8-85c3-343c7af249b5",
+      "id": "22309061-d9f4-4a52-b8b7-c81b00725421",
       "type": "question",
       "value": {
         "latex": "Le fournisseur d'accès souhaite savoir combien de connexions simultanées le point d'accès doit pouvoir gérer pour que sa probabilité d'être saturé à un instant donné soit inférieure à $2.5$\\%. En utilisant l'approximation précédente, proposer une valeur approchée de ce nombre de connexions.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "ac83c698-8171-4fff-8bb4-890dab245fff",
+      "id": "becc7719-2481-445a-ac4e-6b9037126066",
       "type": "reponse",
       "value": {
         "latex": "Soit $n$ le nombre de connexions simultanées au point d'accès. On cherche $n$ tel que $\\prob(X\\geq n)\\leq 0.025$, c'est-à-dire\n\t\t\\[ \\prob\\left(Y\\geq \\frac{n-\\nombre{1000}}{\\sqrt{800}}\\right) \\leq 0.025 ,\\]\n\t\tautrement dit\n\t\t\\[  \\prob\\left(Y\\leq \\frac{n-\\nombre{1000}}{\\sqrt{800}}\\right) \\geq 0.975.\\]\n\t\tPar lecture de table de loi, on obtient $\\displaystyle\\frac{n-\\nombre{1000}}{\\sqrt{800}}\\simeq 1.96$, soit $n\\simeq 1055.44$.\n\t\tOn en conclut qu'il faut qu'au minimum le point d'accès puisse gérer $1056$ connexions simultanées pour que la probabilité d'être saturé soit inférieure à $2.5$\\%.",

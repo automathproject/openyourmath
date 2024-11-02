@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:10.623Z",
+    "createdAt": "2024-11-02T12:27:23.287Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:10.623Z"
+    "updatedAt": "2024-11-02T12:27:23.287Z"
   },
   "contenu": [
     {
-      "id": "e77e7534-434d-4743-bdf8-c55ef2d53780",
+      "id": "9fb574e6-5206-42ef-923f-b377291760fb",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variablea aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ead5d66c-a22b-4bf9-85ef-40b8d650cf85",
+      "id": "0257de5a-b144-4896-b5d0-9dc6be39fb62",
       "type": "question",
       "value": {
         "latex": "On pose $Y = e^X$. Calculer l'espérance et la variance de $Y$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "b2d8a646-a8fe-4c69-a772-51ec769d5d41",
+      "id": "e0cc2b8e-98e1-46ac-821d-08d010566d7b",
       "type": "reponse",
       "value": {
         "latex": "On a $Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu e^{\\sigma Z}$. D'après le théorème de transfert, \n$$\\begin{align*}\n    \\E(e^{\\sigma Z}) & = \\int_{-\\infty}^{+\\infty} e^{\\sigma z} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2 - 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\\\ \n\\end{align*}$$\nDonc par linéarité, $\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}$. \n\nDe même, on s'intéresse à $\\E(Y^2) = \\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma Z})$. D'après le calcul précédent, $\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}$. Donc $\\E(Y^2) = e^{2\\mu + 2\\sigma^2}$ et par théorème de Koenig-Huygens, \n$$\\begin{align*}\n  \\var(Y) & = \\E(Y^2) - \\E(Y)^2 \\\\\n  & = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  & = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1) \n\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1dd26c7a-5c33-4518-8306-96824073fe2a",
+      "id": "87b8beb6-21df-4d64-99a9-c9a27075dd40",
       "type": "question",
       "value": {
         "latex": "On suppose que $m=0$ et $\\sigma = 1$. Déterminer une fonction densité de la variable $Y$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4fb15528-daa2-4910-9bf4-6275275f01ad",
+      "id": "d1bffba1-6f74-411f-9cca-5a1a9b9b5d16",
       "type": "reponse",
       "value": {
         "latex": "On a $Y = e^X = e^{\\sigma Z} = e^Z$. Donc $Y$ est une variable aléatoire positive. Si $t >0$, on a :\n      $$\\begin{align*}\n          \\prob(Y \\leq t) & = \\prob(e^Z \\leq t) \\\\\n          & = \\prob(Z \\leq \\ln(t)) \\\\\n          &= F_Z(\\ln(t))\n      \\end{align*}$$\n      Donc la fonction de répartition de $Y$ est $F_Y(t) = \\begin{cases}\n          0 & \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) & \\text{ si } t > 0 \\\\\n      \\end{cases}$. \n      Par dérivation, on obtient la densité de $Y$ : \n         $$ f_Y(x)  = \\begin{cases}\n              0 & \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} & \\text{ si } x > 0 \\\\\n          \\end{cases} $$",

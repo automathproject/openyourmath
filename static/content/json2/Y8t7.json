@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:26.499Z",
+    "createdAt": "2024-11-02T11:26:23.864Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:26.499Z"
+    "updatedAt": "2024-11-02T11:26:23.864Z"
   },
   "contenu": [
     {
-      "id": "2e575b44-c669-4bab-b9ae-516318f4eb2a",
+      "id": "e3fb9431-4984-45d8-a46c-7a512c39987e",
       "type": "question",
       "value": {
         "latex": "Déterminer le rayon de convergence de la série : \n\t$$\\sum_{n=0}^{+\\infty}\\frac{n^2+4n-1}{n!(n+2)}x^n$$\npuis déterminer sa somme dans l'intervalle ouvert de convergence.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ba14e344-5f60-45f9-9106-49303bbc98ed",
+      "id": "90e3d562-c9ec-40b4-8fff-ac7129dc1b5e",
       "type": "reponse",
       "value": {
         "latex": "La règle de d'\\textsc{Alembert} montre que le rayon de convergence est égal à $+\\infty$.\n\nPour $n$ entier naturel donné, $\\frac{n^2+4n-1}{n!(n+2)}=\\frac{n^3+5n^2+3n-1}{(n+2)!}$ puis \n\n$$\\begin{align*}\\ensuremath\nn^3+5n^2+3n-1&= (n+2)(n+1)n+2n^2+n-1 = (n+2)(n+1)n+2(n+2)(n+1) - 5n - 5\\\\\n&= (n+2)(n+1)n + 2(n+2)(n+1) - 5(n+2) + 5\n\\end{align*}$$\n\nDonc, pour tout réel $x$,\n\n\t$$f(x) =\\sum_{n=0}^{+\\infty}\\frac{(n+2)(n+1)n}{(n+2)!}x^n +2\\sum_{n=0}^{+\\infty}\\frac{(n+2)(n+1)}{(n+2)!}x^n- 5\\sum_{n=0}^{+\\infty}\\frac{n+2}{(n+2)!}x^n+ 5\\sum_{n=0}^{+\\infty}\\frac{1}{(n+2)!}x^n.$$\n\nEnsuite $f(0) = -\\frac{1}{2}$  et pour $x\\neq 0$,\n\n$$\\begin{align*}\nf(x)&=\\sum_{n=1}^{+\\infty}\\frac{1}{(n-1)!}x^n +2\\sum_{n=0}^{+\\infty}\\frac{1}{n!}x^n- 5\\sum_{n=0}^{+\\infty}\\frac{1}{(n+1)!}x^n+ 5\\sum_{n=0}^{+\\infty}\\frac{1}{(n+2)!}x^n\\\\\n&= xe^x + 2e^x -5\\frac{e^x-1}{x}+ 5\\frac{e^x-1-x}{x^2}= \\frac{e^x(x^3+2x^2-5x+5) -5x}{x^2}.\n\\end{align*}$$\n\n\t\t$$\\forall x\\in\\Rr \\, \\quad, \\quad \\sum_{n=0}^{+\\infty}\\frac{n^2+4n-1}{n!(n+2)}x^n=\\left\\{\n\t\t\\begin{array}{l}\n\t\t\\frac{e^x(x^3+2x^2-5x+5) -5x}{x^2}\\;\\text{si}\\;x\\in\\Rr^*\\\\\n\t\t-\\frac{1}{2}\\;\\text{si}\\;x=0\n\t\t\\end{array}\n\t\t\\right.$$",

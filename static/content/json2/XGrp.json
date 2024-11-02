@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:25.389Z",
+    "createdAt": "2024-11-02T12:27:39.222Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:25.389Z"
+    "updatedAt": "2024-11-02T12:27:39.222Z"
   },
   "contenu": [
     {
-      "id": "0cd234ff-6b3b-4e11-810a-868f13a0faa7",
+      "id": "a45ba2cc-d76b-4a56-ad55-207d58d4a325",
       "type": "question",
       "value": {
         "latex": "Vérifier que : $\\forall n \\in \\N$, $ \\frac{n}{n+2} = 1 - \\frac{2}{n+2}$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "60909c46-a611-4d0c-aa48-7327cb886339",
+      "id": "c36f0cce-f222-4e20-a006-17523ac7375a",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de voir que $\\frac{n}{n+2} = \\frac{n+2-2}{n+2} = 1 - \\frac{2}{n+2} $.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "039d9103-ac81-42de-b103-06c0b8b7ed74",
+      "id": "26389d42-44fd-4c4a-9a6c-e3c53c9e387d",
       "type": "question",
       "value": {
         "latex": "Déterminer le domaine de convergence $I$ de cette série entière.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "bc8bf559-cc83-419a-a0f5-3d3dbd4cd37d",
+      "id": "7117f5c1-6dbc-4c15-b587-dd21cd9393e4",
       "type": "reponse",
       "value": {
         "latex": "On pose $u_n(x) =  \\frac{n}{n+2}x^n$. On utilise le théorème de d'Alembert :\n\t\t$$\\begin{align*}\n\t\t\t\\frac{|u_{n+1}(x)|}{|u_n(x)|} &= \\frac{ (n+2)(n+1) }{n(n+3)}\\frac{|x^{n+1}|}{|x^{n}|} \\\\\n\t\t\t& \\sim  \\frac{n^2}{n^2} |x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{}  |x|\n\t\t\\end{align*}$$\t\n\t\tDonc le rayon de convergence est $R=1$.\n\t\t\n\t\tDe plus, il $\\lim\\limits_{n\\to+\\infty} u_n(1) = 1$ et $(u_n(-1))$ n'a pas de limite donc la série est grossièrement divergente pour $x=1$ et $x=-1$.\n\t\t\n\t\tPar conséquent, le domaine de convergence est $I = ]-1;1[$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "e43ab87c-e0e5-488c-8ce5-13f3d22094a1",
+      "id": "5ff13b8c-5c12-4772-ad00-48bb522b6723",
       "type": "question",
       "value": {
         "latex": "Calculer la valeur de $\\displaystyle x^2 \\sum_{n=0}^{+\\infty} \\frac{x^n}{n+2}$ pour tout $x \\in I$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "1b8096fc-c795-4501-b122-5a7d153e74c4",
+      "id": "67f25b53-331d-49ed-af59-dc3164c4bee9",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $x \\in I$ :\n\t\t$$\\begin{align*}\n\t\t\tx^2 \\sum_{n=0}^{+\\infty} \\frac{x^n}{n+2} &= \\sum_{n=0}^{+\\infty}\\frac{x^{n+2}}{n+2} \\\\\n\t\t\t&= \\sum_{k=2}^{+\\infty}\\frac{x^{k}}{k} \\\\\n\t\t\t&= \\sum_{k=1}^{+\\infty}\\frac{x^{k}}{k} - x \\\\\n\t\t\t&= -\\ln(1-x) -x\n\t\t\\end{align*}$$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "6c977f75-dc57-449f-8d8c-5f54afe4adb6",
+      "id": "1c53daf1-2080-418f-9416-655b01ab115e",
       "type": "question",
       "value": {
         "latex": "En déduire le calcul de la somme $S(x)$ pour tout $x \\in I$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "21b716ee-a4db-4215-83ac-ba766b87ed49",
+      "id": "6d0c3ba1-984c-4be6-82f7-6dbe67c9a426",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente, si  $x \\in ]-1;1[$ et $x \\neq 0$ :\n\t\t$$\t\\sum_{n=0}^{+\\infty} \\frac{x^n}{n+2} = \\frac{-\\ln(1-x)-x}{x^2}$$\n\t\t\n\t\tD'après la 1ère question, pour tout $x \\in ]-1;1[$ et $x \\neq 0$ :\n\t\t$$\\begin{align*}\n\t\t\tS(x) &=  \\sum_{n=0}^{+\\infty} x^n - 2\\sum_{n=0}^{+\\infty}\\frac{x^{n}}{n+2} \\\\\n\t\t\t&= \\frac{1}{1-x} -2\\frac{-\\ln(1-x)-x}{x^2}\\\\\n\t\t\t&= \\frac{1}{1-x} + \\frac{2\\ln(1-x)}{x^2} + \\frac{2}{x} \n\t\t\\end{align*}$$\t\n\t\tet trivialement $S(0) = 0$.",

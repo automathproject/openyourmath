@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:09.850Z",
+    "createdAt": "2024-11-02T12:27:22.559Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:09.850Z"
+    "updatedAt": "2024-11-02T12:27:22.559Z"
   },
   "contenu": [
     {
-      "id": "db94e30d-4f84-4b0b-ab3a-b61a8f77a010",
+      "id": "7755acea-5ff8-4823-8e91-44b58e97cc23",
       "type": "description",
       "value": {
         "latex": "On considère deux files d'attente indépendantes. Deux personnes arrivent simultanément et se présentent respectivement aux deux files d'attente. On note $X$ le temps d'attente de la première personne, $Y$ le temps d'attente de la seconde personne, en minutes. On supposera que $X$ et $Y$ suivent chacune une loi exponentielle de paramètre $\\lambda =2$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9bf5075a-b817-4a59-980e-ad4b0d9e6cbb",
+      "id": "243f0848-adc0-480b-b965-8ae8f23b4ff7",
       "type": "question",
       "value": {
         "latex": "Quel est le temps d'attente moyen pour chaque personne ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a9453bd0-39ff-4c5a-8508-58746e5695bf",
+      "id": "1be81f9b-f100-4b71-99c6-2d80e994d7cd",
       "type": "reponse",
       "value": {
         "latex": "Puisque $X$ et $Y$ suivent chacune une loi exponentielle de paramètre $\\lambda =2$, on a $\\mathbb{E}(X)=\\mathbb{E}(Y) = 0.5$ minutes, ce qui donne le temps d'attente moyen pour chaque personne.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1a1c956d-4800-4da1-979c-d8adf38981b7",
+      "id": "e44b6d07-5367-4fe2-9d8a-a31126f1988b",
       "type": "question",
       "value": {
         "latex": "Quelle est la densité de la variable $X^2$ ? la variable $-Y$ ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "32bb3d04-d0f4-43e8-a50a-51e08a95f311",
+      "id": "a0a1b76a-3473-43b8-a981-96865748d2e8",
       "type": "reponse",
       "value": {
         "latex": "Pour obtenir la loi de $X^2$, on cherche sa densité par identification. Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(X^2)) &= \\int_0^{+\\infty}  h(x^2)2e^{-2x}dx \\\\\n\t\t\t&= \\int_0^{+\\infty} 2h(u)e^{-2\\sqrt{u}} \\frac{1}{2\\sqrt{u}} du\n\t\t\\end{align*}$$\t\n\t\tPar identification, on en déduit une densité de $X^2$ définie par $f_{X^2}(x) = \\frac{e^{-2\\sqrt{u}}}{\\sqrt{u}}1_{\\R_+}(x)$.\n\t\t\n\t\tOn procède de même pour obtenir la loi de $-Y$ : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(-Y)) &= \\int_0^{+\\infty}  h(-x)2e^{-2x}dx \\\\\n\t\t\t&= \\int_0^{-\\infty} 2h(u)e^{2{u}} \\times (-du) \\\\\n\t\t\t&= \\int_{-\\infty}^0 2h(u)e^{2{u}} du \\\\\n\t\t\\end{align*}$$\n\t\tPar identification, on en déduit une densité de $-Y$ définie par $f_{-Y}(y) = {2e^{2{y}}}1_{\\R_-}(y) = f_Y(-y)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "8ef2b9ac-1f4c-4043-9395-5baa7a64ecf9",
+      "id": "cf18b85b-b48f-453b-a31c-512abd43c021",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité que la différence d'attente entre les deux personnes soit inférieure à 1 minute.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "d1a38081-19f9-4943-bb5e-ff9e86be5132",
+      "id": "5ce7d7e4-e236-47d4-977b-ae4d3133f9f8",
       "type": "reponse",
       "value": {
         "latex": "On calcule $\\PP(|X-Y|<1) = \\PP(-1<X-Y<1)$ en utilisant la loi du couple $(X,Y)$. Par indépendance de $X$ et $Y$, le couple $(X,Y)$ admet pour densité $g(x,y)=2e^{-2x}\\times 2e^{-2y}1_{\\R_+^2}(x,y)$. La probabilité cherchée est \n\t\t$$\\PP(|X-Y|<1) = \\iint_D g(x,y)dxdy$$\n\t\toù $D=\\{(x,y) \\in \\mathbb{R}^2 \\, , \\, x>0, y>0, -1<x-y<1 \\} = \\{ y\\in[0;1], x \\in [0;1+y]  \\} \\cup  \\{ y\\in]1;+\\infty, x \\in [-1+y;1+y]  \\} $.\n\t\t\n\t\tOn utilise cette décomposition du domaine $D$ pour écrire l'intégrale sous forme d'une somme :\n\t\t$$\\begin{align*}\n\t\t\t\\iint_D g(x,y)dxdy &= \\int_0^1 \\int_0^{1+y}2e^{-2x}dx 2e^{-2y}dy &+&  \\int_1^{+\\infty} \\int_{y-1}^{y+1}2e^{-2x}dx 2e^{-2y}dy\t\\\\\n\t\t\t&= \\int_0^1 2e^{-2y}(1-e^{-2(1+y)})dy &+&  \\int_1^{+\\infty} (e^{-2(y-1)}-e^{-2(y+1)})  (1-e^{-2(1+y)}) \\\\\n\t\t\t&= 1-\\frac{3}{2}e^{-2}+\\frac{1}{2}e^{-6} &+& \\frac{1}{2}e^{-2}-\\frac{1}{2}e^{-6} \\\\\n\t\t\t&= 1-e^{-2} &&\n\t\\end{align*}$$",

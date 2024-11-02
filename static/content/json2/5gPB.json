@@ -1,19 +1,19 @@
 {
   "uuid": "5gPB",
-  "titre": "\\'Etude d'un schéma numérique",
+  "titre": "Étude d'un schéma numérique",
   "theme": [
     ""
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-10-31T14:47:06.215Z",
+    "createdAt": "2024-11-02T12:27:19.192Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:06.215Z"
+    "updatedAt": "2024-11-02T12:27:19.192Z"
   },
   "contenu": [
     {
-      "id": "43b0d02f-1a3b-4ba1-b42a-8236dfd6d27e",
+      "id": "2d86a7ab-6c08-4f42-9a0b-0e632636a891",
       "type": "description",
       "value": {
         "latex": "On considère l'équation différentielle ordinaire suivante :\n\n$$\\begin{cases} y'(t) = f(t, y(t)), \\quad t \\in [0, T] \\\\ y(0) = y_0 \\end{cases}$$\n\noù $f : [0, T] \\times \\mathbb{R} \\to \\mathbb{R}$ est une fonction suffisamment régulière (par exemple de classe $C^2$).\n\nOn se propose d'étudier la consistance du schéma numérique de Leapfrog défini par :\n\n$$\\begin{cases} t_n = n \\cdot h, \\quad n = 0, \\ldots, N \\\\ y_{n+1} = y_n + h \\cdot f(t_n + \\frac{h}{2}, y_n + \\frac{h}{2} f(t_n, y_n)) \\end{cases}$$\n\noù $h = \\frac{T}{N}$ est le pas de discrétisation en temps et $N$ est un entier strictement positif. \n\nOn donne le développement de Taylor-Lagrange à l'ordre 1 pour une fonction $g$ de classe $\\mathcal{C}^2$ de deux variables $x$ et $y$ au voisinage du point $(x_0, y_0)$ est donné par :\n\n$$g(x, y) = g(x_0, y_0) + \\frac{\\partial g}{\\partial x}(x_0, y_0) (x - x_0) + \\frac{\\partial g}{\\partial y}(x_0, y_0) (y - y_0) + R_1(x, y)$$\n\noù $R_1(x, y)$ est le reste du développement limité, qui vérifie :\n\n$$R_1(x, y) = \\frac{1}{2} \\left( \\frac{\\partial^2 g}{\\partial x^2}(\\xi, \\eta) (x - x_0)^2 + 2 \\frac{\\partial^2 g}{\\partial x \\partial y}(\\xi, \\eta) (x - x_0)(y - y_0) + \\frac{\\partial^2 g}{\\partial y^2}(\\xi, \\eta) (y - y_0)^2 \\right)$$\n\navec $(\\xi, \\eta)$ un point situé sur le segment reliant les points $(x_0, y_0)$ et $(x, y)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ee8a1dc2-5090-476a-9e2f-fe1228abb730",
+      "id": "d1d99677-2d0a-42f0-bfbc-7065a1a6f676",
       "type": "question",
       "value": {
         "latex": "Justifier l'existence de $\\xi_n \\in [t_n, t_{n+1}]$ tel que : \n\t$$y(t_{n+1}) = y(t_n + h) = y(t_n) + h \\cdot f(t_n, y(t_n)) + \\frac{h^2}{2} y''(\\xi_n)$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a5164cef-c1b9-4721-989d-a7230f689697",
+      "id": "8f2b7165-0a01-41a1-9261-1380aaf7175b",
       "type": "reponse",
       "value": {
         "latex": "$$y(t_{n+1}) = y(t_n + h) = y(t_n) + h \\cdot y'(t_n) + \\frac{h^2}{2} y''(\\xi_n)$$\n\t\t\n\t\toù $\\xi_n \\in [t_n, t_{n+1}]$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "4422637f-f99c-44c3-bc4e-c8db1e33b5e2",
+      "id": "c4c67177-f55b-4212-95f2-b9fb355738a6",
       "type": "question",
       "value": {
         "latex": "Donne le développement de Taylor-Lagrange à l'ordre $1$ de $f(t_n + \\frac{h}{2}, y(t_n) + \\frac{h}{2} f(t_n, y(t_n)))$ au voisinage de $(t_n,y(t_n))$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "5920c124-dcd7-48ad-a31b-d2ae528c6c1f",
+      "id": "f3fa76f5-6a48-4db2-8749-400ccf82cb97",
       "type": "reponse",
       "value": {
         "latex": "$$f(t_n + \\frac{h}{2}, y(t_n) + \\frac{h}{2} f(t_n, y(t_n))) = f(t_n, y(t_n)) + \\frac{h}{2} \\left( \\frac{\\partial f}{\\partial t}(t_n, y(t_n)) + f(t_n, y(t_n)) \\frac{\\partial f}{\\partial y}(t_n, y(t_n)) \\right) + \\mathcal{O}(h^2)$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "2eeb61cf-9e28-4f88-b574-d571d7b14c28",
+      "id": "5956a603-925f-4fef-941d-aba9c3d5e22c",
       "type": "question",
       "value": {
         "latex": "En déduire que le schéma de Leapfrogest consistant d'ordre au moins $1$.",

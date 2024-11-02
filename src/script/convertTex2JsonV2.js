@@ -49,6 +49,41 @@ function wrapAlignWithDollar(content) {
   // Utilisation de [\s\S]*? pour correspondre sur plusieurs lignes de manière non-gourmande
   return content.replace(/\\begin\{align\*\}([\s\S]*?)\\end\{align\*\}/g, '$$$\\begin{align*}$1\\end{align*}$$$');
 }
+
+/**
+ * 
+ * @param {string} latex 
+ * @returns {string}
+ */
+
+function preprocessLatex(latex) {
+  const replacements = {
+    "\\'E": 'É',
+    "\\'e": 'é',
+    "\\'a": 'á',
+    "\\'i": 'í',
+    "\\'o": 'ó',
+    "\\'u": 'ú',
+    "\\'A": 'Á',
+    "\\'I": 'Í',
+    "\\'O": 'Ó',
+    "\\'U": 'Ú'
+  };
+
+  let processed = latex;
+  for (const [pattern, replacement] of Object.entries(replacements)) {
+    // Utilisation d'une expression régulière qui correspond exactement à la séquence LaTeX
+    const regex = new RegExp(pattern.replace(/[\\]/g, '\\\\'), 'g');
+    processed = processed.replace(regex, replacement);
+  }
+  
+  // Pour debug
+  console.log('Before:', latex);
+  console.log('After:', processed);
+  
+  return processed;
+}
+
 /**
  * Fonction pour convertir du LaTeX en HTML en utilisant Pandoc.
  * @param {string} latex - Chaîne de caractères en LaTeX.
@@ -56,13 +91,14 @@ function wrapAlignWithDollar(content) {
  */
 async function convertLaTeXToHTML(latex) {
   try {
+    const latexPreprocessed = preprocessLatex(latex);
     // Créer des fichiers temporaires dans le répertoire temporaire du système
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'latex-convert-'));
     const tempInputPath = path.join(tempDir, 'temp_input.tex');
     const tempOutputPath = path.join(tempDir, 'temp_output.html');
 
     // Écrire le LaTeX dans un fichier temporaire
-    fs.writeFileSync(tempInputPath, latex, 'utf8');
+    fs.writeFileSync(tempInputPath, latexPreprocessed, 'utf8');
 
     // Exécuter Pandoc pour convertir le LaTeX en HTML
     const command = `pandoc "${tempInputPath}" -f latex+smart -t html --css=styles.css --mathjax -o "${tempOutputPath}"`;
@@ -224,7 +260,7 @@ async function extractLaTeXCommands(latex, commands) {
         if (lastKey === 'theme') {
           obj[lastKey] = finalContent.split(',').map(s => s.trim());
         } else {
-          obj[lastKey] = finalContent;
+          obj[lastKey] = preprocessLatex(finalContent);
         }
       }
     }

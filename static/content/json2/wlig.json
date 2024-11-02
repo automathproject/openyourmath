@@ -1,5 +1,5 @@
 {
-  "uuid": "a46d14c8-136c-44f4-8ac6-28d4710d15a5",
+  "uuid": "c660cbf8-648e-426a-996a-77153cf6d59e",
   "titre": "Optimisation sous contrainte (3)",
   "theme": [
     "Optimisation"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-10-31T14:47:49.796Z",
+    "createdAt": "2024-11-02T11:26:45.302Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-10-31T14:47:49.796Z"
+    "updatedAt": "2024-11-02T11:26:45.302Z"
   },
   "contenu": [
     {
-      "id": "afae23f6-78ea-4ce8-9838-bf7f3ede242a",
+      "id": "e33745a0-30aa-47d9-adeb-a325bf83f3f2",
       "type": "description",
       "value": {
         "latex": "A présent, nous allons introduire un outil permettant d’aller plus vite dans la résolution de ces problèmes: le Lagrangien. \nSi l’on souhaite étudier les extremums de la fonction $f$ soumise à la contrainte $g(x,y)=0$, on introduit le Lagrangien $L(x,y,\\lambda)$ défini par :\n$$ L(x,y,\\lambda)= f(x,y)-\\lambda g(x,y)$$ \n\nDonnons un exemple d’étude pour étudier les extremas de la fonction $f(x,y)=x^2+y^2-4xy$ sous la contrainte $x^2+y^2=8$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "38a9d35a-0ae4-4eda-95ff-e4d06ddc92da",
+      "id": "77ac9ddf-f125-4f40-be29-995b89780e76",
       "type": "question",
       "value": {
         "latex": "Ecrire le Lagrangien associé à ce problème d’optimisation sous contrainte.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2e97f2de-54fe-4142-b991-d5d44bbea5e7",
+      "id": "a3c14b72-bd70-41c7-9909-835b9f9f9074",
       "type": "reponse",
       "value": {
         "latex": "Le Lagrangien est alors: \n$$L(x,y,\\lambda)= f(x,y)-\\lambda g(x,y) = x^2+y^2 - 4 xy - \\lambda (x^2+y^2-8)$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "9a936c94-8cfb-4daf-a0dc-5734105c63c6",
+      "id": "a3b93531-8ca2-435b-bda3-a91e717a7024",
       "type": "question",
       "value": {
         "latex": "Déterminer ses points stationnaires (ie. vérifiant \n$\\frac{\\partial L}{\\partial x}=\n \\frac{\\partial L}{\\partial y}=\n\\frac{\\partial L}{\\partial \\lambda}=0$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "2e5297c0-f97c-49ce-9616-b86c8bfa2a2c",
+      "id": "f882b905-7c31-41d4-9fea-665e5f0c2298",
       "type": "reponse",
       "value": {
         "latex": "$$\\left\\lbrace \\begin{array}{ll}\n\\frac{\\partial L}{\\partial x}& =0 \\\\\n\\frac{\\partial L}{\\partial y}& =0 \\\\\n\\frac{\\partial L}{\\partial \\lambda}& =0 \\end{array}\\right. \n~~ \\Rightarrow \n\\left\\lbrace \n\\begin{array}{ll}\n2x-4y-2\\lambda x &= 0 \\\\\n2y -4x -2 \\lambda y &= 0 \\\\\nx^2+y^2 -8 &=0 \\end{array}\\right. \n~~\\Rightarrow \n\\left\\lbrace \n\\begin{array}{ll}\nx &= \\pm 2 \\\\\ny &= \\pm 2 \\\\\n\\lambda &= \\frac{x-2y}{x}  \\end{array}\\right. $$\n\n\nAinsi, nous avons quatre points stationnaires: \n\\\\ $(2,2)$ correspondant  à $\\lambda=-1$, \n\\\\ $(-2;2)$ correspondant à $\\lambda =3$, \n\\\\ $(2;-2)$ correspondant à $\\lambda = 3$ et \n\\\\ $(-2;-2)$ correspondant à $\\lambda =-1$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "703f41d8-a8c2-4cac-b4da-7c0b4447821a",
+      "id": "35750f09-ab68-4994-a33d-96852f00a20d",
       "type": "question",
       "value": {
         "latex": "Donner l’équation de l’espace vectoriel tangent $T$ à la courbe de contrainte en chacun des points critiques.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "f8bcf0ef-9a2e-4111-88a2-7579e495d77f",
+      "id": "26b07dd0-445a-4691-8387-5712c1a4119c",
       "type": "reponse",
       "value": {
         "latex": "Puisque le gradient $\\nabla g(x_0;y_0)$ est orthogonal au plan tangent à la contrainte $\\Gamma$ en $(x_0;y_0)$, nous en déduisons que:\n$$(u,v)\\in T \\Leftrightarrow \n\\nabla g(x,y) \\cdot \\begin{pmatrix} u \\\\ v \\end{pmatrix} = 0 ~~\\Leftrightarrow ~~\n\\frac{\\partial g}{\\partial x} (x_0;y_0) u + \\frac{\\partial g}{\\partial y}(x_0;y_0) v=0 ~~\\leftrightarrow 2x_0u+2y_0 v=0$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "26f78097-e6e4-4428-9a60-a2d90a1565ad",
+      "id": "6df53c37-235f-4d38-b376-a4257c915e57",
       "type": "question",
       "value": {
         "latex": "On désigne par $H_L(x,y)$ la hessienne de la fonction $L$, vue comme fonction de deux variables. \nOn définit alors la forme quadratique $Q(u,v)$ associé au Lagrangien par \n$$ Q(u,v)= \\frac{1}{2} \\begin{pmatrix} u & v\\end{pmatrix} \\cdot H_L \\cdot \\begin{pmatrix} u \\\\ v\\end{pmatrix} \n~~~~\\text{ avec }~~~~\n H_L(x,y) = \\begin{pmatrix} \n\\frac{\\partial^2 L}{\\partial x^2} & \\frac{\\partial^2 L}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 L}{\\partial y \\partial x} & \\frac{\\partial^2 L}{\\partial y^2}\n\\end{pmatrix}$$\nDonner une expression de $Q(u,v)$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "ecde41ff-5394-4e63-b47d-0c1ace328336",
+      "id": "177ef58b-0a92-4dca-97d2-7954f8cf562e",
       "type": "reponse",
       "value": {
         "latex": "Déjà, exprimons la Hessienne du Lagrangien $L(x,y,\\lambda)$:\nNous avons déjà \n\n$\\frac{\\partial L}{\\partial x}(x,y)= 2x-4y-2\\lambda x$ et \n$\\frac{\\partial L}{\\partial y}(x,y)= 2y-4x-2\\lambda y$.\nNous en déduisons alors que: \n\n$$\\frac{\\partial^2 L}{\\partial x^2}(x,y)= 2-2\\lambda;~~\n\\frac{\\partial^2 L}{\\partial x \\partial y }= \\frac{\\partial^2 L}{\\partial y \\partial x}(x,y)=-4  ~~ \\text{ et }~\\frac{\\partial^2 L}{\\partial y^2}(x,y)=2-2\\lambda$$ \n\nAussi, nous avons :\n$$ H_L(x,y) = \\begin{pmatrix} \n\\frac{\\partial^2 L}{\\partial x^2} & \\frac{\\partial^2 L}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 L}{\\partial y \\partial x} & \\frac{\\partial^2 L}{\\partial y^2}\n\\end{pmatrix}\n= \\begin{pmatrix} 2-2\\lambda  & -4 \\\\ -4 & 2-2\\lambda \\end{pmatrix} \n$$\n\nAinsi, la forme quadratique associée est :\n\n$$ Q(u,v)= \\frac{1}{2} \\begin{pmatrix} u&v \\end{pmatrix} \\cdot \n\\begin{pmatrix} 2-2\\lambda  & -4 \\\\ -4 & 2-2\\lambda \\end{pmatrix} \\cdot \n\\begin{pmatrix} u \\\\ v\\end{pmatrix} =(1-\\lambda) u^2-4uv+(1-2\\lambda) v^2$$",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "02113c97-16ba-495d-b72e-0635eef4be20",
+      "id": "762a4f07-dd1f-49ee-a46d-e99572f471f0",
       "type": "question",
       "value": {
         "latex": "Pour chacun des points critiques obtenus précédemment, déterminer sa nature en étudiant la forme quadratique $Q(u,v)$, pour $(u,v)\\in T$ un vecteur tangent à la contrainte en ce point.\nOn utilisera le fait que si $Q(u,v)>0$, ce point est un minimum alors que si $Q(u,v)<0$, ce point est un maximum.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "c4867e05-1e1e-4aee-965d-5ffbe865ea37",
+      "id": "22ac2a60-4123-4fe6-b98e-a005f2761412",
       "type": "reponse",
       "value": {
         "latex": "$\\bullet$ Pour le point $(2;2)$ pour lequel $\\lambda=-1$, nous avons \n$(u,v)\\in T ~\\Leftrightarrow ~ Q(u,v)=4u^2-8uv+4v^2$. \nDe plus, nous devons avoir $\\frac{\\partial g}{\\partial x}(x,y) u + \\frac{\\partial g}{\\partial y} (x,y)=0$, soit $2xu +2yu=0$ d’où $u+v=0$, i.e. $u=-v$. \n\\\\ Il s’ensuit alors que $Q(u,v)=Q(u,-u)=16u^2>0$ d’où le point $(2,2)$ correspond à un minimum. \n\n\n$\\bullet$ Pour le point $(-2;-2)$, les calculs sont les mêmes qu’au cas précédent et nous obtenons alors un minimum. \n\n\n$\\bullet$ Pour le point $(-2;2)$, nous avions $\\lambda =3$. Cela conduit à \n$Q(u,v)= -2u^2-4uv-2v^2$ et puisque $(u,v)\\in T$, nous devons avoir\n$\\frac{\\partial g}{\\partial x}(x,y) u + \\frac{\\partial g}{\\partial y} (x,y)=0$, soit $-4u +4v=0$, i.e. $u=v$. \n\\\\ Il s’ensuit alors que $Q(u,v)=Q(u,u)=-16u^2<0$ et donc ce point est un maximum. \n\n$\\bullet$ Le point $(2;-2)$ revient aux mêmes calculs que précédemment et nous obtenons que c’est (aussi) un minimum.",
