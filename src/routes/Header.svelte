@@ -12,8 +12,12 @@
 			</a>
 		</div>
 
-		<nav class="navbar-nav mx-auto">
-			<ul class="d-flex list-unstyled mb-0">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<nav class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav mx-auto">
 				<li class="nav-item position-relative">
 					<a
 						href="/"
@@ -82,6 +86,7 @@
 	header {
 		backdrop-filter: blur(8px);
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		min-height: 3.5rem; /* Hauteur minimale fixe */
 	}
 
 	.logo-img {
@@ -131,16 +136,45 @@
 		background-color: #2b6cb0;
 	}
 
-	/* Ajoutez un peu d'espace pour le contenu sous le header fixe */
+	/* Ajustez le padding-top en fonction de la hauteur du header */
 	:global(body) {
-		padding-top: 4rem;
+		padding-top: 3.5rem; /* Même valeur que min-height du header */
 	}
 
 	@media (max-width: 992px) {
-		.navbar-nav {
-			margin: 0 !important;
+		/* Style pour le menu mobile */
+		.navbar-collapse {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: white;
+			padding: 0.5rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		}
 
+		.nav-item {
+			margin: 0.25rem 0;
+		}
+
+		.active-indicator {
+			height: 100%;
+			width: 3px;
+			left: 0;
+			top: 0;
+		}
+
+		/* Réduire la hauteur du header sur mobile */
+		header {
+			min-height: 3rem;
+		}
+
+		/* Ajuster le padding-top du body en conséquence */
+		:global(body) {
+			padding-top: 3rem;
+		}
+
+		/* Ajuster l'espacement des liens de navigation */
 		.nav-link {
 			padding: 0.5rem 1rem;
 		}
