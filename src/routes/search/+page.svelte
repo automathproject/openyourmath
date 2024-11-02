@@ -5,6 +5,7 @@
     import type { Exercice } from '$lib/types/types';
     import Modal from '../../components/Modal.svelte';
     import ExerciceRenderer from '../ExerciceRenderer.svelte';
+    import MathRenderer from '../MathRenderer.svelte';
     
     export let data;
     
@@ -234,7 +235,7 @@
                         on:click={() => handleExerciseClick(result.exercise)}
                     >
                         <div class="card-body">
-                            <h5 class="card-title">{result.exercise.titre}</h5>
+                            <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
                             {#if result.exercise.theme}
                                 <div class="tags">
                                     {#each normalizeThemes(result.exercise.theme) as theme}

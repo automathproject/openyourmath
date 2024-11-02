@@ -63,7 +63,7 @@
   
   <div class="exercice">
     <div class="titre-container">
-      <div class="titre">{ExerciceData.titre}</div>
+      <div class="titre"> <MathRenderer content = {ExerciceData.titre} /></div>
       <a
         href={`https://github.com/automathproject/openyourmath/blob/main/static/content/latex/${ExerciceData.uuid}.tex`}
         target="_blank"
@@ -181,27 +181,7 @@
     color: #007bff;
   }
   
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .tag {
-    background-color: #e0e0e0; /* Couleur de fond du tag */
-    color: #333; /* Couleur du description du tag */
-    padding: 5px 10px; /* Espacement autour du description */
-    border-radius: 15px; /* Coins arrondis pour un effet de badge */
-    font-size: 14px; /* Taille de la police */
-    font-weight: 500; /* Épaisseur du description */
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .tag:hover {
-    background-color: #333; /* Couleur de fond au survol */
-    color: #fff; /* Couleur du description au survol */
-  }
+
   
   </style>
   

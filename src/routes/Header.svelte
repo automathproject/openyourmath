@@ -4,126 +4,145 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header>
-	<div class="corner">
-		<a href="https://coopmaths.fr/alea/">
-			<img src={logo} alt="MathAlea" />
-		</a>
-	</div>
+<header class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90">
+	<div class="container">
+		<div class="navbar-brand p-0">
+			<a href="https://coopmaths.fr/alea/" class="d-block">
+				<img src={logo} alt="MathAlea" class="logo-img" />
+			</a>
+		</div>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Accueil</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/search' ? 'page' : undefined}>
-				<a href="/search">Recherche</a>
-			<li aria-current={$page.url.pathname === '/exercice' ? 'page' : undefined}>
-				<a href="/exercice">Exercices</a>
-				<li aria-current={$page.url.pathname === '/exercice/liste' ? 'page' : undefined}>
-					<a href="/exercice/liste">Liste</a>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
+		<nav class="navbar-nav mx-auto">
+			<ul class="d-flex list-unstyled mb-0">
+				<li class="nav-item position-relative">
+					<a
+						href="/"
+						class="nav-link px-3 {$page.url.pathname === '/' ? 'active' : ''}"
+						aria-current={$page.url.pathname === '/' ? 'page' : undefined}
+					>
+						Accueil
+					</a>
+					{#if $page.url.pathname === '/'}
+						<div class="active-indicator" />
+					{/if}
+				</li>
+				<li class="nav-item position-relative">
+					<a
+						href="/search"
+						class="nav-link px-3 {$page.url.pathname === '/search' ? 'active' : ''}"
+						aria-current={$page.url.pathname === '/search' ? 'page' : undefined}
+					>
+						Recherche
+					</a>
+					{#if $page.url.pathname === '/search'}
+						<div class="active-indicator" />
+					{/if}
+				</li>
+				<li class="nav-item position-relative">
+					<a
+						href="/exercice"
+						class="nav-link px-3 {$page.url.pathname === '/exercice' ? 'active' : ''}"
+						aria-current={$page.url.pathname === '/exercice' ? 'page' : undefined}
+					>
+						Exercices
+					</a>
+					{#if $page.url.pathname === '/exercice'}
+						<div class="active-indicator" />
+					{/if}
+				</li>
+				<li class="nav-item position-relative">
+					<a
+						href="/exercice/liste"
+						class="nav-link px-3 {$page.url.pathname === '/exercice/liste' ? 'active' : ''}"
+						aria-current={$page.url.pathname === '/exercice/liste' ? 'page' : undefined}
+					>
+						Liste
+					</a>
+					{#if $page.url.pathname === '/exercice/liste'}
+						<div class="active-indicator" />
+					{/if}
+				</li>
+			</ul>
+		</nav>
 
-	<div class="corner">
-		<a href="https://github.com/automathproject/openyourmath/tree/main/">
-			<img src={github} alt="GitHub" />
-		</a>
+		<div class="navbar-brand p-0">
+			<a
+				href="https://github.com/automathproject/openyourmath/tree/main/"
+				class="d-block"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img src={github} alt="GitHub" class="github-img" />
+			</a>
+		</div>
 	</div>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
+		backdrop-filter: blur(8px);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 	}
 
-	.corner {
-		width: 3em;
-		height: 3em;
+	.logo-img {
+		width: 2rem;
+		height: 2rem;
+		transition: transform 0.2s ease;
 	}
 
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
+	.logo-img:hover {
+		transform: scale(1.1);
 	}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+	.github-img {
+		width: 2rem;
+		height: 2rem;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
 	}
 
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+	.github-img:hover {
+		opacity: 1;
 	}
 
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
+	.nav-link {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: #4a5568;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
+		letter-spacing: 0.05em;
+		transition: color 0.2s ease;
 	}
 
-	a:hover {
-		color: var(--color-theme-1);
+	.nav-link:hover {
+		color: #2b6cb0;
+	}
+
+	.nav-link.active {
+		color: #2b6cb0;
+	}
+
+	.active-indicator {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #2b6cb0;
+	}
+
+	/* Ajoutez un peu d'espace pour le contenu sous le header fixe */
+	:global(body) {
+		padding-top: 4rem;
+	}
+
+	@media (max-width: 992px) {
+		.navbar-nav {
+			margin: 0 !important;
+		}
+
+		.nav-link {
+			padding: 0.5rem 1rem;
+		}
 	}
 </style>
