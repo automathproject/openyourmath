@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Djessy Vianne",
-    "createdAt": "2024-11-02T11:26:44.487Z",
+    "createdAt": "2024-11-03T14:09:00.339Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:44.487Z"
+    "updatedAt": "2024-11-03T14:09:00.339Z"
   },
   "contenu": [
     {
-      "id": "fa266813-c740-45e5-80b9-5f711be86e09",
+      "id": "f0eabd1b-3cc9-4683-88ba-f76cfee3723f",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire réelle définie sur un espace probabilisé $(\\Omega, \\mathcal{T}, \\prob)$. On suppose que $X(\\Omega) = ]0,+\\infty[$ et que $\\ln(X)$ suit une loi normale d'espérance $\\mu = 1$ et d'écart-type $\\sigma = 2$. On note $\\Phi$ la fonction de répartition de la loi normale centrée réduite $\\mathcal{N}(0,1)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "98037864-5957-4c74-8dfb-cdec0bd0dff6",
+      "id": "c9ba455e-acbb-4b45-95dd-fd210d368518",
       "type": "question",
       "value": {
         "latex": "Donner une valeur approchée, à $10^{-2}$ près, de $\\prob(-0{,}5 \\leq \\ln(X) \\leq 2{,}5)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a24765cf-ced9-410f-bf94-7e4ccc2ac868",
+      "id": "a7142b0f-cf64-4c86-be36-a8d52c413b48",
       "type": "reponse",
       "value": {
         "latex": "On a $\\prob(-0{,}5 \\leq \\ln(X) \\leq 2{,}5) = \\prob\\left(\\frac{-0{,}5 - 1}{2} \\leq \\frac{\\ln(X) - 1}{2} \\leq \\frac{2{,}5 - 1}{2}\\right) = \\prob(-0{,}75 \\leq Z \\leq 0{,}75)$. \n\n            On a $\\Phi(0{,}75) \\approx 0{,}7734$ et $\\prob(-0{,}75 \\leq Z \\leq 0{,}75) = 2 \\Phi(0{,}75) - 1 \\approx 0{,}55$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "cdad89cf-b98d-4692-92f0-4aa8cbb64d5c",
+      "id": "5600417a-0f56-40c7-83e6-17effa013ec4",
       "type": "question",
       "value": {
         "latex": "On note $F_X$ la fonction de répartition de $X$. Exprimer $F_X$ en fonction de $\\Phi$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "b9635cb0-ece3-4e88-8c3d-26356849e1ec",
+      "id": "1878f510-6a84-4cdc-8c19-ccac7ebdc5b1",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\leq 0$, alors $F_X(t) = \\prob(X \\leq t) = 0$ car $X(\\Omega) = ]0,+\\infty[$. Si $t > 0$, alors : \n            $$\\begin{align*}\n                F_X(t) &= \\prob(X \\leq t) \\\\\n                &= \\prob(\\ln(X) \\leq \\ln(t)) \\\\\n                &= \\prob\\left(\\frac{\\ln(X) - 1}{2} \\leq \\frac{\\ln(t) - 1}{2}\\right) \\\\\n                &= \\Phi\\left(\\frac{\\ln(t) - 1}{2}\\right)\n            \\end{align*}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "ca117f06-80aa-4af0-8fc4-102b5c9c2b34",
+      "id": "9b826aaf-2daf-4a61-bc12-2bff8ffcb1f9",
       "type": "question",
       "value": {
         "latex": "En déduire la loi de $X$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "7810e4f0-5203-4f7e-9ceb-ca40afccd575",
+      "id": "dc843f4d-d091-4092-ad8b-183832f7cb2f",
       "type": "reponse",
       "value": {
         "latex": "La fonction $F_X$ est dérivable presque partout, sa dérivée est une densité de probabilité que l'on note $f$. On note au passage que pour tout $x \\in \\R$, $\\Phi'(x) = \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{x^2}{2}}$. \n\n               Si $x \\leq 0$, alors $f(x) = 0$. Si $x > 0$, alors par dérivation d'une fonction composée : $$f(x) = \\frac{1}{2x} \\times \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{(\\ln(x) - 1)^2}{2}}.$$",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-02T12:27:35.697Z",
+    "createdAt": "2024-11-03T14:08:24.584Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T12:27:35.697Z"
+    "updatedAt": "2024-11-03T14:08:24.584Z"
   },
   "contenu": [
     {
-      "id": "de9bc0e4-976f-4a2c-8f1d-eb0236c0775c",
+      "id": "7c975405-315d-4dde-ac73-65d54e186c63",
       "type": "description",
       "value": {
         "latex": "Soient $X$, $Y$ deux variables aléatoires indépendantes suivant chacune une loi exponentielle de paramètre $\\lambda>0$. On définit la variable aléatoire $U = \\frac{X}{X+Y}$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5cbe48a0-ce58-4169-8f2b-f9ffa9d3b6bb",
+      "id": "16ad6458-f7bb-429b-a400-bc3eab9ca177",
       "type": "question",
       "value": {
         "latex": "Sans calcul, déterminer les probabilités $\\PP(U \\geq 0)$ et $\\PP(U \\geq 1)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "24a2dc90-b6bd-46e5-8d9b-66cfdedd99d1",
+      "id": "e413a3a5-69fe-44f4-8820-755c130c13ab",
       "type": "reponse",
       "value": {
         "latex": "Les variables $X$ et $Y$ suivent une loi exponentielle donc sont positives presque sûrement. La variable $U$ est donc positive presque sûrement et $\\PP(U \\geq 0) = 1$. De plus, puisque $X \\geq 0$ et $Y \\geq 0$ presque sûrement, on peut déduire que $X \\leq X+Y$ donc $U \\geq 1$ presque sûrement, d'où $\\PP(U \\geq 1) = 0$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "fb9d9545-d659-4445-9d52-de0998dcfa64",
+      "id": "75be649e-4a1a-4d18-9bc5-2f8c9a2f1ac7",
       "type": "question",
       "value": {
         "latex": "Déterminer, en justifiant, une fonction densité du couple de variables aléatoires $(X,Y)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "8f949045-69d6-473a-9d03-375c7f123a96",
+      "id": "ddb11c2b-0215-45d2-a83f-9d89be24d4e4",
       "type": "reponse",
       "value": {
         "latex": "Par indépendance des variables $X$ et $Y$, une densité du couple $(X,Y)$ est le produit des densités des variables $X$ et $Y$ : on pose \n\t\t\t$$f(x,y) = \\lambda^2 e^{-\\lambda x - \\lambda y} 1_{\\mathbb{R}_+^2}(x,y)$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "f4ccbad0-7f0b-4fb6-bcf0-936fff3e84c8",
+      "id": "3d229aaf-0979-4d2b-b44e-8dd3b6ddac09",
       "type": "question",
       "value": {
         "latex": "Soit $t \\in ]0;1[$. Montrer que \n\t\t$$\\PP(U \\leq t) = \\int_{0}^{+\\infty} \\left(\\int_{\\frac{1-t}{t}x}^{+\\infty} \\lambda^2 e^{-\\lambda x - \\lambda y} dy  \\right)dx$$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "ddd62c64-d509-4171-8812-e098b66d7f46",
+      "id": "d904a3f4-572d-477a-a52d-7d4cd21d69b0",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in ]0;1[$. On constate que $U \\leq t \\iff X \\leq t(X+Y) \\iff X\\frac{1-t}{t} \\leq Y$.    On intègre $f(x,y)$ sur le domaine $D_t = \\{(x,y) \\in \\R^2, y \\geq \\frac{1-t}{t}x \\}$ en appliquant le théorème de Fubini :\n\t\t\t$$\\begin{align*}\n\t\t\t\t\\PP(U \\leq t) &= \\iint_{D_t} f(x,y)dxdy \\\\\n\t\t\t\t&= \\int_{0}^{+\\infty} \\left(\\int_{\\frac{1-t}{t}x}^{+\\infty} \\lambda^2 e^{-\\lambda x - \\lambda y} dy  \\right)dx\n\t\t\t\\end{align*}$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f50f0022-3ed2-4210-924a-9dfe3f5b8f84",
+      "id": "34047b63-1286-45e3-bcbd-8d1a0513eeee",
       "type": "question",
       "value": {
         "latex": "Déduire des questions précédentes la fonction de répartition de la variable aléatoire $U$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "d19e3626-08d4-4dd0-aa70-208bcd2f9add",
+      "id": "ed434c4e-aa4a-45b9-aa97-a6d2f9c7c2d1",
       "type": "reponse",
       "value": {
         "latex": "Soit  $t \\in ]0;1[$ : \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\PP(U \\leq t) &= \\int_{0}^{+\\infty} \\left(\\int_{\\frac{1-t}{t}x}^{+\\infty} \\lambda^2 e^{-\\lambda x - \\lambda y} dy  \\right)dx \\\\\n\t\t\t\t&= \\int_{0}^{+\\infty} \\lambda e^{-\\lambda x} \\times e^{-\\lambda \\frac{1-t}{t} x } dx \\\\\n\t\t\t\t&= \\int_{0}^{+\\infty} \\lambda e^{-\\lambda \\frac{x}{t} } dx \\\\\n\t\t\t\t&= \\int_{0}^{+\\infty} t \\frac{\\lambda}{t} e^{-\\lambda \\frac{x}{t} } dx \\\\\n\t\t\t\t&= t\n\t\t\t\\end{align*}$$\n\t\t\tSi $t \\geq 1$ alors d'après la question 1, $\\PP(U \\geq t) = 1$ et si $t \\leq 0$ alors $\\PP(U \\geq t) = 0$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "79768611-468c-4a1e-9580-95ef0c335f45",
+      "id": "3daa4675-e597-4151-8544-46ca0348f931",
       "type": "question",
       "value": {
         "latex": "En déduire la loi de la variable aléatoire $U$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "d752747c-ab5c-496a-a829-5141132ce610",
+      "id": "a4fea902-2ef3-4c7e-b7ba-aab278a99fa1",
       "type": "reponse",
       "value": {
         "latex": "On reconnaît la fonction de répartition d'une loi uniforme sur $[0;1]$. On peut aussi dériver la fonction de répartition presque partout pour reconnaître sa densité.",

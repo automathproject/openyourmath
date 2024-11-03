@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T12:27:30.135Z",
+    "createdAt": "2024-11-03T14:08:16.738Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T12:27:30.135Z"
+    "updatedAt": "2024-11-03T14:08:16.738Z"
   },
   "contenu": [
     {
-      "id": "cfa48071-fe3f-4374-9495-5c9a7bdf2724",
+      "id": "01b736b2-21f0-4d1c-beb0-98c3c98b517f",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie par  :\n\t$$\\begin{align*}\n\t\tf(x)=\n\t\t\\begin{cases}\n\t\t\t\\frac{4}{3}(1-x)^{\\frac{1}{3}} & \\text{ si } 0\\leq x \\leq 1 \\\\\n\t\t\t0 & \\text{ sinon.}\n\t\t\\end{cases}\n\t\\end{align*}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "49b6d9bc-c04d-446e-9e63-e810b0de452d",
+      "id": "11602832-b7ba-4709-8977-3f5e9daba41b",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est une densité d'une variable aléatoire $Y$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "b9087946-e40d-4b27-ad1d-bae9ad0c8089",
+      "id": "203ab851-d53b-4d4d-a01c-0077ad4c1ca6",
       "type": "reponse",
       "value": {
         "latex": "Il faut et il suffit de vérifier que $f$ est positive intégrable et $\\int_\\mathbb{R} f=1$. Le premier point est immédiat. La fonction $f$ est intégrable sur $\\mathbb{R}$ car elle est continue par morceaux à support compact.\n\t\tEnfin, on a\n\t\t$$\\begin{align*}\n\t\t\t\\int_\\mathbb{R} f(x)dx \n\t\t\t= \\int_0^1 \\frac{4}{3} (1-x)^{1/3} dx\n\t\t\t= \\left[ -(1-x)^{4/3}\\right]_0^1\n\t\t\t=1.\n\t\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "8ea56285-27ab-459f-bf29-5daff51206d1",
+      "id": "87982007-fc78-4cd9-8925-f5628b1dd02a",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition $F$ de la variable $Y$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "0e90550a-de53-40b1-acf8-dec64f86b68d",
+      "id": "6ce7d5f6-3711-4bad-b401-43380aaa5b14",
       "type": "reponse",
       "value": {
         "latex": "Par définition, pour tout $y\\in\\mathbb{R}$, on a $F_Y(y)=\\int_{-\\infty}^y f(t)dt$. Alors\n\t\t\\begin{itemize}\n\t\t\t\\item si $y<0$, $F_Y(y)=0$,\n\t\t\t\\item si $0\\leq y \\leq 1$, \n\t\t\t$F_Y(y)=\\int_0^y \\frac{4}{3} (1-x)^{1/3} dx\n\t\t\t= \\left[ -(1-x)^{4/3}\\right]_0^y\n\t\t\t=1-(1-y)^{4/3}$\n\t\t\t\\item si $y>1$, $F_Y(y)=1$.\n\t\\end{itemize}",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "cbf87ee1-1b01-4029-85de-058c5bc437ed",
+      "id": "90795695-014a-4051-97c3-91fc28ef0ebc",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance de la variable $Y$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "7d665120-b346-4764-b69a-412654d4844a",
+      "id": "5dd6d021-74f4-4e0f-a70f-7801c7dc6139",
       "type": "reponse",
       "value": {
         "latex": "L'espérance de $Y$ se calcule de la manière suivante:\n\t\t\\[ \\mathbb{E}(Y)=\n\t\t\\int_\\mathbb{R} yf(y)dy\n\t\t= \\int_0^1 \\frac{4}{3}y (1-y)^{1/3} dy,\\]\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tet par intégration par parties,\n\t\t\\[ \\E(Y)=\\left[-y(1-y)^{4/3}\\right]_0^1 + \\int_0^1 (1-y)^{4/3}dy\n\t\t=\\left[\\frac{-3}{7}(1-y)^{7/3}\\right]_0^1=\\frac{3}{7}.\n\t\t\\]",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "bead3e91-8dda-4807-a142-5b099a9939f2",
+      "id": "7897c482-c19f-4380-a4d0-831a6d61d529",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité de l'événement $[0.488< Y \\leq 1.2]$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "e94860a2-d2ed-4ce7-81a7-c590ebc21b35",
+      "id": "43edac77-ba48-4aa3-b5a1-c5ec9932f8a8",
       "type": "reponse",
       "value": {
         "latex": "Méthode 1:\n\t\t$$\\begin{align*}\n\t\t\t\\p(0.488< Y < 1.2)&= \\int_{0.488}^{1.2} f(y) dy\n\t\t\t= \\int_{0.488}^{1.2} \\frac{4}{3} (1-y)^{1/3} dy\n\t\t\t=\\left[ -(1-y)^{4/3}\\right]_{0.488}^1 \\\\\n\t\t\t&=(1-0.488)^{1/3}\n\t\t\t=0.8\n\t\t\\end{align*}$$\n\t\tMéthode 2:\n\t\t$$\\begin{align*}\n\t\t\t\\p(0.488< Y < 1.2)&= F_Y(1.2)-F_Y(0.488) \\\\\n\t\t\t&=1-[1-(1-0.488)^{1/3}] \\\\\n\t\t\t&=(1-0.488)^{1/3} \\\\\n\t\t\t&=0.8\n\t\\end{align*}$$",

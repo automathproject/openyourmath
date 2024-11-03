@@ -1,5 +1,5 @@
 {
-  "uuid": "7b2ea25b-fcae-4c77-a90c-b0e5e68edf51",
+  "uuid": "nSSt",
   "titre": "Problème concret",
   "theme": [
     "Optimisation"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-02T11:26:37.392Z",
+    "createdAt": "2024-11-03T14:08:50.456Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:37.392Z"
+    "updatedAt": "2024-11-03T14:08:50.456Z"
   },
   "contenu": [
     {
-      "id": "b6f1f723-60f8-4fd8-b269-2031ce860c1d",
+      "id": "94aca068-3e77-4f5e-aca4-112bc883b422",
       "type": "description",
       "value": {
         "latex": "On désire fabriquer par une imprimante 3D une boite ayant la forme d'un parallélépipède rectangle, sans couvercle sur le dessus. Le volume de cette boite doit être égal à $0,5m^3$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "37b5f470-12d6-4d35-9737-27e206517283",
+      "id": "2f148b36-177a-4022-9365-e42a434895fb",
       "type": "question",
       "value": {
         "latex": "Pour minimiser la quantité de matière utilisée, on désire que la somme des aires des faces soit minimale. Quelles dimensions doit-on choisir pour fabriquer la boite ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "64ea15c3-889e-401c-bb7c-69ed2f3d4b24",
+      "id": "1229322c-8941-4df5-ac91-c18461f29190",
       "type": "description",
       "value": {
         "latex": "\\\\ {\\bf Indication:} Se ramener à un problème d'optimisation d'une fonction de deux variables.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "14eab0e5-9c48-4f41-a7fc-d8b5fcdcf1b1",
+      "id": "452b7d4f-c633-4b5e-9085-d24dd9a9a613",
       "type": "reponse",
       "value": {
         "latex": "Notons $x,y$ et $z$ les dimensions de la boite. \nSon volume (la contrainte) est donc égale à $xyz=0,5$. \nOn souhaite minimiser la fonction $f(x,y,z)=xy+2xz+2yz$. \nComme $z=\\frac{1}{2xy}$, nous savons que ce problème revient à rechercher le minimum de la fonction $g(x,y)=xy+\\frac{1}{x}+\\frac{1}{y}$ sur l'ouvert $U=\\mathbb{R}_+^* \\times \\mathbb{R}_+^*$. \nLes dérivées partielles sont alors:\n$$ \\frac{\\partial g}{\\partial x}(x,y)=y-\\frac{1}{x^2} ~~\\text{ et }~~\n\\frac{\\partial g}{\\partial y}(x,y)=x - \\frac{1}{y^2}$$\nL'unique point critique sur $U$ est alors le point $(1,1)$. \n\\\\ Pour vérifier que c'est bien un minimum, on peut éventuellement calculer la hessienne. \n$$H_g(x,y)= \\begin{vmatrix} \n2x^{-3} & 1 \\\\ 1 & 2y^{-3} \n\\end{vmatrix} $$\nAinsi, $det(H_f(1,1))=3>0$: ainsi, $f$ atteint bien un extremum en $(1,1)$ et comme \n$\\frac{\\partial^2 g}{\\partial x^2}(1,1)>0$, $g$ atteint un minimum en $(1,1)$. \nAinsi, la boite a une aire minimale pour les valeurs $x=1$, $y=1$ et $z=\\frac{1}{2}$.\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=12cm, \n        view={60}{45}, \n        domain=0.1:3, y domain=0.1:3, \n        samples=40, \n        xlabel=$x$, ylabel=$y$, zlabel={$f(x, y)$},\n        colormap/jet, \n        \n        colorbar, \n        zmin=0, \n        zmax=10, \n        point meta min=0, point meta max=10, \n    ]\n        \\addplot3[\n            surf,\n        ]\n        {x*y + 1/x + 1/y};\n    \\end{axis}\n\\end{tikzpicture}",

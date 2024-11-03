@@ -1,5 +1,5 @@
 {
-  "uuid": "69de088f-43e4-4a80-88a3-75e44f08c619",
+  "uuid": "473c5f0f-59cb-4993-864f-bff6767924d9",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "Optimisation"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T11:26:40.692Z",
+    "createdAt": "2024-11-03T14:08:55.045Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:40.692Z"
+    "updatedAt": "2024-11-03T14:08:55.045Z"
   },
   "contenu": [
     {
-      "id": "9c463ffd-53b2-4cae-9f31-081a84758c78",
+      "id": "fcc23bca-6e91-4767-8a4f-28bec63f6f29",
       "type": "description",
       "value": {
         "latex": "Soit $N \\in \\mathbb{N}^*$, et $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$ un nuage de points. On cherche à déterminer les coefficients $a$, $b$ et $c$ de la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b33b527d-511a-446f-a496-daacd96ee8dd",
+      "id": "6687f412-4dfa-4b88-9bdd-abb16180754a",
       "type": "question",
       "value": {
         "latex": "Écrire ce problème comme un problème de minimisation quadratique, c’est-à-dire un problème de la forme\n  \\[\n  \\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec} \\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle,\n  \\]\n  avec $A \\in \\mathcal{S}_n(\\mathbb{R})$, $b \\in \\mathbb{R}^n$. On devra donc expliciter $n$, $A$, et $b$. On utilisera la notation $S_k = \\sum_{i=1}^{N} t_i^k$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "3d03044a-bf6f-4f72-9b01-de9275fa7146",
+      "id": "c54d4c9d-d269-49d0-b7a2-2e01bec66ede",
       "type": "reponse",
       "value": {
         "latex": "Le problème est celui de la régression parabolique pour un nuage de points $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$, où l'on cherche la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole. Le problème peut s'écrire :\n  \\[\n  \\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec} \\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et} \\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\n  \\]\n  En écrivant $J(X) = \\|MX - k\\|^2$ avec $M = \\begin{pmatrix} t_1^2 & t_1 & 1 \\\\ \\vdots & \\vdots & \\vdots \\\\ t_N^2 & t_N & 1 \\end{pmatrix}$ et $k = \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}$, on obtient\n  \\[\n  J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle\n  \\]\n  avec $A = M^T M$ et $b = M^T k$. La matrice $A$ est donc donnée par :\n  \\[\n  A = \\begin{pmatrix} S_4 & S_3 & S_2 \\\\ S_3 & S_2 & S_1 \\\\ S_2 & S_1 & N \\end{pmatrix}.\n  \\]",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "d3534fc2-aac2-459f-a468-5b999edde6d3",
+      "id": "d71829f2-d26f-4042-aba4-2c2259406598",
       "type": "question",
       "value": {
         "latex": "Discuter de l’existence des solutions d’un tel problème.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "283c9fb7-1075-4392-be0d-156e8923d3d9",
+      "id": "68fb97b4-a52d-4528-abf1-56dcbb60dad2",
       "type": "reponse",
       "value": {
         "latex": "Ce problème est équivalent à celui de minimiser la distance euclidienne de $k$ au sous-espace vectoriel $\\text{Im}(M)$, qui est de dimension finie. Il s’agit donc d’un problème de projection orthogonale, qui admet toujours une solution.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "3757e041-f220-42df-9b58-e49dfbcc4fe9",
+      "id": "658fdde8-1dbf-45e0-a83c-012d851f2cbb",
       "type": "question",
       "value": {
         "latex": "On suppose que la matrice $A$ est définie positive. Démontrer que ce problème possède une unique solution.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "46e9f6f7-86f0-49dd-aefb-8f6b50f0c390",
+      "id": "0478bd3d-1828-41e5-b608-33782ae36688",
       "type": "reponse",
       "value": {
         "latex": "Si $A$ est définie positive, alors la fonction $J(X)$ est strictement convexe. Par conséquent, $J(X)$ possède un unique minimum sur $\\mathbb{R}^n$, donc le problème admet une unique solution.",

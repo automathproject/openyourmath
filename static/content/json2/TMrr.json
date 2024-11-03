@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T12:27:37.316Z",
+    "createdAt": "2024-11-03T14:08:26.675Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T12:27:37.316Z"
+    "updatedAt": "2024-11-03T14:08:26.675Z"
   },
   "contenu": [
     {
-      "id": "d46b5f7d-75b3-4add-b0a7-4bc6ba5f5c9e",
+      "id": "cf7c1cae-41bb-4ff1-9859-37b8f56c83b1",
       "type": "description",
       "value": {
         "latex": "Soit $(X,Y)$ un couple de variables aléatoires admettant pour densité la fonction $f$ définie par $$ f(x,y)=   \\frac{3}{8}(x^2+y^2) \\textbf{1}_{[-1;1]^2}(x,y)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9a26efd8-016f-4bff-ba8a-82b9dc9142ef",
+      "id": "9dcc8942-a13f-4c94-8441-6bb6f8e88321",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $(X+Y,X-Y)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "b8c37127-1b0d-462c-8cdc-21afe0ce4062",
+      "id": "82d44030-e8a8-4123-8360-2fc2e2c99f41",
       "type": "reponse",
       "value": {
         "latex": "On pose $U=X+Y$, $V=X-Y$ et on étudie la loi du couple $(U,V)$. D'après le théorème de transfert, si $h$ est continue bornée, \n\t\n\t$$\\mathbb{E}(h(U,V))= \\frac{3}{8} \\int_{[-1;1]^2}^{} h(x+y,x-y) (x^2+y^2)dxdy$$\n\t\n\tPour faire apparaître la densité de $(U,V)$, on effectue le changement de variable $$(u,v)=(x+y,x-y)$$ (c'est une bijection de classe $\\mathcal{C}^1$). La réciproque s'écrit $(x,y)=(\\frac{u+v}{2},\\frac{u-v}{2})$. La matrice jacobienne est $\\begin{pmatrix}\n\t\t\\frac{1}{2} & \\frac{1}{2} \\\\\n\t\t\\frac{1}{2} & -\\frac{1}{2} \\\\\n\t\\end{pmatrix} $ et la valeur absolue de son déterminant est $\\frac{1}{2}$. On peut donc écrire $dxdy=\\frac{1}{2}dudv$ et on a finalement :\n\t\n\t$$\\mathbb{E}(h(U,V))= \\frac{3}{8} \\int_{C}^{} h(u,v) (\\frac{u^2+v^2}{2})\\frac{1}{2}dudv$$  où $C= \\{(u,v) \\in \\R^2 \\slash -2 \\leq u+v \\leq 2 \\text{ et } -2 \\leq u-v \\leq 2 \\}$ est le carré image de $[-1;1]^2$ par le changement de variables.\n\t\n\tOn en déduit que $(U,V)$ a pour densité la fonction $g$ définie par $$g(u,v)=\\frac{3}{16}(u^2+v^2) \\textbf{1}_C(u,v)$$\n\tPour avoir indépendamment la loi de $(X+Y)$ et $(X-Y)$, il resterait à calculer les lois marginales.",

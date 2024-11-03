@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T11:26:42.152Z",
+    "createdAt": "2024-11-03T14:08:57.035Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:42.152Z"
+    "updatedAt": "2024-11-03T14:08:57.035Z"
   },
   "contenu": [
     {
-      "id": "22a1fd19-f1c8-49f6-8c9d-4fea0476df0e",
+      "id": "70519b3e-4dc5-4a55-b360-9e30ea2b90db",
       "type": "question",
       "value": {
         "latex": "Exprimer sous forme d'une série entière la solution de l'équation différentielle $(E)$:\n\t\t\\[ x^2y''(x)+x(x+1)y'(x)-y(x)=0 \\qquad y'(0)=1.\\]",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "c7a9c9d9-136d-4732-b32e-85a5d691b9aa",
+      "id": "404f8ab1-8fd2-4c91-b982-dc6bfe24afe3",
       "type": "reponse",
       "value": {
         "latex": "Soit $y$ une solution développable en série entière, de rayon de convergence $R$: on note $\\displaystyle y(x)=\\sum_{n=0}^{+\\infty} a_n x^n$ et on a\n\t\t\t\\[ \\forall x \\in ]-R;R[, \\qquad y'(x)=\\sum_{n=1}^{+\\infty} na_n x^{n-1}\\quad \\text{ et } \\quad y''(x)=\\sum_{n=2}^{+\\infty} n(n-1)a_n x^{n-2}.\\]\n\t\t\tOn a les équivalences suivantes:\n\t\t\t$$\\begin{align*}\n\t\t\ty \\text{ solution de }(E) \\ & \\Leftrightarrow \\ \n\t\t\t\\forall x \\in ]-R;R[, \\ -a_0 + \\sum_{n=2}^{+\\infty} [(n-1)(n+1)a_n - (n-1)a_{n-1}] x^n =0  \\\\\n\t\t\t\\ & \\Leftrightarrow \\\n\t\t\ta_0=0 \\quad \\text{ et } \\quad  \\forall n \\geq 2, \\ a_n=\\frac{-1}{n+1} a_{n-1}\n\t\t\t\\end{align*}$$\n\t\t\tLa condition initiale donne: $y'(0)=a_1=1$.\n\t\t\tOn en conclut que $a_0=0$, $a_1=1$ et pour tout $n\\geq 2$, $a_n=2\\frac{(-1)^{n+1}}{(n+1)!}$ et donc \n\t\t\t\\[ y(x)=2 \\sum_{n=1}^{+\\infty} \\frac{(-1)^{n+1}}{(n+1)!} x^n,\\] \n\t\t\tdéfinie sur l'intervalle $\\R$. On peut également déterminer la fonction somme, ce qui donne\n\t\t\t\\[ \\forall x \\in \\R, \\qquad y(x)=\\sum_{n=1}^{+\\infty} \\frac{(-1)^{n+1}}{(n+1)!}x^n.\\]",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "491454e4-2d2f-4f56-92ed-284c84bc5600",
+      "id": "f49385f9-30d4-43e8-b56f-439a202ba218",
       "type": "question",
       "value": {
         "latex": "Déterminer l'intervalle de convergence $I$ de la série entière solution de l'équation différentielle ci-dessus.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "493ab4da-f0e1-4f8f-9069-582037feab4b",
+      "id": "3a8334b5-59b1-4292-8436-36b52051d1b4",
       "type": "reponse",
       "value": {
         "latex": "Fait ci-dessus: $D=\\R$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "68dbb95f-7422-4a22-9ad1-895c3de2842a",
+      "id": "7fba4978-a0dd-4118-8d2d-e7f21492dda1",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction somme de cette série entière.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "d3ad7b23-c635-4b68-8651-bcaf6967f49b",
+      "id": "e7ea6f38-9128-49c7-b877-092204c2a670",
       "type": "reponse",
       "value": {
         "latex": "On a:\n\t\t\t\\[\\forall x \\in \\R, \\qquad xy(x)=2 \\sum_{n=1}^{+\\infty} \\frac{(-1)^{n+1}}{(n+1)!}x^{n+1}=2\\sum_{n=2}^{+\\infty} \\frac{(-x)^{n}}{n!}\n\t\t\t=2\\left[\\sum_{n=0}^{+\\infty} \\frac{(-x)^{n}}{n!}-(1-x)\\right]\n\t\t\t\\]\n\t\t\td'où\n\t\t\t\\[\\forall x \\in \\R, \\qquad y(x)=\\frac{2}{x}(e^{-x}-1+x).\\]",

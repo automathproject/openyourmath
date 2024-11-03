@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T12:27:31.604Z",
+    "createdAt": "2024-11-03T14:08:18.760Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T12:27:31.604Z"
+    "updatedAt": "2024-11-03T14:08:18.760Z"
   },
   "contenu": [
     {
-      "id": "8dbd57ac-2f50-40f6-967b-3998e7f20b37",
+      "id": "8567b05d-c1f6-4e79-bf1a-d5bcd4a9450e",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle continue en $(0,0)$~?",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "d7caa170-580b-4903-bcff-71dc5743e4c2",
+      "id": "1bb43111-28a3-4682-b6aa-8586f41340eb",
       "type": "reponse",
       "value": {
         "latex": "Notons tout d'abord que $f$ est une fraction rationnelle sur $\\R^2-\\{(0,0)\\}$ donc elle y est définie et $C^{\\infty}$. Comme $f$ est par ailleurs définie en $(0,0)$, on a $\\mathcal{D}_f = \\R^2$.\n\t\t\n\t\tPour étudier la continuité en $(0,0)$, on étudie la différence $f(x,y) - f(0,0)$ et on passe comme souvent en coordonnées polaires. \n\t\t$$\\begin{align*}\n\t\tf(r \\cos\\theta, r \\sin\\theta) - f(0,0) &= \\frac{-3(r\\cos\\theta)^3+5(r\\sin\\theta)^3}{(r\\cos\\theta)^ +(r\\sin\\theta)^2} \\\\\n\t\t&= \\frac{r^3 (-3\\cos^3\\theta + 5\\sin^3\\theta)}{r^2} \\\\\n\t\t&= r(-3\\cos^3\\theta + 5\\sin^3\\theta)\n\t\t\\end{align*}$$\n\t\tOn obtient la majoration\n\t\t$$\\begin{align*}\n\t\t|f(r \\cos\\theta, r \\sin\\theta) - f(0,0)| &\\leq r(|-3\\cos^3\\theta| + 5 |\\sin^3\\theta)|) \\\\\n\t\t&\\leq (3+5)r \\\\\n\t\t& \\underset{r \\to 0_+}{\\longrightarrow} 0 \\text{ indépendamment de $\\theta$}\n\t\t\\end{align*}$$\n\t\tAinsi $f(x,y) \\underset{(x,y) \\to (0,0)}{\\longrightarrow} f(0,0)$, ce qui prouve que \\fbox{$f$ est continue en $(0,0)$.}",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "0161a4b2-a12f-4f53-afa4-a1a36f186401",
+      "id": "34815014-ed88-4b7c-83e4-6133e6feeb78",
       "type": "question",
       "value": {
         "latex": "Calculer $\\dpa{f}{x}$ et $\\dpa{f}{y}$ pour $(x,y) \\neq (0,0)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "c2237806-591c-4c95-acb2-c3fa9671e589",
+      "id": "edb97e0e-24d8-4083-a245-5e615baa51a4",
       "type": "reponse",
       "value": {
         "latex": "Pour $(x,y) \\neq (0,0)$, on est dans le cas d'un point sans problème. Les dérivées partielles existent et se calculent en appliquant les formules classiques de dérivation\n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{x}(x,y) &= \\frac{ \\dpa{}{x} \\left[ -3x^3+5y^3 \\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{x} \\left[ x^2+y^2 \\right]}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{ (-9x^2)(x^2+y^2) - (-3x^3+5y^3)(2x)}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{-3x^4 - 9x^2y^2 - 10xy^3}{(x^2+y^2)^2}\n\t\t\\end{align*}$$\n\t\tet\n\t\t$$\\begin{align*}\n\t\t\\dpa{f}{y}(x,y) &= \\frac{ \\dpa{}{y} \\left[ -3x^3+5y^3 \\right] (x^2+y^2) - (-3x^3+5y^3)  \\dpa{}{y} \\left[ x^2+y^2 \\right]}{(x^2+y^2)^2} \\\\\n\t\t&= \\frac{ (15y^2)(x^2+y^2) - (-3x^3+5y^3)(2y)}{(x^2+y^2)^2}\\\\\n\t\t&= \\frac{6x^3y + 15x^2y^2 +5 y^4}{(x^2+y^2)^2}\n\t\t\\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "27d5fc60-8509-419f-949e-50932fa84366",
+      "id": "fa965195-c6c0-46df-a47f-60aa3bdcf5e9",
       "type": "question",
       "value": {
         "latex": "Calculer $\\dpa{f}{x}(0,0)$ et $\\dpa{f}{y}(0,0)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "9f2d17ca-05b3-4e71-bdce-63ccd64ce4b4",
+      "id": "75a0353c-f864-4a42-83c4-4eec8bb2817c",
       "type": "reponse",
       "value": {
         "latex": "Le point $(0,0)$ est un point à problème. Comme précédemment, hors de question d'utiliser la question 2 et de remplacer $x$ et $y$ par $0$, ou de les faire tendre vers $0$. Cette méthode serait pertinente si on savait \\textbf{a priori} que les dérivées partielles sont prolongeables par continuité, mais ce n'est pas le cas et cela fait d'ailleurs l'bjet de la question suivante. \\\\\n\t\t\\emph{On retiendra qu'en général ce n'est pas un très bon réflexe de se lancer dans cette voie.}\\\\ \n\t\tLe plus propre et le plus sur est de revenir à la définition en étudiant les taux d'accroissement.\n\t\t\\[ \\frac{f(h,0) - f(0,0)}{h} = \\frac{-3h^3/h^2 - 0}{h} = -3 \\tvq{-3}{h}{0}, \\text{ donc  \\fbox{$\\dpa{f}{x}(0,0) = -3$}} \\]\n\t\tet \n\t\t\\[ \\frac{f(0,k) - f(0,0)}{k} = \\frac{5k^3/k^2}{h} = 5 \\tvq{5}{k}{0} \\text{ donc } \\dpa{f}{y}(0,0) = 5 \\]",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "ced4793d-0666-4d06-b61f-8b5c7726ec85",
+      "id": "513721ba-a039-4b39-8f2b-808a3168fe29",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle de classe $C^1$ en $(0,0)$~?",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "be2fc497-7a5e-4723-8284-9b0ec6856c2b",
+      "id": "f38b99d0-fb67-4a0b-bbaf-7e6ffed7dbd6",
       "type": "reponse",
       "value": {
         "latex": "Pour établir si $f$ est $C^1$ en $(0,0)$, nous devons étudier\n\t\t\\begin{itemize}\n\t\t\t\\item si $\\dpa{f}{x}(x,y)$ (resp. $\\dpa{f}{y}(x,y)$) admet une limite quand $(x,y) \\to (0,0)$ puis\n\t\t\t\\item si cette limite est égale à $\\dpa{f}{x}(0,0) = -3$ (resp. à $\\dpa{f}{y}(0,0) = 5$)\n\t\t\\end{itemize}\n\t\tRegardons les limites de $\\dpa{f}{x}$ et $\\dpa{f}{y}(x,y)$ quand $(x,y) \\to (0,0)$ selon 3 chemins~: la droite $y=0$, la droite $x=0$, la droite $x=y$. Nous avons~:\n\t\t\\[ \\dpa{f}{x}(x,0) \\to -3,\\ \\ \\dpa{f}{x}(0,y) \\to 0,\\ \\ \\dpa{f}{x}(x,x) \\to -\\frac{11}{2} \\]\n\t\t\\[ \\dpa{f}{y}(x,0) \\to 0,\\ \\ \\dpa{f}{y}(0,y) \\to 5, \\ \\ \\dpa{f}{y}(x,x) \\to -\\frac{13}{2} \\]\n\t\tAinsi ni $\\dpa{f}{x}(x,y)$ ni $\\dpa{f}{y}(x,y)$ n'admettent de limites quand $(x,y) \\to (0,0)$. A fortiori elles ne sont pas continues en $(0,0)$ donc \n\t\t\\fbox{$f$ n'est pas $C^1$ en $(0,0)$}",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "d8f20ba2-3966-4acf-a713-3c11ccd1d750",
+      "id": "dc70f0b9-a981-47b6-9b5d-f81623c1582c",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle différentiable en $(0,0)$~?",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "326eec8e-00fd-497e-8b7c-34a1529b110b",
+      "id": "77b96126-1500-4ecc-b5e5-a25ab422f0f0",
       "type": "reponse",
       "value": {
         "latex": "On suit la méthode du poly, chap.~2, \\S~II.6. Comme $f$ admet des dérivées partielles en $(0,0)$, $f$ \\underline{peut} être différentiable en $(0,0)$ et si elle l'est sa différentielle $\\dd f(0,0)$ sera nécessairement égale à $-3 \\dd x + 5 \\dd y$. Puisque $f$ n'est pas $C^1$, on ne peut pas conclure directement à la différentiabilité et il faut étudier la limite de\n\t\t\\[ \\frac{f(h,k) - f(0,0) - [(-3)h + 5k]}{\\sqrt{h^2+k^2}} \\]\n\t\tquand $(h,k) \\to (0,0)$. Or \n\t\t$$\\begin{align*}\n\t\t\\frac{f(h,k) - f(0,0) - (-3h + 5k)}{\\sqrt{h^2+k^2}} &= \\text{(passage en polaires $h = r\\cos\\theta, k=r\\sin\\theta$)} \\\\\n\t\t&= \\frac{r(-3\\cos^3\\theta + 5\\sin^3\\theta) + 3r\\cos\\theta -5r\\sin\\theta}{r} \\\\\n\t\t&= -3\\cos^3\\theta + 5\\sin^3\\theta +3\\cos\\theta -5\\sin\\theta\n\t\t\\end{align*}$$\n\t\tCette quantité n'a pas de limite quand $r \\to 0_+$ puisqu'elle dépend de $\\theta$. A fortiori, elle ne tend pas vers $0$, ce qui signifie par définition que \\fbox{$f$ n'est pas différentiable en $(0,0)$.}",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-02T11:26:28.136Z",
+    "createdAt": "2024-11-03T14:08:37.054Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:28.136Z"
+    "updatedAt": "2024-11-03T14:08:37.054Z"
   },
   "contenu": [
     {
-      "id": "186af6f5-aecb-4f0c-86a0-1ab1bb585e82",
+      "id": "fed97f78-438e-4a9f-8ebd-bcdbc559cc02",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire suivant une loi de Poisson $\\mathcal{P}(\\lambda)$. On rappelle que dans ce cas, quelque soit l'entier $k \\in \\N$, $\\PP(X=k) = e^{-\\lambda} \\frac{\\lambda^k}{k!}$.\n\nOn observe la réalisation d'un échantillon de taille 6 de cette loi : $1,5,2,2,3,1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "264467a6-d4b6-426b-ae12-5eaccf8586d6",
+      "id": "79a237e7-ed53-40e2-9d9f-af863c8f8e89",
       "type": "question",
       "value": {
         "latex": "\\`A l'aide de la méthode du maximum de vraisemblance, donner une estimation de $\\lambda$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "7c7c0994-b446-412d-8595-f4e9e90db410",
+      "id": "cf041f05-2df7-4980-bdef-08090f2a5fc7",
       "type": "question",
       "value": {
         "latex": "Généraliser le procédé pour obtenir un estimateur de $\\lambda$ et déterminer son biais.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "252ceab7-5df3-4dfe-9dae-97a91bc7c6c6",
+      "id": "a80883a0-b6b6-4d5e-ab2f-c61c94c16270",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}\n\t\\item Soit $(x_1,...,x_n)$ une réalisation quelconque de l'échantillon $(X_1,...X_n)$ : \n\t$$\\begin{align*}\n\t\t\\mathcal{L}(\\lambda) &= \\PP(X_1=x_1,X_2=2,...,X_n=x_n) \\\\\n\t\t&= \\PP(X_1=x_1)\\PP(X_2=2),...,\\PP(X_n=x_n) \\text{ par indépendance des va} \\\\\n\t\t&= e^{-\\lambda} \\frac{\\lambda^{x_1}}{x_1!} \\times e^{-\\lambda} \\frac{\\lambda^{x_2}}{x_2!}  \\times ,..., \\times e^{-\\lambda} \\frac{\\lambda^{x_n}}{x_n!} \\\\\n\t\t&=e^{-n\\lambda} \\frac{\\lambda^{\\sum_{i=1}^n x_i }}{x_1!...x_n!}\n\t\\end{align*}$$\n\t\\item  On cherche la valeur de $\\lambda$ qui maximise la fonction de vraisemblance via la log vraisemblance :\n\t$$\\begin{align*}\n\t\t\\ln \\mathcal{L}(\\lambda) &= -n \\lambda + \\left(\\sum_{i=1}^n x_i\\right)\\ln(\\lambda) - \\ln(x_1!...x_n!) \n\t\\end{align*}$$\n\tque l'on dérive afin de voir pour quelle valeur de $p \\in ]0;1[$ cette expression est maximale :\n\t$$\\begin{align*}\n\t\t\\ln \\mathcal{L}(p) =0 \n\t\t&\\iff  -n+ \\left(\\sum_{i=1}^n x_i\\right) \\times \\frac{1}{\\lambda} = 0 \\\\\n\t\t&\\iff \\lambda = \\frac{\\sum_{i=1}^n x_i}{n}\n\t\\end{align*}$$\n\t\n\tEn remplaçant par les valeurs de la réalisation de l'échantillon, on trouve comme estimation de $\\lambda$ la valeur $\\frac{14}{6}$.\n\t\n\tOn trouve en général l'estimateur de moyenne empirique, il est sans biais car $\\E(X) = \\lambda$ pour une loi de Poisson de paramètre $\\lambda$. \n\t\n\\end{enumerate}",

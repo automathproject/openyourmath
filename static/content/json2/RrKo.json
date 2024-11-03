@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T12:27:36.164Z",
+    "createdAt": "2024-11-03T14:08:25.124Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T12:27:36.164Z"
+    "updatedAt": "2024-11-03T14:08:25.124Z"
   },
   "contenu": [
     {
-      "id": "6c3468ad-8178-4b7f-9c13-b6931151b20b",
+      "id": "ec9217f5-0fa2-4852-826b-682136ab77ed",
       "type": "description",
       "value": {
         "latex": "Soit $f \\colon [0;T] \\times \\mathbb{R} \\to \\mathbb{R}$, $a \\in \\mathbb{R}$ et l'équation différentielle :\n$$(E)\t\\begin{cases} \ny'(t) = f(t,y(t)) \\\\\ny(0) = a\n\\end{cases} $$\n\npour laquelle on admet l'existence et l'unicité d'une solution $y$ de classe $\\mathcal{C}^2$. On suppose de plus qu'il existe $M>0$ tel que $\\forall t \\in [0;T]$, $\\forall y \\in \\mathbb{R}$ : \n$$ \\frac{\\partial^2 f}{\\partial y^2}(t,y)>0 \\qquad ; \\qquad \\left| \\frac{\\partial f}{\\partial y}(t,y)   \\right| \\leq M$$\n\nOn rappelle que la méthode d'Euler implicite est donnée par le schéma \n$$y_{n+1} = y_n + hf(t_{n+1},y_{n+1})$$\net on suppose que le pas vérifie $h \\leq \\frac{1}{2M}$.\n\nPour tout $n \\geq 0$, on pose $\\varphi_n(x) = y_n+hf(t_{n+1},x)-x$ et $H_n(x) = y_n+hf(t_{n+1},x)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "25763abe-3c8e-40fe-b283-8559d852c615",
+      "id": "bc412ed6-bc7a-4039-898d-8fd0994e6897",
       "type": "question",
       "value": {
         "latex": "Vérifier que $H_n$ est une application contractante et en déduire que le schéma est bien défini, c'est-à-dire qu'il permet bien de définir explicitement $y_{n+1}$ en fonction de $y_n$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "475f8432-8d30-41d0-9bfb-5afc96a26df9",
+      "id": "5c407f61-31f4-4e8d-a1c3-d353dc3391a9",
       "type": "reponse",
       "value": {
         "latex": "$|H_n'(x)| = h \\left| \\frac{\\partial f}{\\partial y}(t_{n+1},x)  \\right| \\leq hM \\leq \\frac{1}{2} < 1$. Si $n$ est fixé et $y_n$ est défini, alors $H_n$ admet donc un unique point fixe que l'on note $y_{n+1}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "556bafb9-7d03-46ac-bbae-af4e03674f19",
+      "id": "86cce5ad-a165-469a-9628-3cf9676c975e",
       "type": "question",
       "value": {
         "latex": "On propose la méthode suivante :\n\t$$(S) : \\begin{cases}\n\t\\widehat{y}_{n+1}=y_n - \\frac{\\varphi_n(y_n)}{\\varphi_n'(y_n)} \\\\\n\ty_{n+1} = y_n + hf(t_{n+1},\\widehat{y}_{n+1})\n\t\\end{cases}$$\n\tOn admet que cette méthode est stable. Expliquer pourquoi cette méthode ainsi décrite permet de définir explicitement $y_{n+1}$ en fonction de $y_n$. Décrire en particulier la méthode utilisée pour définir $\\widehat{y}_{n+1}$. Puis montrer que cette méthode $(S)$ est consistante, donc convergente.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "e99590f3-13a8-4480-b4ab-610c0ebb2113",
+      "id": "ce8d2c36-c368-446b-a31b-7131d9b691e1",
       "type": "reponse",
       "value": {
         "latex": "Ce schéma permet de résoudre l'écriture implicite en utilisant la méthode de Newton. On écrit le schéma sous la forme standard \n\t\t$$y_{n+1}=y_n+hF(t_n,y_n,h)$$ avec \n\t\t$$F(t,y,h)= f\\left(t+h,y+h\\frac{f(t+h,y)}{1-h\\frac{\\partial f}{\\partial y}(t+h,y)}  \\right)$$\n\t\tet on vérifie que $F(t,y,0)=f(t,y)$ : la méthode est consistante au moins d'ordre 1. On pourrait vérifier que la méthode n'est pas d'ordre 2 en calculant $\\frac{\\partial F}{\\partial h}$ et en constatant que $\\frac{\\partial F}{\\partial h}(t,y,0) = f^{[1]}(t,y) \\neq \\frac{1}{2}f^{[1]}(t,y)$. La méthode étant supposée stable, elle est donc convergente.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "0ca8791a-d2b3-4df3-a28d-0c44cbf657f0",
+      "id": "19f1f2c3-8dad-4a9c-8175-6450753e1974",
       "type": "description",
       "value": {
         "latex": "On suppose maintenant que l'équation différentielle est autonome : $f(t,y) = f(y)$ et que $\\forall y \\in \\mathbb{R}$, $|f(y)| \\leq M$, $|f'(y)| \\leq M$ et $|f''(y)| \\leq M$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "898cf3b4-3e25-4f3f-91ab-fd3aa2a05981",
+      "id": "76fe88d0-62dc-4fe6-94e1-92814281fed0",
       "type": "question",
       "value": {
         "latex": "Simplifier le schéma $(S)$ en l'écrivant en fonction de $f$ et $f'$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "b2f235cd-4463-4202-ada4-d094345958ee",
+      "id": "5262bd37-6dac-4ce2-92e6-9c6fffc3a783",
       "type": "reponse",
       "value": {
         "latex": "Le schéma devient \n\t\t\t$$(S') : \\begin{cases}\n\t\t\t\\widehat{y}_{n+1}=y_n - \\frac{f(y_n)}{1-hf'(y_n)} \\\\\n\t\t\ty_{n+1} = y_n + hf(t_{n+1},\\widehat{y}_{n+1})\n\t\t\t\\end{cases}$$",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "787729f0-7ea0-43df-8265-72a7e936cb32",
+      "id": "9b64c301-5b52-4434-a14b-172846348b34",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\forall y,z \\in \\mathbb{R}$, \n\t\t$$|f(y)(f'(z)-f(z)f'(y)| \\leq 2M^2|y-z|$$",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "eea1a9f9-5a98-4b22-8a40-f21faa5d38cd",
+      "id": "53f514f5-a19a-4fca-b503-16a55bf4323f",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\t|f(y)(f'(z)-f(z)f'(y)| &= |f(y)(f'(z)-f'(y))+f'(y)(f(y)-f(z)| \\\\\n\t\t\t\t&\\leq |f(y)||f'(z)-f'(y)|+|f'(y)||f'(y)-f(z)|\\\\\n\t\t\t\t&\\leq M\\left(|f'(z)-f'(y)|+|f'(y)-f(z)|\\right)\\\\\n\t\t\t\\end{align*}$$\n\t\t\tOr $|f'(y)| \\leq M$ et $|f''(y)| \\leq M$ donc $f$ et $f'$ sont $M$-lipschitziennes, d'où le résultat.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "b58db473-afd1-4c54-b01e-398a5a567cb7",
+      "id": "158dc5f7-2591-4d55-8fb7-2194ca181b93",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\forall y \\in \\mathbb{R}$ :\n\t\t$$\\left|\\frac{1}{1-hf'(y)} \\right| \\leq 2$$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "8ffa35bd-5298-40dc-bffe-b68dd15cf739",
+      "id": "ec51e7f8-f322-4035-9f5d-4d7320b2feb1",
       "type": "reponse",
       "value": {
         "latex": "On a $hf'(y) \\leq Mh \\leq \\frac{1}{2}$ d'où $1-hf'(y) \\geq \\frac{1}{2}$ d'où le résultat demandé.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "ca021545-633d-46f1-91bb-c19dfa957a75",
+      "id": "fc677018-24df-4718-8174-039967da1916",
       "type": "question",
       "value": {
         "latex": "On pose $g_R(y,h)=\\frac{f(y)}{1-hf'(y)}$. Montrer que $\\forall y,z \\in \\mathbb{R}$ :\n\t\t$$|g_R(y,h)-g_R(z,h)| \\leq 4 |f(y)f'(z)-f(y)-f(z)f'(y)+f(z)|$$\n\t\tpuis \n\t\t$$|g_R(y,h)-g_R(z,h)| \\leq 4M(1+2Mh)|y-z|$$",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "5dbdf184-2b1f-4fbb-b2ec-ad8725bc0c5f",
+      "id": "d55939df-eefa-48b4-b060-637c34a4d828",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\t|g_R(y,h)-g_R(z,h)| &= \\left| \\frac{f(y)}{1-hf'(y)}-\\frac{f(z)}{1-hf'(z)}  \\right| \\\\\n\t\t\t\t&= \\frac{|f(y)-f(z)+h(f(z)f'(y)-f(y)f'(z) |}{|1-hf'(y)||1-hf'(z)|}\\\\\n\t\t\t\t&\\leq 4|f(y)-f(z)|+4h|f(z)f'(y)-f(y)f'(z)| \\\\\n\t\t\t\t&\\leq 4M|y-z| + 8M^2h|y-z|\\\\\n\t\t\t\t&\\leq 4M(1+2Mh)|y-z|\n\t\t\\end{align*}$$",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "f9d64080-1e83-411e-88f4-50b5fcc04ae9",
+      "id": "0c6044cd-a6f7-43fd-af20-8177e1336952",
       "type": "question",
       "value": {
         "latex": "En déduire que la méthode est stable",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": "a4e42f4d-235a-4519-8efe-481e40f5f9c2",
+      "id": "c77b103a-802e-4a6f-b0dd-9fdf6289a2d3",
       "type": "reponse",
       "value": {
         "latex": "On étudie la stabilité du nouveau schéma $(S')$ : il s'écrit $y_{n+1}=y_n+hF(y_n,h)$ avec $F(y,h)=f(y+hg_R(y,h))$. Or $f$ est $M$-lipschitzienne donc \n\t\t\t$$\\begin{align*} F(y,h)-F(z,h) &\\leq M(|y-z|+h|g_R(y,h)-g_R(z,h)|)\\\\\n\t\t\t\t&\\leq M(1+2Mh(1+2Mh))|y-z|\\\\\n\t\t\t\t&\\leq 5M|y-z|\n\t\t\t\\end{align*}$$\n\t\t\tDonc $F$ est lipschitzienne uniformément en $h$ : cela prouve la stabilité du schéma.",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "76f2fd13-1439-4ef4-8009-fbac2e221cad",
+      "id": "37736acf-8a41-4cad-a789-e1848fc94908",
       "type": "question",
       "value": {
         "latex": "En déduire que la méthode est convergente.",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "id": "579c314b-dec8-4b10-9502-bc612ecf156a",
+      "id": "78925c6f-c6a9-429a-8f3f-7db3dbf9c5f7",
       "type": "reponse",
       "value": {
         "latex": "La consistance ayant déjà établie dans le cas général, cela prouve que la méthode est convergente.",

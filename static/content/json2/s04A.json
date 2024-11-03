@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T11:26:40.875Z",
+    "createdAt": "2024-11-03T14:08:55.315Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:40.875Z"
+    "updatedAt": "2024-11-03T14:08:55.315Z"
   },
   "contenu": [
     {
-      "id": "c82eff48-3a5b-4c40-8280-b7994619c9bb",
+      "id": "7dbc4303-55b3-4d32-bd8b-03b3a31b0c79",
       "type": "description",
       "value": {
         "latex": "Pour un vol aérien, il arrive fréquemment que le nombre de réservations soit supérieur au nombre passagers présents dans l'avion. Pour compenser ce phénomène, une compagnie aérienne exploitant un avion de 300 places décide de faire de la surréservation (surbooking) en prenant pour chaque vol un nombre $n>300$ de réservations. Si le nombre de passagers présents est supérieur à $300$, les $300$ premiers embarquent et les autres sont dédommagés. On considère que les passagers sont indépendants et que la probabilité de désistement de chaque passager est de $10\\%$. La directrice commerciale de la compagnie aimerait connaître la valeur maximale du nombre $n$ de réservations acceptées telle que la probabilité que les personnes souhaitant embarquer soient en surnombre soit inférieure à $1\\%$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "fc1ea815-759c-4609-8630-79422c49f45c",
+      "id": "73c55c0e-6960-408c-8c40-9814426369fd",
       "type": "question",
       "value": {
         "latex": "Proposer une solution approchée à ce problème.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "dcb1e6d7-da21-40e4-9453-242b70b60b62",
+      "id": "2ea2911a-6298-40cf-a795-87815831305a",
       "type": "reponse",
       "value": {
         "latex": "Soit $n$ le nombre de réservations et soit $X$ le nombre de personnes à se présenter. Alors $X\\sim \\mathcal{B}(n,0.9)$.\n\tOn souhaite déterminer la valeur maximale de $n$ pour laquelle $\\mathbb{P}(X>300)\\leq 0.01$. \\\\\n\tComme $n$ est grand, on peut approcher la loi de $X$ par la loi Normale $\\mathcal{N}(0.9n,\\sigma^2=\\frac{9}{100}n)$ par le théorème de Moivre-Laplace, ce qui donne:\n\t$$\\begin{align*}\n\t\\mathbb{P}(X>300)\\leq 0.01 \\quad\n\t& \\Leftrightarrow \\quad 1- \\mathbb{P}(X\\leq 300)\\leq 0.01 \\\\\n\t& \\Leftrightarrow \\quad \\mathbb{P}(X\\leq 300) \\geq 0.99 \\\\\n\t& \\Leftrightarrow \\quad \\mathbb{P}\\left( \\frac{X-0.9n}{\\frac{3}{10}\\sqrt{n}} \\leq \\frac{300-0.9n}{\\frac{3}{10}\\sqrt{n}} \\right) \\geq 0.99 \\\\\n\t& \\Leftrightarrow \\quad \\mathbb{P}\\left (Z \\leq \\frac{300-0.9n}{\\frac{3}{10}\\sqrt{n}}\\right) \\geq 0.99 \\quad \\text{où } Z\\sim \\mathcal{N}(0,1) \\\\\n\t& \\Leftrightarrow \\quad  \\frac{300-0.9n}{\\frac{3}{10}\\sqrt{n}}\\geq 2.33 \\quad \\text{ par lecture du tableau de loi.}\n\t\\end{align*}$$\n\tOn résout donc l'équation $300-\\frac{9}{10}n=2.33\\times \\frac{3}{10}\\sqrt{n}$, c'est-à-dire en posant $x^2=n$:\n\t\\[ 9x^2+7x-3000=0.\\]\n\tLe discriminant associé est $\\Delta=7^2-4\\times 9\\times (-3000)=108049$ donc $\\sqrt{\\Delta}\\simeq 328.71$ et les racines de cette équation sont les réels\n\t\\[ x_1=\\frac{-7-328.71}{2\\times 9}<0 \\quad \\text{et} \\quad x_2=\\frac{-7+328.71}{2\\times 9}=17.87\\]\n\tdonc $n=x_2^2 \\simeq 319.43$. On conclut qu'il ne faut pas dépasser $319$ passagers pour avoir un surbooking dans moins de $1$\\% des cas.",

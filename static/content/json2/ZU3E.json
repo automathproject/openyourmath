@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-02T11:26:25.007Z",
+    "createdAt": "2024-11-03T14:08:32.645Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-02T11:26:25.007Z"
+    "updatedAt": "2024-11-03T14:08:32.645Z"
   },
   "contenu": [
     {
-      "id": "08970729-2d17-4d69-9fd7-861e2368bc63",
+      "id": "a218a798-3dbb-4ddf-a2ba-ba13a1bc90f8",
       "type": "description",
       "value": {
         "latex": "Soit $X$ le nombre d'avions arrivant en une heure sur un aéroport. On suppose que $X$ suit une loi de Poisson de paramètre $\\lambda = 16$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "295a4bda-05b9-43a6-83cb-14baa0936196",
+      "id": "6067b546-2da2-4a33-bdbe-9028ce7b1e80",
       "type": "question",
       "value": {
         "latex": "\\'A l'aide de l'inégalité de Bienaymé-Tchebychev, donner une minoration de la probabilité $\\prob(10 < X < 22)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d47d5c88-c49d-47e6-8ec9-37f6627dc089",
+      "id": "e9102c87-6778-4f6f-8d89-89ea90dfb313",
       "type": "reponse",
       "value": {
         "latex": "D'après l'inégalité de Bienaymé-Tchebychev, on a : \n            $$\\prob(|X-\\E(X)|\\geq 6 ) \\leq  \\frac{\\V(X)}{6^2}$$\n            ce qui donne : \n            $$\\prob(10\\leq X\\leq 22) = \\prob(|X-16|\\geq 6 ) \\leq  \\frac{\\V(X)}{6^2} = \\frac{16}{36}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0d1de375-b5a2-4a49-83f1-c27562be9504",
+      "id": "92bbc6cc-dc1e-4c78-a8d6-5dbeb700f386",
       "type": "question",
       "value": {
         "latex": "\\'A l'aide d'une table de la fonction de répartition de la loi de Poisson $\\mathcal{P}(16)$ donnée ci-dessous, donner une valeur approchée de la probabilité $\\prob(10 < X < 22)$. \n        \n        \\begin{center}\n            \\begin{tabular}{|c|c|c|c|c|c|c|c|}\n                \\hline\n                $k$ & 9 & 10 & 11 & $\\ldots$ & 21 & 22 & 23 \\\\\n                \\hline\n                $\\prob(X\\leq k)$ & $0.043$ & $0.077$ & $0.127$ & $\\ldots$ & $0.911$ & $0.942$ & $0.963$ \\\\ \n                \\hline\n            \\end{tabular}\n        \\end{center}",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "677edda9-29eb-4162-a220-7215b5854f7e",
+      "id": "b6154d6f-8041-4919-8605-8db06f16bb8a",
       "type": "reponse",
       "value": {
         "latex": "On a $\\prob(10 < X < 22) = \\prob(10 < X \\leq 21) = \\prob(X\\leq 21) - \\prob(X\\leq 10) = 0.911 - 0.077 = 0.834$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "d071e381-8d7d-4958-aec3-04712122f59d",
+      "id": "332c8d17-822a-432e-9adb-e68e45618653",
       "type": "question",
       "value": {
         "latex": "On admet que $X$ peut s'écrire comme la somme de $n$ variables aléatoires indépendantes suivant une loi de Poisson $\\mathcal{P}(1)$. Donner une autre approximation de la probabilité $\\prob(10 < X < 22)$ en utilisant une loi normale.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "85be5ad3-5187-4702-9015-4eb1313f8a6e",
+      "id": "7bd5a139-c4d9-4abb-93f2-7fc2d57c1725",
       "type": "reponse",
       "value": {
         "latex": "On a $\\E(X) = 16$ et $\\V(X) = 16$. D'après le théorème central limite, la variable aléatoire $Z = \\frac{X-16}{4}$ suit approximativement une loi normale centrée réduite. On a donc : \n            $$\\prob(10 < X < 22) = \\prob\\left(\\frac{10-16}{4} < Z < \\frac{22-16}{4}\\right) = \\prob(-1.5 < Z < 1.5)$$\n            Par lecture de la table de la loi normale centrée réduite, on trouve $\\prob(-1.5 < Z < 1.5) = 2 \\times \\Phi(1.5) - 1 = 2 \\times 0.9332 - 1 \\approx 0.8664$.",
