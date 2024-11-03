@@ -15,6 +15,8 @@ npm run dev -- --open
 Les exercices en LaTeX sont issus de : 
 https://github.com/smaxx73/Exercices
 
+Ils sont formatés de manière à être utilisés automatiquement par l'application.
+
 To do :
 - [x] Un bouton pour afficher / masquer les solutions
 - [x] Gérer une liste d'exercices
