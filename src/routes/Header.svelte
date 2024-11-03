@@ -12,7 +12,15 @@
 			</a>
 		</div>
 
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<button 
+			class="navbar-toggler" 
+			type="button" 
+			data-bs-toggle="collapse" 
+			data-bs-target="#navbarNav" 
+			aria-controls="navbarNav" 
+			aria-expanded="false" 
+			aria-label="Toggle navigation"
+		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -83,10 +91,18 @@
 </header>
 
 <style>
+	/* Utilisation des mêmes variables CSS que dans le layout principal */
+	:global(:root) {
+		--header-height: 3.5rem;
+		--header-height-mobile: 3rem;
+	}
+
 	header {
+		height: var(--header-height);
+		min-height: var(--header-height);
 		backdrop-filter: blur(8px);
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-		min-height: 3.5rem; /* Hauteur minimale fixe */
+		z-index: 1000;
 	}
 
 	.logo-img {
@@ -136,16 +152,15 @@
 		background-color: #2b6cb0;
 	}
 
-	/* Ajustez le padding-top en fonction de la hauteur du header */
-	:global(body) {
-		padding-top: 3.5rem; /* Même valeur que min-height du header */
-	}
-
 	@media (max-width: 992px) {
-		/* Style pour le menu mobile */
+		header {
+			height: var(--header-height-mobile);
+			min-height: var(--header-height-mobile);
+		}
+
 		.navbar-collapse {
 			position: absolute;
-			top: 100%;
+			top: var(--header-height-mobile);
 			left: 0;
 			right: 0;
 			background: white;
@@ -164,17 +179,6 @@
 			top: 0;
 		}
 
-		/* Réduire la hauteur du header sur mobile */
-		header {
-			min-height: 3rem;
-		}
-
-		/* Ajuster le padding-top du body en conséquence */
-		:global(body) {
-			padding-top: 3rem;
-		}
-
-		/* Ajuster l'espacement des liens de navigation */
 		.nav-link {
 			padding: 0.5rem 1rem;
 		}
