@@ -78,8 +78,7 @@ function preprocessLatex(latex) {
   }
   
   // Pour debug
-  console.log('Before:', latex);
-  console.log('After:', processed);
+
   
   return processed;
 }
