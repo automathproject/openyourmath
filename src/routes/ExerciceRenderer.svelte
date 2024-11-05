@@ -231,30 +231,53 @@
   }
 
   .exercice-wrapper.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
-    z-index: 1000;
-    overflow-y: auto;
-    padding: 2rem;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Fond avec flou */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  overflow-y: auto;
+  /* Padding adaptatif */
+  padding: clamp(1rem, 5vw, 3rem);
+  /* Transition douce */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .exercice {
-    padding: 1.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    background: white;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.exercice {
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.exercice.fullscreen {
+  max-width: min(900px, 90vw);
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 16px;
+}
+
+/* Ajout des styles pour petit écran */
+@media screen and (max-width: 640px) {
   .exercice.fullscreen {
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
+
+  .exercice-wrapper.fullscreen {
+    padding: 0;
+  }
+}
 
   /* Header et sections */
   .header {
