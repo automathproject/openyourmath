@@ -10,7 +10,11 @@
   let processedContenu = [];
   let showReponses = false;
   let isFullscreen = false;
+let showMetadata = true;
 
+function toggleMetadata() {
+  showMetadata = !showMetadata;
+}
   function toggleReponses() {
     showReponses = !showReponses;
   }
@@ -74,27 +78,46 @@
           easing: quadOut,
         }}
       >
-        <div class="header">
-          <div class="left-section">
+      <div class="header">
+        <div class="left-section">
+          <div class="titre-container">
             <div class="titre">
               <MathRenderer content={ExerciceData.titre} />
             </div>
-            <!-- Structure des metadata -->
-            <div class="metadata">
+            <!-- Bouton déplacé ici -->
+            <button 
+              class="metadata-toggle"
+              on:click={toggleMetadata}
+              title={showMetadata ? "Masquer les métadonnées" : "Afficher les métadonnées"}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class:rotated={!showMetadata}
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+      
+          {#if showMetadata}
+            <div class="metadata" transition:slide={{ duration: 300, easing: quadOut }}>
               <div class="tags">
                 {#each ExerciceData.theme as theme}
                   <span class="tag">{theme}</span>
                 {/each}
               </div>
-
+      
               <div class="metadata-group">
-                <span class="metadata-item">{ExerciceData.metadata.auteur}</span
-                >
+                <span class="metadata-item">{ExerciceData.metadata.auteur}</span>
                 {#if ExerciceData.metadata.organisation}
                   <span class="metadata-separator">•</span>
-                  <span class="metadata-item"
-                    >{ExerciceData.metadata.organisation}</span
-                  >
+                  <span class="metadata-item">{ExerciceData.metadata.organisation}</span>
                 {/if}
                 <span class="metadata-separator">•</span>
                 <div class="date">
@@ -102,6 +125,7 @@
                 </div>
               </div>
             </div>
+          {/if} 
           </div>
 
           <div class="right-section">
@@ -300,37 +324,94 @@
   }
 
   /* Titre */
-  .titre {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-  }
+  .titre-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.titre {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
 
   /* Metadata */
   .metadata {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-top: 0.75rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e2e8f0;
 }
 
+.metadata-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-top: 0.25rem; /* Alignement vertical avec le titre */
+}
+
+.metadata-toggle:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.metadata-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.metadata-toggle svg.rotated {
+  transform: rotate(-180deg);
+}
+
+/* Groupe de metadata */
 .metadata-group {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-.metadata-item {
-  font-size: 1.2rem;
-  color: #4a5568;
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
-  .metadata-separator {
-    color: #9ca3af;
+.metadata-item {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.metadata-separator {
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+  .metadata {
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
   }
+  
+  .tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .metadata-group {
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+}
 
   .theme,
   .auteur,
