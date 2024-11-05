@@ -97,38 +97,23 @@
         }, 0);
     }
 
-    function initializeData(exercises: Exercice[]) {
-        // Initialiser le moteur de recherche
-        searchEngine = new ExerciceSearchEngine();
-        searchEngine.initialize(exercises);
-        
-        // Réinitialiser les tags
-        allTags.clear();
-        
-        // Initialiser les tags
-        exercises.forEach(exercise => {
-            const themes = normalizeThemes(exercise.theme);
-            themes.forEach(theme => {
-                allTags.set(theme, (allTags.get(theme) || 0) + 1);
-            });
-        });
-        
-        // Forcer la mise à jour de la Map
-        allTags = new Map(allTags);
-        
-        // Mettre à jour les résultats
-        updateResults();
-    }
-
-    // Réagir aux changements de données
-    $: if (data?.exercises) {
-        initializeData(data.exercises);
-    }
-
-    // Garder onMount pour l'initialisation initiale
     onMount(() => {
         if (data?.exercises) {
-            initializeData(data.exercises);
+            // Initialiser le moteur de recherche
+            searchEngine = new ExerciceSearchEngine();
+            searchEngine.initialize(data.exercises);
+            
+            // Initialiser les tags
+            data.exercises.forEach(exercise => {
+                const themes = normalizeThemes(exercise.theme);
+                themes.forEach(theme => {
+                    allTags.set(theme, (allTags.get(theme) || 0) + 1);
+                });
+            });
+            allTags = new Map(allTags);
+            
+            // Initialiser les résultats et les compteurs
+            updateResults();
         }
     });
 
