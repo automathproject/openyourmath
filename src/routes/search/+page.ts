@@ -1,21 +1,22 @@
 // src/routes/+page.ts
 import type { PageLoad } from './$types';
 import type { Exercice } from '$lib/types/types';
-import { browser } from '$app/environment';
 
-export const load: PageLoad = async () => {
+export const load: PageLoad = async ({ fetch }) => {
     try {
-        // Utiliser l'URL complète en production
-        const baseUrl = browser ? window.location.origin : 'https://openyourmath.org';
-        const response = await fetch(`${baseUrl}/data/exercises.json`);
+        const response = await fetch('/data/exercises.json', {
+            headers: {
+                'Cache-Control': 'no-cache'
+            }
+        });
         
         if (!response.ok) {
+            console.error('Failed to load exercises:', response.status, response.statusText);
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
         
-        // Log pour debug
-        console.log('Loaded exercises:', data.exercises?.length);
+        const data = await response.json();
+        console.log('Successfully loaded exercises:', data.exercises?.length);
         
         return {
             exercises: data.exercises as Exercice[]
