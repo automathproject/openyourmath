@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-03T14:07:57.313Z",
+    "createdAt": "2024-11-05T19:09:34.989Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:07:57.313Z"
+    "updatedAt": "2024-11-05T19:09:34.989Z"
   },
   "contenu": [
     {
-      "id": "58f596a0-52b3-42aa-b9a9-1a122fa87954",
+      "id": "27aef0f5-d2e4-4c27-9a11-91a4a59dab5e",
       "type": "description",
       "value": {
         "latex": "On effectue un contrôle sur des pièces de un euro dont une proportion $p=0.05$ est fausse et sur des pièces de deux euros dont une proportion $p'=0.02$ est fausse. On considère un lot de $500$ pièces dont $150$ pièces de un euro et $350$ pièces de deux euros.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8d8984a2-8331-457f-a298-f9c498545c96",
+      "id": "1fc738dd-ed37-46f7-8658-4d5e8bc24741",
       "type": "question",
       "value": {
         "latex": "On prend une pièce au hasard dans ce lot: quelle est la probabilité qu'elle soit fausse ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "53aad6a1-7f27-417a-8d3e-2d240f5e3734",
+      "id": "b2953f5c-1985-470c-933a-361bd150ce0e",
       "type": "reponse",
       "value": {
         "latex": "On peut utiliser un arbre de probabilité pour modéliser la situation. En notant $F$ l'événement ``obtenir une pièce fausse'' et $A$ (resp. $B$) l'événement ``obtenir une pièce de un euro (resp. deux euros)'', on a\n\t\t\\[\\prob(F)=\\prob(F\\cap A)+\\prob(F\\cap B)=\\prob(A)\\prob(F|A)+\\prob(B)\\prob(F|B)=\\frac{150}{500}\\times 0.05+\\frac{350}{500}\\times 0.02=0.029.\\]\n\t\tOn a environ $2.9$\\% d'avoir une pièce fausse.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "76bbbbce-0492-4b7c-983d-e1177a986822",
+      "id": "f3d4d32a-0e59-484c-80fd-b90bcb3817c7",
       "type": "question",
       "value": {
         "latex": "Sachant que cette pièce est fausse, quelle est la probabilité qu'elle soit de un euro ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "bf8d487f-58ee-4f87-8a2f-a4c2a84abf30",
+      "id": "1e91ab21-cc04-46cb-b26b-e5a6d5586253",
       "type": "reponse",
       "value": {
         "latex": "On calcule :\n\t\t\\[ \\prob(A|F)=\\frac{\\prob(A\\cap F)}{\\prob(F)}=\\frac{\\prob(A)\\prob(F|A)}{\\prob(F)}=\\frac{\\frac{150}{500}\\times 0.05}{0.029}=0.5172.\\]",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "dabcf2e9-a99c-405c-bcaf-db7d6aed9bba",
+      "id": "ad515abf-23e5-4b49-ab21-bae3d9d1c4c0",
       "type": "question",
       "value": {
         "latex": "On contrôle à présent un lot de $\\nombre{1000}$ pièces de un euro. Soit $X$ la variable aléatoire égale au nombre de pièces fausses parmi les $\\nombre{1000}$. \\\\\n\tQuelle est la loi de $X$ ? Quelle est son espérance ? Son écart-type ? \\\\\n\tEn approchant cette loi par celle d'une loi normale adaptée, donner une approximation de la probabilité pour que $X$ soit compris entre $48$ et $52$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "2c978e2c-f70a-4a3f-8fb9-3e3b5e997ae4",
+      "id": "2e64af97-600f-4fd6-87e9-d40051903688",
       "type": "reponse",
       "value": {
         "latex": "On a: $X\\sim \\mathcal{B}(\\nombre{1000},0.05)$, $\\E(X)=\\nombre{1000}\\times 0.05=50$ et $\\sigma^2(X)=\\nombre{1000}\\times 0.05\\times 0.95=47.5$. \\\\\n\t\tLa \\va $X$ peut être approchée (avec correction de continuité) par la \\va $Y$ de loi $\\mathcal{N}(50,\\sigma^2=47.5)$. Ainsi, on a\n\t\t$$\\begin{align*}\n\t\t\\prob(48\\leq X\\leq 52)\n\t\t&= \\prob(47.5\\leq X\\leq 52.5) \\\\\n\t\t&\\simeq \\prob(47.5\\leq Y\\leq 52.5) \\\\\n\t\t& \\simeq \\prob(-0.36 \\leq Z \\leq 0.36) \\quad \\text{ avec } Z=\\frac{Y-50}{\\sqrt{47.5}} \\sim \\mathcal{N}(0,1) \\\\\n\t\t&\\simeq 2\\prob(Z\\leq 0.36)-1 \\\\\n\t\t& \\simeq 2\\times 0.6406 - 1\\\\\n\t\t1\\simeq 0.2812\n\t\t\\end{align*}$$",

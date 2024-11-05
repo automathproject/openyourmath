@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:16.305Z",
+    "createdAt": "2024-11-05T19:09:53.786Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:16.305Z"
+    "updatedAt": "2024-11-05T19:09:53.786Z"
   },
   "contenu": [
     {
-      "id": "f61b7108-0439-4a24-8a12-7e2dc9a0bd5e",
+      "id": "9b7c172a-328f-4fd2-83a2-24da081e1eb4",
       "type": "description",
       "value": {
         "latex": "Soit $k \\in \\R$ et $f$ la fonction définie sur $\\R$ pour tout $x \\in \\R$ par :\n    $$ f(x) = \\begin{cases}\n        kx(1-x) & \\text{ si } x \\in [0,1] \\\\\n        0 & \\text{ sinon }\n    \\end{cases} $$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "d2398808-bd35-4d7b-98cd-f20e125d209c",
+      "id": "c09bb95e-fba9-4341-88a9-6132f5c403ab",
       "type": "question",
       "value": {
         "latex": "Déterminer la valeur de $k$ pour que $f$ soit une densité de probabilité.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "6dfa7d40-71a4-4068-97b3-7dc49a032fb1",
+      "id": "568e6f9b-42c0-4f22-ad28-128012d7dfee",
       "type": "reponse",
       "value": {
         "latex": "On a :\n        $$\\begin{align*}\n            \\int_{-\\infty}^{+\\infty} f(x) dx &= \\int_{-\\infty}^0 f(x) dx + \\int_0^1 f(x) dx + \\int_1^{+\\infty} f(x) dx \\\\\n            &= 0 + \\int_0^1 kx(1-x) dx + 0 \\\\\n            &= k \\int_0^1 (x - x^2) dx \\\\\n            &= k \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_0^1 \\\\\n            &= k \\left( \\frac{1}{2} - \\frac{1}{3} \\right) \\\\\n            &= \\frac{k}{6}.\n        \\end{align*}$$\n        On a donc $k = 6$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "d6bf78bc-ffb8-4940-94e8-40b2156d9a03",
+      "id": "2842608a-8b81-4216-b360-f1ff3c6f847e",
       "type": "question",
       "value": {
         "latex": "Soit $X$ une variable aléatoire réelle de densité $f$. Déterminer la fonction de répartition $F$ de $X$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "d16f7cf2-7662-4765-a7c3-b20dbaa3eb11",
+      "id": "72ddc788-0ca6-41eb-9690-9aabd0c06428",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\leq 0$, on a : $\\prob(X \\leq t) = 0$. Si $t \\geq 1$, on a : $\\prob(X \\leq t) = 1$. Si $t \\in ]0,1[$, on a : \n        $$\\begin{align*}\n            \\prob(X \\leq t) &= \\int_{-\\infty}^t f(x) dx \\\\\n            &= \\int_0^t 6x(1-x) dx \\\\\n            &= 6 \\int_0^t (x - x^2) dx \\\\\n            &= 6 \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_0^t \\\\\n            &= 6 \\left( \\frac{t^2}{2} - \\frac{t^3}{3} \\right) \\\\\n            &= 6 \\left( \\frac{3t^2 - 2t^3}{6} \\right) \\\\\n            &= 3t^2 - 2t^3.\n        \\end{align*}$$\n        On a donc $F(t) = \\begin{cases}\n            0 & \\text{ si } t \\leq 0 \\\\\n            3t^2 - 2t^3 & \\text{ si } t \\in ]0,1[ \\\\\n            1 & \\text{ si } t \\geq 1.\n        \\end{cases}$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "c33beec3-252f-44f4-8e33-4009f92303cf",
+      "id": "c89da964-a1b4-46d7-b070-08ba9068ffd0",
       "type": "question",
       "value": {
         "latex": "Déterminer la probabilité que $X$ prenne une valeur dans l'intervalle $[0{,}5\\,;\\,1]$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a978125a-b2b8-4668-ba9e-8be4f3146473",
+      "id": "a1c881e6-c756-44c8-abf4-0b73fe7ea711",
       "type": "reponse",
       "value": {
         "latex": "On a :\n        $$\\begin{align*}\n            \\prob(0{,}5 \\leq X \\leq 1) &= \\prob(X \\leq 1) - \\prob(X \\leq 0{,}5) \\\\\n            &= F(1) - F(0{,}5) \\\\\n            &= 1 - (3 \\times 0{,}5^2 - 2 \\times 0{,}5^3) \\\\\n            &= 1 - (3 \\times 0{,}25 - 2 \\times 0{,}125) \\\\\n            &= 1 - (0{,}75 - 0{,}25) \\\\\n            &= 1 - 0{,}5 \\\\\n            &= 0{,}5.\n        \\end{align*}$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "621104d2-c108-45b5-9f1b-a6d81819a603",
+      "id": "dd6268a2-6257-46d5-ab10-840e609a7d27",
       "type": "question",
       "value": {
         "latex": "Déterminer l'espérance et la variance de $X$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "86d68880-c28e-424c-8e79-29bb0370260f",
+      "id": "57566bb2-65cb-423b-afdb-6bb4fb93a5fd",
       "type": "reponse",
       "value": {
         "latex": "On a : \n        $$\\begin{align*}\n            \\E(X) &= \\int_{-\\infty}^{+\\infty} x f(x) dx \\\\\n            &= \\int_0^1 6x^2(1-x) dx \\\\\n            &= 6 \\int_0^1 (x^2 - x^3) dx \\\\\n            &= 6 \\left[ \\frac{x^3}{3} - \\frac{x^4}{4} \\right]_0^1 \\\\\n            &= 6 \\left( \\frac{1}{3} - \\frac{1}{4} \\right) \\\\\n            &= 6 \\times \\frac{1}{12} \\\\\n            &= \\frac{1}{2}.\n        \\end{align*}$$\n        On a aussi d'après le théorème de transfert : \n        $$\\begin{align*}\n            \\E(X^2) &= \\int_{-\\infty}^{+\\infty} x^2 f(x) dx \\\\\n            &= \\int_0^1 6x^3(1-x) dx \\\\\n            &= 6 \\int_0^1 (x^3 - x^4) dx \\\\\n            &= 6 \\left[ \\frac{x^4}{4} - \\frac{x^5}{5} \\right]_0^1 \\\\\n            &= 6 \\left( \\frac{1}{4} - \\frac{1}{5} \\right) \\\\\n            &= 6 \\times \\frac{1}{20} \\\\\n            &= \\frac{3}{10}.\n        \\end{align*}$$\n        On a donc $\\V(X) = \\E(X^2) - \\E(X)^2 = \\frac{3}{10} - \\frac{1}{4} = \\frac{1}{20}$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "0a786816-c9c4-40b6-b3e2-a21f74b4e7c3",
+      "id": "19ec3aee-51ff-44b1-a748-8b95a94b9cbb",
       "type": "question",
       "value": {
         "latex": "Soit la variable aléatoire $Y = X^2$. En distinguant éventuellement selon les valeurs de $t \\in \\R$, déterminer $a(t)$ et $b(t)$ de telle sorte que $\\{Y \\leq t\\} = \\left\\{a(t) \\leq X \\leq b(t)\\right\\}$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "86a669c5-2c00-48b4-8952-92379c1376f6",
+      "id": "bb11c012-dc00-4395-875a-1a78f67846dc",
       "type": "reponse",
       "value": {
         "latex": "Si $t < 0$, on a $\\{Y \\leq t\\} = \\emptyset$. Si $t \\geq 0$, on a $\\{Y \\leq t\\} = \\{X \\in [-\\sqrt{t},\\sqrt{t}]\\}$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "1a308fce-77b2-469b-8a36-14f5d5686af5",
+      "id": "f415eaa5-31db-44fd-8c4f-22c0d6ebc152",
       "type": "question",
       "value": {
         "latex": "En déduire une expression de la fonction de répartition de $Y$ puis une densité de probabilité de $Y$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "c8bd4842-4a3b-444d-bae7-d4616df329b5",
+      "id": "246e4a21-c273-407b-9341-d85a1c59f68d",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t < 0$, on a $F_Y(t) = 0$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            F_Y(t) &= \\prob(Y \\leq t) \\\\\n            &= \\prob(X \\in [-\\sqrt{t},\\sqrt{t}]) \\\\\n            &= F(\\sqrt{t}) - F(-\\sqrt{t}) \\\\\n            &= F(\\sqrt{t}) - 0 \\\\\n            &= \\begin{cases}\n                3t - 2t^{3/2} & \\text{ si } t \\in [0,1] \\\\\n                1 & \\text{ si } t \\geq 1.\n            \\end{cases}\n        \\end{align*}$$\n        On a donc par dérivation $f_Y(x) = \\begin{cases}\n            3 - 3 \\sqrt{x} & \\text{ si } x \\in [0,1] \\\\\n            0 & \\text{ sinon }\n        \\end{cases}$.",

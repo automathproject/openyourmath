@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:40.013Z",
+    "createdAt": "2024-11-05T19:10:19.234Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:40.013Z"
+    "updatedAt": "2024-11-05T19:10:19.234Z"
   },
   "contenu": [
     {
-      "id": "4e17afc1-dd68-4a4a-a1db-a83542bf6ba5",
+      "id": "e619882b-1066-4aa1-a273-9829280a4a68",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire réelle suivant une loi exponentielle de paramètre $\\lambda >0$. On définit $Y= \\lfloor X \\rfloor$ la partie entière de $X$. On pose $Z=X-\\lfloor X \\rfloor$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "7e75ac00-a42f-450f-9274-66c0cd1a230f",
+      "id": "dd0aa855-e728-460f-a947-a3c80ceadec3",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de probabilité de $Y$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "40674777-bd2e-4595-985b-7dbecfb2016f",
+      "id": "ace0d163-7edd-4399-bd93-1b1ba9121869",
       "type": "reponse",
       "value": {
         "latex": "On peut remarquer que $Y(\\Omega)=\\N$. Pour tout $n\\in \\N$, comme $X\\sim \\mathcal{E}(\\lambda)$, \n\t\t\\[\\p(Y=n)=\\p(n\\leq X<n+1)=\\int_n^{n+1} \\lambda e^{-\\lambda x} \\dx\n\t\t=\\left[ -e^{-\\lambda x} \\right]_n^{n+1}\n\t\t=e^{-\\lambda n}(1-e^{-\\lambda}), \\]\n\t\tce qui détermine entièrement la loi de $Y$ : $Y+1$ suit une loi géométrique de paramètre $(1-e^{-\\lambda})$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0e941734-8249-4093-87e8-9c59b89be101",
+      "id": "d8630ff2-1663-4cec-830c-d9d1e926c26a",
       "type": "question",
       "value": {
         "latex": "Calculer $\\PP(n \\leq X < n+t)$ pour tout $n \\in \\N $ et $t \\in ]0;1[$. En déduire la fonction de répartition de $Z$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "382304fa-db4a-4a4c-be0f-9bcf1489276d",
+      "id": "088916ca-25e4-45f8-aa32-fd37589ffa10",
       "type": "reponse",
       "value": {
         "latex": "\\[ \\p(n\\leq X\\leq n+t)=\\int_n^{n+t} \\lambda e^{-\\lambda x} \\dx\n\t\t=\\left[ -e^{-\\lambda x} \\right]_n^{n+t}\n\t\t=e^{-\\lambda n}-e^{-\\lambda (n+t)}.\\]\n\t\tOn a $\\{Z\\in[0;t[\\}=\\cup_{n\\in\\N} \\{n\\leq X\\leq n+t]$, la réunion étant disjointe. Ainsi, pour $t\\in[0;1[$,\n\t\t\\[ \\p(0\\leq Z\\leq t)\n\t\t=\\sum_{n\\in\\N} \\p(n\\leq X\\leq n+t)\n\t\t=\\sum_{n\\in\\N} e^{-\\lambda n} (1-e^{-\\lambda t})\n\t\t=\\frac{1-e^{-\\lambda t}}{1-e^{-\\lambda}}.\n\t\t\\]\n\t\tComme $Z$ est à valeurs dans $[0;1[$, on a\n\t\t$\n\t\tF_Z(t)=\n\t\t\\begin{cases}\n\t\t\t0 \\ \\text{ si } t<0 \\\\\n\t\t\t\\frac{1-e^{-\\lambda t}}{1-e^{-\\lambda}} \\ \\text{ si } 0\\leq t < 1 \\\\\n\t\t\t1 \\ \\text{ si } t \\geq 1\n\t\t\\end{cases}\n\t\t$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "88a3872f-192f-44ae-9ecb-ead00fcff1c8",
+      "id": "ee925190-764e-46f8-b78a-d5e6d1c5ed2b",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance de $Y$ et de $Z$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "ba5609a9-4e39-4f64-9d88-4f7b938606bd",
+      "id": "aa3fb0a3-998a-4275-a596-0652b444ef35",
       "type": "reponse",
       "value": {
         "latex": "Pour la \\va $Y$, on a\n\t\t\\[ \\E(Y)=\\sum_{n=0}^{+\\infty} n \\p(Y=n)\n\t\t=\\sum_{n=0}^{+\\infty} n(e^{-\\lambda n}-e^{-\\lambda (n+1)})\n\t\t= (1-e^{-\\lambda}) \\sum_{n=0}^{+\\infty} ne^{-\\lambda n}.\n\t\t\\]\n\t\tOn utilise la formule \n\t\t\\[ \\sum_{n=0}^{+\\infty} n t^n\n\t\t= t \\sum_{n=0}^{+\\infty} nt^{n-1}\n\t\t=t \\left[ \\sum_{n=0}^{+\\infty} t^n\\right]'\n\t\t=t\\left[\\frac{1}{1-t}\\right]'\n\t\t=\\frac{t}{(1-t)^2}.\n\t\t\\]\n\t\tIl vient\n\t\t\\[ \\E(Y)=(1-e^{-\\lambda})\\frac{e^{-\\lambda}}{(1-e^{-\\lambda})^2}\n\t\t=\\frac{1}{e^\\lambda -1}.\n\t\t\\]\n\t\tCe résultat était prévisible puisque $Y+1$ suit une loi géométrique $\\mathcal{G}(1-e^{-\\lambda})$, donc il est acquis que $\\mathbb{E}(Y+1) = \\frac{1}{1-e^{-\\lambda}}$, d'où par linéarité $\\mathbb{E}(Y) = \\frac{1}{1-e^{-\\lambda}}-1 = \\frac{e^{-\\lambda}}{1-e^{-\\lambda}} $.\n\t\t\\vspace{0.5em}\n\t\t\n\t\tPour la \\va $Z$, on procède par linéarité : \n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\ton sait que $\\E(X)=\\frac{1}{\\lambda}$ donc $\\E(Z) = \\frac{1}{\\lambda}  -  \\frac{e^{-\\lambda}}{1-e^{-\\lambda}} = \\frac{1}{\\lambda}  -  \\frac{1}{e^{\\lambda}-1}$. \n\t\t\n\t\tPar ailleurs, comme $\\lambda<e^\\lambda-1$ pour $\\lambda >0$, on a $\\frac{1}{\\lambda}>\\frac{1}{e^\\lambda -1}$ et donc $\\E(Z)>0$, ce qui est cohérent car $Z$ est à valeurs dans $[0;1]$.",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-03T14:08:02.497Z",
+    "createdAt": "2024-11-05T19:09:39.916Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:02.497Z"
+    "updatedAt": "2024-11-05T19:09:39.916Z"
   },
   "contenu": [
     {
-      "id": "f32c1345-c6d5-4e9c-bb07-82a4daed6552",
+      "id": "1a43ff8a-bf27-4c43-9023-04db7bfc1d3b",
       "type": "question",
       "value": {
         "latex": "Déterminer un nombre réel $k$ tel que $f(x,y) = k \\cdot \\mathbf{1}_T(x,y)$ définisse sur $\\R^2$ la densité du couple $(X,Y)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "0e57e74a-f379-4b92-a099-b216d4e9395a",
+      "id": "71986550-67f9-4e4d-86ca-db0ddb2de952",
       "type": "reponse",
       "value": {
         "latex": "On a $(x,y) \\in T$ si et seulement si $x \\in [0,1]$, $y \\in [0,1]$ et $y \\leq 1-x$. Donc d'après le théorème de Fubini : \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\int_{\\R^2} f(x,y) dx dy &= \\int_0^1 \\int_0^{1-x} k \\,dy dx \\\\\n\t\t\t\t&= \\int_0^1 k(1-x) dx \\\\\n\t\t\t\t&= k \\left[ x - \\frac{x^2}{2} \\right]_0^1 \\\\\n\t\t\t\t&= k \\times \\frac{1}{2}\n\t\t\t\\end{align*}$$\n\t\t\tPour que $f$ soit une densité, il faut que $\\int_{\\R^2} f(x,y) dx dy = 1$ et $f(x,y) \\geq 0$ pour tout $(x,y) \\in \\R^2$. Donc $k = 2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a0426aae-7296-42d2-81de-be901aeb2c50",
+      "id": "9019a0a9-57c8-40f5-84c0-1ed64534349b",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "29b01a88-7e2e-48bc-8574-56e35d4a5de2",
+      "id": "b544e894-30f0-41a7-9008-bd63a1d68438",
       "type": "reponse",
       "value": {
         "latex": "Si $(x,y) \\notin T$, alors $f(x,y) = 0$. Donc pour tout $x \\notin [0,1]$, $f_X(x) = 0$. De même pour tout $y \\notin [0,1]$, $f_Y(y) = 0$. \n\n\t\t\tSi $x \\in [0,1]$, alors $f_X(x) = \\int_{-\\infty}^{+\\infty}f(x,y)dy = 2 \\int_0^{1-x} dy = 2(1-x)$. De même pour tout $y \\in [0,1]$, $f_Y(y) = 2(1-y)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "1a1d2b8e-c3e2-4add-8786-ec08a7f604fb",
+      "id": "3d328ca0-171a-422c-9841-041fe118b532",
       "type": "question",
       "value": {
         "latex": "Les variables aléatoires $X$ et $Y$ sont-elles indépendantes ?",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "69578d11-e9a1-44fb-bdbc-4fcee1e94cdd",
+      "id": "c6ff6665-13af-44e5-90ab-9eb47feadf89",
       "type": "reponse",
       "value": {
         "latex": "Si elles l'étaient, on aurait $f(x,y) = f_X(x) \\times f_Y(y) = 4(1-x)(1-y)$ pour tout $(x,y) \\in \\R^2$. Or $f(0,0) = 2 \\neq 4$. Donc $X$ et $Y$ ne sont pas indépendantes.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "57c210c2-03d2-434c-8ea6-c5077bd2ecd0",
+      "id": "a3cc1996-5745-4ce1-88c8-d1b500d5bac5",
       "type": "question",
       "value": {
         "latex": "Calculer la covariance du couple $(X,Y)$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "df06d81a-a878-4f79-8bfc-929e3043c044",
+      "id": "01cd51dc-b2a6-415a-8760-3caec8e76fc8",
       "type": "reponse",
       "value": {
         "latex": "On sait que $\\cov(X,Y) = \\E(XY) - \\E(X)\\E(Y)$. On a $\\E(X) = \\int_{-\\infty}^{+\\infty} x f_X(x) dx = \\int_0^1 2x(1-x) dx = \\frac{1}{3}$. De même $\\E(Y) = \\frac{1}{3}$. \n\n\t\t\tDe plus, \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\E(XY) &= \\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} xy f(x,y) dx dy \\\\\n\t\t\t\t&= \\int_0^1 \\int_0^{1-x} 2xy dy dx \\\\\n\t\t\t\t&= \\int_0^1 x(1-x)^2 dx \\\\\n\t\t\t\t&= \\int_0^1 x - 2x^2 + x^3 dx \\\\\n\t\t\t\t&= \\left[ \\frac{x^2}{2} - \\frac{2x^3}{3} + \\frac{x^4}{4} \\right]_0^1 \\\\\n\t\t\t\t&= \\frac{1}{12}\n\t\t\t\\end{align*}$$\nDonc $\\cov(X,Y) = \\frac{1}{12} - \\frac{1}{3} \\times \\frac{1}{3} = -\\frac{1}{36}$.",

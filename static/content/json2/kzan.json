@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:48.522Z",
+    "createdAt": "2024-11-05T19:10:29.849Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:48.522Z"
+    "updatedAt": "2024-11-05T19:10:29.849Z"
   },
   "contenu": [
     {
-      "id": "08317622-3c8c-4f17-af88-5b3a1129f67d",
+      "id": "2f1ffb70-f1b7-470c-be56-13b7e3ca4cd5",
       "type": "description",
       "value": {
         "latex": "Soit $(X_n)$ une suite de variables aléatoires i.i.d. selon une loi normale $\\mathcal{N}(0,1)$. On définit la suite de variables aléatoires $(Y_n)$ par $$Y_n = \\frac{1}{n} \\sum_{k=1}^n \\sqrt{k} X_k$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5227c1f9-7c4b-4629-b3ed-631f6a14320b",
+      "id": "59d81c8c-28cd-476c-bfe1-cf00f3b98f2b",
       "type": "question",
       "value": {
         "latex": "Etudier le comportement asymptotique en loi de la suite $(Y_n)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d8a864dc-9c8b-498c-a00a-4c1b1db45e27",
+      "id": "92da67cc-6b26-4db3-8950-eb4ff8f6cb47",
       "type": "reponse",
       "value": {
         "latex": "Les variables $\\sqrt{k}X_k$ ne sont pas identiquement distribuées ! on se lance donc dans un calcul de limite << à la main >>. \n\t\n\tPar indépendance, $Y_n$ suit une loi normale d'espérance $0$ et de variance $\\frac{1}{n^2}\\sum_{k=1}^n \\sqrt{k}^2 \\times 1 = \\frac{1}{n^2} \\times \\frac{n(n+1)}{2}$. On peut donc écrire $Y_n = \\sqrt\\frac{n(n+1)}{2n^2} Z_n$ où $Z_n$ suit une loi normale $\\mathcal{N}(0,1)$.\n\t\n\tSoit $\\varphi_{Y_n}(t)$ la fonction caractéristique de $Y_n$. On sait que $\\varphi_{Z_n}(t) = e^{\\frac{-t^2}{2}}$ donc $$\\varphi_{Y_n}(t) = \\varphi_{Z_n}\\left( \\sqrt\\frac{n(n+1)}{2n^2} t \\right) = e^{- \\frac{-n(n+1)}{2n^2}t^2}$$. \n\t\n\tEn passant à la limite, $\\varphi_{Y_n}(t) \\xrightarrow[n \\to +\\infty]{} e^{- \\frac{t^2}{4}}$. On reconnait la fonction caractéristique de $\\frac{1}{\\sqrt{2}}Z_n$ qui suit une loi normale $\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})$.\n\t\n\tOn a ainsi démontré que la suite $(Y_n)$ converge en loi vers une loi normale  $\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})$.",

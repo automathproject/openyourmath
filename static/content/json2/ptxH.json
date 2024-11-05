@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-03T14:08:52.624Z",
+    "createdAt": "2024-11-05T19:10:34.507Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:52.624Z"
+    "updatedAt": "2024-11-05T19:10:34.507Z"
   },
   "contenu": [
     {
-      "id": "c66bd9b7-e602-4c55-8343-65c4d08323fe",
+      "id": "afaad9fb-fc0b-4f3f-930f-81943c955586",
       "type": "description",
       "value": {
         "latex": "On sait qu'une personne sur cent est dyslexique. Lors des journées \"citoyens\", on détecte ce problème. Sur $n$ jeunes examinés, on note $Y_n$ la proportion de dyslexiques.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "498bca09-a835-4dd5-8fe9-5206e2433b46",
+      "id": "77e1a927-cda5-454d-87db-f9d6cab93f6b",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance et la variance de $Y_n$: on introduira la variable $X_n$ comptant le nombre de dyslexiques parmi les $n$ jeunes.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "57433bb6-a0c5-4e69-8a14-d5a34a042a43",
+      "id": "2a785e99-32ac-4438-9071-952e4278c567",
       "type": "reponse",
       "value": {
         "latex": "On a $X_n\\sim \\mathcal{B}(n,0.01)$. Ainsi, $\\E(X_n)=0.01\\times n$ et $\\sigma^2(X)=0.01\\times 0.09 \\times n$. \\\\\n\t\t\tComme $Y_n=\\frac{X_n}{n}$ donc $\\E(Y_n)=\\frac{1}{n}\\E(X_n)=0.01$ et $\\sigma^2(Y_n)=\\frac{1}{n^2}\\sigma^2(X_n)=\\frac{0.0099}{n}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "8206176f-c816-477a-84b8-7124fa3539be",
+      "id": "6f91159b-715f-4624-94f7-4ea696a2e73c",
       "type": "question",
       "value": {
         "latex": "Trouver un entier $n$ tel que la probabilité que $0.009\\leq Y_n\\leq 0.011$ soit supérieure à $0.9$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4533cdb9-65f3-428f-a322-f02b9abb857d",
+      "id": "d2e93997-a751-40f9-8a9f-3c9c97a187c4",
       "type": "reponse",
       "value": {
         "latex": "On cherche $n$ tel que $\\prob(0.009\\leq Y_n\\leq 0.011)\\geq 0.9$. On a\n\t\t\t$$\\begin{align*}\n\t\t\t\\prob(0.009\\leq Y_n\\leq 0.011)&=\\prob(-0.001\\leq Y_n-0.01\\leq 0.001) \\\\\n\t\t\t&= \\prob(|Y_n-0.01|\\leq 0.001) \\\\\n\t\t\t&= 1-\\prob(|Y_n-0.01|\\geq 0.001).\n\t\t\t\\end{align*}$$\n\t\t\tOn cherche donc $n$ tel que \n\t\t\t\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1.\\]\n\t\t\tOr par l'inégalité de Bienaymé-Tchebychev, on a\n\t\t\t\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq \\frac{\\sigma^2(Y_n)}{(0.001)^2}=\\frac{\\nombre{9900}}{n}.\\]\n\t\t\tSi on impose que \n\t\t\t\\[ \\frac{\\nombre{9900}}{n}\\leq 0.10, \\]\n\t\t\ton obtient bien $\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1$.\n\t\t\tIl faut donc que \n\t\t\t\\[ n\\geq \\frac{\\nombre{9900}}{0.1}=\\nombre{99000}.\n\t\t\t\\]\n\t\t\tOn en conclut qu'il faut au moins examinés $\\nombre{99000}$ jeunes pour avoir, dans $90$\\% des cas, une proportion de dyslexiques comprise entre $0.9$\\% et $1.1$\\%.",

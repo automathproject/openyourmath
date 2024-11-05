@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:22.347Z",
+    "createdAt": "2024-11-05T19:10:00.317Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:22.347Z"
+    "updatedAt": "2024-11-05T19:10:00.317Z"
   },
   "contenu": [
     {
-      "id": "ddfa8427-6c9a-489a-a48a-dae4ffe21693",
+      "id": "fc3d7888-a962-4646-aca4-d53fad17aed3",
       "type": "description",
       "value": {
         "latex": "On suppose qu'un ordinateur effectue $10^6$ opérations élémentaires pour un calcul donné. On suppose également que les erreurs d'arrondi à chaque opération sont indépendantes et suivent chacune une loi uniforme sur l'intervalle $\\left[-5 \\cdot 10^{-10};5 \\cdot 10^{-10} \\right]$. Enfin, on suppose que l'erreur finale est la somme des erreurs commises à chaque opération.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ffba083b-823b-42dc-a027-a7200e850d95",
+      "id": "b8a04e41-3e0b-464b-8fae-421e2a8330c4",
       "type": "question",
       "value": {
         "latex": "\\'Evaluer la probabilité que l'erreur finale soit en valeur absolue inférieure à $\\frac{1}{2} 10^{-6}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "8514bd80-0e05-45cd-80aa-41d129d9624a",
+      "id": "906dc3bc-6d85-4811-ae0a-65d1deb08692",
       "type": "reponse",
       "value": {
         "latex": "Soit $X_i$ la variable aléatoire représentant l'erreur d'arrondi sur la $i$-ème opération. D'après l'énoncé, les variables $X_i$ sont indépendantes et de même loi $\\mathcal{U}([-5.10^{-10};5.10^{-10}])$, donc en particulier\n\t\\[ \\mathbb{E}(X_i)=0 \\quad \\text{ et } \\quad \\sigma(S)=\\frac{10^{-9}}{\\sqrt{12}}.\\]\n\tSoit $\\displaystyle Y=\\sum_{i=1}^{10^6} X_i$ l'erreur finale commise. On cherche à déterminer la probabilité suivante:\n\t$$\\begin{align*}\n\t\t\\mathbb{P}(|Y|<\\frac{1}{2}10^{-6})\n\t\t&= \\mathbb{P}\\left(\\left| \\frac{Y-\\mathbb{E}(Y)}{\\sigma(Y)\\sqrt{10^6}}\\right|< \\frac{1}{2}\\frac{10^{-6}}{\\frac{10^{-9}}{\\sqrt{12}} \\sqrt{10^6}} \\right) \\\\\n\t\t&\\simeq \\mathbb{P}(|Z|<\\sqrt{3}) \\quad \\text{ par le théorème central-limite, avec } Z\\sim \\mathcal{N}(0,1) \\\\\n\t\t& \\simeq 2\\mathbb{P}(Z<1.73)-1 \\\\\n\t\t& \\simeq 2\\times 0.9582-1 \\quad \\text{ par lecture de la table de loi } \\mathcal{N}(0,1) \\\\\n\t\t& \\simeq 0.9164\n\t\\end{align*}$$",

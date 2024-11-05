@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:27.817Z",
+    "createdAt": "2024-11-05T19:10:06.520Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:27.817Z"
+    "updatedAt": "2024-11-05T19:10:06.520Z"
   },
   "contenu": [
     {
-      "id": "235a84e2-a218-4519-98e4-b8ceb6f374ce",
+      "id": "56dd9739-69aa-4e48-9aba-e59a9fc5850d",
       "type": "description",
       "value": {
         "latex": "On s'intéresse à l'équation :\n\\begin{equation}\n\tx = -\\ln(x)\n\\end{equation}\n\nd'inconnue $x \\in ]0;+\\infty[$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "49b41997-f7ca-4873-af4c-a772b9d46c18",
+      "id": "f5c541fb-6bf4-418c-85c3-90f2bc6a4e8d",
       "type": "question",
       "value": {
         "latex": "Montrer que cette équation admet une unique solution $\\ell \\in \\left[\\frac{1}{10} ; 1\\right]$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2d54875a-881e-4af2-a7da-7d7584954526",
+      "id": "bf21ab44-df38-41f5-824d-ca143dffd3f2",
       "type": "reponse",
       "value": {
         "latex": "On pose $h(x) = x+\\ln(x)$ : $h$ est continue et strictement croissante sur $]0;+\\infty[$, de plus $h(1/10) = 0.1-\\ln(10) <0$ et $h(1) = 1 >0$ donc d'après le théorème des valeurs intermédiaires, il existe un unique $\\ell \\in \\left[\\frac{1}{10} ; 1\\right]$ tel que $h(\\ell) = 0$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "a246fd24-e05b-468d-8b1d-5647e6b20985",
+      "id": "46e3dabe-855d-4e86-bb08-af4a9267c9ed",
       "type": "reponse",
       "value": {
         "latex": "Cette méthode est définie par la suite définie par récurrence : $\\forall k \\in \\N$, $$x_{k+1} = \\varphi_1(x_k)$$ où $\\varphi_1 \\colon x \\mapsto -\\ln(x)$ et $x_0 = 0.5$. Si cette méthode converge, alors elle converge vers l'unique point fixe $\\ell$ de $\\varphi_1$. Or $\\ell \\in \\left[\\frac{1}{10} ; 1\\right]$ donc $-\\frac{1}{\\ell} \\in [-10;-1]$. Il est même clair que $\\ell \\neq 1$ donc $$\\phi_1'(\\ell) = -\\frac{1}{\\ell} \\in [-10;-1[$$ ce qui implique en particulier que $|\\varphi_1(\\ell)| >1$. On en conclut que $\\ell$ est un point fixe répulsif de $\\varphi_1$, par conséquent la méthode ne converge pas localement, elle ne converge donc pas.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "6ba11c6a-967e-4401-9868-6401367d9fb8",
+      "id": "45a88189-7266-4c77-842d-fe695e4e1018",
       "type": "question",
       "value": {
         "latex": "Soit la fonction $\\varphi \\colon x \\mapsto e^{-x}$ définie sur $\\R_+^*$. Vérifier que $\\ell$ est un point fixe de la fonction $\\varphi$ puis que $\\varphi\\left(\\left[\\frac{1}{10} ; 1\\right]\\right) \\subset \\left[\\frac{1}{10} ; 1\\right]$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "22829a66-76ce-47be-9eb4-a42a8a223229",
+      "id": "72034b05-1ae9-4ba6-a22f-34377453f07a",
       "type": "reponse",
       "value": {
         "latex": "Il est clair que $\\varphi(\\ell)  = e^{-\\ell} = \\ell$. De plus, La fonction $\\varphi$ est continue et strictement décroissante sur $]0;+\\infty[$, de plus $\\varphi(1/10) = e^{-1/10} <1$ et $\\varphi(1) = e^{-1} > 1/10$ donc par théorème des valeurs intermédiaires, $\\varphi\\left(\\left[\\frac{1}{10} ; 1\\right]\\right) \\subset \\left[\\frac{1}{10} ; 1\\right]$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "70d7bfb0-1a7c-4bc1-9072-73289d885788",
+      "id": "38aecf72-1b8b-4fd0-aa49-acec6bb5bfa0",
       "type": "reponse",
       "value": {
         "latex": "On a $|\\varphi'| = \\varphi$ donc d'après ce qui précède, pour tout $x \\in \\left[\\frac{1}{10} ; 1\\right]$, $|\\varphi'(x)| \\leq |\\varphi'(1)| < 1$ donc d'après le théorème de convergence globale du point fixe, la méthode converge au moins d'ordre 1 avec $x_0 = 0.5 \\in \\left[\\frac{1}{10} ; 1\\right]$.\n\nLa convergence n'est pas d'ordre $2$ car $\\varphi'(\\ell) \\neq 0$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "74638f75-f84e-4b0b-8d01-b1e339badc30",
+      "id": "cbc8db1f-26bd-4dd3-911a-9ec08401f717",
       "type": "question",
       "value": {
         "latex": "On souhaite approcher la solution $\\ell$ par la suite $(x_k)$ avec une précision donnée $\\varepsilon >0$, et donc arrêter les itérations lorsque cette précision est atteinte. \n\t\n\t\n\tEn se basant sur l'inégalité des accroissements finis, majorer le nombre d'itérations à réaliser.\n\t\n\t",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "275e6f43-006d-4da0-97df-6e67fe1724cf",
+      "id": "090b3346-dc5e-4479-b2a2-aa35b5bddf20",
       "type": "reponse",
       "value": {
         "latex": "Pour appliquer la méthode de Newton à l'équation, on pose $h(x)=x-e^{-x}$ et ainsi $\\ell$ est l'unique solution à l'équation $h(x) = 0$. Comme $h^{\\prime}(x)=1+e^{-x} \\neq 0$ sur $] 0,+\\infty[$, la méthode de Newton pour l'équation $h(x)=0$ s'écrit\n\t$$\n\t\\left\\{\\begin{array}{l}\n\t\tx_0 \\in\\left[\\frac{1}{10}, 1\\right] \\text { donné } \\\\\n\t\tx_{n+1}=x_n-\\frac{h\\left(x_n\\right)}{h^{\\prime}\\left(x_n\\right)}, \\quad \\forall n \\geq 0,\n\t\\end{array}\\right.\n\t$$\n\tou encore\n\t$$\n\t\\left\\{\\begin{array}{l}\n\t\tx_0 \\in\\left[\\frac{1}{10}, 1\\right] \\text { donné, } \\\\\n\t\tx_{n+1}=x_n-\\frac{x_n-e^{-x_n}}{1+e^{-x_n}}, \\quad \\forall n \\geq 0 .\n\t\\end{array}\\right.\n\t$$\nIl faut donc écrire dans le programme \\texttt{x = x - (x - exp(-x)) / (1 + exp( -x))}",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:08:41.428Z",
+    "createdAt": "2024-11-05T19:10:20.758Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:41.428Z"
+    "updatedAt": "2024-11-05T19:10:20.758Z"
   },
   "contenu": [
     {
-      "id": "3f5b43cb-d3ab-4c4d-b433-1388a371f256",
+      "id": "a71bf6ec-ac0d-45b4-9ff2-42cd580c3997",
       "type": "description",
       "value": {
         "latex": "Soient $a = 3$ et $b$ deux réels strictement positifs. Soit $X$ une variable aléatoire suivant une loi de Pareto de paramètres $(3,b)$. Alors $X$ admet pour densité  la fonction $f$ définie pour tout $x \\in \\R$ par : \n$$f(x)=\\frac{3 b^3}{x^{4}} \\mathbf{1}_{[b;+\\infty[}(x).$$\nSoit $n \\in \\N^*$ et soit $X_1,X_2,\\cdots{},X_n$ un échantillon de $n$ variables aléatoires indépendantes suivant chacune la loi de Pareto de paramètres $(3,b)$. On définit alors les deux variables aléatoires : $$Y_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\quad \\text{et} \\quad Z_n = \\min(X_1,X_2,\\cdots{},X_n).$$\n\nLe but de l'exercice est de construire un bon estimateur du paramètre $b$ de la loi de Pareto.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "6159c232-02a5-442e-97ae-4d7438c7497a",
+      "id": "9b365f51-cc2f-403e-95e3-be3153652544",
       "type": "question",
       "value": {
         "latex": "Déterminer l'espérance et la variance de $Y_n$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "3c182b6c-fa4c-431b-afb8-1112a8550c0f",
+      "id": "be6d6ebd-4519-4cd6-9b29-1556d96c282d",
       "type": "reponse",
       "value": {
         "latex": "On a $\\E(Y_n) = \\frac{1}{n} \\sum_{i=1}^n \\E(X_i) = \\frac{1}{n} \\sum_{i=1}^n \\frac{3b}{2} = \\frac{3b}{2}$.\n        On calcule d'abord $\\E(X_i^2)$ pour tout $i \\in \\{1,...,n\\}$ : \n        $$\\begin{align*}\n            \\E(X_i^2) &= \\int_b^{+\\infty} \\frac{3 b^3}{x^{4}} x^2 dx \\\\\n            &= \\left[ -\\frac{3 b^3}{x} \\right]_b^{+\\infty} \\\\\n            &= 3b^2\n        \\end{align*}$$\n        Donc $\\var(X_i) = \\E(X_i^2) - \\E(X_i)^2 = 3b^2 - \\left(\\frac{3b}{2}\\right)^2 = \\frac{3b^2}{4}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "278546ed-27b6-4fe5-8f58-4e430c515409",
+      "id": "aaa991f5-1fe1-46c3-9e09-f5d3ddf76fd8",
       "type": "question",
       "value": {
         "latex": "En déduire un estimateur sans biais de $b$ sous la forme $\\alpha_n Y_n$ où $\\alpha_n$ est un réel à déterminer.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "c25a7006-cc17-4664-ad60-636fd6c6a642",
+      "id": "6ea63218-7938-462b-9c26-6b83ca32196e",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de prendre $\\alpha_n = \\frac{2}{3}$ pour que $\\alpha_n Y_n$ soit un estimateur sans biais de $b$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "091ab796-ac0e-4992-b91e-b7be2ae54e5a",
+      "id": "b2c542c1-34ae-4717-b18a-88b27ba57097",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition de $Z_n$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "9c3be258-84b1-404b-9ad6-f6ff1f25d217",
+      "id": "5fbd5102-9071-4a6f-87ee-222a2d117364",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\geq b$. On a : \n        $$\\begin{align*}\n            \\prob(Z_n \\leq t) &= \\prob(\\min(X_1,X_2,\\cdots{},X_n) \\leq t) \\\\\n            &= 1 - \\prob(\\min(X_1,X_2,\\cdots{},X_n) > t) \\\\\n            &= 1 - \\prob(X_1 > t, X_2 > t, \\cdots{}, X_n > t) \\\\\n            &= 1 - \\prod_{i=1}^n \\prob(X_i > t) \\\\\n            &= 1 - \\left(1 - \\prob(X_1 \\leq t)\\right)^n \\\\\n            &= 1 - \\left(1 - F_{X_1}(t)\\right)^n \\\\\n            &= 1 - \\left(1 - \\left(1 - \\frac{b^3}{t^3}\\right)\\right)^n \\\\\n            &= 1 - \\left(\\frac{b^3}{t^3}\\right)^n \\\\\n            &= 1 - \\frac{b^{3n}}{t^{3n}}\n        \\end{align*}$$\n        et si $t < b$, $\\prob(Z_n \\leq t) = 0$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f22f13ea-95a9-4c4d-b1aa-cee7f7a2f83a",
+      "id": "d21f96aa-7924-4f3d-8683-b8f7d87dd826",
       "type": "question",
       "value": {
         "latex": "En déduire que $Z_n$ suit une loi de Pareto de paramètres $(3n, b)$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "b15cabd6-1e9e-4e85-8591-f2d5108f724c",
+      "id": "3bdc8573-6038-4eff-9498-23975eb16e7f",
       "type": "reponse",
       "value": {
         "latex": "D'après la partie 1, question 2, on reconnait la fonction de répartition d'une loi de Pareto de paramètres $(3n, b)$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "f271faf2-6787-4770-ae7e-690ff9fdf9e2",
+      "id": "0e96a79a-1600-4671-91f0-ebbeaf545a13",
       "type": "question",
       "value": {
         "latex": "En déduire un estimateur sans biais de $b$ sous la forme $\\beta_n Z_n$ où $\\beta_n$ est un réel à déterminer.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "f46ffd26-083a-4e2a-bc9b-3ff2fe1021c7",
+      "id": "2ccae428-e1da-4d15-aaec-2c99e249652c",
       "type": "reponse",
       "value": {
         "latex": "L'espérance de $Z_n$ est donnée par $\\E(Z_n) = \\frac{3nb}{3n-1}$. Donc on pose $\\beta_n = \\frac{3n-1}{3n}$ pour que $\\beta_n Z_n$ soit un estimateur sans biais de $b$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "2f9faf3a-009c-4d9b-bfc9-c4400bd7ff88",
+      "id": "46885572-7ce2-468f-a136-cee8d8a0d47c",
       "type": "question",
       "value": {
         "latex": "Lequel des deux estimateurs de $b$ est le meilleur ? Justifier.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "cc2dc80a-0579-474e-9440-fdaeb8f6d962",
+      "id": "c0e59f17-804e-4845-807a-704c0195fe2d",
       "type": "reponse",
       "value": {
         "latex": "On a $\\var(\\alpha_n Y_n) = \\alpha_n^2 \\var(Y_n) = \\frac{4}{9} \\frac{3b^2}{4n} = \\frac{b^2}{3n}$. \n\n        Pour calculer la variance de $\\beta_n Z_n$, on doit d'abord connaître la variance d'une loi de Pareto de paramètres $(3n, b)$. Après calculs, on a $\\var(Z_n) = \\frac{3nb^2}{(3n-1)^2(3n-2)}$. \n        \n        D'autre part,  $\\var(\\beta_n Z_n) = \\beta_n^2 \\var(Z_n) = \\frac{b^2}{3n(3n-2)}$ < $\\frac{b^2}{3n}$. \n\n        Donc $\\beta_n Z_n$ est un meilleur estimateur de $b$ que $\\alpha_n Y_n$.",

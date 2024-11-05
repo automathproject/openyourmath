@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-03T14:08:07.216Z",
+    "createdAt": "2024-11-05T19:09:44.664Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:07.216Z"
+    "updatedAt": "2024-11-05T19:09:44.664Z"
   },
   "contenu": [
     {
-      "id": "244ef545-dfba-4b99-8cee-a980d473a9be",
+      "id": "1a498439-53f8-4ced-ae2b-dce03b1f495c",
       "type": "description",
       "value": {
         "latex": "Une machine produit des rondelles métalliques en grande série. Une rondelle est acceptée si son diamètre extérieur est compris entre $21.9$ et $22.1$ mm. On suppose que sur l'ensemble de la production, le diamètre extérieur des rondelles est une variable aléatoire $X$ qui suit une loi normale de moyenne $22$ mm et d'écart-type $0.05$ mm.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "071e1536-7f31-4e03-b88f-335daf4e396f",
+      "id": "97a8cc85-bd42-4b2e-a88a-a0ff557aed8b",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité $p$ qu'une pièce soit refusée ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "1174da15-bc55-4e1e-8aa0-4fa237e7a583",
+      "id": "d894ae8e-7546-4929-953a-b1095926fad6",
       "type": "reponse",
       "value": {
         "latex": "On calcule la probabilité qu'une pièce soit acceptée\n\t\t$$\\begin{align*}\n\t\t\\prob(21.9\\leq X\\leq 22.1)\n\t\t&= \\prob(-2\\leq \\frac{X-22}{0.05}\\leq 2)\n\t\t=2\\prob(\\frac{X-22}{0.05}\\leq 2)-1\n\t\t=2\\times 0.9772-1\n\t\t=0.9544.\n\t\t\\end{align*}$$\n\t\tAinsi, la probabilité qu'une pièce soit refusée est $p=1-0.9544=0.0456$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "75bad564-0fcc-4d77-83b6-65dd69005b9e",
+      "id": "de0e3737-bd2a-45d7-a588-6d34b6bbeea1",
       "type": "question",
       "value": {
         "latex": "On prélève $100$ pièces. En utilisant une approximation par la loi de Poisson, donner une approximation de la probabilité qu'il y ait $k$ rondelles refusées, pour $k\\in\\{0,1,2,3,4\\}$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "5e7fa749-168d-4357-892d-c307d8425a44",
+      "id": "de4f2bd5-e149-47f3-9e19-ec4f8ba04902",
       "type": "reponse",
       "value": {
         "latex": "Soit $Y$ le nombre de rondelles refusées sur les $100$ pièces. On a $Y\\sim \\mathcal{B}(100,p)$ et $\\E(Y)=100\\times p = 4.56$ donc $Y$ peut être approchée par la variable aléatoire $Z$ de loi $\\mathcal{P}(4.56)$. Ainsi,\n\t\t\\[ \\forall k \\in\\{0,\\cdots , 4\\},\\quad \\prob(Y=k)\\simeq \\prob(Z=k)=\\frac{4.56^k}{k!}e^{-4.56}.\\]\n\t\tLes résultats demandés sont dans le tableau suivant:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$k$ & 0 & 1 & 2 & 3 & 4 \\\\\n\t\t\t\t\\hline\n\t\t\t\t$\\prob(Y=k)$ & $0.0105$ & $0.0477$ & $0.1088$ & $0.1653$ & $0.1885$ \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "69da6f57-b61e-47fe-a634-c6bb3cef2690",
+      "id": "16f2be13-93e9-4d0b-a763-ee0b5071ea90",
       "type": "question",
       "value": {
         "latex": "On prélève $\\nombre{1000}$ pièces. Proposer une approximation de la probabilité qu'il y ait au moins $50$ pièces refusées.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "9d43d387-f951-480c-a61f-42517b5cc5eb",
+      "id": "ce6412c1-f9c0-42ba-b31e-08d769a70bd7",
       "type": "reponse",
       "value": {
         "latex": "Soit $R$ le nombre de pièces refusées parmi les $\\nombre{1000}$ pièces. Alors $Z\\sim \\mathcal{B}(\\nombre{1000},p)$ qui peut être approchée par une loi Normale:\n\t\t$$\\begin{align*}\n\t\t\\prob(Y\\geq 50) \n\t\t&\\simeq \\prob(Z\\geq 49.5) \\quad \\text{ où } Z \\sim \\mathcal{N}(45.6,\\sigma^2=43.52) \\\\\n\t\t&\\simeq \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\geq 0.59\\right) \\\\\n\t\t& \\simeq 1- \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\leq 0.59\\right) \\\\\n\t\t&\\simeq 1-0.7224 \\\\\n\t\t&\\simeq 0.2776\n\t\t\\end{align*}$$\n\t\tIl y a donc environ $27.76$\\% de chances d'avoir au moins $50$ pièces refusées dans le lot de $\\nombre{1000}$ pièces.",

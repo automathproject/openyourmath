@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:07:57.818Z",
+    "createdAt": "2024-11-05T19:09:35.547Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:07:57.818Z"
+    "updatedAt": "2024-11-05T19:09:35.547Z"
   },
   "contenu": [
     {
-      "id": "f5b8a32f-fa2c-453f-9364-958a75a46313",
+      "id": "96ab02b8-30d8-4dbb-82ff-05b4d2974323",
       "type": "description",
       "value": {
         "latex": "Un restaurant universitaire qui est visité par 600 étudiants pour le repas de midi offre un choix de deux plats principaux: risotto ou quiche. Dans le passé, on a observé que 40\\% des étudiants prennent du risotto.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9ef56867-c8e6-458d-bcd9-f9a424b90e3a",
+      "id": "90ca8a76-d5bf-42bd-9042-67850be5e60e",
       "type": "question",
       "value": {
         "latex": "Combien de plats de risotto faut-il prévoir pour que la probabilité qu'il en manque soit inférieure à 10\\% ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "6a3be2dc-d6cf-4a25-b25b-3d588a8fee80",
+      "id": "2d5efce9-6ebc-4276-83d9-ae303d8dae96",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ le nombre d'étudiants souhaitant un plat de risotto. D'après les données de l'énoncé, $X$ suit une loi binomiale $\\mathcal{B}(600,0.4)$. \n\nOn cherche donc un entier $n$ tel que $\\PP(X \\geq n) \\leq 0.1$. Pour ce faire, on approche la loi de $X$ par une loi normale. L'effectif $n$ est supérieur à $30$ donc d'après le théorème central limite, $X$ suit approximativement une loi normale de paramètres $\\mu=600 \\times 0.4 = 240$ et de variance $\\sigma^2 = 600 \\times 0.4 \\times 0.6 = 144 = 12^2$. \n\nAinsi, \n$$\\begin{align*}\n\\PP(X \\geq n) \\leq 0.1 &\\iff \\PP\\left(\\frac{X-240}{12} \\geq \\frac{n-240}{12}\\right)  \\leq 0.1 \\\\\n&\\iff \\PP\\left(\\frac{X-240}{12} \\leq \\frac{n-240}{12}\\right)  \\geq 0.9\n&\\iff \\frac{n-240}{12} \\geq 1.28 \\\\\n&\\iff n \\geq 12 \\times 1.28 + 240 = 255.36 \\\\\n&\\iff n \\geq 256\n\\end{align*}$$\n\nIl faut donc prévoir au moins 256 plats de risotto pour que le risque qu'il en manque soit inférieur à 10\\%.",

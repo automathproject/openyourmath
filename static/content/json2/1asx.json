@@ -5,13 +5,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-03T14:07:57.145Z",
+    "createdAt": "2024-11-05T19:09:34.804Z",
     "organisation": "",
-    "updatedAt": "2024-11-03T14:07:57.145Z"
+    "updatedAt": "2024-11-05T19:09:34.804Z"
   },
   "contenu": [
     {
-      "id": "45ab8afe-e194-4dc3-8a3f-b6a74a33a923",
+      "id": "a667b3b3-fafa-449a-a33d-6dcfabab9710",
       "type": "description",
       "value": {
         "latex": "On considère un avion contenant 100 passagers. On suppose que le poids d'un passager pris au hasard suit une loi de probabilité dont l'espérance est 71 kg et l'écart type est 7~kg.",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "id": "b592fdb7-a876-4e8b-9b8d-faebdda6116d",
+      "id": "62a5a2e8-c152-4337-88cc-240cf7585a59",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité que le poids de l'ensemble des passagers soit supérieur à $7{,}3$ tonnes.",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "148c1ab8-ccf8-4d4e-b66d-35385a8e1c3f",
+      "id": "bac35bc2-c32b-4f0a-9229-947314623bce",
       "type": "reponse",
       "value": {
         "latex": "Soit la variable aléatoire $X$ donnant la somme des poids des 100 passagers. Si on note $Y_i$ le poids du $i$-ème passager, on a $X = \\sum_{i=1}^{100} Y_i$. Par conséquent, $\\mathbb{E}(X) = 7100$ et $V(X) = 100 \\times 7^2 = 4900$. \nD'après le théorème central limite, la loi de $X$ peut être approchée par une loi normale de moyenne $7100$ et de variance $4900$, soit un écart type de $70$. \n\nEn notant $Z$ une variable aléatoire normale centrée réduite, on en déduit que \n$$\\begin{align*}\n  \\PP\\left(X > 7300\\right) &= \\PP\\left(\\frac{X-7100}{70} > \\frac{7300-7100}{70}\\right) \\\\\n  &\\approx  \\PP\\left(Z > \\frac{200}{70} \\approx 2{,}857\\right) \\\\\n  &\\approx 0{,}0021 = 0{,}21\\%\n\\end{align*}$$\nIl n'y a quasiment aucune chance que le poids total des passagers dépasse $7{}3$ tonnes.",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "869b1ccd-1c60-4349-b725-5eddd0e701da",
+      "id": "c9f3f5ed-3b74-43a0-abbc-a001309980ff",
       "type": "question",
       "value": {
         "latex": "Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en soute. Déterminer à l'aide d'un intervalle de confiance au niveau $95\\%$ une estimation de la proportion de passagers qui voyagent avec un bagage en soute sur ce vol.",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "3eea758d-753e-48e4-aa5f-f756b2493584",
+      "id": "a907e38a-43f9-4214-830f-2df445b313c3",
       "type": "reponse",
       "value": {
         "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\nOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",

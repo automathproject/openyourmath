@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-03T14:08:21.977Z",
+    "createdAt": "2024-11-05T19:09:59.906Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-03T14:08:21.977Z"
+    "updatedAt": "2024-11-05T19:09:59.906Z"
   },
   "contenu": [
     {
-      "id": "f749cb08-c458-4b4f-a4b1-1af150a14235",
+      "id": "933c321e-f4e9-42c2-b852-f6c1bfb1672d",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n$$f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &  ~~~\\text{ si } x \\neq 0 \\\\\ny & ~~~\\text{ si } x=0 \n\\end{array}\\right.$$\n\n\\begin{enumerate}\n\\item \n\\question{Montrer que $f$ n'est pas continue en $(0,0)$.\n}\n\\reponse{Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.}\n\n\\item \n\\question{Montrer que $f$ admet des dérivées partielles au point $(0;0)$.}\n\\reponse{Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}\n\n}\n\\end{enumerate}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b284139f-0a95-4ab0-a025-28bee7b6eee1",
+      "id": "47af40bd-ee46-433a-848c-626afe179665",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ n'est pas continue en $(0,0)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "ade691dd-3e0f-41cc-97a5-53ad4a4d3ed3",
+      "id": "93e39f37-fe8e-4ccb-b027-1599fef0b08f",
       "type": "reponse",
       "value": {
         "latex": "Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "79bc92c6-f546-45eb-9ceb-27cc36004e87",
+      "id": "b5241e77-6829-4299-b42f-54be8254e50d",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ admet des dérivées partielles au point $(0;0)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "1f15f577-bfac-4902-bec2-eb0f46ee9b3c",
+      "id": "cde8244b-258e-491e-9aec-a258b1e05f0d",
       "type": "reponse",
       "value": {
         "latex": "Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}",
