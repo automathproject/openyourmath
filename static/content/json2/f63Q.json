@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:20.432Z",
+    "createdAt": "2024-11-06T20:22:35.140Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:20.432Z"
+    "updatedAt": "2024-11-06T20:22:35.140Z"
   },
   "contenu": [
     {
-      "id": "0ddc59df-f5f0-4fd7-8ce6-05070881d4ce",
+      "id": "adf4793c-07a6-44e5-b11f-678303058c4a",
       "type": "description",
       "value": {
         "latex": "Un débutant à un jeu effectue plusieurs parties successives. Pour la première partie, il a une probabilité de $\\frac{1}{2}$ de gagner. Pour les parties suivantes, on suppose que : \n    \\begin{itemize}\n        \\item s'il a gagné la partie précédente, il a une probabilité de $0.6$ de gagner la partie suivante ;\n        \\item s'il a perdu la partie précédente, il a une probabilité de $0.7$ de perdre la partie suivante.\n    \\end{itemize}\n\n    Soit $G_n$ l'événement \\og le joueur a gagné la $n$-ième partie \\fg{} et on note $u_n = \\prob(G_n)$. On note également $v_n = \\prob(\\overline{G_n})$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "484c3307-0c19-4888-9747-6c2c14ee24db",
+      "id": "fc18a215-3ae7-499d-8c07-84df97232988",
       "type": "question",
       "value": {
         "latex": "Calculer $u_1$, $v_1$, $u_2$, $v_2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "e4875dd5-0ff3-4586-bbca-f40cbfccf8be",
+      "id": "087cc9c3-b97f-4a08-a580-32b3ba6103cb",
       "type": "reponse",
       "value": {
         "latex": "On a $u_1 = \\prob(G_1) = \\frac{1}{2}$ et $v_1 = \\prob(\\overline{G_1}) = \\frac{1}{2}$. De plus, on a :\n\n        $$\\begin{align*}\n            u_2 &= \\prob(G_2) \\\\\n            &= \\prob(G_2 \\cap G_1) + \\prob(G_2 \\cap \\overline{G_1}) \\\\\n            &= \\prob(G_1) \\times \\prob(G_2 | G_1) + \\prob(\\overline{G_1}) \\times \\prob(G_2 | \\overline{G_1}) \\\\\n            &= \\frac{1}{2} \\times 0.6 + \\frac{1}{2} \\times 0.3 \\\\\n            &= 0.45.\n        \\end{align*}$$\n\n        De même, on a :\n\n        $$\\begin{align*}\n            v_2 &= \\prob(\\overline{G_2}) \\\\\n            &= \\prob(\\overline{G_2} \\cap G_1) + \\prob(\\overline{G_2} \\cap \\overline{G_1}) \\\\\n            &= \\prob(G_1) \\times \\prob(\\overline{G_2} | G_1) + \\prob(\\overline{G_1}) \\times \\prob(\\overline{G_2} | \\overline{G_1}) \\\\\n            &= \\frac{1}{2} \\times 0.4 + \\frac{1}{2} \\times 0.7 \\\\\n            &= 0.55.\n        \\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "c6e589b7-c01d-41d4-9e97-99ed54682e72",
+      "id": "b73c0167-29e7-4e7a-8c26-864b12e7fc66",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout entier $n \\geqslant 1$, on a $u_{n+1} = 0.6 u_n + 0.3 v_n$. En déduire une relation matricielle entre  $\\begin{pmatrix} u_{n+1} \\\\ v_{n+1} \\end{pmatrix}$ et $\\begin{pmatrix} u_n \\\\ v_n \\end{pmatrix}$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "bfe94db1-d87b-4735-9fa7-09150cf2739d",
+      "id": "aa970741-e6af-45cd-9134-a81c31d0a34e",
       "type": "reponse",
       "value": {
         "latex": "D'après le théorème des probabilités totales, on a : \n\n            $$\\begin{align*}\n                u_{n+1} &= \\prob(G_{n+1}) \\\\\n                &= \\prob(G_{n+1} \\cap G_n) + \\prob(G_{n+1} \\cap \\overline{G_n}) \\\\\n                &= \\prob(G_n) \\times \\prob(G_{n+1} | G_n) + \\prob(\\overline{G_n}) \\times \\prob(G_{n+1} | \\overline{G_n}) \\\\\n                &= 0.6 u_n + 0.3 v_n.\n            \\end{align*}$$\n\n            De même, on a :\n\n            $$\\begin{align*}\n                v_{n+1} &= \\prob(\\overline{G_{n+1}}) \\\\\n                &= \\prob(\\overline{G_{n+1}} \\cap G_n) + \\prob(\\overline{G_{n+1}} \\cap \\overline{G_n}) \\\\\n                &= \\prob(G_n) \\times \\prob(\\overline{G_{n+1}} | G_n) + \\prob(\\overline{G_n}) \\times \\prob(\\overline{G_{n+1}} | \\overline{G_n}) \\\\\n                &= 0.4 u_n + 0.7 v_n.\n            \\end{align*}$$\n            \n            On a donc pour tout $n \\geqslant 1$,\n\n            $$\\begin{pmatrix} u_{n+1} \\\\ v_{n+1} \\end{pmatrix} = \\begin{pmatrix} 0.6 & 0.3 \\\\ 0.4 & 0.7 \\end{pmatrix} \\begin{pmatrix} u_n \\\\ v_n \\end{pmatrix}.$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "81b7d89e-cefa-443d-b9b3-89c3cd6e047c",
+      "id": "04676dc9-8120-42e4-8d8d-2459e88cc5ee",
       "type": "question",
       "value": {
         "latex": "Montrer que la suite de terme général $u_n - \\frac{3}{7}$ est une suite géométrique de raison $0.3$ et en déduire une expression de $u_n$ et $v_n$ en fonction de $n$ ainsi que leur limite quand $n \\to +\\infty$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "fbf5cd97-321d-401e-b4a4-78ca3ea7df4e",
+      "id": "caac2504-5f7b-47cb-ac1a-85e81337ae8b",
       "type": "reponse",
       "value": {
         "latex": "On a pour tout $n \\geqslant 1$, $u_{n+1} = 0.6 u_n + 0.3(1-u_n) = 0.3 + 0.3 u_n$. Ainsi, la suite de terme général $u_n - \\frac{3}{7}$ est une suite géométrique de raison $0.3$ et de premier terme $u_1 - \\frac{3}{7} = \\frac{1}{2} - \\frac{3}{7} = \\frac{1}{14}$. On a donc pour tout $n \\geqslant 1$, $u_n - \\frac{3}{7} = \\left(\\frac{1}{14}\\right) \\times 0.3^{n-1}$ et donc $u_n = \\frac{3}{7} + \\left(\\frac{1}{14}\\right) \\times 0.3^{n-1}$.\n\n        Donc $v_n = 1 - u_n = 1 - \\frac{3}{7} - \\left(\\frac{1}{14}\\right) \\times 0.3^{n-1} = \\frac{4}{7} - \\left(\\frac{1}{14}\\right) \\times 0.3^{n-1}$.\n\n        On a donc $\\lim_{n \\to +\\infty} u_n = \\frac{3}{7}$ et $\\lim_{n \\to +\\infty} v_n = \\frac{4}{7}$. Cela signifie que sur un grand nombre de parties, la probabilité de gagner du joueur tend vers $\\frac{3}{7}$.",

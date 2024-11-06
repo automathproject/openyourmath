@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-05T19:10:24.563Z",
+    "createdAt": "2024-11-06T20:22:38.582Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:24.563Z"
+    "updatedAt": "2024-11-06T20:22:38.582Z"
   },
   "contenu": [
     {
-      "id": "4215474a-ddee-4003-b300-623aab13e372",
+      "id": "595511d0-ef96-4bf4-96da-5f643e41cdd9",
       "type": "description",
       "value": {
         "latex": "On considère un avion contenant 100 passagers. On suppose que le poids d'un passager pris au hasard suit une loi de probabilité dont l'espérance est 71 kg et l'écart type est 7~kg.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "49b33176-60be-456f-a7ed-90531a7e967a",
+      "id": "d1e7c9ec-43c4-4edb-88ca-fb050d65787e",
       "type": "reponse",
       "value": {
         "latex": "On ne connaît pas la loi de $X$ mais d'après le théorème central limite, $X$ suit approximativement une loi normale.  \n\t\t\n\t\tOn peut calculer l'espérance de $X$ et la variance de $X$ : Si on note $Y_i$ le poids du $i$-ème passager, on a $X = \\sum_{i=1}^{100} Y_i$. Par conséquent, $\\mathbb{E}(X) = 7100$ et $V(X) = 100 \\times 7^2 = 4900$. \n\t\t\tD'après le théorème central limite, la loi de $X$ peut être approchée par une loi normale de moyenne $7100$ et de variance $4900$, soit un écart type de $70$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4c245bc1-abfe-4642-a3d6-8cf9f0538cca",
+      "id": "4a219f27-529c-4c41-b227-4748045245a4",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité que le poids de l'ensemble des passagers soit supérieur à $7{,}3$ tonnes.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "05bd56db-8b8a-48d1-b542-8664b233aed8",
+      "id": "88a440e6-69b3-4ae1-ade5-580f0fdbac80",
       "type": "reponse",
       "value": {
         "latex": "En notant $Z$ une variable aléatoire normale centrée réduite, on en déduit que \n\t\t$$\\begin{align*}\n\t\t\t\\PP\\left(X > 7300\\right) &= \\PP\\left(\\frac{X-7100}{70} > \\frac{7300-7100}{70}\\right) \\\\\n\t\t\t&\\approx  \\PP\\left(Z > \\frac{200}{70} \\approx 2{,}857\\right) \\\\\n\t\t\t&\\approx 0{,}0021 = 0{,}21\\%\n\t\t\\end{align*}$$\n\t\tIl n'y a quasiment aucune chance que le poids total des passagers dépasse $7{}3$ tonnes.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7c0c265e-280b-4167-a932-f3ecec016967",
+      "id": "0258532e-409e-4b0d-906e-266c0632c924",
       "type": "question",
       "value": {
         "latex": "Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en soute. Déterminer à l'aide d'un intervalle de confiance au niveau $95\\%$ une estimation de la proportion de passagers qui voyagent avec un bagage en soute sur ce vol.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "418519bc-8ac1-4a7c-a5bd-f312bc3e06f7",
+      "id": "33e33f49-901f-498b-a413-00ec2853845f",
       "type": "reponse",
       "value": {
         "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\t\n\t\tOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "30c68e7e-4442-4d34-b809-def133b70b46",
+      "id": "874b9de5-ba04-413b-aafa-d7d4f6cb709f",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente, il est tout à fait probable (avec une confiance de $95\\%$) que le nombre de bagages en soute soit supérieur à $65$ (entre 42 et 73). Pour que l'intervalle de confiance ne contienne pas $65\\%$, il faut prendre un risque supérieur à $33\\%$.",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:09:43.155Z",
+    "createdAt": "2024-11-06T20:22:00.510Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:09:43.155Z"
+    "updatedAt": "2024-11-06T20:22:00.510Z"
   },
   "contenu": [
     {
-      "id": "f38a9390-60e4-4832-a835-b3d8194f1be2",
+      "id": "68bc6b97-45a8-4a0e-9e01-4b0c17c003d5",
       "type": "description",
       "value": {
         "latex": "Un joueur effectue une suite de parties de pile ou face indépendantes, avec probabilité $p$  d'obtenir pile à chaque partie. Soit $n$  un entier. Le joueur peut choisir entre deux jeux :\n\t\\begin{description}\n\t\t\\item[le Jeu 1 :] le joueur effectue  $2n-1$ parties. Il est déclaré vainqueur s'il obtient au moins $n$ fois pile ;\n\t\t\\item[le Jeu 2 :]  le joueur effectue $2n$  parties. S'il obtient au moins  $n+1$ fois pile, il est déclaré vainqueur. S'il obtient $n$ fois pile exactement, on tire au sort et il est déclaré vainqueur avec probabilité \n\t\t$\\frac{1}{2}$.\n\t\\end{description}\n\t\n\tOn note $X$ le nombre de piles obtenus lorsque le joueur choisit le Jeu 1, et $Y$ le nombre de piles obtenus lorsqu'il choisit le Jeu 2. On note $p_1$  la probabilité de gagner au Jeu 1 et $p_2$  la probabilité de gagner au Jeu 2. \n\t\n\tL'objectif est de savoir s'il vaut mieux jouer au Jeu 1 ou au Jeu 2.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "7220f130-a46c-4b0f-9966-2e8a22559902",
+      "id": "9adb155f-ac08-42d0-bc53-c452d58a80ad",
       "type": "question",
       "value": {
         "latex": "\\'Ecrire $Y=X+U$ où $U$ est une variable aléatoire indépendante de $X$ dont la loi reste à préciser.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "604fc9b9-801b-431f-9195-16259f35732a",
+      "id": "6f3fb8b9-0b01-4ec2-bee1-d2b48485c437",
       "type": "reponse",
       "value": {
         "latex": "Soit $U$ la \\va de Bernoulli égale à $1$ si on a choisi le jeu 2 et que le $2n$-ième lancer donne ``pile''. Comme les lancers sont indépendants, la \\va $U$ est indépendante de $X$ et on a bien $Y=X+U$, avec $U \\sim \\mathcal{B}(p)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "274ae1c1-7854-4a35-9a61-e432b01897e4",
+      "id": "e2b21c1d-17c4-4fa6-b961-8e491d5b3452",
       "type": "question",
       "value": {
         "latex": "Démontrer que $\\PP(Y>n) = \\PP(X>n) + p\\PP(X=n)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "49edb534-dea3-4bdc-ab66-87c021dd53bb",
+      "id": "94d120a0-5aa6-4bf7-93bb-9cd16dab7cb2",
       "type": "reponse",
       "value": {
         "latex": "Comme $Y=X+U$, on a\n\t\t      \t$$\\begin{align*}\n\t\t      \t\\p(Y>n)&=\\p(Y>n,X>n) + \\p(Y>n,X=n) + \\p(Y>n,X<n) \\text{ d'après le th. des proba. totales } \\\\\n\t\t      \t&= \\p(X>n)+\\p(X=n,U=1) + 0 \\\\\n\t\t      \t&= \\p(X>n)+\\p(X=n)\\ \\p(U=1) \\text{ par indépendance de $X$ et $U$ }\\\\\n\t\t      \t&= \\p(X>n)+p\\ \\p(X=n).\n\t\t      \t\\end{align*}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "3019c169-3633-406f-a860-ed4ba2b60acc",
+      "id": "4620446e-aae6-48c5-b568-16cba8161699",
       "type": "question",
       "value": {
         "latex": "Vérifier que $p_1-p_2 = (1-p)\\PP(X=n) - \\frac{1}{2}\\PP(Y=n)$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "047e9206-829d-4de8-b399-5d0156d01c55",
+      "id": "f88b6572-dd4f-4683-9817-ed14db975dd9",
       "type": "reponse",
       "value": {
         "latex": "On a:\n\t\t      \t$$\\begin{align*}\n\t\t      \tp_1-p_2&=\\p(X\\geq n)-\\left[\\p(Y>n)+\\frac{1}{2}\\ \\p(Y=n)\\right] \\\\\n\t\t      \t\n\t\t      \t&= \\p(X=n)+\\p(X>n)-\\p(X>n)-p\\ \\p(X=n)-\\frac{1}{2}\\ \\p(Y=n) \\\\\n\t\t      \t&= (1-p)\\ \\p(X=n)-\\frac{1}{2}\\ \\p(Y=n).\n\t\t      \t\\end{align*}$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "14680301-24f9-4a9a-9d66-227ed096f253",
+      "id": "9fec5f41-6a46-43f4-afe6-98f4fe71731e",
       "type": "question",
       "value": {
         "latex": "Conclure.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "23b7e109-de4e-4e58-91d5-74265e651ba6",
+      "id": "f297a7bb-b60b-4859-8679-145eca0c1e4c",
       "type": "reponse",
       "value": {
         "latex": "Étudions le signe de $p_1-p_2$. Comme $X \\sim \\mathcal{B}(2n-1,p)$ et $Y \\sim \\mathcal{B}(2n,p)$, on a\n\t\t      \t$$\\begin{align*}\n\t\t      \tp_1-p_2&=(1-p) \\binom{2n-1}{n} p^n (1-p)^{2n-1-n} -\\frac{1}{2} \\binom{n}{2n} p^n (1-p)^{2n-n} \\\\\n\t\t      \t&= \\frac{(2n-1)!}{n!\\times (n-1)!}p^n(1-p)^n -\\frac{1}{2}\\times\\frac{(2n)!}{ n! \\times n!}p^n(1-p)^n \\\\\n\t\t      \t&= \\frac{(2n)!}{(n!)^2}\\left( \\frac{n}{2n}- \\frac{1}{2} \\right) p^n (1-p)^n \\\\\n\t\t      \t&= 0\n\t\t      \t\\end{align*}$$\n\t\t      \tOn en conclut qu'aucun des deux jeux n'est préférable à l'autre.",

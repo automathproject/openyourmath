@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:39.877Z",
+    "createdAt": "2024-11-06T20:22:52.943Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:39.877Z"
+    "updatedAt": "2024-11-06T20:22:52.943Z"
   },
   "contenu": [
     {
-      "id": "56befb33-8744-435f-943c-c74d66e963af",
+      "id": "3fedb6e9-d5f9-46c8-a572-69356deae353",
       "type": "description",
       "value": {
         "latex": "On s'intéresse à la méthode de contrôle fiscal d'une entreprise qui consiste à vérifier la comptabilité de l'entreprise.\n\nOn considère que le temps de contrôle d'une entreprise est une variable aléatoire de loi $\\mathcal{N}\\left(m, \\sigma^2\\right)$. On réalise 7 contrôles et on obtient les temps suivants (en jours) :\n$$\n\\begin{array}{lllllll}\n\t57 & 61 & 42 & 53 & 45 & 65 & 58 .\n\\end{array}\n$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "26885179-d8cc-455f-8e96-0090bb00f0a5",
+      "id": "d429e742-5f39-4419-9528-0aac7a8cdd98",
       "type": "question",
       "value": {
         "latex": "Donner une estimation de $m$ et de $\\sigma^2$. On précisera les estimateurs utilisés en indiquant leurs propriétés.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "6c93f21e-5eaa-4a99-aec5-ea7ed160524e",
+      "id": "a9d42740-060a-45c3-8f80-720f9d088b78",
       "type": "reponse",
       "value": {
         "latex": "On estime la moyenne $m$ à l'aide de la moyenne empirique $\\left(\\bar{X}=\\frac{1}{n} \\sum_{i=1}^n X_i\\right)$, qui est sans biais et convergente :\n$$\n\\bar{x}=\\frac{57+61+42+53+45+65+58}{7}=\\frac{381}{7} \\simeq 54.43\n$$\n On estime la variance $\\sigma^2$ à l'aide de la variance empirique $\\left(S^2=\\frac{1}{n-1} \\sum_{i=1}^n\\left(X_i-\\bar{X}\\right)^2\\right)$, qui est sans biais et convergent :\n$$\ns^2=\\frac{1}{6}\\left((57-54.43)^2+(61-54.43)^2+\\ldots+(58-54.43)^2\\right) \\simeq 69.95\n$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1655316d-a2e3-4cd2-bdde-1178aacf5be4",
+      "id": "87d643c3-4e1d-49c7-a573-cdd371b9d0f8",
       "type": "question",
       "value": {
         "latex": "Donner un intervalle de confiance de niveau $90 \\%$ permettant d'estimer $m$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7e3b0932-cd5e-4ec9-8cff-2e5ec65a0443",
+      "id": "f7090d00-b60a-468b-8d73-04f9b818cae0",
       "type": "reponse",
       "value": {
         "latex": "Il s'agit d'un intervalle de confiance d'une moyenne dans le cas où la variance est inconnue et la loi mère de l'échantillon est une loi Normale. On a donc:\n$$\nI C(\\bar{X})=\\left[\\bar{x}-t \\times \\frac{s}{\\sqrt{n}} ; \\bar{x}+t \\times \\frac{s}{\\sqrt{n}}\\right]\n$$\navec $\\bar{x}=54.43, s=\\sqrt{69.95} \\simeq 8.36, n=7$ et $t$ est le réel tel que $\\mathbb{P}(U \\leq t)=1-\\frac{0.10}{2}=0.95$, où $U \\sim S t(6)$, c'est-à-dire $t=1.9432$. On obtient alors\n$$\nI C(\\bar{X})=[48.29 ; 60.57]\n$$",

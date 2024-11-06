@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:09.036Z",
+    "createdAt": "2024-11-06T20:22:24.747Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:09.036Z"
+    "updatedAt": "2024-11-06T20:22:24.747Z"
   },
   "contenu": [
     {
-      "id": "bea45587-2c7d-481e-b240-d04015638746",
+      "id": "0f733351-0e94-413a-b43a-570da2e7a6a2",
       "type": "question",
       "value": {
         "latex": "Soit $X$ une variable aléatoire exponentielle de paramètre $\\lambda=1$. Donner une densité $f_X$ de $X$, son espérance et sa variance.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "54ffa1d3-52b6-42d8-8eef-2db79e714cfd",
+      "id": "9cc175a1-6e86-4a7e-86b1-4c03f9f22483",
       "type": "reponse",
       "value": {
         "latex": "$X\\sim \\mathcal{E}(1)$, \\hspace{2em} $f_X(t)=\\begin{cases} e^{-t} & \\text{ si } t\\geq 0 \\\\\n\t\t\t\t0 & \\text{ sinon}\n\t\t\t\\end{cases}$, \\hspace{2em}\n\t\t\t$\\E(X)=\\frac{1}{\\lambda}$ \\hspace{2em} et \\hspace{2em} $\\V(X)=\\frac{1}{\\lambda^2}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "56ee6f9b-7f17-491b-bd7a-0681a992798b",
+      "id": "befdc59a-c88c-4c4d-9328-938a32b4949d",
       "type": "question",
       "value": {
         "latex": "Vérifier que $f_T$ est bien une densité de probabilité. Déterminer $\\E(T)$ et $\\V(T)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "a5be4acc-20cc-4a69-9fc7-73ebfe4797bf",
+      "id": "8536a162-487e-4e40-97df-085be9d249cf",
       "type": "reponse",
       "value": {
         "latex": "$f_T$ est une fonction positive sur $\\R$ et\n\t\t\t\\[ \\int_\\R f_T(x)\\dx=\\int_0^{+\\infty}xe^{-x}\\dx=\\left[-xe^{-x} \\right]_0^{+\\infty} +\\int_0^{+\\infty} e^{-x}\\dx = \\left[-e^{-x}\\right]_0^{+\\infty}=1.\\]\n\t\t\tDonc $f_T$ est bien une densité de probabilité. \\\\\n\t\t\t\n\t\t\t\n\t\t\tL'espérance de $T$ peut se calculer soit par intégrations par parties, soit en utilisant le rappel:\n\t\t\t\\[ \\E(T)=\\int_0^{+\\infty} x^2e^{-x}\\dx=\\left[ -x^2e^{-x}\\right]_0^{+\\infty} +\\int_0^{+\\infty} 2xe^{-x}\\dx=2\\int_0^{+\\infty}xe^{-x} \\dx=2.\\] \\\\\n\t\t\t\n\t\t\tDe même pour la variance de $T$: $\\V(T)=\\E(T^2)-\\E(T)^2$. Or\n\t\t\t\\[ \\E(T^2)=\\int_0^{+\\infty} x^3e^{-x}\\dx=6\\]\n\t\t\tdonc $\\V(T)=6-2^2=2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "ff75623a-c95e-460f-bcfb-6305a747ca96",
+      "id": "63448f13-4eef-423e-bc12-2fe57bad3c17",
       "type": "question",
       "value": {
         "latex": "Démontrer que la fonction de répartition de $T$, notée $F_T$, est définie par:\n\t\t\\[\n\t\tF_T(x)=\n\t\t\\begin{cases}\n\t\t\t0  \\text{ si } x<0, \\\\\n\t\t\t1-(1+x)e^{-x} \\text{ si } x \\geq 0.\n\t\t\\end{cases}\n\t\t\\]",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "1537cc4d-a88a-4828-aaac-6438deb8f400",
+      "id": "0aada887-02e0-475d-b446-2adb67b4cee3",
       "type": "reponse",
       "value": {
         "latex": "Par définition, \n\t\t\t$F_T(x)=\\int_{-\\infty}^x f_T(t)\\dx t$ donc si $x< 0$, $F_T(x)=0$ et si $x\\geq 0$,\n\t\t\t$$\\begin{align*}\n\t\t\t\tF_T(x) & =\\int_0^x te^{-t}\\dx t\n\t\t\t\t= \\left[-te^{-t}\\right]_0^x + \\int_0^x e^{-t}\\dx t\n\t\t\t\t= -xe^{-x}+0+\\left[-e^{-t}\\right]_0^x \n\t\t\t\t=-xe^{-x}-e^{x}+e^0 \\\\\n\t\t\t\t&= 1-(1+x)e^{-x},\n\t\t\t\\end{align*}$$\n\t\t\tce qui correspond à la formule donnée dans l'énoncé.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "20a4d5cf-d1db-45dc-baf5-f0946582ebb1",
+      "id": "5ab86984-e171-4b13-aa62-b56a155caf93",
       "type": "question",
       "value": {
         "latex": "Montrer que la probabilité que le temps de passage en caisse soit inférieur à deux unités de temps sachant qu'il est supérieur à une unité, est égale à $\\frac{2e-3}{2e}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "d949487c-155e-4d96-a7c2-4b53ecb11b81",
+      "id": "8499882a-b8d0-45af-9589-f2907a17c7f8",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\t\\prob(T\\leq 2|T\\geq 1)\n\t\t\t\t&=\\frac{\\prob(\\{T\\leq 2\\}\\cap \\{T\\geq 1\\})}{\\prob(T\\geq 1)}\n\t\t\t\t=\\frac{\\prob(1\\leq T\\leq 2)}{1-\\prob(T\\leq 1)}\n\t\t\t\t= \\frac{F_T(2)-F_T(1)}{1-F_T(1)} \\\\\n\t\t\t\t&=\\frac{1-3e^{-2}-1+2e^{-1}}{1-1+2e^{-1}}\n\t\t\t\t=\\frac{2e^{-1}-3e^{-2}}{2e^{-1}}\n\t\t\t\t=\\frac{2e-3}{2e}\n\t\t\t\\end{align*}$$",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "2909129c-0fe3-4614-b3ad-49a814ae13d9",
+      "id": "2d401beb-d7c4-46d9-be50-de2fd3e964c4",
       "type": "description",
       "value": {
         "latex": "Un jour donné, trois clients $A$, $B$ et $C$ se présentent simultanément devant deux caisses libres. Par courtoisie, $C$ décide de laisser passer $A$ et $B$ et de prendre la place du premier d'entre eux qui aura terminé. On suppose que les variable aléatoires $T_A$ et $T_B$ correspondant aux temps de passage en caisse de $A$ et de $B$ sont indépendantes.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "d25e78ff-6b88-4674-9c21-054ac95a5f3f",
+      "id": "3a2e0408-1e04-4c96-8f1b-f02e6a0db0cf",
       "type": "question",
       "value": {
         "latex": "Soit $M$ la variable aléatoire égale au temps d'attente du client $C$. Exprimer l'événement $\\{M>x\\}$ en fonction des événements $\\{T_A>x\\}$ et $\\{T_B>x\\}$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "3880ffaf-8409-4973-9055-9282099ef9fe",
+      "id": "0c0529d6-0616-422a-866b-0deec3e40023",
       "type": "reponse",
       "value": {
         "latex": "$\\{M>x\\}=\\{T_A>x\\}\\cap\\{T_B>x\\}$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "447ce07a-af5d-4fce-ad9a-2574fd774bcd",
+      "id": "061abbd5-6d13-45ac-ba9f-7d810fcfa3af",
       "type": "question",
       "value": {
         "latex": "En déduire une expression de la fonction de répartition $F_M$ de $M$, en fonction de $F_{T_A}$ et $F_{T_B}$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "9c1f8339-3626-4cdc-89e8-fffcb2f118b5",
+      "id": "64f68658-dcb0-4521-8670-8e01a4716f65",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $t\\in \\R$,\n\t\t\t$$\\begin{align*}\n\t\t\t\tF_M(t)\n\t\t\t\t&=\\prob(M\\leq t) \\\\\n\t\t\t\t&=1-\\prob(M>t) \\\\\n\t\t\t\t&=1-\\prob(\\{T_A>t\\}\\cap\\{T_B>t\\}) \\\\\n\t\t\t\t&=1-\\prob(T_A>t)\\prob(T_B>t) \\quad \\text{ par indépendance de $T_A$ et de $T_B$} \\\\\n\t\t\t\t&=1-(1-\\prob(T_A\\leq t))(1-\\prob(T_B\\leq t)) \\\\\n\t\t\t\t&= 1- (1-F_{T_A}(t))(1-F_{T_B}(t))\n\t\t\t\\end{align*}$$",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "dce9d985-e0c0-4e6b-9d79-cea28054d10a",
+      "id": "640044e0-c528-4b8d-bde9-59bda58f81e0",
       "type": "question",
       "value": {
         "latex": "Déterminer explicitement une densité de $M$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "a181499a-9fb7-4b9b-9a35-b7e4411d437d",
+      "id": "f585aa40-5203-4f9c-9d09-a679c4ef32b7",
       "type": "reponse",
       "value": {
         "latex": "Comme $T_A$ et $T_B$ suivent la même loi que $T$, on $F_{T_A}=F_{T_B}=F_T$. On obtient donc :\n\t\t\t\\begin{equation*}\n\t\t\t\tF_M (x)\n\t\t\t\t\\,=\\, 1-{(1-F_T(x))}^2 \\,=\\, \n\t\t\t\t\\begin{cases}\n\t\t\t\t\t1-(1+x)^2e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0.\n\t\t\t\t\\end{cases} \n\t\t\t\\end{equation*}\n\t\t\tAfin d'obtenir la densité de la variable aléatoire $M$, on dérive sa fonction de répartition en tous les points de continuité de sa densité :\n\t\t\t$$\\begin{align*}\n\t\t\t\tf_M(t)&= \\begin{cases}\n\t\t\t\t\t-2(1+x)e^{-2x}+2(1+x)^2e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0\n\t\t\t\t\\end{cases} \\\\\n\t\t\t\t&= \\begin{cases}\n\t\t\t\t\t2x\\, (1+x)e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0\n\t\t\t\t\\end{cases}\n\t\t\t\\end{align*}$$",

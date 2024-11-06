@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-05T19:10:45.375Z",
+    "createdAt": "2024-11-06T20:22:58.222Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:45.375Z"
+    "updatedAt": "2024-11-06T20:22:58.222Z"
   },
   "contenu": [
     {
-      "id": "05c89b11-067e-4610-be4b-e205d7983999",
+      "id": "7fd6bc88-ef44-4843-8c0d-85d05b761f40",
       "type": "description",
       "value": {
         "latex": "Soit $f$ une fonction définie pour tout $x \\in \\R$ par $f(x)=\\frac{1}{\\pi}\\frac{1}{1+x^2}$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "a90f296f-b218-4a44-850f-a8d8f10b1259",
+      "id": "1ad94315-922e-4fbe-9489-a08321508ff5",
       "type": "question",
       "value": {
         "latex": "Vérifier que $f$ définit une densité de probabilité. On note $X$ une variable aléatoire admettant $f$ pour densité.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "661b9d8c-ce47-4d3e-b647-e60ccf81cee1",
+      "id": "6a034094-88f7-49d8-8267-e0b06afd9272",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de vérifier que $f(x) \\geq 0$ pour tout $x \\in \\R$ puis de calculer :\n\t\t$$\\begin{align*}\n\t\t\t\\int_{-\\infty}^{+\\infty} f(x)dx &= \\int_{-\\infty}^{+\\infty} \\frac{1}{\\pi}\\frac{1}{1+x^2} dx \\\\\n\t\t\t&= \\frac{1}{\\pi}\\left[\\arctan(x)\\right]_{-\\infty}^{+\\infty} \\\\\n\t\t\t&= \\frac{1}{\\pi} \\left( \\frac{\\pi}{2}- \\left( -\\frac{\\pi}{2}   \\right)  \\right) \\\\\n\t\t\t&= 1\n\t\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1b8a16b2-f449-47e5-a2fc-1d41df32b05b",
+      "id": "374734c5-1965-49f7-aca6-16a97ff00d19",
       "type": "question",
       "value": {
         "latex": "Montrer que $X$ n'admet pas de moment d'ordre 1.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "1642e54e-7c2e-4a1c-814a-bc11d2953843",
+      "id": "f6716b78-c8b8-4792-8a5e-a18295181fd7",
       "type": "reponse",
       "value": {
         "latex": "On remarque que $x \\times \\frac{1}{1+x^2} \\underset{x\\to +\\infty}\\sim \\frac{1}{x}$ donc par comparaison, la fonction $x \\mapsto xf(x)$ n'est pas intégrable au voisinage de $+\\infty$. Donc $X$ n'est pas intégrable et $\\mathbb{E}(X)$ n'existe pas.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "152cc6cc-9a90-444e-8e64-c2cb75e69504",
+      "id": "c3e5f471-65cc-426a-bbff-5431621bf8f8",
       "type": "question",
       "value": {
         "latex": "Calculer la fonction de répartition de $X$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "d3bf63b4-3148-4065-8b34-3ca799ee85d3",
+      "id": "606c1d94-7bc7-4f65-9564-14c8484edb96",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$ : \n\t\t$$\\begin{align*}\n\t\t\tF_X(t) &= \\PP(X \\leq t ) \\\\\n\t\t\t&= \\int_{-\\infty}^{t} f(x)dx \\\\\n\t\t\t&= \\frac{1}{\\pi}\\left[\\arctan(x)\\right]_{-\\infty}^{t} \\\\\n\t\t\t&= \\frac{1}{\\pi} \\left(\\arctan(t) + \\frac{\\pi}{2} \\right) \\\\\n\t\t\t&= \\frac{1}{2} + \\frac{1}{\\pi}\\arctan(t)\n\t\\end{align*}$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "403b37f8-a5d9-4522-8620-9e7463cf508a",
+      "id": "452ae52b-8622-46a6-bbfc-979eaac188c3",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition de $Y=\\arctan(X)$ et en déduire sa loi.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "ae4c3d54-e705-498e-b5ea-d196fd45ae2c",
+      "id": "da54384d-fc82-4921-a836-824bd09724ea",
       "type": "reponse",
       "value": {
         "latex": "On sait que $-\\frac{\\pi}{2} \\leq Y < \\frac{\\pi}{2}$. Donc si $t < -\\frac{\\pi}{2}$ alors $F_Y(t) = 0$ et si $t > \\frac{\\pi}{2}$ alors $F_Y(t) = 1$.  Soit $t \\in \\left[-\\frac{\\pi}{2} ; \\frac{\\pi}{2}\\right]$ : \n\t\t$$\\begin{align*}\n\t\t\tF_Y(t) &= \\PP(X \\leq \\tan(t) ) \\\\\n\t\t\t&= \\frac{1}{\\pi}\\left[\\arctan(x)\\right]_{-\\infty}^{\\tan(t)} \\\\\n\t\t\t&= \\frac{t}{\\pi} + \\frac{1}{2}\n\t\t\\end{align*}$$\n\t\tOn reconnaît la fonction de répartition d'une loi uniforme $\\mathcal{U}\\left(\\left[-\\frac{\\pi}{2} ; \\frac{\\pi}{2}\\right]\\right)$.",

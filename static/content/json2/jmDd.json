@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:27.955Z",
+    "createdAt": "2024-11-06T20:22:40.955Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:27.955Z"
+    "updatedAt": "2024-11-06T20:22:40.955Z"
   },
   "contenu": [
     {
-      "id": "17565d0f-58fb-4249-82f1-0fb61be86d48",
+      "id": "6bace83d-4f17-4f22-8df2-cd5057bf3c28",
       "type": "description",
       "value": {
         "latex": "Une machine est composée de trois alternateurs indépendants. La durée de vie de $T$ de chaque alternateur suit une loi exponentielle de paramètre $\\lambda$. La machine fonctionne si et seulement si au moins deux des alternateurs fonctionnent.  On appelle $X$ la variable aléatoire mesurant le temps de fonctionnement de la machine.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "4b80b425-6fc9-4292-b36c-4aece81b50ea",
+      "id": "9e77bb4c-08f4-4135-af5b-85b6848c6e0b",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $X$ et calculer son espérance.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "f2724a8e-f747-4aeb-84fe-0f4f161659ca",
+      "id": "8d268a4e-4d02-48ab-9110-a77f8fa83ac8",
       "type": "reponse",
       "value": {
         "latex": "Soient $T_1$, $T_2$ et $T_3$ les durées de vie des alternateurs. Soit $t >0$, on a~: \n    $$\\begin{align*}\n        \\prob(X \\geq t) & = \\prob(T_1 \\geq t, T_2 \\geq t, T_3 \\geq t) + \\prob(T_1 < t, T_2 \\geq t, T_3 \\geq t) \\\\ &+ \\prob(T_1 \\geq t, T_2 < t, T_3 \\geq t) + \\prob(T_1 \\geq t, T_2 \\geq t, T_3 < t) \\\\\n        & = \\prob(T_1 \\geq t) \\prob(T_2 \\geq t) \\prob(T_3 \\geq t) + \\prob(T_1 < t) \\prob(T_2 \\geq t) \\prob(T_3 \\geq t) \\\\ & + \\prob(T_1 \\geq t) \\prob(T_2 < t) \\prob(T_3 \\geq t) + \\prob(T_1 \\geq t) \\prob(T_2 \\geq t) \\prob(T_3 < t) \\\\\n        & = e^{-3\\lambda t} + 3 e^{-2\\lambda t} (1-e^{-\\lambda t}) \\\\\n        &= 3 e^{-2\\lambda t} - 2 e^{-3\\lambda t} \n    \\end{align*}$$\n    Donc la fonction de répartition de $X$ est~: \n    $$\\begin{align*}\n        F_X(t) & = \\prob(X \\leq t) \\\\\n        & = 1 - \\prob(X \\geq t) \\\\\n        & = 1 - 3 e^{-2\\lambda t} + 2 e^{-3\\lambda t} \n    \\end{align*}$$\n    Cete fonction est dérivable sur $\\R_+$ et sa dérivée est~:\n    $$\\begin{align*}\n        f_X(t) & = 6\\lambda e^{-2\\lambda t}  - 6 \\lambda e^{-3\\lambda t} \\\\\n    \\end{align*}$$\nOn conclut que $X$ admet pour densité de probabilité $f_X(x) = 6 ( e^{-2\\lambda x}  - e^{-3\\lambda x})1_{\\R_+}(x)$. \n\nOn peut alors calculer son espérance : \n$$\\begin{align*}\n    \\E(X) & = \\int_{-\\infty}^{+\\infty} x f_X(x) dx \\\\\n    & = \\int_{0}^{+\\infty} 6 x ( e^{-2\\lambda x}  - e^{-3\\lambda x}) dx \\\\\n    &= 3 \\times \\frac{1}{2\\lambda} - 2 \\times \\frac{1}{3\\lambda} \\\\\n    & = \\frac{5}{6\\lambda} \\\\\n\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "34bddb7b-4676-4b3b-a76e-5d85843eaf7f",
+      "id": "d02ca414-6e72-4176-9332-8bb0da2abb30",
       "type": "question",
       "value": {
         "latex": "Soient les réels $t>0$, $h>0$. Sachant que la machine a déjà fonctionné pendant un temps $t$, quelle est la probabilité qu'elle fonctionne encore pendant un temps $h$ ? Déterminer la limite de cette probabilité, à $h$ fixé, lorsque $t \\to +\\infty$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7f830a99-632e-46a3-a748-4de7b370feed",
+      "id": "2026db2f-9a66-4e37-b486-1a1578509a2f",
       "type": "reponse",
       "value": {
         "latex": "On exprime la probabilité conditionnelle : \n    $$\\begin{align*}\n        \\prob(X \\geq t+h | X \\geq t) & = \\frac{\\prob(X \\geq t+h, X \\geq t)}{\\prob(X \\geq t)} \\\\\n        & = \\frac{\\prob(X \\geq t+h)}{\\prob(X \\geq t)} \\\\\n        &= \\frac{3e^{-2\\lambda (t+h)} -2 e^{-3\\lambda (t+h)}}{3e^{-2\\lambda t} -2 e^{-3\\lambda t}} \\\\\n        & = \\frac{ 3 e^{-2\\lambda h} - 2 e^{-\\lambda t} e^{-3\\lambda h}}{3 - 2 e^{-\\lambda t}} \\\\\n        & \\xrightarrow[t \\to +\\infty]{} e^{-2\\lambda h}\n    \\end{align*}$$",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:09:34.371Z",
+    "createdAt": "2024-11-06T20:21:51.634Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:09:34.371Z"
+    "updatedAt": "2024-11-06T20:21:51.634Z"
   },
   "contenu": [
     {
-      "id": "0820f778-1a53-477d-979d-556414eef01f",
+      "id": "c2ab0dcb-a247-4fce-aa1e-cb1515d91d8a",
       "type": "description",
       "value": {
         "latex": "Un usager de train effectue régulièremment $100$ trajets par mois en première classe. On admet qu'à chacun de ses voyages, cet usager a une chance sur dix d'être contrôlé. \n\n        On suppose que cet usager fraude systématiquement en voyageant en première classe avec un titre de transport de seconde classe. La différence entre le prix d'un billet de première classe et celui d'un billet de seconde classe est de $1$ euro. En cas de contrôle, le montant de l'amende à payer est noté $\\alpha$ euros.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "e752def1-312c-45dc-bb3f-fec66880ecee",
+      "id": "a0f4d0f2-d372-48ca-b56e-3d106a43795b",
       "type": "question",
       "value": {
         "latex": "Quel est le montant minimum de l'amende $\\alpha$ qu'il faudrait infliger à cet usager pour qu'il soit dissuadé de frauder en étant financièrement perdant à la fin du mois avec une probabilité supérieure à $95\\%$ ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "cef1ac48-e45a-424a-a5a9-306aae4d76cb",
+      "id": "bfc0adc5-c61b-49b3-883d-3dcfcb0ed3fc",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ le nombre de fois dans le mois où l'usager est contrôlé. On a $X\\sim\\mathcal{B}(100,0.1)$. \n\n        Sur un mois, l'usager fait un bénéfice de $100\\times1$ euros sur sa fraude et perd $X\\times\\alpha$ euros en amende.\n\n        On cherche $\\alpha$ tel que $\\prob(100-X\\alpha<0) \\geq 0.95$.\n\n        On sait que $\\E(X) = 100\\times0.1 = 10$ et $\\V(X) = 100\\times0.1\\times0.9 = 9$.\n\n        D'après le théorème central limite, la variable aléatoire $Z = \\frac{X-10}{3}$ suit approximativement une loi normale centrée réduite.\n\n        Or $\\prob(100-X\\alpha<0) = \\prob(X>\\frac{100}{\\alpha}) = \\prob(Z>\\frac{100/\\alpha-10}{3})$. On cherche donc $\\alpha$ tel que $\\prob(Z>\\frac{100/\\alpha-10}{3}) \\geq 0.95$. \n\n        On a $\\prob(Z>\\frac{100/\\alpha-10}{3}) = 1-\\prob\\left(Z\\leq\\frac{100/\\alpha-10}{3}\\right) = 1-\\Phi\\left(\\frac{100/\\alpha-10}{3}\\right)$. On cherche donc $\\alpha$ tel que $1-\\Phi\\left(\\frac{100/\\alpha-10}{3}\\right) \\geq 0.95$ soit $\\Phi\\left(\\frac{100/\\alpha-10}{3}\\right) \\leq 0.05$. \n\n        Par lecture de la table de la loi normale centrée réduite, on trouve $\\frac{100/\\alpha-10}{3} \\leq -1.65$ soit $100/\\alpha \\leq -1.65\\times3+10 = 5.05$ soit $\\alpha \\geq 100/5.05 = 19.8$.\n\n        L'amende doit donc être supérieure à $19.8$ euros pour que l'usager soit dissuadé de frauder en étant financièrement perdant à la fin du mois avec une probabilité supérieure à $95\\%$.",

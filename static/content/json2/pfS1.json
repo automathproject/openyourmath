@@ -1,5 +1,5 @@
 {
-  "uuid": "b8cf24c2-a3f5-45ad-8490-3fcd280ecb16",
+  "uuid": "pfS1",
   "titre": "Estimation d'un paramètre",
   "theme": [
     "statistiques"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:34.234Z",
+    "createdAt": "2024-11-06T20:22:46.628Z",
     "organisation": "",
-    "updatedAt": "2024-11-05T19:10:34.234Z"
+    "updatedAt": "2024-11-06T20:22:46.628Z"
   },
   "contenu": [
     {
-      "id": "becfa14c-9dd8-4bd1-803f-d6aab67a2c80",
+      "id": "ad9d4364-fe3d-472a-8630-05f806e3d164",
       "type": "description",
       "value": {
         "latex": "Dans une usine, une machine produit des pièces dont la longueur suit une loi normale de paramètres $\\mu$ (en cm) et $\\sigma^2 = 4$ (en cm²). On souhaite estimer $\\mu$ à partir d'un échantillon de taille $n=5$. On note $(X_1,...,X_5)$ cet échantillon.\n\nOn considère les deux estimateurs suivants :\n$$T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i \\qquad T_2 = \\frac{1}{4}(X_1 + X_2) + \\frac{1}{6}(X_3 + X_4 + X_5)$$\n\nOn pose également :\n$$U = \\sum_{i=1}^{5} (X_i - T_1)^2 \\qquad V = \\frac{1}{2}(X_1 - X_2)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9f7a33de-e35f-4197-89a1-166d3306efe4",
+      "id": "4c258fe3-4294-49f6-92a2-72abfce16914",
       "type": "question",
       "value": {
         "latex": "Montrer que $V$ suit une loi normale dont on précisera les paramètres.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "e1fa9650-5dde-49ab-a73b-19212e365445",
+      "id": "cc01a59c-f6c0-4950-92d0-356f44ac1bca",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance : \n\t$\\E(V) = \\frac{1}{2}(\\E(X_1) - \\E(X_2)) = \\frac{1}{2}(\\mu - \\mu) = 0$\n\t\n\tPar indépendance des variables :\n\t$\\V(V) = \\frac{1}{4}(\\V(X_1) + \\V(X_2)) = \\frac{1}{4}(4 + 4) = 2$\n\t\n\tDonc $V \\sim \\mathcal{N}(0,2)$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "f7620e93-44be-4d72-96fd-c9693831e5b2",
+      "id": "56f7d9da-d088-4091-8e24-eacdc58560f9",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob(-4{,}5 \\leq V \\leq 4{,}5)$ avec 8 chiffres significatifs.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "bead3c06-cc9b-4dbe-952e-cd5249db1298",
+      "id": "9dd84ceb-f4e3-4492-bb0e-b52bec35c437",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\\prob(-4{,}5 \\leq V \\leq 4{,}5) &= \\prob\\left(-\\frac{4{,}5}{2} \\leq \\frac{V}{2} \\leq \\frac{4{,}5}{2}\\right) \\\\\n\t\t&= \\prob(-2{,}25 \\leq \\frac{V}{2} \\leq 2{,}25) \\\\\n\t\t&= 2\\Phi(2{,}25) - 1 \\\\\n\t\t&\\approx 2 \\times 0{,}98758067 - 1 \\\\\n\t\t&\\approx 0{,}97516134\n\t\\end{align*}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "8f0613c8-b514-4b71-9756-88476bb18602",
+      "id": "27be63c1-6dea-4cbf-82ca-f18fc088dc32",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par la variable $T_1$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "70f0000f-7946-460e-a4b7-f453ddbe464b",
+      "id": "aead23c3-bd21-4509-a042-ede87994bcfc",
       "type": "reponse",
       "value": {
         "latex": "$T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i$ est une somme de variables aléatoires normales indépendantes. Donc $T_1$ suit une loi normale de moyenne $\\mu$ et de variance $\\frac{4}{5}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "92c79785-3923-477e-90c0-175c8a471612",
+      "id": "f57f4d88-244b-4155-bfe2-afefda305cab",
       "type": "question",
       "value": {
         "latex": "Étudier le biais des estimateurs $T_1$ et $T_2$.",
@@ -77,31 +77,31 @@
       }
     },
     {
-      "id": "403012de-3418-4ce8-b7b8-8d006cc7b493",
+      "id": "c5fc9d7a-5555-4490-a6cc-10a98a4e92ea",
       "type": "reponse",
       "value": {
-        "latex": "Pour $T_1$ :\n\t$$\\begin{align*}\n\t\t\\E(T_1) &= \\frac{1}{5}\\sum_{i=1}^{5} \\E(X_i) = \\frac{5\\mu}{5} = \\mu\n\t\\end{align*}$$\n\tDonc $T_1$ est sans biais.\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\E(T_2) &= \\frac{1}{3}(\\E(X_1) + \\E(X_2)) + \\frac{1}{6}(\\E(X_3) + \\E(X_4) + \\E(X_5)) \\\\\n\t\t&= \\frac{2\\mu}{3} + \\frac{3\\mu}{6} = \\mu\n\t\\end{align*}$$\n\tDonc $T_2$ est aussi sans biais.",
-        "html": "<p>Pour <span class=\"math inline\">\\(T_1\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\E(T_1) &amp;= \\frac{1}{5}\\sum_{i=1}^{5} \\E(X_i) =\n\\frac{5\\mu}{5} = \\mu\n    \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(T_1\\)</span>\nest sans biais.</p>\n<p>Pour <span class=\"math inline\">\\(T_2\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\E(T_2) &amp;= \\frac{1}{3}(\\E(X_1) + \\E(X_2)) +\n\\frac{1}{6}(\\E(X_3) + \\E(X_4) + \\E(X_5)) \\\\\n        &amp;= \\frac{2\\mu}{3} + \\frac{3\\mu}{6} = \\mu\n    \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(T_2\\)</span>\nest aussi sans biais.</p>\n"
+        "latex": "Pour $T_1$ :\n\t$$\\begin{align*}\n\t\t\\E(T_1) &= \\frac{1}{5}\\sum_{i=1}^{5} \\E(X_i) = \\frac{5\\mu}{5} = \\mu\n\t\\end{align*}$$\n\tDonc $T_1$ est sans biais.\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\E(T_2) &= \\frac{1}{4}(\\E(X_1) + \\E(X_2)) + \\frac{1}{6}(\\E(X_3) + \\E(X_4) + \\E(X_5)) \\\\\n\t\t&= \\frac{2\\mu}{4} + \\frac{3\\mu}{6} = \\mu\n\t\\end{align*}$$\n\tDonc $T_2$ est aussi sans biais.",
+        "html": "<p>Pour <span class=\"math inline\">\\(T_1\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\E(T_1) &amp;= \\frac{1}{5}\\sum_{i=1}^{5} \\E(X_i) =\n\\frac{5\\mu}{5} = \\mu\n    \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(T_1\\)</span>\nest sans biais.</p>\n<p>Pour <span class=\"math inline\">\\(T_2\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\E(T_2) &amp;= \\frac{1}{4}(\\E(X_1) + \\E(X_2)) +\n\\frac{1}{6}(\\E(X_3) + \\E(X_4) + \\E(X_5)) \\\\\n        &amp;= \\frac{2\\mu}{4} + \\frac{3\\mu}{6} = \\mu\n    \\end{align*}\\]</span> Donc <span class=\"math inline\">\\(T_2\\)</span>\nest aussi sans biais.</p>\n"
       }
     },
     {
-      "id": "ad2b2ae4-3f68-4f14-9568-624b1e3d81d1",
+      "id": "1f101fd0-1fa3-4112-80f9-ef32bf98b051",
       "type": "question",
       "value": {
-        "latex": "Calculer la variance de $T_1$ et $T_2$. En déduire l'estimateur le plus efficace.",
-        "html": "<p>Calculer la variance de <span class=\"math inline\">\\(T_1\\)</span> et\n<span class=\"math inline\">\\(T_2\\)</span>. En déduire l’estimateur le\nplus efficace.</p>\n"
+        "latex": "Lequel de ces deux estimateurs est le plus efficace ?",
+        "html": "<p>Lequel de ces deux estimateurs est le plus efficace ?</p>\n"
       }
     },
     {
-      "id": "1d4a383b-a702-4ef7-8b8b-77c2a70e92fb",
+      "id": "54531f73-b5b9-4b90-a114-10677fd3818e",
       "type": "reponse",
       "value": {
-        "latex": "Pour $T_1$, par indépendance :\n\t$$\\begin{align*}\n\t\t\\V(T_1) &= \\frac{1}{25}\\sum_{i=1}^{5} \\V(X_i) = \\frac{5 \\times 4}{25} = \\frac{4}{5}\n\t\\end{align*}$$\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\V(T_2) &= \\frac{1}{9}\\V(X_1 + X_2) + \\frac{1}{36}\\V(X_3 + X_4 + X_5) \\\\\n\t\t&= \\frac{1}{9}(8) + \\frac{1}{36}(12) = \\frac{8}{9} + \\frac{12}{36} = \\frac{32}{36} \\approx 0.89\n\t\\end{align*}$$\n\t\n\tComme $\\frac{4}{5} < \\frac{32}{36}$, $T_1$ est plus efficace que $T_2$.",
-        "html": "<p>Pour <span class=\"math inline\">\\(T_1\\)</span>, par indépendance :\n<span class=\"math display\">\\[\\begin{align*}\n        \\V(T_1) &amp;= \\frac{1}{25}\\sum_{i=1}^{5} \\V(X_i) = \\frac{5\n\\times 4}{25} = \\frac{4}{5}\n    \\end{align*}\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(T_2\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\V(T_2) &amp;= \\frac{1}{9}\\V(X_1 + X_2) + \\frac{1}{36}\\V(X_3 +\nX_4 + X_5) \\\\\n        &amp;= \\frac{1}{9}(8) + \\frac{1}{36}(12) = \\frac{8}{9} +\n\\frac{12}{36} = \\frac{32}{36} \\approx 0.89\n    \\end{align*}\\]</span></p>\n<p>Comme <span class=\"math inline\">\\(\\frac{4}{5} &lt;\n\\frac{32}{36}\\)</span>, <span class=\"math inline\">\\(T_1\\)</span> est\nplus efficace que <span class=\"math inline\">\\(T_2\\)</span>.</p>\n"
+        "latex": "Pour $T_1$, par indépendance :\n\t$$\\begin{align*}\n\t\t\\V(T_1) &= \\frac{1}{25}\\sum_{i=1}^{5} \\V(X_i) = \\frac{5 \\times 4}{25} = \\frac{4}{5}\n\t\\end{align*}$$\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\V(T_2) &= \\frac{1}{16}\\V(X_1 + X_2) + \\frac{1}{36}\\V(X_3 + X_4 + X_5) \\\\\n\t\t&= \\frac{8}{16} + \\frac{12}{36} \\\\\n\t\t&= \\frac{1}{2} + \\frac{1}{3} > \\frac{4}{5}\n\t\\end{align*}$$\n\t\n\tComme $\\frac{4}{5} < \\frac{30}{36}$, $T_1$ est plus efficace que $T_2$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(T_1\\)</span>, par indépendance :\n<span class=\"math display\">\\[\\begin{align*}\n        \\V(T_1) &amp;= \\frac{1}{25}\\sum_{i=1}^{5} \\V(X_i) = \\frac{5\n\\times 4}{25} = \\frac{4}{5}\n    \\end{align*}\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(T_2\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\V(T_2) &amp;= \\frac{1}{16}\\V(X_1 + X_2) + \\frac{1}{36}\\V(X_3 +\nX_4 + X_5) \\\\\n        &amp;= \\frac{8}{16} + \\frac{12}{36} \\\\\n        &amp;= \\frac{1}{2} + \\frac{1}{3} &gt; \\frac{4}{5}\n    \\end{align*}\\]</span></p>\n<p>Comme <span class=\"math inline\">\\(\\frac{4}{5} &lt;\n\\frac{30}{36}\\)</span>, <span class=\"math inline\">\\(T_1\\)</span> est\nplus efficace que <span class=\"math inline\">\\(T_2\\)</span>.</p>\n"
       }
     },
     {
-      "id": "4ace9ce8-db2a-40b9-a74b-26ad1b51225d",
+      "id": "36cf7dc2-b57f-4e97-8e70-b17d265502cc",
       "type": "question",
       "value": {
         "latex": "Déterminer un coefficient $a \\in \\R$ tel que $aU$ suive une loi du $\\chi^2$ dont on précisera le nombre de degrés de liberté.",
@@ -109,15 +109,15 @@
       }
     },
     {
-      "id": "f45831d9-cb66-4ccf-af16-02b6d679e927",
+      "id": "33eb3464-3ebf-4715-8a5b-3a246767d672",
       "type": "reponse",
       "value": {
-        "latex": "$U = \\sum_{i=1}^{5} (X_i - T_1)^2$ où $T_1$ est la moyenne empirique.\n\tD'après le cours, $\\frac{U}{\\sigma^2}$ suit une loi du $\\chi^2$ à $n-1 = 4$ degrés de liberté.\n\tDonc $\\frac{1}{4}U$ suit une loi du $\\chi^2$ à 4 degrés de liberté.",
-        "html": "<p><span class=\"math inline\">\\(U = \\sum_{i=1}^{5} (X_i - T_1)^2\\)</span>\noù <span class=\"math inline\">\\(T_1\\)</span> est la moyenne empirique.\nD’après le cours, <span\nclass=\"math inline\">\\(\\frac{U}{\\sigma^2}\\)</span> suit une loi du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> à <span class=\"math inline\">\\(n-1\n= 4\\)</span> degrés de liberté. Donc <span\nclass=\"math inline\">\\(\\frac{1}{4}U\\)</span> suit une loi du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> à 4 degrés de liberté.</p>\n"
+        "latex": "$U = \\sum_{i=1}^{5} (X_i - T_1)^2$ où $T_1$ est la moyenne empirique.\n\tD'après le cours (théorème de Fisher), $\\frac{U}{\\sigma^2}$ suit une loi du $\\chi^2$ à $n-1 = 4$ degrés de liberté.\n\tDonc $\\frac{1}{4}U$ suit une loi du $\\chi^2$ à 4 degrés de liberté.",
+        "html": "<p><span class=\"math inline\">\\(U = \\sum_{i=1}^{5} (X_i - T_1)^2\\)</span>\noù <span class=\"math inline\">\\(T_1\\)</span> est la moyenne empirique.\nD’après le cours (théorème de Fisher), <span\nclass=\"math inline\">\\(\\frac{U}{\\sigma^2}\\)</span> suit une loi du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> à <span class=\"math inline\">\\(n-1\n= 4\\)</span> degrés de liberté. Donc <span\nclass=\"math inline\">\\(\\frac{1}{4}U\\)</span> suit une loi du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> à 4 degrés de liberté.</p>\n"
       }
     },
     {
-      "id": "b132d242-155d-4d18-875e-ff7a7221bed6",
+      "id": "5d7ce3c5-baed-40c0-8832-c199c447be73",
       "type": "question",
       "value": {
         "latex": "En déduire la loi suivie par la variable $W = \\frac{T_1 - \\mu}{\\sqrt{\\frac{U}{20}}}$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "641e4744-5175-420f-afa3-adfb71275f76",
+      "id": "59341da7-5126-40c6-842a-510de80434f6",
       "type": "reponse",
       "value": {
         "latex": "On sait que $\\frac{T_1 - \\mu}{\\sigma/\\sqrt{5}} \\sim \\mathcal{N}(0,1)$ indépendant de $\\frac{U}{4} \\sim \\chi^2(4)$\n\t\n\tDonc $W = \\frac{T_1 - \\mu}{\\sqrt{\\frac{U}{20}}} = \\frac{\\frac{T_1 - \\mu}{\\sqrt{\\frac{4}{5}}}}{\\sqrt{\\frac{\\frac{U}{4}}{4}}} \\sim St(4)$.\t\n\tAinsi, $W \\sim St(4)$",

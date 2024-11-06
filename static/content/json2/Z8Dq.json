@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-05T19:10:10.766Z",
+    "createdAt": "2024-11-06T20:22:26.339Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:10.766Z"
+    "updatedAt": "2024-11-06T20:22:26.339Z"
   },
   "contenu": [
     {
-      "id": "9b6a10fd-497e-4ee0-8fd6-c971f580e2d3",
+      "id": "73205af4-76c9-4984-a250-5fcbb2b330ec",
       "type": "question",
       "value": {
         "latex": "Soit $X$ une variable aléatoire suivant une loi exponentielle  de paramètre $\\lambda>0$. Démontrer l'existence des moments d'ordre $n$ de $X$ pour tout $n \\in \\mathbb{N}$ puis les calculer.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "0ea80250-cc82-4025-9dd6-fce03d008476",
+      "id": "b7819ec7-1c63-45cf-8a86-24fa28f55f2d",
       "type": "reponse",
       "value": {
         "latex": "On sait par comparaison que la fonction $x\\mapsto x e^{-\\lambda x}$ est intégrable au voisinage de $+\\infty$ donc on peut calculer par théorème de transfert pour tout $n \\in \\N^*$ : \n\t$$\\begin{align*}\n\t\t\\mathbb{E}(X^n) &= \\lambda \\int_0^{+\\infty} x^n e^{-\\lambda x} dx \\\\\n\t\t&= \\lambda \\left[ \\frac{x^n e^{-\\lambda x}}{-\\lambda} \\right]_{0}^{+\\infty} + \\frac{1}{\\lambda} n \\int_{0}^{+\\infty} x^{n-1} \\lambda e^{-\\lambda x} dx \\\\\n\t\t&= \\frac{n}{\\lambda } \\mathbb{E}(X^{n-1})\n\t\\end{align*}$$\n\tDe plus, on a immédiatement que $\\mathbb{E}(X^0) = 1$ donc par récurrence, on obtient :\n\t$$\\mathbb{E}(X^n) = \\frac{n!}{\\lambda^n}$$",

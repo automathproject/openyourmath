@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:10:18.810Z",
+    "createdAt": "2024-11-06T20:22:33.665Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:10:18.810Z"
+    "updatedAt": "2024-11-06T20:22:33.665Z"
   },
   "contenu": [
     {
-      "id": "76e3be97-d968-4dd1-8843-29af1cec5b50",
+      "id": "8f678b41-4b1c-4133-8994-2cd3564f0a32",
       "type": "description",
       "value": {
         "latex": "Le temps d'attente à une caisse de supermarché peut être modélisé par une variable aléatoire $T$ qui suit une loi exponentielle de paramètre $\\lambda >0$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "996e9b80-6bd8-4f72-bfa5-100079e6cd7f",
+      "id": "17fad2d3-9bf4-48c4-a307-fca79b822b9c",
       "type": "question",
       "value": {
         "latex": "Vérifier que le choix d'un paramètre $\\lambda = 0{,}12$ permet d'avoir environ $\\prob(T \\leq 10) = 0{,}7$. Par la suite, on fixera $\\lambda = 0{,12}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4f080013-e604-4779-bfe6-f9b52100fd0f",
+      "id": "cbe29bdd-8a22-4a0f-950e-eae9d5f242f8",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\\prob(T \\leq 10) &= \\int_{-\\infty}^{10} \\lambda e^{-\\lambda x} \\dx \\\\\n\t\t\t                 &= \\int_0^{10} \\lambda e^{-\\lambda x} \\dx \\\\\n\t\t\t                 &= \\left[ -e^{-\\lambda x} \\right]_0^{10} \\\\\n\t\t\t                 &= 1 - e^{-\\lambda \\times 10} \\\\\n\t\t\t                 &= 1 - e^{-1{,}2} \\\\\n\t\t\t                 &\\approx 0{,}7\n\t\t\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "6ab8e1d6-fafc-43c2-876e-b7fa84092635",
+      "id": "a205910a-7818-4068-a0b9-1976a934a2fc",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob(T > 5)$ et interpréter.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "cd5f77d1-3c1b-4734-97db-cc056eac644e",
+      "id": "b99c2662-c82b-4ee3-90da-10356705045f",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\\prob(T > 5) &= 1 - \\prob(T \\leq 5) \\\\\n\t\t\t             &= 1 - \\int_{-\\infty}^5 \\lambda e^{-\\lambda x} \\dx \\\\\n\t\t\t             &= 1 - \\int_0^5 \\lambda e^{-\\lambda x} \\dx \\\\\n\t\t\t             &= 1 - \\left[ -e^{-\\lambda x} \\right]_0^5 \\\\\n\t\t\t             &= 1 - \\left( -e^{-\\lambda \\times 5} + 1 \\right) \\\\\n\t\t\t             &= e^{-\\lambda \\times 5} \\\\\n\t\t\t             &= e^{-0{,}12 \\times 5} \\\\\n\t\t\t\t\t\t &= e^{-0{,}6} \\\\\n\t\t\t\t\t\t &= 0{,}5488\n\t\t\\end{align*}$$\n\t\tLa probabilité que le temps d'attente soit supérieur à 5 minutes est d'environ 55\\%.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "9f44470a-469b-4719-9af9-115bb4d295c2",
+      "id": "0058b22e-6f3c-47b7-8ac7-5c1e6ca8fe18",
       "type": "question",
       "value": {
         "latex": "Sachant qu'un client a déjà attendu 10 minutes à la caisse, quelle est la probabilité que son attente totale dépasse 15 minutes ?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "68c3ee9e-492e-4ffe-a9c1-b550ec9f0b3c",
+      "id": "00c710ec-55d7-4c48-ad97-eb4f45865421",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\\prob(T > 15 \\mid T > 10) &= \\frac{\\prob(T > 15 \\cap T > 10)}{\\prob(T > 10)} \\\\\n\t\t\t                          &= \\frac{\\prob(T > 15)}{\\prob(T > 10)} \\\\\n\t\t\t                          &= \\frac{e^{-\\lambda \\times 15}}{e^{-\\lambda \\times 10}} \\\\\n\t\t\t                          &= e^{-\\lambda \\times 5} \\\\\n\t\t\t                          &= e^{-0{,}12 \\times 5} \\\\\n\t\t\t                          &= e^{-0{,}6} = \\prob(T > 5)\n\t\t\t                          &= 0{,}5488\n\t\t\\end{align*}$$\n\t\tLa probabilité que le temps d'attente soit supérieur à 15 minutes sachant qu'il est déjà supérieur à 10 minutes est la même que la probabilité que le temps d'attente soit supérieur à 5 minutes. Cette probabilité est d'environ 55\\%. Cette propriété est appelée \\textit{absence de mémoire} de la loi exponentielle.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "99578b87-bc03-4c1f-b336-10618a09438d",
+      "id": "1d263cc6-3e66-46a1-9602-f261dc057feb",
       "type": "question",
       "value": {
         "latex": "On suppose que chaque caisse fonctionne manière indépendante. Etant donné que 6 caisses sont ouvertes, on note $Y$ la variable aléatoire donnant le nombre de caisses pour lesquelles la durée d'attente est supérieure à 10 minutes. Quelle est la loi suivie par la variable $Y$ ? Calculer la probabilité qu'au moins 4 des 6 caisses imposent une durée d'attente supérieure à 10 minutes, ce qui obligerait le magasin à ouvrir une nouvelle caisse.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "96debd40-f343-4484-9d42-d5c6c801e5cb",
+      "id": "8ae593be-1223-428c-870a-42e22a8c4068",
       "type": "reponse",
       "value": {
         "latex": "On a $Y \\sim \\mathcal{B}(6, \\prob(T > 10))$ avec $\\prob(T > 10) = e^{-1{,}2} \\approx 0{,}3012$. \\\\\n\t\tDonc $$\\begin{align*}\n\t\t\t\\prob(Y \\geq 4) &= \\prob(Y = 4) + \\prob(Y = 5) + \\prob(Y = 6) \\\\\n\t\t\t                &= \\binom{6}{4} \\times \\prob(T > 10)^4 \\times \\prob(T \\leq 10)^2 + \\binom{6}{5} \\times \\prob(T > 10)^5 \\times \\prob(T \\leq 10)^1 \\\\\n\t\t\t                &+ \\binom{6}{6} \\times \\prob(T > 10)^6 \\times \\prob(T \\leq 10)^0 \\\\\n\t\t\t                &= \\binom{6}{4} \\times e^{-1{,}2 \\times 4} \\times (1 - e^{-1{,}2})^2 + \\binom{6}{5} \\times e^{-1{,}2 \\times 5} \\times (1 - e^{-1{,}2})^1\\\\\n\t\t\t                 &+ \\binom{6}{6} \\times e^{-1{,}2 \\times 6} \\times (1 - e^{-1{,}2})^0 \\\\\n\t\t\t                &\\approx 0{,}07\n\t\t\\end{align*}$$\n\t\tLa probabilité qu'au moins 4 des 6 caisses imposent une durée d'attente supérieure à 10 minutes est d'environ 7\\%.",

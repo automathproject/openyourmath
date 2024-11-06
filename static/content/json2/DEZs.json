@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-05T19:09:47.479Z",
+    "createdAt": "2024-11-06T20:22:04.836Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-05T19:09:47.479Z"
+    "updatedAt": "2024-11-06T20:22:04.836Z"
   },
   "contenu": [
     {
-      "id": "28ea6731-d8c7-4d65-be65-7f71bcb64349",
+      "id": "e85d27a8-47a2-4e4c-8865-2c446b20b030",
       "type": "description",
       "value": {
         "latex": "Soient $X_1,...,X_n$ des variables aléatoires indépendantes et de même loi ayant pour densité :\n\t$$f_\\theta \\colon x \\mapsto \\left\\{\n\t\\begin{array}{ll}\n\t\t\\frac{1}{2}(1+\\theta x) & \\mbox{si } -1 \\leq x \\leq 1 \\\\\n\t\t0 & \\mbox{sinon.}\n\t\\end{array}\n\t\\right.$$\n\toù $\\theta \\in [-1;1]$ est un paramètre.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "a9f4b459-ca32-45c5-8938-44a0eb65edd2",
+      "id": "758b236e-3179-4620-9d24-dda743f28f7f",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $\\theta \\in [-1;1]$, $f_\\theta $ est une densité de probabilité.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "9dec2d2d-d575-44d4-a652-05bb8f57913e",
+      "id": "42410054-bd24-4723-b915-232c96c7c25f",
       "type": "reponse",
       "value": {
         "latex": "Le fait que $\\theta \\in [-1;1]$ garantit que $f_{\\theta}(x) \\geq 0$ pour tout $x \\in [-1;1]$. De plus, \n\t\t$$\\begin{align*}\n\t\t\t\\int f_\\theta(x) dx &= \\int_{-1}^{1} \\frac{1}{2}(1+\\theta x) dx \\\\\n\t\t\t&= \\int_{-1}^{1} \\frac{1}{2}(1+0) dx \\quad \\text{ par imparité de x} \\\\\n\t\t\t&= 1\n\t\t\\end{align*}$$\t\n\t\tDonc $f_{\\theta}$ définit une bien une densité de probabilité.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "43b08e17-29f0-4913-bfea-28ac83b93673",
+      "id": "eda9bd1c-ccb0-49d4-ae85-f2a126388102",
       "type": "question",
       "value": {
         "latex": "Calculer $\\mathbb{E}(X_1)$ et $\\mathbb{V}(X_1)$. En déduire l'espérance et la variance de la variable aléatoire $\\overline{X} = \\frac{1}{n}\\sum_{i=1}^n X_i$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4c503c32-bd05-475e-af60-70b1cbcd3de4",
+      "id": "a7935455-a9bd-40cb-bd01-7036a3fd21e8",
       "type": "reponse",
       "value": {
         "latex": "On calcule les moments d'ordre 1 et 2 de la variable à densité $X_1$ :\n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(X_1) &= \\int x f_\\theta(x) dx \\\\\n\t\t\t&= \\int_{-1}^{1} \\frac{1}{2}(x+\\theta x^2) dx \\\\\n\t\t\t&= \\int_{-1}^{1} \\frac{1}{2}(\\theta x^2) dx \\quad \\text{ par imparité de $x$} \\\\\n\t\t\t&= 2\\int_{0}^{1} \\frac{1}{2}(\\theta x^2) dx \\quad \\text{ par parité de $x^2$} \\\\\n\t\t\t&= \\frac{\\theta}{3}\n\t\t\\end{align*}$$\n\t\tDe même, \t\t\n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(X_1^2) &= \\int x^2 f_\\theta(x) dx \\\\\n\t\t\t&= \\int_{-1}^{1} \\frac{1}{2}(x^2+\\theta x^3) dx \\\\\n\t\t\t&= \\int_{-1}^{1} \\frac{1}{2}(x^2) dx \\quad \\text{ par imparité de $x^3$} \\\\\n\t\t\t&= \\int_{0}^{1}  x^2 dx \\quad \\text{ par parité de $x^2$} \\\\\n\t\t\t&= \\frac{1}{3}\n\t\t\\end{align*}$$\n\t\t\n\t\tAvec la formule de Koenig Huygens, on en déduit que \n\t\t$$\\mathbb{V}(X_1) = \\mathbb{E}(X_1^2) - \t\\mathbb{E}(X_1)^2 = \\frac{1}{3}-\\frac{\\theta^2}{9} = \\frac{3-\\theta^2}{9}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "a6913205-8d4e-44d4-b0cf-b897deb42064",
+      "id": "cdf11da9-fa83-4356-8b39-e5b470e6d0a5",
       "type": "question",
       "value": {
         "latex": "On pose $T_n = \\frac{3}{n} \\sum_{i=1}^{n} X_i$. Montrer que $T$ est un estimateur sans biais et convergent de $\\theta$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "41a3f038-7e32-4b0f-85ab-593ba80fa89d",
+      "id": "e378f7ed-91d6-4b1c-84f3-792998db3ea9",
       "type": "reponse",
       "value": {
         "latex": "On calcule par linéarité de l'espérance : $\\mathbb{E}(T_n) = \\frac{3}{n} \\times n \\mathbb{E}(X_1) = \\theta$. Donc le biais de $T_n$ est \n\t\t$B(T_n) = \\mathbb{E}(T_n-\\theta) =\\theta - \\theta = 0$.\n\t\t\n\t\tDe plus, par propriétés de la variance et indépendance, \n\t\t$$\\mathbb{V}(T_n) =  \\frac{9}{n^2} \\times n \\times \\mathbb{V}(X_1) = \\frac{3-\\theta^2}{n}$$\n\t\tOr $EQM(T_n) = \\mathbb{V}(T_n) + B(T_n)^2$ donc $EQM(T_n) = \\frac{3-\\theta^2}{n} \\xrightarrow[n \\to +\\infty]{} 0$ : cela prouve que l'estimateur $T_n$ est convergent.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "37f563df-2874-471b-8ef6-65e762633af3",
+      "id": "b750654c-82b4-46d1-9d38-85cec9261654",
       "type": "question",
       "value": {
         "latex": "\\`A l'aide du Théorème Central Limite, donner une approximation de la loi de $T_n$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "622ee833-8514-4874-946d-86dbdeba3986",
+      "id": "d1ad42d5-9422-4143-bca7-a3494aa36bf9",
       "type": "reponse",
       "value": {
         "latex": "On pose $\\mu = \\mathbb{E}(X_1)$ et $\\sigma = \\sqrt{\\mathbb{V}(X_1)}$. Les variables $(X_i)$ sont iid, admettent une espérance et une variance donc d'après le théorème central limite, la variable \n\t\t$$\\frac{\\sum_{i=1}^n X_i - n\\mu}{\\sigma\\sqrt{n} }$$ converge en loi vers une loi normale $\\mathcal{N}(0,1)$.\n\t\tEn réécrivant, cela revient à dire que \t\n\t\t$$\\frac{\\frac{3}{n}\\sum_{i=1}^n X_i - 3\\mu}{3\\frac{\\sigma}{\\sqrt{n}} } = \\frac{T_n-\\theta}{\\sqrt{\\frac{3-\\theta^2}{n}}}$$ converge en loi vers une loi normale $\\mathcal{N}(0,1)$.\n\t\t\n\t\tSi $n$ est grand ($n \\geq 30$), cela revient à dire que $T_n$ suit approximativement une loi normale $\\mathcal{N}(\\theta, \\sigma^2 = \\frac{3-\\theta^2}{n})$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "e644c31b-5bfb-464e-90f6-c068bcf559dd",
+      "id": "470ef66a-a051-4ad4-b3de-c77ef2195fad",
       "type": "question",
       "value": {
         "latex": "Démontrer qu'il existe une constante $M_n$ ne dépendant pas de $\\theta$ telle que si $\\lambda >0$, \n\t\t$$\\PP(|T_n-\\theta| < \\lambda) \\geq 1-\\frac{M_n}{\\lambda^2}$$",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "0c03fc7c-9569-4ffd-9964-8f0d2f41eacd",
+      "id": "7f4a71e4-1f87-494d-becb-5a5f891bc52f",
       "type": "reponse",
       "value": {
         "latex": "D'après l'inégalité de Bienaymé Tchebichev, \n\t\t$$\\PP(|T_n-\\mathbb{E}(T_n)| \\geq  \\lambda) \\leq \\frac{\\mathbb{V}(T_n)}{\\lambda^2}$$\n\t\td'où $$\\PP(|T_n-\\theta| \\geq \\lambda) \\leq \\frac{3-\\theta^2}{n\\lambda^2} \\leq \\frac{3}{n\\lambda^2} = \\frac{M_n}{\\lambda^2}$$\n\t\ten posant $M_n = \\frac{3}{n}$.  Par passage au complémentaire, on obtient finalement :\n\t\t$$\\PP(|T_n-\\theta| < \\lambda) \\geq 1-\\frac{3}{n\\lambda^2}$$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "95c52d8f-8cfb-4694-8500-a8cd9d9a42c9",
+      "id": "d94d0678-8b10-49bc-a200-4c9d853330e9",
       "type": "question",
       "value": {
         "latex": "Déterminer un intervalle de  confiance permettant d'estimer $\\theta$ avec une confiance d'au moins $95\\%$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "783aaca5-2de9-42d6-bd1a-4af8e84aa2ff",
+      "id": "b7bfab9d-0966-4f13-b4f3-a58f2c2bbdaf",
       "type": "reponse",
       "value": {
         "latex": "On cherche un intervalle $I$ tel que $\\PP(\\theta \\in I) \\geq 0{,}95$. Or d'après ce qui précède,\n\t\t\n\t\t$$\\begin{align*}\n\t\t\t\\PP(|T_n-\\theta| < \\lambda) \\geq 1-\\frac{3}{n\\lambda^2} &\\iff \\PP(-\\lambda < T_n-\\theta < \\lambda ) \\geq 1-\\frac{3}{n\\lambda^2} \\\\\n\t\t\t&\\iff\t\\PP( \\theta \\in ]T_n-\\lambda ; T_n + \\lambda [) \\geq 1-\\frac{3}{n\\lambda^2} \t\n\t\t\\end{align*}$$ \n\t\tOr \t$1-\\frac{3}{n\\lambda^2} = 0{,}95 \\iff \\frac{3}{n\\lambda^2} = 0{,}05 \\iff \\lambda^2 = \\frac{3}{0{,}05 n}$\n\t\tdonc \n\t\t$$\\PP\\left( \\theta \\in \\left]T_n - \\sqrt{\\frac{3}{0{,}05 n}} ; T_n + \\sqrt{\\frac{3}{0{,}05 n}}  \\right[\\right) \\geq 0{,}95$$\n\t\td'où l'intervalle de confiance $I = \\left]T_n - \\sqrt{\\frac{3}{0{,}05 n}} ; T_n + \\sqrt{\\frac{3}{0{,}05 n}}  \\right[$.",
