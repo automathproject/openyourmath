@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:50.989Z",
+    "createdAt": "2024-11-15T20:10:43.641Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:50.989Z"
+    "updatedAt": "2024-11-15T20:10:43.641Z"
   },
   "contenu": [
     {
-      "id": "7ada9b20-5541-4182-91e4-4c079dd8a36b",
+      "id": "636f728a-4908-4648-a27e-8e5268d5a3e4",
       "type": "description",
       "value": {
         "latex": "Soit $f$ une fonction réelle définie par \n $$f(x)=\\begin{cases}\n xe^{-\\frac{x^2}{2}}& \\text{ si } x \\geq 0 \\\\\n 0 & \\text{ si } x < 0\n \\end{cases}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9ce559cc-47a7-4caa-a785-6863c1b7cd97",
+      "id": "bb9bc4b4-fabf-4d6b-b8b3-56e8f7a9a4a0",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est une densité de probabilité. On définit $X$ une variable aléatoire admettant $f$ comme densité.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "fe1addfe-0597-4e32-af27-7f14c88e26e5",
+      "id": "f02357ea-66d4-46cd-a6b8-f6c058dbec98",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de vérifier que $f(x) \\geq 0$ pour tout $x \\in \\R$ puis de calculer :\n \t\t$$\\begin{align*}\n \t\t\\int_{-\\infty}^{+\\infty} f(x)dx &= \\int_0^{+\\infty} xe^{-\\frac{x^2}{2}} dx \\\\\n \t\t&= \\left[-e^{-\\frac{x^2}{2}}\\right]_0^{+\\infty} \\\\\n \t\t&= 1\n \t\t\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "c077fb7a-ba47-4cca-a5ad-9565c43e647e",
+      "id": "59447cd2-a24f-4852-80ef-87a16c057df8",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition $F$ de la variable aléatoire $Y=X^2$ en fonction de celle de $X$. En déduire la densité de la variable $Y$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "58b26095-bf22-44b4-949e-4a56a1a4f18c",
+      "id": "cbeeae24-efe6-477b-9404-4fa69fabe4a3",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$ et $F_{X^2}$ la fonction de répartition de la variable aléatoire $X^2$ : alors \n $$\\begin{align*}\n F_{X^2}(t) &= \\PP(X^2 \\leq t) \\\\\n &= \\begin{cases}\n  \\PP\\left(-\\sqrt{t} \\leq X \\leq \\sqrt{t}\\right) & \\text{ si } t \\geq 0 \\\\\n  0 & \\text{ si } t < 0\n \\end{cases} \\\\\n &= \\begin{cases}\n \\int_{-\\sqrt{t}}^{\\sqrt{t}} f(x) dx & \\text{ si } t \\geq 0 \\\\\n 0 & \\text{ si } t < 0\n \\end{cases} \\\\\n &= \\begin{cases}\n\\int_{0}^{\\sqrt{t}} xe^{-\\frac{x^2}{2}} dx & \\text{ si } t \\geq 0 \\\\\n0 & \\text{ si } t < 0\n\\end{cases} \\\\\n &= \\begin{cases}\n\\left[-e^{-\\frac{x^2}{2}}\\right]_0^{\\sqrt{t}} & \\text{ si } t \\geq 0 \\\\\n0 & \\text{ si } t < 0\n\\end{cases} \\\\\n&= \\left(1-e^{-\\frac{t}{2}}\\right)\\textbf{1}_{[0;+\\infty[}(t)\n \\end{align*}$$\t\n \nLa fonction $F_{X^2}$ est dérivable presque partout (sauf en ${0}$). Sa dérivée coïncide donc presque partout avec une fonction densité $g$ de la variable $X^2$. On peut donc poser \n$$g(x)=\\frac{1}{2}e^{-\\frac{t}{2}}\\textbf{1}_{[0;+\\infty[}(x)$$\net on conclut que $X^2$ suit une loi exponentielle de paramètre $\\lambda = \\frac{1}{2}$.",

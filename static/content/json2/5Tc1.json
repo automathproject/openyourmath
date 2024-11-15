@@ -5,13 +5,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:21:55.893Z",
+    "createdAt": "2024-11-15T20:09:55.280Z",
     "organisation": "",
-    "updatedAt": "2024-11-06T20:21:55.893Z"
+    "updatedAt": "2024-11-15T20:09:55.280Z"
   },
   "contenu": [
     {
-      "id": "bd3c7b70-62e6-4a3a-b236-52f1bb6ba70f",
+      "id": "f4de5609-a915-445f-8966-890646c352b7",
       "type": "description",
       "value": {
         "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\n\n\nOn pose \n$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "id": "bab59486-f383-4b2a-ad01-cc64cd414e10",
+      "id": "a8069793-bc97-4b00-b5eb-01880ad5b155",
       "type": "question",
       "value": {
         "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "653b1dc5-0ed1-4c2a-9525-93f3b5ee860f",
+      "id": "a47a6dae-20b2-499b-9a20-e34857e1bafb",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "id": "b9c9b54c-c210-4623-abc4-2063c44e7e9c",
+      "id": "902e3a2b-30d8-40bb-a159-d2e0ef375da2",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "20b280c1-a772-46f0-b750-efc0dd3bca9c",
+      "id": "a085e90e-4c15-46fc-9a9c-fa8148e9f9d7",
       "type": "reponse",
       "value": {
         "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
@@ -51,7 +51,7 @@
       }
     },
     {
-      "id": "6c77a6ce-ab79-4483-adf3-43af81d9f652",
+      "id": "6def989a-9be9-4cb3-9477-06639f1274eb",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
@@ -59,7 +59,7 @@
       }
     },
     {
-      "id": "7cc27cf4-e482-4ef2-aeb5-856d9b9b540a",
+      "id": "60e6483f-2214-48a1-8ee7-b475ab7294e4",
       "type": "reponse",
       "value": {
         "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",

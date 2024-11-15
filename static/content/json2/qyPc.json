@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:48.315Z",
+    "createdAt": "2024-11-15T20:10:41.420Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:48.315Z"
+    "updatedAt": "2024-11-15T20:10:41.420Z"
   },
   "contenu": [
     {
-      "id": "4e4e9a6d-5f10-4c93-ad51-76b7e33402a2",
+      "id": "6f1ca4a9-fb7d-4189-89f4-b6a83dbcbd0c",
       "type": "description",
       "value": {
         "latex": "La fonction {\\rm{random}} disponible dans les logiciels de calcul permet de générer des nombres aléatoires sur l'intervalle $[0;1]$, distribués selon une loi uniforme $\\mathcal{U}([0;1])$. A partir de cette fonction, il est facile de simuler des variables aléatoires suivant d'autres lois. On donne ou on rappelle la définition de quelques lois usuelles :\n\t\n\t\\underline{Définition : }\n\t\tSoit $p \\in ]0;1[$ : une variable $X$ suit une loi de Rademacher $\\mathcal{R}(p)$ si :\n\t\t\\begin{itemize}\n\t\t\t\\item $\\PP(X=1)=p$\n\t\t\t\\item $\\PP(X=-1)=1-p$\n\t\t\\end{itemize}\n\n\t\n\t\\underline{Définition : }\n\t\tSoit $\\lambda >0$ : une variable $X$ suit une loi de Laplace $\\mathcal{L}(\\lambda)$ si elle admet pour densité :\n\t\t$$f_X(x) = \\frac{\\lambda}{2} e^{-\\lambda |x|}$$\n\n\t\n\t\n\t\\underline{Définition : }\n\t\tSoit $p \\in ]0;1[$ : une variable $X$ suit une loi géométrique $\\mathcal{G}(p)$ si pour tout entier $k \\geq 1$ :\n\t\t$$\\PP(Z=k)=p(1-p)^{k-1}$$\n\n\t\n\t\\underline{Notations} : pour tout événement $A$, on note $\\textbf{1}_A$ la fonction indicatrice de $A$ ; pour tout $x$ réel, on note $[x]$ la partie entière de $x$.\n\t\n\tSoient $X$ et $Y$ deux variables aléatoires indépendantes : $X$ suit une loi Rademacher $\\mathcal{R}(1/2)$ et $Y$ suit une loi uniforme sur $[0;1]$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "f60bd9f9-dc93-40ed-b2e3-079814255295",
+      "id": "684374e9-ddba-4341-82ce-a225c4c9eef2",
       "type": "description",
       "value": {
         "latex": "Soit $\\lambda >0$. On pose $U = \\frac{1}{\\lambda} X \\ln(Y)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "321faca7-4906-4660-8fea-462984dc49aa",
+      "id": "d6aaca03-9deb-441f-9fc6-755e58a2d25b",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\lambda>0$ et $U = \\frac{1}{\\lambda} X \\ln(Y)$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "58375a1e-fd7c-4ff1-8920-8cbcd9a08c7f",
+      "id": "2592dc76-ce67-4101-a748-8f18e0adab67",
       "type": "question",
       "value": {
         "latex": "Soit $a \\in \\mathbb{R}$. Calculer $\\PP(\\ln(Y) \\leq a, X=1)$ et $\\PP(\\ln(Y) \\geq a, X=-1)$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "5b7935e0-bc5a-48a4-b593-d737492214a6",
+      "id": "509840b7-65f7-4613-96a4-6a82dc651ee2",
       "type": "reponse",
       "value": {
         "latex": "Soit $a \\in \\mathbb{R}$. Par indépendance de $X$ et $Y$, on a $\\PP(\\ln(Y) \\leq a, X=1) = \\PP(\\ln(Y) \\leq a) \\times \\PP(X=1) = \\PP(Y \\leq e^a) \\times \\frac{1}{2}$. Or \n\t\t\t      \t$\\PP(Y \\leq t) = 1$ si $t >1$ et $\\PP(Y \\leq t) = t$ si $0<t<1$ étant donnée la loi suivie par $Y$. Par conséquent, on a  $\\PP(\\ln(Y) \\leq a, X=1) = \\begin{cases} \\frac{1}{2} \\text{ si } a>0 \\\\ \\frac{1}{2} e^a \\text{ sinon}\\end{cases} $.\n\t\t\t      \t\n\t\t\t      \tDe même, $\\PP(\\ln(Y) \\geq a, X=-1) = \\begin{cases} 0 \\text{ si } a>0 \\\\ \\frac{1}{2} (1-e^a) \\text{ sinon}\\end{cases} $",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "4623d80d-0ce7-4f09-b5ac-5eff09ac1f1e",
+      "id": "e8a86a0d-c756-48d7-ab1c-24efcd71e2ff",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition de la variable $U$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "2234283d-7ded-4101-a52d-a9d6a0c2d61c",
+      "id": "bc677d83-483a-499a-8c9d-258b3e3728d4",
       "type": "reponse",
       "value": {
         "latex": "Soit $F_U$ la fonction de répartition de la variable $U$. Par définition, pour tout réel $t$, \n\t\t\t      \t$$F_U(t) = \\PP(\\frac{1}{\\lambda} X\\, \\ln(Y) \\leq t) = \\PP(X \\, \\ln(Y) \\leq \\lambda t)$$\n\t\t\t      \t\n\t\t\t      \tPar application du théorème des probabilités totales au système d'événements $\\{(X=1), (X=-1)\\}$, \n\t\t\t      \t$$F_U(t) = \\PP(X=1,Y \\leq e^{\\lambda t}) + \\PP(X=-1,Y \\geq e^{-\\lambda t})$$\n\t\t\t      \tD'après le calcul précédent, on obtient \n\t\t\t      \t$$F_U(t) =   \\begin{cases} 1-\\frac{1}{2} e^{-\\lambda t} \\text{ si } t>0 \\\\ \\frac{1}{2} e^{\\lambda t} \\text{ sinon}\\end{cases} $$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "0df298b2-7ee2-4469-87c8-325917de4c81",
+      "id": "4c2417d0-ced9-4cf2-87cb-7c75769d789e",
       "type": "question",
       "value": {
         "latex": "En déduire que $U$ suit une loi de Laplace $\\mathcal{L}(\\lambda)$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "0485bc50-fcd9-4a0a-a46d-483e9879074f",
+      "id": "2b4a4d35-6731-4029-9bd6-7e5980dff912",
       "type": "reponse",
       "value": {
         "latex": "On dérive la fonction de répartition pour obtenir la densité : $F_U'(t) = \\begin{cases} \\frac{1}{2} \\lambda e^{-\\lambda t} \\text{ si } t>0 \\\\ \\frac{1}{2} \\lambda e^{\\lambda t} \\text{ sinon}\\end{cases} = \\frac{1}{2} \\lambda e^{-\\lambda |t|}$. On reconnaît la fonction densité d'une loi de Laplace de paramètre $\\lambda$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "f0f099cd-12e6-4637-b734-aa6a1b5e4b45",
+      "id": "f1b72ff0-8257-4b0f-9cf3-13bf5760df56",
       "type": "description",
       "value": {
         "latex": "Soit $p \\in ]0;1[$. On définit les variables $Z = \\frac{\\ln(Y)}{\\ln(1-p)}$ et $V=1+[Z]$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "13903e68-af3a-46fc-a3c0-298b6300ac67",
+      "id": "697664ec-3ee4-44a7-9bc8-bb3d61f4b215",
       "type": "reponse",
       "value": {
         "latex": "Soit $p \\in ]0;1[$. On définit les variables $Z = \\frac{\\ln(Y)}{\\ln(1-p)}$ et $V=1+[Z]$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "a9302807-32aa-47a9-8edc-ec940e27a1cb",
+      "id": "75058b38-86e0-446f-98a2-8d728852555e",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $Z$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "d92a189d-0598-4029-a63e-7673030da9af",
+      "id": "505a2445-b253-4932-9127-6d7eb66830c8",
       "type": "reponse",
       "value": {
         "latex": "On tente de déterminer la loi de $Z$ en calculant sa fonction de répartition. Par définition (attention aux signes, $\\ln(1-p)<0$), $$F_Z(t) = \\PP(\\ln(Y) \\geq t \\ln(1-p)) = \\PP(Y \\geq (1-p)^t) = 1-F_Y((1-p)^t)$$\n\t\t\t      \tEn dérivant, on obtient une densité de $Z$ :\n\t\t\t      \t$$f_Z(t) = \\begin{cases} -\\ln(1-p) \\times (1-p)^t \\text { si } t>0 \\\\ 0 \\text{ sinon } \\end{cases} $$",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "b1786513-dc4b-45db-bf6e-1bc9c2849b07",
+      "id": "6c38e400-19c6-4d3a-acc2-9e3e19e67ab4",
       "type": "question",
       "value": {
         "latex": "Démontrer que $V$ suit une loi géométrique.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "b930d736-9ce6-4bcd-a5bc-5d15bf28c035",
+      "id": "58b015a3-8314-4c0f-a31c-45a736b43983",
       "type": "reponse",
       "value": {
         "latex": "La variable $V$ est une variable aléatoire discrète à valeurs dans $\\N^*$. Par conséquent, pour tout $k \\in \\N^*$, on calcule \n\t\t\t      \t$$\\PP(V=k) = \\PP(k-1 \\leq Z < k) = \\int_{k-1}^k f_Z(z) dz = (1-p)^{k-1} -(1-p)^k = p(1-p)^{k-1}$$\n\t\t\t      \tOn reconnaît bien la loi géométrique de paramètre $p$.",

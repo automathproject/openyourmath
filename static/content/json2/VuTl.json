@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-06T20:22:23.280Z",
+    "createdAt": "2024-11-15T20:10:19.131Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:23.280Z"
+    "updatedAt": "2024-11-15T20:10:19.131Z"
   },
   "contenu": [
     {
-      "id": "dc58f6ae-30ab-470e-a33c-9aa44e0e74b3",
+      "id": "8effe406-03d6-4e47-8812-6cf3c403711c",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n\t\t$$f(x,y)= x^4+y^4-2(x-y)^2.$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "a2504bf1-9c47-4a31-9524-4ffa0e7c1286",
+      "id": "506e9aff-5588-462f-b4df-2f5663138580",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $(\\alpha,\\beta)\\in \\R_+^2$ (et les déterminer) tels que, pour tout $(x,y)\\in R^2$, si $\\|.\\|$ désigne la norme euclidienne de $\\R^2$:\n\t\t\t\t$$f(x,y)\\geq \\alpha \\| (x,y)\\|^2+\\beta$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "7b6549f7-58ac-4eec-b2cb-149106351bfd",
+      "id": "916f500c-e0a5-44b4-abe0-3f74e0636998",
       "type": "reponse",
       "value": {
         "latex": "$f(x,y)=x^4 +y^4-2x^2-2y^2+4xy$. \n\t\t\t\tNous savons (par une astucieuse inégalité) que $xy\\geq -\\frac{1}{2}(x^2+y^2)$.\n\t\t\t\tAinsi, nous en déduisons que \n\t\t\t\t$$f(x,y)\\geq x^4+y^4-4x^2-4y^2$$\n\t\t\t\tPour tout $(x,y)\\in \\R^2$, nous savons que \n\t\t\t\t$X^4+\\varepsilon^2-2\\varepsilon X^2\\geq 0$ d'où, en utilisant cette inégalité pour $x$ et pour $y$, nous obtenons:\n\t\t\t\t$$f(x,y)\\geq (2\\varepsilon-4)x^2+(2\\varepsilon-4)y^2-2\\varepsilon^4$$\n\t\t\t\tPour $\\varepsilon=3$, il s'ensuit que $f(x,y)\\geq 2(x^2+y^2)-162 =2 \\|(x,y)\\|^2-162$.\n\t\t\t\tAinsi, en prenant $\\alpha=2$ et $\\beta=-162$, nous obtenons l'inégalité souhaitée.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "7d872420-c1cc-4846-84b9-a585dd08697d",
+      "id": "c2d8ffcf-e232-4057-83de-9deff21aad8e",
       "type": "question",
       "value": {
         "latex": "En déduire que $f$ admet (au moins) un minimum global sur $\\R^2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7272bf39-a9f2-4304-a69f-ba4832923cf8",
+      "id": "67e28b27-aa48-40fc-9e19-d6939d458eee",
       "type": "reponse",
       "value": {
         "latex": "Quand $\\|(x,y)\\|\\to +\\infty$, nous obtenons que $f(x,y)\\to +\\infty$. \n\t\t\t\tAinsi, $f$ est coersive sur $\\R^2$, c'est-à-dire qu'elle tends vers l'infini quand son argument tends vers l'infini. Aussi, le minimum ne peut être atteint par cette fonction que dans une région bornée du plan, et donc elle admet  un minimum global sur $\\R^2$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "e11138b7-4b77-45a5-a0e8-14cb958f78cc",
+      "id": "58b6ed5e-e37e-487a-b385-e152eeba2d60",
       "type": "question",
       "value": {
         "latex": "Calculer la matrice Hessienne de $f$ et l'évaluer au point $(0,0)$.\n\t\t\t\tLa fonction $f$ est-elle convexe sur $\\R^2$?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "8ed52877-5f32-40bd-96c6-53125f8cd782",
+      "id": "46c6a502-116c-41b9-b612-9663620371ca",
       "type": "reponse",
       "value": {
         "latex": "Rappelons que $f$ est convexe si et seulement si sa matrice hessienne est semi-définie positive, c'est-à-dire si \n\t\t\t\tpour tout vecteur $z\\in \\R^2$, nous avons $z^T \\cdot H_f \\cdot z\\geq 0$. Cela revient à ce que toutes les valeurs propres de $H_f$ soient positives ou nulles. \n\t\t\t\t\n\t\t\t\tLa matrice Hessienne est alors:\n\t\t\t\t$4 \\begin{pmatrix}\n\t\t\t\t\t3x^2-1 & 1 \\\\ 1& 3y^2-1\n\t\t\t\t\\end{pmatrix}$. \n\t\t\t\tAinsi, sa hessienne en $(0,0)$ est $\\begin{pmatrix}\n\t\t\t\t\t-1 & 1 \\\\ 1&-1\n\t\t\t\t\\end{pmatrix}$: ces valeurs propres sont $0$ et $-2$. Ainsi, cette matrice n'est pas semi-definie positive et donc la fonction $f$ n'est pas convexe.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "bfb26c99-8cdd-4df2-99e5-84ad1b8004d8",
+      "id": "1e26f5b9-cb36-43b8-b9dd-df791b03c6e0",
       "type": "question",
       "value": {
         "latex": "Déterminer les points critiques de $f$ et préciser leur nature (minimum ou maximum local, point selle...",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "4633c226-7199-47d6-9062-0b119d6fca8c",
+      "id": "e2fb8365-7295-4b99-9fda-4396873ca892",
       "type": "reponse",
       "value": {
         "latex": "Les points critiques sont donnés par les solutions de $\\nabla f(x,y)=(0,0)$, soit \n\t\t\t\t$$\n\t\t\t\t\\left\\lbrace \\begin{array}{ll}\n\t\t\t\t\t\\frac{\\partial f}{\\partial x}(x,y) & = 4(x^3-x+y)=0 \\\\ \n\t\t\t\t\t\\frac{\\partial f}{\\partial y}(x,y) & = y^3+x-y =0 \\end{array}\\right. \n\t\t\t\t~~\\Rightarrow ~~\n\t\t\t\t\\left\\lbrace\\begin{array}{ll}\n\t\t\t\t\tx^3+y^3 &=0 \\\\\n\t\t\t\t\ty^3+x-y&=0 \n\t\t\t\t\\end{array}\\right. \n\t\t\t\t~~\\Rightarrow ~~\n\t\t\t\t\\left\\lbrace \\begin{array}{ll}\n\t\t\t\t\ty&=-x \\\\\n\t\t\t\t\tx^3-2x&=0\\end{array}\\right. $$\n\t\t\t\tIl y a donc trois points critiques: $O(0,0)$, $A(\\sqrt{2};-\\sqrt{2})$ et $B(-\\sqrt{2};\\sqrt{2})$.\n\t\t\t\t\\\\ Point $O$: La Hessienne est $Hess~f(0,0) = \\begin{pmatrix} -4 & 4 \\\\ 4&-4\\end{pmatrix}$: son déterminant est nul donc on ne peut pas conclure directement. Une petite étude plus spécifique s'impose. \n\t\t\t\tPour $|x|<2$, nous avons $f(x,-x) = 2x^4-8x^2 = -2x^2(4-x^4)<0$. \n\t\t\t\tDe même, $f(x,x)=2x^4\\geq 0$ ce qui montre que $(0,0)$ est un point-selle de $f$. \n\t\t\t\t\\\\ Point $A$: $Hess~f(\\sqrt{2};-\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$. \n\t\t\t\tLa Hessienne a alors un déterminant positif et $20>0$ donc $f$ possède un minimum local en $A$.\n\t\t\t\t\\\\ Point $B$:   $Hess~f(-\\sqrt{2};\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$: idem, $f$ admet un minimul local en $B$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "e0cb5c36-e3ba-4b47-b266-2d4dd6a2e246",
+      "id": "e0450eb4-6e8e-4be3-a9d3-0cd4a829e55a",
       "type": "question",
       "value": {
         "latex": "En déduire le minimum de $f$ sur $\\R^2$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "7d231ab0-c5fd-4328-b416-5082c3f4b91c",
+      "id": "9cfbf984-5830-4ba0-baca-d8667eb578ce",
       "type": "reponse",
       "value": {
         "latex": "D'après l'étude précédente, nous en déduisons que $f$ admet deux minimums, l'un en $A$ et l'autre en $B$, et que la valeur minimale pour $f$ est $-8$.\n\t\t\t\t\n\t\t\t\t\\begin{tikzpicture}\n\t\t\t\t\t\t\\begin{axis}[\n\t\t\t\t\t\t\twidth=10cm,\n\t\t\t\t\t\t\tview={60}{30},\n\t\t\t\t\t\t\txlabel={$x$},\n\t\t\t\t\t\t\tylabel={$y$},\n\t\t\t\t\t\t\tzlabel={$f(x,y)$},\n\t\t\t\t\t\t\tdomain=-2:2,\n\t\t\t\t\t\t\tdomain y=-2:2,\n\t\t\t\t\t\t\tsamples=40,\n\t\t\t\t\t\t\tcolormap/cool\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\\addplot3[surf] {x^4 + y^4 - 2*(x - y)^2};\n\t\t\t\t\t\t\\end{axis}\n\t\t\t\t\t\\end{tikzpicture}",

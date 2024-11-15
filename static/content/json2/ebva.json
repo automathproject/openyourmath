@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-06T20:22:34.796Z",
+    "createdAt": "2024-11-15T20:10:29.382Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:34.796Z"
+    "updatedAt": "2024-11-15T20:10:29.382Z"
   },
   "contenu": [
     {
-      "id": "be73885b-6d49-4dc9-a053-66e97c0782ae",
+      "id": "44f9b065-dfc6-43a1-9864-85a600aa9b79",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n$$f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &  ~~~\\text{ si } x \\neq 0 \\\\\ny & ~~~\\text{ si } x=0 \n\\end{array}\\right.$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "7545884a-14e3-4fde-949e-6e4fbb4935bc",
+      "id": "59feb021-239d-4f11-a9b0-fc453c223b5e",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ n'est pas continue en $(0,0)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "516fb69b-827a-4cac-8394-1d5d2aab069b",
+      "id": "a7fca573-2988-41d3-bf68-a0f509bf87dc",
       "type": "reponse",
       "value": {
         "latex": "Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "8c0ef218-c46c-439b-81e0-e24eb664977e",
+      "id": "a957018e-3855-4331-9934-00ff2e81bd37",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ admet des dérivées partielles au point $(0;0)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4e007f1d-b8d2-464d-9e89-9eeec669e21b",
+      "id": "fc9af656-a5ae-4a55-98b2-8e0b0608839b",
       "type": "reponse",
       "value": {
         "latex": "Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}",

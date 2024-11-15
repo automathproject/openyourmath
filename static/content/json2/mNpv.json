@@ -1,5 +1,5 @@
 {
-  "uuid": "2e83bb7c-fa42-4728-9349-7eef3b9606ad",
+  "uuid": "e95cfabc-9904-4857-b4a4-f90d01e03b41",
   "titre": "Calcul différentiel",
   "theme": [
     "Optimisation"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:43.861Z",
+    "createdAt": "2024-11-15T20:10:37.314Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:43.861Z"
+    "updatedAt": "2024-11-15T20:10:37.314Z"
   },
   "contenu": [
     {
-      "id": "9c2cf39f-c727-4497-99c9-131deb538fcf",
+      "id": "b13215d5-49e2-4e9c-8766-47abb26a4d09",
       "type": "description",
       "value": {
         "latex": "Cet exercice traite des notions de dérivées partielles, continuité et différentiabilité.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "44d3976a-8df9-480d-830c-62cd31765019",
+      "id": "5d887582-682a-4965-9b9d-5cf51cfcb7bb",
       "type": "question",
       "value": {
         "latex": "Soit $E$ un $\\mathbb{R}$-espace vectoriel muni d'un produit scalaire $\\langle \\cdot, \\cdot \\rangle$. Montrer la continuité, puis la différentiabilité et calculer la différentielle de l'application \"produit scalaire\" $\\Phi : E^2 \\to \\mathbb{R}$ définie par $\\Phi(x, y) = \\langle x, y \\rangle$ pour tous $(x, y) \\in E^2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a830e878-9214-4936-9e87-aa06bdec7690",
+      "id": "4d8c5a48-708d-420e-92ac-13e3b321a62f",
       "type": "reponse",
       "value": {
         "latex": "L'application $\\Phi$ est bilinéaire, donc sa continuité sur $E^2$ équivaut à sa continuité en $(0, 0)$. D'après l'inégalité de Cauchy-Schwarz, on a \n  \\[\n  |\\Phi(x, y)| \\leq \\|x\\| \\cdot \\|y\\| \\quad \\text{pour tous } (x, y) \\in E^2.\n  \\]\n  \n  Pour la différentiabilité, fixons $(x, y) \\in E^2$ et $(h, k) \\in E^2$. On a :\n  \\[\n  \\Phi(x + h, y + k) = \\Phi(x, y) + \\Phi(x, k) + \\Phi(h, y) + \\Phi(h, k),\n  \\]\n  donc la différentielle de $\\Phi$ en $(x, y)$ est donnée par $d\\Phi_{(x, y)}(h, k) = \\langle x, k \\rangle + \\langle y, h \\rangle$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "f3d97966-82d2-4ef0-b348-46d0da0ad303",
+      "id": "d690dd97-02df-4f59-b775-f2f2b9d04ca1",
       "type": "question",
       "value": {
         "latex": "Soit $A \\in \\mathcal{M}_{n,m}(\\mathbb{R})$. Montrer que l'application $J : \\mathbb{R}^m \\to \\mathbb{R}$ définie par $J(X) = \\|AX\\|^2$ est différentiable et calculer sa différentielle. Montrer ensuite que l'application $G : \\mathbb{R}^m \\to \\mathbb{R}$ définie par $G(X) = f(J(X))$ pour une fonction $f \\in C^1(\\mathbb{R})$ est différentiable et calculer sa différentielle.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "2e54c333-5ec5-45d4-a1b7-cb27d0afcfd7",
+      "id": "e782d4ab-8976-4fc2-be6a-873a8b3bb5fe",
       "type": "reponse",
       "value": {
         "latex": "L'application $X \\mapsto \\|AX\\|^2$ est polynomiale, donc elle est différentiable sur $\\mathbb{R}^m$. En particulier, on a\n  \\[\n  J(X) = \\langle AX, AX \\rangle = \\langle A^TAX, X \\rangle,\n  \\]\n  et la différentielle de $J$ en $X$ est donnée par $d_X J(h) = 2 \\langle A^TAX, h \\rangle$ pour tout $h \\in \\mathbb{R}^m$.\n\n  Pour l'application $G$, on applique le théorème de composition des différentielles. On obtient :\n  $$\n  d_X G(h) = f'(J(X)) \\cdot d_X J(h) = 2 f'(J(X)) \\langle A^TAX, h \\rangle.\n  $$",

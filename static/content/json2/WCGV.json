@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:23.481Z",
+    "createdAt": "2024-11-15T20:10:19.309Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:23.481Z"
+    "updatedAt": "2024-11-15T20:10:19.309Z"
   },
   "contenu": [
     {
-      "id": "ce40830d-0a1e-4015-aa1a-30f4956bd4d1",
+      "id": "2998d7e1-a815-4c1d-acbc-870ffaad2ac9",
       "type": "description",
       "value": {
         "latex": "Une usine produit des circuits imprimés dont $1$\\% sont défectueux.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "39c0e56c-51e2-46fe-9d18-df12a99d3cd3",
+      "id": "281f2ed6-138a-41f7-a0fd-3d30c7674793",
       "type": "question",
       "value": {
         "latex": "On fait un prélèvement de $100$ circuits imprimés. Quelle est la probabilité qu'il n'y ait pas de circuit imprimé défectueux dans ce prélèvement ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "48c0e87b-10e8-4e66-88d1-99e4de3d02b6",
+      "id": "4345de9f-aaa8-4c75-a85a-65a16971d1e8",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ le nombre de circuits défectueux dans ce prélèvement.\n\t\tAlors $X\\sim \\mathcal{B}(100,0.01)$. La probabilité qu'il n'y ait pas de circuit défectueux est:\n\t\t\\[ \\prob(X=0)=\\binom{100}{0}\\times 0.01^{0}\\times 0.99^{100}=0.99^{100} \\simeq 0.366.\\]",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "2a792f33-ca77-4361-a8a6-c2701bc7311f",
+      "id": "035eaddd-ac2b-42ef-96a3-941eed4d4bec",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité qu'il y ait deux circuits imprimés défectueux dans un prélèvement de $100$ circuits imprimés ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "aec0d0ab-6797-4feb-9f38-a85b659852b0",
+      "id": "43890bc1-fbf4-42be-b9a1-4f39b675670d",
       "type": "reponse",
       "value": {
         "latex": "$\\prob(X=2)=\\binom{100}{2}\\times 0.01^{2}\\times 0.99^{98}\\simeq 0.185$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "f2e370be-2efa-4248-ad0b-9bfae14f0bc0",
+      "id": "efa3f400-34fd-44ac-af01-79d3f3392aa5",
       "type": "question",
       "value": {
         "latex": "On prélève les circuits imprimés un par un et on les teste immédiatement. Quelle est la probabilité que le premier circuit imprimé défectueux apparaisse au $100$\\up{ème} tirage ?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "5597c9bf-13bb-43ff-bf67-290056e50bb0",
+      "id": "ce093681-5450-467a-af6a-af7de4d11ce7",
       "type": "reponse",
       "value": {
         "latex": "Soit $Y$ le rang du premier circuit imprimé défectueux. Alors $Y\\sim \\mathcal{G}(0.01)$ et on a:\n\t\t\\[ \\prob(Y=100)=0.99^{99}\\times 0.01 \\simeq 0.0037,\\]\n\t\tsoit environ $0.37$\\% de chance de rencontrer le premier circuit défectueux au dernier tirage.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "3f63fb6e-ded0-4eed-9793-5901bf3c9d75",
+      "id": "1965b552-4622-4551-8a6f-ca60a20bbc5d",
       "type": "question",
       "value": {
         "latex": "Sur $N=10\\ 000$ circuits imprimés en stock dont $d=100$ sont défectueux, on en choisit $500$. Quelle est la probabilité que sur les $500$ prélevés il y en ait cinq défectueux ?",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "a1c62f6f-a5ec-4c5d-9de3-6d5f4f9e9686",
+      "id": "8cd9c681-5ecd-4be7-a8cf-6efccdf1c08a",
       "type": "reponse",
       "value": {
         "latex": "Soit $Z$ le nombre de circuits défectueux sur les $500$ prélevés. Alors $Z\\sim \\mathcal{H}(500,0.01,10\\ 000)$ et on a\n\t\t\\[ \\prob(Z=5)=\\frac{\\binom{100}{5}\\binom{9900}{495}}{\\binom{10\\ 000}{500}}.\n\t\t\\]\n\t\tQuand le paramètre $N$ est grand (dans les faits, quand $\\frac n N < 0,1$), on peut approcher une loi hypergéométrique $\\mathcal{H}(n,p,N)$ par une loi binomiale $\\mathcal{B}(n,p)$. Ici, on obtient une approximation de $\\prob(X=5)$ par $\\binom{500}{5}\\times 0.01^5 \\times 0.99^{495} \\simeq 0.18$.",

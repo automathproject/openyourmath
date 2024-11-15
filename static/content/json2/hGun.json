@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Quentin Liard",
-    "createdAt": "2024-11-06T20:22:37.170Z",
+    "createdAt": "2024-11-15T20:10:31.450Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:37.170Z"
+    "updatedAt": "2024-11-15T20:10:31.450Z"
   },
   "contenu": [
     {
-      "id": "2de67518-7e28-420b-b9c4-b7eeb690701d",
+      "id": "cce7c8dc-74b9-4570-9f1b-3d7e622fcbe7",
       "type": "question",
       "value": {
         "latex": "Soient $X$ et $Y$ deux variables aléatoires indépendantes. Démontrer que  pour tout $t\\geq 0$ : $$\\mathcal{L}_t(X+Y)=\\mathcal{L}_t(X)\\mathcal{L}_t(Y).$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "12ca724b-bf02-482a-84df-f74334260eaf",
+      "id": "ed8996ce-222d-4f53-ac1d-4409bbbabbd8",
       "type": "reponse",
       "value": {
         "latex": "On a $\\mathcal{L}_t(Z) = \\mathbb{E}(e^{-tZ}) = \\int_0^{+\\infty} e^{-tz} \\frac{1}{2} e^{-\\frac{z}{2}} dz = \\frac{1}{2} \\int_0^{+\\infty} e^{-\\frac{z}{2}(2t+1)} dz = \\frac{1}{2} \\left[ \\frac{e^{-\\frac{z}{2}(2t+1)}}{-\\frac{2t+1}{2}} \\right]_0^{+\\infty} = \\frac{1}{2t+1}$. \n    On a $\\mathcal{L}_t(S_n) = \\prod_{i=1}^n \\mathcal{L}_t(Z_i) = \\prod_{i=1}^n \\frac{1}{2t+1} = \\left( \\frac{1}{2t+1} \\right)^n$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "042691ee-1c8a-4f97-93b9-c38367b6872a",
+      "id": "6e6b41cf-af34-4351-ae29-03c08256518c",
       "type": "reponse",
       "value": {
         "latex": "On a $\\int_{\\R} f_U(x) dx = \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx = \\int_0^{+\\infty} \\frac{y^{n-1}}{n-1!} e^{-y} dy = 1$. Donc $f_U$ est bien une densité de probabilité.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "80b61d9c-8597-4bbd-9693-2e21988dcff5",
+      "id": "831deb38-a19e-404e-a3b7-eab04c8fdc95",
       "type": "reponse",
       "value": {
         "latex": "On a \n    $$\\begin{align*}\n        \\mathcal{L}_t(U) &= \\int_0^{+\\infty} e^{-tx} \\frac{1}{2^n} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx \\\\ \n        &= \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}(2t+1)} dx \\\\\n        &= \\int_0^{+\\infty} \\frac{1}{2^n} \\left(\\frac{2}{2t+1}\\right)^{n-1}\\frac{y^{n-1}}{n-1!} e^{-y} \\frac{2}{2t+1} dy \\\\\n         &= \\frac{1}{(2t+1)^n}\n    \\end{align*}$$\n    Donc $U$ et $S_n$ suivent la même loi définie par la densité $f_U$.",

@@ -400,4 +400,3 @@ async function main() {
     console.error("Une erreur inattendue s'est produite :", error);
     process.exit(1);
   });
-

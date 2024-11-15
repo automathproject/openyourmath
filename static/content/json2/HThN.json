@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:09.339Z",
+    "createdAt": "2024-11-15T20:10:06.698Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:09.339Z"
+    "updatedAt": "2024-11-15T20:10:06.698Z"
   },
   "contenu": [
     {
-      "id": "f6e3717d-4ae6-4cee-aec8-8c964418c7ec",
+      "id": "d51e4683-3caf-4939-8278-85843522d5a3",
       "type": "description",
       "value": {
         "latex": "Une urne contient $n$ boules numérotées de $1$ à $n$, $n$ étant un entier non nul et non premier. On tire une boule au hasard de l'urne et on définit les événements $A_{p_i}$ comme étant ``Le nombre est divisible par $p_i$.'', où les entiers $p_1, p_2, \\ldots , p_r$ sont les diviseurs premiers de $n$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b22c3a15-7f41-4b86-b61f-c63af0c232ed",
+      "id": "ccdc5b58-35d5-4526-9926-1a32a9210ac4",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité $\\prob(A_{p_i})$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "c5b3c95e-94cf-4fa0-a8cc-96f1dcd05d43",
+      "id": "bcd6a829-3b00-44a8-9e3c-b424227d3419",
       "type": "reponse",
       "value": {
         "latex": "Il y a $\\frac n {p_i}$ multiples de $p_i$ inférieurs à $n$, donc $\\prob(A_{p_i})=\\frac{\\frac{n}{p_i}}{n} = \\frac{1}{p_i}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1ab493f4-8f2b-488f-b824-34d80df5c2b7",
+      "id": "17307096-4d96-43ba-9112-efeef7076f16",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob(A_{p_{i_1}}\\cap A_{p_{i_2}}\\cap \\ldots\\cap A_{p_{i_k}})$ pour $k$ quelconques de ces $r$ événements. \n\tEn déduire que $A_{p_{1}}, A_{p_{2}}, \\ldots, A_{p_{r}}$ sont $r$ événements indépendants dans leur ensemble.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "8e50a8ce-6a3c-4cb7-91b4-6058a098c56e",
+      "id": "698322ea-8f4b-4569-bed5-e1336f090dd8",
       "type": "reponse",
       "value": {
         "latex": "L'événement $A_{p_{i_1}}\\cap A_{p_{i_2}}\\cap \\ldots\\cap A_{p_{i_k}}$ est réalisé ssi le nombre est divisible à la fois par $p_{i_1}$, $p_{i_2}$, \\ldots, $p_{i_k}$. Comme il s'agit de nombres premiers, ceci équivaut à dire que le nombre est divisible par $p_{i_1}\\times p_{i_2} \\times \\ldots \\times p_{i_k}$. Ainsi,\n\t\t$$\\begin{align*}\n\t\t\t\\prob(A_{p_{i_1}}\\cap A_{p_{i_2}}\\cap \\ldots\\cap A_{p_{i_k}})&=\\prob(\\text{``Le nombre est divisible par }p_{i_1}\\times p_{i_2} \\times \\ldots \\times p_{i_k}\\text{''})\\\\\n\t\t\t&=\\frac{1}{p_{i_1}\\times p_{i_2} \\times \\ldots \\times p_{i_k}}\\\\\n\t\t\t&=\n\t\t\t\\frac{1}{p_{i_1}}\\times \\frac{1}{p_{i_2}} \\times \\ldots \\frac{1}{\\times p_{i_k}}\n\t\t\t\\\\\n\t\t\t&=\\prob(A_{p_{i_1}})\\times \\prob(A_{p_{i_2}}) \\times \\ldots \\times \\prob(A_{p_{i_k}}).\n\t\t\\end{align*}$$\n\t\tOn vient donc de montrer que $A_{p_{1}}, A_{p_{2}}, \\ldots, A_{p_{r}}$ sont indépendants dans leur ensemble.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "b05f2c08-f37b-4e28-b80e-99c135771371",
+      "id": "3d814bd1-b68b-4a3f-b255-7ed8134f8304",
       "type": "question",
       "value": {
         "latex": "On appelle $A$ l'événement ``le nombre choisi n'est divisible par aucun $p_i$''. Calculer $\\prob(A)$.\n\tEn déduire que le nombre d'entiers de $\\{1,2,\\ldots,n\\}$ qui sont premiers avec $n$, c'est-à-dire qui n'ont aucun facteur premier commun avec $n$, est $\\displaystyle \\Phi(n)=n\\prod_{i=1}^r\\left(1-\\frac{1}{p_i}\\right)$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "b627887d-700b-449b-b7b1-6e4c89cff246",
+      "id": "898b46c0-8b23-4efb-9af3-0d25f355c4ad",
       "type": "reponse",
       "value": {
         "latex": "L'événement $A$ se réécrit $\\overline{A}_{p_1}\\cap \\overline{A}_{p_2}\\cap \\ldots \\cap \\overline{A}_{p_r}$. Comme les événements $A_{p_{1}}, A_{p_{2}}, \\ldots, A_{p_{r}}$ sont indépendants dans leur ensemble, c'est aussi le cas des événements $\\overline{A}_{p_{1}}, \\ldots, \\overline{A}_{p_{r}}$. Par conséquent,\n\t\t$$\\begin{align*}\n\t\t\t\\prob(A)&=\\prob(\\overline{A}_{p_1}\\cap \\overline{A}_{p_2}\\cap \\ldots \\cap \\overline{A}_{p_r}) \\\\\n\t\t\t&= \\prod_{i=1}^r \\prob(\\overline {A_{p_i}}) \n\t\t\t= \\prod_{i=1}^r \\left( 1-\\frac{1}{p_i}\\right)\n\t\t\\end{align*}$$\n\t\td'où $\\displaystyle\\frac{\\Phi(n)}{n}= \\prod_{i=1}^r \\left( 1-\\frac{1}{p_i}\\right)$ et $\\displaystyle\\Phi(n)=n\\prod_{i=1}^r \\left( 1-\\frac{1}{p_i}\\right)$. \\\\\n\t\tLa fonction $\\Phi$ est appellée l'indicatrice d'Euler. Elle associe à tout entier naturel n non nul, le nombre d'entiers compris entre 1 et n  et premiers avec n.",

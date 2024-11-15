@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:37.632Z",
+    "createdAt": "2024-11-15T20:10:31.812Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:37.632Z"
+    "updatedAt": "2024-11-15T20:10:31.812Z"
   },
   "contenu": [
     {
-      "id": "20fc9ab7-cb92-4d20-a310-cd9f5c11ec4c",
+      "id": "14f43ec1-294c-40c8-bf5c-49667b2edcf1",
       "type": "description",
       "value": {
         "latex": "Soit $f$ une application de classe $\\mathcal{C}^2 \\colon [0;T] \\times \\mathbb{R} \\to \\mathbb{R}$, $a \\in \\mathbb{R}$ et l'équation différentielle :\n$$(E)\t\\begin{cases} \ny'(t) = f(t,y(t)) \\\\\ny(0) = a\n\\end{cases} $$\n\npour laquelle on admet l'existence et l'unicité d'une solution $y$ de classe $\\mathcal{C}^1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "f9e5806c-cf77-42ae-938c-907d03bec059",
+      "id": "66246a93-9b34-40e4-b342-9407bc40849e",
       "type": "question",
       "value": {
         "latex": "Montrer que $y$ est de classe $\\mathcal{C}^3$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "5279b411-032f-403f-a9a5-b31c28c8cf42",
+      "id": "21797980-255f-49e1-8ee9-c5401455379f",
       "type": "reponse",
       "value": {
         "latex": "Comme $y'(t)=f(t,y(t))$, $y'$ est de classe $\\mathcal{C}^2$ donc $y$ est de classe $\\mathcal{C}^3$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "aac56c6c-89bc-4f18-b2ed-630d9dfb0be7",
+      "id": "b4be0387-7732-47ef-9c3e-278e6b628f53",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $t,h \\in \\mathbb{R}^+$, \n\t$$y(t+h)=y(t)+hf(t,y(t)) + \\frac{h^2}{2}\\left( \\frac{\\partial f}{\\partial t}(t,y(t))+f(t,y(t)) \\frac{\\partial f}{\\partial y}(t,y(t)) \\right) + O(h^3)$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "865c3ad3-6459-4690-afda-81c95f679be5",
+      "id": "41759ff7-d16d-4f92-9ec7-7682ea9a16d6",
       "type": "reponse",
       "value": {
         "latex": "D'après la formule de Taylor, on a \n\t\t$$y(t+h) = y(t)+hy'(t)+\\frac{h^2}{2}y''(t) + O(h^3)$$\n\t\tOr $y''(t) = \\frac{\\partial}{\\partial t} f(t,y(t)) = \\frac{\\partial f}{\\partial t}(t,y(t))+y'(t)\\frac{\\partial f}{\\partial y}(t,y(t))$\n\t\td'où le résultat.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "22029f77-a540-4b48-bd5b-647e1319228b",
+      "id": "5702ba6e-d8f2-47e7-b4d8-708c766da6e7",
       "type": "description",
       "value": {
         "latex": "Pour approcher la solution de $(E)$, on propose le schéma numérique suivant : \n\t$h=T/N$, $t_n=nh$, $y_0=a$ et \n\t$$(S) \\colon y_{n+1} = y_n + hf(t_n,y_n) + \\frac{h^2}{2}\\left( \\frac{\\partial f}{\\partial t}(t_n,y_n)+f(t_n,y_n)\\frac{\\partial f}{\\partial y}(t_n,y_n) \\right)$$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "2e048be4-4e7d-4095-a574-f9118ae182ff",
+      "id": "6047e8cf-5837-44b4-af48-ad3f6ec82cd6",
       "type": "question",
       "value": {
         "latex": "Expliquer cette méthode, puis vérifier qu'elle est consistante. Quel est son ordre de consistance ?",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "70992756-36b9-4714-81a8-293e328c20ce",
+      "id": "0abd9205-be46-41e9-9f3d-649ae154b512",
       "type": "reponse",
       "value": {
         "latex": "Ce schéma revient à négliger le terme $O(h^3)$ dans le développement de Taylor. Il est consistant car si on pose $F(t,y,h) = f(t,y(t)) + \\frac{h}{2}\\left( \\frac{\\partial f}{\\partial t}(t,y(t))+f(t,y(t)) \\frac{\\partial f}{\\partial y}(t,y(t)) \\right)$, le schéma s'écrit $y_{n+1} = y_n + hF(t_n,y_n,h)$ avec $F(t,y,0)=f(t,y)$.\n\t\t\t\n\t\t\tDe plus, $f^{[1]}(t,y) = \\frac{\\partial f}{\\partial t}(t,y(t))+f(t,y(t)) \\frac{\\partial f}{\\partial y}(t,y(t))$ donc $\\frac{\\partial F}{\\partial h}(t,y,h) = \\frac{1}{2}f^{[1]}(t,y)$.\n\t\t\t\n\t\t\tD'après la propriété de consistance vue à l'exercice 5, le schéma est donc consistant d'ordre au moins 2. Par ailleurs, $\\frac{\\partial^2 F}{\\partial h^2}(t,y,h) = 0$ donc la méthode est d'ordre 2 en général.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "0b2a50cc-a9d3-44c8-a457-81600d26e885",
+      "id": "a8e272d0-3ba7-4d11-94af-a2779955dd22",
       "type": "description",
       "value": {
         "latex": "On suppose que : \n\t\t\t\\begin{itemize}\n\t\t\t\t\\item l'équation est autonome, c'est-à-dire que $f$ ne dépend pas de $t$ ;\n\t\t\t\t\\item il existe une constante $L>0$ telle que $f$ et $f'$ sont $L$-lipschitziennes ;\n\t\t\t\t\\item il existe une constante $M>0$ telle que pour tout $y \\in \\mathbb{R}$, $|f(y)|\\leq M$ et $|f'(y)| \\leq M$. \n\t\t\t\\end{itemize}",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "e2cf46d7-0339-4813-9c61-8bfdd8786463",
+      "id": "d05143dd-dd0f-4206-90f2-d1be0a3924d9",
       "type": "question",
       "value": {
         "latex": "Démontrer que la méthode est stable et convergente.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "7dcd503f-bfac-4906-8db5-56742385aa1e",
+      "id": "b329cbc6-83b5-4993-9e07-250baad310c0",
       "type": "reponse",
       "value": {
         "latex": "Si l'équation est autonome, $f$ ne dépend pas de $t$ et $F$ non plus, ce qui permet de réécrire \n\t\t\t$$F(t,y,h) = F(y,h) = f(y)+\\frac{h}{2}f(y)f'(y)$$\n\t\t\tPour montrer que la méthode est stable, il suffit de montrer que $F$ est lipschitzienne en $y$ uniformément en $h$ :\n\t\t\t\n\t\t\t$$\\begin{align*}\n\t\t\t\t|F(y,h)-F(z,h)| &\\leq |f(y)-f(z)|+\\frac{h}{2}|f(y)f'(y)-f(z)f'(z)| \\\\\n\t\t\t\t&\\leq |f(y)-f(z)|+\\frac{h}{2}\\left( |f(y)|\\cdot|f'(y)-f'(z)|+|f'(z)|\\cdot|f(y)-f(z)|  \\right)\\\\\n\t\t\t\t&\\leq (L+TLM)|y-z|\n\t\t\t\\end{align*}$$\n\t\t\tLa méthode est donc stable et consistante, elle est donc convergente.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "0dac95f0-167b-46b9-af1d-dab8b8955993",
+      "id": "0d91d83d-5fad-4862-b1c1-698a808a0b6e",
       "type": "question",
       "value": {
         "latex": "Soit $N$ un entier supérieur ou égal à 2. En exploitant le travail ci-dessus, proposer un schéma d'ordre $N$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "65f77757-9fe6-416a-882a-000227942ae7",
+      "id": "0e6d575b-6259-42b7-91f6-fde24cb6b9d8",
       "type": "reponse",
       "value": {
         "latex": "Si $f$ est de classe $\\mathcal{C}^N$, on a \n\t\t\t$$y(t+h) = y(t)+hy'(t)+\\frac{h^2}{2}y''(t)+...+\\frac{h^N}{N!}y^{(N)}(t) + O(h^{N+1})$$\n\t\t\tOr $y^{(k)}(t) = f^{[k-1]}(t,y(t))$\n\t\t\tdonc on peut proposer le schéma :\n\t\t\t$$y_{n+1}=y_n + h \\left( f+ \\frac{h}{2}f^{[1]}+...+\\frac{h^{N-1}}{N!}f^{[N-1]}  \\right)(t_n,y_n)$$",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "feb809bf-20ff-4eb0-a4c6-32b3179a0d44",
+      "id": "ff804629-1cf4-4af9-b200-d6f2a92bd09d",
       "type": "question",
       "value": {
         "latex": "On pose $f(t,x)=-tx$. \\'Ecrire un algorithme pour le schéma $(S)$ calculant un terme $y_n$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "46cc4645-e13c-431c-a536-51a0b88bbaf4",
+      "id": "10c184e1-1975-4157-a751-1ff394a02c95",
       "type": "reponse",
       "value": {
         "latex": "Avec $f(t,y) = -ty$, $\\frac{\\partial f}{\\partial t}(t,y(t)) = -y(t)$ et $\\frac{\\partial f}{\\partial y}(t,y(t)) = -t$, le schéma devient :\n\t\t$$y_{n+1}=y_n \\left( 1-h^2\\left(n+ \\frac{1}{2}(1-(nh)^2) \\right)  \\right)$$",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": "af0b6047-323e-4148-bf63-4d8735d804ac",
+      "id": "0394bfab-90ed-445e-b299-b40b05f9d440",
       "type": "question",
       "value": {
         "latex": "Résoudre analytiquement l'équation différentielle $y' = -ty$.",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "c408157f-3917-46fa-b3a1-e29f248f4ab6",
+      "id": "8f626403-4d38-4ab7-9b70-df5336a25faa",
       "type": "question",
       "value": {
         "latex": "Calculer les 20 premières valeurs données par le schéma défini précédemment et comparer avec le résultat exact et ceux obtenus avec la méthode d'Euler et la méthode d'Euler améliorée (méthode du point milieu).",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "id": "e0b6667a-3f24-4bc3-b018-9127d6c41158",
+      "id": "9a19f424-6f28-447b-91d7-3c1eb993dca2",
       "type": "reponse",
       "value": {
         "latex": "La solution exacte de l'EDO pour $f(t,y) = -ty$ et $y(0)=a=1$ est $y(t = e^{-t^2/2})$. Pour un pas $h=1/5$, on obtient les valeurs suivantes :\n\t\t\n\t\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\t\\hline \n\t\t\t$n$ & 1 & 3 & 5 & 10 & 15 & 20 \\\\ \n\t\t\t\\hline \n\t\t\t$t_n$ & 0.2 & 0.6 & 1 & 2 & 3 & 4 \\\\ \n\t\t\t\\hline \n\t\t\t$y(t_n)$ & 0.9802 & 0.8353 & 0.6065 & 0.1353 & 0.1111 & 0.0003 \\\\ \n\t\t\t\\hline \n\t\t\tEuler & 1 & 0.8832 & 0.6529 & 0.1244 & 0.0046 & 0.00001 \\\\ \n\t\t\t\\hline \n\t\t\tEuler améliorée & 0.9801 & 0.8323 & 0.5961 & 0.1167 & 0.0065 & 0.00009 \\\\ \n\t\t\t\\hline \n\t\n\t\n\t\t\\end{tabular} \n\t\t\n\t\tEn lecture rapide de ce tableau, on voit que la méthode d'Euler explicite (d'ordre 1) est moins bonne que les autres sur cet exemple.",

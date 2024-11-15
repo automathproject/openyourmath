@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:21:57.107Z",
+    "createdAt": "2024-11-15T20:09:56.358Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:21:57.107Z"
+    "updatedAt": "2024-11-15T20:09:56.358Z"
   },
   "contenu": [
     {
-      "id": "948a00f6-3d50-4ba6-8873-aaec3f3a3308",
+      "id": "145ad56b-9c3e-490f-b6ff-e25846d07976",
       "type": "description",
       "value": {
         "latex": "Pour préserver la confidentialité des opinions individuelles, un sondage est effectué avec le protocole suivant. Chaque personne sondée doit, avant de répondre <<oui>> ou <<non>> à la question posée, réaliser confidentiellement (elle seule connait le résultat) une variable de Bernoulli de paramètre $a$, $a \\in ]0;1[$ donné et connu du sondeur. Si le résultat est $1$, la personne doit répondre à la question selon son avis. Si le résultat est $0$, la personne doit répondre à la question selon le contraire de son avis. \n\t\n\tOn suppose que les personnes sondées suivent parfaitement ce protocole et l'on note $X_i$ la variable aléatoire qui vaut $1$ si la $i$-ème personne sondée répond <<oui>> et $0$ si elle répond <<non>>. \n\t\n\tOn note $n$ le nombre de personnes sondées et $p$ la proportion de personnes dont l'opinion personnelle est <<oui>> dans la population sondée. Soit $q$ la probabilité qu'une personne sondée réponde <<oui>>. Enfin, on suppose que $a \\neq \\frac{1}{2}$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "c7992e28-a744-480c-bca8-496e4b4a8103",
+      "id": "96ed8f6e-4f07-4d7d-ad21-c804462e375d",
       "type": "question",
       "value": {
         "latex": "Exprimer $q$ en fonction de $p$ et $a$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2ed6ce0c-adf1-4b70-a1aa-ac29b47c6575",
+      "id": "ade87322-12ba-4c84-9d3a-399652e9e4d1",
       "type": "reponse",
       "value": {
         "latex": "D'après l'énoncé de la situation et le théorème des probabilités totales, $q=ap+(1-a)(1-p)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "ff3a1b7d-ff3f-46e7-8e84-2bec3fd99bfa",
+      "id": "d19b7135-fac5-4803-be09-488946905069",
       "type": "reponse",
       "value": {
         "latex": "Chaque variable $X_i$ suit une loi $\\mathcal{B}(q)$ donc $\\mathbb{E}(\\overline{X})=q$ : $\\overline{X}$ est un estimateur sais biais de $q$. Et $V(\\overline{X}) = \\frac{q(1-q)}{n} \\to 0$ donc $\\overline{X}$ est un estimateur convergent.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "748376f4-c48c-477b-a07e-0a83269d19cf",
+      "id": "a8ee74a4-c720-489f-b503-00a290f7ffe0",
       "type": "question",
       "value": {
         "latex": "On pose $$T_n = \\frac{\\overline{X}-1+a}{2a-1}$$\n\t\tCalculer l'espérance et la variance de $T_n$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "5e1c4aeb-0edc-46ba-aa00-ac2ef2e8d8d1",
+      "id": "85249f20-afdf-4c5a-a7d4-8804de822bbe",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité et d'après le calcul précédent, on trouve $\\mathbb{E}(T_n)=\\frac{q-1+a}{2a-1}=p$. D'après les règles de calcul pour la variance, \n\t\t\t$$V(T_n) = \\frac{1}{(a-1)^2}V(\\overline{X}-1+a) = \\frac{1}{(2a-1)^2}V(\\overline{X}) = \\frac{q(q-1)}{n(2a-1)^2}$$\n\t\t\tOr en développant le calcul, on trouve $q(q-1) = p(1-p)(2a-1)^2+a(1-a)$ donc $V(T_n) = \\frac{p(1-p)}{n}+\\frac{a(1-a)}{n(2a-1)^2}$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "81d7b11a-badf-4e1c-8577-c6a764b1a2be",
+      "id": "d05f457a-8181-4b15-8c92-8f1c778a069e",
       "type": "question",
       "value": {
         "latex": "Démontrer que $T_n$ est un estimateur de $p$ sans biais et convergent.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "d5a171bf-9d74-4ede-8338-a9563dd81106",
+      "id": "e62760bb-52eb-44f7-907a-801b49959247",
       "type": "reponse",
       "value": {
         "latex": "Cela permet de voir que $B(T_n) = p-p=0$ et $V(T_n) \\to 0$ quand $n \\to +\\infty$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "a2887c9b-2a1c-4e5c-9110-3d0a4545cb99",
+      "id": "d1786567-5798-4ce1-b81e-cc367d1cd005",
       "type": "question",
       "value": {
         "latex": "Justifier que la variable $\\frac{T_n-p}{\\sigma(T_n)}$ converge en loi vers la loi normale centrée réduite.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "e655b977-4cb6-4716-b05a-a703588e3d12",
+      "id": "64b95794-e2f4-4570-b1ba-767e9e7a388b",
       "type": "reponse",
       "value": {
         "latex": "Pour pouvoir appliquer le théorème central limite, il suffit de vérifier que $T_n$ s'écrit bien sous la forme d'une somme de variables aléatoires indépendantes et identiquement distribuées. En effet, on a \n\t\t\t$$T_n = \\frac{\\frac{1}{n} \\left( \\sum_{i=1}^n  X_i \\right) -1+a}{2a-1} = \\frac{ \\frac{1}{n} \\sum_{i=1}^n  \\left( X_i  -1+a \\right)}{2a-1} = \\sum_{i=1}^n \\frac{X_i  -1+a}{n(2a-1)} $$\n\t\t\tLes variables $X_i$ étant i.i.d, les hypothèses sont bien vérifiées et d'après le théorème central limite, la variable $\\frac{T_n-\\mathbb{E}(T_n)}{\\sigma(T_n)}$ converge bien en loi vers une variable suivant une loi normale centrée réduite.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "1d46b5ae-7907-443d-90a9-7e41e5a06ec7",
+      "id": "7c7a4ef0-8fe4-4455-b2d5-0ed8bec4599a",
       "type": "question",
       "value": {
         "latex": "Donner une estimation de $p$ par intervalle de confiance au niveau de confiance $1-\\alpha$ que l'on notera $I_\\alpha$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "acd85335-9def-4bb4-9434-5ae3e773fb87",
+      "id": "8e91c964-97c5-483d-b398-48dbe3cb8e17",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente, on peut (en supposant $n$ grand) approcher la variable $\\frac{T_n-\\mathbb{E}(T_n)}{\\sigma(T_n)}$ par une variable $Z$ qui suit une loi $\\mathcal{N}(0,1)$. Ensuite, on construit facilement un intervalle de confiance pour $p=\\mathbb{E}(T_n)$ au niveau $1-\\alpha$ en choisissant dans la table la valeur $u_{\\alpha/2}$ permettant d'avoir \n\t\t\t$$\\PP(-u_{\\alpha/2} < Z < u_{\\alpha/2}) = 1-\\alpha$$\n\t\t\tpuis en redéployant l'inégalité autour de $p$ :\n\t\t\t$$\\PP(T_n-u_{\\alpha/2} \\sigma(T_n) < \\mathbb{E}(T_n) < T_n + u_{\\alpha/2} \\sigma(T_n)) = 1-\\alpha $$\n\t\t\tD'où l'intervalle de confiance pour $p = \\mathbb{E}(T_n)$ : \n\t\t\t$$I_conf = [ T_n - u_{\\alpha/2} \\sigma(T_n) \\,;\\,  T_n + u_{\\alpha/2} \\sigma(T_n)]$$\n\t\t\tPour réaliser cet intervalle, il suffit de réaliser l'échantillon et de remplacer $ T_n$ et $\\sigma( T_n)$ par leurs réalisations. On obtiendra un intervalle par excès en replaçant $\\sigma(T_n)$ par un majorant $\\frac{1/2}{\\sqrt{n(2a-1)^2}}$",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "00518947-ab3a-40f6-bbf7-303c224052ab",
+      "id": "9c53cf8e-d133-4929-ae91-922665479273",
       "type": "question",
       "value": {
         "latex": "On fixe $a = \\frac{1}{6}$, $n=1000$ et on considère une réalisation de la variable aléatoire $\\overline{X}$ égale à $0{,}425$. Déterminer une réalisation de l'intervalle de confiance utilisé pour l'estimation de $p$ au risque $\\alpha = 0{,}05$ (on pourra utiliser la majoration $q(1-q) \\leq \\frac{1}{4}$).",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "fb109b0a-5e55-4d13-ab69-eabe2a3d20d4",
+      "id": "19125924-0138-49a5-b5e4-f9e374153ae1",
       "type": "reponse",
       "value": {
         "latex": "Application numérique : on trouve $\\alpha = 0.05$, on utilise $u_{\\alpha/2} = 1.96$ et on trouve \n\t\t\t$$I = [0.566 \\,;\\, 0.658]$$",

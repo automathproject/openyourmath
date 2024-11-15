@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-06T20:22:42.517Z",
+    "createdAt": "2024-11-15T20:10:36.051Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:42.517Z"
+    "updatedAt": "2024-11-15T20:10:36.051Z"
   },
   "contenu": [
     {
-      "id": "e4a31ff1-40b7-4c64-9dd1-ca19b8eb7be0",
+      "id": "3439eee6-6f35-4983-8743-7faa49d10fa7",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\mathbb{R}^2$ par \n$$ f(x,y)= (x^2+y^2) e^{-x}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ee1a2482-fc1e-4da9-8ef4-300a9443ca19",
+      "id": "f8b18d71-5ec0-4733-b947-5ec2d8f3d3d0",
       "type": "question",
       "value": {
         "latex": "Justifier (rapidement) que cette fonction est de classe $\\mathcal{C}^2$ sur $\\mathbb{R}^2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4e33780a-10b2-4734-8e60-1325a75dcccd",
+      "id": "fd7c6f4c-2837-4a95-9d79-dc00be737ed5",
       "type": "reponse",
       "value": {
         "latex": "Les fonctions $(x,y)\\mapsto x^2+y^2$ et $(x,y)\\mapsto e^{-x}$ étant de classe $\\mathcal{C}^{\\infty}(\\mathbb{R}^2)$,  leur produit l'est aussi.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "77fdf07b-5fb6-4543-9b95-56b40cac4bc5",
+      "id": "6394fcc0-b56a-4ea4-aeff-0169e7851b03",
       "type": "question",
       "value": {
         "latex": "Trouver les points critiques de $f$ sur $\\mathbb{R}^2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "adcd7633-2b42-491e-b92b-4c6ef59e1cc2",
+      "id": "a6081328-d563-473a-8598-3d8860306842",
       "type": "reponse",
       "value": {
         "latex": "Calculons déjà les dérivées partielles premières de $f$. Nous avons: \n\\\\ $\\frac{\\partial f}{\\partial x} (x,y)=2x e^{-x} -(x^2+y^2) e^{-x}$\n$\\frac{\\partial f}{\\partial y} (x,y)= 2y e^{-x}$. \n\\\\ Ainsi, cherchons les valeurs $(x,y) \\in \\mathbb{R}^2$ telles que \n$$ \\frac{\\partial f}{\\partial x}(x,y) = \\frac{\\partial f}{\\partial y}(x,y) =0$$\nDe $\\frac{\\partial f}{\\partial y}(x,y)=0$, nous déduisons que $y=0$ et en injectant dans l'autre équation, nous obtenons que $2x -x^2=0$ soit $x(2-x)=0$ et donc $x=0$ ou $x=2$.\n\\\\ Les points critiques sont alors $(0,0)$ et $(2,0)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "c519905b-8c5b-43fd-bee7-54301dee18bf",
+      "id": "f6c628a5-280e-443f-8b8c-9e7d5dc701d9",
       "type": "question",
       "value": {
         "latex": "Trouver les extrema locaux de $f$ sur $\\mathbb{R}^2$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a421e621-bd15-4e6d-8f3b-10db57b3f866",
+      "id": "63df78f1-3330-4382-a6a4-d13eeb5bf22c",
       "type": "reponse",
       "value": {
         "latex": "Etudions les dérivées secondes de $f$: \n\\\\ $\\frac{\\partial^2 f}{\\partial x^2}(x,y)=(2-2x)e^{-x} - (2x-x^2-y^2) e^{-x} = (x^2+y^2-4x+2) e^{-x}$.\n\\\\ $\\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) = -2y e^{-x}$\net  $\\frac{\\partial^2 f}{\\partial y^2}(x,y) = 2 e^{-x}$.\n\nAinsi, la hessienne associée à la fonction $f$ est:\n$$H_f(x,y) = \\begin{vmatrix} \n(x^2+y^2-4x+2) e^{-x} & -2y e^{-x} \\\\\n-2y e^{-x} & 2 e^{-x} \\end{vmatrix}$$\nAinsi, en évaluant cette fonction aux points critiques de $f$, nous obtenons: \n$$ \nH_f(0,0) = \\begin{vmatrix} \n2 & 0 \\\\ 0 & 2 \\end{vmatrix} ~~\\text{ et }~~\nH_f(2,0) = \\begin{vmatrix} \n-2 e^{-2} & 0 \\\\ 0 & 2e^{-2} \\end{vmatrix} $$\nOn en déduit que $f$ possède un minimum en $(0;0)$ et un point selle en $(2;0)$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=8cm, \n        view={70}{40}, \n        domain=-1:3, y domain=-2:2, \n        samples=40, \n        xlabel=$x$, ylabel=$y$, zlabel={$f(x, y)$},\n        colormap/hot, \n        \n        colorbar, \n        zmin=0, zmax=10, \n        point meta min=0, point meta max=10, \n    ]\n        \\addplot3[\n            surf, mesh/ordering=y varies \n        ]\n        {(x^2 + y^2)*exp(-x)};\n    \\end{axis}\n\\end{tikzpicture}",

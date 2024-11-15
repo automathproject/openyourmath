@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:21:53.599Z",
+    "createdAt": "2024-11-15T20:09:53.363Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:21:53.599Z"
+    "updatedAt": "2024-11-15T20:09:53.363Z"
   },
   "contenu": [
     {
-      "id": "7fa84da3-a287-46e0-baaa-cb5a3dac430a",
+      "id": "8be001d0-7ae3-45d5-ac36-e52197863894",
       "type": "description",
       "value": {
         "latex": "Une urne contient 2 boules noires et 8 boules blanches.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "c332545f-b21a-4457-9799-e75516a21821",
+      "id": "353abd25-a32a-43ec-8a42-979174de4774",
       "type": "description",
       "value": {
         "latex": "Un joueur tire successivement 5 boules en remettant la boule dans l'urne après chaque tirage. S'il tire une boule blanche il gagne 2 points dans le cas contraire il perd trois points. Soit $X$ le nombre de points obtenus par le joueur en une partie.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "15ca5d86-0c78-4bc8-bd03-9fbde89463d7",
+      "id": "00a8f12f-d6a2-4583-9b97-cd7d5a38bd89",
       "type": "question",
       "value": {
         "latex": "Dresser le tableau définissant la loi de $X$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "5e8b6311-4ed6-4e9d-b4fe-9bfabc422cfb",
+      "id": "9253d555-8a30-4eb8-9d4c-bc1bc39da0ff",
       "type": "reponse",
       "value": {
         "latex": "On peut dénombrer les cas possibles en regardant le nombre de boules blanches au sein d'un tirage de 5 boules : \\\\\n\t\t\t\t0 boule blanche : $X=5 \\times (-3) = -15$ pts \\\\\n\t\t\t\t1 boule blanche : $X = 2 + 4 \\times (-3) = -11$ pts \\\\\n\t\t\t\t2 boules blanches : $X = 2 \\times 2 + 3 \\times (-3) = -5$ pts \\\\\n\t\t\t\t3 boules blanches : $X = 3 \\times 2 + 2 \\times (-3) = 0$ pts \\\\\n\t\t\t\t4 boules blanches : $X = 4 \\times 2 + 1 \\times (-3) = 5$ pts \\\\\n\t\t\t\t5 boules blanches : $X = 5 \\times 2 = 10$ pts \\\\\n\t\t\t\t\n\t\t\t\tA chaque tirage, la probabilité d'avoir une boule noire est $0.2$ et la probabilité d'avoir une boule blanche est $0.8$ car il y a remise. La probabilité d'avoir un certain tirage contenant $k$ boules blanches et $5-k$ boules noires est donc $(0.8)^k \\times (0.2)^{5-k}$. Sur un tirage de 5 boules, il y a $\\binom{5}{k}$ combinaisons possibles pour avoir $k$ boules blanches parmi ces 5 boules. Au final, on a une probabilité d'avoir $k$ boules blanches : $\\binom{5}{k} \\times (0.8)^k \\times (0.2)^{5-k}$.\n\t\t\t\t\n\t\t\t\tPour $k=2$ par exemple, on a une probabilité de $0.0512$. Le nombre de points $X$ étant déterminé par le nombre de boules blanches, on en déduit directement la loi de la variable $X$ : \n\t\t\t\t\\begin{center}\n\t\t\t\t\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\t\t\t\t\\hline $k$ & -15 & -11 & -5 & 0 & 5 & 10 \\\\ \n\t\t\t\t\t\t\\hline $\\PP(X=k)$ & 0{,}00032 & 0{,}0064 & 0{,}0512 & 0{,}2048 & 0{,}4096 & 0{,}32768 \\\\ \n\t\t\t\t\t\t\\hline \n\t\t\t\t\t\\end{tabular} \n\t\t\t\\end{center}",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "41a391c7-76eb-4f6d-8b63-205f17c449f8",
+      "id": "e74a4649-bc5d-4070-88ee-ef935abd5194",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance et la variance de $X$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "a8d11d14-6a0a-4aa3-ac46-f98a541fe446",
+      "id": "9de2b943-456e-4405-a20a-b73d28d30c70",
       "type": "reponse",
       "value": {
         "latex": "L'espérance de $X$ se calcule à partir du tableau et on trouve $\\EX = 4$ : c'est le nombre de points que l'on peut obtenir en moyenne à ce jeu.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "c53ba827-903e-4f1b-ae99-c5db4af0a819",
+      "id": "6ebbee8f-a8e3-4787-b541-79d8cf5f3448",
       "type": "question",
       "value": {
         "latex": "Le joueur tire 5 boules simultanément, les 10 boules de l'urne étant numérotées de 1 à 10. \tSoit $Y$ le plus grand des numéros tirés. Déterminer la loi de probabilité de $Y$ et calculer son espérance.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "8ab2b76c-f829-472d-8075-4e0f2a39ee67",
+      "id": "df4a5ee7-c595-4426-ad96-403aa0883b00",
       "type": "reponse",
       "value": {
         "latex": "La variable $Y$ est le plus grand des numéros tirés sur les 5 boules. Sur 5 boules tirées, la plus grande valeur est nécessairement supérieure ou égale à 5. Ainsi, les valeurs possibles prises par $Y$ sont $\\{5,6,7,8,9,10\\}$.\n\t\t\n\t\tIl y a $\\binom{10}{5}$ tirages possibles, ils sont équiprobables. \n\t\t\n\t\tPour obtenir $Y=5$, il n'y a qu'un seul tirage possible : 5 boules parmi les 5 plus petits numéros. \\\\\n\t\tPour obtenir $Y \\leq 6$, il y a $\\binom{6}{5}$ tirages possibles : 5 boules parmi les 6 plus petits numéros. \\\\\n\t\tOn généralise : pour obtenir $Y \\leq k$, il y a $\\binom{k}{5}$ tirages possibles : 5 boules parmi les k plus petits numéros (avec $k$ compris entre $5$ et $10$). On en déduit la fonction de répartition de $Y$ : $$\\PP(Y \\leq k) = \\frac{\\binom{k}{5}}{\\binom{10}{5}}$$\n\t\tpuis on obtient $\\PP(Y=k) = \\PP(Y \\leq k) - \\PP(Y \\leq k-1)$.\n\t\tNumériquement, cela donne :\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\t\t\\hline $k$ & 5 & 6 & -7 & 8 & 9 & 10 \\\\ \n\t\t\t\t\\hline $\\PP(Y \\leq k)$ & 0{,}003968 & 0{,}0238095 & 0{,}083333 & 0{,}222222 & 0{,}5 & 1 \\\\ \n\t\t\t\t\\hline $\\PP(Y=k)$ & 0{,}003968 & 0{,}019841 & 0{,}059524 & 0{,}138889 & 0{,}277778 & 0{,}5 \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular} \n\t\\end{center}",

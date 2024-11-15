@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-06T20:22:01.086Z",
+    "createdAt": "2024-11-15T20:09:59.653Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-06T20:22:01.086Z"
+    "updatedAt": "2024-11-15T20:09:59.653Z"
   },
   "contenu": [
     {
-      "id": "30df1bbc-6984-41a9-bacb-5f63b1829815",
+      "id": "e64f7f5b-bb66-4e19-aad8-0534a95bcc28",
       "type": "description",
       "value": {
         "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\t\n\t\n\t\n\tOn pose \n\t$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n\t$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "cbbe116f-6fd9-4125-9386-6760661c42fb",
+      "id": "6074d992-5387-4d41-9fe8-e43e095ac389",
       "type": "question",
       "value": {
         "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "6e8c6a2f-2461-4fc1-a08b-3c5e69d62743",
+      "id": "3a775b2d-2eca-4e62-aa71-b49907c0ee23",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "826ac986-3133-4d36-b163-8e6e0c540d66",
+      "id": "a3bf1adf-d28a-42bd-bd0c-532f6412d824",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "52e449cf-316e-4510-86a3-8fe38e11bfd7",
+      "id": "7cc7bfaf-b35b-4702-a9b9-4d3a5b80539c",
       "type": "reponse",
       "value": {
         "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "69f1b47e-be88-440b-9b0a-b02899261e95",
+      "id": "6cc5139b-2538-4947-aa63-0ac439c22aba",
       "type": "question",
       "value": {
         "latex": "Déterminer $x \\in \\R$ tel que $\\PP(U>x) = 0{,}05$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "6c63b966-a094-4477-9b08-a6ccad3f63e7",
+      "id": "7823c892-5071-467c-bf1d-d902269f2c2d",
       "type": "reponse",
       "value": {
         "latex": "On lit dans la table de loi  $\\PP(U<x) = 0{,}95$ pour $x = 11{,}07$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "004b7b41-ae86-40a2-93bf-ae6c308f9392",
+      "id": "0a93592e-b30d-43fd-bac1-80036b18a620",
       "type": "question",
       "value": {
         "latex": "A l'aide du tableur, calculer $\\PP(V > 5)$ avec une précision de $10^{-8}$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "3e0a1301-0fd7-497a-8672-957749d059ee",
+      "id": "894d11be-7d33-4f08-acba-8d23e1a92545",
       "type": "reponse",
       "value": {
         "latex": "On a constaté que $V$ suit une loi de $\\chi^2(3)$ d'après le théorème de Fisher.\n\nEnsuite, \ten tapant la formule \\texttt{1-LOI.KHIDEUX.N(5;3;1)} dans le tableur, on trouve que $\\PP(V > 5) \\approx 0{,}17179714$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "5417831f-4acb-4d76-a140-4359efd6c685",
+      "id": "d4dbd2f1-ac2c-4f7f-946a-a41b794fd96a",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "4db1a50a-db50-4100-aed1-07bb4dcd517a",
+      "id": "de0eff17-55a9-4240-ae11-8f7d8f001d73",
       "type": "reponse",
       "value": {
         "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",
