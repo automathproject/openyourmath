@@ -6,6 +6,14 @@ import os from 'os';
 
 import crypto from 'crypto';
 
+import {
+  preprocessLatex,
+  stripComments,
+  wrapAlignWithDollar,
+  isCommandCommented,
+  convertLaTeXToHTML
+} from './Tex2HtmlUtils.js';
+
 const fsPromises = fs.promises;
 const execPromise = util.promisify(exec);
 
@@ -13,110 +21,7 @@ function generateUniqueId() {
     return crypto.randomUUID();
 }
 
-/**
- * Fonction pour supprimer les commentaires d'une chaîne de caractères LaTeX.
- * Les commentaires commencent par % et s'étendent jusqu'à la fin de la ligne.
- * Les % échappés (e.g., \%) ne sont pas considérés comme des débuts de commentaires.
- * @param {string} str - Chaîne de caractères LaTeX.
- * @returns {string} - Chaîne sans les commentaires non échappés.
- */
-function stripComments(str) {
-  return str.replace(/(?<!\\)%.*$/gm, '');
-}
 
-/**
- * Fonction pour vérifier si une commande est commentée sur la même ligne.
- * @param {string} line - La ligne de texte LaTeX.
- * @param {number} commandPosInLine - Position du début de la commande dans la ligne.
- * @returns {boolean} - Retourne true si la commande est commentée, sinon false.
- */
-function isCommandCommented(line, commandPosInLine) {
-  for (let i = 0; i < commandPosInLine; i++) {
-    if (line[i] === '%' && (i === 0 || line[i - 1] !== '\\')) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Fonction pour envelopper les blocs align* avec des doubles $$.
- * @param {string} content - Le contenu extrait.
- * @returns {string} - Le contenu avec les blocs align* enveloppés de $$.
- */
-function wrapAlignWithDollar(content) {
-  // Regex pour trouver tous les blocs \begin{align*}...\end{align*}
-  // Utilisation de [\s\S]*? pour correspondre sur plusieurs lignes de manière non-gourmande
-  return content.replace(/\\begin\{align\*\}([\s\S]*?)\\end\{align\*\}/g, '$$$\\begin{align*}$1\\end{align*}$$$');
-}
-
-/**
- * 
- * @param {string} latex 
- * @returns {string}
- */
-
-function preprocessLatex(latex) {
-  const replacements = {
-    "\\'E": 'É',
-    "\\'e": 'é',
-    "\\'a": 'á',
-    "\\'i": 'í',
-    "\\'o": 'ó',
-    "\\'u": 'ú',
-    "\\'A": 'Á',
-    "\\'I": 'Í',
-    "\\'O": 'Ó',
-    "\\'U": 'Ú'
-  };
-
-  let processed = latex;
-  for (const [pattern, replacement] of Object.entries(replacements)) {
-    // Utilisation d'une expression régulière qui correspond exactement à la séquence LaTeX
-    const regex = new RegExp(pattern.replace(/[\\]/g, '\\\\'), 'g');
-    processed = processed.replace(regex, replacement);
-  }
-  
-  // Pour debug
-
-  
-  return processed;
-}
-
-/**
- * Fonction pour convertir du LaTeX en HTML en utilisant Pandoc.
- * @param {string} latex - Chaîne de caractères en LaTeX.
- * @returns {Promise<string>} - Chaîne de caractères en HTML.
- */
-async function convertLaTeXToHTML(latex) {
-  try {
-    const latexPreprocessed = preprocessLatex(latex);
-    // Créer des fichiers temporaires dans le répertoire temporaire du système
-    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'latex-convert-'));
-    const tempInputPath = path.join(tempDir, 'temp_input.tex');
-    const tempOutputPath = path.join(tempDir, 'temp_output.html');
-
-    // Écrire le LaTeX dans un fichier temporaire
-    fs.writeFileSync(tempInputPath, latexPreprocessed, 'utf8');
-
-    // Exécuter Pandoc pour convertir le LaTeX en HTML
-    const command = `pandoc "${tempInputPath}" -f latex+smart -t html --css=styles.css --mathjax -o "${tempOutputPath}"`;
-    await execPromise(command);
-
-    // Lire le fichier HTML généré
-    const html = fs.readFileSync(tempOutputPath, 'utf8');
-
-    // Supprimer les fichiers temporaires et le répertoire temporaire
-    fs.unlinkSync(tempInputPath);
-    fs.unlinkSync(tempOutputPath);
-    fs.rmdirSync(tempDir);
-
-    return html;
-  } catch (error) {
-    console.error('Erreur lors de la conversion avec Pandoc :', error);
-    return ''; // Retourner une chaîne vide en cas d'erreur
-  }
-}
 
 /**
  * Fonction générique pour extraire le contenu des commandes LaTeX.
