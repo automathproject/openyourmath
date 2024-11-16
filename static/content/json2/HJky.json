@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:10:06.549Z",
+    "createdAt": "2024-11-16T11:14:36.597Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:06.549Z"
+    "updatedAt": "2024-11-16T11:14:36.597Z"
   },
   "contenu": [
     {
-      "id": "8fdec527-86c0-4209-a3d9-0bdfd06bf560",
+      "id": "bd6f1a9a-9949-4877-bb94-ad73089871e9",
       "type": "description",
       "value": {
         "latex": "On suppose que le poids d'un adulte peut être modélisé par une variable aléatoire $X$ qui suit une loi normale d'espérance $\\mu = 70$ kg et d'écart-type $\\sigma = 15$ kg.\n\n    Un ascenseur peut supporter 500 kg avant la surcharge. Les normes de sécurité spécifient que la probabilité de surcharge ne doit pas dépasser 0,0001. On admet que le poids total de $n$ usagers adultes d’ascenseurs, dont les poids sont indépendants, est une variable aléatoire $S = X_1+\\cdots X_n$ où $X_1, \\ldots, X_n$ sont des variables aléatoires indépendantes et identiquement distribuées selon la loi de $X$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b183c24a-6819-48b4-a312-7a356cdb3e52",
+      "id": "f41f5cc5-0e83-46b7-879e-d83490071c47",
       "type": "question",
       "value": {
         "latex": "Justifier que la variable aléatoire $S$ suit une loi normale d’espérance $\\mu_S = 70n$ et d’écart-type $\\sigma_S = 15\\sqrt{n}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "9f13881c-856c-4d55-b735-e792482d7d14",
+      "id": "9faf7981-c4cd-448e-a817-b352f961d98a",
       "type": "reponse",
       "value": {
         "latex": "On a $S = X_1 + \\cdots + X_n$ où $X_1, \\ldots, X_n$ sont des variables aléatoires indépendantes et identiquement distribuées selon la loi de $X$. Donc, $S$ est une somme de variables aléatoires indépendantes et identiquement distribuées. D’après le théorème central limite, $\\frac{S - \\mu_S}{\\sigma_S}$ suit une loi normale centrée réduite. Or par linéarité de l'espérance, on a $\\mu_S = \\mu + \\cdots + \\mu = 70n$. Par propriétés de la variance d'une somme de variables indépendantes, on a $\\sigma_S^2 = \\sigma^2 + \\cdots + \\sigma^2 = 15^2n$. Donc, $\\sigma_S = 15\\sqrt{n}$. Ainsi, $S$ suit une loi normale d’espérance $\\mu_S = 70n$ et d’écart-type $\\sigma_S = 15\\sqrt{n}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "7ef23050-399c-40c6-9c73-e00863279ec8",
+      "id": "49c31adb-45f5-4125-b319-10296c6b756c",
       "type": "question",
       "value": {
         "latex": "Justifier que $\\prob(Z > 4{,}475) < 0{,}0001$ où $Z$ est une variable aléatoire suivant une loi normale centrée réduite.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7dbdf559-7f30-4571-a9c6-bc2da33ebbcb",
+      "id": "91ab9fab-3b82-43b4-8af9-67a92768d6b2",
       "type": "reponse",
       "value": {
         "latex": "D'après la table de valeurs de la loi normale centrée réduite, on a $\\prob(Z < 3{,}99) > 0{,}9999$ donc par croissance de la fonction de répartition, on a $\\prob(Z < 4{,}475) > 0{,}9999$. Donc, $\\prob(Z > 4{,}475) < 0{,}0001$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "fec1f51c-cb2b-46f7-82a1-41071f10d751",
+      "id": "3204176c-a170-43c8-8f21-c84a060fddc3",
       "type": "question",
       "value": {
         "latex": "Calculer les probabilités de surcharge $p_5$ lorsqu’il y a 5 adultes dans l’ascenseur et $p_6$ lorsqu’il y a 6 adultes dans l’ascenseur.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "26b66768-8dc2-4297-b23e-6aa6b51972ec",
+      "id": "200d6a7c-169d-440b-a821-7d31cf117efb",
       "type": "reponse",
       "value": {
         "latex": "Pour $n = 5$ adultes :\n\n        Calcul de l'espérance et de l'écart-type du poids total $S$ :\n        \\[\n        \\mu_S = n \\times \\mu = 5 \\times 70 = 350 \\ \\text{kg}\n        \\]\n        \\[\n        \\sigma_S = \\sqrt{n} \\times \\sigma = \\sqrt{5} \\times 15 \\approx 33{,}54 \\ \\text{kg}\n        \\]\n        \n        Calcul du score $z$ correspondant à la limite de surcharge (500 kg) :\n        \\[\n        z_5 = \\frac{500 - \\mu_S}{\\sigma_S} = \\frac{500 - 350}{33{,}54} \\approx 4{,}475\n        \\]\n        \n        Calcul de la probabilité de surcharge $p_5$ :\n        \\[\n        p_5 = \\prob(S > 500) = \\prob(Z > z_5)\n        \\]\n        En utilisant lune calculatrice statistique :\n        \\[\n        \\prob(Z > 4{,}475) \\approx 0{,}000004\n        \\]\n        \n        D'après la question précédente, on a $\\prob(Z > 4{,}475) < 0{,}0001$ donc $p_5 < 0{,}0001$.\n        \n        \n        Pour $n = 6$ adultes :\n        \n        Calcul de l'espérance et de l'écart-type du poids total $S$ :\n        \\[\n        \\mu_S = n \\times \\mu = 6 \\times 70 = 420 \\ \\text{kg}\n        \\]\n        \\[\n        \\sigma_S = \\sqrt{n} \\times \\sigma = \\sqrt{6} \\times 15 \\approx 36{,}74 \\ \\text{kg}\n        \\]\n        \n        Calcul du score $z$ correspondant à la limite de surcharge (500 kg) :\n        \\[\n        z_6 = \\frac{500 - \\mu_S}{\\sigma_S} = \\frac{500 - 420}{36{,}74} \\approx 2{,}177\n        \\]\n        \n        Calcul de la probabilité de surcharge $p_6$ :\n        \\[\n        p_6 = \\prob(S > 500) = \\prob(Z > z_6)\n        \\]\n        En utilisant la table de la loi normale centrée réduite :\n        \\[\n        \\prob(Z > 2{,}177) \\approx 0{,}0148\n        \\]\n        On a donc $p_6 \\approx 0{,}0148$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "122e6f1d-f618-4e9a-8d8a-2aef87e2eb17",
+      "id": "22f83786-e806-4d13-809a-a98fa111e1e1",
       "type": "question",
       "value": {
         "latex": "En déduire le nombre maximal de personnes autorisées à emprunter l’ascenseur.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "37420418-c4b9-40e7-99c7-ce1df7bee35a",
+      "id": "81d96d82-741a-42d4-911d-348cff222a90",
       "type": "reponse",
       "value": {
         "latex": "On cherche le plus grand entier $n$ tel que $p_n \\leq 0{,}0001$. On a $p_5 \\approx 0{,}000004$ et $p_6 \\approx 0{,}0148$. Donc, le nombre maximal de personnes autorisées à emprunter l’ascenseur est 5.",

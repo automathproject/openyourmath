@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-15T20:10:36.827Z",
+    "createdAt": "2024-11-16T11:15:15.395Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:36.827Z"
+    "updatedAt": "2024-11-16T11:15:15.395Z"
   },
   "contenu": [
     {
-      "id": "a27c85df-027d-4c21-a131-42ffe9e926e6",
+      "id": "7f680497-f00f-4a61-8897-15800926965d",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire dont la loi est déterminée par la fonction densité définie pour tout $x \\in \\R$ par : $$\n\tf_X(x)=\\frac{1}{\\sigma \\sqrt{2 \\pi}} \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right]\n\t$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "751100ee-6e36-48ba-94a5-436e7974798c",
+      "id": "31a3fcfe-3e70-463a-b70d-58de0d1b3fa1",
       "type": "question",
       "value": {
         "latex": "A l'aide d'un changement de variable, calculer $\\mathbb{E}(X)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "fa8b6851-51f6-4681-ad62-604238203578",
+      "id": "bb23ba94-482e-4c47-8e49-646da43fd935",
       "type": "reponse",
       "value": {
         "latex": "On exprime l'intégrale en posant le changement de variable affine $u=\\frac{x-\\mu}{\\sigma} \\iff x = \\sigma u + \\mu$ :\n\t$$\\begin{align*}\n\t\t\\mathbb{E}(X) &= \\int_{-\\infty}^{+\\infty}xf(x)dx \\\\\n\t\t&= \\int_{-\\infty}^{+\\infty} (\\sigma u + \\mu) \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{u^2}{2}} \\sigma du\\\\\n\t\t&= \\frac{\\sigma}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} u e^{-\\frac{u^2}{2}} du + \\mu \\times \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} e^{-\\frac{u^2}{2}}du\\\\\n\t\t&= 0 + \\mu \\times \\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} e^{-\\frac{u^2}{2}}du \\\\\n\t\t&= 0 + \\mu \\times 1 \\\\\n\t\t&= \\mu\n\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "46ca6a8d-9bdc-48c4-a59f-6f8d55a47fa1",
+      "id": "1bb84530-1a86-4a31-90e9-5a0bdfd637b4",
       "type": "question",
       "value": {
         "latex": "Calculer la variance de $X$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "3545befa-4d24-45b9-b75f-151d8b9c1a06",
+      "id": "25832d42-bcaa-4493-9da7-5d0985ef3019",
       "type": "reponse",
       "value": {
         "latex": "On utilise le même changement de variable : \n\t$$\n\t\\mathbb{E}\\left((X-\\mu)^2\\right)=\\frac{1}{\\sigma \\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty}(x-\\mu)^2 \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right] \\mathrm{d} x\n\t$$\n\tdevient, après changement de variables ci-dessus :\n\t$$\n\tE\\left((X-\\mu)^2\\right)=\\frac{\\sigma^2}{\\sqrt{2 \\pi}} \\int_{-\\infty}^{+\\infty} u^2 \\exp \\left[-\\frac{u^2}{2}\\right] \\mathrm{d} u .\n\t$$\n\tEn intégrant par parties, on trouve directement que\n\t$$\n\tE\\left((X-\\mu)^2\\right)=\\sigma^2 .\n\t$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "1c821030-f019-4db9-863d-fe0b78d0c005",
+      "id": "405d2048-fa0a-4b39-a6a8-916d25554d39",
       "type": "question",
       "value": {
         "latex": "Soit $Z = \\frac{X-\\mu}{\\sigma}$. Déterminer la loi de $Z$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "4ccb56f9-02c7-45e4-9f5d-9f6c5a1e1f83",
+      "id": "1feb7548-f401-4395-a51e-5d1dd70c89e9",
       "type": "reponse",
       "value": {
         "latex": "En effectuant toujours le même changement de variables $u=\\frac{x-\\mu}{\\sigma}$, on a pour tout réel $t$ :\n\t$$\n\t\\PP(Z \\leqslant t)=\\PP(X \\leq \\sigma t + \\mu )\\int_{-\\infty}^{\\sigma t + \\mu} \\frac{1}{\\sigma \\sqrt{2 \\pi}} \\exp \\left[-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right] \\mathrm{d} x=\\int_{-\\infty}^t \\frac{1}{\\sqrt{2 \\pi}} \\exp \\left[-\\frac{u^2}{2}\\right] \\mathrm{d} u .\n\t$$\n\tLa densité de la variable aléatoire $Y$ est donc la fonction\n\t$$\n\tf_Y(u)=\\frac{1}{\\sqrt{2 \\pi}} \\exp \\left[-\\frac{u^2}{2}\\right],\n\t$$\n\tqui correspond à celle de la loi normale centrée réduite $\\mathscr{N}(0,1)$.",

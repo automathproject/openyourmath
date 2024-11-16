@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-15T20:10:33.899Z",
+    "createdAt": "2024-11-16T11:15:12.295Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:33.899Z"
+    "updatedAt": "2024-11-16T11:15:12.295Z"
   },
   "contenu": [
     {
-      "id": "f7ea3ad9-1473-4f7d-9219-930e1b5ea33c",
+      "id": "c5531a43-4c9b-4ea1-9196-5ad1c61268cb",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R$ par \n$$f(x)=\\begin{cases} \\lambda x & \\text{ si } x\\in[0,1] \\\\  \n        0 &\\text{ si } x\\notin [0,1].\n       \\end{cases}\n$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "1b8af89a-ad54-4830-9fef-ac72dec1bc90",
+      "id": "8d4a2984-4c37-48ed-894f-f7888c213080",
       "type": "question",
       "value": {
         "latex": "Calculer $\\lambda$ pour que $f$ soit la densité d'une variable aléatoire absolument continue $X$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2e5b9fb7-5a18-4fc9-acc7-fac67f1907f4",
+      "id": "a4e9c528-eee3-4a3c-9082-ff948311a0b3",
       "type": "reponse",
       "value": {
         "latex": "Pour que $f$ soit une densité, il faut que $f$ soit positive sur $\\R$ (ce qui est le cas ici) et que $\\int_\\R f(x) \\dx =1$. Or\n \\[ \\int_\\R f(x) \\dx=\\int_0^1 \\lambda x \\dx  =\\left[ \\frac{\\lambda}{2}x^2\\right]_0^1 =\\frac{\\lambda}{2}\\]\n donc $\\lambda=2$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "9d0f3fc4-df5d-4e96-b9b0-e7d60215f6f6",
+      "id": "0955b7e5-d57f-4738-a44e-6e76d5b14973",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob\\left(X\\leq \\frac{1}{3}\\right)$ et $\\prob\\left(X\\leq \\frac{2}{3} \\mid X>\\frac{1}{3}\\right)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "3f8c970b-9d5a-4556-82f0-c3d102b69722",
+      "id": "1c27eea8-f4b9-4269-9774-3e5cc0357096",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n  &\\prob\\left(X\\leq \\frac{1}{3}\\right)=\\int_{-\\infty}^\\frac{1}{3} f(x)\\dx =[x^2]_0^\\frac{1}{3}=\\frac{1}{9} \\\\\n  &\\prob\\left(X\\leq \\frac{2}{3} \\mid X>\\frac{1}{3}\\right)=\\frac{\\prob\\left(\\frac{1}{3}<X\\leq \\frac{2}{3}\\right)}{\\prob\\left(X>\\frac{1}{3}\\right)}\n  = \\frac{\\int_\\frac{1}{3}^\\frac{2}{3}2x \\dx}{1-\\prob\\left(X\\leq \\frac{1}{3}\\right)}\n  =\\frac{[x^2]_\\frac{1}{3}^\\frac{2}{3}}{1-\\frac{1}{9}}\n  = \\frac{\\frac{1}{3}}{\\frac{8}{9}}\n  =\\frac{3}{8}\n \\end{align*}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "9ed30039-9756-426c-a939-ff1c76528128",
+      "id": "08352c87-a7f9-4e7c-b825-cb9804e10012",
       "type": "question",
       "value": {
         "latex": "Calculer $\\E(X)$ et $\\var(X)$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "ff08252a-63fb-4e87-8bcb-c23cdc2ed8bd",
+      "id": "81bd7872-cd5d-4637-aca4-c16b31b1779e",
       "type": "reponse",
       "value": {
         "latex": "$$\\E(X)=\\int_\\R xf(x)\\dx =\\int_0^1 2x^2 \\dx =\\left[ \\frac{2}{3}x^3\\right]_0^1=\\frac{2}{3}$$\n $$\\begin{align*}\n  \\var(X) &= \\E(X^2)-\\E(X)^2\n  = \\int_\\R x^2f(x)\\dx  -\\left(\\frac{2}{3}\\right)^2 \n  = \\left[ \\frac{1}{2}x^4\\right]_0^1-\\frac{4}{9}\n  =\\frac{1}{2}-\\frac{4}{9}\n  =\\frac{1}{18}\n \\end{align*}$$",

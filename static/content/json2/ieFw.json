@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:10:32.865Z",
+    "createdAt": "2024-11-16T11:15:11.311Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:32.865Z"
+    "updatedAt": "2024-11-16T11:15:11.311Z"
   },
   "contenu": [
     {
-      "id": "bd89d8d4-0245-4b1b-868a-8b7a273be30f",
+      "id": "608e623d-8a57-4b32-be0d-729960eea0de",
       "type": "description",
       "value": {
         "latex": "On considère la série entière de la variable réelle $x$ : \n$$\\sum_{n \\geq 1} \\frac{(-1)^n}{\\sqrt{n}+1}x^n$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "79a524e8-14a4-4708-b3b2-91a2a27aaf3d",
+      "id": "807a5f2f-e86a-449c-be36-c40d59afdd9d",
       "type": "question",
       "value": {
         "latex": "Vérifier que le rayon de convergence est égal à $1$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "b739e77c-6ad5-46a2-ab14-c5373e42eb0f",
+      "id": "165ee3ed-2096-4494-8b52-a5f7accf2a42",
       "type": "reponse",
       "value": {
         "latex": "On pose $u_n(x) = \\frac{(-1)^n}{\\sqrt{n}+1}x^n$ et on utilise le théorème de d'Alembert : \n\t\t$$\\begin{align*}\n\t\t\t\\frac{|u_{n+1}(x)|}{|u_n(x)|} &= \\frac{ \\sqrt{n}+1 }{\\sqrt{n+1}+1}\\frac{|x^{n+1}|}{|x^{n}|} \\\\\n\t\t\t& \\sim  \\frac{\\sqrt{n}}{\\sqrt{n}} |x| \\\\\n\t\t\t&\\xrightarrow[n\\to+\\infty]{}  |x|\n\t\t\\end{align*}$$\n\t\tDonc la série converge si et seulemlent si $|x|<1$. Donc le rayon de convergence est bien $R=1$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "1a834da0-7e12-47fa-b267-21fb7e8e4e81",
+      "id": "39dbf041-3946-4566-8630-49ea12d78111",
       "type": "question",
       "value": {
         "latex": "Déterminer le domaine de convergence de cette série entière.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "f0de51d9-d94f-4757-bcf4-69b42338f135",
+      "id": "e7f803a1-b864-4b21-bfb5-295fbba7385b",
       "type": "reponse",
       "value": {
         "latex": "On sait que la série converge sur l'intervalle $]-R;R[ = ]-1;1[$. Il reste à étudier le cas où $x=-1$ et $x=1$. \n\t\t\n\t\tOr $u_n(-1) = \\frac{1}{\\sqrt{n}+1} \\sum \\frac{1}{n^{\\frac{1}{2}}}$ : la série $\\sum u_n(-1)$ est donc une série à termes positifs et le terme général est équvalent au terme général d'une série de Riemann divergente ($\\alpha = 1/2<1$) donc la série $\\sum u_n(-1)$ diverge. \n\t\t\n\t\tDe plus, \t$u_n(1) = \\frac{(-1)^n}{\\sqrt{n}+1} = (-1)^n a_n$ avec $a_n = \\frac{1}{\\sqrt{n}+1} >0$ pour tout $n \\geq 1$. Donc $u_n(1)$ est le terme général d'une série alternée. Or il est clair que $(a_n)$ est une suite décroissante et $\\lim\\limits_{n\\to+\\infty} a_n = 0$ donc d'après le théorème des séries alternées, la série $\\sum u_n(1)$ converge.\n\t\t\n\t\tEn définitive, le domaine de convergence est \n\t\t$$D = ]-1;1]$$",

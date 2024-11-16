@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:10:32.377Z",
+    "createdAt": "2024-11-16T11:15:10.817Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:32.377Z"
+    "updatedAt": "2024-11-16T11:15:10.817Z"
   },
   "contenu": [
     {
-      "id": "861754f3-0bea-4fe4-931a-88108d486533",
+      "id": "48ad797b-143f-4d57-96bb-a9884b3d3c66",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle continue sur $\\R^2$~?",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5be773d1-269a-4839-8e09-9f584c693404",
+      "id": "0d3e941a-45d4-4aa2-9614-7a7b56593244",
       "type": "reponse",
       "value": {
         "latex": "Tout d'abord, on remarque que $f$ est bien définie sur $\\R^2$. Elle est continue (et même $C^{\\infty}$ sur $\\R^2-\\{(0,0)\\}$ en tant que fraction rationnelle. Pour étudier la continuité en $(0,0)$, on passe en polaires~:\n\t\t$$\\begin{align*}\n\t\tf(r\\cos\\theta, r\\sin\\theta) - f(0,0) &= \\frac{(r\\cos\\theta)^2(r\\sin\\theta)^3}{ (r\\cos\\theta)^2 + (r\\sin\\theta)^2 } \\\\\n\t\t&= r\\cos^2\\theta \\sin^3\\theta\n\t\t\\end{align*}$$\n\t\tIl suit\n\t\t$$\\begin{align*}\n\t\t|f(r\\cos\\theta, r\\sin\\theta) - f(0,0)| &\\leq r \\\\\n\t\t& \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$} \n\t\t\\end{align*}$$\n\t\tAinsi $f$ est continue en $(0,0)$, et finalement \\fbox{$f$ est continue sur $\\R^2$}",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "172bf91e-defa-45c4-9baf-95c50cf5524f",
+      "id": "32a0e2f1-8bf0-4d90-8e13-c6052c260765",
       "type": "question",
       "value": {
         "latex": "Calculer $\\overrightarrow{\\textup{grad}}\\ f (x,y)$ pour $(x,y) \\neq (0,0)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "f2c13387-7a04-45ae-9a30-d6f9281ef6e5",
+      "id": "92af9cc1-32b7-4a2f-8e0b-3fb9b6d918fc",
       "type": "reponse",
       "value": {
         "latex": "pour $(x,y) \\neq (0,0)$\n\t\t$$\\begin{align*}\n\t\t\\overrightarrow{\\textup{grad}}\\ f(x,y) &= \\left[ \\begin{array}{c}\n\t\t\\dpa{}{x}\\left[ \\dfrac{x^2 y^3}{x^2+y^2}\\right]  \\\\ \\dpa{}{y}\\left[ \\dfrac{x^2 y^3}{x^2+y^2}\\right] \n\t\t\\end{array} \\right] \\\\\n\t\t&= \\left[ \\begin{array}{c}\n\t\t\\dfrac{(2xy^3)(x^2+y^2) -(x^2 y^3)(2x)}{(x^2+y^2)^2}  \\\\ \\dfrac{(3x^2y^2)(x^2+y^2) -(x^2 y^3)(2y)}{(x^2+y^2)^2}\n\t\t\\end{array} \\right] \\\\\n\t\t&= \\frac{1}{(x^2+y^2)^2}\\left[ \\begin{array}{c} 2xy^5 \\\\ x^4y^2 + x^2y^4 \\end{array} \\right]\n\t\t\n\t\t\\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "9f3ab4eb-3581-46ae-8623-176dd7edea05",
+      "id": "5d213a67-ccfe-45b2-8c38-46960a46a0e3",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle de  classe $C^1$ sur $\\R^2$~?",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "40709957-078b-4713-a406-9eeee3a14482",
+      "id": "a6cd9255-44b1-4387-bf9f-93a82f5be691",
       "type": "reponse",
       "value": {
         "latex": "Nous avons\n\t\t\\begin{itemize}\n\t\t\t\\item existence des dérivées partielles\\\\\n\t\t\t\\[\\dfrac{f(h,0) - f(0,0)}{h} = 0 \\tvq{0}{h}{0}\\hspace*{5mm} \\text{ donc $\\dpa{f}{x}(0,0)$ existe et vaut $0$} \\]\n\t\t\t\\[\\dfrac{f(0,h) - f(0,0)}{h} = 0 \\tvq{0}{h}{0}\\hspace*{5mm} \\text{ donc $\\dpa{f}{y}(0,0)$ existe et vaut $0$} \\]\n\t\t\t\\item continuité des dérivées partielles\n\t\t\t$$\\begin{align*}\n\t\t\t\\dpa{f}{x}(x,y) - \\dpa{f}{x}(0,0) &= \\frac{2xy^5}{(x^2+y^2)^2} \\\\\n\t\t\t& \\text{ (passage en polaires)} \\\\\n\t\t\t&= 2r^2 \\cos\\theta \\sin^5\\theta\n\t\t\t\\end{align*}$$\n\t\t\tDonc\n\t\t\t\\[\\left| \\dpa{f}{x}(x,y) - \\dpa{f}{x}(0,0) \\right| \\leq 2r^2 \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$} \\]\n\t\t\tDe manière analogue,\n\t\t\t$$\\begin{align*}\n\t\t\t\\dpa{f}{y}(x,y) - \\dpa{f}{y}(0,0) &= \\frac{x^4y^2 + x^2y^4}{(x^2+y^2)^2} \\\\\n\t\t\t& \\text{ (passage en polaires)} \\\\\n\t\t\t&= r^2 \\cos^2\\theta \\sin^2\\theta\n\t\t\t\\end{align*}$$\n\t\t\tDonc\n\t\t\t\\[ \\left| \\dpa{f}{y}(x,y) - \\dpa{f}{y}(0,0) \\right| \\leq r^2  \\tvq{0}{r}{0+} \\text{ indépendamment de $\\theta$} \\]\n\t\t\\end{itemize}\n\t\tOn conclut que $f$ est $C^1$ en $(0,0)$. Par ailleurs, $f$ est $C^1$ sur $\\R^2-\\{(0,0)\\}$. Au final \\fbox{$f$ est $C^1$ sur $\\R^2$}",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "bd1257d5-d2ea-4ff6-bb0c-db653ad99e57",
+      "id": "d5bd0d6e-80f9-4ebe-b0a5-95061f84f386",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle différentiable sur $\\R^2$~?",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "5c8c2078-44b5-4c19-ba19-0a9de322f07b",
+      "id": "cd89e490-f6d2-49c3-a9c4-7a758d187a2e",
       "type": "reponse",
       "value": {
         "latex": "\\fbox{$f$ est différentiable sur $\\R^2$} car elle est $C^1$. C'est l'application du théorème 2.9 du poly.",

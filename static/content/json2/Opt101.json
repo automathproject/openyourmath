@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-15T20:10:13.075Z",
+    "createdAt": "2024-11-16T11:14:48.161Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:13.075Z"
+    "updatedAt": "2024-11-16T11:14:48.161Z"
   },
   "contenu": [
     {
-      "id": "7e615819-4583-4863-8b9c-110161d69fc0",
+      "id": "6420e8cb-a9c3-42f3-83de-d26f9d496bd5",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f(x,y)=x^3+3x^2y+y^3$.\n\n\\begin{enumerate}\n\\item \n\\question{Calculer les dérivées partielles de cette fonction.}\n\\reponse{\nLes dérivées partielles de \\( f(x, y) \\) sont :\n\n\\[\n\\frac{\\partial f}{\\partial x} = 3x^2 - 6xy\n\\]\n\n\\[\n\\frac{\\partial f}{\\partial y} = -3x^2 + 3y^2\n\\]\n}\n\n\\item \\question{Rechercher alors les points critiques de cette fonction.}\n\\reponse{Les points critiques sont obtenus en résolvant le système d'équations suivant :\n\n\\[\n3x^2 - 6xy = 0 \\quad \\text{(1)}\n\\]\n\\[\n-3x^2 + 3y^2 = 0 \\quad \\text{(2)}\n\\]\n\nRésolvons ce système: De l'équation (1): \\( 3x(x - 2y) = 0 \\) nous déduisons que\n\\( x = 0 \\) ou \\( x = 2y \\).\n\\\\ De l'équation (2): \\(-3x^2 + 3y^2 = 0 \\), nous obtenons \\( x^2 = y^2 \\).\nEtudions alors différents cas: \n\\\\ Cas 1 : \\( x = 0 \\) alors de \\( x^2 = y^2 \\), nous obtenons \\( y = 0 \\), d'où $(0,0)$ est un point critique.\n\\\\ Cas 2 : \\( x = 2y \\): alors de \\( (2y)^2 = y^2 \\), nous obtenons \\( 4y^2 = y^2 \\) donc \\( y = 0 \\).\nNous obtenons encore \\((0, 0)\\) pour point critique. \n\\\\ Ainsi, l'unique point critique de cette fonction est \\((0, 0)\\).\n}\n\n\n\\item \\question{Calculer la Hessienne: pouvez-vous alors conclure à la nature du ou des points critiques de cette fonction ?} \n\\reponse{\nPour déterminer si le point critique \\((0, 0)\\) est un maximum, minimum ou un point selle, nous utilisons le critère de la matrice Hessienne.\nLa matrice Hessienne de \\( f \\) est donnée par :\n\n\\[\nH = \\begin{bmatrix}\n\\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 f}{\\partial y \\partial x} & \\frac{\\partial^2 f}{\\partial y^2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n6x - 6y & -6x \\\\\n-6x & 6y\n\\end{bmatrix}\n\\]\n\nAu point critique \\((0, 0)\\), la matrice Hessienne devient :\n\n\\[\nH(0, 0) = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\nCette matrice est dégénérée, ce qui signifie que nous ne pouvons pas conclure directement sur la nature du point critique en utilisant les dérivées secondes.}\n\n\n\\item \\question{En étudiant $f(x,x)$, montrer que $f$ n'admet aucun extremum local.}\n\\reponse{Nous avons $f(x,x) = 5x^3$: ainsi, $f$ change de signe autour de $(0;0)$, et donc $f$ n'admet pas d'extremum local en $(0,0)$.\nAinsi, la fonction \\( f(x, y) = x^3 - 3x^2y + y^3 \\) a un point critique en \\((0, 0)\\), qui est un point selle et non un extremum local (ni maximum ni minimum).\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={30}{30},        \n        colormap/cool,        \n        domain=-3:3,          \n        samples=40,           \n        xlabel=$x$,           \n        ylabel=$y$,           \n        zlabel={$f(x,y)$},    \n        zmax=20,              \n        zmin=-20              \n    ]\n    \\addplot3[\n        surf,                 \n    ]\n    {x^3 - 3*x^2*y + y^3};    \n    \\end{axis}\n\\end{tikzpicture} }\n\\end{enumerate}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "605dfa71-75ea-4d01-8651-76b655205559",
+      "id": "5cd88529-7e5b-443e-a8ff-24e1bdbb0a63",
       "type": "question",
       "value": {
         "latex": "Calculer les dérivées partielles de cette fonction.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "acdfb643-e216-43e0-b7dc-5aebb3abf15e",
+      "id": "4db6a399-9001-4427-888d-41f65ca578ae",
       "type": "reponse",
       "value": {
         "latex": "Les dérivées partielles de \\( f(x, y) \\) sont :\n\n\\[\n\\frac{\\partial f}{\\partial x} = 3x^2 - 6xy\n\\]\n\n\\[\n\\frac{\\partial f}{\\partial y} = -3x^2 + 3y^2\n\\]",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "4015019d-4a76-46ea-ae5a-521960850cb2",
+      "id": "ba497231-84c3-460b-aade-eed6cf0fd9cd",
       "type": "question",
       "value": {
         "latex": "Rechercher alors les points critiques de cette fonction.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "8f725a62-eea3-4ec6-8fc4-7bebb0d8af9c",
+      "id": "c4d9ef5b-63a7-4484-ac2c-00e19f87e739",
       "type": "reponse",
       "value": {
         "latex": "Les points critiques sont obtenus en résolvant le système d'équations suivant :\n\n\\[\n3x^2 - 6xy = 0 \\quad \\text{(1)}\n\\]\n\\[\n-3x^2 + 3y^2 = 0 \\quad \\text{(2)}\n\\]\n\nRésolvons ce système: De l'équation (1): \\( 3x(x - 2y) = 0 \\) nous déduisons que\n\\( x = 0 \\) ou \\( x = 2y \\).\n\\\\ De l'équation (2): \\(-3x^2 + 3y^2 = 0 \\), nous obtenons \\( x^2 = y^2 \\).\nEtudions alors différents cas: \n\\\\ Cas 1 : \\( x = 0 \\) alors de \\( x^2 = y^2 \\), nous obtenons \\( y = 0 \\), d'où $(0,0)$ est un point critique.\n\\\\ Cas 2 : \\( x = 2y \\): alors de \\( (2y)^2 = y^2 \\), nous obtenons \\( 4y^2 = y^2 \\) donc \\( y = 0 \\).\nNous obtenons encore \\((0, 0)\\) pour point critique. \n\\\\ Ainsi, l'unique point critique de cette fonction est \\((0, 0)\\).",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "a02685a7-e731-4a27-86f8-3508e00606cd",
+      "id": "3b65a6b4-8734-41c3-ab4d-b06466e2249b",
       "type": "question",
       "value": {
         "latex": "Calculer la Hessienne: pouvez-vous alors conclure à la nature du ou des points critiques de cette fonction ?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "d97608c8-59a7-4a7c-a6ba-ba69a91293d1",
+      "id": "0283d517-934d-4873-8e87-242998b4c7e4",
       "type": "reponse",
       "value": {
         "latex": "Pour déterminer si le point critique \\((0, 0)\\) est un maximum, minimum ou un point selle, nous utilisons le critère de la matrice Hessienne.\nLa matrice Hessienne de \\( f \\) est donnée par :\n\n\\[\nH = \\begin{bmatrix}\n\\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 f}{\\partial y \\partial x} & \\frac{\\partial^2 f}{\\partial y^2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n6x - 6y & -6x \\\\\n-6x & 6y\n\\end{bmatrix}\n\\]\n\nAu point critique \\((0, 0)\\), la matrice Hessienne devient :\n\n\\[\nH(0, 0) = \\begin{bmatrix}\n0 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\nCette matrice est dégénérée, ce qui signifie que nous ne pouvons pas conclure directement sur la nature du point critique en utilisant les dérivées secondes.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "467dbc10-27af-4f32-a3f3-a7a01df47faf",
+      "id": "3ccaecb1-995c-4ab5-abd2-f3c8d945ad9f",
       "type": "question",
       "value": {
         "latex": "En étudiant $f(x,x)$, montrer que $f$ n'admet aucun extremum local.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "d999bbf5-bf65-48ee-9fc7-48c591fc18de",
+      "id": "fc787f21-b589-4d97-af9d-a9a70761046f",
       "type": "reponse",
       "value": {
         "latex": "Nous avons $f(x,x) = 5x^3$: ainsi, $f$ change de signe autour de $(0;0)$, et donc $f$ n'admet pas d'extremum local en $(0,0)$.\nAinsi, la fonction \\( f(x, y) = x^3 - 3x^2y + y^3 \\) a un point critique en \\((0, 0)\\), qui est un point selle et non un extremum local (ni maximum ni minimum).\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={30}{30},        \n        colormap/cool,        \n        domain=-3:3,          \n        samples=40,           \n        xlabel=$x$,           \n        ylabel=$y$,           \n        zlabel={$f(x,y)$},    \n        zmax=20,              \n        zmin=-20              \n    ]\n    \\addplot3[\n        surf,                 \n    ]\n    {x^3 - 3*x^2*y + y^3};    \n    \\end{axis}\n\\end{tikzpicture}",

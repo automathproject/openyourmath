@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-15T20:10:25.592Z",
+    "createdAt": "2024-11-16T11:15:03.491Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:25.592Z"
+    "updatedAt": "2024-11-16T11:15:03.491Z"
   },
   "contenu": [
     {
-      "id": "45198b0e-d2c8-4a70-b0be-ea24b6eaa8d9",
+      "id": "8e073e6e-e022-4f63-b298-1c5196e8a759",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(X \\geq t)$ pour tout $t \\in \\R$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8579a32c-e75f-477b-94eb-53028efde698",
+      "id": "b50658a8-0399-4c02-a9ac-7f2d78f2abad",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(X \\geq t) &= \\int_t^{+\\infty} f(x) \\d x \\\\\n            &= \\int_t^{+\\infty} 3 e^{-3x} \\d x \\\\\n            &= \\left[ -e^{-3x} \\right]_t^{+\\infty} \\\\\n            &= e^{-3t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(X \\geq t) = 1$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "8fe3127f-4ce2-4985-942d-f6ef4e9dbd66",
+      "id": "c8e7cbca-25e9-47a5-96b8-34ad9cb39091",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(Z \\geq t)$ pour tout $t \\in \\R$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "2736733f-44c5-4c22-8aff-fbaf35554ec7",
+      "id": "21d8960b-2869-489d-91b4-01bba9e5d750",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(Z \\geq t) &= \\prob(X \\geq t \\text{ et } Y \\geq t) \\\\\n            &= \\prob(X \\geq t) \\prob(Y \\geq t) \\text{ par indépendance de $X$ et $Y$} \\\\\n            &= e^{-3t} \\times e^{-3t} \\\\\n            &= e^{-6t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(Z \\geq t) = 1$.\n\n        On voit ainsi que $Z = \\min(X,Y)$ suit une loi exponentielle $\\mathcal{E}(6)$.",

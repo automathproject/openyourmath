@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-15T20:10:13.553Z",
+    "createdAt": "2024-11-16T11:14:48.882Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:13.553Z"
+    "updatedAt": "2024-11-16T11:14:48.882Z"
   },
   "contenu": [
     {
-      "id": "7afc08b7-7325-4eee-9b83-45f9de02124b",
+      "id": "b5580370-241f-4a6e-bc00-1a6f1e4ed483",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n$$f(x,y)= x^4+y^4-2(x-y)^2.$$\n\n\\begin{enumerate}\n\\item \n\\question{Montrer qu'il existe $(\\alpha,\\beta)\\in \\R_+^2$ (et les déterminer) tels que, pour tout $(x,y)\\in R^2$, si $\\|.\\|$ désigne la norme euclidienne de $\\R^2$:\n$$f(x,y)\\geq \\alpha \\| (x,y)\\|^2+\\beta$$}\n\n\\reponse{$f(x,y)=x^4 +y^4-2x^2-2y^2+4xy$. \nNous savons (par une astucieuse inégalité) que $xy\\geq -\\frac{1}{2}(x^2+y^2)$.\nAinsi, nous en déduisons que \n$$f(x,y)\\geq x^+y^4-4x^2-4y^2$$\nPour tout $(x,y)\\in \\R^2$, nous savons que $X^4+\\varepsilon^4-2\\varepsilon X^2\\geq 0$ d'où, en utilisant cette inégalité pour $x$ et pour $y$, nous obtenons:\n$$f(x,y)\\geq (2\\varepsilon-4)x^2+(2\\varepsilon-4)y^2-2\\varepsilon^4$$\nPour $\\varepsilon=3$, il s'ensuit que $f(x,y)\\geq 2(x^2+y^2)-162 =2 \\|(x,y)\\|^2-162$.\nAinsi, en prenant $\\alpha=2$ et $\\beta=-162$, nous obtenons l'inégalité souhaitée. \n}\n\n\\item \n\\question{En déduire que $f$ admet (au moins) un minimum global sur $\\R^2$.}\n\\reponse{Quand $\\|(x,y)\\|\\to +\\infty$, nous obtenons que $f(x,y)\\to +\\infty$. \nAinsi, $f$ est coersive sur $\\R^2$: elle admet donc un minimum global sur $\\R^2$.}\n\n\n\\item \n\\question{Calculer la matrice Hessienne de $f$ et l'évaluer au point $(0,0)$.\nLa fonction $f$ est-elle convexe sur $\\R^2$?}\n\\reponse{Rappelons que $f$ est convexe si et seulement si sa matrice hessienne est semi-définie positive, c'est-à-dire si \npour tout vecteur $z\\in \\R^2$, nous avons $z^T \\cdot H_f \\cdot z\\geq 0$. Cela revient à ce que toutes les valeurs propres de $H_f$ soient positives ou nulles. \n\nLa matrice Hessienne est alors:\n$4 \\begin{pmatrix}\n3x^2-1 & 1 \\\\ 1& 3y^2-1\n\\end{pmatrix}$. \nAinsi, sa hessienne en $(0,0)$ est $\\begin{pmatrix}\n-1 & 1 \\\\ 1&-1\n\\end{pmatrix}$: ces valeurs propres sont $0$ et $-2$. Ainsi, cette matrice n'est pas semi-definie positive et donc la fonction $f$ n'est pas convexe. }\n\n\\question{Déterminer les points critiques de $f$ et préciser leur nature (minimum ou maximum local, point selle...}\n\\reponse{Les points critiques sont donnés par les solutions de $\\nabla f(x,y)=(0,0)$, soit \n$$\n\\left\\lbrace \\begin{array}{ll}\n\\frac{\\partial f}{\\partial x}(x,y) & = 4(x^3-x+y)=0 \\\\ \n\\frac{\\partial f}{\\partial y}(x,y) & = y^3+x-y =0 \\end{array}\\right. \n~~\\Rightarrow ~~\n\\left\\lbrace\\begin{array}{ll}\nx^3+y^3 &=0 \\\\\ny^3+x-y&=0 \n\\end{array}\\right. \n~~\\Rightarrow ~~\n\\left\\lbrace \\begin{array}{ll}\ny&=-x \\\\\nx^3-2x&=0\\end{array}\\right. $$\nIl y a donc trois points critiques: $O(0,0)$, $A(\\sqrt{2};-\\sqrt{2})$ et $B(-\\sqrt{2};\\sqrt{2})$.\n\\\\ Point $O$: La Hessienne est $Hess~f(0,0) = \\begin{pmatrix} -4 & 4 \\\\ 4&-4\\end{pmatrix}$: son déterminant est nul donc on ne peut pas conclure directement. Une petite étude plus spécifique s'impose. \nPour $|x|<2$, nous avons $f(x,-x) = 2x^4-8x^2 = -2x^2(4-x^4)<0$. \nDe même, $f(x,x)=2x^4\\geq 0$ ce qui montre que $(0,0)$ est un point-selle de $f$. \n\\\\ Point $A$: $Hess~f(\\sqrt{2};-\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$. \nLa Hessienne a alors un déterminant positif et $20>0$ donc $f$ possède un minimum local en $A$.\n\\\\ Point $B$:   $Hess~f(-\\sqrt{2};\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$: idem, $f$ admet un minimul local en $B$. \n}\n\n\\item\n\\question{En déduire le minimum de $f$ sur $\\R^2$.}\n\\reponse{D'après l'étude précédente, nous en déduisons que $f$ admet deux minimums, l'un en $A$ et l'autre en $B$, et que la valeur minimale pour $f$ est $-8$.\n\n\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=10cm,\n        view={60}{30},\n        xlabel={$x$},\n        ylabel={$y$},\n        zlabel={$f(x,y)$},\n        domain=-2:2,\n        domain y=-2:2,\n        samples=40,\n        colormap/cool\n    ]\n    \\addplot3[surf] {x^4 + y^4 - 2*(x - y)^2};\n    \\end{axis}\n\\end{tikzpicture}\n\n\n}\n\n\n\n\\end{enumerate}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "0835163f-645e-4aeb-8da9-a79713030eed",
+      "id": "9cc06ea9-ec9b-4ec2-838b-4f25044184ea",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $(\\alpha,\\beta)\\in \\R_+^2$ (et les déterminer) tels que, pour tout $(x,y)\\in R^2$, si $\\|.\\|$ désigne la norme euclidienne de $\\R^2$:\n$$f(x,y)\\geq \\alpha \\| (x,y)\\|^2+\\beta$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "ec219fb0-e82e-45ee-b843-35301cc9aefd",
+      "id": "886c727d-cdff-4af3-8aa2-fccf1a179e72",
       "type": "reponse",
       "value": {
         "latex": "$f(x,y)=x^4 +y^4-2x^2-2y^2+4xy$. \nNous savons (par une astucieuse inégalité) que $xy\\geq -\\frac{1}{2}(x^2+y^2)$.\nAinsi, nous en déduisons que \n$$f(x,y)\\geq x^+y^4-4x^2-4y^2$$\nPour tout $(x,y)\\in \\R^2$, nous savons que $X^4+\\varepsilon^4-2\\varepsilon X^2\\geq 0$ d'où, en utilisant cette inégalité pour $x$ et pour $y$, nous obtenons:\n$$f(x,y)\\geq (2\\varepsilon-4)x^2+(2\\varepsilon-4)y^2-2\\varepsilon^4$$\nPour $\\varepsilon=3$, il s'ensuit que $f(x,y)\\geq 2(x^2+y^2)-162 =2 \\|(x,y)\\|^2-162$.\nAinsi, en prenant $\\alpha=2$ et $\\beta=-162$, nous obtenons l'inégalité souhaitée.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "522f8e23-f8a9-4426-b96e-06f16369f261",
+      "id": "e09f34ac-2eae-46db-bfb9-7bf55d7b7768",
       "type": "question",
       "value": {
         "latex": "En déduire que $f$ admet (au moins) un minimum global sur $\\R^2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4be179c7-0f14-4e4d-be85-6b9f6da80fef",
+      "id": "fba207d0-d086-45ea-ba2d-ca5487270afb",
       "type": "reponse",
       "value": {
         "latex": "Quand $\\|(x,y)\\|\\to +\\infty$, nous obtenons que $f(x,y)\\to +\\infty$. \nAinsi, $f$ est coersive sur $\\R^2$: elle admet donc un minimum global sur $\\R^2$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "b8d69bc5-0a8b-4ce1-aa9b-e76a798d912d",
+      "id": "e9cdc3f1-22e4-4f8a-a67d-fb2f3f7cbd26",
       "type": "question",
       "value": {
         "latex": "Calculer la matrice Hessienne de $f$ et l'évaluer au point $(0,0)$.\nLa fonction $f$ est-elle convexe sur $\\R^2$?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "96b97b6c-37cb-40da-a62f-cc781fe6df53",
+      "id": "38f0f0bc-2aaa-4418-8789-54373d4ccc5e",
       "type": "reponse",
       "value": {
         "latex": "Rappelons que $f$ est convexe si et seulement si sa matrice hessienne est semi-définie positive, c'est-à-dire si \npour tout vecteur $z\\in \\R^2$, nous avons $z^T \\cdot H_f \\cdot z\\geq 0$. Cela revient à ce que toutes les valeurs propres de $H_f$ soient positives ou nulles. \n\nLa matrice Hessienne est alors:\n$4 \\begin{pmatrix}\n3x^2-1 & 1 \\\\ 1& 3y^2-1\n\\end{pmatrix}$. \nAinsi, sa hessienne en $(0,0)$ est $\\begin{pmatrix}\n-1 & 1 \\\\ 1&-1\n\\end{pmatrix}$: ces valeurs propres sont $0$ et $-2$. Ainsi, cette matrice n'est pas semi-definie positive et donc la fonction $f$ n'est pas convexe.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "980b4f90-e933-47e3-b54e-ad4d3d36a310",
+      "id": "ca09680b-be15-48f8-a71a-2d30f97196b1",
       "type": "question",
       "value": {
         "latex": "Déterminer les points critiques de $f$ et préciser leur nature (minimum ou maximum local, point selle...",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "74e1cf87-efae-4787-a367-8fc63b87a31e",
+      "id": "8c8f85f2-1523-4a6b-a926-62c36bd740de",
       "type": "reponse",
       "value": {
         "latex": "Les points critiques sont donnés par les solutions de $\\nabla f(x,y)=(0,0)$, soit \n$$\n\\left\\lbrace \\begin{array}{ll}\n\\frac{\\partial f}{\\partial x}(x,y) & = 4(x^3-x+y)=0 \\\\ \n\\frac{\\partial f}{\\partial y}(x,y) & = y^3+x-y =0 \\end{array}\\right. \n~~\\Rightarrow ~~\n\\left\\lbrace\\begin{array}{ll}\nx^3+y^3 &=0 \\\\\ny^3+x-y&=0 \n\\end{array}\\right. \n~~\\Rightarrow ~~\n\\left\\lbrace \\begin{array}{ll}\ny&=-x \\\\\nx^3-2x&=0\\end{array}\\right. $$\nIl y a donc trois points critiques: $O(0,0)$, $A(\\sqrt{2};-\\sqrt{2})$ et $B(-\\sqrt{2};\\sqrt{2})$.\n\\\\ Point $O$: La Hessienne est $Hess~f(0,0) = \\begin{pmatrix} -4 & 4 \\\\ 4&-4\\end{pmatrix}$: son déterminant est nul donc on ne peut pas conclure directement. Une petite étude plus spécifique s'impose. \nPour $|x|<2$, nous avons $f(x,-x) = 2x^4-8x^2 = -2x^2(4-x^4)<0$. \nDe même, $f(x,x)=2x^4\\geq 0$ ce qui montre que $(0,0)$ est un point-selle de $f$. \n\\\\ Point $A$: $Hess~f(\\sqrt{2};-\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$. \nLa Hessienne a alors un déterminant positif et $20>0$ donc $f$ possède un minimum local en $A$.\n\\\\ Point $B$:   $Hess~f(-\\sqrt{2};\\sqrt{2}) = \\begin{pmatrix} 20&4 \\\\ 4&20\\end{pmatrix}$: idem, $f$ admet un minimul local en $B$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "8a74f1e8-5493-41c7-8ffc-4539b41bd3bb",
+      "id": "a88ded48-1649-4d4e-afc0-06c0de634438",
       "type": "question",
       "value": {
         "latex": "En déduire le minimum de $f$ sur $\\R^2$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "3c13b7a0-cc83-45af-877c-62ad1b6045e9",
+      "id": "394686e8-f784-4eb5-86ce-144f5f16b853",
       "type": "reponse",
       "value": {
         "latex": "D'après l'étude précédente, nous en déduisons que $f$ admet deux minimums, l'un en $A$ et l'autre en $B$, et que la valeur minimale pour $f$ est $-8$.\n\n\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=10cm,\n        view={60}{30},\n        xlabel={$x$},\n        ylabel={$y$},\n        zlabel={$f(x,y)$},\n        domain=-2:2,\n        domain y=-2:2,\n        samples=40,\n        colormap/cool\n    ]\n    \\addplot3[surf] {x^4 + y^4 - 2*(x - y)^2};\n    \\end{axis}\n\\end{tikzpicture}",

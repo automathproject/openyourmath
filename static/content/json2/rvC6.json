@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:10:42.560Z",
+    "createdAt": "2024-11-16T11:15:21.468Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:42.560Z"
+    "updatedAt": "2024-11-16T11:15:21.468Z"
   },
   "contenu": [
     {
-      "id": "3ce22418-bf77-4484-b9f4-1647a4a3fa87",
+      "id": "119a3abf-9a84-4252-82b2-7904c2013330",
       "type": "description",
       "value": {
         "latex": "La méthode de la corde pour résoudre une équation du type $f(x)=0$ consiste à construire la suite $(x_k)$ définie par\n$$\\forall k \\in \\mathbb{N} : \\quad x_{k+1}=x_k-\\frac{f(x_k)}{f'(x_0)}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "6dd3eeaf-7baa-4931-a758-c71e507c862d",
+      "id": "9bee9a46-df2c-46ab-a2ea-52d4dcaa005c",
       "type": "question",
       "value": {
         "latex": "Sur un graphique, construire les premières itérations de cette méthode en prenant $f(x)=x^2$ et $x_0=1$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2f8b74e9-b869-4c79-8f9c-04d4f1209f0d",
+      "id": "96f59e87-6c15-4d0f-8653-ff251701b5ba",
       "type": "reponse",
       "value": {
         "latex": "Le principe de construction du point $x_{k+1}$ est le suivant: on prend l'intersection de l'axe des abscisses avec la droite passant par le point $(x_k,f(x_k))$ de pente $f'(x_0)=2x_0=2$. \n\t\t\t\\begin{center} \n\t\t\t\t\\newcommand\\newtfonc[1]{#1*#1) } \n\t\t\t\t\\begin{tikzpicture}[scale=.5]\n\t\t\t\t\\begin{axis}[\n\t\t\t\twidth=14cm, height=10cm,\n\t\t\t\taxis x line=center, \n\t\t\t\taxis y line=middle,\n\t\t\t\txlabel =$x$,\n\t\t\t\tevery axis x label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1.0)},\n\t\t\t\t\tanchor=west,\n\t\t\t\t},\n\t\t\t\tylabel = $y$,\n\t\t\t\tevery axis y label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1)},\n\t\t\t\t\tanchor=south,},\n\t\t\t\tlegend style={draw=none,at={(-.1,1)},anchor=north west,font=\\large },\n\t\t\t\tsamples=100,\n\t\t\t\tymin=-0.6, ymax=1.5,\n\t\t\t\txmin=-1.8, xmax=2.1,\n\t\t\t\tytick={0 },\n\t\t\t\txtick={0 },\n\t\t\t\tlegend cell align=left,\n\t\t\t\t]\n\t\t\t\t\\addplot [mark=none,line width=.5mm,blue,domain= -1.7:2 ]{\\newtfonc{x} };\n\t\t\t\t\\node[label={-90:{\\large{$x_0$}}},circle,fill,red,inner sep=2pt] at (axis cs:1,0) {};\n\t\t\t\t\\node[label={-80:{\\large{$x_1$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.5 ,0) {};\n\t\t\t\t\\node[label={-120:{\\large{$x_2$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.375 ,0) {};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (1,0) (1,1)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-1};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (0.5,0) (0.5,0.25)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-0.75};\n\t\t\t\t\\end{axis}\n\t\t\t\t\\end{tikzpicture}\n\t\t\\end{center}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "4abd0ba8-5416-46b1-a1fd-bdebf721e183",
+      "id": "e7c0532f-d761-4c46-af3a-522ec282c70d",
       "type": "question",
       "value": {
         "latex": "De quelle méthode générale la méthode de la corde est-elle un cas particulier ? Justifier.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "dc0d3612-d8f9-410b-bc72-eecf8df726af",
+      "id": "0251ff8a-3806-4c75-842d-83bbce54b9fd",
       "type": "reponse",
       "value": {
         "latex": "La méthode de la corde est un cas particulier de la méthode de point fixe : on a $x_{k+1}=g(x_k)$, où $g$ est la fonction définie par $g(x)=x-\\frac{f(x)}{f'(x_0)}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "178156b9-f510-4112-bdf9-a269fae0d59b",
+      "id": "b176f5c1-90de-4ccb-971d-1c527c49adb1",
       "type": "question",
       "value": {
         "latex": "En déduire l'ordre minimal de convergence de la méthode de la corde, quand celle-ci converge.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "e4dc72c9-ca4f-41ec-8ae7-b10af52933b1",
+      "id": "3860aa9e-cf68-4976-a321-1cc6fed7512b",
       "type": "reponse",
       "value": {
         "latex": "Quand une méthode de point fixe converge, elle est au minimum d'ordre $1$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "eeae2a13-a86b-4691-893d-1dc0dd25aa71",
+      "id": "e71cc5fa-946c-4471-bd89-5c4a70a4c5d6",
       "type": "description",
       "value": {
         "latex": "On souhaite trouver une méthode efficace pour trouver une approximation de la racine carrée d'un nombre positif $A$ donné. Considérons tout d'abord l'algorithme suivant: étant donné une valeur $x_0$, on calcule\n\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad k=0,1,2,... \\]",

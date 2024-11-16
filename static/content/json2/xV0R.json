@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:10:49.070Z",
+    "createdAt": "2024-11-16T11:15:29.123Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:49.070Z"
+    "updatedAt": "2024-11-16T11:15:29.123Z"
   },
   "contenu": [
     {
-      "id": "d91458e9-2e4e-4874-845b-ab69c10759c1",
+      "id": "dd648b7f-4828-4442-b274-557e01823bf6",
       "type": "question",
       "value": {
         "latex": "Trouver sous forme d'une série entière la solution de l'équation différentielle $(E)$:\n\t$$ (1-t)ty'(t)=(1+t)y(t)$$\n\tvérifiant les conditions initiales $y(0)=0$ et $y'(0)=1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "f83c09f0-febc-4d34-945f-f64578b3d01b",
+      "id": "28e0f6af-a861-4ed9-b075-fd432d9c19fc",
       "type": "reponse",
       "value": {
         "latex": "Soit $y$ une solution développable en série entière, de rayon de convergence $R$: on note $\\displaystyle y(t)=\\sum_{n=0}^{+\\infty} a_n t^n$ et on a\n\t\t\\[ \\forall t \\in ]-R;R[, \\qquad y'(t)=\\sum_{n=1}^{+\\infty} na_n t^{n-1}.\\]\n\t\tOn a les équivalences suivantes:\n\t\t$$\\begin{align*}\n\t\t\ty \\text{ solution de }(E) \\ & \\Leftrightarrow \\  \\forall t \\in ]-R;R[, \\\n\t\t\t(1-t)ty'(t)-(1+t)y(t)=0 \\\\\n\t\t\t\\ & \\Leftrightarrow \\  \\forall t \\in ]-R;R[, \\ \\sum_{n=1}^{+\\infty} n a_n\\times t^n - \\sum_{n=2}^{+\\infty}  a_{n-1} (n-1)t^n - \\sum_{n=1}^{+\\infty} a_{n-1}t^n- \\sum_{n=0}^{+\\infty} a_n t^n =0 \\\\\n\t\t\t\\ & \\Leftrightarrow \\  \\forall t \\in ]-R;R[, \\ -a_0-a_0t+\\sum_{n=2}^{+\\infty} [a_n(n-1)-na_{n-1}]t^n =0 \\\\\n\t\t\t\\ & \\Leftrightarrow \\\n\t\t\ta_0=0 \\quad \\text{ et } \\quad  \\forall n \\geq 2, \\ a_n=\\frac{n}{n-1}a_{n-1}\n\t\t\\end{align*}$$\n\t\tLes conditions initales donnent:\n\t\t\\[ y(0)=a_0=0 \\quad \\text{ et } \\quad y'(0)=a_1=1.\\]\n\t\tOn en conclut que pour tout $n\\geq 0$, $a_n=n$ et donc \n\t\t\\[ y(t)=\\sum_{n=0}^{+\\infty} nt^n.\\]",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "f79641e8-10a8-4264-88a3-328ea499dd82",
+      "id": "a5d945a4-c22e-4987-8b99-361dc07effe8",
       "type": "question",
       "value": {
         "latex": "Calculer la somme de cette série en précisant son intervalle de convergence.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "b9e69bf9-f83e-47f3-b08a-c16c26efc92c",
+      "id": "fcf7743e-a78a-42ef-a343-ae8cf0e9a097",
       "type": "reponse",
       "value": {
         "latex": "La série $\\sum_{n\\geq 0} nt^n$ a pour rayon de convergence $R=1$. \\\\\n\t\tOn a\n\t\t\\[ \\forall t \\in ]-1;1[, \\qquad \\sum_{n=0}^{+\\infty} t^n=\\frac{1}{1-t}\\]\n\t\tdonc en dérivant\n\t\t\\[ \\forall t \\in ]-1;1[, \\qquad \\sum_{n=1}^{+\\infty} nt^{n-1}=\\frac{1}{(1-t)^2}.\\]\n\t\tPar conséquent,\n\t\t\\[\\forall t \\in ]-1;1[, \\qquad y(t)=\\sum_{n=0}^{+\\infty} nt^n\n\t\t=t\\sum_{n=0}^{+\\infty} nt^{n-1}\n\t\t= t\\sum_{n=1}^{+\\infty} nt^{n-1}\n\t\t=\\frac{t}{(1-t)^2}.\\]",

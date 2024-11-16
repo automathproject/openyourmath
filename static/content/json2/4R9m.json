@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-15T20:09:54.076Z",
+    "createdAt": "2024-11-16T11:14:22.631Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:09:54.076Z"
+    "updatedAt": "2024-11-16T11:14:22.631Z"
   },
   "contenu": [
     {
-      "id": "dc993338-e700-4b3d-829d-9b29d52d9fc2",
+      "id": "a327d5f1-fdef-49c0-b67e-2c35199e0db1",
       "type": "description",
       "value": {
         "latex": "Déterminer les courbes de niveaux des fonctions suivantes et esquisser rapidement une représentation graphique d'un ensemble de celles-ci.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8321dedc-b049-4d06-b70a-ec3c808d1423",
+      "id": "25f3f996-e880-48be-8f9b-71b7348544c7",
       "type": "question",
       "value": {
         "latex": "$f(x,y) = x+y-1$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "508d46c0-0c7c-470d-bdcf-965fd398f69c",
+      "id": "7678f282-d4de-4f8b-ba61-2d06d48b4316",
       "type": "reponse",
       "value": {
         "latex": "Soit $k \\in \\mathbb{R}$ : $f(x,y) = k \\iff y = -x+k+1$. Pour tout $k \\in \\R$, les lignes de niveau $k$ sont des droites de coefficient directeur $-1$. \n\t\t\n\\begin{center}\n\t\\begin{tikzpicture}\n\\begin{axis}[\ntitle={$f(x,y)=x+y-1$},\nenlarge x limits,\nview={0}{90},\nxlabel=$x$, ylabel=$y$,\nsmall,\naxis equal,\naxis x line=center,\naxis y line=center,\n\n]\n\\addplot3[\ndomain=-3:3,\ndomain y=-3:3,\ncontour gnuplot={number=14},\nthick,\n]\n{x+y-1};\n\\end{axis}\n\\end{tikzpicture}\n\\end{center}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "64c4f129-1624-491d-a232-7930c5d9448b",
+      "id": "4a9fc1f1-d73f-402a-b3ad-c0adf0f29fc5",
       "type": "question",
       "value": {
         "latex": "$f(x,y) = e^{y-x^2}$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "ead1eb72-5123-434c-9053-4a84771fa522",
+      "id": "5d2dd7dc-3f7c-4bdf-a952-2c78bfe13754",
       "type": "reponse",
       "value": {
         "latex": "Soit $k \\in \\mathbb{R}$ : $f(x,y) = k \\Rightarrow k>0$. Pour tout $k>0$, $f(x,y) = k \\iff y = x^2 + \\ln(k)$. Les lignes de niveau $k>0$ sont des paraboles, vides si $k \\leq 0$. \n\\begin{center}\n\t\\begin{tikzpicture}\n\t\\begin{axis}[\n\t\n\tenlarge x limits,\n\tview={0}{90},\n\txlabel=$x$, ylabel=$y$,\n\tsmall,\n\taxis equal,\n\taxis x line=center,\n\taxis y line=center,\n\t\n\t]\n\t\\addplot3[\n\tdomain=-3:3,\n\tdomain y=-3:3,\n\tcontour gnuplot={levels={0.2,0.4,0.6, 0.8,1,2,3,4,5,6,7,8,9,10,11,12}},\n\tsamples=40,\n\tthick,\n\t]\n\t{exp(y-x^2)};\n\t\\end{axis}\n\t\\end{tikzpicture}\n\\end{center}",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "fc434bcc-46fd-479a-a2ea-7a72cca7acc6",
+      "id": "936eb1af-3bf0-46ee-b1a4-7de9839ca374",
       "type": "question",
       "value": {
         "latex": "$f(x,y) = \\ln(x+2y)$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "002a79bf-f9ea-45c4-bda8-d7a8961524e7",
+      "id": "420fb66e-9de1-4809-903d-26ac659a67f4",
       "type": "reponse",
       "value": {
         "latex": "Soit $k \\in \\mathbb{R}$ : $f(x,y) = k \\iff y = -\\frac{x+e^{k}}{2} $. Les lignes de niveau $k$ sont des droites de coefficient directeur $-\\frac{1}{2}$. \n\n\\begin{center}\n\t\\begin{tikzpicture}\n\t\\begin{axis}[\n\t\n\tenlarge x limits,\n\tview={0}{90},\n\txlabel=$x$, ylabel=$y$,\n\tsmall,\n\taxis equal,\n\taxis x line=center,\n\taxis y line=center,\n\t\n\t]\n\t\\addplot3[\n\tdomain=-5:5,\n\tdomain y=-5:5,\n\tcontour gnuplot={levels={-1,0,1,1.5,2}},\n\tsamples=20,\n\tthick,\n\t]\n\t{ln(x+2*y)};\n\t\\end{axis}\n\t\\end{tikzpicture}\n\\end{center}",

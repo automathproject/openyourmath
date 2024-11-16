@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-15T20:10:38.664Z",
+    "createdAt": "2024-11-16T11:15:17.266Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-15T20:10:38.664Z"
+    "updatedAt": "2024-11-16T11:15:17.266Z"
   },
   "contenu": [
     {
-      "id": "4473b532-5e62-4155-a8ef-9aba7e13d2c7",
+      "id": "ef32900f-f94b-4e45-a840-0a44b746665f",
       "type": "description",
       "value": {
         "latex": "Déterminer les extrémums locaux des applications suivantes définies sur $\\R^2$:",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "416a69f0-ff91-4369-ade2-ca4bec1d4ffd",
+      "id": "2223eb88-dbe6-424b-9fdf-1a9db6868462",
       "type": "question",
       "value": {
         "latex": "$f(x,y)= 4x + 2y - x^2- y^2 - 2x^3$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "85b9526d-9edc-42b9-ba0a-16f7f174f181",
+      "id": "5a3eb70f-e16d-4cfa-9a9d-dc6ca027b98c",
       "type": "reponse",
       "value": {
         "latex": "Les dérivées partielles de \\( f(x, y) \\) sont :\n\n\\[\n\\frac{\\partial f}{\\partial x} = 4-2x-6x^2\n\\]\n\n\\[\n\\frac{\\partial f}{\\partial y} = 2-2y\n\\]\n\nAinsi, recherchons les points critiques, c'est-à-dire vérifiant $\\frac{\\partial f}{\\partial x} (x,y)=\\frac{\\partial f}{\\partial y} (x;y)=0$.\n\\\\ Nous obtenons alors que $6x^2+2x-4=0$ soit $3x^2+x-2=0$. En calculant le discriminant, nous obtenons que \n$\\Delta=25$, donc que les racines de cette équation d'ordre $2$ sont $x=-1$ et $x=2/3$.\nLa seconde condition portant sur $y$ donne $y=1$: ainsi, il y a deux points critiques, \n$A:(-1;1)$ et $B:(2/3;1)$. \n\\\\ Nous savons que si $f$ admet un extremum local, comme $f$ est de classe $\\mathcal{C}^1$ sur $\\R^2$ (c'est une fonction polynomiale en $(x,y)$), celui ci est nécessairement un point critique. \n\nPour déterminer la nature du point critique, calculons la matrice Hessienne: \n\\[\nH(x,y) = \\begin{bmatrix}\n\\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 f}{\\partial y \\partial x} & \\frac{\\partial^2 f}{\\partial y^2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n-2-12x & 0 \\\\\n0 & -2\n\\end{bmatrix}\n\\]\n\nPour le point $A$, nous obtenons alors $H(-1;1)= \\begin{pmatrix} 10 & 0 \\\\ 0 & -2\\end{pmatrix}$ de déterminant \n$-20$. Ainsi, le déterminant étant négatif, $A$ est un point selle. \n\nPour le point $B$, nous obtenons \n$H(2/3;1) = \\begin{pmatrix} -10 & 0 \\\\ 0 & -2\\end{pmatrix}$, de déterminant $20>0$ donc cette fonction admet un extrémum en $B$.  Comme $\\frac{\\partial^2 f}{\\partial x^2}<0$, nous en déduisons que c'est un maximum. \n\n\nAinsi, $f$ admet un maximum local en $B$.\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},        \n        colormap/viridis,     \n        domain=-2:2,          \n        samples=40,           \n        xlabel=$x$,           \n        ylabel=$y$,           \n        zlabel={$f(x,y)$},    \n        zmax=10,              \n        zmin=-20              \n    ]\n    \\addplot3[\n        surf,                 \n    ]\n    {4*x + 2*y - x^2 - y^2 - 2*x^3*y^2};    \n    \\end{axis}\n\\end{tikzpicture}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "6dd5dd94-894a-4592-b0c8-d5e71ade467e",
+      "id": "903f581a-3a01-42da-99db-17d47167651d",
       "type": "question",
       "value": {
         "latex": "$g(x,y)=xy+x^3y^2$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "3821bb1a-17bc-4266-a43b-4b798cda18cb",
+      "id": "b02122c2-65f5-4eef-9d67-9f6c86c4db2e",
       "type": "reponse",
       "value": {
         "latex": "Les dérivées partielles de \\( g(x, y) \\) sont :\n\n\\[\n\\frac{\\partial f}{\\partial x} = y+3x^2y^2 \\]\n\\[\n\\frac{\\partial g}{\\partial y} = x+2x^3y \\]\n\nAinsi, recherchons les points critiques, c'est-à-dire vérifiant $\\frac{\\partial g}{\\partial x} (x,y)=\\frac{\\partial g}{\\partial y} (x;y)=0$.\n\\\\ Nous obtenons alors que $y(1+3x^2y)=0$ et $x(1+2x^2y^2)=0$. \n\nRaisonnons alors par disjonction des cas: si $y=0$ (1ere équation), alors nécessairement $x=0$ (seconde équation). \n\\\\ Si $1+3x^2y=0$, alors si $x=0$ ce qui est absurde ($1=0$), soit c'est $1+2x^2y=0$.\nCela conduit alors à $x^2y=0$, d'où $x=0$ ou $y=0$, ce qui est ici absurde (hypothèse $1+3x^2y=0$).\n\nNous en déduisons donc que l'unique point critique de la fonction $g$ est le point $(0;0)$.\n\nReste à étudier si ce point est un extrémum local ou non.  \nPour ce faire, calculons la Hessienne de cette fonction. Nous obtenons:\n\n\\[\nH(x,y) = \\begin{bmatrix}\n\\frac{\\partial^2 g}{\\partial x^2} & \\frac{\\partial^2 g}{\\partial x \\partial y} \\\\\n\\frac{\\partial^2 g}{\\partial y \\partial x} & \\frac{\\partial^2 g}{\\partial y^2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n6xy^2 & 1+6x^2y \\\\\n1+6xy & 2x^3  \n\\end{bmatrix}\n\\]\n\nAinsi, l'évaluation de la Hessienne au point critique $(0,0)$ donne $H(0,0)=\\begin{pmatrix} 0  & 1\\\\ 1&0\\end{pmatrix}$. Son déterminant est négatif, d'où $(0,0)$ est un point selle. \nLa fonction $g$ n'admet donc ni minimum ni maximum local. \n\nPour le point $A$, nous obtenons alors $H(-1;1)= \\begin{pmatrix} 10 & 0 \\\\ 0 & -2\\end{pmatrix}$ de déterminant \n$-20$. Ainsi, le déterminant étant négatif, $A$ est un point selle. \n\nPour le point $B$, nous obtenons \n$H(2/3;1) = \\begin{pmatrix} -10 & 0 \\\\ 0 & -2\\end{pmatrix}$, de déterminant $20>0$ donc cette fonction admet un extrémum en $B$.  Comme $\\frac{\\partial^2 f}{\\partial x^2}<0$, nous en déduisons que c'est un maximum. \n\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},         \n        colormap/viridis,      \n        domain=-2:2,           \n        samples=40,            \n        xlabel=$x$,            \n        ylabel=$y$,            \n        zlabel={$g(x,y)$},     \n        zmax=10,               \n        zmin=-10               \n    ]\n    \\addplot3[\n        surf,                  \n        shader=interp,         \n    ]\n    {x*y + x^3*y^2};           \n    \\end{axis}\n\\end{tikzpicture}",
