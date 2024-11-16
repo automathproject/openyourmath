@@ -1,19 +1,19 @@
 {
   "uuid": "iQqS",
-  "titre": "",
+  "titre": "Probabilité de surcharge",
   "theme": [
     "probabilités"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-16T11:15:11.150Z",
+    "createdAt": "2024-11-16T14:07:18.229Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:11.150Z"
+    "updatedAt": "2024-11-16T14:07:18.229Z"
   },
   "contenu": [
     {
-      "id": "836fc831-2428-4814-96ef-dd0db9f4a984",
+      "id": "91c01117-da46-42f9-b632-7a6b6ae6436e",
       "type": "description",
       "value": {
         "latex": "On considère un avion contenant 100 passagers. On suppose que le poids d'un passager pris au hasard suit une loi de probabilité dont l'espérance est 71 kg et l'écart type est 7~kg.",
@@ -21,7 +21,15 @@
       }
     },
     {
-      "id": "c0590208-9a45-476f-a489-47161284a497",
+      "id": "3b14b12c-940d-479e-9cdb-f27f00cad8be",
+      "type": "question",
+      "value": {
+        "latex": "Soit $X$ la variable aléatoire donnant le poids total des 100 passagers. Que peut-on dire de la variable $X$ ?",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> la variable aléatoire\ndonnant le poids total des 100 passagers. Que peut-on dire de la\nvariable <span class=\"math inline\">\\(X\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "bac4f0ba-ea19-41f6-ba12-12a808599f45",
       "type": "reponse",
       "value": {
         "latex": "On ne connaît pas la loi de $X$ mais d'après le théorème central limite, $X$ suit approximativement une loi normale.  \n\t\t\n\t\tOn peut calculer l'espérance de $X$ et la variance de $X$ : Si on note $Y_i$ le poids du $i$-ème passager, on a $X = \\sum_{i=1}^{100} Y_i$. Par conséquent, $\\mathbb{E}(X) = 7100$ et $V(X) = 100 \\times 7^2 = 4900$. \n\t\t\tD'après le théorème central limite, la loi de $X$ peut être approchée par une loi normale de moyenne $7100$ et de variance $4900$, soit un écart type de $70$.",
@@ -29,7 +37,7 @@
       }
     },
     {
-      "id": "11efb892-f5cd-48ac-b4ef-78d8f06ed921",
+      "id": "74637eec-f65f-4c84-81fe-338a43e5efb8",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité que le poids de l'ensemble des passagers soit supérieur à $7{,}3$ tonnes.",
@@ -37,7 +45,7 @@
       }
     },
     {
-      "id": "d0318be2-785d-4fad-b8c3-287137e8b7f4",
+      "id": "94c561a7-e5a2-4368-9425-b5e115e92ace",
       "type": "reponse",
       "value": {
         "latex": "En notant $Z$ une variable aléatoire normale centrée réduite, on en déduit que \n\t\t$$\\begin{align*}\n\t\t\t\\PP\\left(X > 7300\\right) &= \\PP\\left(\\frac{X-7100}{70} > \\frac{7300-7100}{70}\\right) \\\\\n\t\t\t&\\approx  \\PP\\left(Z > \\frac{200}{70} \\approx 2{,}857\\right) \\\\\n\t\t\t&\\approx 0{,}0021 = 0{,}21\\%\n\t\t\\end{align*}$$\n\t\tIl n'y a quasiment aucune chance que le poids total des passagers dépasse $7{}3$ tonnes.",
@@ -45,7 +53,7 @@
       }
     },
     {
-      "id": "805668cf-cd6c-4d96-a0b3-d00bafd9c5c9",
+      "id": "bc637c6e-018e-4150-9cf7-8e7afa0ba9a7",
       "type": "question",
       "value": {
         "latex": "Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en soute. Déterminer à l'aide d'un intervalle de confiance au niveau $95\\%$ une estimation de la proportion de passagers qui voyagent avec un bagage en soute sur ce vol.",
@@ -53,7 +61,7 @@
       }
     },
     {
-      "id": "7084d4db-7972-40f1-9992-655b8647fcf7",
+      "id": "0e88a6b9-1119-4daa-b6b5-5ead0921a224",
       "type": "reponse",
       "value": {
         "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\t\n\t\tOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",
@@ -61,7 +69,15 @@
       }
     },
     {
-      "id": "7a9b9b21-791c-408b-b6b0-e745de3026a2",
+      "id": "d4cb506f-5cbc-42d7-931b-9a5ec983b8cc",
+      "type": "question",
+      "value": {
+        "latex": "L'avion ne peut pas accueillir plus de 65 bagages en soute. Quelle information en terme de risque peut-on donner à la compagnie aérienne ?",
+        "html": "<p>L’avion ne peut pas accueillir plus de 65 bagages en soute. Quelle\ninformation en terme de risque peut-on donner à la compagnie aérienne\n?</p>\n"
+      }
+    },
+    {
+      "id": "ee3d55ba-b8c2-44cc-93c9-1d0b3fd3aea0",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente, il est tout à fait probable (avec une confiance de $95\\%$) que le nombre de bagages en soute soit supérieur à $65$ (entre 42 et 73). Pour que l'intervalle de confiance ne contienne pas $65\\%$, il faut prendre un risque supérieur à $33\\%$.",

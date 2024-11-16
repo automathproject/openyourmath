@@ -1,19 +1,19 @@
 {
   "uuid": "7otE",
-  "titre": "",
+  "titre": "Estimation pour un référendum",
   "theme": [
     "statistiques"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:27.269Z",
+    "createdAt": "2024-11-16T13:52:53.424Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:27.269Z"
+    "updatedAt": "2024-11-16T13:52:53.424Z"
   },
   "contenu": [
     {
-      "id": "09032a01-a5c7-4a6d-a9d0-b772bb46796f",
+      "id": "052fbf7b-71c1-4d93-9f26-6aa50e147fb3",
       "type": "description",
       "value": {
         "latex": "Lors d'un référendum, un sondage aléatoire simple avec remise pratiqué sur $1000$ personnes a\ndonné $55\\%$ pour le << Oui >> et $45\\%$ pour le << Non >>.",
@@ -21,7 +21,15 @@
       }
     },
     {
-      "id": "6bcae95b-d40c-4d4f-9099-3020360d6cb3",
+      "id": "d96b078b-801b-4376-9c15-accc0358ee78",
+      "type": "question",
+      "value": {
+        "latex": "Est-il plus précis de faire un sondage sur $1000$ personnes dans une population de $1$ million de personnes ou un sondage sur $2000$ personnes dans une population de $10$ millions de personnes ? Justifier.",
+        "html": "<p>Est-il plus précis de faire un sondage sur <span\nclass=\"math inline\">\\(1000\\)</span> personnes dans une population de\n<span class=\"math inline\">\\(1\\)</span> million de personnes ou un\nsondage sur <span class=\"math inline\">\\(2000\\)</span> personnes dans une\npopulation de <span class=\"math inline\">\\(10\\)</span> millions de\npersonnes ? Justifier.</p>\n"
+      }
+    },
+    {
+      "id": "7fee8d63-94aa-4746-af70-131ac55b1ada",
       "type": "reponse",
       "value": {
         "latex": "La taille de la population n'infuence pas le résultat de l'estimation. Mais plus la taille de l'échantillon est importante, plus le sondage est précis. Il vaut donc mieux faire un sondage sur 2000 personnes que sur 1000 personnnes.",
@@ -29,7 +37,15 @@
       }
     },
     {
-      "id": "941fef21-c35b-42a6-bd3f-99728dad6038",
+      "id": "9bc99713-d968-4409-89b8-b348ad92a8c2",
+      "type": "question",
+      "value": {
+        "latex": "Concernant le référendum cité ci-dessus, déterminer un intervalle contenant le pourcentage de << Oui >> avec une probabilité de $0{,}95$.",
+        "html": "<p>Concernant le référendum cité ci-dessus, déterminer un intervalle\ncontenant le pourcentage de &lt;&lt; Oui &gt;&gt; avec une probabilité\nde <span class=\"math inline\">\\(0{,}95\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "91761a5f-9145-4afc-8ea7-4868b96e311b",
       "type": "reponse",
       "value": {
         "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $1000$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{55}{100}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.519 ; 0.581]$. \n\nEn remplaçant $u_{\\alpha/2}$ par $2{,}5758$ pour une confiance de $99\\%$, on obtient numériquement $I_{conf} \\approx [0.509 ; 0.591]$.",
@@ -37,7 +53,15 @@
       }
     },
     {
-      "id": "8ffddd48-5205-46f9-81ad-cce5983ee0fb",
+      "id": "35f11579-b098-41fb-92bf-923ddd87f9ca",
+      "type": "question",
+      "value": {
+        "latex": "Peut-on considérer, avec une confiance de $95\\%$, que le << Oui >> l'emporte ? La réponse est-elle\n\tla même avec un niveau de confiance de $99\\%$ ? \\`A partir de quel niveau de confiance peut-on commencer à douter que le << Oui >> l'emporte ?",
+        "html": "<p>Peut-on considérer, avec une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, que le &lt;&lt; Oui &gt;&gt;\nl’emporte ? La réponse est-elle la même avec un niveau de confiance de\n<span class=\"math inline\">\\(99\\%\\)</span> ? À partir de quel niveau de\nconfiance peut-on commencer à douter que le &lt;&lt; Oui &gt;&gt;\nl’emporte ?</p>\n"
+      }
+    },
+    {
+      "id": "6bcbbf37-b23d-42ab-928e-6274e05c835a",
       "type": "reponse",
       "value": {
         "latex": "La réponse est oui car dans chacun des cas, l'intervalle de confiance se situe au dessus de $50\\%$. Il faudrait dépasser $99,8\\%$ de confiance pour pouvoir commencer à mettre en doute que le << Oui >> l'emporte.",
@@ -45,7 +69,15 @@
       }
     },
     {
-      "id": "1b14dd0f-8fe0-4e2a-bc85-c18e36c318b2",
+      "id": "c73a30e5-10bd-4e25-85af-2ff74b8f6dea",
+      "type": "question",
+      "value": {
+        "latex": "Si, pour un référendum, on sait que << oui >> se situe autour de $50\\%$, combien de personnes\n\tfaudrait-il interroger pour que la proportion de << Oui >> soit connue à $1\\%$ près (en plus ou en moins), avec un niveau de confiance de $0{,}95$ ?",
+        "html": "<p>Si, pour un référendum, on sait que &lt;&lt; oui &gt;&gt; se situe\nautour de <span class=\"math inline\">\\(50\\%\\)</span>, combien de\npersonnes faudrait-il interroger pour que la proportion de &lt;&lt; Oui\n&gt;&gt; soit connue à <span class=\"math inline\">\\(1\\%\\)</span> près (en\nplus ou en moins), avec un niveau de confiance de <span\nclass=\"math inline\">\\(0{,}95\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "e68f0017-3c6e-4048-8e6a-a92df36cc6c0",
       "type": "reponse",
       "value": {
         "latex": "La longueur de l'intervalle de confiance est de l'ordre de $\\frac{1}{\\sqrt{n}}$ où $n$ est la taille de l'échantillon. Pour avoir $\\frac{1}{\\sqrt{n}} < 0{,}01$, il faut $n > 10\\,000$.",

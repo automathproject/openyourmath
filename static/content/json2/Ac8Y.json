@@ -1,27 +1,27 @@
 {
   "uuid": "Ac8Y",
-  "titre": "",
+  "titre": "Loi log-normale",
   "theme": [
     "probabilités"
   ],
   "niveau": "",
   "metadata": {
-    "auteur": "",
-    "createdAt": "2024-11-16T11:14:29.417Z",
+    "auteur": "Maxime NGUYEN",
+    "createdAt": "2024-11-16T14:07:17.675Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:29.417Z"
+    "updatedAt": "2024-11-16T14:07:17.675Z"
   },
   "contenu": [
     {
-      "id": "7f41203f-0dcc-4e9c-b18c-53537a936680",
+      "id": "278e6fcb-5dac-4d04-bee7-6db55ccc32a5",
       "type": "description",
       "value": {
-        "latex": "Soit $X$ une variablea aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)",
-        "html": ""
+        "latex": "Soit $X$ une variable aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)$ avec $\\mu \\in \\R$ et $\\sigma >0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nsuivant une loi normale quelconque <span\nclass=\"math inline\">\\(\\mathcal{N}(\\mu,\\sigma)\\)</span> avec <span\nclass=\"math inline\">\\(\\mu \\in \\R\\)</span> et <span\nclass=\"math inline\">\\(\\sigma &gt;0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "a6607f28-7f74-4078-afe6-7c3b5f8bc9a9",
+      "id": "ffaf4d52-8c5a-4faa-9360-9ef8c7ff036d",
       "type": "question",
       "value": {
         "latex": "On pose $Y = e^X$. Calculer l'espérance et la variance de $Y$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "022c7785-3420-4640-97af-88e91264f6ad",
+      "id": "2cb7caa2-8f76-45aa-86ff-5352c639490e",
       "type": "reponse",
       "value": {
         "latex": "On a $Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu e^{\\sigma Z}$. D'après le théorème de transfert, \n$$\\begin{align*}\n    \\E(e^{\\sigma Z}) & = \\int_{-\\infty}^{+\\infty} e^{\\sigma z} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2 - 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\\\ \n\\end{align*}$$\nDonc par linéarité, $\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}$. \n\nDe même, on s'intéresse à $\\E(Y^2) = \\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma Z})$. D'après le calcul précédent, $\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}$. Donc $\\E(Y^2) = e^{2\\mu + 2\\sigma^2}$ et par théorème de Koenig-Huygens, \n$$\\begin{align*}\n  \\var(Y) & = \\E(Y^2) - \\E(Y)^2 \\\\\n  & = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  & = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1) \n\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "f7c343b7-af54-40cd-a753-660fa0608641",
+      "id": "22d5eb2c-8c7e-4af5-a80a-611e7035f9f4",
       "type": "question",
       "value": {
         "latex": "On suppose que $m=0$ et $\\sigma = 1$. Déterminer une fonction densité de la variable $Y$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "4bcc7dac-c858-41ec-bfba-cd66ef8c950d",
+      "id": "44c72b62-f5c7-442e-9018-78c52ac874be",
       "type": "reponse",
       "value": {
         "latex": "On a $Y = e^X = e^{\\sigma Z} = e^Z$. Donc $Y$ est une variable aléatoire positive. Si $t >0$, on a :\n      $$\\begin{align*}\n          \\prob(Y \\leq t) & = \\prob(e^Z \\leq t) \\\\\n          & = \\prob(Z \\leq \\ln(t)) \\\\\n          &= F_Z(\\ln(t))\n      \\end{align*}$$\n      Donc la fonction de répartition de $Y$ est $F_Y(t) = \\begin{cases}\n          0 & \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) & \\text{ si } t > 0 \\\\\n      \\end{cases}$. \n      Par dérivation, on obtient la densité de $Y$ : \n         $$ f_Y(x)  = \\begin{cases}\n              0 & \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} & \\text{ si } x > 0 \\\\\n          \\end{cases} $$",

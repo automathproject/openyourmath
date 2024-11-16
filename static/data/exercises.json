@@ -1,609 +1,9 @@
 {
   "metadata": {
     "totalCount": 440,
-    "generatedAt": "2024-11-16T13:36:25.892Z"
+    "generatedAt": "2024-11-16T14:07:24.383Z"
   },
   "exercises": [
-    {
-      "uuid": "5Tc1",
-      "titre": "",
-      "theme": "",
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:23.894Z",
-        "organisation": "",
-        "updatedAt": "2024-11-16T11:14:23.894Z"
-      },
-      "contenu": [
-        {
-          "id": "78879ce7-f07a-4a88-b4ed-6b654a910dc7",
-          "type": "description",
-          "value": {
-            "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\n\n\nOn pose \n$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
-            "html": "<p>On considère un échantillon <span\nclass=\"math inline\">\\((X_i)\\)</span> de taille <span\nclass=\"math inline\">\\(n=4\\)</span> dans une population suivant une loi\nnormale de paramètres <span class=\"math inline\">\\(\\mu\\)</span> et <span\nclass=\"math inline\">\\(\\sigma^2\\)</span>.</p>\n<p>On pose <span class=\"math display\">\\[T_1 = \\frac{1}{4}\\sum_{i=1}^{4}\nX_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)\\]</span>\n<span class=\"math display\">\\[U =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}\\]</span></p>\n"
-          }
-        },
-        {
-          "id": "e955b66f-a1bf-47f8-8f4c-497d805b2ad5",
-          "type": "question",
-          "value": {
-            "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
-            "html": "<p>On cherche à estimer <span class=\"math inline\">\\(\\mu\\)</span> à\nl’aide des estimateurs <span class=\"math inline\">\\(T_1\\)</span> et <span\nclass=\"math inline\">\\(T_2\\)</span>. Étudier leur biais et comparer leurs\nefficacités.</p>\n"
-          }
-        },
-        {
-          "id": "2bdf3a3e-6d31-434f-a40f-872f9bac6baf",
-          "type": "reponse",
-          "value": {
-            "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
-            "html": "<p>Par linéarité de l’espérance, on calcule <span\nclass=\"math inline\">\\(\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu\\)</span>,\n<span class=\"math inline\">\\(\\mathbb{E}(T_2) =\n\\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu\\)</span>. Par conséquent, <span\nclass=\"math inline\">\\(B(T_1)=B(T_2)=0\\)</span>.</p>\n<p>Pour comparer l’efficacité des deux estimateurs sais biais, on\ncalcule leur EQM (ce qui revient à calculer leur variance.) Par\nindépendance des variables, on a :</p>\n<p><span class=\"math inline\">\\(V(T_1) = \\frac{\\sigma^2}{4} &lt; V(T_3) =\n\\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}\\)</span>. Le plus efficace est\ndonc l’estimateur <span class=\"math inline\">\\(T_1\\)</span> qui est la\nmoyenne empirique.</p>\n"
-          }
-        },
-        {
-          "id": "13968c66-8d30-42d4-a827-82893bc37a79",
-          "type": "question",
-          "value": {
-            "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
-            "html": "<p>Quelle est la loi suivie par la variable <span\nclass=\"math inline\">\\(T_1\\)</span> ? la variable <span\nclass=\"math inline\">\\(T_2\\)</span> ? la variable <span\nclass=\"math inline\">\\(U\\)</span> ? la variable <span\nclass=\"math inline\">\\(V\\)</span> ? justifier.</p>\n"
-          }
-        },
-        {
-          "id": "989c89cc-f295-4512-a197-e0ff0e1f7349",
-          "type": "reponse",
-          "value": {
-            "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
-            "html": "<p><span class=\"math inline\">\\(U =\n\\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2\\)</span> ; or les\n<span class=\"math inline\">\\(X_i\\)</span> sont des variables aléatoires\nindépendantes et <span\nclass=\"math inline\">\\(\\frac{X_i-\\mu}{\\sigma}\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span> donc par définition,\n<span class=\"math inline\">\\(U\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4)\\)</span>.</p>\n<p>De plus, <span class=\"math inline\">\\(T_1 = \\overline{X}\\)</span> est\nl’estimateur de moyenne empirique donc d’après le théorème de Fisher,\n<span class=\"math inline\">\\(V\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4-1) = \\chi^2(3)\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "e4df27b5-06a3-4533-b3ee-89115f165231",
-          "type": "question",
-          "value": {
-            "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
-            "html": "<p>Quelle est la loi de la variable aléatoire <span\nclass=\"math inline\">\\(\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}\\)</span>\n?</p>\n"
-          }
-        },
-        {
-          "id": "0db604fb-c0ab-4263-af5b-19178f23b585",
-          "type": "reponse",
-          "value": {
-            "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",
-            "html": "<p>On pose <span class=\"math inline\">\\(Z =\n\\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} =\n\\frac{2(T_1-\\mu)}{\\sigma}\\)</span> variable distribuée selon une loi\n<span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Soit alors <span\nclass=\"math inline\">\\(Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}\\)</span> : par\ndéfinition, <span class=\"math inline\">\\(Y\\)</span> suit une loi <span\nclass=\"math inline\">\\(St(4)\\)</span>. Après simplifications, on peut\nréécrire <span class=\"math inline\">\\(Y = \\frac{4(T_1-\\mu)}{{\\sigma\n\\sqrt{U}}}\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "7otE",
-      "titre": "",
-      "theme": [
-        "statistiques"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:27.269Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:14:27.269Z"
-      },
-      "contenu": [
-        {
-          "id": "09032a01-a5c7-4a6d-a9d0-b772bb46796f",
-          "type": "description",
-          "value": {
-            "latex": "Lors d'un référendum, un sondage aléatoire simple avec remise pratiqué sur $1000$ personnes a\ndonné $55\\%$ pour le << Oui >> et $45\\%$ pour le << Non >>.",
-            "html": "<p>Lors d’un référendum, un sondage aléatoire simple avec remise\npratiqué sur <span class=\"math inline\">\\(1000\\)</span> personnes a donné\n<span class=\"math inline\">\\(55\\%\\)</span> pour le &lt;&lt; Oui &gt;&gt;\net <span class=\"math inline\">\\(45\\%\\)</span> pour le &lt;&lt; Non\n&gt;&gt;.</p>\n"
-          }
-        },
-        {
-          "id": "6bcae95b-d40c-4d4f-9099-3020360d6cb3",
-          "type": "reponse",
-          "value": {
-            "latex": "La taille de la population n'infuence pas le résultat de l'estimation. Mais plus la taille de l'échantillon est importante, plus le sondage est précis. Il vaut donc mieux faire un sondage sur 2000 personnes que sur 1000 personnnes.",
-            "html": "<p>La taille de la population n’infuence pas le résultat de\nl’estimation. Mais plus la taille de l’échantillon est importante, plus\nle sondage est précis. Il vaut donc mieux faire un sondage sur 2000\npersonnes que sur 1000 personnnes.</p>\n"
-          }
-        },
-        {
-          "id": "941fef21-c35b-42a6-bd3f-99728dad6038",
-          "type": "reponse",
-          "value": {
-            "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $1000$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{55}{100}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.519 ; 0.581]$. \n\nEn remplaçant $u_{\\alpha/2}$ par $2{,}5758$ pour une confiance de $99\\%$, on obtient numériquement $I_{conf} \\approx [0.509 ; 0.591]$.",
-            "html": "<p>On cherche à estimer une fréquence à partir d’un échantillon de\ntaille <span class=\"math inline\">\\(1000\\)</span>. La fréquence observée\ndans l’échantillon est <span class=\"math inline\">\\(f_{obs} =\n\\frac{55}{100}\\)</span>. On peut donc utiliser la formule du cours :\n<span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> en remplaçant <span\nclass=\"math inline\">\\(u_{\\alpha/2}\\)</span> par <span\nclass=\"math inline\">\\(1{,}96\\)</span> pour une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, on obtient numériquement <span\nclass=\"math inline\">\\(I_{conf} \\approx [0.519 ; 0.581]\\)</span>.</p>\n<p>En remplaçant <span class=\"math inline\">\\(u_{\\alpha/2}\\)</span> par\n<span class=\"math inline\">\\(2{,}5758\\)</span> pour une confiance de\n<span class=\"math inline\">\\(99\\%\\)</span>, on obtient numériquement\n<span class=\"math inline\">\\(I_{conf} \\approx [0.509 ;\n0.591]\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "8ffddd48-5205-46f9-81ad-cce5983ee0fb",
-          "type": "reponse",
-          "value": {
-            "latex": "La réponse est oui car dans chacun des cas, l'intervalle de confiance se situe au dessus de $50\\%$. Il faudrait dépasser $99,8\\%$ de confiance pour pouvoir commencer à mettre en doute que le << Oui >> l'emporte.",
-            "html": "<p>La réponse est oui car dans chacun des cas, l’intervalle de confiance\nse situe au dessus de <span class=\"math inline\">\\(50\\%\\)</span>. Il\nfaudrait dépasser <span class=\"math inline\">\\(99,8\\%\\)</span> de\nconfiance pour pouvoir commencer à mettre en doute que le &lt;&lt; Oui\n&gt;&gt; l’emporte.</p>\n"
-          }
-        },
-        {
-          "id": "1b14dd0f-8fe0-4e2a-bc85-c18e36c318b2",
-          "type": "reponse",
-          "value": {
-            "latex": "La longueur de l'intervalle de confiance est de l'ordre de $\\frac{1}{\\sqrt{n}}$ où $n$ est la taille de l'échantillon. Pour avoir $\\frac{1}{\\sqrt{n}} < 0{,}01$, il faut $n > 10\\,000$.",
-            "html": "<p>La longueur de l’intervalle de confiance est de l’ordre de <span\nclass=\"math inline\">\\(\\frac{1}{\\sqrt{n}}\\)</span> où <span\nclass=\"math inline\">\\(n\\)</span> est la taille de l’échantillon. Pour\navoir <span class=\"math inline\">\\(\\frac{1}{\\sqrt{n}} &lt;\n0{,}01\\)</span>, il faut <span class=\"math inline\">\\(n &gt;\n10\\,000\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "9iIv",
-      "titre": "",
-      "theme": [
-        "statistiques"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:28.693Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:14:28.693Z"
-      },
-      "contenu": [
-        {
-          "id": "f7f6800e-0cdb-4c72-b923-34227716dd84",
-          "type": "description",
-          "value": {
-            "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\t\n\t\n\t\n\tOn pose \n\t$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n\t$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
-            "html": "<p>On considère un échantillon <span\nclass=\"math inline\">\\((X_i)\\)</span> de taille <span\nclass=\"math inline\">\\(n=4\\)</span> dans une population suivant une loi\nnormale de paramètres <span class=\"math inline\">\\(\\mu\\)</span> et <span\nclass=\"math inline\">\\(\\sigma^2\\)</span>.</p>\n<p>On pose <span class=\"math display\">\\[T_1 = \\frac{1}{4}\\sum_{i=1}^{4}\nX_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)\\]</span>\n<span class=\"math display\">\\[U =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}\\]</span></p>\n"
-          }
-        },
-        {
-          "id": "5941ee70-0771-4ace-a1c2-ff2a1c06a30b",
-          "type": "question",
-          "value": {
-            "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
-            "html": "<p>On cherche à estimer <span class=\"math inline\">\\(\\mu\\)</span> à\nl’aide des estimateurs <span class=\"math inline\">\\(T_1\\)</span> et <span\nclass=\"math inline\">\\(T_2\\)</span>. Étudier leur biais et comparer leurs\nefficacités.</p>\n"
-          }
-        },
-        {
-          "id": "647c6e42-53e0-4606-b365-cd50b43678a8",
-          "type": "reponse",
-          "value": {
-            "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
-            "html": "<p>Par linéarité de l’espérance, on calcule <span\nclass=\"math inline\">\\(\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu\\)</span>,\n<span class=\"math inline\">\\(\\mathbb{E}(T_2) =\n\\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu\\)</span>. Par conséquent, <span\nclass=\"math inline\">\\(B(T_1)=B(T_2)=0\\)</span>.</p>\n<p>Pour comparer l’efficacité des deux estimateurs sais biais, on\ncalcule leur EQM (ce qui revient à calculer leur variance.) Par\nindépendance des variables, on a :</p>\n<p><span class=\"math inline\">\\(V(T_1) = \\frac{\\sigma^2}{4} &lt; V(T_3) =\n\\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}\\)</span>. Le plus efficace est\ndonc l’estimateur <span class=\"math inline\">\\(T_1\\)</span> qui est la\nmoyenne empirique.</p>\n"
-          }
-        },
-        {
-          "id": "c792a4a8-7131-442a-96ef-148ab93c6006",
-          "type": "question",
-          "value": {
-            "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
-            "html": "<p>Quelle est la loi suivie par la variable <span\nclass=\"math inline\">\\(T_1\\)</span> ? la variable <span\nclass=\"math inline\">\\(T_2\\)</span> ? la variable <span\nclass=\"math inline\">\\(U\\)</span> ? la variable <span\nclass=\"math inline\">\\(V\\)</span> ? justifier.</p>\n"
-          }
-        },
-        {
-          "id": "4cc9cc86-4a79-45af-a609-5b4ca8f052ac",
-          "type": "reponse",
-          "value": {
-            "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
-            "html": "<p><span class=\"math inline\">\\(U =\n\\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2\\)</span> ; or les\n<span class=\"math inline\">\\(X_i\\)</span> sont des variables aléatoires\nindépendantes et <span\nclass=\"math inline\">\\(\\frac{X_i-\\mu}{\\sigma}\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span> donc par définition,\n<span class=\"math inline\">\\(U\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4)\\)</span>.</p>\n<p>De plus, <span class=\"math inline\">\\(T_1 = \\overline{X}\\)</span> est\nl’estimateur de moyenne empirique donc d’après le théorème de Fisher,\n<span class=\"math inline\">\\(V\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4-1) = \\chi^2(3)\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "15dcad93-f5fc-461f-91f2-2a87b6bdc97c",
-          "type": "question",
-          "value": {
-            "latex": "Déterminer $x \\in \\R$ tel que $\\PP(U>x) = 0{,}05$.",
-            "html": "<p>Déterminer <span class=\"math inline\">\\(x \\in \\R\\)</span> tel que\n<span class=\"math inline\">\\(\\PP(U&gt;x) = 0{,}05\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "cae1287c-843d-4955-84bc-8b048fbe4ae0",
-          "type": "reponse",
-          "value": {
-            "latex": "On lit dans la table de loi  $\\PP(U<x) = 0{,}95$ pour $x = 11{,}07$.",
-            "html": "<p>On lit dans la table de loi <span class=\"math inline\">\\(\\PP(U&lt;x) =\n0{,}95\\)</span> pour <span class=\"math inline\">\\(x =\n11{,}07\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "43429086-b7c0-4d52-bce2-eeac600a386a",
-          "type": "question",
-          "value": {
-            "latex": "A l'aide du tableur, calculer $\\PP(V > 5)$ avec une précision de $10^{-8}$.",
-            "html": "<p>A l’aide du tableur, calculer <span class=\"math inline\">\\(\\PP(V &gt;\n5)\\)</span> avec une précision de <span\nclass=\"math inline\">\\(10^{-8}\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "23327687-4e3d-476c-80de-f7039b1331fd",
-          "type": "reponse",
-          "value": {
-            "latex": "On a constaté que $V$ suit une loi de $\\chi^2(3)$ d'après le théorème de Fisher.\n\nEnsuite, \ten tapant la formule \\texttt{1-LOI.KHIDEUX.N(5;3;1)} dans le tableur, on trouve que $\\PP(V > 5) \\approx 0{,}17179714$.",
-            "html": "<p>On a constaté que <span class=\"math inline\">\\(V\\)</span> suit une loi\nde <span class=\"math inline\">\\(\\chi^2(3)\\)</span> d’après le théorème de\nFisher.</p>\n<p>Ensuite, en tapant la formule <code>1-LOI.KHIDEUX.N(5;3;1)</code>\ndans le tableur, on trouve que <span class=\"math inline\">\\(\\PP(V &gt; 5)\n\\approx 0{,}17179714\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "abcbabc5-e496-4a4b-9ee2-e5a4f798f436",
-          "type": "question",
-          "value": {
-            "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
-            "html": "<p>Quelle est la loi de la variable aléatoire <span\nclass=\"math inline\">\\(\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}\\)</span>\n?</p>\n"
-          }
-        },
-        {
-          "id": "3abe450a-937d-4073-9c74-3c17e09e8c18",
-          "type": "reponse",
-          "value": {
-            "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",
-            "html": "<p>On pose <span class=\"math inline\">\\(Z =\n\\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} =\n\\frac{2(T_1-\\mu)}{\\sigma}\\)</span> variable distribuée selon une loi\n<span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Soit alors <span\nclass=\"math inline\">\\(Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}\\)</span> : par\ndéfinition, <span class=\"math inline\">\\(Y\\)</span> suit une loi <span\nclass=\"math inline\">\\(St(4)\\)</span>. Après simplifications, on peut\nréécrire <span class=\"math inline\">\\(Y = \\frac{4(T_1-\\mu)}{{\\sigma\n\\sqrt{U}}}\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "Ac8Y",
-      "titre": "",
-      "theme": [
-        "probabilités"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:29.417Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:14:29.417Z"
-      },
-      "contenu": [
-        {
-          "id": "7f41203f-0dcc-4e9c-b18c-53537a936680",
-          "type": "description",
-          "value": {
-            "latex": "Soit $X$ une variablea aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)",
-            "html": ""
-          }
-        },
-        {
-          "id": "a6607f28-7f74-4078-afe6-7c3b5f8bc9a9",
-          "type": "question",
-          "value": {
-            "latex": "On pose $Y = e^X$. Calculer l'espérance et la variance de $Y$.",
-            "html": "<p>On pose <span class=\"math inline\">\\(Y = e^X\\)</span>. Calculer\nl’espérance et la variance de <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "022c7785-3420-4640-97af-88e91264f6ad",
-          "type": "reponse",
-          "value": {
-            "latex": "On a $Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu e^{\\sigma Z}$. D'après le théorème de transfert, \n$$\\begin{align*}\n    \\E(e^{\\sigma Z}) & = \\int_{-\\infty}^{+\\infty} e^{\\sigma z} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2 - 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\\\ \n\\end{align*}$$\nDonc par linéarité, $\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}$. \n\nDe même, on s'intéresse à $\\E(Y^2) = \\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma Z})$. D'après le calcul précédent, $\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}$. Donc $\\E(Y^2) = e^{2\\mu + 2\\sigma^2}$ et par théorème de Koenig-Huygens, \n$$\\begin{align*}\n  \\var(Y) & = \\E(Y^2) - \\E(Y)^2 \\\\\n  & = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  & = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1) \n\\end{align*}$$",
-            "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu\ne^{\\sigma Z}\\)</span>. D’après le théorème de transfert, <span\nclass=\"math display\">\\[\\begin{align*}\n    \\E(e^{\\sigma Z}) &amp; = \\int_{-\\infty}^{+\\infty} e^{\\sigma z}\n\\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2\n- 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}\ne^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}}\n\\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\\\\n\\end{align*}\\]</span> Donc par linéarité, <span\nclass=\"math inline\">\\(\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}\\)</span>.</p>\n<p>De même, on s’intéresse à <span class=\"math inline\">\\(\\E(Y^2) =\n\\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma\nZ})\\)</span>. D’après le calcul précédent, <span\nclass=\"math inline\">\\(\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}\\)</span>. Donc\n<span class=\"math inline\">\\(\\E(Y^2) = e^{2\\mu + 2\\sigma^2}\\)</span> et\npar théorème de Koenig-Huygens, <span\nclass=\"math display\">\\[\\begin{align*}\n  \\var(Y) &amp; = \\E(Y^2) - \\E(Y)^2 \\\\\n  &amp; = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  &amp; = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1)\n\\end{align*}\\]</span></p>\n"
-          }
-        },
-        {
-          "id": "f7c343b7-af54-40cd-a753-660fa0608641",
-          "type": "question",
-          "value": {
-            "latex": "On suppose que $m=0$ et $\\sigma = 1$. Déterminer une fonction densité de la variable $Y$.",
-            "html": "<p>On suppose que <span class=\"math inline\">\\(m=0\\)</span> et <span\nclass=\"math inline\">\\(\\sigma = 1\\)</span>. Déterminer une fonction\ndensité de la variable <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "4bcc7dac-c858-41ec-bfba-cd66ef8c950d",
-          "type": "reponse",
-          "value": {
-            "latex": "On a $Y = e^X = e^{\\sigma Z} = e^Z$. Donc $Y$ est une variable aléatoire positive. Si $t >0$, on a :\n      $$\\begin{align*}\n          \\prob(Y \\leq t) & = \\prob(e^Z \\leq t) \\\\\n          & = \\prob(Z \\leq \\ln(t)) \\\\\n          &= F_Z(\\ln(t))\n      \\end{align*}$$\n      Donc la fonction de répartition de $Y$ est $F_Y(t) = \\begin{cases}\n          0 & \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) & \\text{ si } t > 0 \\\\\n      \\end{cases}$. \n      Par dérivation, on obtient la densité de $Y$ : \n         $$ f_Y(x)  = \\begin{cases}\n              0 & \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} & \\text{ si } x > 0 \\\\\n          \\end{cases} $$",
-            "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\sigma Z} =\ne^Z\\)</span>. Donc <span class=\"math inline\">\\(Y\\)</span> est une\nvariable aléatoire positive. Si <span class=\"math inline\">\\(t\n&gt;0\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n          \\prob(Y \\leq t) &amp; = \\prob(e^Z \\leq t) \\\\\n          &amp; = \\prob(Z \\leq \\ln(t)) \\\\\n          &amp;= F_Z(\\ln(t))\n      \\end{align*}\\]</span> Donc la fonction de répartition de <span\nclass=\"math inline\">\\(Y\\)</span> est <span class=\"math inline\">\\(F_Y(t)\n= \\begin{cases}\n          0 &amp; \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) &amp; \\text{ si } t &gt; 0 \\\\\n      \\end{cases}\\)</span>. Par dérivation, on obtient la densité de\n<span class=\"math inline\">\\(Y\\)</span> : <span\nclass=\"math display\">\\[f_Y(x)  = \\begin{cases}\n              0 &amp; \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} &amp;\n\\text{ si } x &gt; 0 \\\\\n          \\end{cases}\\]</span></p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "BA22",
-      "titre": "",
-      "theme": "",
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:30.329Z",
-        "organisation": "",
-        "updatedAt": "2024-11-16T11:14:30.329Z"
-      },
-      "contenu": [
-        {
-          "id": "3aea72bf-bd3e-4476-851f-e725b94ab9fb",
-          "type": "description",
-          "value": {
-            "latex": "Une entreprise utilise des camions pour transporter sa production. Elle dispose de 100 camions. Elle repère sur un échantillon de 25 jours choisis au hasard le nombre de camions en panne. Voici les résultats:\n\t\n\\begin{center}\n\t\t\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}\n\t\t\\hline\n5&5&6&4&6&6&8&3&5&5&5&4&3&6&5&6&4&7&6&6&5&4&3&6&5  \\\\\n\t\t\\hline\n\t\\end{tabular}\n\\end{center}",
-            "html": "<p>Une entreprise utilise des camions pour transporter sa production.\nElle dispose de 100 camions. Elle repère sur un échantillon de 25 jours\nchoisis au hasard le nombre de camions en panne. Voici les\nrésultats:</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">8</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">7</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n</div>\n"
-          }
-        },
-        {
-          "id": "85caef0b-0fa9-43f8-ae22-07172de91020",
-          "type": "question",
-          "value": {
-            "latex": "Calculer la moyenne $\\bar{x}$ et l'écart-type $\\sigma$ du nombre de camions en panne chaque jour pour l'échantillon étudié.",
-            "html": "<p>Calculer la moyenne <span class=\"math inline\">\\(\\bar{x}\\)</span> et\nl’écart-type <span class=\"math inline\">\\(\\sigma\\)</span> du nombre de\ncamions en panne chaque jour pour l’échantillon étudié.</p>\n"
-          }
-        },
-        {
-          "id": "9ed84daf-96ec-4abc-b8fb-8caff3723391",
-          "type": "reponse",
-          "value": {
-            "latex": "On trouve $\\bar{x} = 5.12$ et $\\sigma = 1.21$. (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EeDHiet0b2JOpLX-9rFeI-kBsj_o9NtQ-Qz8hJvy6rlIpw?e=463Dks}{feuille de calcul}).",
-            "html": "<p>On trouve <span class=\"math inline\">\\(\\bar{x} = 5.12\\)</span> et\n<span class=\"math inline\">\\(\\sigma = 1.21\\)</span>. (<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EeDHiet0b2JOpLX-9rFeI-kBsj_o9NtQ-Qz8hJvy6rlIpw?e=463Dks\">feuille\nde calcul</a>).</p>\n"
-          }
-        },
-        {
-          "id": "c29afead-f7e7-4619-92d3-60ba5c8c1079",
-          "type": "question",
-          "value": {
-            "latex": "A partir des résultats obtenus pour cet échantillon, proposer une estimation ponctuelle sans biais de la moyenne $\\mu$ et de l'écart type $s$ du nombre de camions en panne chaque jour pour la population correspondant aux jours ouvrables de l'année.",
-            "html": "<p>A partir des résultats obtenus pour cet échantillon, proposer une\nestimation ponctuelle sans biais de la moyenne <span\nclass=\"math inline\">\\(\\mu\\)</span> et de l’écart type <span\nclass=\"math inline\">\\(s\\)</span> du nombre de camions en panne chaque\njour pour la population correspondant aux jours ouvrables de\nl’année.</p>\n"
-          }
-        },
-        {
-          "id": "86ee92bc-720a-408f-8648-4495380aac24",
-          "type": "reponse",
-          "value": {
-            "latex": "Pour cela, on utilise les estimateurs sans biais du cours : \n\\begin{itemize}\n  \\item Avec $\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_i$, on obtient une estimation sans biais de la moyenne $\\bar{x} = 5.12$.\n  \\item Avec $S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2$, on obtient une estimation sans biais de la variance $s^2 = \\frac{n}{n-1} \\sigma^2 = \\frac{25}{24} \\times (1.21)^2 \\approx 1.53$ d'où une estimation sans biais de l'écart type $s = \\sqrt{\\frac{25}{24}}\\times 1.21 \\approx 1.24$. \n\\end{itemize}",
-            "html": "<p>Pour cela, on utilise les estimateurs sans biais du cours :</p>\n<ul>\n<li><p>Avec <span class=\"math inline\">\\(\\overline{X} =\n\\frac{1}{n}\\sum_{i=1}^{n} X_i\\)</span>, on obtient une estimation sans\nbiais de la moyenne <span class=\"math inline\">\\(\\bar{x} =\n5.12\\)</span>.</p></li>\n<li><p>Avec <span class=\"math inline\">\\(S^2 = \\frac{1}{n-1}\n\\sum_{i=1}^{n} (X_i - \\overline{X})^2\\)</span>, on obtient une\nestimation sans biais de la variance <span class=\"math inline\">\\(s^2 =\n\\frac{n}{n-1} \\sigma^2 = \\frac{25}{24} \\times (1.21)^2 \\approx\n1.53\\)</span> d’où une estimation sans biais de l’écart type <span\nclass=\"math inline\">\\(s = \\sqrt{\\frac{25}{24}}\\times 1.21 \\approx\n1.24\\)</span>.</p></li>\n</ul>\n"
-          }
-        },
-        {
-          "id": "48fbdfe6-56dd-45a8-a937-a9418a107586",
-          "type": "question",
-          "value": {
-            "latex": "Déterminer un intervalle de confiance de la moyenne $\\mu$ de la population avec un niveau de confiance $95 \\%$.",
-            "html": "<p>Déterminer un intervalle de confiance de la moyenne <span\nclass=\"math inline\">\\(\\mu\\)</span> de la population avec un niveau de\nconfiance <span class=\"math inline\">\\(95 \\%\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "3715cbc8-c556-4355-8cd7-b6df6f1c82bd",
-          "type": "reponse",
-          "value": {
-            "latex": "On utilise la formule du cours pour un petit échantillon. Pour cela, on doit suppose que la distribution du nombre de pannes est normale dans la population. \n\nPar lecture de la table de la loi de Student $St(24)$, on obtient $t_{\\alpha/2 } \\approx 2.063899$ d'où\n$$\\left[\\bar{x} - t_{\\alpha/2 }\\frac{s}{\\sqrt{n}};\n\\bar{x} + t_{\\alpha/2 }\\frac{s}{\\sqrt{n}}\\right] \\approx [4.609;5.630]$$",
-            "html": "<p>On utilise la formule du cours pour un petit échantillon. Pour cela,\non doit suppose que la distribution du nombre de pannes est normale dans\nla population.</p>\n<p>Par lecture de la table de la loi de Student <span\nclass=\"math inline\">\\(St(24)\\)</span>, on obtient <span\nclass=\"math inline\">\\(t_{\\alpha/2 } \\approx 2.063899\\)</span> d’où <span\nclass=\"math display\">\\[\\left[\\bar{x} - t_{\\alpha/2 }\\frac{s}{\\sqrt{n}};\n\\bar{x} + t_{\\alpha/2 }\\frac{s}{\\sqrt{n}}\\right] \\approx\n[4.609;5.630]\\]</span></p>\n"
-          }
-        },
-        {
-          "id": "fd5d4611-841c-4c47-81ea-65411dc17e39",
-          "type": "question",
-          "value": {
-            "latex": "Au garage où sont stationnés les camions, le responsable affirme qu'il y a, en moyenne, 4 camions en panne par jour. Un des chauffeurs prétend qu'il y en a 6. \n\t\nConstruire un test avec les hypothèses $\\begin{cases}H_0 \\colon \\mu = 4 \\\\ H_1 \\colon \\mu > 4\n\t\\end{cases}$ et un risque de première espèce de $5 \\%$ puis proposer une interprétation du résultat.",
-            "html": "<p>Au garage où sont stationnés les camions, le responsable affirme\nqu’il y a, en moyenne, 4 camions en panne par jour. Un des chauffeurs\nprétend qu’il y en a 6.</p>\n<p>Construire un test avec les hypothèses <span\nclass=\"math inline\">\\(\\begin{cases}H_0 \\colon \\mu = 4 \\\\ H_1 \\colon \\mu\n&gt; 4\n    \\end{cases}\\)</span> et un risque de première espèce de <span\nclass=\"math inline\">\\(5 \\%\\)</span> puis proposer une interprétation du\nrésultat.</p>\n"
-          }
-        },
-        {
-          "id": "f8550284-6bcf-47a5-a1b3-6b1898f4f69d",
-          "type": "reponse",
-          "value": {
-            "latex": "On réalise un test de conformité pour une moyenne. Pour cela, on prend la variable de décision $$Z=\\frac{\\overline{X}-\\mu_0}{\\frac{S}{\\sqrt{n}}}$$ avec $n=25$. Cette variable suit une loi $St(24)$ et par lecture de table pour ce test unilatéral à droite, on trouve une zone de rejet $W = [1.71;+\\infty[$. \n\nOr $Z_{obs} \\approx 4.53$ donc on peut rejeter l'hypothèse qu'il y a en moyenne 4 camions en panne par jour avec un risque de $5\\%$. Il y en a vraisemblablement plus. On pourrait refaire un test pour tester l'hypothèse du chauffeur $\\mu = 6$.",
-            "html": "<p>On réalise un test de conformité pour une moyenne. Pour cela, on\nprend la variable de décision <span\nclass=\"math display\">\\[Z=\\frac{\\overline{X}-\\mu_0}{\\frac{S}{\\sqrt{n}}}\\]</span>\navec <span class=\"math inline\">\\(n=25\\)</span>. Cette variable suit une\nloi <span class=\"math inline\">\\(St(24)\\)</span> et par lecture de table\npour ce test unilatéral à droite, on trouve une zone de rejet <span\nclass=\"math inline\">\\(W = [1.71;+\\infty[\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(Z_{obs} \\approx 4.53\\)</span> donc on\npeut rejeter l’hypothèse qu’il y a en moyenne 4 camions en panne par\njour avec un risque de <span class=\"math inline\">\\(5\\%\\)</span>. Il y en\na vraisemblablement plus. On pourrait refaire un test pour tester\nl’hypothèse du chauffeur <span class=\"math inline\">\\(\\mu =\n6\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "DnxY",
-      "titre": "",
-      "theme": [
-        "statistiques"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "Maxime Nguyen",
-        "createdAt": "2024-11-16T11:14:33.308Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:14:33.308Z"
-      },
-      "contenu": [
-        {
-          "id": "0bbc4ee0-40e0-49a7-af13-63be125430de",
-          "type": "question",
-          "value": {
-            "latex": "A partir des données de l'échantillon, donner une estimation ponctuelle sans biais du prix moyen et de la variance du prix du carburant E10 en France. On précisera les estimateurs utilisés.",
-            "html": "<p>A partir des données de l’échantillon, donner une estimation\nponctuelle sans biais du prix moyen et de la variance du prix du\ncarburant E10 en France. On précisera les estimateurs utilisés.</p>\n"
-          }
-        },
-        {
-          "id": "e5d4f0e2-457d-4550-9ccc-c1747f4e6f53",
-          "type": "reponse",
-          "value": {
-            "latex": "Avec l'estimateur de moyenne empirique (sans biais et convergent), on trouve une estimation de la moyenne de prix de $1{,}661759$ et une variance de $0{,}0139$.",
-            "html": "<p>Avec l’estimateur de moyenne empirique (sans biais et convergent), on\ntrouve une estimation de la moyenne de prix de <span\nclass=\"math inline\">\\(1{,}661759\\)</span> et une variance de <span\nclass=\"math inline\">\\(0{,}0139\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "c7088414-b6ba-4e51-b5ad-2d338b41b5c0",
-          "type": "question",
-          "value": {
-            "latex": "Proposer une estimation par intervalle de confiance du prix moyen et de la variance du carburant E10 en France, respectivement pour une confiance de $95\\%$ puis $99\\%$.",
-            "html": "<p>Proposer une estimation par intervalle de confiance du prix moyen et\nde la variance du carburant E10 en France, respectivement pour une\nconfiance de <span class=\"math inline\">\\(95\\%\\)</span> puis <span\nclass=\"math inline\">\\(99\\%\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "4a73c4bf-f90c-48be-8028-716e2c8dea2c",
-          "type": "reponse",
-          "value": {
-            "latex": "On travaille sur un échantillon de taille $108$ donc les calculs se font avec la loi normale.\n\t\n\tPour $\\alpha = 5\\%$, on trouve $[1{,}6395 ; 1{,6840}]$. \n\t\n\tPour $\\alpha = 5\\%$, on trouve $[1{,}6325 ; 1{,6910}]$.",
-            "html": "<p>On travaille sur un échantillon de taille <span\nclass=\"math inline\">\\(108\\)</span> donc les calculs se font avec la loi\nnormale.</p>\n<p>Pour <span class=\"math inline\">\\(\\alpha = 5\\%\\)</span>, on trouve\n<span class=\"math inline\">\\([1{,}6395 ; 1{,6840}]\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(\\alpha = 5\\%\\)</span>, on trouve\n<span class=\"math inline\">\\([1{,}6325 ; 1{,6910}]\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "H30c",
-      "titre": "",
-      "theme": "",
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:36.380Z",
-        "organisation": "",
-        "updatedAt": "2024-11-16T11:14:36.380Z"
-      },
-      "contenu": [
-        {
-          "id": "2316ceca-332a-42e1-9cad-7c136e03ccb2",
-          "type": "description",
-          "value": {
-            "latex": "En lançant successivement 60 fois un dé, un joueur obtient les résultats suivants :\n\t\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\\hline\n\\end{tabular}\n\\end{center}",
-            "html": "<p>En lançant successivement 60 fois un dé, un joueur obtient les\nrésultats suivants :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
-          }
-        },
-        {
-          "id": "fe468a3a-00ad-457f-95bf-8beeaa1363af",
-          "type": "question",
-          "value": {
-            "latex": "Le dé est-il truqué?",
-            "html": "<p>Le dé est-il truqué?</p>\n"
-          }
-        },
-        {
-          "id": "2db16ebe-4b2d-4411-98cc-bf6ec08d749e",
-          "type": "reponse",
-          "value": {
-            "latex": "On réalise un test d'adéquation du $\\chi^2$ pour répondre à la question. Un dé non truqué devrait produire une distribution uniforme des effectifs de chaque face. Cela donne le tableau des effectifs théoriques : \n\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\t\\hline Effectifs $e_i$ & 10 & 10 & 10 & 10 & 10 & 10 \\\\\n\t\t\\hline\n\t\\end{tabular}\n\\end{center} \n\nOn pose pour variable de décision $$Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}$$ où $O_i$ est la variable aléatoire donnant l'effectif de la $i$-ème classe pour l'échantillon de taille $60$. D'après le cours, $Q$ suit une loi $\\chi^2(5)$. \n\nD'après la table de $\\chi^2(5)$, l'intervalle de rejet pour $\\alpha=5\\%$ est $[11.07~;~+\\infty[$.\n\nOn trouve $Q_{obs} = 13.6 \\in W$ (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c}{fichier tableur})donc on peut rejeter l'hypothèse $H_0$ avec un risque de première espèce de $5\\%$ : on peut suspecter que le dé est truqué.",
-            "html": "<p>On réalise un test d’adéquation du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> pour répondre à la question. Un dé\nnon truqué devrait produire une distribution uniforme des effectifs de\nchaque face. Cela donne le tableau des effectifs théoriques :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(e_i\\)</span></td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>On pose pour variable de décision <span\nclass=\"math display\">\\[Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}\\]</span>\noù <span class=\"math inline\">\\(O_i\\)</span> est la variable aléatoire\ndonnant l’effectif de la <span class=\"math inline\">\\(i\\)</span>-ème\nclasse pour l’échantillon de taille <span\nclass=\"math inline\">\\(60\\)</span>. D’après le cours, <span\nclass=\"math inline\">\\(Q\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\chi^2(5)\\)</span>.</p>\n<p>D’après la table de <span class=\"math inline\">\\(\\chi^2(5)\\)</span>,\nl’intervalle de rejet pour <span\nclass=\"math inline\">\\(\\alpha=5\\%\\)</span> est <span\nclass=\"math inline\">\\([11.07~;~+\\infty[\\)</span>.</p>\n<p>On trouve <span class=\"math inline\">\\(Q_{obs} = 13.6 \\in W\\)</span>\n(<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c\">fichier\ntableur</a>)donc on peut rejeter l’hypothèse <span\nclass=\"math inline\">\\(H_0\\)</span> avec un risque de première espèce de\n<span class=\"math inline\">\\(5\\%\\)</span> : on peut suspecter que le dé\nest truqué.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "iQqS",
-      "titre": "",
-      "theme": [
-        "probabilités"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "Maxime Nguyen",
-        "createdAt": "2024-11-16T11:15:11.150Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:15:11.150Z"
-      },
-      "contenu": [
-        {
-          "id": "836fc831-2428-4814-96ef-dd0db9f4a984",
-          "type": "description",
-          "value": {
-            "latex": "On considère un avion contenant 100 passagers. On suppose que le poids d'un passager pris au hasard suit une loi de probabilité dont l'espérance est 71 kg et l'écart type est 7~kg.",
-            "html": "<p>On considère un avion contenant 100 passagers. On suppose que le\npoids d’un passager pris au hasard suit une loi de probabilité dont\nl’espérance est 71 kg et l’écart type est 7 kg.</p>\n"
-          }
-        },
-        {
-          "id": "c0590208-9a45-476f-a489-47161284a497",
-          "type": "reponse",
-          "value": {
-            "latex": "On ne connaît pas la loi de $X$ mais d'après le théorème central limite, $X$ suit approximativement une loi normale.  \n\t\t\n\t\tOn peut calculer l'espérance de $X$ et la variance de $X$ : Si on note $Y_i$ le poids du $i$-ème passager, on a $X = \\sum_{i=1}^{100} Y_i$. Par conséquent, $\\mathbb{E}(X) = 7100$ et $V(X) = 100 \\times 7^2 = 4900$. \n\t\t\tD'après le théorème central limite, la loi de $X$ peut être approchée par une loi normale de moyenne $7100$ et de variance $4900$, soit un écart type de $70$.",
-            "html": "<p>On ne connaît pas la loi de <span class=\"math inline\">\\(X\\)</span>\nmais d’après le théorème central limite, <span\nclass=\"math inline\">\\(X\\)</span> suit approximativement une loi\nnormale.</p>\n<p>On peut calculer l’espérance de <span\nclass=\"math inline\">\\(X\\)</span> et la variance de <span\nclass=\"math inline\">\\(X\\)</span> : Si on note <span\nclass=\"math inline\">\\(Y_i\\)</span> le poids du <span\nclass=\"math inline\">\\(i\\)</span>-ème passager, on a <span\nclass=\"math inline\">\\(X = \\sum_{i=1}^{100} Y_i\\)</span>. Par conséquent,\n<span class=\"math inline\">\\(\\mathbb{E}(X) = 7100\\)</span> et <span\nclass=\"math inline\">\\(V(X) = 100 \\times 7^2 = 4900\\)</span>. D’après le\nthéorème central limite, la loi de <span\nclass=\"math inline\">\\(X\\)</span> peut être approchée par une loi normale\nde moyenne <span class=\"math inline\">\\(7100\\)</span> et de variance\n<span class=\"math inline\">\\(4900\\)</span>, soit un écart type de <span\nclass=\"math inline\">\\(70\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "11efb892-f5cd-48ac-b4ef-78d8f06ed921",
-          "type": "question",
-          "value": {
-            "latex": "Calculer la probabilité que le poids de l'ensemble des passagers soit supérieur à $7{,}3$ tonnes.",
-            "html": "<p>Calculer la probabilité que le poids de l’ensemble des passagers soit\nsupérieur à <span class=\"math inline\">\\(7{,}3\\)</span> tonnes.</p>\n"
-          }
-        },
-        {
-          "id": "d0318be2-785d-4fad-b8c3-287137e8b7f4",
-          "type": "reponse",
-          "value": {
-            "latex": "En notant $Z$ une variable aléatoire normale centrée réduite, on en déduit que \n\t\t$$\\begin{align*}\n\t\t\t\\PP\\left(X > 7300\\right) &= \\PP\\left(\\frac{X-7100}{70} > \\frac{7300-7100}{70}\\right) \\\\\n\t\t\t&\\approx  \\PP\\left(Z > \\frac{200}{70} \\approx 2{,}857\\right) \\\\\n\t\t\t&\\approx 0{,}0021 = 0{,}21\\%\n\t\t\\end{align*}$$\n\t\tIl n'y a quasiment aucune chance que le poids total des passagers dépasse $7{}3$ tonnes.",
-            "html": "<p>En notant <span class=\"math inline\">\\(Z\\)</span> une variable\naléatoire normale centrée réduite, on en déduit que <span\nclass=\"math display\">\\[\\begin{align*}\n            \\PP\\left(X &gt; 7300\\right) &amp;=\n\\PP\\left(\\frac{X-7100}{70} &gt; \\frac{7300-7100}{70}\\right) \\\\\n            &amp;\\approx  \\PP\\left(Z &gt; \\frac{200}{70} \\approx\n2{,}857\\right) \\\\\n            &amp;\\approx 0{,}0021 = 0{,}21\\%\n        \\end{align*}\\]</span> Il n’y a quasiment aucune chance que le\npoids total des passagers dépasse <span\nclass=\"math inline\">\\(7{}3\\)</span> tonnes.</p>\n"
-          }
-        },
-        {
-          "id": "805668cf-cd6c-4d96-a0b3-d00bafd9c5c9",
-          "type": "question",
-          "value": {
-            "latex": "Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en soute. Déterminer à l'aide d'un intervalle de confiance au niveau $95\\%$ une estimation de la proportion de passagers qui voyagent avec un bagage en soute sur ce vol.",
-            "html": "<p>Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en\nsoute. Déterminer à l’aide d’un intervalle de confiance au niveau <span\nclass=\"math inline\">\\(95\\%\\)</span> une estimation de la proportion de\npassagers qui voyagent avec un bagage en soute sur ce vol.</p>\n"
-          }
-        },
-        {
-          "id": "7084d4db-7972-40f1-9992-655b8647fcf7",
-          "type": "reponse",
-          "value": {
-            "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\t\n\t\tOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",
-            "html": "<p>On cherche à estimer une fréquence à partir d’un échantillon de\ntaille <span class=\"math inline\">\\(40\\)</span>. La fréquence observée\ndans l’échantillon est <span class=\"math inline\">\\(f_{obs} =\n\\frac{23}{40}\\)</span>. On peut donc utiliser la formule du cours :\n<span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> en remplaçant <span\nclass=\"math inline\">\\(u_{\\alpha/2}\\)</span> par <span\nclass=\"math inline\">\\(1{,}96\\)</span> pour une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, on obtient numériquement <span\nclass=\"math inline\">\\(I_{conf} \\approx [0.42 ; 0.73]\\)</span>.</p>\n<p>On peut estimer que la proportion de passagers voyageant avec un\nbagage en soute est compris entre <span\nclass=\"math inline\">\\(42\\%\\)</span> et <span\nclass=\"math inline\">\\(73\\%\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "7a9b9b21-791c-408b-b6b0-e745de3026a2",
-          "type": "reponse",
-          "value": {
-            "latex": "D'après la question précédente, il est tout à fait probable (avec une confiance de $95\\%$) que le nombre de bagages en soute soit supérieur à $65$ (entre 42 et 73). Pour que l'intervalle de confiance ne contienne pas $65\\%$, il faut prendre un risque supérieur à $33\\%$.",
-            "html": "<p>D’après la question précédente, il est tout à fait probable (avec une\nconfiance de <span class=\"math inline\">\\(95\\%\\)</span>) que le nombre de\nbagages en soute soit supérieur à <span\nclass=\"math inline\">\\(65\\)</span> (entre 42 et 73). Pour que\nl’intervalle de confiance ne contienne pas <span\nclass=\"math inline\">\\(65\\%\\)</span>, il faut prendre un risque supérieur\nà <span class=\"math inline\">\\(33\\%\\)</span>.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "jj3V",
-      "titre": "",
-      "theme": "",
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:15:13.136Z",
-        "organisation": "",
-        "updatedAt": "2024-11-16T11:15:13.136Z"
-      },
-      "contenu": [
-        {
-          "id": "c299d344-a470-4d4b-b8bf-0d64334f19cb",
-          "type": "description",
-          "value": {
-            "latex": "L'équipe médicale d'une entreprise fait ses\n statistiques sur le taux de cholestérol de ses employés; les\nobservations sur 100 employés tirés au sort sont les suivantes.\n\n\\begin{center}\n\t\\begin{tabular}{c|c}\n\ttaux de cholestérol en cg:(centre classe) & effectif d'employés: \\\\\n\t\\hline $120$ & $9$ \\\\ \n\t$160$ & $22$ \\\\ \n\t$200$ & $25$ \\\\ \n\t$240$ & $21$ \\\\ \n\t$280$ & $16$ \\\\ \n\t$320$ & $7$\n\\end{tabular}\n\\end{center}",
-            "html": "<p>L’équipe médicale d’une entreprise fait ses statistiques sur le taux\nde cholestérol de ses employés; les observations sur 100 employés tirés\nau sort sont les suivantes.</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">taux de cholestérol en cg:(centre\nclasse)</th>\n<th style=\"text-align: center;\">effectif d’employés:</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(120\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(9\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(160\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(22\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(200\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(25\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(240\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(21\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(280\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(16\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(320\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(7\\)</span></td>\n</tr>\n</tbody>\n</table>\n</div>\n"
-          }
-        },
-        {
-          "id": "9983f21a-8314-4df9-b86b-449d3f1c7cdf",
-          "type": "question",
-          "value": {
-            "latex": "Calculer la moyenne $m_{e}$ et la variance $\\sigma_{e}^2$ sur l'échantillon.",
-            "html": "<p>Calculer la moyenne <span class=\"math inline\">\\(m_{e}\\)</span> et la\nvariance <span class=\"math inline\">\\(\\sigma_{e}^2\\)</span> sur\nl’échantillon.</p>\n"
-          }
-        },
-        {
-          "id": "6518969b-4c94-4b99-b5ae-d07b0825a178",
-          "type": "reponse",
-          "value": {
-            "latex": "On obtient, sur l'échantillon, la moyenne $m_{e}=213{,}6$, l'écart-type $\\sigma _{e}=55.7767$. (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EWYi-azbRsdHtG21-VGJXbcBqFKfHOj8SPV3FMXeKLBM1g?e=fBHC4S}{feuille de calcul})",
-            "html": "<p>On obtient, sur l’échantillon, la moyenne <span\nclass=\"math inline\">\\(m_{e}=213{,}6\\)</span>, l’écart-type <span\nclass=\"math inline\">\\(\\sigma _{e}=55.7767\\)</span>. (<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EWYi-azbRsdHtG21-VGJXbcBqFKfHOj8SPV3FMXeKLBM1g?e=fBHC4S\">feuille\nde calcul</a>)</p>\n"
-          }
-        },
-        {
-          "id": "69fcf3f5-8cad-4b73-81ef-97016e3c2f21",
-          "type": "question",
-          "value": {
-            "latex": "Estimer sans biais la moyenne et l'écart-type pour le taux de cholestérol dans toute l'entreprise.",
-            "html": "<p>Estimer sans biais la moyenne et l’écart-type pour le taux de\ncholestérol dans toute l’entreprise.</p>\n"
-          }
-        },
-        {
-          "id": "a1bdf0da-f463-455f-a0ff-b4a843b975fd",
-          "type": "reponse",
-          "value": {
-            "latex": "La moyenne sur l'entreprise est estimée sans biais par l'estimateur $\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_i$ qui se réalise en $m_{e}=213{,}6$.\n\t\tLa variance est estimée sans biais par l'estimateur $S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2$ donc l'écart-type est estimé par: $s_{e}=\\sqrt{\\frac{100}{99}}55.77\\simeq 56.06$.",
-            "html": "<p>La moyenne sur l’entreprise est estimée sans biais par l’estimateur\n<span class=\"math inline\">\\(\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n}\nX_i\\)</span> qui se réalise en <span\nclass=\"math inline\">\\(m_{e}=213{,}6\\)</span>. La variance est estimée\nsans biais par l’estimateur <span class=\"math inline\">\\(S^2 =\n\\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2\\)</span> donc\nl’écart-type est estimé par: <span\nclass=\"math inline\">\\(s_{e}=\\sqrt{\\frac{100}{99}}55.77\\simeq\n56.06\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "a685c96e-b1dc-4782-a81a-9552b740f13d",
-          "type": "question",
-          "value": {
-            "latex": "Déterminer un intervalle de confiance  permettant d'estimer la moyenne du taux de cholestérol de tous les employés de cette entreprise avec une confiance de $90\\%$.",
-            "html": "<p>Déterminer un intervalle de confiance permettant d’estimer la moyenne\ndu taux de cholestérol de tous les employés de cette entreprise avec une\nconfiance de <span class=\"math inline\">\\(90\\%\\)</span>.</p>\n"
-          }
-        },
-        {
-          "id": "02080ff9-935a-47c2-8a3b-f6c9fa768e5d",
-          "type": "reponse",
-          "value": {
-            "latex": "On en déduit, au seuil 90\\%, un intervalle de confiance pour la\n\t\tmoyenne par lecture de table de la loi normale centrée réduite avec $u_{\\alpha/2 } \\approx 1{,}644854$ : \n\t\t$$\\left[m_{e} - u_{\\alpha/2 }\\frac{s_{e}}{\\sqrt{n}};\n\t\tm_{e} + u_{\\alpha/2 }\\frac{s_{e}}{\\sqrt{n}}]=[204.379;222.821\\right]$$.\n\t\tAinsi le taux moyen de cholestérol est, à un seuil de confiance $90$\\%, \n\t\tsituée entre $204$ et $223$ cg.",
-            "html": "<p>On en déduit, au seuil 90%, un intervalle de confiance pour la\nmoyenne par lecture de table de la loi normale centrée réduite avec\n<span class=\"math inline\">\\(u_{\\alpha/2 } \\approx 1{,}644854\\)</span> :\n<span class=\"math display\">\\[\\left[m_{e} - u_{\\alpha/2\n}\\frac{s_{e}}{\\sqrt{n}};\n        m_{e} + u_{\\alpha/2\n}\\frac{s_{e}}{\\sqrt{n}}]=[204.379;222.821\\right]\\]</span>. Ainsi le taux\nmoyen de cholestérol est, à un seuil de confiance <span\nclass=\"math inline\">\\(90\\)</span>%, située entre <span\nclass=\"math inline\">\\(204\\)</span> et <span\nclass=\"math inline\">\\(223\\)</span> cg.</p>\n"
-          }
-        }
-      ]
-    },
     {
       "uuid": "s7LB",
       "titre": "Adéquation à une loi de Poisson",
@@ -10653,6 +10053,78 @@
       ]
     },
     {
+      "uuid": "jj3V",
+      "titre": "Estimation d'une moyenne",
+      "theme": [
+        "statistiques"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T14:07:18.393Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:18.393Z"
+      },
+      "contenu": [
+        {
+          "id": "a816c219-54a5-4b6b-b9ba-bddb3b2717bc",
+          "type": "description",
+          "value": {
+            "latex": "L'équipe médicale d'une entreprise fait ses\n statistiques sur le taux de cholestérol de ses employés; les\nobservations sur 100 employés tirés au sort sont les suivantes.\n\n\\begin{center}\n\t\\begin{tabular}{c|c}\n\ttaux de cholestérol en cg:(centre classe) & effectif d'employés: \\\\\n\t\\hline $120$ & $9$ \\\\ \n\t$160$ & $22$ \\\\ \n\t$200$ & $25$ \\\\ \n\t$240$ & $21$ \\\\ \n\t$280$ & $16$ \\\\ \n\t$320$ & $7$\n\\end{tabular}\n\\end{center}",
+            "html": "<p>L’équipe médicale d’une entreprise fait ses statistiques sur le taux\nde cholestérol de ses employés; les observations sur 100 employés tirés\nau sort sont les suivantes.</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">taux de cholestérol en cg:(centre\nclasse)</th>\n<th style=\"text-align: center;\">effectif d’employés:</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(120\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(9\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(160\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(22\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(200\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(25\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(240\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(21\\)</span></td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(280\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(16\\)</span></td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(320\\)</span></td>\n<td style=\"text-align: center;\"><span\nclass=\"math inline\">\\(7\\)</span></td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+          }
+        },
+        {
+          "id": "826c7094-0fda-48fd-b8f4-10b6bba4caad",
+          "type": "question",
+          "value": {
+            "latex": "Calculer la moyenne $m_{e}$ et la variance $\\sigma_{e}^2$ sur l'échantillon.",
+            "html": "<p>Calculer la moyenne <span class=\"math inline\">\\(m_{e}\\)</span> et la\nvariance <span class=\"math inline\">\\(\\sigma_{e}^2\\)</span> sur\nl’échantillon.</p>\n"
+          }
+        },
+        {
+          "id": "e101294b-cf15-4008-824d-2b22fa2b3d05",
+          "type": "reponse",
+          "value": {
+            "latex": "On obtient, sur l'échantillon, la moyenne $m_{e}=213{,}6$, l'écart-type $\\sigma _{e}=55.7767$. (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EWYi-azbRsdHtG21-VGJXbcBqFKfHOj8SPV3FMXeKLBM1g?e=fBHC4S}{feuille de calcul})",
+            "html": "<p>On obtient, sur l’échantillon, la moyenne <span\nclass=\"math inline\">\\(m_{e}=213{,}6\\)</span>, l’écart-type <span\nclass=\"math inline\">\\(\\sigma _{e}=55.7767\\)</span>. (<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EWYi-azbRsdHtG21-VGJXbcBqFKfHOj8SPV3FMXeKLBM1g?e=fBHC4S\">feuille\nde calcul</a>)</p>\n"
+          }
+        },
+        {
+          "id": "401ddb87-30a9-4f82-b4e5-72eeb343f34f",
+          "type": "question",
+          "value": {
+            "latex": "Estimer sans biais la moyenne et l'écart-type pour le taux de cholestérol dans toute l'entreprise.",
+            "html": "<p>Estimer sans biais la moyenne et l’écart-type pour le taux de\ncholestérol dans toute l’entreprise.</p>\n"
+          }
+        },
+        {
+          "id": "cffab966-52cc-4dc0-9b10-5e659f42240c",
+          "type": "reponse",
+          "value": {
+            "latex": "La moyenne sur l'entreprise est estimée sans biais par l'estimateur $\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_i$ qui se réalise en $m_{e}=213{,}6$.\n\t\tLa variance est estimée sans biais par l'estimateur $S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2$ donc l'écart-type est estimé par: $s_{e}=\\sqrt{\\frac{100}{99}}55.77\\simeq 56.06$.",
+            "html": "<p>La moyenne sur l’entreprise est estimée sans biais par l’estimateur\n<span class=\"math inline\">\\(\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n}\nX_i\\)</span> qui se réalise en <span\nclass=\"math inline\">\\(m_{e}=213{,}6\\)</span>. La variance est estimée\nsans biais par l’estimateur <span class=\"math inline\">\\(S^2 =\n\\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2\\)</span> donc\nl’écart-type est estimé par: <span\nclass=\"math inline\">\\(s_{e}=\\sqrt{\\frac{100}{99}}55.77\\simeq\n56.06\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "ff085fc5-92a4-4d57-9946-192cc7641bc5",
+          "type": "question",
+          "value": {
+            "latex": "Déterminer un intervalle de confiance  permettant d'estimer la moyenne du taux de cholestérol de tous les employés de cette entreprise avec une confiance de $90\\%$.",
+            "html": "<p>Déterminer un intervalle de confiance permettant d’estimer la moyenne\ndu taux de cholestérol de tous les employés de cette entreprise avec une\nconfiance de <span class=\"math inline\">\\(90\\%\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "20368b2d-b71d-48ff-815f-8531441465fa",
+          "type": "reponse",
+          "value": {
+            "latex": "On en déduit, au seuil 90\\%, un intervalle de confiance pour la \tmoyenne par lecture de table de la loi normale centrée réduite avec $u_{\\alpha/2 } \\approx 1{,}644854$ : \n\t\t$$\\left[m_{e} - u_{\\alpha/2 }\\frac{s_{e}}{\\sqrt{n}};\n\t\tm_{e} + u_{\\alpha/2 }\\frac{s_{e}}{\\sqrt{n}}]=[204.379;222.821\\right]$$.\n\t\tAinsi le taux moyen de cholestérol est, à un seuil de confiance $90$\\%, \n\t\tsituée entre $204$ et $223$ cg.",
+            "html": "<p>On en déduit, au seuil 90%, un intervalle de confiance pour la\nmoyenne par lecture de table de la loi normale centrée réduite avec\n<span class=\"math inline\">\\(u_{\\alpha/2 } \\approx 1{,}644854\\)</span> :\n<span class=\"math display\">\\[\\left[m_{e} - u_{\\alpha/2\n}\\frac{s_{e}}{\\sqrt{n}};\n        m_{e} + u_{\\alpha/2\n}\\frac{s_{e}}{\\sqrt{n}}]=[204.379;222.821\\right]\\]</span>. Ainsi le taux\nmoyen de cholestérol est, à un seuil de confiance <span\nclass=\"math inline\">\\(90\\)</span>%, située entre <span\nclass=\"math inline\">\\(204\\)</span> et <span\nclass=\"math inline\">\\(223\\)</span> cg.</p>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "PwkL",
       "titre": "Estimation des paramètres d'une loi normale",
       "theme": [
@@ -11288,6 +10760,143 @@
           "value": {
             "latex": "On utilise la formule simplifiée du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[ f_{obs}-u_{\\alpha/2} \\frac{1}{2 \\sqrt{n}} ~;~ f_{obs} + u_{\\alpha/2} \\frac{1}{2 \\sqrt{n}} \\right]$$\n\tet on cherche $n$ tel que $u_{\\alpha/2} \\frac{1}{\\sqrt{n}} \\leq 0.01 \\iff \\sqrt{n} \\geq \\frac{1.96}{0.01}$ soit $n \\geq 38415$.",
             "html": "<p>On utilise la formule simplifiée du cours : <span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[ f_{obs}-u_{\\alpha/2}\n\\frac{1}{2 \\sqrt{n}} ~;~ f_{obs} + u_{\\alpha/2} \\frac{1}{2 \\sqrt{n}}\n\\right]\\]</span> et on cherche <span class=\"math inline\">\\(n\\)</span>\ntel que <span class=\"math inline\">\\(u_{\\alpha/2} \\frac{1}{\\sqrt{n}} \\leq\n0.01 \\iff \\sqrt{n} \\geq \\frac{1.96}{0.01}\\)</span> soit <span\nclass=\"math inline\">\\(n \\geq 38415\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "7otE",
+      "titre": "Estimation pour un référendum",
+      "theme": [
+        "statistiques"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "",
+        "createdAt": "2024-11-16T13:52:53.424Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T13:52:53.424Z"
+      },
+      "contenu": [
+        {
+          "id": "052fbf7b-71c1-4d93-9f26-6aa50e147fb3",
+          "type": "description",
+          "value": {
+            "latex": "Lors d'un référendum, un sondage aléatoire simple avec remise pratiqué sur $1000$ personnes a\ndonné $55\\%$ pour le << Oui >> et $45\\%$ pour le << Non >>.",
+            "html": "<p>Lors d’un référendum, un sondage aléatoire simple avec remise\npratiqué sur <span class=\"math inline\">\\(1000\\)</span> personnes a donné\n<span class=\"math inline\">\\(55\\%\\)</span> pour le &lt;&lt; Oui &gt;&gt;\net <span class=\"math inline\">\\(45\\%\\)</span> pour le &lt;&lt; Non\n&gt;&gt;.</p>\n"
+          }
+        },
+        {
+          "id": "d96b078b-801b-4376-9c15-accc0358ee78",
+          "type": "question",
+          "value": {
+            "latex": "Est-il plus précis de faire un sondage sur $1000$ personnes dans une population de $1$ million de personnes ou un sondage sur $2000$ personnes dans une population de $10$ millions de personnes ? Justifier.",
+            "html": "<p>Est-il plus précis de faire un sondage sur <span\nclass=\"math inline\">\\(1000\\)</span> personnes dans une population de\n<span class=\"math inline\">\\(1\\)</span> million de personnes ou un\nsondage sur <span class=\"math inline\">\\(2000\\)</span> personnes dans une\npopulation de <span class=\"math inline\">\\(10\\)</span> millions de\npersonnes ? Justifier.</p>\n"
+          }
+        },
+        {
+          "id": "7fee8d63-94aa-4746-af70-131ac55b1ada",
+          "type": "reponse",
+          "value": {
+            "latex": "La taille de la population n'infuence pas le résultat de l'estimation. Mais plus la taille de l'échantillon est importante, plus le sondage est précis. Il vaut donc mieux faire un sondage sur 2000 personnes que sur 1000 personnnes.",
+            "html": "<p>La taille de la population n’infuence pas le résultat de\nl’estimation. Mais plus la taille de l’échantillon est importante, plus\nle sondage est précis. Il vaut donc mieux faire un sondage sur 2000\npersonnes que sur 1000 personnnes.</p>\n"
+          }
+        },
+        {
+          "id": "9bc99713-d968-4409-89b8-b348ad92a8c2",
+          "type": "question",
+          "value": {
+            "latex": "Concernant le référendum cité ci-dessus, déterminer un intervalle contenant le pourcentage de << Oui >> avec une probabilité de $0{,}95$.",
+            "html": "<p>Concernant le référendum cité ci-dessus, déterminer un intervalle\ncontenant le pourcentage de &lt;&lt; Oui &gt;&gt; avec une probabilité\nde <span class=\"math inline\">\\(0{,}95\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "91761a5f-9145-4afc-8ea7-4868b96e311b",
+          "type": "reponse",
+          "value": {
+            "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $1000$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{55}{100}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.519 ; 0.581]$. \n\nEn remplaçant $u_{\\alpha/2}$ par $2{,}5758$ pour une confiance de $99\\%$, on obtient numériquement $I_{conf} \\approx [0.509 ; 0.591]$.",
+            "html": "<p>On cherche à estimer une fréquence à partir d’un échantillon de\ntaille <span class=\"math inline\">\\(1000\\)</span>. La fréquence observée\ndans l’échantillon est <span class=\"math inline\">\\(f_{obs} =\n\\frac{55}{100}\\)</span>. On peut donc utiliser la formule du cours :\n<span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> en remplaçant <span\nclass=\"math inline\">\\(u_{\\alpha/2}\\)</span> par <span\nclass=\"math inline\">\\(1{,}96\\)</span> pour une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, on obtient numériquement <span\nclass=\"math inline\">\\(I_{conf} \\approx [0.519 ; 0.581]\\)</span>.</p>\n<p>En remplaçant <span class=\"math inline\">\\(u_{\\alpha/2}\\)</span> par\n<span class=\"math inline\">\\(2{,}5758\\)</span> pour une confiance de\n<span class=\"math inline\">\\(99\\%\\)</span>, on obtient numériquement\n<span class=\"math inline\">\\(I_{conf} \\approx [0.509 ;\n0.591]\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "35f11579-b098-41fb-92bf-923ddd87f9ca",
+          "type": "question",
+          "value": {
+            "latex": "Peut-on considérer, avec une confiance de $95\\%$, que le << Oui >> l'emporte ? La réponse est-elle\n\tla même avec un niveau de confiance de $99\\%$ ? \\`A partir de quel niveau de confiance peut-on commencer à douter que le << Oui >> l'emporte ?",
+            "html": "<p>Peut-on considérer, avec une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, que le &lt;&lt; Oui &gt;&gt;\nl’emporte ? La réponse est-elle la même avec un niveau de confiance de\n<span class=\"math inline\">\\(99\\%\\)</span> ? À partir de quel niveau de\nconfiance peut-on commencer à douter que le &lt;&lt; Oui &gt;&gt;\nl’emporte ?</p>\n"
+          }
+        },
+        {
+          "id": "6bcbbf37-b23d-42ab-928e-6274e05c835a",
+          "type": "reponse",
+          "value": {
+            "latex": "La réponse est oui car dans chacun des cas, l'intervalle de confiance se situe au dessus de $50\\%$. Il faudrait dépasser $99,8\\%$ de confiance pour pouvoir commencer à mettre en doute que le << Oui >> l'emporte.",
+            "html": "<p>La réponse est oui car dans chacun des cas, l’intervalle de confiance\nse situe au dessus de <span class=\"math inline\">\\(50\\%\\)</span>. Il\nfaudrait dépasser <span class=\"math inline\">\\(99,8\\%\\)</span> de\nconfiance pour pouvoir commencer à mettre en doute que le &lt;&lt; Oui\n&gt;&gt; l’emporte.</p>\n"
+          }
+        },
+        {
+          "id": "c73a30e5-10bd-4e25-85af-2ff74b8f6dea",
+          "type": "question",
+          "value": {
+            "latex": "Si, pour un référendum, on sait que << oui >> se situe autour de $50\\%$, combien de personnes\n\tfaudrait-il interroger pour que la proportion de << Oui >> soit connue à $1\\%$ près (en plus ou en moins), avec un niveau de confiance de $0{,}95$ ?",
+            "html": "<p>Si, pour un référendum, on sait que &lt;&lt; oui &gt;&gt; se situe\nautour de <span class=\"math inline\">\\(50\\%\\)</span>, combien de\npersonnes faudrait-il interroger pour que la proportion de &lt;&lt; Oui\n&gt;&gt; soit connue à <span class=\"math inline\">\\(1\\%\\)</span> près (en\nplus ou en moins), avec un niveau de confiance de <span\nclass=\"math inline\">\\(0{,}95\\)</span> ?</p>\n"
+          }
+        },
+        {
+          "id": "e68f0017-3c6e-4048-8e6a-a92df36cc6c0",
+          "type": "reponse",
+          "value": {
+            "latex": "La longueur de l'intervalle de confiance est de l'ordre de $\\frac{1}{\\sqrt{n}}$ où $n$ est la taille de l'échantillon. Pour avoir $\\frac{1}{\\sqrt{n}} < 0{,}01$, il faut $n > 10\\,000$.",
+            "html": "<p>La longueur de l’intervalle de confiance est de l’ordre de <span\nclass=\"math inline\">\\(\\frac{1}{\\sqrt{n}}\\)</span> où <span\nclass=\"math inline\">\\(n\\)</span> est la taille de l’échantillon. Pour\navoir <span class=\"math inline\">\\(\\frac{1}{\\sqrt{n}} &lt;\n0{,}01\\)</span>, il faut <span class=\"math inline\">\\(n &gt;\n10\\,000\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "DnxY",
+      "titre": "Estimation sur un jeu de données",
+      "theme": [
+        "statistiques",
+        "tableur"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T14:07:17.962Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:17.962Z"
+      },
+      "contenu": [
+        {
+          "id": "a05bbb0a-a8f5-40df-94e1-7241cab9eb47",
+          "type": "question",
+          "value": {
+            "latex": "A partir des données de l'échantillon, donner une estimation ponctuelle sans biais du prix moyen et de la variance du prix du carburant E10 en France. On précisera les estimateurs utilisés.",
+            "html": "<p>A partir des données de l’échantillon, donner une estimation\nponctuelle sans biais du prix moyen et de la variance du prix du\ncarburant E10 en France. On précisera les estimateurs utilisés.</p>\n"
+          }
+        },
+        {
+          "id": "3f22d8a3-057a-42e3-8450-a494ba4d9342",
+          "type": "reponse",
+          "value": {
+            "latex": "Avec l'estimateur de moyenne empirique (sans biais et convergent), on trouve une estimation de la moyenne de prix de $1{,}661759$ et une variance de $0{,}0139$.",
+            "html": "<p>Avec l’estimateur de moyenne empirique (sans biais et convergent), on\ntrouve une estimation de la moyenne de prix de <span\nclass=\"math inline\">\\(1{,}661759\\)</span> et une variance de <span\nclass=\"math inline\">\\(0{,}0139\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "7c6679ad-47bb-49cf-a12b-8bab21ad5563",
+          "type": "question",
+          "value": {
+            "latex": "Proposer une estimation par intervalle de confiance du prix moyen et de la variance du carburant E10 en France, respectivement pour une confiance de $95\\%$ puis $99\\%$.",
+            "html": "<p>Proposer une estimation par intervalle de confiance du prix moyen et\nde la variance du carburant E10 en France, respectivement pour une\nconfiance de <span class=\"math inline\">\\(95\\%\\)</span> puis <span\nclass=\"math inline\">\\(99\\%\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "f87dcacb-abe5-4b59-80c3-063931481be4",
+          "type": "reponse",
+          "value": {
+            "latex": "On travaille sur un échantillon de taille $108$ donc les calculs se font avec la loi normale.\n\t\n\tPour $\\alpha = 5\\%$, on trouve $[1{,}6395 ; 1{,6840}]$. \n\t\n\tPour $\\alpha = 5\\%$, on trouve $[1{,}6325 ; 1{,6910}]$.",
+            "html": "<p>On travaille sur un échantillon de taille <span\nclass=\"math inline\">\\(108\\)</span> donc les calculs se font avec la loi\nnormale.</p>\n<p>Pour <span class=\"math inline\">\\(\\alpha = 5\\%\\)</span>, on trouve\n<span class=\"math inline\">\\([1{,}6395 ; 1{,6840}]\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(\\alpha = 5\\%\\)</span>, on trouve\n<span class=\"math inline\">\\([1{,}6325 ; 1{,6910}]\\)</span>.</p>\n"
           }
         }
       ]
@@ -19877,6 +19486,62 @@
       ]
     },
     {
+      "uuid": "Ac8Y",
+      "titre": "Loi log-normale",
+      "theme": [
+        "probabilités"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T14:07:17.675Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:17.675Z"
+      },
+      "contenu": [
+        {
+          "id": "278e6fcb-5dac-4d04-bee7-6db55ccc32a5",
+          "type": "description",
+          "value": {
+            "latex": "Soit $X$ une variable aléatoire suivant une loi normale quelconque $\\mathcal{N}(\\mu,\\sigma)$ avec $\\mu \\in \\R$ et $\\sigma >0$.",
+            "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> une variable aléatoire\nsuivant une loi normale quelconque <span\nclass=\"math inline\">\\(\\mathcal{N}(\\mu,\\sigma)\\)</span> avec <span\nclass=\"math inline\">\\(\\mu \\in \\R\\)</span> et <span\nclass=\"math inline\">\\(\\sigma &gt;0\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "ffaf4d52-8c5a-4faa-9360-9ef8c7ff036d",
+          "type": "question",
+          "value": {
+            "latex": "On pose $Y = e^X$. Calculer l'espérance et la variance de $Y$.",
+            "html": "<p>On pose <span class=\"math inline\">\\(Y = e^X\\)</span>. Calculer\nl’espérance et la variance de <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "2cb7caa2-8f76-45aa-86ff-5352c639490e",
+          "type": "reponse",
+          "value": {
+            "latex": "On a $Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu e^{\\sigma Z}$. D'après le théorème de transfert, \n$$\\begin{align*}\n    \\E(e^{\\sigma Z}) & = \\int_{-\\infty}^{+\\infty} e^{\\sigma z} \\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2 - 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    & = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    & = e^{\\frac{\\sigma^2}{2}} \\\\ \n\\end{align*}$$\nDonc par linéarité, $\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}$. \n\nDe même, on s'intéresse à $\\E(Y^2) = \\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma Z})$. D'après le calcul précédent, $\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}$. Donc $\\E(Y^2) = e^{2\\mu + 2\\sigma^2}$ et par théorème de Koenig-Huygens, \n$$\\begin{align*}\n  \\var(Y) & = \\E(Y^2) - \\E(Y)^2 \\\\\n  & = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  & = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1) \n\\end{align*}$$",
+            "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\mu + \\sigma Z} = e^\\mu\ne^{\\sigma Z}\\)</span>. D’après le théorème de transfert, <span\nclass=\"math display\">\\[\\begin{align*}\n    \\E(e^{\\sigma Z}) &amp; = \\int_{-\\infty}^{+\\infty} e^{\\sigma z}\n\\frac{1}{\\sqrt{2\\pi}} e^{-\\frac{z^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} e^{-\\frac{z^2\n- 2\\sigma z + \\sigma^2 - \\sigma^2}{2}} dz \\\\\n    &amp; = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty}\ne^{-\\frac{(z-\\sigma)^2}{2}} e^{\\frac{\\sigma^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\frac{1}{\\sqrt{2\\pi}}\n\\int_{-\\infty}^{+\\infty} e^{-\\frac{(z-\\sigma)^2}{2}} dz \\\\\n    &amp; = e^{\\frac{\\sigma^2}{2}} \\\\\n\\end{align*}\\]</span> Donc par linéarité, <span\nclass=\"math inline\">\\(\\E(Y) = e^{\\mu + \\frac{\\sigma^2}{2}}\\)</span>.</p>\n<p>De même, on s’intéresse à <span class=\"math inline\">\\(\\E(Y^2) =\n\\E(e^{2X}) = \\E(e^{2\\mu + 2\\sigma Z}) = e^{2\\mu} \\E(e^{2\\sigma\nZ})\\)</span>. D’après le calcul précédent, <span\nclass=\"math inline\">\\(\\E(e^{2\\sigma Z}) = e^{2\\sigma^2}\\)</span>. Donc\n<span class=\"math inline\">\\(\\E(Y^2) = e^{2\\mu + 2\\sigma^2}\\)</span> et\npar théorème de Koenig-Huygens, <span\nclass=\"math display\">\\[\\begin{align*}\n  \\var(Y) &amp; = \\E(Y^2) - \\E(Y)^2 \\\\\n  &amp; = e^{2\\mu + 2\\sigma^2} - e^{2\\mu + \\sigma^2} \\\\\n  &amp; = e^{2\\mu + \\sigma^2} (e^{\\sigma^2} - 1)\n\\end{align*}\\]</span></p>\n"
+          }
+        },
+        {
+          "id": "22d5eb2c-8c7e-4af5-a80a-611e7035f9f4",
+          "type": "question",
+          "value": {
+            "latex": "On suppose que $m=0$ et $\\sigma = 1$. Déterminer une fonction densité de la variable $Y$.",
+            "html": "<p>On suppose que <span class=\"math inline\">\\(m=0\\)</span> et <span\nclass=\"math inline\">\\(\\sigma = 1\\)</span>. Déterminer une fonction\ndensité de la variable <span class=\"math inline\">\\(Y\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "44c72b62-f5c7-442e-9018-78c52ac874be",
+          "type": "reponse",
+          "value": {
+            "latex": "On a $Y = e^X = e^{\\sigma Z} = e^Z$. Donc $Y$ est une variable aléatoire positive. Si $t >0$, on a :\n      $$\\begin{align*}\n          \\prob(Y \\leq t) & = \\prob(e^Z \\leq t) \\\\\n          & = \\prob(Z \\leq \\ln(t)) \\\\\n          &= F_Z(\\ln(t))\n      \\end{align*}$$\n      Donc la fonction de répartition de $Y$ est $F_Y(t) = \\begin{cases}\n          0 & \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) & \\text{ si } t > 0 \\\\\n      \\end{cases}$. \n      Par dérivation, on obtient la densité de $Y$ : \n         $$ f_Y(x)  = \\begin{cases}\n              0 & \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} & \\text{ si } x > 0 \\\\\n          \\end{cases} $$",
+            "html": "<p>On a <span class=\"math inline\">\\(Y = e^X = e^{\\sigma Z} =\ne^Z\\)</span>. Donc <span class=\"math inline\">\\(Y\\)</span> est une\nvariable aléatoire positive. Si <span class=\"math inline\">\\(t\n&gt;0\\)</span>, on a : <span class=\"math display\">\\[\\begin{align*}\n          \\prob(Y \\leq t) &amp; = \\prob(e^Z \\leq t) \\\\\n          &amp; = \\prob(Z \\leq \\ln(t)) \\\\\n          &amp;= F_Z(\\ln(t))\n      \\end{align*}\\]</span> Donc la fonction de répartition de <span\nclass=\"math inline\">\\(Y\\)</span> est <span class=\"math inline\">\\(F_Y(t)\n= \\begin{cases}\n          0 &amp; \\text{ si } t \\leq 0 \\\\\n          F_Z(\\ln(t)) &amp; \\text{ si } t &gt; 0 \\\\\n      \\end{cases}\\)</span>. Par dérivation, on obtient la densité de\n<span class=\"math inline\">\\(Y\\)</span> : <span\nclass=\"math display\">\\[f_Y(x)  = \\begin{cases}\n              0 &amp; \\text{ si } x \\leq 0 \\\\\n              \\frac{1}{x\\sqrt{2\\pi} } e^{-\\frac{(\\ln(x))^2}{2}} &amp;\n\\text{ si } x &gt; 0 \\\\\n          \\end{cases}\\]</span></p>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "vnXU",
       "titre": "Loi log-normale",
       "theme": [
@@ -20624,6 +20289,182 @@
           "value": {
             "latex": "D'après le cours, $X$ admet pour densité $f_X$ définie par  $f_X(x) = \\int_{\\R}^{} f(x,y)dy = \\frac{1}{\\pi} \\int_{\\{y^2<1-x^2\\}}^{} dy$.\n\t\t\n\t\tOr $ y^2<1-x^2 \\iff \\begin{cases}\n\t\t-\\sqrt{1-x^2} < y < \\sqrt{1-x^2} \\\\\n\t\t-1<x<1\n\t\t\\end{cases}$ donc $$f_X(x) = \\frac{1}{\\pi} \\textbf{1}_{]-1;1[}(x)\\int_{-\\sqrt{1-x^2}}^{+\\sqrt{1-x^2}} dy =  \\frac{2}{\\pi} \\sqrt{1-x^2} \\textbf{1}_{]-1;1[}(x)$$",
             "html": "<p>D’après le cours, <span class=\"math inline\">\\(X\\)</span> admet pour\ndensité <span class=\"math inline\">\\(f_X\\)</span> définie par <span\nclass=\"math inline\">\\(f_X(x) = \\int_{\\R}^{} f(x,y)dy = \\frac{1}{\\pi}\n\\int_{\\{y^2&lt;1-x^2\\}}^{} dy\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(y^2&lt;1-x^2 \\iff \\begin{cases}\n        -\\sqrt{1-x^2} &lt; y &lt; \\sqrt{1-x^2} \\\\\n        -1&lt;x&lt;1\n        \\end{cases}\\)</span> donc <span class=\"math display\">\\[f_X(x) =\n\\frac{1}{\\pi} \\textbf{1}_{]-1;1[}(x)\\int_{-\\sqrt{1-x^2}}^{+\\sqrt{1-x^2}}\ndy =  \\frac{2}{\\pi} \\sqrt{1-x^2} \\textbf{1}_{]-1;1[}(x)\\]</span></p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "5Tc1",
+      "titre": "Lois pour les statistiques",
+      "theme": [
+        "probabilités"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T13:52:53.227Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T13:52:53.227Z"
+      },
+      "contenu": [
+        {
+          "id": "fcca03c6-8b7e-46e2-9004-cb754048eb28",
+          "type": "description",
+          "value": {
+            "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\n\n\nOn pose \n$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
+            "html": "<p>On considère un échantillon <span\nclass=\"math inline\">\\((X_i)\\)</span> de taille <span\nclass=\"math inline\">\\(n=4\\)</span> dans une population suivant une loi\nnormale de paramètres <span class=\"math inline\">\\(\\mu\\)</span> et <span\nclass=\"math inline\">\\(\\sigma^2\\)</span>.</p>\n<p>On pose <span class=\"math display\">\\[T_1 = \\frac{1}{4}\\sum_{i=1}^{4}\nX_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)\\]</span>\n<span class=\"math display\">\\[U =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}\\]</span></p>\n"
+          }
+        },
+        {
+          "id": "6eb42e23-8875-414a-8088-167e271a4e07",
+          "type": "question",
+          "value": {
+            "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
+            "html": "<p>On cherche à estimer <span class=\"math inline\">\\(\\mu\\)</span> à\nl’aide des estimateurs <span class=\"math inline\">\\(T_1\\)</span> et <span\nclass=\"math inline\">\\(T_2\\)</span>. Étudier leur biais et comparer leurs\nefficacités.</p>\n"
+          }
+        },
+        {
+          "id": "b7e62d2b-da23-4336-a694-d93bee491952",
+          "type": "reponse",
+          "value": {
+            "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
+            "html": "<p>Par linéarité de l’espérance, on calcule <span\nclass=\"math inline\">\\(\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu\\)</span>,\n<span class=\"math inline\">\\(\\mathbb{E}(T_2) =\n\\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu\\)</span>. Par conséquent, <span\nclass=\"math inline\">\\(B(T_1)=B(T_2)=0\\)</span>.</p>\n<p>Pour comparer l’efficacité des deux estimateurs sais biais, on\ncalcule leur EQM (ce qui revient à calculer leur variance.) Par\nindépendance des variables, on a :</p>\n<p><span class=\"math inline\">\\(V(T_1) = \\frac{\\sigma^2}{4} &lt; V(T_3) =\n\\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}\\)</span>. Le plus efficace est\ndonc l’estimateur <span class=\"math inline\">\\(T_1\\)</span> qui est la\nmoyenne empirique.</p>\n"
+          }
+        },
+        {
+          "id": "debca4a1-7ede-4737-9403-521781ac4645",
+          "type": "question",
+          "value": {
+            "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
+            "html": "<p>Quelle est la loi suivie par la variable <span\nclass=\"math inline\">\\(T_1\\)</span> ? la variable <span\nclass=\"math inline\">\\(T_2\\)</span> ? la variable <span\nclass=\"math inline\">\\(U\\)</span> ? la variable <span\nclass=\"math inline\">\\(V\\)</span> ? justifier.</p>\n"
+          }
+        },
+        {
+          "id": "9c565c4d-4c4a-42e4-8025-127e322b2f22",
+          "type": "reponse",
+          "value": {
+            "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
+            "html": "<p><span class=\"math inline\">\\(U =\n\\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2\\)</span> ; or les\n<span class=\"math inline\">\\(X_i\\)</span> sont des variables aléatoires\nindépendantes et <span\nclass=\"math inline\">\\(\\frac{X_i-\\mu}{\\sigma}\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span> donc par définition,\n<span class=\"math inline\">\\(U\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4)\\)</span>.</p>\n<p>De plus, <span class=\"math inline\">\\(T_1 = \\overline{X}\\)</span> est\nl’estimateur de moyenne empirique donc d’après le théorème de Fisher,\n<span class=\"math inline\">\\(V\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4-1) = \\chi^2(3)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "e1c3955f-ea2c-4ea2-8baa-5ace1c546005",
+          "type": "question",
+          "value": {
+            "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
+            "html": "<p>Quelle est la loi de la variable aléatoire <span\nclass=\"math inline\">\\(\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}\\)</span>\n?</p>\n"
+          }
+        },
+        {
+          "id": "0a5ec694-6f3f-4983-87a0-599cfdf9ca0e",
+          "type": "reponse",
+          "value": {
+            "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",
+            "html": "<p>On pose <span class=\"math inline\">\\(Z =\n\\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} =\n\\frac{2(T_1-\\mu)}{\\sigma}\\)</span> variable distribuée selon une loi\n<span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Soit alors <span\nclass=\"math inline\">\\(Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}\\)</span> : par\ndéfinition, <span class=\"math inline\">\\(Y\\)</span> suit une loi <span\nclass=\"math inline\">\\(St(4)\\)</span>. Après simplifications, on peut\nréécrire <span class=\"math inline\">\\(Y = \\frac{4(T_1-\\mu)}{{\\sigma\n\\sqrt{U}}}\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "9iIv",
+      "titre": "Lois pour les statistiques",
+      "theme": [
+        "statistiques"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T13:52:53.676Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T13:52:53.676Z"
+      },
+      "contenu": [
+        {
+          "id": "90ffacfc-bf3e-4ba2-a1fc-cae1981c74ed",
+          "type": "description",
+          "value": {
+            "latex": "On considère un échantillon $(X_i)$ de taille $n=4$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\t\n\t\n\t\n\tOn pose \n\t$$T_1 = \\frac{1}{4}\\sum_{i=1}^{4} X_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)$$\n\t$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}$$",
+            "html": "<p>On considère un échantillon <span\nclass=\"math inline\">\\((X_i)\\)</span> de taille <span\nclass=\"math inline\">\\(n=4\\)</span> dans une population suivant une loi\nnormale de paramètres <span class=\"math inline\">\\(\\mu\\)</span> et <span\nclass=\"math inline\">\\(\\sigma^2\\)</span>.</p>\n<p>On pose <span class=\"math display\">\\[T_1 = \\frac{1}{4}\\sum_{i=1}^{4}\nX_i  \\qquad T_2 = \\frac{1}{5}(2X_1+X_2)+\\frac{1}{10}(3X_3+X_4)\\]</span>\n<span class=\"math display\">\\[U =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-\\mu)^2} \\qquad V =\n\\frac{1}{\\sigma^2}\\sum_{i=1}^{4}  {(X_i-T_1)^2}\\]</span></p>\n"
+          }
+        },
+        {
+          "id": "1bcb6300-35f4-43a2-841b-723123e61f16",
+          "type": "question",
+          "value": {
+            "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$ et $T_2$. \\'Etudier leur biais et comparer leurs efficacités.",
+            "html": "<p>On cherche à estimer <span class=\"math inline\">\\(\\mu\\)</span> à\nl’aide des estimateurs <span class=\"math inline\">\\(T_1\\)</span> et <span\nclass=\"math inline\">\\(T_2\\)</span>. Étudier leur biais et comparer leurs\nefficacités.</p>\n"
+          }
+        },
+        {
+          "id": "f2c36e9e-d74f-4e16-938b-2085c39a06af",
+          "type": "reponse",
+          "value": {
+            "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu$, $\\mathbb{E}(T_2) = \\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu$. Par conséquent, $B(T_1)=B(T_2)=0$.\n\t\t\n\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\n\t\t$V(T_1) = \\frac{\\sigma^2}{4} < V(T_3) = \\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
+            "html": "<p>Par linéarité de l’espérance, on calcule <span\nclass=\"math inline\">\\(\\mathbb{E}(T_1) = \\frac{4\\mu}{4} = \\mu\\)</span>,\n<span class=\"math inline\">\\(\\mathbb{E}(T_2) =\n\\frac{3\\mu}{5}+\\frac{4\\mu}{10} = \\mu\\)</span>. Par conséquent, <span\nclass=\"math inline\">\\(B(T_1)=B(T_2)=0\\)</span>.</p>\n<p>Pour comparer l’efficacité des deux estimateurs sais biais, on\ncalcule leur EQM (ce qui revient à calculer leur variance.) Par\nindépendance des variables, on a :</p>\n<p><span class=\"math inline\">\\(V(T_1) = \\frac{\\sigma^2}{4} &lt; V(T_3) =\n\\frac{(4^2+2^2+3^2+1^2)\\sigma^2}{100}\\)</span>. Le plus efficace est\ndonc l’estimateur <span class=\"math inline\">\\(T_1\\)</span> qui est la\nmoyenne empirique.</p>\n"
+          }
+        },
+        {
+          "id": "d594af18-94f9-49c8-a228-9c2d1db0bc04",
+          "type": "question",
+          "value": {
+            "latex": "Quelle est la loi suivie par la variable $T_1$ ? la variable $T_2$ ? la variable $U$ ? la variable $V$ ? justifier.",
+            "html": "<p>Quelle est la loi suivie par la variable <span\nclass=\"math inline\">\\(T_1\\)</span> ? la variable <span\nclass=\"math inline\">\\(T_2\\)</span> ? la variable <span\nclass=\"math inline\">\\(U\\)</span> ? la variable <span\nclass=\"math inline\">\\(V\\)</span> ? justifier.</p>\n"
+          }
+        },
+        {
+          "id": "152c7998-01bb-4dc3-bffb-7292d6547fb4",
+          "type": "reponse",
+          "value": {
+            "latex": "$U = \\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(4)$. \n\t\t\n\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(4-1) = \\chi^2(3)$.",
+            "html": "<p><span class=\"math inline\">\\(U =\n\\sum_{i=1}^{4}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2\\)</span> ; or les\n<span class=\"math inline\">\\(X_i\\)</span> sont des variables aléatoires\nindépendantes et <span\nclass=\"math inline\">\\(\\frac{X_i-\\mu}{\\sigma}\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span> donc par définition,\n<span class=\"math inline\">\\(U\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4)\\)</span>.</p>\n<p>De plus, <span class=\"math inline\">\\(T_1 = \\overline{X}\\)</span> est\nl’estimateur de moyenne empirique donc d’après le théorème de Fisher,\n<span class=\"math inline\">\\(V\\)</span> suit une loi de <span\nclass=\"math inline\">\\(\\chi^2(4-1) = \\chi^2(3)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "2c272397-1cb3-46ca-a2fe-ea178ba20b71",
+          "type": "question",
+          "value": {
+            "latex": "Déterminer $x \\in \\R$ tel que $\\PP(U>x) = 0{,}05$.",
+            "html": "<p>Déterminer <span class=\"math inline\">\\(x \\in \\R\\)</span> tel que\n<span class=\"math inline\">\\(\\PP(U&gt;x) = 0{,}05\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "6c99454e-2576-410b-88a5-047f1a8c5126",
+          "type": "reponse",
+          "value": {
+            "latex": "On lit dans la table de loi  $\\PP(U<x) = 0{,}95$ pour $x = 11{,}07$.",
+            "html": "<p>On lit dans la table de loi <span class=\"math inline\">\\(\\PP(U&lt;x) =\n0{,}95\\)</span> pour <span class=\"math inline\">\\(x =\n11{,}07\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "1b6ddcb2-dbb4-4a20-982c-4cadbb9ec2d7",
+          "type": "question",
+          "value": {
+            "latex": "A l'aide du tableur, calculer $\\PP(V > 5)$ avec une précision de $10^{-8}$.",
+            "html": "<p>A l’aide du tableur, calculer <span class=\"math inline\">\\(\\PP(V &gt;\n5)\\)</span> avec une précision de <span\nclass=\"math inline\">\\(10^{-8}\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "32995836-41bd-468a-b4ae-1c24ac82b968",
+          "type": "reponse",
+          "value": {
+            "latex": "On a constaté que $V$ suit une loi de $\\chi^2(3)$ d'après le théorème de Fisher.\n\nEnsuite, \ten tapant la formule \\texttt{1-LOI.KHIDEUX.N(5;3;1)} dans le tableur, on trouve que $\\PP(V > 5) \\approx 0{,}17179714$.",
+            "html": "<p>On a constaté que <span class=\"math inline\">\\(V\\)</span> suit une loi\nde <span class=\"math inline\">\\(\\chi^2(3)\\)</span> d’après le théorème de\nFisher.</p>\n<p>Ensuite, en tapant la formule <code>1-LOI.KHIDEUX.N(5;3;1)</code>\ndans le tableur, on trouve que <span class=\"math inline\">\\(\\PP(V &gt; 5)\n\\approx 0{,}17179714\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "1d030f0a-8b17-4500-8283-942262eff222",
+          "type": "question",
+          "value": {
+            "latex": "Quelle est la loi de la variable aléatoire $\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$ ?",
+            "html": "<p>Quelle est la loi de la variable aléatoire <span\nclass=\"math inline\">\\(\\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}\\)</span>\n?</p>\n"
+          }
+        },
+        {
+          "id": "89a700b8-a355-4e21-9632-59bfb5d5d944",
+          "type": "reponse",
+          "value": {
+            "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} = \\frac{2(T_1-\\mu)}{\\sigma}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}$ : par définition, $Y$ suit une loi $St(4)$. Après simplifications, on peut réécrire $Y = \\frac{4(T_1-\\mu)}{{\\sigma \\sqrt{U}}}$.",
+            "html": "<p>On pose <span class=\"math inline\">\\(Z =\n\\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{4} }} =\n\\frac{2(T_1-\\mu)}{\\sigma}\\)</span> variable distribuée selon une loi\n<span class=\"math inline\">\\(\\mathcal{N}(0,1)\\)</span>. Soit alors <span\nclass=\"math inline\">\\(Y = \\frac{Z}{\\sqrt{\\frac{U}{4} }}\\)</span> : par\ndéfinition, <span class=\"math inline\">\\(Y\\)</span> suit une loi <span\nclass=\"math inline\">\\(St(4)\\)</span>. Après simplifications, on peut\nréécrire <span class=\"math inline\">\\(Y = \\frac{4(T_1-\\mu)}{{\\sigma\n\\sqrt{U}}}\\)</span>.</p>\n"
           }
         }
       ]
@@ -24032,6 +23873,94 @@
           "value": {
             "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\nOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",
             "html": "<p>On cherche à estimer une fréquence à partir d’un échantillon de\ntaille <span class=\"math inline\">\\(40\\)</span>. La fréquence observée\ndans l’échantillon est <span class=\"math inline\">\\(f_{obs} =\n\\frac{23}{40}\\)</span>. On peut donc utiliser la formule du cours :\n<span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> en remplaçant <span\nclass=\"math inline\">\\(u_{\\alpha/2}\\)</span> par <span\nclass=\"math inline\">\\(1{,}96\\)</span> pour une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, on obtient numériquement <span\nclass=\"math inline\">\\(I_{conf} \\approx [0.42 ; 0.73]\\)</span>.</p>\n<p>On peut estimer que la proportion de passagers voyageant avec un\nbagage en soute est compris entre <span\nclass=\"math inline\">\\(42\\%\\)</span> et <span\nclass=\"math inline\">\\(73\\%\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "iQqS",
+      "titre": "Probabilité de surcharge",
+      "theme": [
+        "probabilités"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime Nguyen",
+        "createdAt": "2024-11-16T14:07:18.229Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:18.229Z"
+      },
+      "contenu": [
+        {
+          "id": "91c01117-da46-42f9-b632-7a6b6ae6436e",
+          "type": "description",
+          "value": {
+            "latex": "On considère un avion contenant 100 passagers. On suppose que le poids d'un passager pris au hasard suit une loi de probabilité dont l'espérance est 71 kg et l'écart type est 7~kg.",
+            "html": "<p>On considère un avion contenant 100 passagers. On suppose que le\npoids d’un passager pris au hasard suit une loi de probabilité dont\nl’espérance est 71 kg et l’écart type est 7 kg.</p>\n"
+          }
+        },
+        {
+          "id": "3b14b12c-940d-479e-9cdb-f27f00cad8be",
+          "type": "question",
+          "value": {
+            "latex": "Soit $X$ la variable aléatoire donnant le poids total des 100 passagers. Que peut-on dire de la variable $X$ ?",
+            "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> la variable aléatoire\ndonnant le poids total des 100 passagers. Que peut-on dire de la\nvariable <span class=\"math inline\">\\(X\\)</span> ?</p>\n"
+          }
+        },
+        {
+          "id": "bac4f0ba-ea19-41f6-ba12-12a808599f45",
+          "type": "reponse",
+          "value": {
+            "latex": "On ne connaît pas la loi de $X$ mais d'après le théorème central limite, $X$ suit approximativement une loi normale.  \n\t\t\n\t\tOn peut calculer l'espérance de $X$ et la variance de $X$ : Si on note $Y_i$ le poids du $i$-ème passager, on a $X = \\sum_{i=1}^{100} Y_i$. Par conséquent, $\\mathbb{E}(X) = 7100$ et $V(X) = 100 \\times 7^2 = 4900$. \n\t\t\tD'après le théorème central limite, la loi de $X$ peut être approchée par une loi normale de moyenne $7100$ et de variance $4900$, soit un écart type de $70$.",
+            "html": "<p>On ne connaît pas la loi de <span class=\"math inline\">\\(X\\)</span>\nmais d’après le théorème central limite, <span\nclass=\"math inline\">\\(X\\)</span> suit approximativement une loi\nnormale.</p>\n<p>On peut calculer l’espérance de <span\nclass=\"math inline\">\\(X\\)</span> et la variance de <span\nclass=\"math inline\">\\(X\\)</span> : Si on note <span\nclass=\"math inline\">\\(Y_i\\)</span> le poids du <span\nclass=\"math inline\">\\(i\\)</span>-ème passager, on a <span\nclass=\"math inline\">\\(X = \\sum_{i=1}^{100} Y_i\\)</span>. Par conséquent,\n<span class=\"math inline\">\\(\\mathbb{E}(X) = 7100\\)</span> et <span\nclass=\"math inline\">\\(V(X) = 100 \\times 7^2 = 4900\\)</span>. D’après le\nthéorème central limite, la loi de <span\nclass=\"math inline\">\\(X\\)</span> peut être approchée par une loi normale\nde moyenne <span class=\"math inline\">\\(7100\\)</span> et de variance\n<span class=\"math inline\">\\(4900\\)</span>, soit un écart type de <span\nclass=\"math inline\">\\(70\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "74637eec-f65f-4c84-81fe-338a43e5efb8",
+          "type": "question",
+          "value": {
+            "latex": "Calculer la probabilité que le poids de l'ensemble des passagers soit supérieur à $7{,}3$ tonnes.",
+            "html": "<p>Calculer la probabilité que le poids de l’ensemble des passagers soit\nsupérieur à <span class=\"math inline\">\\(7{,}3\\)</span> tonnes.</p>\n"
+          }
+        },
+        {
+          "id": "94c561a7-e5a2-4368-9425-b5e115e92ace",
+          "type": "reponse",
+          "value": {
+            "latex": "En notant $Z$ une variable aléatoire normale centrée réduite, on en déduit que \n\t\t$$\\begin{align*}\n\t\t\t\\PP\\left(X > 7300\\right) &= \\PP\\left(\\frac{X-7100}{70} > \\frac{7300-7100}{70}\\right) \\\\\n\t\t\t&\\approx  \\PP\\left(Z > \\frac{200}{70} \\approx 2{,}857\\right) \\\\\n\t\t\t&\\approx 0{,}0021 = 0{,}21\\%\n\t\t\\end{align*}$$\n\t\tIl n'y a quasiment aucune chance que le poids total des passagers dépasse $7{}3$ tonnes.",
+            "html": "<p>En notant <span class=\"math inline\">\\(Z\\)</span> une variable\naléatoire normale centrée réduite, on en déduit que <span\nclass=\"math display\">\\[\\begin{align*}\n            \\PP\\left(X &gt; 7300\\right) &amp;=\n\\PP\\left(\\frac{X-7100}{70} &gt; \\frac{7300-7100}{70}\\right) \\\\\n            &amp;\\approx  \\PP\\left(Z &gt; \\frac{200}{70} \\approx\n2{,}857\\right) \\\\\n            &amp;\\approx 0{,}0021 = 0{,}21\\%\n        \\end{align*}\\]</span> Il n’y a quasiment aucune chance que le\npoids total des passagers dépasse <span\nclass=\"math inline\">\\(7{}3\\)</span> tonnes.</p>\n"
+          }
+        },
+        {
+          "id": "bc637c6e-018e-4150-9cf7-8e7afa0ba9a7",
+          "type": "question",
+          "value": {
+            "latex": "Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en soute. Déterminer à l'aide d'un intervalle de confiance au niveau $95\\%$ une estimation de la proportion de passagers qui voyagent avec un bagage en soute sur ce vol.",
+            "html": "<p>Sur 40 passagers interrogés au hasard, 23 voyagent avec un bagage en\nsoute. Déterminer à l’aide d’un intervalle de confiance au niveau <span\nclass=\"math inline\">\\(95\\%\\)</span> une estimation de la proportion de\npassagers qui voyagent avec un bagage en soute sur ce vol.</p>\n"
+          }
+        },
+        {
+          "id": "0e88a6b9-1119-4daa-b6b5-5ead0921a224",
+          "type": "reponse",
+          "value": {
+            "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $40$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{23}{40}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.42 ; 0.73]$.\n\t\t\n\t\tOn peut estimer que la proportion de passagers voyageant avec un bagage en soute est compris entre $42\\%$ et $73\\%$.",
+            "html": "<p>On cherche à estimer une fréquence à partir d’un échantillon de\ntaille <span class=\"math inline\">\\(40\\)</span>. La fréquence observée\ndans l’échantillon est <span class=\"math inline\">\\(f_{obs} =\n\\frac{23}{40}\\)</span>. On peut donc utiliser la formule du cours :\n<span\nclass=\"math display\">\\[I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2}\n\\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]\\]</span> en remplaçant <span\nclass=\"math inline\">\\(u_{\\alpha/2}\\)</span> par <span\nclass=\"math inline\">\\(1{,}96\\)</span> pour une confiance de <span\nclass=\"math inline\">\\(95\\%\\)</span>, on obtient numériquement <span\nclass=\"math inline\">\\(I_{conf} \\approx [0.42 ; 0.73]\\)</span>.</p>\n<p>On peut estimer que la proportion de passagers voyageant avec un\nbagage en soute est compris entre <span\nclass=\"math inline\">\\(42\\%\\)</span> et <span\nclass=\"math inline\">\\(73\\%\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "d4cb506f-5cbc-42d7-931b-9a5ec983b8cc",
+          "type": "question",
+          "value": {
+            "latex": "L'avion ne peut pas accueillir plus de 65 bagages en soute. Quelle information en terme de risque peut-on donner à la compagnie aérienne ?",
+            "html": "<p>L’avion ne peut pas accueillir plus de 65 bagages en soute. Quelle\ninformation en terme de risque peut-on donner à la compagnie aérienne\n?</p>\n"
+          }
+        },
+        {
+          "id": "ee3d55ba-b8c2-44cc-93c9-1d0b3fd3aea0",
+          "type": "reponse",
+          "value": {
+            "latex": "D'après la question précédente, il est tout à fait probable (avec une confiance de $95\\%$) que le nombre de bagages en soute soit supérieur à $65$ (entre 42 et 73). Pour que l'intervalle de confiance ne contienne pas $65\\%$, il faut prendre un risque supérieur à $33\\%$.",
+            "html": "<p>D’après la question précédente, il est tout à fait probable (avec une\nconfiance de <span class=\"math inline\">\\(95\\%\\)</span>) que le nombre de\nbagages en soute soit supérieur à <span\nclass=\"math inline\">\\(65\\)</span> (entre 42 et 73). Pour que\nl’intervalle de confiance ne contienne pas <span\nclass=\"math inline\">\\(65\\%\\)</span>, il faut prendre un risque supérieur\nà <span class=\"math inline\">\\(33\\%\\)</span>.</p>\n"
           }
         }
       ]
@@ -28972,6 +28901,135 @@
         "updatedAt": "2024-11-16T11:15:04.898Z"
       },
       "contenu": []
+    },
+    {
+      "uuid": "H30c",
+      "titre": "Test d'une anomalie",
+      "theme": [
+        "statistiques",
+        "tableur"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T14:07:18.048Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:18.048Z"
+      },
+      "contenu": [
+        {
+          "id": "c5082a08-0abc-4878-b433-ff47e9b9a5da",
+          "type": "description",
+          "value": {
+            "latex": "En lançant successivement 60 fois un dé, un joueur obtient les résultats suivants :\n\t\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\\hline\n\\end{tabular}\n\\end{center}",
+            "html": "<p>En lançant successivement 60 fois un dé, un joueur obtient les\nrésultats suivants :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+          }
+        },
+        {
+          "id": "8b023da0-6ba3-4435-885d-edbfefcc155d",
+          "type": "question",
+          "value": {
+            "latex": "Le dé est-il truqué?",
+            "html": "<p>Le dé est-il truqué?</p>\n"
+          }
+        },
+        {
+          "id": "0a3922d4-abb1-413f-a0ed-adf49d0f6f5a",
+          "type": "reponse",
+          "value": {
+            "latex": "On réalise un test d'adéquation du $\\chi^2$ pour répondre à la question. Un dé non truqué devrait produire une distribution uniforme des effectifs de chaque face. Cela donne le tableau des effectifs théoriques : \n\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\hline Faces $x_i$ & 1 & 2 & 3 & 4 & 5 & 6 \\\\\n\t\t\\hline Effectifs $n_i$ & 15 & 7 & 4 & 11 & 6 & 17 \\\\\n\t\t\\hline Effectifs $e_i$ & 10 & 10 & 10 & 10 & 10 & 10 \\\\\n\t\t\\hline\n\t\\end{tabular}\n\\end{center} \n\nOn pose pour variable de décision $$Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}$$ où $O_i$ est la variable aléatoire donnant l'effectif de la $i$-ème classe pour l'échantillon de taille $60$. D'après le cours, $Q$ suit une loi $\\chi^2(5)$. \n\nD'après la table de $\\chi^2(5)$, l'intervalle de rejet pour $\\alpha=5\\%$ est $[11.07~;~+\\infty[$.\n\nOn trouve $Q_{obs} = 13.6 \\in W$ (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c}{fichier tableur})donc on peut rejeter l'hypothèse $H_0$ avec un risque de première espèce de $5\\%$ : on peut suspecter que le dé est truqué.",
+            "html": "<p>On réalise un test d’adéquation du <span\nclass=\"math inline\">\\(\\chi^2\\)</span> pour répondre à la question. Un dé\nnon truqué devrait produire une distribution uniforme des effectifs de\nchaque face. Cela donne le tableau des effectifs théoriques :</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">Faces <span\nclass=\"math inline\">\\(x_i\\)</span></th>\n<th style=\"text-align: center;\">1</th>\n<th style=\"text-align: center;\">2</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(n_i\\)</span></td>\n<td style=\"text-align: center;\">15</td>\n<td style=\"text-align: center;\">7</td>\n<td style=\"text-align: center;\">4</td>\n<td style=\"text-align: center;\">11</td>\n<td style=\"text-align: center;\">6</td>\n<td style=\"text-align: center;\">17</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Effectifs <span\nclass=\"math inline\">\\(e_i\\)</span></td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n<td style=\"text-align: center;\">10</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>On pose pour variable de décision <span\nclass=\"math display\">\\[Q=\\sum_{i=1}^6 \\frac{(O_i-e_i)^2}{e_i}\\]</span>\noù <span class=\"math inline\">\\(O_i\\)</span> est la variable aléatoire\ndonnant l’effectif de la <span class=\"math inline\">\\(i\\)</span>-ème\nclasse pour l’échantillon de taille <span\nclass=\"math inline\">\\(60\\)</span>. D’après le cours, <span\nclass=\"math inline\">\\(Q\\)</span> suit une loi <span\nclass=\"math inline\">\\(\\chi^2(5)\\)</span>.</p>\n<p>D’après la table de <span class=\"math inline\">\\(\\chi^2(5)\\)</span>,\nl’intervalle de rejet pour <span\nclass=\"math inline\">\\(\\alpha=5\\%\\)</span> est <span\nclass=\"math inline\">\\([11.07~;~+\\infty[\\)</span>.</p>\n<p>On trouve <span class=\"math inline\">\\(Q_{obs} = 13.6 \\in W\\)</span>\n(<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EfmljPG_LipCiIlDwESb5DsBtQvsb9gziaK95ni0MXfezg?e=mUpc0c\">fichier\ntableur</a>)donc on peut rejeter l’hypothèse <span\nclass=\"math inline\">\\(H_0\\)</span> avec un risque de première espèce de\n<span class=\"math inline\">\\(5\\%\\)</span> : on peut suspecter que le dé\nest truqué.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "BA22",
+      "titre": "Test d'une moyenne",
+      "theme": [
+        "statistiques"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-16T14:07:17.875Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-16T14:07:17.875Z"
+      },
+      "contenu": [
+        {
+          "id": "5fbf31b5-10eb-4d8c-a02d-f43c982e1b0c",
+          "type": "description",
+          "value": {
+            "latex": "Une entreprise utilise des camions pour transporter sa production. Elle dispose de 100 camions. Elle repère sur un échantillon de 25 jours choisis au hasard le nombre de camions en panne. Voici les résultats:\n\t\n\\begin{center}\n\t\t\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}\n\t\t\\hline\n5&5&6&4&6&6&8&3&5&5&5&4&3&6&5&6&4&7&6&6&5&4&3&6&5  \\\\\n\t\t\\hline\n\t\\end{tabular}\n\\end{center}",
+            "html": "<p>Une entreprise utilise des camions pour transporter sa production.\nElle dispose de 100 camions. Elle repère sur un échantillon de 25 jours\nchoisis au hasard le nombre de camions en panne. Voici les\nrésultats:</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">8</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">7</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n<th style=\"text-align: center;\">4</th>\n<th style=\"text-align: center;\">3</th>\n<th style=\"text-align: center;\">6</th>\n<th style=\"text-align: center;\">5</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n</div>\n"
+          }
+        },
+        {
+          "id": "383aeb7e-73e0-455e-946a-341c0b36d173",
+          "type": "question",
+          "value": {
+            "latex": "Calculer la moyenne $\\bar{x}$ et l'écart-type $\\sigma$ du nombre de camions en panne chaque jour pour l'échantillon étudié.",
+            "html": "<p>Calculer la moyenne <span class=\"math inline\">\\(\\bar{x}\\)</span> et\nl’écart-type <span class=\"math inline\">\\(\\sigma\\)</span> du nombre de\ncamions en panne chaque jour pour l’échantillon étudié.</p>\n"
+          }
+        },
+        {
+          "id": "2fdb8c90-d2ce-4862-86ee-b129eeba6e4b",
+          "type": "reponse",
+          "value": {
+            "latex": "On trouve $\\bar{x} = 5.12$ et $\\sigma = 1.21$. (\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EeDHiet0b2JOpLX-9rFeI-kBsj_o9NtQ-Qz8hJvy6rlIpw?e=463Dks}{feuille de calcul}).",
+            "html": "<p>On trouve <span class=\"math inline\">\\(\\bar{x} = 5.12\\)</span> et\n<span class=\"math inline\">\\(\\sigma = 1.21\\)</span>. (<a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EeDHiet0b2JOpLX-9rFeI-kBsj_o9NtQ-Qz8hJvy6rlIpw?e=463Dks\">feuille\nde calcul</a>).</p>\n"
+          }
+        },
+        {
+          "id": "67a99665-6064-4aa1-8469-ba874efb9901",
+          "type": "question",
+          "value": {
+            "latex": "A partir des résultats obtenus pour cet échantillon, proposer une estimation ponctuelle sans biais de la moyenne $\\mu$ et de l'écart type $s$ du nombre de camions en panne chaque jour pour la population correspondant aux jours ouvrables de l'année.",
+            "html": "<p>A partir des résultats obtenus pour cet échantillon, proposer une\nestimation ponctuelle sans biais de la moyenne <span\nclass=\"math inline\">\\(\\mu\\)</span> et de l’écart type <span\nclass=\"math inline\">\\(s\\)</span> du nombre de camions en panne chaque\njour pour la population correspondant aux jours ouvrables de\nl’année.</p>\n"
+          }
+        },
+        {
+          "id": "56c224b8-3874-4fb5-912b-36d5549f618e",
+          "type": "reponse",
+          "value": {
+            "latex": "Pour cela, on utilise les estimateurs sans biais du cours : \n\\begin{itemize}\n  \\item Avec $\\overline{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_i$, on obtient une estimation sans biais de la moyenne $\\bar{x} = 5.12$.\n  \\item Avec $S^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (X_i - \\overline{X})^2$, on obtient une estimation sans biais de la variance $s^2 = \\frac{n}{n-1} \\sigma^2 = \\frac{25}{24} \\times (1.21)^2 \\approx 1.53$ d'où une estimation sans biais de l'écart type $s = \\sqrt{\\frac{25}{24}}\\times 1.21 \\approx 1.24$. \n\\end{itemize}",
+            "html": "<p>Pour cela, on utilise les estimateurs sans biais du cours :</p>\n<ul>\n<li><p>Avec <span class=\"math inline\">\\(\\overline{X} =\n\\frac{1}{n}\\sum_{i=1}^{n} X_i\\)</span>, on obtient une estimation sans\nbiais de la moyenne <span class=\"math inline\">\\(\\bar{x} =\n5.12\\)</span>.</p></li>\n<li><p>Avec <span class=\"math inline\">\\(S^2 = \\frac{1}{n-1}\n\\sum_{i=1}^{n} (X_i - \\overline{X})^2\\)</span>, on obtient une\nestimation sans biais de la variance <span class=\"math inline\">\\(s^2 =\n\\frac{n}{n-1} \\sigma^2 = \\frac{25}{24} \\times (1.21)^2 \\approx\n1.53\\)</span> d’où une estimation sans biais de l’écart type <span\nclass=\"math inline\">\\(s = \\sqrt{\\frac{25}{24}}\\times 1.21 \\approx\n1.24\\)</span>.</p></li>\n</ul>\n"
+          }
+        },
+        {
+          "id": "2b5ef8cc-6c05-40d1-97be-a2761a26c57b",
+          "type": "question",
+          "value": {
+            "latex": "Déterminer un intervalle de confiance de la moyenne $\\mu$ de la population avec un niveau de confiance $95 \\%$.",
+            "html": "<p>Déterminer un intervalle de confiance de la moyenne <span\nclass=\"math inline\">\\(\\mu\\)</span> de la population avec un niveau de\nconfiance <span class=\"math inline\">\\(95 \\%\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "53655faf-d556-4af3-9501-9b25c924ee14",
+          "type": "reponse",
+          "value": {
+            "latex": "On utilise la formule du cours pour un petit échantillon. Pour cela, on doit suppose que la distribution du nombre de pannes est normale dans la population. \n\nPar lecture de la table de la loi de Student $St(24)$, on obtient $t_{\\alpha/2 } \\approx 2.063899$ d'où\n$$\\left[\\bar{x} - t_{\\alpha/2 }\\frac{s}{\\sqrt{n}};\n\\bar{x} + t_{\\alpha/2 }\\frac{s}{\\sqrt{n}}\\right] \\approx [4.609;5.630]$$",
+            "html": "<p>On utilise la formule du cours pour un petit échantillon. Pour cela,\non doit suppose que la distribution du nombre de pannes est normale dans\nla population.</p>\n<p>Par lecture de la table de la loi de Student <span\nclass=\"math inline\">\\(St(24)\\)</span>, on obtient <span\nclass=\"math inline\">\\(t_{\\alpha/2 } \\approx 2.063899\\)</span> d’où <span\nclass=\"math display\">\\[\\left[\\bar{x} - t_{\\alpha/2 }\\frac{s}{\\sqrt{n}};\n\\bar{x} + t_{\\alpha/2 }\\frac{s}{\\sqrt{n}}\\right] \\approx\n[4.609;5.630]\\]</span></p>\n"
+          }
+        },
+        {
+          "id": "fe6dbbaa-226e-425f-800d-bdbcb35dc834",
+          "type": "question",
+          "value": {
+            "latex": "Au garage où sont stationnés les camions, le responsable affirme qu'il y a, en moyenne, 4 camions en panne par jour. Un des chauffeurs prétend qu'il y en a 6. \n\t\nConstruire un test avec les hypothèses $\\begin{cases}H_0 \\colon \\mu = 4 \\\\ H_1 \\colon \\mu > 4\n\t\\end{cases}$ et un risque de première espèce de $5 \\%$ puis proposer une interprétation du résultat.",
+            "html": "<p>Au garage où sont stationnés les camions, le responsable affirme\nqu’il y a, en moyenne, 4 camions en panne par jour. Un des chauffeurs\nprétend qu’il y en a 6.</p>\n<p>Construire un test avec les hypothèses <span\nclass=\"math inline\">\\(\\begin{cases}H_0 \\colon \\mu = 4 \\\\ H_1 \\colon \\mu\n&gt; 4\n    \\end{cases}\\)</span> et un risque de première espèce de <span\nclass=\"math inline\">\\(5 \\%\\)</span> puis proposer une interprétation du\nrésultat.</p>\n"
+          }
+        },
+        {
+          "id": "62a2fd1e-bc0a-4123-a826-d14ef4615dc9",
+          "type": "reponse",
+          "value": {
+            "latex": "On réalise un test de conformité pour une moyenne. Pour cela, on prend la variable de décision $$Z=\\frac{\\overline{X}-\\mu_0}{\\frac{S}{\\sqrt{n}}}$$ avec $n=25$. Cette variable suit une loi $St(24)$ et par lecture de table pour ce test unilatéral à droite, on trouve une zone de rejet $W = [1.71;+\\infty[$. \n\nOr $Z_{obs} \\approx 4.53$ donc on peut rejeter l'hypothèse qu'il y a en moyenne 4 camions en panne par jour avec un risque de $5\\%$. Il y en a vraisemblablement plus. On pourrait refaire un test pour tester l'hypothèse du chauffeur $\\mu = 6$.",
+            "html": "<p>On réalise un test de conformité pour une moyenne. Pour cela, on\nprend la variable de décision <span\nclass=\"math display\">\\[Z=\\frac{\\overline{X}-\\mu_0}{\\frac{S}{\\sqrt{n}}}\\]</span>\navec <span class=\"math inline\">\\(n=25\\)</span>. Cette variable suit une\nloi <span class=\"math inline\">\\(St(24)\\)</span> et par lecture de table\npour ce test unilatéral à droite, on trouve une zone de rejet <span\nclass=\"math inline\">\\(W = [1.71;+\\infty[\\)</span>.</p>\n<p>Or <span class=\"math inline\">\\(Z_{obs} \\approx 4.53\\)</span> donc on\npeut rejeter l’hypothèse qu’il y a en moyenne 4 camions en panne par\njour avec un risque de <span class=\"math inline\">\\(5\\%\\)</span>. Il y en\na vraisemblablement plus. On pourrait refaire un test pour tester\nl’hypothèse du chauffeur <span class=\"math inline\">\\(\\mu =\n6\\)</span>.</p>\n"
+          }
+        }
+      ]
     },
     {
       "uuid": "YuII",
