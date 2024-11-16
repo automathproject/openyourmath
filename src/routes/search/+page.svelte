@@ -139,6 +139,54 @@
 
     // Réagir aux changements de la recherche
     $: query, updateResults();
+
+    function getPreview(content: string, maxLength: number = 150): string {
+        if (!content) return '';
+        
+        if (content.length <= maxLength) return content;
+        
+        const truncated = content.slice(0, maxLength);
+        
+        // Chercher la dernière occurrence de chaque type de délimiteur d'ouverture
+        const lastDoubleDollar = truncated.lastIndexOf('$$');
+        const lastSingleDollar = truncated.lastIndexOf('$');
+        const lastBracketOpen = truncated.lastIndexOf('\\[');
+        const lastParenOpen = truncated.lastIndexOf('\\(');
+        
+        // Chercher la dernière occurrence de chaque type de délimiteur de fermeture
+        const lastBracketClose = truncated.lastIndexOf('\\]');
+        const lastParenClose = truncated.lastIndexOf('\\)');
+        
+        let safeEnd = maxLength;
+        
+        // Gestion des $$ (prioritaire car deux caractères)
+        if (lastDoubleDollar !== -1) {
+            const doubleDollarMatches = truncated.match(/\$\$/g) || [];
+            if (doubleDollarMatches.length % 2 !== 0) {
+                safeEnd = Math.min(safeEnd, lastDoubleDollar);
+            }
+        }
+        
+        // Gestion des $ simples (en excluant les $$ déjà comptés)
+        if (lastSingleDollar !== -1) {
+            const contentWithoutDoubleDollar = truncated.replace(/\$\$/g, '##');
+            const singleDollarCount = (contentWithoutDoubleDollar.match(/\$/g) || []).length;
+            if (singleDollarCount % 2 !== 0) {
+                safeEnd = Math.min(safeEnd, lastSingleDollar);
+            }
+        }
+        
+        if (lastBracketOpen !== -1 && (lastBracketClose === -1 || lastBracketClose < lastBracketOpen)) {
+            safeEnd = Math.min(safeEnd, lastBracketOpen);
+        }
+        
+        if (lastParenOpen !== -1 && (lastParenClose === -1 || lastParenClose < lastParenOpen)) {
+            safeEnd = Math.min(safeEnd, lastParenOpen);
+        }
+        
+        const preview = content.slice(0, safeEnd) + ' ...';
+        return preview;
+    }
 </script>
 
 <div class="container-fluid p-4">
@@ -255,6 +303,17 @@
                                         {/each}
                                     </div>
                                 {/if}
+                                {#if result.exercise.contenu.length > 0}
+                                {@const previewContent = result.exercise.contenu.find(el => el.type === "description") || 
+                                                       result.exercise.contenu.find(el => el.type === "question")}
+{#if previewContent && previewContent.value.html}
+<p class="card-text text-muted mb-2">
+    <span class="preview-html">
+        <MathRenderer content={getPreview(previewContent.value.html)}/>
+    </span>
+</p>
+{/if}
+                            {/if}
                             </div>
                         </div>
                     {/each}
@@ -360,5 +419,21 @@
     .hover-card:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-html {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    
+    .preview-html :global(p) {
+        margin: 0;
+    }
+
+    .preview-type {
+        font-size: 0.8rem;
+        color: #999;
+        font-style: italic;
+        margin-left: 0.5rem;
     }
 </style>
