@@ -48,5 +48,8 @@ export const macros = {
   "\\vide": "\\varnothing}",
   "\\dd": "\\textup{d}",
   "\\dlim": "\\displaystyle\\lim}",
-  "\\vvvert": "\\vert\\!\\vert\\!\\vert"// Définit \\vvvert comme triple barre verticale
+  "\\vvvert": "\\vert\\!\\vert\\!\\vert", 
+  "\\dpa": "\\frac{\\partial #1}{\\partial #2}",
+  "\\dpsm": "\\frac{\\partial^2 #1}{\\partial #2 \\, \\partial #3}", // Macro pour dérivée mixte (3 arguments)
+  "\\dpsp": "\\frac{\\partial^2 #1}{\\partial #2^2}"  
 };
