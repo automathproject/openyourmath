@@ -47,5 +47,6 @@ export const macros = {
   "\\lr": "\\longrightarrow}",
   "\\vide": "\\varnothing}",
   "\\dd": "\\textup{d}",
-  "\\dlim": "\\displaystyle\\lim}"
+  "\\dlim": "\\displaystyle\\lim}",
+  "\\vvvert": "\\vert\\!\\vert\\!\\vert"// Définit \\vvvert comme triple barre verticale
 };
