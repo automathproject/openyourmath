@@ -37,7 +37,7 @@
         <div class="container text-center py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <img src={image_welcome} alt="Welcome" class="logo mb-4" width="400" height="400"/>
+                    <img src={image_welcome} alt="Welcome" class="logo mb-4" width="320" height="320"/>
                     <!-- <h1 class="display-4 fw-bold mb-3">OpenYourMath</h1> -->
                     <p class="lead text-muted mb-4">
                         Une base de données d'exercices de mathématiques pour l'enseignement supérieur, accessible à tous. 

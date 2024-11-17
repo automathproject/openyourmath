@@ -1,4 +1,4 @@
-<!-- src/routes/+page.svelte -->
+<!-- src/routes/search/+page.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
     import { ExerciceSearchEngine } from '$lib/utils/search';
@@ -11,7 +11,8 @@
     
     let searchEngine: ExerciceSearchEngine;
     let query = '';
-    let results: Array<{ exercise: Exercice; score: number }> = [];
+    let allResults: Array<{ exercise: Exercice; score: number }> = [];
+    let displayedResults: Array<{ exercise: Exercice; score: number }> = [];
     let showModal = false;
     let selectedExercise: Exercice | null = null;
     let selectedTags: Set<string> = new Set();
@@ -19,35 +20,34 @@
     let dynamicTagCounts: Map<string, number> = new Map();
     let showFilters = true;
 
+    // Pagination
+    const ITEMS_PER_PAGE = 10;
+    let currentPage = 1;
+    let hasMoreItems = false;
+
     function normalizeThemes(theme: string | string[]): string[] {
         if (Array.isArray(theme)) return theme;
         return theme ? theme.split(',').map(t => t.trim()) : [];
     }
 
-    // Calculer les compteurs dynamiques en fonction des filtres actuels
     function updateDynamicCounts(currentResults: Array<{ exercise: Exercice; score: number }>) {
         dynamicTagCounts.clear();
         
-        // Pour chaque résultat actuellement visible
         currentResults.forEach(result => {
             const exerciseTags = normalizeThemes(result.exercise.theme);
             exerciseTags.forEach(tag => {
-                // Si ce n'est pas un tag déjà sélectionné
                 if (!selectedTags.has(tag)) {
                     dynamicTagCounts.set(tag, (dynamicTagCounts.get(tag) || 0) + 1);
                 }
             });
         });
 
-        // Pour les tags sélectionnés, calculer leur nombre à partir de tous les résultats
-        // en simulant le retrait de ce tag des filtres
         if (selectedTags.size > 0) {
             const baseResults = query.trim() && searchEngine 
                 ? searchEngine.search(query)
                 : data.exercises.map(exercise => ({ exercise, score: 1 }));
 
             selectedTags.forEach(selectedTag => {
-                // Filtrer les résultats avec tous les tags sauf celui-ci
                 const otherTags = new Set(selectedTags);
                 otherTags.delete(selectedTag);
                 
@@ -64,12 +64,21 @@
         dynamicTagCounts = new Map(dynamicTagCounts);
     }
 
-    let updateCounter = 0;
+    function updateDisplayedResults() {
+        const startIndex = 0;
+        const endIndex = currentPage * ITEMS_PER_PAGE;
+        displayedResults = allResults.slice(startIndex, endIndex);
+        hasMoreItems = endIndex < allResults.length;
+    }
+
+    function loadMore() {
+        currentPage += 1;
+        updateDisplayedResults();
+    }
 
     function updateResults() {
         let filteredResults;
         
-        // Recherche textuelle
         if (query.trim() && searchEngine) {
             filteredResults = searchEngine.search(query);
         } else {
@@ -79,7 +88,6 @@
             }));
         }
 
-        // Filtrage par tags
         if (selectedTags.size > 0) {
             filteredResults = filteredResults.filter(result => {
                 const exerciseTags = new Set(normalizeThemes(result.exercise.theme));
@@ -87,23 +95,18 @@
             });
         }
 
-        // Force le rafraîchissement complet des résultats
-        results = [];
-        // Attend le prochain cycle pour mettre à jour les résultats
-        setTimeout(() => {
-            results = filteredResults;
-            updateCounter++; // Incrémente le compteur pour forcer le rafraîchissement
-            updateDynamicCounts(filteredResults);
-        }, 0);
+        // Réinitialiser la pagination
+        currentPage = 1;
+        allResults = filteredResults;
+        updateDisplayedResults();
+        updateDynamicCounts(filteredResults);
     }
 
     onMount(() => {
         if (data?.exercises) {
-            // Initialiser le moteur de recherche
             searchEngine = new ExerciceSearchEngine();
             searchEngine.initialize(data.exercises);
             
-            // Initialiser les tags
             data.exercises.forEach(exercise => {
                 const themes = normalizeThemes(exercise.theme);
                 themes.forEach(theme => {
@@ -112,7 +115,6 @@
             });
             allTags = new Map(allTags);
             
-            // Initialiser les résultats et les compteurs
             updateResults();
         }
     });
@@ -147,19 +149,16 @@
         
         const truncated = content.slice(0, maxLength);
         
-        // Chercher la dernière occurrence de chaque type de délimiteur d'ouverture
         const lastDoubleDollar = truncated.lastIndexOf('$$');
         const lastSingleDollar = truncated.lastIndexOf('$');
         const lastBracketOpen = truncated.lastIndexOf('\\[');
         const lastParenOpen = truncated.lastIndexOf('\\(');
         
-        // Chercher la dernière occurrence de chaque type de délimiteur de fermeture
         const lastBracketClose = truncated.lastIndexOf('\\]');
         const lastParenClose = truncated.lastIndexOf('\\)');
         
         let safeEnd = maxLength;
         
-        // Gestion des $$ (prioritaire car deux caractères)
         if (lastDoubleDollar !== -1) {
             const doubleDollarMatches = truncated.match(/\$\$/g) || [];
             if (doubleDollarMatches.length % 2 !== 0) {
@@ -167,7 +166,6 @@
             }
         }
         
-        // Gestion des $ simples (en excluant les $$ déjà comptés)
         if (lastSingleDollar !== -1) {
             const contentWithoutDoubleDollar = truncated.replace(/\$\$/g, '##');
             const singleDollarCount = (contentWithoutDoubleDollar.match(/\$/g) || []).length;
@@ -184,13 +182,13 @@
             safeEnd = Math.min(safeEnd, lastParenOpen);
         }
         
-        const preview = content.slice(0, safeEnd) + ' ...';
-        return preview;
+        return content.slice(0, safeEnd) + ' ...';
     }
 </script>
 
 <div class="container-fluid p-4">
     <div class="row">
+        <!-- Colonne de gauche : Filtres -->
         <div class="col-12 col-md-4 col-lg-3">
             <div class="card mb-4">
                 <div class="card-body">
@@ -273,7 +271,7 @@
         <div class="col-12 col-md-8 col-lg-9">
             <div class="alert alert-info">
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong>{results.length} exercice(s) trouvé(s)</strong>
+                    <strong>{allResults.length} exercice(s) trouvé(s)</strong>
                     {#if selectedTags.size > 0}
                         <small class="text-muted">
                             Filtres : {Array.from(selectedTags).join(', ')}
@@ -282,43 +280,49 @@
                 </div>
             </div>
         
-            {#key updateCounter}
-                <div class="d-flex flex-column gap-3">
-                    {#each results as result (result.exercise.uuid)}
-                        <div 
-                            class="card cursor-pointer hover-card"
-                            on:click={() => handleExerciseClick(result.exercise)}
-                        >
-                            <div class="card-body">
-                                <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
-                                {#if result.exercise.theme}
-                                    <div class="tags">
-                                        {#each normalizeThemes(result.exercise.theme) as theme}
-                                            <span 
-                                                class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
-                                                on:click|stopPropagation={() => toggleTag(theme)}
-                                            >
-                                                {theme}
-                                            </span>
-                                        {/each}
-                                    </div>
-                                {/if}
-                                {#if result.exercise.contenu.length > 0}
+            <div class="d-flex flex-column gap-3">
+                {#each displayedResults as result (result.exercise.uuid)}
+                    <div 
+                        class="card cursor-pointer hover-card"
+                        on:click={() => handleExerciseClick(result.exercise)}
+                    >
+                        <div class="card-body">
+                            <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
+                            {#if result.exercise.theme}
+                                <div class="tags">
+                                    {#each normalizeThemes(result.exercise.theme) as theme}
+                                        <span 
+                                            class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
+                                            on:click|stopPropagation={() => toggleTag(theme)}
+                                        >
+                                            {theme}
+                                        </span>
+                                    {/each}
+                                </div>
+                            {/if}
+                            {#if result.exercise.contenu.length > 0}
                                 {@const previewContent = result.exercise.contenu.find(el => el.type === "description") || 
                                                        result.exercise.contenu.find(el => el.type === "question")}
-{#if previewContent && previewContent.value.html}
-<p class="card-text text-muted mb-2">
-    <span class="preview-html">
-        <MathRenderer content={getPreview(previewContent.value.html)}/>
-    </span>
-</p>
-{/if}
+                                {#if previewContent && previewContent.value.html}
+                                    <p class="card-text text-muted mb-2">
+                                        <span class="preview-html">
+                                            <MathRenderer content={getPreview(previewContent.value.html)}/>
+                                        </span>
+                                    </p>
+                                {/if}
                             {/if}
-                            </div>
                         </div>
-                    {/each}
+                    </div>
+                {/each}
+            </div>
+
+            {#if hasMoreItems}
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary" on:click={loadMore}>
+                        Charger plus d'exercices
+                    </button>
                 </div>
-            {/key}
+            {/if}
         </div>
     </div>
 </div>

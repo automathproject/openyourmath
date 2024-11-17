@@ -1,7 +1,6 @@
 <!-- Composant de recherche des exercices -->
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Exercice from './Exercice.svelte';
   import ExerciceRenderer from './ExerciceRenderer.svelte';
   import MathRenderer from './MathRenderer.svelte';
 
