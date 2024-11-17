@@ -1,4 +1,4 @@
-<!-- src/components/Exercice.svelte -->
+<!-- src/components/ExerciceRenderer.svelte -->
 <script lang="ts">
   import { fade, fly, slide, scale } from "svelte/transition";
   import { quadOut } from "svelte/easing";
@@ -7,6 +7,7 @@
   export let ExerciceData;
   const latexTypes = ["description", "question", "reponse"];
 
+  let isLargeFont = false; // Nouvelle variable
   let processedContenu = [];
   let showReponses = false;
   let isFullscreen = false;
@@ -25,7 +26,12 @@ function toggleMetadata() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
+      isLargeFont = false;
     }
+  }
+
+  function toggleFontSize() {
+    isLargeFont = !isLargeFont;
   }
 
   $: if (ExerciceData) {
@@ -65,6 +71,7 @@ function toggleMetadata() {
 <div
   class="exercice-wrapper"
   class:fullscreen={isFullscreen}
+  class:large-font={isLargeFont}
   transition:fade={{ duration: 200 }}
 >
   <div class="exercice" class:fullscreen={isFullscreen}>
@@ -134,9 +141,7 @@ function toggleMetadata() {
                 on:click={toggleReponses}
                 class="control-button answer-button"
                 class:active={showReponses}
-                title={showReponses
-                  ? "Masquer les réponses"
-                  : "Afficher les réponses"}
+                title={showReponses ? "Masquer les réponses" : "Afficher les réponses"}
               >
                 {#if !showReponses}
                   <svg
@@ -168,13 +173,33 @@ function toggleMetadata() {
                   </svg>
                 {/if}
               </button>
-
+            
+              {#if isFullscreen}
+                <button
+                  on:click={toggleFontSize}
+                  class="control-button font-size-button"
+                  class:active={isLargeFont}
+                  title={isLargeFont ? "Taille normale" : "Agrandir le texte"}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <text x="4" y="18" font-size="18" font-family="sans-serif">A</text>
+                    <text x="12" y="18" font-size="12" font-family="sans-serif">A</text>
+                  </svg>
+                </button>
+              {/if}
+            
               <button
                 on:click={toggleFullscreen}
                 class="control-button fullscreen-button"
-                title={isFullscreen
-                  ? "Quitter le plein écran"
-                  : "Mode plein écran"}
+                title={isFullscreen ? "Quitter le plein écran" : "Mode plein écran"}
               >
                 {#if !isFullscreen}
                   <svg
@@ -516,4 +541,38 @@ function toggleMetadata() {
     padding: 0.5rem;
     border-left: 4px solid #1eff00;
   }
+
+/* Nouveau style pour la grande police */
+.large-font {
+  font-size: 150%;
+}
+
+.large-font :global(.titre) {
+  font-size: 2.25rem;
+}
+
+.large-font :global(.metadata-group) {
+  font-size: 1.3rem;
+}
+
+.large-font :global(.tag) {
+  font-size: 1.3rem;
+}
+
+/* Style pour le bouton de taille de police */
+.font-size-button {
+  background: #4a5568;
+  color: white;
+  border-color: #4a5568;
+}
+
+.font-size-button:hover {
+  background: #2d3748;
+  border-color: #2d3748;
+}
+
+.font-size-button.active {
+  background: #2d3748;
+  border-color: #2d3748;
+}
 </style>
