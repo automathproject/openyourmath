@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCount": 440,
-    "generatedAt": "2024-11-16T21:10:32.686Z"
+    "totalCount": 448,
+    "generatedAt": "2024-11-17T16:08:32.149Z"
   },
   "exercises": [
     {
@@ -2871,6 +2871,30 @@
       ]
     },
     {
+      "uuid": "ReNe",
+      "titre": "Calcul du gradient de la fonction d'erreur",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Quentin LIARD",
+        "createdAt": "2024-11-17T15:59:40.984Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:40.984Z"
+      },
+      "contenu": [
+        {
+          "id": "0490d88f-5b25-4422-a8f8-420aff81505e",
+          "type": "description",
+          "value": {
+            "latex": "Soit le réseau de neurones multicouches décrit pas le graphe suivant :\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$1$};\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$x$};\n\\node[entree,blue] (E-3) at (-\\layersep,-5) {$1$};\n\n\n\n\\node[input neuron] (I-1) at (0,-1.5) {};\n\\node[input neuron] (I-3) at (0,-3.75) {};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {$\\Sigma$};\n\n\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\Sigma$};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\\node[below right=0.8ex,scale=0.7] at (I-3) {};\n\n\n\n\n\n\n\n\\node[hidden neuron] (O) at (\\layersep,-3.75 cm) {};\n\\node[hidden neuron] (P) at (\\layersep,-1.5 cm) {};\n\\node[above right=0.8ex,scale=0.7] at (O) {$h_{12}$};\n\\node[right=0.5ex,scale=0.7] at (P) {$h_{11}$};\n\n\n\\path[thick] (E-1) edge node[pos=0.5,above,scale=0.7]{$w_{1}$} (I-1) ;\n\\path[thick] (E-2) edge node[pos=0.5,above left,scale=0.7]{$w_{2}$} (I-1);\n\\path[thick] (E-2) edge node[pos=0.5,above,scale=0.7]{$w_4$} (I-3);\n\\path[thick] (E-3) edge node[pos=0.5,above,scale=0.7]{$w_3$} (I-3);\n\\path[thick] (I-1) edge node[pos=0.5,above,scale=0.7]{$f_{11}$} (P);\n\\path[thick] (I-3) edge node[pos=0.5,below,scale=0.7]{$f_{12}$}(O);\n\\node[below right=0.8ex,scale=0.5] at (O) {$\\text{Sigmoide}$};\n\\node[below =0.8ex,scale=0.5] at (P) {$\\text{Sigmoide}$};\n\n\\node[hidden neuron] (Q) at (2*\\layersep,-2.5 cm) {};\n\\node[output neuron] (R) at (3*\\layersep,-2.5 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (R) {$\\text{Id}$};\n\\node[input neuron] (I-4) at (2.5,-0.5) {$1$};\n\\path[thick] (O) edge node[pos=0.6,above,scale=0.7]{$w_{7}$} (Q) ;\n\\node[below right=0.8ex,scale=0.7] at (Q) {$\\Sigma$};\n\\path[thick] (I-4) edge node[pos=0.5,above,scale=0.7]{$w_{5}$} (Q) ;\n\\path[thick] (Q) edge node[pos=0.5,above,scale=0.7]{$f_{21}$} (R);\n\\path[thick] (P) edge node[pos=0.5,above,scale=0.7]{$w_{6}$} (Q) ;\n\n\\draw[->,thick] (R)-- ++(2,0) node[right,blue]{$\\hat{y}$};\n \n     \n\n\n\n\n\\end{tikzpicture}  \n\\end{center}\n\\begin{enumerate}\n\\item Donner les formules qui déterminent les sorties intermédiaires $f_{11},\\,f_{12},\\,h_{11},\\,h_{12}$ et $f_{21}$ ainsi que la sortie finale $\\hat{y}$.\n\\item On pose la fonction d'erreur $E(w)=(y-\\hat{y})^2.$ En appliquant l'algorithme de backpropagation, déterminer les dérivées partielles $\\frac{\\partial E(w)}{\\partial w_j}$ puis $\\frac{\\hat{y}}{\\partial w_j}$. En déduire les expressions des mises à jour des paramètres $\\Delta w_j$ pour $j=1,\\cdots{},7$. \n\n\n\\end{enumerate}",
+            "html": "<p>Soit le réseau de neurones multicouches décrit pas le graphe suivant\n:</p>\n<div class=\"center\">\n\n</div>\n<ol>\n<li><p>Donner les formules qui déterminent les sorties intermédiaires\n<span class=\"math inline\">\\(f_{11},\\,f_{12},\\,h_{11},\\,h_{12}\\)</span>\net <span class=\"math inline\">\\(f_{21}\\)</span> ainsi que la sortie\nfinale <span class=\"math inline\">\\(\\hat{y}\\)</span>.</p></li>\n<li><p>On pose la fonction d’erreur <span\nclass=\"math inline\">\\(E(w)=(y-\\hat{y})^2.\\)</span> En appliquant\nl’algorithme de backpropagation, déterminer les dérivées partielles\n<span class=\"math inline\">\\(\\frac{\\partial E(w)}{\\partial w_j}\\)</span>\npuis <span class=\"math inline\">\\(\\frac{\\hat{y}}{\\partial w_j}\\)</span>.\nEn déduire les expressions des mises à jour des paramètres <span\nclass=\"math inline\">\\(\\Delta w_j\\)</span> pour <span\nclass=\"math inline\">\\(j=1,\\cdots{},7\\)</span>.</p></li>\n</ol>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "6NIK",
       "titre": "Calcul par approximation",
       "theme": [
@@ -3538,6 +3562,110 @@
           "value": {
             "latex": "\\begin{enumerate}\n\t\\item Soit $(x_1,...,x_n)$ une réalisation quelconque de l'échantillon $(X_1,...X_n)$ : \n\t$$\\begin{align*}\n\t\t\\mathcal{L}(\\lambda) &= \\PP(X_1=x_1,X_2=2,...,X_n=x_n) \\\\\n\t\t&= \\PP(X_1=x_1)\\PP(X_2=2),...,\\PP(X_n=x_n) \\text{ par indépendance des va} \\\\\n\t\t&= e^{-\\lambda} \\frac{\\lambda^{x_1}}{x_1!} \\times e^{-\\lambda} \\frac{\\lambda^{x_2}}{x_2!}  \\times ,..., \\times e^{-\\lambda} \\frac{\\lambda^{x_n}}{x_n!} \\\\\n\t\t&=e^{-n\\lambda} \\frac{\\lambda^{\\sum_{i=1}^n x_i }}{x_1!...x_n!}\n\t\\end{align*}$$\n\t\\item  On cherche la valeur de $\\lambda$ qui maximise la fonction de vraisemblance via la log vraisemblance :\n\t$$\\begin{align*}\n\t\t\\ln \\mathcal{L}(\\lambda) &= -n \\lambda + \\left(\\sum_{i=1}^n x_i\\right)\\ln(\\lambda) - \\ln(x_1!...x_n!) \n\t\\end{align*}$$\n\tque l'on dérive afin de voir pour quelle valeur de $p \\in ]0;1[$ cette expression est maximale :\n\t$$\\begin{align*}\n\t\t\\ln \\mathcal{L}(p) =0 \n\t\t&\\iff  -n+ \\left(\\sum_{i=1}^n x_i\\right) \\times \\frac{1}{\\lambda} = 0 \\\\\n\t\t&\\iff \\lambda = \\frac{\\sum_{i=1}^n x_i}{n}\n\t\\end{align*}$$\n\t\n\tEn remplaçant par les valeurs de la réalisation de l'échantillon, on trouve comme estimation de $\\lambda$ la valeur $\\frac{14}{6}$.\n\t\n\tOn trouve en général l'estimateur de moyenne empirique, il est sans biais car $\\E(X) = \\lambda$ pour une loi de Poisson de paramètre $\\lambda$. \n\t\n\\end{enumerate}",
             "html": "<ol>\n<li><p>Soit <span class=\"math inline\">\\((x_1,...,x_n)\\)</span> une\nréalisation quelconque de l’échantillon <span\nclass=\"math inline\">\\((X_1,...X_n)\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\mathcal{L}(\\lambda) &amp;= \\PP(X_1=x_1,X_2=2,...,X_n=x_n) \\\\\n        &amp;= \\PP(X_1=x_1)\\PP(X_2=2),...,\\PP(X_n=x_n) \\text{ par\nindépendance des va} \\\\\n        &amp;= e^{-\\lambda} \\frac{\\lambda^{x_1}}{x_1!} \\times\ne^{-\\lambda} \\frac{\\lambda^{x_2}}{x_2!}  \\times ,..., \\times\ne^{-\\lambda} \\frac{\\lambda^{x_n}}{x_n!} \\\\\n        &amp;=e^{-n\\lambda} \\frac{\\lambda^{\\sum_{i=1}^n x_i\n}}{x_1!...x_n!}\n    \\end{align*}\\]</span></p></li>\n<li><p>On cherche la valeur de <span\nclass=\"math inline\">\\(\\lambda\\)</span> qui maximise la fonction de\nvraisemblance via la log vraisemblance : <span\nclass=\"math display\">\\[\\begin{align*}\n        \\ln \\mathcal{L}(\\lambda) &amp;= -n \\lambda + \\left(\\sum_{i=1}^n\nx_i\\right)\\ln(\\lambda) - \\ln(x_1!...x_n!)\n    \\end{align*}\\]</span> que l’on dérive afin de voir pour quelle\nvaleur de <span class=\"math inline\">\\(p \\in ]0;1[\\)</span> cette\nexpression est maximale : <span class=\"math display\">\\[\\begin{align*}\n        \\ln \\mathcal{L}(p) =0\n        &amp;\\iff  -n+ \\left(\\sum_{i=1}^n x_i\\right) \\times\n\\frac{1}{\\lambda} = 0 \\\\\n        &amp;\\iff \\lambda = \\frac{\\sum_{i=1}^n x_i}{n}\n    \\end{align*}\\]</span></p>\n<p>En remplaçant par les valeurs de la réalisation de l’échantillon, on\ntrouve comme estimation de <span class=\"math inline\">\\(\\lambda\\)</span>\nla valeur <span class=\"math inline\">\\(\\frac{14}{6}\\)</span>.</p>\n<p>On trouve en général l’estimateur de moyenne empirique, il est sans\nbiais car <span class=\"math inline\">\\(\\E(X) = \\lambda\\)</span> pour une\nloi de Poisson de paramètre <span\nclass=\"math inline\">\\(\\lambda\\)</span>.</p></li>\n</ol>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "AKnT",
+      "titre": "Classification linéaire par un perceptron",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T15:59:40.861Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:40.861Z"
+      },
+      "contenu": [
+        {
+          "id": "bbf729d3-1b95-4589-bb08-d9303b92e4f8",
+          "type": "question",
+          "value": {
+            "latex": "Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. \n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.6]\n\t\t\\tikzstyle{rouge} = [fill,rectangle,red,scale=1.2];\n\t\t\\tikzstyle{bleu} = [fill,circle,blue] ;\n\t\t\n\t\t\\draw[gray] (-4,-4) grid ++(8,8);\n\t\t\\draw[->,>=latex, very thick,black] (-4.5,0)--(5,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, black] (0,-4.1)--(0,5) node[left] {$y$};\n\t\t\n\t\t\\node[below left] at (0,0) {$0$};\n\t\t\\node[left] at (0,1) {$1$};\n\t\t\\node[below] at (1,0) {$1$};\n\t\t\n\t\t\\foreach \\x/\\y in {-2/3,3.2/2,-1/3.1,1/1.8,2.3/3.1}{\n\t\t\t\\node[bleu] at (\\x,\\y) {};\n\t\t}\n\t\t\\foreach \\x/\\y in {1/-2,3/-1,1.5/-2.5,0/-3,-2.2/1.3}{\n\t\t\t\\node[rouge] at (\\x,\\y) {};\n\t\t}\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-4,-4) rectangle (4,4);\n\t\t\t\\draw[blue,ultra thick] (-4,4) -- (4,0);\n\t\t\t\\fill[red!50,opacity=0.5] (-4,4) -- (-4,-4) --(4,-4)--(4,0) -- cycle;\n\t\t\t\\fill[blue!20,opacity=0.5] (-4,4) -- (-4,4) --(4,4)--(4,0) -- cycle;\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\\node[scale=1,red,below] at (4,-4) {$F(x,y)=0$};\n\t\t\\node[scale=1,blue,above] at (-4,4) {$F(x,y)=1$};\n\t\t\n\t\t\n\t\\end{tikzpicture}\n\\end{center}",
+            "html": "<p>Décrire un perceptron qui permet de réaliser la classification entre\nles points bleus et les points rouges comme dans le graphique\nci-dessous.</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "MZkM",
+      "titre": "Classification linéaire par un perceptron",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T16:01:20.543Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T16:01:20.543Z"
+      },
+      "contenu": [
+        {
+          "id": "3de727bc-cfff-4ef9-8dc0-33cb68609b29",
+          "type": "question",
+          "value": {
+            "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$H$};\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/3$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/5$} (I-3) ;\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$1/4$} (I-4);\n\t\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$1$}(O);\n\t\t\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$2$} (O);\n\t\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$2$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-120:0.8) ;\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\t\n\t\\end{tikzpicture} \n\\end{center}",
+            "html": "<p>Décrire ce que permet de réaliser ce réseau de neurones :</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "tPb8",
+      "titre": "Classification linéaire par un perceptron",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T16:08:32.027Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T16:08:32.027Z"
+      },
+      "contenu": [
+        {
+          "id": "355abe0e-c9b1-44fe-b8a1-f88c9a6293d5",
+          "type": "question",
+          "value": {
+            "latex": "Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. Justifier.\n\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.6]\n\t\t\\tikzstyle{rouge} = [fill,rectangle,red,scale=1.2];\n\t\t\\tikzstyle{bleu} = [fill,circle,blue] ;\n\t\t\n\t\t\n\t\t\\draw[gray] (-4,-4) grid ++(8,8);\n\t\t\\draw[->,>=latex, very thick,black] (-4.5,0)--(5,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, black] (0,-4.1)--(0,5) node[left] {$y$};\n\t\t\n\t\t\n\t\t\\foreach \\x/\\y in {-2/3,-1/2,-3/-0.3,1/1.8,2.3/3.1}{\n\t\t\t\\node[bleu] at (\\x,\\y) {};\n\t\t}\n\t\t\\foreach \\x/\\y in {1/-2,3/-1,1.5/-2.5,0/-3,-2.2/-3.3}{\n\t\t\t\\node[rouge] at (\\x,\\y) {};\n\t\t}\n\t\t\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-4,-4) rectangle (4,4);\n\t\t\t\\draw[red,ultra thick] (4,3) -- (-4,-2);\n\t\t\t\\fill[red!50,opacity=0.5] (4,3) -- (4,-4) --(-4,-4)--(-4,-2) -- cycle;\n\t\t\t\\fill[blue!20,opacity=0.5] (4,3) -- (4,4) --(-4,4)--(-4,-2) -- cycle;\n\t\t\t\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\n\t\t\\node[scale=1,red,below] at (4,-4) {$F(x,y)=1$};\n\t\t\\node[scale=1,blue,above] at (-4,4) {$F(x,y)=0$};\n\t\t\n\t\t\n\t\t\n\t\\end{tikzpicture}\n\\end{center}",
+            "html": "<p>Décrire un perceptron qui permet de réaliser la classification entre\nles points bleus et les points rouges comme dans le graphique\nci-dessous. Justifier.</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        },
+        {
+          "id": "a0c9ee91-9d14-44df-af87-c447381ca847",
+          "type": "reponse",
+          "value": {
+            "latex": "We want to separate the plane into to half planes. One can consider the red line defined by $y=5x/8+1/2$ that is $5x-8y+4 = 0$ or another line which separates as well, for example $5x-8y=0$.  So this perceptron can fit to this problem.\n\t\n\t\n\t\\begin{center}\n\t\t\\begin{tikzpicture}[scale=0.5]\n\t\t\t\\draw[thick,fill=black!10] (0,0) circle (2);\n\t\t\t\\node at (150:9) {$x$};\n\t\t\t\\node at (190:9) {$y$};\n\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.3,above]{$5$};;\n\t\t\t\\draw[ultra thick]  (190:3) -- (190:8) node[pos=0.3,above]{$-8$};\n\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.3,above]{$4$};\n\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0) node[right] {};\n\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\\end{tikzpicture}  \n\t\\end{center}",
+            "html": "<p>We want to separate the plane into to half planes. One can consider\nthe red line defined by <span class=\"math inline\">\\(y=5x/8+1/2\\)</span>\nthat is <span class=\"math inline\">\\(5x-8y+4 = 0\\)</span> or another line\nwhich separates as well, for example <span\nclass=\"math inline\">\\(5x-8y=0\\)</span>. So this perceptron can fit to\nthis problem.</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "xkLh",
+      "titre": "Classification linéaire par un perceptron",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T15:59:41.094Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:41.094Z"
+      },
+      "contenu": [
+        {
+          "id": "6751784a-1f8e-4c43-a9dc-f90331e50f1f",
+          "type": "question",
+          "value": {
+            "latex": "Expliquer à l'aide d'un graphique ce que réalise le réseau de neurones suivant :\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$H$};\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$1$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$1$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$0$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-130:0.8);\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-2$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}",
+            "html": "<p>Expliquer à l’aide d’un graphique ce que réalise le réseau de\nneurones suivant :</p>\n<div class=\"center\">\n\n</div>\n"
           }
         }
       ]
@@ -15631,6 +15759,78 @@
       ]
     },
     {
+      "uuid": "5NS7",
+      "titre": "Fonction d'erreur d'un réseau de neurones",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T15:59:40.717Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:40.717Z"
+      },
+      "contenu": [
+        {
+          "id": "6eed2a56-826f-40e0-8101-072595eb63e6",
+          "type": "description",
+          "value": {
+            "latex": "On considère le réseau de neurones suivant :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{neuron}=[circle,fill=red!50,minimum size=12pt,inner sep=0pt]\n\t\t\n\t\t\n\t\t\\node[blue] (E) at (-\\layersep,0) {$x$};\n\t\t\t\n\t\t\n\t\t\\node[neuron] (F) at (0,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (F) {$g_1$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (F) {};\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.8]{$a$} (F);\n\t\t\\draw[-o,thick] (F) to node[midway,below right,scale=0.8]{$b$} ++ (-130:1.3);\n\t\t\n\t\t\n\t\t\\node[neuron] (G) at (\\layersep,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (G) {$g_2$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (G) {$...$};\n\t\t\\path[thick] (F) edge node[pos=0.8,above,scale=0.8]{$c$} (G);\n\t\t\n\t\t\\draw[->,>=latex,thick] (G)-- ++(2,0) node[right,blue]{$F(x,a,b,c)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}\n\n\noù $g_1$ et $g_2$ sont la fonction ReLu. \n\n\n\n\t{\\centering \\fbox{\\BUseVerbatim{5NS7}}\\par}\n\nLa fonction d'erreur est : \n$$E(a,b,c) = \\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)$$\noù $E_i = (F(x_i)-t_i)^2$ avec les données d'entraînement suivantes $(x_i,t_i)$ pour 3 valeurs : $(1,2), (-2,0), (3,3)$.",
+            "html": "<p>On considère le réseau de neurones suivant :</p>\n<div class=\"center\">\n\n</div>\n<p>où <span class=\"math inline\">\\(g_1\\)</span> et <span\nclass=\"math inline\">\\(g_2\\)</span> sont la fonction ReLu.</p>\n<p>La fonction d’erreur est : <span class=\"math display\">\\[E(a,b,c) =\n\\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)\\]</span> où <span\nclass=\"math inline\">\\(E_i = (F(x_i)-t_i)^2\\)</span> avec les données\nd’entraînement suivantes <span class=\"math inline\">\\((x_i,t_i)\\)</span>\npour 3 valeurs : <span class=\"math inline\">\\((1,2), (-2,0),\n(3,3)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "84d23e91-caff-49d0-a4e9-793fac3bc6a0",
+          "type": "question",
+          "value": {
+            "latex": "Calculez l'erreur des données d'entraînement (évaluez la fonction de perte) lorsque $(a,b,c) = (-1,2,1)$.",
+            "html": "<p>Calculez l’erreur des données d’entraînement (évaluez la fonction de\nperte) lorsque <span class=\"math inline\">\\((a,b,c) =\n(-1,2,1)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "e7155d2d-f030-491e-a722-f919bf46f602",
+          "type": "reponse",
+          "value": {
+            "latex": "La fonction est $F(x,a,b,c) = c(ax+b)$ si $ax+b \\geq 0$, c'est-à-dire $-x+2$ si $x \\leq 2$, $0$ sinon. Alors $F(1) = 1$, $F(-2) = 4$ et $F(3) = 0$. \n\t\t\n\t\tAinsi, $E(-1,2,1) = \\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}$.",
+            "html": "<p>La fonction est <span class=\"math inline\">\\(F(x,a,b,c) =\nc(ax+b)\\)</span> si <span class=\"math inline\">\\(ax+b \\geq 0\\)</span>,\nc’est-à-dire <span class=\"math inline\">\\(-x+2\\)</span> si <span\nclass=\"math inline\">\\(x \\leq 2\\)</span>, <span\nclass=\"math inline\">\\(0\\)</span> sinon. Alors <span\nclass=\"math inline\">\\(F(1) = 1\\)</span>, <span\nclass=\"math inline\">\\(F(-2) = 4\\)</span> et <span\nclass=\"math inline\">\\(F(3) = 0\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(E(-1,2,1) =\n\\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "bdef7778-2259-4f95-ae77-1314d3c401c1",
+          "type": "description",
+          "value": {
+            "latex": "Supposons que $x = 3$ et $(a,b,c) = (1,-1,2)$.",
+            "html": "<p>Supposons que <span class=\"math inline\">\\(x = 3\\)</span> et <span\nclass=\"math inline\">\\((a,b,c) = (1,-1,2)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "f965becd-53e1-4849-8b7a-b54ebc587112",
+          "type": "question",
+          "value": {
+            "latex": "Calculez $\\frac{\\partial F}{\\partial c}$ en utilisant les règles ci-dessus.",
+            "html": "<p>Calculez <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial\nc}\\)</span> en utilisant les règles ci-dessus.</p>\n"
+          }
+        },
+        {
+          "id": "ec9db824-4d5b-4f66-b0f3-bd325a9053c7",
+          "type": "reponse",
+          "value": {
+            "latex": "On a $ax+b = 3-1 = 2$, donc $\\frac{\\partial F}{\\partial c} = 1 \\times 2 = 2$.",
+            "html": "<p>On a <span class=\"math inline\">\\(ax+b = 3-1 = 2\\)</span>, donc <span\nclass=\"math inline\">\\(\\frac{\\partial F}{\\partial c} = 1 \\times 2 =\n2\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "59815b8c-e4d4-4af1-8a2c-08663b909659",
+          "type": "reponse",
+          "value": {
+            "latex": "On a $\\frac{\\partial F}{\\partial a} = 3 \\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} = 6$ et $\\frac{\\partial F}{\\partial b} = \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} = 2$.",
+            "html": "<p>On a <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial a} = 3\n\\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} =\n6\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial b}\n= \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} =\n2\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "Lmme",
       "titre": "Fonction de $n$ variables et laplacien nul",
       "theme": [
@@ -16209,6 +16409,38 @@
           "value": {
             "latex": "La fonction $f$ est continue sur $\\R$ donc d'après le théorème de Dirichlet, pour tout $x \\in \\R$, $$f(x) = \\frac{\\pi}{2} + \\sum_{n = 0}^{+\\infty} \\frac{4}{(2n+1)^2\\pi} \\cos((2n+1)x)$$\n\t\tDonc en particulier pour $x = 0$, on a \n\t\t$$f(0) = \\sum_{n = 0}^{+\\infty} \\frac{4}{(2n+1)^2\\pi}$$\n\t\tOr $f(0) = \\pi$ donc \n\t\t$$\\pi = \\frac{\\pi}{2} + \\sum_{n = 0}^{+\\infty} \\frac{4}{(2n+1)^2\\pi}$$\n\t\tdonc $$\\sum_{n=0}^{+\\infty} \\frac{1}{(2n+1)^2} = \\frac{\\pi^2}{8}$$",
             "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est continue sur\n<span class=\"math inline\">\\(\\R\\)</span> donc d’après le théorème de\nDirichlet, pour tout <span class=\"math inline\">\\(x \\in \\R\\)</span>,\n<span class=\"math display\">\\[f(x) = \\frac{\\pi}{2} + \\sum_{n =\n0}^{+\\infty} \\frac{4}{(2n+1)^2\\pi} \\cos((2n+1)x)\\]</span> Donc en\nparticulier pour <span class=\"math inline\">\\(x = 0\\)</span>, on a <span\nclass=\"math display\">\\[f(0) = \\sum_{n = 0}^{+\\infty}\n\\frac{4}{(2n+1)^2\\pi}\\]</span> Or <span class=\"math inline\">\\(f(0) =\n\\pi\\)</span> donc <span class=\"math display\">\\[\\pi = \\frac{\\pi}{2} +\n\\sum_{n = 0}^{+\\infty} \\frac{4}{(2n+1)^2\\pi}\\]</span> donc <span\nclass=\"math display\">\\[\\sum_{n=0}^{+\\infty} \\frac{1}{(2n+1)^2} =\n\\frac{\\pi^2}{8}\\]</span></p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "Bekb",
+      "titre": "Fonction réalisée par un réseau de neurones",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T15:59:40.916Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:40.916Z"
+      },
+      "contenu": [
+        {
+          "id": "924cfbf4-3d05-46d5-88b3-fb14f9339c03",
+          "type": "question",
+          "value": {
+            "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$H$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/2$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/4$} (I-3) ;\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$1/3$} (I-4);\n\t\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$3$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$3$}(O);\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$2$} (O);\n\t\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$2$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-5$} ++ (-120:0.8) ;\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\t\n\t\t\n\t\\end{tikzpicture} \n\\end{center}",
+            "html": "<p>Décrire ce que permet de réaliser ce réseau de neurones :</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        },
+        {
+          "id": "f95dceb0-1974-4591-bbc8-90324f65f8eb",
+          "type": "reponse",
+          "value": {
+            "latex": "This neural network realizes the function $\\R \\to \\R$ as follows:\n\t\\begin{tikzpicture}[scale=1]\n\t\t\n\t\t\n\t\t\\draw[->,>=latex, gray] (-0.5,0)--(6,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, gray] (0,-0.5)--(0,4) node[left] {$y$};\n\t\t\n\t\t\n\t\t\\draw[ultra thick,red] (-0.5,0) -- (1,0);\n\t\t\\draw[ultra thick,red] (1,3) -- (2,3);\n\t\t\n\t\t\n\t\t\\draw[ultra thick,red] (2,0) -- (3,0);\n\t\t\\draw[ultra thick,red] (3,2) -- (4,2);\n\t\t\\draw[ultra thick,red] (4,0) -- (5,0) node[above]{$F(x)$};\n\t\t\n\t\t\n\t\t\\fill[black] (0,1) circle (1pt);\n\t\t\\fill[black] (1,0) circle (1pt);\n\t\t\n\t\t\n\t\t\\node at (0,0) [below left] {$0$};\n\t\t\\node at (0,1) [left] {$1$};\n\t\t\\node at (1,0) [below] {$1$};\n\t\t\n\t\t\n\t\t\\node at (1,0) [below] {$1$};\n\t\t\\node at (2,0) [below] {$2$};\n\t\t\\node at (3,0) [below] {$3$};\n\t\t\\node at (4,0) [below] {$4$};\n\t\t\n\t\t\n\t\t\\draw[dashed] (1,3)--(0,3) node[left]{$3$};\n\t\t\\draw[dashed] (3,2)--(0,2) node[left]{$2$};\n\t\t\n\t\t\n\t\t\\draw[dashed] (1,0)--(1,3);\n\t\t\\draw[dashed] (2,0)--(2,3);\n\t\t\\draw[dashed] (3,0)--(3,2);\n\t\t\\draw[dashed] (4,0)--(4,2);\n\t\t\n\t\t\n\t\\end{tikzpicture}",
+            "html": "<p>This neural network realizes the function <span\nclass=\"math inline\">\\(\\R \\to \\R\\)</span> as follows:</p>\n"
           }
         }
       ]
@@ -23383,30 +23615,6 @@
       ]
     },
     {
-      "uuid": "ReNe",
-      "titre": "OPTRN",
-      "theme": [
-        "Réseau de neurones"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "",
-        "createdAt": "2024-11-16T11:14:51.430Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-16T11:14:51.430Z"
-      },
-      "contenu": [
-        {
-          "id": "6da461f8-2337-495d-9900-b8794f0fe8bc",
-          "type": "description",
-          "value": {
-            "latex": "Soit le réseau de neurones multicouches décrit pas le graphe suivant:\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$1$};\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$x$};\n\\node[entree,blue] (E-3) at (-\\layersep,-5) {$1$};\n\n\n\n\\node[input neuron] (I-1) at (0,-1.5) {};\n\\node[input neuron] (I-3) at (0,-3.75) {};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {$\\Sigma$};\n\n\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\Sigma$};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\\node[below right=0.8ex,scale=0.7] at (I-3) {};\n\n\n\n\n\n\n\n\\node[hidden neuron] (O) at (\\layersep,-3.75 cm) {};\n\\node[hidden neuron] (P) at (\\layersep,-1.5 cm) {};\n\\node[above right=0.8ex,scale=0.7] at (O) {$h_{12}$};\n\\node[right=0.5ex,scale=0.7] at (P) {$h_{11}$};\n\n\n\\path[thick] (E-1) edge node[pos=0.5,above,scale=0.7]{$w_{1}$} (I-1) ;\n\\path[thick] (E-2) edge node[pos=0.5,above left,scale=0.7]{$w_{2}$} (I-1);\n\\path[thick] (E-2) edge node[pos=0.5,above,scale=0.7]{$w_4$} (I-3);\n\\path[thick] (E-3) edge node[pos=0.5,above,scale=0.7]{$w_3$} (I-3);\n\\path[thick] (I-1) edge node[pos=0.5,above,scale=0.7]{$f_{11}$} (P);\n\\path[thick] (I-3) edge node[pos=0.5,below,scale=0.7]{$f_{12}$}(O);\n\\node[below right=0.8ex,scale=0.5] at (O) {$\\text{Sigmoide}$};\n\\node[below =0.8ex,scale=0.5] at (P) {$\\text{Sigmoide}$};\n\n\\node[hidden neuron] (Q) at (2*\\layersep,-2.5 cm) {};\n\\node[output neuron] (R) at (3*\\layersep,-2.5 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (R) {$\\text{Id}$};\n\\node[input neuron] (I-4) at (2.5,-0.5) {$1$};\n\\path[thick] (O) edge node[pos=0.6,above,scale=0.7]{$w_{7}$} (Q) ;\n\\node[below right=0.8ex,scale=0.7] at (Q) {$\\Sigma$};\n\\path[thick] (I-4) edge node[pos=0.5,above,scale=0.7]{$w_{5}$} (Q) ;\n\\path[thick] (Q) edge node[pos=0.5,above,scale=0.7]{$f_{21}$} (R);\n\\path[thick] (P) edge node[pos=0.5,above,scale=0.7]{$w_{6}$} (Q) ;\n\n\\draw[->,thick] (R)-- ++(2,0) node[right,blue]{$\\hat{y}$};\n \n     \n\n\n\n\n\\end{tikzpicture}  \n\\end{center}\n\\begin{enumerate}\n\\item Donner les formules qui déterminent les sorties intermédiaires $f_{11},\\,f_{12},\\,h_{11},\\,h_{12}$ et $f_{21}$ ainsi que la sortie finale $\\hat{y}$.\n\\item On pose la fonction d'erreur $E(w)=(y-\\hat{y})^2.$ En appliquant l'algorithme de backpropagation, déterminer les dérivées partielles $\\frac{\\partial E(w)}{\\partial w_j}$ puis $\\frac{\\hat{y}}{\\partial w_j}$. En déduire les expressions des mises à jour des paramètres $\\Delta w_j$ pour $j=1,\\cdots{},7$. \n\n\n\\end{enumerate}",
-            "html": "<p>Soit le réseau de neurones multicouches décrit pas le graphe\nsuivant:</p>\n<div class=\"center\">\n\n</div>\n<ol>\n<li><p>Donner les formules qui déterminent les sorties intermédiaires\n<span class=\"math inline\">\\(f_{11},\\,f_{12},\\,h_{11},\\,h_{12}\\)</span>\net <span class=\"math inline\">\\(f_{21}\\)</span> ainsi que la sortie\nfinale <span class=\"math inline\">\\(\\hat{y}\\)</span>.</p></li>\n<li><p>On pose la fonction d’erreur <span\nclass=\"math inline\">\\(E(w)=(y-\\hat{y})^2.\\)</span> En appliquant\nl’algorithme de backpropagation, déterminer les dérivées partielles\n<span class=\"math inline\">\\(\\frac{\\partial E(w)}{\\partial w_j}\\)</span>\npuis <span class=\"math inline\">\\(\\frac{\\hat{y}}{\\partial w_j}\\)</span>.\nEn déduire les expressions des mises à jour des paramètres <span\nclass=\"math inline\">\\(\\Delta w_j\\)</span> pour <span\nclass=\"math inline\">\\(j=1,\\cdots{},7\\)</span>.</p></li>\n</ol>\n"
-          }
-        }
-      ]
-    },
-    {
       "uuid": "ElA1",
       "titre": "Ouverts et fermés dans $\\R^2$",
       "theme": [
@@ -25738,6 +25946,62 @@
           "value": {
             "latex": "On peut remarquer que la hessienne est constante en $a$ et $b$ (car la fonciton $R$ est polynomiale de degré $2$). Il suffit donc de montrer que $\\langle X, H X \\rangle \\ge 0$ pour tout vecteur $X = \\begin{pmatrix} a \\\\ b \\end{pmatrix} \\in \\R^2$, où $H$ est la hessienne obtenue précédemment. Ce produit scalaire s'écrit, après développement : $$ \\frac{1}{4} \\langle X, H X \\rangle = a^2 \\sum_{i=1}^n x_i^2 + 2 a b \\sum_{i=1}^n x_i  + b^2 n.$$ Par Cauchy-Schwarz, on a $\\sum_{i=1}^n x_i^2 \\ge \\frac{1}{n} \\left(\\sum_{i=1}^n x_i \\right)^2$, d'où il vient : $$ \\frac{1}{4} \\langle X, H X \\rangle  \\ge \\frac{1}{n}\\left(a \\sum_{i=1}^n x_i + b n \\right)^2 \\ge 0,$$ comme voulu.",
             "html": "<p>On peut remarquer que la hessienne est constante en <span\nclass=\"math inline\">\\(a\\)</span> et <span\nclass=\"math inline\">\\(b\\)</span> (car la fonciton <span\nclass=\"math inline\">\\(R\\)</span> est polynomiale de degré <span\nclass=\"math inline\">\\(2\\)</span>). Il suffit donc de montrer que <span\nclass=\"math inline\">\\(\\langle X, H X \\rangle \\ge 0\\)</span> pour tout\nvecteur <span class=\"math inline\">\\(X = \\begin{pmatrix} a \\\\ b\n\\end{pmatrix} \\in \\R^2\\)</span>, où <span\nclass=\"math inline\">\\(H\\)</span> est la hessienne obtenue précédemment.\nCe produit scalaire s’écrit, après développement : <span\nclass=\"math display\">\\[\\frac{1}{4} \\langle X, H X \\rangle = a^2\n\\sum_{i=1}^n x_i^2 + 2 a b \\sum_{i=1}^n x_i  + b^2 n.\\]</span> Par\nCauchy-Schwarz, on a <span class=\"math inline\">\\(\\sum_{i=1}^n x_i^2 \\ge\n\\frac{1}{n} \\left(\\sum_{i=1}^n x_i \\right)^2\\)</span>, d’où il vient :\n<span class=\"math display\">\\[\\frac{1}{4} \\langle X, H X \\rangle  \\ge\n\\frac{1}{n}\\left(a \\sum_{i=1}^n x_i + b n \\right)^2 \\ge 0,\\]</span>\ncomme voulu.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "qAIw",
+      "titre": "Représentation d'une fonction réelle par un réseau de neurones",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T16:08:31.982Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T16:08:31.982Z"
+      },
+      "contenu": [
+        {
+          "id": "1ad418ac-fcd4-4090-8ad1-00a80c98f6ef",
+          "type": "question",
+          "value": {
+            "latex": "Concevoir un réseau de neurones qui réalises la fonction $\\R \\to \\R$ suivante :\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.7]\n\t\n\t\\draw[->,>=latex, gray] (-0.5,0)--(6,0) node[below] {$x$};\n\t\\draw[->,>=latex, gray] (0,-0.5)--(0,4) node[left] {$y$};\n\t\n\t\\draw[ultra thick,red] (-0.5,0) -- (2,0);\n\t\\draw[ultra thick,red] (2,3) -- (4,3);\n\t\n\t\n\t\n\t\\draw[ultra thick,red] (4,0) -- (6,0) node[above]{$F(x)$};\n\t\n\t\\fill[black] (0,1) circle (1pt);\n\t\\fill[black] (1,0) circle (1pt);\n\t\n\t\\node at (0,0) [below left] {$0$};\n\t\\node at (0,1) [left] {$1$};\n\t\\node at (1,0) [below] {$1$};\n\t\n\t\\node at (2,0) [below] {$2$};\n\t\n\t\\node at (4,0) [below] {$4$};\n\t\n\t\n\t\n\t\\draw[dashed] (2,3)--(0,3) node[left]{$3$};\n\t\n\t\n\t\\draw[dashed] (2,0)--(2,3);\n\t\\draw[dashed] (4,0)--(4,3);\n\t\n\t\n\\end{tikzpicture}\t\n\\end{center}",
+            "html": "<p>Concevoir un réseau de neurones qui réalises la fonction <span\nclass=\"math inline\">\\(\\R \\to \\R\\)</span> suivante :</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "653s",
+      "titre": "Réseau de neurones multicouches",
+      "theme": [
+        "Réseau de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-11-17T15:59:40.805Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-11-17T15:59:40.805Z"
+      },
+      "contenu": [
+        {
+          "id": "dc55a105-878c-464a-b84b-122c084ed4df",
+          "type": "question",
+          "value": {
+            "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\\node[input neuron] (I-2) at (0,-1.5) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$H$};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$2$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$0$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$-2$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$0$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$3$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}",
+            "html": "<p>Décrire ce que permet de réaliser ce réseau de neurones :</p>\n<div class=\"center\">\n\n</div>\n"
+          }
+        },
+        {
+          "id": "89e6fa06-a9ce-4377-b9a2-fe77440e9ec6",
+          "type": "reponse",
+          "value": {
+            "latex": "This neural network has three neurons in the first layer, each one car separate the plane into to half planes. The second layer is made by only one neuron which is the AND neuron. \n\t\n\tSo this neural network has output $1$ if $(x,y)$ is at the intersection of the 3 half planes, $0$ if not. Precisely, can separate the plane into two parts as following:\n\t\n\t\\begin{tikzpicture}[scale=1]\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-2,-1) rectangle (8,5);\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (1.33,0.66) -- (-10,-5);\n\t\t\t\\draw[red,ultra thick] (1.33,0.66) -- (6,3);\n\t\t\t\\draw[ultra thick,dashed] (6,3) -- (10,5);\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (-1,3) -- (-7,3);\n\t\t\t\\draw[red,ultra thick] (-1,3) -- (6,3);\n\t\t\t\\draw[ultra thick,dashed] (6,3) -- (8,3);\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (-6,8) -- (-1,3);\n\t\t\t\\draw[ red,ultra thick] (-1,3)--(1.33,0.66);\n\t\t\t\\draw[ultra thick,dashed] (1.33,0.66)--(6,-4);\n\t\t\t\n\t\t\t\n\t\t\t\\fill[red!50,opacity=0.5] (1.33,0.66) -- (-1,3) -- (6,3) -- cycle;\n\t\t\t\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\n\t\t\\draw[->,>=latex, very thick,gray] (-2.5,0)--(9,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, gray] (0,-1.5)--(0,6) node[left] {$y$};\n\t\t\\draw[gray,thin] (-2,-1) grid (8,5);\n\t\t\n\t\t\n\t\t\\node[left] at (-2,4) {$x+y-2=0$};\n\t\t\\node[left] at (-2,3) {$-y+3=0$};\n\t\t\\node[right] at (8,4) {$-x+2y=0$};\n\t\t\n\t\t\n\t\t\\node[scale=1.2,red] at (2,2.3) {$F(x,y)=1$};\n\t\t\n\t\t\n\t\t\\node at (0,0) [below left] {$0$};\n\t\t\\node at (1,0) [below right] {$1$};\n\t\t\\node at (0,1) [above left] {$1$};\n\t\t\n\t\t\n\t\\end{tikzpicture}",
+            "html": "<p>This neural network has three neurons in the first layer, each one\ncar separate the plane into to half planes. The second layer is made by\nonly one neuron which is the AND neuron.</p>\n<p>So this neural network has output <span\nclass=\"math inline\">\\(1\\)</span> if <span\nclass=\"math inline\">\\((x,y)\\)</span> is at the intersection of the 3\nhalf planes, <span class=\"math inline\">\\(0\\)</span> if not. Precisely,\ncan separate the plane into two parts as following:</p>\n"
           }
         }
       ]
