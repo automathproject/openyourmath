@@ -3,6 +3,7 @@
   import { fade, fly, slide, scale } from "svelte/transition";
   import { quadOut } from "svelte/easing";
   import MathRenderer from "./MathRenderer.svelte";
+  import ExerciceHeader from "./ExerciceHeader.svelte";
 
   export let ExerciceData;
   const latexTypes = ["description", "question", "reponse"];
@@ -113,25 +114,7 @@ function toggleMetadata() {
           </div>
       
           {#if showMetadata}
-            <div class="metadata" transition:slide={{ duration: 300, easing: quadOut }}>
-              <div class="tags">
-                {#each ExerciceData.theme as theme}
-                  <span class="tag">{theme}</span>
-                {/each}
-              </div>
-      
-              <div class="metadata-group">
-                <span class="metadata-item">{ExerciceData.metadata.auteur}</span>
-                {#if ExerciceData.metadata.organisation}
-                  <span class="metadata-separator">•</span>
-                  <span class="metadata-item">{ExerciceData.metadata.organisation}</span>
-                {/if}
-                <span class="metadata-separator">•</span>
-                <div class="date">
-                  {formatDate(ExerciceData.metadata.createdAt)}
-                </div>
-              </div>
-            </div>
+          <ExerciceHeader metadata={ExerciceData.metadata} />
           {/if} 
           </div>
 
