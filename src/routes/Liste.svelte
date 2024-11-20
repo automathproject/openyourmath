@@ -1,5 +1,5 @@
 <script lang="ts">
-    import MathRenderer from './MathRenderer.svelte';
+    import MathRenderer from '../components/MathRenderer.svelte';
     import { onMount } from 'svelte';
     import { goto } from '$app/navigation';
     import { page } from '$app/stores';

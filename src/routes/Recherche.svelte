@@ -1,8 +1,8 @@
 <!-- Composant de recherche des exercices -->
 <script lang="ts">
   import { onMount } from 'svelte';
-  import ExerciceRenderer from './ExerciceRenderer.svelte';
-  import MathRenderer from './MathRenderer.svelte';
+  import ExerciceRenderer from '../components/ExerciceRenderer.svelte';
+  import MathRenderer from '../components/MathRenderer.svelte';
 
   export let onSelect: (uuid: string) => void;
 

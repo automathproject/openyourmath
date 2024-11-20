@@ -9,7 +9,7 @@
     import Liste from '../Liste.svelte';
     
     import { get } from 'svelte/store';
-    import ExerciceRenderer from '../ExerciceRenderer.svelte';
+    import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     
     // Variables liées au champ de saisie
     let inputUuid: string = '';

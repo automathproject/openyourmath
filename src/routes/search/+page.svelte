@@ -4,8 +4,8 @@
     import { ExerciceSearchEngine } from '$lib/utils/search';
     import type { Exercice } from '$lib/types/types';
     import Modal from '../../components/Modal.svelte';
-    import ExerciceRenderer from '../ExerciceRenderer.svelte';
-    import MathRenderer from '../MathRenderer.svelte';
+    import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
+    import MathRenderer from '../../components/MathRenderer.svelte';
     
     export let data;
     

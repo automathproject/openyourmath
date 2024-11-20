@@ -1,5 +1,6 @@
 <script>
 	import Header from './Header.svelte';
+	import 'katex/dist/katex.min.css';
 	import '../app.css';
    </script>
    
@@ -18,6 +19,8 @@
 	   --header-height: 3.5rem;
 	   --header-height-mobile: 3rem;
 	 }
+
+
    
 	 .app {
 	   display: flex;

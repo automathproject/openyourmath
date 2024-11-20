@@ -1,7 +1,7 @@
 <!-- src/components/Exercice.svelte -->
 <script>
   import { fade, fly, slide, scale } from 'svelte/transition'; // Import de plusieurs transitions
-  import MathRenderer from './MathRenderer.svelte';
+  import MathRenderer from '../components/MathRenderer.svelte';
 
   export let ExerciceData;
   const latexTypes = ['texte', 'question', 'reponse'];
