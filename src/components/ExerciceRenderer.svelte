@@ -126,30 +126,16 @@ function toggleMetadata() {
 
           <div class="right-section">
             <div class="button-group">
-<ReponsesToggleButton
-  showReponses={showReponses}
-  onToggle={toggleReponses} />
+              <ReponsesToggleButton
+                showReponses={showReponses}
+                onToggle={toggleReponses} 
+              />
             
               {#if isFullscreen}
-                <button
-                  on:click={toggleFontSize}
-                  class="control-button font-size-button"
-                  class:active={isLargeFont}
-                  title={isLargeFont ? "Taille normale" : "Agrandir le texte"}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <text x="4" y="18" font-size="18" font-family="sans-serif">A</text>
-                    <text x="12" y="18" font-size="12" font-family="sans-serif">A</text>
-                  </svg>
-                </button>
+                <FontSizeToggleButton
+                  isLargeFont={isLargeFont}
+                  onToggle={toggleFontSize}
+                />
               {/if}
             
               <FullscreenToggleButton
@@ -482,22 +468,7 @@ function toggleMetadata() {
   font-size: 1.3rem;
 }
 
-/* Style pour le bouton de taille de police */
-.font-size-button {
-  background: #4a5568;
-  color: white;
-  border-color: #4a5568;
-}
 
-.font-size-button:hover {
-  background: #2d3748;
-  border-color: #2d3748;
-}
-
-.font-size-button.active {
-  background: #2d3748;
-  border-color: #2d3748;
-}
 
 
 </style>
