@@ -4,9 +4,7 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
     import 'katex/dist/katex.min.css';
-    import Exercice from '../Exercice.svelte';
     import Recherche from '../Recherche.svelte';
-    import Liste from '../Liste.svelte';
     
     import { get } from 'svelte/store';
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
