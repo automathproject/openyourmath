@@ -20,16 +20,26 @@
     let loadingExercise: boolean = false; // Indicateur de chargement pour l'exercice
     let showList = true; // Variable pour contrôler l'affichage de la liste
     
-    // Fonction pour charger les données de l'exercice
+    import { browser } from '$app/environment';
+
+    // Fonction pour vérifier si on est sur un petit écran
+    function isSmallScreen() {
+        return browser && window.innerWidth <= 768;
+    }
+
+    // Modifie la fonction loadExerciseData
     async function loadExerciseData(uuid: string) {
       if (uuid) {
         loadingExercise = true;
         try {
-          // Utiliser un chemin absolu pour éviter les problèmes de résolution
           const response = await fetch(`/content/json2/${uuid}.json`);
           if (response.ok) {
             exerciseData = await response.json();
             errorMessage = '';
+            // Masque automatiquement la liste sur petit écran quand l'exercice est chargé
+            if (isSmallScreen()) {
+                showList = false;
+            }
           } else {
             exerciseData = null;
             errorMessage = `Erreur lors du chargement de l'exercice : ${response.statusText}`;
@@ -44,9 +54,29 @@
         exerciseData = null;
         errorMessage = 'Aucun exercice sélectionné';
       }
-
-
     }
+
+    // Optionnel : Gérer le redimensionnement de la fenêtre
+    onMount(() => {
+        const initialUuid = get(page).url.searchParams.get('uuid');
+        if (initialUuid) {
+            exerciseUuid = initialUuid;
+            inputUuid = initialUuid;
+            loadExerciseData(exerciseUuid);
+        }
+
+        // Ajouter un gestionnaire de redimensionnement si nécessaire
+        const handleResize = () => {
+            if (exerciseData && isSmallScreen()) {
+                showList = false;
+            }
+        };
+
+        if (browser) {
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
+    });
     function toggleList() {
         showList = !showList;
       }
