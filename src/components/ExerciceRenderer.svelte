@@ -1,4 +1,4 @@
-<!-- src/routes/ExerciceRenderer.svelte -->
+<!-- src/components/ExerciceRenderer.svelte -->
 <script lang="ts">
   import { fade, fly, slide, scale } from "svelte/transition";
   import { quadOut } from "svelte/easing";
@@ -120,12 +120,7 @@ function toggleMetadata() {
           </div>
       
           {#if showMetadata}
-          <ExerciceHeader metadata={ExerciceData.metadata} />
-          <div class="tags">
-            {#each ExerciceData.theme as theme}
-              <span class="tag">{theme}</span>
-            {/each}
-          </div>
+          <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme}/>
           {/if} 
           </div>
 
@@ -358,10 +353,7 @@ function toggleMetadata() {
     padding-bottom: 0.75rem;
   }
   
-  .tag {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.75rem;
-  }
+
   
   .metadata-group {
     font-size: 0.75rem;

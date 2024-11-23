@@ -1,5 +1,10 @@
+<!-- src/components/ExerciceHeader.svelte -->
 <script lang="ts">
+    import { slide } from 'svelte/transition';
+    import { quadOut } from 'svelte/easing';
+
     export let metadata;
+    export let themes;
   
     function formatDate(dateString: string): string {
       const date = new Date(dateString);
@@ -11,7 +16,17 @@
     }
   </script>
   
-  <div class="metadata">
+  <div class="metadata" transition:slide={{ duration: 100, easing: quadOut }}>
+    <!-- Ligne des thèmes -->
+    <div class="themes-row">
+      <div class="tags">
+        {#each themes as theme}
+          <span class="tag">{theme}</span>
+        {/each}
+      </div>
+    </div>
+  
+    <!-- Autres métadonnées -->
     <div class="metadata-group">
       <span class="metadata-item">{metadata.auteur}</span>
       {#if metadata.organisation}
@@ -39,5 +54,14 @@
     .metadata-separator {
       color: #aaa;
     }
+    .tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+  }
+  .themes-row {
+    display: flex;
+    flex-wrap: wrap; /* Permet de gérer plusieurs thèmes sur une même ligne */
+    gap: 0.5rem; /* Espacement entre les tags */
+  }
   </style>
   
