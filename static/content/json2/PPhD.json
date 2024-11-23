@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-16T11:14:49.691Z",
+    "createdAt": "2024-11-23T17:27:32.299Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:49.691Z"
+    "updatedAt": "2024-11-23T17:27:32.299Z"
   },
   "contenu": [
     {
-      "id": "b0c7ab04-0526-4369-857d-8fe741e6af5e",
+      "id": "15151e89-7275-4694-8325-62c3285dc780",
       "type": "question",
       "value": {
         "latex": "Déterminer la valeur de $k$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "38f318ab-6d86-4c8d-9099-838917171d4d",
+      "id": "47ccfd36-ab14-4fc7-a7c8-08260a726373",
       "type": "reponse",
       "value": {
         "latex": "Pour que $f_X$ soit une densité, il faut que $\\int_{\\R} f_X(x) dx = 1$. On a donc :\n    $$\\begin{align*}\n        \\int_{\\R} f_X(x) dx &= \\int_{-1}^1 kx^2 dx \\\\\n        &= \\left[ \\frac{k}{3}x^3 \\right]_{-1}^1 \\\\\n        &= \\frac{2k}{3} = 1\n    \\end{align*}$$\n    Donc $k = \\frac{3}{2}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "73d89fa0-249c-4dc8-9dd1-434412046625",
+      "id": "45c513f4-457b-49ed-9bb7-62d6646f62e1",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition $F_X$ de $X$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "96eb7825-2877-4110-9bf2-484f6c1b3082",
+      "id": "8938b29e-409a-4c53-b7af-2f3d8db52598",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n        F_X \\colon t \\mapsto \\begin{cases}\n            0 & \\text{si } t < -1 \\\\\n            \\frac{3}{2} \\int_{-1}^t x^2 dx & \\text{si } t \\in [-1;1] \\\\\n            1 & \\text{si } t > 1\n        \\end{cases}\n    \\end{align*}$$\n    donc :\n    $$\\begin{align*}\n        F_X \\colon x \\mapsto \\begin{cases}\n            0 & \\text{si } t < -1 \\\\\n            \\frac{1}{2}t^3 + \\frac{1}{2} & \\text{si } t \\in [-1;1] \\\\\n            1 & \\text{si } t > 1\n        \\end{cases}\n    \\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "db6e127e-87f4-4415-ae52-bdc9b9e128c6",
+      "id": "8be61a9a-adb4-47ec-84c4-26472071b3ad",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob(X \\leq \\frac{1}{2} \\mid X > 0)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "38e8cec4-ec67-42c5-8819-1acb3f236188",
+      "id": "d351f845-b919-4771-9467-684a97cacf04",
       "type": "reponse",
       "value": {
         "latex": "D'après la formule des probabilités conditionnelles, on a :\n$$\\begin{align*}\n    \\prob(X \\leq \\frac{1}{2} \\mid X > 0) &= \\frac{\\prob(X \\leq \\frac{1}{2} \\cap X > 0)}{\\prob(X > 0)} \\\\\n    &= \\frac{\\prob(0 < X \\leq \\frac{1}{2})}{\\prob(X > 0)}\n\\end{align*}$$\nOr $\\prob(X>0) = 1 - \\prob(X \\leq 0) = 1 - F_X(0) = 1 - \\frac{1}{2} = \\frac{1}{2}$ et : \n$$\\begin{align*}\n    \\prob(0 < X \\leq \\frac{1}{2}) &= F_X(\\frac{1}{2}) - F_X(0) \\\\\n    &= \\frac{1}{2}(\\frac{1}{2})^3 + \\frac{1}{2} - \\frac{1}{2} \\\\\n    &= \\frac{1}{16} \n\\end{align*}$$\nDonc $\\prob(X \\leq \\frac{1}{2} \\mid X > 0) = \\frac{\\frac{1}{16}}{\\frac{1}{2}} = \\frac{1}{8}$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "56b751db-6140-423a-9fa9-500629f0eed6",
+      "id": "34761187-d21f-46f7-b23e-b74d962d57e3",
       "type": "question",
       "value": {
         "latex": "Calculer $\\E(X)$ et $\\var(X)$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "431bd2df-f42f-457d-9de9-e3f6bfd42838",
+      "id": "167e6d9c-5987-489d-b6f5-64b759deb015",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n        \\E(X) &= \\int_{\\R} xf_X(x) dx \\\\\n        &= \\int_{-1}^1 x \\frac{3}{2}x^2 dx \\\\\n        &= \\left[ \\frac{3}{8}x^4 \\right]_{-1}^1 \\\\\n        &= 0\n    \\end{align*}$$\n    D'après le théorème de transfert, on a : \n    $$\\begin{align*}\n        \\E(X^2) &= \\int_{\\R} x^2 f_X(x) dx \\\\\n        &= \\int_{-1}^1 x^2 \\frac{3}{2}x^2 dx \\\\\n        &= \\left[ \\frac{3}{10}x^5 \\right]_{-1}^1 \\\\\n        &= \\frac{3}{5}\n    \\end{align*}$$\n    Donc $\\var(X) = \\E(X^2) - \\E(X)^2 = \\frac{3}{5}$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "9af5bc1c-a72b-4b78-b130-0e7cc8355a17",
+      "id": "7fa0d296-b56e-4078-ba30-053fe1a8264d",
       "type": "question",
       "value": {
         "latex": "Soit $Y = X^2$. Déterminer la fonction de répartition $F_Y$ de $Y$ et en déduire sa densité.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "de981dfa-d022-4c2d-8986-50a8f069c1f1",
+      "id": "b49d6b13-8ea3-4836-94f9-838d7c891718",
       "type": "reponse",
       "value": {
         "latex": "Par définition, si $t \\in \\R$ alors $F_Y(t) = \\prob(Y \\leq t) = \\prob(X^2 \\leq t)$. Donc : \n    $$F_Y(t) = \\begin{cases}\n        0 & \\text{si } t < 0 \\\\\n        \\prob(-\\sqrt{t} \\leq X \\leq \\sqrt{t}) & \\text{si } t \\geq 0\n    \\end{cases}$$\n    Or si $t \\geq 0$, $\\prob(-\\sqrt{t} \\leq X \\leq \\sqrt{t}) = F_X(\\sqrt{t}) - F_X(-\\sqrt{t}) = \\begin{cases}\n        1 & \\text{si } t \\geq 1 \\\\\n        \\left[ \\frac{1}{2} x^3 \\right]_{-\\sqrt{t}}^{\\sqrt{t}} = t\\sqrt{t} & \\text{si } t \\in [0;1]\n    \\end{cases}$.\n\n    En définitive, $$F_Y(t) = \\begin{cases}\n        0 & \\text{si } t < 0 \\\\\n        t\\sqrt{t} & \\text{si } t \\in [0;1] \\\\\n        1 & \\text{si } t \\geq 1\n    \\end{cases}$$\nPar dérivation de la fonction de répartition, on obtient la densité de $Y$ : \n$$f_Y(t) = \\begin{cases}\n    \\frac{3}{2}\\sqrt{t} & \\text{si } t \\in [0;1] \\\\\n    0 & \\text{sinon}\n\\end{cases}$$",

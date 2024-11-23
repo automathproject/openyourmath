@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-16T11:14:22.154Z",
+    "createdAt": "2024-11-23T17:27:15.630Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:22.154Z"
+    "updatedAt": "2024-11-23T17:27:15.630Z"
   },
   "contenu": [
     {
-      "id": "28ded2ee-058e-470a-8e48-4e64f7e378d2",
+      "id": "a0f5d79b-18eb-4b49-a419-7944ce177b45",
       "type": "description",
       "value": {
         "latex": "On considère un échantillon $(X_i)$ de taille $n=5$ dans une population suivant une loi normale de paramètres $\\mu$ et $\\sigma^2$. \n\tOn pose \n\t$$T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i \\qquad {T_2} = \\frac15(X_1+X_2) +\\frac14 (X_3+X_4+X_5) \\qquad T_3 = \\frac{1}{10}(2X_1+3X_2)+\\frac{1}{8}(X_3+2X_4+X_5)$$\n\t$$U = \\frac{1}{\\sigma^2}\\sum_{i=1}^{5}  {(X_i-\\mu)^2} \\qquad V = \\frac{1}{\\sigma^2}\\sum_{i=1}^{5}  {(X_i-T_1)^2}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5095fac2-cb54-4ed2-91d1-4897d1641325",
+      "id": "f28d9477-6a87-4986-a1bc-495098745f60",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par la variable $X_1-X_2$ ? Justifier.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2d309de0-833c-4b0c-a6a3-eda4409aee72",
+      "id": "c9500e2d-23a1-4eae-972d-297c4b3cbb91",
       "type": "reponse",
       "value": {
         "latex": "D'après le cours, $X_1-X_2$ suit une loi normale d'espérance $\\mathbb{E}(X_1-X_2) = \\mu - \\mu = 0$. Par indépendance, $V(X_1-X_2) = V(X_1)+(-1)^2V(X_2) = 2\\sigma^2$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "a1641e41-2f3a-45b0-b5ab-b54ab721b3fb",
+      "id": "1fd70924-ad5e-4a70-96a0-f5432b9ea609",
       "type": "question",
       "value": {
         "latex": "On cherche à estimer $\\mu$ à l'aide des estimateurs $T_1$, $T_2$, $T_3$. \\'Etudier leur biais et comparer l'efficacité des estimateurs sans biais.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "b52f01f0-3ef6-4e99-bb8b-c3b437ec7372",
+      "id": "a7f44955-32fe-4dd3-95ca-66bf7d06f185",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance, on calcule $\\mathbb{E}(T_1) = \\frac{5\\mu}{5} = \\mu$, $\\mathbb{E}(T_2) = \\frac{2\\mu}{5}+\\frac{3\\mu}{4}$, $\\mathbb{E}(T_3) = \\mu$. Par conséquent, $B(T_1)=B(T_3)=0$ et $B(T_2) = \\mathbb{E}(T_2)-\\mu = \\frac{3\\mu}{20}$.\n\t\t\t\n\t\t\tPour comparer l'efficacité des deux estimateurs sais biais, on calcule leur EQM (ce qui revient à calculer leur variance.) Par indépendance des variables, on a :\n\t\t\t\n\t\t\t$V(T_1) = \\frac{\\sigma^2}{5} < V(T_3) = \\frac{147\\sigma^2}{800}$. Le plus efficace est donc l'estimateur $T_1$ qui est la moyenne empirique.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "dcca3225-7da2-4f6c-b8f1-6754b6e2a7cb",
+      "id": "d803fedc-c8d0-48ca-aa62-c8e0bca83cd3",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par la variable $U$ ? la variable $V$ ? justifier.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a56f3329-b791-47b0-b99b-aef3b0c428b0",
+      "id": "64646234-a9f8-4e3a-abfb-5aa285b033d8",
       "type": "reponse",
       "value": {
         "latex": "$U = \\sum_{i=1}^{5}  \\left(\\frac{X_i-\\mu}{\\sigma}\\right)^2$ ; or les $X_i$ sont des variables aléatoires indépendantes et $\\frac{X_i-\\mu}{\\sigma}$ suit une loi $\\mathcal{N}(0,1)$ donc par définition, $U$ suit une loi de $\\chi^2(5)$. \n\t\t\t\n\t\t\tDe plus, $T_1 = \\overline{X}$ est l'estimateur de moyenne empirique donc d'après le théorème de Fisher, $V$ suit une loi de $\\chi^2(5-1) = \\chi^2(4)$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f63acbe0-382d-4063-b9ae-82b694a53ae9",
+      "id": "a82b838a-ec03-43c5-a1cb-8b0b6f58c875",
       "type": "question",
       "value": {
         "latex": "Déterminer $x \\in \\R$ tel que $\\PP(U>x) = 0{,}05$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "fa14620d-0904-41f9-a93f-1572c145cbe8",
+      "id": "84628748-f980-4e23-bdf6-4493b942728a",
       "type": "reponse",
       "value": {
         "latex": "On lit dans la table de loi  $\\PP(U<x) = 0{,}95$ pour $x = 11{,}07$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "fcb0e08f-760b-4872-a708-33dd4286a40a",
+      "id": "16dac6c9-4982-4cc7-9339-4f9c9c136b99",
       "type": "question",
       "value": {
         "latex": "En utilisant $T_1$ et $U$, construire une variable $Y$ qui suive une loi de Student dont on précisera le paramètre.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "17d73d96-fde0-4b92-82db-7bfcc6740e79",
+      "id": "a8a887c3-d28f-419a-97df-db797fb67fcc",
       "type": "reponse",
       "value": {
         "latex": "On pose $Z = \\frac{T_1-\\mu}{\\frac{\\sigma}{\\sqrt{5} }}$ variable distribuée selon une loi $\\mathcal{N}(0,1)$. Soit alors $Y = \\frac{Z}{\\sqrt{\\frac{U}{5} }}$ : par définition, $Y$ suit une loi $St(5)$. Après simplification, on peut réécrire $Y = \\frac{T_1-\\mu}{\\frac{\\sigma \\sqrt{U}}{5}}$.",

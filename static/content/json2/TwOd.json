@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:54.126Z",
+    "createdAt": "2024-11-23T17:27:35.172Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:54.126Z"
+    "updatedAt": "2024-11-23T17:27:35.172Z"
   },
   "contenu": [
     {
-      "id": "d533d354-8213-4b8f-933e-363729dcb655",
+      "id": "5cb798b4-faf6-46ae-a448-06a606fa635e",
       "type": "description",
       "value": {
         "latex": "Soit $a \\in \\mathbb{R}$ et $(X,Y)$ un couple de variables aléatoires admettant une densité $f$ définie par \n\t$$f(x,y)= a(x+y)  \\textbf{1}_{[0;1]}(x) \\textbf{1}_{[0;1]}(y)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "2ec1895a-43da-4334-8672-8ff1e4eddbca",
+      "id": "90c0001f-40f2-4890-bf94-63a08963f347",
       "type": "question",
       "value": {
         "latex": "Déterminer $a$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a22995dc-d21d-49a4-9a97-933405d5cecf",
+      "id": "46b2ed3c-8a40-4071-bb4f-d18e5cd39ed9",
       "type": "reponse",
       "value": {
         "latex": "On calcule $\\int_0^1 \\int_0^1(x+y)dxdy = \\int_0^1 xdx\\int_0^1 dy + \\int_0^1 dx\\int_0^1 ydy = \\frac{1}{2} \\times 1 + 1 \\times \\frac{1}{2} = 1$ donc il faut $a=1$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "bee0298a-55b7-4669-9b44-ae48a1465e91",
+      "id": "6ff2a20b-8543-45b6-868f-5fdac6e25a59",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "666c9271-f148-4be2-87dd-3b10c1e6611b",
+      "id": "056e68ce-96ad-4951-bdb8-41749a1ba955",
       "type": "reponse",
       "value": {
         "latex": "On détermine les densités marginales $f_X$ et $f_Y$ à partir de la densité $f$ du couple de variables : \n\t\t$f_X(x) = \\int f(x,y)dy = 1_{[0;1]}(x)\\left[xy+\\frac{y^2}{2} \\right]_0^1 =  1_{[0;1]}(x) \\left(x+\\frac{1}{2}\\right)$. De même, $f_Y(y) = 1_{[0;1]}(y) \\left(y+\\frac{1}{2}\\right)$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "d6a6dd5b-9f83-447b-813d-acf4887add28",
+      "id": "1931af69-7d47-47e0-8e7e-9693479c4570",
       "type": "question",
       "value": {
         "latex": "Calculer $\\mathbb{E}(X)$, $\\sigma^2(X)$, $\\mathbb{E}(Y)$, $\\sigma^2(Y)$, $cov(X,Y)$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "47dcac74-52fc-4cfe-8ca7-5956e3f86ef0",
+      "id": "af29c4a8-76bd-46b7-85a8-d09b48ab5590",
       "type": "reponse",
       "value": {
         "latex": "On utilise les densités marginales : \n\t\t$\\mathbb{E}(X) = \\int xf_X(x)dx = \\int_0^1 \\left(x^2+\\frac{x}{2}\\right)dx = \\frac{7}{12}$. De même, $\\mathbb{E}(Y) = \\frac{7}{12}$. \n\t\t\n\t\t\n\t\t\n\t\t\n\t\tPar théorème de transfert, $\\mathbb{E}(X^2) = \\int x^2f_X(x)dx = \\int_0^1 x^3+ \\frac{x^2}{2} dx = \\frac{1}{4}+\\frac{1}{6} = \\frac{5}{12}$. De même, $\\mathbb{E}(Y^2)=\\frac{5}{12}$. \n\t\t\n\t\tOn peut ainsi calculer la variance $\\sigma^2(X)=\\mathbb{E}(X^2)-\\mathbb{E}(X)^2 = \\frac{11}{144}$ et $\\sigma^2(Y)=\\sigma^2(X)$.\n\t\t\n\t\tPour le calcul de la covariance, on calcule $\\mathbb{E}(XY)$ en appliquant le théorème de transfert sur la loi du couple $(X,Y)$ : $\\mathbb{E}(XY)=\\int_0^1 \\int_0^1xy(x+y)dxdy = \\int_0^1x^2dx \\int_0^1ydy + \\int_0^1xdx \\int_0^1y^2dy = \\frac{1}{3}$. Il vient $cov(X,Y) = \\mathbb{E}(XY)-\\mathbb{E}(X)\\mathbb{E}(Y) = \\frac{-1}{144}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "891d5b20-7999-4505-9406-5363d485af94",
+      "id": "530b4288-b574-47bd-b5fc-4448726a4dc7",
       "type": "question",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont-elles indépendantes ?",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "6ebc65af-93f7-4ef6-88b3-171b6ca88464",
+      "id": "d21af571-2720-4942-95ab-f590b2e6c5bd",
       "type": "reponse",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont donc corrélées, elles ne sont donc pas indépendantes. Cela se vérifie également en comparant le produit des densités marginales avec la densité du couple $(X,Y)$.",

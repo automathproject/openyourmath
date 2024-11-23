@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:15.259Z",
+    "createdAt": "2024-11-23T17:27:50.500Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:15.259Z"
+    "updatedAt": "2024-11-23T17:27:50.500Z"
   },
   "contenu": [
     {
-      "id": "058af2d2-8e73-450a-8c9a-05fbc28e4647",
+      "id": "46bdee59-31bd-47f2-a99b-e099457daa49",
       "type": "description",
       "value": {
         "latex": "On consid\\`ere le syst\\`eme lin\\'eaire :\n\\begin{equation}\n\t\\left\\{\\begin{array}{rcl}\n\t\t5 x +  y + z & = & 7\\\\\n\t\tx + 5 y -z & = & 5 \\\\\n\t\tx -y + 4z & = & 4\n\t\\end{array}\\right.\n\t\\tag{$S$}\n\t\\label{eq:syslin1}\n\\end{equation}\n\ndont la solution est $(1,1,1)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "1e510621-cd22-458b-9d99-e38f0eec743f",
+      "id": "4a65c864-2397-4d6e-bc41-95f17e14c0d1",
       "type": "question",
       "value": {
         "latex": "Montrer que l'on peut utiliser la m\\'ethode de Jacobi pour r\\'esoudre ce syst\\`eme et justifier que dans ce cas, la m\\'ethode converge.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "8b470d3e-1962-4f98-8c0d-9bd4b47612d9",
+      "id": "45773ae0-6946-4a87-9e33-86e924c68e6f",
       "type": "reponse",
       "value": {
         "latex": "Résoudre ce système revient à résoudre l'équation $Ax=b$ où $A=\\left(\\begin{matrix} 5 & 1 & 1\\\\1 & 5 & -1\\\\1 & -1 & 4 \\end{matrix}\\right)$ et $b=\\left(\\begin{matrix} 7\\\\5\\\\4 \\end{matrix}\\right)$. Cette matrice $A$ est à diagonale strictement dominante car $5>1+1$ et $4>1+1$. Par théorème, on en déduit que la méthode de Jacobi converge vers la solution.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "9cd29bfd-975e-4d33-8032-5cde64385635",
+      "id": "26732d0a-5a74-4270-b497-6648b64c0827",
       "type": "question",
       "value": {
         "latex": "Calculer la premi\\`ere it\\'eration de la m\\'ethode de Jacobi en partant de $X_0 = (0,0,0)$ puis la 50ème itération à l'aide d'un programme Python.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "faca2ab6-b7ea-4ee9-b7fa-76cbadfc74a5",
+      "id": "e34917ea-1802-48ca-9474-a42b7a1d2721",
       "type": "reponse",
       "value": {
         "latex": "Pour appliquer la méthode de Jacobi, on décompose $A$ sous la forme $A=M-N$ où \n\t\t$M=\\left(\\begin{matrix} 5 & 0 & 0\\\\0 & 5 & 0\\\\0 & 0 & 4 \\end{matrix}\\right)$ et $N=\\left(\\begin{matrix} 0 & -1 & -1\\\\-1 & 0 & 1\\\\-1 & 1 & 0 \\end{matrix}\\right)$. Pour tout entier $n$, on définit $X_{n+1}=F(X_n)$ où $F(X)=M^{-1}NX+M^{-1}b$ et $M^{-1}=\\left(\\begin{matrix} \\frac15 & 0 & 0\\\\0 & \\frac15 & 0\\\\0 & 0 & \\frac14 \\end{matrix}\\right)$. On décide d'initialiser l'itération avec $X_0=\\left(\\begin{matrix} 0\\\\0\\\\0 \\end{matrix}\\right)$.\n\t\t\n\t\tOn calcule :\n\t\t$$X_1 = M^{-1}NX_0+M^{-1}b= M^{-1}b = \\left(\\begin{matrix} 1.4\\\\1\\\\1 \\end{matrix}\\right) $$\n\t\t$$X_2 = M^{-1}NX_1+M^{-1}b = \\left(\\begin{matrix} 1\\\\0.92\\\\0.9 \\end{matrix}\\right) $$\n\t\t$$X_3 = M^{-1}NX_2+M^{-1}b = \\left(\\begin{matrix} 1.036\\\\0.98\\\\0.98 \\end{matrix}\\right) $$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "e4fa1487-5880-4148-a153-e86c412556d6",
+      "id": "957a0dd0-9b78-4d81-ad01-9c8f2c2f146e",
       "type": "question",
       "value": {
         "latex": "Montrer que la matrice $A$ est symétrique définie positive et en déduire la convergence de la m\\'ethode de Gauss-Seidel pour ce probl\\`eme.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "aefc5d5c-2b09-47de-998c-2836c58012cb",
+      "id": "d0a6fec4-eaa1-4cc3-8a3e-ef061e145829",
       "type": "reponse",
       "value": {
         "latex": "Pour utiliser la méthode de Gauss-Seidel, on peut s'assurer que la matrice $A$ est symétrique définie positive. Elle est visiblement symétrique réelle donc diagonalisable. Il reste donc à vérifier que ses valeurs propres sont toutes strictement positives. \n\t\t\n\t\tOn se lance dans le calcul du polynôme caractéristique : \n\t\t$$P_A(X) = \\begin{vmatrix}\n\t\t\t5-X & 1 & 1 \\\\\n\t\t\t1 & 5-X & -1 \\\\\n\t\t\t1 & -1 & 4-X \n\t\t\\end{vmatrix} = \\begin{vmatrix}\n\t\t\t6-X & 1 & 1 \\\\\n\t\t\t6-X & 5-X & -1 \\\\\n\t\t\t0 & -1 & 4-X \n\t\t\\end{vmatrix} \t\t=(6-X)(X^2-8X+14)$$\n\t\tUne valeur propre évidente est donc $\\lambda_1=6$. En analysant le polynôme du second degré $(X^2-8X+14)$, on déduit que $\\lambda_2\\lambda_3=14$ donc $\\lambda_2$ et $\\lambda_3$ sont de même signe. De plus, $\\lambda_2+\\lambda_3=8$ donc on est assuré que $\\lambda_2>0$ et $\\lambda_3>0$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "d12c21b4-4d17-4a52-a590-c8635d3f8d10",
+      "id": "739a3b32-c3ee-4e72-af9e-8cdb7824577d",
       "type": "question",
       "value": {
         "latex": "Calculer les cinquante premi\\`eres it\\'erations de la m\\'ethode de Gauss-Seidel en partant de $X_0 = (0,0,0)$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "880066b2-14b0-4a98-bdb2-2c173cf3aa70",
+      "id": "6751c6a5-34b8-47fb-b10c-d70d70d15b77",
       "type": "reponse",
       "value": {
         "latex": "On calcule :\n\t\t$$X_1 = M^{-1}NX_0+M^{-1}b= M^{-1}b = \\left(\\begin{matrix} 1.4\\\\0.72\\\\0.83 \\end{matrix}\\right) $$\n\t\t$$X_2 = M^{-1}NX_1+M^{-1}b = \\left(\\begin{matrix} 1.09\\\\0.948\\\\0.9645 \\end{matrix}\\right) $$\n\t\t$$X_3 = M^{-1}NX_2+M^{-1}b = \\left(\\begin{matrix} 1.0175\\\\0.9894\\\\0.992975 \\end{matrix}\\right) $$",

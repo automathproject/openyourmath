@@ -2,18 +2,18 @@
   "uuid": "653s",
   "titre": "Réseau de neurones multicouches",
   "theme": [
-    "Réseau de neurones"
+    "réseau de neurones"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-17T15:59:40.805Z",
+    "createdAt": "2024-11-23T17:27:17.937Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-17T15:59:40.805Z"
+    "updatedAt": "2024-11-23T17:27:17.937Z"
   },
   "contenu": [
     {
-      "id": "dc55a105-878c-464a-b84b-122c084ed4df",
+      "id": "c097a26b-683a-441a-9bc2-67c4feea4959",
       "type": "question",
       "value": {
         "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\\node[input neuron] (I-2) at (0,-1.5) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$H$};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$2$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$0$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$-2$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$0$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$3$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "89e6fa06-a9ce-4377-b9a2-fe77440e9ec6",
+      "id": "0c3d6dc6-b1a0-46c6-9724-ff5b9a31bbda",
       "type": "reponse",
       "value": {
         "latex": "This neural network has three neurons in the first layer, each one car separate the plane into to half planes. The second layer is made by only one neuron which is the AND neuron. \n\t\n\tSo this neural network has output $1$ if $(x,y)$ is at the intersection of the 3 half planes, $0$ if not. Precisely, can separate the plane into two parts as following:\n\t\n\t\\begin{tikzpicture}[scale=1]\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-2,-1) rectangle (8,5);\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (1.33,0.66) -- (-10,-5);\n\t\t\t\\draw[red,ultra thick] (1.33,0.66) -- (6,3);\n\t\t\t\\draw[ultra thick,dashed] (6,3) -- (10,5);\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (-1,3) -- (-7,3);\n\t\t\t\\draw[red,ultra thick] (-1,3) -- (6,3);\n\t\t\t\\draw[ultra thick,dashed] (6,3) -- (8,3);\n\t\t\t\n\t\t\t\n\t\t\t\\draw[ultra thick,dashed] (-6,8) -- (-1,3);\n\t\t\t\\draw[ red,ultra thick] (-1,3)--(1.33,0.66);\n\t\t\t\\draw[ultra thick,dashed] (1.33,0.66)--(6,-4);\n\t\t\t\n\t\t\t\n\t\t\t\\fill[red!50,opacity=0.5] (1.33,0.66) -- (-1,3) -- (6,3) -- cycle;\n\t\t\t\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\n\t\t\\draw[->,>=latex, very thick,gray] (-2.5,0)--(9,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, gray] (0,-1.5)--(0,6) node[left] {$y$};\n\t\t\\draw[gray,thin] (-2,-1) grid (8,5);\n\t\t\n\t\t\n\t\t\\node[left] at (-2,4) {$x+y-2=0$};\n\t\t\\node[left] at (-2,3) {$-y+3=0$};\n\t\t\\node[right] at (8,4) {$-x+2y=0$};\n\t\t\n\t\t\n\t\t\\node[scale=1.2,red] at (2,2.3) {$F(x,y)=1$};\n\t\t\n\t\t\n\t\t\\node at (0,0) [below left] {$0$};\n\t\t\\node at (1,0) [below right] {$1$};\n\t\t\\node at (0,1) [above left] {$1$};\n\t\t\n\t\t\n\t\\end{tikzpicture}",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-11-16T11:15:29.355Z",
+    "createdAt": "2024-11-23T17:27:59.962Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:29.355Z"
+    "updatedAt": "2024-11-23T17:27:59.962Z"
   },
   "contenu": [
     {
-      "id": "c1e7d739-1abc-4426-93f1-3351eddf560e",
+      "id": "25aabd36-b1a7-4f4f-b8c9-77ce5feea527",
       "type": "question",
       "value": {
         "latex": "Déterminer, en justifiant par un calcul, la loi de la variable aléatoire $T$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b57d31c5-905c-4610-b228-2844ae86fa70",
+      "id": "53a22e52-f20f-4944-9f80-6b82b0967d0d",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité, on calcule $\\mathbb{E}(T) = \\frac{2+3+2}{7} \\times 10  = 10$. Par indépendance et propriété de la variance, $\\sigma^2(\\overline{T}) = \\frac{4+9+4}{49} \\times  4= \\frac{68}{49}$. Par somme de lois normales, $\\overline{X}$ suit une loi normale $\\mathcal{N}(10,\\sigma^2 = \\frac{68}{49})$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "99738633-477a-475a-ae13-4544701f130a",
+      "id": "6dafe420-4f04-4d7f-9f21-c47bf4406b48",
       "type": "question",
       "value": {
         "latex": "Vérifier que $\\overline{X}$ et $T$ sont deux estimateurs sans biais de $\\mu$. Lequel de ces deux estimateurs de $\\mu$ est le plus efficace ?",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "8424f3d7-7c1f-41d7-a113-14f42d4f6dad",
+      "id": "41aab36e-4694-4d81-b136-60ae06a5484f",
       "type": "reponse",
       "value": {
         "latex": "Pour étudier le biais d'un estimateur, on doit calculer leur espérance. Par linéarité, $\\mathbb{E}(\\overline{X}) = \\mu$ donc le biais de $\\overline{X}$ est $B(\\overline{X}) = \\mathbb{E}(\\overline{X}-\\mu) = 0$. De même, $B(T)=0$.\n\t\n\t\tPour comparer l'efficacité de ces deux estimateurs, on peut comparer leurs variances respectives : par indépendance et propriété de la variance, $\\sigma^2(\\overline{X}) = \\frac{3 \\times 4}{9} = \\frac{4}{3} < \\frac{68}{49} = \\sigma^2(T)$. Par conséquent, $\\overline{X}$ est plus efficace que $T$ pour estimer $\\mu$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "838042cd-b5b4-4945-ad57-2863dc625c32",
+      "id": "3e42b159-a215-4c8a-a758-23a1f55cfd26",
       "type": "question",
       "value": {
         "latex": "Déterminer, en justifiant, la loi de la variable aléatoire $U$ et la loi de la variable $V$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "59015a8b-8dcc-4389-888d-a97b6a5d9a1e",
+      "id": "e0e3f4cc-31e9-46d8-8f75-c1ae5a153b68",
       "type": "reponse",
       "value": {
         "latex": "$U = \\frac{1}{4}\\sum_{i=1}^{3}  {(X_i-10)^2} = \\sum_{i=1}^{3}  {  \\left( \\frac{ X_i-10}{2}\\right)^2}$. Or les variables aléatoires $X_i$ sont indépendantes et $ \\frac{ X_i-10}{2}$ suit une loi normale centrée réduite donc par définition $U$ suit une loi $\\chi^2(3)$.\n\t\n\tPar théorème du cours (Théorème de Fisher), $V$ suit une loi $\\chi^2(2)$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "97807e87-2188-4f79-ba38-700557ae7344",
+      "id": "06fa80e0-1e85-4f96-a875-6b6853042bca",
       "type": "question",
       "value": {
         "latex": "A l'aide des tables de valeurs, déterminer un réel $t$ tel que $\\PP(V>t) = 0.95$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "c9f9db93-4570-44bd-ae46-8192db9e4dad",
+      "id": "bc62cc5f-5413-413c-97ec-3473a877d5a9",
       "type": "reponse",
       "value": {
         "latex": "Par lecture de la table d'une loi $\\chi^2(2)$, on a $\\PP(V \\leq 0.1026) = 0.05$ donc on peut prendre $t=0{,}1026$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "349d8f78-a637-4d38-a811-31317f37d016",
+      "id": "f3721ac8-6402-412e-8cb8-a632b3a57a08",
       "type": "question",
       "value": {
         "latex": "On pose $$Y = \\frac{\\overline{X}-10}{\\sqrt{\\frac{2V}{3}}}$$ \nParmi les formules suivantes, laquelle permet de déterminer le réel $t$ tel que $\\prob(Y > t) = 0.025$ ?\n\\begin{itemize}\n\t\\item \\texttt{=LOI.NORMALE.STANDARD.INVERSE(0.95)}\n\t\\item \\texttt{=LOI.KHIDEUX.INVERSE(0,975;2)}\n\t\\item \\texttt{=1-LOI.KHIDEUX.INVERSE(0,025;3)}\n\t\\item \\texttt{=LOI.STUDENT.INVERSE.N(0,975;2)}\n\t\\item \\texttt{=1-LOI.STUDENT.INVERSE.N(0,025;3)}\n\\end{itemize}",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "9ecdfb56-6252-40f8-92ff-a5b2b041ca67",
+      "id": "543c5715-a8f8-477f-981f-f83380b489ec",
       "type": "reponse",
       "value": {
         "latex": "on a $$Y = \\frac{\\overline{X}-10}{\\sqrt{\\frac{2V}{3}}} = \\frac{\\overline{X}-10}{\\sqrt{\\frac{4}{3} \\frac{V}{2}}} = \n\t\t\t\\frac{ \\frac{ \\overline{X}-10}{\\sqrt{\\frac43}}}{\\sqrt{\\frac{V}{2}}}$$ et on reconnaît une loi de Student $St(2)$. On cherche $t$ tel que $\\prob(Y > t) = 0.025 \\iff \\prob(Y \\leq t) = 0.975$ d'où la formule : {=LOI.STUDENT.INVERSE.N(0,975;2)}",

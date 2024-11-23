@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:04.436Z",
+    "createdAt": "2024-11-23T17:27:42.043Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:04.436Z"
+    "updatedAt": "2024-11-23T17:27:42.043Z"
   },
   "contenu": [
     {
-      "id": "d7186bb7-0498-495a-9882-fedcfa4f09f0",
+      "id": "ef67a69e-d242-4b4a-b53e-c06808bb5a66",
       "type": "description",
       "value": {
         "latex": "Pour une fonction $f$ continue par morceaux sur $[a;b]$, on pose $\\theta \\in [0;1]$ on considère l'approximation :\n$$\\int_a^b f(s)ds \\approx (b-a)(\\theta f(a) + (1-\\theta)f(b))$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8cde0874-f4b5-465d-b7e0-b9ac40d59b57",
+      "id": "3f2eae89-028a-4c8d-95d6-1c6a523d3a7c",
       "type": "question",
       "value": {
         "latex": "\\'A partir de ce choix d'approximation, construire un schéma de résolution d'une EDO $y'(t)=f(t,y)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "c28f4c54-6e3e-4208-bfc5-b22210e0c88a",
+      "id": "7ab265c4-66e2-4d8c-b637-a92ce8a0d103",
       "type": "question",
       "value": {
         "latex": "A partir de ce choix d'approximation, construire un schéma de résolution d'une EDO $y'(t)=f(t,y)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "83078ae3-c807-4886-8592-81afda0285e7",
+      "id": "ab6ddaa9-4026-41fe-b60c-8f111885ccdd",
       "type": "reponse",
       "value": {
         "latex": "On a $y(t_{n+1}) = y(t_n) + \\int_{t_n}^{t_{n+1}} f\\left(s,y(s)\\right) ds$ d'où le schéma défini par :\n\t\t$$y_{n+1} = y_n + h \\left( \\theta f(t_n,y(t_n)) + (1-\\theta) f(t_{n+1}, y(t_{n+1}))\\right)$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "2ea4385e-8554-4a2a-8743-d426b4e2bb23",
+      "id": "5dd67fb9-b73d-4fae-bada-c15c96b18516",
       "type": "question",
       "value": {
         "latex": "Reconnaître des schémas usuels pour les valeurs $\\theta \\in \\{0,\\frac{1}{2},1\\}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "1cab3cfb-7283-4491-a961-fae847a9b4c8",
+      "id": "81ca4230-5a22-4fc1-b186-ec1f3840d5be",
       "type": "reponse",
       "value": {
         "latex": "\\begin{itemize}\n\t\t\t\\item \tSi $\\theta =0$ : méthode d'Euler implicite (rectangle à droite) ;\n\t\t\t\\item   Si $\\theta = 1$ : méthode d'Euler explicite (rectangle à gauche) ;\n\t\t\t\\item   Si $\\theta = 1/2$ : méthode de Carnk Nikolson.\n\t\t\\end{itemize}",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a5769ae3-51c2-461a-897f-c921e4f057da",
+      "id": "c6e1b62d-f17e-46d1-af95-3c1c1359a22d",
       "type": "question",
       "value": {
         "latex": "Montrer que le schéma est consistant d'ordre 1 si $\\theta \\neq \\frac12$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "356f1cf3-f804-4967-b1c2-938d13e3f104",
+      "id": "78063f8d-3616-4ca3-9cf5-8c27be008846",
       "type": "reponse",
       "value": {
         "latex": "On calcule l'erreur de consistance : \n$$\\begin{align*}\n  h\\, e_n(h) &= \\underbrace{y(t_{n+1}) - y(t_n)}_{\\text{développement de Taylor}} - h \\theta \\underbrace{f(t_n, y(t_n))}_{y'(t_n)} - h(1-\\theta) \\underbrace{f(t_{n+1}, y(t_{n+1}))}_{y'(t_{n+1})} \\\\\n             &= h y'(t_n) + \\frac{h^2}{2}y''(t_n) + \\frac{h^3}{6} y'''(c_n) - h \\theta y'(t_n) - h(1-\\theta) \\left( y'(t_n) + hy''(t_n) + \\frac{h^2}{2}y'''(c'_n)  \\right) \\\\\n             &= h y'(t_n)(1-\\theta - (1-\\theta)) + h^2 \\left( \\frac{y''(t_n)}{2} - (1-\\theta)y''(t_n)  \\right) + h^3 \\underbrace{\\left( ... \\right)}_{\\text{borné}} \\\\\n\\end{align*}$$\t\nDonc $$|e_n(h)| \\leq h \\left| \\frac{y''(t_n)}{2} - (1-\\theta)y''(t_n)  \\right| + h^2 M$$\nce qui permet de conclure que l'ordre de consistance est $1$ si $\\theta \\neq \\frac{1}{2}$, l'ordre de consistance est $2$ si $\\theta = \\frac{1}{2}$.",

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:20.772Z",
+    "createdAt": "2024-11-23T17:27:14.535Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:20.772Z"
+    "updatedAt": "2024-11-23T17:27:14.535Z"
   },
   "contenu": [
     {
-      "id": "20e77455-621e-44e8-9334-151781887018",
+      "id": "a833e1d9-e452-483b-93e5-fc8390e9ea15",
       "type": "description",
       "value": {
         "latex": "Une étude des glaciers a montré que la température T à l'instant t (mesuré en jours) à la profondeur $x$ (mesurée en pied) peut être modélisée par la fonction \n$$T(x,t) = T_0 + T_1e^{-\\lambda x}\\sin(\\omega t-\\lambda x)$$\noù $T_0$, $T_1$, $\\omega = \\frac{2\\pi}{365}$ et $\\lambda$ sont des constantes réelles.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "506da454-b094-491e-9aa7-1c114b918c5f",
+      "id": "f67cd84f-ce78-4045-bd36-3e276e2b1c94",
       "type": "question",
       "value": {
         "latex": "Exprimer les deux dérivées partielles de $T$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "e0fcdc12-2271-4e81-b3b2-c7ef4c0c6078",
+      "id": "2427a652-4e52-49eb-98eb-d5ca8aeeaa37",
       "type": "reponse",
       "value": {
         "latex": "Les dérivées partielles sont définies pour tout $(x,t) \\in \\R^2$ :\n\t\t$$\\begin{align*}\n\t\t\\frac{\\partial T}{\\partial x}(x,t) &= -\\lambda T_1 e^{-\\lambda x}\\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right)\\\\\n\t\t\\frac{\\partial T}{\\partial t}(x,t) &= \\omega T_1 e^{-\\lambda x} \\cos(\\omega t-\\lambda x)\n\t\t\\end{align*}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "946beb9a-43b0-4adc-bda9-3a33da6ad0c6",
+      "id": "32738db8-04d4-43cf-966d-fddb2a4cd27b",
       "type": "question",
       "value": {
         "latex": "Montrer que $T$ vérifie l'équation de la chaleur :\n\t$$\\frac{\\partial T}{\\partial t}(x,t) = k\\frac{\\partial^2 T}{\\partial x^2}(x,t)$$\n\tpour une certaine constante $k$ à déterminer.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "3863c666-c526-4c36-81c5-1454266e7bc2",
+      "id": "b2024631-3c5d-49f2-81de-44e38366fca3",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de dériver une seconde fois par rapport à $x$ l'expression de $\\frac{\\partial T}{\\partial x}(x,t)$ : on trouve\n\t\t$$\\begin{align*}\n\t\t\\frac{\\partial^2 T}{\\partial x^2}(x,t) &= \\frac{\\partial}{\\partial x}\\frac{\\partial T}{\\partial x}(x,t) \\\\\n\t\t&= (-\\lambda)^2 T_1 e^{-\\lambda x} \\left( \\sin(\\omega t-\\lambda x)+ \\cos(\\omega t-\\lambda x)  \\right) + (-\\lambda)^2 T_1 e^{-\\lambda x} \\left(\\cos(\\omega t-\\lambda x)- \\sin(\\omega t-\\lambda x)\\right) \\\\\n\t\t&= 2\\lambda^2 T_1 e^{-\\lambda x} \\cos(\\omega t - \\lambda x)\t\n\t\t\\end{align*}$$\n\t\tLa constante attendue est donc $k = \\frac{\\omega}{2\\lambda^2}$.",

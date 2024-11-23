@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:07.634Z",
+    "createdAt": "2024-11-23T17:27:44.756Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:07.634Z"
+    "updatedAt": "2024-11-23T17:27:44.756Z"
   },
   "contenu": [
     {
-      "id": "7b376031-3bc7-4312-9b6b-bc1a8e774935",
+      "id": "4fde3eaf-22d7-4611-97ff-9872143f87b4",
       "type": "description",
       "value": {
         "latex": "On construit différentes méthodes de Monte Carlo afin de donner une valeur approchée de $\\frac{\\pi}{4}$. Afin de les comparer, on donnera la variance de l'estimation sous la forme $\\frac{C}{n}$ où $n$ est la taille de l'échantillon. On souhaite avoir la variance la plus faible possible.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "983ce6ff-ad55-485f-87c0-a46d39aaf1ea",
+      "id": "eac7b13a-cab3-44f9-bdd5-c324210813cf",
       "type": "description",
       "value": {
         "latex": "On considère le carré $[0;1]^2$ et on note $D$ le quart de disque centré en $0$ et de rayon $1$ : \n$$D = \\{(x,y) \\in \\R_+^2 \\, , \\, x^2 + y^2 \\leq 1\\}$$\n\nL'aire de $D$ vaut $\\frac{\\pi}{4}$. \n\nSoit $(X_i,Y_i)$ une suite de couples variables aléatoires indépendantes, identiquement distribuées selon une loi uniforme sur $[0;1]^2$. Pour tout entier $i \\geq 1$, on pose $$Z_i = \\textbf{1}_{(X_i,Y_i) \\in D}$$ \n\nAinsi, les variables $(Z_i)_{i \\geq 1}$ sont indépendantes.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "1cfd8ce1-9048-4eb0-86c8-643309592610",
+      "id": "b32c7168-9144-4896-80cd-7c7768a0b8ab",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $Z_1$ et en déduire que $\\mathbb{E}(Z_1) = \\frac{\\pi}{4}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "27b2b15a-ad96-46ea-9556-28dbc44d7a77",
+      "id": "5d19665d-0d50-4954-91f8-c019380de81a",
       "type": "reponse",
       "value": {
         "latex": "On remarque que $Z_1$ prend se valeurs dans $\\{0,1\\}$ donc $Z_1$ suit une loi de Bernoulli. Or \n$$\\begin{align*}\n\\PP(Z_1 = 1) &= \\PP((X_1,Y_1) \\in D) \\\\\n             &= \\iint_{D} dxdy \\\\\n             &= \\frac{\\pi}{4}\n\\end{align*}$$\t\nDonc $Z_1$ suit une loi de Bernoulli de paramètre $p = \\frac{\\pi}{4}$ et son espérance vaut $\\E(Z_1) = \\frac{\\pi}{4}$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "f8d3b5b9-7f7e-4b80-b96b-ba7a94133c60",
+      "id": "245baa80-5ca9-4225-af78-5f293f95d369",
       "type": "question",
       "value": {
         "latex": "Soit $n \\in \\N^*$, on pose :\n\t$$T_n^{(1)} = \\frac{1}{n} \\sum_{i=1}^{n} Z_i$$\n\tJustifier que $T_n^{(1)}$ est un estimateur sans biais de $\\frac{\\pi}{4}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "136f428b-195b-4f43-b133-7d6cc7b6e96d",
+      "id": "d7abb80d-0b5f-4c5a-a4a7-fa1bab254685",
       "type": "reponse",
       "value": {
         "latex": "On remarque que $\\E(T_n^{(1)}) = \\E(Z_1) = \\frac{\\pi}{4}$ donc par linéarité, $B(T_n^{(1)}) = \\frac{\\pi}{4} - \\frac{\\pi}{4} = 0$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "4b7995b7-bd56-4a81-9907-9fa5c78f0962",
+      "id": "bf5ab1ee-4054-496d-a53d-cd2a74c1abe5",
       "type": "question",
       "value": {
         "latex": "Justifier que la suite de variables aléatoires $\\left(T_n^{(1)}\\right)_{n \\geq 1}$ converge presque sûrement vers  $\\frac{\\pi}{4}$ lorsque $n$ tend vers l'infini.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "56a11120-4e8c-43bc-a137-c55f3499e49b",
+      "id": "0b585a54-dea1-4246-805f-adde79f54c18",
       "type": "reponse",
       "value": {
         "latex": "Les variables aléatoires $(Z_i)$ sont indépendantes, identiquement distribuées, admettent une espérance donc par application directe de la loi forte des grands nombres, la suite $\\left(T_n^{(1)}\\right)_{n \\geq 1}$ converge presque sûrement vers  $\\frac{\\pi}{4}$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "01569006-eac5-4a4c-8b82-658debdb0a76",
+      "id": "d3ff41db-dfe0-46fd-a7b1-87d56c939c77",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $C^{(1)} \\in \\R$ tel que $\\V\\left(T_n^{(1)}\\right) = \\frac{C^{(1)}}{n}$ et donner une valeur numérique approchée de $C^{(1)}$ à $10^{-4}$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "35865eae-21b3-476c-a4f4-74bb274ff0fd",
+      "id": "32a686af-9d15-4462-aa2f-7ff15ec46eec",
       "type": "reponse",
       "value": {
         "latex": "Par indépendance, $\\V\\left(T_n^{(1)}\\right) = \\frac{\\V(Z_1)}{n}$ or $V(Z_1) = \\frac{\\pi}{4}\\left(1- \\frac{\\pi}{4}\\right) \\approx 0{,}1685$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "14f5f6ba-b92b-4113-84f0-cef4c99e99bc",
+      "id": "2cf238bb-4eec-4cdd-a6d6-a5d671486ea1",
       "type": "description",
       "value": {
         "latex": "On définit une fonction $g \\colon [0;1] \\to [0;+\\infty[$ par :\n$$g(x) = \\sqrt{1-x^2}$$\n\nSoit $(U_i)$ une suite de variables aléatoires indépendantes, identiquement distribuées selon une loi uniforme sur $[0;1]$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "6cc4b1bc-f4bb-4835-93ee-0f9a6a90344f",
+      "id": "bab33825-b1fb-4fc0-bce7-331272634457",
       "type": "question",
       "value": {
         "latex": "Justifier que $\\E(g(U_1)) = \\frac{\\pi}{4}$.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "9f69d381-b326-4597-af78-ccc5464fdf48",
+      "id": "65d19565-49e6-494a-b13f-2a6d88594039",
       "type": "reponse",
       "value": {
         "latex": "Par application du théorème de transfert, \n$$\\E(g(U_1)) = \\int g(x) \\textbf{1}_{[0,1]}(x) dx = \\int_0^1 \\sqrt{1-x^2}dx = \\frac{\\pi}{4}$$",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "911e4941-00d1-4b9d-8b47-247407efec11",
+      "id": "7a898f42-a1e1-4d41-8290-06866a5dab85",
       "type": "question",
       "value": {
         "latex": "En déduire une suite de variables aléatoires convergeant presque sûrement vers  $\\frac{\\pi}{4}$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "13395ac5-8eb4-4e69-9478-9a405a04fdd9",
+      "id": "433f09a4-4092-4d86-b8f6-5d815c78c89b",
       "type": "reponse",
       "value": {
         "latex": "En posant $T_n^{(2)} = \\frac{1}{n} \\sum_{i=1}^{n} g(U_i)$ alors d'après la loi forte des grands nombres, la suite $\\left(T_n^{(2)}\\right)$ converge presque sûrement vers $\\E(g(U_1)) = \\frac{\\pi}{4}$.",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": "a5a7efdb-dd3a-434f-8b6a-3ac22dd88768",
+      "id": "122e7590-dfda-49a8-9037-272699ae28ea",
       "type": "description",
       "value": {
         "latex": "Soit $n \\in \\N^*$, on pose :\n\t$$T_n^{(2)} = \\frac{1}{n} \\sum_{i=1}^{n} g(U_i)$$",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "cef98ffe-b848-4fc6-8e2b-552ee9735375",
+      "id": "2bb65d7a-cf2a-45b7-b6f4-39ab8378870c",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $C^{(2)} \\in \\R$ tel que $\\V\\left(T_n^{(2)}\\right) = \\frac{C^{(2)}}{n}$ et donner une valeur numérique approchée de $C^{(2)}$ à $10^{-4}$.",
@@ -149,7 +149,7 @@
       }
     },
     {
-      "id": "9e5ccafc-c38c-48ff-8ec6-ab13e167c9d1",
+      "id": "b8192c4c-278d-4f03-ae0a-d73def058c98",
       "type": "reponse",
       "value": {
         "latex": "Il s'agit comme en partie 1 de calculer $\\V(g(U_1)) = \\E(g(U_1)^2) - \\left(\\frac{\\pi}{4}\\right)^2$. Or : \n$$\\begin{align*}\n\t\\E(g(U_1)^2) &= \\int_0^1 g(x)^2 dx \\\\\n\t             &= \\int_0^1 (1-x^2) dx \\\\\n\t             &= \\frac{2}{3}\n\\end{align*}$$\nOn a donc $\\V\\left(T_n^{(2)}\\right) = \\frac{C^{(2)}}{n}$ avec $C^{(2)} =  \\frac{2}{3} - \\left(\\frac{\\pi}{4}\\right)^2 \\approx 0.0498$.",
@@ -157,7 +157,7 @@
       }
     },
     {
-      "id": "98f9c917-4211-4211-8ceb-c5b0065d46fb",
+      "id": "4c3d47de-889f-4970-bf00-108d51943639",
       "type": "question",
       "value": {
         "latex": "Comparer les deux techniques d'approximation présentées ici.",
@@ -165,7 +165,7 @@
       }
     },
     {
-      "id": "ea0aa57b-da83-4654-bf86-0c541a38e96f",
+      "id": "a3eaf0d8-5f5a-40fb-9f85-a4d7fbe592ed",
       "type": "reponse",
       "value": {
         "latex": "Des deux estimateurs de $\\frac{\\pi}{4}$ présentés ici, le plus efficace est celui qui a la plus petite variance, c'est $T_n^{(2)}$.",

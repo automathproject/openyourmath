@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:55.006Z",
+    "createdAt": "2024-11-23T17:27:35.748Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:55.006Z"
+    "updatedAt": "2024-11-23T17:27:35.748Z"
   },
   "contenu": [
     {
-      "id": "4ce0dd55-9065-4033-bfda-132416c91cc4",
+      "id": "1e4a4e84-714e-4196-aa35-4278d8adcfe5",
       "type": "description",
       "value": {
         "latex": "On lance un dé équilibré. On gagne 1 euro si le résultat est pair, on pert 1 euro si le résultat est impair. Ŝoit $n \\geq 1$ le nombre de parties. On note $X$ le nombre le nombre de lancers pairs obtenus au bout de $n$ parties et $G$ le gain obtenu au bout de $n$ parties.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b406cea6-263c-4211-991b-8c16325d9e83",
+      "id": "362dfcc6-8771-4060-98a3-8c8c1ff90fde",
       "type": "question",
       "value": {
         "latex": "Donner la loi de $X$, son espérance et sa variance.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "36fd36a5-46b1-4046-a741-72cf7ec5dfe3",
+      "id": "7fad4f2d-037e-4401-97af-10bbe1afefd6",
       "type": "reponse",
       "value": {
         "latex": "La variable aléatoire $X$ donne le nombre de succès à l'issue de $n$ expériences indépendantes de Bernoulli où le succès est l'obtention d'un résultat pair, de probabilité $p=0.5$. On a donc $X\\sim\\mathcal{B}(n,0.5)$, $\\E(X) = n\\times0.5 = \\frac{n}{2}$ et $\\V(X) = n\\times0.5\\times0.5 = \\frac{n}{4}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "3f35a281-ec60-4668-a712-4e463a265924",
+      "id": "24d0454a-b56e-412a-9c97-2a8b4ccf2382",
       "type": "question",
       "value": {
         "latex": "Exprimer $G$ en fonction de $X$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "c2a0f200-49ea-4592-961e-c5211eefcb2b",
+      "id": "c9d507e8-58ba-4cc5-9368-caabd1dee3be",
       "type": "reponse",
       "value": {
         "latex": "On a $G = X - (n-X) = 2X-n$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "5e16a136-f863-4e8a-91af-d216a5d59942",
+      "id": "6f966500-7758-4ee7-a943-8e7c3a064234",
       "type": "question",
       "value": {
         "latex": "Exprimer l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} en fonction de $X$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "f6322ba8-3b12-46e5-a059-54c618794bbf",
+      "id": "de74d61f-14aa-40e3-9e6b-9776810a0d29",
       "type": "reponse",
       "value": {
         "latex": "On a $-20 \\leq G \\leq 20 \\iff -20 \\leq 2X-n \\leq 20 \\iff -10 \\leq X-\\frac{n}{2} \\leq 10$. Donc l'événement considéré est $\\{|X - \\frac{n}{2}| \\leq 10\\}$ ou encore $\\{-10 \\leq X - \\frac{n}{2} \\leq 10\\}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "75e37b31-1689-4f23-b69d-d8d584a7ed93",
+      "id": "f8d0f67d-6b56-4c01-a025-c0a3af128b34",
       "type": "question",
       "value": {
         "latex": "En utilisant le théorème central limite sans correction de continuité, déterminer le nombre maximal de lancers $n$ à effectuer pour que la probabilité de l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} soit supérieure à $0.9544$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "2c71f213-4440-4b4c-9c49-f9d14b6ecae3",
+      "id": "08fe7e02-c117-45be-b0e4-9ccdfe8712ea",
       "type": "reponse",
       "value": {
         "latex": "On cherche $n$ tel que $\\prob(|X - \\frac{n}{2}| \\leq 10) \\geq 0.9544$. On sait que $\\E(X) = \\frac{n}{2}$ et $\\V(X) = \\frac{n}{4}$. D'après le théorème central limite, la variable aléatoire $Z = \\frac{X-\\frac{n}{2}}{\\frac{\\sqrt{n}}{2}}$ suit approximativement une loi normale centrée réduite. On a donc : \n            $$\\prob(|X - \\frac{n}{2}| \\leq 10) = \\prob\\left(\\frac{|X - \\frac{n}{2}|}{\\frac{\\sqrt{n}}{2}} \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right) = \\prob\\left(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right)$$\n            On cherche donc $n$ tel que $\\prob(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}) = 2 \\times \\Phi(\\frac{10}{\\frac{\\sqrt{n}}{2}}) - 1 = 2 \\times \\Phi(\\frac{20}{\\sqrt{n}}) - 1 \\geq 0.9544$ soit encore $\\Phi(\\frac{20}{\\sqrt{n}}) \\geq 0.9772$.\n\n            Par lecture de table, on trouve $\\frac{20}{\\sqrt{n}} \\geq 2$ soit $n \\leq 100$.",

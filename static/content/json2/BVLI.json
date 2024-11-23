@@ -1,19 +1,19 @@
 {
-  "uuid": "7161c0e8-93dd-4f45-a0e5-6256622f0141",
+  "uuid": "5eebea81-51bd-4944-bdab-f7849d0f86db",
   "titre": "Optimisation sans contrainte",
   "theme": [
-    "Optimisation"
+    "optimisation"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:30.695Z",
+    "createdAt": "2024-11-23T17:27:22.051Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:30.695Z"
+    "updatedAt": "2024-11-23T17:27:22.051Z"
   },
   "contenu": [
     {
-      "id": "8eb8a92b-9c10-424f-97b9-eadead33f728",
+      "id": "44fa70cb-5584-469f-913a-3f2d78304067",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\mathbb{R}^2$ par :\n$$f(x,y) = x^4 + y^4 - 2(x - y)^2$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5d0c7036-5d7e-4d61-91cf-025791ea6ed3",
+      "id": "e93bc6ce-2105-444d-b671-71b1eb7bc586",
       "type": "question",
       "value": {
         "latex": "Montrer qu’il existe $(\\alpha, \\beta) \\in \\mathbb{R}_+^2$ (et les déterminer) tels que\n  $$\n  f(x, y) \\geq \\alpha \\|(x, y)\\|^2 + \\beta\n  $$\n  pour tous $(x, y) \\in \\mathbb{R}^2$, où $\\|(x, y)\\|$ désigne la norme euclidienne de $\\mathbb{R}^2$. En déduire que le problème\n$$\n  \\inf_{(x,y) \\in \\mathbb{R}^2} f(x, y)\n$$\n  possède au moins une solution.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "bdf4b36a-f0f6-40e0-9411-a4b088775c7b",
+      "id": "a6a455b3-f868-443e-887c-ebbfe72a6701",
       "type": "reponse",
       "value": {
         "latex": "La fonction $f$ est donnée par $f(x, y) = x^4 + y^4 - 2(x - y)^2$. Puisque $f$ est une fonction polynomiale, elle est de classe $C^\\infty$ sur $\\mathbb{R}^2$. En utilisant l'inégalité $xy \\geq -\\frac{1}{2}(x^2 + y^2)$, on peut écrire :\n  \\[\n  f(x, y) \\geq x^4 + y^4 - 2x^2 - 2y^2 + 4xy \\geq x^4 + y^4 - 4x^2 - 4y^2.\n  \\]\n  Choisissant $\\alpha = 2$ et $\\beta = -16$, on obtient que $f(x, y) \\geq \\alpha \\|(x, y)\\|^2 + \\beta$. Cela montre que $f$ est coercive sur $\\mathbb{R}^2$, et d'après le théorème de Weierstrass, le problème $\\inf_{(x,y)\\in \\mathbb{R}^2} f(x, y)$ possède au moins une solution.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "fc5871b1-ca6b-41f3-9c90-6a647ed09331",
+      "id": "06661fb7-4b95-42ee-b59a-90add2dba895",
       "type": "question",
       "value": {
         "latex": "La fonction $f$ est-elle convexe sur $\\mathbb{R}^2$ ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "bff1831b-eefb-47a3-b590-81a669943548",
+      "id": "76485400-6200-45a7-a75d-df43fc3b5c14",
       "type": "reponse",
       "value": {
         "latex": "Pour étudier la convexité de $f$, calculons sa matrice hessienne en tout point $(x, y) \\in \\mathbb{R}^2$. On a :\n  \\[\n  \\text{Hess } f(x, y) = 4 \\begin{pmatrix} 3x^2 - 1 & 1 \\\\ 1 & 3y^2 - 1 \\end{pmatrix}.\n  \\]\n  La fonction $f$ est convexe sur $\\mathbb{R}^2$ si, et seulement si, sa matrice hessienne est semi-définie positive en tout point. Or, les valeurs propres de la hessienne en $(0, 0)$ sont 0 et -2. Par conséquent, $f$ n'est pas convexe.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "f94e4188-61ce-4dc2-bbaa-326e43897e50",
+      "id": "4794be9c-f5c5-4a67-920a-b72acc3628ea",
       "type": "question",
       "value": {
         "latex": "Déterminer les points critiques de $f$, et préciser leur nature (minimum local, maximum local, point-selle, etc.). Résoudre alors le problème d'optimisation.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "1c55eb81-c38b-42e7-8244-35793718f12d",
+      "id": "994cca5f-8a21-4b72-807d-8e8429a1b463",
       "type": "reponse",
       "value": {
         "latex": "Les points critiques de $f$ sont donnés par les solutions de $\\nabla f(x, y) = (0, 0)$, c'est-à-dire :\n  \\[\n  \\begin{cases} \n  x^3 - (x - y) = 0, \\\\\n  y^3 + (x - y) = 0.\n  \\end{cases}\n  \\]\n  En résolvant ce système, on obtient trois points critiques : $O(0, 0)$, $A(\\sqrt{2}, -\\sqrt{2})$ et $B(-\\sqrt{2}, \\sqrt{2})$.\n\n  Pour déterminer la nature de ces points critiques, on utilise la matrice hessienne. Les points $A$ et $B$ sont des points de minimum local car la hessienne y est définie positive. Le point $O$ est un point-selle car la hessienne y a des valeurs propres de signes opposés.\n\n  Ainsi, la solution du problème d'optimisation est donnée par $\\inf_{(x,y) \\in \\mathbb{R}^2} f(x, y) = f(A) = f(B) = -8$.",

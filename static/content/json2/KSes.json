@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:40.636Z",
+    "createdAt": "2024-11-23T17:27:28.585Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:40.636Z"
+    "updatedAt": "2024-11-23T17:27:28.585Z"
   },
   "contenu": [
     {
-      "id": "0baed3a9-6f1f-48a4-858f-9baa733d1a54",
+      "id": "1578f090-be2c-45bb-8579-d478519e4760",
       "type": "description",
       "value": {
         "latex": "On considère l'intégrale \n\t$$I = \\int_0^4 \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9082807c-0469-4208-b56e-541e1d98c7c2",
+      "id": "b8fc850d-361a-43e2-9f01-35dc706f7bcd",
       "type": "question",
       "value": {
         "latex": "Démontrer qu'il existe une fonction $\\varphi \\colon \\R \\to \\R$ telle que $I=\\mathbb{E}(\\varphi(Z_1))$ où $Z_1$ est une variable aléatoire normale $\\mathcal{N}(0,1)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "09bed068-f420-43e2-9a98-ce3ea711bc70",
+      "id": "a50b9f53-5a87-4557-83e4-d24e3410f48e",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de poser $\\varphi = 1_{[0;4]}$ de telle sorte qu'en appliquant le théorème de transfert à $Z_1$ admettant pour densité $f_Z(x) =  \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}$, on obtienne\n\t\t\t$$\\mathbb{E}(1_{[0;4]}(Z_1)) = \\int_\\R 1_{[0;4]}(y) \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy = I$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "61008ade-04d9-49cc-a6b4-00d45eadfa53",
+      "id": "e3ff81b3-9763-4b0e-bc0b-b05781b68926",
       "type": "description",
       "value": {
         "latex": "On définit une suite de variables $(Z_n)_{n \\geq 1}$ indépendantes et identiquement distribuées selon une loi normale $\\mathcal{N}(0,1)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "47e6aa16-4b09-4963-a29c-a3186b6eb7ca",
+      "id": "81e85328-16b3-468c-97eb-51e2538229ea",
       "type": "question",
       "value": {
         "latex": "Déterminer une fonction $g \\colon \\R \\to \\R$ telle que la suite  $\\left( \\frac{1}{n}\\sum_{i=1}^n g(Z_i)  \\right))_{n \\geq 1}$  converge presque sûrement vers $I$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "a51f5586-5d1e-411a-9630-60aaab3f0eeb",
+      "id": "04a19d25-6596-4f5c-afb3-6fb6b6fd8ef1",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de poser $g = \\varphi = 1_{[0;4]}$ pour que les variables $(g(Z_i))$ soient i.i.d et admettent une espérance $I$. Ainsi, d'après la Loi Forte des Grands Nombres, on a \n\t\t\t\t$$\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) \\xrightarrow[n \\to +\\infty]{p.s.} I$$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "66f37135-b038-4830-b874-6a21a1d8722e",
+      "id": "f876ec9c-2258-40fc-925a-16a1dd497def",
       "type": "question",
       "value": {
         "latex": "Construire un intervalle de confiance $I_{conf}$ tel que $\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "8bbe4a9a-836e-40f4-a448-e94ceff3ff8d",
+      "id": "88b584fc-8aac-41ed-a3ff-7e0dda732099",
       "type": "reponse",
       "value": {
         "latex": "On note  $\\sigma^2 = \\mathbb{V}(g(Z_1))$. D'après le Théorème Central Limite, \n\t\t\t\t$$ \\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1) $$\n\t\t\t\tSi $n$ est grand, on peut considérer que la variable $Z'_n = \t \\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}}$ suit approximativement une loi $\\mathcal{N}(0,1)$. Par conséquent, d'après la table de loi,\n\t\t\t\t$$\\PP(-1{,}96 \\leq Z'_n \\leq 1{,}96) \\approx 0{,}95 \\iff  \\mathbb{P}\\left(  Z'_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}}     \\leq  I  \\leq   Z'_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right) \\approx 0{,}95   $$\n\t\t\t\tOn en déduit un intervalle de confiance $I_{conf} = \\left[  Z'_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}} ; Z'_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right] $ qui est en réalité un intervalle de confiance asymptotique. Il resterait à expliciter $\\sigma = \\sqrt{V(g(Z_1))}$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "574954a3-fda8-4954-8d84-868991975f3e",
+      "id": "2c6c56ec-5795-4081-b588-cf48c04e5cdd",
       "type": "description",
       "value": {
         "latex": "On définit une suite de variables $(U_n)$ indépendantes et identiquement distribuées selon une loi uniforme $\\mathcal{U}([0;4])$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "a4b1807e-1871-448d-982d-1aa148cc6fff",
+      "id": "9f908e73-2d8a-4bf3-8d26-7723206e0108",
       "type": "question",
       "value": {
         "latex": "A l'aide de cette suite, définir une suite de variables aléatoires $(Y_n)$ qui converge presque sûrement vers $I$.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "bdf4bf4b-ba8f-42a2-9270-398fa02b4c1b",
+      "id": "f6cd42cb-8770-49ae-b9a8-dbb5d6583355",
       "type": "reponse",
       "value": {
         "latex": "D'après la loi forte des grands nombres,\n\t\t\t\t$$\\frac{4}{n}\\sum_{i=1}^n \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} \\xrightarrow[n \\to +\\infty]{p.s.} \\mathbb{E}\\left(\\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_1^2}{2}}\\right) = \\int_{\\R}^{} \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}} \\frac{1}{4} 1_{[0;4]}(x)  dx = I$$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "053e90a7-7a8d-4aef-b3c1-7779517a0ccd",
+      "id": "384af085-65a0-4017-b6b3-760375ee22bf",
       "type": "question",
       "value": {
         "latex": "En déduire une méthode de Monte Carlo permettant d'obtenir une valeur approchée de $I$ en complétant l'algorithme suivant :\n\t\t\t\t\\texttt{n=1000;S=0 \\\\\n\t\t\t\t\tfor i in range(n): \\\\\n\t\t\t\t\t  u = ... \\\\\n\t\t\t\t\t S= S + ... \\\\\n\t\t\t\t\tprint(...)}\n\n\n\n\n\n\n",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "886da15f-14f0-4312-8ac1-7be41a0ec29b",
+      "id": "77d1988c-ca4b-4d00-88c5-3f04bdd2e73f",
       "type": "reponse",
       "value": {
         "latex": "u = 4*rand() \\\\\n\t\t\t\tS= S + 1/sqrt(2*pi)*exp(-u**2/2) \\\\\n\t\t\t\tprint(4*S/n)",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "0a462e48-ba26-4f35-be41-6f0dc9375d10",
+      "id": "20fcf51a-f777-4729-90e3-5a8c092c8b2b",
       "type": "question",
       "value": {
         "latex": "Construire un intervalle de confiance $I_{conf}$ tel que $\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "a01f8bf1-3060-4896-99a6-d6da50ff1f64",
+      "id": "13895097-a772-4e2a-9d61-ea7acb11b610",
       "type": "reponse",
       "value": {
         "latex": "On procède de même en posant $h \\colon x \\mapsto \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}$.\n\t\t\t\t\n\t\t\t\tOn note  $\\sigma'^2 = \\mathbb{V}(h(Z_1))$. D'après le Théorème Central Limite, \n\t\t\t\t$$ \\frac{\\frac{1}{n}\\sum\\limits_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma'}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1) $$\n\t\t\t\tSi $n$ est grand, on peut considérer que la variable $Z''_n = \t \\frac{\\frac{1}{n}\\sum_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma'}{\\sqrt{n}}}$ suit approximativement une loi $\\mathcal{N}(0,1)$. On en déduit un intervalle de confiance $I_{conf} = \\left[  Z''_n - 1{,}96 \\frac{\\sigma'}{\\sqrt{n}} ; Z''_n + 1{,}96 \\frac{\\sigma'}{\\sqrt{n}} \\right] $",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": "69ae8cc1-32af-4d77-b255-074536047313",
+      "id": "681f97ed-13b6-42cb-89a1-87161beec2d8",
       "type": "question",
       "value": {
         "latex": "Afin d'obtenir une approximation de $I$, au vu des intervalles de confiance obtenus pour chaque méthode, mieux vaut-il utiliser une méthode de Monte Carlo basée sur la suite $(Z_n)$ ou la suite $(U_n)$ ?",
@@ -141,7 +141,7 @@
       }
     },
     {
-      "id": "8d59a11c-2e0e-4dc5-836b-292cad864813",
+      "id": "b7ecfe46-e724-46e8-a477-7456dffca211",
       "type": "reponse",
       "value": {
         "latex": "Il reste à comparer $\\sigma$ et $\\sigma'$...",

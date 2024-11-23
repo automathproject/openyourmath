@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:20.397Z",
+    "createdAt": "2024-11-23T17:27:14.231Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:20.397Z"
+    "updatedAt": "2024-11-23T17:27:14.231Z"
   },
   "contenu": [
     {
-      "id": "6db255e5-01bc-4a45-a420-656bbab5a76f",
+      "id": "d955f714-e2b2-46cc-b62c-d042c8e0a7eb",
       "type": "question",
       "value": {
         "latex": "Calculer $\\E(X_i)$ et $\\var(X_i)$, pour $i\\in\\{1,2,3\\}$. On considère la variable aléatoire $Y=\\frac{1}{3}(X_1+X_2+X_3)$. Exprimer $\\E(Y)$ et $\\var(Y)$ sans déterminer la loi de $Y$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ddc41221-972c-40d3-9074-464c9fc36ad2",
+      "id": "5baf7692-460c-4529-8eaf-e3b8def37bb9",
       "type": "reponse",
       "value": {
         "latex": "Espérance de $X_i$:\n\t\t\\[ \\E(X_i)=\\int_0^{2a}\\frac{t}{2a}  \\dx t = \\left[ \\frac{1}{4a}t^2 \\right]_0^{2a} =\\frac{4a}{(2a)^2}=a\\]\n\t\tVariance de $X_i$:\n\t\t$$\\begin{align*}\n\t\t\t&\\E(X_i^2)=\\int_0^{2a}\\frac{t^2}{2a}  \\dx t = \\left[ \\frac{t^3}{6a} \\right]_0^{2a} =\\frac{6a}{(2a)^3}=\\frac{4}{3} a^2 \\\\\n\t\t\t&\\var(X_i)=\\E(X_i^2)-\\E(X_i)^2=\\frac{4}{3}a^2-a^2=\\frac{1}{3}a^2\n\t\t\\end{align*}$$\n\t\tEspérance de $Y$:\n\t\t\\[\\E(Y)=\\frac{1}{3}(\\E(X_1)+\\E(X_2)+\\E(X_3))=a\\]\n\t\tVariance de $Y$: \n\t\t$$\\begin{align*}\n\t\t\t\\var(Y)&=\\frac{1}{9}\\var(X_1+X_2+X_3) \\\\\n\t\t\t&= \\frac{1}{9}(\\var(X_1)+\\var(X_2)+\\var(X_3)) \\quad \\text{ car les va }X_i\\text{ sont indépendantes} \\\\\n\t\t\t&=\\frac{a^2}{9}\n\t\t\\end{align*}$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "9f893b7a-70b7-4380-a9ab-9d431b8c9b6b",
+      "id": "5102c6c5-ad05-4888-953e-56be06434632",
       "type": "question",
       "value": {
         "latex": "On pose $Z=\\max(X_1,X_2,X_3)$. Justifier que la fonction de répartition $F_Z$ de $Z$ vérifie: $\\displaystyle F_Z(t)=\\prod_{i=1}^3 F_{X_i}(t)$. En déduire qu'une densité de $Z$ est :\n\t$$\n\tf_{Z}(t)=\n\t\\left\\{\\begin{array}{cl}\n\t\t\\frac{3}{(2a)^3}t^2 &\\text{si } 0\\leq t \\leq 2a, \\\\[1mm]\n\t\t0& \\text{sinon.}\n\t\\end{array}\\right.\n\t$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "97a786e6-bbb4-4e48-a0ab-ae86fe7d1636",
+      "id": "718956ab-11c4-4efb-9033-02ddf56b6be3",
       "type": "reponse",
       "value": {
         "latex": "Fonction de répartition de $Z$:\n\t\t$$\\begin{align*}\n\t\t\t\\forall t \\in\\R, \\quad  F_Z(t)&=\\p(Z\\leq t)\\\\\n\t\t\t& =\\p(\\max(X_1,X_2,X_3) \\leq t) \\\\\n\t\t\t&=\\p(\\{X_1\\leq t\\}\\cap \\{X_2\\leq t\\}\\cap \\{X_3\\leq t\\}) \\\\\n\t\t\t&=\\p(X_1\\leq t)\\p(X_2\\leq t)\\p(X_3\\leq t) \\quad \\text{ car les va }X_i\\text{ sont indépendantes}\\\\\n\t\t\t&=\\prod_{i=1}^3 F_{X_i}(t) \n\t\t\\end{align*}$$\n\t\tDensité de $Z$:\n\t\t\\[ \\forall t \\in \\R, \\quad f_Z(t)=F_Z'(t)=3F_{X_1}(t)\\times f_{X_1}(t) \\]\n\t\tor\n\t\t\\[ F_{X_1}(t)=\\begin{cases} 0 & \\text{ si } t<0 \\\\\n\t\t\t\\frac{t}{2a} & \\text{ si } t\\in[0;2a] \\\\\n\t\t\t1 & \\text{ si } t> 2a\n\t\t\\end{cases}\n\t\t\\]\n\t\tdonc\n\t\t$$\\begin{align*}\n\t\t\tf_Z(t)&= \\begin{cases}\n\t\t\t\t0 & \\text{ si } t< 0 \\text{ ou } t>2a \\\\\n\t\t\t\t3\\left(\\frac{t}{2a}\\right)^2\\times \\frac{1}{2a} &  \\text{ si } t\\in[0;2a]\n\t\t\t\\end{cases} \\\\\n\t\t\t&= \\begin{cases}\n\t\t\t\t0 & \\text{ si } t< 0 \\text{ ou } t>2a \\\\\n\t\t\t\t\\frac{3}{(2a)^3}t^2 & \\text{ si } t\\in[0;2a]\n\t\t\t\\end{cases}\n\t\t\\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "033b5368-4f40-44b2-b353-8a9bc5225436",
+      "id": "75269fea-c038-4ffa-bc56-30fa882a92ee",
       "type": "question",
       "value": {
         "latex": "Calculer $\\E(Z)$ et $\\var(Z)$. Soit la \\va $T=\\alpha Z$. Déterminer $\\alpha$ de sorte que $\\E(T)=\\E(Y)$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "8420a3ae-d512-4f89-ba15-fd54f06494ce",
+      "id": "b4dabdaa-cbbb-4313-8829-bbe51d9abb1c",
       "type": "reponse",
       "value": {
         "latex": "Espérance de $Z$:\n\t\t\\[ \\E(Z)=\\int_0^{2a} \\frac{3}{(2a)^3}t^3  \\dx t\n\t\t=\\left[ \\frac{3}{4}\\frac{1}{(2a)^3}t^4 \\right]_0^{2a}\n\t\t=\\frac{3a}{2}\n\t\t\\]\n\t\tVariance de $Z$:\n\t\t$$\\begin{align*}\n\t\t\t&\\E(Z^2)=\\int_0^{2a} \\frac{3}{(2a)^3}t^4  \\dx t\n\t\t\t=\\left[ \\frac{3}{5}\\frac{1}{(2a)^3}t^5 \\right]_0^{2a}\n\t\t\t=\\frac{12}{5}a^2 \\\\\n\t\t\t&\\var(Z)=\\E(Z^2)-\\E(Z)^2\n\t\t\t=\\frac{12}{5}a^2-\\frac{9}{4}a^2=\\frac{3}{20}a^2\n\t\t\\end{align*}$$\n\t\tDétermination de $\\alpha$:\n\t\t$$\\begin{align*}\n\t\t\t\\E(T)=\\E(Y) \\quad \\Leftrightarrow \\quad \\alpha\\E(Z)=a\n\t\t\t\\quad \\Leftrightarrow \\quad \\alpha \\frac{3a}{2}=a\n\t\t\t\\quad \\Leftrightarrow \\quad \\alpha=\\frac{2}{3}\n\t\t\\end{align*}$$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "93524fc6-94a5-4e47-bf77-f0096d666d9c",
+      "id": "4b76dcdc-6e67-4819-81a1-7a28df4b6a46",
       "type": "question",
       "value": {
         "latex": "Comparer $\\var(T)$ et $\\var(Y)$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "947a89d4-c00c-4d57-babb-d6a0b20ef4ac",
+      "id": "0c1e2f91-3ad0-4e89-af4c-f9afdff2e52e",
       "type": "reponse",
       "value": {
         "latex": "On a\n\t\t$$\\var(T)=\\sigma^2\\left(\\frac{2}{3}Z\\right)\n\t\t= \\frac{4}{9}\\var(Z)\n\t\t=\\frac{4}{9}\\times \\frac{3}{20}a^2 \n\t\t=\\frac{a^2}{15}.$$\n\t\tComme $\\displaystyle \\var(Y)=\\frac{a^2}{9}$, on a $\\var(T) <  \\var(Y)$.",

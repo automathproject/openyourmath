@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T17:30:38.727Z",
+    "createdAt": "2024-11-23T17:27:29.017Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T17:30:38.727Z"
+    "updatedAt": "2024-11-23T17:27:29.017Z"
   },
   "contenu": [
     {
-      "id": "fb093af4-ef54-4e86-97dd-61ab041569e5",
+      "id": "531cc4af-a6a0-472f-8bb7-a0b8b55109f0",
       "type": "description",
       "value": {
         "latex": "Pour approcher les racines réelles de la fonction $f:\\mathbb{R}\\rightarrow \\mathbb{R}$ définie par $f(x)=x-e^{-(1+x)}$, on utilise quatre méthodes de point fixe: $x_0$ donné, $x_{n+1}=\\phi_i(x_n)$, pour tout $n\\in\\mathbb{N}$, où\n$$ \\phi_1(x)=e^{-(1+x)}, \\quad \\phi_2(x)=x^2e^{1+x}, \\quad \\phi_3(x)=-1-\\ln(x), \\quad \\phi_4(x)=\\frac{1+x}{1+e^{1+x}}.$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "22a665e9-03e6-4853-b1e3-a6ae36bb05d5",
+      "id": "9331401f-3e7e-429d-9d15-b819d883490d",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe une unique racine réelle $\\ell$ de $f$. Montrer que $\\ell\\in]\\frac{1}{5};\\frac{1}{2}[$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "58a700ea-d71e-47b4-b179-3ff6339ff444",
+      "id": "72cd2377-4953-49ea-97d0-59aad42762a5",
       "type": "reponse",
       "value": {
         "latex": "La fonction $f$ est définie et dérivable sur $\\mathbb{R}$, de dérivée $f'(x)=1+e^{-(1+x)}>0$. La fonction $f$ est donc strictement croissante et continue sur $\\mathbb{R}$. Or $f(\\frac{1}{5})<0$ et $f(\\frac{1}{2})>0$ donc d'après le théorème des valeurs intermédiaires, $f$ admet une unique racine réelle $\\ell$ sur $\\mathbb{R}$  et  $l\\in]\\frac{1}{5};\\frac{1}{2}[$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "972579c4-a088-49d1-a256-06f4abf20c24",
+      "id": "7877fdf5-86ba-43b3-a6f4-5eb024d42dc5",
       "type": "question",
       "value": {
         "latex": "Montrer que les quatre méthodes de point fixe sont consistantes avec la recherche du zéro de $f$, \\textit{i.e.} montrer que pour tout $x\\in]\\frac{1}{5};\\frac{1}{2}[$, on a pour tout $i \\in \\{1,2,3,4\\}$ : $$\\phi_i(x)=x  \\Leftrightarrow  f(x)=0.$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "9b1adef5-9886-47ce-8759-01fb7c6fe1a1",
+      "id": "7514fbce-5e61-4957-8555-8033d57b5be1",
       "type": "reponse",
       "value": {
         "latex": "Pour $\\phi_1$, pas de problème. \\\\\n\t\tPour $\\phi_2$, on a $\\phi_2(x)=x \\Leftrightarrow x=0$ ou $f(x)=0$. Comme on se place dans l'intervalle $]\\frac{1}{5};\\frac{1}{2}[$, on obtient l'équivalence recherchée. \\\\\n\t\tPour $\\phi_3$ et $\\phi_4$, pas de problème.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "7f1c0d95-ac24-4ca3-a980-d89353be1548",
+      "id": "2b29547f-fddc-445d-8a3d-779bbf4f5042",
       "type": "question",
       "value": {
         "latex": "Étudier la convergence locale des quatre méthodes de point fixe. Si elles convergent, donner l'ordre de convergence.\n\tAttention, on ne demande pas d'étudier la convergence globale sur $]\\frac{1}{5};\\frac{1}{2}[$ mais de vérifier s'il existe un voisinage de $\\ell$ tel que pour tout $x_0$ dans ce voisinage, la méthode converge.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "1939d1b9-38ab-4cb5-86b3-7b11c27d58ee",
+      "id": "cf2e8e93-7dbe-4880-8a11-5ebc46aa93ea",
       "type": "reponse",
       "value": {
         "latex": "Les fonctions $\\phi_i$ sont dérivables sur l'intervalle $]\\frac{1}{5};\\frac{1}{2}[$, de dérivées:\n\t\t\\[ \\phi_1'(x)=-e^{-(1+x)}, \\quad \\phi_2'(x)=2xe^{1+x}+x^2e^{1+x}, \\quad \\phi_3'(x)=-\\frac{1}{x}, \\quad \\phi_4'(x)=\\frac{1-xe^{1+x}}{(1+e^{1+x})^2}. \\]\n\t\tPar ailleurs, $\\ell$ étant solution de l'équation $f(x)=0$, on a l'égalité $\\ell=e^{-(1+\\ell)}$. On en déduit que :\n\t\t\\begin{itemize}\n\t\t\t\\item $\\phi_1'(\\ell)=-e^{-(1+\\ell)}=\\ell$ donc $|\\phi_1'(\\ell)|<1$ (car $\\ell\\in]\\frac{1}{5};\\frac{1}{2}[$). Le point $\\ell$ est attractif pour la fonction $\\phi_1$: la suite converge à l'ordre $1$ pour $x_0$ suffisamment proche de $\\ell$.\n\t\t\t\\item $\\phi_2'(\\ell)=2+\\ell$ donc $|\\phi_2'(\\ell)|>1$, ce qui implique que le point $\\ell$ est répulsif pour $\\phi_2$ et la suite ne converge pas.\n\t\t\t\\item $|\\phi_3'(\\ell)|=|\\frac{-1}{\\ell}|>1$ donc la suite ne converge pas.\n\t\t\t\\item $\\phi_4'(\\ell)=\\frac{1-e^{-(1+\\ell)}e^{1+\\ell} }{(1+e^{1+\\ell})^2}=0$. Le point $\\ell$ est attractif pour $\\phi_4$. La suite est donc convergente pour $x_0$ dans un voisinage suffisamment proche de $\\ell$. De plus, l'ordre de convergence est au moins $2$.\n\t\\end{itemize}",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "03261051-dacc-401d-95dc-b30227e2339f",
+      "id": "110daefc-b235-48ef-b5f4-32494b739af7",
       "type": "question",
       "value": {
         "latex": "Pour la première méthode, établir analytiquement pour quelles valeurs de $x_0$ la suite converge.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "792d8cd2-b955-4fe7-822e-5526d6597e12",
+      "id": "5595bc32-2edf-47a5-9001-c861e094a5a9",
       "type": "reponse",
       "value": {
         "latex": "Pour construire la fonction $\\phi_1$, il suffit d'effectuer une translation d'une unité vers la gauche de la fonction $x\\mapsto e^{-x}$.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\tL'étude graphique suggère que la suite converge quel que soit $x_0\\in\\mathbb{R}$ (convergence <<en escargot>>). Pour le prouver, on utilise le théorème de convergence globale de la méthode de point fixe.\n\t\t\\begin{itemize}\n\t\t\t\\item On commence par vérifier si $|\\phi_1'(x)|<1, \\ \\forall x\\in\\mathbb{R}$: \n\t\t\t\\[ |\\phi_1'(x)|<1 \\quad \\Leftrightarrow \\quad -1<e^{-(1+x)}<1 \\quad \\Leftrightarrow \\quad x>-1.\\] \n\t\t\tEn revanche, $|\\phi_1'(0)| = e^{-1}$ donc on peut poser $K = e^{-1} <1$ ; or $\\phi_1'$ est décroissante sur $\\R$ donc : $$\\forall x \\in [0;+\\infty[ \\, ,\\,|\\phi_1'(x)| \\leq K$$ \n\t\t\t\\item Commençons par regarder si le théorème de convergence globale s'applique sur l'intervalle $[0;+\\infty[$. Pour cela, il faut vérifier que $\\phi_1([0;+\\infty[)\\subset  [0;+\\infty[$. Or pour tout $x \\in [0;+\\infty[$, $\\phi_1(x)=e^{-(1+x)} \\in [0;1[$ donc $\\phi_1([0;+\\infty[)=[0;1[ \\subset [0;+\\infty[$. On a donc vérifié la seconde hypothèse du théorème, ce qui permet de conclure que la méthode de point fixe converge au moins pour tout $x_0\\in[0;+\\infty[$.\n\t\t\t\\item Reste à étudier le cas où $x_0 < 0$. Si on s'intéresse au premier terme $x_1$, on s'aperçoit que $x_1=\\phi_1(x_0)=e^{-(1+x_0)}\\in[0;+\\infty[$ et on se retrouve dans le cas précédent: le théorème s'applique à partir de $x_1$.\n\t\t\\end{itemize}\n\t\tEn conclusion, la méthode de point fixe associée à $\\phi_1$ converge quel que soit $x_0\\in\\mathbb{R}$.",

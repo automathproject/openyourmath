@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:29.797Z",
+    "createdAt": "2024-11-23T17:28:00.294Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:29.797Z"
+    "updatedAt": "2024-11-23T17:28:00.294Z"
   },
   "contenu": [
     {
-      "id": "7100af64-8fd4-494e-bd8d-6686a1a54b8e",
+      "id": "f5f85226-9860-453c-923c-4f3202fd2634",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire absolument continue dont la densité est donnée par $$f(x)=\\frac{1}{2}\\textbf{1}_{[-1;1]}(x)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "832939c3-8b18-40d8-bc4e-49f9149cd148",
+      "id": "46ccb9be-545f-46bc-97a4-b750b7ca16ce",
       "type": "question",
       "value": {
         "latex": "On cherche à identifier la loi de $Y=X^2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4589d006-1734-42c5-a10f-245cf03837cf",
+      "id": "c3d636dd-d9e8-4ca6-92d8-25f5fe399e10",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}\n\t\t\\item pour tout $t$, $F_Y(t)= \\prob(X^2 \\leq t)$\n\t\t\\item si $t \\geq 0$, $\\{X^2 \\leq t\\} = \\{X \\in [-\\sqrt{t};\\sqrt{t}] \\}$ ; \\\\ si $t<0$ $\\{X^2 \\leq t\\} = \\emptyset$\n\t\t\\item donc pour tout $t \\geq 0$, $$F_Y(t) = \\prob(X \\in [-\\sqrt{t};\\sqrt{t}]) = \\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2}\\textbf{1}_{[-1;1]}(x) dx$$\n\t\tsi $0 \\leq t \\leq 1$ alors $F_Y(t)=\\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2} dx = \\sqrt{t}$ \\\\\n\t\tsi $t>1$ alors $F_Y(t)=\\int_{-1}^1 \\frac{1}{2} dx = 1$\n\t\t\\item pour tout $t \\in ]0;1[$, $F_Y$ est dérivable en $t$ et $F_Y'(t) = \\frac{1}{2} \\frac{1}{\\sqrt{t}}$ donc en intégrant, $F_Y(t) = \\int_{0}^{t}  \\frac{1}{2} \\frac{1}{\\sqrt{x}} dx$ de sorte que $F_Y(0)=0$ et $F_Y(1)=1$. \\\\\n\t\tPour résumer ces conditions, on peut écrire que pour tout $t \\in \\R $, \n\t\t$$F_Y(t) = \\int_{-\\infty}^t \\frac{1}{2} \\frac{1}{\\sqrt{x}} \\textbf{1}_{[0;1]}(x)dx$$\n\t\t\n\t\tOn en déduit que $Y$ admet pour densité la fonction $g \\colon x \\mapsto   \\frac{1}{2\\sqrt{x}} \\textbf{1}_{[0;1]}(x)$\n\\end{enumerate}",

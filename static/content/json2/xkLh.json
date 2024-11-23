@@ -2,18 +2,18 @@
   "uuid": "xkLh",
   "titre": "Classification linéaire par un perceptron",
   "theme": [
-    "Réseau de neurones"
+    "réseau de neurones"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-17T15:59:41.094Z",
+    "createdAt": "2024-11-23T17:27:59.980Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-17T15:59:41.094Z"
+    "updatedAt": "2024-11-23T17:27:59.980Z"
   },
   "contenu": [
     {
-      "id": "6751784a-1f8e-4c43-a9dc-f90331e50f1f",
+      "id": "b35a789b-37b5-4edd-8a3c-da3a4f9aa680",
       "type": "question",
       "value": {
         "latex": "Expliquer à l'aide d'un graphique ce que réalise le réseau de neurones suivant :\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$H$};\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$1$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$1$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$0$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-130:0.8);\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-2$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}",

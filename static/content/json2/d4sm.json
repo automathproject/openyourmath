@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:05.661Z",
+    "createdAt": "2024-11-23T17:27:43.043Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:05.661Z"
+    "updatedAt": "2024-11-23T17:27:43.043Z"
   },
   "contenu": [
     {
-      "id": "b58109ac-deb3-461e-b3a7-c6bb7f798331",
+      "id": "56a2a52f-13a5-479e-97d7-3607c6a8b976",
       "type": "question",
       "value": {
         "latex": "Vérifier que la fonction $f$ définit bien une densité de probabilité.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "482d9d95-d30f-4964-9c3d-15787bf429f0",
+      "id": "68b84bd2-01d3-404f-88ff-1cb05dd214dd",
       "type": "reponse",
       "value": {
         "latex": "Pour que $ f $ soit une densité, l'intégrale de $ f $ doit être égale à 1. On a : \n        $$\\begin{align*}\n            \\int_1^{+\\infty} \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx &= \\alpha \\int_1^{+\\infty} x^{-(\\alpha+1)} dx \\\\\n            &= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^{+\\infty} \\\\\n            &= \\frac{\\alpha}{\\alpha} = 1\n        \\end{align*}$$\n        Donc $f$ est positive et $\\int f = 1$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "790acf90-f9b9-40c3-9230-bd0526bf350d",
+      "id": "67dda5f3-b8cc-4474-8e23-bcf80419d651",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition de $ X $.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "4a4311fd-cd68-40ff-b3eb-bad4da34da4f",
+      "id": "0100c608-a5c4-4150-a6f3-4fea2cf30fb9",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\leq 1$, alors $F_X(t) = 0$. Si $t > 1$, alors :\n            $$\\begin{align*}\n                F_X(t) &= \\int_1^t \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx \\\\\n                &= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^t \\\\\n                &= 1 - \\frac{1}{t^\\alpha}\n            \\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "356b2ac2-4092-4adb-a492-65f64e559b4a",
+      "id": "5bacb961-38c9-43ad-a462-c2f94209516f",
       "type": "question",
       "value": {
         "latex": "Étudier l'existence de $ \\E(X)$ en fonction de la valeur du paramètre $\\alpha$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "be655614-c9f0-46ce-bbfc-64248444585b",
+      "id": "a1c97d06-0a49-4ab8-a719-e919a25b6123",
       "type": "reponse",
       "value": {
         "latex": "Si elle existe, l'espérance de $ X $ est $ \\int_1^{+\\infty} x \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx$. Or cette intégrale existe si et seulement si $ \\alpha > 1 $.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a8e30833-48c6-428c-b59f-1f312fc469b1",
+      "id": "adb6511e-c434-45c5-8bb8-d6be436c6b6d",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de la variable aléatoire $Y$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "e26d479b-51a0-4882-91c5-0d6d90d8898c",
+      "id": "4b39ea0e-86fc-45eb-925a-c55173150f6e",
       "type": "reponse",
       "value": {
         "latex": "Soit $ t \\in \\R $. Si $ t \\leq s+1 $, alors $ F_Y(t) = 0 $. Si $ t > s+1 $, alors :\n            $$\\begin{align*}\n                F_Y(t) &= \\prob(Y \\leq t) \\\\\n                &= \\prob(rX + s \\leq t) \\\\\n                &= \\prob(X \\leq \\frac{t-s}{r}) \\\\\n                &= F_X\\left( \\frac{t-s}{r} \\right) \\\\\n                &= 1 - \\frac{1}{\\left( \\frac{t-s}{r} \\right)^\\alpha} \\\\\n                &= 1 - \\left( \\frac{r}{t-s} \\right)^\\alpha\n            \\end{align*}$$\n            Par dérivation, on trouve que $Y$ est une variable aléatoire absolument continue et que la densité de $Y$ est $ f_Y(x) = \\mathbf{1}_{]s+1;+\\infty[}(x) \\frac{\\alpha}{r} \\left( \\frac{r}{x-s} \\right)^{\\alpha+1} $. On trouve une loi de Pareto de paramètre $(\\alpha, r, s+1)$.",

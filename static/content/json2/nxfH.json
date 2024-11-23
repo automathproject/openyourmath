@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:17.132Z",
+    "createdAt": "2024-11-23T17:27:51.927Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:17.132Z"
+    "updatedAt": "2024-11-23T17:27:51.927Z"
   },
   "contenu": [
     {
-      "id": "ffc4cb12-9155-408c-8f06-c220342367dc",
+      "id": "1c98247b-c60f-4133-9073-64b9d2bf6c83",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire de densité $f_{\\theta}$ définie par :\n\t$$f_{\\theta}(x) = \\theta x^{\\theta-1} 1_{]0;1[}(x)$$\n\toù $\\theta >0$.\n\tSoit une suite $(X_n)$ de variables aléatoires indépendantes suivant chacune la même loi que $X$. On pose \n\t$$ \\overline{X}_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\qquad \\text{} \\qquad U_n = \\frac{\\overline{X}_n}{1-\\overline{X}_n}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9190bcb4-7775-4a3a-b05d-520a6f8d4a52",
+      "id": "d1dcbf44-c174-41ef-99e4-453ee5acb9b7",
       "type": "question",
       "value": {
         "latex": "Calculer $\\mathbb{E}(X)$ et $V(X)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d4fe64bd-3ccf-4148-8010-1fa2a820202d",
+      "id": "ff0eb4d4-1ee8-43f2-ad14-2d9448db1671",
       "type": "reponse",
       "value": {
         "latex": "On calcule les moments d'ordre 1 et 2 : $\\mathbb{E}(X) = \\int_0^1 \\theta x^{\\theta} dx = \\frac{\\theta}{\\theta+1}$ et  $\\mathbb{E}(X^2) = \\int_0^1 \\theta x^{\\theta+1} dx = \\frac{\\theta}{\\theta+2}$ d'où $V(X) = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "718da49a-06ac-4327-85b9-c5be99ce8a9d",
+      "id": "7f3cdc25-090b-45ac-a94f-010d5a6ea0c1",
       "type": "question",
       "value": {
         "latex": "Montrer que la suite  $(\\overline{X}_n)$ converge en probabilité vers un réel $g(\\theta)$ que l'on précisera.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "44215b92-e064-499d-a05a-f706a1fcb680",
+      "id": "10d17b25-b309-4959-8fa5-f254d00a0bb6",
       "type": "reponse",
       "value": {
         "latex": "D'après la loi faible des grands nombres, $\\overline{X}_n  \\xrightarrow[]{\\mathcal{P}} \\mathbb{E}(X) = \\frac{\\theta}{\\theta+1}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "64481749-5cfd-48e1-ad08-b353e0231f33",
+      "id": "2862193d-40f9-49c7-b0da-752a24782594",
       "type": "question",
       "value": {
         "latex": "En déduire que la suite $(U_n)$ converge en probabilité vers le réel $\\theta$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "b567dd86-fade-4664-9752-ac57e6c34b23",
+      "id": "f379813e-66b1-4116-b3b3-7b452ca581ed",
       "type": "reponse",
       "value": {
         "latex": "La fonction $f \\colon y \\mapsto \\frac{y}{1-y}$ est continue sur $]0;1[$ donc par composition, $f(\\overline{X}_n) = U_n  \\xrightarrow[n \\to +\\infty]{\\mathcal{P}} h(g(\\theta)) = \\theta$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "83d7e0d1-0f73-46df-bcbd-264540511c0f",
+      "id": "cc0fcb6d-797b-454f-a62c-18ac19dd734a",
       "type": "question",
       "value": {
         "latex": "On pose \n\t\t$$T_n = \\frac{1}{1+U_n} \\sqrt{ \\frac{U_n}{U_n+2} }$$\n\t\tLa suite $(T_n)$ converge-t-elle en probabilité ? Si oui, déterminer sa limite.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "e1a619a1-0008-474c-ab78-ea264c39bd11",
+      "id": "83a0eaf0-f672-49a9-a0a1-e958e5084077",
       "type": "reponse",
       "value": {
         "latex": "De même, $T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{P}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } $.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "2c02d948-60f0-4b21-8466-cc2601f6c9f2",
+      "id": "988a9b8e-7c61-4385-9c49-527f6e900743",
       "type": "question",
       "value": {
         "latex": "Vérifier que la suite $(V_n)$ définie par \n\t\t$$V_n = \\sqrt{n}\\left(\\overline{X}_n - \\frac{\\theta}{\\theta+1}  \\right)$$ converge en loi vers une loi normale dont on précisera les paramètres.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "b91d32a1-71ed-4e63-8309-784293d470c4",
+      "id": "9b406e56-ba2e-4f78-ba12-01bd26432bb4",
       "type": "reponse",
       "value": {
         "latex": "D'après le Théorème Central Limite, \n\t\t\t$$\\frac{\\overline{X}_n- \\mathbb{E}(\\overline{X}_n) }{\\sqrt{V(\\overline{X}_n)}}  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)$$\n\t\t\tavec $\\mathbb{E}(\\overline{X}_n) = n \\times \\frac{\\theta}{n(\\theta+1)} = \\frac{\\theta}{\\theta+1}$ et $V(\\overline{X}_n) = \\frac{1}{n^2} \\times n \\times\\frac{\\theta}{(\\theta+1)^2(\\theta+2)}$. Donc \n\t\t\t$$\\frac{\\overline{X}_n-  \\frac{\\theta}{\\theta+1} }{\\sqrt{ \\frac{\\theta}{n(\\theta+1)^2(\\theta+2)}  }}  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}(0,1)$$\n\t\t\tdonc $$\\sqrt{n}\\left(\\overline{X}_n-  \\frac{\\theta}{\\theta+1} \\right)  \\xrightarrow[n \\to +\\infty]{\\mathcal{L}} \\mathcal{N}\\left(0,\\sigma^2 = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\right)$$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "2fa509fa-3295-44b4-93c9-608063afbc21",
+      "id": "dae28e91-527c-4f91-b0eb-236550be9647",
       "type": "question",
       "value": {
         "latex": "Déterminer une suite de réels $(a_n)$ et un un réel $m(\\theta)$ tels que la suite de variables aléatoires $(Z_n)$ définie par \n\t\t$$Z_n = a_n \\frac{ \\overline{X}_n - m(\\theta)}{T_n}$$\n\t\tconverge en loi vers une limite à préciser.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "f37360ac-5c86-416e-816a-bce3298b1dbf",
+      "id": "65b28bd2-b196-4b4c-8ee6-7e2807ab21b6",
       "type": "reponse",
       "value": {
         "latex": "On sait que $T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{P}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } $ donc $T_n \\xrightarrow[n \\to +\\infty]{\\mathcal{L}}  \\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } $ et d'après la propriété de Slutsky, la suite de variables $\\left( \\frac{V_n}{T_n} \\right)$ converge vers $\\frac{V}{\\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } }$ où $V$ suit une loi $\\mathcal{N}\\left(0,\\sigma^2 = \\frac{\\theta}{(\\theta+1)^2(\\theta+2)}\\right)$. Donc $\\frac{V}{\\frac{1}{1+\\theta} \\sqrt{ \\frac{\\theta}{\\theta+2} } }$ suit une loi $\\mathcal{N}(0,1)$.",

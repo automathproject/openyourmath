@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:25.537Z",
+    "createdAt": "2024-11-23T17:27:18.296Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:25.537Z"
+    "updatedAt": "2024-11-23T17:27:18.296Z"
   },
   "contenu": [
     {
-      "id": "e783b72f-7cd4-4cea-af48-23364e053f2b",
+      "id": "35b37ba7-ee41-47d8-82a7-e4b1ebf0bfae",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $k \\in \\{1, \\dots, 10\\}$, $\\prob(X_A = k) = p$ où $p$ est une valeur constante à déterminer.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "a490076e-ff6d-4631-a7bc-fcce3739e2cc",
+      "id": "81f1f806-2f50-468d-b1a9-2aa1e82b1ed4",
       "type": "reponse",
       "value": {
         "latex": "Soit $E$ l'ensemble des permutations possibles des 10 clés. On a $|E| = 10!$ et toutes ces configurations sont équiprobables. Pour tout $k \\in \\{1, \\dots, 10\\}$, on a $X_A = k$ si et seulement si la clé correcte est à la position $k$. Il y a $9!$ permutations qui vérifient cette condition.\n\t\t  On a donc $\\prob(X_A = k) = \\frac{1}{|E|} \\times 9! = \\frac{9!}{10!} = \\frac{1}{10}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "8c69e752-5c01-4fb8-9cd0-8caa4e5e8841",
+      "id": "e6ff6fbb-e660-440b-9786-b49f419fa136",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par $X_B$ ?",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "54bcda83-e9d3-4451-a52c-8d906bc9eb86",
+      "id": "836cf0bd-2444-4661-b06e-abdf9c9de3c7",
       "type": "reponse",
       "value": {
         "latex": "La méthode est vue comme un tirage avec remise d'une clé jusqu'à tomber sur la bonne. La variable aléatoire $X_B$ modélise donc un temps d'attente du premier succès pour une expérience de Bernoulli de paramètre $\\frac{1}{10}$. Donc $X_B$ suit une loi géométrique de paramètre $\\frac{1}{10}$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "621a4ce5-8cef-426d-98ed-4454abb5a154",
+      "id": "033b5327-e824-44c4-a6eb-14ea5ccbb7da",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité d'essayer strictement plus de 8 clés : par la méthode A ? Par la méthode B ? On notera $H$ l'événement : « essayer plus de 8 clés ».",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "0d650ab6-9414-4dff-9879-7a674bd7c13e",
+      "id": "8829b6da-560f-422d-9ca7-d15663b2e7aa",
       "type": "reponse",
       "value": {
         "latex": "\\begin{itemize}\n\t\t\t\\item Pour la méthode A, on a $\\prob(X_A > 8) = \\prob(X_A = 9) + \\prob(X_A = 10) = \\frac{1}{10} + \\frac{1}{10} = \\frac{1}{5}$.\n\t\t\t\\item Pour la méthode B, on a $\\prob(X_B > 8) = \\sum\\limits_{k=9}^{+\\infty} \\left(1 - \\frac{1}{10}\\right)^{k-1} \\times \\frac{1}{10} = \\frac{1}{10}\\sum\\limits_{k=8}^{+\\infty} \\left(\\frac{9}{10}\\right)^k = \\frac{1}{10} \\times \\left(\\frac{9}{10}\\right)^8 \\times \\frac{1}{1 - \\frac{9}{10}} = \\frac{1}{10} \\times \\left(\\frac{9}{10}\\right)^8 \\times 10 = \\left(\\frac{9}{10}\\right)^8$.\n\t\t\\end{itemize}",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "69612027-8e91-4cc6-90a3-f139606196f0",
+      "id": "e6383902-124d-4680-922c-c66747bc4162",
       "type": "question",
       "value": {
         "latex": "On admet que le gardien utilise la méthode A deux fois sur trois. Quelle est la probabilité conditionnelle que le gardien utilise la méthode B sachant que les 8 premiers essais ont échoué ? On donnera le résultat arrondi à $10^{-2}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "0c0933d5-ebef-44b1-abb5-ed5761197173",
+      "id": "1aebdda9-d9cd-411b-b310-027b817272c3",
       "type": "reponse",
       "value": {
         "latex": "Soit $B$ l'événement : « utiliser la méthode B ». On a $\\prob(B) = \\frac{1}{3}$. D'après la formule de Bayes, on a $\\prob(B | {H}) = \\frac{\\prob({H} | B) \\times \\prob(B)}{\\prob({H})}$. Or d'après le théorème des probabilités totales, $\\prob(H) = \\prob(H | B) \\times \\prob(B) + \\prob(H | \\overline{B}) \\times \\prob(\\overline{B}) = \\left(\\frac{9}{10}\\right)^8 \\times \\frac{1}{3} + \\frac{1}{5} \\times \\frac{2}{3}$. \n\n\t\tDonc $\\prob(B | {H}) = \\frac{\\left(\\frac{9}{10}\\right)^8 \\times \\frac{1}{3}}{\\left(\\frac{9}{10}\\right)^8 \\times \\frac{1}{3} + \\frac{1}{5} \\times \\frac{2}{3}} \\approx 0.52$.",

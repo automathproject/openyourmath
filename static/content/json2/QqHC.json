@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:50.773Z",
+    "createdAt": "2024-11-23T17:27:33.041Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:50.773Z"
+    "updatedAt": "2024-11-23T17:27:33.041Z"
   },
   "contenu": [
     {
-      "id": "2fe83645-1e6c-4744-a206-c8bbd87b2404",
+      "id": "6fbd0bb5-590d-43c0-8263-6b0a8e5b28c7",
       "type": "description",
       "value": {
         "latex": "Une urne contient $n$ boules blanches numérotées de $1$ à $n$, où $n\\in\\N^*$ et deux boules noires numérotées $1$ et $2$. On effectue le tirage de toutes les boules de l'urne, une à une et sans remise. On appelle $X$ le rang d'apparition de la première boule blanche et $Y$ celui du premier numéro $1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5c558599-f6b0-4b83-9e7c-f29049686618",
+      "id": "5c1196df-93bb-4718-a9d6-4f9ee39aa062",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $X$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "53442ab8-0f6e-4cc7-9cae-4805e9f0b77a",
+      "id": "c8ab6fcb-9947-4288-a172-c2593ebd7338",
       "type": "reponse",
       "value": {
         "latex": "$X$ étant le rang d'apparition de la première boule blanche et l'urne contenant $n$ boules blanches et $2$ boules noires, les valeurs prises par $X$ sont les suivantes\n \\[ X(\\Omega)=\\{1,2,3\\}.\\]\n Déterminons les probabilités de chaque issue :\n $$\\begin{align*}\n  \\prob(X=1)&=\\prob(\\text{''On obtient une boule blanche au premier tirage``})\\\\\n  &=\\frac{n}{n+2} \\\\\n  \\prob(X=2)&=\\prob(\\text{''On obtient une boule noire puis une boule blanche``})\\\\\n  &=\\frac{2}{n+2}\\times\\frac{n}{n+1} \\\\\n  \\prob(X=3)&=\\prob(\\text{''On obtient deux boules noires puis une boule blanche``}) \\\\ &=\\frac{2}{n+2}\\times \\frac{1}{n+1}\\times \\frac{n}{n}\\\\\n  &=\\frac{2}{(n+2)(n+2)}.\n \\end{align*}$$\n On peut vérifier que $\\prob(X=1)+\\prob(X=2)+\\prob(X=3)=1$. On a ainsi déterminer la loi de $X$, que l'on peut résumer dans le tableau ci-dessous:\n \\begin{center}\n  \\begin{tabular}{|c|c|c|c|}\n   \\hline\n   $k$ & $1$ & $2$ & $3$ \\\\\n   \\hline\n   $\\prob(X=k)$ & $\\frac{n}{n+2}$ & $\\frac{2n}{(n+2)(n+1)}$ & $\\frac{2}{(n+2)(n+1)}$ \\\\\n   \\hline\n  \\end{tabular}\n \\end{center}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0460057b-20f0-4f01-ba88-991eac2814d6",
+      "id": "0647f121-f4a4-48bd-9039-259007751a67",
       "type": "question",
       "value": {
         "latex": "Montrer que les événements $\\{X=1\\}$ et $\\{Y=1\\}$ sont indépendants si et seulement si $n=2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "32236dba-bc1e-40ee-b7e5-1285aa4674ff",
+      "id": "42fef272-b7b7-4d14-93a5-f24f094e565b",
       "type": "reponse",
       "value": {
         "latex": "On a:\n \\begin{itemize}\n  \\item $\\prob(X=1,Y=1)=\\prob(\\text{''On obtient la boule blanche numérotée $1$ au premier tirage``})=\\frac{1}{n+2}$.\n  \\item $\\prob(X=1)\\prob(Y=1)=\\frac{n}{n+2}\\times \\frac{2}{n+2}$\n  \\item $\\{X=1\\}$ et $\\{Y=1\\}$ sont indépendants si et seulement si\n  $$\\begin{align*}\n   \\prob(X=1,Y=1)=\\prob(X=1)\\prob(Y=1) \\quad\n   & \\Leftrightarrow \\quad \\frac{1}{n+2}=\\frac{2n}{(n+2)^2} \\\\\n   & \\Leftrightarrow \\quad 2n=n+2 \\\\\n   & \\Leftrightarrow \\quad n=2.\n  \\end{align*}$$\n \\end{itemize}",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "0a3504aa-cac8-4fd8-bd40-6cbc38b96ca4",
+      "id": "7627a1de-58af-41f9-a133-ddfed434d01b",
       "type": "question",
       "value": {
         "latex": "Montrer que les variables aléatoires $X$ et $Y$ ne sont pas indépendantes.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "89322991-7c79-4598-8b6f-474646d4d9a6",
+      "id": "88af976d-b96a-4987-8db4-415aadbe2b0c",
       "type": "reponse",
       "value": {
         "latex": "Pour $n\\neq 2$, on a montré, par la question précédente, que les événements $\\{X=1\\}$ et $\\{Y=1\\}$ n'étaient pas indépendants, ce qui montre que les variables $X$ et $Y$ ne sont pas indépendantes.\n \n Pour $n=2$, on a alors $2$ boules blanches et $2$ boules noires dans l'urne. Ainsi,\n \\[ \\prob(X=2,Y=2)=\\frac{1}{4}\\times \\frac{1}{3}=\\frac{1}{12}\\]\n et $\\prob(X=2)=\\frac{1}{3}$ et $\\prob(Y=2)=\\frac{1}{3}$. Par conséquent, $\\prob(X=2,Y=2)\\neq \\prob(X=2)\\prob(Y=2)$, ce qui implique que les variables aléatoires $X$ et $Y$ ne sont pas indépendantes.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "67b385f4-b7f5-4513-a6fb-0d43b874b87d",
+      "id": "d227efad-2ea1-40b7-abbe-25fd9b1b6c95",
       "type": "description",
       "value": {
         "latex": "On suppose maintenant que $n=2$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "a40eb6f4-0c6f-4a9e-8a74-229eabb8d9d5",
+      "id": "7a78bf93-2349-4fa6-a8bf-41f98d10d709",
       "type": "question",
       "value": {
         "latex": "Montrer que $X$ et $Y$ ont même loi.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "2e7a4689-c5a9-4d91-9bcb-4946ab3d066b",
+      "id": "55fc72ca-fbb6-480a-9c83-d5ca6e613291",
       "type": "reponse",
       "value": {
         "latex": "La loi de $X$ a été déterminée à la question $1$. Pour $Y$, on a $Y(\\Omega)=\\{1,2,3\\}$ et\n  $$\\begin{align*}\n   &\\prob(Y=1)=\\frac{2}{4}=\\frac{1}{2}=\\prob(X=1) \\\\\n   &\\prob(Y=2)=\\frac{1}{3}=\\prob(X=2) \\\\\n   &\\prob(Y=3)=\\frac{2}{4}\\times \\frac{1}{3}\\times 1 = \\frac{1}{6}=\\prob(X=3)\n  \\end{align*}$$\ndonc $X$ et $Y$ ont même loi.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "2469c0fa-8cbe-4b5b-ae09-dc1fc8b14688",
+      "id": "2f7b6353-6829-459c-98ba-8e0d5813637d",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi du couple $(X,Y)$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "f4d56098-6b73-479b-85ca-059b5f4ada36",
+      "id": "479788bd-46af-4224-b04a-ce47047a7ba9",
       "type": "reponse",
       "value": {
         "latex": "\\begin{center}\n\\begin{tabular}{|c|c|c|c||c|}\n\\hline\n $Y \\backslash X$ & $1$ & $2$ & $3$ & $\\prob_{Y}$ (loi de $Y$)  \\\\\n \\hline\n $1$ & $\\frac{1}{4}$ & $\\frac{1}{6}$ & $\\frac{1}{12}$ & $\\frac{1}{2}$  \\\\\n \\hline\n $2$ & $\\frac{1}{6}$ & $\\frac{1}{12}$ & $\\frac{1}{12}$ & $\\frac{1}{3}$  \\\\\n \\hline\n $3$ & $\\frac{1}{12}$ & $\\frac{1}{12}$ & $0$ & $\\frac{1}{6}$ \\\\\n \\hline\n \\hline\n $\\prob_{X}$ (loi de $X$) & $\\frac{1}{2}$ & $\\frac{1}{3}$ & $\\frac{1}{6}$ & $1$  \\\\\n \\hline\n\\end{tabular}\n\\end{center}",

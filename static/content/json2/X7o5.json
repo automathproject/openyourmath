@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:14:56.313Z",
+    "createdAt": "2024-11-23T17:27:36.630Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:56.313Z"
+    "updatedAt": "2024-11-23T17:27:36.630Z"
   },
   "contenu": [
     {
-      "id": "72768d00-b9dc-4acd-b9e5-9f85b956bc1c",
+      "id": "62166cc4-04bc-4f89-9fc2-1f94c1cff0bb",
       "type": "description",
       "value": {
         "latex": "Soient $a > 1$ et $b=1$ deux réels. Soit $X$ une variable aléatoire suivant une loi de Pareto de paramètres $(a,1)$. Alors $X$ admet pour densité  la fonction $f$ définie pour tout $x \\in \\R$ par : \n$$f(x)=\\frac{a}{x^{a+1}} \\mathbf{1}_{[1;+\\infty[}(x).$$\nSoit $\\left(X_n\\right)_{n \\in \\N^*}$ une suite de variables aléatoires indépendantes suivant chacune la loi de Pareto de paramètres $(a,1)$. \n\n",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "82cd8428-c673-48d7-8e17-7681cd197c55",
+      "id": "9cca6339-9224-4108-a40f-af493cccfedf",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance de $X_1$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "f31618e9-6412-46a4-b7f9-c99b8ec28609",
+      "id": "b6bca106-532a-451b-9447-718fe98ff835",
       "type": "reponse",
       "value": {
         "latex": "Avec $a>1$, on a $\\EX_1 = \\int_1^{+\\infty} \\frac{a}{x^{a+1}} dx = \\left[ -\\frac{a}{x^a} \\right]_1^{+\\infty} = \\frac{a}{a-1}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0ba123a0-cfdc-4d1f-9154-a3105bc6fc18",
+      "id": "e8a0bc35-ff71-435f-a5e6-fa1d02473c25",
       "type": "question",
       "value": {
         "latex": "On pose $\\displaystyle T_n = \\frac{n}{\\sum\\limits_{i=1}^n \\ln(X_i)}$. Montrer que $T_n$ est un estimateur de $a$ issu de la méthode du maximum de vraisemblance.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "d1924322-653b-42e6-b234-cf2c1e6e6857",
+      "id": "a687eca8-147c-4930-9fd1-b0314ef413c3",
       "type": "reponse",
       "value": {
         "latex": "La fonction de vraisemblance de l'échantillon $\\left(X_1,X_2,\\cdots{},X_n\\right)$ est donnée par : \n            $$\\begin{align*}\n                L(a) &= \\prod_{i=1}^n f_{X_i}(x_i) \\\\\n                &= \\prod_{i=1}^n \\frac{a}{x_i^{a+1}} \\mathbf{1}_{[1;+\\infty[}(x_i) \\\\\n                &= a^n \\prod_{i=1}^n \\frac{1}{x_i^{a+1}} \\mathbf{1}_{[1;+\\infty[}(x_i) \\\\\n                &= a^n \\frac{1}{\\prod_{i=1}^n x_i^{a+1}} \\mathbf{1}_{[1;+\\infty[}(x_i) \\\\\n                &= \\begin{cases}\n                    a^n \\left(\\prod_{i=1}^n x_i \\right)^{-a-1}  & \\text{si } \\forall i \\in  \\{1,...,n\\}, x_i \\geq 1 \\\\\n                    0 & \\text{sinon}\n                \\end{cases}\n            \\end{align*}$$\n            La log vraisemblance est donc donnée par :\n            $$\\begin{align*}\n                \\ln(L(a)) &= \\ln(a^n) - (a+1) \\sum_{i=1}^n \\ln(x_i) \\\\\n                &= n \\ln(a) - (a+1) \\sum_{i=1}^n \\ln(x_i)\n            \\end{align*}$$\n            Donc $\\ln(L(a))$ est maximal pour $a = \\frac{n}{\\sum_{i=1}^n \\ln(x_i)}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "2eef2f71-57e5-40f7-be2f-0f6f099f9cef",
+      "id": "713c542b-de0a-48b8-81a6-1a35b770f804",
       "type": "question",
       "value": {
         "latex": "Montrer que $a \\ln(X_1)$ suit une loi exponentielle de paramètre $1$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "2621b132-0740-4860-a798-ccc251cf6a6a",
+      "id": "524fcc62-bcc4-483e-899d-17bec635ac4b",
       "type": "reponse",
       "value": {
         "latex": "On détermine la fonction de répartition de $a \\ln(X_1)$. \n            Soit $t \\geq 0$. On a : \n            $$\\begin{align*}\n                \\prob(a \\ln(X_1) \\leq t) &= \\prob(\\ln(X_1) \\leq \\frac{t}{a}) \\\\\n                &= \\prob(X_1 \\leq e^{\\frac{t}{a}}) \\\\\n                &= F_{X_1}(e^{\\frac{t}{a}}) \\\\\n                &= 1 - \\left( e^{\\frac{t}{a}} \\right)^{a} \\text{ car } e^{\\frac{t}{a}} \\geq 1 \\\\\n                &= 1 - e^t\n            \\end{align*}$$\n            Si $t < 0$, $e^{\\frac{t}{a}} < 1$ donc $\\prob(a \\ln(X_1) \\leq t) = 0$. Donc $a \\ln(X_1)$ suit une loi exponentielle de paramètre $1$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "c0fe1ce2-5ea5-472b-979a-aa196aa598b1",
+      "id": "01623bd7-0998-428f-b5e0-8dad59da28e6",
       "type": "question",
       "value": {
         "latex": "En déduire l'espérance et la variance de $\\frac{1}{T_n}$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "c81c1c63-6c7e-462d-a352-1cd6db636ad6",
+      "id": "f2d9b3bc-43a9-4cc7-a3a5-46986695e1e0",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance, on a $\\E\\left(\\frac{1}{T_n}\\right)  = \\frac{1}{an}\\sum_{i=1}^n \\E\\left(a \\ln(X_i)\\right) = \\frac{1}{an} \\sum_{i=1}^n \\frac{1}{1} = \\frac{1}{a}$. \n\n            Par propriétés de la variance, on a $\\var\\left(\\frac{1}{T_n} \\right) = \\frac{1}{a^2 n^2} \\sum_{i=1}^n \\var(a \\ln(X_i)) = \\frac{1}{a^2 n^2} \\sum_{i=1}^n 1 = \\frac{1}{a^2 n}$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "fde0b079-f026-4bdf-9966-baea7a2b286a",
+      "id": "1da23d82-82f9-4e31-93f9-5c22b418d8a1",
       "type": "question",
       "value": {
         "latex": "Montrer que la suite de variables aléatoires $\\left(\\frac{1}{T_n}\\right)_{n \\in \\N^*}$ converge presque sûrement vers une constante que l'on déterminera.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "1d004156-2ee7-4f8e-8007-ef1b8c13948b",
+      "id": "eb585ae4-4349-468b-9644-e04cb4a18d83",
       "type": "reponse",
       "value": {
         "latex": "D'après la loi forte des grands nombres, on a $\\frac{1}{T_n} = \\frac{1}{n} \\sum_{i=1}^n \\ln(X_i) \\xrightarrow[n \\to +\\infty]{\\text{p.s.}} \\E(\\ln(X_1))$. Or $\\E(a\\ln(X_1)) = \\frac{1}{1} = 1$. Donc $\\frac{1}{T_n} \\xrightarrow[n \\to +\\infty]{\\text{p.s.}} \\frac{1}{a}$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "7e5024fd-ab06-4162-8c31-111d29251bd3",
+      "id": "4511e200-757a-4adc-a5b0-3d6461af4c62",
       "type": "question",
       "value": {
         "latex": "Pour tout $n \\in \\N^*$, on pose $Z_n = \\sqrt{n}\\left(\\frac{a}{T_n} - 1 \\right)$. Montrer que la suite de variables aléatoires $\\left(Z_n\\right)_{n \\in \\N^*}$ converge en loi vers une loi normale centrée réduite.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "a96bc6db-db9f-40f8-9199-0d388067bfba",
+      "id": "e7eaa365-252e-48cc-a076-f9a1a9c9b0f4",
       "type": "question",
       "value": {
         "latex": "En déduire un intervalle de confiance au niveau de confiance $95\\%$ pour $a$ sous la forme : $$\\left[ \\frac{\\sqrt{n}-c}{\\sqrt{n}}T_n~;~\\frac{\\sqrt{n}+c}{\\sqrt{n}}T_n \\right]$$ où $c$ est un réel à déterminer.",

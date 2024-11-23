@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-16T11:14:24.001Z",
+    "createdAt": "2024-11-23T17:27:17.152Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:14:24.001Z"
+    "updatedAt": "2024-11-23T17:27:17.152Z"
   },
   "contenu": [
     {
-      "id": "057fb0fb-af81-410f-8aec-531bc3356d84",
+      "id": "39458d54-def8-4e87-92d5-a6c0ac24a5c4",
       "type": "description",
       "value": {
         "latex": "Pour étudier le degré de pollution des eaux d'une rivière par les déchets d'une usine, on mesure la teneur en milligrammes d'un certain polluant par litre d'eau.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9e824423-7e39-466c-8ba7-60fd0bb4fb1c",
+      "id": "c899f4a1-1b8f-4d7b-b9cb-0552be614275",
       "type": "question",
       "value": {
         "latex": "On effectue 17 mesures pour lesquelles les valeurs observées des teneurs en polluant ont une moyenne de 5.2~mg/L et un écart-type de 1.2~mg/L. \n  \t\\begin{enumerate}\n  \t\t\\item Donner une estimation sans biais de la moyenne et de l'écart type de la teneur en polluant dans cette rivière.\n\n  \t\t\\item Donner un intervalle de confiance au seuil de 5\\% pour la teneur moyenne en polluant de cette rivière.\n  \t\t\\item A partir de ces résultats, peut-on considérer que l'usine respecte la législation en vigueur selon laquelle cette teneur moyenne en polluant ne doit pas dépasser 7~mg/ ?\n  \t\\end{enumerate}",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4bf4421b-575d-4a76-b719-10be5d3b7333",
+      "id": "9b1133b5-479e-4f44-98b6-79deb062fe6f",
       "type": "reponse",
       "value": {
         "latex": "La moyenne observée dans l'échantillon est une estimation sans biais de la moyenne de la teneur dans la rivière, on obtient $\\overline{x}=5.2$. L'écart type observé donne une estimation biaisée de l'écart type de la teneur en polluant dans la rivière, on calcule donc la variance observée $\\tilde{S}^2 = 1.2^2 = 1.44$ puis la variance corrigée $S^2 = \\frac{17}{16} \\tilde{S}^2 \\approx 1.53$ d'où une estimation non biaisée $s \\approx 1.24$ de l'écart type. \n   \t\n   \tL'échantillon étant petit ($n=17$), on doit supposer de surcroit que la distribution des mesures est normale. De là, on tire un intervalle de confiance à l'aide de la loi de Student $St(16)$  : $[4.58;5.82]$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "7ce4cd93-1f0d-4679-aca7-f93b39018945",
+      "id": "70b93e4f-9af3-40a7-b9f1-6a2470593207",
       "type": "question",
       "value": {
         "latex": "Combien de mesures devrait-on faire pour estimer la teneur moyenne en polluant avec une précision de 0.1~mg/L au niveau de confiance 95\\% ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "1a42fb5c-ed48-48d5-8d19-5febf28f8f46",
+      "id": "61131fce-4505-4fe5-bfda-6d947cb93662",
       "type": "reponse",
       "value": {
         "latex": "En supposant que l'écart type de l'échantillon reste le même, la précision de l'intervalle de confiance est donné par sa longueur qui est $2\\times t_{\\alpha/2}\\sqrt{\\frac{s^2}{n}}$. Dans la question précédente, cette longueur vaut environ $1.23$. \n\nOn cherche $n$ tel que   $2\\times t_{\\alpha/2}\\sqrt{\\frac{s^2}{n}} = \\leq 0.1$. On peut supposer que $n$ sera plus grand que $30$, donc on remplace $t_{\\alpha/2}$ (quantile d'une loi de Student) par $u_{\\alpha/2}$ en lecture de table de la loi normale centrée réduite.   En supposant que l'estimation de variance reste la même, on obtient $2\\times 1.96 \\times\\frac{1.24}{\\sqrt{n}} \\leq 0.1$ soit $\\sqrt{n} \\geq 48.608$ soit \\fbox{$n \\geq 2363$}. \n\n\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/Ec9ve_iQd-pNn_Tf86GSa8EBJUrDEkRpISpMW4xkp23PeQ?e=oOly0h}{Détail des calculs sur tableur}",

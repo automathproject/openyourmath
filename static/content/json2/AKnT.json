@@ -2,18 +2,18 @@
   "uuid": "AKnT",
   "titre": "Classification linéaire par un perceptron",
   "theme": [
-    "Réseau de neurones"
+    "réseau de neurones"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-17T15:59:40.861Z",
+    "createdAt": "2024-11-23T17:27:20.976Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-17T15:59:40.861Z"
+    "updatedAt": "2024-11-23T17:27:20.976Z"
   },
   "contenu": [
     {
-      "id": "bbf729d3-1b95-4589-bb08-d9303b92e4f8",
+      "id": "e270a991-1303-4acd-a517-b8159b7016f9",
       "type": "question",
       "value": {
         "latex": "Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. \n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.6]\n\t\t\\tikzstyle{rouge} = [fill,rectangle,red,scale=1.2];\n\t\t\\tikzstyle{bleu} = [fill,circle,blue] ;\n\t\t\n\t\t\\draw[gray] (-4,-4) grid ++(8,8);\n\t\t\\draw[->,>=latex, very thick,black] (-4.5,0)--(5,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, black] (0,-4.1)--(0,5) node[left] {$y$};\n\t\t\n\t\t\\node[below left] at (0,0) {$0$};\n\t\t\\node[left] at (0,1) {$1$};\n\t\t\\node[below] at (1,0) {$1$};\n\t\t\n\t\t\\foreach \\x/\\y in {-2/3,3.2/2,-1/3.1,1/1.8,2.3/3.1}{\n\t\t\t\\node[bleu] at (\\x,\\y) {};\n\t\t}\n\t\t\\foreach \\x/\\y in {1/-2,3/-1,1.5/-2.5,0/-3,-2.2/1.3}{\n\t\t\t\\node[rouge] at (\\x,\\y) {};\n\t\t}\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-4,-4) rectangle (4,4);\n\t\t\t\\draw[blue,ultra thick] (-4,4) -- (4,0);\n\t\t\t\\fill[red!50,opacity=0.5] (-4,4) -- (-4,-4) --(4,-4)--(4,0) -- cycle;\n\t\t\t\\fill[blue!20,opacity=0.5] (-4,4) -- (-4,4) --(4,4)--(4,0) -- cycle;\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\\node[scale=1,red,below] at (4,-4) {$F(x,y)=0$};\n\t\t\\node[scale=1,blue,above] at (-4,4) {$F(x,y)=1$};\n\t\t\n\t\t\n\t\\end{tikzpicture}\n\\end{center}",

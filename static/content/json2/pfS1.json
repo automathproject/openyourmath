@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:18.564Z",
+    "createdAt": "2024-11-23T17:27:52.903Z",
     "organisation": "",
-    "updatedAt": "2024-11-16T11:15:18.564Z"
+    "updatedAt": "2024-11-23T17:27:52.903Z"
   },
   "contenu": [
     {
-      "id": "93b0176f-4f01-41cd-9268-740d1c848c88",
+      "id": "8454df16-4c4b-4f78-9433-67d291fb03b6",
       "type": "description",
       "value": {
         "latex": "Dans une usine, une machine produit des pièces dont la longueur suit une loi normale de paramètres $\\mu$ (en cm) et $\\sigma^2 = 4$ (en cm²). On souhaite estimer $\\mu$ à partir d'un échantillon de taille $n=5$. On note $(X_1,...,X_5)$ cet échantillon.\n\nOn considère les deux estimateurs suivants :\n$$T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i \\qquad T_2 = \\frac{1}{4}(X_1 + X_2) + \\frac{1}{6}(X_3 + X_4 + X_5)$$\n\nOn pose également :\n$$U = \\sum_{i=1}^{5} (X_i - T_1)^2 \\qquad V = \\frac{1}{2}(X_1 - X_2)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "cb32d038-dbda-4544-bf01-bb2148397313",
+      "id": "fe0e17a8-f394-4323-8e01-9ba43c573611",
       "type": "question",
       "value": {
         "latex": "Montrer que $V$ suit une loi normale dont on précisera les paramètres.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "01b9bdb9-bff1-42b9-9645-4d0dd1f3a61c",
+      "id": "cdf30920-5edb-4072-af46-a91a62f6a711",
       "type": "reponse",
       "value": {
         "latex": "Par linéarité de l'espérance : \n\t$\\E(V) = \\frac{1}{2}(\\E(X_1) - \\E(X_2)) = \\frac{1}{2}(\\mu - \\mu) = 0$\n\t\n\tPar indépendance des variables :\n\t$\\V(V) = \\frac{1}{4}(\\V(X_1) + \\V(X_2)) = \\frac{1}{4}(4 + 4) = 2$\n\t\n\tDonc $V \\sim \\mathcal{N}(0,\\sqrt{2})$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "318dc6d1-4d71-4e6b-a929-87fe4f5bfc96",
+      "id": "58d4d74e-1dfd-4a19-a9dd-c6bd92b9aa8c",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob(-4{,}5 \\leq V \\leq 4{,}5)$ avec 8 chiffres significatifs.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "a2f70636-0977-4a79-8ceb-229703d57f36",
+      "id": "883c89cd-34b3-482e-9fd3-b9b326f9b5cb",
       "type": "reponse",
       "value": {
         "latex": "Avec le tableur et la formule \\texttt{=LOI.NORMALE.N(4,5;0;RACINE(2);1)*2-1}, on trouve \t\t$\\prob(-4{,}5 \\leq V \\leq 4{,}5) \\approx 0{,}99853728$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "4deaf041-3462-421c-8801-1873e3b8f087",
+      "id": "afc1c0d8-b51f-41ae-a3d2-f8d3168096bd",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par la variable $T_1$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "89e053e5-650a-403f-8fe2-bb566e20bf6e",
+      "id": "39cad4a8-58bc-4f71-80b4-07c5feeafc21",
       "type": "reponse",
       "value": {
         "latex": "$T_1 = \\frac{1}{5}\\sum_{i=1}^{5} X_i$ est une somme de variables aléatoires normales indépendantes. Donc $T_1$ suit une loi normale de moyenne $\\mu$ et de variance $\\frac{4}{5}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "fbb3674f-cc94-4b02-b2a2-681d7be4003d",
+      "id": "722d50ea-e648-45ae-8bdf-b48cee19d9af",
       "type": "question",
       "value": {
         "latex": "Étudier le biais des estimateurs $T_1$ et $T_2$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "35ce0211-20bd-4bd0-8a91-d5384dbc2c9c",
+      "id": "5dcfb24c-0c56-45e6-b500-d4206564011b",
       "type": "reponse",
       "value": {
         "latex": "Pour $T_1$ :\n\t$$\\begin{align*}\n\t\t\\E(T_1) &= \\frac{1}{5}\\sum_{i=1}^{5} \\E(X_i) = \\frac{5\\mu}{5} = \\mu\n\t\\end{align*}$$\n\tDonc $T_1$ est sans biais.\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\E(T_2) &= \\frac{1}{4}(\\E(X_1) + \\E(X_2)) + \\frac{1}{6}(\\E(X_3) + \\E(X_4) + \\E(X_5)) \\\\\n\t\t&= \\frac{2\\mu}{4} + \\frac{3\\mu}{6} = \\mu\n\t\\end{align*}$$\n\tDonc $T_2$ est aussi sans biais.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "ade52dc6-6b34-4d18-a99e-37cc80dece56",
+      "id": "87027610-9d76-4ac0-ab5b-839c84d504bb",
       "type": "question",
       "value": {
         "latex": "Lequel de ces deux estimateurs est le plus efficace ?",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "bc95982e-d78f-4fb8-a35f-2e9a59755a75",
+      "id": "bd73dbf1-e0ed-404b-bbba-b33427c5032f",
       "type": "reponse",
       "value": {
         "latex": "Pour $T_1$, par indépendance :\n\t$$\\begin{align*}\n\t\t\\V(T_1) &= \\frac{1}{25}\\sum_{i=1}^{5} \\V(X_i) = \\frac{5 \\times 4}{25} = \\frac{4}{5}\n\t\\end{align*}$$\n\t\n\tPour $T_2$ :\n\t$$\\begin{align*}\n\t\t\\V(T_2) &= \\frac{1}{16}\\V(X_1 + X_2) + \\frac{1}{36}\\V(X_3 + X_4 + X_5) \\\\\n\t\t&= \\frac{8}{16} + \\frac{12}{36} \\\\\n\t\t&= \\frac{1}{2} + \\frac{1}{3} > \\frac{4}{5}\n\t\\end{align*}$$\n\t\n\tComme $\\frac{4}{5} < \\frac{30}{36}$, $T_1$ est plus efficace que $T_2$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "fb915663-1871-47d4-8b32-16f53fc6f989",
+      "id": "f7bf1e16-0dbe-419f-b3aa-c274237078cb",
       "type": "question",
       "value": {
         "latex": "Déterminer un coefficient $a \\in \\R$ tel que $aU$ suive une loi du $\\chi^2$ dont on précisera le nombre de degrés de liberté.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "ff92db6e-0890-4ef1-ac39-dc5ff6ebefdf",
+      "id": "f8261852-f987-4c89-b07d-9bb8de654936",
       "type": "reponse",
       "value": {
         "latex": "$U = \\sum_{i=1}^{5} (X_i - T_1)^2$ où $T_1$ est la moyenne empirique.\n\tD'après le cours (théorème de Fisher), $\\frac{U}{\\sigma^2}$ suit une loi du $\\chi^2$ à $n-1 = 4$ degrés de liberté.\n\tDonc $\\frac{1}{4}U$ suit une loi du $\\chi^2$ à 4 degrés de liberté.",
@@ -117,7 +117,7 @@
       }
     },
     {
-      "id": "298e53f3-888e-46c8-9cb7-3996d50aff49",
+      "id": "4679ed2f-63af-4f8f-a42e-e812f0620420",
       "type": "question",
       "value": {
         "latex": "En déduire la loi suivie par la variable $W = \\frac{T_1 - \\mu}{\\sqrt{\\frac{U}{20}}}$.",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "id": "2f3f40b9-ae3c-4f2d-8610-f9ef4f710de9",
+      "id": "1a1abe56-d774-4cca-ac08-b8d2dd777e6a",
       "type": "reponse",
       "value": {
         "latex": "On sait que $\\frac{T_1 - \\mu}{\\sigma/\\sqrt{5}} \\sim \\mathcal{N}(0,1)$ indépendant de $\\frac{U}{4} \\sim \\chi^2(4)$\n\t\n\tDonc $W = \\frac{T_1 - \\mu}{\\sqrt{\\frac{U}{20}}} = \\frac{\\frac{T_1 - \\mu}{\\sqrt{\\frac{4}{5}}}}{\\sqrt{\\frac{\\frac{U}{4}}{4}}} \\sim St(4)$.\t\n\tAinsi, $W \\sim St(4)$",

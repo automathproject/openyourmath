@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-16T11:15:25.062Z",
+    "createdAt": "2024-11-23T17:27:57.244Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-16T11:15:25.062Z"
+    "updatedAt": "2024-11-23T17:27:57.244Z"
   },
   "contenu": [
     {
-      "id": "a525edb9-58ba-408d-aea5-fbff832f0537",
+      "id": "23353e1f-a21d-4503-afe4-28435e1c566a",
       "type": "description",
       "value": {
         "latex": "Etant donnés trois nombres réels dans l'intervalle $[0;1]$, on définit deux stratégies :\n\t\n\t\\begin{description}\n\t\t\\item[Stratégie A : ] choisir le plus grand des trois nombres ;\n\t\t\\item[Stratégie B : ] choisir la somme des deux nombres les plus petits.\n\t\\end{description}\n\t\n\tDeux hobbits jouent au jeu comportant les étapes suivantes :\n\t\n\t\\begin{itemize}\n\t\t\\item choisir entre la stratégie A et la stratégie B ;\n\t\t\\item à l'aide d'un générateur pseudo aléatoire, tirer au hasard et de manière indépendante trois nombres réels entre 0 et 1 ;\n\t\t\\item le gagnant est celui qui obtient la plus grande valeur, compte tenu de la stratégie choisie.\n\t\\end{itemize}\n\t\n\tOn note $X_1$, $X_2$, $X_3$ les nombres obtenus lors des tirages au sort. On note $Y_A$ la variable égale à la valeur obtenue par la stratégie $A$ et $Y_B$ la variable égale à la valeur obtenue par la stratégie $B$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "e935b359-aaa2-49e8-8a07-46832772da8e",
+      "id": "85dafb1a-906e-4d6c-9eec-0427b68ca575",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi de probabilité suivie par chaque variable aléatoire $X_i$, $i \\in \\{1,2,3\\}$ ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d169c676-78d3-4a54-bd16-6f6536f076b7",
+      "id": "462fe094-53a4-4b5b-8bd9-dd6b1c019123",
       "type": "reponse",
       "value": {
         "latex": "$X_1$, $X_2$ et $X_3$ suivent une loi uniforme sur $[0;1]$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "ac44516b-8870-4208-bf29-9c61d206ece4",
+      "id": "68dbfadc-d71f-4f90-ae06-9e2302fe187a",
       "type": "question",
       "value": {
         "latex": "Exprimer $Y_A$ en fonction des $X_i$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "f08f281d-9f59-41dd-a796-edcecab569f8",
+      "id": "670b075a-1979-4b47-b59c-4bea3f20b0fd",
       "type": "reponse",
       "value": {
         "latex": "$Y_A=\\max(X_1,X_2,X_3)$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "99801e04-c70c-471b-8364-96d6ff2d96a8",
+      "id": "f0bf546f-3857-4d16-b3a9-f47f72c7d848",
       "type": "question",
       "value": {
         "latex": "Exprimer $Y_B$ en fonction de $Y_A$ et des $X_i$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "555459ab-1e11-4e4b-a7f3-acf674f5843d",
+      "id": "8c127509-8f2d-4350-b538-0f94185df672",
       "type": "reponse",
       "value": {
         "latex": "$Y_B=X_1+X_2+X_3-Y_A$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "264690f4-0454-4bb8-9e50-b0d6365917d0",
+      "id": "baa0468d-da20-4200-a01d-0a0299193495",
       "type": "question",
       "value": {
         "latex": "Déterminer la fonction de répartition de $Y_A$. En déduire que $Y_A$ est une variable aléatoire absolument continue dont on déterminera une fonction densité.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "9bca79bc-04b0-4f2f-b49e-607d9fb5c20c",
+      "id": "1369f67f-676c-42bd-835e-17c9c519c61a",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $x\\in\\R$,\n\t\t\\[ F_{Y_A}(t)=\\p(Y_A\\leq t)=\\p(\\max(X_1,X_2,X_3\\leq t)=\\p(\\{X_1\\leq t\\}\\cap\\{X_2\\leq t\\} \\cap \\{X_3\\leq t\\}).\\]\n\t\tComme les \\vas $X_i$ sont i.i.d., on obtient:\n\t\t\\[ F_{Y_A}(t)=\\p(X_1\\leq t)\\p(X_2\\leq t)\\p(X_3\\leq t) =(F_{X_1}(t))^3.\\]\n\t\tDonc\n\t\t$ F_{Y_1}(t)=\n\t\t\\begin{cases}\n\t\t\t0 \\text{ si } t<0 \\\\\n\t\t\tt^3 \\text{ si } 0 \\leq t \\leq 1 \\\\\n\t\t\t1 \\text{ si } t> 1\n\t\t\\end{cases}\n\t\t$.\n\t\tLa \\va $Y_A$ est donc absolument continue et sa densité vaut $f_{Y_A}(t)=F'_{Y_A}(t)=3t^2\\textbf{1}_{[0;1]}(t)$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "e7939b60-089a-41b1-b3bf-7136cbaccdb2",
+      "id": "2ce54de6-5021-45c4-943d-a822e70fb9f9",
       "type": "question",
       "value": {
         "latex": "En comparant l'espérance des variables aléatoires $Y_A$ et $Y_B$ , peut-on dire qu'il existe une meilleure stratégie ?",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "8d28599a-f04e-440d-9d2d-332a4946ed08",
+      "id": "c89fb01e-7328-4535-8afb-395745b55f30",
       "type": "reponse",
       "value": {
         "latex": "Comparons l'espérance des \\vas $Y_A$ et $Y_B$:\n\t\t$$\\begin{align*}\n\t\t\t&\\E(Y_A)=\\int_0^1 x \\times 3x^2 \\ dx\n\t\t\t=\\left[ \\frac{3}{4} x^4\\right]_0^1=\\frac{3}{4}, \\\\\n\t\t\t&\\E(Y_B)==\\E(X_1)+\\E(X_2)+\\E(X_3)-\\E(Y_A)=\\frac{1}{2}\\times 3-\\frac{3}{4}=\\frac{3}{4}.\n\t\t\\end{align*}$$\n\t\tLes deux stratégies sont donc équivalentes.\n\t\t\\vspace{1em}\n\t\t\n\t\tPour comparer les deux stratégies plus finement, il faut calculer $\\p(Y_B\\geq Y_A)$. \\\\\n\t\tComme $\\{Y_B\\geq Y_A\\}=\\{X_1+X_2+X_3-2Y_A\\geq 0\\}$, on a \n\t\t$$\\begin{align*}\n\t\t\t\\p(Y_B\\geq Y_A)&=\\int_{[0;1]^3} \\mathbb{1}_{\\{x_1+x_2+x_3-2\\max(x_1,x_2,x_3)\\geq 0\\}}\\dx_1 \\  dx_2 \\ dx_3 \\\\ \n\t\t\t&=\\int_{D_1} \\dx_1 \\  dx_2 \\ dx_3 +\\int_{D_2} \\dx_1 \\  dx_2 \\ dx_3 + \\int_{D_3} \\dx_1 \\  dx_2 \\ dx_3\n\t\t\\end{align*}$$\n\t\tavec\n\t\t$$\\begin{align*}\n\t\t\t&D_1=\\{ (x_1,x_2,x_3)\\in[0;1]^3 | x_2\\leq x_1, x_3\\leq x_1, x_2+x_3\\geq x_1\\} \\\\\n\t\t\t&D_2=\\{ (x_1,x_2,x_3)\\in[0;1]^3 | x_1\\leq x_2, x_3\\leq x_2, x_1+x_3\\geq x_2\\} \\\\\n\t\t\t&D_3=\\{ (x_1,x_2,x_3)\\in[0;1]^3 | x_1\\leq x_3, x_2\\leq x_3, x_1+x_2\\geq x_3\\} \n\t\t\\end{align*}$$\n\t\tPar permutations des indices, il est immédiat que les trois intégrales sont égales or\n\t\t$$\\begin{align*}\n\t\t\t\\int_{D_1} dx_1\\ dx_2 \\ dx_3 \n\t\t\t= \\int_0^1 \\int_0^{x_1} \\int_{x_1-x_2}^{x_1} dx_3 \\ dx_2\\ dx_1\n\t\t\t= \\int_0^1 \\int_0^{x_1} x_2 \\ dx_2\\ dx_1\n\t\t\t=\\int_0^1 \\frac{x_1^2}{2} \\dx_1\n\t\t\t=\\frac{1}{6}.\n\t\t\\end{align*}$$\n\t\tAinsi $\\mathbb{P}(Y_B\\geq Y_A)=3\\int_{D_1} dx=\\frac{1}{2}$.\n\t\tOn retrouve que les deux stratégies sont équivalentes, au sens où si le joueur $A$ adopte la stratégie $1$ et le joueur $B$ adopte la stratégie $2$, alors $A$ et $B$ ont la même probabilité $\\frac{1}{2}$ de gagner.",
