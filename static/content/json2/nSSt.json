@@ -7,41 +7,41 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-11-23T17:27:51.365Z",
+    "createdAt": "2024-12-02T16:45:15.998Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-23T17:27:51.365Z"
+    "updatedAt": "2024-12-02T16:45:15.998Z"
   },
   "contenu": [
     {
-      "id": "69411f33-e5d8-4878-bc14-497c540ce476",
+      "id": "9751b78d-3322-405b-bff6-9d549f832740",
       "type": "description",
       "value": {
         "latex": "On désire fabriquer par une imprimante 3D une boite ayant la forme d'un parallélépipède rectangle, sans couvercle sur le dessus. Le volume de cette boite doit être égal à $0,5m^3$.",
-        "html": "<p>On désire fabriquer par une imprimante 3D une boite ayant la forme\nd’un parallélépipède rectangle, sans couvercle sur le dessus. Le volume\nde cette boite doit être égal à <span\nclass=\"math inline\">\\(0,5m^3\\)</span>.</p>\n"
+        "html": "<p>On désire fabriquer par une imprimante 3D une boite ayant la forme d’un parallélépipède rectangle, sans couvercle sur le dessus. Le volume de cette boite doit être égal à <span class=\"math inline\">\\(0,5m^3\\)</span>.</p>\n"
       }
     },
     {
-      "id": "b92afe1f-47d6-40c0-9a85-e2cb4794286b",
+      "id": "1cd2a56b-c8c2-4f83-a17b-63adcce021a2",
       "type": "question",
       "value": {
         "latex": "Pour minimiser la quantité de matière utilisée, on désire que la somme des aires des faces soit minimale. Quelles dimensions doit-on choisir pour fabriquer la boite ?",
-        "html": "<p>Pour minimiser la quantité de matière utilisée, on désire que la\nsomme des aires des faces soit minimale. Quelles dimensions doit-on\nchoisir pour fabriquer la boite ?</p>\n"
+        "html": "<p>Pour minimiser la quantité de matière utilisée, on désire que la somme des aires des faces soit minimale. Quelles dimensions doit-on choisir pour fabriquer la boite ?</p>\n"
       }
     },
     {
-      "id": "68641b32-3d3e-46bd-b7a6-89630daa7fe9",
+      "id": "333d73bb-bc16-4403-afd8-3fd95618fc65",
       "type": "description",
       "value": {
         "latex": "\\\\ {\\bf Indication:} Se ramener à un problème d'optimisation d'une fonction de deux variables.",
-        "html": "<p><br />\n<span><strong>Indication:</strong></span> Se ramener à un problème\nd’optimisation d’une fonction de deux variables.</p>\n"
+        "html": "<p><br />\n<span><strong>Indication:</strong></span> Se ramener à un problème d’optimisation d’une fonction de deux variables.</p>\n"
       }
     },
     {
-      "id": "81467dfc-3840-480f-ac47-a28b3251285b",
+      "id": "d2e49079-c39b-431f-b3e1-48e095a3dac2",
       "type": "reponse",
       "value": {
         "latex": "Notons $x,y$ et $z$ les dimensions de la boite. \nSon volume (la contrainte) est donc égale à $xyz=0,5$. \nOn souhaite minimiser la fonction $f(x,y,z)=xy+2xz+2yz$. \nComme $z=\\frac{1}{2xy}$, nous savons que ce problème revient à rechercher le minimum de la fonction $g(x,y)=xy+\\frac{1}{x}+\\frac{1}{y}$ sur l'ouvert $U=\\mathbb{R}_+^* \\times \\mathbb{R}_+^*$. \nLes dérivées partielles sont alors:\n$$ \\frac{\\partial g}{\\partial x}(x,y)=y-\\frac{1}{x^2} ~~\\text{ et }~~\n\\frac{\\partial g}{\\partial y}(x,y)=x - \\frac{1}{y^2}$$\nL'unique point critique sur $U$ est alors le point $(1,1)$. \n\\\\ Pour vérifier que c'est bien un minimum, on peut éventuellement calculer la hessienne. \n$$H_g(x,y)= \\begin{vmatrix} \n2x^{-3} & 1 \\\\ 1 & 2y^{-3} \n\\end{vmatrix} $$\nAinsi, $det(H_f(1,1))=3>0$: ainsi, $f$ atteint bien un extremum en $(1,1)$ et comme \n$\\frac{\\partial^2 g}{\\partial x^2}(1,1)>0$, $g$ atteint un minimum en $(1,1)$. \nAinsi, la boite a une aire minimale pour les valeurs $x=1$, $y=1$ et $z=\\frac{1}{2}$.\n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        width=12cm, \n        view={60}{45}, \n        domain=0.1:3, y domain=0.1:3, \n        samples=40, \n        xlabel=$x$, ylabel=$y$, zlabel={$f(x, y)$},\n        colormap/jet, \n        \n        colorbar, \n        zmin=0, \n        zmax=10, \n        point meta min=0, point meta max=10, \n    ]\n        \\addplot3[\n            surf,\n        ]\n        {x*y + 1/x + 1/y};\n    \\end{axis}\n\\end{tikzpicture}",
-        "html": "<p>Notons <span class=\"math inline\">\\(x,y\\)</span> et <span\nclass=\"math inline\">\\(z\\)</span> les dimensions de la boite. Son volume\n(la contrainte) est donc égale à <span\nclass=\"math inline\">\\(xyz=0,5\\)</span>. On souhaite minimiser la\nfonction <span class=\"math inline\">\\(f(x,y,z)=xy+2xz+2yz\\)</span>. Comme\n<span class=\"math inline\">\\(z=\\frac{1}{2xy}\\)</span>, nous savons que ce\nproblème revient à rechercher le minimum de la fonction <span\nclass=\"math inline\">\\(g(x,y)=xy+\\frac{1}{x}+\\frac{1}{y}\\)</span> sur\nl’ouvert <span class=\"math inline\">\\(U=\\mathbb{R}_+^* \\times\n\\mathbb{R}_+^*\\)</span>. Les dérivées partielles sont alors: <span\nclass=\"math display\">\\[\\frac{\\partial g}{\\partial\nx}(x,y)=y-\\frac{1}{x^2} ~~\\text{ et }~~\n\\frac{\\partial g}{\\partial y}(x,y)=x - \\frac{1}{y^2}\\]</span> L’unique\npoint critique sur <span class=\"math inline\">\\(U\\)</span> est alors le\npoint <span class=\"math inline\">\\((1,1)\\)</span>.<br />\nPour vérifier que c’est bien un minimum, on peut éventuellement calculer\nla hessienne. <span class=\"math display\">\\[H_g(x,y)= \\begin{vmatrix}\n2x^{-3} &amp; 1 \\\\ 1 &amp; 2y^{-3}\n\\end{vmatrix}\\]</span> Ainsi, <span\nclass=\"math inline\">\\(det(H_f(1,1))=3&gt;0\\)</span>: ainsi, <span\nclass=\"math inline\">\\(f\\)</span> atteint bien un extremum en <span\nclass=\"math inline\">\\((1,1)\\)</span> et comme <span\nclass=\"math inline\">\\(\\frac{\\partial^2 g}{\\partial\nx^2}(1,1)&gt;0\\)</span>, <span class=\"math inline\">\\(g\\)</span> atteint\nun minimum en <span class=\"math inline\">\\((1,1)\\)</span>. Ainsi, la\nboite a une aire minimale pour les valeurs <span\nclass=\"math inline\">\\(x=1\\)</span>, <span\nclass=\"math inline\">\\(y=1\\)</span> et <span\nclass=\"math inline\">\\(z=\\frac{1}{2}\\)</span>.</p>\n"
+        "html": "<p>Notons <span class=\"math inline\">\\(x,y\\)</span> et <span class=\"math inline\">\\(z\\)</span> les dimensions de la boite. Son volume (la contrainte) est donc égale à <span class=\"math inline\">\\(xyz=0,5\\)</span>. On souhaite minimiser la fonction <span class=\"math inline\">\\(f(x,y,z)=xy+2xz+2yz\\)</span>. Comme <span class=\"math inline\">\\(z=\\frac{1}{2xy}\\)</span>, nous savons que ce problème revient à rechercher le minimum de la fonction <span class=\"math inline\">\\(g(x,y)=xy+\\frac{1}{x}+\\frac{1}{y}\\)</span> sur l’ouvert <span class=\"math inline\">\\(U=\\mathbb{R}_+^* \\times \\mathbb{R}_+^*\\)</span>. Les dérivées partielles sont alors: <span class=\"math display\">\\[\\frac{\\partial g}{\\partial x}(x,y)=y-\\frac{1}{x^2} ~~\\text{ et }~~\n\\frac{\\partial g}{\\partial y}(x,y)=x - \\frac{1}{y^2}\\]</span> L’unique point critique sur <span class=\"math inline\">\\(U\\)</span> est alors le point <span class=\"math inline\">\\((1,1)\\)</span>.<br />\nPour vérifier que c’est bien un minimum, on peut éventuellement calculer la hessienne. <span class=\"math display\">\\[H_g(x,y)= \\begin{vmatrix} \n2x^{-3} &amp; 1 \\\\ 1 &amp; 2y^{-3} \n\\end{vmatrix}\\]</span> Ainsi, <span class=\"math inline\">\\(det(H_f(1,1))=3&gt;0\\)</span>: ainsi, <span class=\"math inline\">\\(f\\)</span> atteint bien un extremum en <span class=\"math inline\">\\((1,1)\\)</span> et comme <span class=\"math inline\">\\(\\frac{\\partial^2 g}{\\partial x^2}(1,1)&gt;0\\)</span>, <span class=\"math inline\">\\(g\\)</span> atteint un minimum en <span class=\"math inline\">\\((1,1)\\)</span>. Ainsi, la boite a une aire minimale pour les valeurs <span class=\"math inline\">\\(x=1\\)</span>, <span class=\"math inline\">\\(y=1\\)</span> et <span class=\"math inline\">\\(z=\\frac{1}{2}\\)</span>.</p>\n"
       }
     }
   ]

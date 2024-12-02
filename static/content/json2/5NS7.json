@@ -7,65 +7,65 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-11-23T17:27:16.964Z",
+    "createdAt": "2024-12-02T16:45:11.516Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-23T17:27:16.964Z"
+    "updatedAt": "2024-12-02T16:45:11.516Z"
   },
   "contenu": [
     {
-      "id": "2a57513f-cb3c-4281-8cf7-e9ebb67504a6",
+      "id": "6aebe497-f0cf-4c86-a658-3623457d4934",
       "type": "description",
       "value": {
         "latex": "On considère le réseau de neurones suivant :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{neuron}=[circle,fill=red!50,minimum size=12pt,inner sep=0pt]\n\t\t\n\t\t\n\t\t\\node[blue] (E) at (-\\layersep,0) {$x$};\n\t\t\t\n\t\t\n\t\t\\node[neuron] (F) at (0,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (F) {$g_1$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (F) {};\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.8]{$a$} (F);\n\t\t\\draw[-o,thick] (F) to node[midway,below right,scale=0.8]{$b$} ++ (-130:1.3);\n\t\t\n\t\t\n\t\t\\node[neuron] (G) at (\\layersep,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (G) {$g_2$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (G) {$...$};\n\t\t\\path[thick] (F) edge node[pos=0.8,above,scale=0.8]{$c$} (G);\n\t\t\n\t\t\\draw[->,>=latex,thick] (G)-- ++(2,0) node[right,blue]{$F(x,a,b,c)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}\n\n\noù $g_1$ et $g_2$ sont la fonction ReLu. \n\n\n\n\t{\\centering \\fbox{\\BUseVerbatim{5NS7}}\\par}\n\nLa fonction d'erreur est : \n$$E(a,b,c) = \\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)$$\noù $E_i = (F(x_i)-t_i)^2$ avec les données d'entraînement suivantes $(x_i,t_i)$ pour 3 valeurs : $(1,2), (-2,0), (3,3)$.",
-        "html": "<p>On considère le réseau de neurones suivant :</p>\n<div class=\"center\">\n\n</div>\n<p>où <span class=\"math inline\">\\(g_1\\)</span> et <span\nclass=\"math inline\">\\(g_2\\)</span> sont la fonction ReLu.</p>\n<p>La fonction d’erreur est : <span class=\"math display\">\\[E(a,b,c) =\n\\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)\\]</span> où <span\nclass=\"math inline\">\\(E_i = (F(x_i)-t_i)^2\\)</span> avec les données\nd’entraînement suivantes <span class=\"math inline\">\\((x_i,t_i)\\)</span>\npour 3 valeurs : <span class=\"math inline\">\\((1,2), (-2,0),\n(3,3)\\)</span>.</p>\n"
+        "html": "<p>On considère le réseau de neurones suivant :</p>\n<p>où <span class=\"math inline\">\\(g_1\\)</span> et <span class=\"math inline\">\\(g_2\\)</span> sont la fonction ReLu.</p>\n<p>La fonction d’erreur est : <span class=\"math display\">\\[E(a,b,c) = \\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)\\]</span> où <span class=\"math inline\">\\(E_i = (F(x_i)-t_i)^2\\)</span> avec les données d’entraînement suivantes <span class=\"math inline\">\\((x_i,t_i)\\)</span> pour 3 valeurs : <span class=\"math inline\">\\((1,2), (-2,0), (3,3)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "2658f40a-257b-4220-815b-0ff10fe79a41",
+      "id": "5b270d63-9cf2-42cd-88ce-7df29fa701f0",
       "type": "question",
       "value": {
         "latex": "Calculez l'erreur des données d'entraînement (évaluez la fonction de perte) lorsque $(a,b,c) = (-1,2,1)$.",
-        "html": "<p>Calculez l’erreur des données d’entraînement (évaluez la fonction de\nperte) lorsque <span class=\"math inline\">\\((a,b,c) =\n(-1,2,1)\\)</span>.</p>\n"
+        "html": "<p>Calculez l’erreur des données d’entraînement (évaluez la fonction de perte) lorsque <span class=\"math inline\">\\((a,b,c) = (-1,2,1)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "4daa6731-e56a-4e34-be4b-cd2401a9ef21",
+      "id": "dcf26310-c36e-46c4-8b99-a5a799aba8d2",
       "type": "reponse",
       "value": {
         "latex": "La fonction est $F(x,a,b,c) = c(ax+b)$ si $ax+b \\geq 0$, c'est-à-dire $-x+2$ si $x \\leq 2$, $0$ sinon. Alors $F(1) = 1$, $F(-2) = 4$ et $F(3) = 0$. \n\t\t\n\t\tAinsi, $E(-1,2,1) = \\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}$.",
-        "html": "<p>La fonction est <span class=\"math inline\">\\(F(x,a,b,c) =\nc(ax+b)\\)</span> si <span class=\"math inline\">\\(ax+b \\geq 0\\)</span>,\nc’est-à-dire <span class=\"math inline\">\\(-x+2\\)</span> si <span\nclass=\"math inline\">\\(x \\leq 2\\)</span>, <span\nclass=\"math inline\">\\(0\\)</span> sinon. Alors <span\nclass=\"math inline\">\\(F(1) = 1\\)</span>, <span\nclass=\"math inline\">\\(F(-2) = 4\\)</span> et <span\nclass=\"math inline\">\\(F(3) = 0\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(E(-1,2,1) =\n\\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}\\)</span>.</p>\n"
+        "html": "<p>La fonction est <span class=\"math inline\">\\(F(x,a,b,c) = c(ax+b)\\)</span> si <span class=\"math inline\">\\(ax+b \\geq 0\\)</span>, c’est-à-dire <span class=\"math inline\">\\(-x+2\\)</span> si <span class=\"math inline\">\\(x \\leq 2\\)</span>, <span class=\"math inline\">\\(0\\)</span> sinon. Alors <span class=\"math inline\">\\(F(1) = 1\\)</span>, <span class=\"math inline\">\\(F(-2) = 4\\)</span> et <span class=\"math inline\">\\(F(3) = 0\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(E(-1,2,1) = \\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}\\)</span>.</p>\n"
       }
     },
     {
-      "id": "e6522450-eeb0-43f9-a091-739900de58ea",
+      "id": "e595f41e-cbe6-44b8-8233-8d6d52527ce8",
       "type": "description",
       "value": {
         "latex": "Supposons que $x = 3$ et $(a,b,c) = (1,-1,2)$.",
-        "html": "<p>Supposons que <span class=\"math inline\">\\(x = 3\\)</span> et <span\nclass=\"math inline\">\\((a,b,c) = (1,-1,2)\\)</span>.</p>\n"
+        "html": "<p>Supposons que <span class=\"math inline\">\\(x = 3\\)</span> et <span class=\"math inline\">\\((a,b,c) = (1,-1,2)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "6da5caa9-9ee5-4eab-9e07-955b2a1936ba",
+      "id": "b5033a64-c9e5-4671-bc2b-2f9a5df7d4af",
       "type": "question",
       "value": {
         "latex": "Calculez $\\frac{\\partial F}{\\partial c}$ en utilisant les règles ci-dessus.",
-        "html": "<p>Calculez <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial\nc}\\)</span> en utilisant les règles ci-dessus.</p>\n"
+        "html": "<p>Calculez <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial c}\\)</span> en utilisant les règles ci-dessus.</p>\n"
       }
     },
     {
-      "id": "2c28932a-b961-48ae-b907-76a7ac4225a1",
+      "id": "74ea7bff-f58b-4bab-a87a-bff31addaacb",
       "type": "reponse",
       "value": {
         "latex": "On a $ax+b = 3-1 = 2$, donc $\\frac{\\partial F}{\\partial c} = 1 \\times 2 = 2$.",
-        "html": "<p>On a <span class=\"math inline\">\\(ax+b = 3-1 = 2\\)</span>, donc <span\nclass=\"math inline\">\\(\\frac{\\partial F}{\\partial c} = 1 \\times 2 =\n2\\)</span>.</p>\n"
+        "html": "<p>On a <span class=\"math inline\">\\(ax+b = 3-1 = 2\\)</span>, donc <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial c} = 1 \\times 2 = 2\\)</span>.</p>\n"
       }
     },
     {
-      "id": "284ff5df-2d56-4c14-ad55-b0ae2959eb75",
+      "id": "f5a62339-71e8-4abd-8b74-442fc5b29e62",
       "type": "reponse",
       "value": {
         "latex": "On a $\\frac{\\partial F}{\\partial a} = 3 \\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} = 6$ et $\\frac{\\partial F}{\\partial b} = \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} = 2$.",
-        "html": "<p>On a <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial a} = 3\n\\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} =\n6\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial b}\n= \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} =\n2\\)</span>.</p>\n"
+        "html": "<p>On a <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial a} = 3 \\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} = 6\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial b} = \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} = 2\\)</span>.</p>\n"
       }
     }
   ]

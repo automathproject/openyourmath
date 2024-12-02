@@ -1,5 +1,5 @@
 {
-  "uuid": "50df2dc4-7a65-4544-8d36-371346e6741c",
+  "uuid": "e60aad1b-ca75-440b-9642-f1c45e7db383",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "optimisation"
@@ -7,37 +7,37 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-23T17:27:54.781Z",
+    "createdAt": "2024-12-02T16:45:16.551Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-23T17:27:54.781Z"
+    "updatedAt": "2024-12-02T16:45:16.551Z"
   },
   "contenu": [
     {
-      "id": "464b9878-eacb-41e5-8f90-fe2e44d64d89",
+      "id": "23d29249-814f-452e-bae1-d9e995011fa7",
       "type": "description",
       "value": {
         "latex": "Soit $N \\in \\mathbb{N}^*$, et $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$ un nuage de points. On cherche à déterminer les coefficients $a$, $b$ et $c$ de la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole.",
-        "html": "<p>Soit <span class=\"math inline\">\\(N \\in \\mathbb{N}^*\\)</span>, et\n<span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}\\)</span> un\nnuage de points. On cherche à déterminer les coefficients <span\nclass=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span>\net <span class=\"math inline\">\\(c\\)</span> de la parabole <span\nclass=\"math inline\">\\(P\\)</span> d’équation <span\nclass=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme\ndes carrés des distances des points <span class=\"math inline\">\\((t_i,\nx_i)\\)</span> à cette parabole.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(N \\in \\mathbb{N}^*\\)</span>, et <span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}\\)</span> un nuage de points. On cherche à déterminer les coefficients <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(c\\)</span> de la parabole <span class=\"math inline\">\\(P\\)</span> d’équation <span class=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme des carrés des distances des points <span class=\"math inline\">\\((t_i, x_i)\\)</span> à cette parabole.</p>\n"
       }
     },
     {
-      "id": "c5cc56a6-b2e4-4205-a8c5-c610a8dcadd6",
+      "id": "3ac33ec3-1c7d-4486-9e10-368b8933c351",
       "type": "question",
       "value": {
         "latex": "Écrire ce problème comme un problème de minimisation quadratique, c’est-à-dire un problème de la forme\n  \\[\n  \\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec} \\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle,\n  \\]\n  avec $A \\in \\mathcal{S}_n(\\mathbb{R})$, $b \\in \\mathbb{R}^n$. On devra donc expliciter $n$, $A$, et $b$. On utilisera la notation $S_k = \\sum_{i=1}^{N} t_i^k$.",
-        "html": "<p>Écrire ce problème comme un problème de minimisation quadratique,\nc’est-à-dire un problème de la forme <span\nclass=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec}\n\\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X\n\\rangle,\\]</span> avec <span class=\"math inline\">\\(A \\in\n\\mathcal{S}_n(\\mathbb{R})\\)</span>, <span class=\"math inline\">\\(b \\in\n\\mathbb{R}^n\\)</span>. On devra donc expliciter <span\nclass=\"math inline\">\\(n\\)</span>, <span\nclass=\"math inline\">\\(A\\)</span>, et <span\nclass=\"math inline\">\\(b\\)</span>. On utilisera la notation <span\nclass=\"math inline\">\\(S_k = \\sum_{i=1}^{N} t_i^k\\)</span>.</p>\n"
+        "html": "<p>Écrire ce problème comme un problème de minimisation quadratique, c’est-à-dire un problème de la forme <span class=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec} \\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle,\\]</span> avec <span class=\"math inline\">\\(A \\in \\mathcal{S}_n(\\mathbb{R})\\)</span>, <span class=\"math inline\">\\(b \\in \\mathbb{R}^n\\)</span>. On devra donc expliciter <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(A\\)</span>, et <span class=\"math inline\">\\(b\\)</span>. On utilisera la notation <span class=\"math inline\">\\(S_k = \\sum_{i=1}^{N} t_i^k\\)</span>.</p>\n"
       }
     },
     {
-      "id": "9bbd09c3-46de-4a5d-91ba-755aa5c7b510",
+      "id": "c268151c-a3b0-41b8-af88-7292e7cbc491",
       "type": "reponse",
       "value": {
         "latex": "Le problème est celui de la régression parabolique pour un nuage de points $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$, où l'on cherche la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole. Le problème peut s'écrire :\n  \\[\n  \\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec} \\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et} \\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\n  \\]\n  En écrivant $J(X) = \\|MX - k\\|^2$ avec $M = \\begin{pmatrix} t_1^2 & t_1 & 1 \\\\ \\vdots & \\vdots & \\vdots \\\\ t_N^2 & t_N & 1 \\end{pmatrix}$ et $k = \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}$, on obtient\n  \\[\n  J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle\n  \\]\n  avec $A = M^T M$ et $b = M^T k$. La matrice $A$ est donc donnée par :\n  \\[\n  A = \\begin{pmatrix} S_4 & S_3 & S_2 \\\\ S_3 & S_2 & S_1 \\\\ S_2 & S_1 & N \\end{pmatrix}.\n  \\]",
-        "html": "<p>Le problème est celui de la régression parabolique pour un nuage de\npoints <span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq\nN}\\)</span>, où l’on cherche la parabole <span\nclass=\"math inline\">\\(P\\)</span> d’équation <span\nclass=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme\ndes carrés des distances des points <span class=\"math inline\">\\((t_i,\nx_i)\\)</span> à cette parabole. Le problème peut s’écrire : <span\nclass=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec}\n\\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et}\n\\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\\]</span> En\nécrivant <span class=\"math inline\">\\(J(X) = \\|MX - k\\|^2\\)</span> avec\n<span class=\"math inline\">\\(M = \\begin{pmatrix} t_1^2 &amp; t_1 &amp; 1\n\\\\ \\vdots &amp; \\vdots &amp; \\vdots \\\\ t_N^2 &amp; t_N &amp; 1\n\\end{pmatrix}\\)</span> et <span class=\"math inline\">\\(k =\n\\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}\\)</span>, on obtient\n<span class=\"math display\">\\[J(X) = \\frac{1}{2} \\langle AX, X \\rangle -\n\\langle b, X \\rangle\\]</span> avec <span class=\"math inline\">\\(A = M^T\nM\\)</span> et <span class=\"math inline\">\\(b = M^T k\\)</span>. La matrice\n<span class=\"math inline\">\\(A\\)</span> est donc donnée par : <span\nclass=\"math display\">\\[A = \\begin{pmatrix} S_4 &amp; S_3 &amp; S_2 \\\\\nS_3 &amp; S_2 &amp; S_1 \\\\ S_2 &amp; S_1 &amp; N\n\\end{pmatrix}.\\]</span></p>\n"
+        "html": "<p>Le problème est celui de la régression parabolique pour un nuage de points <span class=\"math inline\">\\(\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}\\)</span>, où l’on cherche la parabole <span class=\"math inline\">\\(P\\)</span> d’équation <span class=\"math inline\">\\(y = at^2 + bt + c\\)</span> qui minimise la somme des carrés des distances des points <span class=\"math inline\">\\((t_i, x_i)\\)</span> à cette parabole. Le problème peut s’écrire : <span class=\"math display\">\\[\\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec} \\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et} \\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\\]</span> En écrivant <span class=\"math inline\">\\(J(X) = \\|MX - k\\|^2\\)</span> avec <span class=\"math inline\">\\(M = \\begin{pmatrix} t_1^2 &amp; t_1 &amp; 1 \\\\ \\vdots &amp; \\vdots &amp; \\vdots \\\\ t_N^2 &amp; t_N &amp; 1 \\end{pmatrix}\\)</span> et <span class=\"math inline\">\\(k = \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}\\)</span>, on obtient <span class=\"math display\">\\[J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle\\]</span> avec <span class=\"math inline\">\\(A = M^T M\\)</span> et <span class=\"math inline\">\\(b = M^T k\\)</span>. La matrice <span class=\"math inline\">\\(A\\)</span> est donc donnée par : <span class=\"math display\">\\[A = \\begin{pmatrix} S_4 &amp; S_3 &amp; S_2 \\\\ S_3 &amp; S_2 &amp; S_1 \\\\ S_2 &amp; S_1 &amp; N \\end{pmatrix}.\\]</span></p>\n"
       }
     },
     {
-      "id": "2843d4ba-e087-4bce-83e7-59874e1c829e",
+      "id": "10c118fd-3322-45e7-ab1f-c720548435d9",
       "type": "question",
       "value": {
         "latex": "Discuter de l’existence des solutions d’un tel problème.",
@@ -45,27 +45,27 @@
       }
     },
     {
-      "id": "4a6ee60a-1182-4a69-82cc-3d11fd509286",
+      "id": "2d25a652-4e78-4237-8efc-ef8b67eb0ec2",
       "type": "reponse",
       "value": {
         "latex": "Ce problème est équivalent à celui de minimiser la distance euclidienne de $k$ au sous-espace vectoriel $\\text{Im}(M)$, qui est de dimension finie. Il s’agit donc d’un problème de projection orthogonale, qui admet toujours une solution.",
-        "html": "<p>Ce problème est équivalent à celui de minimiser la distance\neuclidienne de <span class=\"math inline\">\\(k\\)</span> au sous-espace\nvectoriel <span class=\"math inline\">\\(\\text{Im}(M)\\)</span>, qui est de\ndimension finie. Il s’agit donc d’un problème de projection orthogonale,\nqui admet toujours une solution.</p>\n"
+        "html": "<p>Ce problème est équivalent à celui de minimiser la distance euclidienne de <span class=\"math inline\">\\(k\\)</span> au sous-espace vectoriel <span class=\"math inline\">\\(\\text{Im}(M)\\)</span>, qui est de dimension finie. Il s’agit donc d’un problème de projection orthogonale, qui admet toujours une solution.</p>\n"
       }
     },
     {
-      "id": "b19ac0bb-24c9-4bc1-b350-37a69edc7515",
+      "id": "a8e92547-d9a6-4046-8079-fbb9911f9a09",
       "type": "question",
       "value": {
         "latex": "On suppose que la matrice $A$ est définie positive. Démontrer que ce problème possède une unique solution.",
-        "html": "<p>On suppose que la matrice <span class=\"math inline\">\\(A\\)</span> est\ndéfinie positive. Démontrer que ce problème possède une unique\nsolution.</p>\n"
+        "html": "<p>On suppose que la matrice <span class=\"math inline\">\\(A\\)</span> est définie positive. Démontrer que ce problème possède une unique solution.</p>\n"
       }
     },
     {
-      "id": "b702030d-38ee-4ce6-910f-5090b413953c",
+      "id": "9c3703fe-66c4-40ae-9a49-5b3ed44ce60e",
       "type": "reponse",
       "value": {
         "latex": "Si $A$ est définie positive, alors la fonction $J(X)$ est strictement convexe. Par conséquent, $J(X)$ possède un unique minimum sur $\\mathbb{R}^n$, donc le problème admet une unique solution.",
-        "html": "<p>Si <span class=\"math inline\">\\(A\\)</span> est définie positive, alors\nla fonction <span class=\"math inline\">\\(J(X)\\)</span> est strictement\nconvexe. Par conséquent, <span class=\"math inline\">\\(J(X)\\)</span>\npossède un unique minimum sur <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span>, donc le problème admet une\nunique solution.</p>\n"
+        "html": "<p>Si <span class=\"math inline\">\\(A\\)</span> est définie positive, alors la fonction <span class=\"math inline\">\\(J(X)\\)</span> est strictement convexe. Par conséquent, <span class=\"math inline\">\\(J(X)\\)</span> possède un unique minimum sur <span class=\"math inline\">\\(\\mathbb{R}^n\\)</span>, donc le problème admet une unique solution.</p>\n"
       }
     }
   ]
