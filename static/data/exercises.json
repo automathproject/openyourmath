@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 447,
-    "generatedAt": "2024-12-02T16:45:18.061Z"
+    "generatedAt": "2024-12-03T20:54:40.494Z"
   },
   "exercises": [
     {
@@ -10721,46 +10721,6 @@
           "value": {
             "latex": "On cherche $n$ tel que $\\prob(0.009\\leq Y_n\\leq 0.011)\\geq 0.9$. On a\n\t\t\t$$\\begin{align*}\n\t\t\t\\prob(0.009\\leq Y_n\\leq 0.011)&=\\prob(-0.001\\leq Y_n-0.01\\leq 0.001) \\\\\n\t\t\t&= \\prob(|Y_n-0.01|\\leq 0.001) \\\\\n\t\t\t&= 1-\\prob(|Y_n-0.01|\\geq 0.001).\n\t\t\t\\end{align*}$$\n\t\t\tOn cherche donc $n$ tel que \n\t\t\t\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1.\\]\n\t\t\tOr par l'inégalité de Bienaymé-Tchebychev, on a\n\t\t\t\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq \\frac{\\sigma^2(Y_n)}{(0.001)^2}=\\frac{\\nombre{9900}}{n}.\\]\n\t\t\tSi on impose que \n\t\t\t\\[ \\frac{\\nombre{9900}}{n}\\leq 0.10, \\]\n\t\t\ton obtient bien $\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1$.\n\t\t\tIl faut donc que \n\t\t\t\\[ n\\geq \\frac{\\nombre{9900}}{0.1}=\\nombre{99000}.\n\t\t\t\\]\n\t\t\tOn en conclut qu'il faut au moins examinés $\\nombre{99000}$ jeunes pour avoir, dans $90$\\% des cas, une proportion de dyslexiques comprise entre $0.9$\\% et $1.1$\\%.",
             "html": "<p>On cherche <span class=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math inline\">\\(\\prob(0.009\\leq Y_n\\leq 0.011)\\geq 0.9\\)</span>.\nOn a <span class=\"math display\">\\[\\begin{align*}\n            \\prob(0.009\\leq Y_n\\leq 0.011)&amp;=\\prob(-0.001\\leq\nY_n-0.01\\leq 0.001) \\\\\n            &amp;= \\prob(|Y_n-0.01|\\leq 0.001) \\\\\n            &amp;= 1-\\prob(|Y_n-0.01|\\geq 0.001).\n            \\end{align*}\\]</span> On cherche donc <span\nclass=\"math inline\">\\(n\\)</span> tel que <span\nclass=\"math display\">\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1.\\]</span> Or\npar l’inégalité de Bienaymé-Tchebychev, on a <span\nclass=\"math display\">\\[\\prob(|Y_n-0.01|\\geq 0.001)\\leq\n\\frac{\\sigma^2(Y_n)}{(0.001)^2}=\\frac{\\nombre{9900}}{n}.\\]</span> Si on\nimpose que <span class=\"math display\">\\[\\frac{\\nombre{9900}}{n}\\leq\n0.10,\\]</span> on obtient bien <span\nclass=\"math inline\">\\(\\prob(|Y_n-0.01|\\geq 0.001)\\leq 0.1\\)</span>. Il\nfaut donc que <span class=\"math display\">\\[n\\geq\n\\frac{\\nombre{9900}}{0.1}=\\nombre{99000}.\\]</span> On en conclut qu’il\nfaut au moins examinés <span\nclass=\"math inline\">\\(\\nombre{99000}\\)</span> jeunes pour avoir, dans\n<span class=\"math inline\">\\(90\\)</span>% des cas, une proportion de\ndyslexiques comprise entre <span class=\"math inline\">\\(0.9\\)</span>% et\n<span class=\"math inline\">\\(1.1\\)</span>%.</p>\n"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "JABn",
-      "titre": "Estimation par intervalle de confiance",
-      "theme": [
-        "statistiques"
-      ],
-      "niveau": "",
-      "metadata": {
-        "auteur": "Maxime Nguyen",
-        "createdAt": "2024-11-23T17:27:27.734Z",
-        "organisation": "AMSCC",
-        "updatedAt": "2024-11-23T17:27:27.734Z"
-      },
-      "contenu": [
-        {
-          "id": "3d4a004d-c997-4d52-9544-341b07ae3c88",
-          "type": "description",
-          "value": {
-            "latex": "Le tableau suivant donne la répartition de 10 000 personnes en fonction de leur groupe sanguin et de leur facteur Rhésus. \n\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|}\n\t\t\\hline  & O & A & B & AB  \\\\ \n\t\t\\hline Rh+ & 3500 & 3800 & 900 & 170  \\\\ \n\t\t\\hline Rh- & 700 & 700 & 200 & 30   \\\\ \n\t\t\\hline \n\t\\end{tabular} \n\\end{center}",
-            "html": "<p>Le tableau suivant donne la répartition de 10 000 personnes en\nfonction de leur groupe sanguin et de leur facteur Rhésus.</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"></th>\n<th style=\"text-align: center;\">O</th>\n<th style=\"text-align: center;\">A</th>\n<th style=\"text-align: center;\">B</th>\n<th style=\"text-align: center;\">AB</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Rh+</td>\n<td style=\"text-align: center;\">3500</td>\n<td style=\"text-align: center;\">3800</td>\n<td style=\"text-align: center;\">900</td>\n<td style=\"text-align: center;\">170</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Rh-</td>\n<td style=\"text-align: center;\">700</td>\n<td style=\"text-align: center;\">700</td>\n<td style=\"text-align: center;\">200</td>\n<td style=\"text-align: center;\">30</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
-          }
-        },
-        {
-          "id": "7bdc3ecd-6b6d-4924-8bc3-e89a1d3c1196",
-          "type": "question",
-          "value": {
-            "latex": "Les deux caractères \\og groupe sanguin \\fg{} et \\og facteur Rhésus \\fg{} sont-ils indépendants ?",
-            "html": "<p>Les deux caractères groupe sanguin et facteur Rhésus sont-ils\nindépendants ?</p>\n"
-          }
-        },
-        {
-          "id": "4e7f5d40-cee4-4c4c-ae08-9c8f34e10c06",
-          "type": "reponse",
-          "value": {
-            "latex": "\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EYlCPJY62BdMpTYscg1T6zABc9_WCIR_pzt6XSOajALYhw?e=kf80uR&nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMzAwLTAwMDAwMDAwMDAwMH0}{Lien vers tableur}",
-            "html": "<p><a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EYlCPJY62BdMpTYscg1T6zABc9_WCIR_pzt6XSOajALYhw?e=kf80uR&amp;nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMzAwLTAwMDAwMDAwMDAwMH0\">Lien\nvers tableur</a></p>\n"
           }
         }
       ]
@@ -23343,7 +23303,7 @@
       ]
     },
     {
-      "uuid": "3e89e652-16c4-4889-8598-3b7d9c0bed49",
+      "uuid": "9e6fce41-971f-4004-ae23-fe6eff83fac5",
       "titre": "OPTRN",
       "theme": [
         "Réseau de neurones"
@@ -23351,33 +23311,33 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-02T16:45:14.262Z",
+        "createdAt": "2024-12-03T20:54:40.228Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-02T16:45:14.262Z"
+        "updatedAt": "2024-12-03T20:54:40.228Z"
       },
       "contenu": [
         {
-          "id": "7099c008-3e1d-4ade-bba5-2a7021589511",
+          "id": "b3a11bf1-a486-4139-85a7-db030a06e488",
           "type": "description",
           "value": {
             "latex": "Soit le réseau de neurones multicouches décrit pas le graphe suivant:\r\n\r\n\\begin{center}\r\n\t\\begin{tikzpicture}[scale=1]\r\n\\def\\layersep{2cm}\r\n\\tikzstyle{every pin edge}=[thick]\r\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\r\n\\tikzstyle{entree}=[];\r\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\r\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\r\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\r\n\\tikzstyle{annot} = [text width=4em, text centered]\r\n\r\n\r\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$1$};\r\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$x$};\r\n\\node[entree,blue] (E-3) at (-\\layersep,-5) {$1$};\r\n\r\n\r\n\r\n\\node[input neuron] (I-1) at (0,-1.5) {};\r\n\\node[input neuron] (I-3) at (0,-3.75) {};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {};\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\\node[hidden neuron] (O) at (\\layersep,-3.75 cm) {};\r\n\\node[hidden neuron] (P) at (\\layersep,-1.5 cm) {};\r\n\\node[above right=0.8ex,scale=0.7] at (O) {$h_{12}$};\r\n\\node[right=0.5ex,scale=0.7] at (P) {$h_{11}$};\r\n\r\n\r\n\\path[thick] (E-1) edge node[pos=0.5,above,scale=0.7]{$w_{1}$} (I-1) ;\r\n\\path[thick] (E-2) edge node[pos=0.5,above left,scale=0.7]{$w_{2}$} (I-1);\r\n\\path[thick] (E-2) edge node[pos=0.5,above,scale=0.7]{$w_4$} (I-3);\r\n\\path[thick] (E-3) edge node[pos=0.5,above,scale=0.7]{$w_3$} (I-3);\r\n\\path[thick] (I-1) edge node[pos=0.5,above,scale=0.7]{$f_{11}$} (P);\r\n\\path[thick] (I-3) edge node[pos=0.5,below,scale=0.7]{$f_{12}$}(O);\r\n\\node[below right=0.8ex,scale=0.5] at (O) {$\\text{Sigmoide}$};\r\n\\node[below =0.8ex,scale=0.5] at (P) {$\\text{Sigmoide}$};\r\n\r\n\\node[hidden neuron] (Q) at (2*\\layersep,-2.5 cm) {};\r\n\\node[output neuron] (R) at (3*\\layersep,-2.5 cm) {};\r\n\\node[below right=0.8ex,scale=0.7] at (R) {$\\text{Id}$};\r\n\\node[input neuron] (I-4) at (2.5,-0.5) {$1$};\r\n\\path[thick] (O) edge node[pos=0.6,above,scale=0.7]{$w_{7}$} (Q) ;\r\n\\node[below right=0.8ex,scale=0.7] at (Q) {$\\Sigma$};\r\n\\path[thick] (I-4) edge node[pos=0.5,above,scale=0.7]{$w_{5}$} (Q) ;\r\n\\path[thick] (Q) edge node[pos=0.5,above,scale=0.7]{$f_{21}$} (R);\r\n\\path[thick] (P) edge node[pos=0.5,above,scale=0.7]{$w_{6}$} (Q) ;\r\n\r\n\\draw[->,thick] (R)-- ++(2,0) node[right,blue]{$\\hat{y}$};\r\n \r\n     \r\n\r\n\r\n\r\n\r\n\\end{tikzpicture}  \r\n\\end{center}\r\n\\begin{enumerate}\r\n\\item Donner les formules qui déterminent les sorties intermédiaires $f_{11},\\,f_{12},\\,h_{11},\\,h_{12}$ et $f_{21}$ ainsi que la sortie finale $\\hat{y}$.\r\n\\reponse{\\[\r\nf_{11} = w_2 x + w_1\r\n\\]\r\n\\[\r\nf_{12} = w_4 x + w_3\r\n\\]\r\n\\[\r\nh_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\r\n\\]\r\n\\[\r\nh_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\r\n\\]\r\n\\[\r\n\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\r\n\\]}\r\n\\item On pose la fonction d'erreur $E(w)=(y-\\hat{y})^2.$ En appliquant l'algorithme de backpropagation (méthode du Gradient appliqué au réseau de neurones), déterminer les dérivées partielles $\\frac{\\partial E(w)}{\\partial w_j}$ puis $\\frac{\\partial \\hat{y}}{\\partial w_j}$. En déduire les expressions des mises à jour des paramètres $\\Delta w_j$ (variation des poids) pour $j=1,\\cdots{},7$. \r\n\\reponse{La fonction d’erreur est donnée par :\r\n\\[\r\nE(\\mathbf{w}) = (y - \\hat{y})^2\r\n\\]\r\n\r\nDonc, on aura :\r\n\\[\r\n\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n\r\nD’après la propagation en avant, on a : $\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5$.  \r\nLes dérivées partielles $\\frac{\\partial \\hat{y}}{\\partial w_j}$ peuvent être calculées comme suit :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\r\n\\]\r\n\r\nPour les autres paramètres :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\r\n\\]\r\n\r\nEn fin, la mise à jour de chaque paramètre $\\Delta w_j$ est donnée par :\r\n\\[\r\n\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n}\r\n\r\n\\end{enumerate}",
-            "html": "<p>Soit le réseau de neurones multicouches décrit pas le graphe suivant:</p>\n<ol>\n<li><p>Donner les formules qui déterminent les sorties intermédiaires <span class=\"math inline\">\\(f_{11},\\,f_{12},\\,h_{11},\\,h_{12}\\)</span> et <span class=\"math inline\">\\(f_{21}\\)</span> ainsi que la sortie finale <span class=\"math inline\">\\(\\hat{y}\\)</span>.</p></li>\n<li><p>On pose la fonction d’erreur <span class=\"math inline\">\\(E(w)=(y-\\hat{y})^2.\\)</span> En appliquant l’algorithme de backpropagation (méthode du Gradient appliqué au réseau de neurones), déterminer les dérivées partielles <span class=\"math inline\">\\(\\frac{\\partial E(w)}{\\partial w_j}\\)</span> puis <span class=\"math inline\">\\(\\frac{\\partial \\hat{y}}{\\partial w_j}\\)</span>. En déduire les expressions des mises à jour des paramètres <span class=\"math inline\">\\(\\Delta w_j\\)</span> (variation des poids) pour <span class=\"math inline\">\\(j=1,\\cdots{},7\\)</span>.</p></li>\n</ol>\n"
+            "html": "<p>Soit le réseau de neurones multicouches décrit pas le graphe\nsuivant:</p>\n<div class=\"center\">\n\n</div>\n<ol>\n<li><p>Donner les formules qui déterminent les sorties intermédiaires\n<span class=\"math inline\">\\(f_{11},\\,f_{12},\\,h_{11},\\,h_{12}\\)</span>\net <span class=\"math inline\">\\(f_{21}\\)</span> ainsi que la sortie\nfinale <span class=\"math inline\">\\(\\hat{y}\\)</span>.</p></li>\n<li><p>On pose la fonction d’erreur <span\nclass=\"math inline\">\\(E(w)=(y-\\hat{y})^2.\\)</span> En appliquant\nl’algorithme de backpropagation (méthode du Gradient appliqué au réseau\nde neurones), déterminer les dérivées partielles <span\nclass=\"math inline\">\\(\\frac{\\partial E(w)}{\\partial w_j}\\)</span> puis\n<span class=\"math inline\">\\(\\frac{\\partial \\hat{y}}{\\partial\nw_j}\\)</span>. En déduire les expressions des mises à jour des\nparamètres <span class=\"math inline\">\\(\\Delta w_j\\)</span> (variation\ndes poids) pour <span\nclass=\"math inline\">\\(j=1,\\cdots{},7\\)</span>.</p></li>\n</ol>\n"
           }
         },
         {
-          "id": "1ecb7b36-934f-4bbc-82ff-d77b1d50ffc3",
+          "id": "53cfe03b-7048-4349-a78a-60e888804938",
           "type": "reponse",
           "value": {
             "latex": "\\[\r\nf_{11} = w_2 x + w_1\r\n\\]\r\n\\[\r\nf_{12} = w_4 x + w_3\r\n\\]\r\n\\[\r\nh_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\r\n\\]\r\n\\[\r\nh_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\r\n\\]\r\n\\[\r\n\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\r\n\\]",
-            "html": "<p><span class=\"math display\">\\[f_{11} = w_2 x + w_1\\]</span> <span class=\"math display\">\\[f_{12} = w_4 x + w_3\\]</span> <span class=\"math display\">\\[h_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\\]</span> <span class=\"math display\">\\[h_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\\]</span> <span class=\"math display\">\\[\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\\]</span></p>\n"
+            "html": "<p><span class=\"math display\">\\[f_{11} = w_2 x + w_1\\]</span> <span\nclass=\"math display\">\\[f_{12} = w_4 x + w_3\\]</span> <span\nclass=\"math display\">\\[h_{11} = \\sigma(f_{11}) = \\frac{1}{1 +\ne^{-f_{11}}}\\]</span> <span class=\"math display\">\\[h_{12} =\n\\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\\]</span> <span\nclass=\"math display\">\\[\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} +\nw_5\\]</span></p>\n"
           }
         },
         {
-          "id": "7dfbc510-c5b6-4420-aecc-eb70dcccaed3",
+          "id": "df7cd593-3956-4c86-b64e-5f307aafdf27",
           "type": "reponse",
           "value": {
             "latex": "La fonction d’erreur est donnée par :\r\n\\[\r\nE(\\mathbf{w}) = (y - \\hat{y})^2\r\n\\]\r\n\r\nDonc, on aura :\r\n\\[\r\n\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n\r\nD’après la propagation en avant, on a : $\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5$.  \r\nLes dérivées partielles $\\frac{\\partial \\hat{y}}{\\partial w_j}$ peuvent être calculées comme suit :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\r\n\\]\r\n\r\nPour les autres paramètres :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\r\n\\]\r\n\r\nEn fin, la mise à jour de chaque paramètre $\\Delta w_j$ est donnée par :\r\n\\[\r\n\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]",
-            "html": "<p>La fonction d’erreur est donnée par : <span class=\"math display\">\\[E(\\mathbf{w}) = (y - \\hat{y})^2\\]</span></p>\n<p>Donc, on aura : <span class=\"math display\">\\[\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\\]</span></p>\n<p>D’après la propagation en avant, on a : <span class=\"math inline\">\\(\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\\)</span>. Les dérivées partielles <span class=\"math inline\">\\(\\frac{\\partial \\hat{y}}{\\partial w_j}\\)</span> peuvent être calculées comme suit : <span class=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\\]</span></p>\n<p>Pour les autres paramètres : <span class=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\\]</span> <span class=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\\]</span> <span class=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\\]</span> <span class=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\\]</span></p>\n<p>En fin, la mise à jour de chaque paramètre <span class=\"math inline\">\\(\\Delta w_j\\)</span> est donnée par : <span class=\"math display\">\\[\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\\]</span></p>\n"
+            "html": "<p>La fonction d’erreur est donnée par : <span\nclass=\"math display\">\\[E(\\mathbf{w}) = (y - \\hat{y})^2\\]</span></p>\n<p>Donc, on aura : <span class=\"math display\">\\[\\frac{\\partial\nE(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial\n\\hat{y}}{\\partial w_j}\\]</span></p>\n<p>D’après la propagation en avant, on a : <span\nclass=\"math inline\">\\(\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} +\nw_5\\)</span>. Les dérivées partielles <span\nclass=\"math inline\">\\(\\frac{\\partial \\hat{y}}{\\partial w_j}\\)</span>\npeuvent être calculées comme suit : <span\nclass=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\\]</span></p>\n<p>Pour les autres paramètres : <span\nclass=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_1} =\n\\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial\nh_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} =\nw_6 h_{11}(1 - h_{11})\\]</span> <span\nclass=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6\nh_{11}(1 - h_{11}) x\\]</span> <span\nclass=\"math display\">\\[\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7\nh_{12}(1 - h_{12})\\]</span> <span class=\"math display\">\\[\\frac{\\partial\n\\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\\]</span></p>\n<p>En fin, la mise à jour de chaque paramètre <span\nclass=\"math inline\">\\(\\Delta w_j\\)</span> est donnée par : <span\nclass=\"math display\">\\[\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial\n\\hat{y}}{\\partial w_j}\\]</span></p>\n"
           }
         }
       ]
@@ -25359,65 +25319,65 @@
       "niveau": "",
       "metadata": {
         "auteur": "legall",
-        "createdAt": "2024-12-02T16:45:15.159Z",
+        "createdAt": "2024-12-03T20:54:40.346Z",
         "organisation": "exo7",
-        "updatedAt": "2024-12-02T16:45:15.159Z"
+        "updatedAt": "2024-12-03T20:54:40.346Z"
       },
       "contenu": [
         {
-          "id": "e90102fa-fc0d-4227-9004-6b0607de7601",
+          "id": "893574c3-6db0-4076-b885-670b84590108",
           "type": "description",
           "value": {
             "latex": "Soit $f : \\Rr \n\t^2\\rightarrow \\Rr $ l'application $(x,y) \\mapsto 6xy+(y-x)^3.$ On note\n\t$\\Delta =\\{ (x,y)\\in \\Rr^2 , -1\\leq x\\leq y \\leq 1\\} .$",
-            "html": "<p>Soit <span class=\"math inline\">\\(f : \\Rr \n    ^2\\rightarrow \\Rr\\)</span> l’application <span class=\"math inline\">\\((x,y) \\mapsto 6xy+(y-x)^3.\\)</span> On note <span class=\"math inline\">\\(\\Delta =\\{ (x,y)\\in \\Rr^2 , -1\\leq x\\leq y \\leq 1\\} .\\)</span></p>\n"
+            "html": "<p>Soit <span class=\"math inline\">\\(f : \\Rr\n    ^2\\rightarrow \\Rr\\)</span> l’application <span\nclass=\"math inline\">\\((x,y) \\mapsto 6xy+(y-x)^3.\\)</span> On note <span\nclass=\"math inline\">\\(\\Delta =\\{ (x,y)\\in \\Rr^2 , -1\\leq x\\leq y \\leq\n1\\} .\\)</span></p>\n"
           }
         },
         {
-          "id": "086e77e7-97e8-4426-b456-a1d0b9243b09",
+          "id": "956a0d5b-4a1c-409c-8566-f3336462bd4b",
           "type": "question",
           "value": {
             "latex": "Dessiner $\\Delta $. Montrer que $f$ est bornée et atteint ses \tbornes sur $\\Delta .$",
-            "html": "<p>Dessiner <span class=\"math inline\">\\(\\Delta\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est bornée et atteint ses bornes sur <span class=\"math inline\">\\(\\Delta .\\)</span></p>\n"
+            "html": "<p>Dessiner <span class=\"math inline\">\\(\\Delta\\)</span>. Montrer que\n<span class=\"math inline\">\\(f\\)</span> est bornée et atteint ses bornes\nsur <span class=\"math inline\">\\(\\Delta .\\)</span></p>\n"
           }
         },
         {
-          "id": "18f2e7d6-9c4d-402d-ab58-2609fbd5fa1b",
+          "id": "aa24dae2-1ee9-4f5d-9189-35f2e5c44466",
           "type": "reponse",
           "value": {
             "latex": "\\textbf{Description de $\\Delta$ :}\n    \t\n    \tLa région $\\Delta$ est définie par les inégalités :\n    \t\\[\n    \t-1 \\leq x \\leq y \\leq 1.\n    \t\\]\n    \tDans le plan $(x, y)$, $\\Delta$ est la région délimitée par :\n    \t\\begin{itemize}\n    \t\t\\item Les droites verticales $x = -1$ et $x = 1$.\n    \t\t\\item La droite $y = x$.\n    \t\t\\item La droite horizontale $y = 1$.\n    \t\\end{itemize}\n    \tGraphiquement, $\\Delta$ est un trapèze situé entre $x = -1$ et $x = 1$, au-dessus de la droite $y = x$ et en dessous de la droite $y = 1$.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Continuité et compacité :}\n    \t\n    \tLa fonction $f$ est une fonction polynomiale en $x$ et $y$, donc continue sur $\\mathbb{R}^2$. L'ensemble $\\Delta$ est fermé et borné dans $\\mathbb{R}^2$, donc compact.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Conclusion :}\n    \t\n    \tD'après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, $f$ est bornée sur $\\Delta$ et atteint ses bornes sur $\\Delta$.",
-            "html": "<p><strong>Description de <span class=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>La région <span class=\"math inline\">\\(\\Delta\\)</span> est définie par les inégalités : <span class=\"math display\">\\[-1 \\leq x \\leq y \\leq 1.\\]</span> Dans le plan <span class=\"math inline\">\\((x, y)\\)</span>, <span class=\"math inline\">\\(\\Delta\\)</span> est la région délimitée par :</p>\n<ul>\n<li><p>Les droites verticales <span class=\"math inline\">\\(x = -1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>.</p></li>\n<li><p>La droite <span class=\"math inline\">\\(y = x\\)</span>.</p></li>\n<li><p>La droite horizontale <span class=\"math inline\">\\(y = 1\\)</span>.</p></li>\n</ul>\n<p>Graphiquement, <span class=\"math inline\">\\(\\Delta\\)</span> est un trapèze situé entre <span class=\"math inline\">\\(x = -1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>, au-dessus de la droite <span class=\"math inline\">\\(y = x\\)</span> et en dessous de la droite <span class=\"math inline\">\\(y = 1\\)</span>.</p>\n<p><strong>Continuité et compacité :</strong></p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est une fonction polynomiale en <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span>, donc continue sur <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>. L’ensemble <span class=\"math inline\">\\(\\Delta\\)</span> est fermé et borné dans <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>, donc compact.</p>\n<p><strong>Conclusion :</strong></p>\n<p>D’après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, <span class=\"math inline\">\\(f\\)</span> est bornée sur <span class=\"math inline\">\\(\\Delta\\)</span> et atteint ses bornes sur <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+            "html": "<p><strong>Description de <span class=\"math inline\">\\(\\Delta\\)</span>\n:</strong></p>\n<p>La région <span class=\"math inline\">\\(\\Delta\\)</span> est définie par\nles inégalités : <span class=\"math display\">\\[-1 \\leq x \\leq y \\leq\n1.\\]</span> Dans le plan <span class=\"math inline\">\\((x, y)\\)</span>,\n<span class=\"math inline\">\\(\\Delta\\)</span> est la région délimitée par\n:</p>\n<ul>\n<li><p>Les droites verticales <span class=\"math inline\">\\(x =\n-1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>.</p></li>\n<li><p>La droite <span class=\"math inline\">\\(y = x\\)</span>.</p></li>\n<li><p>La droite horizontale <span class=\"math inline\">\\(y =\n1\\)</span>.</p></li>\n</ul>\n<p>Graphiquement, <span class=\"math inline\">\\(\\Delta\\)</span> est un\ntrapèze situé entre <span class=\"math inline\">\\(x = -1\\)</span> et <span\nclass=\"math inline\">\\(x = 1\\)</span>, au-dessus de la droite <span\nclass=\"math inline\">\\(y = x\\)</span> et en dessous de la droite <span\nclass=\"math inline\">\\(y = 1\\)</span>.</p>\n<p><strong>Continuité et compacité :</strong></p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est une fonction\npolynomiale en <span class=\"math inline\">\\(x\\)</span> et <span\nclass=\"math inline\">\\(y\\)</span>, donc continue sur <span\nclass=\"math inline\">\\(\\mathbb{R}^2\\)</span>. L’ensemble <span\nclass=\"math inline\">\\(\\Delta\\)</span> est fermé et borné dans <span\nclass=\"math inline\">\\(\\mathbb{R}^2\\)</span>, donc compact.</p>\n<p><strong>Conclusion :</strong></p>\n<p>D’après le théorème des valeurs extrêmes, toute fonction continue sur\nun compact atteint ses bornes sur cet ensemble. Ainsi, <span\nclass=\"math inline\">\\(f\\)</span> est bornée sur <span\nclass=\"math inline\">\\(\\Delta\\)</span> et atteint ses bornes sur <span\nclass=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
           }
         },
         {
-          "id": "14bf50b9-1a4d-4e63-9480-d4b5a5ed2868",
+          "id": "3175dce7-592b-42d9-a3cd-cdfa453b2895",
           "type": "question",
           "value": {
             "latex": "Calculer les extrema de $f $ sur le bord de $\\Delta $ puis dans \n    \tl'intérieur de $\\Delta $.",
-            "html": "<p>Calculer les extrema de <span class=\"math inline\">\\(f\\)</span> sur le bord de <span class=\"math inline\">\\(\\Delta\\)</span> puis dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+            "html": "<p>Calculer les extrema de <span class=\"math inline\">\\(f\\)</span> sur le\nbord de <span class=\"math inline\">\\(\\Delta\\)</span> puis dans\nl’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
           }
         },
         {
-          "id": "7562928e-ff93-48cc-b1ec-b0f9f67cffcb",
+          "id": "0a393b3a-1730-46f0-828e-4837ecd63cf3",
           "type": "reponse",
           "value": {
             "latex": "\\textbf{Sur le bord $\\mathbf{y = x}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, x) = 6x^2 + (x - x)^3 = 6x^2$.\n    \n    \\begin{itemize}\n    \t\\item Le minimum est atteint en $x = 0$ : $f(0, 0) = 0$.\n    \t\\item Le maximum est atteint en $x = \\pm 1$ : $f(\\pm 1, \\pm 1) = 6$.\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{y = 1}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(x) = 6 - 3(1 - x)^2.\n    \\]\n    En résolvant $f'(x) = 0$ :\n    \\[\n    6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $x = 1 - \\sqrt{2} \\approx -0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(1, 1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{x = -1}$, avec $\\mathbf{y \\in [-1, 1]}$ :}\n    \n    On a $f(-1, y) = -6y + (y + 1)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(y) = -6 + 3(y + 1)^2.\n    \\]\n    En résolvant $f'(y) = 0$ :\n    \\[\n    -6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $y = -1 + \\sqrt{2} \\approx 0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(-1, -1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Dans l'intérieur de $\\Delta$ :}\n    \n    Calculons les points critiques en résolvant $\\nabla f = 0$ :\n    \n    \\[\n    \\begin{cases}\n    f_x = 6y - 3(y - x)^2 = 0, \\\\\n    f_y = 6x + 3(y - x)^2 = 0.\n    \\end{cases}\n    \\]\n    \n    En soustrayant les deux équations :\n    \\[\n    f_x - f_y = 6(y - x) - 6(y - x) = 0.\n    \\]\n    Ainsi, les deux équations sont équivalentes si $f_x = 0$.\n    \n    Posons $s = y - x$. Alors :\n    \\[\n    \\begin{cases}\n    6(y - x) - 3(y - x)^2 = 0 \\implies 6s - 3s^2 = 0 \\implies s(6 - 3s) = 0 \\implies s = 0 \\text{ ou } s = 2, \\\\\n    x = -\\dfrac{s^2}{2}.\n    \\end{cases}\n    \\]\n    \n    \\textbf{Cas 1 :} $s = 0$ $\\implies$ $y = x$ $\\implies$ $x = 0$ $\\implies$ $(0, 0)$.\n    \n    \\textbf{Cas 2 :} $s = 2$ $\\implies$ $x = -2$ $\\implies$ $x = -2$ n'appartient pas à $[-1, 1]$ $\\implies$ on exclut ce cas.\n    \n    \\textbf{Conclusion :} Le seul point critique intérieur est $(0, 0)$ avec $f(0, 0) = 0$.",
-            "html": "<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = x}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, x) = 6x^2 + (x - x)^3 = 6x^2\\)</span>.</p>\n<ul>\n<li><p>Le minimum est atteint en <span class=\"math inline\">\\(x = 0\\)</span> : <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p></li>\n<li><p>Le maximum est atteint en <span class=\"math inline\">\\(x = \\pm 1\\)</span> : <span class=\"math inline\">\\(f(\\pm 1, \\pm 1) = 6\\)</span>.</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = 1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(x) = 6 - 3(1 - x)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(x) = 0\\)</span> : <span class=\"math display\">\\[6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(x = 1 - \\sqrt{2} \\approx -0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(1, 1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{x = -1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{y \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(-1, y) = -6y + (y + 1)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(y) = -6 + 3(y + 1)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(y) = 0\\)</span> : <span class=\"math display\">\\[-6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(y = -1 + \\sqrt{2} \\approx 0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(-1, -1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>Calculons les points critiques en résolvant <span class=\"math inline\">\\(\\nabla f = 0\\)</span> :</p>\n<p><span class=\"math display\">\\[\\begin{cases}\n    f_x = 6y - 3(y - x)^2 = 0, \\\\\n    f_y = 6x + 3(y - x)^2 = 0.\n    \\end{cases}\\]</span></p>\n<p>En soustrayant les deux équations : <span class=\"math display\">\\[f_x - f_y = 6(y - x) - 6(y - x) = 0.\\]</span> Ainsi, les deux équations sont équivalentes si <span class=\"math inline\">\\(f_x = 0\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(s = y - x\\)</span>. Alors : <span class=\"math display\">\\[\\begin{cases}\n    6(y - x) - 3(y - x)^2 = 0 \\implies 6s - 3s^2 = 0 \\implies s(6 - 3s) = 0 \\implies s = 0 \\text{ ou } s = 2, \\\\\n    x = -\\dfrac{s^2}{2}.\n    \\end{cases}\\]</span></p>\n<p><strong>Cas 1 :</strong> <span class=\"math inline\">\\(s = 0\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(y = x\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = 0\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\((0, 0)\\)</span>.</p>\n<p><strong>Cas 2 :</strong> <span class=\"math inline\">\\(s = 2\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = -2\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = -2\\)</span> n’appartient pas à <span class=\"math inline\">\\([-1, 1]\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> on exclut ce cas.</p>\n<p><strong>Conclusion :</strong> Le seul point critique intérieur est <span class=\"math inline\">\\((0, 0)\\)</span> avec <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p>\n"
+            "html": "<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y =\nx}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1,\n1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, x) = 6x^2 + (x - x)^3 =\n6x^2\\)</span>.</p>\n<ul>\n<li><p>Le minimum est atteint en <span class=\"math inline\">\\(x =\n0\\)</span> : <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p></li>\n<li><p>Le maximum est atteint en <span class=\"math inline\">\\(x = \\pm\n1\\)</span> : <span class=\"math inline\">\\(f(\\pm 1, \\pm 1) =\n6\\)</span>.</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y =\n1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1,\n1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, 1) = 6x \\cdot 1 + (1 - x)^3 =\n6x + (1 - x)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(x) = 6 -\n3(1 - x)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(x)\n= 0\\)</span> : <span class=\"math display\">\\[6 - 3(1 - x)^2 = 0 \\implies\n(1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\\]</span> Seule la solution\n<span class=\"math inline\">\\(x = 1 - \\sqrt{2} \\approx -0{,}4142\\)</span>\nappartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(1, 1) = 6 + 0 = 6\\)</span>\n(maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 =\n2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2})\n+ (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2}\n+ 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span>\n(minimum).</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{x =\n-1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{y \\in [-1,\n1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(-1, y) = -6y + (y +\n1)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(y) = -6 +\n3(y + 1)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(y)\n= 0\\)</span> : <span class=\"math display\">\\[-6 + 3(y + 1)^2 = 0 \\implies\n(y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\\]</span> Seule la solution\n<span class=\"math inline\">\\(y = -1 + \\sqrt{2} \\approx 0{,}4142\\)</span>\nappartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(-1, -1) = 6 + 0 = 6\\)</span>\n(maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 =\n2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2}\n\\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Dans l’intérieur de <span\nclass=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>Calculons les points critiques en résolvant <span\nclass=\"math inline\">\\(\\nabla f = 0\\)</span> :</p>\n<p><span class=\"math display\">\\[\\begin{cases}\n    f_x = 6y - 3(y - x)^2 = 0, \\\\\n    f_y = 6x + 3(y - x)^2 = 0.\n    \\end{cases}\\]</span></p>\n<p>En soustrayant les deux équations : <span class=\"math display\">\\[f_x\n- f_y = 6(y - x) - 6(y - x) = 0.\\]</span> Ainsi, les deux équations sont\néquivalentes si <span class=\"math inline\">\\(f_x = 0\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(s = y - x\\)</span>. Alors : <span\nclass=\"math display\">\\[\\begin{cases}\n    6(y - x) - 3(y - x)^2 = 0 \\implies 6s - 3s^2 = 0 \\implies s(6 - 3s)\n= 0 \\implies s = 0 \\text{ ou } s = 2, \\\\\n    x = -\\dfrac{s^2}{2}.\n    \\end{cases}\\]</span></p>\n<p><strong>Cas 1 :</strong> <span class=\"math inline\">\\(s = 0\\)</span>\n<span class=\"math inline\">\\(\\implies\\)</span> <span\nclass=\"math inline\">\\(y = x\\)</span> <span\nclass=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x =\n0\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span\nclass=\"math inline\">\\((0, 0)\\)</span>.</p>\n<p><strong>Cas 2 :</strong> <span class=\"math inline\">\\(s = 2\\)</span>\n<span class=\"math inline\">\\(\\implies\\)</span> <span\nclass=\"math inline\">\\(x = -2\\)</span> <span\nclass=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x =\n-2\\)</span> n’appartient pas à <span class=\"math inline\">\\([-1,\n1]\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> on exclut ce\ncas.</p>\n<p><strong>Conclusion :</strong> Le seul point critique intérieur est\n<span class=\"math inline\">\\((0, 0)\\)</span> avec <span\nclass=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p>\n"
           }
         },
         {
-          "id": "1c1f693a-e35a-4612-81c6-b6f7c4ad7b70",
+          "id": "76c5e788-396d-4319-9a90-adeb151f22e2",
           "type": "question",
           "value": {
             "latex": "En déduire les bornes de $f$ sur $\\Delta $.",
-            "html": "<p>En déduire les bornes de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+            "html": "<p>En déduire les bornes de <span class=\"math inline\">\\(f\\)</span> sur\n<span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
           }
         },
         {
-          "id": "0593a0ec-2e72-4af6-af5e-8aaa341da794",
+          "id": "bbf5a23d-93a7-46a4-81e4-d79842dfc648",
           "type": "reponse",
           "value": {
             "latex": "D'après les calculs précédents :\n\t\n\t\\begin{itemize}\n\t\t\\item Le maximum de $f$ sur $\\Delta$ est $f_{\\text{max}} = 6$, atteint en $(1, 1)$ et $(-1, -1)$.\n\t\t\\item Le minimum de $f$ sur $\\Delta$ est $f_{\\text{min}} = 0{,}3432$, atteint sur le bord en $(1 - \\sqrt{2}, 1)$ et $(-1, -1 + \\sqrt{2})$, et $f(0, 0) = 0$ à l'intérieur.\n\t\\end{itemize}\n\t\n\tCependant, en comparant $f(0, 0) = 0$ et $f(1 - \\sqrt{2}, 1) \\approx 0{,}3432$, on conclut que le minimum absolu est $f_{\\text{min}} = 0$, atteint en $(0, 0)$.",
-            "html": "<p>D’après les calculs précédents :</p>\n<ul>\n<li><p>Le maximum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{max}} = 6\\)</span>, atteint en <span class=\"math inline\">\\((1, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1)\\)</span>.</p></li>\n<li><p>Le minimum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{min}} = 0{,}3432\\)</span>, atteint sur le bord en <span class=\"math inline\">\\((1 - \\sqrt{2}, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1 + \\sqrt{2})\\)</span>, et <span class=\"math inline\">\\(f(0, 0) = 0\\)</span> à l’intérieur.</p></li>\n</ul>\n<p>Cependant, en comparant <span class=\"math inline\">\\(f(0, 0) = 0\\)</span> et <span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) \\approx 0{,}3432\\)</span>, on conclut que le minimum absolu est <span class=\"math inline\">\\(f_{\\text{min}} = 0\\)</span>, atteint en <span class=\"math inline\">\\((0, 0)\\)</span>.</p>\n"
+            "html": "<p>D’après les calculs précédents :</p>\n<ul>\n<li><p>Le maximum de <span class=\"math inline\">\\(f\\)</span> sur <span\nclass=\"math inline\">\\(\\Delta\\)</span> est <span\nclass=\"math inline\">\\(f_{\\text{max}} = 6\\)</span>, atteint en <span\nclass=\"math inline\">\\((1, 1)\\)</span> et <span\nclass=\"math inline\">\\((-1, -1)\\)</span>.</p></li>\n<li><p>Le minimum de <span class=\"math inline\">\\(f\\)</span> sur <span\nclass=\"math inline\">\\(\\Delta\\)</span> est <span\nclass=\"math inline\">\\(f_{\\text{min}} = 0{,}3432\\)</span>, atteint sur le\nbord en <span class=\"math inline\">\\((1 - \\sqrt{2}, 1)\\)</span> et <span\nclass=\"math inline\">\\((-1, -1 + \\sqrt{2})\\)</span>, et <span\nclass=\"math inline\">\\(f(0, 0) = 0\\)</span> à l’intérieur.</p></li>\n</ul>\n<p>Cependant, en comparant <span class=\"math inline\">\\(f(0, 0) =\n0\\)</span> et <span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) \\approx\n0{,}3432\\)</span>, on conclut que le minimum absolu est <span\nclass=\"math inline\">\\(f_{\\text{min}} = 0\\)</span>, atteint en <span\nclass=\"math inline\">\\((0, 0)\\)</span>.</p>\n"
           }
         }
       ]
@@ -26544,53 +26504,53 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-02T16:45:12.554Z",
+        "createdAt": "2024-12-03T20:54:40.115Z",
         "organisation": "",
-        "updatedAt": "2024-12-02T16:45:12.554Z"
+        "updatedAt": "2024-12-03T20:54:40.115Z"
       },
       "contenu": [
         {
-          "id": "ed57e924-a669-4218-b7da-f1c40714fdb7",
+          "id": "92cc61c1-8245-4022-81bc-5ea645fd4464",
           "type": "description",
           "value": {
             "latex": "Vous allez travailler avec un réseau de neurones à une couche cachée, conçu pour effectuer une tâche de prédiction simple. \n\t\n\t\n\t\n\t\\textbf{Description du réseau}\n\t\n\t\\begin{itemize}\n\t\t\\item \\textbf{Entrée :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\( x \\in \\mathbb{R} \\) (scalaire)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Couche cachée (2 neurones) :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Neurone caché 1 :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_1 = 0{,}15 \\)\n\t\t\t\t\\item Biais : \\( b_1 = 0{,}35 \\)\n\t\t\t\\end{itemize}\n\t\t\t\\item \\textbf{Neurone caché 2 :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_2 = 0{,}20 \\)\n\t\t\t\t\\item Biais : \\( b_2 = 0{,}35 \\)\n\t\t\t\\end{itemize}\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Couche de sortie (1 neurone) :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Neurone de sortie :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_3 = 0{,}40 \\) (connecté au neurone caché 1)\n\t\t\t\t\\item Poids : \\( w_4 = 0{,}45 \\) (connecté au neurone caché 2)\n\t\t\t\t\\item Biais : \\( b_3 = 0{,}60 \\)\n\t\t\t\\end{itemize}\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Fonctions d'activation :}\n\t\t\\begin{itemize}\n\t\t\t\\item Fonction sigmoïde : \\( \\sigma(z) = \\dfrac{1}{1 + e^{-z}} \\)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Fonction de coût :}\n\t\t\\begin{itemize}\n\t\t\t\\item Erreur quadratique moyenne : \\( E = \\dfrac{1}{2}(y - \\hat{y})^2 \\)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Données :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Entrée :} \\( x = 0{,}05 \\)\n\t\t\t\\item \\textbf{Sortie cible :} \\( y = 0{,}01 \\)\n\t\t\\end{itemize}\n\t\\end{itemize}",
-            "html": "<p>Vous allez travailler avec un réseau de neurones à une couche cachée, conçu pour effectuer une tâche de prédiction simple.</p>\n<p><strong>Description du réseau</strong></p>\n<ul>\n<li><p><strong>Entrée :</strong></p>\n<ul>\n<li><p><span class=\"math inline\">\\(x \\in \\mathbb{R}\\)</span> (scalaire)</p></li>\n</ul></li>\n<li><p><strong>Couche cachée (2 neurones) :</strong></p>\n<ul>\n<li><p><strong>Neurone caché 1 :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_1 = 0{,}15\\)</span></p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_1 = 0{,}35\\)</span></p></li>\n</ul></li>\n<li><p><strong>Neurone caché 2 :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_2 = 0{,}20\\)</span></p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_2 = 0{,}35\\)</span></p></li>\n</ul></li>\n</ul></li>\n<li><p><strong>Couche de sortie (1 neurone) :</strong></p>\n<ul>\n<li><p><strong>Neurone de sortie :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_3 = 0{,}40\\)</span> (connecté au neurone caché 1)</p></li>\n<li><p>Poids : <span class=\"math inline\">\\(w_4 = 0{,}45\\)</span> (connecté au neurone caché 2)</p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_3 = 0{,}60\\)</span></p></li>\n</ul></li>\n</ul></li>\n<li><p><strong>Fonctions d’activation :</strong></p>\n<ul>\n<li><p>Fonction sigmoïde : <span class=\"math inline\">\\(\\sigma(z) = \\dfrac{1}{1 + e^{-z}}\\)</span></p></li>\n</ul></li>\n<li><p><strong>Fonction de coût :</strong></p>\n<ul>\n<li><p>Erreur quadratique moyenne : <span class=\"math inline\">\\(E = \\dfrac{1}{2}(y - \\hat{y})^2\\)</span></p></li>\n</ul></li>\n<li><p><strong>Données :</strong></p>\n<ul>\n<li><p><strong>Entrée :</strong> <span class=\"math inline\">\\(x = 0{,}05\\)</span></p></li>\n<li><p><strong>Sortie cible :</strong> <span class=\"math inline\">\\(y = 0{,}01\\)</span></p></li>\n</ul></li>\n</ul>\n"
+            "html": "<p>Vous allez travailler avec un réseau de neurones à une couche cachée,\nconçu pour effectuer une tâche de prédiction simple.</p>\n<p><strong>Description du réseau</strong></p>\n<ul>\n<li><p><strong>Entrée :</strong></p>\n<ul>\n<li><p><span class=\"math inline\">\\(x \\in \\mathbb{R}\\)</span>\n(scalaire)</p></li>\n</ul></li>\n<li><p><strong>Couche cachée (2 neurones) :</strong></p>\n<ul>\n<li><p><strong>Neurone caché 1 :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_1 =\n0{,}15\\)</span></p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_1 =\n0{,}35\\)</span></p></li>\n</ul></li>\n<li><p><strong>Neurone caché 2 :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_2 =\n0{,}20\\)</span></p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_2 =\n0{,}35\\)</span></p></li>\n</ul></li>\n</ul></li>\n<li><p><strong>Couche de sortie (1 neurone) :</strong></p>\n<ul>\n<li><p><strong>Neurone de sortie :</strong></p>\n<ul>\n<li><p>Poids : <span class=\"math inline\">\\(w_3 = 0{,}40\\)</span>\n(connecté au neurone caché 1)</p></li>\n<li><p>Poids : <span class=\"math inline\">\\(w_4 = 0{,}45\\)</span>\n(connecté au neurone caché 2)</p></li>\n<li><p>Biais : <span class=\"math inline\">\\(b_3 =\n0{,}60\\)</span></p></li>\n</ul></li>\n</ul></li>\n<li><p><strong>Fonctions d’activation :</strong></p>\n<ul>\n<li><p>Fonction sigmoïde : <span class=\"math inline\">\\(\\sigma(z) =\n\\dfrac{1}{1 + e^{-z}}\\)</span></p></li>\n</ul></li>\n<li><p><strong>Fonction de coût :</strong></p>\n<ul>\n<li><p>Erreur quadratique moyenne : <span class=\"math inline\">\\(E =\n\\dfrac{1}{2}(y - \\hat{y})^2\\)</span></p></li>\n</ul></li>\n<li><p><strong>Données :</strong></p>\n<ul>\n<li><p><strong>Entrée :</strong> <span class=\"math inline\">\\(x =\n0{,}05\\)</span></p></li>\n<li><p><strong>Sortie cible :</strong> <span class=\"math inline\">\\(y =\n0{,}01\\)</span></p></li>\n</ul></li>\n</ul>\n"
           }
         },
         {
-          "id": "7b34142b-6d8a-4dbb-a2f1-3e88459996c0",
+          "id": "f84edd33-43e3-42a6-93b5-350c26530f2d",
           "type": "question",
           "value": {
             "latex": "Calculer les sorties des neurones de la couche cachée (\\( h_1 \\) et \\( h_2 \\)).",
-            "html": "<p>Calculer les sorties des neurones de la couche cachée (<span class=\"math inline\">\\(h_1\\)</span> et <span class=\"math inline\">\\(h_2\\)</span>).</p>\n"
+            "html": "<p>Calculer les sorties des neurones de la couche cachée (<span\nclass=\"math inline\">\\(h_1\\)</span> et <span\nclass=\"math inline\">\\(h_2\\)</span>).</p>\n"
           }
         },
         {
-          "id": "9b2aaefa-0b37-4e78-a381-e100fe82c957",
+          "id": "6b135bd1-4160-49a4-b45c-c9b345a871bc",
           "type": "reponse",
           "value": {
             "latex": "Neurone caché 1 : \n    \t$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_{h1} = w_1 \\cdot x + b_1 \\\\\n    \t& net_{h1} = 0{,}15 \\times 0{,}05 + 0{,}35 = 0{,}3575 \\\\\n    \t\\text{Sortie : } & h_1 = \\sigma(net_{h1}) = \\dfrac{1}{1 + e^{-0{,}3575}} \\approx 0{,}5889\n    \t\\end{align*}$$\n    \t\n    \t\n    \tNeurone caché 2 :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_{h2} = w_2 \\cdot x + b_2 \\\\\n    \t& net_{h2} = 0{,}20 \\times 0{,}05 + 0{,}35 = 0{,}36 \\\\\n    \t\\text{Sortie : } & h_2 = \\sigma(net_{h2}) = \\dfrac{1}{1 + e^{-0{,}36}} \\approx 0{,}5890\n    \t\\end{align*}$$",
-            "html": "<p>Neurone caché 1 : <span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_{h1} = w_1 \\cdot x + b_1 \\\\\n        &amp; net_{h1} = 0{,}15 \\times 0{,}05 + 0{,}35 = 0{,}3575 \\\\\n        \\text{Sortie : } &amp; h_1 = \\sigma(net_{h1}) = \\dfrac{1}{1 + e^{-0{,}3575}} \\approx 0{,}5889\n        \\end{align*}\\]</span></p>\n<p>Neurone caché 2 :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_{h2} = w_2 \\cdot x + b_2 \\\\\n        &amp; net_{h2} = 0{,}20 \\times 0{,}05 + 0{,}35 = 0{,}36 \\\\\n        \\text{Sortie : } &amp; h_2 = \\sigma(net_{h2}) = \\dfrac{1}{1 + e^{-0{,}36}} \\approx 0{,}5890\n        \\end{align*}\\]</span></p>\n"
+            "html": "<p>Neurone caché 1 : <span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_{h1} = w_1 \\cdot x + b_1 \\\\\n        &amp; net_{h1} = 0{,}15 \\times 0{,}05 + 0{,}35 = 0{,}3575 \\\\\n        \\text{Sortie : } &amp; h_1 = \\sigma(net_{h1}) = \\dfrac{1}{1 +\ne^{-0{,}3575}} \\approx 0{,}5889\n        \\end{align*}\\]</span></p>\n<p>Neurone caché 2 :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_{h2} = w_2 \\cdot x + b_2 \\\\\n        &amp; net_{h2} = 0{,}20 \\times 0{,}05 + 0{,}35 = 0{,}36 \\\\\n        \\text{Sortie : } &amp; h_2 = \\sigma(net_{h2}) = \\dfrac{1}{1 +\ne^{-0{,}36}} \\approx 0{,}5890\n        \\end{align*}\\]</span></p>\n"
           }
         },
         {
-          "id": "55f25811-c109-41c6-98ef-9eb63387768d",
+          "id": "ced4a477-2378-4521-bf8d-6629cd49ae77",
           "type": "question",
           "value": {
             "latex": "Calculer la sortie du neurone de sortie (\\( \\hat{y} \\)).",
-            "html": "<p>Calculer la sortie du neurone de sortie (<span class=\"math inline\">\\(\\hat{y}\\)</span>).</p>\n"
+            "html": "<p>Calculer la sortie du neurone de sortie (<span\nclass=\"math inline\">\\(\\hat{y}\\)</span>).</p>\n"
           }
         },
         {
-          "id": "e505c5f1-4fcd-4c8f-82af-22ece8f9768e",
+          "id": "f2a649f6-3511-4b7d-94e2-52970b4ed8ad",
           "type": "reponse",
           "value": {
             "latex": "$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_o = w_3 \\cdot h_1 + w_4 \\cdot h_2 + b_3 \\\\\n    \t& net_o = 0{,}40 \\times 0{,}5889 + 0{,}45 \\times 0{,}5890 + 0{,}60 \\\\\n    \t& net_o = 0{,}2356 + 0{,}2650 + 0{,}60 = 1{,}1006 \\\\\n    \t\\text{Sortie : } & \\hat{y} = \\sigma(net_o) = \\dfrac{1}{1 + e^{-1{,}1006}} \\approx 0{,}7507\n    \t\\end{align*}$$",
-            "html": "<p><span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_o = w_3 \\cdot h_1 + w_4 \\cdot h_2 + b_3 \\\\\n        &amp; net_o = 0{,}40 \\times 0{,}5889 + 0{,}45 \\times 0{,}5890 + 0{,}60 \\\\\n        &amp; net_o = 0{,}2356 + 0{,}2650 + 0{,}60 = 1{,}1006 \\\\\n        \\text{Sortie : } &amp; \\hat{y} = \\sigma(net_o) = \\dfrac{1}{1 + e^{-1{,}1006}} \\approx 0{,}7507\n        \\end{align*}\\]</span></p>\n"
+            "html": "<p><span class=\"math display\">\\[\\begin{align*}\n        \\text{Entrée nette : } &amp; net_o = w_3 \\cdot h_1 + w_4 \\cdot\nh_2 + b_3 \\\\\n        &amp; net_o = 0{,}40 \\times 0{,}5889 + 0{,}45 \\times 0{,}5890 +\n0{,}60 \\\\\n        &amp; net_o = 0{,}2356 + 0{,}2650 + 0{,}60 = 1{,}1006 \\\\\n        \\text{Sortie : } &amp; \\hat{y} = \\sigma(net_o) = \\dfrac{1}{1 +\ne^{-1{,}1006}} \\approx 0{,}7507\n        \\end{align*}\\]</span></p>\n"
           }
         },
         {
-          "id": "88ec1c8c-80fc-4f45-817b-d8b734407b7d",
+          "id": "48b86413-bf46-4168-8800-807113e8a89a",
           "type": "question",
           "value": {
             "latex": "Calculer l'erreur du réseau en utilisant la fonction de coût.",
@@ -26598,43 +26558,43 @@
           }
         },
         {
-          "id": "1cc20a74-5d8d-415c-b4af-5bb5d6aa5d18",
+          "id": "db0dbf97-d813-4577-9c45-5ac874af0baf",
           "type": "reponse",
           "value": {
             "latex": "$$\\begin{align*}\n    \tE = \\dfrac{1}{2}(y - \\hat{y})^2 = \\dfrac{1}{2}(0{,}01 - 0{,}7507)^2 = \\dfrac{1}{2}(-0{,}7407)^2 \\approx 0{,}2741\n    \t\\end{align*}$$",
-            "html": "<p><span class=\"math display\">\\[\\begin{align*}\n        E = \\dfrac{1}{2}(y - \\hat{y})^2 = \\dfrac{1}{2}(0{,}01 - 0{,}7507)^2 = \\dfrac{1}{2}(-0{,}7407)^2 \\approx 0{,}2741\n        \\end{align*}\\]</span></p>\n"
+            "html": "<p><span class=\"math display\">\\[\\begin{align*}\n        E = \\dfrac{1}{2}(y - \\hat{y})^2 = \\dfrac{1}{2}(0{,}01 -\n0{,}7507)^2 = \\dfrac{1}{2}(-0{,}7407)^2 \\approx 0{,}2741\n        \\end{align*}\\]</span></p>\n"
           }
         },
         {
-          "id": "d03f7f52-16a5-4a67-9efc-8d3c104c6729",
+          "id": "c5329cee-0873-46bf-9b33-61964ea0888a",
           "type": "question",
           "value": {
             "latex": "Calculer les gradients des poids \\( w_3 \\) et \\( w_4 \\) de la couche de sortie  les gradients des poids \\( w_1 \\) et \\( w_2 \\) de la couche cachée.",
-            "html": "<p>Calculer les gradients des poids <span class=\"math inline\">\\(w_3\\)</span> et <span class=\"math inline\">\\(w_4\\)</span> de la couche de sortie les gradients des poids <span class=\"math inline\">\\(w_1\\)</span> et <span class=\"math inline\">\\(w_2\\)</span> de la couche cachée.</p>\n"
+            "html": "<p>Calculer les gradients des poids <span\nclass=\"math inline\">\\(w_3\\)</span> et <span\nclass=\"math inline\">\\(w_4\\)</span> de la couche de sortie les gradients\ndes poids <span class=\"math inline\">\\(w_1\\)</span> et <span\nclass=\"math inline\">\\(w_2\\)</span> de la couche cachée.</p>\n"
           }
         },
         {
-          "id": "ccfea9cc-a44f-4044-b23c-f33b66f6ed45",
+          "id": "f01633c8-fcfc-4531-b9aa-f7af51be3f82",
           "type": "reponse",
           "value": {
             "latex": "Calcul de l'erreur locale au neurone de sortie (\\( \\delta_o \\)) :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\delta_o = \\dfrac{\\partial E}{\\partial net_o} = \\dfrac{\\partial E}{\\partial \\hat{y}} \\cdot \\dfrac{\\partial \\hat{y}}{\\partial net_o} \\\\\n    \t\\dfrac{\\partial E}{\\partial \\hat{y}} = \\hat{y} - y = 0{,}7507 - 0{,}01 = 0{,}7407 \\\\\n    \t\\dfrac{\\partial \\hat{y}}{\\partial net_o} = \\hat{y}(1 - \\hat{y}) = 0{,}7507 \\times 0{,}2493 \\approx 0{,}1875 \\\\\n    \t\\delta_o = 0{,}7407 \\times 0{,}1875 \\approx 0{,}1389\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\dfrac{\\partial E}{\\partial w_3} = \\delta_o \\cdot h_1 = 0{,}1389 \\times 0{,}5889 \\approx 0{,}0817 \\\\\n    \t\\dfrac{\\partial E}{\\partial w_4} = \\delta_o \\cdot h_2 = 0{,}1389 \\times 0{,}5890 \\approx 0{,}0818\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids \\( w_1 \\) et \\( w_2 \\)\n    \t\n    \tCalcul des erreurs locales aux neurones cachés (\\( \\delta_{h1} \\) et \\( \\delta_{h2} \\)) :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\delta_{h1} = \\delta_o \\cdot w_3 \\cdot h_1 (1 - h_1) \\\\\n    \t& = 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times (1 - 0{,}5889) \\\\\n    \t& \\approx 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times 0{,}4111 \\approx 0{,}0134 \\\\\n    \t\\delta_{h2} = \\delta_o \\cdot w_4 \\cdot h_2 (1 - h_2) \\\\\n    \t& = 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times (1 - 0{,}5890) \\\\\n    \t& \\approx 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times 0{,}4110 \\approx 0{,}0150\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\dfrac{\\partial E}{\\partial w_1} = \\delta_{h1} \\cdot x = 0{,}0134 \\times 0{,}05 \\approx 0{,}0007 \\\\\n    \t\\dfrac{\\partial E}{\\partial w_2} = \\delta_{h2} \\cdot x = 0{,}0150 \\times 0{,}05 \\approx 0{,}0008\n    \t\\end{align*}$$",
-            "html": "<p>Calcul de l’erreur locale au neurone de sortie (<span class=\"math inline\">\\(\\delta_o\\)</span>) :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\delta_o = \\dfrac{\\partial E}{\\partial net_o} = \\dfrac{\\partial E}{\\partial \\hat{y}} \\cdot \\dfrac{\\partial \\hat{y}}{\\partial net_o} \\\\\n        \\dfrac{\\partial E}{\\partial \\hat{y}} = \\hat{y} - y = 0{,}7507 - 0{,}01 = 0{,}7407 \\\\\n        \\dfrac{\\partial \\hat{y}}{\\partial net_o} = \\hat{y}(1 - \\hat{y}) = 0{,}7507 \\times 0{,}2493 \\approx 0{,}1875 \\\\\n        \\delta_o = 0{,}7407 \\times 0{,}1875 \\approx 0{,}1389\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\dfrac{\\partial E}{\\partial w_3} = \\delta_o \\cdot h_1 = 0{,}1389 \\times 0{,}5889 \\approx 0{,}0817 \\\\\n        \\dfrac{\\partial E}{\\partial w_4} = \\delta_o \\cdot h_2 = 0{,}1389 \\times 0{,}5890 \\approx 0{,}0818\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids <span class=\"math inline\">\\(w_1\\)</span> et <span class=\"math inline\">\\(w_2\\)</span></p>\n<p>Calcul des erreurs locales aux neurones cachés (<span class=\"math inline\">\\(\\delta_{h1}\\)</span> et <span class=\"math inline\">\\(\\delta_{h2}\\)</span>) :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\delta_{h1} = \\delta_o \\cdot w_3 \\cdot h_1 (1 - h_1) \\\\\n        &amp; = 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times (1 - 0{,}5889) \\\\\n        &amp; \\approx 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times 0{,}4111 \\approx 0{,}0134 \\\\\n        \\delta_{h2} = \\delta_o \\cdot w_4 \\cdot h_2 (1 - h_2) \\\\\n        &amp; = 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times (1 - 0{,}5890) \\\\\n        &amp; \\approx 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times 0{,}4110 \\approx 0{,}0150\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\dfrac{\\partial E}{\\partial w_1} = \\delta_{h1} \\cdot x = 0{,}0134 \\times 0{,}05 \\approx 0{,}0007 \\\\\n        \\dfrac{\\partial E}{\\partial w_2} = \\delta_{h2} \\cdot x = 0{,}0150 \\times 0{,}05 \\approx 0{,}0008\n        \\end{align*}\\]</span></p>\n"
+            "html": "<p>Calcul de l’erreur locale au neurone de sortie (<span\nclass=\"math inline\">\\(\\delta_o\\)</span>) :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\delta_o = \\dfrac{\\partial E}{\\partial net_o} = \\dfrac{\\partial\nE}{\\partial \\hat{y}} \\cdot \\dfrac{\\partial \\hat{y}}{\\partial net_o} \\\\\n        \\dfrac{\\partial E}{\\partial \\hat{y}} = \\hat{y} - y = 0{,}7507 -\n0{,}01 = 0{,}7407 \\\\\n        \\dfrac{\\partial \\hat{y}}{\\partial net_o} = \\hat{y}(1 - \\hat{y})\n= 0{,}7507 \\times 0{,}2493 \\approx 0{,}1875 \\\\\n        \\delta_o = 0{,}7407 \\times 0{,}1875 \\approx 0{,}1389\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\dfrac{\\partial E}{\\partial w_3} = \\delta_o \\cdot h_1 = 0{,}1389\n\\times 0{,}5889 \\approx 0{,}0817 \\\\\n        \\dfrac{\\partial E}{\\partial w_4} = \\delta_o \\cdot h_2 = 0{,}1389\n\\times 0{,}5890 \\approx 0{,}0818\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids <span\nclass=\"math inline\">\\(w_1\\)</span> et <span\nclass=\"math inline\">\\(w_2\\)</span></p>\n<p>Calcul des erreurs locales aux neurones cachés (<span\nclass=\"math inline\">\\(\\delta_{h1}\\)</span> et <span\nclass=\"math inline\">\\(\\delta_{h2}\\)</span>) :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\delta_{h1} = \\delta_o \\cdot w_3 \\cdot h_1 (1 - h_1) \\\\\n        &amp; = 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times (1 -\n0{,}5889) \\\\\n        &amp; \\approx 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times\n0{,}4111 \\approx 0{,}0134 \\\\\n        \\delta_{h2} = \\delta_o \\cdot w_4 \\cdot h_2 (1 - h_2) \\\\\n        &amp; = 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times (1 -\n0{,}5890) \\\\\n        &amp; \\approx 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times\n0{,}4110 \\approx 0{,}0150\n        \\end{align*}\\]</span></p>\n<p>Calcul des gradients des poids :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        \\dfrac{\\partial E}{\\partial w_1} = \\delta_{h1} \\cdot x =\n0{,}0134 \\times 0{,}05 \\approx 0{,}0007 \\\\\n        \\dfrac{\\partial E}{\\partial w_2} = \\delta_{h2} \\cdot x =\n0{,}0150 \\times 0{,}05 \\approx 0{,}0008\n        \\end{align*}\\]</span></p>\n"
           }
         },
         {
-          "id": "57631458-cf39-4bb6-bc03-a764807c1886",
+          "id": "d296f18a-98c1-40eb-bba9-f1d211958b21",
           "type": "question",
           "value": {
             "latex": "Avec un taux d'apprentissage \\( \\eta = 0{,}5 \\), mettre à jour tous les poids du réseau.",
-            "html": "<p>Avec un taux d’apprentissage <span class=\"math inline\">\\(\\eta = 0{,}5\\)</span>, mettre à jour tous les poids du réseau.</p>\n"
+            "html": "<p>Avec un taux d’apprentissage <span class=\"math inline\">\\(\\eta =\n0{,}5\\)</span>, mettre à jour tous les poids du réseau.</p>\n"
           }
         },
         {
-          "id": "37788e85-1a07-4940-a1eb-cc79c79e4826",
+          "id": "ad9cfeab-7b5a-496d-b4b1-b035483617df",
           "type": "reponse",
           "value": {
             "latex": "Avec \\( \\eta = 0{,}5 \\) :\n    \t\n    \t- Mise à jour des poids de la couche de sortie :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \tw_3^{\\text{nouveau}} = w_3^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_3} = 0{,}40 - 0{,}5 \\times 0{,}0817 = 0{,}3592 \\\\\n    \tw_4^{\\text{nouveau}} = w_4^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_4} = 0{,}45 - 0{,}5 \\times 0{,}0818 = 0{,}4091\n    \t\\end{align*}$$\n    \t\n    \t\n    \t- Mise à jour des poids de la couche cachée :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \tw_1^{\\text{nouveau}} = w_1^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_1} = 0{,}15 - 0{,}5 \\times 0{,}0007 = 0{,}1497 \\\\\n    \tw_2^{\\text{nouveau}} = w_2^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_2} = 0{,}20 - 0{,}5 \\times 0{,}0008 = 0{,}1996\n    \t\\end{align*}$$",
-            "html": "<p>Avec <span class=\"math inline\">\\(\\eta = 0{,}5\\)</span> :</p>\n<p>- Mise à jour des poids de la couche de sortie :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        w_3^{\\text{nouveau}} = w_3^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_3} = 0{,}40 - 0{,}5 \\times 0{,}0817 = 0{,}3592 \\\\\n        w_4^{\\text{nouveau}} = w_4^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_4} = 0{,}45 - 0{,}5 \\times 0{,}0818 = 0{,}4091\n        \\end{align*}\\]</span></p>\n<p>- Mise à jour des poids de la couche cachée :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        w_1^{\\text{nouveau}} = w_1^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_1} = 0{,}15 - 0{,}5 \\times 0{,}0007 = 0{,}1497 \\\\\n        w_2^{\\text{nouveau}} = w_2^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_2} = 0{,}20 - 0{,}5 \\times 0{,}0008 = 0{,}1996\n        \\end{align*}\\]</span></p>\n"
+            "html": "<p>Avec <span class=\"math inline\">\\(\\eta = 0{,}5\\)</span> :</p>\n<p>- Mise à jour des poids de la couche de sortie :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        w_3^{\\text{nouveau}} = w_3^{\\text{ancien}} - \\eta\n\\dfrac{\\partial E}{\\partial w_3} = 0{,}40 - 0{,}5 \\times 0{,}0817 =\n0{,}3592 \\\\\n        w_4^{\\text{nouveau}} = w_4^{\\text{ancien}} - \\eta\n\\dfrac{\\partial E}{\\partial w_4} = 0{,}45 - 0{,}5 \\times 0{,}0818 =\n0{,}4091\n        \\end{align*}\\]</span></p>\n<p>- Mise à jour des poids de la couche cachée :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n        w_1^{\\text{nouveau}} = w_1^{\\text{ancien}} - \\eta\n\\dfrac{\\partial E}{\\partial w_1} = 0{,}15 - 0{,}5 \\times 0{,}0007 =\n0{,}1497 \\\\\n        w_2^{\\text{nouveau}} = w_2^{\\text{ancien}} - \\eta\n\\dfrac{\\partial E}{\\partial w_2} = 0{,}20 - 0{,}5 \\times 0{,}0008 =\n0{,}1996\n        \\end{align*}\\]</span></p>\n"
           }
         }
       ]
@@ -29214,6 +29174,46 @@
         "updatedAt": "2024-11-23T17:27:42.444Z"
       },
       "contenu": []
+    },
+    {
+      "uuid": "JABn",
+      "titre": "Test d'indépendance de deux variables qualitatives",
+      "theme": [
+        "statistiques"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime Nguyen",
+        "createdAt": "2024-12-03T20:54:40.169Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-03T20:54:40.169Z"
+      },
+      "contenu": [
+        {
+          "id": "ef6e73bb-6630-49ef-b839-aacf5b251e4c",
+          "type": "description",
+          "value": {
+            "latex": "Le tableau suivant donne la répartition de 10 000 personnes en fonction de leur groupe sanguin et de leur facteur Rhésus. \n\n\\begin{center}\n\t\\begin{tabular}{|c|c|c|c|c|}\n\t\t\\hline  & O & A & B & AB  \\\\ \n\t\t\\hline Rh+ & 3500 & 3800 & 900 & 170  \\\\ \n\t\t\\hline Rh- & 700 & 700 & 200 & 30   \\\\ \n\t\t\\hline \n\t\\end{tabular} \n\\end{center}",
+            "html": "<p>Le tableau suivant donne la répartition de 10 000 personnes en\nfonction de leur groupe sanguin et de leur facteur Rhésus.</p>\n<div class=\"center\">\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"></th>\n<th style=\"text-align: center;\">O</th>\n<th style=\"text-align: center;\">A</th>\n<th style=\"text-align: center;\">B</th>\n<th style=\"text-align: center;\">AB</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Rh+</td>\n<td style=\"text-align: center;\">3500</td>\n<td style=\"text-align: center;\">3800</td>\n<td style=\"text-align: center;\">900</td>\n<td style=\"text-align: center;\">170</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Rh-</td>\n<td style=\"text-align: center;\">700</td>\n<td style=\"text-align: center;\">700</td>\n<td style=\"text-align: center;\">200</td>\n<td style=\"text-align: center;\">30</td>\n</tr>\n</tbody>\n</table>\n</div>\n"
+          }
+        },
+        {
+          "id": "55e616b5-6f68-4750-9e83-fb9a6b324bcd",
+          "type": "question",
+          "value": {
+            "latex": "Les deux caractères \\og groupe sanguin \\fg{} et \\og facteur Rhésus \\fg{} sont-ils indépendants ?",
+            "html": "<p>Les deux caractères groupe sanguin et facteur Rhésus sont-ils\nindépendants ?</p>\n"
+          }
+        },
+        {
+          "id": "4509c38c-ed1d-4850-997b-801aa80aa171",
+          "type": "reponse",
+          "value": {
+            "latex": "\\href{https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EYlCPJY62BdMpTYscg1T6zABc9_WCIR_pzt6XSOajALYhw?e=kf80uR&nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMzAwLTAwMDAwMDAwMDAwMH0}{Lien vers tableur}",
+            "html": "<p><a\nhref=\"https://stcyrterrenetdefensegouvf-my.sharepoint.com/:x:/g/personal/maxime_nguyen_st-cyr_terre-net_defense_gouv_fr/EYlCPJY62BdMpTYscg1T6zABc9_WCIR_pzt6XSOajALYhw?e=kf80uR&amp;nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMzAwLTAwMDAwMDAwMDAwMH0\">Lien\nvers tableur</a></p>\n"
+          }
+        }
+      ]
     },
     {
       "uuid": "H30c",
