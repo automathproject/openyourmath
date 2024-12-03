@@ -114,7 +114,7 @@
   <div class="row">
       {#if showList}
       <div class="col-md-4 liste-container">
-          <h3>Recherche</h3>
+          <h4>Recherche par thème</h4>
           <Recherche onSelect={handleSelect} />
       </div>
       {/if}
