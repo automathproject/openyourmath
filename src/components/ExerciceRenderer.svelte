@@ -4,25 +4,36 @@
   import { quadOut } from "svelte/easing";
   import MathRenderer from "./MathRenderer.svelte";
   import ExerciceHeader from "./ExerciceHeader.svelte";
-
+  import { onMount, afterUpdate } from 'svelte';
   import MetadataToggleButton from "./buttons/MetadataToggleButton.svelte";
   import ReponsesToggleButton from "./buttons/ReponsesToggleButton.svelte";
   import FullscreenToggleButton from "./buttons/FullscreenToggleButton.svelte";
   import FontSizeToggleButton from "./buttons/FontSizeToggleButton.svelte";
 
-
   export let ExerciceData;
   const latexTypes = ["description", "question", "reponse"];
 
-  let isLargeFont = false; // Nouvelle variable
+  let isLargeFont = false;
   let processedContenu = [];
   let showReponses = false;
   let isFullscreen = false;
-let showMetadata = true;
+  let showMetadata = true;
+  let contentKey = 0; // Nouvelle clé pour forcer le remontage
 
-function toggleMetadata() {
-  showMetadata = !showMetadata;
-}
+  function resetState() {
+    showReponses = false;
+    contentKey++; // Incrémenter la clé pour forcer le remontage
+  }
+
+  // Reset l'état quand ExerciceData change
+  $: if (ExerciceData) {
+    resetState();
+  }
+
+  function toggleMetadata() {
+    showMetadata = !showMetadata;
+  }
+
   function toggleReponses() {
     showReponses = !showReponses;
   }
@@ -42,10 +53,6 @@ function toggleMetadata() {
   }
 
   $: if (ExerciceData) {
-    showReponses = false;
-  }
-
-  $: if (ExerciceData) {
     let counter = 0;
     processedContenu = ExerciceData.contenu.map((item, index) => {
       if (item.type === "question") {
@@ -53,19 +60,17 @@ function toggleMetadata() {
         return {
           ...item,
           number: counter,
-          key: `${ExerciceData.uuid}-${index}`,
+          key: `${ExerciceData.uuid}-${index}-${contentKey}`,
         };
       }
       return {
         ...item,
-        key: `${ExerciceData.uuid}-${index}`,
+        key: `${ExerciceData.uuid}-${index}-${contentKey}`,
       };
     });
   } else {
     processedContenu = [];
   }
-
-
 </script>
 
 <div
@@ -75,7 +80,7 @@ function toggleMetadata() {
   transition:fade={{ duration: 200 }}
 >
   <div class="exercice" class:fullscreen={isFullscreen}>
-    {#key isFullscreen}
+    {#key `${isFullscreen}-${contentKey}`}
       <div
         class="content"
         transition:scale|local={{
@@ -85,32 +90,33 @@ function toggleMetadata() {
           easing: quadOut,
         }}
       >
-      <div class="header">
-        <div class="left-section">
-          <div class="titre-container">
-            <div class="titre">
-              <MathRenderer content={ExerciceData.titre} />
-            </div>
-            <!-- Bouton déplacé ici -->
-            <button 
-              class="metadata-toggle"
-              on:click={toggleMetadata}
-              title={showMetadata ? "Masquer les métadonnées" : "Afficher les métadonnées"}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                class:rotated={!showMetadata}
+        <div class="header">
+          <div class="left-section">
+            <div class="titre-container">
+              <div class="titre">
+                {#key contentKey}
+                  <MathRenderer content={ExerciceData.titre} />
+                {/key}
+              </div>
+              <button 
+                class="metadata-toggle"
+                on:click={toggleMetadata}
+                title={showMetadata ? "Masquer les métadonnées" : "Afficher les métadonnées"}
               >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-          </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class:rotated={!showMetadata}
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
       
           {#if showMetadata}
           <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme}/>
@@ -147,13 +153,15 @@ function toggleMetadata() {
           </div>
         </div>
 
-        <!-- Le reste du contenu -->
-        {#each processedContenu as item, index (item.key)}
+        <!-- Contenu de l'exercice -->
+        {#each processedContenu as item (item.key)}
           {#if latexTypes.includes(item.type)}
             {#if item.type === "question"}
               <div class={item.type}>
                 <strong>Question {item.number} : </strong>
-                <MathRenderer content={item.value.html} />
+                {#key item.key}
+                  <MathRenderer content={item.value.html} />
+                {/key}
               </div>
             {:else if item.type === "reponse"}
               {#if showReponses}
@@ -161,12 +169,16 @@ function toggleMetadata() {
                   class={item.type}
                   transition:slide={{ duration: 300, easing: quadOut }}
                 >
-                  <MathRenderer content={item.value.html} />
+                  {#key item.key}
+                    <MathRenderer content={item.value.html} />
+                  {/key}
                 </div>
               {/if}
             {:else if item.type === "description"}
               <div class={item.type}>
-                <MathRenderer content={item.value.html} />
+                {#key item.key}
+                  <MathRenderer content={item.value.html} />
+                {/key}
               </div>
             {/if}
           {/if}
