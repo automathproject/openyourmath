@@ -180,6 +180,12 @@
                   <MathRenderer content={item.value.html} />
                 {/key}
               </div>
+            {:else if item.type === "indication"}
+              <div class={item.type}>
+                {#key item.key}
+                  <MathRenderer content={item.value.html} />
+                {/key}
+              </div>
             {/if}
           {/if}
         {/each}
@@ -454,6 +460,12 @@
     background-color: #d0ecc9;
     padding: 0.5rem;
     border-left: 4px solid #1eff00;
+  }
+
+  .indication {
+    background-color: #f1ed1598;
+    padding: 0.5rem;
+    border-left: 4px solid #f1ee15;
   }
 
 /* Nouveau style pour la grande police */
