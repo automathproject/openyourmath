@@ -7,6 +7,7 @@
   import { onMount, afterUpdate } from 'svelte';
   import MetadataToggleButton from "./buttons/MetadataToggleButton.svelte";
   import ReponsesToggleButton from "./buttons/ReponsesToggleButton.svelte";
+  import HintsToggleButton from "./buttons/HintsToggleButton.svelte";
   import FullscreenToggleButton from "./buttons/FullscreenToggleButton.svelte";
   import FontSizeToggleButton from "./buttons/FontSizeToggleButton.svelte";
 
@@ -16,12 +17,14 @@
   let isLargeFont = false;
   let processedContenu = [];
   let showReponses = false;
+  let showHints = false;
   let isFullscreen = false;
   let showMetadata = true;
   let contentKey = 0; // Nouvelle clé pour forcer le remontage
 
   function resetState() {
     showReponses = false;
+    showHints = false;
     contentKey++; // Incrémenter la clé pour forcer le remontage
   }
 
@@ -36,6 +39,10 @@
 
   function toggleReponses() {
     showReponses = !showReponses;
+  }
+
+  function toggleHints() {
+    showHints = !showHints;
   }
 
   function toggleFullscreen() {
@@ -125,6 +132,10 @@
 
           <div class="right-section">
             <div class="button-group">
+              <HintsToggleButton
+                showHints={showHints}
+                onToggle={toggleHints}
+              />
               <ReponsesToggleButton
                 showReponses={showReponses}
                 onToggle={toggleReponses} 
@@ -181,11 +192,13 @@
                 {/key}
               </div>
             {:else if item.type === "indication"}
-              <div class={item.type}>
+              {#if showHints}
+              <div class={item.type} transition:slide={{ duration: 300, easing: quadOut}} >
                 {#key item.key}
                   <MathRenderer content={item.value.html} />
                 {/key}
               </div>
+              {/if}
             {/if}
           {/if}
         {/each}
