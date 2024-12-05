@@ -29,11 +29,11 @@
         exercises = await exercicesResponse.json();
         themeTree = await themesResponse.json();
         // Ouvrir la première catégorie par défaut
-        const firstCategory = Object.keys(themeTree)[0];
-        if (firstCategory) {
-          expandedCategories.add(firstCategory);
-          expandedCategories = expandedCategories;
-        }
+        //const firstCategory = Object.keys(themeTree)[0];
+        //if (firstCategory) {
+        //  expandedCategories.add(firstCategory);
+        //  expandedCategories = expandedCategories;
+        //}
       } else {
         const status = !exercicesResponse.ok 
           ? `Exercices: ${exercicesResponse.status}` 
