@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Erwan HILLION",
-    "createdAt": "2024-12-02T16:45:17.819Z",
+    "createdAt": "2024-12-05T15:38:09.302Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-02T16:45:17.819Z"
+    "updatedAt": "2024-12-05T15:38:09.302Z"
   },
   "contenu": [
     {
-      "id": "8dbb2507-9ac3-403e-8a29-806b0e2d3fe3",
+      "id": "6cb3b8d0-138b-4531-8c0b-25da7aeeef9e",
       "type": "description",
       "value": {
         "latex": "On dispose d'observations $(x_1,y_1),\\ldots,(x_n,y_n)$. On cherche les \"meilleurs\" coefficients $a$ et $b$ tels que pour chaque observation, on ait $y_i \\approx a x_i + b$. Ce probl\\`eme est appel\\'e r\\'egression lin\\'eaire simple.\n\n\\medskip\n\nPour mesurer la qualit\\'e des param\\`etres $(a,b)$, on souhaite que l'\\'ecart entre $y_i$ et $ax_i+b$ soit faible pour chaque observation. Pour quantifier l'erreur, on utilise le risque quadratique :\n\\begin{equation*}\nR(a,b) = \\sum_{i=1}^n (y_i - (a x_i+b) )^2.\n\\end{equation*}\nLe probl\\`eme est de minimiser la fonction $R(a,b)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "b08c025b-6601-439b-9655-95a94f4e567b",
+      "id": "ec9f5fa5-3342-4e2b-9b37-83f0dc28eb2a",
       "type": "question",
       "value": {
         "latex": "Montrer que :\n\\begin{equation*}\nR(a,b) = a^2 \\sum_{i=1}^n x_i^2 + 2ab \\sum_{i=1}^n x_i + b^2 n -2 a\\sum_{i=1}^n x_i y_i -2 b \\sum_{i=1}^n y_i + \\sum_{i=1}^n y_i^2.\n\\end{equation*}",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "29a39d17-0c6a-4fbe-9d5b-45f555a1f92a",
+      "id": "fd6cdab6-9ee4-4c71-b57c-edf447aa4dc3",
       "type": "reponse",
       "value": {
         "latex": "La formule s'obtient simplement en développant chaque expression de la somme.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "7bbca2d3-63aa-4e87-a385-42533e80607f",
+      "id": "7d77e92e-74f0-4bde-8901-93cae40b4485",
       "type": "question",
       "value": {
         "latex": "Montrer que le gradient de $R$ s'écrit : \n\\begin{equation} \\label{eq:nablaR}\n(\\nabla R)(a,b) = \\left( \\begin{array}{c} 2a \\sum_{i=1}^n x_i^2 + 2 b \\sum_{i=1}^n x_i -2 \\sum_{i=1}^n x_i y_i \\\\ 2a \\sum_{i=1}^n x_i +2 b n -2 \\sum_{i=1}^n y_i \\end{array} \\right).\n\\end{equation}",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "81c8ba49-689b-4fc7-b637-1928c0853220",
+      "id": "9ffd9290-510e-4d88-998b-ea0b257847bc",
       "type": "reponse",
       "value": {
         "latex": "Cela découle d'un calcul direct.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "cd8853fb-db77-4884-82d1-e9e69ea50c64",
+      "id": "9ebae299-a65e-445f-a623-6f9ea233eb9b",
       "type": "question",
       "value": {
         "latex": "Montrer que $R$ possède un unique point critique $(a^*,b^*)$ que l'on exprimera à l'aide des $x_i$ et des $y_i$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "92dd446a-552d-481e-a0a1-07cef174e24c",
+      "id": "b3d4c1a6-d8db-46ee-8d7c-84800bd49aaa",
       "type": "reponse",
       "value": {
         "latex": "On cherche $(a^*,b^*)$ tel que $\\nabla R(a^*,b^*)=0$. Au vu de l'expression explicite du gradient, on s'aperçoit qu'il faut résoudre un système linéaire à deux inconnues. La résolution de ce système (par exemple avec le pivot de Gauss) donne l'unique solution : $$a^* = \\frac{\\sum_{i=1}^n x_i \\sum_{i=1}^n y_i - n \\sum_{i=1}^n x_iy_i}{\\left(\\sum_{i=1}^n x_i\\right)^2-n\\sum_{i=1}^n x_i^2} \\ , \\ b^*=\\frac{\\sum_{i=1}^n x_iy_i \\sum_{i=1}^n x_i-\\sum_{i=1}^n y_i \\sum_{i=1}^n x_i^2}{\\left(\\sum_{i=1}^n x_i\\right)^2-n\\sum_{i=1}^n x_i^2}.$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "88ab079c-4c54-4e11-88fa-e434231de145",
+      "id": "4581ccb6-1980-43ff-a988-1c3189a939e0",
       "type": "question",
       "value": {
         "latex": "Montrer que la hessienne de $R$ s'écrit :\n\\begin{equation*}\n\\textrm{Hess}_R(a,b)  = \\left( \\begin{array}{cc} 2 \\sum_{i=1}^n x_i^2 & 2 \\sum_{i=1}^n x_i \\\\ 2 \\sum_{i=1}^n x_i & 2 n \\end{array}\\right).\n\\end{equation*}",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "6ebc94a6-5163-4faf-83c7-3316b8b82ad1",
+      "id": "8b538cad-11bb-470d-b37b-90c123db1304",
       "type": "reponse",
       "value": {
         "latex": "La hessienne s'obtient par calcul direct, en dérivant les dérivées partielles obtenues dans le calcul du gradient.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "17431f1e-b87e-4643-b145-4808636ffe62",
+      "id": "8b1c27c1-8a2d-4ec1-a905-4c396faf6e30",
       "type": "reponse",
       "value": {
         "latex": "On peut remarquer que la hessienne est constante en $a$ et $b$ (car la fonciton $R$ est polynomiale de degré $2$). Il suffit donc de montrer que $\\langle X, H X \\rangle \\ge 0$ pour tout vecteur $X = \\begin{pmatrix} a \\\\ b \\end{pmatrix} \\in \\R^2$, où $H$ est la hessienne obtenue précédemment. Ce produit scalaire s'écrit, après développement : $$ \\frac{1}{4} \\langle X, H X \\rangle = a^2 \\sum_{i=1}^n x_i^2 + 2 a b \\sum_{i=1}^n x_i  + b^2 n.$$ Par Cauchy-Schwarz, on a $\\sum_{i=1}^n x_i^2 \\ge \\frac{1}{n} \\left(\\sum_{i=1}^n x_i \\right)^2$, d'où il vient : $$ \\frac{1}{4} \\langle X, H X \\rangle  \\ge \\frac{1}{n}\\left(a \\sum_{i=1}^n x_i + b n \\right)^2 \\ge 0,$$ comme voulu.",

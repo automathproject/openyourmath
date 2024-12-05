@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-02T16:45:13.667Z",
+    "createdAt": "2024-12-05T15:37:33.953Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-02T16:45:13.667Z"
+    "updatedAt": "2024-12-05T15:37:33.953Z"
   },
   "contenu": [
     {
-      "id": "bc49a66a-e9c4-4245-a104-35dfbbfd2ce9",
+      "id": "c64453cd-7d6f-4792-b28d-4e7b623487e5",
       "type": "question",
       "value": {
         "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$H$};\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/3$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/5$} (I-3) ;\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$1/4$} (I-4);\n\t\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$1$}(O);\n\t\t\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$2$} (O);\n\t\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$2$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-120:0.8) ;\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\t\n\t\\end{tikzpicture} \n\\end{center}",

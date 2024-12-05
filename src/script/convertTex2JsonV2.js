@@ -258,6 +258,7 @@ async function main() {
       { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
       { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
       { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+      { name: 'indication', jsonKey: 'contenu', isContent: true, isVerbatim: false },
       { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },
   ];
 

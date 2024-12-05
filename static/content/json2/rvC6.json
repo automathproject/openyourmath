@@ -7,73 +7,73 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-23T17:27:54.913Z",
+    "createdAt": "2024-12-05T15:38:02.800Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-23T17:27:54.913Z"
+    "updatedAt": "2024-12-05T15:38:02.800Z"
   },
   "contenu": [
     {
-      "id": "122fa0a6-2a0e-49ff-8013-9bd3c9713612",
+      "id": "41819699-d828-495d-b404-769b49f5c707",
       "type": "description",
       "value": {
         "latex": "La méthode de la corde pour résoudre une équation du type $f(x)=0$ consiste à construire la suite $(x_k)$ définie par\n$$\\forall k \\in \\mathbb{N} : \\quad x_{k+1}=x_k-\\frac{f(x_k)}{f'(x_0)}$$",
-        "html": "<p>La méthode de la corde pour résoudre une équation du type <span\nclass=\"math inline\">\\(f(x)=0\\)</span> consiste à construire la suite\n<span class=\"math inline\">\\((x_k)\\)</span> définie par <span\nclass=\"math display\">\\[\\forall k \\in \\mathbb{N} : \\quad\nx_{k+1}=x_k-\\frac{f(x_k)}{f&#39;(x_0)}\\]</span></p>\n"
+        "html": "<p>La méthode de la corde pour résoudre une équation du type <span class=\"math inline\">\\(f(x)=0\\)</span> consiste à construire la suite <span class=\"math inline\">\\((x_k)\\)</span> définie par <span class=\"math display\">\\[\\forall k \\in \\mathbb{N} : \\quad x_{k+1}=x_k-\\frac{f(x_k)}{f&#39;(x_0)}\\]</span></p>\n"
       }
     },
     {
-      "id": "339428fd-9017-48db-bd68-00247e1e3da8",
+      "id": "4e1788cd-22f6-4160-8098-ce6b74fd2607",
       "type": "question",
       "value": {
         "latex": "Sur un graphique, construire les premières itérations de cette méthode en prenant $f(x)=x^2$ et $x_0=1$.",
-        "html": "<p>Sur un graphique, construire les premières itérations de cette\nméthode en prenant <span class=\"math inline\">\\(f(x)=x^2\\)</span> et\n<span class=\"math inline\">\\(x_0=1\\)</span>.</p>\n"
+        "html": "<p>Sur un graphique, construire les premières itérations de cette méthode en prenant <span class=\"math inline\">\\(f(x)=x^2\\)</span> et <span class=\"math inline\">\\(x_0=1\\)</span>.</p>\n"
       }
     },
     {
-      "id": "728e9fd3-c8fc-4350-9353-b7ccff34eb35",
+      "id": "86415467-433a-4ba1-8f33-4289d1584f66",
       "type": "reponse",
       "value": {
         "latex": "Le principe de construction du point $x_{k+1}$ est le suivant: on prend l'intersection de l'axe des abscisses avec la droite passant par le point $(x_k,f(x_k))$ de pente $f'(x_0)=2x_0=2$. \n\t\t\t\\begin{center} \n\t\t\t\t\\newcommand\\newtfonc[1]{#1*#1) } \n\t\t\t\t\\begin{tikzpicture}[scale=.5]\n\t\t\t\t\\begin{axis}[\n\t\t\t\twidth=14cm, height=10cm,\n\t\t\t\taxis x line=center, \n\t\t\t\taxis y line=middle,\n\t\t\t\txlabel =$x$,\n\t\t\t\tevery axis x label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1.0)},\n\t\t\t\t\tanchor=west,\n\t\t\t\t},\n\t\t\t\tylabel = $y$,\n\t\t\t\tevery axis y label/.style={\n\t\t\t\t\tat={(ticklabel* cs:1)},\n\t\t\t\t\tanchor=south,},\n\t\t\t\tlegend style={draw=none,at={(-.1,1)},anchor=north west,font=\\large },\n\t\t\t\tsamples=100,\n\t\t\t\tymin=-0.6, ymax=1.5,\n\t\t\t\txmin=-1.8, xmax=2.1,\n\t\t\t\tytick={0 },\n\t\t\t\txtick={0 },\n\t\t\t\tlegend cell align=left,\n\t\t\t\t]\n\t\t\t\t\\addplot [mark=none,line width=.5mm,blue,domain= -1.7:2 ]{\\newtfonc{x} };\n\t\t\t\t\\node[label={-90:{\\large{$x_0$}}},circle,fill,red,inner sep=2pt] at (axis cs:1,0) {};\n\t\t\t\t\\node[label={-80:{\\large{$x_1$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.5 ,0) {};\n\t\t\t\t\\node[label={-120:{\\large{$x_2$}}},circle,fill,red,inner sep=2pt] at (axis cs:0.375 ,0) {};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (1,0) (1,1)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-1};\n\t\t\t\t\\addplot [dotted,thick,blue] coordinates { (0.5,0) (0.5,0.25)};\n\t\t\t\t\\addplot [line width=.3mm,red] {2*x-0.75};\n\t\t\t\t\\end{axis}\n\t\t\t\t\\end{tikzpicture}\n\t\t\\end{center}",
-        "html": "<p>Le principe de construction du point <span\nclass=\"math inline\">\\(x_{k+1}\\)</span> est le suivant: on prend\nl’intersection de l’axe des abscisses avec la droite passant par le\npoint <span class=\"math inline\">\\((x_k,f(x_k))\\)</span> de pente <span\nclass=\"math inline\">\\(f&#39;(x_0)=2x_0=2\\)</span>.</p>\n<div class=\"center\">\n\n</div>\n"
+        "html": "<p>Le principe de construction du point <span class=\"math inline\">\\(x_{k+1}\\)</span> est le suivant: on prend l’intersection de l’axe des abscisses avec la droite passant par le point <span class=\"math inline\">\\((x_k,f(x_k))\\)</span> de pente <span class=\"math inline\">\\(f&#39;(x_0)=2x_0=2\\)</span>.</p>\n"
       }
     },
     {
-      "id": "e5aab258-1fb3-4ad3-bd2e-dd68ff47814b",
+      "id": "fa9552b5-2a19-49ef-bf35-f9fafe2a04e2",
       "type": "question",
       "value": {
         "latex": "De quelle méthode générale la méthode de la corde est-elle un cas particulier ? Justifier.",
-        "html": "<p>De quelle méthode générale la méthode de la corde est-elle un cas\nparticulier ? Justifier.</p>\n"
+        "html": "<p>De quelle méthode générale la méthode de la corde est-elle un cas particulier ? Justifier.</p>\n"
       }
     },
     {
-      "id": "06833d41-d00c-40d4-b77f-569b571df975",
+      "id": "c0259bae-4e5a-49de-9af4-34c43d110338",
       "type": "reponse",
       "value": {
         "latex": "La méthode de la corde est un cas particulier de la méthode de point fixe : on a $x_{k+1}=g(x_k)$, où $g$ est la fonction définie par $g(x)=x-\\frac{f(x)}{f'(x_0)}$.",
-        "html": "<p>La méthode de la corde est un cas particulier de la méthode de point\nfixe : on a <span class=\"math inline\">\\(x_{k+1}=g(x_k)\\)</span>, où\n<span class=\"math inline\">\\(g\\)</span> est la fonction définie par <span\nclass=\"math inline\">\\(g(x)=x-\\frac{f(x)}{f&#39;(x_0)}\\)</span>.</p>\n"
+        "html": "<p>La méthode de la corde est un cas particulier de la méthode de point fixe : on a <span class=\"math inline\">\\(x_{k+1}=g(x_k)\\)</span>, où <span class=\"math inline\">\\(g\\)</span> est la fonction définie par <span class=\"math inline\">\\(g(x)=x-\\frac{f(x)}{f&#39;(x_0)}\\)</span>.</p>\n"
       }
     },
     {
-      "id": "90953f3c-6e48-4f40-aaf4-e2c9bcf9e752",
+      "id": "0fa09f5d-333b-4675-ad5e-aa0ed8dafe4f",
       "type": "question",
       "value": {
         "latex": "En déduire l'ordre minimal de convergence de la méthode de la corde, quand celle-ci converge.",
-        "html": "<p>En déduire l’ordre minimal de convergence de la méthode de la corde,\nquand celle-ci converge.</p>\n"
+        "html": "<p>En déduire l’ordre minimal de convergence de la méthode de la corde, quand celle-ci converge.</p>\n"
       }
     },
     {
-      "id": "caa3fe2c-65a8-4c06-ba04-b5884b1618ea",
+      "id": "778793b1-52ff-4c0c-80b6-654377a42a1a",
       "type": "reponse",
       "value": {
         "latex": "Quand une méthode de point fixe converge, elle est au minimum d'ordre $1$.",
-        "html": "<p>Quand une méthode de point fixe converge, elle est au minimum d’ordre\n<span class=\"math inline\">\\(1\\)</span>.</p>\n"
+        "html": "<p>Quand une méthode de point fixe converge, elle est au minimum d’ordre <span class=\"math inline\">\\(1\\)</span>.</p>\n"
       }
     },
     {
-      "id": "0e5b4e43-1acb-416d-b8a1-f595b3d091b8",
+      "id": "f6911a40-6c60-46a3-99f5-25f3022ef1d0",
       "type": "description",
       "value": {
         "latex": "On souhaite trouver une méthode efficace pour trouver une approximation de la racine carrée d'un nombre positif $A$ donné. Considérons tout d'abord l'algorithme suivant: étant donné une valeur $x_0$, on calcule\n\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad k=0,1,2,... \\]",
-        "html": "<p>On souhaite trouver une méthode efficace pour trouver une\napproximation de la racine carrée d’un nombre positif <span\nclass=\"math inline\">\\(A\\)</span> donné. Considérons tout d’abord\nl’algorithme suivant: étant donné une valeur <span\nclass=\"math inline\">\\(x_0\\)</span>, on calcule <span\nclass=\"math display\">\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad\nk=0,1,2,...\\]</span></p>\n"
+        "html": "<p>On souhaite trouver une méthode efficace pour trouver une approximation de la racine carrée d’un nombre positif <span class=\"math inline\">\\(A\\)</span> donné. Considérons tout d’abord l’algorithme suivant: étant donné une valeur <span class=\"math inline\">\\(x_0\\)</span>, on calcule <span class=\"math display\">\\[x_{k+1}=x_k+\\frac{A-x^2_k}{2}, \\quad k=0,1,2,...\\]</span></p>\n"
       }
     }
   ]

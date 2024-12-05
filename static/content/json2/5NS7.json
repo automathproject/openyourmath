@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-02T16:45:11.516Z",
+    "createdAt": "2024-12-05T15:37:17.022Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-02T16:45:11.516Z"
+    "updatedAt": "2024-12-05T15:37:17.022Z"
   },
   "contenu": [
     {
-      "id": "6aebe497-f0cf-4c86-a658-3623457d4934",
+      "id": "7fab888d-05f6-4bf8-9613-b6656fe739bb",
       "type": "description",
       "value": {
         "latex": "On considère le réseau de neurones suivant :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{neuron}=[circle,fill=red!50,minimum size=12pt,inner sep=0pt]\n\t\t\n\t\t\n\t\t\\node[blue] (E) at (-\\layersep,0) {$x$};\n\t\t\t\n\t\t\n\t\t\\node[neuron] (F) at (0,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (F) {$g_1$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (F) {};\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.8]{$a$} (F);\n\t\t\\draw[-o,thick] (F) to node[midway,below right,scale=0.8]{$b$} ++ (-130:1.3);\n\t\t\n\t\t\n\t\t\\node[neuron] (G) at (\\layersep,0) {};\n\t\t\\node[above right=0.8ex,scale=0.8] at (G) {$g_2$};\n\t\t\\node[below right=0.8ex,scale=0.8] at (G) {$...$};\n\t\t\\path[thick] (F) edge node[pos=0.8,above,scale=0.8]{$c$} (G);\n\t\t\n\t\t\\draw[->,>=latex,thick] (G)-- ++(2,0) node[right,blue]{$F(x,a,b,c)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}\n\n\noù $g_1$ et $g_2$ sont la fonction ReLu. \n\n\n\n\t{\\centering \\fbox{\\BUseVerbatim{5NS7}}\\par}\n\nLa fonction d'erreur est : \n$$E(a,b,c) = \\frac{1}{3}\\sum_{i=1}^3 E_i(a,b,c)$$\noù $E_i = (F(x_i)-t_i)^2$ avec les données d'entraînement suivantes $(x_i,t_i)$ pour 3 valeurs : $(1,2), (-2,0), (3,3)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5b270d63-9cf2-42cd-88ce-7df29fa701f0",
+      "id": "0a4876ed-aad8-4885-ae44-6eec317f1f16",
       "type": "question",
       "value": {
         "latex": "Calculez l'erreur des données d'entraînement (évaluez la fonction de perte) lorsque $(a,b,c) = (-1,2,1)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "dcf26310-c36e-46c4-8b99-a5a799aba8d2",
+      "id": "7529a030-6082-47c8-a742-981ebfc112f6",
       "type": "reponse",
       "value": {
         "latex": "La fonction est $F(x,a,b,c) = c(ax+b)$ si $ax+b \\geq 0$, c'est-à-dire $-x+2$ si $x \\leq 2$, $0$ sinon. Alors $F(1) = 1$, $F(-2) = 4$ et $F(3) = 0$. \n\t\t\n\t\tAinsi, $E(-1,2,1) = \\frac13\\left((1-2)^2+(4-0)^2+(0-3)^2\\right) = \\frac{26}{3}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "e595f41e-cbe6-44b8-8233-8d6d52527ce8",
+      "id": "732b2fbb-72ab-4081-b0d5-19c2d51ed094",
       "type": "description",
       "value": {
         "latex": "Supposons que $x = 3$ et $(a,b,c) = (1,-1,2)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "b5033a64-c9e5-4671-bc2b-2f9a5df7d4af",
+      "id": "fd4f8979-cbe8-4142-b6ad-ca306f418d35",
       "type": "question",
       "value": {
         "latex": "Calculez $\\frac{\\partial F}{\\partial c}$ en utilisant les règles ci-dessus.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "74ea7bff-f58b-4bab-a87a-bff31addaacb",
+      "id": "ab005f85-16dc-40a3-a5f9-9d3075ec1d26",
       "type": "reponse",
       "value": {
         "latex": "On a $ax+b = 3-1 = 2$, donc $\\frac{\\partial F}{\\partial c} = 1 \\times 2 = 2$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "f5a62339-71e8-4abd-8b74-442fc5b29e62",
+      "id": "9888e490-7256-4502-a550-3287dc1ca7e0",
       "type": "reponse",
       "value": {
         "latex": "On a $\\frac{\\partial F}{\\partial a} = 3 \\times \\frac{1}{2} \\times 2 \\times \\frac{\\partial F}{\\partial c} = 6$ et $\\frac{\\partial F}{\\partial b} = \\frac{1}{2}\\times 2 \\times \\frac{\\partial F}{\\partial c} = 2$.",

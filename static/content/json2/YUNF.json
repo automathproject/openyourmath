@@ -1,5 +1,5 @@
 {
-  "uuid": "ac270e31-52ec-4b6e-8167-f2a672d56555",
+  "uuid": "24d3171a-86ea-4f1f-aa21-5d5b8ce522ef",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "optimisation"
@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-02T16:45:15.031Z",
+    "createdAt": "2024-12-05T15:37:42.601Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-02T16:45:15.031Z"
+    "updatedAt": "2024-12-05T15:37:42.601Z"
   },
   "contenu": [
     {
-      "id": "2b6406e5-b7f3-4345-9519-bf57927afc80",
+      "id": "19bf459e-7f41-41fb-bff2-84c747364de5",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $[-1, 1]$ par $f(x) = x^3$. L'espace $\\mathcal{C}^0([-1, 1])$ est muni du produit scalaire $\\langle h, g \\rangle = \\int_{-1}^{1} h(x)g(x) dx$ et on note $\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx$ la norme associée. \n\n  On cherche à déterminer le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9397fa79-2b89-4c5a-adb3-95c198b3b881",
+      "id": "ffbfa95e-383c-4605-aa28-e5e53ee5afcf",
       "type": "question",
       "value": {
         "latex": "Mettre ce problème sous la forme d’un problème de moindres carrés de dimension finie. Quelle est cette dimension ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "a0611bee-eb60-41ad-b7a8-65ad69fbbaa9",
+      "id": "a01dd455-d731-4470-a727-98318e422a8b",
       "type": "reponse",
       "value": {
         "latex": "Le problème est de trouver le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f(x) = x^3$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$, où la norme est définie par :\n  \\[\n  \\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx.\n  \\]\n  Le polynôme $P(x) = ax + b$ est de degré inférieur ou égal à 1. On doit donc minimiser l'intégrale :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b) \\right)^2 dx.\n  \\]\n  Ce problème peut être formulé comme un problème de moindres carrés dans un espace vectoriel de dimension 2 (les paramètres à déterminer étant $a$ et $b$).",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "5c7b7a18-593a-4679-abff-32f462852602",
+      "id": "70e752d1-add4-4722-8388-06a6aa9d44b3",
       "type": "question",
       "value": {
         "latex": "Étudier l’existence/l’unicité des solutions de ce problème.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7a807193-34b0-4cab-a111-7568be3f76e9",
+      "id": "2a69d262-e8ad-4007-9640-5ca75599422d",
       "type": "reponse",
       "value": {
         "latex": "Le problème est quadratique en les paramètres $a$ et $b$. Par conséquent, il peut être formulé comme la minimisation d'une fonction quadratique définie positive, dont la matrice hessienne associée est définie positive. Cela garantit que le problème possède une solution unique.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "789aa1e5-8a44-412f-a2ee-3e5dca096d49",
+      "id": "a38db77d-2b95-4025-b42f-aa96be491cee",
       "type": "question",
       "value": {
         "latex": "Résoudre ce problème.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "65b342e9-dbf5-4102-825a-f612ddd93369",
+      "id": "404f9def-fc62-4436-a65b-c84dd8c543dc",
       "type": "reponse",
       "value": {
         "latex": "On calcule l’intégrale de $J(a, b)$ :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\n  \\]\n  En calculant chaque terme séparément, on obtient :\n  \\[\n  J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0 \\cdot b + 0 \\cdot ab + \\text{termes constants}.\n  \\]\n  Résoudre ce problème d'optimisation quadratique donne les valeurs $a = \\frac{3}{5}$ et $b = 0$. Ainsi, le polynôme $P(x)$ qui approche le mieux $f(x) = x^3$ au sens des moindres carrés est $P(x) = \\frac{3}{5}x$.",

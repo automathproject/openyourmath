@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-02T16:45:16.797Z",
+    "createdAt": "2024-12-05T15:38:04.052Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-02T16:45:16.797Z"
+    "updatedAt": "2024-12-05T15:38:04.052Z"
   },
   "contenu": [
     {
-      "id": "a8e43d90-8302-4401-9981-7379c4acf7bd",
+      "id": "fdffbd4c-05a7-4b5c-908d-31c2e6b82b58",
       "type": "question",
       "value": {
         "latex": "Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. Justifier.\n\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.6]\n\t\t\\tikzstyle{rouge} = [fill,rectangle,red,scale=1.2];\n\t\t\\tikzstyle{bleu} = [fill,circle,blue] ;\n\t\t\n\t\t\n\t\t\\draw[gray] (-4,-4) grid ++(8,8);\n\t\t\\draw[->,>=latex, very thick,black] (-4.5,0)--(5,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, black] (0,-4.1)--(0,5) node[left] {$y$};\n\t\t\n\t\t\n\t\t\\foreach \\x/\\y in {-2/3,-1/2,-3/-0.3,1/1.8,2.3/3.1}{\n\t\t\t\\node[bleu] at (\\x,\\y) {};\n\t\t}\n\t\t\\foreach \\x/\\y in {1/-2,3/-1,1.5/-2.5,0/-3,-2.2/-3.3}{\n\t\t\t\\node[rouge] at (\\x,\\y) {};\n\t\t}\n\t\t\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-4,-4) rectangle (4,4);\n\t\t\t\\draw[red,ultra thick] (4,3) -- (-4,-2);\n\t\t\t\\fill[red!50,opacity=0.5] (4,3) -- (4,-4) --(-4,-4)--(-4,-2) -- cycle;\n\t\t\t\\fill[blue!20,opacity=0.5] (4,3) -- (4,4) --(-4,4)--(-4,-2) -- cycle;\n\t\t\t\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\n\t\t\\node[scale=1,red,below] at (4,-4) {$F(x,y)=1$};\n\t\t\\node[scale=1,blue,above] at (-4,4) {$F(x,y)=0$};\n\t\t\n\t\t\n\t\t\n\t\\end{tikzpicture}\n\\end{center}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "81bc191b-4d31-4914-bda6-9fad2cc31594",
+      "id": "d0396522-9ec4-419b-ba9a-e978c6d6504d",
       "type": "reponse",
       "value": {
         "latex": "We want to separate the plane into to half planes. One can consider the red line defined by $y=5x/8+1/2$ that is $5x-8y+4 = 0$ or another line which separates as well, for example $5x-8y=0$.  So this perceptron can fit to this problem.\n\t\n\t\n\t\\begin{center}\n\t\t\\begin{tikzpicture}[scale=0.5]\n\t\t\t\\draw[thick,fill=black!10] (0,0) circle (2);\n\t\t\t\\node at (150:9) {$x$};\n\t\t\t\\node at (190:9) {$y$};\n\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.3,above]{$5$};;\n\t\t\t\\draw[ultra thick]  (190:3) -- (190:8) node[pos=0.3,above]{$-8$};\n\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.3,above]{$4$};\n\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0) node[right] {};\n\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\\end{tikzpicture}  \n\t\\end{center}",

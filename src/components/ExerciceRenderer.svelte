@@ -11,7 +11,7 @@
   import FontSizeToggleButton from "./buttons/FontSizeToggleButton.svelte";
 
   export let ExerciceData;
-  const latexTypes = ["description", "question", "reponse"];
+  const latexTypes = ["description", "question", "reponse", "indication"];
 
   let isLargeFont = false;
   let processedContenu = [];
@@ -451,6 +451,7 @@
 
   .description,
   .question,
+  .indication,
   .reponse {
     margin-top: 1rem;
     line-height: 1.6;
@@ -463,7 +464,7 @@
   }
 
   .indication {
-    background-color: #f1ed1598;
+    background-color: #f1ed153b;
     padding: 0.5rem;
     border-left: 4px solid #f1ee15;
   }

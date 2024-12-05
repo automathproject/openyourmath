@@ -7,41 +7,41 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-11-23T17:27:56.265Z",
+    "createdAt": "2024-12-05T15:38:04.427Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-11-23T17:27:56.265Z"
+    "updatedAt": "2024-12-05T15:38:04.427Z"
   },
   "contenu": [
     {
-      "id": "9e036fe9-7cd8-4312-a806-b2a0a872f784",
+      "id": "dbb0191e-c378-446d-81f8-973c334ecf74",
       "type": "description",
       "value": {
         "latex": "Le général Contant doit échanger des documents top secrets avec le général Janty. Pour cela, ils ont rendez-vous au bar Le Torkel. On suppose que l'heure d'arrivée de chaque individu au point de rendez-vous est uniformément distribué entre 20h et 21h. En revanche, chacun a promis de ne pas attendre l'autre plus de 10 minutes sur place.",
-        "html": "<p>Le général Contant doit échanger des documents top secrets avec le\ngénéral Janty. Pour cela, ils ont rendez-vous au bar Le Torkel. On\nsuppose que l’heure d’arrivée de chaque individu au point de rendez-vous\nest uniformément distribué entre 20h et 21h. En revanche, chacun a\npromis de ne pas attendre l’autre plus de 10 minutes sur place.</p>\n"
+        "html": "<p>Le général Contant doit échanger des documents top secrets avec le général Janty. Pour cela, ils ont rendez-vous au bar Le Torkel. On suppose que l’heure d’arrivée de chaque individu au point de rendez-vous est uniformément distribué entre 20h et 21h. En revanche, chacun a promis de ne pas attendre l’autre plus de 10 minutes sur place.</p>\n"
       }
     },
     {
-      "id": "437554bc-9493-4c51-91ef-a4beb610f0e4",
+      "id": "cccaac96-3641-44f7-86d6-c6f573e0e2e0",
       "type": "question",
       "value": {
         "latex": "Décrire la probabilité que ces deux personnes puissent effectuer leur transaction sous forme d'une intégrale double.",
-        "html": "<p>Décrire la probabilité que ces deux personnes puissent effectuer leur\ntransaction sous forme d’une intégrale double.</p>\n"
+        "html": "<p>Décrire la probabilité que ces deux personnes puissent effectuer leur transaction sous forme d’une intégrale double.</p>\n"
       }
     },
     {
-      "id": "cbff7659-529b-4b0e-ab85-2ce59010c56d",
+      "id": "a268088a-ce1a-473b-aedf-6d7771034589",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité que ces deux personnes puissent effectuer leur transaction ?",
-        "html": "<p>Quelle est la probabilité que ces deux personnes puissent effectuer\nleur transaction ?</p>\n"
+        "html": "<p>Quelle est la probabilité que ces deux personnes puissent effectuer leur transaction ?</p>\n"
       }
     },
     {
-      "id": "c80de89c-296b-450d-8afd-5a4b1c36559b",
+      "id": "98e0e715-cdb7-4da5-8878-3b02f45d4931",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ l'heure d'arrivée du général Contant et $Y$ l'heure d'arrivée du général Janty. L'énoncé suggère que $X$ et $Y$ sont des \\vas indépendantes et nous dit qu'elles suivent toutes les deux une loi uniforme sur $[20;21]$.\n\tLa probabilité cherchée est $\\p(|X-Y|\\leq \\frac{1}{6})$.\n\t\n\tComme $X$ et $Y$ sont indépendantes, on a\n\t\\[ f_{(X,Y)}(x,y)=f_X(x)f_Y(y) =\\mathbf{1}_{[20;21]^2} (x,y).\\]\n\tDonc\n\t\\[ p\n\t= \\int \\int_D dx\\dy,\n\t\\]\n\toù\n\t$D=\\{(x,y)\\in\\R^2|20\\leq x \\leq 21, \\ 20\\leq y \\leq 21, \\ \\frac{-1}{6}\\leq x-y \\leq \\frac{1}{6}\\}$. \n\t\\vspace{1em}\n\t\n\t\n\tOn peut évaluer géométriquement cette aire mais nous allons faire le calcul de l'intégrale double. On commence par remplacer l'intervalle $[20;21]$ par l'intervalle $[0;1]$ en effectuant une translation. Ainsi, l'écriture est simplifiée.\n\t$$\\begin{align*}\n\t\tp&= \\int_0^{\\frac{1}{6}} \\int_0^{\\frac{1}{6}+y} dx \\dy\n\t\t+ \\int_{\\frac{1}{6}}^{\\frac{5}{6}} \\int_{y-\\frac{1}{6}}^{y+\\frac{1}{6}} dx \\dy\n\t\t+ \\int_{\\frac{5}{6}}^1 \\int_{y-\\frac{1}{6}}^{1} dx \\dy \\\\\n\t\t&= \\int_0^{\\frac{1}{6}} (\\frac{1}{6}+y) \\dy\n\t\t+ \\int_{\\frac{1}{6}}^{\\frac{5}{6}} \\frac{1}{3} \\dy\n\t\t+ \\int_{\\frac{5}{6}}^1 (\\frac{7}{6}-y) \\dy \\\\\n\t\t&=\\left[\\frac{1}{6}y+\\frac{1}{2}y^2 \\right]_0^\\frac{1}{6}\n\t\t+\\left[\\frac{1}{3}y\\right]_\\frac{1}{6}^\\frac{5}{6}\n\t\t+\\left[\\frac{7}{6}y-\\frac{1}{2}y^2 \\right]_\\frac{5}{6}^1 \\\\\n\t\t&=\\frac{11}{36}.\n\t\\end{align*}$$\n\tLa probabilité que les deux généraux puissent effectuer leur transaction est donc de l'ordre de $0.31$.",
-        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> l’heure d’arrivée du\ngénéral Contant et <span class=\"math inline\">\\(Y\\)</span> l’heure\nd’arrivée du général Janty. L’énoncé suggère que <span\nclass=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont des indépendantes et nous dit\nqu’elles suivent toutes les deux une loi uniforme sur <span\nclass=\"math inline\">\\([20;21]\\)</span>. La probabilité cherchée est\n<span class=\"math inline\">\\(\\p(|X-Y|\\leq \\frac{1}{6})\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> sont indépendantes, on a <span\nclass=\"math display\">\\[f_{(X,Y)}(x,y)=f_X(x)f_Y(y)\n=\\mathbf{1}_{[20;21]^2} (x,y).\\]</span> Donc <span\nclass=\"math display\">\\[p\n    = \\int \\int_D dx\\dy,\\]</span> où <span\nclass=\"math inline\">\\(D=\\{(x,y)\\in\\R^2|20\\leq x \\leq 21, \\ 20\\leq y \\leq\n21, \\ \\frac{-1}{6}\\leq x-y \\leq \\frac{1}{6}\\}\\)</span>.</p>\n<p>On peut évaluer géométriquement cette aire mais nous allons faire le\ncalcul de l’intégrale double. On commence par remplacer l’intervalle\n<span class=\"math inline\">\\([20;21]\\)</span> par l’intervalle <span\nclass=\"math inline\">\\([0;1]\\)</span> en effectuant une translation.\nAinsi, l’écriture est simplifiée. <span\nclass=\"math display\">\\[\\begin{align*}\n        p&amp;= \\int_0^{\\frac{1}{6}} \\int_0^{\\frac{1}{6}+y} dx \\dy\n        + \\int_{\\frac{1}{6}}^{\\frac{5}{6}}\n\\int_{y-\\frac{1}{6}}^{y+\\frac{1}{6}} dx \\dy\n        + \\int_{\\frac{5}{6}}^1 \\int_{y-\\frac{1}{6}}^{1} dx \\dy \\\\\n        &amp;= \\int_0^{\\frac{1}{6}} (\\frac{1}{6}+y) \\dy\n        + \\int_{\\frac{1}{6}}^{\\frac{5}{6}} \\frac{1}{3} \\dy\n        + \\int_{\\frac{5}{6}}^1 (\\frac{7}{6}-y) \\dy \\\\\n        &amp;=\\left[\\frac{1}{6}y+\\frac{1}{2}y^2 \\right]_0^\\frac{1}{6}\n        +\\left[\\frac{1}{3}y\\right]_\\frac{1}{6}^\\frac{5}{6}\n        +\\left[\\frac{7}{6}y-\\frac{1}{2}y^2 \\right]_\\frac{5}{6}^1 \\\\\n        &amp;=\\frac{11}{36}.\n    \\end{align*}\\]</span> La probabilité que les deux généraux puissent\neffectuer leur transaction est donc de l’ordre de <span\nclass=\"math inline\">\\(0.31\\)</span>.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> l’heure d’arrivée du général Contant et <span class=\"math inline\">\\(Y\\)</span> l’heure d’arrivée du général Janty. L’énoncé suggère que <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont des indépendantes et nous dit qu’elles suivent toutes les deux une loi uniforme sur <span class=\"math inline\">\\([20;21]\\)</span>. La probabilité cherchée est <span class=\"math inline\">\\(\\p(|X-Y|\\leq \\frac{1}{6})\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont indépendantes, on a <span class=\"math display\">\\[f_{(X,Y)}(x,y)=f_X(x)f_Y(y) =\\mathbf{1}_{[20;21]^2} (x,y).\\]</span> Donc <span class=\"math display\">\\[p\n    = \\int \\int_D dx\\dy,\\]</span> où <span class=\"math inline\">\\(D=\\{(x,y)\\in\\R^2|20\\leq x \\leq 21, \\ 20\\leq y \\leq 21, \\ \\frac{-1}{6}\\leq x-y \\leq \\frac{1}{6}\\}\\)</span>.</p>\n<p>On peut évaluer géométriquement cette aire mais nous allons faire le calcul de l’intégrale double. On commence par remplacer l’intervalle <span class=\"math inline\">\\([20;21]\\)</span> par l’intervalle <span class=\"math inline\">\\([0;1]\\)</span> en effectuant une translation. Ainsi, l’écriture est simplifiée. <span class=\"math display\">\\[\\begin{align*}\n        p&amp;= \\int_0^{\\frac{1}{6}} \\int_0^{\\frac{1}{6}+y} dx \\dy\n        + \\int_{\\frac{1}{6}}^{\\frac{5}{6}} \\int_{y-\\frac{1}{6}}^{y+\\frac{1}{6}} dx \\dy\n        + \\int_{\\frac{5}{6}}^1 \\int_{y-\\frac{1}{6}}^{1} dx \\dy \\\\\n        &amp;= \\int_0^{\\frac{1}{6}} (\\frac{1}{6}+y) \\dy\n        + \\int_{\\frac{1}{6}}^{\\frac{5}{6}} \\frac{1}{3} \\dy\n        + \\int_{\\frac{5}{6}}^1 (\\frac{7}{6}-y) \\dy \\\\\n        &amp;=\\left[\\frac{1}{6}y+\\frac{1}{2}y^2 \\right]_0^\\frac{1}{6}\n        +\\left[\\frac{1}{3}y\\right]_\\frac{1}{6}^\\frac{5}{6}\n        +\\left[\\frac{7}{6}y-\\frac{1}{2}y^2 \\right]_\\frac{5}{6}^1 \\\\\n        &amp;=\\frac{11}{36}.\n    \\end{align*}\\]</span> La probabilité que les deux généraux puissent effectuer leur transaction est donc de l’ordre de <span class=\"math inline\">\\(0.31\\)</span>.</p>\n"
       }
     }
   ]
