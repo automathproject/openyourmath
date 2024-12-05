@@ -74,7 +74,7 @@
     }
     
     .hint-button {
-      background: #f1ee15;
+      background: #f1ed156e;
       color: black;
       border-color: #f1ed1573;
     }
