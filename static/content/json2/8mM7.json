@@ -2,18 +2,20 @@
   "uuid": "8mM7",
   "titre": "Lancers de dé",
   "theme": [
-    "probabilités"
+    "variables aléatoires",
+    "loi binomiale",
+    "loi normale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:20.815Z",
+    "createdAt": "2024-12-17T17:05:04.183Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:20.815Z"
+    "updatedAt": "2024-12-17T17:05:04.183Z"
   },
   "contenu": [
     {
-      "id": "d6fff3ea-4d36-4fcb-8b02-298d6d6c7911",
+      "id": "284345d6-8518-4cc5-b0e7-06723e95339d",
       "type": "description",
       "value": {
         "latex": "On lance $720$ fois un dé équilibré.",
@@ -21,7 +23,7 @@
       }
     },
     {
-      "id": "d0ec7b87-adc5-403d-99ee-48e9e67f7eab",
+      "id": "89c47cdd-8536-45c4-9968-852e8485343c",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ le nombre de fois où le nombre $6$ est apparu sur les $720$ lancers. La \\va $X$ suit donc la loi $\\mathcal{B}(720,\\frac{1}{6})$. En particulier, $\\E(X)=720\\times \\frac{1}{6}=120$ et  $\\V(X)=720\\times \\frac{1}{6}\\times (1-\\frac{1}{6})=100$.",
@@ -29,7 +31,7 @@
       }
     },
     {
-      "id": "2cf08865-8099-473f-a82f-de50f405628c",
+      "id": "fecad816-fa06-4d27-b5fc-ab45c5313cae",
       "type": "question",
       "value": {
         "latex": "En utilisant l'inégalité de Bienaymé-Tchebytchev, que peut-on dire de la probabilité que le nombre $6$ soit apparu entre $100$ et $140$ fois ?",
@@ -37,7 +39,7 @@
       }
     },
     {
-      "id": "70cb47b3-d468-48b6-9adb-44a635b628e9",
+      "id": "9b20d9d7-a135-433b-8116-431ffd1309a2",
       "type": "reponse",
       "value": {
         "latex": "En utilisant l'inégalité de Bienaymé-Tchebytchev, on a\n\t\t\t\\[ \\p(|X-\\E(X)|\\geq 20)\\leq \\frac{\\V(X)}{20^2}=\\frac{100}{400}=\\frac{1}{4}.\\]\n\t\t\tOn en conclut\n\t\t\t\\[ \\p(100\\leq X\\leq 140)=\\p(|X-120|\\leq 20)=1-\\p(|X-120|>20)\\geq 1-\\frac{1}{4}=\\frac{3}{4}.\\]",
@@ -45,7 +47,7 @@
       }
     },
     {
-      "id": "6d27c52f-ae0e-4139-afe9-a1903557d029",
+      "id": "3b6d458e-c197-4524-85df-ae5d2bc868dc",
       "type": "question",
       "value": {
         "latex": "Que peut-on dire de cette même probabilité en utilisant une approximation par la loi Normale ?",
@@ -53,7 +55,7 @@
       }
     },
     {
-      "id": "84d7f152-01b2-4053-b4b6-618c9f5287b7",
+      "id": "0217fbda-83ec-4b45-9669-2682c6f62cdc",
       "type": "reponse",
       "value": {
         "latex": "On approxime la loi de $X$ par la loi $\\mathcal{N}(120,\\sigma^2=10^2)$. Alors\n\t\t\t$$\\begin{align*}\n\t\t\t\t\\p(100\\leq X\\leq 140)&=\\p(-2\\leq \\frac{X-120}{10}\\leq 2) \\\\\n\t\t\t\t&\\simeq \\p(-2\\leq Z\\leq 2), \\quad \\text{où} \\ Z\\sim \\mathcal{N}(0,1) \\\\\n\t\t\t\t&\\simeq 2\\p(Z\\leq 2)-1 \\\\\n\t\t\t\t&\\simeq 2* 0.9772-1, \\quad \\text{par lecture de la table de loi } \\mathcal{N}(0,1)  \\\\\n\t\t\t\t& \\simeq 0.9544.\n\t\t\\end{align*}$$",
@@ -61,7 +63,7 @@
       }
     },
     {
-      "id": "62bf71f1-96e5-4cd2-a8fd-5c15f0fb83e6",
+      "id": "430ca575-3851-4e3f-8d00-b43b5508b9aa",
       "type": "question",
       "value": {
         "latex": "Déterminer le plus petit entier $n$ tel que $\\mathbb{P}(|X-120|\\leq n)\\geq 0.9$, où $X$ est la variable aléatoire égale au nombre d'apparition du $6$ sur $720$ lancers, que l'on puisse obtenir:\n\t\t\\begin{enumerate}\n\t\t\t\\item par l'inégalité de Bienaymé-Tchebytchev,\n\t\t\t\\item par le théorème central-limite.\n\t\\end{enumerate}",
@@ -69,7 +71,7 @@
       }
     },
     {
-      "id": "637bfbb4-9d5a-445f-861a-d914b02aaa0f",
+      "id": "e709aca3-96c1-4152-b37d-64cba2514981",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}\n\t\t\t\\item Par l'inégalité de Bienaymé-Tchebytchev, on a  \n\t\t\t\\[\\p(|X-120|\\geq n) \\leq \\frac{100}{n^2}.\\]\n\t\t\tSi on impose $\\frac{100}{n^2}<0.1$, alors on a bien l'inégalité recherchée, à savoir $ \\p(|X-120|\\leq n) \\geq 0.9$.\n\t\t\tOr \n\t\t\t\\[ \\frac{100}{n^2}<0.1 \\Leftrightarrow n>\\sqrt{1000}\\simeq 31.62.\\]\n\t\t\tLa valeur minimale de $n$ obtenue est donc $n=32$.\n\t\t\t\\item $\\p(|X-120|\\leq n)=\\p(|\\frac{X-120}{10}|\\leq \\frac{n}{10})\\simeq \\p(Z\\leq \\frac{n}{10})-1$, où $Z\\sim \\mathcal{N}(0,1)$.\n\t\t\tAinsi la condition $ \\p(|X-120|\\leq n) \\geq 0.9$ devient $\\p(Z\\leq \\frac{n}{10})\\leq 0.95$, c'est-à-dire \n\t\t\t$\\frac{n}{10}\\geq 1.64$. La valeur minimale de $n$ obtenue est donc $n=17$.\n\t\\end{enumerate}",
@@ -77,7 +79,7 @@
       }
     },
     {
-      "id": "c2e97603-3b3e-41f7-a327-e4a5675506d5",
+      "id": "ac27c73f-8d90-4e29-930c-203d5ed0ab45",
       "type": "question",
       "value": {
         "latex": "Commenter les résultats.",
@@ -85,7 +87,7 @@
       }
     },
     {
-      "id": "7601f7d0-61ff-4bfa-9fa8-07b16e2a4717",
+      "id": "736da21a-857d-4621-83a5-42a88af9a48f",
       "type": "reponse",
       "value": {
         "latex": "Le théorème central-limite est plus efficace que l'inégalité de Bienaymé-Tchebytchev.",

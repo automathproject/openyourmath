@@ -2,18 +2,18 @@
   "uuid": "P9tc",
   "titre": "Calcul d'erreur",
   "theme": [
-    "probabilités"
+    "théorème central limite"
   ],
   "niveau": "",
   "metadata": {
-    "auteur": "",
-    "createdAt": "2024-12-05T15:37:34.853Z",
+    "auteur": "Erwan L'HARIDON",
+    "createdAt": "2024-12-17T17:05:12.834Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:34.853Z"
+    "updatedAt": "2024-12-17T17:05:12.834Z"
   },
   "contenu": [
     {
-      "id": "7ab07a4b-eb24-4ab2-a142-4ad37871def3",
+      "id": "87972491-d40c-4727-8ab7-92aef7c88e99",
       "type": "description",
       "value": {
         "latex": "On suppose qu'un ordinateur effectue $10^6$ opérations élémentaires pour un calcul donné. On suppose également que les erreurs d'arrondi à chaque opération sont indépendantes et suivent chacune une loi uniforme sur l'intervalle $\\left[-5 \\cdot 10^{-10};5 \\cdot 10^{-10} \\right]$. Enfin, on suppose que l'erreur finale est la somme des erreurs commises à chaque opération.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8afbc9af-46dc-4164-a4b4-3fabbae49ec2",
+      "id": "944c044e-779d-4ea4-a00b-d8ad1dd124c2",
       "type": "question",
       "value": {
         "latex": "\\'Evaluer la probabilité que l'erreur finale soit en valeur absolue inférieure à $\\frac{1}{2} 10^{-6}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "f8ef82f4-9e69-4f70-95e2-de1b15203f7e",
+      "id": "f9470123-df71-4efa-9272-273fd3076c6c",
       "type": "reponse",
       "value": {
         "latex": "Soit $X_i$ la variable aléatoire représentant l'erreur d'arrondi sur la $i$-ème opération. D'après l'énoncé, les variables $X_i$ sont indépendantes et de même loi $\\mathcal{U}([-5.10^{-10};5.10^{-10}])$, donc en particulier\n\t\\[ \\mathbb{E}(X_i)=0 \\quad \\text{ et } \\quad \\sigma(S)=\\frac{10^{-9}}{\\sqrt{12}}.\\]\n\tSoit $\\displaystyle Y=\\sum_{i=1}^{10^6} X_i$ l'erreur finale commise. On cherche à déterminer la probabilité suivante:\n\t$$\\begin{align*}\n\t\t\\mathbb{P}(|Y|<\\frac{1}{2}10^{-6})\n\t\t&= \\mathbb{P}\\left(\\left| \\frac{Y-\\mathbb{E}(Y)}{\\sigma(Y)\\sqrt{10^6}}\\right|< \\frac{1}{2}\\frac{10^{-6}}{\\frac{10^{-9}}{\\sqrt{12}} \\sqrt{10^6}} \\right) \\\\\n\t\t&\\simeq \\mathbb{P}(|Z|<\\sqrt{3}) \\quad \\text{ par le théorème central-limite, avec } Z\\sim \\mathcal{N}(0,1) \\\\\n\t\t& \\simeq 2\\mathbb{P}(Z<1.73)-1 \\\\\n\t\t& \\simeq 2\\times 0.9582-1 \\quad \\text{ par lecture de la table de loi } \\mathcal{N}(0,1) \\\\\n\t\t& \\simeq 0.9164\n\t\\end{align*}$$",

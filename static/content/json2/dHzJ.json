@@ -2,18 +2,19 @@
   "uuid": "dHzJ",
   "titre": "Application du théorème central limite",
   "theme": [
-    "statistiques"
+    "loi normale",
+    "théorème central limite"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:48.839Z",
+    "createdAt": "2024-12-17T17:05:18.613Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:48.839Z"
+    "updatedAt": "2024-12-17T17:05:18.613Z"
   },
   "contenu": [
     {
-      "id": "929892a1-093b-4369-87d1-d80e96752277",
+      "id": "65cf7f5d-f4c2-40a3-af7c-6cb47120e237",
       "type": "description",
       "value": {
         "latex": "On considère une production de feuilles cartonnées dont l'épaisseur est modélisée par une variable aléatoire qui a pour espérance $5$~mm et pour écart type $0{,}4$~mm.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "4b4c4de5-2427-497c-9c36-28a2d923ef30",
+      "id": "0f045f39-26a2-4dd1-9ec7-8e7806a085b0",
       "type": "question",
       "value": {
         "latex": "Considérant un paquet de 100 feuilles choisies au hasard de manière indépendante, comment calculer la probabilité que ce paquet ait une épaisseur comprise entre 49 et 51 cm ?",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "71ec8e45-fb2a-464b-9cd1-4dbb4d7899f3",
+      "id": "a153c177-3fbc-4960-a5b0-c4810017c74f",
       "type": "reponse",
       "value": {
         "latex": "Soit $X_1,...,X_{100}$ un échantillon où $X_i$ représente l'épaisseur d'une feuille, $\\mathbb{E}(X_i) = 5$ et $V(X_i) = 0{,}16$.  Par indépendance, d'après le théorème central limite, la variable $S = \\sum_{i=1}^{100} X_i$ suit approximativement une loi normale de moyenne $\\mu = 100 \\times 5 = 500$ et  de variance $\\sigma^2 = 100 \\times 0{,}16 = 16$. Dit autrement, la variable $\\frac{S-500}{\\sqrt{16}}$ suit approximativement une loi normale centrée réduite.\n\t\n\tOn souhaite calculer $$\\PP(490 < S < 510) = \\PP\\left( \\frac{490-500}{\\sqrt{16}} <    \\frac{S-500}{\\sqrt{16}} <  \\frac{510-500}{\\sqrt{16}} \\right) = \\PP\\left( -2.5 <    \\frac{S-500}{4} <  2.5 \\right) = \\fbox{0{,}9876}$$.",

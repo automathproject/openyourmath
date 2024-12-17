@@ -2,18 +2,19 @@
   "uuid": "Su3X",
   "titre": "Approximation d'une intégrale",
   "theme": [
-    "probabilités"
+    "simulation",
+    "méthode de Monte Carlo"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-12-05T15:37:38.261Z",
+    "createdAt": "2024-12-17T17:05:15.007Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:38.261Z"
+    "updatedAt": "2024-12-17T17:05:15.007Z"
   },
   "contenu": [
     {
-      "id": "5032532b-b463-44d0-a268-aedd03d7ba60",
+      "id": "d89c6d73-093c-43a6-8259-601b3974046c",
       "type": "description",
       "value": {
         "latex": "On suppose dans cet exercice que l'on dispose d'une fonction \\texttt{normale()} pour simuler la variable $\\mathcal{N}(0,1)$ et de \\texttt{rand()} pour simuler la loi  $\\mathcal{U}([0;1])$. \n\t\n\tSoient $(X_i)_{i \\geq 1}$ une suite de variables aléatoires indépendantes et identiquement distribuées (iid) selon la loi $\\mathcal{N}(0,1)$. \n\t\n\tOn cherche une valeur approchée de l'intégrale suivante : \n\t$$I = \\int_{0}^{+\\infty} x^2 e^{-\\frac{x^2}{2}} dx$$",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "a20714a0-c7fe-4be5-bc55-8f21393c0768",
+      "id": "0de790e3-fb8e-4e96-bdce-7433fcd12592",
       "type": "question",
       "value": {
         "latex": "Pour tout $i \\geq 1$, exprimer $\\mathbb{E}(X_i^2)$ sous forme d'intégrale.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "e49b45f8-bbd4-4257-b327-14bbb520b38f",
+      "id": "58f7c849-6d73-4607-933d-baf7da180ab5",
       "type": "reponse",
       "value": {
         "latex": "On applique le théorème de transfert : \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\mathbb{E}(X_i^2) &= \\int_{-\\infty}^{+\\infty} x^2 e^{-\\frac{x^2}{2}} \\frac{1}{\\sqrt{2\\pi}} dx \\\\\n\t\t\t\t&= 2 \\int_{0}^{+\\infty} x^2 e^{-\\frac{x^2}{2}} \\frac{1}{\\sqrt{2\\pi}} dx \\\\\n\t\t\t\t&= \\sqrt{\\frac{2}{\\pi}}I\n\t\t\t\\end{align*}$$",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "aeef48c1-bbaf-4cc6-a576-ba14723bd2fe",
+      "id": "25c71d99-8e94-403f-8d6c-537c6d558ddb",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\displaystyle \\frac{1}{n}\\sum_{i=1}^n X_i^2 \\xrightarrow[n \\to \\infty]{{\\rm{p.s.}}} \\sqrt{\\frac{2}{\\pi}}I$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "6ecb1a01-ee53-4f00-8a39-524253131e64",
+      "id": "1a039c3f-9a93-42f3-b24c-708613b2e0c7",
       "type": "reponse",
       "value": {
         "latex": "On applique la loi forte des grands nombres à la suite de variables aléatoires iid $(X_i^2)_{i \\geq 1}$ : $\\displaystyle \\frac{1}{n}\\sum_{i=1}^n X_i^2 \\xrightarrow[n \\to \\infty]{{\\rm{p.s.}}} \\mathbb{E}(X_1^2) =  \\sqrt{\\frac{2}{\\pi}}I$.",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "e62f3d40-fe83-4e39-baeb-11701d78887b",
+      "id": "d59622ac-9672-466b-b4d7-8909f99ff0ab",
       "type": "question",
       "value": {
         "latex": "Soit $\\tilde{f} \\colon x \\mapsto xe^{-\\frac{x^2}{2}} \\textbf{1}_{[0;+\\infty[}(x)$. \n\t\tVérifier que $\\tilde{f}$ définit une densité de probabilité et exprimer la fonction de répartition associée à cette loi.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "22d7d6f8-56bf-411f-9932-6d31c8b2e1ae",
+      "id": "c1462c01-dd7c-4324-b5f0-f307ef018c5f",
       "type": "reponse",
       "value": {
         "latex": "On constate que $\\tilde{f}(x) \\geq 0$ pour tout $x \\geq 0$. Par ailleurs, \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\int \\tilde{f}(x) dx &= \\int_{0}^{+\\infty}  xe^{-\\frac{x^2}{2}} dx \\\\\n\t\t\t\t&=  \\left[ -e^{-\\frac{x^2}{2}}\\right]_0^{+\\infty} \\\\\n\t\t\t\t&= 1\n\t\t\t\\end{align*}$$\t\n\t\t\tDonc $\\tilde{f}$ est bien une fonction densité de probabilité. \n\t\t\t\n\t\t\tSoit $\\tilde{F}$ la fonction de répartition associée : si $t \\leq 0$, il est clair que $\\tilde{F}(t) = 0$. Soit $t>0$ : \n\t\t\t$$\\begin{align*}\n\t\t\t\t\\tilde{F}(t) &= \\int_{0}^{t}  xe^{-\\frac{x^2}{2}} dx \\\\\n\t\t\t\t&= 1 - e^{-\\frac{t^2}{2}}\n\t\t\t\\end{align*}$$",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "16edda02-fdbe-43bf-bfdd-88fb22b920fb",
+      "id": "7dc588f5-ee7e-411e-8c00-298fd000183e",
       "type": "question",
       "value": {
         "latex": "Soit $U$ une variable aléatoire suivant une loi $\\mathcal{U}([0;1])$. Démontrer que la variable aléatoire $\\sqrt{-2\\ln(1-U)}$ admet $\\tilde{f}$ comme densité. En déduire une commande permettant de simuler la loi d'une variable aléatoire admettant $\\tilde{f}$ pour densité.",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "ab4db10e-6d25-4d86-967f-8b2a14fb1232",
+      "id": "2d46c569-6223-472f-8343-d5f7c3f9b287",
       "type": "reponse",
       "value": {
         "latex": "Plusieurs méthodes sont possibles. On peut utiliser le théorème d'identification pour identifier la loi de la variable aléatoire $\\sqrt{-2\\ln(1-U)}$. On peut aussi remarquer que si $u \\in [0;1]$ alors $u=\\tilde{F}(x)$ pour $x = \\sqrt{-2\\ln(1-x)}$. D'après le théorème de simulation par inversion de la fonction de répartition, cela prouve que la fonction de répartition de la variable $\\sqrt{-2\\ln(1-U)}$ est $\\tilde{F}$, ce qui revient à dire que sa loi admet $\\tilde{f}$ pour densité.",
@@ -85,7 +86,7 @@
       }
     },
     {
-      "id": "9a64a0de-ef91-4bde-8cf5-fb722841f51b",
+      "id": "643926bd-e8cf-46c1-8f19-356b3ba1da9f",
       "type": "question",
       "value": {
         "latex": "En remarquant que $\\displaystyle I = \\int_{0}^{+\\infty} x \\tilde{f}(x) dx$, \tdéterminer une nouvelle suite convergeant presque sûrement vers $I$. En déduire une méthode (que l'on détaillera) permettant d'approcher  $I$.",
@@ -93,7 +94,7 @@
       }
     },
     {
-      "id": "0a723dc8-ca2b-4213-9cb5-49d8138ea3a3",
+      "id": "55b0fdf5-26d1-48c9-8845-409408f44086",
       "type": "reponse",
       "value": {
         "latex": "Soit $J_n = \\frac{1}{n} \\sum_{i=1}^n Y_i$ où $(Y_i)$ est une suite de variables aléatoires i.i.d. selon une loi admettant $\\tilde{f}$ pour densité. Alors on remarque que $I = \\mathbb{E}(Y_1)$ et d'après la loi forte des grands nombres, \n\t\t\t$$ \\displaystyle \\frac{1}{n}\\sum_{i=1}^n Y_i \\xrightarrow[n \\to \\infty]{{\\rm{p.s.}}} I$$\n\t\t\t\n\t\t\tSachant simuler la loi de $Y_1$, on déduit l'algorithme suivant permettant de déterminer une valeur approchée de $I$ :\n\t\t\t\n\t\t\t{\\centering \\fbox{\\BUseVerbatim{Su3Xpython}}\\par}",

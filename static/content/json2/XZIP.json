@@ -2,18 +2,35 @@
   "uuid": "XZIP",
   "titre": "File d'attente",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "probabilités conditionnelles"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:41.461Z",
+    "createdAt": "2024-12-17T19:48:02.846Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:41.461Z"
+    "updatedAt": "2024-12-17T19:48:02.846Z"
   },
   "contenu": [
     {
-      "id": "9d843e0c-926d-46ff-b6ae-88172d851c20",
+      "id": "fe328fc3-0242-476d-8278-5fe5a1e714e9",
+      "type": "indication",
+      "value": {
+        "latex": "Dans les calculs, on pourra utiliser une intégration par parties:\n\t\\[\\int_a^b u(x)v'(x) \\dx= {[uv]}_a^b-\\int_a^b u'(x)v(x) \\dx \\]\n\tou bien se souvenir que \n\t\\[\\int_0^{+\\infty} x^n e^{-x} \\dx= n!=1\\times 2\\times \\ldots \\times n\\text{.}\\]",
+        "html": "<p>Dans les calculs, on pourra utiliser une intégration par parties: <span class=\"math display\">\\[\\int_a^b u(x)v&#39;(x) \\dx= {[uv]}_a^b-\\int_a^b u&#39;(x)v(x) \\dx\\]</span> ou bien se souvenir que <span class=\"math display\">\\[\\int_0^{+\\infty} x^n e^{-x} \\dx= n!=1\\times 2\\times \\ldots \\times n\\text{.}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "930f0e1f-2f3b-4095-9168-a2dc365e39dc",
+      "type": "description",
+      "value": {
+        "latex": "Après enquête, on estime que le temps de passage à une caisse, exprimé en unités de temps, est une \\va $T$ dont une densité de probabilité est donnée par la fonction $f_T$ définie par: \n$$ f_T(t)=\\begin{cases} 0 & \\text{ si } t<0  \\\\\n\tt e^{-t}& \\text{ si } t\\geq 0.\n\\end{cases}$$",
+        "html": "<p>Après enquête, on estime que le temps de passage à une caisse, exprimé en unités de temps, est une <span class=\"math inline\">\\(T\\)</span> dont une densité de probabilité est donnée par la fonction <span class=\"math inline\">\\(f_T\\)</span> définie par: <span class=\"math display\">\\[f_T(t)=\\begin{cases} 0 &amp; \\text{ si } t&lt;0  \\\\\n    t e^{-t}&amp; \\text{ si } t\\geq 0.\n\\end{cases}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "494bdd0a-55a9-4507-996d-d3493663c0f7",
       "type": "question",
       "value": {
         "latex": "Soit $X$ une variable aléatoire exponentielle de paramètre $\\lambda=1$. Donner une densité $f_X$ de $X$, son espérance et sa variance.",
@@ -21,7 +38,7 @@
       }
     },
     {
-      "id": "a9a1d4c9-6946-4514-9db1-34011a03553f",
+      "id": "b59e4ad0-5868-4f2f-83d5-562dd2d02d4d",
       "type": "reponse",
       "value": {
         "latex": "$X\\sim \\mathcal{E}(1)$, \\hspace{2em} $f_X(t)=\\begin{cases} e^{-t} & \\text{ si } t\\geq 0 \\\\\n\t\t\t\t0 & \\text{ sinon}\n\t\t\t\\end{cases}$, \\hspace{2em}\n\t\t\t$\\E(X)=\\frac{1}{\\lambda}$ \\hspace{2em} et \\hspace{2em} $\\V(X)=\\frac{1}{\\lambda^2}$.",
@@ -29,7 +46,7 @@
       }
     },
     {
-      "id": "76c6d17f-85c6-418f-ac99-2553a700e0dd",
+      "id": "358407c5-fc8f-45b7-a300-f4a9ef095202",
       "type": "question",
       "value": {
         "latex": "Vérifier que $f_T$ est bien une densité de probabilité. Déterminer $\\E(T)$ et $\\V(T)$.",
@@ -37,7 +54,7 @@
       }
     },
     {
-      "id": "172b3ce4-8a56-479b-a223-f37d4660af3d",
+      "id": "0a6385b1-ded5-452b-a2bd-daa8f0746937",
       "type": "reponse",
       "value": {
         "latex": "$f_T$ est une fonction positive sur $\\R$ et\n\t\t\t\\[ \\int_\\R f_T(x)\\dx=\\int_0^{+\\infty}xe^{-x}\\dx=\\left[-xe^{-x} \\right]_0^{+\\infty} +\\int_0^{+\\infty} e^{-x}\\dx = \\left[-e^{-x}\\right]_0^{+\\infty}=1.\\]\n\t\t\tDonc $f_T$ est bien une densité de probabilité. \\\\\n\t\t\t\n\t\t\t\n\t\t\tL'espérance de $T$ peut se calculer soit par intégrations par parties, soit en utilisant le rappel:\n\t\t\t\\[ \\E(T)=\\int_0^{+\\infty} x^2e^{-x}\\dx=\\left[ -x^2e^{-x}\\right]_0^{+\\infty} +\\int_0^{+\\infty} 2xe^{-x}\\dx=2\\int_0^{+\\infty}xe^{-x} \\dx=2.\\] \\\\\n\t\t\t\n\t\t\tDe même pour la variance de $T$: $\\V(T)=\\E(T^2)-\\E(T)^2$. Or\n\t\t\t\\[ \\E(T^2)=\\int_0^{+\\infty} x^3e^{-x}\\dx=6\\]\n\t\t\tdonc $\\V(T)=6-2^2=2$.",
@@ -45,7 +62,7 @@
       }
     },
     {
-      "id": "e2fc9ea5-2479-4876-8545-9c01ab976f56",
+      "id": "6c3ed83a-7323-45f6-91b1-3702caac6000",
       "type": "question",
       "value": {
         "latex": "Démontrer que la fonction de répartition de $T$, notée $F_T$, est définie par:\n\t\t\\[\n\t\tF_T(x)=\n\t\t\\begin{cases}\n\t\t\t0  \\text{ si } x<0, \\\\\n\t\t\t1-(1+x)e^{-x} \\text{ si } x \\geq 0.\n\t\t\\end{cases}\n\t\t\\]",
@@ -53,7 +70,7 @@
       }
     },
     {
-      "id": "f19c4c45-615b-44fd-be17-3d6ded3b0f2e",
+      "id": "49d59af5-aad8-43f0-a34a-79248792964e",
       "type": "reponse",
       "value": {
         "latex": "Par définition, \n\t\t\t$F_T(x)=\\int_{-\\infty}^x f_T(t)\\dx t$ donc si $x< 0$, $F_T(x)=0$ et si $x\\geq 0$,\n\t\t\t$$\\begin{align*}\n\t\t\t\tF_T(x) & =\\int_0^x te^{-t}\\dx t\n\t\t\t\t= \\left[-te^{-t}\\right]_0^x + \\int_0^x e^{-t}\\dx t\n\t\t\t\t= -xe^{-x}+0+\\left[-e^{-t}\\right]_0^x \n\t\t\t\t=-xe^{-x}-e^{x}+e^0 \\\\\n\t\t\t\t&= 1-(1+x)e^{-x},\n\t\t\t\\end{align*}$$\n\t\t\tce qui correspond à la formule donnée dans l'énoncé.",
@@ -61,7 +78,7 @@
       }
     },
     {
-      "id": "ae664d29-d66a-4679-ae2c-205b33ab8153",
+      "id": "6d1185c2-0790-4ca1-bdcb-f03574199b1f",
       "type": "question",
       "value": {
         "latex": "Montrer que la probabilité que le temps de passage en caisse soit inférieur à deux unités de temps sachant qu'il est supérieur à une unité, est égale à $\\frac{2e-3}{2e}$.",
@@ -69,7 +86,7 @@
       }
     },
     {
-      "id": "3934ef72-8307-4347-a7db-f55aea2799bf",
+      "id": "521d5b89-d01c-44b7-ae59-a19c52391401",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\t\\prob(T\\leq 2|T\\geq 1)\n\t\t\t\t&=\\frac{\\prob(\\{T\\leq 2\\}\\cap \\{T\\geq 1\\})}{\\prob(T\\geq 1)}\n\t\t\t\t=\\frac{\\prob(1\\leq T\\leq 2)}{1-\\prob(T\\leq 1)}\n\t\t\t\t= \\frac{F_T(2)-F_T(1)}{1-F_T(1)} \\\\\n\t\t\t\t&=\\frac{1-3e^{-2}-1+2e^{-1}}{1-1+2e^{-1}}\n\t\t\t\t=\\frac{2e^{-1}-3e^{-2}}{2e^{-1}}\n\t\t\t\t=\\frac{2e-3}{2e}\n\t\t\t\\end{align*}$$",
@@ -77,7 +94,7 @@
       }
     },
     {
-      "id": "01319145-f831-450c-bd3b-02344925943f",
+      "id": "c49f2ac9-8aba-4abf-9780-6007be07fdaa",
       "type": "description",
       "value": {
         "latex": "Un jour donné, trois clients $A$, $B$ et $C$ se présentent simultanément devant deux caisses libres. Par courtoisie, $C$ décide de laisser passer $A$ et $B$ et de prendre la place du premier d'entre eux qui aura terminé. On suppose que les variable aléatoires $T_A$ et $T_B$ correspondant aux temps de passage en caisse de $A$ et de $B$ sont indépendantes.",
@@ -85,7 +102,7 @@
       }
     },
     {
-      "id": "1beb3f02-0f56-4520-ac1f-8198daec97b1",
+      "id": "54011239-8ae0-4284-92d2-fb6903e6f972",
       "type": "question",
       "value": {
         "latex": "Soit $M$ la variable aléatoire égale au temps d'attente du client $C$. Exprimer l'événement $\\{M>x\\}$ en fonction des événements $\\{T_A>x\\}$ et $\\{T_B>x\\}$.",
@@ -93,7 +110,7 @@
       }
     },
     {
-      "id": "26689c95-cdbd-40a2-99d2-3ad4f0e8a10b",
+      "id": "415648f2-fc41-4c9a-a6cb-9ac99cd3233b",
       "type": "reponse",
       "value": {
         "latex": "$\\{M>x\\}=\\{T_A>x\\}\\cap\\{T_B>x\\}$",
@@ -101,7 +118,7 @@
       }
     },
     {
-      "id": "1481ce91-af49-4f87-8b8d-3de29522fca6",
+      "id": "55baa8f4-53ae-425e-b5e7-5779e56e4f96",
       "type": "question",
       "value": {
         "latex": "En déduire une expression de la fonction de répartition $F_M$ de $M$, en fonction de $F_{T_A}$ et $F_{T_B}$.",
@@ -109,7 +126,7 @@
       }
     },
     {
-      "id": "988cbedb-8e22-4fd3-baa3-5bf7701d365e",
+      "id": "f1971efc-2984-48c6-9fc6-e628e38db413",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $t\\in \\R$,\n\t\t\t$$\\begin{align*}\n\t\t\t\tF_M(t)\n\t\t\t\t&=\\prob(M\\leq t) \\\\\n\t\t\t\t&=1-\\prob(M>t) \\\\\n\t\t\t\t&=1-\\prob(\\{T_A>t\\}\\cap\\{T_B>t\\}) \\\\\n\t\t\t\t&=1-\\prob(T_A>t)\\prob(T_B>t) \\quad \\text{ par indépendance de $T_A$ et de $T_B$} \\\\\n\t\t\t\t&=1-(1-\\prob(T_A\\leq t))(1-\\prob(T_B\\leq t)) \\\\\n\t\t\t\t&= 1- (1-F_{T_A}(t))(1-F_{T_B}(t))\n\t\t\t\\end{align*}$$",
@@ -117,7 +134,7 @@
       }
     },
     {
-      "id": "8e3d0050-4890-4ff6-9cb4-d9d4b0666de5",
+      "id": "65d909f7-1e34-47c1-87c8-0f9ab91ea5c8",
       "type": "question",
       "value": {
         "latex": "Déterminer explicitement une densité de $M$.",
@@ -125,7 +142,7 @@
       }
     },
     {
-      "id": "fee8ea27-8ff4-413b-b93e-d1736d9424af",
+      "id": "02d4fbb8-c060-4145-9b67-37bda52b28b6",
       "type": "reponse",
       "value": {
         "latex": "Comme $T_A$ et $T_B$ suivent la même loi que $T$, on $F_{T_A}=F_{T_B}=F_T$. On obtient donc :\n\t\t\t\\begin{equation*}\n\t\t\t\tF_M (x)\n\t\t\t\t\\,=\\, 1-{(1-F_T(x))}^2 \\,=\\, \n\t\t\t\t\\begin{cases}\n\t\t\t\t\t1-(1+x)^2e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0.\n\t\t\t\t\\end{cases} \n\t\t\t\\end{equation*}\n\t\t\tAfin d'obtenir la densité de la variable aléatoire $M$, on dérive sa fonction de répartition en tous les points de continuité de sa densité :\n\t\t\t$$\\begin{align*}\n\t\t\t\tf_M(t)&= \\begin{cases}\n\t\t\t\t\t-2(1+x)e^{-2x}+2(1+x)^2e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0\n\t\t\t\t\\end{cases} \\\\\n\t\t\t\t&= \\begin{cases}\n\t\t\t\t\t2x\\, (1+x)e^{-2x} & \\text{ si } x\\geq 0 \\\\\n\t\t\t\t\t0 \\text{ si } x<0\n\t\t\t\t\\end{cases}\n\t\t\t\\end{align*}$$",

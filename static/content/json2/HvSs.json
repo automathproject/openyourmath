@@ -2,18 +2,19 @@
   "uuid": "HvSs",
   "titre": "Calcul de probabilités",
   "theme": [
-    "statistiques"
+    "théorème central limite",
+    "loi normale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:29.592Z",
+    "createdAt": "2024-12-17T17:05:09.597Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:29.592Z"
+    "updatedAt": "2024-12-17T17:05:09.597Z"
   },
   "contenu": [
     {
-      "id": "3a30bf60-b18c-4c20-989e-a865ebc493f4",
+      "id": "e9073752-6cb2-468a-89b3-3e2d9ded575e",
       "type": "question",
       "value": {
         "latex": "On modélise le poids d'une pièce fabriquée par la machine avec une variable aléatoire $X$. Que peut-on dire de la variable $X$ ?",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "e741b1bc-dab7-42d5-a7fb-5755836845b2",
+      "id": "fd10b32e-b99f-4c9a-8ef7-52db63fd86c2",
       "type": "reponse",
       "value": {
         "latex": "On sait donc que $\\EX=0.5~g$ et $\\sigma(X)=0.02~g$.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "7c0d56b1-c68b-4449-b34c-9de0e7f6efb9",
+      "id": "305f1a05-2705-4eb1-bcb9-247b0c51e386",
       "type": "question",
       "value": {
         "latex": "Soit $\\overline{X}$ la variable aléatoire égale au poids moyen d'une pièce dans un échantillon de $n$ pièces. Que peut-on dire de l'espérance et la variance de $\\overline{X}$ ? Que peut-on dire de la loi suivie par $\\overline{X}$ ?",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "75789123-bd6f-49ac-8799-1cca199aa60b",
+      "id": "3e9740bb-169b-43a4-9e3c-8ffd02b8e997",
       "type": "reponse",
       "value": {
         "latex": "On sait que $\\mathbb{E}(\\overline{X})=\\EX = 0.5$ et $\\sigma^2(\\overline{X}) = \\frac{\\sigma^2(X)}{n} = \\frac{(0.02)^2}{n}$\n\t\t\n\t\tOn ne peut pas déterminer exactement la loi de $\\overline{X}$, mais si l'échantillon est grand, d'après le Théorème Central Limite, on peut approcher la loi de \\fbox{$\\overline{X}$ par une loi normale $\\mathcal{N}(0.5,\\frac{(0.02)^2}{n})$}",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "466d9800-173f-4dfc-8e5f-3b46c73d8ff7",
+      "id": "7ab71c04-82b4-4e5f-aae0-87bd4b7ccab5",
       "type": "question",
       "value": {
         "latex": "Définir une variable aléatoire permettant de modéliser le poids total d'un échantillon de $n$ pièces. Que peut-on dire de sa loi de probabilité si $n$ est suffisamment grand ?",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "d4ce61b2-ba29-4338-968e-16b996767332",
+      "id": "44ae46e6-bf1e-44ff-9608-84719d3bde15",
       "type": "reponse",
       "value": {
         "latex": "Soit $P$ le poids total de l'échantillon. Alors $P=X_1+...+X_n = n \\times \\overline{X}$. Or : \\\\$\\mathbb{E}(n\\overline{X})=n \\mathbb{E(\\overline{X})}=0.5n$ et\\\\ $\\sigma^2(n\\overline{X})=n^2 \\sigma^2(\\overline{X})=n \\times (0.02)^2$.\n\t\t\n\t\tDonc le poids total de l'échantillon \\fbox{$P$ suit approximativement une loi normale $\\mathcal{N}(0.5n,(0.02)^2n)$}",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "4c3dbf62-87ec-4d10-8153-37b5e8c64568",
+      "id": "94682d5f-1717-4a34-98a2-ac46a35dc28d",
       "type": "question",
       "value": {
         "latex": "On considère deux échantillons de $1000$ pièces chacun. Définir une variable aléatoire permettant de modéliser la différence de poids entre ces deux échantillons.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "fb701983-8e44-4764-b4dc-17d1a38dca11",
+      "id": "8bb9386f-364a-4e7d-9604-fab3444a36d6",
       "type": "reponse",
       "value": {
         "latex": "On note $P_1$ le poids du premier échantillon de taille 1000, $P_2$ le poids du second échantillon de taille 1000. La différence de poids est donc $P_1$-$P_2$ si $P_1$ plus grand que $P_2$, et $P_2-P_1$ si $P_2$ plus grand que $P_1$. En résumé, cette différence s'écrit  $|P_1-P_2|$ (nombre toujours positif).",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "11641a48-d33e-4c76-9f2f-857484854e73",
+      "id": "4dc0c237-6668-47ba-9740-65fd3351dda9",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité pour que le poids de deux lots de $1000$ pièces chacun diffère de plus de $2$~g.",
@@ -85,7 +86,7 @@
       }
     },
     {
-      "id": "f66a0221-c3b9-4fae-a84f-e369742c587e",
+      "id": "5d9ee219-7969-4e04-a2a4-c345738eeea5",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente, on sait que $P_1$ et $P_2$ suivent chacune une loi $\\mathcal{N}(0.5 \\times 1000,(0.02)^2 \\times 1000)$. On va déterminer la loi de $P_1-P_2$ en supposant que $P_1$ et $P_2$ sont indépendantes : pour cela, on calcule :\n\t\t\\begin{itemize}\n\t\t\t\\item $\\mathbb{E}(P_1-P_2)=\\mathbb{E}(P_1)-\\mathbb{E}(P_2)=0$\n\t\t\t\\item $\\sigma^2(P_1-P_2)=\\sigma^2(P_1)+\\sigma^2(P_2)=2 \\times (0.02)^2 \\times 1000 = (0.02)^2 \\times 2000 $\n\t\t\\end{itemize}\n\t\tOn cherche à calculer $\\PP(|P_1-P_2|>2)$. Par symétrie ($P_1$ plus grand que $P_2$ ou l'inverse), il suffit de calculer $\\PP(P_1-P_2>2)$ (cas où $P_1$ plus grand que $P_2$) et de multiplier le résultat par 2 (on trouvera le même résultat pour $\\PP(P_2-P_1>2)$)\n\t\t\n\t\tLa variable $P_1-P_2$ suit approximativement une loi normale $\\mathcal{N}(0,(0.02)^2 \\times 2000)$ donc $U=\\frac{P_1-P_2}{0.02\\sqrt{2000}}$ suit approximativement une loi $\\mathcal{N}(0,1)$.\n\t\t\n\t\tOr $\\PP(U > \\frac{2}{0.02 \\sqrt{2000}})=\\PP(U>\\frac{1}{0.1 \\sqrt{20}})=\\PP(U>2.236)$. \n\t\t\n\t\tDonc $\\PP(X_1-X_2>2)=\\PP(U>2.236)=1-\\PP(U<2.236)=0.0129$. On en déduit que $$\\PP(|P_1-P_2|>2)=2 \\times 0.0129=0.0258$$\n\t\t\n\t\tLa probabilité que l'écart entre les poids des deux échantillons soit supérieur à 2~g est d'environ $2.6\\%$.",

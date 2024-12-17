@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François CULUS",
-    "createdAt": "2024-12-17T10:44:30.051Z",
+    "createdAt": "2024-12-17T17:05:15.490Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-17T10:44:30.051Z"
+    "updatedAt": "2024-12-17T17:05:15.490Z"
   },
   "contenu": [
     {
-      "id": "e4306c8b-01ee-44b0-90cc-3a06fa6699e1",
+      "id": "e237eaed-13e5-45af-b3fa-ec93e26e9873",
       "type": "description",
       "value": {
         "latex": "On considère le réseau de neurones suivant, comportant une unique entrée, notée $x$, deux neurones en première couche et un unique neurone en seconde couche.\nLes fonctions d'activation sont données: pour la première couche, il s'agit de la fonction ReLu, et pour la seconde couche, la fonction identité. \n\n\t\\begin{center}\n\\begin{tikzpicture}[scale=1.5]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E) at (-\\layersep,0) {$x$};\n\n\n\\node[input neuron] (I-1) at (0,1) {};\n\\node[input neuron] (I-2) at (0,-1) {};\n\n\\node[above right=0.8ex,scale=0.7] at (I-1) {$ReLu$};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {$ReLu$};\n\n\n\\node[output neuron] (O) at (\\layersep,0 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\n\n\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.8);\n\n\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\n\n\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\n\n\n\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\n\\end{tikzpicture}  \n\t\\end{center}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "4b785587-9859-4632-8ed6-acf5dbc7a9fb",
+      "id": "2a212e12-a190-4893-824e-f6290c0e9078",
       "type": "question",
       "value": {
         "latex": "Dessiner l'allure du graphe de $F$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "48e4f98b-2cf9-47c3-b0af-02c3d350acfb",
+      "id": "2f934063-0f03-479c-8f85-1c1077df17d2",
       "type": "indication",
       "value": {
         "latex": "Déterminer $F(x)$ en distinguant les valeurs selon que $x +2 \\geq 0$ et $x \\geq 0$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0a0c051a-932a-458e-8278-f113bf6c6e25",
+      "id": "742b8212-5426-46fa-9ecf-166ae4fa85c4",
       "type": "reponse",
       "value": {
         "latex": "\\begin{itemize}\n    \t\t\\item Si $x \\geq 0$ alors la première couche renvoie $(x+2,x)$ ;\n    \t\t\\item Si $-2 \\leq x < 0$ alors la première couche renvoie $(x+2,0)$ ;\n    \t\t\\item Si $x < -2$ alors la première couche renvoie $(0,0)$.\n    \t\\end{itemize}\n    La deuxième couche réalise la soustraction des deux composantes de sortie de la première couche : \n    \t\\begin{itemize}\n    \t\t\\item Si $x \\geq 0$ alors $F(x) = x+2-x = 2$ ;\n    \t\t\\item Si $-2 \\leq x < 0$ alors $F(x) = x+2 - 0 = x+2$ ;\n    \t\t\\item Si $x < -2$ alors $F(x) = 0-0 = 0$.\n    \t\\end{itemize}\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.0]\n\t\n\t\n\t\\draw[step=0.5,lightgray,very thin] (-4,-1) grid (4,3);\n\t\n\t\n\t\\draw[->] (-4,0) -- (4,0) node[right] {$x$};\n\t\\draw[->] (0,-1) -- (0,3.2) node[above] {$y$};\n\t\n\t\n\t\\foreach \\x in {-3,-2,-1,1,2,3} {\n\t\t\\draw (\\x,0.1) -- (\\x,-0.1) node[below] {\\x};\n\t}\n\t\\foreach \\y in {1,2,3} {\n\t\t\\draw (0.1,\\y) -- (-0.1,\\y) node[left] {\\y};\n\t}\n\t\n\t\n\t\\draw[ultra thick,red,domain=-2:0] plot (\\x,{\\x+2}) -- (0,2); \n\t\n\t\\draw[ultra thick,red] (-3.8,0) -- (-2,0); \n\t\\draw[ultra thick,red] (0,2) -- (3.8,2);  \n\t\n\t\n\t\n\t\n\t\n\t\\end{tikzpicture}    \n\\end{center}",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "b32b5029-21d4-4028-8941-b3b97efd3ec7",
+      "id": "0f3c5587-673a-4f11-9a16-83ec727bd469",
       "type": "question",
       "value": {
         "latex": "Inversement, déterminer un réseau de neurones qui permet de réaliser une fonction $G$ dont voici le graphe : \n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.0]\n\n\n\\draw[step=0.5,lightgray,very thin] (-4,-1) grid (4,3);\n\n\n\\draw[->] (-4,0) -- (4,0) node[right] {$x$};\n\\draw[->] (0,-1) -- (0,3.2) node[above] {$y$};\n\n\n\\foreach \\x in {-3,-2,-1,1,2,3} {\n\t\\draw (\\x,0.1) -- (\\x,-0.1) node[below] {\\x};\n}\n\\foreach \\y in {1,2,3} {\n\t\\draw (0.1,\\y) -- (-0.1,\\y) node[left] {\\y};\n}\n\n\n\\draw[ultra thick,red,domain=-2:0] plot (\\x,{\\x+2}) -- (0,2); \n\\draw[ultra thick,red,domain=0:2] plot (\\x,{-\\x+2}) -- (2,0); \n\\draw[ultra thick,red] (-3.8,0) -- (-2,0); \n\\draw[ultra thick,red] (2,0) -- (3.8,0);  \n\n\n\n\n\n\\end{tikzpicture}    \n\\end{center}",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "9a3844e8-8d4d-43ba-925d-2ed1f6798471",
+      "id": "d21ab453-9747-4b66-baf0-7fab25c1d8a7",
       "type": "indication",
       "value": {
         "latex": "",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "efbc25e1-e8d8-4d40-b973-7ca4e566200a",
+      "id": "af70dfb2-25e7-4fb7-8d9e-a86ff0b28759",
       "type": "reponse",
       "value": {
         "latex": "\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\\def\\layersep{2cm}\n\t\\tikzstyle{every pin edge}=[thick]\n\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\\tikzstyle{entree}=[];\n\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\n\t\n\t\n\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\n\t\n\t\n\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\n\t\n\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$ReLu$};\n\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$ReLu$};\n\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$ReLu$};\n\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$ReLu$};\n\t\n\t\n\t\n\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.6);\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-3) ;\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$-1$} (I-4);\n\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.6);\n\t\n\t\n\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\t\n\t\n\t\n\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-2$} ++ (-120:0.8) ;\n\t\n\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\n\t\n\t\\end{tikzpicture} \n\\end{center}",

@@ -2,18 +2,18 @@
   "uuid": "BGJz",
   "titre": "Densité et transformation affine",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:23.183Z",
+    "createdAt": "2024-12-17T17:05:06.312Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:23.183Z"
+    "updatedAt": "2024-12-17T17:05:06.312Z"
   },
   "contenu": [
     {
-      "id": "11a350d6-a67d-450f-a327-9c7481edac82",
+      "id": "91e8d34c-c060-40ce-b7a2-36adae5e29a4",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire absolument continue admettant pour densité $f$. Soit $(a,b) \\in \\mathbb{R}^2$ avec $a>0$ et $Y=aX+b$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9d81a967-4aa9-4979-b0a4-0259e27d88f5",
+      "id": "7ad04c7f-955f-40f1-a3b0-591de6118455",
       "type": "question",
       "value": {
         "latex": "Démontrer que $Y$ est une variable aléatoire absolument continue en exprimant sa densité en fonction de $f$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "31254593-ae3a-469b-a1d5-cdd4baf2d90a",
+      "id": "9e672df3-f185-469f-a0b3-67875ef89eea",
       "type": "reponse",
       "value": {
         "latex": "On utilise le théorème d'identification. La densité $f_Y$ de $Y$ est l'unique fonction telle que pour toute fonction $h$ continue bornée, on ait\n\t\\[ \\E(h(Y))=\\int_\\R h(y)f_Y(y)\\ dy.\\]\n\tOr, étant donné $h$, on a\n\t$$\\begin{align*}\n\t\t\\E(h(Y))&=\\E(h(aX+b)) \\\\\n\t\t&= \\int_\\R h(ax+b) f_X(x) \\ dx \\quad \\text{(par le théorème de transfert)} \\\\\n\t\t&= \\int_\\R h(y) f_X\\left(\\frac{y-b}{a}\\right) \\frac{1}{a} dy \\quad \\text{(par changement de variable } y=ax+b \\text{)}\n\t\\end{align*}$$\n\td'où son identification\n\t\\[ f_Y(y)=\\frac{1}{a}f_X\\left(\\frac{y-b}{a}\\right).\\]",

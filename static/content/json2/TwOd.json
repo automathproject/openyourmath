@@ -2,18 +2,19 @@
   "uuid": "TwOd",
   "titre": "Variance, covariance, indépendance dans un couple",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "loi conjointe"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:39.091Z",
+    "createdAt": "2024-12-17T19:48:01.358Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:39.091Z"
+    "updatedAt": "2024-12-17T19:48:01.358Z"
   },
   "contenu": [
     {
-      "id": "a409cc31-8206-4ee6-a85a-c89dd30fe400",
+      "id": "4c655d6b-d763-428b-88e0-359edab830fe",
       "type": "description",
       "value": {
         "latex": "Soit $a \\in \\mathbb{R}$ et $(X,Y)$ un couple de variables aléatoires admettant une densité $f$ définie par \n\t$$f(x,y)= a(x+y)  \\textbf{1}_{[0;1]}(x) \\textbf{1}_{[0;1]}(y)$$",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "ceb510d2-520b-4dcb-abd3-779c6ac806a6",
+      "id": "c5c6d1d2-642c-400c-935f-260182a93e60",
       "type": "question",
       "value": {
         "latex": "Déterminer $a$.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "5152bc3c-1cda-4a8c-9f9f-6fbf61710997",
+      "id": "64642fc9-9c80-4fcb-a8e0-71b63385f13a",
       "type": "reponse",
       "value": {
         "latex": "On calcule $\\int_0^1 \\int_0^1(x+y)dxdy = \\int_0^1 xdx\\int_0^1 dy + \\int_0^1 dx\\int_0^1 ydy = \\frac{1}{2} \\times 1 + 1 \\times \\frac{1}{2} = 1$ donc il faut $a=1$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "5df2906a-6c39-4597-8c90-9801ca25eae7",
+      "id": "871182cc-d48e-4f7d-b5a3-600b593decbe",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "5b364ce7-2daf-4411-805b-6447aacce23d",
+      "id": "30ee2a4e-2ad0-4938-b424-27ea107f6219",
       "type": "reponse",
       "value": {
         "latex": "On détermine les densités marginales $f_X$ et $f_Y$ à partir de la densité $f$ du couple de variables : \n\t\t$f_X(x) = \\int f(x,y)dy = 1_{[0;1]}(x)\\left[xy+\\frac{y^2}{2} \\right]_0^1 =  1_{[0;1]}(x) \\left(x+\\frac{1}{2}\\right)$. De même, $f_Y(y) = 1_{[0;1]}(y) \\left(y+\\frac{1}{2}\\right)$",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "66eabe00-7aaf-42b3-b3a0-7bb91bf00a7b",
+      "id": "5977ef14-82ff-4323-86f5-e13f831115de",
       "type": "question",
       "value": {
         "latex": "Calculer $\\mathbb{E}(X)$, $\\sigma^2(X)$, $\\mathbb{E}(Y)$, $\\sigma^2(Y)$, $cov(X,Y)$.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "578a8969-d7c4-4a49-a244-36486ede5087",
+      "id": "10248be7-2fd1-416f-82bb-37b939c56399",
       "type": "reponse",
       "value": {
         "latex": "On utilise les densités marginales : \n\t\t$\\mathbb{E}(X) = \\int xf_X(x)dx = \\int_0^1 \\left(x^2+\\frac{x}{2}\\right)dx = \\frac{7}{12}$. De même, $\\mathbb{E}(Y) = \\frac{7}{12}$. \n\t\t\n\t\t\n\t\t\n\t\t\n\t\tPar théorème de transfert, $\\mathbb{E}(X^2) = \\int x^2f_X(x)dx = \\int_0^1 x^3+ \\frac{x^2}{2} dx = \\frac{1}{4}+\\frac{1}{6} = \\frac{5}{12}$. De même, $\\mathbb{E}(Y^2)=\\frac{5}{12}$. \n\t\t\n\t\tOn peut ainsi calculer la variance $\\sigma^2(X)=\\mathbb{E}(X^2)-\\mathbb{E}(X)^2 = \\frac{11}{144}$ et $\\sigma^2(Y)=\\sigma^2(X)$.\n\t\t\n\t\tPour le calcul de la covariance, on calcule $\\mathbb{E}(XY)$ en appliquant le théorème de transfert sur la loi du couple $(X,Y)$ : $\\mathbb{E}(XY)=\\int_0^1 \\int_0^1xy(x+y)dxdy = \\int_0^1x^2dx \\int_0^1ydy + \\int_0^1xdx \\int_0^1y^2dy = \\frac{1}{3}$. Il vient $cov(X,Y) = \\mathbb{E}(XY)-\\mathbb{E}(X)\\mathbb{E}(Y) = \\frac{-1}{144}$.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "3d48aa07-5af9-4945-95d1-e95e1d145fe2",
+      "id": "6a44ba43-2b14-45dc-a0b5-23f9d1c5f093",
       "type": "question",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont-elles indépendantes ?",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "db7191f9-a6de-4ef6-9c9e-4fbe985cb86f",
+      "id": "d71f6ebf-2748-42df-b85c-50d5196f9cc0",
       "type": "reponse",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont donc corrélées, elles ne sont donc pas indépendantes. Cela se vérifie également en comparant le produit des densités marginales avec la densité du couple $(X,Y)$.",

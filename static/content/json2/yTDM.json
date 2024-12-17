@@ -2,18 +2,18 @@
   "uuid": "yTDM",
   "titre": "Changement de variable",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:38:09.125Z",
+    "createdAt": "2024-12-17T19:48:08.009Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:38:09.125Z"
+    "updatedAt": "2024-12-17T19:48:08.009Z"
   },
   "contenu": [
     {
-      "id": "618a2c54-1e72-47f8-ab8e-418accad8f43",
+      "id": "bdbecaf8-040a-48df-8095-8e4c18a0288b",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire absolument continue dont la densité est donnée par $$f(x)=\\frac{1}{2}\\textbf{1}_{[-1;1]}(x)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "e10b1f57-b08e-4e1e-86bd-e483f050cc05",
+      "id": "4cc2a8d5-e939-4929-967e-af15762bb37f",
       "type": "question",
       "value": {
         "latex": "On cherche à identifier la loi de $Y=X^2$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "1940817e-4b02-4272-9e3c-5f710b6630d5",
+      "id": "171c393c-1e52-4b43-9b6a-157599b31341",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}\n\t\t\\item pour tout $t$, $F_Y(t)= \\prob(X^2 \\leq t)$\n\t\t\\item si $t \\geq 0$, $\\{X^2 \\leq t\\} = \\{X \\in [-\\sqrt{t};\\sqrt{t}] \\}$ ; \\\\ si $t<0$ $\\{X^2 \\leq t\\} = \\emptyset$\n\t\t\\item donc pour tout $t \\geq 0$, $$F_Y(t) = \\prob(X \\in [-\\sqrt{t};\\sqrt{t}]) = \\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2}\\textbf{1}_{[-1;1]}(x) dx$$\n\t\tsi $0 \\leq t \\leq 1$ alors $F_Y(t)=\\int_{-\\sqrt{t}}^{+\\sqrt{t}} \\frac{1}{2} dx = \\sqrt{t}$ \\\\\n\t\tsi $t>1$ alors $F_Y(t)=\\int_{-1}^1 \\frac{1}{2} dx = 1$\n\t\t\\item pour tout $t \\in ]0;1[$, $F_Y$ est dérivable en $t$ et $F_Y'(t) = \\frac{1}{2} \\frac{1}{\\sqrt{t}}$ donc en intégrant, $F_Y(t) = \\int_{0}^{t}  \\frac{1}{2} \\frac{1}{\\sqrt{x}} dx$ de sorte que $F_Y(0)=0$ et $F_Y(1)=1$. \\\\\n\t\tPour résumer ces conditions, on peut écrire que pour tout $t \\in \\R $, \n\t\t$$F_Y(t) = \\int_{-\\infty}^t \\frac{1}{2} \\frac{1}{\\sqrt{x}} \\textbf{1}_{[0;1]}(x)dx$$\n\t\t\n\t\tOn en déduit que $Y$ admet pour densité la fonction $g \\colon x \\mapsto   \\frac{1}{2\\sqrt{x}} \\textbf{1}_{[0;1]}(x)$\n\\end{enumerate}",

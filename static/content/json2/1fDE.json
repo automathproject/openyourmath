@@ -2,18 +2,21 @@
   "uuid": "1fDE",
   "titre": "Approximation par une loi normale",
   "theme": [
-    "probabilités"
+    "probabilités conditionnelles",
+    "variables aléatoires",
+    "loi binomiale",
+    "loi normale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-12-05T15:37:14.124Z",
+    "createdAt": "2024-12-17T17:04:58.302Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:14.124Z"
+    "updatedAt": "2024-12-17T17:04:58.302Z"
   },
   "contenu": [
     {
-      "id": "cb1042b4-2fb7-4899-90bb-6df4d525f20d",
+      "id": "2576a02b-8b94-4e7e-9068-11511b34922b",
       "type": "description",
       "value": {
         "latex": "On effectue un contrôle sur des pièces de un euro dont une proportion $p=0.05$ est fausse et sur des pièces de deux euros dont une proportion $p'=0.02$ est fausse. On considère un lot de $500$ pièces dont $150$ pièces de un euro et $350$ pièces de deux euros.",
@@ -21,7 +24,7 @@
       }
     },
     {
-      "id": "e93d3a32-e375-4a84-8c76-dca04a568adc",
+      "id": "3e6cc49f-1d8e-46c8-87b2-c822e7d6d391",
       "type": "question",
       "value": {
         "latex": "On prend une pièce au hasard dans ce lot: quelle est la probabilité qu'elle soit fausse ?",
@@ -29,7 +32,7 @@
       }
     },
     {
-      "id": "7d48a0d6-f1d2-4a59-8c76-76b5d03fa1d8",
+      "id": "2291fe9e-a009-4675-9412-7220c29777ed",
       "type": "reponse",
       "value": {
         "latex": "On peut utiliser un arbre de probabilité pour modéliser la situation. En notant $F$ l'événement ``obtenir une pièce fausse'' et $A$ (resp. $B$) l'événement ``obtenir une pièce de un euro (resp. deux euros)'', on a\n\t\t\\[\\prob(F)=\\prob(F\\cap A)+\\prob(F\\cap B)=\\prob(A)\\prob(F|A)+\\prob(B)\\prob(F|B)=\\frac{150}{500}\\times 0.05+\\frac{350}{500}\\times 0.02=0.029.\\]\n\t\tOn a environ $2.9$\\% d'avoir une pièce fausse.",
@@ -37,7 +40,7 @@
       }
     },
     {
-      "id": "ac29e5e0-2203-4605-a039-84533f6d5094",
+      "id": "0c8815e8-be64-473d-aff8-5f1f6dbfd72d",
       "type": "question",
       "value": {
         "latex": "Sachant que cette pièce est fausse, quelle est la probabilité qu'elle soit de un euro ?",
@@ -45,7 +48,7 @@
       }
     },
     {
-      "id": "a360cebc-f94a-428c-ac2c-f2180977eddd",
+      "id": "08e6e50b-4a4c-4d2f-8bcf-67a2ef9d203b",
       "type": "reponse",
       "value": {
         "latex": "On calcule :\n\t\t\\[ \\prob(A|F)=\\frac{\\prob(A\\cap F)}{\\prob(F)}=\\frac{\\prob(A)\\prob(F|A)}{\\prob(F)}=\\frac{\\frac{150}{500}\\times 0.05}{0.029}=0.5172.\\]",
@@ -53,7 +56,7 @@
       }
     },
     {
-      "id": "cb2fc585-5d91-4bf7-a05c-a00570536df7",
+      "id": "01485041-b26b-4188-a228-6064106c693f",
       "type": "question",
       "value": {
         "latex": "On contrôle à présent un lot de $\\nombre{1000}$ pièces de un euro. Soit $X$ la variable aléatoire égale au nombre de pièces fausses parmi les $\\nombre{1000}$. \\\\\n\tQuelle est la loi de $X$ ? Quelle est son espérance ? Son écart-type ? \\\\\n\tEn approchant cette loi par celle d'une loi normale adaptée, donner une approximation de la probabilité pour que $X$ soit compris entre $48$ et $52$.",
@@ -61,7 +64,7 @@
       }
     },
     {
-      "id": "c4433b42-b742-4344-ac6d-c18e11afc6d6",
+      "id": "076cc451-a5c5-4dd0-bdab-5c646fd3f2c5",
       "type": "reponse",
       "value": {
         "latex": "On a: $X\\sim \\mathcal{B}(\\nombre{1000},0.05)$, $\\E(X)=\\nombre{1000}\\times 0.05=50$ et $\\sigma^2(X)=\\nombre{1000}\\times 0.05\\times 0.95=47.5$. \\\\\n\t\tLa \\va $X$ peut être approchée (avec correction de continuité) par la \\va $Y$ de loi $\\mathcal{N}(50,\\sigma^2=47.5)$. Ainsi, on a\n\t\t$$\\begin{align*}\n\t\t\\prob(48\\leq X\\leq 52)\n\t\t&= \\prob(47.5\\leq X\\leq 52.5) \\\\\n\t\t&\\simeq \\prob(47.5\\leq Y\\leq 52.5) \\\\\n\t\t& \\simeq \\prob(-0.36 \\leq Z \\leq 0.36) \\quad \\text{ avec } Z=\\frac{Y-50}{\\sqrt{47.5}} \\sim \\mathcal{N}(0,1) \\\\\n\t\t&\\simeq 2\\prob(Z\\leq 0.36)-1 \\\\\n\t\t& \\simeq 2\\times 0.6406 - 1\\\\\n\t\t1\\simeq 0.2812\n\t\t\\end{align*}$$",

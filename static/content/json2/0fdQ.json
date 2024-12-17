@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "Rachel ABABOU",
-    "createdAt": "2024-12-17T10:44:29.223Z",
+    "createdAt": "2024-12-17T17:04:57.730Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-17T10:44:29.223Z"
+    "updatedAt": "2024-12-17T17:04:57.730Z"
   },
   "contenu": [
     {
-      "id": "e3e522f8-cecc-4fe4-96ec-76a171261724",
+      "id": "fb4f7b7c-edfa-4738-bdef-e55ea7ccab81",
       "type": "description",
       "value": {
         "latex": "On considère le réseau de neurones à deux couches suivant où la fonction d'activation de la première couche est $\\sigma \\colon x \\mapsto \\frac{1}{1+e^{-x}}$ et la fonction d'activation de la seconde couche est $id \\colon x \\mapsto x$. \n\t\n\t\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-1.5) {$y$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\n\t\t\\node[input neuron] (I-3) at (0,-2) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$\\sigma$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\sigma$};\n\t\t\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$id$};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$\\omega_1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.7,above left,scale=0.7]{$\\omega_3$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$a$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above right,scale=0.7]{$\\omega_2$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$\\omega_4$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$b$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$\\omega_5$} (O);\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$\\omega_6$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$c$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y,a,b,c,\\omega_1,\\cdots,\\omega_6)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}   \n\\end{center}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "64443fa2-10e0-4a4d-87ce-fb57092d6189",
+      "id": "4f751ccd-aad7-46ea-a0ba-e4f62779fd25",
       "type": "question",
       "value": {
         "latex": "Exprimer la sortie de la première couche en fonction de $x,y,a,b,\\omega_1,\\cdots,\\omega_4$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "ad34e520-858f-4ecd-b19c-307ba957070f",
+      "id": "2982d87f-2101-4ceb-8047-fe0151337745",
       "type": "question",
       "value": {
         "latex": "Donner une expression de la sortie $F(x,y,a,b,c,\\omega_1,\\cdots,\\omega_6)$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "974e943a-c29b-457c-bdad-a477b6b133ea",
+      "id": "c911b268-78d1-4c75-876d-4c6db6d1c839",
       "type": "question",
       "value": {
         "latex": "Exprimer la dérivée $\\sigma'$ en fonction de $\\sigma$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "aaca1012-3180-4d37-b4f9-5bb8fbc970d3",
+      "id": "15f1abc2-2a22-4dfa-810e-51e763ff48e5",
       "type": "question",
       "value": {
         "latex": "Déterminer les dérivées partielles $\\frac{\\partial F}{\\partial \\omega_5}$ et $\\frac{\\partial F}{\\partial \\omega_6}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "c14f07a5-cfcb-4657-988a-aa36620ca8a1",
+      "id": "ec3333cc-dded-454d-a4dd-eabfa7ce316a",
       "type": "question",
       "value": {
         "latex": "Exprimer $\\frac{\\partial F}{\\partial a}$ en fonction de $\\frac{\\partial F}{\\partial \\omega_5}$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a5a06a82-a048-4dbe-bcd4-bee2cbf8e5fe",
+      "id": "ebe24745-c9d3-4a48-a238-14d394aeb84c",
       "type": "question",
       "value": {
         "latex": "On considère l'entrée suivante : \n\t$$(x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)$$\n\tLes poids initiaux sont : \n\t$$W_{init} = (a,b,\\omega_1,\\cdots,\\omega_6) = (0.35, 0.5, 0.15, 0.2, 0.25, 0.3, 0.4, 0.45)$$\n\tLa sortie obtenue est $F_{\\circ} = 1.006117$.\n\t\n\tOn considère la donnée d'apprentissage : $((x,y),t) = \\left(\\left(0{,}05 \\, ; \\, 0{,}10\\right), 0.99 \\right)$. L'erreur quadratique est : \n\t$$E_{\\circ} = (0.99 - 1.006117)^2 = 0.00026$$\n\tCalculer le gradient de $F$ puis le gradient de $E$ pour $W_{init}$ avec l'entrée $(x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "d90cb9f9-9acb-44ec-b905-845f796821b4",
+      "id": "2e96e5ac-b10e-4106-ab8e-429fa5312673",
       "type": "question",
       "value": {
         "latex": "En utilisant la méthode du gradient à pas constant $\\delta = 0.1$, réaliser un apprentissage de ce réseau en déterminant les nouveaux poids $W_{new}$.",

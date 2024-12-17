@@ -2,18 +2,19 @@
   "uuid": "gl15",
   "titre": "Estimation par inégalité",
   "theme": [
-    "probabilités"
+    "loi binomiale",
+    "approximation de loi"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:51.952Z",
+    "createdAt": "2024-12-17T17:05:20.534Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:51.952Z"
+    "updatedAt": "2024-12-17T17:05:20.534Z"
   },
   "contenu": [
     {
-      "id": "819950f3-0072-4895-8ebc-208f51a8d111",
+      "id": "bb3b0000-c05e-4291-9968-a41267b24b72",
       "type": "description",
       "value": {
         "latex": "Une population de personnes doit voter à l'élection présidentielle. La proportion souhaitant voter pour la candidate Mme A. est inconnue, on la note $p$. Pour approcher cette valeur, on effectue un sondage sur $n$ personnes : l'échantillon est modélisé par une suite de variables aléatoires indépendantes $(X_1,...,X_n)$ suivant chacune une loi de Bernoulli de paramètre $p$ ($X_i=1$ si le $i$-ème individu souhaite voter pour Mme A., $X_i=0$ sinon). \n\nOn note $S_n=\\sum_{i=1}^n X_i$ de sorte que $\\frac{S_n}{n}$ représente la proportion de personnes votant pour Mme A. dans l'échantillon.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "3bd6403c-fac4-41ad-b279-13c69241e21b",
+      "id": "ad4d6b31-8bb9-4875-983f-53a9f8858f91",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par $S_n$ ?",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "f7016e6a-8dfc-44c2-8773-f4df3d341afb",
+      "id": "83a6fe23-d599-450b-be45-ae1daf0c9996",
       "type": "reponse",
       "value": {
         "latex": "$S_n$ suit une loi binomiale $\\mathcal{B}(n,p)$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "e8ad95c4-b03d-4bda-93fd-5da31f2643eb",
+      "id": "bc9643be-5ba1-4f20-aea6-28b02e31429c",
       "type": "question",
       "value": {
         "latex": "Déterminer l'espérance et la variance de $\\frac{S_n}{n}$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "9e6f1c68-63fc-4481-a163-f723327c42ed",
+      "id": "2184cf49-2c0d-4e74-bff0-9c435ec8956c",
       "type": "reponse",
       "value": {
         "latex": "On en déduit que $\\mathbb{E}(S_n)=np$ et $V(S_n)=np(1-p)$. D'après les propriétés de l'espérance et de la variance, on en déduit que $\\mathbb{E}\\left(\\frac{S_n}{n}\\right)=p$ et $V\\left(\\frac{S_n}{n}\\right)=\\frac{p(1-p)}{n}$.",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "e946927f-e7b6-4fc3-8271-bc068475d452",
+      "id": "066a5ed7-1d2d-4da6-b31b-aae01eb4c444",
       "type": "question",
       "value": {
         "latex": "Soit $\\varepsilon >0$. Démontrer que \n\t$$\\PP\\left(\\left| \\frac{S_n}{n}-p \\right| > \\varepsilon \\right) \\leq \\frac{1}{4n\\varepsilon^2}$$",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "a8abc1dc-7bdf-4b89-be9f-65940ec3bf4c",
+      "id": "96fd2fbf-99a3-4df4-ac71-3da9a74e7bba",
       "type": "reponse",
       "value": {
         "latex": "D'après l'inégalité de Bienaymé-Tchebychev, \n\t$$\\PP\\left(\\left| \\frac{S_n}{n}-p \\right| > \\varepsilon \\right) \\leq \\frac{p(1-p)}{n\\varepsilon^2}$$\n\tet on conclut en remarquant que $p(1-p) \\leq \\frac{1}{4}$.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "fed90dc5-5e82-44b7-b609-07fa9e33a8c5",
+      "id": "3952261d-a013-411f-8291-4d94bfb0f61d",
       "type": "question",
       "value": {
         "latex": "Comment choisir la taille de l'échantillon de sorte que le résultat du sondage soit proche de $p$ à $\\varepsilon=0.05$ près avec une probabilité supérieure à $95\\%$ ?",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "af35e9c6-fd1c-4ae6-b6ab-f99f292ef7a6",
+      "id": "8d85d91d-2f9b-45a8-bc92-4b5d5c0310ba",
       "type": "reponse",
       "value": {
         "latex": "Il faut choisir $n$ tel que $\\frac{1}{4} n \\varepsilon^2 \\leq 0.05$, on peut prendre $n=2000$.",

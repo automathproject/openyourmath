@@ -2,18 +2,20 @@
   "uuid": "4iSJ",
   "titre": "Qualité d'un algorithme",
   "theme": [
-    "statistiques"
+    "statistiques",
+    "estimateurs",
+    "tests d'hypothèses"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:16.343Z",
+    "createdAt": "2024-12-17T17:05:00.280Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:16.343Z"
+    "updatedAt": "2024-12-17T17:05:00.280Z"
   },
   "contenu": [
     {
-      "id": "b0adb734-410e-4a5e-b592-4d2c010fb329",
+      "id": "89df3d66-8f7d-4a16-8839-ea22d6bd8b71",
       "type": "description",
       "value": {
         "latex": "On souhaite quantifier la qualité d'un algorithme de classification d'images. \n\n\n\n\n\n\n\n\n\nL'algorithme ne retourne pas une catégorie à partir d'une image $i$, mais seulement une grandeur $G_i$ qui permet de déterminer la classe la plus probable. On note $X_i$ l'erreur commise par l'algorithme pour la valeur $G_i$. \n\nOn suppose que $X_i$ suit une loi normale centrée de variance $\\sigma^2$.",
@@ -21,7 +23,7 @@
       }
     },
     {
-      "id": "efc7cb05-1cb2-44d3-8c50-71f1663ee4a5",
+      "id": "b70701c0-3eec-4833-8228-c6cdfbc09b9a",
       "type": "description",
       "value": {
         "latex": "Sur un premier échantillon de 25 images, on obtient une erreur moyenne de $0{,}01$ calculée avec l'estimateur de moyenne empirique et une variance de 0{,}25 calculée avec l'estimateur $\\tilde{S}^2=\\frac{1}{n}\\sum_{i=1}^n (X_i-\\overline{X})^2$.",
@@ -29,7 +31,7 @@
       }
     },
     {
-      "id": "7216fdd5-7916-483c-868e-c37a4b6b31ce",
+      "id": "4f0703ce-507c-4242-91a0-21ab129b0f32",
       "type": "question",
       "value": {
         "latex": "Donner une estimation non biaisée de $\\sigma^2$.",
@@ -37,7 +39,7 @@
       }
     },
     {
-      "id": "0901a0a8-39ce-456a-bda4-9f1ee933e4a3",
+      "id": "0fd35a33-f1b1-4731-bf43-8497898522f0",
       "type": "question",
       "value": {
         "latex": "Avec un risque d'erreur de $10\\%$, peut-on remettre en cause l'hypothèse que l'espérance de $X_i$ est nulle ?",
@@ -45,7 +47,7 @@
       }
     },
     {
-      "id": "c4975b09-669d-45a2-a818-7fd1de798c15",
+      "id": "3d57b495-2812-4052-9e4b-2217ca95673d",
       "type": "description",
       "value": {
         "latex": "Pour étudier la stabilité de l'algorithme par rapport au bruitage des images, on étudie un second échantillon de $25$ images bruitées. On obtient avec les mêmes estimateurs que précédemment une erreur empirique de $0{,}012$ et une variance de $0{,}50$.",
@@ -53,7 +55,7 @@
       }
     },
     {
-      "id": "6de73f4b-39c9-4e9b-8273-9b21ffc2d859",
+      "id": "ea5864dc-3558-4c49-a47e-5d48c31fb365",
       "type": "question",
       "value": {
         "latex": "Donner une estimation non biaisée $\\sigma^2$ à partir de cet échantillon.",
@@ -61,7 +63,7 @@
       }
     },
     {
-      "id": "d273fcdf-c8d1-4a24-a84c-7a8669c8d46e",
+      "id": "979e2539-2afc-4821-891b-97f8f2f3aac1",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de la variable $\\frac{n}{\\sigma^2}\\tilde{S}^2$ puis de $\\frac{n-1}{\\sigma^2}{S}^2$ où $S^2$ est l'estimateur de variance non biaisé pour un échantillon de taille $n$.",
@@ -69,7 +71,7 @@
       }
     },
     {
-      "id": "b610c25d-79a8-484f-94e3-50afdcf943d7",
+      "id": "4e9264e7-a859-454e-9d9e-257e520ea66a",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de la variable $\\frac{S_2^2}{S_1^2}$ où $S_i^2$ est l'estimateur de variance non biaisé de l'échantillon $i \\in \\{1;2\\}$.",
@@ -77,7 +79,7 @@
       }
     },
     {
-      "id": "c57cd811-e5a7-42e9-809e-08fb54ef6bc9",
+      "id": "28af401c-9e69-4860-9f15-015c1fb8a09e",
       "type": "question",
       "value": {
         "latex": "En considérant le quotient de la plus grande variance par la plus petite, construire et mettre en oeuvre un test d'hypothèse permettant de dire si la variance obtenue dans l'échantillon 2 et significativement plus élevée que celle de l'échantillon 1.",

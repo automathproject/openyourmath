@@ -2,18 +2,19 @@
   "uuid": "WCGV",
   "titre": "Fiabilité",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes",
+    "loi binomiale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:40.359Z",
+    "createdAt": "2024-12-17T19:48:02.063Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:40.359Z"
+    "updatedAt": "2024-12-17T19:48:02.063Z"
   },
   "contenu": [
     {
-      "id": "26c99f79-6c64-4291-8eb2-03c847c0958e",
+      "id": "49de7643-1db1-4fce-86b6-68fdb2014fe5",
       "type": "description",
       "value": {
         "latex": "Une usine produit des circuits imprimés dont $1$\\% sont défectueux.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "0feeb046-762f-4c36-9150-3226224fcd88",
+      "id": "e8dfa2e0-0be3-4ef9-86dc-ce4e0b2015d3",
       "type": "question",
       "value": {
         "latex": "On fait un prélèvement de $100$ circuits imprimés. Quelle est la probabilité qu'il n'y ait pas de circuit imprimé défectueux dans ce prélèvement ?",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "93cbbf9f-4378-4f40-b6be-71251263c619",
+      "id": "c0d3c998-0a20-46c2-b8c7-5a5b594699d5",
       "type": "reponse",
       "value": {
         "latex": "Soit $X$ le nombre de circuits défectueux dans ce prélèvement.\n\t\tAlors $X\\sim \\mathcal{B}(100,0.01)$. La probabilité qu'il n'y ait pas de circuit défectueux est:\n\t\t\\[ \\prob(X=0)=\\binom{100}{0}\\times 0.01^{0}\\times 0.99^{100}=0.99^{100} \\simeq 0.366.\\]",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "c148bf28-0ff9-4bcc-85f3-17c1421041b4",
+      "id": "9ddf7bd8-5921-4456-be95-637501cee341",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité qu'il y ait deux circuits imprimés défectueux dans un prélèvement de $100$ circuits imprimés ?",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "e8b5dba4-d9b1-449d-8fd5-ea228add9d15",
+      "id": "d2e45cb9-dd33-4df7-9aa3-b6f691b2b734",
       "type": "reponse",
       "value": {
         "latex": "$\\prob(X=2)=\\binom{100}{2}\\times 0.01^{2}\\times 0.99^{98}\\simeq 0.185$",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "762a4775-268b-4f9d-a169-968544b74bfb",
+      "id": "da087fdb-1259-4aa9-b653-1cde5f5b53c6",
       "type": "question",
       "value": {
         "latex": "On prélève les circuits imprimés un par un et on les teste immédiatement. Quelle est la probabilité que le premier circuit imprimé défectueux apparaisse au $100$\\up{ème} tirage ?",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "45de48b1-db03-44c6-857f-5b6767a393f5",
+      "id": "c6107c8b-f0b0-41c6-822b-456a73decd18",
       "type": "reponse",
       "value": {
         "latex": "Soit $Y$ le rang du premier circuit imprimé défectueux. Alors $Y\\sim \\mathcal{G}(0.01)$ et on a:\n\t\t\\[ \\prob(Y=100)=0.99^{99}\\times 0.01 \\simeq 0.0037,\\]\n\t\tsoit environ $0.37$\\% de chance de rencontrer le premier circuit défectueux au dernier tirage.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "3be5ef10-1075-4c18-b4d4-34ea724704fe",
+      "id": "0a932f93-4c54-437a-af34-cbbd672aa368",
       "type": "question",
       "value": {
         "latex": "Sur $N=10\\ 000$ circuits imprimés en stock dont $d=100$ sont défectueux, on en choisit $500$. Quelle est la probabilité que sur les $500$ prélevés il y en ait cinq défectueux ?",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "c77f8363-aaf1-48fe-94ee-c5115c045083",
+      "id": "3479f9d1-2bda-4224-a9c5-6f056c1b3d53",
       "type": "reponse",
       "value": {
         "latex": "Soit $Z$ le nombre de circuits défectueux sur les $500$ prélevés. Alors $Z\\sim \\mathcal{H}(500,0.01,10\\ 000)$ et on a\n\t\t\\[ \\prob(Z=5)=\\frac{\\binom{100}{5}\\binom{9900}{495}}{\\binom{10\\ 000}{500}}.\n\t\t\\]\n\t\tQuand le paramètre $N$ est grand (dans les faits, quand $\\frac n N < 0,1$), on peut approcher une loi hypergéométrique $\\mathcal{H}(n,p,N)$ par une loi binomiale $\\mathcal{B}(n,p)$. Ici, on obtient une approximation de $\\prob(X=5)$ par $\\binom{500}{5}\\times 0.01^5 \\times 0.99^{495} \\simeq 0.18$.",

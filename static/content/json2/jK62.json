@@ -2,18 +2,19 @@
   "uuid": "jK62",
   "titre": "Jeu de boules",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes",
+    "loi binomiale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:54.883Z",
+    "createdAt": "2024-12-17T17:05:22.607Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:54.883Z"
+    "updatedAt": "2024-12-17T17:05:22.607Z"
   },
   "contenu": [
     {
-      "id": "8c674e6c-71ea-42b5-a065-47b6ce2bf90c",
+      "id": "b1d5033e-aa79-4520-901c-57445f3a78ab",
       "type": "description",
       "value": {
         "latex": "On tire $4$ boules avec remise dans une urne contenant des boules numérotées de $1$ à $5$. On dit que $i\\in{1,2,3,4,5}$ est une valeur gagnante si la boule numéro $i$ est tirée au moins une fois.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "fa258ea2-6eda-4681-a205-93bf61001b44",
+      "id": "d0e5520f-40a8-475a-8643-cf7ae7dedc2c",
       "type": "question",
       "value": {
         "latex": "Pour $i=1,...,5$, soit $X_i$ la variable aléatoire qui est égale à $1$ si le numéro $i$ est une valeur gagnante, et $0$ sinon. Trouver $\\prob(X_i=0)$. Déterminer la loi, l'espérance et la variance de $X_i$ pour $i=1,...,5$.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "4078a70c-f5f4-491f-8097-c64796230d61",
+      "id": "da81d59c-52a8-41b9-bb30-2efce54d7658",
       "type": "reponse",
       "value": {
         "latex": "On a \\qquad $X_i=\\begin{cases} 1 & \\text{ si } i \\text{ valeur gagnante} \\\\\n\t\t0 & \\text{ sinon}\n\t\t\\end{cases}$ \\qquad \n\t\tdonc \n\t\t\\[ \\prob(X_i=0)=\\prob(\\text{''La boule numérotée $i$ n'a jamais été tirée``})=\\left(\\frac{4}{5}\\right)^4.\\]\n\t\tComme $X_i$ ne peut prendre que deux valeurs: $0$ ou $1$, on en déduit:\n\t\t\\[ \\prob(X_i=1)=1-\\prob(X_i=0)=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625},\\]\n\t\tce qui revient à dire que $X_i\\sim \\mathcal{B}\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)$. Ainsi, on a\n\t\t$$\\begin{align*}\n\t\t\\E(X_i)&=1-\\left(\\frac{4}{5}\\right)^4=\\frac{369}{625}, \\\\\n\t\t\\V(X_i)&=\\left(1-\\left(\\frac{4}{5}\\right)^4\\right)\\times \\left(\\frac{4}{5}\\right)^4=\\frac{94\\ 464}{390\\ 625}.\n\t\t\\end{align*}$$",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "ac7e99bf-80ec-43c5-a3b8-832891c92b83",
+      "id": "c976de35-81b4-4787-ab23-ef5e332f8c58",
       "type": "question",
       "value": {
         "latex": "Calculer $\\prob((X_1=0)\\cap(X_2=0))$. Les variables aléatoires $X_1$ et $X_2$ sont-elles indépendantes ?",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "2b714cbf-ed85-4a25-98c8-54b80286a205",
+      "id": "eb70fb4d-7446-49c9-afad-f9fc74a0053e",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\\prob((X_1=0)\\cap(X_2=0))&=\\prob(\\text{''Les boules numérotées $1$ et $2$ n'ont jamais été tirées``}) \\\\\n\t\t&= \\left(\\frac{3}{5}\\right)^4=\\frac{81}{625}\n\t\t\\end{align*}$$\n\t\tor $\\prob(X_1=0)\\prob(X_2=0)=\\left(\\frac{4}{5}\\right)^4 \\times \\left(\\frac{4}{5}\\right)^4$ donc $\\prob((X_1=0)\\cap(X_2=0)) \\neq \\prob(X_1=0)\\prob(X_2=0)$. On en conclut que les variables $X_1$ et $X_2$ ne sont pas indépendantes.",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "036ffe49-d493-4682-9fe2-759d944e0840",
+      "id": "2d577c54-1228-42d3-b4c2-82c4325cbaab",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi jointe de $(X_1,X_2)$.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "2f3eb438-d66c-483b-a3e3-b33ab219ee7f",
+      "id": "c65500e9-7b4c-47b5-8265-871676c17a9b",
       "type": "reponse",
       "value": {
         "latex": "\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c||c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $0$ & $1$ & $\\prob_{X_2}$ (loi de $X_2$)  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$0$ & $\\frac{81}{625}$ & $\\frac{175}{625}$ & $\\frac{256}{625}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $\\frac{175}{625}$ & $\\frac{194}{625}$ & $\\frac{369}{625}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t\\hline\n\t\t\t\t$\\prob_{X_1}$ (loi de $X_1$) & $\\frac{256}{625}$ & $\\frac{369}{625}$ & $1$  \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "6a48e286-a74a-4cca-b1cb-0b69d5bd96a2",
+      "id": "5e4a412e-9089-4175-ac4b-8afbeeba104b",
       "type": "question",
       "value": {
         "latex": "Soit $X$ la variable aléatoire égale au nombre de valeurs gagnantes. Exprimer $X$ en fonction de $X_1$,...,$X_5$. Déterminer l'espérance de $X$.",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "3e40d1d6-1e07-45d6-8e71-430a62d7a5c5",
+      "id": "71bd595a-3169-45c2-b4cb-c2a40a539ffe",
       "type": "reponse",
       "value": {
         "latex": "On a $X=X_1+X_2+X_3+X_4+X_5$. Comme les variables aléatoires $X_i$ sont de même loi, on obtient\n\t\t\\[ \\E(X)=\\sum_{i=1}^5 \\E(X_i)=5\\E(X_1)=5\\times \\frac{369}{625}=\\frac{369}{125}\\simeq 2.95.\\]\n\t\tEn moyenne, on aura quasiment $3$ valeurs gagnantes par jeu.",

@@ -2,18 +2,20 @@
   "uuid": "7otE",
   "titre": "Estimation pour un référendum",
   "theme": [
-    "statistiques"
+    "statistiques",
+    "estimateurs",
+    "intervalles de confiance"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:20.396Z",
+    "createdAt": "2024-12-17T17:05:03.900Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:20.396Z"
+    "updatedAt": "2024-12-17T17:05:03.900Z"
   },
   "contenu": [
     {
-      "id": "4ab26261-10e2-42c1-9043-97b1f19739f4",
+      "id": "59717e93-f15d-48bb-a6af-60790ad10ae7",
       "type": "description",
       "value": {
         "latex": "Lors d'un référendum, un sondage aléatoire simple avec remise pratiqué sur $1000$ personnes a\ndonné $55\\%$ pour le << Oui >> et $45\\%$ pour le << Non >>.",
@@ -21,7 +23,7 @@
       }
     },
     {
-      "id": "b312cba2-4806-4c2b-b9fb-fcaffca2e17b",
+      "id": "966d27e7-f92c-4269-bb05-180253e44054",
       "type": "question",
       "value": {
         "latex": "Est-il plus précis de faire un sondage sur $1000$ personnes dans une population de $1$ million de personnes ou un sondage sur $2000$ personnes dans une population de $10$ millions de personnes ? Justifier.",
@@ -29,7 +31,7 @@
       }
     },
     {
-      "id": "c76db26f-5f4d-4bb9-8136-eec7acb114b1",
+      "id": "405800dc-1fba-4ef2-9f64-429aed39c5ce",
       "type": "reponse",
       "value": {
         "latex": "La taille de la population n'infuence pas le résultat de l'estimation. Mais plus la taille de l'échantillon est importante, plus le sondage est précis. Il vaut donc mieux faire un sondage sur 2000 personnes que sur 1000 personnnes.",
@@ -37,7 +39,7 @@
       }
     },
     {
-      "id": "ab994b4e-073c-40c8-9d33-0de8cbcb7d89",
+      "id": "c98f9e73-d6bb-4590-96d5-5c5432a894b8",
       "type": "question",
       "value": {
         "latex": "Concernant le référendum cité ci-dessus, déterminer un intervalle contenant le pourcentage de << Oui >> avec une probabilité de $0{,}95$.",
@@ -45,7 +47,7 @@
       }
     },
     {
-      "id": "80408d8f-9cb0-41a8-b97f-55294f1f8f1d",
+      "id": "b32b805d-5429-44c7-a298-69c07652234d",
       "type": "reponse",
       "value": {
         "latex": "On cherche à estimer une fréquence à partir d'un échantillon de taille $1000$. La fréquence observée dans l'échantillon est $f_{obs} = \\frac{55}{100}$. On peut donc utiliser la formule du cours : \n\t\t$$I_{conf}(F(\\omega))=\\left[f_{obs}-u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} ~;~ f_{obs} + u_{\\alpha/2} \\sqrt{\\frac{f_{obs}(1-f_{obs})}{n}} \\right]$$\n\t\ten remplaçant $u_{\\alpha/2}$ par $1{,}96$ pour une confiance de $95\\%$, on obtient numériquement $I_{conf} \\approx [0.519 ; 0.581]$. \n\nEn remplaçant $u_{\\alpha/2}$ par $2{,}5758$ pour une confiance de $99\\%$, on obtient numériquement $I_{conf} \\approx [0.509 ; 0.591]$.",
@@ -53,7 +55,7 @@
       }
     },
     {
-      "id": "f7b8dfa2-7fa3-48c7-ba3d-c51bd216229a",
+      "id": "026e7e43-3fcd-49a6-b1cb-60fbd2b0208f",
       "type": "question",
       "value": {
         "latex": "Peut-on considérer, avec une confiance de $95\\%$, que le << Oui >> l'emporte ? La réponse est-elle\n\tla même avec un niveau de confiance de $99\\%$ ? \\`A partir de quel niveau de confiance peut-on commencer à douter que le << Oui >> l'emporte ?",
@@ -61,7 +63,7 @@
       }
     },
     {
-      "id": "4ce23db4-7ff5-48a2-87cb-6e8748539a66",
+      "id": "0241b24a-5d38-4692-89e7-1226ec833ffe",
       "type": "reponse",
       "value": {
         "latex": "La réponse est oui car dans chacun des cas, l'intervalle de confiance se situe au dessus de $50\\%$. Il faudrait dépasser $99,8\\%$ de confiance pour pouvoir commencer à mettre en doute que le << Oui >> l'emporte.",
@@ -69,7 +71,7 @@
       }
     },
     {
-      "id": "d0f74a0d-ce32-40ae-940c-9ea0e5972a89",
+      "id": "1f1ffa20-1814-4fe3-ac66-f17dd951f169",
       "type": "question",
       "value": {
         "latex": "Si, pour un référendum, on sait que << oui >> se situe autour de $50\\%$, combien de personnes\n\tfaudrait-il interroger pour que la proportion de << Oui >> soit connue à $1\\%$ près (en plus ou en moins), avec un niveau de confiance de $0{,}95$ ?",
@@ -77,7 +79,7 @@
       }
     },
     {
-      "id": "d94cfc9f-6cbb-4bfa-8c1f-1a45825567c2",
+      "id": "a0add6da-5a08-4e26-b8ab-2e65fe1c7c4a",
       "type": "reponse",
       "value": {
         "latex": "La longueur de l'intervalle de confiance est de l'ordre de $\\frac{1}{\\sqrt{n}}$ où $n$ est la taille de l'échantillon. Pour avoir $\\frac{1}{\\sqrt{n}} < 0{,}01$, il faut $n > 10\\,000$.",

@@ -1,19 +1,19 @@
 {
   "uuid": "NIYa",
-  "titre": "Loi d'un min ou max, question de cours",
+  "titre": "Loi d'un min ou max",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:34.345Z",
+    "createdAt": "2024-12-17T17:05:12.373Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:34.345Z"
+    "updatedAt": "2024-12-17T17:05:12.373Z"
   },
   "contenu": [
     {
-      "id": "36f129cd-d157-4328-968a-da781274eba2",
+      "id": "c995f56f-d854-4418-9731-f9686ee2649e",
       "type": "description",
       "value": {
         "latex": "Soit $X_1,..,X_n$ des variables aléatoires indépendantes suivant chacune une même loi exponentielle $\\mathcal{E}(\\lambda)$ de paramètre $\\lambda>0$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "f4a707d7-9801-4521-ae38-9c5f49a38769",
+      "id": "184f6330-7886-4ab6-b52a-0f9923a30401",
       "type": "question",
       "value": {
         "latex": "Calculer la fonction de répartition de la variable $\\max(X_1,...,X_n)$ et en déduire la loi de cette variable aléatoire.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "5232f7b4-eac9-46f0-ac4c-9b2dc9b9209d",
+      "id": "48653bce-1b2c-4944-a122-585f2c16d72b",
       "type": "reponse",
       "value": {
         "latex": "On note $V=\\max(X_1,...,X_n)$. On sait que $\\PP(V \\leq t) = \\PP((X_1 \\leq t) \\cap ... \\cap (X_n \\leq t))$ et par indépendance des variables qui suivent chacune une même loi, on en déduit que \n\t\t$$\\PP(V \\leq t) = \\PP(X_1 \\leq t)^n = \\begin{cases}\n\t\t\t(1-e^{-\\lambda t})^n & \\text{ si } t \\geq 0 \\\\\n\t\t\t0 & \\text{ sinon}\n\t\t\\end{cases} $$\n\t\tOn obtient ainsi la fonction de répartition de $V$. La densité de $V$ s'obtient en dérivant cette fonction.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "84d78cb0-8532-427c-83d6-35c14b735806",
+      "id": "c6b87439-464b-40fa-abaa-d7615a71e8fa",
       "type": "question",
       "value": {
         "latex": "Calculer la loi de la variable $\\min(X_1,...,X_n)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "200a7769-9f0a-4d1c-9a9d-ae908bf7b25c",
+      "id": "0a9306cf-1aeb-4f03-8e91-35031ec018a6",
       "type": "reponse",
       "value": {
         "latex": "On note $U= \\min(X_1,...,X_n)$. On sait que $\\PP(U \\geq t) = \\PP((X_1 \\geq t) \\cap ... \\cap (X_n \\geq t))$ et par indépendance des variables qui suivent chacune une même loi, on en déduit que \n\t\t$$\\PP(U \\geq t) = \\PP(X_1 \\geq t)^n = \\begin{cases}\n\t\t\te^{-\\lambda nt} & \\text{ si } t \\geq 0 \\\\\n\t\t\t1 & \\text{ sinon}\n\t\t\\end{cases} $$\n\t\tOn en déduit que la fonction de répartition de $U$ est la fonction \n\t\t$$ t \\mapsto \\begin{cases}\n\t\t\t1 - e^{-\\lambda nt} & \\text{ si } t \\geq 0 \\\\\n\t\t\t0 & \\text{ sinon}\n\t\t\\end{cases} $$\n\t\tUne fonction densité de $U$ s'obtient en dérivant cette fonction de répartition.",

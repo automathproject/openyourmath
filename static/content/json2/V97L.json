@@ -2,18 +2,18 @@
   "uuid": "V97L",
   "titre": "Étude d'un gain",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:39.798Z",
+    "createdAt": "2024-12-17T19:48:01.730Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:39.798Z"
+    "updatedAt": "2024-12-17T19:48:01.730Z"
   },
   "contenu": [
     {
-      "id": "371aa1c9-f8e8-4ce3-97e4-c32b6148e14b",
+      "id": "6e4f8f19-b129-4e10-bb3d-9c643754a145",
       "type": "description",
       "value": {
         "latex": "On lance un dé équilibré. On gagne 1 euro si le résultat est pair, on pert 1 euro si le résultat est impair. Ŝoit $n \\geq 1$ le nombre de parties. On note $X$ le nombre le nombre de lancers pairs obtenus au bout de $n$ parties et $G$ le gain obtenu au bout de $n$ parties.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "e15b83b8-19cd-42d2-9d8d-830b32040fdc",
+      "id": "85bfe79c-13e7-48fc-8426-b4803062c47b",
       "type": "question",
       "value": {
         "latex": "Donner la loi de $X$, son espérance et sa variance.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d73457eb-b705-4263-b0cf-e3413fa9b43f",
+      "id": "bedc656b-05b1-40d7-a91b-4cad2dee2a5d",
       "type": "reponse",
       "value": {
         "latex": "La variable aléatoire $X$ donne le nombre de succès à l'issue de $n$ expériences indépendantes de Bernoulli où le succès est l'obtention d'un résultat pair, de probabilité $p=0.5$. On a donc $X\\sim\\mathcal{B}(n,0.5)$, $\\E(X) = n\\times0.5 = \\frac{n}{2}$ et $\\V(X) = n\\times0.5\\times0.5 = \\frac{n}{4}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "69b80477-047f-4708-b289-0ee4c81f66ff",
+      "id": "6c5fbc7f-e0d8-4edb-b327-4b9db2b46f43",
       "type": "question",
       "value": {
         "latex": "Exprimer $G$ en fonction de $X$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "5e8a125c-f7b0-4dc0-be9d-7975e3a60759",
+      "id": "a2c828ce-f405-4b66-a201-e54bdb0e6ab7",
       "type": "reponse",
       "value": {
         "latex": "On a $G = X - (n-X) = 2X-n$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "d6be1194-72d0-49f0-913f-10e4dc1f8d77",
+      "id": "cf95ae30-3958-4021-9446-ae4ee694a8a9",
       "type": "question",
       "value": {
         "latex": "Exprimer l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} en fonction de $X$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "0b0ca57e-dd19-448b-b7cc-1d363a5c52e0",
+      "id": "48a8c811-1b9c-4669-bbaf-c74f19f9951a",
       "type": "reponse",
       "value": {
         "latex": "On a $-20 \\leq G \\leq 20 \\iff -20 \\leq 2X-n \\leq 20 \\iff -10 \\leq X-\\frac{n}{2} \\leq 10$. Donc l'événement considéré est $\\{|X - \\frac{n}{2}| \\leq 10\\}$ ou encore $\\{-10 \\leq X - \\frac{n}{2} \\leq 10\\}$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f1196679-1968-4215-83de-796dd2d8133c",
+      "id": "9eafd378-c3d0-4061-aa93-26c010defb36",
       "type": "question",
       "value": {
         "latex": "En utilisant le théorème central limite sans correction de continuité, déterminer le nombre maximal de lancers $n$ à effectuer pour que la probabilité de l'événement \\og le gain ou la perte n'excède pas 20 euros \\fg{} soit supérieure à $0.9544$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "bda3c2bb-8ea0-412f-94b1-f9cd72bdc33d",
+      "id": "30a9f9f7-7ac3-42df-8bc9-0cd5b20c0a0e",
       "type": "reponse",
       "value": {
         "latex": "On cherche $n$ tel que $\\prob(|X - \\frac{n}{2}| \\leq 10) \\geq 0.9544$. On sait que $\\E(X) = \\frac{n}{2}$ et $\\V(X) = \\frac{n}{4}$. D'après le théorème central limite, la variable aléatoire $Z = \\frac{X-\\frac{n}{2}}{\\frac{\\sqrt{n}}{2}}$ suit approximativement une loi normale centrée réduite. On a donc : \n            $$\\prob(|X - \\frac{n}{2}| \\leq 10) = \\prob\\left(\\frac{|X - \\frac{n}{2}|}{\\frac{\\sqrt{n}}{2}} \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right) = \\prob\\left(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}\\right)$$\n            On cherche donc $n$ tel que $\\prob(|Z| \\leq \\frac{10}{\\frac{\\sqrt{n}}{2}}) = 2 \\times \\Phi(\\frac{10}{\\frac{\\sqrt{n}}{2}}) - 1 = 2 \\times \\Phi(\\frac{20}{\\sqrt{n}}) - 1 \\geq 0.9544$ soit encore $\\Phi(\\frac{20}{\\sqrt{n}}) \\geq 0.9772$.\n\n            Par lecture de table, on trouve $\\frac{20}{\\sqrt{n}} \\geq 2$ soit $n \\leq 100$.",

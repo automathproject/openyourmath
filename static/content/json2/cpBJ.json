@@ -2,18 +2,19 @@
   "uuid": "cpBJ",
   "titre": "Complexes et matrices",
   "theme": [
-    "calcul matriciel"
+    "calcul matriciel",
+    "nombres complexes"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:48.347Z",
+    "createdAt": "2024-12-17T17:05:18.095Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:48.347Z"
+    "updatedAt": "2024-12-17T17:05:18.095Z"
   },
   "contenu": [
     {
-      "id": "314c7794-2326-4c70-9301-adc12f99d2ad",
+      "id": "481f355a-f8f2-489b-86d8-d8930f39534d",
       "type": "description",
       "value": {
         "latex": "L'ensemble des nombres complexes est défini par $\\mathbb{C}=\\{a+i b / a \\in \\mathbb{R}, b \\in \\mathbb{R}\\}$ avec $i^2=-1$. L'addition est définie par: $(a+i b)+(c+i d)=(a+c)+i(b+d)$ et la multiplication est donnée par : $(a+i b) \\times(c+i d)=(a . c-b . d)+i(a d+b c)$. A chaque nombre complexe $a+i b$, on associe la matrice $M(a, b)=\\left(\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right)$.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "af7bd3a7-616a-42cb-ba64-253c1a35cac4",
+      "id": "9796de7a-b77c-4d1c-84f0-71d5fa5e2c8b",
       "type": "question",
       "value": {
         "latex": "On note par $J$ la matrice associée au nombre $i$. Montrer que $J^2=-I_2$, où $I$ est la matrice identité.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "b2b3ce41-b7f0-4004-bd4d-6424d2921e65",
+      "id": "1c87e088-cfcf-48f7-9932-63ac8360e235",
       "type": "reponse",
       "value": {
         "latex": "$$\n\t\t\\begin{aligned}\n\t\t\t& J=M(0,1)=\\left(\\begin{array}{cc}\n\t\t\t\t0 & 1 \\\\\n\t\t\t\t-1 & 0\n\t\t\t\\end{array}\\right) \\\\\n\t\t\t& J^2=\\left(\\begin{array}{cc}\n\t\t\t\t0 & 1 \\\\\n\t\t\t\t-1 & 0\n\t\t\t\\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n\t\t\t\t0 & 1 \\\\\n\t\t\t\t-1 & 0\n\t\t\t\\end{array}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\t-1 & 0 \\\\\n\t\t\t\t0 & -1\n\t\t\t\\end{array}\\right)=-I_2=-M(1,0)=M(-1,0)\n\t\t\\end{aligned}\n\t\t$$",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "520d3709-d5c3-4348-a1fe-5fa4b52003c6",
+      "id": "eb450a8a-2141-4173-987d-6ae2bb606710",
       "type": "question",
       "value": {
         "latex": "Si les matrices $M(a, b)$ et $M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)$ sont associées respectivement aux nombres $z=(a+i b)$ et $z^{\\prime}=\\left(a^{\\prime}+i b^{\\prime}\\right)$, montrer que $M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)$ correspond au produit des nombres complexes : $z . z^{\\prime}$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "cc19a743-73c9-4e5a-ba00-fb384a70822b",
+      "id": "f0a08e58-e1d6-4157-b5fa-672af6dc1430",
       "type": "reponse",
       "value": {
         "latex": "$$\n\t\t\\begin{aligned}\n\t\t\t& M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\ta & b \\\\\n\t\t\t\t-b & a\n\t\t\t\\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n\t\t\t\ta^{\\prime} & b^{\\prime} \\\\\n\t\t\t\t-b^{\\prime} & a^{\\prime}\n\t\t\t\\end{array}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\ta \\cdot a^{\\prime}-b \\cdot b^{\\prime} & a b^{\\prime}+b a^{\\prime} \\\\\n\t\t\t\t-a b^{\\prime}-b a^{\\prime} & a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n\t\t\t\\end{array}\\right) \\\\\n\t\t\t& z . z^{\\prime}=(a+i b) \\times\\left(a^{\\prime}+i b^{\\prime}\\right)=\\left(\\begin{array}{ll}\n\t\t\t\t\\left.a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\\right)+i\\left(a b^{\\prime}+b a^{\\prime}\\right)\n\t\t\t\\end{array} \\quad \\text { a } \\quad \\text { pour } \\quad\\right. \\text { matrice associée : } \\\\\n\t\t\t& M\\left(a \\cdot a^{\\prime}-b \\cdot b^{\\prime}, a b^{\\prime}+b a^{\\prime}\\right)=\\left(\\begin{array}{ll}\n\t\t\t\ta \\cdot a^{\\prime}-b \\cdot b^{\\prime} & a b^{\\prime}+b a^{\\prime} \\\\\n\t\t\t\t-a b^{\\prime}-b a^{\\prime} & a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n\t\t\t\\end{array}\\right)=M(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)\n\t\t\\end{aligned}\n\t\t$$",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "c25cb49c-f593-46a0-a4df-635013c04bcd",
+      "id": "541c5a4d-cecf-4180-aaa0-91c8b9094be3",
       "type": "question",
       "value": {
         "latex": "Pour $A=\\left(\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right)$ non nulle, évaluer la matrice inverse $A^{-1}$. Identifier le nombre complexe correspondant.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "353cb0b0-0d9e-4152-95e7-34a5f4079768",
+      "id": "6c110552-032b-473a-b681-a4fb2cccf700",
       "type": "reponse",
       "value": {
         "latex": "$$\n\t\t\\begin{gathered}\n\t\t\tM(a, b) \\cdot M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\ta & b \\\\\n\t\t\t\t-b & a\n\t\t\t\\end{array}\\right) \\cdot\\left(\\begin{array}{cc}\n\t\t\t\ta^{\\prime} & b^{\\prime} \\\\\n\t\t\t\t-b^{\\prime} & a^{\\prime}\n\t\t\t\\end{array}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\ta \\cdot a^{\\prime}-b \\cdot b^{\\prime} & a b^{\\prime}+b a^{\\prime} \\\\\n\t\t\t\t-a b^{\\prime}-b a^{\\prime} & a \\cdot a^{\\prime}-b \\cdot b^{\\prime}\n\t\t\t\\end{array}\\right)=I_2=\\left(\\begin{array}{ll}\n\t\t\t\t1 & 0 \\\\\n\t\t\t\t0 & 1\n\t\t\t\\end{array}\\right) \\\\\n\t\t\t\\Leftrightarrow\\left\\{\\begin{array} { l } \n\t\t\t\t{ a \\cdot a ^ { \\prime } - b \\cdot b ^ { \\prime } = 1 } \\\\\n\t\t\t\t{ a b ^ { \\prime } + b a ^ { \\prime } = 0 }\n\t\t\t\\end{array} \\Leftrightarrow \\left\\{\\begin{array} { l } \n\t\t\t\t{ a \\cdot a ^ { \\prime } - b \\cdot b ^ { \\prime } = 1 } \\\\\n\t\t\t\t{ b a ^ { \\prime } + a b ^ { \\prime } = 0 }\n\t\t\t\\end{array} \\Leftrightarrow \\begin{array} { c } \n\t\t\t\t{ a \\ell _ { 1 } + b \\ell _ { 2 } } \\\\\n\t\t\t\t{ b \\ell _ { 1 } - a \\ell _ { 2 } }\n\t\t\t\\end{array} \\left\\{\\begin{array}{l}\n\t\t\t\t\\left(a^2+b^2\\right) a^{\\prime}=a \\\\\n\t\t\t\t\\left(-a^2-b^2\\right) b^{\\prime}=b\n\t\t\t\\end{array}\\right.\\right.\\right. \\\\\n\t\t\t\\Leftrightarrow\\left\\{\\begin{array}{l}\n\t\t\t\ta^{\\prime}=\\frac{a}{a^2+b^2} \\\\\n\t\t\t\tb^{\\prime}=-\\frac{b}{a^2+b^2}\n\t\t\t\\end{array}\\right.\n\t\t\\end{gathered}\n\t\t$$\n\t\tL'inverse de $M(a, b)=A=\\left(\\begin{array}{cc}a & b \\\\ -b & a\\end{array}\\right)$, associé au nombre complexe $z=a+i . b$ est définie à condition que $a^2+b^2 \\neq 0$ autrement dit si $A \\neq\\left(\\begin{array}{ll}0 & 0 \\\\ 0 & 0\\end{array}\\right)$.\n\t\tCette inverse est :\n\t\t$$\n\t\tA^{-1}=M^{\\prime}\\left(a^{\\prime}, b^{\\prime}\\right)=\\left(\\begin{array}{cc}\n\t\t\ta^{\\prime} & b^{\\prime} \\\\\n\t\t\t-b^{\\prime} & a^{\\prime}\n\t\t\\end{array}\\right)=\\left(\\begin{array}{cc}\n\t\t\t\\frac{a}{a^2+b^2} & -\\frac{b}{a^2+b^2} \\\\\n\t\t\t\\frac{b}{a^2+b^2} & \\frac{a}{a^2+b^2}\n\t\t\\end{array}\\right)=M\\left(\\frac{a}{a^2+b^2},-\\frac{b}{a^2+b^2}\\right)\n\t\t$$\n\t\tC'est la matrice associée à $z^{-1}=\\frac{1}{a^2+b^2}(a-i b)$.",

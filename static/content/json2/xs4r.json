@@ -2,18 +2,19 @@
   "uuid": "xs4r",
   "titre": "Loi d'un couple de variables aléatoires",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes",
+    "loi conjointe"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:38:08.893Z",
+    "createdAt": "2024-12-17T19:48:07.833Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:38:08.893Z"
+    "updatedAt": "2024-12-17T19:48:07.833Z"
   },
   "contenu": [
     {
-      "id": "bb55452d-a892-4c7b-b321-d3e707dab56a",
+      "id": "8a92eff8-14a7-4c4a-b806-8d494134f2bc",
       "type": "question",
       "value": {
         "latex": "Déterminer la valeur de $p$.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "09978b96-352a-4545-95eb-12024fa5f201",
+      "id": "e0e02fe1-8ace-419a-b254-72877c20e462",
       "type": "reponse",
       "value": {
         "latex": "La somme des probabilités doit être égale à 1. On a donc :\n\\[\n0{,}1 + 0{,}05 + 0{,}15 + 0{,}2 + p + 0{,}1 + 0{,}05 + 0{,}15 + 0{,}1 = 1\n\\]\nd'où $p = 0{,}1$.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "b301b381-9923-48e8-9a5d-00e4e9b2e715",
+      "id": "bb226857-77b2-4ca4-a80b-6c968162d634",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "23e37390-13cf-462f-824c-4927eaae330f",
+      "id": "6bec9c6f-d49c-4bb0-b554-34add42c666e",
       "type": "reponse",
       "value": {
         "latex": "pour $X$ : $\\prob(X=1) = 0{,}1 + 0{,}05 + 0{,}15 = 0{,}3$, $\\prob(X=3) = 0{,}2 + 0{,}1 + 0{,}1 = 0{,}4$ et $\\prob(X=5) = 0{,}05 + 0{,}15 + 0{,}1 = 0{,}3$ ;\\\\\npour $Y$ : $\\prob(Y=2) = 0{,}1 + 0{,}2 + 0{,}05 = 0{,}35$, $\\prob(Y=4) = 0{,}05 + 0{,}15 + 0{,}15 = 0{,}35$ et $\\prob(Y=6) = 0{,}15 + 0{,}1 + 0{,}1 = 0{,}35$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "57d605bb-1e93-4a24-8bae-72882a80ff9a",
+      "id": "d07f9ce7-14f4-4662-a3a4-55b2fb992366",
       "type": "question",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont-elles indépendantes ?",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "85cfc560-10de-45b7-85b9-3a893a8d54d4",
+      "id": "53204564-9295-4afc-b2a6-be8d99c42f30",
       "type": "reponse",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont indépendantes si et seulement si pour tout couple $(x,y)$, on a $\\prob(X=x \\cap Y=y) = \\prob(X=x) \\times \\prob(Y=y)$. \n\nOr on a $\\prob(X=1 \\cap Y=2) = 0{,}1 \\neq 0{,}3 \\times 0{,}35 = \\prob(X=1) \\times \\prob(Y=2)$. Donc les variables $X$ et $Y$ ne sont pas indépendantes.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "03aae757-8db8-487a-b6a8-cc00de8de014",
+      "id": "12856cd6-3f58-451e-837f-c6706671388d",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de la variable $D = |X - Y|$.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "7f9e8331-86d0-4c02-a0b6-85e025ee3bc6",
+      "id": "137bee1b-75b9-4d2f-aa4b-df4ca355eea6",
       "type": "reponse",
       "value": {
         "latex": "On a $D = |X - Y|$ donc les valeurs possibles prises par $D$ sont $\\{1, 3, 5\\}$. On a : \n      $$\\begin{align*}\n            \\prob(D = 1) & = \\prob(X=1 \\cap Y=2) + \\prob(X=3 \\cap Y=4) + \\prob(X=3 \\cap Y=2) \\\\ &+ \\prob(X=5 \\cap Y=6) + \\prob(X=5 \\cap Y=4) \\\\\n            & = 0{,}1 + 0{,}1 + 0{,}2 + 0{,}1 + 0{,}15 \\\\ &= 0{,}65 \\\\\n            \\prob(D = 3) & = \\prob(X=1 \\cap Y=4) + \\prob(X=3 \\cap Y=6) + \\prob(X=5 \\cap Y=2) \\\\ &= 0{,}05 + 0{,}1 + 0{,}05 \\\\ &= 0{,}2 \\\\\n            \\prob(D = 5) & = \\prob(X=1 \\cap Y=6) \\\\ & = 0{,}15 \n      \\end{align*}$$",

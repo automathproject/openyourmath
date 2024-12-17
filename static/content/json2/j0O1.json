@@ -2,18 +2,19 @@
   "uuid": "j0O1",
   "titre": "Simulation d'une loi de Pareto",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "simulation de loi"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:54.462Z",
+    "createdAt": "2024-12-17T17:05:22.196Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:54.462Z"
+    "updatedAt": "2024-12-17T17:05:22.196Z"
   },
   "contenu": [
     {
-      "id": "abb6e1d5-2f9c-40e0-9f07-13e99e8e219b",
+      "id": "b4d49792-c303-4177-98d2-b116c8344efd",
       "type": "description",
       "value": {
         "latex": "Soient $a$ et $b$ deux réels strictement positifs. On considère la fonction $f$ définie pour tout $x \\in \\R$ par : \n$$f(x)=\\frac{a b^a}{x^{a+1}} \\mathbf{1}_{[b;+\\infty[}(x).$$",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "2deb218d-86db-4d4f-b8e2-a8fb8618e3df",
+      "id": "aa2015e7-737f-4c66-b566-7f3809f87665",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est une densité de probabilité.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "c0ccf1cf-e484-4e13-b558-fb827efd0e9e",
+      "id": "6ee8bcb2-18fc-4929-9c48-e0042ee3cc36",
       "type": "reponse",
       "value": {
         "latex": "On a $\\int_{-\\infty}^{+\\infty} f(x) dx = \\int_b^{+\\infty} \\frac{a b^a}{x^{a+1}} dx = \\left[ -\\frac{b^a}{x^a} \\right]_b^{+\\infty} = 1$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "b9aa9bcf-9dea-4436-8ec6-1163373b38e9",
+      "id": "cfde45e0-577d-45a4-9ab0-8ab7d0dbdf1d",
       "type": "description",
       "value": {
         "latex": "Dans la suite, on note $X$ une variable aléatoire suivant la loi de densité $f$. On dit alors que $X$ suit une loi de Pareto de paramètres $a$ et $b$.",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "64d93507-209a-4abb-82a2-59440f231d68",
+      "id": "cea37b66-0194-4eff-bacc-1fbd2454302f",
       "type": "question",
       "value": {
         "latex": "Montrer que la fonction  de répartition de la loi de Pareto de paramètres $a$ et $b$ est donnée pour tout $t \\in \\R$ par : $$F(t)=\\begin{cases}\n        0 & \\text{si } t < b \\\\\n        1 - \\frac{b^a}{t^a} & \\text{si } t \\geq b\n    \\end{cases}$$",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "0d1f727c-5540-4224-9173-9556a7bd9b8a",
+      "id": "44497efb-872c-4398-b870-da19dd864dab",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $t \\geq b$, on a $F(t) = \\int_b^t \\frac{a b^a}{x^{a+1}} dx = \\left[ -\\frac{b^a}{x^a} \\right]_b^t = 1 - \\frac{b^a}{t^a}$.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "2ba4ec55-748b-4c08-be40-a92fabca75df",
+      "id": "6423c00e-b0d1-480b-9552-42affe4356d1",
       "type": "question",
       "value": {
         "latex": "Soit $U$ une variable aléatoire suivant la loi uniforme sur $[0;1]$. Montrer que la variable aléatoire $Y = b U^{-\\frac{1}{a}}$ suit la loi de Pareto de paramètres $a$ et $b$.",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "575befca-081b-4351-9e13-56693a391025",
+      "id": "f486d346-c83c-4e4a-a1f5-aae2d13a262c",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\geq b$.  \n         On a $F_Y(t) = \\prob(Y \\leq t)  = \\prob(b U^{-\\frac{1}{a}} \\leq t) = \\prob(U \\geq \\left(\\frac{b}{t}\\right)^a) = 1 - \\left(\\frac{b}{t}\\right)^a$. Donc $Y$ suit bien une loi de Pareto de paramètres $a$ et $b$.",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "343ef3f4-42b6-416d-8b08-3e00153c75e1",
+      "id": "2e728985-7e97-4bab-a647-a8997de888e5",
       "type": "question",
       "value": {
         "latex": "En déduire un programme en Python (ou en langage naturel) permettant de simuler une variable aléatoire suivant une loi de Pareto de paramètres $a$ et $b$. On suppose acquis que la fonction \\texttt{rand()} simule une variable aléatoire suivant la loi uniforme sur $[0;1]$.",
@@ -85,7 +86,7 @@
       }
     },
     {
-      "id": "ce2c5835-7e2d-44cc-9790-a729f9ceb1f8",
+      "id": "4ec01f63-eda0-4a74-87e5-643526b2d11b",
       "type": "reponse",
       "value": {
         "latex": "{\\BUseVerbatim{j0O1python}\\par}",
@@ -93,7 +94,7 @@
       }
     },
     {
-      "id": "ba0de04b-32b4-4d5e-bc7d-c001541ba72e",
+      "id": "e678ac5c-ff1d-4921-a3bc-d5f332ece3c6",
       "type": "question",
       "value": {
         "latex": "Montrer que la variable aléatoire $X$ admet une espérance si et seulement si $a>1$ puis montrer que dans ce cas, $\\EX = \\frac{ab}{a-1}$.",
@@ -101,7 +102,7 @@
       }
     },
     {
-      "id": "7f5f3bf2-943f-4aca-8fb4-f6fa0ab0c113",
+      "id": "bc1f8a59-542f-4137-b231-eda7f51f93e4",
       "type": "reponse",
       "value": {
         "latex": "Si $a \\leq 1$, on a $\\int_b^{+\\infty} \\frac{a b^a}{x^{a}} dx = \\left[ -\\frac{b^a}{x^{a-1}} \\right]_b^{+\\infty} = +\\infty$. Donc $X$ n'admet pas d'espérance. \n\n        Si $a > 1$, on a $\\EX = \\int_b^{+\\infty} \\frac{a b^a}{x^{a}} dx = \\left[ -\\frac{ab^a}{(a-1)x^{a-1}} \\right]_b^{+\\infty} = \\frac{ab}{a-1}$.",
@@ -109,7 +110,7 @@
       }
     },
     {
-      "id": "54bd52e3-36d2-4f80-81b9-434971200de0",
+      "id": "8c0cab9d-0afb-4420-b4f3-be9300564933",
       "type": "question",
       "value": {
         "latex": "On considère le programme Python suivant : \\\\\n    {\\BUseVerbatim{j0O1python2}\\par}\n    Que contient la liste \\texttt{L} renvoyée par la fonction \\texttt{surprise} ?",
@@ -117,7 +118,7 @@
       }
     },
     {
-      "id": "a9d23f53-46f6-4efd-8996-55aeb6ecedbd",
+      "id": "75e36f3f-e59a-49c3-b92f-b0f6634fe75e",
       "type": "reponse",
       "value": {
         "latex": "La loi forte des grands nombres permet d'approcher l'espérance de $X$ par $\\frac{1}{n} \\sum_{i=1}^n X_i$ lorsque $n$ est grand, ici $n = 10^p$ avec $p \\in \\{0,1,2,3,4\\}$. La liste \\texttt{L} contient $5$ réalisations de la variable $\\frac{1}{n} \\sum_{i=1}^n X_i$ pour différentes valeurs de $n$ donc $5$ valeurs approchées de l'espérance de la variable aléatoire $X$ suivant une loi de Pareto de paramètres $a$ et $b$.",
@@ -125,7 +126,7 @@
       }
     },
     {
-      "id": "666f3e8c-1d33-4b52-b4b1-fd03ca7ae92b",
+      "id": "bc2ff5de-1923-4598-9ad8-48458f208137",
       "type": "question",
       "value": {
         "latex": "On exécute la fonction \\texttt{surprise(2, 1)} et on obtient la liste suivante : \\\\\n    \\texttt{[2.0086758965462077, 2.0955498340858476, 1.982373410207895, 2.3281900268025373, 1.9814394974836453]} \\\\\n    On exécute ensuite la fonction \\texttt{surprise(1, 4)} et on obtient la liste suivante : \\\\\n    \\texttt{[18.267993642430078, 315.70341942673815, 18.99208132191137, 37.82281968971657, 109.82384813797769]} \\\\\n    Commenter ces résultats.",
@@ -133,7 +134,7 @@
       }
     },
     {
-      "id": "2fc1066c-5e27-491a-866e-ec1f878dfeb0",
+      "id": "55073e90-e1d9-459d-a4a3-3abc6489ea85",
       "type": "reponse",
       "value": {
         "latex": "Lorsque $a=2$ et $b=1$, on a $\\EX = \\frac{2}{2-1} = 2$. On observe que les valeurs de la liste \\texttt{L} sont proches de $2$, ce qui est cohérent avec la question précédente.\n\n        Lorsque $a=1$ et $b=4$, on a $\\EX$ qui n'est pas définie. La loi forte des grands nombres ne s'applique donc pas, ce qui explique que la suite des $\\frac{1}{n} \\sum_{i=1}^n X_i$ ne converge pas vers $\\EX$.",

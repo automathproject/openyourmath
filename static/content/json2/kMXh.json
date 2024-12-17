@@ -1,19 +1,20 @@
 {
   "uuid": "kMXh",
-  "titre": "Couple de variables aléatoires, question de cours",
+  "titre": "Couple de variables aléatoires",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "loi conjointe"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:55.663Z",
+    "createdAt": "2024-12-17T17:05:23.215Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:55.663Z"
+    "updatedAt": "2024-12-17T17:05:23.215Z"
   },
   "contenu": [
     {
-      "id": "87d687e6-ed1e-4e86-b241-65025c56aa2d",
+      "id": "3c8ed1b1-82c7-48b4-84af-859e50feef0a",
       "type": "description",
       "value": {
         "latex": "Supposons que $(X,Y)$ suive la loi uniforme sur le disque unité $D$ centré en $(0,0)$.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "294a86fb-d412-48b2-bf82-6f5815eda683",
+      "id": "6fcdfb50-76ca-442c-adef-4c2b073e9093",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $X$.",
@@ -29,7 +30,15 @@
       }
     },
     {
-      "id": "34e9d067-f577-434b-9cdc-b0a285d6b473",
+      "id": "fa324d57-6e32-46d7-8a9b-4130d822df67",
+      "type": "indication",
+      "value": {
+        "latex": "On pourra commencer par déterminer la densité de $(X,Y)$.",
+        "html": "<p>On pourra commencer par déterminer la densité de <span class=\"math inline\">\\((X,Y)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f37e3bdd-c5bd-4b06-8f15-c22b7f102efc",
       "type": "reponse",
       "value": {
         "latex": "Alors $(X,Y)$ admet pour densité $f(x,y)=\\frac{1}{\\pi} \\textbf{1}_D(x,y)$. Alors $X$ admet pour densité $f_X$ définie par  $f_X(x) = \\int_{\\R}^{} f(x,y)dy = \\frac{1}{\\pi} \\int_{\\{y^2<1-x^2\\}}^{} dy$.\n\t\n\tOr $ y^2<1-x^2 \\iff \\begin{cases}\n\t\t-\\sqrt{1-x^2} < y < \\sqrt{1-x^2} \\\\\n\t\t-1<x<1\n\t\\end{cases}$ donc $$f_X(x) = \\frac{1}{\\pi} \\textbf{1}_{]-1;1[}(x)\\int_{-\\sqrt{1-x^2}}^{+\\sqrt{1-x^2}} dy =  \\frac{2}{\\pi} \\sqrt{1-x^2} \\textbf{1}_{]-1;1[}(x)$$",

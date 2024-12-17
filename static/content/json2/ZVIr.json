@@ -2,18 +2,18 @@
   "uuid": "ZVIr",
   "titre": "Calculs de lois",
   "theme": [
-    "statistiques"
+    "loi normale"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-05T15:37:44.012Z",
+    "createdAt": "2024-12-17T19:48:04.755Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:44.012Z"
+    "updatedAt": "2024-12-17T19:48:04.755Z"
   },
   "contenu": [
     {
-      "id": "efbaa0e0-bc41-42c4-8e72-c53560302fb6",
+      "id": "c9d49f38-0882-4594-925d-41b787fbe0d2",
       "type": "description",
       "value": {
         "latex": "Soient $\\left(X_i\\right)_{1 \\leq i \\leq 9}$ des variables aléatoires indépendantes, identiquement distribuées, suivant chacune une loi normale de moyenne $\\mu = 2$ et de variance $\\sigma^2 = 9$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "2b12cfdc-d389-48aa-a5b0-9f11a6e74e31",
+      "id": "dd212ad4-8f5e-4eda-aacf-9f9c83ce20a0",
       "type": "question",
       "value": {
         "latex": "Déterminer la probabilité de l'événement $\\{X_1 \\geq 1\\}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "cc2a0eaa-34e4-4229-9157-918efe6f0755",
+      "id": "ac4dd216-b991-495b-b34a-33dc4956b9eb",
       "type": "reponse",
       "value": {
         "latex": "$X_1$ suit une loi $\\mathcal{N}(2,3^2)$ donc $\\PP(X_1 \\geq 1)=\\PP(\\frac{X_1-2}{3} \\geq \\frac{1-2}{3}) = \\PP(U \\geq -0.3333)$ où $U$ suit une loi $\\mathcal{N}(0,1)$. Or par symétrie,  $\\PP(U \\geq -0.3333) = \\PP(U \\leq 0.3333)$ et d'après la table, $\\PP(U \\leq 0.3333)=0.6293$\n\t\t\n\t\tDonc  \\fbox{$\\PP(X_1 \\geq 1)=0.6293$}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0fc5bf54-f38b-44db-8be0-4418e1a6caa0",
+      "id": "dc8e4266-41e1-43db-a756-94a5b118d31c",
       "type": "question",
       "value": {
         "latex": "Soit $Y$ la variable aléatoire définie par $$Y = \\frac{1}{9}\\sum_{i=1}^9 X_i$$ Déterminer la loi de $Y$ et calculer $\\PP(Y \\geq 1)$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "bf1d0c59-fc39-415f-9020-8d4b424d28fe",
+      "id": "2465e95b-2ae1-4385-8fc6-e3223b2aa7b6",
       "type": "reponse",
       "value": {
         "latex": "On sait que $\\mathbb{E}(Y)=\\frac{1}{9} \\sum_{i=1}^9 \\mathbb{E}(X_i) = \\frac{1}{9} \\times 9 \\times 2 = 2$.\n\t\t\n\t\tOn sait que par indépendance des variables,  $\\sigma^2(Y)=\\frac{1}{9^2} \\sum_{i=1}^9 \\sigma^2(X_i) = \\frac{1}{9^2} \\times 9 \\times 3^2 = 1$.\n\t\t\n\t\tDonc \\fbox{$Y$ suit une loi $\\mathcal{N}(2,1)$}.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "f9869db8-22b7-441d-912c-1bd303822663",
+      "id": "c9043e2a-0f24-4255-ad6a-4edc2bbebe17",
       "type": "question",
       "value": {
         "latex": "Soit $Z$ la variable aléatoire définie par $$Z = X_1 + X_2 + X_3 + X_4 + X_5 - X_6 - X_7 - X_8 - X_9$$\n\t\tDéterminer la loi de $Z$ et calculer $\\PP(Z \\geq 1)$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "f44a278f-3b0e-4b22-9c4a-54eb9c4279ac",
+      "id": "3154bc34-aff4-41f6-aee4-c0c314ff4ed5",
       "type": "reponse",
       "value": {
         "latex": "De même, $\\mathbb{E}(Z)=2+2+2+2+2-2-2-2-2=2$ et, puisque toutes ces variables sont indépendantes, \\\\ $\\sigma^2(Z)= 3^2+3^2+3^2+3^2+3^2+(-3)^2+(-3)^2+(-3)^2+(-3)^2 =5 \\times 3^2+4 \\times 3^2 = 81 = 9^2$\n\t\t\n\t\tDonc $Z$ suit une loi $\\mathcal{N}(2,9^2)$.\n\t\t\n\t\tPuis on calcule $\\PP(Z \\geq 1) = \\PP(U \\geq \\frac{1-2}{9}) = \\PP(U \\geq -\\frac19 )=\\PP(U \\leq \\frac19)$. D'après la table, \\fbox{$\\PP(Z \\geq 1) = 0.5438$}.",

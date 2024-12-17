@@ -2,18 +2,19 @@
   "uuid": "3zDK",
   "titre": "Application de la loi de Benford",
   "theme": [
-    "Statistiques et tests d’hypothèses"
+    "statistiques",
+    "tests d'hypothèses"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-17T10:44:29.291Z",
+    "createdAt": "2024-12-17T17:04:59.442Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-17T10:44:29.291Z"
+    "updatedAt": "2024-12-17T17:04:59.442Z"
   },
   "contenu": [
     {
-      "id": "f9fcb668-74c8-42db-918d-25d91efe72a3",
+      "id": "157fbf82-0c9d-4c4e-85a8-6304cc89eb6c",
       "type": "description",
       "value": {
         "latex": "La loi de Benford, initialement appelée loi des nombres anormaux par Benford, fait référence à une fréquence de distribution statistique observée empiriquement sur de nombreuses sources de données dans la vraie vie, ainsi qu’en mathématiques. Dans une série de données numériques, on pourrait s’attendre à voir les chiffres de 1 à 9 apparaître à peu près aussi fréquemment comme premier chiffre significatif, soit avec une fréquence de $1/9 = 11,1\\%$ pour chacun. Or, contrairement à cette intuition (biais d’équiprobabilité), la série suit très souvent approximativement la loi de Benford :\n\n\n\n\\def\\yscale{0.2}\n\n\n\\def\\barwidth{0.5}\n\n\n\\def\\data{{1/30.10},{2/17.61},{3/12.49},{4/9.69},{5/7.92},{6/6.69},{7/5.80},{8/5.12},{9/4.58}}\n\n\\begin{center}\n\\begin{tikzpicture}[x=1cm,y=1cm,font=\\small]\n\n\n\\draw[->,thick] (0.5,0) -- (0.5,7.5) node[above]{Fréquence (\\%)};\n\n\n\\foreach \\v in {0,5,10,15,20,25,30,35} {\n   \\draw (0.5,\\v*\\yscale) -- (0.45,\\v*\\yscale) node[left]{\\v};\n}\n\n\n\\draw[->,thick] (0.5,0) -- (9.5,0) node[right]{1ère décimale};\n\n\n\\node[font=\\bfseries,anchor=south] at (5,7.7) {Loi de BENFORD};\n\\node[font=\\small,anchor=south] at (5,6.4) {Fréquences relatives d'apparition de la 1ère décimale};\n\n\n\\foreach \\x in {1,2,3,4,5,6,7,8,9} {\n  \\draw (\\x,0) -- (\\x,-0.1) node[below]{\\x};\n}\n\n\n\\foreach \\X/\\Y in \\data {\n  \n  \\pgfmathsetmacro{\\h}{\\Y*\\yscale}\n  \n  \n  \n  \\filldraw[fill=cyan!70!black,draw=black] (\\X-\\barwidth/2,0) rectangle (\\X+\\barwidth/2,\\h);\n  \n  \\node[font=\\footnotesize,anchor=south] at (\\X,\\h) {\\Y\\%};\n}\n\n\\end{tikzpicture}\n\\end{center}\n\nCette loi est utilisée notamment dans la détection des fraudes. \n\nEn 2019, le mathématicien Mickäel Launay a relevé 1226 prix dans un supermarché, et a obtenu comme fréquences successives pour les premiers chiffres de 1 à 9 : 32\\%, 26\\%, 15\\%, 9\\%, 5\\%, 4\\%, 3\\%, 2\\%, 4\\%.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "496096b2-8eee-4e55-a755-ded9e932425e",
+      "id": "9c9f3be0-d470-4f79-9a28-a548452d1bab",
       "type": "question",
       "value": {
         "latex": "Avec un risque de première espèce de 5\\%, peut-on affirmer que l’observation du mathématicien est incompatible avec la loi de Benford ?",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "2ac1fcb7-e5af-4f0f-9735-a0987ec41c5c",
+      "id": "50506c1e-a28b-4c04-ac64-f5b67a2e2672",
       "type": "indication",
       "value": {
         "latex": "Effectuer un test du $\\chi^2$ pour comparer les fréquences observées avec celles attendues selon la loi de Benford.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "674a6ab3-abda-4c85-a24f-26a1570aa6e6",
+      "id": "9e2c463a-0bc3-4ca9-8f6e-724f0c198580",
       "type": "reponse",
       "value": {
         "latex": "À compléter.",

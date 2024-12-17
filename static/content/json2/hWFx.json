@@ -2,18 +2,19 @@
   "uuid": "hWFx",
   "titre": "Loi conjointe",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes",
+    "loi conjointe"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:52.876Z",
+    "createdAt": "2024-12-17T17:05:21.044Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:52.876Z"
+    "updatedAt": "2024-12-17T17:05:21.044Z"
   },
   "contenu": [
     {
-      "id": "2e885940-b163-4489-b851-6715afcfd5b1",
+      "id": "834cfa82-9392-4a2b-8b65-9b654710f805",
       "type": "description",
       "value": {
         "latex": "Soient $X$ et $Y$ deux variables aléatoires réelles et soient $y$ et $a$ deux paramètres réels tels que la loi du couple $(X,Y)$ soit donnée par le tableau joint:\n\\begin{center}\n\t{\\renewcommand{\\arraystretch}{1.2}\n\t\\begin{tabular}{|c|c|c|}\n\t\t\\hline\n\t\t$X \\backslash Y$ & $-1$ & $y$ \\\\\n\t\t\\hline\n\t\t$-2$ & $\\frac{1}{6}$ & $\\frac{2}{18}$ \\\\\n\t\t\\hline\n\t\t$-1$ & $\\frac{1}{9}$ & $0$ \\\\\n\t\t\\hline\n\t\t$1$ & $0$ & $a$ \\\\\n\t\t\\hline\n\t\t$2$ & $\\frac{1}{18}$ & $\\frac{2}{6}$ \\\\\n\t\t\\hline\n\t\\end{tabular}}\n\\end{center}",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "e64578c6-0c76-4dcd-baaf-20455578da5f",
+      "id": "8b917aea-03e2-45f5-bed0-7f3492bfe3d1",
       "type": "question",
       "value": {
         "latex": "Quelle est la valeur du paramètre $a$ ?",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "b9a8057e-fc86-4eea-9ada-68cf771e9549",
+      "id": "ad94d6c5-d8fe-4dd0-816a-09a332c915bb",
       "type": "reponse",
       "value": {
         "latex": "On a nécessairement:\n\t\t\\[ \\frac{1}{6}+\\frac{2}{18}+\\frac{1}{9}+ a +\\frac{1}{18}+\\frac{2}{6}=1\\]\n\t\tdonc $a=\\frac{2}{9}$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "7e951847-076a-4705-8223-62caa9f84591",
+      "id": "ec5707ab-1377-4566-83d9-2e3beeb9ee55",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales de $X$ et de $Y$. Ces variables sont-elles indépendantes ?",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "90bb3365-8611-40ba-a514-f61971b3f3d1",
+      "id": "92b5bb8e-25f0-4162-a41a-e895c6ae9979",
       "type": "reponse",
       "value": {
         "latex": "\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c||c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $-1$ & $y$ & $\\prob_X$ (loi de $X$) \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-2$ & $\\frac{3}{18}$ & $\\frac{2}{18}$ & $\\frac{5}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-1$ & $\\frac{2}{18}$ & $0$ & $\\frac{2}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $0$ & $\\frac{4}{18}$ & $\\frac{4}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$2$ & $\\frac{1}{18}$ & $\\frac{6}{18}$ & $\\frac{7}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t\\hline\n\t\t\t\t$\\prob_Y$ (loi de $Y$) & $\\frac{6}{18}$ & $\\frac{12}{18}$ & 1 \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\t\n\t\tIl n'y a pas indépendance des variables $X$ et $Y$ car $\\prob(X=1,Y=-1)=0$ et $\\prob(X=1)\\prob(Y=-1)=\\frac{6}{18}\\times \\frac{4}{18}\\neq 0$.",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "021800a2-0f37-482b-b9f7-b7b74bd587de",
+      "id": "766a822f-e8a6-487f-bfbb-b606a9b83072",
       "type": "question",
       "value": {
         "latex": "Calculer $\\E(X)$ et $\\E(Y)$.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "8257395f-4cc2-40c8-b9dc-90d90e8f6a18",
+      "id": "aa3563e6-8c44-4bff-a140-61e5dca8ee3a",
       "type": "reponse",
       "value": {
         "latex": "L'espérance de $X$ est la suivante:\n\t\t$$\\begin{align*}\n\t\t\\E(X)&= (-2)\\prob(X=-2)+(-1)\\prob(X=-1)+1\\prob(X=1)+2\\prob(X=2) \\\\\n\t\t&= (-2)\\times \\frac{5}{18}+(-1) \\frac{2}{18}+\\frac{4}{18}+2\\times \\frac{7}{18} \\\\\n\t\t&=\\frac{1}{3}.\n\t\t\\end{align*}$$\n\t\tL'espérance de $Y$ est\n\t\t$$\\begin{align*}\n\t\t\\E(Y)&= (-1)\\prob(Y=-1)+y\\prob(Y=-y) \\\\\n\t\t&= (-1)\\times \\frac{6}{18}+y\\times \\frac{12}{18} \\\\\n\t\t&=\\frac{-1}{3}+\\frac{2}{3}y.\n\t\t\\end{align*}$$",
@@ -69,7 +70,7 @@
       }
     },
     {
-      "id": "639f975e-4d48-48a5-961a-5f084d2fc3be",
+      "id": "b3aefae9-a9d9-487e-a3f8-d692a2e2f562",
       "type": "question",
       "value": {
         "latex": "Déterminer $y$ de sorte que $\\E(X.Y)=0$.",
@@ -77,7 +78,7 @@
       }
     },
     {
-      "id": "1f20d7c4-7adc-4e37-af30-b3841ea892ca",
+      "id": "3f777175-8038-4786-a683-6b00cc6a3197",
       "type": "reponse",
       "value": {
         "latex": "Il faut déterminer la loi de $XY$. Les valeurs possibles prises par $XY$ sont données dans le tableau suivant:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $-1$ & $y$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-2$ & $XY=2$ & $XY=-2y$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-1$ & $XY=1$ & $XY=-y$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $XY=-1$ & $XY=y$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$2$ & $XY=-2$ & $XY=2y$  \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\tOn en déduit la loi de $XY$:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$k$ & $-2$ & $-1$ & $1$ & $2$ & $-2y$ & $-y$ & $y$ & $2y$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$\\prob(XY=k)$ & $\\frac{1}{18}$ & $0$ & $\\frac{2}{18}$ & $\\frac{3}{18}$ & $\\frac{2}{18}$ & $0$ & $\\frac{4}{18}$ & $\\frac{6}{18}$\\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\tsoit de manière plus synthétique:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c|c|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$k$ & $-2$ & $1$ & $2$ & $-2y$  & $y$ & $2y$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$\\prob(XY=k)$ & $\\frac{1}{18}$ & $\\frac{2}{18}$ & $\\frac{3}{18}$ & $\\frac{2}{18}$ & $\\frac{4}{18}$ & $\\frac{6}{18}$\\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\tL'espérance de $XY$ est donc la suivante:\n\t\t\\[ \\E(XY)= \\frac{1}{18} \\times (-2+2+6-4y+4y+12y)=\\frac{1}{18}\\times (6+12y).\\]\n\t\tOn a ainsi\n\t\t$$\\begin{align*}\n\t\t\\E(XY)=0 \\quad & \\Leftrightarrow \\quad \\frac{1}{18}\\times (6+12y)=0 \\\\\n\t\t& \\Leftrightarrow \\quad y=\\frac{-1}{2}.\n\t\t\\end{align*}$$",
@@ -85,7 +86,7 @@
       }
     },
     {
-      "id": "c9b71f0a-a6a8-4bbf-8f0e-bcc6b394570b",
+      "id": "6a0f9bcd-6003-4ad1-887f-dc2c4082ef40",
       "type": "question",
       "value": {
         "latex": "On pose désormais $y=1$ et on considère les variables aléatoires $U=Y$ et $V=\\frac{X}{Y}$.\n\tDéterminer le tableau de la loi de probabilité du couple $(U,V)$. Que peut-on dire des variables aléatoires $U$ et $V$ ?",
@@ -93,7 +94,7 @@
       }
     },
     {
-      "id": "be0902e1-4818-4999-8a2a-f8d5f6f2ec69",
+      "id": "b75d99a4-8e4c-422b-bf61-946f00e65b39",
       "type": "reponse",
       "value": {
         "latex": "On s'intéresse d'abord aux valeurs que le couple $(U=Y,V=\\frac{X}{Y})$ peut prendre:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $-1$ & $1$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-2$ & $(U,V)=(-1,2)$ & $(U,V)=(1,-2)$  \\\\\n\t\t\t\t& $\\frac{3}{18}$ & $\\frac{2}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-1$ & $(U,V)=(-1,1)$ & $(U,V)=(1,-1)$  \\\\\n\t\t\t\t& $\\frac{2}{18}$ & $0$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $(U,V)=(-1,-1)$ & $(U,V)=(1,1)$  \\\\\n\t\t\t\t& $0$ & $\\frac{4}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\t$2$ & $(U,V)=(-1,-2)$ & $(U,V)=(1,2)$  \\\\\n\t\t\t\t& $\\frac{1}{18}$ & $\\frac{6}{18}$ \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\tOn obtient ainsi la loi du couple $(U,V)$:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c||c|}\n\t\t\t\t\\hline\n\t\t\t\t$X \\backslash Y$ & $-2$ & $1$ & $2$ & $\\prob_U$ (loi de $U$)  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$-1$ & $\\frac{1}{18}$ & $\\frac{2}{18}$ & $\\frac{3}{18}$ & $\\frac{6}{18}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t$1$ & $\\frac{2}{18}$ & $\\frac{4}{18}$ & $\\frac{6}{18}$ & $\\frac{12}{18}$  \\\\\n\t\t\t\t\\hline\n\t\t\t\t\\hline\n\t\t\t\t$\\prob_V$ (loi de $V$) & $\\frac{3}{18}$ & $\\frac{6}{18}$ & $\\frac{9}{18}$ & $1$  \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}\n\t\tOn peut vérifier que:\n\t\t\\[ \\forall i\\in\\{-1,1\\}, \\forall j\\in\\{-2,1,2\\}, \\quad \\prob(U=i,V=j)=\\prob(U=i)\\times \\prob(V=j)\\]\n\t\tdonc les variables aléatoires $U$ et $V$ sont indépendantes.",

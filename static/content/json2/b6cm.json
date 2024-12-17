@@ -2,18 +2,19 @@
   "uuid": "b6cm",
   "titre": "Autour d'une loi exponentielle",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "loi exponentielle"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-12-05T15:37:46.635Z",
+    "createdAt": "2024-12-17T17:05:16.854Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:46.635Z"
+    "updatedAt": "2024-12-17T17:05:16.854Z"
   },
   "contenu": [
     {
-      "id": "10588179-d1f3-4643-b990-67e8b692344e",
+      "id": "ea0fb845-c670-4982-b633-ae221b72e660",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(X \\geq t)$ pour tout $t \\in \\R$.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "9f0380b0-1442-43c7-a00d-48b1787f80bc",
+      "id": "295ea06d-d363-463e-b3ae-bdab26302d8c",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(X \\geq t) &= \\int_t^{+\\infty} f(x) \\d x \\\\\n            &= \\int_t^{+\\infty} 3 e^{-3x} \\d x \\\\\n            &= \\left[ -e^{-3x} \\right]_t^{+\\infty} \\\\\n            &= e^{-3t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(X \\geq t) = 1$.",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "b7a73b78-7929-4464-b46c-cd8197ff1175",
+      "id": "3338d000-8076-4a72-9d18-b31dfbc27aa9",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(Z \\geq t)$ pour tout $t \\in \\R$.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "4949a5f8-d2a3-4e8b-b719-fc309289361e",
+      "id": "24e6b580-c9fd-4edc-b0fd-6a6242fe1a4c",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(Z \\geq t) &= \\prob(X \\geq t \\text{ et } Y \\geq t) \\\\\n            &= \\prob(X \\geq t) \\prob(Y \\geq t) \\text{ par indépendance de $X$ et $Y$} \\\\\n            &= e^{-3t} \\times e^{-3t} \\\\\n            &= e^{-6t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(Z \\geq t) = 1$.\n\n        On voit ainsi que $Z = \\min(X,Y)$ suit une loi exponentielle $\\mathcal{E}(6)$.",

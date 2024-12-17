@@ -2,18 +2,18 @@
   "uuid": "FKpl",
   "titre": "Comparaison d'estimateurs",
   "theme": [
-    "statistiques"
+    "estimateurs"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "Maxime Nguyen",
-    "createdAt": "2024-12-05T15:37:26.864Z",
+    "createdAt": "2024-12-17T17:05:08.032Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:26.864Z"
+    "updatedAt": "2024-12-17T17:05:08.032Z"
   },
   "contenu": [
     {
-      "id": "b2a8f11f-01bd-4db9-b068-70ef0a13986f",
+      "id": "ae0a463a-9d58-4f7a-9d05-3ed68cf424a8",
       "type": "description",
       "value": {
         "latex": "On considère trois variables aléatoires indépendantes $X_1,X_2,X_3$ suivant chacune une loi de probabilité de même moyenne $\\mu$ et de variance $\\sigma^2$. On pose $$M_1=\\frac{X_1+X_2+X_3}{3} \\text{ et } M_2=\\frac{X_1+2X_2+3X_3}{6}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "2b7214e8-c26d-4971-8d8a-ff61fb5f2d6f",
+      "id": "6b22bbe2-0a3b-430f-bbfd-3699345fdbdb",
       "type": "question",
       "value": {
         "latex": "Démontrer que ce sont deux estimateurs sans biais de la moyenne $\\mu$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2afbff2e-22e8-45dc-bc36-e42028c3f219",
+      "id": "80867503-4f30-4dfd-8926-d6d5cf59e6e1",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\\E(M_1) &= \\E\\left(\\frac{X_1+X_2+X_3}{3}\\right) \\\\\n\t\t&= \\frac{1}{3}\\E(X_1+X_2+X_3) \\\\\n\t\t&= \\frac{1}{3}(\\E(X_1)+\\E(X_2)+\\E(X_3)) \\\\\n\t\t&= \\frac{1}{3}(3\\mu) \\\\\n\t\t&= \\mu\n\t\\end{align*}$$\n\tDonc $B(M_1) = \\E(M_1 - \\mu) = \\E(M_1) - \\mu = \\mu - \\mu = 0$. \\\\\n\tDonc $M_1$ est un estimateur sans biais de la moyenne $\\mu$. \\\\\n\n\tDe même, on a :\n\t$$\\begin{align*}\n\t\t\\E(M_2) &= \\E\\left(\\frac{X_1+2X_2+3X_3}{6}\\right) \\\\\n\t\t&= \\frac{1}{6}\\E(X_1+2X_2+3X_3) \\\\\n\t\t&= \\frac{1}{6}(\\mu+2\\mu+3\\mu) \\\\\n\t\t&= \\frac{6\\mu}{6} \\\\\n\t\t&= \\mu\n\t\\end{align*}$$\n\tDonc $B(M_2) = \\E(M_2 - \\mu) = \\E(M_2) - \\mu = \\mu - \\mu = 0$. \\\\\n\tDonc $M_2$ est un estimateur sans biais de la moyenne $\\mu$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "0539fe08-0d75-436b-9f1f-84fc38d9e2ba",
+      "id": "76d5fb9b-3506-4a79-85a9-055381221af2",
       "type": "question",
       "value": {
         "latex": "Lequel de ces deux estimateurs est le plus efficace ?",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7cdec610-8b76-4a1c-ae24-ac90a22169ae",
+      "id": "2ad10bfd-094a-4ee2-ad44-c9909c5ee9a4",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\\V(M_1) &= \\V\\left(\\frac{X_1+X_2+X_3}{3}\\right) \\\\\n\t\t&= \\frac{1}{9}\\V(X_1+X_2+X_3) \\\\\n\t\t&= \\frac{1}{9}(\\V(X_1)+\\V(X_2)+\\V(X_3)) \\\\\n\t\t&= \\frac{1}{9}(3\\sigma^2) \\\\\n\t\t&= \\frac{\\sigma^2}{3}\n\t\\end{align*}$$\n\t$$\\begin{align*}\n\t\t\\V(M_2) &= \\V\\left(\\frac{X_1+2X_2+3X_3}{6}\\right) \\\\\n\t\t&= \\frac{1}{36}\\V(X_1+2X_2+3X_3) \\\\\n\t\t&= \\frac{1}{36}(\\V(X_1)+4\\V(X_2)+9\\V(X_3)) \\\\\n\t\t&= \\frac{1}{36}(3\\sigma^2+4\\sigma^2+9\\sigma^2) \\\\\n\t\t&= \\frac{16\\sigma^2}{36} \\\\\n\t\t&= \\frac{4\\sigma^2}{9}\n\t\\end{align*}$$\n\tDonc $\\V(M_1) = \\frac{\\sigma^2}{3}$ et $\\V(M_2) = \\frac{4\\sigma^2}{9}$. \\\\\n\tDonc $\\V(M_1) < \\V(M_2)$. \\\\\n\tDonc $M_1$ est plus efficace que $M_2$.",

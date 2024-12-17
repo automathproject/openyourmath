@@ -1,19 +1,20 @@
 {
   "uuid": "J4Ag",
-  "titre": "Fonction caractéristique et loi de Poisson",
+  "titre": "Fonction caractéristique d'une loi de Poisson",
   "theme": [
-    "probabilités"
+    "fonction caractéristique",
+    "loi de Poisson"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:30.009Z",
+    "createdAt": "2024-12-17T17:05:09.728Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:30.009Z"
+    "updatedAt": "2024-12-17T17:05:09.728Z"
   },
   "contenu": [
     {
-      "id": "f25af1fa-6b82-4e16-97cb-995a4de9c453",
+      "id": "6c0bb1b3-9acc-4975-9201-a8f092b0bb68",
       "type": "question",
       "value": {
         "latex": "Soit $X$ une variable aléatoire de loi de Poisson de paramètre $\\lambda$. Calculer sa fonction caractéristique.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "6f137f9a-9eeb-4bb6-8bcf-16cf00bce14c",
+      "id": "da0fbaca-e942-4795-9170-3c66b47805f5",
       "type": "reponse",
       "value": {
         "latex": "Soit $t\\in\\mathbb{R}$.\n\t\t      \t$$\\begin{align*}\n\t\t      \t\\phi_X(t)=\\mathbb{E}(e^{itX})\n\t\t      \t=\\sum_{k\\geq 0} e^{itk}\\p(X=k)\n\t\t      \t=\\sum_{k\\geq 0} e^{itk}\\frac{\\lambda^k}{k!}e^{-\\lambda}\n\t\t      \t=e^{-\\lambda}\\sum_{k\\geq 0} \\frac{(\\lambda e^{it})^k}{k!}\n\t\t      \t=e^{\\lambda(e^{it}-1)}\n\t\t      \t\\end{align*}$$",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "c44f2c37-33d1-4061-9f90-6359005fcf9d",
+      "id": "3d7b038e-2e22-4335-87f8-ff58772ad69f",
       "type": "question",
       "value": {
         "latex": "Soit $X$ et $Y$ deux variables aléatoires indépendantes de loi de Poisson de paramètres respectifs $\\lambda$ et $\\mu$. En utilisant la fonction caractéristique, montrer que la variable $X+Y$ suit une loi de Poisson de paramètre à déterminer.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "120ce363-1bed-466e-b728-8aac65ba7ef3",
+      "id": "e4bc6cbc-b7d2-441c-9617-c13d7d5f671f",
       "type": "reponse",
       "value": {
         "latex": "Comme les variables aléatoires $X$ et $Y$ sont indépendantes, on a pour tout $t\\in\\mathbb{R}$,\n\t\t      \t\\[ \\phi_{X+Y}(t)=\\phi_X(t) \\phi_Y(t)=e^{(\\lambda + \\mu)(e^{it}-1)},\\]\n\t\t      \tce qui correspond à la fonction caractéristique d'une loi de Poisson de paramètre $\\lambda+\\mu$. Donc $X+Y \\sim \\mathcal{P}(\\lambda+\\mu)$.",

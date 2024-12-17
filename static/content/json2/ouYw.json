@@ -2,18 +2,19 @@
   "uuid": "ouYw",
   "titre": "Calcul d'intégrale",
   "theme": [
-    "séries entières"
+    "séries entières",
+    "intégration"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:59.462Z",
+    "createdAt": "2024-12-17T17:05:24.918Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:59.462Z"
+    "updatedAt": "2024-12-17T17:05:24.918Z"
   },
   "contenu": [
     {
-      "id": "d56b3721-9a7b-4ffa-ac44-f2e2e9c5d4f9",
+      "id": "2193bdb6-eebd-4da9-9044-dffe1907961b",
       "type": "description",
       "value": {
         "latex": "Le but de l'exercice est de calculer l'intégrale :\n\t$$I = \\int_0^1 \\ln(t)\\ln(1-t)\\mathrm{d}t$$\n\tà l'aide d'un développement en série entière. \n\tOn admet que $\\displaystyle \\sum_{n=1}^{+\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$.",
@@ -21,7 +22,7 @@
       }
     },
     {
-      "id": "caad5b19-c2f9-46fa-b830-918e56c4f15d",
+      "id": "52e7f0aa-b9e7-4b2b-b6f6-35275328b6da",
       "type": "question",
       "value": {
         "latex": "Démontrer que pour tout entier $n \\geq 1$, \n\t\t$$\\int_0^1 \\frac{-t^n \\ln(t)}{n} \\mathrm{d}t = \\frac{1}{n(n+1)^2}$$",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "id": "54a14156-8e03-4c17-879a-5716d442ed5b",
+      "id": "5523056c-23b3-455c-a4aa-15bdc1d072e9",
       "type": "reponse",
       "value": {
         "latex": "On réalise une intégration par parties en posant $u'(t) = \\frac{t^n}{n}$ et $v(t) = \\ln(t)$.\n\t\t\t$$\\begin{align*}\n\t\t\t\\int_0^1 \\frac{t^n \\ln(t)}{n} \\mathrm{d}t &= \\left[\\frac{t^{n+1}}{n(n+1)}\\ln(t)\\right]_0^1 - \\int_0^1 \\frac{t^n}{n(n+1)}\\mathrm{d}t\\\\\n\t\t\t&= 0 - \\left[\\frac{t^{n+1}}{n(n+1)^2}\\right]_0^1 \\\\\n\t\t\t&= - \\frac{1}{n(n+1)^2}\n\t\t\t\\end{align*}$$\n\t\t\td'où le résultat.",
@@ -37,7 +38,7 @@
       }
     },
     {
-      "id": "9f647f37-4bfd-403e-835e-c1e9db992a5f",
+      "id": "767100e2-4e18-420c-b337-27029d32a9fd",
       "type": "question",
       "value": {
         "latex": "Déterminer $a,b,c \\in \\R$ tels que $$\\frac{1}{n(n+1)^2} = \\frac{a}{n} + \\frac{b}{n+1} + \\frac{c}{(n+1)^2}$$",
@@ -45,7 +46,7 @@
       }
     },
     {
-      "id": "a2ca043f-a676-4c29-9d83-0c9c12d5b81b",
+      "id": "fa8418c4-92d0-49cb-be34-41139c54452b",
       "type": "reponse",
       "value": {
         "latex": "On trouve $$\\frac{1}{n(n+1)^2} = \\frac{1}{n} - \\frac{1}{n+1} - \\frac{1}{(n+1)^2}$$",
@@ -53,7 +54,7 @@
       }
     },
     {
-      "id": "e549d27c-ff1a-4ce1-91ca-8e03db25b8fc",
+      "id": "7e8a04ad-391a-4eab-b5bf-b1d3a9532845",
       "type": "question",
       "value": {
         "latex": "\\`A l'aide d'un développement en série entière et des résultats des questions précédentes, déterminer la valeur exacte de $I$.",
@@ -61,7 +62,7 @@
       }
     },
     {
-      "id": "61bf49f2-0d3d-4f75-824e-7db494a06a43",
+      "id": "3d3a1831-3b1f-4fb2-a971-c48db782e284",
       "type": "reponse",
       "value": {
         "latex": "On rappelle d'abord que pour tout $t \\in ]-1;1[$ : \n\t\t\t$$\\ln(1-t) = \\sum_{n=1}^{+\\infty} \\frac{-t^n}{n}$$\n\t\t\tPar théorème d'intégration terme à terme pour une série entière, la variable $t$ variant dans $]0;1[ \\subset ]-1;1[$, on a :\n\t\t\t$$\\begin{align*}\n\t\t\t\\int_0^1 \\ln(t)\\ln(1-t)\\mathrm{d}t &= \\int_0^1 \\ln(t) \\sum_{n=1}^{+\\infty} \\frac{-t^n}{n} \\mathrm{d}t \\\\\n\t\t\t&= \\sum_{n=1}^{+\\infty} \\int_0^1 \\ln(t) \\times \\frac{-t^n}{n} \\mathrm{d}t \\\\\n\t\t\t&= \\sum_{n=1}^{+\\infty} \\frac{1}{n(n+1)^2} \\\\\n\t\t\t&= \\sum_{n=1}^{+\\infty} \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) - \\sum_{n=1}^{+\\infty} \\frac{1}{(n+1)^2} \\\\\n\t\t\t&= 1 - \\sum_{n=2}^{+\\infty} \\frac{1}{n^2} \\\\\n\t\t\t&= 1 + 1 - \\sum_{n=1}^{+\\infty} \\frac{1}{n^2}\n\t\t\t\\end{align*}$$\n\t\t\tDonc \\fbox{$I = 2 - \\frac{\\pi^2}{6}$}.",

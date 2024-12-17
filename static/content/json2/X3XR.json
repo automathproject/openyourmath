@@ -2,18 +2,18 @@
   "uuid": "X3XR",
   "titre": "Fonction de répartition",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:40.681Z",
+    "createdAt": "2024-12-17T19:48:02.175Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:40.681Z"
+    "updatedAt": "2024-12-17T19:48:02.175Z"
   },
   "contenu": [
     {
-      "id": "14d42574-3ac7-4dfc-9291-49ed94a93e7a",
+      "id": "db240b00-dc6b-495d-abca-20c5e8e1dc8c",
       "type": "description",
       "value": {
         "latex": "Soit $\\lambda>0$ et $X$ une variable aléatoire admettant pour densité $f(x)=\\lambda e^{-\\lambda x}1_{[0;+\\infty[}(x)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "4f91794e-5f0e-4b8e-bca8-ae659a5dc219",
+      "id": "dd10fd83-b0d8-44f2-940c-d2a89cbe8e81",
       "type": "question",
       "value": {
         "latex": "Vérifier que $f$ définit bien une fonction densité, puis déterminer la fonction de répartition $F_X$ de $X$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "b6b5abf9-37cb-4ad7-b709-c695cd724a8b",
+      "id": "d39e2992-8527-4124-b233-6a4aa5f8412f",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de vérifier que $f(x) \\geq 0$ pour tout $x \\in \\R$ puis de calculer :\n \t$$\\begin{align*}\n \t\\int_{-\\infty}^{+\\infty} f(x)dx &= \\int_0^{+\\infty} \\lambda e^{-\\lambda x} dx \\\\\n \t                               &= \\left[-e^{-\\lambda x}\\right]_0^{+\\infty} \\\\\n \t                               &= 1\n \t\\end{align*}$$\nOn détermine maintenant la fonction de répartition : soit $t \\in \\R$ ;\n\\begin{itemize}\n\t\\item si $t<0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^t 0 dx = 0$ ;\n\t\\item si $t \\geq 0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^0 0 dx + \\int_0^t \\lambda e^{-\\lambda x} dx = 0 + \\left[-e^{-\\lambda x}\\right]_0^t = 1 - e^{-\\lambda t}$.\n\\end{itemize}",

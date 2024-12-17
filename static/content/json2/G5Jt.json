@@ -2,18 +2,18 @@
   "uuid": "G5Jt",
   "titre": "Probabilités et divisibilité",
   "theme": [
-    "probabilités"
+    "variables aléatoires discrètes"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:27.382Z",
+    "createdAt": "2024-12-17T17:05:08.295Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:27.382Z"
+    "updatedAt": "2024-12-17T17:05:08.295Z"
   },
   "contenu": [
     {
-      "id": "76ad11df-5408-4136-a371-7e7ab59a7bfa",
+      "id": "fad8c0b7-7ca4-4b50-a971-f4f3b7efab01",
       "type": "description",
       "value": {
         "latex": "Soit $n \\in \\N^*$. Une urne contient $n$ boules blanches numérotées de $1$ à $n$ et $2$ boules noires numérotées $1$ et $2$. On effectue le tirage de toutes les boules de l'urne, une à une, et sans remise. On appelle $X$ le rang d'apparition de la première boule blanche et $Y$ celui du premier numéro $1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "d835d377-bfc8-437e-b8e9-4aae92b24026",
+      "id": "3e89cd7b-7f6b-454d-aac5-83817dff4010",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $X$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "2b7f2a5e-c02f-4e76-8f65-cdbdd24d3cc1",
+      "id": "bc6f39f6-e10c-41bb-b802-244bfc4e57eb",
       "type": "reponse",
       "value": {
         "latex": "L'ensemble des valeurs prises par $X$ est $X(\\Omega) = \\{1,2,3\\}$. \nLes boules sont a priori indiscernables au toucher donc le tirage d'un boule parmi les $n+2$ suit une loi uniforme, autrement dit la probabilité de tirer une boule en particulier est $\\frac{1}{n+2}$. On en déduit que la probabilité que la première boule tirée soit blanche est $$\\prob(X=1) = \\frac{n}{n+2}$$.\n\nPar indépendance des tirages et formule de Baye, on a $$\\prob(X=2) = \\prob(\\overline{N_1})\\prob(N_2 \\mid \\overline{N_1}) = \\frac{2}{n+2}\\frac{n}{n+1} = \\frac{2n}{(n+2)(n+1)}$$\n\nDe même, on a $$\\prob(X=3) = \\frac{2}{n+2}\\frac{1}{n+1}\\frac{n}{n} = \\frac{2}{(n+2)(n+1)}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "50a19dea-9d65-4cc9-9d4f-5e9b125272c5",
+      "id": "51e5e62d-e942-43d9-aaf8-f4b1b3dc1138",
       "type": "question",
       "value": {
         "latex": "Montrer que les événements $\\{X=1\\}$ et $\\{Y=1\\}$ sont indépendants si et seulement si $n=2$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "c2105ab7-bf2a-4c08-85d2-4bf4a1014c41",
+      "id": "8a4b322d-a457-4a62-adba-509e25ca7315",
       "type": "reponse",
       "value": {
         "latex": "On a $\\prob(X=1,Y=1) = \\frac{1}{n+2}$, c'est la probabilité que la première boule tirée soit blanche et qu'elle porte le numéro 1. \n\t\nOn a $\\prob(Y=1) = \\frac{2}{n+2}$ car au premier tirage, $2$ boules portent le numéro $1$. \n\nLes événements  $\\{X=1\\}$ et $\\{Y=1\\}$ sont indépendants si et seulement si : \n$$\\begin{align*}\n\\prob(X=1,Y=1) = \\prob(X=1)\\prob(Y=1) &\\iff \\frac{1}{n+2} = \\frac{n}{n+2} \\times \\frac{2}{n+2} \\\\\n&\\iff 2n = n+2 \\\\\n&\\iff n = 2\n\\end{align*}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "d4e8cdf9-6351-49fe-a600-f9ac72a8834c",
+      "id": "bffb1a27-a4a1-4442-94e3-b6b2fb8f3d06",
       "type": "question",
       "value": {
         "latex": "Montrer que les variables aléatoires $X$ et $Y$ ne sont pas indépenantes.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "63f18f21-f197-4c0f-b737-460d56655f1d",
+      "id": "9a507406-ea47-4787-95db-0e8afd9c8b29",
       "type": "reponse",
       "value": {
         "latex": "On compare par exemple $\\prob(X=3,Y=3)$ et $\\prob(X=3)\\times \\prob(Y=3)$. Or $\\prob(X=3,Y=3)=0$ car pour que la première boule blanche apparaisse au rang $3$, il faut que les deux premières tirées soient noires, dont l'une d'elle porte le numéro $1$. \n\t\nOr il est clair que $\\prob(X=3) \\neq 0$ et $\\prob(Y=3)\\neq 0$. On en déduit que  $\\prob(X=3,Y=3) \\neq \\prob(X=3)\\times \\prob(Y=3)$ ce qui permet de conclure que  les variables aléatoires $X$ et $Y$ ne sont pas indépenantes.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "89cbb883-7eba-41bb-99b8-df8bcfaba7bb",
+      "id": "505d16d2-8254-4a35-8a5d-89bcfe7613ee",
       "type": "description",
       "value": {
         "latex": "On suppose maintenant que $n=2$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "523699b2-f6d3-4234-ba72-fe18118ce432",
+      "id": "a1c2921b-21c9-4d8c-abf9-bbb3db7be1b3",
       "type": "question",
       "value": {
         "latex": "Montrer que $X$ et $Y$ ont la même loi de probabilité.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "71567b5c-b351-418f-b14d-bc6519817357",
+      "id": "bcd97a63-a708-4af4-b72b-3a56323d36c2",
       "type": "reponse",
       "value": {
         "latex": "Sous cette hypothèse, on a $Y(\\Omega) = \\{1,2,3\\}$. De plus, d'après la question 1, on a \n\t$$\\prob(X=1) = \\frac{1}{2} \\quad \\prob(X=2) = \\frac{1}{3} \\quad \\prob(X=3) = \\frac{1}{6}$$\n\tPar ailleurs : \n\t\\begin{itemize}\n\t\t\\item $\\prob(Y=1) = \\frac{2}{4} = \\frac{1}{2}$, c'est la probabilité que la première boule tirée porte le numéro $1$.\n\t\t\\item $\\prob(Y=2) = \\prob(B_1)\\prob(\\overline{B_2} \\mid \\B_1) = \\frac{2}{4}\\frac{1}{3} = \\frac{1}{3}$.\n\t\t\\item de même, $\\prob(Y=3) = \\frac{2}{4}\\frac{1}{3}\\frac{2}{2} = \\frac{1}{6$.}\n\t\\end{itemize}\n\t\tLes deux variables $X$ et $Y$ ont donc la même loi de probabilité.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "3bad1721-2b68-40b1-9784-3f1fd289476d",
+      "id": "2052e4a0-c2c6-4aea-9f6c-2c1b4f747c08",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi du couple $(X,Y)$.",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "521fe988-2262-4c5c-8862-d903b33ad00f",
+      "id": "c229708d-a049-4d0c-835e-1ad43556614c",
       "type": "reponse",
       "value": {
         "latex": "En utilisant les questions précédentes et en calculant de manière similaire $\\prob(X=1,Y=2)$, $\\prob(X=1,Y=3)$, $\\prob(X=3,Y=1)$\n\\begin{center}\n\t \t\\begin{tabular}{|c|c|c|c|}\n \t\t\\hline\n \t$X \\backslash Y$\t& $1$ & $2$ & $3$ \\\\\n \t\t\\hline\n \t$1$\t& $\\frac{1}{4}$ & $\\frac{1}{6}$  & $\\frac{1}{12}$ \\\\\n \t\t\\hline\n \t$2$\t& $\\frac{1}{6}$ & $\\frac{1}{12}$ & $\\frac{1}{12}$ \\\\\n \t\t\\hline\n \t$3$\t& $\\frac{1}{12}$ & $\\frac{1}{12}$ & $0$ \\\\\n \t\t\\hline\n \t\\end{tabular}\t\n\\end{center}\nEn sommant les lignes et les colonnes, on retrouve les résultats des lois marginales calculées précédemment.",

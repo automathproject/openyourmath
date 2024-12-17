@@ -1,19 +1,19 @@
 {
   "uuid": "T4fh",
-  "titre": "Convergence d'une suite de variables aléatoires",
+  "titre": "Etude d'un estimateur",
   "theme": [
-    "probabilités"
+    "estimateurs"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:38.605Z",
+    "createdAt": "2024-12-17T17:05:15.195Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:38.605Z"
+    "updatedAt": "2024-12-17T17:05:15.195Z"
   },
   "contenu": [
     {
-      "id": "6fd6f425-1dba-4a06-bcd0-746df9f855cb",
+      "id": "1bd54b18-2ea4-43c7-a34b-da8a2124b2ff",
       "type": "question",
       "value": {
         "latex": "Exprimer $\\mathbb{E}(Y)$ et $\\mathbb{E}(Y^2)$ en fonction de $n$ et $p$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "3160d2ff-0904-4141-8575-469919932f8d",
+      "id": "3b162298-a74d-4392-8021-2be35a707d59",
       "type": "reponse",
       "value": {
         "latex": "On considère $Y = n\\overline{X} = \\sum_{i=1}^n X_i$ : par définition, $Y$ suit une loi binomiale $\\mathcal{B}(n,p)$, ce qui permet d'affirmer que $\\mathbb{E}(Y) = np$ et $V(Y) = np(1-p)$. Or on sait que $V(Y) = \\mathbb{E}(Y^2)-(\\mathbb{E}(Y))^2$, donc $\\mathbb{E}(Y^2) = np(1-p)+(np)^2 = np(1+p(n-1))$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "89e18b9c-e508-4c79-b05e-291f0fc1fce2",
+      "id": "938a2b31-bc4c-47d6-a1e8-c0e38cb9590c",
       "type": "question",
       "value": {
         "latex": "On pose $Z = \\overline{X}^2$. Peut-on dire que $Z$ est un estimateur sais biais de $p^2$ ?",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "fb65c6e8-d706-4425-b449-31054be94b9f",
+      "id": "384a88ff-a0f6-43a2-b3b1-1474da42184e",
       "type": "reponse",
       "value": {
         "latex": "En voyant la variable $Z$ comme un estimateur de $p^2$, on va calculer son biais $B(Z)=\\mathbb{E}(Z-p^2) = \\mathbb{E}(Z)-p^2$. Or $\\mathbb{E}(Z) = \\mathbb{E}\\left(\\left(\\frac{1}{n}Y\\right)^2\\right) = \\frac{1}{n^2}\\mathbb{E}(Y^2) = \\frac{p}{n} + p^2 \\frac{n-1}{n} \\neq p^2$ donc $B(Z) \\neq 0$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "7396769e-8b05-498d-9937-f25037338fdc",
+      "id": "6e81f547-4682-4b54-ba8f-118c2b33359f",
       "type": "question",
       "value": {
         "latex": "On pose $T = \\frac{Y(Y-1)}{n(n-1)}$. Vérifier que $T$ est un estimateur sans biais de $p^2$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "8498189d-fa05-4560-87b7-a2a62af8b4b7",
+      "id": "a72c0b18-ca82-4a26-b962-edfc1dbd4078",
       "type": "reponse",
       "value": {
         "latex": "En revanche, $\\mathbb{E}(T) = \\frac{1}{n(n-1)}\\mathbb{E}(Y(Y-1)) = \\frac{1}{n(n-1)}(np(1+(n-1)p)-np) = p^2$ donc $T$ est un estimateur non biaisé de la valeur $p^2$.",

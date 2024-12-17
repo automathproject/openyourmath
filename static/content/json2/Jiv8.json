@@ -2,18 +2,21 @@
   "uuid": "Jiv8",
   "titre": "Lois pour les statistiques",
   "theme": [
-    "statistiques"
+    "loi normale",
+    "loi du chi2",
+    "loi de Student",
+    "loi de Fisher"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:30.950Z",
+    "createdAt": "2024-12-17T17:05:10.434Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:30.950Z"
+    "updatedAt": "2024-12-17T17:05:10.434Z"
   },
   "contenu": [
     {
-      "id": "595d992c-3a31-476b-9010-383c7d28ef3a",
+      "id": "9eb0a7a3-1f93-4e37-9ffd-5292663e41ed",
       "type": "description",
       "value": {
         "latex": "Soient 9 variables aléatoires indépendantes, normales centrées réduites notées $(U_i)_{1 \\leq i \\leq 9}$.",
@@ -21,7 +24,7 @@
       }
     },
     {
-      "id": "ed712737-1b51-4ae2-852d-3ea077645012",
+      "id": "3f455e37-8341-406d-b2af-fe96c7835b95",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par la variable aléatoire $X=\\sum\\limits_{i=1}^{9}U_i^2$ ? Déterminer le réel $x$ tel que $\\PP(X > x) = 0.05$.",
@@ -29,7 +32,7 @@
       }
     },
     {
-      "id": "153e5bbf-dedd-48ff-a955-152de71dc367",
+      "id": "3cdea093-2928-4579-9ecd-a727773004e5",
       "type": "reponse",
       "value": {
         "latex": "On a $X \\sim \\chi^2(9)$ et $x = 16.92$.",
@@ -37,7 +40,7 @@
       }
     },
     {
-      "id": "0841f314-d7fe-46d5-9882-ebb1f86eae49",
+      "id": "ffcd733a-7683-445d-84ff-1c17b123a5bb",
       "type": "question",
       "value": {
         "latex": "Soit $Y$ une variable aléatoire suivant une loi normale de moyenne 10 et d'écart-type 3, indépendante de $X$. Quelle est la loi suivie par la variable aléatoire $Z=\\frac{Y-10}{\\sqrt{X}}$ ? Déterminer le réel $z$ tel que $\\PP(Z > z) = 0.05$.",
@@ -45,7 +48,7 @@
       }
     },
     {
-      "id": "da356f6f-5cf9-4f4e-8672-9982e1713e2f",
+      "id": "e25ad5ca-c172-4bfc-afde-38311d2ed84d",
       "type": "reponse",
       "value": {
         "latex": "On a $Z = \\frac{\\frac{Y-10}{3}}{\\sqrt{\\frac{X}{9}}}$ donc par définition, $Z$ suit une loi de Student $St(9)$ et $z = 1.833$.",
@@ -53,7 +56,7 @@
       }
     },
     {
-      "id": "d3fdeae5-047a-4db9-9a45-48c734a636af",
+      "id": "392b822c-1d58-4929-be2a-96001193caa2",
       "type": "question",
       "value": {
         "latex": "Soit $V$ une variable aléatoire distribuée selon une loi du $\\chi^2$ à 3 degrés de liberté, indépendante de $X$. Quelle est la loi suivie par $W_1=\\frac{X}{3V}$ ? Quelle est la loi suivie par $W_2=\\frac{3V}{X}$ ? Déterminer le réel $w_2$ tel que $\\PP(W_2 > w_2) = 0.05$.",
@@ -61,7 +64,7 @@
       }
     },
     {
-      "id": "4780a2c3-3ff5-4a22-9e0f-2248424a6385",
+      "id": "16a7d57e-0154-4f98-9a19-0f3dcc7e8b3b",
       "type": "reponse",
       "value": {
         "latex": "On a $W_1 = \\frac{\\frac{X}{9}}{\\frac{V}{3}}$ donc $W_1$ suit une loi de Fisher $F(9,3)$. De même, $W_2 = \\frac{3V}{\\frac{X}{9}}$ donc $W_2$ suit une loi de Fisher $F(3,9)$. On a $w_2 = 0.325$.",

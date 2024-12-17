@@ -2,18 +2,20 @@
   "uuid": "KZCb",
   "titre": "Différents types de convergence",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité",
+    "convergence en loi",
+    "convergence en probabilité"
   ],
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:31.672Z",
+    "createdAt": "2024-12-17T17:05:11.103Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:31.672Z"
+    "updatedAt": "2024-12-17T17:05:11.103Z"
   },
   "contenu": [
     {
-      "id": "425d0f53-b03e-4eeb-a856-d14aca2803ed",
+      "id": "01c665ac-e540-4b00-b4dc-56648feb29f3",
       "type": "description",
       "value": {
         "latex": "Soit $n$ un entier naturel non-nul et soit $a$ un réel. On considère la fonction $f_n$ définie sur $\\mathbb R$ par $$f_n(x)=\\frac{an}{\\pi(1+n^2x^2)}.$$",
@@ -21,7 +23,7 @@
       }
     },
     {
-      "id": "92d20ab9-2071-4566-99fb-44a02a8d2183",
+      "id": "2c443c6b-e055-4e7c-8642-939295f739ac",
       "type": "question",
       "value": {
         "latex": "Déterminer $a$ pour que $f_n$ soit une densité de variable aléatoire.",
@@ -29,7 +31,7 @@
       }
     },
     {
-      "id": "7dfc5b90-ebf1-45a6-b742-9b3607cad098",
+      "id": "342fcffe-e18e-4925-977b-001e8f9e4f8b",
       "type": "reponse",
       "value": {
         "latex": "La fonction $f_n$ étant continue et positive, elle est une densité de variable aléatoire si et seulement si\n\t\t\t$$\n\t\t\t\\int_{-\\infty}^{+\\infty} f_n(x) d x=1\n\t\t\t$$\n\t\t\tOr, effectuant le changement de variables $u=n x$, on a\n\t\t\t$$\n\t\t\t\\int_{-\\infty}^{+\\infty} \\frac{a n}{\\pi\\left(1+n^2 x^2\\right)} d x=\\int_{-\\infty}^{+\\infty} \\frac{a}{\\pi\\left(1+u^2\\right)} d u=\\frac{a}{\\pi}[\\arctan (u)]_{-\\infty}^{+\\infty}=\\frac{a}{\\pi} \\times \\pi=a\n\t\t\t$$\n\t\t\t$f_n$ est donc une densité de variable aléatoire si et seulement si $a=1$.",
@@ -37,7 +39,7 @@
       }
     },
     {
-      "id": "4bebe14e-53c6-49bd-b426-1583fc1c3403",
+      "id": "710071e1-fdb8-4630-bab8-2c54b7cb42f1",
       "type": "question",
       "value": {
         "latex": "Soit $(X_n)$ une suite de variables aléatoires telle que chaque $X_n$\n\t\tadmet pour densité $f_n$. \\'Etudier l'existence de moments pour $X_n$.",
@@ -45,7 +47,7 @@
       }
     },
     {
-      "id": "f6c72bfd-4874-449e-bfa8-7f0e9b4dc44a",
+      "id": "1038cab3-5799-43e0-9dfd-4a2067152b4d",
       "type": "reponse",
       "value": {
         "latex": "On a $x f_n(x) \\sim_{+\\infty} \\frac{1}{\\pi n x}$ dont l'intégrale est divergente au voisinage de $+\\infty$, et qui est une fonction positive. Ainsi, la variable aléatoire $X_n$ n'admet pas d'espérance, ni aucun autre moment.",
@@ -53,7 +55,7 @@
       }
     },
     {
-      "id": "669e534b-4323-43ee-83ec-05ba1d4402c1",
+      "id": "b29da0d2-f6f6-4c77-a9bd-13ddba450466",
       "type": "question",
       "value": {
         "latex": "\\'Etudier la convergence en loi de la suite $(X_n)$.",
@@ -61,7 +63,7 @@
       }
     },
     {
-      "id": "28a63088-f814-471a-a8f2-026e26f5fda5",
+      "id": "22a6dc82-8f19-40d2-92b2-aa1d96b57899",
       "type": "reponse",
       "value": {
         "latex": "Soit $F_n$ la fonction de répartition de $X_n$, définie pour tout $x$ réel par\n\t\t\t$$\n\t\t\tF_n(x)=\\int_{-\\infty}^x f_n(t) d t=\\frac{1}{\\pi}\\left(\\arctan (n x)+\\frac{\\pi}{2}\\right) .\n\t\t\t$$\n\t\t\tSi $x<0, \\arctan (n x) \\rightarrow-\\pi / 2$, et donc $F_n(x) \\longrightarrow 0$. Si $x>0, \\arctan (n x) \\longrightarrow \\pi / 2$ et donc $F_n(x) \\longrightarrow 1$. \n\t\t\t\n\t\t\tSoit maintenant $X$ une variable aléatoire identiquement nulle. Sa fonction de répartition $F_X$ vérifie $F_X(x)=0$ si $x<0$ et $F_X(x)=1$ si $x \\geq 0$. Autrement dit, en tout point de continuité de $F_X$, la suite $\\left(F_n(x)\\right)$ converge vers $F_X(x)$. \n\t\t\t\n\t\t\tOn en déduit la convergence en loi de la suite $\\left(X_n\\right)$ vers $X$.",
@@ -69,7 +71,7 @@
       }
     },
     {
-      "id": "cc064f0b-36e5-4289-8fac-8a42582c02e1",
+      "id": "17a4c1bf-a963-4697-a575-b692add5f39e",
       "type": "question",
       "value": {
         "latex": "\\'Etudier la convergence en probabilité de la suite $(X_n)$.",
@@ -77,7 +79,7 @@
       }
     },
     {
-      "id": "f603a16c-9efa-4a19-ac21-b7bce5b876e0",
+      "id": "8657a70e-01c7-49da-8419-75b6a0e37f42",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\varepsilon>0$. On cherche  la limite de $P\\left(\\left|X_n-x\\right|<\\varepsilon\\right)$ où $X$ est la  variable nulle.\n\t\t\t$$\n\t\t\t\\text { on } \\begin{aligned}\n\t\t\t\tP\\left(\\left|X_n\\right|<\\varepsilon\\right) &=\\int_{-\\varepsilon}^{\\varepsilon} \\frac{n}{\\pi\\left(1+n^2 x^2\\right)} d x \\\\\n\t\t\t\t&=\\int_{-n \\varepsilon}^{n \\varepsilon} \\frac{d u}{\\pi\\left(1+u^2\\right)} \\\\\n\t\t\t\t&=\\frac{1}{\\pi}(\\operatorname{Arctan}(n \\varepsilon)-\\operatorname{Arctan}(-n \\varepsilon)) \\\\\n\t\t\t\t&=\\frac{2}{\\pi} \\operatorname{Arctan}(n \\varepsilon) \\underset{n \\to\\infty}{\\longrightarrow} \\frac{2}{\\pi} \\times \\frac{\\pi}{2}=1\n\t\t\t\\end{aligned}\n\t\t\t$$\n\t\t\tDonc on a bien $X_n \\underset{\\text { proba }}{\\longrightarrow} 0$",

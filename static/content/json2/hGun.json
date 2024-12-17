@@ -2,18 +2,18 @@
   "uuid": "hGun",
   "titre": "Norme d'un vecteur gaussien et somme de variables exponentielles",
   "theme": [
-    "probabilités"
+    "variables aléatoires à densité"
   ],
   "niveau": "",
   "metadata": {
-    "auteur": "Quentin Liard",
-    "createdAt": "2024-12-05T15:37:52.264Z",
+    "auteur": "Quentin LIARD",
+    "createdAt": "2024-12-17T17:05:20.806Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:52.264Z"
+    "updatedAt": "2024-12-17T17:05:20.806Z"
   },
   "contenu": [
     {
-      "id": "6ec9670d-bec2-4766-9078-638629486109",
+      "id": "16a2465d-ab46-4a9d-b4f4-6874e4d5d4a8",
       "type": "question",
       "value": {
         "latex": "Soient $X$ et $Y$ deux variables aléatoires indépendantes. Démontrer que  pour tout $t\\geq 0$ : $$\\mathcal{L}_t(X+Y)=\\mathcal{L}_t(X)\\mathcal{L}_t(Y).$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "76fd285f-07a2-4625-9c29-a9fa41001080",
+      "id": "1cc813b1-6390-4095-a4fb-0f020a49e73b",
       "type": "reponse",
       "value": {
         "latex": "On a $\\mathcal{L}_t(Z) = \\mathbb{E}(e^{-tZ}) = \\int_0^{+\\infty} e^{-tz} \\frac{1}{2} e^{-\\frac{z}{2}} dz = \\frac{1}{2} \\int_0^{+\\infty} e^{-\\frac{z}{2}(2t+1)} dz = \\frac{1}{2} \\left[ \\frac{e^{-\\frac{z}{2}(2t+1)}}{-\\frac{2t+1}{2}} \\right]_0^{+\\infty} = \\frac{1}{2t+1}$. \n    On a $\\mathcal{L}_t(S_n) = \\prod_{i=1}^n \\mathcal{L}_t(Z_i) = \\prod_{i=1}^n \\frac{1}{2t+1} = \\left( \\frac{1}{2t+1} \\right)^n$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "1e9baffd-352b-4063-8bfb-9005e028e4bd",
+      "id": "ff2f2815-84d8-4f62-bbca-f30d25cb5799",
       "type": "reponse",
       "value": {
         "latex": "On a $\\int_{\\R} f_U(x) dx = \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx = \\int_0^{+\\infty} \\frac{y^{n-1}}{n-1!} e^{-y} dy = 1$. Donc $f_U$ est bien une densité de probabilité.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "6560a6f8-fc38-4057-953a-c0dd4c5f9f97",
+      "id": "da430423-faba-4a27-a480-33d3f105e965",
       "type": "reponse",
       "value": {
         "latex": "On a \n    $$\\begin{align*}\n        \\mathcal{L}_t(U) &= \\int_0^{+\\infty} e^{-tx} \\frac{1}{2^n} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx \\\\ \n        &= \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}(2t+1)} dx \\\\\n        &= \\int_0^{+\\infty} \\frac{1}{2^n} \\left(\\frac{2}{2t+1}\\right)^{n-1}\\frac{y^{n-1}}{n-1!} e^{-y} \\frac{2}{2t+1} dy \\\\\n         &= \\frac{1}{(2t+1)^n}\n    \\end{align*}$$\n    Donc $U$ et $S_n$ suivent la même loi définie par la densité $f_U$.",
