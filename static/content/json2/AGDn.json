@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:21.960Z",
+    "createdAt": "2024-12-17T10:44:29.349Z",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:21.960Z"
+    "updatedAt": "2024-12-17T10:44:29.349Z"
   },
   "contenu": [
     {
-      "id": "0f91935a-7c1c-4983-83ab-9f41dc7d3d68",
+      "id": "66295093-c0d3-48c8-ad3b-994b1d297b94",
       "type": "question",
       "value": {
         "latex": "Calculer :\n$$\n\\Delta=\\left|\\begin{array}{cccc}\n\ta^2 & a b & a b & b^2 \\\\\n\ta b & a^2 & b^2 & a b \\\\\n\ta b & b^2 & a^2 & a b \\\\\n\tb^2 & a b & a b & a^2\n\\end{array}\\right|,\n$$\noù $a$ et $b$ sont deux réels non nuls.",
@@ -21,7 +21,15 @@
       }
     },
     {
-      "id": "9ce8aaf8-f641-4547-8866-1330dcf5a9e7",
+      "id": "163dadb0-baf4-4304-a462-9460b1645d4c",
+      "type": "indication",
+      "value": {
+        "latex": "Faire apparaître des $0$ par opérations sur les lignes ou les colonnes. On peut ainsi factoriser par $(a^2-b^2)$ deux fois successivement.",
+        "html": "<p>Faire apparaître des <span class=\"math inline\">\\(0\\)</span> par opérations sur les lignes ou les colonnes. On peut ainsi factoriser par <span class=\"math inline\">\\((a^2-b^2)\\)</span> deux fois successivement.</p>\n"
+      }
+    },
+    {
+      "id": "6830d8b4-9bfe-4b48-b711-df31e8899190",
       "type": "reponse",
       "value": {
         "latex": "$$\n\\begin{aligned}\n\t& \\Delta=\\left|\\begin{array}{cccc}\n\t\ta^2 & a b & a b & b^2 \\\\\n\t\ta b & a^2 & b^2 & a b \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=\\ell_2-\\ell_3\\left|\\begin{array}{cccc} \n\t\t& \\ell_4 \\\\\n\t\ta^2-b^2 & 0 & 0 & b^2-a^2 \\\\\n\t\t0 & a^2-b^2 & b^2-a^2 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =\\left(a^2-b^2\\right)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& c_1+c_2+c_3+c_4 \\\\\n\t& =(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t(a+b)^2 & b^2 & a^2 & a b \\\\\n\t\t(a+b)^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t1 & b^2 & a^2 & a b \\\\\n\t\t1 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right| \\\\\n\t& \\Delta^{\\prime}=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right|=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & 0 \\\\\n\t\t1 & b^2 & a^2+b^2 \\\\\n\t\t1 & a b & 2 a b\n\t\\end{array}\\right|=-\\left|\\begin{array}{cc}\n\t\t1 & a^2+b^2 \\\\\n\t\t1 & 2 a b\n\t\\end{array}\\right|=a^2+b^2-2 a b \\\\\n\t& \\Delta=(a-b)^4 \\cdot(a+b)^4 \\\\\n\t&\n\\end{aligned}\n$$",

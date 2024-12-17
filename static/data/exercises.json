@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalCount": 447,
-    "generatedAt": "2024-12-05T15:38:10.764Z"
+    "totalCount": 454,
+    "generatedAt": "2024-12-17T10:44:30.706Z"
   },
   "exercises": [
     {
@@ -177,6 +177,54 @@
           "value": {
             "latex": "On peut ne retenir que les valeurs du vendredi obtenues par exemple avec la formule \\texttt{=SI(B2=\"Vendredi\";C2;\"\")} et on trouve numériquement $50{,}4625$. On observe donc une différence dans le temps de trajet.",
             "html": "<p>On peut ne retenir que les valeurs du vendredi obtenues par exemple avec la formule <code>=SI(B2=\"Vendredi\";C2;\"\")</code> et on trouve numériquement <span class=\"math inline\">\\(50{,}4625\\)</span>. On observe donc une différence dans le temps de trajet.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "3zDK",
+      "titre": "Application de la loi de Benford",
+      "theme": [
+        "Statistiques et tests d’hypothèses"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-12-17T10:44:29.291Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:29.291Z"
+      },
+      "contenu": [
+        {
+          "id": "f9fcb668-74c8-42db-918d-25d91efe72a3",
+          "type": "description",
+          "value": {
+            "latex": "La loi de Benford, initialement appelée loi des nombres anormaux par Benford, fait référence à une fréquence de distribution statistique observée empiriquement sur de nombreuses sources de données dans la vraie vie, ainsi qu’en mathématiques. Dans une série de données numériques, on pourrait s’attendre à voir les chiffres de 1 à 9 apparaître à peu près aussi fréquemment comme premier chiffre significatif, soit avec une fréquence de $1/9 = 11,1\\%$ pour chacun. Or, contrairement à cette intuition (biais d’équiprobabilité), la série suit très souvent approximativement la loi de Benford :\n\n\n\n\\def\\yscale{0.2}\n\n\n\\def\\barwidth{0.5}\n\n\n\\def\\data{{1/30.10},{2/17.61},{3/12.49},{4/9.69},{5/7.92},{6/6.69},{7/5.80},{8/5.12},{9/4.58}}\n\n\\begin{center}\n\\begin{tikzpicture}[x=1cm,y=1cm,font=\\small]\n\n\n\\draw[->,thick] (0.5,0) -- (0.5,7.5) node[above]{Fréquence (\\%)};\n\n\n\\foreach \\v in {0,5,10,15,20,25,30,35} {\n   \\draw (0.5,\\v*\\yscale) -- (0.45,\\v*\\yscale) node[left]{\\v};\n}\n\n\n\\draw[->,thick] (0.5,0) -- (9.5,0) node[right]{1ère décimale};\n\n\n\\node[font=\\bfseries,anchor=south] at (5,7.7) {Loi de BENFORD};\n\\node[font=\\small,anchor=south] at (5,6.4) {Fréquences relatives d'apparition de la 1ère décimale};\n\n\n\\foreach \\x in {1,2,3,4,5,6,7,8,9} {\n  \\draw (\\x,0) -- (\\x,-0.1) node[below]{\\x};\n}\n\n\n\\foreach \\X/\\Y in \\data {\n  \n  \\pgfmathsetmacro{\\h}{\\Y*\\yscale}\n  \n  \n  \n  \\filldraw[fill=cyan!70!black,draw=black] (\\X-\\barwidth/2,0) rectangle (\\X+\\barwidth/2,\\h);\n  \n  \\node[font=\\footnotesize,anchor=south] at (\\X,\\h) {\\Y\\%};\n}\n\n\\end{tikzpicture}\n\\end{center}\n\nCette loi est utilisée notamment dans la détection des fraudes. \n\nEn 2019, le mathématicien Mickäel Launay a relevé 1226 prix dans un supermarché, et a obtenu comme fréquences successives pour les premiers chiffres de 1 à 9 : 32\\%, 26\\%, 15\\%, 9\\%, 5\\%, 4\\%, 3\\%, 2\\%, 4\\%.",
+            "html": "<p>La loi de Benford, initialement appelée loi des nombres anormaux par Benford, fait référence à une fréquence de distribution statistique observée empiriquement sur de nombreuses sources de données dans la vraie vie, ainsi qu’en mathématiques. Dans une série de données numériques, on pourrait s’attendre à voir les chiffres de 1 à 9 apparaître à peu près aussi fréquemment comme premier chiffre significatif, soit avec une fréquence de <span class=\"math inline\">\\(1/9 = 11,1\\%\\)</span> pour chacun. Or, contrairement à cette intuition (biais d’équiprobabilité), la série suit très souvent approximativement la loi de Benford :</p>\n<p>Cette loi est utilisée notamment dans la détection des fraudes.</p>\n<p>En 2019, le mathématicien Mickäel Launay a relevé 1226 prix dans un supermarché, et a obtenu comme fréquences successives pour les premiers chiffres de 1 à 9 : 32%, 26%, 15%, 9%, 5%, 4%, 3%, 2%, 4%.</p>\n"
+          }
+        },
+        {
+          "id": "496096b2-8eee-4e55-a755-ded9e932425e",
+          "type": "question",
+          "value": {
+            "latex": "Avec un risque de première espèce de 5\\%, peut-on affirmer que l’observation du mathématicien est incompatible avec la loi de Benford ?",
+            "html": "<p>Avec un risque de première espèce de 5%, peut-on affirmer que l’observation du mathématicien est incompatible avec la loi de Benford ?</p>\n"
+          }
+        },
+        {
+          "id": "2ac1fcb7-e5af-4f0f-9735-a0987ec41c5c",
+          "type": "indication",
+          "value": {
+            "latex": "Effectuer un test du $\\chi^2$ pour comparer les fréquences observées avec celles attendues selon la loi de Benford.",
+            "html": "<p>Effectuer un test du <span class=\"math inline\">\\(\\chi^2\\)</span> pour comparer les fréquences observées avec celles attendues selon la loi de Benford.</p>\n"
+          }
+        },
+        {
+          "id": "674a6ab3-abda-4c85-a24f-26a1570aa6e6",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
           }
         }
       ]
@@ -1950,13 +1998,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-05T15:37:21.960Z",
+        "createdAt": "2024-12-17T10:44:29.349Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:21.960Z"
+        "updatedAt": "2024-12-17T10:44:29.349Z"
       },
       "contenu": [
         {
-          "id": "0f91935a-7c1c-4983-83ab-9f41dc7d3d68",
+          "id": "66295093-c0d3-48c8-ad3b-994b1d297b94",
           "type": "question",
           "value": {
             "latex": "Calculer :\n$$\n\\Delta=\\left|\\begin{array}{cccc}\n\ta^2 & a b & a b & b^2 \\\\\n\ta b & a^2 & b^2 & a b \\\\\n\ta b & b^2 & a^2 & a b \\\\\n\tb^2 & a b & a b & a^2\n\\end{array}\\right|,\n$$\noù $a$ et $b$ sont deux réels non nuls.",
@@ -1964,7 +2012,15 @@
           }
         },
         {
-          "id": "9ce8aaf8-f641-4547-8866-1330dcf5a9e7",
+          "id": "163dadb0-baf4-4304-a462-9460b1645d4c",
+          "type": "indication",
+          "value": {
+            "latex": "Faire apparaître des $0$ par opérations sur les lignes ou les colonnes. On peut ainsi factoriser par $(a^2-b^2)$ deux fois successivement.",
+            "html": "<p>Faire apparaître des <span class=\"math inline\">\\(0\\)</span> par opérations sur les lignes ou les colonnes. On peut ainsi factoriser par <span class=\"math inline\">\\((a^2-b^2)\\)</span> deux fois successivement.</p>\n"
+          }
+        },
+        {
+          "id": "6830d8b4-9bfe-4b48-b711-df31e8899190",
           "type": "reponse",
           "value": {
             "latex": "$$\n\\begin{aligned}\n\t& \\Delta=\\left|\\begin{array}{cccc}\n\t\ta^2 & a b & a b & b^2 \\\\\n\t\ta b & a^2 & b^2 & a b \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=\\ell_2-\\ell_3\\left|\\begin{array}{cccc} \n\t\t& \\ell_4 \\\\\n\t\ta^2-b^2 & 0 & 0 & b^2-a^2 \\\\\n\t\t0 & a^2-b^2 & b^2-a^2 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =\\left(a^2-b^2\\right)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t1 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\ta b & b^2 & a^2 & a b \\\\\n\t\tb^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& c_1+c_2+c_3+c_4 \\\\\n\t& =(a-b)^2 \\cdot(a+b)^2 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t(a+b)^2 & b^2 & a^2 & a b \\\\\n\t\t(a+b)^2 & a b & a b & a^2\n\t\\end{array}\\right| \\\\\n\t& =(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{cccc}\n\t\t0 & 0 & 0 & -1 \\\\\n\t\t0 & 1 & -1 & 0 \\\\\n\t\t1 & b^2 & a^2 & a b \\\\\n\t\t1 & a b & a b & a^2\n\t\\end{array}\\right|=(a-b)^2 \\cdot(a+b)^4 \\cdot\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right| \\\\\n\t& \\Delta^{\\prime}=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & b^2 & a^2 \\\\\n\t\t1 & a b & a b\n\t\\end{array}\\right|=\\left|\\begin{array}{ccc}\n\t\t0 & 1 & 0 \\\\\n\t\t1 & b^2 & a^2+b^2 \\\\\n\t\t1 & a b & 2 a b\n\t\\end{array}\\right|=-\\left|\\begin{array}{cc}\n\t\t1 & a^2+b^2 \\\\\n\t\t1 & 2 a b\n\t\\end{array}\\right|=a^2+b^2-2 a b \\\\\n\t& \\Delta=(a-b)^4 \\cdot(a+b)^4 \\\\\n\t&\n\\end{aligned}\n$$",
@@ -3551,6 +3607,78 @@
       ]
     },
     {
+      "uuid": "djCi",
+      "titre": "Classification des points d'un triangle",
+      "theme": [
+        "réseaux de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-12-17T10:44:30.461Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:30.461Z"
+      },
+      "contenu": [
+        {
+          "id": "94e4702f-35f6-4047-a524-3388e517a718",
+          "type": "description",
+          "value": {
+            "latex": "On souhaite construire un réseau de neurones qui réalise une classification des points du plan $\\R^2$ selon que ces points appartiennent ou non au triangle $T$ dont les sommets sont les points de coordonnées respectives $(-1,-1),(-1,1),(1,1)$ comme ci-dessous.\n\t\n\t\\begin{center}\n\t\t\\begin{tikzpicture}[scale=1]\n\t\t\t\n\t\t\t\n\t\t\t\\draw[step=0.5,lightgray,very thin] (-2,-2) grid (2,2);\n\t\t\t\\draw[step=1,gray, thin] (-2,-2) grid (2,2);\n\t\t\t\n\t\t\t\\draw[->] (-2,0) -- (2,0) node[right] {$x$};\n\t\t\t\\draw[->] (0,-2) -- (0,2) node[above] {$y$};\n\t\t\t\n\t\t\t\\filldraw[thick,red,fill=red!20] (-1,-1) -- (-1,1) -- (1,1) -- cycle;\n\t\t\t\n\t\t\t\\draw[->] (-2,0) -- (2,0) node[right] {$x$};\n\t\t\t\\draw[->] (0,-2) -- (0,2) node[above] {$y$};\n\t\t\t\n\t\t\t\n\t\t\t\\foreach \\x in {-2,-1,1,2} {\n\t\t\t\t\\draw (\\x,0.05) -- (\\x,-0.05) node[below] {\\x};\n\t\t\t}\n\t\t\t\n\t\t\t\\foreach \\y in {-2,-1,1,2} {\n\t\t\t\t\\draw (0.05,\\y) -- (-0.05,\\y) node[left] {\\y};\n\t\t\t}\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\\end{tikzpicture}\n\t\\end{center}",
+            "html": "<p>On souhaite construire un réseau de neurones qui réalise une classification des points du plan <span class=\"math inline\">\\(\\R^2\\)</span> selon que ces points appartiennent ou non au triangle <span class=\"math inline\">\\(T\\)</span> dont les sommets sont les points de coordonnées respectives <span class=\"math inline\">\\((-1,-1),(-1,1),(1,1)\\)</span> comme ci-dessous.</p>\n"
+          }
+        },
+        {
+          "id": "635d8ab0-b6e2-40a3-a1cb-6449e022b923",
+          "type": "question",
+          "value": {
+            "latex": "Démontrer que le perceptron défini ci-dessous réalise l'opération logique $x$ ET $y$ ET $z$ où $(x,y,z) \\in \\{0,1\\}^3$. \n\t\t\n\t\t\\begin{center}\n\t\t\t\\begin{tikzpicture}[scale=0.3, font=\\scriptsize]\n\t\t\t\t\n\t\t\t\t\\draw[thick,fill=black!10] (0,0) circle (3);\n\t\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.2,above]{$1$} node[left]{$x$};\n\t\t\t\t\\draw[ultra thick]  (170:3) -- (170:8)node[pos=0.2,above]{$1$} node[left]{$y$};\n\t\t\t\t\\draw[ultra thick]  (190:3) -- (190:8)node[pos=0.2,above]{$1$} node[left]{$z$};\n\t\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.2,below]{$-3$};\n\t\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0);\n\t\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\t\t\n\t\t\t\\end{tikzpicture}  \n\t\t\\end{center}",
+            "html": "<p>Démontrer que le perceptron défini ci-dessous réalise l’opération logique <span class=\"math inline\">\\(x\\)</span> ET <span class=\"math inline\">\\(y\\)</span> ET <span class=\"math inline\">\\(z\\)</span> où <span class=\"math inline\">\\((x,y,z) \\in \\{0,1\\}^3\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "38603c3a-5f1a-4de9-b10b-b95afacb9791",
+          "type": "reponse",
+          "value": {
+            "latex": "Si $(x,y,z) = (1,1,1)$ alors $x$ ET $y$ ET $z$ vaut $1$, $0$ dans tous les autres cas. \n\nOr ce perceptron renvoie $1$ si et seulement si $x+y+z \\geq 3$. Donc si $x=y=z=1$ alors la sortie vaut $1$. Si $x=0$ ou $y=0$ ou $z=0$ alors $x+y+z \\leq 2 < 3$ et la sortie vaut $0$.",
+            "html": "<p>Si <span class=\"math inline\">\\((x,y,z) = (1,1,1)\\)</span> alors <span class=\"math inline\">\\(x\\)</span> ET <span class=\"math inline\">\\(y\\)</span> ET <span class=\"math inline\">\\(z\\)</span> vaut <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(0\\)</span> dans tous les autres cas.</p>\n<p>Or ce perceptron renvoie <span class=\"math inline\">\\(1\\)</span> si et seulement si <span class=\"math inline\">\\(x+y+z \\geq 3\\)</span>. Donc si <span class=\"math inline\">\\(x=y=z=1\\)</span> alors la sortie vaut <span class=\"math inline\">\\(1\\)</span>. Si <span class=\"math inline\">\\(x=0\\)</span> ou <span class=\"math inline\">\\(y=0\\)</span> ou <span class=\"math inline\">\\(z=0\\)</span> alors <span class=\"math inline\">\\(x+y+z \\leq 2 &lt; 3\\)</span> et la sortie vaut <span class=\"math inline\">\\(0\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "dbe8c0d3-dc04-498d-b5fe-2664b6a1c45b",
+          "type": "question",
+          "value": {
+            "latex": "En déduire un réseau de neurones prenant un vecteur $(x,y) \\in \\R^2$ en entrée et renvoyant \n\t\t$1$ si $(x,y) \\in T$, $0$ sinon.",
+            "html": "<p>En déduire un réseau de neurones prenant un vecteur <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> en entrée et renvoyant <span class=\"math inline\">\\(1\\)</span> si <span class=\"math inline\">\\((x,y) \\in T\\)</span>, <span class=\"math inline\">\\(0\\)</span> sinon.</p>\n"
+          }
+        },
+        {
+          "id": "389a19d8-480c-4ae6-a9e3-6c008a710fdd",
+          "type": "reponse",
+          "value": {
+            "latex": "Le triangle est l'intersection de trois demi plans définis par ces inéquations : \n\t\t$\\begin{cases}\n\t\t\tx + 1 \\geq 0 \\\\\n\t\t\t-y +1 \\geq 0 \\\\\n\t\t\t-x + y \\geq 0\n\t\t \\end{cases}$\n\t\t d'où le réseau à deux couches suivant où chaque perceptron de la première couche réalise une inéquation et celui de la seconde couche réalise l'intersection :\n\t\t \n\\begin{tikzpicture}[scale=1.5]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\n\n\\node[input neuron] (I-1) at (0,0) {};\n\\node[input neuron] (I-2) at (0,-1.5) {};\n\\node[input neuron] (I-3) at (0,-3) {};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\n\n\n\n\n\n\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (O) {};\n\n\n\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$0$} (I-1);\n\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$1$} ++ (-110:0.8);\n\n\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$0$} (I-2);\n\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-2);\n\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-130:0.8);\n\n\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$-1$} (I-3);\n\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$1$} (I-3);\n\n\n\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\\path[thick] (I-2) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-110:0.8) ;\n\n\n\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\n\\end{tikzpicture}  \t\n\nToutes les fonctions d'activation sont la fonction Heaviside.",
+            "html": "<p>Le triangle est l’intersection de trois demi plans définis par ces inéquations : <span class=\"math inline\">\\(\\begin{cases}\n            x + 1 \\geq 0 \\\\\n            -y +1 \\geq 0 \\\\\n            -x + y \\geq 0\n         \\end{cases}\\)</span> d’où le réseau à deux couches suivant où chaque perceptron de la première couche réalise une inéquation et celui de la seconde couche réalise l’intersection :</p>\n<p>Toutes les fonctions d’activation sont la fonction Heaviside.</p>\n"
+          }
+        },
+        {
+          "id": "04d10f26-321a-4df2-aeb9-8a36d3c3f544",
+          "type": "question",
+          "value": {
+            "latex": "Soit $P$ un polygône convexe du plan à 10 côtés. Décrire l'architecture d'un réseau de neurones permettant de réaliser une classification des points appartenant à l'intérieur de ce polygône.",
+            "html": "<p>Soit <span class=\"math inline\">\\(P\\)</span> un polygône convexe du plan à 10 côtés. Décrire l’architecture d’un réseau de neurones permettant de réaliser une classification des points appartenant à l’intérieur de ce polygône.</p>\n"
+          }
+        },
+        {
+          "id": "39448b7e-dc0a-4aeb-b1ab-830158022909",
+          "type": "reponse",
+          "value": {
+            "latex": "Un polygône convexe est l'intersection de $10$ demi plans. Pour le réaliser, on peut décrire un réseau de neurones à deux couches prenant en entrée un vecteur $(x,y) \\in \\R^2$ : \n\t\\begin{itemize}\n\t\t\\item La première couche est constituée de $10$ neurones réalisant les $10$ demi plans ;\n\t\t\\item La seconde couche est constituée de $1$ neurone réalisant la fonction logique \\texttt{ET} sur $\\{0,1\\}^{10}$ : il suffit de prendre par exemple : \n\t\t\n\t\t\t\t\\begin{center}\n\t\t\t\\begin{tikzpicture}[scale=0.3, font=\\scriptsize]\n\t\t\t\n\t\t\t\\draw[thick,fill=black!10] (0,0) circle (3);\n\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.2,above]{$1$} node[left]{$x_1$};\n\t\t\t\\draw[ultra thick]  (170:3) -- (170:8)node[pos=0.2,above]{$...$} node[left]{$...$};\n\t\t\t\\draw[ultra thick]  (190:3) -- (190:8)node[pos=0.2,above]{$1$} node[left]{$x_{10}$};\n\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.2,below]{$-10$};\n\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0);\n\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\t\n\t\t\t\\end{tikzpicture}  \n\t\t\\end{center}\n\tavec $(x_1,\\cdots,x_{10}) \\in \\{0,1\\}^{10}$ en entrée, les poids $(a_1,\\cdots,a_{10}) = (1,\\cdots,1)$, un biais $a_{11} = -10$ et une fonction d'activation Heaviside.\n\t\\end{itemize}",
+            "html": "<p>Un polygône convexe est l’intersection de <span class=\"math inline\">\\(10\\)</span> demi plans. Pour le réaliser, on peut décrire un réseau de neurones à deux couches prenant en entrée un vecteur <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> :</p>\n<ul>\n<li><p>La première couche est constituée de <span class=\"math inline\">\\(10\\)</span> neurones réalisant les <span class=\"math inline\">\\(10\\)</span> demi plans ;</p></li>\n<li><p>La seconde couche est constituée de <span class=\"math inline\">\\(1\\)</span> neurone réalisant la fonction logique <code>ET</code> sur <span class=\"math inline\">\\(\\{0,1\\}^{10}\\)</span> : il suffit de prendre par exemple :</p>\n<p>avec <span class=\"math inline\">\\((x_1,\\cdots,x_{10}) \\in \\{0,1\\}^{10}\\)</span> en entrée, les poids <span class=\"math inline\">\\((a_1,\\cdots,a_{10}) = (1,\\cdots,1)\\)</span>, un biais <span class=\"math inline\">\\(a_{11} = -10\\)</span> et une fonction d’activation Heaviside.</p></li>\n</ul>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "AKnT",
       "titre": "Classification linéaire par un perceptron",
       "theme": [
@@ -3650,6 +3778,70 @@
           "value": {
             "latex": "Expliquer à l'aide d'un graphique ce que réalise le réseau de neurones suivant :\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$H$};\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$1$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$1$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$0$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-130:0.8);\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-2$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\t\t\n\t\\end{tikzpicture}  \n\\end{center}",
             "html": "<p>Expliquer à l’aide d’un graphique ce que réalise le réseau de neurones suivant :</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "AMir",
+      "titre": "Classification par un réseau de neurones",
+      "theme": [
+        ""
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "",
+        "createdAt": "2024-12-17T10:44:29.435Z",
+        "organisation": "",
+        "updatedAt": "2024-12-17T10:44:29.435Z"
+      },
+      "contenu": [
+        {
+          "id": "f40dd67f-7969-433e-bc9c-b399e7aa52ed",
+          "type": "description",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "036f9c94-32e4-4c38-b29d-093c25be07e3",
+          "type": "question",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "c3859516-2494-4a6a-a001-727bd2970a32",
+          "type": "indication",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "7cc53733-f1b8-4516-8d39-cc05b2cb89d9",
+          "type": "reponse",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "93d5b138-63bb-436f-88fa-4a9a4b5274d6",
+          "type": "question",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "36713a12-88ef-47af-bba1-7ab137e0ee47",
+          "type": "indication",
+          "value": {
+            "latex": "",
+            "html": "\n"
           }
         }
       ]
@@ -4249,6 +4441,126 @@
           "value": {
             "latex": "Il suffit de remplacer par les expressions trouvées ci-dessus, simplifier et on trouve $\\dpsp{\\varphi}{x}(x,y) - 2 \\dpsm{\\varphi}{x}{y}(x,y) + \\dpsp{\\varphi}{y}(x,y) = 0$",
             "html": "<p>Il suffit de remplacer par les expressions trouvées ci-dessus, simplifier et on trouve <span class=\"math inline\">\\(\\dpsp{\\varphi}{x}(x,y) - 2 \\dpsm{\\varphi}{x}{y}(x,y) + \\dpsp{\\varphi}{y}(x,y) = 0\\)</span></p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "HqCj",
+      "titre": "Conformité de la teneur en thiomersal dans un vaccin grippal pandémique",
+      "theme": [
+        "Statistiques et tests d'hypothèses"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-12-17T10:44:29.705Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:29.705Z"
+      },
+      "contenu": [
+        {
+          "id": "cc9389bd-6ceb-4135-956d-6578b64150f5",
+          "type": "description",
+          "value": {
+            "latex": "On s’intéresse à la campagne de vaccination contre la grippe A pandémique de l’année 2009 en France. On mène une étude sur la teneur en thiomersal dans un vaccin. Le thiomersal est un composé contenant du mercure, utilisé de longue date comme conservateur dans les médicaments, et notamment dans les vaccins, pour prévenir la contamination bactérienne. Toutefois, sa toxicité oblige à limiter la quantité utilisée.\n\nUn vaccin produit par un laboratoire français contient, selon la notice, 45 $\\mu g$ de thiomersal par dose. On suppose que la teneur en thiomersal suit une loi normale d'espérance $m$ et de variance $\\sigma^2$, inconnues. On dispose d’un échantillon de 16 valeurs disponibles dans le fichier joint.",
+            "html": "<p>On s’intéresse à la campagne de vaccination contre la grippe A pandémique de l’année 2009 en France. On mène une étude sur la teneur en thiomersal dans un vaccin. Le thiomersal est un composé contenant du mercure, utilisé de longue date comme conservateur dans les médicaments, et notamment dans les vaccins, pour prévenir la contamination bactérienne. Toutefois, sa toxicité oblige à limiter la quantité utilisée.</p>\n<p>Un vaccin produit par un laboratoire français contient, selon la notice, 45 <span class=\"math inline\">\\(\\mu g\\)</span> de thiomersal par dose. On suppose que la teneur en thiomersal suit une loi normale d’espérance <span class=\"math inline\">\\(m\\)</span> et de variance <span class=\"math inline\">\\(\\sigma^2\\)</span>, inconnues. On dispose d’un échantillon de 16 valeurs disponibles dans le fichier joint.</p>\n"
+          }
+        },
+        {
+          "id": "a206233d-c6a9-460b-aec3-0e602060d67f",
+          "type": "question",
+          "value": {
+            "latex": "On considère trois tests de conformité de la moyenne $m$, définis par les hypothèses suivantes : \n$$A : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m > 45,\n                \\end{cases} \\quad B : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m < 45,\n                \\end{cases} \\quad C : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m \\neq 45,\n                \\end{cases}$$\n    Si on veut se prémunir en priorité du risque :\n    \\begin{enumerate}\n        \\item[(a)] lié à la contamination bactérienne du vaccin,\n        \\item[(b)] ou de la toxicité du thiomersal,\n    \\end{enumerate}\n    quel test doit-on choisir dans chacun de ces deux cas ? Justifier rapidement.",
+            "html": "<p>On considère trois tests de conformité de la moyenne <span class=\"math inline\">\\(m\\)</span>, définis par les hypothèses suivantes : <span class=\"math display\">\\[A : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m &gt; 45,\n                \\end{cases} \\quad B : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m &lt; 45,\n                \\end{cases} \\quad C : \\begin{cases}\n                    H_0 : m = 45,\\\\\n                    H_1 : m \\neq 45,\n                \\end{cases}\\]</span> Si on veut se prémunir en priorité du risque :</p>\n<ol>\n<li><p>lié à la contamination bactérienne du vaccin,</p></li>\n<li><p>ou de la toxicité du thiomersal,</p></li>\n</ol>\n<p>quel test doit-on choisir dans chacun de ces deux cas ? Justifier rapidement.</p>\n"
+          }
+        },
+        {
+          "id": "85c6d1e8-8cb6-4c7d-afc3-a24f8e786c85",
+          "type": "indication",
+          "value": {
+            "latex": "Identifier le risque que chaque hypothèse alternative $H_1$ cherche à prévenir.",
+            "html": "<p>Identifier le risque que chaque hypothèse alternative <span class=\"math inline\">\\(H_1\\)</span> cherche à prévenir.</p>\n"
+          }
+        },
+        {
+          "id": "9e406907-e829-47df-bd64-553768c78b50",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        },
+        {
+          "id": "98a6a7f1-78e0-46ba-98a3-4d4e2e70d1ea",
+          "type": "question",
+          "value": {
+            "latex": "Donner une estimation de $m$ par un intervalle de confiance de niveau 99\\%.",
+            "html": "<p>Donner une estimation de <span class=\"math inline\">\\(m\\)</span> par un intervalle de confiance de niveau 99%.</p>\n"
+          }
+        },
+        {
+          "id": "d3443a71-99ed-41fa-a1c4-54bec31fe07a",
+          "type": "indication",
+          "value": {
+            "latex": "Utiliser les données de l’échantillon et la distribution de Student.",
+            "html": "<p>Utiliser les données de l’échantillon et la distribution de Student.</p>\n"
+          }
+        },
+        {
+          "id": "626808ef-745e-4453-bb10-4911480b31ec",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        },
+        {
+          "id": "04bef2ff-966d-46e9-9bb7-2dec5d20e01d",
+          "type": "question",
+          "value": {
+            "latex": "Réaliser le test $A$ avec un risque de première espèce de 5\\%. Quelle est la valeur critique de la moyenne de l’échantillon au-delà de laquelle on rejette l’hypothèse $H_0$ ? Exprimer la prise de décision à l’issue de ce test.",
+            "html": "<p>Réaliser le test <span class=\"math inline\">\\(A\\)</span> avec un risque de première espèce de 5%. Quelle est la valeur critique de la moyenne de l’échantillon au-delà de laquelle on rejette l’hypothèse <span class=\"math inline\">\\(H_0\\)</span> ? Exprimer la prise de décision à l’issue de ce test.</p>\n"
+          }
+        },
+        {
+          "id": "90608ff1-93a8-4a0b-95c1-0d8093b082a0",
+          "type": "indication",
+          "value": {
+            "latex": "Utiliser la table de la loi normale centrée réduite pour déterminer la valeur critique.",
+            "html": "<p>Utiliser la table de la loi normale centrée réduite pour déterminer la valeur critique.</p>\n"
+          }
+        },
+        {
+          "id": "524625e0-dd40-47d9-9041-e46ba5de8608",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        },
+        {
+          "id": "3445116e-4604-403e-97e1-60d6c5cf80e5",
+          "type": "question",
+          "value": {
+            "latex": "On considère le test défini par les hypothèses suivantes : \n    $$\\begin{cases}\n        H_0 : m = 45, \\\\\n        H_1 : m = m_1.\n    \\end{cases}$$\n    Calculer la puissance du test $A'$ pour $m_1 = 46$ et $m_1 = 47$.",
+            "html": "<p>On considère le test défini par les hypothèses suivantes : <span class=\"math display\">\\[\\begin{cases}\n        H_0 : m = 45, \\\\\n        H_1 : m = m_1.\n    \\end{cases}\\]</span> Calculer la puissance du test <span class=\"math inline\">\\(A&#39;\\)</span> pour <span class=\"math inline\">\\(m_1 = 46\\)</span> et <span class=\"math inline\">\\(m_1 = 47\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "fed1969f-d85c-40e3-b0e5-fab73897c61d",
+          "type": "indication",
+          "value": {
+            "latex": "La puissance est $1 - \\beta$, où $\\beta$ est la probabilité d’erreur de seconde espèce.",
+            "html": "<p>La puissance est <span class=\"math inline\">\\(1 - \\beta\\)</span>, où <span class=\"math inline\">\\(\\beta\\)</span> est la probabilité d’erreur de seconde espèce.</p>\n"
+          }
+        },
+        {
+          "id": "37ea819f-073b-4f8d-bd50-f7962bd22f0d",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
           }
         }
       ]
@@ -13175,6 +13487,86 @@
       ]
     },
     {
+      "uuid": "0fdQ",
+      "titre": "Etude d'une rétropropagation",
+      "theme": [
+        "réseaux de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Rachel ABABOU",
+        "createdAt": "2024-12-17T10:44:29.223Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:29.223Z"
+      },
+      "contenu": [
+        {
+          "id": "e3e522f8-cecc-4fe4-96ec-76a171261724",
+          "type": "description",
+          "value": {
+            "latex": "On considère le réseau de neurones à deux couches suivant où la fonction d'activation de la première couche est $\\sigma \\colon x \\mapsto \\frac{1}{1+e^{-x}}$ et la fonction d'activation de la seconde couche est $id \\colon x \\mapsto x$. \n\t\n\t\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\t\t\\node[entree,blue] (E-2) at (-\\layersep,-1.5) {$y$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,0) {};\n\t\t\n\t\t\\node[input neuron] (I-3) at (0,-2) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$\\sigma$};\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\sigma$};\n\t\t\n\t\t\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-1) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {};\n\t\t\\node[above right=0.8ex,scale=0.7] at (O) {$id$};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$\\omega_1$} (I-1) ;\n\t\t\\path[thick] (E-2) edge node[pos=0.7,above left,scale=0.7]{$\\omega_3$} (I-1);\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$a$} ++ (-110:0.8);\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E-1) edge node[pos=0.8,above right,scale=0.7]{$\\omega_2$} (I-3);\n\t\t\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$\\omega_4$} (I-3);\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$b$} ++ (-130:0.8);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$\\omega_5$} (O);\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$\\omega_6$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$c$} ++ (-110:0.8) ;\n\t\t\n\t\t\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y,a,b,c,\\omega_1,\\cdots,\\omega_6)$};\n\t\t\n\t\t\n\t\\end{tikzpicture}   \n\\end{center}",
+            "html": "<p>On considère le réseau de neurones à deux couches suivant où la fonction d’activation de la première couche est <span class=\"math inline\">\\(\\sigma \\colon x \\mapsto \\frac{1}{1+e^{-x}}\\)</span> et la fonction d’activation de la seconde couche est <span class=\"math inline\">\\(id \\colon x \\mapsto x\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "64443fa2-10e0-4a4d-87ce-fb57092d6189",
+          "type": "question",
+          "value": {
+            "latex": "Exprimer la sortie de la première couche en fonction de $x,y,a,b,\\omega_1,\\cdots,\\omega_4$.",
+            "html": "<p>Exprimer la sortie de la première couche en fonction de <span class=\"math inline\">\\(x,y,a,b,\\omega_1,\\cdots,\\omega_4\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "ad34e520-858f-4ecd-b19c-307ba957070f",
+          "type": "question",
+          "value": {
+            "latex": "Donner une expression de la sortie $F(x,y,a,b,c,\\omega_1,\\cdots,\\omega_6)$.",
+            "html": "<p>Donner une expression de la sortie <span class=\"math inline\">\\(F(x,y,a,b,c,\\omega_1,\\cdots,\\omega_6)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "974e943a-c29b-457c-bdad-a477b6b133ea",
+          "type": "question",
+          "value": {
+            "latex": "Exprimer la dérivée $\\sigma'$ en fonction de $\\sigma$.",
+            "html": "<p>Exprimer la dérivée <span class=\"math inline\">\\(\\sigma&#39;\\)</span> en fonction de <span class=\"math inline\">\\(\\sigma\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "aaca1012-3180-4d37-b4f9-5bb8fbc970d3",
+          "type": "question",
+          "value": {
+            "latex": "Déterminer les dérivées partielles $\\frac{\\partial F}{\\partial \\omega_5}$ et $\\frac{\\partial F}{\\partial \\omega_6}$.",
+            "html": "<p>Déterminer les dérivées partielles <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial \\omega_5}\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial \\omega_6}\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "c14f07a5-cfcb-4657-988a-aa36620ca8a1",
+          "type": "question",
+          "value": {
+            "latex": "Exprimer $\\frac{\\partial F}{\\partial a}$ en fonction de $\\frac{\\partial F}{\\partial \\omega_5}$.",
+            "html": "<p>Exprimer <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial a}\\)</span> en fonction de <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial \\omega_5}\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "a5a06a82-a048-4dbe-bcd4-bee2cbf8e5fe",
+          "type": "question",
+          "value": {
+            "latex": "On considère l'entrée suivante : \n\t$$(x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)$$\n\tLes poids initiaux sont : \n\t$$W_{init} = (a,b,\\omega_1,\\cdots,\\omega_6) = (0.35, 0.5, 0.15, 0.2, 0.25, 0.3, 0.4, 0.45)$$\n\tLa sortie obtenue est $F_{\\circ} = 1.006117$.\n\t\n\tOn considère la donnée d'apprentissage : $((x,y),t) = \\left(\\left(0{,}05 \\, ; \\, 0{,}10\\right), 0.99 \\right)$. L'erreur quadratique est : \n\t$$E_{\\circ} = (0.99 - 1.006117)^2 = 0.00026$$\n\tCalculer le gradient de $F$ puis le gradient de $E$ pour $W_{init}$ avec l'entrée $(x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)$.",
+            "html": "<p>On considère l’entrée suivante : <span class=\"math display\">\\[(x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)\\]</span> Les poids initiaux sont : <span class=\"math display\">\\[W_{init} = (a,b,\\omega_1,\\cdots,\\omega_6) = (0.35, 0.5, 0.15, 0.2, 0.25, 0.3, 0.4, 0.45)\\]</span> La sortie obtenue est <span class=\"math inline\">\\(F_{\\circ} = 1.006117\\)</span>.</p>\n<p>On considère la donnée d’apprentissage : <span class=\"math inline\">\\(((x,y),t) = \\left(\\left(0{,}05 \\, ; \\, 0{,}10\\right), 0.99 \\right)\\)</span>. L’erreur quadratique est : <span class=\"math display\">\\[E_{\\circ} = (0.99 - 1.006117)^2 = 0.00026\\]</span> Calculer le gradient de <span class=\"math inline\">\\(F\\)</span> puis le gradient de <span class=\"math inline\">\\(E\\)</span> pour <span class=\"math inline\">\\(W_{init}\\)</span> avec l’entrée <span class=\"math inline\">\\((x,y) = \\left(0{,}05 \\, ; \\, 0{,}10\\right)\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "d90cb9f9-9acb-44ec-b905-845f796821b4",
+          "type": "question",
+          "value": {
+            "latex": "En utilisant la méthode du gradient à pas constant $\\delta = 0.1$, réaliser un apprentissage de ce réseau en déterminant les nouveaux poids $W_{new}$.",
+            "html": "<p>En utilisant la méthode du gradient à pas constant <span class=\"math inline\">\\(\\delta = 0.1\\)</span>, réaliser un apprentissage de ce réseau en déterminant les nouveaux poids <span class=\"math inline\">\\(W_{new}\\)</span>.</p>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "BZWM",
       "titre": "Étude d'une série à termes positifs",
       "theme": [
@@ -14703,6 +15095,102 @@
       ]
     },
     {
+      "uuid": "0C55",
+      "titre": "Étude des troubles musculo-squelettiques (TMS) chez les militaires",
+      "theme": [
+        "Statistiques et tests d'hypothèses"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "2024-12-17T10:44:29.076Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:29.076Z"
+      },
+      "contenu": [
+        {
+          "id": "53f85dde-e76a-431f-9e22-2f8734877455",
+          "type": "description",
+          "value": {
+            "latex": "On s’intéresse aux troubles musculo-squelettiques (TMS) chez le combattant de quatre régiments de l’Armée de Terre (sources : \\url{https://hal.univ-lorraine.fr/hal-01734435}).",
+            "html": "<p>On s’intéresse aux troubles musculo-squelettiques (TMS) chez le combattant de quatre régiments de l’Armée de Terre (sources : <a href=\"https://hal.univ-lorraine.fr/hal-01734435\">https://hal.univ-lorraine.fr/hal-01734435</a>).</p>\n"
+          }
+        },
+        {
+          "id": "3ac2ca63-858e-4138-ad82-f0b2e2f38667",
+          "type": "question",
+          "value": {
+            "latex": "Dans cette étude, 19 femmes sur 21 (soit 90,5\\%) et 191 hommes sur 227 (84,1\\%) déclarent avoir eu des TMS. En réalisant un test d’indépendance du $\\chi^2$ avec un risque de première espèce de 5\\%, dire si la différence de prévalence entre les femmes et les hommes est significative.",
+            "html": "<p>Dans cette étude, 19 femmes sur 21 (soit 90,5%) et 191 hommes sur 227 (84,1%) déclarent avoir eu des TMS. En réalisant un test d’indépendance du <span class=\"math inline\">\\(\\chi^2\\)</span> avec un risque de première espèce de 5%, dire si la différence de prévalence entre les femmes et les hommes est significative.</p>\n"
+          }
+        },
+        {
+          "id": "f76e4ea5-746f-45f5-8a92-556e98381c2e",
+          "type": "indication",
+          "value": {
+            "latex": "Utiliser la formule du $\\chi^2$ pour comparer les fréquences observées et attendues.",
+            "html": "<p>Utiliser la formule du <span class=\"math inline\">\\(\\chi^2\\)</span> pour comparer les fréquences observées et attendues.</p>\n"
+          }
+        },
+        {
+          "id": "ab69af38-f6b8-4906-b1d4-62c30d94db59",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        },
+        {
+          "id": "cea68a5d-fbb1-4cd0-a20f-f03786ad2f9a",
+          "type": "question",
+          "value": {
+            "latex": "Parmi les personnes ayant déclaré avoir eu des TMS, 1 n’a pas souhaité répondre et : \n    \\begin{itemize}\n        \\item 10 femmes sur 19 ont été gênées par les TMS durant les 12 derniers mois (52,6\\%),\n        \\item 142 hommes sur 190 (74,7\\%) ont été gênés par les TMS durant la même période.\n    \\end{itemize}\n    En réalisant un nouveau test d’indépendance du $\\chi^2$ avec un risque de première espèce de 5\\%, dire si les hommes sont significativement plus sensibles que les femmes aux TMS dans l’exercice de leurs fonctions.",
+            "html": "<p>Parmi les personnes ayant déclaré avoir eu des TMS, 1 n’a pas souhaité répondre et :</p>\n<ul>\n<li><p>10 femmes sur 19 ont été gênées par les TMS durant les 12 derniers mois (52,6%),</p></li>\n<li><p>142 hommes sur 190 (74,7%) ont été gênés par les TMS durant la même période.</p></li>\n</ul>\n<p>En réalisant un nouveau test d’indépendance du <span class=\"math inline\">\\(\\chi^2\\)</span> avec un risque de première espèce de 5%, dire si les hommes sont significativement plus sensibles que les femmes aux TMS dans l’exercice de leurs fonctions.</p>\n"
+          }
+        },
+        {
+          "id": "5b380fab-f5bf-480a-bfa1-bec6f4532340",
+          "type": "indication",
+          "value": {
+            "latex": "Calculez le $\\chi^2$ en tenant compte des effectifs observés et attendus pour chaque groupe.",
+            "html": "<p>Calculez le <span class=\"math inline\">\\(\\chi^2\\)</span> en tenant compte des effectifs observés et attendus pour chaque groupe.</p>\n"
+          }
+        },
+        {
+          "id": "3ee6cb9f-8cac-45aa-b2a1-ec1bdf81bddd",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        },
+        {
+          "id": "abad97ab-a369-47ca-b9f8-bc3ad3710181",
+          "type": "question",
+          "value": {
+            "latex": "Soit $f_1$ la proportion de femmes gênées par les TMS les 12 derniers mois et $f_2$ la proportion de femmes gênées par les TMS les 12 derniers mois. On souhaite tester l’hypothèse $H_0 : f_1 = f_2$ à partir de l’échantillon décrit à la question précédente et la variable de décision : \n    \\[\n    Z = \\frac{F_1 - F_2}{\\sqrt{P(1-P)\\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}\n    \\]\n    où $n_1$ est l’effectif de l’échantillon de femmes, $n_2$ est l’effectif de l’échantillon d’hommes, $F_1$ est la fréquence de femmes gênées, $F_2$ est la fréquence d’hommes gênés, et $P = \\frac{n_1F_1 + n_2F_2}{n_1 + n_2}$. On admet que $Z$ suit une loi normale centrée réduite.\n\n    En faisant un test de comparaison de proportions avec un risque de première espèce de 5\\%, dire de nouveau si les hommes sont significativement plus sensibles que les femmes aux TMS dans l’exercice de leurs fonctions.",
+            "html": "<p>Soit <span class=\"math inline\">\\(f_1\\)</span> la proportion de femmes gênées par les TMS les 12 derniers mois et <span class=\"math inline\">\\(f_2\\)</span> la proportion de femmes gênées par les TMS les 12 derniers mois. On souhaite tester l’hypothèse <span class=\"math inline\">\\(H_0 : f_1 = f_2\\)</span> à partir de l’échantillon décrit à la question précédente et la variable de décision : <span class=\"math display\">\\[Z = \\frac{F_1 - F_2}{\\sqrt{P(1-P)\\left(\\frac{1}{n_1} + \\frac{1}{n_2}\\right)}}\\]</span> où <span class=\"math inline\">\\(n_1\\)</span> est l’effectif de l’échantillon de femmes, <span class=\"math inline\">\\(n_2\\)</span> est l’effectif de l’échantillon d’hommes, <span class=\"math inline\">\\(F_1\\)</span> est la fréquence de femmes gênées, <span class=\"math inline\">\\(F_2\\)</span> est la fréquence d’hommes gênés, et <span class=\"math inline\">\\(P = \\frac{n_1F_1 + n_2F_2}{n_1 + n_2}\\)</span>. On admet que <span class=\"math inline\">\\(Z\\)</span> suit une loi normale centrée réduite.</p>\n<p>En faisant un test de comparaison de proportions avec un risque de première espèce de 5%, dire de nouveau si les hommes sont significativement plus sensibles que les femmes aux TMS dans l’exercice de leurs fonctions.</p>\n"
+          }
+        },
+        {
+          "id": "26f6fe5c-17bc-4906-8c5d-8cd00b42fc14",
+          "type": "indication",
+          "value": {
+            "latex": "Utiliser la statistique $Z$ pour calculer la valeur critique et la comparer à la valeur obtenue.",
+            "html": "<p>Utiliser la statistique <span class=\"math inline\">\\(Z\\)</span> pour calculer la valeur critique et la comparer à la valeur obtenue.</p>\n"
+          }
+        },
+        {
+          "id": "75cb1f0e-a4fa-4b32-8160-4a2c534e8dac",
+          "type": "reponse",
+          "value": {
+            "latex": "À compléter.",
+            "html": "<p>À compléter.</p>\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "bXCC",
       "titre": "Étude des zéros d'une fonction non linéaire",
       "theme": [
@@ -16078,6 +16566,78 @@
       ]
     },
     {
+      "uuid": "Y6X6",
+      "titre": "Fonction définie par un réseau de neurones",
+      "theme": [
+        "réseaux de neurones"
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Jean-François CULUS",
+        "createdAt": "2024-12-17T10:44:30.051Z",
+        "organisation": "AMSCC",
+        "updatedAt": "2024-12-17T10:44:30.051Z"
+      },
+      "contenu": [
+        {
+          "id": "e4306c8b-01ee-44b0-90cc-3a06fa6699e1",
+          "type": "description",
+          "value": {
+            "latex": "On considère le réseau de neurones suivant, comportant une unique entrée, notée $x$, deux neurones en première couche et un unique neurone en seconde couche.\nLes fonctions d'activation sont données: pour la première couche, il s'agit de la fonction ReLu, et pour la seconde couche, la fonction identité. \n\n\t\\begin{center}\n\\begin{tikzpicture}[scale=1.5]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E) at (-\\layersep,0) {$x$};\n\n\n\\node[input neuron] (I-1) at (0,1) {};\n\\node[input neuron] (I-2) at (0,-1) {};\n\n\\node[above right=0.8ex,scale=0.7] at (I-1) {$ReLu$};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {$ReLu$};\n\n\n\\node[output neuron] (O) at (\\layersep,0 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\n\n\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.8);\n\n\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\n\n\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\n\n\n\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\n\\end{tikzpicture}  \n\t\\end{center}",
+            "html": "<p>On considère le réseau de neurones suivant, comportant une unique entrée, notée <span class=\"math inline\">\\(x\\)</span>, deux neurones en première couche et un unique neurone en seconde couche. Les fonctions d’activation sont données: pour la première couche, il s’agit de la fonction ReLu, et pour la seconde couche, la fonction identité.</p>\n"
+          }
+        },
+        {
+          "id": "4b785587-9859-4632-8ed6-acf5dbc7a9fb",
+          "type": "question",
+          "value": {
+            "latex": "Dessiner l'allure du graphe de $F$.",
+            "html": "<p>Dessiner l’allure du graphe de <span class=\"math inline\">\\(F\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "48e4f98b-2cf9-47c3-b0af-02c3d350acfb",
+          "type": "indication",
+          "value": {
+            "latex": "Déterminer $F(x)$ en distinguant les valeurs selon que $x +2 \\geq 0$ et $x \\geq 0$.",
+            "html": "<p>Déterminer <span class=\"math inline\">\\(F(x)\\)</span> en distinguant les valeurs selon que <span class=\"math inline\">\\(x +2 \\geq 0\\)</span> et <span class=\"math inline\">\\(x \\geq 0\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "0a0c051a-932a-458e-8278-f113bf6c6e25",
+          "type": "reponse",
+          "value": {
+            "latex": "\\begin{itemize}\n    \t\t\\item Si $x \\geq 0$ alors la première couche renvoie $(x+2,x)$ ;\n    \t\t\\item Si $-2 \\leq x < 0$ alors la première couche renvoie $(x+2,0)$ ;\n    \t\t\\item Si $x < -2$ alors la première couche renvoie $(0,0)$.\n    \t\\end{itemize}\n    La deuxième couche réalise la soustraction des deux composantes de sortie de la première couche : \n    \t\\begin{itemize}\n    \t\t\\item Si $x \\geq 0$ alors $F(x) = x+2-x = 2$ ;\n    \t\t\\item Si $-2 \\leq x < 0$ alors $F(x) = x+2 - 0 = x+2$ ;\n    \t\t\\item Si $x < -2$ alors $F(x) = 0-0 = 0$.\n    \t\\end{itemize}\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.0]\n\t\n\t\n\t\\draw[step=0.5,lightgray,very thin] (-4,-1) grid (4,3);\n\t\n\t\n\t\\draw[->] (-4,0) -- (4,0) node[right] {$x$};\n\t\\draw[->] (0,-1) -- (0,3.2) node[above] {$y$};\n\t\n\t\n\t\\foreach \\x in {-3,-2,-1,1,2,3} {\n\t\t\\draw (\\x,0.1) -- (\\x,-0.1) node[below] {\\x};\n\t}\n\t\\foreach \\y in {1,2,3} {\n\t\t\\draw (0.1,\\y) -- (-0.1,\\y) node[left] {\\y};\n\t}\n\t\n\t\n\t\\draw[ultra thick,red,domain=-2:0] plot (\\x,{\\x+2}) -- (0,2); \n\t\n\t\\draw[ultra thick,red] (-3.8,0) -- (-2,0); \n\t\\draw[ultra thick,red] (0,2) -- (3.8,2);  \n\t\n\t\n\t\n\t\n\t\n\t\\end{tikzpicture}    \n\\end{center}",
+            "html": "<ul>\n<li><p>Si <span class=\"math inline\">\\(x \\geq 0\\)</span> alors la première couche renvoie <span class=\"math inline\">\\((x+2,x)\\)</span> ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(-2 \\leq x &lt; 0\\)</span> alors la première couche renvoie <span class=\"math inline\">\\((x+2,0)\\)</span> ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(x &lt; -2\\)</span> alors la première couche renvoie <span class=\"math inline\">\\((0,0)\\)</span>.</p></li>\n</ul>\n<p>La deuxième couche réalise la soustraction des deux composantes de sortie de la première couche :</p>\n<ul>\n<li><p>Si <span class=\"math inline\">\\(x \\geq 0\\)</span> alors <span class=\"math inline\">\\(F(x) = x+2-x = 2\\)</span> ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(-2 \\leq x &lt; 0\\)</span> alors <span class=\"math inline\">\\(F(x) = x+2 - 0 = x+2\\)</span> ;</p></li>\n<li><p>Si <span class=\"math inline\">\\(x &lt; -2\\)</span> alors <span class=\"math inline\">\\(F(x) = 0-0 = 0\\)</span>.</p></li>\n</ul>\n"
+          }
+        },
+        {
+          "id": "b32b5029-21d4-4028-8941-b3b97efd3ec7",
+          "type": "question",
+          "value": {
+            "latex": "Inversement, déterminer un réseau de neurones qui permet de réaliser une fonction $G$ dont voici le graphe : \n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.0]\n\n\n\\draw[step=0.5,lightgray,very thin] (-4,-1) grid (4,3);\n\n\n\\draw[->] (-4,0) -- (4,0) node[right] {$x$};\n\\draw[->] (0,-1) -- (0,3.2) node[above] {$y$};\n\n\n\\foreach \\x in {-3,-2,-1,1,2,3} {\n\t\\draw (\\x,0.1) -- (\\x,-0.1) node[below] {\\x};\n}\n\\foreach \\y in {1,2,3} {\n\t\\draw (0.1,\\y) -- (-0.1,\\y) node[left] {\\y};\n}\n\n\n\\draw[ultra thick,red,domain=-2:0] plot (\\x,{\\x+2}) -- (0,2); \n\\draw[ultra thick,red,domain=0:2] plot (\\x,{-\\x+2}) -- (2,0); \n\\draw[ultra thick,red] (-3.8,0) -- (-2,0); \n\\draw[ultra thick,red] (2,0) -- (3.8,0);  \n\n\n\n\n\n\\end{tikzpicture}    \n\\end{center}",
+            "html": "<p>Inversement, déterminer un réseau de neurones qui permet de réaliser une fonction <span class=\"math inline\">\\(G\\)</span> dont voici le graphe :</p>\n"
+          }
+        },
+        {
+          "id": "9a3844e8-8d4d-43ba-925d-2ed1f6798471",
+          "type": "indication",
+          "value": {
+            "latex": "",
+            "html": "\n"
+          }
+        },
+        {
+          "id": "efbc25e1-e8d8-4d40-b973-7ca4e566200a",
+          "type": "reponse",
+          "value": {
+            "latex": "\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\\def\\layersep{2cm}\n\t\\tikzstyle{every pin edge}=[thick]\n\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\\tikzstyle{entree}=[];\n\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\n\t\n\t\n\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\n\t\n\t\n\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\n\t\n\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$ReLu$};\n\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$ReLu$};\n\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$ReLu$};\n\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$ReLu$};\n\t\n\t\n\t\n\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.6);\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-2);\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-3) ;\n\t\n\t\n\t\n\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$-1$} (I-4);\n\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$2$} ++ (-120:0.6);\n\t\n\t\n\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\t\n\t\n\t\n\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$-1$}(O);\n\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-2$} ++ (-120:0.8) ;\n\t\n\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\n\t\n\t\\end{tikzpicture} \n\\end{center}",
+            "html": "\n"
+          }
+        }
+      ]
+    },
+    {
       "uuid": "o5At",
       "titre": "Fonction deux variables",
       "theme": [
@@ -16278,13 +16838,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "Maxime NGUYEN",
-        "createdAt": "2024-12-05T15:37:23.436Z",
+        "createdAt": "2024-12-17T10:44:29.486Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:23.436Z"
+        "updatedAt": "2024-12-17T10:44:29.486Z"
       },
       "contenu": [
         {
-          "id": "b20f41a9-09c0-4088-8a21-15fa4ff5271a",
+          "id": "cac5d961-4a3e-4d3c-95cf-abe2b0c63313",
           "type": "question",
           "value": {
             "latex": "Décrire ce que permet de réaliser ce réseau de neurones :\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=1.5]\n\t\t\\def\\layersep{2cm}\n\t\t\\tikzstyle{every pin edge}=[thick]\n\t\t\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\t\t\\tikzstyle{entree}=[];\n\t\t\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\t\t\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\t\t\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\t\t\\tikzstyle{annot} = [text width=4em, text centered]\n\t\t\n\t\t\n\t\t\n\t\t\\node[entree,blue] (E) at (-\\layersep,-2.5) {$x$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[input neuron] (I-1) at (0,-1) {};\n\t\t\\node[input neuron] (I-2) at (0,-2) {};\n\t\t\\node[input neuron] (I-3) at (0,-3) {};\n\t\t\\node[input neuron] (I-4) at (0,-4) {};\n\t\t\n\t\t\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-1) {$H$};\n\t\t\\node[above right=0.8ex,scale=0.7] at (I-2) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-3) {$H$};\n\t\t\\node[below right=0.8ex,scale=0.7] at (I-4) {$H$};\n\t\t\n\t\t\n\t\t\n\t\t\\node[output neuron] (O) at (\\layersep,-2.5 cm) {};\n\t\t\\node[below right=0.8ex,scale=0.7] at (O) {id};\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\t\t\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/2$} (I-2);\n\t\t\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,above,scale=0.7]{$-1/4$} (I-3) ;\n\t\t\\draw[-o,thick] (I-3) to node[midway,below right,scale=0.7]{$1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (E) edge node[pos=0.8,below left,scale=0.7]{$1/3$} (I-4);\n\t\t\\draw[-o,thick] (I-4) to node[midway,below right,scale=0.7]{$-1$} ++ (-120:0.6);\n\t\t\n\t\t\n\t\t\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$3$} (O);\n\t\t\\path[thick] (I-2) edge node[pos=0.8,above,scale=0.7]{$3$}(O);\n\t\t\n\t\t\n\t\t\n\t\t\\path[thick] (I-3) edge node[pos=0.8,above,scale=0.7]{$2$} (O);\n\t\t\\path[thick] (I-4) edge node[pos=0.8,above,scale=0.7]{$2$}(O);\n\t\t\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-5$} ++ (-120:0.8) ;\n\t\t\n\t\t\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x)$};\n\t\t\n\t\t\n\t\\end{tikzpicture} \n\\end{center}",
@@ -16292,7 +16852,7 @@
           }
         },
         {
-          "id": "d9d44538-0c6e-48ba-874c-9f4409a70523",
+          "id": "09e78e52-5db4-4d59-9d40-57ccc40be27e",
           "type": "reponse",
           "value": {
             "latex": "This neural network realizes the function $\\R \\to \\R$ as follows:\n\t\\begin{tikzpicture}[scale=1]\n\t\t\n\t\t\n\t\t\\draw[->,>=latex, gray] (-0.5,0)--(6,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, gray] (0,-0.5)--(0,4) node[left] {$y$};\n\t\t\n\t\t\n\t\t\\draw[ultra thick,red] (-0.5,0) -- (1,0);\n\t\t\\draw[ultra thick,red] (1,3) -- (2,3);\n\t\t\n\t\t\n\t\t\\draw[ultra thick,red] (2,0) -- (3,0);\n\t\t\\draw[ultra thick,red] (3,2) -- (4,2);\n\t\t\\draw[ultra thick,red] (4,0) -- (5,0) node[above]{$F(x)$};\n\t\t\n\t\t\n\t\t\\fill[black] (0,1) circle (1pt);\n\t\t\\fill[black] (1,0) circle (1pt);\n\t\t\n\t\t\n\t\t\\node at (0,0) [below left] {$0$};\n\t\t\\node at (0,1) [left] {$1$};\n\t\t\\node at (1,0) [below] {$1$};\n\t\t\n\t\t\n\t\t\\node at (1,0) [below] {$1$};\n\t\t\\node at (2,0) [below] {$2$};\n\t\t\\node at (3,0) [below] {$3$};\n\t\t\\node at (4,0) [below] {$4$};\n\t\t\n\t\t\n\t\t\\draw[dashed] (1,3)--(0,3) node[left]{$3$};\n\t\t\\draw[dashed] (3,2)--(0,2) node[left]{$2$};\n\t\t\n\t\t\n\t\t\\draw[dashed] (1,0)--(1,3);\n\t\t\\draw[dashed] (2,0)--(2,3);\n\t\t\\draw[dashed] (3,0)--(3,2);\n\t\t\\draw[dashed] (4,0)--(4,2);\n\t\t\n\t\t\n\t\\end{tikzpicture}",
@@ -21287,13 +21847,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-05T15:37:33.757Z",
+        "createdAt": "2024-12-17T10:44:29.763Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:33.757Z"
+        "updatedAt": "2024-12-17T10:44:29.763Z"
       },
       "contenu": [
         {
-          "id": "4e8eea64-12f7-4306-a413-3a678887e4f6",
+          "id": "7177c3ab-13c6-4cce-b2d7-90827a002c55",
           "type": "question",
           "value": {
             "latex": "Les matrices suivantes sont-elles inversibles? Dans l'affirmative, déterminer la matrice inverse.\n$$\nA=\\left(\\begin{array}{cc}\n\t-2 & 5 \\\\\n\t1 & 3\n\\end{array}\\right) ; \\quad B=\\left(\\begin{array}{ccc}\n\t1 & 2 & 3 \\\\\n\t-1 & 2 & 4 \\\\\n\t0 & 1 & 2\n\\end{array}\\right) ; \\quad C=\\left(\\begin{array}{ccc}\n\t-1 & 0 & 2 \\\\\n\t0 & 2 & 1 \\\\\n\t-2 & -5 & 0\n\\end{array}\\right) ; \\quad D=\\left(\\begin{array}{cccc}\n\t2 & 1 & 0 & 0 \\\\\n\t-2 & 0 & 1 & -1 \\\\\n\t0 & -1 & 1 & -2 \\\\\n\t0 & 2 & 1 & 1\n\\end{array}\\right)\n$$",
@@ -21301,7 +21861,15 @@
           }
         },
         {
-          "id": "4a6f8d19-f4d2-42bf-9494-3ca60da4093a",
+          "id": "d79dc115-15d8-4076-91a8-5999f08f0fe9",
+          "type": "indication",
+          "value": {
+            "latex": "On peut calculer le déterminant de chaque matrice puis inverser en utilisant la comatrice.",
+            "html": "<p>On peut calculer le déterminant de chaque matrice puis inverser en utilisant la comatrice.</p>\n"
+          }
+        },
+        {
+          "id": "0424dc7e-be43-4057-94d2-258235127db7",
           "type": "reponse",
           "value": {
             "latex": "$\\operatorname{det} A=\\left|\\begin{array}{cc}-2 & 5 \\\\ 1 & 3\\end{array}\\right|=(-2) \\times 3-5 \\times 1=-11 \\neq 0$, donc $A$ inversible.\nPour $M=\\left(\\begin{array}{ll}a & c \\\\ b & d\\end{array}\\right)$ avec a.d-b.c $\\neq 0, M^{-1}=\\frac{1}{a \\cdot d-b . c}\\left(\\begin{array}{cc}d & -c \\\\ -b & a\\end{array}\\right)$.\n$$\nA^{-1}=\\frac{1}{11}\\left(\\begin{array}{cc}\n\t-3 & 5 \\\\\n\t1 & 2\n\\end{array}\\right)\n$$\n$\\operatorname{det} B=\\left|\\begin{array}{ccc}1 & 2 & 3 \\\\ -1 & 2 & 4 \\\\ 0 & 1 & 2\\end{array}\\right|=\\begin{gathered}\\ell_1 \\\\ \\ell_3\\end{gathered}\\left|\\begin{array}{ccc}1 & 2 & 3 \\\\ 0 & 1 & 2\\end{array}\\right|=1 \\times\\left|\\begin{array}{ll}4 & 7 \\\\ 1 & 2\\end{array}\\right|=1 \\neq 0$, donc $B$ inversible.\nCalcul des cofacteurs :\n$$\n\\begin{array}{lll}\n\tB_{11}=(+1) \\times\\left|\\begin{array}{ll}\n\t\t2 & 4 \\\\\n\t\t1 & 2\n\t\\end{array}\\right|=0 & B_{12}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 4 \\\\\n\t\t0 & 2\n\t\\end{array}\\right|=2 & B_{13}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 2 \\\\\n\t\t0 & 1\n\t\\end{array}\\right|=-1 \\\\\n\tB_{21}=(-1) \\times\\left|\\begin{array}{ll}\n\t\t2 & 3 \\\\\n\t\t1 & 2\n\t\\end{array}\\right|=-1 & B_{22}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t1 & 3 \\\\\n\t\t0 & 2\n\t\\end{array}\\right|=2 & B_{23}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t1 & 2 \\\\\n\t\t0 & 1\n\t\\end{array}\\right|=-1 \\\\\n\tB_{31}=(+1) \\times\\left|\\begin{array}{ll}\n\t\t2 & 3 \\\\\n\t\t2 & 4\n\t\\end{array}\\right|=2 & B_{32}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t1 & 3 \\\\\n\t\t-1 & 4\n\t\\end{array}\\right|=-7 & B_{33}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t1 & 2 \\\\\n\t\t-1 & 2\n\t\\end{array}\\right|=4\n\\end{array}\n$$\nOn en déduit la comatrice :\n$$\n\\tilde{B}=\\left(\\begin{array}{ccc}\n\t0 & 2 & -1 \\\\\n\t-1 & 2 & -1 \\\\\n\t2 & 7 & 4\n\\end{array}\\right)\n$$\nEt la matrice inverse :\n$$\nB^{-1}=\\left(\\begin{array}{ccc}\n\t0 & -1 & 2 \\\\\n\t2 & 2 & 7 \\\\\n\t-1 & -1 & 4\n\\end{array}\\right)\n$$\n\ninversible.\nCalcul des cofacteurs :\n$$\n\\begin{array}{lll}\n\tC_{11}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t2 & 1 \\\\\n\t\t-5 & 0\n\t\\end{array}\\right|=5 & C_{12}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t0 & 1 \\\\\n\t\t-2 & 0\n\t\\end{array}\\right|=-2 & C_{13}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t0 & 2 \\\\\n\t\t-2 & -5\n\t\\end{array}\\right|=4 \\\\\n\tC_{21}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t0 & 2 \\\\\n\t\t-5 & 0\n\t\\end{array}\\right|=-10 & C_{22}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 2 \\\\\n\t\t-2 & 0\n\t\\end{array}\\right|=4 & C_{23}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 0 \\\\\n\t\t-2 & -5\n\t\\end{array}\\right|=-5 \\\\\n\tC_{31}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t0 & 2 \\\\\n\t\t2 & 1\n\t\\end{array}\\right|=-4 & C_{32}=(-1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 2 \\\\\n\t\t0 & 1\n\t\\end{array}\\right|=1 & C_{33}=(+1) \\times\\left|\\begin{array}{cc}\n\t\t-1 & 0 \\\\\n\t\t0 & 2\n\t\\end{array}\\right|=-2\n\\end{array}\n$$\nOn en déduit la comatrice :\n$$\n\\tilde{C}=\\left(\\begin{array}{ccc}\n\t5 & -2 & 4 \\\\\n\t-10 & 4 & -5 \\\\\n\t-4 & 1 & -2\n\\end{array}\\right)\n$$\nEt la matrice inverse :\n$$\nC^{-1}=\\frac{1}{3}\\left(\\begin{array}{ccc}\n\t5 & -10 & -4 \\\\\n\t-2 & 4 & 1 \\\\\n\t4 & -5 & -2\n\\end{array}\\right)\n$$",
@@ -21319,13 +21887,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-05T15:37:35.946Z",
+        "createdAt": "2024-12-17T10:44:29.817Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:35.946Z"
+        "updatedAt": "2024-12-17T10:44:29.817Z"
       },
       "contenu": [
         {
-          "id": "895705f8-b2bc-45a6-9fa6-a3792d719153",
+          "id": "c79e3a54-9b66-42d6-a2ec-f3009417774a",
           "type": "question",
           "value": {
             "latex": "Déterminer $a$ tel que la matrice $M_a=\\left(\\begin{array}{ccc}a+1 & -1 & -a \\\\ 1 & a & -1 \\\\ -1 & 0 & 2 a+1\\end{array}\\right)$ soit inversible. Déterminer alors son inverse.",
@@ -21333,7 +21901,15 @@
           }
         },
         {
-          "id": "964a3286-e1fc-4e39-b432-b3ad0e5e25ce",
+          "id": "3a3716a9-9ac9-4d2d-af43-c2bb1305a7c7",
+          "type": "indication",
+          "value": {
+            "latex": "On calcule le déterminant de $M_a$ en fonction de $a$ et on résout l'équation $\\det(M_a) = 0$.",
+            "html": "<p>On calcule le déterminant de <span class=\"math inline\">\\(M_a\\)</span> en fonction de <span class=\"math inline\">\\(a\\)</span> et on résout l’équation <span class=\"math inline\">\\(\\det(M_a) = 0\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "21019489-5546-4195-90b5-fc5eef2d70d3",
           "type": "reponse",
           "value": {
             "latex": "$$\n\\begin{aligned}\n\t& \\operatorname{det} M_a=\\left|\\begin{array}{ccc}\n\t\ta+1 & -1 & -a \\\\\n\t\t1 & a & -1 \\\\\n\t\t-1 & 0 & 2 a+1\n\t\\end{array}\\right|=\\left|\\begin{array}{ccc}\n\t\tc_1+c_2+c_3 & -1 & -c_1 \\\\\n\t\ta & a & -1 \\\\\n\t\t2 a & 0 & 2 a+1\n\t\\end{array}\\right| \\\\\n\t& =\\underset{\\substack{\\text { mis en } \\\\\n\t\t\t\\text { facteur } \\\\\n\t\t\t\\text { de } c_2}}{ }\\left|\\begin{array}{ccc}\n\t\t0 & -1 & -a \\\\\n\t\t1 & a & -1 \\\\\n\t\t2 & 0 & 2 a+1\n\t\\end{array}\\right| \\\\\n\t& =a .\\left|\\begin{array}{ccc}\n\t\t0 & -1 & -a \\\\\n\t\t1 & a & -1 \\\\\n\t\t0 & -2 a & 2 a+3\n\t\\end{array}\\right| \\begin{array}{c}\n\t\t\\ell_1 \\\\\n\t\t\\ell_3-2 \\ell_2\n\t\\end{array} \\\\\n\t& =a \\cdot[-1 \\times[(-1) \\times(2 a+3)-(-2 a) \\times(-a)]] \\\\\n\t& =a \\cdot \\underbrace{\\left(2 a^2+2 a+3\\right)}_{\\text {discriminant } \\Delta>0} \\\\\n\t&\n\\end{aligned}\n$$\n$M_a$ inversible ssi $a \\neq 0$.\nCalcul des cofacteurs :\n$$\n\\begin{aligned}\n\t& M_{11}=\\left|\\begin{array}{cc}\n\t\ta & -1 \\\\\n\t\t0 & 2 a+1\n\t\\end{array}\\right|=2 a^2+a \\quad M_{12}=-\\left|\\begin{array}{cc}\n\t\t1 & -1 \\\\\n\t\t-1 & 2 a+1\n\t\\end{array}\\right|=-2 a \\quad M_{13}=\\left|\\begin{array}{cc}\n\t\t1 & a \\\\\n\t\t-1 & 0\n\t\\end{array}\\right|=a \\\\\n\t& M_{21}=-\\left|\\begin{array}{cc}\n\t\t-1 & -a \\\\\n\t\t0 & 2 a+1\n\t\\end{array}\\right|=2 a+1 \\quad M_{22}=\\left|\\begin{array}{cc}\n\t\ta+1 & -a \\\\\n\t\t-1 & 2 a+1\n\t\\end{array}\\right|=2 a^2+2 a+1 \\quad M_{23}=-\\left|\\begin{array}{cc}\n\t\ta+1 & -1 \\\\\n\t\t-1 & 0\n\t\\end{array}\\right|=1 \\\\\n\t& M_{31}=\\left|\\begin{array}{cc}\n\t\t-1 & -a \\\\\n\t\ta & -1\n\t\\end{array}\\right|=a^2+1 \\quad M_{32}=-\\left|\\begin{array}{cc}\n\t\ta+1 & -a \\\\\n\t\t1 & -1\n\t\\end{array}\\right|=1 \\quad M_{33}=\\left|\\begin{array}{cc}\n\t\ta+1 & -1 \\\\\n\t\t1 & a\n\t\\end{array}\\right|=a^2+a+1 \\\\\n\t&\n\\end{aligned}\n$$\non en déduit :\n$$\n\\begin{aligned}\n\t\\tilde{M} & =\\left(\\begin{array}{ccc}\n\t\t2 a^2+a & -2 a & a \\\\\n\t\t2 a+1 & 2 a^2+2 a+1 & 1 \\\\\n\t\ta^2+1 & 1 & a^2+a+1\n\t\\end{array}\\right) \\\\\n\t{ }^t \\tilde{M} & =\\left(\\begin{array}{ccc}\n\t\t2 a^2+a & 2 a+1 & a^2+1 \\\\\n\t\t-2 a & 2 a^2+2 a+1 & 1 \\\\\n\t\ta & 1 & a^2+a+1\n\t\\end{array}\\right)\n\\end{aligned}\n$$\n\n--\n\nPour $a \\neq 0$ :\n$$\nM_a^{-1}=\\frac{1}{a \\cdot\\left(2 a^2+2 a+3\\right)}\\left(\\begin{array}{ccc}\n\t2 a^2+a & 2 a+1 & a^2+1 \\\\\n\t-2 a & 2 a^2+2 a+1 & 1 \\\\\n\ta & 1 & a^2+a+1\n\\end{array}\\right)\n$$",
@@ -23383,7 +23959,7 @@
       ]
     },
     {
-      "uuid": "be6a1c39-2ada-456c-a3ec-e3be2616f77d",
+      "uuid": "a055ea59-96be-4db6-9139-f75a38e3e7b2",
       "titre": "OPTRN",
       "theme": [
         "Réseau de neurones"
@@ -23391,13 +23967,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-05T15:37:36.876Z",
+        "createdAt": "2024-12-17T10:44:29.896Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:36.876Z"
+        "updatedAt": "2024-12-17T10:44:29.896Z"
       },
       "contenu": [
         {
-          "id": "064be35e-e20c-4395-867c-2e5739e34c58",
+          "id": "50110d1f-1e2e-447e-9438-9fda5093f042",
           "type": "description",
           "value": {
             "latex": "Soit le réseau de neurones multicouches décrit pas le graphe suivant:\r\n\r\n\\begin{center}\r\n\t\\begin{tikzpicture}[scale=1]\r\n\\def\\layersep{2cm}\r\n\\tikzstyle{every pin edge}=[thick]\r\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\r\n\\tikzstyle{entree}=[];\r\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\r\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\r\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\r\n\\tikzstyle{annot} = [text width=4em, text centered]\r\n\r\n\r\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$1$};\r\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$x$};\r\n\\node[entree,blue] (E-3) at (-\\layersep,-5) {$1$};\r\n\r\n\r\n\r\n\\node[input neuron] (I-1) at (0,-1.5) {};\r\n\\node[input neuron] (I-3) at (0,-3.75) {};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {};\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\\node[hidden neuron] (O) at (\\layersep,-3.75 cm) {};\r\n\\node[hidden neuron] (P) at (\\layersep,-1.5 cm) {};\r\n\\node[above right=0.8ex,scale=0.7] at (O) {$h_{12}$};\r\n\\node[right=0.5ex,scale=0.7] at (P) {$h_{11}$};\r\n\r\n\r\n\\path[thick] (E-1) edge node[pos=0.5,above,scale=0.7]{$w_{1}$} (I-1) ;\r\n\\path[thick] (E-2) edge node[pos=0.5,above left,scale=0.7]{$w_{2}$} (I-1);\r\n\\path[thick] (E-2) edge node[pos=0.5,above,scale=0.7]{$w_4$} (I-3);\r\n\\path[thick] (E-3) edge node[pos=0.5,above,scale=0.7]{$w_3$} (I-3);\r\n\\path[thick] (I-1) edge node[pos=0.5,above,scale=0.7]{$f_{11}$} (P);\r\n\\path[thick] (I-3) edge node[pos=0.5,below,scale=0.7]{$f_{12}$}(O);\r\n\\node[below right=0.8ex,scale=0.5] at (O) {$\\text{Sigmoide}$};\r\n\\node[below =0.8ex,scale=0.5] at (P) {$\\text{Sigmoide}$};\r\n\r\n\\node[hidden neuron] (Q) at (2*\\layersep,-2.5 cm) {};\r\n\\node[output neuron] (R) at (3*\\layersep,-2.5 cm) {};\r\n\\node[below right=0.8ex,scale=0.7] at (R) {$\\text{Id}$};\r\n\\node[input neuron] (I-4) at (2.5,-0.5) {$1$};\r\n\\path[thick] (O) edge node[pos=0.6,above,scale=0.7]{$w_{7}$} (Q) ;\r\n\\node[below right=0.8ex,scale=0.7] at (Q) {$\\Sigma$};\r\n\\path[thick] (I-4) edge node[pos=0.5,above,scale=0.7]{$w_{5}$} (Q) ;\r\n\\path[thick] (Q) edge node[pos=0.5,above,scale=0.7]{$f_{21}$} (R);\r\n\\path[thick] (P) edge node[pos=0.5,above,scale=0.7]{$w_{6}$} (Q) ;\r\n\r\n\\draw[->,thick] (R)-- ++(2,0) node[right,blue]{$\\hat{y}$};\r\n \r\n     \r\n\r\n\r\n\r\n\r\n\\end{tikzpicture}  \r\n\\end{center}\r\n\\begin{enumerate}\r\n\\item Donner les formules qui déterminent les sorties intermédiaires $f_{11},\\,f_{12},\\,h_{11},\\,h_{12}$ et $f_{21}$ ainsi que la sortie finale $\\hat{y}$.\r\n\\reponse{\\[\r\nf_{11} = w_2 x + w_1\r\n\\]\r\n\\[\r\nf_{12} = w_4 x + w_3\r\n\\]\r\n\\[\r\nh_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\r\n\\]\r\n\\[\r\nh_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\r\n\\]\r\n\\[\r\n\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\r\n\\]}\r\n\\item On pose la fonction d'erreur $E(w)=(y-\\hat{y})^2.$ En appliquant l'algorithme de backpropagation (méthode du Gradient appliqué au réseau de neurones), déterminer les dérivées partielles $\\frac{\\partial E(w)}{\\partial w_j}$ puis $\\frac{\\partial \\hat{y}}{\\partial w_j}$. En déduire les expressions des mises à jour des paramètres $\\Delta w_j$ (variation des poids) pour $j=1,\\cdots{},7$. \r\n\\reponse{La fonction d’erreur est donnée par :\r\n\\[\r\nE(\\mathbf{w}) = (y - \\hat{y})^2\r\n\\]\r\n\r\nDonc, on aura :\r\n\\[\r\n\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n\r\nD’après la propagation en avant, on a : $\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5$.  \r\nLes dérivées partielles $\\frac{\\partial \\hat{y}}{\\partial w_j}$ peuvent être calculées comme suit :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\r\n\\]\r\n\r\nPour les autres paramètres :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\r\n\\]\r\n\r\nEn fin, la mise à jour de chaque paramètre $\\Delta w_j$ est donnée par :\r\n\\[\r\n\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n}\r\n\r\n\\end{enumerate}",
@@ -23405,7 +23981,7 @@
           }
         },
         {
-          "id": "ec35db40-b8f1-42af-a90c-9d358f52924d",
+          "id": "ea0a1a5b-6566-4ee1-adae-ddcf48a0dc31",
           "type": "reponse",
           "value": {
             "latex": "\\[\r\nf_{11} = w_2 x + w_1\r\n\\]\r\n\\[\r\nf_{12} = w_4 x + w_3\r\n\\]\r\n\\[\r\nh_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\r\n\\]\r\n\\[\r\nh_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\r\n\\]\r\n\\[\r\n\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\r\n\\]",
@@ -23413,7 +23989,7 @@
           }
         },
         {
-          "id": "b3a4baea-cb2d-461b-8592-2792bf9052d2",
+          "id": "ec49991a-f727-445f-99d2-0a6148d43586",
           "type": "reponse",
           "value": {
             "latex": "La fonction d’erreur est donnée par :\r\n\\[\r\nE(\\mathbf{w}) = (y - \\hat{y})^2\r\n\\]\r\n\r\nDonc, on aura :\r\n\\[\r\n\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n\r\nD’après la propagation en avant, on a : $\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5$.  \r\nLes dérivées partielles $\\frac{\\partial \\hat{y}}{\\partial w_j}$ peuvent être calculées comme suit :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\r\n\\]\r\n\r\nPour les autres paramètres :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\r\n\\]\r\n\r\nEn fin, la mise à jour de chaque paramètre $\\Delta w_j$ est donnée par :\r\n\\[\r\n\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]",
@@ -25447,13 +26023,13 @@
       "niveau": "",
       "metadata": {
         "auteur": "legall",
-        "createdAt": "2024-12-05T15:37:43.089Z",
+        "createdAt": "2024-12-17T10:44:30.257Z",
         "organisation": "exo7",
-        "updatedAt": "2024-12-05T15:37:43.089Z"
+        "updatedAt": "2024-12-17T10:44:30.257Z"
       },
       "contenu": [
         {
-          "id": "4cffc545-7371-4b3e-93e5-d93f099531e8",
+          "id": "682e4591-1834-4252-a52f-6773e9e79894",
           "type": "description",
           "value": {
             "latex": "Soit $f : \\Rr \n\t^2\\rightarrow \\Rr $ l'application $(x,y) \\mapsto 6xy+(y-x)^3.$ On note\n\t$\\Delta =\\{ (x,y)\\in \\Rr^2 , -1\\leq x\\leq y \\leq 1\\} .$",
@@ -25461,7 +26037,7 @@
           }
         },
         {
-          "id": "a32a4a12-d6df-40a4-b77c-d6f075af4469",
+          "id": "1fd18814-3b5c-4ff2-a346-1bd298ad2ce4",
           "type": "question",
           "value": {
             "latex": "Dessiner $\\Delta $. Montrer que $f$ est bornée et atteint ses \tbornes sur $\\Delta .$",
@@ -25469,7 +26045,7 @@
           }
         },
         {
-          "id": "6e8dce54-a0a3-4b3b-a6e5-27aa918e6779",
+          "id": "3384fbba-f495-4d2c-81bf-7b78c94fe6da",
           "type": "indication",
           "value": {
             "latex": "",
@@ -25477,23 +26053,39 @@
           }
         },
         {
-          "id": "647126dc-c6cc-4711-85c4-fa07b115e0a8",
+          "id": "c2db423f-68d1-4e96-bab2-fa58f480c2cc",
           "type": "reponse",
           "value": {
-            "latex": "\\textbf{Description de $\\Delta$ :}\n    \t\n    \tLa région $\\Delta$ est définie par les inégalités :\n    \t\\[\n    \t-1 \\leq x \\leq y \\leq 1.\n    \t\\]\n    \tDans le plan $(x, y)$, $\\Delta$ est la région délimitée par :\n    \t\\begin{itemize}\n    \t\t\\item Les droites verticales $x = -1$ et $x = 1$.\n    \t\t\\item La droite $y = x$.\n    \t\t\\item La droite horizontale $y = 1$.\n    \t\\end{itemize}\n    \tGraphiquement, $\\Delta$ est un trapèze situé entre $x = -1$ et $x = 1$, au-dessus de la droite $y = x$ et en dessous de la droite $y = 1$.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Continuité et compacité :}\n    \t\n    \tLa fonction $f$ est une fonction polynomiale en $x$ et $y$, donc continue sur $\\mathbb{R}^2$. L'ensemble $\\Delta$ est fermé et borné dans $\\mathbb{R}^2$, donc compact.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Conclusion :}\n    \t\n    \tD'après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, $f$ est bornée sur $\\Delta$ et atteint ses bornes sur $\\Delta$.",
-            "html": "<p><strong>Description de <span class=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>La région <span class=\"math inline\">\\(\\Delta\\)</span> est définie par les inégalités : <span class=\"math display\">\\[-1 \\leq x \\leq y \\leq 1.\\]</span> Dans le plan <span class=\"math inline\">\\((x, y)\\)</span>, <span class=\"math inline\">\\(\\Delta\\)</span> est la région délimitée par :</p>\n<ul>\n<li><p>Les droites verticales <span class=\"math inline\">\\(x = -1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>.</p></li>\n<li><p>La droite <span class=\"math inline\">\\(y = x\\)</span>.</p></li>\n<li><p>La droite horizontale <span class=\"math inline\">\\(y = 1\\)</span>.</p></li>\n</ul>\n<p>Graphiquement, <span class=\"math inline\">\\(\\Delta\\)</span> est un trapèze situé entre <span class=\"math inline\">\\(x = -1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>, au-dessus de la droite <span class=\"math inline\">\\(y = x\\)</span> et en dessous de la droite <span class=\"math inline\">\\(y = 1\\)</span>.</p>\n<p><strong>Continuité et compacité :</strong></p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est une fonction polynomiale en <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span>, donc continue sur <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>. L’ensemble <span class=\"math inline\">\\(\\Delta\\)</span> est fermé et borné dans <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>, donc compact.</p>\n<p><strong>Conclusion :</strong></p>\n<p>D’après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, <span class=\"math inline\">\\(f\\)</span> est bornée sur <span class=\"math inline\">\\(\\Delta\\)</span> et atteint ses bornes sur <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+            "latex": "\\textbf{Description de $\\Delta$ :}\n    \t\n    \tLa région $\\Delta$ est définie par les inégalités :\n    \t\\[\n    \t-1 \\leq x \\leq y \\leq 1.\n    \t\\]\n    \tDans le plan $(x, y)$, $\\Delta$ est la région délimitée par :\n    \t\\begin{itemize}\n    \t\t\\item Les droites verticales $x = -1$ et $x = 1$.\n    \t\t\\item La droite $y = x$.\n    \t\t\\item La droite horizontale $y = 1$.\n    \t\\end{itemize}\n    \tGraphiquement, $\\Delta$ est un triangle situé délimité par les points $(-1, -1)$, $(1, 1)$ et $(-1, 1)$.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Continuité et compacité :}\n    \t\n    \tLa fonction $f$ est une fonction polynomiale en $x$ et $y$, donc continue sur $\\mathbb{R}^2$. L'ensemble $\\Delta$ est fermé et borné dans $\\mathbb{R}^2$, donc compact.\n    \t\n    \t\\medskip\n    \t\n    \t\\textbf{Conclusion :}\n    \t\n    \tD'après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, $f$ est bornée sur $\\Delta$ et atteint ses bornes sur $\\Delta$.",
+            "html": "<p><strong>Description de <span class=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>La région <span class=\"math inline\">\\(\\Delta\\)</span> est définie par les inégalités : <span class=\"math display\">\\[-1 \\leq x \\leq y \\leq 1.\\]</span> Dans le plan <span class=\"math inline\">\\((x, y)\\)</span>, <span class=\"math inline\">\\(\\Delta\\)</span> est la région délimitée par :</p>\n<ul>\n<li><p>Les droites verticales <span class=\"math inline\">\\(x = -1\\)</span> et <span class=\"math inline\">\\(x = 1\\)</span>.</p></li>\n<li><p>La droite <span class=\"math inline\">\\(y = x\\)</span>.</p></li>\n<li><p>La droite horizontale <span class=\"math inline\">\\(y = 1\\)</span>.</p></li>\n</ul>\n<p>Graphiquement, <span class=\"math inline\">\\(\\Delta\\)</span> est un triangle situé délimité par les points <span class=\"math inline\">\\((-1, -1)\\)</span>, <span class=\"math inline\">\\((1, 1)\\)</span> et <span class=\"math inline\">\\((-1, 1)\\)</span>.</p>\n<p><strong>Continuité et compacité :</strong></p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est une fonction polynomiale en <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span>, donc continue sur <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>. L’ensemble <span class=\"math inline\">\\(\\Delta\\)</span> est fermé et borné dans <span class=\"math inline\">\\(\\mathbb{R}^2\\)</span>, donc compact.</p>\n<p><strong>Conclusion :</strong></p>\n<p>D’après le théorème des valeurs extrêmes, toute fonction continue sur un compact atteint ses bornes sur cet ensemble. Ainsi, <span class=\"math inline\">\\(f\\)</span> est bornée sur <span class=\"math inline\">\\(\\Delta\\)</span> et atteint ses bornes sur <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
           }
         },
         {
-          "id": "15e03aa4-dca3-4165-9971-32a8774cf7b9",
+          "id": "73427645-93b9-424e-9f59-29771edc4496",
           "type": "question",
           "value": {
-            "latex": "Calculer les extrema de $f $ sur le bord de $\\Delta $ puis dans \n    \tl'intérieur de $\\Delta $.",
-            "html": "<p>Calculer les extrema de <span class=\"math inline\">\\(f\\)</span> sur le bord de <span class=\"math inline\">\\(\\Delta\\)</span> puis dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+            "latex": "La fonction $f$ admet-elle un minimum local ou maximum local dans l'intérieur de $\\Delta$ ? Si oui, les déterminer.",
+            "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> admet-elle un minimum local ou maximum local dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span> ? Si oui, les déterminer.</p>\n"
           }
         },
         {
-          "id": "21a88054-fd44-48bd-9897-c9a41a5ba162",
+          "id": "a5985852-a213-4836-a525-86d6dc40da18",
+          "type": "reponse",
+          "value": {
+            "latex": "Calculons les points stationnaires en résolvant $\\nabla f = 0$ :\n\t\t\\[\n\t\t\\begin{cases}\n\t\t\t\\frac{\\partial f}{\\partial x}(x,y) = 6y - 3(y - x)^2 = 0, \\\\\n\t\t\t\\frac{\\partial f}{\\partial y}(x,y) = 6x + 3(y - x)^2 = 0.\n\t\t\\end{cases}\n\t\t\\]\n\t\t$\\iff$\n\t\t\\[\n\t\t\\begin{cases}\n\t\t\t6y + 6x = 0, \\\\\n\t\t\t6x + 3(2x)^2 = 0.\n\t\t\\end{cases}\n\t\t\\]\n\t\t$\\iff$\n\t\t\\[\n\t\t\\begin{cases}\n\t\t\tx = -y, \\\\\n\t\t\t6x(1 + 2x) = 0.\n\t\t\\end{cases}\n\t\t\\]\n\t\t$\\iff$\n\t\t$(x,y) = (0,0)$ ou $(x,y) = \\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$. Le point $(0,0)$ n'est pas dans l'intérieur de $\\Delta$. \n\n\t\tOn détermine la nature en calculant la matrice hessienne de $f$ : \n\t\t\\[\n\t\tH_f(x,y) = \\begin{pmatrix}\n\t\t\t\\frac{\\partial^2 f}{\\partial x^2}(x,y) & \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) \\\\\n\t\t\t\\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) & \\frac{\\partial^2 f}{\\partial y^2}(x,y)\n\t\t\\end{pmatrix} = \\begin{pmatrix}\n\t\t\t6(y-x) & 6-6(y-x) \\\\\n\t\t\t6-6(y-x) & 6(y-x)\n\t\t\\end{pmatrix}.\n\t\t\\]\n\t\tEn $\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$, $H_f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = \\begin{pmatrix} 6 & 0 \\\\ 0 & 6 \\end{pmatrix}$, \n\t\tde déterminant $36 > 0$  et définie positive, donc $\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$ est un minimum local de $f$ et ce minimum vaut $f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = -\\frac{1}{2}$.",
+            "html": "<p>Calculons les points stationnaires en résolvant <span class=\"math inline\">\\(\\nabla f = 0\\)</span> : <span class=\"math display\">\\[\\begin{cases}\n            \\frac{\\partial f}{\\partial x}(x,y) = 6y - 3(y - x)^2 = 0, \\\\\n            \\frac{\\partial f}{\\partial y}(x,y) = 6x + 3(y - x)^2 = 0.\n        \\end{cases}\\]</span> <span class=\"math inline\">\\(\\iff\\)</span> <span class=\"math display\">\\[\\begin{cases}\n            6y + 6x = 0, \\\\\n            6x + 3(2x)^2 = 0.\n        \\end{cases}\\]</span> <span class=\"math inline\">\\(\\iff\\)</span> <span class=\"math display\">\\[\\begin{cases}\n            x = -y, \\\\\n            6x(1 + 2x) = 0.\n        \\end{cases}\\]</span> <span class=\"math inline\">\\(\\iff\\)</span> <span class=\"math inline\">\\((x,y) = (0,0)\\)</span> ou <span class=\"math inline\">\\((x,y) = \\left(-\\frac{1}{2}, \\frac{1}{2}\\right)\\)</span>. Le point <span class=\"math inline\">\\((0,0)\\)</span> n’est pas dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n<p>On détermine la nature en calculant la matrice hessienne de <span class=\"math inline\">\\(f\\)</span> : <span class=\"math display\">\\[H_f(x,y) = \\begin{pmatrix}\n            \\frac{\\partial^2 f}{\\partial x^2}(x,y) &amp; \\frac{\\partial^2 f}{\\partial x \\partial y}(x,y) \\\\\n            \\frac{\\partial^2 f}{\\partial y \\partial x}(x,y) &amp; \\frac{\\partial^2 f}{\\partial y^2}(x,y)\n        \\end{pmatrix} = \\begin{pmatrix}\n            6(y-x) &amp; 6-6(y-x) \\\\\n            6-6(y-x) &amp; 6(y-x)\n        \\end{pmatrix}.\\]</span> En <span class=\"math inline\">\\(\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)\\)</span>, <span class=\"math inline\">\\(H_f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = \\begin{pmatrix} 6 &amp; 0 \\\\ 0 &amp; 6 \\end{pmatrix}\\)</span>, de déterminant <span class=\"math inline\">\\(36 &gt; 0\\)</span> et définie positive, donc <span class=\"math inline\">\\(\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)\\)</span> est un minimum local de <span class=\"math inline\">\\(f\\)</span> et ce minimum vaut <span class=\"math inline\">\\(f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = -\\frac{1}{2}\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "6cffa98c-6154-4cdb-b5ca-1787416acfbe",
+          "type": "question",
+          "value": {
+            "latex": "Calculer les extrema de $f$ sur le bord de $\\Delta $.",
+            "html": "<p>Calculer les extrema de <span class=\"math inline\">\\(f\\)</span> sur le bord de <span class=\"math inline\">\\(\\Delta\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "bd9cc8c9-acb3-450c-8cc9-8f84a42a4b56",
           "type": "indication",
           "value": {
             "latex": "",
@@ -25501,15 +26093,15 @@
           }
         },
         {
-          "id": "7d4e5274-6eff-428e-ba6c-0f05a51172e2",
+          "id": "fcf21213-07f3-4c52-a2bc-4c092d5ae10e",
           "type": "reponse",
           "value": {
-            "latex": "\\textbf{Sur le bord $\\mathbf{y = x}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, x) = 6x^2 + (x - x)^3 = 6x^2$.\n    \n    \\begin{itemize}\n    \t\\item Le minimum est atteint en $x = 0$ : $f(0, 0) = 0$.\n    \t\\item Le maximum est atteint en $x = \\pm 1$ : $f(\\pm 1, \\pm 1) = 6$.\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{y = 1}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(x) = 6 - 3(1 - x)^2.\n    \\]\n    En résolvant $f'(x) = 0$ :\n    \\[\n    6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $x = 1 - \\sqrt{2} \\approx -0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(1, 1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{x = -1}$, avec $\\mathbf{y \\in [-1, 1]}$ :}\n    \n    On a $f(-1, y) = -6y + (y + 1)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(y) = -6 + 3(y + 1)^2.\n    \\]\n    En résolvant $f'(y) = 0$ :\n    \\[\n    -6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $y = -1 + \\sqrt{2} \\approx 0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(-1, -1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Dans l'intérieur de $\\Delta$ :}\n    \n    Calculons les points critiques en résolvant $\\nabla f = 0$ :\n    \n    \\[\n    \\begin{cases}\n    f_x = 6y - 3(y - x)^2 = 0, \\\\\n    f_y = 6x + 3(y - x)^2 = 0.\n    \\end{cases}\n    \\]\n    \n    En soustrayant les deux équations :\n    \\[\n    f_x - f_y = 6(y - x) - 6(y - x) = 0.\n    \\]\n    Ainsi, les deux équations sont équivalentes si $f_x = 0$.\n    \n    Posons $s = y - x$. Alors :\n    \\[\n    \\begin{cases}\n    6(y - x) - 3(y - x)^2 = 0 \\implies 6s - 3s^2 = 0 \\implies s(6 - 3s) = 0 \\implies s = 0 \\text{ ou } s = 2, \\\\\n    x = -\\dfrac{s^2}{2}.\n    \\end{cases}\n    \\]\n    \n    \\textbf{Cas 1 :} $s = 0$ $\\implies$ $y = x$ $\\implies$ $x = 0$ $\\implies$ $(0, 0)$.\n    \n    \\textbf{Cas 2 :} $s = 2$ $\\implies$ $x = -2$ $\\implies$ $x = -2$ n'appartient pas à $[-1, 1]$ $\\implies$ on exclut ce cas.\n    \n    \\textbf{Conclusion :} Le seul point critique intérieur est $(0, 0)$ avec $f(0, 0) = 0$.",
-            "html": "<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = x}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, x) = 6x^2 + (x - x)^3 = 6x^2\\)</span>.</p>\n<ul>\n<li><p>Le minimum est atteint en <span class=\"math inline\">\\(x = 0\\)</span> : <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p></li>\n<li><p>Le maximum est atteint en <span class=\"math inline\">\\(x = \\pm 1\\)</span> : <span class=\"math inline\">\\(f(\\pm 1, \\pm 1) = 6\\)</span>.</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = 1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(x) = 6 - 3(1 - x)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(x) = 0\\)</span> : <span class=\"math display\">\\[6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(x = 1 - \\sqrt{2} \\approx -0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(1, 1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{x = -1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{y \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(-1, y) = -6y + (y + 1)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(y) = -6 + 3(y + 1)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(y) = 0\\)</span> : <span class=\"math display\">\\[-6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(y = -1 + \\sqrt{2} \\approx 0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(-1, -1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Dans l’intérieur de <span class=\"math inline\">\\(\\Delta\\)</span> :</strong></p>\n<p>Calculons les points critiques en résolvant <span class=\"math inline\">\\(\\nabla f = 0\\)</span> :</p>\n<p><span class=\"math display\">\\[\\begin{cases}\n    f_x = 6y - 3(y - x)^2 = 0, \\\\\n    f_y = 6x + 3(y - x)^2 = 0.\n    \\end{cases}\\]</span></p>\n<p>En soustrayant les deux équations : <span class=\"math display\">\\[f_x - f_y = 6(y - x) - 6(y - x) = 0.\\]</span> Ainsi, les deux équations sont équivalentes si <span class=\"math inline\">\\(f_x = 0\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(s = y - x\\)</span>. Alors : <span class=\"math display\">\\[\\begin{cases}\n    6(y - x) - 3(y - x)^2 = 0 \\implies 6s - 3s^2 = 0 \\implies s(6 - 3s) = 0 \\implies s = 0 \\text{ ou } s = 2, \\\\\n    x = -\\dfrac{s^2}{2}.\n    \\end{cases}\\]</span></p>\n<p><strong>Cas 1 :</strong> <span class=\"math inline\">\\(s = 0\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(y = x\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = 0\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\((0, 0)\\)</span>.</p>\n<p><strong>Cas 2 :</strong> <span class=\"math inline\">\\(s = 2\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = -2\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> <span class=\"math inline\">\\(x = -2\\)</span> n’appartient pas à <span class=\"math inline\">\\([-1, 1]\\)</span> <span class=\"math inline\">\\(\\implies\\)</span> on exclut ce cas.</p>\n<p><strong>Conclusion :</strong> Le seul point critique intérieur est <span class=\"math inline\">\\((0, 0)\\)</span> avec <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p>\n"
+            "latex": "\\textbf{Sur le bord $\\mathbf{y = x}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, x) = 6x^2 + (x - x)^3 = 6x^2$.\n    \n    \\begin{itemize}\n    \t\\item Le minimum est atteint en $x = 0$ : $f(0, 0) = 0$.\n    \t\\item Le maximum est atteint en $x = \\pm 1$ : $f(\\pm 1, \\pm 1) = 6$.\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{y = 1}$, avec $\\mathbf{x \\in [-1, 1]}$ :}\n    \n    On a $f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(x) = 6 - 3(1 - x)^2.\n    \\]\n    En résolvant $f'(x) = 0$ :\n    \\[\n    6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $x = 1 - \\sqrt{2} \\approx -0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(1, 1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}\n    \n    \\medskip\n    \n    \\textbf{Sur le bord $\\mathbf{x = -1}$, avec $\\mathbf{y \\in [-1, 1]}$ :}\n    \n    On a $f(-1, y) = -6y + (y + 1)^3$.\n    \n    Calcul de la dérivée :\n    \\[\n    f'(y) = -6 + 3(y + 1)^2.\n    \\]\n    En résolvant $f'(y) = 0$ :\n    \\[\n    -6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\n    \\]\n    Seule la solution $y = -1 + \\sqrt{2} \\approx 0{,}4142$ appartient à $[-1, 1]$.\n    \n    \\begin{itemize}\n    \t\\item $f(-1, -1) = 6 + 0 = 6$ (maximum).\n    \t\\item $f(-1, 1) = -6 + 8 = 2$.\n    \t\\item $f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432$ (minimum).\n    \\end{itemize}",
+            "html": "<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = x}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, x) = 6x^2 + (x - x)^3 = 6x^2\\)</span>.</p>\n<ul>\n<li><p>Le minimum est atteint en <span class=\"math inline\">\\(x = 0\\)</span> : <span class=\"math inline\">\\(f(0, 0) = 0\\)</span>.</p></li>\n<li><p>Le maximum est atteint en <span class=\"math inline\">\\(x = \\pm 1\\)</span> : <span class=\"math inline\">\\(f(\\pm 1, \\pm 1) = 6\\)</span>.</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{y = 1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{x \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(x, 1) = 6x \\cdot 1 + (1 - x)^3 = 6x + (1 - x)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(x) = 6 - 3(1 - x)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(x) = 0\\)</span> : <span class=\"math display\">\\[6 - 3(1 - x)^2 = 0 \\implies (1 - x)^2 = 2 \\implies x = 1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(x = 1 - \\sqrt{2} \\approx -0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(1, 1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) = 6(1 - \\sqrt{2}) + (1 - (1 - \\sqrt{2}))^3 = 6 - 6\\sqrt{2} + (\\sqrt{2})^3 = 6 - 6\\sqrt{2} + 2\\sqrt{2} = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n<p><strong>Sur le bord <span class=\"math inline\">\\(\\mathbf{x = -1}\\)</span>, avec <span class=\"math inline\">\\(\\mathbf{y \\in [-1, 1]}\\)</span> :</strong></p>\n<p>On a <span class=\"math inline\">\\(f(-1, y) = -6y + (y + 1)^3\\)</span>.</p>\n<p>Calcul de la dérivée : <span class=\"math display\">\\[f&#39;(y) = -6 + 3(y + 1)^2.\\]</span> En résolvant <span class=\"math inline\">\\(f&#39;(y) = 0\\)</span> : <span class=\"math display\">\\[-6 + 3(y + 1)^2 = 0 \\implies (y + 1)^2 = 2 \\implies y = -1 \\pm \\sqrt{2}.\\]</span> Seule la solution <span class=\"math inline\">\\(y = -1 + \\sqrt{2} \\approx 0{,}4142\\)</span> appartient à <span class=\"math inline\">\\([-1, 1]\\)</span>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(f(-1, -1) = 6 + 0 = 6\\)</span> (maximum).</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, 1) = -6 + 8 = 2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(f(-1, -1 + \\sqrt{2}) = 6 - 4\\sqrt{2} \\approx 0{,}3432\\)</span> (minimum).</p></li>\n</ul>\n"
           }
         },
         {
-          "id": "f474ebe8-fc28-4883-947b-7e153b257a70",
+          "id": "a57eda31-a0a4-4f2f-b8f9-0b662ef8e5d2",
           "type": "question",
           "value": {
             "latex": "En déduire les bornes de $f$ sur $\\Delta $.",
@@ -25517,11 +26109,11 @@
           }
         },
         {
-          "id": "3ba92416-2358-4fa7-9c28-0d8dfcdf0d8e",
+          "id": "348881c5-2880-4e53-af8a-763128f2f9ca",
           "type": "reponse",
           "value": {
-            "latex": "D'après les calculs précédents :\n\t\n\t\\begin{itemize}\n\t\t\\item Le maximum de $f$ sur $\\Delta$ est $f_{\\text{max}} = 6$, atteint en $(1, 1)$ et $(-1, -1)$.\n\t\t\\item Le minimum de $f$ sur $\\Delta$ est $f_{\\text{min}} = 0{,}3432$, atteint sur le bord en $(1 - \\sqrt{2}, 1)$ et $(-1, -1 + \\sqrt{2})$, et $f(0, 0) = 0$ à l'intérieur.\n\t\\end{itemize}\n\t\n\tCependant, en comparant $f(0, 0) = 0$ et $f(1 - \\sqrt{2}, 1) \\approx 0{,}3432$, on conclut que le minimum absolu est $f_{\\text{min}} = 0$, atteint en $(0, 0)$.",
-            "html": "<p>D’après les calculs précédents :</p>\n<ul>\n<li><p>Le maximum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{max}} = 6\\)</span>, atteint en <span class=\"math inline\">\\((1, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1)\\)</span>.</p></li>\n<li><p>Le minimum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{min}} = 0{,}3432\\)</span>, atteint sur le bord en <span class=\"math inline\">\\((1 - \\sqrt{2}, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1 + \\sqrt{2})\\)</span>, et <span class=\"math inline\">\\(f(0, 0) = 0\\)</span> à l’intérieur.</p></li>\n</ul>\n<p>Cependant, en comparant <span class=\"math inline\">\\(f(0, 0) = 0\\)</span> et <span class=\"math inline\">\\(f(1 - \\sqrt{2}, 1) \\approx 0{,}3432\\)</span>, on conclut que le minimum absolu est <span class=\"math inline\">\\(f_{\\text{min}} = 0\\)</span>, atteint en <span class=\"math inline\">\\((0, 0)\\)</span>.</p>\n"
+            "latex": "D'après les calculs précédents :\n\t\n\t\\begin{itemize}\n\t\t\\item Le maximum de $f$ sur $\\Delta$ est $f_{\\text{max}} = 6$, atteint en $(1, 1)$ et $(-1, -1)$.\n\t\t\\item Le minimum de $f$ sur $\\Delta$ est $f_{\\text{min}} = 0{,}3432$, atteint sur le bord en $(1 - \\sqrt{2}, 1)$ et $(-1, -1 + \\sqrt{2})$, et $f(0, 0) = 0$ à l'intérieur.\n\t\\end{itemize}\n\t\n\tCependant, en comparant $f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = -\\frac{1}{2}$ avec $f_{\\text{min}}$, on conclut que le minimum global de $f$ sur $\\Delta$ est $-\\frac{1}{2}$, atteint en $\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)$.",
+            "html": "<p>D’après les calculs précédents :</p>\n<ul>\n<li><p>Le maximum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{max}} = 6\\)</span>, atteint en <span class=\"math inline\">\\((1, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1)\\)</span>.</p></li>\n<li><p>Le minimum de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(f_{\\text{min}} = 0{,}3432\\)</span>, atteint sur le bord en <span class=\"math inline\">\\((1 - \\sqrt{2}, 1)\\)</span> et <span class=\"math inline\">\\((-1, -1 + \\sqrt{2})\\)</span>, et <span class=\"math inline\">\\(f(0, 0) = 0\\)</span> à l’intérieur.</p></li>\n</ul>\n<p>Cependant, en comparant <span class=\"math inline\">\\(f\\left(-\\frac{1}{2}, \\frac{1}{2}\\right) = -\\frac{1}{2}\\)</span> avec <span class=\"math inline\">\\(f_{\\text{min}}\\)</span>, on conclut que le minimum global de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\Delta\\)</span> est <span class=\"math inline\">\\(-\\frac{1}{2}\\)</span>, atteint en <span class=\"math inline\">\\(\\left(-\\frac{1}{2}, \\frac{1}{2}\\right)\\)</span>.</p>\n"
           }
         }
       ]
@@ -29337,11 +29929,36 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2024-12-05T15:37:47.805Z",
+        "createdAt": "2024-12-17T10:44:30.307Z",
         "organisation": "AMSCC",
-        "updatedAt": "2024-12-05T15:37:47.805Z"
+        "updatedAt": "2024-12-17T10:44:30.307Z"
       },
-      "contenu": []
+      "contenu": [
+        {
+          "id": "42b52ccf-53b4-4836-9de8-cbdb8e93ecb6",
+          "type": "description",
+          "value": {
+            "latex": "On  interroge 1873 ́étudiants  de  Master  sur  la  catégorie  socio-professionnelle  de  leurs parents.  Les  ́étudiants  suivent  différents  cursus :   ́écoles  d'ingénieurs,  ́école de  commerce,  universités scientifiques,  médecine.  Les résultats sont les suivants :\n\t\n\\begin{center}\n\t\t\\begin{tabular}{|c|c|c|c|c|}\n\t\t\\hline \n\t\t& Ouvriers & Employés & Cadres & Professions libérales \\\\ \n\t\t\\hline \n\t\tEcoles d'ingénieurs & 50 & 280 & 120 & 20 \\\\ \n\t\t\\hline \n\t\tEcoles de commerce & 8 & 29 & 210 & 350 \\\\ \n\t\t\\hline \n\t\tUniversités scientifiques & 150 & 230 & 100 & 40 \\\\ \n\t\t\\hline \n\t\tMédecine & 26 & 80 & 80 & 100 \\\\ \n\t\t\\hline \n\t\\end{tabular} \n\\end{center}\n\nOn s'intéresse à l'influence du milieu socio-professionnel des parents sur le type d'étude des enfants. Pour répondre à cette question :",
+            "html": "<p>On interroge 1873 ́étudiants de Master sur la catégorie socio-professionnelle de leurs parents. Les ́étudiants suivent différents cursus : ́écoles d’ingénieurs, ́école de commerce, universités scientifiques, médecine. Les résultats sont les suivants :</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th style=\"text-align: center;\"></th>\n<th style=\"text-align: center;\">Ouvriers</th>\n<th style=\"text-align: center;\">Employés</th>\n<th style=\"text-align: center;\">Cadres</th>\n<th style=\"text-align: center;\">Professions libérales</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Ecoles d’ingénieurs</td>\n<td style=\"text-align: center;\">50</td>\n<td style=\"text-align: center;\">280</td>\n<td style=\"text-align: center;\">120</td>\n<td style=\"text-align: center;\">20</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Ecoles de commerce</td>\n<td style=\"text-align: center;\">8</td>\n<td style=\"text-align: center;\">29</td>\n<td style=\"text-align: center;\">210</td>\n<td style=\"text-align: center;\">350</td>\n</tr>\n<tr class=\"odd\">\n<td style=\"text-align: center;\">Universités scientifiques</td>\n<td style=\"text-align: center;\">150</td>\n<td style=\"text-align: center;\">230</td>\n<td style=\"text-align: center;\">100</td>\n<td style=\"text-align: center;\">40</td>\n</tr>\n<tr class=\"even\">\n<td style=\"text-align: center;\">Médecine</td>\n<td style=\"text-align: center;\">26</td>\n<td style=\"text-align: center;\">80</td>\n<td style=\"text-align: center;\">80</td>\n<td style=\"text-align: center;\">100</td>\n</tr>\n</tbody>\n</table>\n<p>On s’intéresse à l’influence du milieu socio-professionnel des parents sur le type d’étude des enfants. Pour répondre à cette question :</p>\n"
+          }
+        },
+        {
+          "id": "bb8d05f9-f15e-4a88-8c73-bda66c166523",
+          "type": "question",
+          "value": {
+            "latex": "Réaliser un test d'indépendance du $\\chi^2$ en expliquant le résultat obtenu pour un risque de première espèce de $5\\%$.",
+            "html": "<p>Réaliser un test d’indépendance du <span class=\"math inline\">\\(\\chi^2\\)</span> en expliquant le résultat obtenu pour un risque de première espèce de <span class=\"math inline\">\\(5\\%\\)</span>.</p>\n"
+          }
+        },
+        {
+          "id": "dd96ffc4-2686-4d7e-bf57-b6b7c5cd8c2c",
+          "type": "question",
+          "value": {
+            "latex": "Jusqu'à quel risque de première espèce peut-on maintenir cette décision ? Le résultat obtenu s'appelle la $p$-valeur du test.",
+            "html": "<p>Jusqu’à quel risque de première espèce peut-on maintenir cette décision ? Le résultat obtenu s’appelle la <span class=\"math inline\">\\(p\\)</span>-valeur du test.</p>\n"
+          }
+        }
+      ]
     },
     {
       "uuid": "JABn",
