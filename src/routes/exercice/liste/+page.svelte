@@ -80,7 +80,10 @@
     {#if showList}
     <div class="col-md-4 liste-container">
       <h3>Liste des Exercices</h3>
-      <Liste onSelect={handleSelect} />
+      <Liste 
+      onSelect={handleSelect}
+      activeExerciseId={exerciseUuid} 
+      />
     </div>
     {/if}
     <div class={showList ? "col-md-8" : "col-md-12"}>
