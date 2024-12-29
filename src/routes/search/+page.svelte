@@ -6,8 +6,17 @@
     import Modal from '../../components/Modal.svelte';
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
+    import {  customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
+
+    
     
     export let data;
+
+    let exercicesInList: Set<string>;
+    
+    customList.subscribe(list => {
+        exercicesInList = new Set(list.map(ex => ex.uuid));
+    });
     
     let searchEngine: ExerciceSearchEngine;
     let query = '';
@@ -184,6 +193,15 @@
         
         return content.slice(0, safeEnd) + ' ...';
     }
+
+    function toggleCustomList(exercise: Exercice, event: MouseEvent) {
+    event.stopPropagation();
+    if (exercicesInList.has(exercise.uuid)) {
+        removeFromCustomList(exercise);
+    } else {
+        addToCustomList(exercise);
+    }
+}
 </script>
 
 <div class="container-fluid p-4">
@@ -268,7 +286,7 @@
         </div>
 
         <!-- Colonne de droite : Résultats -->
-        <div class="col-12 col-md-8 col-lg-9">
+        <div class="col-12 col-md-5 col-lg-6">
             <div class="alert alert-info">
                 <div class="d-flex justify-content-between align-items-center">
                     <strong>{allResults.length} exercice(s) trouvé(s)</strong>
@@ -282,35 +300,51 @@
         
             <div class="d-flex flex-column gap-3">
                 {#each displayedResults as result (result.exercise.uuid)}
-                    <div 
-                        class="card cursor-pointer hover-card"
-                        on:click={() => handleExerciseClick(result.exercise)}
-                    >
-                        <div class="card-body">
-                            <h5 class="card-title"><MathRenderer content={result.exercise.titre}/></h5>
-                            {#if result.exercise.theme}
-                                <div class="tags">
-                                    {#each normalizeThemes(result.exercise.theme) as theme}
-                                        <span 
-                                            class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
-                                            on:click|stopPropagation={() => toggleTag(theme)}
-                                        >
-                                            {theme}
-                                        </span>
-                                    {/each}
-                                </div>
-                            {/if}
-                            {#if result.exercise.contenu.length > 0}
-                                {@const previewContent = result.exercise.contenu.find(el => el.type === "description") || 
-                                                       result.exercise.contenu.find(el => el.type === "question")}
-                                {#if previewContent && previewContent.value.html}
-                                    <p class="card-text text-muted mb-2">
-                                        <span class="preview-html">
-                                            <MathRenderer content={getPreview(previewContent.value.html)}/>
-                                        </span>
-                                    </p>
+                    <div class="card hover-card">
+                        <div class="card-body position-relative">
+                            <!-- Add button -->
+                            <button 
+                            class="btn-add {exercicesInList.has(result.exercise.uuid) ? 'added' : ''}"
+                            on:click={(e) => toggleCustomList(result.exercise, e)}
+                            title={exercicesInList.has(result.exercise.uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
+                        >
+                            {exercicesInList.has(result.exercise.uuid) ? '−' : '+'}
+                        </button>
+                            
+                            <!-- Exercise content (clickable) -->
+                            <div 
+                                class="exercise-content cursor-pointer"
+                                on:click={() => handleExerciseClick(result.exercise)}
+                            >
+                                <h5 class="card-title">
+                                    <MathRenderer content={result.exercise.titre}/>
+                                </h5>
+                                
+                                {#if result.exercise.theme}
+                                    <div class="tags">
+                                        {#each normalizeThemes(result.exercise.theme) as theme}
+                                            <span 
+                                                class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
+                                                on:click|stopPropagation={() => toggleTag(theme)}
+                                            >
+                                                {theme}
+                                            </span>
+                                        {/each}
+                                    </div>
                                 {/if}
-                            {/if}
+                                
+                                {#if result.exercise.contenu.length > 0}
+                                    {@const previewContent = result.exercise.contenu.find(el => el.type === "description") || 
+                                                           result.exercise.contenu.find(el => el.type === "question")}
+                                    {#if previewContent && previewContent.value.html}
+                                        <p class="card-text text-muted mb-2">
+                                            <span class="preview-html">
+                                                <MathRenderer content={getPreview(previewContent.value.html)}/>
+                                            </span>
+                                        </p>
+                                    {/if}
+                                {/if}
+                            </div>
                         </div>
                     </div>
                 {/each}
@@ -323,6 +357,48 @@
                     </button>
                 </div>
             {/if}
+        </div>
+        <!-- Custom List Column -->
+        <div class="col-12 col-md-3 col-lg-3">
+            <div class="card sticky-top" style="top: 1rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Ma liste d'exercices</h5>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                        <div class="uuids-list text-muted small">
+                            <span class="font-monospace">
+                                {$customList.map(ex => ex.uuid).join(', ')}
+                            </span>
+                        </div>
+                        {#if $customList.length > 0}
+                            <a 
+                                href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" 
+                                class="btn btn-primary btn-sm"
+                            >
+                                Ouvrir la liste complète
+                            </a>
+                        {/if}
+                    </div>
+                    {#if $customList.length === 0}
+                        <p class="text-muted">
+                            Ajoutez des exercices à votre liste en cliquant sur le bouton + à côté de chaque exercice.
+                        </p>
+                    {:else}
+                        <div class="d-flex flex-column gap-2">
+                            {#each $customList as exercise}
+                                <div class="custom-list-item">
+                                    <MathRenderer content={exercise.titre}/>
+                                    <button 
+                                        class="btn-remove"
+                                        on:click={() => removeFromCustomList(exercise)}
+                                    >
+                                        ×
+                                    </button>
+                                </div>
+                            {/each}
+                        </div>
+                    {/if}
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -439,5 +515,77 @@
         color: #999;
         font-style: italic;
         margin-left: 0.5rem;
+    }
+
+    .btn-add {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        border: none;
+        color: #333;
+        font-size: 20px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        z-index: 1;
+    }
+
+    .btn-add:hover {
+        background-color: #d0d0d0;
+        transform: scale(1.1);
+    }
+
+    .btn-add.added {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .exercise-content {
+        padding-right: 3rem;
+    }
+
+    .custom-list-item {
+        padding: 0.5rem;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .btn-remove {
+        background: none;
+        border: none;
+        color: #dc3545;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 6px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-remove:hover {
+        opacity: 1;
+    }
+
+    .sticky-top {
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+
+    .uuids-list {
+        font-size: 0.75rem;
+        color: #6c757d;
+        word-wrap: break-word;
+        line-height: 1.2;
     }
 </style>
