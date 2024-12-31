@@ -15,8 +15,8 @@
             icon: "bi-display"
         },
         {
-            title: "Export LaTeX",
-            description: "Générez des documents rapidement en exportant directement vos exercices au format LaTeX.",
+            title: "Fiches personnalisées",
+            description: "Générez des listes personnalisées d'exercices, aussi facilement que vous ajoutez un produit dans un panier.",
             icon: "bi-file-text"
         },
         {
