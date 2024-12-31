@@ -7,6 +7,7 @@
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
     import {  customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
+    import { slide } from 'svelte/transition';
 
     
     
@@ -202,6 +203,8 @@
         addToCustomList(exercise);
     }
 }
+
+let showCustomListModal = false;
 </script>
 
 <div class="container-fluid p-4">
@@ -359,47 +362,100 @@
             {/if}
         </div>
         <!-- Custom List Column -->
-        <div class="col-12 col-md-3 col-lg-3">
-            <div class="card sticky-top" style="top: 1rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Ma liste d'exercices</h5>
-                    <div class="d-flex flex-column gap-2 mb-3">
-                        <div class="uuids-list text-muted small">
-                            <span class="font-monospace">
-                                {$customList.map(ex => ex.uuid).join(', ')}
-                            </span>
-                        </div>
-                        {#if $customList.length > 0}
-                            <a 
-                                href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" 
-                                class="btn btn-primary btn-sm"
-                            >
-                                Ouvrir la liste complète
-                            </a>
-                        {/if}
-                    </div>
-                    {#if $customList.length === 0}
-                        <p class="text-muted">
-                            Ajoutez des exercices à votre liste en cliquant sur le bouton + à côté de chaque exercice.
-                        </p>
-                    {:else}
-                        <div class="d-flex flex-column gap-2">
-                            {#each $customList as exercise}
-                                <div class="custom-list-item">
-                                    <MathRenderer content={exercise.titre}/>
-                                    <button 
-                                        class="btn-remove"
-                                        on:click={() => removeFromCustomList(exercise)}
-                                    >
-                                        ×
-                                    </button>
-                                </div>
-                            {/each}
-                        </div>
-                    {/if}
+<!-- Custom List Column -->
+<div class="d-none d-md-block col-md-3 col-lg-3">
+    <div class="card sticky-top" style="top: 1rem;">
+        <div class="card-body">
+            <h5 class="card-title">Ma liste d'exercices</h5>
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="uuids-list text-muted small">
+                    <span class="font-monospace">
+                        {$customList.map(ex => ex.uuid).join(', ')}
+                    </span>
                 </div>
+                {#if $customList.length > 0}
+                    <a 
+                        href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" 
+                        class="btn btn-primary btn-sm"
+                    >
+                        Ouvrir la liste complète
+                    </a>
+                {/if}
+            </div>
+            <div class="custom-list-content">
+                {#if $customList.length === 0}
+                    <p class="text-muted">
+                        Ajoutez des exercices à votre liste en cliquant sur le bouton + à côté de chaque exercice.
+                    </p>
+                {:else}
+                    <div class="d-flex flex-column gap-2">
+                        {#each $customList as exercise}
+                            <div class="custom-list-item">
+                                <MathRenderer content={exercise.titre}/>
+                                <button 
+                                    class="btn-remove"
+                                    on:click={() => removeFromCustomList(exercise)}
+                                >
+                                    ×
+                                </button>
+                            </div>
+                        {/each}
+                    </div>
+                {/if}
             </div>
         </div>
+    </div>
+</div>
+<!-- Floating button and modal for mobile -->
+<div class="d-block d-md-none">
+    {#if $customList.length > 0}
+        <button 
+            class="floating-list-button"
+            on:click={() => showCustomListModal = true}
+        >
+            <span class="list-count">{$customList.length}</span>
+            <span class="list-label">Ma liste</span>
+        </button>
+    {/if}
+</div>
+
+<!-- Mobile Custom List Modal -->
+{#if showCustomListModal}
+<div 
+    class="custom-list-modal"
+    transition:slide={{duration: 300}}
+>
+    <div class="custom-list-modal-content">
+        <div class="custom-list-modal-header">
+            <h5>Ma liste d'exercices</h5>
+            <button 
+                class="btn-close"
+                on:click={() => showCustomListModal = false}
+            ></button>
+        </div>
+        <div class="custom-list-modal-body">
+            {#if $customList.length === 0}
+            <p class="text-muted">
+                Ajoutez des exercices à votre liste en cliquant sur le bouton + à côté de chaque exercice.
+            </p>
+        {:else}
+            <div class="d-flex flex-column gap-2">
+                {#each $customList as exercise}
+                    <div class="custom-list-item">
+                        <MathRenderer content={exercise.titre}/>
+                        <button 
+                            class="btn-remove"
+                            on:click={() => removeFromCustomList(exercise)}
+                        >
+                            ×
+                        </button>
+                    </div>
+                {/each}
+            </div>
+        {/if}        </div>
+    </div>
+</div>
+{/if}
     </div>
 </div>
 
@@ -577,15 +633,77 @@
         opacity: 1;
     }
 
-    .sticky-top {
-        max-height: calc(100vh - 2rem);
-        overflow-y: auto;
-    }
+    .custom-list-content {
+    max-height: calc(80vh - 180px);
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
 
-    .uuids-list {
-        font-size: 0.75rem;
-        color: #6c757d;
-        word-wrap: break-word;
-        line-height: 1.2;
-    }
+.sticky-top {
+    z-index: 1030;  /* s'assurer qu'il reste sous les modals */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.uuids-list {
+    font-size: 0.75rem;
+    color: #6c757d;
+    word-wrap: break-word;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.floating-list-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1030;
+}
+
+.list-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.list-label {
+    font-size: 0.8rem;
+}
+
+.custom-list-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 2001;
+}
+
+.custom-list-modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+.custom-list-modal-body {
+    padding: 1rem;
+}
 </style>
