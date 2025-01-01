@@ -2,6 +2,7 @@
 <script lang="ts">
     import { customList, removeFromCustomList } from '$lib/stores/customList';
     import MathRenderer from './MathRenderer.svelte';
+    import ListViewButton from './buttons/ListViewButton.svelte';
     import { slide } from 'svelte/transition';
 
     export let showMobileButton = false;
@@ -45,12 +46,12 @@
                 </button>
                 </div>
                     {#if $customList.length > 0}
-                        <a 
-                            href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" 
-                            class="btn btn-primary btn-sm"
-                        >
-                            Ouvrir la liste complète
-                        </a>
+                    <a 
+                    href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" 
+                    class="btn btn-primary btn-sm"
+                >
+                    Visualiser la liste personnalisée
+                </a>
                     {/if}
                 </div>
                 <div class="custom-list-content">
@@ -96,12 +97,17 @@
         >
             <div class="custom-list-modal-content">
                 <div class="custom-list-modal-header">
+                    {#if $customList.length > 0}
+                    <ListViewButton href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" size="md" />
+                    {/if}
                     <h5>Ma liste d'exercices</h5>
+
                     <button 
                         class="btn-close"
                         on:click={() => showCustomListModal = false}
                     ></button>
                 </div>
+
                 <div class="custom-list-modal-body">
                     {#if $customList.length === 0}
                         <p class="text-muted">
