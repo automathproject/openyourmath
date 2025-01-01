@@ -18,6 +18,41 @@
             }, 2000);
         });
     }
+
+        // Variables pour gérer le swipe
+        let touchStart = 0;
+    let touchY = 0;
+    let modalTranslateY = 0;
+    
+    function handleTouchStart(e: TouchEvent) {
+        touchStart = e.touches[0].clientY;
+        touchY = e.touches[0].clientY;
+    }
+    
+    function handleTouchMove(e: TouchEvent) {
+        touchY = e.touches[0].clientY;
+        const delta = touchY - touchStart;
+        
+        // Ne permet que le swipe vers le bas
+        if (delta > 0) {
+            modalTranslateY = delta;
+            e.preventDefault();
+        }
+    }
+    
+    function handleTouchEnd() {
+        const delta = touchY - touchStart;
+        
+        // Si on a swipé vers le bas de plus de 100px, on ferme
+        if (delta > 100) {
+            showCustomListModal = false;
+        }
+        
+        // Reset de la position
+        modalTranslateY = 0;
+        touchStart = 0;
+        touchY = 0;
+    }
 </script>
 
 <div class="custom-list-container">
@@ -89,25 +124,31 @@
         </button>
     {/if}
 
-    <!-- Mobile Modal -->
+    <!-- Modal mobile avec gestion du swipe -->
     {#if showCustomListModal}
         <div 
             class="custom-list-modal"
             transition:slide={{duration: 300}}
+            on:touchstart={handleTouchStart}
+            on:touchmove={handleTouchMove}
+            on:touchend={handleTouchEnd}
+            style="transform: translateY({modalTranslateY}px);"
         >
             <div class="custom-list-modal-content">
+                <!-- Indicateur de swipe -->
+                <div class="swipe-indicator"></div>
+                
                 <div class="custom-list-modal-header">
-                    {#if $customList.length > 0}
-                    <ListViewButton href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}" size="md" />
-                    {/if}
-                    <h5>Ma liste d'exercices</h5>
-
-                    <button 
+                    <ListViewButton 
+                    href="/exercice/liste?list={$customList.map(ex => ex.uuid).join(',')}"
+                    size="md"
+                /> 
+                <h5>Ma liste d'exercices</h5>
+                <button 
                         class="btn-close"
                         on:click={() => showCustomListModal = false}
                     ></button>
                 </div>
-
                 <div class="custom-list-modal-body">
                     {#if $customList.length === 0}
                         <p class="text-muted">
@@ -141,6 +182,7 @@
     {/if}
 {/if}
 </div>
+
 
 <style>
     .custom-list-content {
@@ -272,6 +314,27 @@
         overflow-y: auto;
         box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         z-index: 2001;
+        transition: transform 0.2s ease;
+    }
+
+    /* Indicateur de swipe */
+    .swipe-indicator {
+        width: 40px;
+        height: 4px;
+        background-color: #e0e0e0;
+        border-radius: 2px;
+        margin: 0.5rem auto;
+    }
+
+    .custom-list-modal-content {
+        padding-top: 0.5rem;
+    }
+
+    /* Permettre le scroll uniquement sur le contenu */
+    .custom-list-modal-body {
+        max-height: calc(80vh - 100px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .custom-list-modal-header {
