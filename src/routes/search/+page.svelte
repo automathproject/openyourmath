@@ -153,6 +153,7 @@
     // Réagir aux changements de la recherche
     $: query, updateResults();
 
+    // Prévisualisation du contenu d'un exercice
     function getPreview(content: string, maxLength: number = 150): string {
         if (!content) return '';
         
