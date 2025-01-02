@@ -8,12 +8,12 @@ export class ExerciceSearchEngine {
     constructor() {
         const options: Fuse.IFuseOptions<Exercice> = {
             keys: [
-                { name: 'titre', weight: 0.4 },
+                { name: 'titre', weight: 0.3 },
                 { name: 'theme', weight: 0.3 },
-                { name: 'niveau', weight: 0.2 },
+                { name: 'niveau', weight: 0.1 },
                 { 
                     name: 'contenu',
-                    weight: 0.1,
+                    weight: 0.3,
                     getFn: (exercise) => {
                         return exercise.contenu
                             .map(element => {
@@ -29,7 +29,7 @@ export class ExerciceSearchEngine {
                     }
                 }
             ],
-            threshold: 0.4,
+            threshold: 0.35,
             includeScore: true
         };
 
