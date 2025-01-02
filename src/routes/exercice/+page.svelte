@@ -7,6 +7,7 @@
   import { tick } from 'svelte';
   import { get } from 'svelte/store';
   import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
+  import CustomList from '../../components/CustomList.svelte';
   
   let inputUuid: string = '';
   let exerciseUuid: string = '';
@@ -137,6 +138,7 @@
               <button on:click={handleLoadExercise} class="btn btn-primary ms-2">
                   Afficher l'exercice
               </button>
+              
           </div>
           
           {#if loadingExercise}
@@ -157,6 +159,9 @@
               </div>
           {/if}
       </div>
+      <div class="d-none d-md-block col-md-3 col-lg-3">
+        <CustomList showMobileButton={false} />
+    </div>
   </div>
 </section>
 

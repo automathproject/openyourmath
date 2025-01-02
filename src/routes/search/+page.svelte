@@ -7,17 +7,9 @@
     import CustomList from '../../components/CustomList.svelte';
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
-    import {  customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
-
-    
+    import AddButton from '../../components/AddButton.svelte';
     
     export let data;
-
-    let exercicesInList: Set<string>;
-    
-    customList.subscribe(list => {
-        exercicesInList = new Set(list.map(ex => ex.uuid));
-    });
     
     let searchEngine: ExerciceSearchEngine;
     let query = '';
@@ -195,17 +187,6 @@
         
         return content.slice(0, safeEnd) + ' ...';
     }
-
-    function toggleCustomList(exercise: Exercice, event: MouseEvent) {
-    event.stopPropagation();
-    if (exercicesInList.has(exercise.uuid)) {
-        removeFromCustomList(exercise);
-    } else {
-        addToCustomList(exercise);
-    }
-}
-
-let showCustomListModal = false;
 </script>
 
 <div class="container-fluid p-4">
@@ -306,14 +287,7 @@ let showCustomListModal = false;
                 {#each displayedResults as result (result.exercise.uuid)}
                     <div class="card hover-card">
                         <div class="card-body position-relative">
-                            <!-- Add button -->
-                            <button 
-                            class="btn-add {exercicesInList.has(result.exercise.uuid) ? 'added' : ''}"
-                            on:click={(e) => toggleCustomList(result.exercise, e)}
-                            title={exercicesInList.has(result.exercise.uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
-                            >
-                            {exercicesInList.has(result.exercise.uuid) ? '−' : '+'}
-                            </button>
+                            <AddButton exercise={result.exercise} />
                             
                             <!-- Exercise content (clickable) -->
                             <div 
@@ -481,144 +455,10 @@ let showCustomListModal = false;
         margin: 0;
     }
 
-    .preview-type {
-        font-size: 0.8rem;
-        color: #999;
-        font-style: italic;
-        margin-left: 0.5rem;
-    }
 
-    .btn-add {
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-color: #e0e0e0;
-        border: none;
-        color: #333;
-        font-size: 20px;
-        line-height: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        z-index: 1;
-    }
-
-    .btn-add:hover {
-        background-color: #d0d0d0;
-        transform: scale(1.1);
-    }
-
-    .btn-add.added {
-        background-color: #333;
-        color: #fff;
-    }
 
     .exercise-content {
         padding-right: 3rem;
     }
 
-    .custom-list-item {
-        padding: 0.5rem;
-        background-color: #f8f9fa;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.5rem;
-    }
-
-    .btn-remove {
-        background: none;
-        border: none;
-        color: #dc3545;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 0 6px;
-        cursor: pointer;
-        opacity: 0.7;
-        transition: opacity 0.2s ease;
-    }
-
-    .btn-remove:hover {
-        opacity: 1;
-    }
-
-    .custom-list-content {
-    max-height: calc(80vh - 180px);
-    overflow-y: auto;
-    padding-right: 0.5rem;
-}
-
-.sticky-top {
-    z-index: 1030;  /* s'assurer qu'il reste sous les modals */
-    max-height: 80vh;
-    overflow-y: auto;
-}
-
-.uuids-list {
-    font-size: 0.75rem;
-    color: #6c757d;
-    word-wrap: break-word;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.floating-list-button {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    background: #0d6efd;
-    color: white;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    z-index: 1030;
-}
-
-.list-count {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.list-label {
-    font-size: 0.8rem;
-}
-
-.custom-list-modal {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    z-index: 2001;
-}
-
-.custom-list-modal-header {
-    padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background: white;
-}
-
-.custom-list-modal-body {
-    padding: 1rem;
-}
 </style>
