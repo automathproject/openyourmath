@@ -51,7 +51,7 @@
   background-color: white;
   padding: 0;
   border-radius: 8px;
-  max-width: 90%;
+  max-width: 800px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;

@@ -273,7 +273,7 @@
     }
 
     .btn-copy:hover {
-        background-color: #e9ecef;
+        background-color: #a3bad1;
         color: #212529;
     }
 
