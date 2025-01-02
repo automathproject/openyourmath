@@ -8,6 +8,7 @@
   import { get } from 'svelte/store';
   import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
   import CustomList from '../../components/CustomList.svelte';
+  // import AddButton from '../../components/AddButton.svelte';
   
   let inputUuid: string = '';
   let exerciseUuid: string = '';
@@ -138,7 +139,6 @@
               <button on:click={handleLoadExercise} class="btn btn-primary ms-2">
                   Afficher l'exercice
               </button>
-              
           </div>
           
           {#if loadingExercise}

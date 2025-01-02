@@ -4,8 +4,6 @@
   import { quadOut } from "svelte/easing";
   import MathRenderer from "./MathRenderer.svelte";
   import ExerciceHeader from "./ExerciceHeader.svelte";
-  import { onMount, afterUpdate } from 'svelte';
-  import MetadataToggleButton from "./buttons/MetadataToggleButton.svelte";
   import ReponsesToggleButton from "./buttons/ReponsesToggleButton.svelte";
   import HintsToggleButton from "./buttons/HintsToggleButton.svelte";
   import FullscreenToggleButton from "./buttons/FullscreenToggleButton.svelte";
