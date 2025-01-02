@@ -20,7 +20,6 @@
     let selectedTags: Set<string> = new Set();
     let allTags: Map<string, number> = new Map();
     let dynamicTagCounts: Map<string, number> = new Map();
-    let showFilters = true;
 
     // Pagination
     const ITEMS_PER_PAGE = 10;
