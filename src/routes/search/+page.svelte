@@ -8,7 +8,6 @@
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
     import {  customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
-    import { slide } from 'svelte/transition';
 
     
     
@@ -312,9 +311,9 @@ let showCustomListModal = false;
                             class="btn-add {exercicesInList.has(result.exercise.uuid) ? 'added' : ''}"
                             on:click={(e) => toggleCustomList(result.exercise, e)}
                             title={exercicesInList.has(result.exercise.uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
-                        >
+                            >
                             {exercicesInList.has(result.exercise.uuid) ? '−' : '+'}
-                        </button>
+                            </button>
                             
                             <!-- Exercise content (clickable) -->
                             <div 
@@ -350,6 +349,7 @@ let showCustomListModal = false;
                                     {/if}
                                 {/if}
                             </div>
+                            <small class="text-muted position-absolute bottom-0 end-0 p-2">{result.exercise.uuid}</small>
                         </div>
                     </div>
                 {/each}
