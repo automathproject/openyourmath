@@ -7,25 +7,25 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-17T17:05:26.707Z",
+    "createdAt": "2024-11-17",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-17T17:05:26.707Z"
+    "updatedAt": "2025-01-03T14:18:07.909Z"
   },
   "contenu": [
     {
-      "id": "6455bfc8-a2e9-482b-a2dc-d229ca26769f",
+      "id": "bd32c678-4e8a-4726-8107-b9232f9f5362",
       "type": "question",
       "value": {
         "latex": "Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. Justifier.\n\n\n\n\\begin{center}\n\t\\begin{tikzpicture}[scale=0.6]\n\t\t\\tikzstyle{rouge} = [fill,rectangle,red,scale=1.2];\n\t\t\\tikzstyle{bleu} = [fill,circle,blue] ;\n\t\t\n\t\t\n\t\t\\draw[gray] (-4,-4) grid ++(8,8);\n\t\t\\draw[->,>=latex, very thick,black] (-4.5,0)--(5,0) node[below] {$x$};\n\t\t\\draw[->,>=latex, very thick, black] (0,-4.1)--(0,5) node[left] {$y$};\n\t\t\n\t\t\n\t\t\\foreach \\x/\\y in {-2/3,-1/2,-3/-0.3,1/1.8,2.3/3.1}{\n\t\t\t\\node[bleu] at (\\x,\\y) {};\n\t\t}\n\t\t\\foreach \\x/\\y in {1/-2,3/-1,1.5/-2.5,0/-3,-2.2/-3.3}{\n\t\t\t\\node[rouge] at (\\x,\\y) {};\n\t\t}\n\t\t\n\t\t\n\t\t\\begin{scope}[even odd rule]\n\t\t\t\\clip (-4,-4) rectangle (4,4);\n\t\t\t\\draw[red,ultra thick] (4,3) -- (-4,-2);\n\t\t\t\\fill[red!50,opacity=0.5] (4,3) -- (4,-4) --(-4,-4)--(-4,-2) -- cycle;\n\t\t\t\\fill[blue!20,opacity=0.5] (4,3) -- (4,4) --(-4,4)--(-4,-2) -- cycle;\n\t\t\t\n\t\t\t\n\t\t\\end{scope}\n\t\t\n\t\t\n\t\t\\node[scale=1,red,below] at (4,-4) {$F(x,y)=1$};\n\t\t\\node[scale=1,blue,above] at (-4,4) {$F(x,y)=0$};\n\t\t\n\t\t\n\t\t\n\t\\end{tikzpicture}\n\\end{center}",
-        "html": "<p>Décrire un perceptron qui permet de réaliser la classification entre les points bleus et les points rouges comme dans le graphique ci-dessous. Justifier.</p>\n"
+        "html": "<p>Décrire un perceptron qui permet de réaliser la classification entre\nles points bleus et les points rouges comme dans le graphique\nci-dessous. Justifier.</p>\n<div class=\"center\">\n\n</div>\n"
       }
     },
     {
-      "id": "bf80c787-a9f5-45b4-8ccd-9b549eb4760b",
+      "id": "7f0ebf37-c3df-45a2-93b6-043274933dd3",
       "type": "reponse",
       "value": {
         "latex": "We want to separate the plane into to half planes. One can consider the red line defined by $y=5x/8+1/2$ that is $5x-8y+4 = 0$ or another line which separates as well, for example $5x-8y=0$.  So this perceptron can fit to this problem.\n\t\n\t\n\t\\begin{center}\n\t\t\\begin{tikzpicture}[scale=0.5]\n\t\t\t\\draw[thick,fill=black!10] (0,0) circle (2);\n\t\t\t\\node at (150:9) {$x$};\n\t\t\t\\node at (190:9) {$y$};\n\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.3,above]{$5$};;\n\t\t\t\\draw[ultra thick]  (190:3) -- (190:8) node[pos=0.3,above]{$-8$};\n\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.3,above]{$4$};\n\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0) node[right] {};\n\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\\end{tikzpicture}  \n\t\\end{center}",
-        "html": "<p>We want to separate the plane into to half planes. One can consider the red line defined by <span class=\"math inline\">\\(y=5x/8+1/2\\)</span> that is <span class=\"math inline\">\\(5x-8y+4 = 0\\)</span> or another line which separates as well, for example <span class=\"math inline\">\\(5x-8y=0\\)</span>. So this perceptron can fit to this problem.</p>\n"
+        "html": "<p>We want to separate the plane into to half planes. One can consider\nthe red line defined by <span class=\"math inline\">\\(y=5x/8+1/2\\)</span>\nthat is <span class=\"math inline\">\\(5x-8y+4 = 0\\)</span> or another line\nwhich separates as well, for example <span\nclass=\"math inline\">\\(5x-8y=0\\)</span>. So this perceptron can fit to\nthis problem.</p>\n<div class=\"center\">\n\n</div>\n"
       }
     }
   ]

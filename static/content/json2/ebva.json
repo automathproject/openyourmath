@@ -7,49 +7,49 @@
   "niveau": "",
   "metadata": {
     "auteur": "Jean-François Culus",
-    "createdAt": "2024-12-05T15:37:50.239Z",
+    "createdAt": "2024-10-11",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:50.239Z"
+    "updatedAt": "2025-01-03T14:17:56.508Z"
   },
   "contenu": [
     {
-      "id": "7912e58b-666d-4969-80a5-6e69c6ec990a",
+      "id": "0a30121f-f401-4732-9126-5280ba06db29",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $\\R^2$ par \n$$f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &  ~~~\\text{ si } x \\neq 0 \\\\\ny & ~~~\\text{ si } x=0 \n\\end{array}\\right.$$",
-        "html": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span> définie sur <span class=\"math inline\">\\(\\R^2\\)</span> par <span class=\"math display\">\\[f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &amp;  ~~~\\text{ si } x \\neq 0 \\\\\ny &amp; ~~~\\text{ si } x=0 \n\\end{array}\\right.\\]</span></p>\n"
+        "html": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span>\ndéfinie sur <span class=\"math inline\">\\(\\R^2\\)</span> par <span\nclass=\"math display\">\\[f(x,y)= \\left\\lbrace \\begin{array}{ll}\ny^2/x &amp;  ~~~\\text{ si } x \\neq 0 \\\\\ny &amp; ~~~\\text{ si } x=0\n\\end{array}\\right.\\]</span></p>\n"
       }
     },
     {
-      "id": "883bb6e9-14d8-42c1-94d0-02bcfb9d878d",
+      "id": "04f17702-0254-4feb-b9d4-107e21a3b805",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ n'est pas continue en $(0,0)$.",
-        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> n’est pas continue en <span class=\"math inline\">\\((0,0)\\)</span>.</p>\n"
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> n’est pas continue\nen <span class=\"math inline\">\\((0,0)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "3161f44e-20f3-49a6-b807-92057ca4817a",
+      "id": "ad861c00-2a31-4014-8e15-b328cdf85810",
       "type": "reponse",
       "value": {
         "latex": "Il est clair que cette fonction n'est pas continue en  $(0;0)$ puisque pour $y$ quelconque fixé, quand $x\\to 0$, $f(x,y)\\to \\pm \\infty$.",
-        "html": "<p>Il est clair que cette fonction n’est pas continue en <span class=\"math inline\">\\((0;0)\\)</span> puisque pour <span class=\"math inline\">\\(y\\)</span> quelconque fixé, quand <span class=\"math inline\">\\(x\\to 0\\)</span>, <span class=\"math inline\">\\(f(x,y)\\to \\pm \\infty\\)</span>.</p>\n"
+        "html": "<p>Il est clair que cette fonction n’est pas continue en <span\nclass=\"math inline\">\\((0;0)\\)</span> puisque pour <span\nclass=\"math inline\">\\(y\\)</span> quelconque fixé, quand <span\nclass=\"math inline\">\\(x\\to 0\\)</span>, <span\nclass=\"math inline\">\\(f(x,y)\\to \\pm \\infty\\)</span>.</p>\n"
       }
     },
     {
-      "id": "9ad5f922-3d9a-4974-b9c2-2d25185b2e52",
+      "id": "fec2c365-147b-4ef2-ba48-ccfb2cf17f0a",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ admet des dérivées partielles au point $(0;0)$.",
-        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> admet des dérivées partielles au point <span class=\"math inline\">\\((0;0)\\)</span>.</p>\n"
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> admet des dérivées\npartielles au point <span class=\"math inline\">\\((0;0)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "412efb69-9801-43d1-8bde-6d11bd7a11af",
+      "id": "5da6fe77-7599-494d-8106-30cefad52f72",
       "type": "reponse",
       "value": {
         "latex": "Etudions les dérivées partielles. \nPour tout $x \\in \\R^*$, nous avons:\n$f(x,0)-f(0,0)=0$ d'où $\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0$ existe. Ainsi, $\\frac{\\partial f}{\\partial x}(0;0)=0$.\nDe même pour tout $y\\in \\R^*$, nous avons:\n$f(0,y)-f(0,0)=y$ d'où $\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1$ et donc la dérivée partielle $\\frac{\\partial f}{\\partial y}(0,0)$ existe est est égale à $1$. \n\n\\begin{tikzpicture}\n    \\begin{axis}[\n        view={60}{30},                  \n        domain=-2:2,                    \n        domain y=-2:2,                  \n        samples=40,                     \n        xlabel=$x$,                     \n        ylabel=$y$,                     \n        zlabel={$f(x,y)$},              \n        zmax=4,                         \n        zmin=-4,                        \n        colormap/cool,                  \n    ]\n    \n    \\addplot3[\n        surf,                           \n        domain=-2:0.1,                  \n    ]\n    {y^2/x};                            \n\n    \\addplot3[\n        surf,                           \n        domain=0.1:2,                   \n    ]\n    {y^2/x};                            \n\n    \n    \\addplot3[\n        domain=-2:2,                    \n        samples=40,                     \n        thick,                          \n    ]\n    (0,y,y);                            \n    \\end{axis}\n\\end{tikzpicture}",
-        "html": "<p>Etudions les dérivées partielles. Pour tout <span class=\"math inline\">\\(x \\in \\R^*\\)</span>, nous avons: <span class=\"math inline\">\\(f(x,0)-f(0,0)=0\\)</span> d’où <span class=\"math inline\">\\(\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0\\)</span> existe. Ainsi, <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(0;0)=0\\)</span>. De même pour tout <span class=\"math inline\">\\(y\\in \\R^*\\)</span>, nous avons: <span class=\"math inline\">\\(f(0,y)-f(0,0)=y\\)</span> d’où <span class=\"math inline\">\\(\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1\\)</span> et donc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(0,0)\\)</span> existe est est égale à <span class=\"math inline\">\\(1\\)</span>.</p>\n"
+        "html": "<p>Etudions les dérivées partielles. Pour tout <span\nclass=\"math inline\">\\(x \\in \\R^*\\)</span>, nous avons: <span\nclass=\"math inline\">\\(f(x,0)-f(0,0)=0\\)</span> d’où <span\nclass=\"math inline\">\\(\\lim_{x\\to 0} \\frac{f(x,0)-f(0,0)}{x}=0\\)</span>\nexiste. Ainsi, <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial\nx}(0;0)=0\\)</span>. De même pour tout <span class=\"math inline\">\\(y\\in\n\\R^*\\)</span>, nous avons: <span\nclass=\"math inline\">\\(f(0,y)-f(0,0)=y\\)</span> d’où <span\nclass=\"math inline\">\\(\\lim_{y\\to 0}\\frac{f(0,y)-f(0,0)}{y}=1\\)</span> et\ndonc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial\nf}{\\partial y}(0,0)\\)</span> existe est est égale à <span\nclass=\"math inline\">\\(1\\)</span>.</p>\n"
       }
     }
   ]

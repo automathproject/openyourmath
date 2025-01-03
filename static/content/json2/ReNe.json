@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-29T14:15:51.058Z",
+    "createdAt": "2024-10-11",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-29T14:15:51.058Z"
+    "updatedAt": "2025-01-03T14:17:44.803Z"
   },
   "contenu": [
     {
-      "id": "9f9bd501-5eb4-4fb2-85a0-aa61d8c2476e",
+      "id": "261ab47e-3db8-4465-82e2-e794da1c5edd",
       "type": "description",
       "value": {
         "latex": "Soit le réseau de neurones multicouches décrit pas le graphe suivant:\r\n\r\n\\begin{center}\r\n\t\\begin{tikzpicture}[scale=1]\r\n\\def\\layersep{2cm}\r\n\\tikzstyle{every pin edge}=[thick]\r\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\r\n\\tikzstyle{entree}=[];\r\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\r\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\r\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\r\n\\tikzstyle{annot} = [text width=4em, text centered]\r\n\r\n\r\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$1$};\r\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$x$};\r\n\\node[entree,blue] (E-3) at (-\\layersep,-5) {$1$};\r\n\r\n\r\n\r\n\\node[input neuron] (I-1) at (0,-1.5) {};\r\n\\node[input neuron] (I-3) at (0,-3.75) {};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {$\\Sigma$};\r\n\r\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\r\n\\node[below right=0.8ex,scale=0.7] at (I-3) {};\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\\node[hidden neuron] (O) at (\\layersep,-3.75 cm) {};\r\n\\node[hidden neuron] (P) at (\\layersep,-1.5 cm) {};\r\n\\node[above right=0.8ex,scale=0.7] at (O) {$h_{12}$};\r\n\\node[right=0.5ex,scale=0.7] at (P) {$h_{11}$};\r\n\r\n\r\n\\path[thick] (E-1) edge node[pos=0.5,above,scale=0.7]{$w_{1}$} (I-1) ;\r\n\\path[thick] (E-2) edge node[pos=0.5,above left,scale=0.7]{$w_{2}$} (I-1);\r\n\\path[thick] (E-2) edge node[pos=0.5,above,scale=0.7]{$w_4$} (I-3);\r\n\\path[thick] (E-3) edge node[pos=0.5,above,scale=0.7]{$w_3$} (I-3);\r\n\\path[thick] (I-1) edge node[pos=0.5,above,scale=0.7]{$f_{11}$} (P);\r\n\\path[thick] (I-3) edge node[pos=0.5,below,scale=0.7]{$f_{12}$}(O);\r\n\\node[below right=0.8ex,scale=0.5] at (O) {$\\text{Sigmoide}$};\r\n\\node[below =0.8ex,scale=0.5] at (P) {$\\text{Sigmoide}$};\r\n\r\n\\node[hidden neuron] (Q) at (2*\\layersep,-2.5 cm) {};\r\n\\node[output neuron] (R) at (3*\\layersep,-2.5 cm) {};\r\n\\node[below right=0.8ex,scale=0.7] at (R) {$\\text{Id}$};\r\n\\node[input neuron] (I-4) at (2.5,-0.5) {$1$};\r\n\\path[thick] (O) edge node[pos=0.6,above,scale=0.7]{$w_{7}$} (Q) ;\r\n\\node[below right=0.8ex,scale=0.7] at (Q) {$\\Sigma$};\r\n\\path[thick] (I-4) edge node[pos=0.5,above,scale=0.7]{$w_{5}$} (Q) ;\r\n\\path[thick] (Q) edge node[pos=0.5,above,scale=0.7]{$f_{21}$} (R);\r\n\\path[thick] (P) edge node[pos=0.5,above,scale=0.7]{$w_{6}$} (Q) ;\r\n\r\n\\draw[->,thick] (R)-- ++(2,0) node[right,blue]{$\\hat{y}$};\r\n \r\n     \r\n\r\n\r\n\r\n\r\n\\end{tikzpicture}  \r\n\\end{center}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "413584c4-752b-4538-a90c-526b9cedf0b0",
+      "id": "4e4aff9f-4755-469c-904a-752955dff13f",
       "type": "question",
       "value": {
         "latex": "Donner les formules qui déterminent les sorties intermédiaires $f_{11},\\,f_{12},\\,h_{11},\\,h_{12}$ et $f_{21}$ ainsi que la sortie finale $\\hat{y}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "cee189ca-9e42-4561-a127-ece519d7a74b",
+      "id": "f05206db-4e0e-4839-b670-e2589703141c",
       "type": "reponse",
       "value": {
         "latex": "\\[\r\nf_{11} = w_2 x + w_1\r\n\\]\r\n\\[\r\nf_{12} = w_4 x + w_3\r\n\\]\r\n\\[\r\nh_{11} = \\sigma(f_{11}) = \\frac{1}{1 + e^{-f_{11}}}\r\n\\]\r\n\\[\r\nh_{12} = \\sigma(f_{12}) = \\frac{1}{1 + e^{-f_{12}}}\r\n\\]\r\n\\[\r\n\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5\r\n\\]",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "6274ebe6-ea9d-4bfe-9139-c3104cd2f2e9",
+      "id": "3422e06f-f78c-4719-bfa1-93a4bdca1c34",
       "type": "question",
       "value": {
         "latex": "On pose la fonction d'erreur $E(w)=(y-\\hat{y})^2.$ En appliquant l'algorithme de backpropagation (méthode du Gradient appliqué au réseau de neurones), déterminer les dérivées partielles $\\frac{\\partial E(w)}{\\partial w_j}$ puis $\\frac{\\partial \\hat{y}}{\\partial w_j}$. En déduire les expressions des mises à jour des paramètres $\\Delta w_j$ (variation des poids) pour $j=1,\\cdots{},7$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "9446e09e-ace5-4106-8611-313ad1955edc",
+      "id": "7261c068-42ae-4f55-b01f-55f1a1ee8294",
       "type": "reponse",
       "value": {
         "latex": "La fonction d’erreur est donnée par :\r\n\\[\r\nE(\\mathbf{w}) = (y - \\hat{y})^2\r\n\\]\r\n\r\nDonc, on aura :\r\n\\[\r\n\\frac{\\partial E(\\mathbf{w})}{\\partial w_j} = -2(y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]\r\n\r\nD’après la propagation en avant, on a : $\\hat{y} = f_{21} = w_6 h_{11} + w_7 h_{12} + w_5$.  \r\nLes dérivées partielles $\\frac{\\partial \\hat{y}}{\\partial w_j}$ peuvent être calculées comme suit :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_5} = 1, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_6} = h_{11}, \\quad\r\n\\frac{\\partial \\hat{y}}{\\partial w_7} = h_{12}\r\n\\]\r\n\r\nPour les autres paramètres :\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_1} = \\frac{\\partial \\hat{y}}{\\partial h_{11}} \\times \\frac{\\partial h_{11}}{\\partial f_{11}} \\times \\frac{\\partial f_{11}}{\\partial w_1} = w_6 h_{11}(1 - h_{11})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_2} = w_6 h_{11}(1 - h_{11}) x\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_3} = w_7 h_{12}(1 - h_{12})\r\n\\]\r\n\\[\r\n\\frac{\\partial \\hat{y}}{\\partial w_4} = w_7 h_{12}(1 - h_{12}) x\r\n\\]\r\n\r\nEn fin, la mise à jour de chaque paramètre $\\Delta w_j$ est donnée par :\r\n\\[\r\n\\Delta w_j = \\alpha (y - \\hat{y}) \\frac{\\partial \\hat{y}}{\\partial w_j}\r\n\\]",

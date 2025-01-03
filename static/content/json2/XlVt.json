@@ -8,13 +8,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-29T14:43:17.579Z",
+    "createdAt": "2022-09-22",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-29T14:43:17.579Z"
+    "updatedAt": "2025-01-03T14:17:48.651Z"
   },
   "contenu": [
     {
-      "id": "f04e5807-2d27-45f3-ab13-c0866e21ec1f",
+      "id": "e0699b41-b264-42e1-b07c-a5a2322c52bb",
       "type": "description",
       "value": {
         "latex": "Soit $X$ une variable aléatoire réelle suivant une loi uniforme sur $[0;1]$ et $\\lambda >0$.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "986ebd71-e310-4c4a-9f34-4e8d2a452b74",
+      "id": "f42ba481-df92-4f9e-9ba4-85b7ca9827b1",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi suivie par $Y=\\frac{-1}{\\lambda}\\ln(1-X)$ ?",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "43d5fce4-9654-4118-a942-3dede95e21c9",
+      "id": "b17987e0-3c63-4122-8c7e-e2a68a60a53f",
       "type": "reponse",
       "value": {
         "latex": "Soit $t\\in\\mathbb{R}$. On a\n\t\t$$\\begin{align*}\n\t\t\tF_Y(t) &= \\mathbb{P}(Y\\leq t) \\\\\n\t\t\t&= \\mathbb{P}(\\frac{-1}{\\lambda}\\ln(1-X)\\leq t) \\\\\n\t\t\t&= \\mathbb{P}(\\ln(1-X)\\geq -\\lambda t) \\\\\n\t\t\t&= \\mathbb{P}(1-X\\geq e^{-\\lambda t}) \\\\\n\t\t\t&=  \\mathbb{P}(X\\leq 1-e^{-\\lambda t}) \\\\\n\t\t\t&= F_X(1-e^{-\\lambda t}).\n\t\t\\end{align*}$$\n\t\tOr $X\\sim \\mathcal{U}([0;1])$ donc $F_X(x)=\\begin{cases} 0 & \\text{ si } x<0 \\\\ x & \\text{ si } x\\in[0;1[ \\\\ 1 & \\text{ si } x\\geq 1 \\end{cases}$.\n\t\t\n\t\tDe plus, si $t\\geq 0$, $1-e^{-\\lambda t} \\in [0;1[$ et si $t\\leq 0$, $1-e^{-\\lambda t}<0$.\n\t\t\n\t\tPar conséquent,\n\t\t\\[ F_Y(t)=\\begin{cases}\n\t\t\t0 & \\text{ si } t<0 \\\\\n\t\t\t1-e^{-\\lambda t} & \\text{ si } t\\geq 0\n\t\t\\end{cases}\n\t\t\\]\n\t\tce qui nous permet de reconnaître la fonction de répartition de la loi exponentielle de paramètre $\\lambda$ donc $Y\\sim \\mathcal{E}(\\lambda)$.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "fe54b67e-57af-4e9b-8650-7b76fba50f13",
+      "id": "7d634e9a-7f3f-41d6-b74f-6e8eb8073609",
       "type": "question",
       "value": {
         "latex": "Dans un langage de programmation, on simule une loi uniforme sur $[0;1]$ avec la commande $\\texttt{rand()}$. Quelle commande peut-on écrire pour simuler une loi exponentielle de paramètre $\\lambda$ ?",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "9e51a1ad-a7a4-4b48-b02c-6e4c7b3d5650",
+      "id": "40a7e480-7e13-48b7-85c5-6f28d172d596",
       "type": "reponse",
       "value": {
         "latex": "Il suffit d'écrire \\texttt{-1/lambda*log(1-rand())} et même \\texttt{-1/lambda*log(rand())} car $1-X$ suit une loi uniforme sur $[0;1]$.",

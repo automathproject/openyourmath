@@ -1,5 +1,5 @@
 {
-  "uuid": "24d3171a-86ea-4f1f-aa21-5d5b8ce522ef",
+  "uuid": "07c9cf18-51fd-4e5b-b694-d69b03806037",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "optimisation"
@@ -7,37 +7,37 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:42.601Z",
+    "createdAt": "2024-10-15",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:42.601Z"
+    "updatedAt": "2025-01-03T14:17:49.614Z"
   },
   "contenu": [
     {
-      "id": "19bf459e-7f41-41fb-bff2-84c747364de5",
+      "id": "66dcdebe-50c9-4166-8b70-5a959a17121a",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $[-1, 1]$ par $f(x) = x^3$. L'espace $\\mathcal{C}^0([-1, 1])$ est muni du produit scalaire $\\langle h, g \\rangle = \\int_{-1}^{1} h(x)g(x) dx$ et on note $\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx$ la norme associée. \n\n  On cherche à déterminer le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$.",
-        "html": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span> définie sur <span class=\"math inline\">\\([-1, 1]\\)</span> par <span class=\"math inline\">\\(f(x) = x^3\\)</span>. L’espace <span class=\"math inline\">\\(\\mathcal{C}^0([-1, 1])\\)</span> est muni du produit scalaire <span class=\"math inline\">\\(\\langle h, g \\rangle = \\int_{-1}^{1} h(x)g(x) dx\\)</span> et on note <span class=\"math inline\">\\(\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx\\)</span> la norme associée.</p>\n<p>On cherche à déterminer le polynôme <span class=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui approche le mieux la fonction <span class=\"math inline\">\\(f\\)</span> sur l’intervalle <span class=\"math inline\">\\([-1, 1]\\)</span>, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur <span class=\"math inline\">\\(\\|f - P\\|^2\\)</span>.</p>\n"
+        "html": "<p>On considère la fonction <span class=\"math inline\">\\(f\\)</span>\ndéfinie sur <span class=\"math inline\">\\([-1, 1]\\)</span> par <span\nclass=\"math inline\">\\(f(x) = x^3\\)</span>. L’espace <span\nclass=\"math inline\">\\(\\mathcal{C}^0([-1, 1])\\)</span> est muni du\nproduit scalaire <span class=\"math inline\">\\(\\langle h, g \\rangle =\n\\int_{-1}^{1} h(x)g(x) dx\\)</span> et on note <span\nclass=\"math inline\">\\(\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx\\)</span> la\nnorme associée.</p>\n<p>On cherche à déterminer le polynôme <span\nclass=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui\napproche le mieux la fonction <span class=\"math inline\">\\(f\\)</span> sur\nl’intervalle <span class=\"math inline\">\\([-1, 1]\\)</span>, au sens des\nmoindres carrés. Autrement dit, on veut minimiser l’erreur <span\nclass=\"math inline\">\\(\\|f - P\\|^2\\)</span>.</p>\n"
       }
     },
     {
-      "id": "ffbfa95e-383c-4605-aa28-e5e53ee5afcf",
+      "id": "9110e9da-8a68-4fac-a945-928d32d68f82",
       "type": "question",
       "value": {
         "latex": "Mettre ce problème sous la forme d’un problème de moindres carrés de dimension finie. Quelle est cette dimension ?",
-        "html": "<p>Mettre ce problème sous la forme d’un problème de moindres carrés de dimension finie. Quelle est cette dimension ?</p>\n"
+        "html": "<p>Mettre ce problème sous la forme d’un problème de moindres carrés de\ndimension finie. Quelle est cette dimension ?</p>\n"
       }
     },
     {
-      "id": "a01dd455-d731-4470-a727-98318e422a8b",
+      "id": "0eec6e9e-8e4f-47fa-894f-248cf252f7ef",
       "type": "reponse",
       "value": {
         "latex": "Le problème est de trouver le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f(x) = x^3$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$, où la norme est définie par :\n  \\[\n  \\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx.\n  \\]\n  Le polynôme $P(x) = ax + b$ est de degré inférieur ou égal à 1. On doit donc minimiser l'intégrale :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b) \\right)^2 dx.\n  \\]\n  Ce problème peut être formulé comme un problème de moindres carrés dans un espace vectoriel de dimension 2 (les paramètres à déterminer étant $a$ et $b$).",
-        "html": "<p>Le problème est de trouver le polynôme <span class=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui approche le mieux la fonction <span class=\"math inline\">\\(f(x) = x^3\\)</span> sur l’intervalle <span class=\"math inline\">\\([-1, 1]\\)</span>, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur <span class=\"math inline\">\\(\\|f - P\\|^2\\)</span>, où la norme est définie par : <span class=\"math display\">\\[\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx.\\]</span> Le polynôme <span class=\"math inline\">\\(P(x) = ax + b\\)</span> est de degré inférieur ou égal à 1. On doit donc minimiser l’intégrale : <span class=\"math display\">\\[J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b) \\right)^2 dx.\\]</span> Ce problème peut être formulé comme un problème de moindres carrés dans un espace vectoriel de dimension 2 (les paramètres à déterminer étant <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span>).</p>\n"
+        "html": "<p>Le problème est de trouver le polynôme <span\nclass=\"math inline\">\\(P\\)</span> de degré inférieur ou égal à 1 qui\napproche le mieux la fonction <span class=\"math inline\">\\(f(x) =\nx^3\\)</span> sur l’intervalle <span class=\"math inline\">\\([-1,\n1]\\)</span>, au sens des moindres carrés. Autrement dit, on veut\nminimiser l’erreur <span class=\"math inline\">\\(\\|f - P\\|^2\\)</span>, où\nla norme est définie par : <span class=\"math display\">\\[\\|h\\|^2 =\n\\int_{-1}^{1} h(x)^2 dx.\\]</span> Le polynôme <span\nclass=\"math inline\">\\(P(x) = ax + b\\)</span> est de degré inférieur ou\négal à 1. On doit donc minimiser l’intégrale : <span\nclass=\"math display\">\\[J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b)\n\\right)^2 dx.\\]</span> Ce problème peut être formulé comme un problème\nde moindres carrés dans un espace vectoriel de dimension 2 (les\nparamètres à déterminer étant <span class=\"math inline\">\\(a\\)</span> et\n<span class=\"math inline\">\\(b\\)</span>).</p>\n"
       }
     },
     {
-      "id": "70e752d1-add4-4722-8388-06a6aa9d44b3",
+      "id": "fed01967-0f69-4b48-a74a-203b5a2a3998",
       "type": "question",
       "value": {
         "latex": "Étudier l’existence/l’unicité des solutions de ce problème.",
@@ -45,15 +45,15 @@
       }
     },
     {
-      "id": "2a69d262-e8ad-4007-9640-5ca75599422d",
+      "id": "f16cacbe-0be3-40ff-af9e-118f30900fe0",
       "type": "reponse",
       "value": {
         "latex": "Le problème est quadratique en les paramètres $a$ et $b$. Par conséquent, il peut être formulé comme la minimisation d'une fonction quadratique définie positive, dont la matrice hessienne associée est définie positive. Cela garantit que le problème possède une solution unique.",
-        "html": "<p>Le problème est quadratique en les paramètres <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span>. Par conséquent, il peut être formulé comme la minimisation d’une fonction quadratique définie positive, dont la matrice hessienne associée est définie positive. Cela garantit que le problème possède une solution unique.</p>\n"
+        "html": "<p>Le problème est quadratique en les paramètres <span\nclass=\"math inline\">\\(a\\)</span> et <span\nclass=\"math inline\">\\(b\\)</span>. Par conséquent, il peut être formulé\ncomme la minimisation d’une fonction quadratique définie positive, dont\nla matrice hessienne associée est définie positive. Cela garantit que le\nproblème possède une solution unique.</p>\n"
       }
     },
     {
-      "id": "a38db77d-2b95-4025-b42f-aa96be491cee",
+      "id": "28c6f9ec-bf20-41f7-9550-9e9e16ab429d",
       "type": "question",
       "value": {
         "latex": "Résoudre ce problème.",
@@ -61,11 +61,11 @@
       }
     },
     {
-      "id": "404f9def-fc62-4436-a65b-c84dd8c543dc",
+      "id": "5ae1af10-2e38-4990-ab5b-2ae1586ca90b",
       "type": "reponse",
       "value": {
         "latex": "On calcule l’intégrale de $J(a, b)$ :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\n  \\]\n  En calculant chaque terme séparément, on obtient :\n  \\[\n  J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0 \\cdot b + 0 \\cdot ab + \\text{termes constants}.\n  \\]\n  Résoudre ce problème d'optimisation quadratique donne les valeurs $a = \\frac{3}{5}$ et $b = 0$. Ainsi, le polynôme $P(x)$ qui approche le mieux $f(x) = x^3$ au sens des moindres carrés est $P(x) = \\frac{3}{5}x$.",
-        "html": "<p>On calcule l’intégrale de <span class=\"math inline\">\\(J(a, b)\\)</span> : <span class=\"math display\">\\[J(a, b) = \\int_{-1}^{1} \\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\\]</span> En calculant chaque terme séparément, on obtient : <span class=\"math display\">\\[J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0 \\cdot b + 0 \\cdot ab + \\text{termes constants}.\\]</span> Résoudre ce problème d’optimisation quadratique donne les valeurs <span class=\"math inline\">\\(a = \\frac{3}{5}\\)</span> et <span class=\"math inline\">\\(b = 0\\)</span>. Ainsi, le polynôme <span class=\"math inline\">\\(P(x)\\)</span> qui approche le mieux <span class=\"math inline\">\\(f(x) = x^3\\)</span> au sens des moindres carrés est <span class=\"math inline\">\\(P(x) = \\frac{3}{5}x\\)</span>.</p>\n"
+        "html": "<p>On calcule l’intégrale de <span class=\"math inline\">\\(J(a,\nb)\\)</span> : <span class=\"math display\">\\[J(a, b) = \\int_{-1}^{1}\n\\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\\]</span> En\ncalculant chaque terme séparément, on obtient : <span\nclass=\"math display\">\\[J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0\n\\cdot b + 0 \\cdot ab + \\text{termes constants}.\\]</span> Résoudre ce\nproblème d’optimisation quadratique donne les valeurs <span\nclass=\"math inline\">\\(a = \\frac{3}{5}\\)</span> et <span\nclass=\"math inline\">\\(b = 0\\)</span>. Ainsi, le polynôme <span\nclass=\"math inline\">\\(P(x)\\)</span> qui approche le mieux <span\nclass=\"math inline\">\\(f(x) = x^3\\)</span> au sens des moindres carrés\nest <span class=\"math inline\">\\(P(x) = \\frac{3}{5}x\\)</span>.</p>\n"
       }
     }
   ]

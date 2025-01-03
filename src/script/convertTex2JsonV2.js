@@ -245,22 +245,21 @@ async function main() {
 
   // Définir les commandes à extraire avec l'indicateur isVerbatim
   const commandsToExtract = [
-      // Champs uniques de l'exercice
-      { name: 'uuid', jsonKey: 'uuid', isContent: false, isVerbatim: false },
-      { name: 'titre', jsonKey: 'titre', isContent: false, isVerbatim: false },
-      { name: 'theme', jsonKey: 'theme', isContent: false, isVerbatim: false },
-      { name: 'niveau', jsonKey: 'niveau', isContent: false, isVerbatim: false },
-      // Metadata
-      { name: 'auteur', jsonKey: 'metadata.auteur', isContent: false, isVerbatim: false },
-      { name: 'date', jsonKey: 'metadata.createdAt', isContent: false, isVerbatim: false },
-      { name: 'organisation', jsonKey: 'metadata.organisation', isContent: false, isVerbatim: false },
-      // Champs de contenu
-      { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-      { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-      { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-      { name: 'indication', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-      { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },
-  ];
+    // Champs uniques de l'exercice
+    { name: 'uuid', jsonKey: 'uuid', isContent: false, isVerbatim: false },
+    { name: 'titre', jsonKey: 'titre', isContent: false, isVerbatim: false },
+    { name: 'theme', jsonKey: 'theme', isContent: false, isVerbatim: false },
+    { name: 'niveau', jsonKey: 'niveau', isContent: false, isVerbatim: false },
+    { name: 'auteur', jsonKey: 'metadata.auteur', isContent: false, isVerbatim: false },
+    { name: 'datecreate', jsonKey: 'metadata.createdAt', isContent: false, isVerbatim: false }, // au lieu de 'date'
+    { name: 'organisation', jsonKey: 'metadata.organisation', isContent: false, isVerbatim: false },
+    // Champs de contenu
+    { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+    { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+    { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+    { name: 'indication', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+    { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },
+];
 
   // Vérifier si le chemin d'entrée existe
   if (!fs.existsSync(inputPath)) {

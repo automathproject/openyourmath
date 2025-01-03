@@ -7,65 +7,65 @@
   "niveau": "",
   "metadata": {
     "auteur": "Maxime NGUYEN",
-    "createdAt": "2024-12-17T10:44:30.461Z",
+    "createdAt": "2024-12-13",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-17T10:44:30.461Z"
+    "updatedAt": "2025-01-03T14:17:55.246Z"
   },
   "contenu": [
     {
-      "id": "94e4702f-35f6-4047-a524-3388e517a718",
+      "id": "98c8d3b4-56ab-4b50-9982-0fb089d18f80",
       "type": "description",
       "value": {
         "latex": "On souhaite construire un réseau de neurones qui réalise une classification des points du plan $\\R^2$ selon que ces points appartiennent ou non au triangle $T$ dont les sommets sont les points de coordonnées respectives $(-1,-1),(-1,1),(1,1)$ comme ci-dessous.\n\t\n\t\\begin{center}\n\t\t\\begin{tikzpicture}[scale=1]\n\t\t\t\n\t\t\t\n\t\t\t\\draw[step=0.5,lightgray,very thin] (-2,-2) grid (2,2);\n\t\t\t\\draw[step=1,gray, thin] (-2,-2) grid (2,2);\n\t\t\t\n\t\t\t\\draw[->] (-2,0) -- (2,0) node[right] {$x$};\n\t\t\t\\draw[->] (0,-2) -- (0,2) node[above] {$y$};\n\t\t\t\n\t\t\t\\filldraw[thick,red,fill=red!20] (-1,-1) -- (-1,1) -- (1,1) -- cycle;\n\t\t\t\n\t\t\t\\draw[->] (-2,0) -- (2,0) node[right] {$x$};\n\t\t\t\\draw[->] (0,-2) -- (0,2) node[above] {$y$};\n\t\t\t\n\t\t\t\n\t\t\t\\foreach \\x in {-2,-1,1,2} {\n\t\t\t\t\\draw (\\x,0.05) -- (\\x,-0.05) node[below] {\\x};\n\t\t\t}\n\t\t\t\n\t\t\t\\foreach \\y in {-2,-1,1,2} {\n\t\t\t\t\\draw (0.05,\\y) -- (-0.05,\\y) node[left] {\\y};\n\t\t\t}\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\\end{tikzpicture}\n\t\\end{center}",
-        "html": "<p>On souhaite construire un réseau de neurones qui réalise une classification des points du plan <span class=\"math inline\">\\(\\R^2\\)</span> selon que ces points appartiennent ou non au triangle <span class=\"math inline\">\\(T\\)</span> dont les sommets sont les points de coordonnées respectives <span class=\"math inline\">\\((-1,-1),(-1,1),(1,1)\\)</span> comme ci-dessous.</p>\n"
+        "html": "<p>On souhaite construire un réseau de neurones qui réalise une\nclassification des points du plan <span\nclass=\"math inline\">\\(\\R^2\\)</span> selon que ces points appartiennent\nou non au triangle <span class=\"math inline\">\\(T\\)</span> dont les\nsommets sont les points de coordonnées respectives <span\nclass=\"math inline\">\\((-1,-1),(-1,1),(1,1)\\)</span> comme\nci-dessous.</p>\n<div class=\"center\">\n\n</div>\n"
       }
     },
     {
-      "id": "635d8ab0-b6e2-40a3-a1cb-6449e022b923",
+      "id": "40ffc9bb-cb97-4a12-a9ea-1688ace30e66",
       "type": "question",
       "value": {
         "latex": "Démontrer que le perceptron défini ci-dessous réalise l'opération logique $x$ ET $y$ ET $z$ où $(x,y,z) \\in \\{0,1\\}^3$. \n\t\t\n\t\t\\begin{center}\n\t\t\t\\begin{tikzpicture}[scale=0.3, font=\\scriptsize]\n\t\t\t\t\n\t\t\t\t\\draw[thick,fill=black!10] (0,0) circle (3);\n\t\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.2,above]{$1$} node[left]{$x$};\n\t\t\t\t\\draw[ultra thick]  (170:3) -- (170:8)node[pos=0.2,above]{$1$} node[left]{$y$};\n\t\t\t\t\\draw[ultra thick]  (190:3) -- (190:8)node[pos=0.2,above]{$1$} node[left]{$z$};\n\t\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.2,below]{$-3$};\n\t\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0);\n\t\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\t\t\n\t\t\t\\end{tikzpicture}  \n\t\t\\end{center}",
-        "html": "<p>Démontrer que le perceptron défini ci-dessous réalise l’opération logique <span class=\"math inline\">\\(x\\)</span> ET <span class=\"math inline\">\\(y\\)</span> ET <span class=\"math inline\">\\(z\\)</span> où <span class=\"math inline\">\\((x,y,z) \\in \\{0,1\\}^3\\)</span>.</p>\n"
+        "html": "<p>Démontrer que le perceptron défini ci-dessous réalise l’opération\nlogique <span class=\"math inline\">\\(x\\)</span> ET <span\nclass=\"math inline\">\\(y\\)</span> ET <span\nclass=\"math inline\">\\(z\\)</span> où <span class=\"math inline\">\\((x,y,z)\n\\in \\{0,1\\}^3\\)</span>.</p>\n<div class=\"center\">\n\n</div>\n"
       }
     },
     {
-      "id": "38603c3a-5f1a-4de9-b10b-b95afacb9791",
+      "id": "e5bc213d-eef5-4376-b56f-2f694a567d7a",
       "type": "reponse",
       "value": {
         "latex": "Si $(x,y,z) = (1,1,1)$ alors $x$ ET $y$ ET $z$ vaut $1$, $0$ dans tous les autres cas. \n\nOr ce perceptron renvoie $1$ si et seulement si $x+y+z \\geq 3$. Donc si $x=y=z=1$ alors la sortie vaut $1$. Si $x=0$ ou $y=0$ ou $z=0$ alors $x+y+z \\leq 2 < 3$ et la sortie vaut $0$.",
-        "html": "<p>Si <span class=\"math inline\">\\((x,y,z) = (1,1,1)\\)</span> alors <span class=\"math inline\">\\(x\\)</span> ET <span class=\"math inline\">\\(y\\)</span> ET <span class=\"math inline\">\\(z\\)</span> vaut <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(0\\)</span> dans tous les autres cas.</p>\n<p>Or ce perceptron renvoie <span class=\"math inline\">\\(1\\)</span> si et seulement si <span class=\"math inline\">\\(x+y+z \\geq 3\\)</span>. Donc si <span class=\"math inline\">\\(x=y=z=1\\)</span> alors la sortie vaut <span class=\"math inline\">\\(1\\)</span>. Si <span class=\"math inline\">\\(x=0\\)</span> ou <span class=\"math inline\">\\(y=0\\)</span> ou <span class=\"math inline\">\\(z=0\\)</span> alors <span class=\"math inline\">\\(x+y+z \\leq 2 &lt; 3\\)</span> et la sortie vaut <span class=\"math inline\">\\(0\\)</span>.</p>\n"
+        "html": "<p>Si <span class=\"math inline\">\\((x,y,z) = (1,1,1)\\)</span> alors <span\nclass=\"math inline\">\\(x\\)</span> ET <span\nclass=\"math inline\">\\(y\\)</span> ET <span\nclass=\"math inline\">\\(z\\)</span> vaut <span\nclass=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(0\\)</span>\ndans tous les autres cas.</p>\n<p>Or ce perceptron renvoie <span class=\"math inline\">\\(1\\)</span> si et\nseulement si <span class=\"math inline\">\\(x+y+z \\geq 3\\)</span>. Donc si\n<span class=\"math inline\">\\(x=y=z=1\\)</span> alors la sortie vaut <span\nclass=\"math inline\">\\(1\\)</span>. Si <span\nclass=\"math inline\">\\(x=0\\)</span> ou <span\nclass=\"math inline\">\\(y=0\\)</span> ou <span\nclass=\"math inline\">\\(z=0\\)</span> alors <span\nclass=\"math inline\">\\(x+y+z \\leq 2 &lt; 3\\)</span> et la sortie vaut\n<span class=\"math inline\">\\(0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "dbe8c0d3-dc04-498d-b5fe-2664b6a1c45b",
+      "id": "21e42132-1224-4c8e-b977-43b82c819206",
       "type": "question",
       "value": {
         "latex": "En déduire un réseau de neurones prenant un vecteur $(x,y) \\in \\R^2$ en entrée et renvoyant \n\t\t$1$ si $(x,y) \\in T$, $0$ sinon.",
-        "html": "<p>En déduire un réseau de neurones prenant un vecteur <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> en entrée et renvoyant <span class=\"math inline\">\\(1\\)</span> si <span class=\"math inline\">\\((x,y) \\in T\\)</span>, <span class=\"math inline\">\\(0\\)</span> sinon.</p>\n"
+        "html": "<p>En déduire un réseau de neurones prenant un vecteur <span\nclass=\"math inline\">\\((x,y) \\in \\R^2\\)</span> en entrée et renvoyant\n<span class=\"math inline\">\\(1\\)</span> si <span\nclass=\"math inline\">\\((x,y) \\in T\\)</span>, <span\nclass=\"math inline\">\\(0\\)</span> sinon.</p>\n"
       }
     },
     {
-      "id": "389a19d8-480c-4ae6-a9e3-6c008a710fdd",
+      "id": "352118e3-a520-482a-ba65-ce120923a5d2",
       "type": "reponse",
       "value": {
         "latex": "Le triangle est l'intersection de trois demi plans définis par ces inéquations : \n\t\t$\\begin{cases}\n\t\t\tx + 1 \\geq 0 \\\\\n\t\t\t-y +1 \\geq 0 \\\\\n\t\t\t-x + y \\geq 0\n\t\t \\end{cases}$\n\t\t d'où le réseau à deux couches suivant où chaque perceptron de la première couche réalise une inéquation et celui de la seconde couche réalise l'intersection :\n\t\t \n\\begin{tikzpicture}[scale=1.5]\n\\def\\layersep{2cm}\n\\tikzstyle{every pin edge}=[thick]\n\\tikzstyle{neuron}=[circle,fill=black!25,minimum size=12pt,inner sep=0pt]\n\\tikzstyle{entree}=[];\n\\tikzstyle{input neuron}=[neuron, fill=green!50];\n\\tikzstyle{output neuron}=[neuron, fill=red!50];\n\\tikzstyle{hidden neuron}=[neuron, fill=blue!50];\n\\tikzstyle{annot} = [text width=4em, text centered]\n\n\n\\node[entree,blue] (E-1) at (-\\layersep,-0.5) {$x$};\n\\node[entree,blue] (E-2) at (-\\layersep,-2.5) {$y$};\n\n\n\\node[input neuron] (I-1) at (0,0) {};\n\\node[input neuron] (I-2) at (0,-1.5) {};\n\\node[input neuron] (I-3) at (0,-3) {};\n\n\\node[below right=0.8ex,scale=0.7] at (I-1) {};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\\node[below right=0.8ex,scale=0.7] at (I-2) {};\n\n\n\n\n\n\n\\node[output neuron] (O) at (\\layersep,-1.5 cm) {};\n\\node[below right=0.8ex,scale=0.7] at (O) {};\n\n\n\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$1$} (I-1) ;\n\\path[thick] (E-2) edge node[pos=0.8,above left,scale=0.7]{$0$} (I-1);\n\\draw[-o,thick] (I-1) to node[midway,below right,scale=0.7]{$1$} ++ (-110:0.8);\n\n\\path[thick] (E-1) edge node[pos=0.8,above,scale=0.7]{$0$} (I-2);\n\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$-1$} (I-2);\n\\draw[-o,thick] (I-2) to node[midway,below right,scale=0.7]{$1$} ++ (-130:0.8);\n\n\\path[thick] (E-1) edge node[pos=0.9,above right,scale=0.7]{$-1$} (I-3);\n\\path[thick] (E-2) edge node[pos=0.8,above,scale=0.7]{$1$} (I-3);\n\n\n\\path[thick] (I-1) edge node[pos=0.8,above,scale=0.7]{$1$} (O);\n\\path[thick] (I-2) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\\path[thick] (I-3) edge node[pos=0.8,below,scale=0.7]{$1$}(O);\n\\draw[-o,thick] (O) to node[midway,below right,scale=0.7]{$-3$} ++ (-110:0.8) ;\n\n\n\\draw[->,thick] (O)-- ++(1,0) node[right,blue]{$F(x,y)$};\n\n\\end{tikzpicture}  \t\n\nToutes les fonctions d'activation sont la fonction Heaviside.",
-        "html": "<p>Le triangle est l’intersection de trois demi plans définis par ces inéquations : <span class=\"math inline\">\\(\\begin{cases}\n            x + 1 \\geq 0 \\\\\n            -y +1 \\geq 0 \\\\\n            -x + y \\geq 0\n         \\end{cases}\\)</span> d’où le réseau à deux couches suivant où chaque perceptron de la première couche réalise une inéquation et celui de la seconde couche réalise l’intersection :</p>\n<p>Toutes les fonctions d’activation sont la fonction Heaviside.</p>\n"
+        "html": "<p>Le triangle est l’intersection de trois demi plans définis par ces\ninéquations : <span class=\"math inline\">\\(\\begin{cases}\n            x + 1 \\geq 0 \\\\\n            -y +1 \\geq 0 \\\\\n            -x + y \\geq 0\n         \\end{cases}\\)</span> d’où le réseau à deux couches suivant où\nchaque perceptron de la première couche réalise une inéquation et celui\nde la seconde couche réalise l’intersection :</p>\n<p>Toutes les fonctions d’activation sont la fonction Heaviside.</p>\n"
       }
     },
     {
-      "id": "04d10f26-321a-4df2-aeb9-8a36d3c3f544",
+      "id": "c24cfc88-88d4-49e7-aa3a-d0cb69f960c7",
       "type": "question",
       "value": {
         "latex": "Soit $P$ un polygône convexe du plan à 10 côtés. Décrire l'architecture d'un réseau de neurones permettant de réaliser une classification des points appartenant à l'intérieur de ce polygône.",
-        "html": "<p>Soit <span class=\"math inline\">\\(P\\)</span> un polygône convexe du plan à 10 côtés. Décrire l’architecture d’un réseau de neurones permettant de réaliser une classification des points appartenant à l’intérieur de ce polygône.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(P\\)</span> un polygône convexe du\nplan à 10 côtés. Décrire l’architecture d’un réseau de neurones\npermettant de réaliser une classification des points appartenant à\nl’intérieur de ce polygône.</p>\n"
       }
     },
     {
-      "id": "39448b7e-dc0a-4aeb-b1ab-830158022909",
+      "id": "b466c266-5e6c-40f0-8487-18e579bf955d",
       "type": "reponse",
       "value": {
         "latex": "Un polygône convexe est l'intersection de $10$ demi plans. Pour le réaliser, on peut décrire un réseau de neurones à deux couches prenant en entrée un vecteur $(x,y) \\in \\R^2$ : \n\t\\begin{itemize}\n\t\t\\item La première couche est constituée de $10$ neurones réalisant les $10$ demi plans ;\n\t\t\\item La seconde couche est constituée de $1$ neurone réalisant la fonction logique \\texttt{ET} sur $\\{0,1\\}^{10}$ : il suffit de prendre par exemple : \n\t\t\n\t\t\t\t\\begin{center}\n\t\t\t\\begin{tikzpicture}[scale=0.3, font=\\scriptsize]\n\t\t\t\n\t\t\t\\draw[thick,fill=black!10] (0,0) circle (3);\n\t\t\t\\draw[ultra thick]  (150:3) -- (150:8)node[pos=0.2,above]{$1$} node[left]{$x_1$};\n\t\t\t\\draw[ultra thick]  (170:3) -- (170:8)node[pos=0.2,above]{$...$} node[left]{$...$};\n\t\t\t\\draw[ultra thick]  (190:3) -- (190:8)node[pos=0.2,above]{$1$} node[left]{$x_{10}$};\n\t\t\t\\draw[-o,ultra thick]  (210:3) -- (210:8) node[pos=0.2,below]{$-10$};\n\t\t\t\\draw[->,>=latex,ultra thick] (0:3) --  (8,0);\n\t\t\t\\node[below right] at (-15:3) {$H$};\n\t\t\t\n\t\t\t\\end{tikzpicture}  \n\t\t\\end{center}\n\tavec $(x_1,\\cdots,x_{10}) \\in \\{0,1\\}^{10}$ en entrée, les poids $(a_1,\\cdots,a_{10}) = (1,\\cdots,1)$, un biais $a_{11} = -10$ et une fonction d'activation Heaviside.\n\t\\end{itemize}",
-        "html": "<p>Un polygône convexe est l’intersection de <span class=\"math inline\">\\(10\\)</span> demi plans. Pour le réaliser, on peut décrire un réseau de neurones à deux couches prenant en entrée un vecteur <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> :</p>\n<ul>\n<li><p>La première couche est constituée de <span class=\"math inline\">\\(10\\)</span> neurones réalisant les <span class=\"math inline\">\\(10\\)</span> demi plans ;</p></li>\n<li><p>La seconde couche est constituée de <span class=\"math inline\">\\(1\\)</span> neurone réalisant la fonction logique <code>ET</code> sur <span class=\"math inline\">\\(\\{0,1\\}^{10}\\)</span> : il suffit de prendre par exemple :</p>\n<p>avec <span class=\"math inline\">\\((x_1,\\cdots,x_{10}) \\in \\{0,1\\}^{10}\\)</span> en entrée, les poids <span class=\"math inline\">\\((a_1,\\cdots,a_{10}) = (1,\\cdots,1)\\)</span>, un biais <span class=\"math inline\">\\(a_{11} = -10\\)</span> et une fonction d’activation Heaviside.</p></li>\n</ul>\n"
+        "html": "<p>Un polygône convexe est l’intersection de <span\nclass=\"math inline\">\\(10\\)</span> demi plans. Pour le réaliser, on peut\ndécrire un réseau de neurones à deux couches prenant en entrée un\nvecteur <span class=\"math inline\">\\((x,y) \\in \\R^2\\)</span> :</p>\n<ul>\n<li><p>La première couche est constituée de <span\nclass=\"math inline\">\\(10\\)</span> neurones réalisant les <span\nclass=\"math inline\">\\(10\\)</span> demi plans ;</p></li>\n<li><p>La seconde couche est constituée de <span\nclass=\"math inline\">\\(1\\)</span> neurone réalisant la fonction logique\n<code>ET</code> sur <span class=\"math inline\">\\(\\{0,1\\}^{10}\\)</span> :\nil suffit de prendre par exemple :</p>\n<div class=\"center\">\n\n</div>\n<p>avec <span class=\"math inline\">\\((x_1,\\cdots,x_{10}) \\in\n\\{0,1\\}^{10}\\)</span> en entrée, les poids <span\nclass=\"math inline\">\\((a_1,\\cdots,a_{10}) = (1,\\cdots,1)\\)</span>, un\nbiais <span class=\"math inline\">\\(a_{11} = -10\\)</span> et une fonction\nd’activation Heaviside.</p></li>\n</ul>\n"
       }
     }
   ]

@@ -7,13 +7,13 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-29T14:02:05.403Z",
+    "createdAt": "2023-01-11",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-29T14:02:05.403Z"
+    "updatedAt": "2025-01-03T14:18:01.016Z"
   },
   "contenu": [
     {
-      "id": "256c0b64-639c-4ad7-a182-6553997c7046",
+      "id": "5f1c8c48-fba1-405d-b2f7-c854127a2c6f",
       "type": "question",
       "value": {
         "latex": "En utilisant le déterminant, justifier l'existence d'une matrice $A$ vérifiant :\n$$\n\\begin{pmatrix}\n\t5 & 4 & 3 \\\\\n\t7 & 6 & 5 \\\\\n\t2 & 0 & 1\n\\end{pmatrix}=\\begin{pmatrix}\n\t0 & 1 & -1 \\\\\n\t1 & 1 & 1 \\\\\n\t1 & 0 & 1\n\\end{pmatrix} \\times A\n$$\npuis déterminer $A$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "73a9b36d-ac52-4803-b7a8-311f9bb573c9",
+      "id": "a8e20696-dbf5-46e9-bf4e-83d4344ef057",
       "type": "indication",
       "value": {
         "latex": "Calculer et utiliser l'inverse de la matrice $\\begin{pmatrix}0 & 1 & -1 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1\\end{pmatrix}$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "48c2759b-4a91-4b05-ad0f-77040e98878f",
+      "id": "dbe0ab0f-8421-4ecd-8c38-912331dcc1e6",
       "type": "reponse",
       "value": {
         "latex": "Remarque :\nCompte-tenu des règles du produit matriciel, si elles existent, les matrices $A$ et $B$ sont des matrices $3 \\times 3$.\nPuisque $\\begin{vmatrix}0 & 1 & -1 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1\\end{vmatrix} \\neq 0$, la matrice $M=\\begin{pmatrix}0 & 1 & -1 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1\\end{pmatrix}$ est inversible et :\n$$\n\\begin{pmatrix}\n\t0 & 1 & -1 \\\\\n\t1 & 1 & 1 \\\\\n\t1 & 0 & 1\n\\end{pmatrix}^{-1} \\times \\begin{pmatrix}\n\t5 & 4 & 3 \\\\\n\t7 & 6 & 5 \\\\\n\t2 & 0 & 1\n\\end{pmatrix}=\\underbrace{\\left(\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & 1 & 1 \\\\\n\t\t1 & 0 & 1\n\t\\end{array}\\right)^{-1} \\cdot\\left(\\begin{array}{ccc}\n\t\t0 & 1 & -1 \\\\\n\t\t1 & 1 & 1 \\\\\n\t\t1 & 0 & 1\n\t\\end{array}\\right)}_{I d} \\cdot A=A\n$$\nOn calcule $\\left(\\begin{array}{ccc}0 & 1 & -1 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1\\end{array}\\right)^{-1}=\\left(\\begin{array}{ccc}1 & -1 & 2 \\\\ 0 & 1 & -1 \\\\ -1 & 1 & -1\\end{array}\\right)$ par l'une ou l'autre méthode d'inversion.\nMéthode 1 :\nPar la méthode du pivot de Gauss. Posons :\n$$\nM=\\left(\\begin{array}{ccc}\n\t0 & 1 & -1 \\\\\n\t1 & 1 & 1 \\\\\n\t1 & 0 & 1\n\\end{array}\\right) \\quad I_3=\\left(\\begin{array}{ccc}\n\t1 & 0 & 0 \\\\\n\t0 & 1 & 0 \\\\\n\t0 & 0 & 1\n\\end{array}\\right)\n$$\nPermutons la première et la troisième ligne :\n$$\n\\left(\\begin{array}{ccc}\n\t1 & 0 & 1 \\\\\n\t1 & 1 & 1 \\\\\n\t0 & 1 & -1\n\\end{array}\\right) \\quad\\left(\\begin{array}{lll}\n\t0 & 0 & 1 \\\\\n\t0 & 1 & 0 \\\\\n\t1 & 0 & 0\n\\end{array}\\right)\n$$\nRetranchons la première ligne de la deuxième :\n$$\n\\left(\\begin{array}{ccc}\n\t1 & 0 & 1 \\\\\n\t0 & 1 & 0 \\\\\n\t0 & 1 & -1\n\\end{array}\\right) \\quad\\left(\\begin{array}{ccc}\n\t0 & 0 & 1 \\\\\n\t0 & 1 & -1 \\\\\n\t1 & 0 & 0\n\\end{array}\\right)\n$$\nRetranchons la deuxième ligne de la troisième :\n$$\n\\left(\\begin{array}{ccc}\n\t1 & 0 & 1 \\\\\n\t0 & 1 & 0 \\\\\n\t0 & 0 & -1\n\\end{array}\\right) \\quad\\left(\\begin{array}{ccc}\n\t0 & 0 & 1 \\\\\n\t0 & 1 & -1 \\\\\n\t1 & -1 & 1\n\\end{array}\\right)\n$$\nChangeons le signe de la troisième ligne :\n$$\n\\left(\\begin{array}{lll}\n\t1 & 0 & 1 \\\\\n\t0 & 1 & 0 \\\\\n\t0 & 0 & 1\n\\end{array}\\right) \\quad\\left(\\begin{array}{ccc}\n\t0 & 0 & 1 \\\\\n\t0 & 1 & -1 \\\\\n\t-1 & 1 & -1\n\\end{array}\\right)\n$$\nRetranchons la troisième ligne de la première :\n$$\nI_3=\\left(\\begin{array}{lll}\n\t1 & 0 & 0 \\\\\n\t0 & 1 & 0 \\\\\n\t0 & 0 & 1\n\\end{array}\\right) \\quad\\left(\\begin{array}{ccc}\n\t1 & -1 & 2 \\\\\n\t0 & 1 & -1 \\\\\n\t-1 & 1 & -1\n\\end{array}\\right)=M^{-1}\n$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "01780659-b346-43ee-aa6b-63aeb207f830",
+      "id": "dab05765-e16f-40bb-860b-e5286fe60ea2",
       "type": "question",
       "value": {
         "latex": "Peut-on déterminer une matrice $B$ telle que :\n$$\n\\begin{pmatrix}\n\t5 & 4 & 3 \\\\\n\t7 & 6 & 5 \\\\\n\t2 & 0 & 1\n\\end{pmatrix}=B \\times \\begin{pmatrix}\n\t1 & 2 & 3 \\\\\n\t2 & 3 & 4 \\\\\n\t1 & 2 & 3\n\\end{pmatrix} \\text{ ?}\n$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "fd5ac5ce-36b6-46f7-8dca-0838ff8e246f",
+      "id": "7c3b851c-71a4-436e-8d3e-e244ef7dd76b",
       "type": "reponse",
       "value": {
         "latex": "En revanche, puisque $\\forall M, N \\in \\mathcal{M}_n(\\mathbb{R}) \\operatorname{det}(M \\times N)=\\operatorname{det}(M) \\times \\operatorname{det}(N)$, il n'existe pas de matrice $B \\in \\mathcal{M}_3(\\mathbb{R})$ telle que $\\left(\\begin{array}{lll}5 & 4 & 3 \\\\ 7 & 6 & 5 \\\\ 2 & 0 & 1\\end{array}\\right)=B \\cdot\\left(\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 4 \\\\ 1 & 2 & 3\\end{array}\\right)$ car $\\left|\\begin{array}{lll}5 & 4 & 3 \\\\ 7 & 6 & 5 \\\\ 2 & 0 & 1\\end{array}\\right| \\neq 0$ et $\\left|\\begin{array}{lll}1 & 2 & 3 \\\\ 2 & 3 & 4 \\\\ 1 & 2 & 3\\end{array}\\right|=0$.",

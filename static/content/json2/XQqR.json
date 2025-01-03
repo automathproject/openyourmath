@@ -7,33 +7,33 @@
   "niveau": "",
   "metadata": {
     "auteur": "",
-    "createdAt": "2024-12-05T15:37:41.200Z",
+    "createdAt": "2023-03-20",
     "organisation": "AMSCC",
-    "updatedAt": "2024-12-05T15:37:41.200Z"
+    "updatedAt": "2025-01-03T14:17:48.300Z"
   },
   "contenu": [
     {
-      "id": "652289c6-1fa9-42b6-ad47-efeb73a39d57",
+      "id": "afd5595e-6f08-4c59-a779-00d9827b32b6",
       "type": "description",
       "value": {
         "latex": "La méthode d'Euler explicite est convergente et consistante d'ordre 1. On considère l'approximation suivante :\n\t $$\\int_{t_n}^{t_{n+1}}f(s,y(s))ds \\approx h\\cdot f\\left( t_n+\\frac{h}{2},y\\left( t_n+\\frac{h}{2} \\right)  \\right).$$\n\nLa méthode qui en découle s'écrit donc sous la forme \n$$y_{n+1} = y_n + h\\cdot f\\left( t_n + \\frac{h}{2},y_{n+1/2} \\right)$$\noù $y_{n+1/2}$ reste à définir sous la forme \n$$y_{n+1/2} = y_n + \\frac{h}{2}G(t_n,y_n,h)$$",
-        "html": "<p>La méthode d’Euler explicite est convergente et consistante d’ordre 1. On considère l’approximation suivante : <span class=\"math display\">\\[\\int_{t_n}^{t_{n+1}}f(s,y(s))ds \\approx h\\cdot f\\left( t_n+\\frac{h}{2},y\\left( t_n+\\frac{h}{2} \\right)  \\right).\\]</span></p>\n<p>La méthode qui en découle s’écrit donc sous la forme <span class=\"math display\">\\[y_{n+1} = y_n + h\\cdot f\\left( t_n + \\frac{h}{2},y_{n+1/2} \\right)\\]</span> où <span class=\"math inline\">\\(y_{n+1/2}\\)</span> reste à définir sous la forme <span class=\"math display\">\\[y_{n+1/2} = y_n + \\frac{h}{2}G(t_n,y_n,h)\\]</span></p>\n"
+        "html": "<p>La méthode d’Euler explicite est convergente et consistante d’ordre\n1. On considère l’approximation suivante : <span\nclass=\"math display\">\\[\\int_{t_n}^{t_{n+1}}f(s,y(s))ds \\approx h\\cdot\nf\\left( t_n+\\frac{h}{2},y\\left( t_n+\\frac{h}{2}\n\\right)  \\right).\\]</span></p>\n<p>La méthode qui en découle s’écrit donc sous la forme <span\nclass=\"math display\">\\[y_{n+1} = y_n + h\\cdot f\\left( t_n +\n\\frac{h}{2},y_{n+1/2} \\right)\\]</span> où <span\nclass=\"math inline\">\\(y_{n+1/2}\\)</span> reste à définir sous la forme\n<span class=\"math display\">\\[y_{n+1/2} = y_n +\n\\frac{h}{2}G(t_n,y_n,h)\\]</span></p>\n"
       }
     },
     {
-      "id": "b353d011-d4fa-467f-8859-aa999139be9c",
+      "id": "939bf203-2d78-46e1-9426-0b57b9f90498",
       "type": "question",
       "value": {
         "latex": "Déterminer une fonction $G$ permettant à ce schéma d'être consistant d'ordre 2.",
-        "html": "<p>Déterminer une fonction <span class=\"math inline\">\\(G\\)</span> permettant à ce schéma d’être consistant d’ordre 2.</p>\n"
+        "html": "<p>Déterminer une fonction <span class=\"math inline\">\\(G\\)</span>\npermettant à ce schéma d’être consistant d’ordre 2.</p>\n"
       }
     },
     {
-      "id": "772950f6-9a14-482a-bb69-c6cc569a20fe",
+      "id": "4fcfad75-6523-40ee-8baa-33821558a959",
       "type": "reponse",
       "value": {
         "latex": "La méthode s'écrit donc sous la forme $y_{n+1} = y_n + H(t_n,y_n,h)$ avec $H(t,y,h) = f\\left(t+\\frac{h}{2},y+\\frac{h}{2}G(t,y,h)  \\right)$\n\nQuel que soit le choix de $G$, on obtient $H(t,y,0) = f(t,y)$ de sorte que par théorème, la méthode est consistante au moins d'ordre 1.\n\nOn dérive $H$ par rapport à $h$ :\n...\n\net on trouve que $\\frac{\\partial H}{\\partial h}(t,y,0) = \\frac{1}{2} f^{[1]}(t,y)$ si et seulement si $G(t,y,0)=f(t,y)$. On prend donc $G(t,y,h)=f(t,y)$.",
-        "html": "<p>La méthode s’écrit donc sous la forme <span class=\"math inline\">\\(y_{n+1} = y_n + H(t_n,y_n,h)\\)</span> avec <span class=\"math inline\">\\(H(t,y,h) = f\\left(t+\\frac{h}{2},y+\\frac{h}{2}G(t,y,h)  \\right)\\)</span></p>\n<p>Quel que soit le choix de <span class=\"math inline\">\\(G\\)</span>, on obtient <span class=\"math inline\">\\(H(t,y,0) = f(t,y)\\)</span> de sorte que par théorème, la méthode est consistante au moins d’ordre 1.</p>\n<p>On dérive <span class=\"math inline\">\\(H\\)</span> par rapport à <span class=\"math inline\">\\(h\\)</span> : ...</p>\n<p>et on trouve que <span class=\"math inline\">\\(\\frac{\\partial H}{\\partial h}(t,y,0) = \\frac{1}{2} f^{[1]}(t,y)\\)</span> si et seulement si <span class=\"math inline\">\\(G(t,y,0)=f(t,y)\\)</span>. On prend donc <span class=\"math inline\">\\(G(t,y,h)=f(t,y)\\)</span>.</p>\n"
+        "html": "<p>La méthode s’écrit donc sous la forme <span\nclass=\"math inline\">\\(y_{n+1} = y_n + H(t_n,y_n,h)\\)</span> avec <span\nclass=\"math inline\">\\(H(t,y,h) =\nf\\left(t+\\frac{h}{2},y+\\frac{h}{2}G(t,y,h)  \\right)\\)</span></p>\n<p>Quel que soit le choix de <span class=\"math inline\">\\(G\\)</span>, on\nobtient <span class=\"math inline\">\\(H(t,y,0) = f(t,y)\\)</span> de sorte\nque par théorème, la méthode est consistante au moins d’ordre 1.</p>\n<p>On dérive <span class=\"math inline\">\\(H\\)</span> par rapport à <span\nclass=\"math inline\">\\(h\\)</span> : ...</p>\n<p>et on trouve que <span class=\"math inline\">\\(\\frac{\\partial\nH}{\\partial h}(t,y,0) = \\frac{1}{2} f^{[1]}(t,y)\\)</span> si et\nseulement si <span class=\"math inline\">\\(G(t,y,0)=f(t,y)\\)</span>. On\nprend donc <span class=\"math inline\">\\(G(t,y,h)=f(t,y)\\)</span>.</p>\n"
       }
     }
   ]
