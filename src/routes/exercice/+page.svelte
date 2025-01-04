@@ -126,23 +126,25 @@
           </button>
           <div class="input-container mb-3">
             <div class="input-group">
-                <input
-                    type="text"
-                    bind:value={inputUuid}
-                    class="form-control"
-                    placeholder="Ab62,..."
-                    on:keydown={(event) => {
-                        if (event.key === 'Enter') {
-                            handleLoadExercise();
-                        }
-                    }}
-                />
-                <button on:click={handleLoadExercise} class="btn btn-primary">
-                    Afficher l'exercice
-                </button>
-                <AddButton uuid={exerciseUuid} />
+              <input
+                type="text"
+                bind:value={inputUuid}
+                class="form-control"
+                style="max-width: 80px;" 
+                maxlength="4"
+                placeholder="Ab62"
+                on:keydown={(event) => {
+                  if (event.key === 'Enter') {
+                    handleLoadExercise();
+                  }
+                }}
+              />
+              <button on:click={handleLoadExercise} class="btn btn-primary btn-sm">
+                Voir l'exercice
+              </button>
+              <AddButton uuid={exerciseUuid} />
             </div>
-        </div>
+          </div>
           
           {#if loadingExercise}
               <div class="alert alert-info" role="alert">
@@ -162,8 +164,8 @@
               </div>
           {/if}
       </div>
-      <div class="d-none d-md-block col-md-3 col-lg-3">
-        <CustomList showMobileButton={false} />
+      <div class="col-12 col-md-3 col-lg-3">
+        <CustomList showMobileButton={true} />
     </div>
   </div>
 </section>
