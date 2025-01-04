@@ -68,7 +68,7 @@
 						class="nav-link px-3 {$page.url.pathname === '/exercice/liste' ? 'active' : ''}"
 						aria-current={$page.url.pathname === '/exercice/liste' ? 'page' : undefined}
 					>
-						Liste
+						Ma Liste
 					</a>
 					{#if $page.url.pathname === '/exercice/liste'}
 						<div class="active-indicator" />

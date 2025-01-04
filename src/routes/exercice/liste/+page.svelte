@@ -2,10 +2,10 @@
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
-    import Exercice from '../../Exercice.svelte';
     import Liste from '../../Liste.svelte';
     import { get } from 'svelte/store';
     import ExerciceRenderer from '../../../components/ExerciceRenderer.svelte';
+    import HideColumnsButton from '../../../components/buttons/HideColumnsButton.svelte';
 
     // Variable représentant l'UUID chargé
     let exerciseUuid: string = '';
@@ -86,10 +86,8 @@
       />
     </div>
     {/if}
-    <div class={showList ? "col-md-8" : "col-md-12"}>
-      <button on:click={toggleList} class="btn btn-primary mb-3">
-        {showList ? '<<<' : '>>>'}
-      </button>
+    <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
+    <HideColumnsButton bind:showList />
       
       {#if loadingExercise}
         <div class="alert alert-info" role="alert">

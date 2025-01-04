@@ -9,7 +9,8 @@
   import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
   import CustomList from '../../components/CustomList.svelte';
   import AddButton from '../../components/AddButton.svelte';
-  
+  import HideColumnsButton from '../../components/buttons/HideColumnsButton.svelte';
+
   let inputUuid: string = '';
   let exerciseUuid: string = '';
   let exerciseData: any = null;
@@ -20,6 +21,7 @@
   let key = 0; // Clé pour forcer le remontage du composant
   
   import { browser } from '$app/environment';
+
 
   function isSmallScreen() {
       return browser && window.innerWidth <= 768;
@@ -121,18 +123,9 @@
           <Recherche onSelect={handleSelect} />
         </div>
       {/if}
-      <div class={showList ? "col-md-8" : "col-md-12"}>
+      <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
         <!-- Bouton toggle repositionné -->
-        <div class="toggle-button-container">
-          <button
-            on:click={toggleList}
-            class="btn btn-primary btn-sm toggle-button"
-            aria-label={showList ? "Masquer la colonne" : "Afficher la colonne"}
-          >
-            <i class="bi bi-chevron-{showList ? 'left' : 'right'} transition"></i>
-          </button>
-        </div>
-  
+      <HideColumnsButton bind:showList />  
         <div class="input-container mb-3">
             <div class="input-group">
               <input
@@ -177,40 +170,7 @@
   </section>
   
   <style>
-    .toggle-button-container {
-      position: absolute;
-      left: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-    }
-  
-    .toggle-button {
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--bs-primary);
-      border: none;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  
-    .toggle-button:hover {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    }
-  
-    .toggle-button i {
-      font-size: 14px;
-      line-height: 1;
-      transition: transform 0.3s ease;
-    }
-  
-    .toggle-button:hover i {
-      transform: translateX(var(--translate-x, 0));
-    }
+
   
     .input-container {
       margin-bottom: 1rem;
@@ -223,13 +183,6 @@
     }
   
     @media (max-width: 768px) {
-      .toggle-button-container {
-        left: 0;
-        top: 0;
-        transform: none;
-        position: relative;
-        margin-bottom: 1rem;
-      }
   
       .input-group {
         flex-direction: column;
@@ -267,8 +220,5 @@
     }
   }
   
-    .transition {
-      transition: all 0.3s ease;
-    }
   </style>
   
