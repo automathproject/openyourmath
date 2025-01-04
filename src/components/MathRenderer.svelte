@@ -1,5 +1,5 @@
 <!-- src/components/MathRenderer.svelte -->
-<script>
+<script lang="ts">
     import { macros } from '../macros';
     import { onMount, afterUpdate } from 'svelte';
     import renderMathInElement from 'katex/contrib/auto-render';
@@ -7,7 +7,7 @@
   
     export let content = '';
   
-    let mathContainer;
+    let mathContainer: HTMLSpanElement;
 
     const renderMath = () => {
       renderMathInElement(mathContainer, {
@@ -38,10 +38,19 @@
   <style>
     /* Styles pour les tableaux LaTeX */
     :global(.katex-display) {
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 1em 0;
-    }
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1em 0;
+}
+
+/* Ajoutez ces nouvelles règles */
+  :global(.katex) {
+    font-size: 1.1em !important; /* Ajustez cette valeur selon vos besoins */
+  }
+
+:global(.katex-display > .katex) {
+  font-size: 1.1em !important; /* Pour les formules en mode display ($$...$$) */
+}
 
     :global(table) {
         border-collapse: collapse;
