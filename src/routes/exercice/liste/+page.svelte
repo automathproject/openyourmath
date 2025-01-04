@@ -73,19 +73,51 @@
         loadExerciseData(exerciseUuid);
       }
     });
+
+     // Ajout des nouvelles variables pour gérer le titre
+ let customTitle = localStorage.getItem('exerciseListTitle') || 'Liste des Exercices';
+ let isEditingTitle = false;
+
+ // Fonction pour gérer le double-clic sur le titre
+ function handleTitleDoubleClick() {
+   isEditingTitle = true;
+ }
+
+ // Fonction pour sauvegarder le nouveau titre
+ function handleTitleSave(event: KeyboardEvent | FocusEvent) {
+   if (event instanceof KeyboardEvent && event.key !== 'Enter') {
+     return;
+   }
+   
+   isEditingTitle = false;
+   localStorage.setItem('exerciseListTitle', customTitle);
+ }
 </script>
 
 <section class="container">
   <div class="row">
-    {#if showList}
-    <div class="col-md-4 liste-container">
-      <h3>Liste des Exercices</h3>
-      <Liste 
-      onSelect={handleSelect}
-      activeExerciseId={exerciseUuid} 
-      />
-    </div>
-    {/if}
+   {#if showList}
+   <div class="col-md-4 liste-container">
+     {#if isEditingTitle}
+       <input
+         type="text"
+         bind:value={customTitle}
+         on:blur={handleTitleSave}
+         on:keydown={handleTitleSave}
+         class="h3 form-control"
+         autofocus
+       />
+     {:else}
+       <h3 on:dblclick={handleTitleDoubleClick}>
+         {customTitle}
+       </h3>
+     {/if}
+     <Liste
+       onSelect={handleSelect}
+       activeExerciseId={exerciseUuid}
+     />
+   </div>
+   {/if}
     <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
     <HideColumnsButton bind:showList />
       
@@ -125,9 +157,19 @@
       align-items: stretch;
     }
 
-    .input-container button {
-      margin-top: 10px;
-      width: 100%;
-    }
+
   }
+
+   /* Ajout des styles pour le titre éditable */
+ h3 {
+   cursor: pointer;
+   user-select: none;
+ }
+
+ input.h3 {
+   font-size: 1.75rem;
+   font-weight: bold;
+   width: 100%;
+   margin-bottom: 1rem;
+ }
 </style>
