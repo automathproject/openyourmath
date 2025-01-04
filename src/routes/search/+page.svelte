@@ -188,21 +188,21 @@
     }
 </script>
 
-<div class="container-fluid p-4">
+<div class="container-fluid">
     <div class="row">
+        <div class="card mb-4">
+            <div class="card-body">
+                <input
+                    type="text"
+                    bind:value={query}
+                    placeholder="Rechercher un exercice..."
+                    class="form-control"
+                />
+            </div>
+        </div>
         <!-- Colonne de gauche : Filtres -->
         <div class="col-12 col-md-4 col-lg-3">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Recherche</h5>
-                    <input
-                        type="text"
-                        bind:value={query}
-                        placeholder="Rechercher un exercice..."
-                        class="form-control"
-                    />
-                </div>
-            </div>
+
 
             <div class="card">
                 <div class="card-body">
