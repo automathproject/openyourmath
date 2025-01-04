@@ -16,6 +16,7 @@
   let errorMessage: string = 'Aucun exercice sélectionné';
   let loadingExercise: boolean = false;
   let showList = true;
+  $: arrowClass = showList ? 'rotate-180' : '';
   let key = 0; // Clé pour forcer le remontage du composant
   
   import { browser } from '$app/environment';
@@ -113,24 +114,31 @@
 </script>
 
 <section class="container">
-  <div class="row">
+    <div class="row position-relative">
       {#if showList}
-      <div class="col-md-4 liste-container">
+        <div class="col-md-4 liste-container">
           <h4>Recherche par thème</h4>
           <Recherche onSelect={handleSelect} />
-      </div>
+        </div>
       {/if}
       <div class={showList ? "col-md-8" : "col-md-12"}>
-          <button on:click={toggleList} class="btn btn-primary mb-3">
-              {showList ? '<<<' : '>>>'}
+        <!-- Bouton toggle repositionné -->
+        <div class="toggle-button-container">
+          <button
+            on:click={toggleList}
+            class="btn btn-primary btn-sm toggle-button"
+            aria-label={showList ? "Masquer la colonne" : "Afficher la colonne"}
+          >
+            <i class="bi bi-chevron-{showList ? 'left' : 'right'} transition"></i>
           </button>
-          <div class="input-container mb-3">
+        </div>
+  
+        <div class="input-container mb-3">
             <div class="input-group">
               <input
                 type="text"
                 bind:value={inputUuid}
-                class="form-control"
-                style="max-width: 80px;" 
+                class="form-control fixed-width-input"
                 maxlength="4"
                 placeholder="Ab62"
                 on:keydown={(event) => {
@@ -145,54 +153,122 @@
               <AddButton uuid={exerciseUuid} />
             </div>
           </div>
-          
-          {#if loadingExercise}
-              <div class="alert alert-info" role="alert">
-                  Chargement de l'exercice...
-              </div>
-          {/if}
-      
-          {#if errorMessage && !exerciseData}
-              <div class="alert alert-danger" role="alert">
-                  {errorMessage}
-              </div>
-          {/if}
-      
-          {#if exerciseData}
-              <div key={key}>
-                  <ExerciceRenderer ExerciceData={exerciseData} />
-              </div>
-          {/if}
+  
+        {#if loadingExercise}
+          <div class="alert alert-info" role="alert">
+            Chargement de l'exercice...
+          </div>
+        {/if}
+        {#if errorMessage && !exerciseData}
+          <div class="alert alert-danger" role="alert">
+            {errorMessage}
+          </div>
+        {/if}
+        {#if exerciseData}
+          <div key={key}>
+            <ExerciceRenderer ExerciceData={exerciseData} />
+          </div>
+        {/if}
       </div>
       <div class="col-12 col-md-3 col-lg-3">
         <CustomList showMobileButton={true} />
+      </div>
     </div>
-  </div>
-</section>
-
-<style>
+  </section>
+  
+  <style>
+    .toggle-button-container {
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+  
+    .toggle-button {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bs-primary);
+      border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .toggle-button:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+  
+    .toggle-button i {
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+  
+    .toggle-button:hover i {
+      transform: translateX(var(--translate-x, 0));
+    }
+  
     .input-container {
-        margin-bottom: 1rem;
+      margin-bottom: 1rem;
     }
-    
+  
     .input-group {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    
+  
     @media (max-width: 768px) {
-        .input-group {
-            flex-direction: column;
-            align-items: stretch;
-        }
-    
-        .input-group > * {
-            margin-top: 0.5rem;
-        }
-    
-        .input-group > :first-child {
-            margin-top: 0;
-        }
+      .toggle-button-container {
+        left: 0;
+        top: 0;
+        transform: none;
+        position: relative;
+        margin-bottom: 1rem;
+      }
+  
+      .input-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+  
+      .input-group > * {
+        margin-top: 0.5rem;
+      }
+  
+      .input-group > :first-child {
+        margin-top: 0;
+      }
     }
-    </style>
+
+    .fixed-width-input {
+    width: 80px !important;
+    min-width: 80px !important;
+    font-size: 16px; /* Empêche le zoom automatique sur iOS */
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .input-group {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+
+    .fixed-width-input {
+      width: 100px !important;
+      min-width: 100px !important;
+      margin: 0 auto;
+    }
+  }
+  
+    .transition {
+      transition: all 0.3s ease;
+    }
+  </style>
+  
