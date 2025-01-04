@@ -286,7 +286,7 @@
                 {#each displayedResults as result (result.exercise.uuid)}
                     <div class="card hover-card">
                         <div class="card-body position-relative">
-                            <AddButton exercise={result.exercise} />
+                            <AddButton uuid={result.exercise.uuid} />
                             
                             <!-- Exercise content (clickable) -->
                             <div 

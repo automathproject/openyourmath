@@ -4,33 +4,55 @@
     import { customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
     import type { Exercice } from '$lib/types/types';
     
-    export let exercise: Exercice;
-    
+    export let uuid: string;
     let exercicesInList: Set<string>;
     
     customList.subscribe(list => {
         exercicesInList = new Set(list.map(ex => ex.uuid));
     });
-
-    function toggleCustomList(event: MouseEvent) {
+    
+    async function toggleCustomList(event: MouseEvent) {
         event.stopPropagation();
-        if (exercicesInList.has(exercise.uuid)) {
-            removeFromCustomList(exercise);
+        
+        if (exercicesInList.has(uuid)) {
+            // Pour retirer, on crée un objet minimal avec juste l'uuid
+            removeFromCustomList({ uuid } as Exercice);
         } else {
-            addToCustomList(exercise);
+            const exercise = await getExerciseByUuid(uuid);
+            if (exercise) {
+                addToCustomList(exercise);
+            }
         }
     }
-</script>
-
-<button 
-    class="btn-add {exercicesInList.has(exercise.uuid) ? 'added' : ''}"
-    on:click={toggleCustomList}
-    title={exercicesInList.has(exercise.uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
->
-    {exercicesInList.has(exercise.uuid) ? '−' : '+'}
-</button>
-
-<style>
+    
+    async function getExerciseByUuid(uuid: string): Promise<Exercice | null> {
+        try {
+            const response = await fetch(`/exercice/${uuid}`);
+            if (!response.ok) {
+                if (response.status === 404) {
+                    console.error(`Exercice ${uuid} non trouvé`);
+                    return null;
+                }
+                throw new Error(`Erreur HTTP: ${response.status}`);
+            }
+            const exercise = await response.json();
+            return exercise;
+        } catch (error) {
+            console.error(`Erreur lors de la récupération de l'exercice ${uuid}:`, error);
+            return null;
+        }
+    }
+    </script>
+    
+    <button
+        class="btn-add {exercicesInList.has(uuid) ? 'added' : ''}"
+        on:click={toggleCustomList}
+        title={exercicesInList.has(uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
+    >
+        {exercicesInList.has(uuid) ? '−' : '+'}
+    </button>
+    
+    <style>
     .btn-add {
         position: absolute;
         right: 1rem;
@@ -50,14 +72,14 @@
         transition: all 0.2s ease;
         z-index: 1;
     }
-
+    
     .btn-add:hover {
         background-color: #d0d0d0;
         transform: scale(1.1);
     }
-
+    
     .btn-add.added {
         background-color: #333;
         color: #fff;
     }
-</style>
+    </style>
