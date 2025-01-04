@@ -54,9 +54,8 @@
     
     <style>
     .btn-add {
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
+        position: relative;
+        margin-left: 0.5rem;
         width: 32px;
         height: 32px;
         border-radius: 50%;

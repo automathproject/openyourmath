@@ -1,4 +1,4 @@
-<!-- src/routes/exercice/recherche/+page.svelte -->
+<!-- src/routes/exercice/+page.svelte -->
 <script lang="ts">
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
@@ -8,7 +8,7 @@
   import { get } from 'svelte/store';
   import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
   import CustomList from '../../components/CustomList.svelte';
-  // import AddButton from '../../components/AddButton.svelte';
+  import AddButton from '../../components/AddButton.svelte';
   
   let inputUuid: string = '';
   let exerciseUuid: string = '';
@@ -125,21 +125,24 @@
               {showList ? '<<<' : '>>>'}
           </button>
           <div class="input-container mb-3">
-              <input
-                  type="text"
-                  bind:value={inputUuid}
-                  class="form-control"
-                  placeholder="Ab62,..."
-                  on:keydown={(event) => {
-                      if (event.key === 'Enter') {
-                          handleLoadExercise();
-                      }
-                  }}
-              />
-              <button on:click={handleLoadExercise} class="btn btn-primary ms-2">
-                  Afficher l'exercice
-              </button>
-          </div>
+            <div class="input-group">
+                <input
+                    type="text"
+                    bind:value={inputUuid}
+                    class="form-control"
+                    placeholder="Ab62,..."
+                    on:keydown={(event) => {
+                        if (event.key === 'Enter') {
+                            handleLoadExercise();
+                        }
+                    }}
+                />
+                <button on:click={handleLoadExercise} class="btn btn-primary">
+                    Afficher l'exercice
+                </button>
+                <AddButton uuid={exerciseUuid} />
+            </div>
+        </div>
           
           {#if loadingExercise}
               <div class="alert alert-info" role="alert">
@@ -166,37 +169,28 @@
 </section>
 
 <style>
-  .liste-container {
-      max-height: calc(100vh - 100px);
-      overflow-y: auto;
-      padding-bottom: 20px;
-  }
-  .input-container {
-      display: flex;
-      align-items: center;
-  }
-
-  .input-container input {
-      flex: 1;
-  }
-
-  .input-container button {
-      flex-shrink: 0;
-  }
-
-  .container {
-      margin-top: 20px;
-  }
-
-  @media (max-width: 768px) {
-      .input-container {
-          flex-direction: column;
-          align-items: stretch;
-      }
-
-      .input-container button {
-          margin-top: 10px;
-          width: 100%;
-      }
-  }
-</style>
+    .input-container {
+        margin-bottom: 1rem;
+    }
+    
+    .input-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+        .input-group {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    
+        .input-group > * {
+            margin-top: 0.5rem;
+        }
+    
+        .input-group > :first-child {
+            margin-top: 0;
+        }
+    }
+    </style>

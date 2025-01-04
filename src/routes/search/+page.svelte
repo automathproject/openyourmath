@@ -286,8 +286,9 @@
                 {#each displayedResults as result (result.exercise.uuid)}
                     <div class="card hover-card">
                         <div class="card-body position-relative">
+                            <div class="add-button-wrapper">
                             <AddButton uuid={result.exercise.uuid} />
-                            
+                            </div>
                             <!-- Exercise content (clickable) -->
                             <div 
                                 class="exercise-content cursor-pointer"
@@ -460,4 +461,10 @@
         padding-right: 3rem;
     }
 
+    .add-button-wrapper {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 2;
+}
 </style>
