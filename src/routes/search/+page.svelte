@@ -103,6 +103,8 @@
         updateDynamicCounts(filteredResults);
     }
 
+    let isLoading = true;
+
     onMount(() => {
         if (data?.exercises) {
             searchEngine = new ExerciceSearchEngine();
@@ -117,6 +119,7 @@
             allTags = new Map(allTags);
             
             updateResults();
+            isLoading = false;
         }
     });
 
@@ -155,157 +158,168 @@
 </script>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="card mb-4">
-            <div class="card-body">
-                <input
-                    type="text"
-                    bind:value={query}
-                    placeholder="Rechercher un exercice..."
-                    class="form-control"
-                />
-            </div>
+    {#if isLoading}
+    <div class="loading-container">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
         </div>
-        <!-- Colonne de gauche : Filtres -->
-        <div class="col-12 col-md-4 col-lg-3">
-            <div class="card">
+        <div class="mt-2">Chargement des exercices...</div>
+    </div>
+    {:else}
+    <div class="row">
+        <div class="row">
+            <div class="card mb-4">
                 <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h5 class="card-title mb-0">Thèmes disponibles</h5>
+                    <input
+                        type="text"
+                        bind:value={query}
+                        placeholder="Rechercher un exercice..."
+                        class="form-control"
+                    />
+                </div>
+            </div>
+            <!-- Colonne de gauche : Filtres -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Thèmes disponibles</h5>
+                            {#if selectedTags.size > 0}
+                                <button 
+                                    class="btn btn-outline-danger btn-sm" 
+                                    on:click={() => {
+                                        selectedTags.clear();
+                                        selectedTags = selectedTags;
+                                        updateResults();
+                                    }}
+                                >
+                                    Réinitialiser
+                                </button>
+                            {/if}
+                        </div>
+                        
                         {#if selectedTags.size > 0}
-                            <button 
-                                class="btn btn-outline-danger btn-sm" 
-                                on:click={() => {
-                                    selectedTags.clear();
-                                    selectedTags = selectedTags;
-                                    updateResults();
-                                }}
-                            >
-                                Réinitialiser
-                            </button>
-                        {/if}
-                    </div>
-                    
-                    {#if selectedTags.size > 0}
-                        <div class="selected-tags mb-3">
-                            <div class="small text-muted mb-2">Filtres actifs :</div>
-                            <div class="tags">
-                                {#each Array.from(selectedTags) as tag}
-                                    <span class="tag selected">
-                                        {tag}
-                                        <span class="tag-count selected">
-                                            {dynamicTagCounts.get(tag)}
+                            <div class="selected-tags mb-3">
+                                <div class="small text-muted mb-2">Filtres actifs :</div>
+                                <div class="tags">
+                                    {#each Array.from(selectedTags) as tag}
+                                        <span class="tag selected">
+                                            {tag}
+                                            <span class="tag-count selected">
+                                                {dynamicTagCounts.get(tag)}
+                                            </span>
+                                            <button 
+                                                class="remove-tag"
+                                                on:click={() => toggleTag(tag)}
+                                            >
+                                                ×
+                                            </button>
                                         </span>
-                                        <button 
-                                            class="remove-tag"
+                                    {/each}
+                                </div>
+                            </div>
+                        {/if}
+    
+                        <div class="available-tags">
+                            {#if selectedTags.size > 0}
+                                <div class="small text-muted mb-2">Filtres additionnels disponibles :</div>
+                            {/if}
+                            <div class="tags">
+                                {#each Array.from(allTags) as [tag, totalCount]}
+                                    {@const availableCount = dynamicTagCounts.get(tag) ?? 0}
+                                    {#if !selectedTags.has(tag) && availableCount > 0}
+                                        <span 
+                                            class="tag"
                                             on:click={() => toggleTag(tag)}
                                         >
-                                            ×
-                                        </button>
-                                    </span>
+                                            {tag}
+                                            <span class="tag-count">
+                                                {availableCount}
+                                            </span>
+                                        </span>
+                                    {/if}
                                 {/each}
                             </div>
                         </div>
-                    {/if}
-
-                    <div class="available-tags">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Colonne de droite : Résultats -->
+            <div class="col-12 col-md-5 col-lg-6">
+                <div class="alert alert-info">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>{allResults.length} exercice(s) trouvé(s)</strong>
                         {#if selectedTags.size > 0}
-                            <div class="small text-muted mb-2">Filtres additionnels disponibles :</div>
+                            <small class="text-muted">
+                                Filtres : {Array.from(selectedTags).join(', ')}
+                            </small>
                         {/if}
-                        <div class="tags">
-                            {#each Array.from(allTags) as [tag, totalCount]}
-                                {@const availableCount = dynamicTagCounts.get(tag) ?? 0}
-                                {#if !selectedTags.has(tag) && availableCount > 0}
-                                    <span 
-                                        class="tag"
-                                        on:click={() => toggleTag(tag)}
-                                    >
-                                        {tag}
-                                        <span class="tag-count">
-                                            {availableCount}
+                    </div>
+                </div>
+            
+                <div class="d-flex flex-column gap-3">
+                    {#each displayedResults as result (result.exercise.uuid)}
+                        <div class="card hover-card">
+                            <div class="card-body position-relative">
+                                <div class="add-button-wrapper">
+                                <AddButton uuid={result.exercise.uuid} />
+                                </div>
+                                <!-- Exercise content (clickable) -->
+                                <div 
+                                    class="exercise-content cursor-pointer"
+                                    on:click={() => handleExerciseClick(result.exercise)}
+                                >
+                                    <h5 class="card-title">
+                                        <MathRenderer content={result.exercise.titre}/>
+                                    </h5>
+                                    
+                                    {#if result.exercise.theme}
+                                        <div class="tags">
+                                            {#each normalizeThemes(result.exercise.theme) as theme}
+                                                <span 
+                                                    class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
+                                                    on:click|stopPropagation={() => toggleTag(theme)}
+                                                >
+                                                    {theme}
+                                                </span>
+                                            {/each}
+                                        </div>
+                                    {/if}
+                                    
+                                    {#if result.exercise.preview}
+                                    <p class="card-text text-muted mb-2">
+                                        <span class="preview-html">
+                                            <MathRenderer content={result.exercise.preview}/>
                                         </span>
-                                    </span>
+                                    </p>
                                 {/if}
-                            {/each}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Colonne de droite : Résultats -->
-        <div class="col-12 col-md-5 col-lg-6">
-            <div class="alert alert-info">
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong>{allResults.length} exercice(s) trouvé(s)</strong>
-                    {#if selectedTags.size > 0}
-                        <small class="text-muted">
-                            Filtres : {Array.from(selectedTags).join(', ')}
-                        </small>
-                    {/if}
-                </div>
-            </div>
-        
-            <div class="d-flex flex-column gap-3">
-                {#each displayedResults as result (result.exercise.uuid)}
-                    <div class="card hover-card">
-                        <div class="card-body position-relative">
-                            <div class="add-button-wrapper">
-                            <AddButton uuid={result.exercise.uuid} />
+                                </div>
+                                <small class="text-muted position-absolute bottom-0 end-0 p-2">{result.exercise.uuid}</small>
                             </div>
-                            <!-- Exercise content (clickable) -->
-                            <div 
-                                class="exercise-content cursor-pointer"
-                                on:click={() => handleExerciseClick(result.exercise)}
-                            >
-                                <h5 class="card-title">
-                                    <MathRenderer content={result.exercise.titre}/>
-                                </h5>
-                                
-                                {#if result.exercise.theme}
-                                    <div class="tags">
-                                        {#each normalizeThemes(result.exercise.theme) as theme}
-                                            <span 
-                                                class="tag result-tag {selectedTags.has(theme) ? 'selected' : ''}"
-                                                on:click|stopPropagation={() => toggleTag(theme)}
-                                            >
-                                                {theme}
-                                            </span>
-                                        {/each}
-                                    </div>
-                                {/if}
-                                
-                                {#if result.exercise.preview}
-                                <p class="card-text text-muted mb-2">
-                                    <span class="preview-html">
-                                        <MathRenderer content={result.exercise.preview}/>
-                                    </span>
-                                </p>
-                            {/if}
-                            </div>
-                            <small class="text-muted position-absolute bottom-0 end-0 p-2">{result.exercise.uuid}</small>
                         </div>
-                    </div>
-                {/each}
-            </div>
-
-            {#if hasMoreItems}
-                <div class="text-center mt-4">
-                    <button class="btn btn-primary" on:click={loadMore}>
-                        Charger plus d'exercices
-                    </button>
+                    {/each}
                 </div>
-            {/if}
+    
+                {#if hasMoreItems}
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary" on:click={loadMore}>
+                            Charger plus d'exercices
+                        </button>
+                    </div>
+                {/if}
+            </div>
+            <!-- Custom List Column -->
+            <div class="d-none d-md-block col-md-3 col-lg-3">
+                <CustomList showMobileButton={false} />
+            </div>
+            <!-- Mobile Custom List Modal -->
+             <div class="d-block d-md-none">
+                <CustomList showMobileButton={true} />
+            </div>  
         </div>
-        <!-- Custom List Column -->
-        <div class="d-none d-md-block col-md-3 col-lg-3">
-            <CustomList showMobileButton={false} />
-        </div>
-        <!-- Mobile Custom List Modal -->
-         <div class="d-block d-md-none">
-            <CustomList showMobileButton={true} />
-        </div>  
     </div>
+    {/if}
 </div>
 
 <Modal 
@@ -427,4 +441,13 @@
     top: 1rem;
     z-index: 2;
 }
+
+.loading-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        color: #666;
+    }
 </style>
