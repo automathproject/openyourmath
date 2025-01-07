@@ -168,8 +168,6 @@
         </div>
         <!-- Colonne de gauche : Filtres -->
         <div class="col-12 col-md-4 col-lg-3">
-
-
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center mb-3">
