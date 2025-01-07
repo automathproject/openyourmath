@@ -6,6 +6,7 @@ export type Exercice = {
     niveau: string;
     metadata: Metadata;
     contenu: ContenuElement[];
+    preview: string;
   };
   
   export type Metadata = {

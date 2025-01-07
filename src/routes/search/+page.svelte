@@ -152,49 +152,6 @@
     // Réagir aux changements de la recherche
     $: query, updateResults();
 
-    // Prévisualisation du contenu d'un exercice
-    function getPreview(content: string, maxLength: number = 150): string {
-        if (!content) return '';
-        
-        if (content.length <= maxLength) return content;
-        
-        const truncated = content.slice(0, maxLength);
-        
-        const lastDoubleDollar = truncated.lastIndexOf('$$');
-        const lastSingleDollar = truncated.lastIndexOf('$');
-        const lastBracketOpen = truncated.lastIndexOf('\\[');
-        const lastParenOpen = truncated.lastIndexOf('\\(');
-        
-        const lastBracketClose = truncated.lastIndexOf('\\]');
-        const lastParenClose = truncated.lastIndexOf('\\)');
-        
-        let safeEnd = maxLength;
-        
-        if (lastDoubleDollar !== -1) {
-            const doubleDollarMatches = truncated.match(/\$\$/g) || [];
-            if (doubleDollarMatches.length % 2 !== 0) {
-                safeEnd = Math.min(safeEnd, lastDoubleDollar);
-            }
-        }
-        
-        if (lastSingleDollar !== -1) {
-            const contentWithoutDoubleDollar = truncated.replace(/\$\$/g, '##');
-            const singleDollarCount = (contentWithoutDoubleDollar.match(/\$/g) || []).length;
-            if (singleDollarCount % 2 !== 0) {
-                safeEnd = Math.min(safeEnd, lastSingleDollar);
-            }
-        }
-        
-        if (lastBracketOpen !== -1 && (lastBracketClose === -1 || lastBracketClose < lastBracketOpen)) {
-            safeEnd = Math.min(safeEnd, lastBracketOpen);
-        }
-        
-        if (lastParenOpen !== -1 && (lastParenClose === -1 || lastParenClose < lastParenOpen)) {
-            safeEnd = Math.min(safeEnd, lastParenOpen);
-        }
-        
-        return content.slice(0, safeEnd) + ' ...';
-    }
 </script>
 
 <div class="container-fluid">
@@ -320,17 +277,13 @@
                                     </div>
                                 {/if}
                                 
-                                {#if result.exercise.contenu.length > 0}
-                                    {@const previewContent = result.exercise.contenu.find(el => el.type === "description") || 
-                                                           result.exercise.contenu.find(el => el.type === "question")}
-                                    {#if previewContent && previewContent.value.html}
-                                        <p class="card-text text-muted mb-2">
-                                            <span class="preview-html">
-                                                <MathRenderer content={getPreview(previewContent.value.html)}/>
-                                            </span>
-                                        </p>
-                                    {/if}
-                                {/if}
+                                {#if result.exercise.preview}
+                                <p class="card-text text-muted mb-2">
+                                    <span class="preview-html">
+                                        <MathRenderer content={result.exercise.preview}/>
+                                    </span>
+                                </p>
+                            {/if}
                             </div>
                             <small class="text-muted position-absolute bottom-0 end-0 p-2">{result.exercise.uuid}</small>
                         </div>
