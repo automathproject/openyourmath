@@ -120,10 +120,19 @@
         }
     });
 
-    function handleExerciseClick(exercise: Exercice) {
-        selectedExercise = exercise;
+    async function handleExerciseClick(exercise: Exercice) {
+    try {
+        const response = await fetch(`/exercice/${exercise.uuid}`);
+        if (!response.ok) {
+            throw new Error('Erreur lors du chargement de l\'exercice');
+        }
+        selectedExercise = await response.json();
         showModal = true;
+    } catch (error) {
+        console.error('Erreur lors du chargement de l\'exercice:', error);
+        // Optionnel : ajouter une notification d'erreur pour l'utilisateur
     }
+}
 
     function handleModalClose() {
         showModal = false;

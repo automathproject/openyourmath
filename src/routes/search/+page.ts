@@ -1,4 +1,4 @@
-// src/routes/+page.ts
+// src/routes/search/+page.ts
 import type { PageLoad } from './$types';
 import type { Exercice } from '$lib/types/types';
 import { browser } from '$app/environment';
@@ -7,7 +7,7 @@ export const load: PageLoad = async ({ fetch }) => {
     try {
         // Ajout d'un timestamp pour éviter le cache lors de la navigation
         const timestamp = Date.now();
-        const response = await fetch(`/data/exercises.json?t=${timestamp}`, {
+        const response = await fetch(`/data/exercises-index.json?t=${timestamp}`, {
             headers: {
                 'Cache-Control': 'no-cache',
                 'Pragma': 'no-cache'
