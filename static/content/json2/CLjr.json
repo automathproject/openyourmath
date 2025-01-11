@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-01-23",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:33.624Z"
+    "updatedAt": "2025-01-11T19:11:01.817Z"
   },
   "contenu": [
     {
-      "id": "e2aa0ea3-58cf-4d72-8d5b-7dcec36db60d",
+      "id": "af4671ec-b399-4724-bed5-5805bc42cd9d",
       "type": "description",
       "value": {
         "latex": "Déterminer l'ordre de multiplicité de la racine $x_0$ du polynôme $P$, et en déduire la factorisation du polynôme, dans les cas suivants :",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "29c5042b-e7c7-44e3-aca1-716c726674ad",
+      "id": "958dfc01-3f4c-4158-9af5-3047bcf3310e",
       "type": "question",
       "value": {
         "latex": "$P(X)=X^4-X^3-3 X^2+5 X-2 \\quad x_0=1$.",
@@ -29,15 +29,23 @@
       }
     },
     {
-      "id": "f2e58939-c05c-4637-a8de-f59e85b359a1",
-      "type": "reponse",
+      "id": "1b4668b0-a41a-4303-af1c-4e390a52c0f5",
+      "type": "indication",
       "value": {
-        "latex": "$$\nP(X)=X^4-X^3-3 X^2+5 X-2 .\n$$ \n\n On a :\n$$\n\\begin{aligned}\nP(1) & =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) & =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) & =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) & =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) & =12-6-6=0 \\\\\nP^{(3)}(X) & =24 X-6 \\\\\nP^{(3)}(1) & \\neq 0\n\\end{aligned}\n$$\nAinsi $x_0=1$ est racine d'ordre 3 de $P$ et :\n$$\n\\begin{gathered}\nP(X)=(X-1)^3 \\cdot(X-a)=\\left(X^3-3 X^2+3 X-1\\right) \\cdot(X-a)=X^4 \\ldots+a \\\\\n=X^4-X^3-3 X^2+5 X-2 \\\\\n\\quad \\Rightarrow a=-2 \\\\\nP(X)=(X-1)^3 \\cdot(X+2)\n\\end{gathered}\n$$",
-        "html": "<p><span class=\"math display\">\\[P(X)=X^4-X^3-3 X^2+5 X-2 .\\]</span></p>\n<p>On a : <span class=\"math display\">\\[\\begin{aligned}\nP(1) &amp; =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) &amp; =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) &amp; =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) &amp; =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) &amp; =12-6-6=0 \\\\\nP^{(3)}(X) &amp; =24 X-6 \\\\\nP^{(3)}(1) &amp; \\neq 0\n\\end{aligned}\\]</span> Ainsi <span class=\"math inline\">\\(x_0=1\\)</span>\nest racine d’ordre 3 de <span class=\"math inline\">\\(P\\)</span> et :\n<span class=\"math display\">\\[\\begin{gathered}\nP(X)=(X-1)^3 \\cdot(X-a)=\\left(X^3-3 X^2+3 X-1\\right) \\cdot(X-a)=X^4\n\\ldots+a \\\\\n=X^4-X^3-3 X^2+5 X-2 \\\\\n\\quad \\Rightarrow a=-2 \\\\\nP(X)=(X-1)^3 \\cdot(X+2)\n\\end{gathered}\\]</span></p>\n"
+        "latex": "Calculer $P(1)$, puis $P'(1)$...",
+        "html": "<p>Calculer <span class=\"math inline\">\\(P(1)\\)</span>, puis <span\nclass=\"math inline\">\\(P&#39;(1)\\)</span>...</p>\n"
       }
     },
     {
-      "id": "18ec8588-ea7e-4901-936a-6c5ff6e8dc30",
+      "id": "d5affcde-bfeb-4ae5-a7c2-4dbceb890b37",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\nP(X)=X^4-X^3-3 X^2+5 X-2 .\n$$ \n\n On a :\n\n$$\\begin{align*}\nP(1) & =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) & =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) & =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) & =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) & =12-6-6=0 \\\\\nP^{(3)}(X) & =24 X-6 \\\\\nP^{(3)}(1) & \\neq 0\n\\end{align*}$$\n\nAinsi $x_0=1$ est racine d'ordre 3 de $P$, donc par définition il existe un polynôme $Q$ tel que : \n$$P(X) = (X-1)^3 Q(X)$$\n\nOr $P$ est d'ordre $4$ donc $Q$ est de degré $1$ De plus, le coefficient de plus haut degré de $P$ est $1$, donc celui de $Q$ aussi et il est existe $a \\in \\mathbb{C}$ tel que $Q(X) = X-a$. Ainsi :\n$$P(X)=(X-1)^3 (X-a)$$\nOr $P(0) = -1 \\times (-a) = a$ d'une part et $P(0) = -2$ d'après la définition de $P$ donc $a=-2$ et :\n$$P(X)=(X-1)^3 (X+2)$$",
+        "html": "<p><span class=\"math display\">\\[P(X)=X^4-X^3-3 X^2+5 X-2 .\\]</span></p>\n<p>On a :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nP(1) &amp; =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) &amp; =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) &amp; =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) &amp; =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) &amp; =12-6-6=0 \\\\\nP^{(3)}(X) &amp; =24 X-6 \\\\\nP^{(3)}(1) &amp; \\neq 0\n\\end{align*}\\]</span></p>\n<p>Ainsi <span class=\"math inline\">\\(x_0=1\\)</span> est racine d’ordre 3\nde <span class=\"math inline\">\\(P\\)</span>, donc par définition il existe\nun polynôme <span class=\"math inline\">\\(Q\\)</span> tel que : <span\nclass=\"math display\">\\[P(X) = (X-1)^3 Q(X)\\]</span></p>\n<p>Or <span class=\"math inline\">\\(P\\)</span> est d’ordre <span\nclass=\"math inline\">\\(4\\)</span> donc <span\nclass=\"math inline\">\\(Q\\)</span> est de degré <span\nclass=\"math inline\">\\(1\\)</span> De plus, le coefficient de plus haut\ndegré de <span class=\"math inline\">\\(P\\)</span> est <span\nclass=\"math inline\">\\(1\\)</span>, donc celui de <span\nclass=\"math inline\">\\(Q\\)</span> aussi et il est existe <span\nclass=\"math inline\">\\(a \\in \\mathbb{C}\\)</span> tel que <span\nclass=\"math inline\">\\(Q(X) = X-a\\)</span>. Ainsi : <span\nclass=\"math display\">\\[P(X)=(X-1)^3 (X-a)\\]</span> Or <span\nclass=\"math inline\">\\(P(0) = -1 \\times (-a) = a\\)</span> d’une part et\n<span class=\"math inline\">\\(P(0) = -2\\)</span> d’après la définition de\n<span class=\"math inline\">\\(P\\)</span> donc <span\nclass=\"math inline\">\\(a=-2\\)</span> et : <span\nclass=\"math display\">\\[P(X)=(X-1)^3 (X+2)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "40b6bbb3-a87d-4dd8-bae9-3f0298fa0070",
       "type": "question",
       "value": {
         "latex": "$P(X)=X^3-iX^2+X-i \\quad x_0=i$.",
@@ -45,11 +53,19 @@
       }
     },
     {
-      "id": "d6f1a772-8517-4a16-9b40-697fc0b04a74",
+      "id": "2c49f6b2-c823-4566-90fc-e736815826f3",
+      "type": "indication",
+      "value": {
+        "latex": "Calculer $P(i)$, puis $P'(i)$...",
+        "html": "<p>Calculer <span class=\"math inline\">\\(P(i)\\)</span>, puis <span\nclass=\"math inline\">\\(P&#39;(i)\\)</span>...</p>\n"
+      }
+    },
+    {
+      "id": "b93d17be-2bc2-41db-8203-c61a53d0c7e7",
       "type": "reponse",
       "value": {
-        "latex": "$$\nP(X)=X^3-i . X^2+X-i .\n$$\n\nOn a :\n$$\n\\begin{aligned}\nP(i) & =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) & =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) & =3 \\cdot i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) & =6 X-2 i \\\\\nP^{\\prime \\prime}(i) & =6 i-2 i \\neq 0\n\\end{aligned}\n$$\nAinsi $x_0=1$ est racine double de $P$ et :\n$$\n\\begin{aligned}\nP(X)= & (X-i)^2 \\cdot(X-a)=\\left(X^2-2 i X-1\\right) \\cdot(X-a)=X^3 \\ldots+a \\\\\n= & X^3-i X^2+X-i \\\\\n& \\Rightarrow a=-i\n\\end{aligned}\n$$\nd'où \n$$P(X) = (X-i)^2(X+i)$$",
-        "html": "<p><span class=\"math display\">\\[P(X)=X^3-i . X^2+X-i .\\]</span></p>\n<p>On a : <span class=\"math display\">\\[\\begin{aligned}\nP(i) &amp; =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) &amp; =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) &amp; =3 \\cdot i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) &amp; =6 X-2 i \\\\\nP^{\\prime \\prime}(i) &amp; =6 i-2 i \\neq 0\n\\end{aligned}\\]</span> Ainsi <span class=\"math inline\">\\(x_0=1\\)</span>\nest racine double de <span class=\"math inline\">\\(P\\)</span> et : <span\nclass=\"math display\">\\[\\begin{aligned}\nP(X)= &amp; (X-i)^2 \\cdot(X-a)=\\left(X^2-2 i X-1\\right) \\cdot(X-a)=X^3\n\\ldots+a \\\\\n= &amp; X^3-i X^2+X-i \\\\\n&amp; \\Rightarrow a=-i\n\\end{aligned}\\]</span> d’où <span class=\"math display\">\\[P(X) =\n(X-i)^2(X+i)\\]</span></p>\n"
+        "latex": "$$\nP(X)=X^3-iX^2+X-i .\n$$\n\nOn a :\n\n$$\\begin{align*}\nP(i) & =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) & =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) & =3 i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) & =6 X-2 i \\\\\nP^{\\prime \\prime}(i) & =6 i-2 i \\neq 0\n\\end{align*}$$\n\nAinsi $x_0=1$ est racine double de $P$, donc par définition il existe $a \\in \\mathbb{C}$ tel que :\n\n\n$$P(X)=  (X-i)^2 (X-a)$$\n\nOr $P(0) = a = -i$ \n\n\nd'où \n$$P(X) = (X-i)^2(X+i)$$",
+        "html": "<p><span class=\"math display\">\\[P(X)=X^3-iX^2+X-i .\\]</span></p>\n<p>On a :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nP(i) &amp; =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) &amp; =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) &amp; =3 i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) &amp; =6 X-2 i \\\\\nP^{\\prime \\prime}(i) &amp; =6 i-2 i \\neq 0\n\\end{align*}\\]</span></p>\n<p>Ainsi <span class=\"math inline\">\\(x_0=1\\)</span> est racine double de\n<span class=\"math inline\">\\(P\\)</span>, donc par définition il existe\n<span class=\"math inline\">\\(a \\in \\mathbb{C}\\)</span> tel que :</p>\n<p><span class=\"math display\">\\[P(X)=  (X-i)^2 (X-a)\\]</span></p>\n<p>Or <span class=\"math inline\">\\(P(0) = a = -i\\)</span></p>\n<p>d’où <span class=\"math display\">\\[P(X) = (X-i)^2(X+i)\\]</span></p>\n"
       }
     }
   ]

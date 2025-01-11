@@ -1,12 +1,71 @@
 {
   "metadata": {
-    "totalCount": 453,
-    "generatedAt": "2025-01-07T21:15:31.764Z"
+    "totalCount": 454,
+    "generatedAt": "2025-01-11T19:11:02.964Z"
   },
   "exercises": [
     {
+      "uuid": "2pOR",
+      "titre": "",
+      "theme": [
+        ""
+      ],
+      "niveau": "",
+      "metadata": {
+        "auteur": "Maxime NGUYEN",
+        "createdAt": "20/12/2024",
+        "organisation": "AMSCC",
+        "updatedAt": "2025-01-11T19:11:01.501Z"
+      },
+      "contenu": [
+        {
+          "type": "description",
+          "value": {
+            "latex": "Soit $A = \\begin{pmatrix} 1 & 0 & 1 \\\\ -1 & 0 & 2 \\\\ 0 & 1 & -1 \\end{pmatrix} \\in \\mathcal{M}_{3}(\\mathbb{R})$."
+          }
+        },
+        {
+          "type": "question",
+          "value": {
+            "latex": "Calculer le déterminant de $A$."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "On développe $A$ suivant la 2ème colonne pour obtenir:\\\\\n $$\\det(A)=-1 \\times (2\\times 1-1 \\times (-1))=-3.$$"
+          }
+        },
+        {
+          "type": "question",
+          "value": {
+            "latex": "Montrer que $A^3-3A +3I_{3}$ est la matrice nulle."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "$A^2=\\begin{pmatrix} 1 & 0 & 1 \\\\ -1 & 2 & -3 \\\\ -1 & -1 & 3 \\end{pmatrix}$\n    $A^3=\\begin{pmatrix} 0 & 0 & 3 \\\\ -3 & -3 & 6 \\\\ 0 & 3 & -6 \\end{pmatrix}$\n    d'o\\`u $A^3-3A=-3 I_{3} \\Longleftrightarrow A^3-3A+3 I_{3}=0$."
+          }
+        },
+        {
+          "type": "question",
+          "value": {
+            "latex": "Déduire d'une des questions précédentes que $A$ est inversible et déterminer son inverse."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "On a donc $A \\times \\frac{1}{-3}(A^2-3 I_{3})=I_{3}$ et la matrice inverse est donc\n$A^{-1}= -\\frac{1}{3}(A^2-3 I_{3})$"
+          }
+        }
+      ],
+      "preview": "<p>Soit <span class=\"math inline\"> ..."
+    },
+    {
       "uuid": "Syo2",
-      "titre": "{TITRE}",
+      "titre": "",
       "theme": [
         "calcul matriciel"
       ],
@@ -15,13 +74,13 @@
         "auteur": "Maxime NGUYEN",
         "createdAt": "2024-12-19",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:46.115Z"
+        "updatedAt": "2025-01-11T19:11:02.214Z"
       },
       "contenu": [
         {
           "type": "description",
           "value": {
-            "latex": "Soit la matrice $U_{3} = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{pmatrix} \\in \\mathcal{M}_{3}(\\mathbb{R})$ et la matrice identité $I_{3} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\in \\mathcal{M}_{3}(\\mathbb{R})$. \n\nPour tout réels $a,b$, on note $M(a,b) = aU + bI_{3}$."
+            "latex": "Soit la matrice $U= \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{pmatrix} \\in \\mathcal{M}_{3}(\\mathbb{R})$ et la matrice identité $I_{3} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\in \\mathcal{M}_{3}(\\mathbb{R})$. \n\nPour tous réels $a,b$, on note $M(a,b) = aU + bI_{3}$."
           }
         },
         {
@@ -31,15 +90,9 @@
           }
         },
         {
-          "type": "indication",
-          "value": {
-            "latex": ""
-          }
-        },
-        {
           "type": "reponse",
           "value": {
-            "latex": ""
+            "latex": "La matrice $M(1,-3)$ s'\\'ecrit :\n    \\[\n    M(1,-3) = U - 3I_{3} = \\begin{pmatrix} -2 & 1 & 1 \\\\ 1 & -2 & 1 \\\\ 1 & 1 & -2 \\end{pmatrix}.\n    \\]\n    Pour d\\'eterminer si $M(1,-3)$ est inversible, calculons son d\\'eterminant :\n    \\[\n    \\det(M(1,-3)) = \\det\\begin{pmatrix} -2 & 1 & 1 \\\\ 1 & -2 & 1 \\\\ 1 & 1 & -2 \\end{pmatrix}.\n    \\]\n    En sommant la colonne $1$ et $2$ on obtient une troisième colonne nulle. En cons\\'equence, $\\det(M(1,-3)) = 0$. La matrice n'est donc pas inversible."
           }
         },
         {
@@ -49,15 +102,21 @@
           }
         },
         {
-          "type": "indication",
+          "type": "reponse",
           "value": {
-            "latex": ""
+            "latex": "La matrice $M(1,1)$ s'\\'ecrit :\n    \\[\n    M(1,1) = U+ I_{3} = \\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix}.\n    \\]\n    Calculons son d\\'eterminant :\n    \\[\n    \\det(M(1,1)) = \\det\\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{pmatrix} = 2(2 \\cdot 2 - 1 \\cdot 1) - 1(1 \\cdot 2 - 1 \\cdot 1) + 1(1 \\cdot 1 - 1 \\cdot 2).\n    \\]\n    Simplifions :\n    \\[\n    \\det(M(1,1)) = 2(4 - 1) - 1(2 - 1) + 1(1 - 2) = 2 \\cdot 3 - 1 \\cdot 1 - 1 = 6 - 1 - 1 = 4.\n    \\]\n    Comme $\\det(M(1,1)) \\neq 0$, $M(1,1)$ est inversible. \n    Avec le méthode du pivot de Gauss appliquée également à la matrice augmentée avec $I_{3}$ on obtient:\n    $M(1,1)^{-1}=\\begin{pmatrix} \\frac{3}{4} & -\\frac{1}{4} & -\\frac{1}{4} \\\\ -\\frac{1}{4} &\\frac{3}{4} & -\\frac{1}{4} \\\\ -\\frac{1}{4} & -\\frac{1}{4} & \\frac{3}{4} \\end{pmatrix}$"
           }
         },
         {
           "type": "question",
           "value": {
-            "latex": "Montrer que $M(a,b)$ est inversible dans $\\mathcal{M}_{3}(\\mathbb{R})$ si et seulement si $b(b+3a) \\neq 0$ et exrimer $M(a,b)^{-1}$ sous la forme $a'U + b'I_{3}$ où $a'$ et $b'$ sont des réels à déterminer."
+            "latex": "Montrer que $M(a,b)$ est inversible dans $\\mathcal{M}_{3}(\\mathbb{R})$ si et seulement si $b(b+3a) \\neq 0$ et exprimer $M(a,b)^{-1}$ sous la forme $a'U + b'I_{3}$ où $a'$ et $b'$ sont des réels à déterminer."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "La matrice $M(a,b)$ s'\\'ecrit :\n    \\[\n    M(a,b) = aU+ bI_{3}.\n    \\]\n    Calculons le d\\'eterminant:\n    \\[\n    \\det(M(a,b)) = \\det(aU + bI_{3}).\n    \\]\n    Le d\\'eterminant est nul si $b = 0$ ou si $b + 3a = 0$. En effet:\\\\\nEn sommant la colonne $1$ et $2$ puis en factorisant par $b+3a$ on obtient un déterminant avec une colonne de $1$. En utilisant le pivot de Gauss on se retrouve avec \n$$ \\det(M(a,b))=(3a+b)b^2.$$\n    Si $b(b + 3a) \\neq 0$, alors $M(a,b)$ est inversible. Pour exprimer $M(a,b)^{-1}$, on cherche des coefficients $a'$ et $b'$ tels que :\n    \\[\n    M(a,b) \\cdot (a' + b'I_{3}) = I_{3}.\n    \\]\n    Le calcul montre que :\n    \\[\n    a' = -\\frac{1}{b(b + 3a)}, \\quad b' = \\frac{1}{b}.\n    \\]\n    Ainsi, l'inverse est donn\\'e par :\n    \\[\n    M(a,b)^{-1} = -\\frac{1}{b(b + 3a)}U_{3} + \\frac{1}{b}I_{3}.\n    \\]"
           }
         }
       ],
@@ -2277,7 +2336,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:34.491Z"
+        "updatedAt": "2025-01-11T19:11:01.936Z"
       },
       "contenu": [
         {
@@ -2293,9 +2352,15 @@
           }
         },
         {
+          "type": "indication",
+          "value": {
+            "latex": "Revenir à la définition en écrivant qu'il existe un polynôme $Q$ tel que $P(X)=Q(X) \\left(X^2-1\\right)+(X+1)$."
+          }
+        },
+        {
           "type": "reponse",
           "value": {
-            "latex": "On a :\n$$\nP(X)=Q(X) \\cdot\\left(X^2-1\\right)+(X+1)\n$$\nQue l'on peut encore écrire :\n$$\nP(X)=Q(X) \\cdot(X-1)(X+1)+(X+1)=(X+1)[Q(X) \\cdot(X-1)+1]+0\n$$\nLe reste de la division par $(X+1)$ est 0.\n\nOn peut aussi écrire :\n$$\nP(X)=Q(X) \\cdot(X-1)(X+1)+\\underbrace{(X-1)+2}_{X+1}=(X-1)[Q(X) \\cdot(X+1)+1]+2\n$$\nLe reste de la division par $(X-1)$ est 2."
+            "latex": "On a :\n$$\nP(X)=Q(X) \\left(X^2-1\\right)+(X+1)\n$$\nQue l'on peut encore écrire :\n$$\nP(X)=Q(X) \\cdot(X-1)(X+1)+(X+1)=(X+1)[Q(X) \\cdot(X-1)+1]+0\n$$\nLe reste de la division par $(X+1)$ est 0.\n\nOn peut aussi écrire :\n$$\nP(X)=Q(X) \\cdot(X-1)(X+1)+\\underbrace{(X-1)+2}_{X+1}=(X-1)[Q(X) \\cdot(X+1)+1]+2\n$$\nLe reste de la division par $(X-1)$ est 2."
           }
         }
       ],
@@ -5841,19 +5906,19 @@
         "auteur": "",
         "createdAt": "2023-01-24",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:18:12.877Z"
+        "updatedAt": "2025-01-11T19:11:02.627Z"
       },
       "contenu": [
         {
           "type": "question",
           "value": {
-            "latex": "Vérifier que le polynôme $B(X)=X^2-X+1$ est irréductible sur $\\mathbb{R}[X]$. Effectuer la division euclidienne du polynôme $A(X)=X^3+2 X-1$ par le polynôme $B(X)$, et en déduire les coefficients $a, b, c$ et $d$ de la décomposition en éléments simples de :\n$$\nF(X)=\\frac{A(X)}{(B(X))^2}=\\frac{X^3+2 X-1}{\\left(X^2-X+1\\right)^2}=\\frac{a \\cdot X+b}{\\left(X^2-X+1\\right)^2}+\\frac{c X+d}{X^2-X+1}\n$$"
+            "latex": "Vérifier que le polynôme $B(X)=X^2-X+1$ est irréductible sur $\\mathbb{R}[X]$. Effectuer la division euclidienne du polynôme $A(X)=X^3+2 X-1$ par le polynôme $B(X)$, et en déduire les coefficients $a, b, c$ et $d$ de la décomposition en éléments simples de :\n$$\nF(X)=\\frac{A(X)}{(B(X))^2}=\\frac{X^3+2 X-1}{\\left(X^2-X+1\\right)^2}=\\frac{a X+b}{\\left(X^2-X+1\\right)^2}+\\frac{c X+d}{X^2-X+1}\n$$"
           }
         },
         {
           "type": "reponse",
           "value": {
-            "latex": "$$\nA(X)=X^3+2 X-1=\\underbrace{\\left(X^2-X+1\\right)}_{B(X)} \\cdot(X+1)+2 X-2\n$$\nOn en déduit :\n$$\n\\begin{aligned}\n\tF(X) & =\\frac{A(X)}{(B(X))^2}=\\frac{X^3+2 X-1}{\\left(X^2-X+1\\right)^2} \\\\\n\t& =\\frac{\\left(X^2-X+1\\right) \\cdot(X+1)+2 X-2}{\\left(X^2-X+1\\right)^2} \\\\\n\t& =\\frac{2 X-2}{\\left(X^2-X+1\\right)^2}+\\frac{X+1}{X^2-X+1}\n\\end{aligned}\n$$"
+            "latex": "$$\nA(X)=X^3+2 X-1=\\underbrace{\\left(X^2-X+1\\right)}_{B(X)} \\cdot(X+1)+2 X-2\n$$\nOn en déduit :\n$$\n\\begin{aligned}\n\tF(X) & =\\frac{A(X)}{(B(X))^2}=\\frac{X^3+2 X-1}{\\left(X^2-X+1\\right)^2} \\\\\n\t& =\\frac{\\left(X^2-X+1\\right) (X+1)+2 X-2}{\\left(X^2-X+1\\right)^2} \\\\\n\t& =\\frac{2 X-2}{\\left(X^2-X+1\\right)^2}+\\frac{X+1}{X^2-X+1}\n\\end{aligned}\n$$"
           }
         },
         {
@@ -6644,7 +6709,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:28.325Z"
+        "updatedAt": "2025-01-11T19:11:01.676Z"
       },
       "contenu": [
         {
@@ -6657,6 +6722,12 @@
           "type": "question",
           "value": {
             "latex": "Quel est le degré du polynôme $P(x)=\\Delta$ ?"
+          }
+        },
+        {
+          "type": "indication",
+          "value": {
+            "latex": "Exprimer, sans le calculer, le déterminant en développant par rapport à la dernière colonne."
           }
         },
         {
@@ -6674,13 +6745,19 @@
         {
           "type": "reponse",
           "value": {
-            "latex": "Pour $x=a, \\Delta=0$ car deux colonnes sont identiques. De même, pour $x=b$ et pour $x=c$. Ainsi, $a, b$ et $c$ sont trois racines évidentes de $P(x)$.\nAinsi :\n$$\nP(x)=k \\cdot(x-a)(x-b)(x-c)\n$$\noù $k$ est le coefficient de $x^3$. Ainsi :\n$$\n\\begin{aligned}\n& k=\\left|\\begin{array}{ccc}\n1 & 1 & 1 \\\\\na & b & c \\\\\na^2 & b^2 & c^2\n\\end{array}\\right|=\\left|\\begin{array}{ccc}\n1 & 0 & 0 \\\\\na & b-a & c-a \\\\\na^2 & b^2-a^2 & c^2-a^2\n\\end{array}\\right| \\\\\n& =(b-a)(c-a)\\left|\\begin{array}{ccc}\n\\mathcal{c}_1 & c_2 & c_3-c_2 \\\\\n1 & 0 & 0 \\\\\na & 1 & 0 \\\\\na^2 & b+a & c-b\n\\end{array}\\right| \\\\\n& =(b-a)(c-a)(c-b) \\\\\n&\n\\end{aligned}\n$$\nConclusion :\n$$\nP(x)=(b-a)(c-a)(c-b)(x-a)(x-b)(x-c)\n$$"
+            "latex": "Pour $x=a, \\Delta=0$ car deux colonnes sont identiques. De même, pour $x=b$ et pour $x=c$. Ainsi, $a, b$ et $c$ sont trois racines évidentes de $P(x)$.\nAinsi :\n$$\nP(x)=k(x-a)(x-b)(x-c)\n$$\noù $k$ est le coefficient de $x^3$. Ainsi :\n$$\n\\begin{aligned}\n& k=\\left|\\begin{array}{ccc}\n1 & 1 & 1 \\\\\na & b & c \\\\\na^2 & b^2 & c^2\n\\end{array}\\right|=\\left|\\begin{array}{ccc}\n1 & 0 & 0 \\\\\na & b-a & c-a \\\\\na^2 & b^2-a^2 & c^2-a^2\n\\end{array}\\right| \\\\\n& =(b-a)(c-a)\\left|\\begin{array}{ccc}\n\\mathcal{c}_1 & c_2 & c_3-c_2 \\\\\n1 & 0 & 0 \\\\\na & 1 & 0 \\\\\na^2 & b+a & c-b\n\\end{array}\\right| \\\\\n& =(b-a)(c-a)(c-b) \\\\\n&\n\\end{aligned}\n$$\nConclusion :\n$$\nP(x)=(b-a)(c-a)(c-b)(x-a)(x-b)(x-c)\n$$"
           }
         },
         {
           "type": "question",
           "value": {
             "latex": "Calculer $\\left|\\begin{array}{cccc}1 & 1 & 1 & 1 \\\\ 1 & i & -1 & -i \\\\ 1 & -1 & 1 & -1 \\\\ 1 & -i & -1 & i\\end{array}\\right|$."
+          }
+        },
+        {
+          "type": "indication",
+          "value": {
+            "latex": "Utiliser les questions précédentes en remplaçant $a$, $b$ et $c$ par des valeurs judicieuses."
           }
         },
         {
@@ -7412,7 +7489,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:57.679Z"
+        "updatedAt": "2025-01-11T19:11:02.441Z"
       },
       "contenu": [
         {
@@ -7422,9 +7499,15 @@
           }
         },
         {
+          "type": "indication",
+          "value": {
+            "latex": "Traduire cette information de divisibilité de polynômes en termes de racines : si $P_n$ est divisible par $Q$ alors les racines de $Q$ sont également des racines de $P_n$."
+          }
+        },
+        {
           "type": "reponse",
           "value": {
-            "latex": "On a :$$\n\\begin{aligned}\nP_n(0) & =(1)^{2 n}-0-0-1=0 \\\\\nP_n(-1) & =(-1+1)^{2 n}-(-1)^{2 n}-2 \\cdot(-1)-1=0-1+2-1=0 \\\\\nP_n\\left(-\\frac{1}{2}\\right) & =\\left(-\\frac{1}{2}+1\\right)^{2 n}-\\left(-\\frac{1}{2}\\right)^{2 n}-2 \\cdot\\left(-\\frac{1}{2}\\right)-1=\\left(\\frac{1}{2}\\right)^{2 n}-\\left(\\frac{1}{2}\\right)^{2 n}+1-1=0\n\\end{aligned}\n$$\n0 racine signifie que $X$ divise $P_n(X): P_n(X)=X . Q_1(X)$;\n$-1$ racine signifie que $(X+1)$ divise $P_n(X): P_n(X)=(X+1) \\cdot \\underbrace{Q_2(X)}_{X \\cdot Q_3(X)}=X \\cdot(X+1) \\cdot Q_3(X)$;\n$-\\frac{1}{2}$ racine signifie que $(2 X+1)$ divise $P_n(X)$ :\n$$\nP_n(X)=(2 X+1) \\cdot Q_4(X)=\\underbrace{X \\cdot(X+1) \\cdot(2 X+1)}_{Q(X)} \\cdot Q_5(X)\n$$\ndonc $Q(X)=X(X+1)(2 X+1)$ divise $P_n(X)=(X+1)^{2 n}-X^{2 n}-2 X-1$."
+            "latex": "On a :\n$$\\begin{align*}\nP_n(0) & =(1)^{2 n}-0-0-1=0 \\\\\nP_n(-1) & =(-1+1)^{2 n}-(-1)^{2 n}-2 \\cdot(-1)-1=0-1+2-1=0 \\\\\nP_n\\left(-\\frac{1}{2}\\right) & =\\left(-\\frac{1}{2}+1\\right)^{2 n}-\\left(-\\frac{1}{2}\\right)^{2 n}-2 \\cdot\\left(-\\frac{1}{2}\\right)-1=\\left(\\frac{1}{2}\\right)^{2 n}-\\left(\\frac{1}{2}\\right)^{2 n}+1-1=0\n\\end{align*}$$\n\n$0$ racine signifie que $X$ divise $P_n(X): P_n(X)=X Q_1(X)$;\n$-1$ racine signifie que $(X+1)$ divise $P_n(X): P_n(X)=(X+1) \\underbrace{Q_2(X)}_{X \\cdot Q_3(X)}=X \\cdot(X+1)  Q_3(X)$;\n$-\\frac{1}{2}$ racine signifie que $(2 X+1)$ divise $P_n(X)$ :\n$$\nP_n(X)=(2 X+1) \\cdot Q_4(X)=\\underbrace{X (X+1) (2 X+1)}_{Q(X)} \\cdot Q_5(X)\n$$\ndonc $Q(X)=X(X+1)(2 X+1)$ divise $P_n(X)=(X+1)^{2 n}-X^{2 n}-2 X-1$."
           }
         }
       ],
@@ -7441,23 +7524,41 @@
         "auteur": "",
         "createdAt": "2023-01-24",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:18:12.254Z"
+        "updatedAt": "2025-01-11T19:11:02.535Z"
       },
       "contenu": [
         {
+          "type": "description",
+          "value": {
+            "latex": "Soit les polynômes à coefficients réels $A(X)=X^3+2 X-5$ et $B(X)=X-1$."
+          }
+        },
+        {
           "type": "question",
           "value": {
-            "latex": "Effectuer la division euclidienne du polynôme $A(X)=X^3+2 X-5$ par le polynôme $B(X)=X-1$ et en déduire les coefficients $a, b, c$ et $d$ de la décomposition en éléments simples de $$\\frac{A(X)}{B(X)}=\\frac{X^3+2 X-5}{X-1}=a  X^2+b  X+c+\\frac{d}{X-1}$$."
+            "latex": "Effectuer la division euclidienne du polynôme $A$ par le polynôme $B$."
           }
         },
         {
           "type": "reponse",
           "value": {
-            "latex": "$$\nA(X)=X^3+2 X-5=\\underbrace{(X-1)}_{B(X)} \\cdot\\left(X^2+X+3\\right)-2\n$$\nOn en déduit :\n$$\n\\begin{aligned}\n\tF(X) & =\\frac{A(X)}{B(X)}=\\frac{X^3+2 X-5}{X-1}=\\frac{(X-1) \\cdot\\left(X^2+X+3\\right)-2}{X-1} \\\\\n\t& =\\frac{(X-1) \\cdot\\left(X^2+X+3\\right)}{X-1}-\\frac{2}{X-1}=X^2+X+3-\\frac{2}{X-1}\n\\end{aligned}\n$$"
+            "latex": "On trouve : \n$$\nA(X)=X^3+2 X-5=\\underbrace{(X-1)}_{B(X)} \\left(X^2+X+3\\right)-2\n$$"
+          }
+        },
+        {
+          "type": "question",
+          "value": {
+            "latex": "En déduire les coefficients $a, b, c$ et $d$ de la décomposition en éléments simples de $$\\frac{A(X)}{B(X)}=\\frac{X^3+2 X-5}{X-1}=a X^2+b  X+c+\\frac{d}{X-1}$$"
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "On en déduit :\n\t$$\n\t\\begin{aligned}\n\tF(X) & =\\frac{A(X)}{B(X)}=\\frac{X^3+2 X-5}{X-1}=\\frac{(X-1) \\left(X^2+X+3\\right)-2}{X-1} \\\\\n\t& =\\frac{(X-1) \\cdot\\left(X^2+X+3\\right)}{X-1}-\\frac{2}{X-1}=X^2+X+3-\\frac{2}{X-1}\n\t\\end{aligned}\n\t$$"
           }
         }
       ],
-      "preview": "<p>Effectuer la division euclidienne du polynôme <span\nclass=\"math inline\">\\(A(X)=X^3+2 X-5\\)</span> par le polynôme <span\nclass=\"math inline\"> ..."
+      "preview": "<p>Soit les polynômes à coefficients réels <span\nclass=\"math inline\">\\(A(X)=X^3+2 X-5\\)</span> et <span\nclass=\"math inline\">\\(B(X)=X-1\\)</span>.</p>\n"
     },
     {
       "uuid": "ieFw",
@@ -19224,7 +19325,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:48.253Z"
+        "updatedAt": "2025-01-11T19:11:02.315Z"
       },
       "contenu": [
         {
@@ -19234,9 +19335,15 @@
           }
         },
         {
+          "type": "indication",
+          "value": {
+            "latex": "Revenir à la définition ou utiliser la caractérisation d'une racine multiple avec les dérivées du polynôme.\n\t\n\tPremière méthode : effectuer la division euclidienne de $P$ par $(X-1)$, puis successivement du quotient par $(X-1)$ tant que le reste est nul. \n\nDeuxième méthode : évaluer $P(1)$, puis $P'(1)$, puis $P^{(2)}(1)$... tant que le résultat est nul."
+          }
+        },
+        {
           "type": "reponse",
           "value": {
-            "latex": "Méthode 1: Par divisions successives.\n\nLe reste de la quatrième division euclidienne n'est pas nul, donc 1 est racine de multiplicité 3 .\nEn reprenant les calculs de division euclidienne, il vient :\n$$\n\\begin{aligned}\nX^5-X^4-X^3-X^2+4 X-2 & =(X-1)\\left(X^4-4 X^3+10 X^2-12 X+5\\right) \\\\\n& =(X-1)(X-1)\\left(X^3-3 X^2+7 X-5\\right) \\\\\n& =(X-1)(X-1)(X-1)\\left(X^2-2 X+5\\right) \\\\\n& =(X-1)^3\\left(X^2-2 X+5\\right)\n\\end{aligned}\n$$"
+            "latex": "Méthode 1: Par divisions successives.\n\nLe reste de la quatrième division euclidienne n'est pas nul, donc 1 est racine de multiplicité 3 .\nEn reprenant les calculs de division euclidienne, il vient :\n\n$$\\begin{align*}\nX^5-X^4-X^3-X^2+4 X-2 & =(X-1)\\left(X^4-4 X^3+10 X^2-12 X+5\\right) \\\\\n& =(X-1)(X-1)\\left(X^3-3 X^2+7 X-5\\right) \\\\\n& =(X-1)(X-1)(X-1)\\left(X^2-2 X+5\\right) \\\\\n& =(X-1)^3\\left(X^2-2 X+5\\right)\n\\end{align*}$$"
           }
         },
         {
@@ -19259,7 +19366,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:33.624Z"
+        "updatedAt": "2025-01-11T19:11:01.817Z"
       },
       "contenu": [
         {
@@ -19275,9 +19382,15 @@
           }
         },
         {
+          "type": "indication",
+          "value": {
+            "latex": "Calculer $P(1)$, puis $P'(1)$..."
+          }
+        },
+        {
           "type": "reponse",
           "value": {
-            "latex": "$$\nP(X)=X^4-X^3-3 X^2+5 X-2 .\n$$ \n\n On a :\n$$\n\\begin{aligned}\nP(1) & =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) & =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) & =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) & =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) & =12-6-6=0 \\\\\nP^{(3)}(X) & =24 X-6 \\\\\nP^{(3)}(1) & \\neq 0\n\\end{aligned}\n$$\nAinsi $x_0=1$ est racine d'ordre 3 de $P$ et :\n$$\n\\begin{gathered}\nP(X)=(X-1)^3 \\cdot(X-a)=\\left(X^3-3 X^2+3 X-1\\right) \\cdot(X-a)=X^4 \\ldots+a \\\\\n=X^4-X^3-3 X^2+5 X-2 \\\\\n\\quad \\Rightarrow a=-2 \\\\\nP(X)=(X-1)^3 \\cdot(X+2)\n\\end{gathered}\n$$"
+            "latex": "$$\nP(X)=X^4-X^3-3 X^2+5 X-2 .\n$$ \n\n On a :\n\n$$\\begin{align*}\nP(1) & =1-1-3+5-2=0 \\\\\nP^{\\prime}(X) & =4 X^3-3 X^2-6 X+5 \\\\\nP^{\\prime}(1) & =4-3-6+5=0 \\\\\nP^{\\prime \\prime}(X) & =12 X^2-6 X-6 \\\\\nP^{\\prime \\prime}(1) & =12-6-6=0 \\\\\nP^{(3)}(X) & =24 X-6 \\\\\nP^{(3)}(1) & \\neq 0\n\\end{align*}$$\n\nAinsi $x_0=1$ est racine d'ordre 3 de $P$, donc par définition il existe un polynôme $Q$ tel que : \n$$P(X) = (X-1)^3 Q(X)$$\n\nOr $P$ est d'ordre $4$ donc $Q$ est de degré $1$ De plus, le coefficient de plus haut degré de $P$ est $1$, donc celui de $Q$ aussi et il est existe $a \\in \\mathbb{C}$ tel que $Q(X) = X-a$. Ainsi :\n$$P(X)=(X-1)^3 (X-a)$$\nOr $P(0) = -1 \\times (-a) = a$ d'une part et $P(0) = -2$ d'après la définition de $P$ donc $a=-2$ et :\n$$P(X)=(X-1)^3 (X+2)$$"
           }
         },
         {
@@ -19287,9 +19400,15 @@
           }
         },
         {
+          "type": "indication",
+          "value": {
+            "latex": "Calculer $P(i)$, puis $P'(i)$..."
+          }
+        },
+        {
           "type": "reponse",
           "value": {
-            "latex": "$$\nP(X)=X^3-i . X^2+X-i .\n$$\n\nOn a :\n$$\n\\begin{aligned}\nP(i) & =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) & =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) & =3 \\cdot i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) & =6 X-2 i \\\\\nP^{\\prime \\prime}(i) & =6 i-2 i \\neq 0\n\\end{aligned}\n$$\nAinsi $x_0=1$ est racine double de $P$ et :\n$$\n\\begin{aligned}\nP(X)= & (X-i)^2 \\cdot(X-a)=\\left(X^2-2 i X-1\\right) \\cdot(X-a)=X^3 \\ldots+a \\\\\n= & X^3-i X^2+X-i \\\\\n& \\Rightarrow a=-i\n\\end{aligned}\n$$\nd'où \n$$P(X) = (X-i)^2(X+i)$$"
+            "latex": "$$\nP(X)=X^3-iX^2+X-i .\n$$\n\nOn a :\n\n$$\\begin{align*}\nP(i) & =i^3-i . i^2+i-i=0 \\\\\nP^{\\prime}(X) & =3 X^2-2 i X+1 \\\\\nP^{\\prime}(i) & =3 i^2-2 . i . i+1=0 \\\\\nP^{\\prime \\prime}(X) & =6 X-2 i \\\\\nP^{\\prime \\prime}(i) & =6 i-2 i \\neq 0\n\\end{align*}$$\n\nAinsi $x_0=1$ est racine double de $P$, donc par définition il existe $a \\in \\mathbb{C}$ tel que :\n\n\n$$P(X)=  (X-i)^2 (X-a)$$\n\nOr $P(0) = a = -i$ \n\n\nd'où \n$$P(X) = (X-i)^2(X+i)$$"
           }
         }
       ],
@@ -21613,13 +21732,19 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:56.540Z"
+        "updatedAt": "2025-01-11T19:11:02.380Z"
       },
       "contenu": [
         {
           "type": "question",
           "value": {
             "latex": "Montrer que le polynôme $P(X)=1+X+\\frac{X^2}{2 !}+\\frac{X^3}{3 !}+\\ldots+\\frac{X^n}{n !}$ n'a pas de racine multiple."
+          }
+        },
+        {
+          "type": "indication",
+          "value": {
+            "latex": "Supposer qu'il existe une racine multiple, c'est-à-dire qu'il existe $\\alpha$ tel que $P(\\alpha) = P'(\\alpha) = 0$ et raisonner par l'absurde."
           }
         },
         {
@@ -22712,7 +22837,7 @@
         "auteur": "",
         "createdAt": "2023-01-23",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-03T14:17:42.570Z"
+        "updatedAt": "2025-01-11T19:11:02.091Z"
       },
       "contenu": [
         {
@@ -22736,13 +22861,13 @@
         {
           "type": "question",
           "value": {
-            "latex": "Justifier l'existence d'un polynôme $Q_n(X)$ et de trois réels $a_n, b_n$ et $c_n$ tels que :\n$$\nX^n=\\left(X^3+X^2+X+1\\right) \\cdot Q_n(X)+a_n X^2+b_n X+c_n\n$$\nOn ne demande pas de déterminer $Q_n(X)$."
+            "latex": "Justifier l'existence d'un polynôme $Q_n(X)$ et de trois réels $a_n, b_n$ et $c_n$ tels que :\n$$\nX^n=\\left(X^3+X^2+X+1\\right)  Q_n(X)+a_n X^2+b_n X+c_n\n$$\nOn ne demande pas de déterminer $Q_n(X)$."
           }
         },
         {
           "type": "reponse",
           "value": {
-            "latex": "Par la division euclidienne de $P(X)$ par $T(X)$, il existe deux polynômes $Q_n(X)$ et $R_n(X)$ tels que :\n$$\nP(X)=T(X) \\cdot Q_n(X)+R_n(X)\n$$\nAvec $d^{\\circ}\\left(R_n\\right)<d^{\\circ}(T)=3$. Ainsi il existe trois réels $a_n, b_n$ et $c_n$ tels que :\n$$\nR_n(X)=a_n X^2+b_n X+c_n \\text {. }\n$$"
+            "latex": "Par la division euclidienne de $P(X)$ par $T(X)$, il existe deux polynômes $Q_n(X)$ et $R_n(X)$ tels que :\n$$\nP(X)=T(X)  Q_n(X)+R_n(X)\n$$\nAvec $d^{\\circ}\\left(R_n\\right)<d^{\\circ}(T)=3$. Ainsi il existe trois réels $a_n, b_n$ et $c_n$ tels que :\n$$\nR_n(X)=a_n X^2+b_n X+c_n \\text {. }\n$$"
           }
         },
         {
