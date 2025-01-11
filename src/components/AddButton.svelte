@@ -3,7 +3,7 @@
 <script lang="ts">
     import { customList, addToCustomList, removeFromCustomList } from '$lib/stores/customList';
     import type { Exercice } from '$lib/types/types';
-    
+    import { FilePlus2, FileMinus2 } from 'lucide-svelte';    
     export let uuid: string;
     let exercicesInList: Set<string>;
     
@@ -45,12 +45,16 @@
     </script>
     
     <button
-        class="btn-add {exercicesInList.has(uuid) ? 'added' : ''}"
-        on:click={toggleCustomList}
-        title={exercicesInList.has(uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
-    >
-        {exercicesInList.has(uuid) ? '−' : '+'}
-    </button>
+    class="btn-add"
+    on:click={toggleCustomList}
+    title={exercicesInList.has(uuid) ? "Retirer de ma liste" : "Ajouter à ma liste"}
+  >
+    {#if exercicesInList.has(uuid)}
+      <FileMinus2 size={20} />
+    {:else}
+      <FilePlus2 size={20} />
+    {/if}
+  </button>
     
     <style>
     .btn-add {
