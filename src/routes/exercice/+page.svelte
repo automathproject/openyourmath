@@ -10,6 +10,7 @@
   import CustomList from '../../components/CustomList.svelte';
   import AddButton from '../../components/AddButton.svelte';
   import HideColumnsButton from '../../components/buttons/HideColumnsButton.svelte';
+  import { Search } from 'lucide-svelte'; // Importez l'icône de recherche
 
   let inputUuid: string = '';
   let exerciseUuid: string = '';
@@ -18,10 +19,9 @@
   let loadingExercise: boolean = false;
   let showList = true;
   $: arrowClass = showList ? 'rotate-180' : '';
-  let key = 0; // Clé pour forcer le remontage du composant
+  let key = 0;
   
   import { browser } from '$app/environment';
-
 
   function isSmallScreen() {
       return browser && window.innerWidth <= 768;
@@ -38,9 +38,7 @@
       errorMessage = '';
 
       try {
-          // Nettoyer l'ancien contenu avant le chargement
           exerciseData = null;
-          // Incrémenter la clé pour forcer le remontage
           key += 1;
           await tick();
 
@@ -124,26 +122,30 @@
         </div>
       {/if}
       <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
-        <!-- Bouton toggle repositionné -->
-      <HideColumnsButton bind:showList />  
+        <HideColumnsButton bind:showList />  
         <div class="input-container mb-3">
             <div class="input-group">
-              <input
-                type="text"
-                bind:value={inputUuid}
-                class="form-control fixed-width-input"
-                maxlength="4"
-                placeholder="Ab62"
-                on:keydown={(event) => {
-                  if (event.key === 'Enter') {
-                    handleLoadExercise();
-                  }
-                }}
-              />
-              <button on:click={handleLoadExercise} class="btn btn-primary btn-sm">
-                Voir l'exercice
-              </button>
-              <AddButton uuid={exerciseUuid} />
+              <div class="search-group">
+                <input
+                  type="text"
+                  bind:value={inputUuid}
+                  class="form-control fixed-width-input"
+                  maxlength="4"
+                  placeholder="Ab62"
+                  on:keydown={(event) => {
+                    if (event.key === 'Enter') {
+                      handleLoadExercise();
+                    }
+                  }}
+                />
+                <button 
+                  on:click={handleLoadExercise} 
+                  class="btn btn-primary btn-icon"
+                  aria-label="Voir l'exercice">
+                  <Search size={20} />
+                </button>
+                <AddButton uuid={exerciseUuid} />
+              </div>
             </div>
           </div>
   
@@ -167,58 +169,58 @@
         <CustomList showMobileButton={true} />
       </div>
     </div>
-  </section>
+</section>
   
-  <style>
+<style>
+  .input-container {
+    margin-bottom: 1rem;
+  }
 
-  
-    .input-container {
-      margin-bottom: 1rem;
-    }
-  
-    .input-group {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  
-    @media (max-width: 768px) {
-  
-      .input-group {
-        flex-direction: column;
-        align-items: stretch;
-      }
-  
-      .input-group > * {
-        margin-top: 0.5rem;
-      }
-  
-      .input-group > :first-child {
-        margin-top: 0;
-      }
-    }
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-    .fixed-width-input {
+  .search-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .fixed-width-input {
     width: 80px !important;
     min-width: 80px !important;
-    font-size: 16px; /* Empêche le zoom automatique sur iOS */
+    font-size: 16px;
     text-align: center;
     letter-spacing: 1px;
   }
 
+  .btn-icon {
+    padding: 0.375rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media (max-width: 768px) {
     .input-group {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .search-group {
+      flex-direction: row;
+      justify-content: center;
     }
 
     .fixed-width-input {
       width: 100px !important;
       min-width: 100px !important;
-      margin: 0 auto;
+    }
+
+    .btn-icon {
+      padding: 0.375rem;
     }
   }
-  
-  </style>
-  
+</style>
