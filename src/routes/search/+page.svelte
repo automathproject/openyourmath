@@ -8,6 +8,7 @@
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
     import AddButton from '../../components/AddButton.svelte';
+    import ThemeFilter from '../../components/filters/ThemeFilter.svelte';
     
     export let data;
     
@@ -180,69 +181,17 @@
             </div>
             <!-- Colonne de gauche : Filtres -->
             <div class="col-12 col-md-4 col-lg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="card-title mb-0">Thèmes disponibles</h5>
-                            {#if selectedTags.size > 0}
-                                <button 
-                                    class="btn btn-outline-danger btn-sm" 
-                                    on:click={() => {
-                                        selectedTags.clear();
-                                        selectedTags = selectedTags;
-                                        updateResults();
-                                    }}
-                                >
-                                    Réinitialiser
-                                </button>
-                            {/if}
-                        </div>
-                        
-                        {#if selectedTags.size > 0}
-                            <div class="selected-tags mb-3">
-                                <div class="small text-muted mb-2">Filtres actifs :</div>
-                                <div class="tags">
-                                    {#each Array.from(selectedTags) as tag}
-                                        <span class="tag selected">
-                                            {tag}
-                                            <span class="tag-count selected">
-                                                {dynamicTagCounts.get(tag)}
-                                            </span>
-                                            <button 
-                                                class="remove-tag"
-                                                on:click={() => toggleTag(tag)}
-                                            >
-                                                ×
-                                            </button>
-                                        </span>
-                                    {/each}
-                                </div>
-                            </div>
-                        {/if}
-    
-                        <div class="available-tags">
-                            {#if selectedTags.size > 0}
-                                <div class="small text-muted mb-2">Filtres additionnels disponibles :</div>
-                            {/if}
-                            <div class="tags">
-                                {#each Array.from(allTags) as [tag, totalCount]}
-                                    {@const availableCount = dynamicTagCounts.get(tag) ?? 0}
-                                    {#if !selectedTags.has(tag) && availableCount > 0}
-                                        <span 
-                                            class="tag"
-                                            on:click={() => toggleTag(tag)}
-                                        >
-                                            {tag}
-                                            <span class="tag-count">
-                                                {availableCount}
-                                            </span>
-                                        </span>
-                                    {/if}
-                                {/each}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ThemeFilter
+                    {selectedTags}
+                    {allTags}
+                    {dynamicTagCounts}
+                    on:toggleTag={({ detail }) => toggleTag(detail.tag)}
+                    on:resetTags={() => {
+                        selectedTags.clear();
+                        selectedTags = selectedTags;
+                        updateResults();
+                    }}
+                />
             </div>
     
             <!-- Colonne de droite : Résultats -->
