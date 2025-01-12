@@ -8,7 +8,7 @@
     import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
     import MathRenderer from '../../components/MathRenderer.svelte';
     import AddButton from '../../components/AddButton.svelte';
-    import ThemeFilter from '../../components/filters/ThemeFilter.svelte';
+    import FiltersPanel from '../../components/filters/FiltersPanel.svelte';
     
     export let data;
     
@@ -181,7 +181,7 @@
             </div>
             <!-- Colonne de gauche : Filtres -->
             <div class="col-12 col-md-4 col-lg-3">
-                <ThemeFilter
+                <FiltersPanel
                     {selectedTags}
                     {allTags}
                     {dynamicTagCounts}
