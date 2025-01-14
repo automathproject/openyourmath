@@ -1,3 +1,4 @@
+<!--src/routes/exercice/+page.svelte-->
 <script lang="ts">
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
@@ -79,7 +80,7 @@ if (uuid !== exerciseUuid) {
 <div class="row">
   {#if showList}
   <div class="col-md-4 liste-container">
-    <h3>Liste des Exercices</h3>
+    <h3>Ma liste d'exercices</h3>
     <Liste 
     onSelect={handleSelect}
     activeExerciseId={exerciseUuid} 

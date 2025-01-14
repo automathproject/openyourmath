@@ -1,4 +1,4 @@
-<!-- src/routes/Liste.svelte-->
+<!-- src/routes/Liste.svelte -->
 <script lang="ts">
   import MathRenderer from '../components/MathRenderer.svelte';
   import { onMount, onDestroy } from 'svelte';
@@ -16,12 +16,21 @@
   const error = writable<string | null>(null);
   const loading = writable(false);
   
-  // Store dérivé pour les exercices filtrés
+  // Store dérivé maintenant l'ordre des UUIDs
   const exercises = derived(
     [customList, uuidInput],
     ([$customList, $uuidInput]) => {
-      const uuids = new Set($uuidInput.split(',').map(u => u.trim()).filter(Boolean));
-      return $customList.filter(ex => uuids.has(ex.uuid));
+      const uuidArray = $uuidInput.split(',')
+        .map(u => u.trim())
+        .filter(Boolean);
+      
+      // Créer un Map pour un accès rapide aux exercices
+      const exerciseMap = new Map($customList.map(ex => [ex.uuid, ex]));
+      
+      // Retourner les exercices dans l'ordre des UUIDs
+      return uuidArray
+        .map(uuid => exerciseMap.get(uuid))
+        .filter((ex): ex is Exercice => ex !== undefined);
     }
   );
 
@@ -47,7 +56,6 @@
       return;
     }
 
-    // Annuler toute requête en cours
     if (abortController) {
       abortController.abort();
     }
@@ -72,11 +80,16 @@
       
       await goto(`?list=${get(uuidInput)}`, { replaceState: true });
 
-      const fetchPromises = uniqueUUIDs.map(async uuid => {
-        // Vérifier si l'exercice est déjà dans le store
-        const existingExercise = get(customList).find(ex => ex.uuid === uuid);
+      // Charger les exercices séquentiellement pour maintenir l'ordre
+      const newExercises: Exercice[] = [];
+      const existingExercises = get(customList);
+      
+      for (const uuid of uniqueUUIDs) {
+        const existingExercise = existingExercises.find(ex => ex.uuid === uuid);
+        
         if (existingExercise) {
-          return existingExercise;
+          newExercises.push(existingExercise);
+          continue;
         }
 
         try {
@@ -87,26 +100,22 @@
           if (response.ok) {
             const exerciseData = await response.json();
             const exercise = { ...exerciseData, uuid };
-            customList.update(list => {
-              if (!list.some(ex => ex.uuid === uuid)) {
-                return [...list, exercise];
-              }
-              return list;
-            });
-            return exercise;
+            newExercises.push(exercise);
+          } else {
+            console.error(`Erreur pour UUID ${uuid}: ${response.statusText}`);
           }
-          throw new Error(`Erreur pour UUID ${uuid}: ${response.statusText}`);
         } catch (err) {
           if (err.name === 'AbortError') throw err;
           console.error(`Erreur lors de la récupération de l'exercice ${uuid}:`, err);
-          return null;
         }
-      });
+      }
 
-      const results = await Promise.all(fetchPromises);
-      const validResults = results.filter((ex): ex is Exercice => ex !== null);
+      // Mettre à jour le store en préservant l'ordre
+      if (newExercises.length > 0) {
+        customList.set(newExercises);
+      }
 
-      if (validResults.length === 0) {
+      if (newExercises.length === 0) {
         error.set('Aucun exercice trouvé pour les UUIDs fournis.');
       }
     } catch (err: any) {
@@ -118,7 +127,6 @@
     }
   }
 
-  // Protection contre les doubles clics
   let isSelecting = false;
   async function handleSelect(uuid: string) {
     if (isSelecting || uuid === activeExerciseId) return;
@@ -131,7 +139,6 @@
     }
   }
 
-  // Debounce pour l'input
   let inputTimeout: NodeJS.Timeout;
   function handleInputChange(event: Event) {
     const target = event.target as HTMLInputElement;
@@ -208,7 +215,6 @@
     background-color: #f0f0f0;
   }
   
-  /* Style pour l'exercice actif */
   .list-group-item.active {
     background-color: #e9ecef;
     border-color: #dee2e6;
