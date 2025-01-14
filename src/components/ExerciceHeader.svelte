@@ -5,6 +5,7 @@
 
     export let metadata;
     export let themes;
+    export let uuid;
   
     function formatDate(dateString: string): string {
       const date = new Date(dateString);
@@ -28,6 +29,13 @@
   
     <!-- Autres métadonnées -->
     <div class="metadata-group">
+      <a
+      href={`https://github.com/automathproject/openyourmath/blob/main/static/content/latex/${uuid}.tex`}
+      target="_blank"
+      class="tex-link"
+    >
+      {uuid}.tex
+    </a>
       <span class="metadata-item">{metadata.auteur}</span>
       {#if metadata.organisation}
         <span class="metadata-separator">•</span>

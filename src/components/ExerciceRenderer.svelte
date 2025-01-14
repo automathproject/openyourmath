@@ -18,15 +18,14 @@
   let showHints = false;
   let isFullscreen = false;
   let showMetadata = true;
-  let contentKey = 0; // Nouvelle clé pour forcer le remontage
+  let contentKey = 0;
 
   function resetState() {
     showReponses = false;
     showHints = false;
-    contentKey++; // Incrémenter la clé pour forcer le remontage
+    contentKey++;
   }
 
-  // Reset l'état quand ExerciceData change
   $: if (ExerciceData) {
     resetState();
   }
@@ -96,6 +95,7 @@
         }}
       >
         <div class="header">
+          <!-- Section titre et métadonnées -->
           <div class="left-section">
             <div class="titre-container">
               <div class="titre">
@@ -122,45 +122,42 @@
                 </svg>
               </button>
             </div>
-      
-          {#if showMetadata}
-          <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme}/>
-          {/if} 
           </div>
 
+          <!-- Section droite avec le lien .tex et bouton plein écran -->
           <div class="right-section">
-            <div class="button-group">
-              <HintsToggleButton
-                showHints={showHints}
-                onToggle={toggleHints}
+            {#if isFullscreen}
+              <FontSizeToggleButton
+                isLargeFont={isLargeFont}
+                onToggle={toggleFontSize}
               />
-              <ReponsesToggleButton
-                showReponses={showReponses}
-                onToggle={toggleReponses} 
-              />
-            
-              {#if isFullscreen}
-                <FontSizeToggleButton
-                  isLargeFont={isLargeFont}
-                  onToggle={toggleFontSize}
-                />
-              {/if}
-            
-              <FullscreenToggleButton
-                isFullscreen={isFullscreen}
-                onToggle={toggleFullscreen}
-              />
-            </div>
+            {/if}
+            <FullscreenToggleButton
+              isFullscreen={isFullscreen}
+              onToggle={toggleFullscreen}
+            />
 
-            <a
-              href={`https://github.com/automathproject/openyourmath/blob/main/static/content/latex/${ExerciceData.uuid}.tex`}
-              target="_blank"
-              class="tex-link"
-            >
-              {ExerciceData.uuid}.tex
-            </a>
           </div>
         </div>
+
+        <!-- Nouvelle section pour les métadonnées et les boutons de contrôle -->
+        {#if showMetadata}
+        <div class="metadata-section">
+          <div class="metadata-content">
+            <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme} uuid={ExerciceData.uuid}/>
+          </div>
+          <div class="control-buttons">
+            <HintsToggleButton
+              showHints={showHints}
+              onToggle={toggleHints}
+            />
+            <ReponsesToggleButton
+              showReponses={showReponses}
+              onToggle={toggleReponses} 
+            />
+          </div>
+        </div>
+        {/if}
 
         <!-- Contenu de l'exercice -->
         {#each processedContenu as item (item.key)}
@@ -206,69 +203,66 @@
 </div>
 
 <style>
-  /* Layout de base */
   .exercice-wrapper {
     position: relative;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .exercice-wrapper.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* Fond avec flou */
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
-  overflow-y: auto;
-  /* Padding adaptatif */
-  padding: clamp(1rem, 5vw, 3rem);
-  /* Transition douce */
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: clamp(1rem, 5vw, 3rem);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.exercice {
-  padding: 1.5rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  background: white;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .exercice {
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.exercice.fullscreen {
-  max-width: min(900px, 90vw);
+  .exercice.fullscreen {
+  max-width: 750px;
   margin: 0 auto;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border-radius: 16px;
 }
 
-/* Ajout des styles pour petit écran */
-@media screen and (max-width: 640px) {
-  .exercice.fullscreen {
-    max-width: 100%;
-    margin: 0;
-    padding: 1rem;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .exercice-wrapper.fullscreen {
-    padding: 0;
-  }
-  
-}
-
-  /* Header et sections */
   .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     gap: 2rem;
+  }
+
+  .metadata-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+
+  .metadata-content {
+    flex: 1;
+  }
+
+  .control-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
   }
 
   .left-section {
@@ -277,177 +271,78 @@
 
   .right-section {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     gap: 0.5rem;
+    align-items: center;
   }
 
-  /* Titre */
   .titre-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.titre {
-  flex: 1;
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.3;
-}
-
-
-  /* Metadata */
-  .metadata {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.metadata-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  color: #6b7280;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  margin-top: 0.25rem; /* Alignement vertical avec le titre */
-}
-
-.metadata-toggle:hover {
-  color: #374151;
-  background-color: #f3f4f6;
-}
-
-.metadata-toggle svg {
-  transition: transform 0.3s ease;
-}
-
-.metadata-toggle svg.rotated {
-  transform: rotate(-180deg);
-}
-
-/* Groupe de metadata */
-.metadata-group {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
-.metadata-item {
-  color: #4b5563;
-  font-weight: 500;
-}
-
-.metadata-separator {
-  color: #9ca3af;
-}
-
-/* Responsive */
-@media screen and (max-width: 640px) {
-  .metadata {
-    gap: 0.5rem;
-    padding-bottom: 0.75rem;
-  }
-  
-
-  
-  .metadata-group {
-    font-size: 0.75rem;
-    gap: 0.5rem;
-  }
-}
-
-  .theme,
-  .auteur,
-  .organisation {
-    font-size: 1.2rem;
-  }
-
-  .date {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #555;
-    font-style: italic;
-  }
-
-  /* Boutons */
-  .button-group {
     display: flex;
+    align-items: flex-start;
     gap: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
-  .control-button {
-    display: inline-flex;
+  .titre {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 640px) {
+    .exercice.fullscreen {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+    .metadata-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .control-buttons {
+      margin-left: 0;
+    }
+
+    .right-section {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Rest of the styles remain the same... */
+  
+  .metadata-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #6b7280;
+    transition: all 0.2s ease;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    background: white;
-    color: #4a5568;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    height: 40px;
-    width: 40px;
+    border-radius: 4px;
+    margin-top: 0.25rem;
   }
 
-  .control-button:hover {
-    background: #f7fafc;
-    border-color: #cbd5e0;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  .metadata-toggle:hover {
+    color: #374151;
+    background-color: #f3f4f6;
   }
 
-  .control-button:active {
-    transform: translateY(0);
+  .metadata-toggle svg {
+    transition: transform 0.3s ease;
   }
 
-  .control-button.active {
-    background: #4a5568;
-    color: white;
-    border-color: #4a5568;
+  .metadata-toggle svg.rotated {
+    transform: rotate(-180deg);
   }
 
-  .fullscreen-button {
-    background: #2d3748;
-    color: white;
-    border-color: #2d3748;
-  }
-
-  .fullscreen-button:hover {
-    background: #1a202c;
-    border-color: #1a202c;
-  }
-
-  .answer-button {
-    background: #81b87a;
-    color: white;
-    border-color: #81b87a;
-  }
-
-  .answer-button:hover {
-    background: #17c700;
-    border-color: #17c700;
-  }
-
-  .answer-button.active {
-    background: #17c700;
-    border-color: #17c700;
-  }
-
-  /* Liens */
   .tex-link {
     text-decoration: none;
     font-size: 0.9rem;
@@ -455,7 +350,6 @@
     padding: 0.25rem 0;
   }
 
-  /* Contenu */
   .content {
     transform-origin: center top;
   }
@@ -480,24 +374,19 @@
     border-left: 4px solid #f1ee15;
   }
 
-/* Nouveau style pour la grande police */
-.large-font {
-  font-size: 150%;
-}
+  .large-font {
+    font-size: 150%;
+  }
 
-.large-font :global(.titre) {
-  font-size: 2.25rem;
-}
+  .large-font :global(.titre) {
+    font-size: 2.25rem;
+  }
 
-.large-font :global(.metadata-group) {
-  font-size: 1.3rem;
-}
+  .large-font :global(.metadata-group) {
+    font-size: 1.3rem;
+  }
 
-.large-font :global(.tag) {
-  font-size: 1.3rem;
-}
-
-
-
-
+  .large-font :global(.tag) {
+    font-size: 1.3rem;
+  }
 </style>
