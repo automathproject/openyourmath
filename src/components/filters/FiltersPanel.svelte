@@ -10,8 +10,8 @@
 
 <div class="card">
     <div class="card-header d-flex align-items-center gap-2">
-        <Filter size={20} />
-        <h4 class="mb-0">Filtres</h4>
+        <Filter size={16} />
+        <h5 class="mb-0">Filtres</h5>
     </div>
     <div class="card-body p-0">
         <!-- Liste des filtres -->
