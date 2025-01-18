@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-01-11",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:46.210Z"
+    "updatedAt": "2025-01-18T15:03:23.938Z"
   },
   "contenu": [
     {
-      "id": "de06e2d6-310c-4cce-9f12-c38d1e02c82e",
+      "id": "ee128d4f-4f24-45ef-9210-8a111cc84471",
       "type": "question",
       "value": {
         "latex": "Exprimer $\\mathbb{E}(Y)$ et $\\mathbb{E}(Y^2)$ en fonction de $n$ et $p$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "cb701080-a741-4320-bfc7-5fb8ef7a4f0f",
+      "id": "251a23c6-ccbd-48dd-9813-684ba5a9a75d",
       "type": "reponse",
       "value": {
         "latex": "On considère $Y = n\\overline{X} = \\sum_{i=1}^n X_i$ : par définition, $Y$ suit une loi binomiale $\\mathcal{B}(n,p)$, ce qui permet d'affirmer que $\\mathbb{E}(Y) = np$ et $V(Y) = np(1-p)$. Or on sait que $V(Y) = \\mathbb{E}(Y^2)-(\\mathbb{E}(Y))^2$, donc $\\mathbb{E}(Y^2) = np(1-p)+(np)^2 = np(1+p(n-1))$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "07043d18-b65f-44b1-9373-a6d072292d7e",
+      "id": "87786167-fb2a-4dff-89f8-b221251b8c69",
       "type": "question",
       "value": {
         "latex": "On pose $Z = \\overline{X}^2$. Peut-on dire que $Z$ est un estimateur sais biais de $p^2$ ?",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "d0489ba4-d5df-4321-8ec8-6ff7a9e712cc",
+      "id": "71ff18c4-ddad-4c3b-b9ae-595ac5bac24f",
       "type": "reponse",
       "value": {
         "latex": "En voyant la variable $Z$ comme un estimateur de $p^2$, on va calculer son biais $B(Z)=\\mathbb{E}(Z-p^2) = \\mathbb{E}(Z)-p^2$. Or $\\mathbb{E}(Z) = \\mathbb{E}\\left(\\left(\\frac{1}{n}Y\\right)^2\\right) = \\frac{1}{n^2}\\mathbb{E}(Y^2) = \\frac{p}{n} + p^2 \\frac{n-1}{n} \\neq p^2$ donc $B(Z) \\neq 0$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "9fda090f-d5e4-4d72-92b3-aad7a2a2f467",
+      "id": "6fa6fb01-d326-429f-b469-f6f93fca15f6",
       "type": "question",
       "value": {
         "latex": "On pose $T = \\frac{Y(Y-1)}{n(n-1)}$. Vérifier que $T$ est un estimateur sans biais de $p^2$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "31303064-81cc-4d9b-8f2b-cf5fd9beb355",
+      "id": "89738448-b63d-42a6-922d-e2bdcb7128b0",
       "type": "reponse",
       "value": {
         "latex": "En revanche, $\\mathbb{E}(T) = \\frac{1}{n(n-1)}\\mathbb{E}(Y(Y-1)) = \\frac{1}{n(n-1)}(np(1+(n-1)p)-np) = p^2$ donc $T$ est un estimateur non biaisé de la valeur $p^2$.",

@@ -31,17 +31,25 @@ function generateUniqueId() {
  * @returns {Promise<{modifiedLatex: string, tikzMap: Map<string, string>}>}
  */
 async function preprocessTikzBlocks(latex) {
-  const tikzMap = new Map();
-  const blocks = await extractAndConvertTikzBlocks(latex);
-  let modifiedLatex = latex;
+  try {
+    const blocks = await extractAndConvertTikzBlocks(latex);
+    let modifiedLatex = latex;
+    const tikzMap = new Map();
 
-  for (const block of blocks) {
-    const id = `__TIKZ_${generateUniqueId()}__`;
-    tikzMap.set(id, block.svg);
-    modifiedLatex = modifiedLatex.replace(block.original, id);
+    for (const block of blocks) {
+      if (block && block.original) {
+        const id = `__TIKZ_${generateUniqueId()}__`;
+        tikzMap.set(id, block.svg);
+        modifiedLatex = modifiedLatex.replace(block.original, id);
+      }
+    }
+
+    return { modifiedLatex, tikzMap };
+  } catch (error) {
+    console.error('Erreur lors du prétraitement des blocs TikZ:', error);
+    // En cas d'erreur, retourner le LaTeX original sans modification
+    return { modifiedLatex: latex, tikzMap: new Map() };
   }
-
-  return { modifiedLatex, tikzMap };
 }
 
 /**

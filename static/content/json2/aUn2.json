@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-09-28",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:51.308Z"
+    "updatedAt": "2025-01-18T15:03:41.437Z"
   },
   "contenu": [
     {
-      "id": "f880c1eb-afa0-494c-9d30-5b89ed198328",
+      "id": "9fc3f91f-ca92-4d00-b04f-1bc406b7b86e",
       "type": "description",
       "value": {
         "latex": "Désirant juger le travail d'un ouvrier ajusteur, un chef d'atelier prélève un échantillon de 50 pièces métalliques dans sa production. On note $X$ l'épaisseur de ses pièces. L'objectif est d'avoir $\\EX = 5~mm$. Les résultats des mesures sur cet échantillon sont portés dans le tableau suivant :\n\t\\begin{center}\t\n\t\\begin{tabular}{|c|c|c|c|c|}\n\t\t\\hline $n_i$ & 5 & 15 & 20 & 10 \\\\ \n\t\t\\hline $x_i$ en mm & 4.8 & 4.9 & 5.0 & 5.1 \\\\ \n\t\t\\hline \n\t\\end{tabular} \n\t\\end{center}",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "bff97f99-fd14-4139-a145-de8f60906b43",
+      "id": "5b871c38-e742-4ac6-9ef2-2c00864f66e0",
       "type": "question",
       "value": {
         "latex": "Cette vérification permet-elle de conclure que le résultat est conforme aux exigences, au seuil de confiance de $99\\%$ ?",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "06a06a14-4ccd-4cee-8bea-3883bf626604",
+      "id": "b74829a3-377b-45fa-a021-fbf5a3322102",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\t\\bar{x} & = \\frac{1}{50} \\sum_{i=1}^4 n_i x_i \\\\\n\t\t\t& = \\frac{1}{50} (5 \\times 4.8 + 15 \\times 4.9 + 20 \\times 5.0 + 10 \\times 5.1) \\\\\n\t\t\t& = 4.98 \\\\\n\t\t\\end{align*}$$\n\t\tdonc une estimation sans biais de l'épaisseur moyenne des pièces est $\\bar{x} = 4.98~mm$. \n\n\t\tDe plus, la variance observée dans cet échantillon est : \n\t\t$$\\begin{align*}\n\t\t\t\\sigma^2 & = \\frac{1}{50} \\sum_{i=1}^4 n_i (x_i - \\bar{x})^2 \\\\\n\t\t\t& = \\frac{1}{50} (5 \\times (4.8 - 4.98)^2 + 15 \\times (4.9 - 4.98)^2 + 20 \\times (5.0 - 4.98)^2 + 10 \\times (5.1 - 4.98)^2) \\\\\n\t\t\t& = 0.081 \\\\\n\t\t\\end{align*}$$\n\t\tdonc une estimation sans biais de la variance de l'épaisseur des pièces est $s^2 = \\frac{50}{49} \\sigma^2 = 0.083$.\n\n\t\tOn réalise le test d'hypothèse suivant :\n\t\t$$\\begin{align*}\n\t\t\tH_0 &: \\EX = 5 \\\\\n\t\t\tH_1 &: \\EX \\neq 5\n\t\t\\end{align*}$$\n\t\tavec un risque de première espèce de $1\\%$. \n\n\t\tLa variable de décision est $Z = \\frac{\\bar{X} - 5}{\\frac{S}{\\sqrt{n}}} \\sim \\mathcal{N}(0,1)$.\t\n\t\t\n\t\tOn fait un test bilatéral, donc on rejette $H_0$ si $|Z| > z_{\\frac{\\alpha}{2}} = 2.58$ par lecture de la table de la loi normale. Or la valeur observée est $Z_{obs} = \\frac{4.98 - 5}{\\frac{\\sqrt{0.083}}{\\sqrt{50}}} = -2{,}33$. Donc on ne rejette pas $H_0$. On peut donc conclure que le résultat est conforme aux exigences, au seuil de confiance de $99\\%$.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "554c896e-7cf6-4345-95f4-4e601f053fbd",
+      "id": "9c6b1138-e357-4c73-b5c3-b4f2cfac1385",
       "type": "question",
       "value": {
         "latex": "Quel risque de première espèce devrait-on prendre pour que la prise de décision soit différente ?",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "ed3f6f0a-d4c0-416d-ab39-d976f6710ce6",
+      "id": "afa72752-3c17-429e-ae68-6ed955e424b8",
       "type": "reponse",
       "value": {
         "latex": "Pour que la prise de décision soit différente, il faudrait que la valeur critique soit $2.33$, ce qui correspond, par lecture de table, à un risque de première espèce de $1.98\\%$.",

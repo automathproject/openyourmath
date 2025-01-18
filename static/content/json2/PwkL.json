@@ -9,11 +9,11 @@
     "auteur": "Maxime NGUYEN",
     "createdAt": "2022-10-04",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:43.960Z"
+    "updatedAt": "2025-01-18T15:03:20.026Z"
   },
   "contenu": [
     {
-      "id": "ef577c20-f818-4f36-8dac-e99f10659356",
+      "id": "9dda95ac-47c1-4c01-a3c3-3fb292137d63",
       "type": "description",
       "value": {
         "latex": "On considère un échantillon $X_1,...,X_n$ suivant une loi normale $\\mathcal{N}(\\mu,\\sigma^2)$. On cherche un estimateur de $\\mu$ et de $\\sigma$ par la méthode du maximum de vraisemblance. On note $(x_1,...,x_n)$ une réalisation de cet échantillon. On rappelle que la densité d'une loi normale est $$f(x)=\\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "4456279b-94a6-428c-9d01-5eb99cf228c7",
+      "id": "a7fbc4ed-d9c8-4777-a970-459efbc9c5b3",
       "type": "question",
       "value": {
         "latex": "Exprimer la fonction de vraisemblance $L(x_1,...,x_n,\\mu,\\sigma)$, puis son logarithme.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "3e418669-fc0b-4814-a9ce-d8d4cb9a2f8c",
+      "id": "cee890f4-f13a-4ec3-93ab-2ab5d4f00d46",
       "type": "reponse",
       "value": {
         "latex": "$$L(x_1,...,x_n,\\mu,\\sigma) = \\prod_{i=1}^n f(x_i) = \\prod_{i=1}^n \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}$$\n\t\t$$\\ln L(x_1,...,x_n,\\mu,\\sigma) = \\sum_{i=1}^n \\ln \\left(\\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{(x_i-\\mu)^2}{2\\sigma^2}}\\right) = -n\\ln(\\sigma \\sqrt{2\\pi}) - \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{2\\sigma^2}$$",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "9ac3a489-65d5-4ec9-a922-49d9b4ca18c3",
+      "id": "0fcef410-350d-4d2e-b722-ee82f628766b",
       "type": "question",
       "value": {
         "latex": "Dériver $\\ln L(x_1,...,x_n,\\mu,\\sigma)$ par rapport à $\\mu$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "6c30ce64-5df0-4e71-b5e5-02dcf7faa1ce",
+      "id": "886dac31-4d47-43b6-9416-64cf12c409a2",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\mu} = \\sum_{i=1}^n \\frac{x_i-\\mu}{\\sigma^2}$$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "bd4562b8-7d94-4694-9f2f-28d6c923cab1",
+      "id": "027abef7-b4dc-4a97-aa80-e0aaa33b6923",
       "type": "question",
       "value": {
         "latex": "En déduire un estimateur de $\\mu$.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "9604971f-fdab-4a10-8c80-23157d8093c1",
+      "id": "62696285-ea0a-45a2-9274-845d3c57c8f9",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\mu} = 0 \\Leftrightarrow \\sum_{i=1}^n \\frac{x_i-\\mu}{\\sigma^2} = 0 \\Leftrightarrow \\sum_{i=1}^n x_i - n\\mu = 0 \\Leftrightarrow \\mu = \\frac{1}{n}\\sum_{i=1}^n x_i$$\n\t\tdonc $\\hat{\\mu} = \\frac{1}{n}\\sum_{i=1}^n x_i$ est un estimateur de $\\mu$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "8bc0c4f8-4f6e-49fe-b950-4a7b69a37cac",
+      "id": "ef338c2f-26aa-4243-9d16-28c6a4b99a1b",
       "type": "question",
       "value": {
         "latex": "Déterminer un estimateur de $\\sigma$ avec une démarche analogue.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "59832793-8190-47dd-ae84-09b6901be90d",
+      "id": "cb92e8a3-5d2a-468a-a404-bc52908b1af8",
       "type": "reponse",
       "value": {
         "latex": "$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\sigma} = \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{\\sigma^3} - \\frac{n}{\\sigma}$$\n\t\t$$\\frac{\\partial \\ln L(x_1,...,x_n,\\mu,\\sigma)}{\\partial \\sigma} = 0 \\Leftrightarrow \\sum_{i=1}^n \\frac{(x_i-\\mu)^2}{\\sigma^3} - \\frac{n}{\\sigma} = 0 \\Leftrightarrow \\sum_{i=1}^n (x_i-\\mu)^2 = n\\sigma^2$$\n\t\t$$\\Leftrightarrow \\sigma^2 = \\frac{1}{n}\\sum_{i=1}^n (x_i-\\mu)^2$$\n\t\tdonc $\\hat{\\sigma} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n (x_i-\\mu)^2}$ est un estimateur de $\\sigma$.",

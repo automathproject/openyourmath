@@ -9,11 +9,11 @@
     "auteur": "Maxime NGUYEN",
     "createdAt": "2024-12-02",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:34.333Z"
+    "updatedAt": "2025-01-18T15:02:55.044Z"
   },
   "contenu": [
     {
-      "id": "70631158-c982-45f2-a62a-5c7aa072e483",
+      "id": "83e6d9e4-4fcf-4267-a06b-1693f9fbde49",
       "type": "description",
       "value": {
         "latex": "Vous allez travailler avec un réseau de neurones à une couche cachée, conçu pour effectuer une tâche de prédiction simple. \n\t\n\t\n\t\n\t\\textbf{Description du réseau}\n\t\n\t\\begin{itemize}\n\t\t\\item \\textbf{Entrée :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\( x \\in \\mathbb{R} \\) (scalaire)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Couche cachée (2 neurones) :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Neurone caché 1 :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_1 = 0{,}15 \\)\n\t\t\t\t\\item Biais : \\( b_1 = 0{,}35 \\)\n\t\t\t\\end{itemize}\n\t\t\t\\item \\textbf{Neurone caché 2 :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_2 = 0{,}20 \\)\n\t\t\t\t\\item Biais : \\( b_2 = 0{,}35 \\)\n\t\t\t\\end{itemize}\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Couche de sortie (1 neurone) :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Neurone de sortie :}\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Poids : \\( w_3 = 0{,}40 \\) (connecté au neurone caché 1)\n\t\t\t\t\\item Poids : \\( w_4 = 0{,}45 \\) (connecté au neurone caché 2)\n\t\t\t\t\\item Biais : \\( b_3 = 0{,}60 \\)\n\t\t\t\\end{itemize}\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Fonctions d'activation :}\n\t\t\\begin{itemize}\n\t\t\t\\item Fonction sigmoïde : \\( \\sigma(z) = \\dfrac{1}{1 + e^{-z}} \\)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Fonction de coût :}\n\t\t\\begin{itemize}\n\t\t\t\\item Erreur quadratique moyenne : \\( E = \\dfrac{1}{2}(y - \\hat{y})^2 \\)\n\t\t\\end{itemize}\n\t\t\n\t\t\\item \\textbf{Données :}\n\t\t\\begin{itemize}\n\t\t\t\\item \\textbf{Entrée :} \\( x = 0{,}05 \\)\n\t\t\t\\item \\textbf{Sortie cible :} \\( y = 0{,}01 \\)\n\t\t\\end{itemize}\n\t\\end{itemize}",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "1162a3a6-0966-4d1f-9fdf-b5e42edd4fca",
+      "id": "a8d25b9b-f967-4021-bbd0-4224b2fb4c19",
       "type": "question",
       "value": {
         "latex": "Calculer les sorties des neurones de la couche cachée (\\( h_1 \\) et \\( h_2 \\)).",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d6ef9ab2-5138-42c6-800e-43401d5bf937",
+      "id": "1785f607-5971-4271-a6bf-b71f3679b70c",
       "type": "indication",
       "value": {
         "latex": "",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "154645df-f2f6-4849-aa2b-ac4d78e7e1f4",
+      "id": "eca0b8c9-66dc-4dcb-8300-4e4c06f340e1",
       "type": "reponse",
       "value": {
         "latex": "Neurone caché 1 : \n    \t$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_{h1} = w_1 \\cdot x + b_1 \\\\\n    \t& net_{h1} = 0{,}15 \\times 0{,}05 + 0{,}35 = 0{,}3575 \\\\\n    \t\\text{Sortie : } & h_1 = \\sigma(net_{h1}) = \\dfrac{1}{1 + e^{-0{,}3575}} \\approx 0{,}5889\n    \t\\end{align*}$$\n    \t\n    \t\n    \tNeurone caché 2 :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_{h2} = w_2 \\cdot x + b_2 \\\\\n    \t& net_{h2} = 0{,}20 \\times 0{,}05 + 0{,}35 = 0{,}36 \\\\\n    \t\\text{Sortie : } & h_2 = \\sigma(net_{h2}) = \\dfrac{1}{1 + e^{-0{,}36}} \\approx 0{,}5890\n    \t\\end{align*}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "d1c45c27-e317-4010-bb66-bb04d7b7131d",
+      "id": "68e70097-1c32-4942-8dde-48031b6dc2a3",
       "type": "question",
       "value": {
         "latex": "Calculer la sortie du neurone de sortie (\\( \\hat{y} \\)).",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "37bbc80d-4431-437a-a133-75b538c68288",
+      "id": "41843a90-196f-49a4-aae3-0b4cbf4d338f",
       "type": "indication",
       "value": {
         "latex": "",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "0281eef0-d32a-434f-a0cd-c743e89dd971",
+      "id": "a35ba7b0-7d0e-4983-a05d-d37a8ce9b269",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n    \t\\text{Entrée nette : } & net_o = w_3 \\cdot h_1 + w_4 \\cdot h_2 + b_3 \\\\\n    \t& net_o = 0{,}40 \\times 0{,}5889 + 0{,}45 \\times 0{,}5890 + 0{,}60 \\\\\n    \t& net_o = 0{,}2356 + 0{,}2650 + 0{,}60 = 1{,}1006 \\\\\n    \t\\text{Sortie : } & \\hat{y} = \\sigma(net_o) = \\dfrac{1}{1 + e^{-1{,}1006}} \\approx 0{,}7507\n    \t\\end{align*}$$",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "abef16f6-d96e-4db4-a940-47cda9ec1889",
+      "id": "3a8ae5eb-2dee-4625-ab52-ca706434715f",
       "type": "question",
       "value": {
         "latex": "Calculer l'erreur du réseau en utilisant la fonction de coût.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "94ba4d92-0407-464d-8c8d-fe6133f82ac9",
+      "id": "d0440aae-5453-4165-bb81-abd3332ddef9",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n    \tE = \\dfrac{1}{2}(y - \\hat{y})^2 = \\dfrac{1}{2}(0{,}01 - 0{,}7507)^2 = \\dfrac{1}{2}(-0{,}7407)^2 \\approx 0{,}2741\n    \t\\end{align*}$$",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "a4306640-e55d-4691-9bca-6655c7c7529e",
+      "id": "2b2a25d2-edcc-44a2-9891-a424cc7fe2ff",
       "type": "question",
       "value": {
         "latex": "Calculer les gradients des poids \\( w_3 \\) et \\( w_4 \\) de la couche de sortie  les gradients des poids \\( w_1 \\) et \\( w_2 \\) de la couche cachée.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "ceeb7c89-c071-436e-a398-4878b7e062b5",
+      "id": "807f2af2-0f8d-4139-966d-00d163668ae0",
       "type": "reponse",
       "value": {
         "latex": "Calcul de l'erreur locale au neurone de sortie (\\( \\delta_o \\)) :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\delta_o = \\dfrac{\\partial E}{\\partial net_o} = \\dfrac{\\partial E}{\\partial \\hat{y}} \\cdot \\dfrac{\\partial \\hat{y}}{\\partial net_o} \\\\\n    \t\\dfrac{\\partial E}{\\partial \\hat{y}} = \\hat{y} - y = 0{,}7507 - 0{,}01 = 0{,}7407 \\\\\n    \t\\dfrac{\\partial \\hat{y}}{\\partial net_o} = \\hat{y}(1 - \\hat{y}) = 0{,}7507 \\times 0{,}2493 \\approx 0{,}1875 \\\\\n    \t\\delta_o = 0{,}7407 \\times 0{,}1875 \\approx 0{,}1389\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\dfrac{\\partial E}{\\partial w_3} = \\delta_o \\cdot h_1 = 0{,}1389 \\times 0{,}5889 \\approx 0{,}0817 \\\\\n    \t\\dfrac{\\partial E}{\\partial w_4} = \\delta_o \\cdot h_2 = 0{,}1389 \\times 0{,}5890 \\approx 0{,}0818\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids \\( w_1 \\) et \\( w_2 \\)\n    \t\n    \tCalcul des erreurs locales aux neurones cachés (\\( \\delta_{h1} \\) et \\( \\delta_{h2} \\)) :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\delta_{h1} = \\delta_o \\cdot w_3 \\cdot h_1 (1 - h_1) \\\\\n    \t& = 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times (1 - 0{,}5889) \\\\\n    \t& \\approx 0{,}1389 \\times 0{,}40 \\times 0{,}5889 \\times 0{,}4111 \\approx 0{,}0134 \\\\\n    \t\\delta_{h2} = \\delta_o \\cdot w_4 \\cdot h_2 (1 - h_2) \\\\\n    \t& = 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times (1 - 0{,}5890) \\\\\n    \t& \\approx 0{,}1389 \\times 0{,}45 \\times 0{,}5890 \\times 0{,}4110 \\approx 0{,}0150\n    \t\\end{align*}$$\n    \t\n    \t\n    \tCalcul des gradients des poids :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \t\\dfrac{\\partial E}{\\partial w_1} = \\delta_{h1} \\cdot x = 0{,}0134 \\times 0{,}05 \\approx 0{,}0007 \\\\\n    \t\\dfrac{\\partial E}{\\partial w_2} = \\delta_{h2} \\cdot x = 0{,}0150 \\times 0{,}05 \\approx 0{,}0008\n    \t\\end{align*}$$",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "id": "4d1ddc53-e63e-4c8b-9532-4164a0ee1e3e",
+      "id": "ffc08024-d065-4d54-ad97-3df8a17e3db3",
       "type": "question",
       "value": {
         "latex": "Avec un taux d'apprentissage \\( \\eta = 0{,}5 \\), mettre à jour tous les poids du réseau.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "32fda220-411a-4e66-8bd8-b55326ac5fcb",
+      "id": "4a4cb5f6-7616-4714-9fc0-221939114217",
       "type": "reponse",
       "value": {
         "latex": "Avec \\( \\eta = 0{,}5 \\) :\n    \t\n    \t- Mise à jour des poids de la couche de sortie :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \tw_3^{\\text{nouveau}} = w_3^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_3} = 0{,}40 - 0{,}5 \\times 0{,}0817 = 0{,}3592 \\\\\n    \tw_4^{\\text{nouveau}} = w_4^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_4} = 0{,}45 - 0{,}5 \\times 0{,}0818 = 0{,}4091\n    \t\\end{align*}$$\n    \t\n    \t\n    \t- Mise à jour des poids de la couche cachée :\n    \t\n    \t\n    \t$$\\begin{align*}\n    \tw_1^{\\text{nouveau}} = w_1^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_1} = 0{,}15 - 0{,}5 \\times 0{,}0007 = 0{,}1497 \\\\\n    \tw_2^{\\text{nouveau}} = w_2^{\\text{ancien}} - \\eta \\dfrac{\\partial E}{\\partial w_2} = 0{,}20 - 0{,}5 \\times 0{,}0008 = 0{,}1996\n    \t\\end{align*}$$",

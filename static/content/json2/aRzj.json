@@ -11,11 +11,11 @@
     "auteur": "",
     "createdAt": "2023-01-11",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:51.230Z"
+    "updatedAt": "2025-01-18T15:03:41.328Z"
   },
   "contenu": [
     {
-      "id": "a2475f9a-685c-498c-af0a-7288cba21e63",
+      "id": "a4700d6a-cf46-40a2-a29c-567570043665",
       "type": "description",
       "value": {
         "latex": "Soient $\\theta$ un réel strictement positif et $X_1, X_2, \\ldots, X_n$ un échantillon dont la loi mère a pour densité la fonction $f$ définie sur $\\R$ par : $$f \\colon x \\mapsto \\frac{1}{\\theta^2} x e^{-\\frac{x}{\\theta}} {\\textbf{1}}_{]0;+\\infty[}(x)$$.",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "ac3332db-cbdb-4ba0-8f8e-53942cdf4851",
+      "id": "88bd22c7-2285-443b-8a33-2813ad069601",
       "type": "question",
       "value": {
         "latex": "Déterminer un estimateur de $\\theta$ issu de la méthode du maximum de vraisemblance.",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "0d7fc6b4-3883-4258-8778-b01d87a1cbca",
+      "id": "6596d844-1762-4653-ae88-7c5b4a7a9cb8",
       "type": "reponse",
       "value": {
         "latex": "On définit un échantillon $(X_1,...,X_n)$ de cette loi et on considère une réalisation quelconque $(x_1,...,x_n)$ de cet échantillon. Le support de la loi étant l'intervalle $]0;+\\infty[$, on peut supposer que pour tout $i$, $x_i > 0$. \n\t\t\n\t\tOn exprime maintenant la log vraisemblance de cet échantillon : \n\t\t$$\\begin{align*}\n\t\t\\ln \\mathcal{L}(x_1,...,x_n,\\theta) &= \\ln \\prod_{i=1}^n f(x_i) \\\\\n\t\t&= -2n \\ln(\\theta) + \\sum_{i=1}^{n} \\ln(x_i) -\\frac{1}{\\theta} \\sum_{i=1}^{n} x_i \\\\\n\t\t\\frac{\\partial \\ln \\mathcal{L}}{\\partial \\theta}(x_1,...,x_n,\\theta) = 0 &\\iff \\theta = \\frac{1}{2 n} \\sum_{i=1}^n x_i \\\\\n\t\t\\frac{\\partial^2 \\ln \\mathcal{L}}{\\partial \\theta^2}(x_1,...,x_n,\\theta) &= \\frac{2n}{\\theta^2} - \\frac{2}{\\theta^3} \\sum_{i=1}^n x_i\n\t\t\\end{align*}$$\n\tEn posant $\\theta_0 = \\frac{1}{2 n} \\sum_{i=1}^n x_i$, on a :\n\t$$\\begin{align*}\n\t\t\\frac{\\partial^2 \\ln \\mathcal{L}}{\\partial \\theta^2}(x_1,...,x_n,\\theta_0) &= \\frac{2}{\\theta_0} \\left(\\frac{n}{\\theta_0} - \\frac{1}{\\theta_0} \\times (2n)\\right) \\\\\n\t\t&= \\frac{-2n}{\\theta_0^2} < 0\n\t\\end{align*}$$\nDonc la fonction $\\theta \\mapsto \\ln \\mathcal{L}(x_1,...,x_n,\\theta)$ admet bien un maximum en $\\theta = \\theta_0$ pour tout $x_1,...,x_n$. On en déduit un estimateur de $\\theta$ : \t \\fbox{$\\hat{\\theta}=\\frac{1}{2 n} \\sum_{i=1}^n X_i$}.",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "id": "2c2afba0-030f-4892-94fa-d8027c026ea1",
+      "id": "1ac78428-c986-4f79-b701-d83f6d7288f3",
       "type": "question",
       "value": {
         "latex": "Déterminer le biais de cet estimateur.  \\\\(Indication : on admet que pour tout $n \\in \\N$, $\\int_0^{+\\infty} x^n e^{-x} \\, \\mathrm{d}x = n!$.)",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": "bfea9c3d-4654-4a5b-b73f-f73a8ed9acfc",
+      "id": "8ebdeb8d-0e61-4c01-a182-d2634c383559",
       "type": "reponse",
       "value": {
         "latex": "On calcule l'espérance de cette loi : \n$$\\begin{align*}\n\\E(X_1) &= \\int xf(x)dx \\\\\n        &= \\int_0^{+\\infty} \\frac{x^2}{\\theta^2}e^{-\\frac{x}{\\theta}} dx \\\\\n        &= \\theta \\int_0^{+\\infty} {u^2}e^{-u} du \\\\\n        &= 2 \\theta \n\\end{align*}$$\t\nDonc par linéarité, l'espérance de $\\hat{\\theta}$ est $$\\E\\left(\\hat{\\theta}\\right) = \\frac{1}{2n} \\times n \\times 2 \\theta = \\theta$$\ndonc le biais de $\\hat{\\theta}$ est $$B(\\hat{\\theta}) = \\E(\\hat{\\theta} - \\theta) = 0$$",

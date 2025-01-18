@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-03-02",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:18:07.721Z"
+    "updatedAt": "2025-01-18T15:05:52.946Z"
   },
   "contenu": [
     {
-      "id": "129268bf-1348-492f-b5a3-e8e2452bb4a5",
+      "id": "cc0c6eb2-e9ab-467a-8051-ed75cb0da612",
       "type": "description",
       "value": {
         "latex": "Soit $A \\in \\mathcal{M}_N(\\R)$ une matrice réelle symétrique définie positive et $b\\in \\R^N$. On note $\\rho(A)$ le rayon spectral de la matrice $A$.  Pour résoudre le système \n$$Ax=b$$\non considère la suite définie par $x_0 \\in \\R^N$ et $\\sigma \\in \\R$ :\n$$x_{n+1} = x_n - \\sigma(Ax_n-b)$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "c6f4586a-6c66-468a-b4e6-fb584e6226ac",
+      "id": "b954bd2c-d34d-4f51-bedb-776819494bb0",
       "type": "question",
       "value": {
         "latex": "Montrer que la méthode converge vers la solution $x$ du système si et seulement si :\n\t$$0 < \\sigma < \\frac{2}{\\rho(A)}$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "4d468074-5ca0-421e-976c-a20df776f20c",
+      "id": "7b55a489-ceaf-468d-ae3a-5422885b3045",
       "type": "reponse",
       "value": {
         "latex": "On vérifie dans un premier temps que si la méthode converge vers un vecteur $y \\in \\R^n$, alors $y$ vérifie $y=y-\\sigma(Ay-b) \\iff Ay=b$ à condition que $\\sigma \\neq 0$.\n\t\t\n\t\tPour que la méthode converge, le cours dit qu'il est nécessaire et suffisant que la matrice d'itération $B$ vérifie $\\rho(B)<1$. Ici, $B = I-\\sigma A$, le spectre de $B$ est $sp(B) = \\{1- \\sigma\\lambda \\mid \\lambda \\in sp(A)\\}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "f93f3b52-c0c4-46f0-9531-c483214e1416",
+      "id": "950eeeff-c539-49e7-84c9-3913ca9d5551",
       "type": "question",
       "value": {
         "latex": "Comment choisir $\\sigma$ pour que optimiser la vitesse de convergence de cette méthode ? Exprimer le résultat en fonction de $\\rho(A)$ et $\\rho(A^{-1})$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "02046bef-457c-4e59-ac1f-a5ea0051f70a",
+      "id": "0e818989-da0a-4b86-9e6d-29ff61f865bb",
       "type": "reponse",
       "value": {
         "latex": "On cherche $\\sigma$ tel que $\\rho(B)$ soit minimal. Or $\\rho(B) = \\max_i|1-\\sigma\\lambda_i|$. On sait que les valeurs propres de $A$ sont strictement positives, on peut les ranger dans l'ordre croissant $0 < \\lambda _1 \\leq ... \\leq \\lambda _n$, ce qui permet d'affirmer que $\\rho(B) = \\max\\{1-\\sigma \\lambda_1 ; \\sigma \\lambda_n -1 \\}$. \\'Etant donné que cette  fonction est décroissante jusqu'au point $\\sigma$ tel que $1-\\sigma \\lambda_1 = \\sigma \\lambda_n-1$, puis croissante au delà, la solution est $\\sigma = \\frac{2}{\\lambda_1+\\lambda_n}$. Or $\\lambda_1 = \\frac{1}{\\rho(A^{-1})}$ et $\\lambda_n = \\rho(A)$ d'où  \n\t\t$$\\sigma = \\frac{2}{\\frac{1}{\\rho(A^{-1})} + \\rho(A)}$$",

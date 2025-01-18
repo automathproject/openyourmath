@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-09-13",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:58.013Z"
+    "updatedAt": "2025-01-18T15:04:09.951Z"
   },
   "contenu": [
     {
-      "id": "27d47d68-67b8-477a-9f75-1a391d96f151",
+      "id": "a2cddbd6-b9ae-4730-8695-9e2701e2823c",
       "type": "description",
       "value": {
         "latex": "Soit $\\lambda>0$ et $X$ une variable aléatoire admettant pour densité $f(x)=\\lambda e^{-\\lambda x}1_{[0;+\\infty[}(x)$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "96382bff-1176-406b-86b9-da5c636f525b",
+      "id": "fad57c84-3ed9-40ff-8e68-04b505c5598a",
       "type": "question",
       "value": {
         "latex": "Vérifier que $f$ définit bien une fonction densité, puis déterminer la fonction de répartition $F_X$ de $X$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "d3456cde-f77b-45e4-8a26-fac447aad6ce",
+      "id": "5991d022-a979-45b3-8f83-011483bf1472",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de vérifier que $f(x) \\geq 0$ pour tout $x \\in \\R$ puis de calculer :\n        $$\\begin{align*}\n        \\int_{-\\infty}^{+\\infty} f(x)dx &= \\int_0^{+\\infty} \\lambda e^{-\\lambda x} dx \\\\\n                                       &= \\left[-e^{-\\lambda x}\\right]_0^{+\\infty} \\\\\n                                       &= 1\n        \\end{align*}$$\n   On détermine maintenant la fonction de répartition : soit $t \\in \\R$ ;\n   \\begin{itemize}\n       \\item si $t<0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^t 0 dx = 0$ ;\n       \\item si $t \\geq 0$, alors $F_X(t) = \\int_{-\\infty}^t f(x)dx = \\int_{-\\infty}^0 0 dx + \\int_0^t \\lambda e^{-\\lambda x} dx = 0 + \\left[-e^{-\\lambda x}\\right]_0^t = 1 - e^{-\\lambda t}$.\n   \\end{itemize}",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "81dba11b-9f4f-4f78-a67c-4e804596fa04",
+      "id": "fcbb2ccf-5d4f-4816-bd94-70573d1f3c05",
       "type": "question",
       "value": {
         "latex": "Exprimer $\\prob(-1 \\leq X \\leq 1)$ en fonction de $F_X$ et en déduire une valeur numérique.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "6ddf7f78-6293-4691-8ad5-087678576ae4",
+      "id": "c33aa317-73d4-4e1d-a93c-419be5fd1bc6",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n            \\prob(-1 \\leq X \\leq 1) &= F_X(1) - F_X(-1) \\\\\n                                    &= (1-e^{-\\lambda}) - 0 \\\\\n                                    &= 1-e^{-\\lambda}\n        \\end{align*}$$",

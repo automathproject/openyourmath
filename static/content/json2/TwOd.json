@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-09-22",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:46.652Z"
+    "updatedAt": "2025-01-18T15:03:24.557Z"
   },
   "contenu": [
     {
-      "id": "827352d7-91b9-4c19-be66-923256cf5dd8",
+      "id": "1ea3a528-dd16-4138-afd5-6e50db44383b",
       "type": "description",
       "value": {
         "latex": "Soit $a \\in \\mathbb{R}$ et $(X,Y)$ un couple de variables aléatoires admettant une densité $f$ définie par \n\t$$f(x,y)= a(x+y)  \\textbf{1}_{[0;1]}(x) \\textbf{1}_{[0;1]}(y)$$",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "f1520182-c15c-4667-9a3a-98893c107e8d",
+      "id": "44acbb48-f7d2-4a49-a748-2d23def6cf53",
       "type": "question",
       "value": {
         "latex": "Déterminer $a$.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "d5c60609-7423-46ea-9d56-373c95a3f347",
+      "id": "f525dd14-7124-48b7-9427-1a449fd01fef",
       "type": "reponse",
       "value": {
         "latex": "On calcule $\\int_0^1 \\int_0^1(x+y)dxdy = \\int_0^1 xdx\\int_0^1 dy + \\int_0^1 dx\\int_0^1 ydy = \\frac{1}{2} \\times 1 + 1 \\times \\frac{1}{2} = 1$ donc il faut $a=1$.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "301ec26a-1f1e-411e-a562-f17cc0ad8e4c",
+      "id": "42eed5a3-77b8-4649-8a79-9eb82fa51e4b",
       "type": "question",
       "value": {
         "latex": "Déterminer les lois marginales du couple $(X,Y)$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "a40127fa-1b03-4e72-8e2c-cb7e57e74a05",
+      "id": "57482420-42b0-4459-b221-f489f3143f68",
       "type": "reponse",
       "value": {
         "latex": "On détermine les densités marginales $f_X$ et $f_Y$ à partir de la densité $f$ du couple de variables : \n\t\t$f_X(x) = \\int f(x,y)dy = 1_{[0;1]}(x)\\left[xy+\\frac{y^2}{2} \\right]_0^1 =  1_{[0;1]}(x) \\left(x+\\frac{1}{2}\\right)$. De même, $f_Y(y) = 1_{[0;1]}(y) \\left(y+\\frac{1}{2}\\right)$",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "30d243f3-d4b7-4916-a286-39ef9d0f01fc",
+      "id": "d7ce253e-e430-4487-afa9-e405d44b2efc",
       "type": "question",
       "value": {
         "latex": "Calculer $\\mathbb{E}(X)$, $\\sigma^2(X)$, $\\mathbb{E}(Y)$, $\\sigma^2(Y)$, $cov(X,Y)$.",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "77c7bfd3-58bc-4acf-93f8-0136c735f01f",
+      "id": "e56a074e-704f-4db3-bda2-361501119041",
       "type": "reponse",
       "value": {
         "latex": "On utilise les densités marginales : \n\t\t$\\mathbb{E}(X) = \\int xf_X(x)dx = \\int_0^1 \\left(x^2+\\frac{x}{2}\\right)dx = \\frac{7}{12}$. De même, $\\mathbb{E}(Y) = \\frac{7}{12}$. \n\t\t\n\t\t\n\t\t\n\t\t\n\t\tPar théorème de transfert, $\\mathbb{E}(X^2) = \\int x^2f_X(x)dx = \\int_0^1 x^3+ \\frac{x^2}{2} dx = \\frac{1}{4}+\\frac{1}{6} = \\frac{5}{12}$. De même, $\\mathbb{E}(Y^2)=\\frac{5}{12}$. \n\t\t\n\t\tOn peut ainsi calculer la variance $\\sigma^2(X)=\\mathbb{E}(X^2)-\\mathbb{E}(X)^2 = \\frac{11}{144}$ et $\\sigma^2(Y)=\\sigma^2(X)$.\n\t\t\n\t\tPour le calcul de la covariance, on calcule $\\mathbb{E}(XY)$ en appliquant le théorème de transfert sur la loi du couple $(X,Y)$ : $\\mathbb{E}(XY)=\\int_0^1 \\int_0^1xy(x+y)dxdy = \\int_0^1x^2dx \\int_0^1ydy + \\int_0^1xdx \\int_0^1y^2dy = \\frac{1}{3}$. Il vient $cov(X,Y) = \\mathbb{E}(XY)-\\mathbb{E}(X)\\mathbb{E}(Y) = \\frac{-1}{144}$.",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "12b92882-8e4c-4347-b74f-9649fb04516a",
+      "id": "622f368b-3aec-45dc-bbad-46dc3956fd2f",
       "type": "question",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont-elles indépendantes ?",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "c69fa1b5-55d7-47b9-a527-992899e6a81f",
+      "id": "1992d8f4-3ff7-489e-92c8-c1457ba17ed6",
       "type": "reponse",
       "value": {
         "latex": "Les variables $X$ et $Y$ sont donc corrélées, elles ne sont donc pas indépendantes. Cela se vérifie également en comparant le produit des densités marginales avec la densité du couple $(X,Y)$.",

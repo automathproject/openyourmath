@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-10-23",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:18:00.716Z"
+    "updatedAt": "2025-01-18T15:04:13.350Z"
   },
   "contenu": [
     {
-      "id": "000a84e0-74f6-45cc-87ac-5e96a2953ceb",
+      "id": "59478396-d3d5-47cb-8ad2-4c7c067fa16b",
       "type": "description",
       "value": {
         "latex": "Une machine est composée de trois alternateurs indépendants. La durée de vie de $T$ de chaque alternateur suit une loi exponentielle de paramètre $\\lambda$. La machine fonctionne si et seulement si au moins deux des alternateurs fonctionnent.  On appelle $X$ la variable aléatoire mesurant le temps de fonctionnement de la machine.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "c71f6e53-a12c-4ca8-9791-3934e799c4a2",
+      "id": "bc96c2b2-a41d-4add-9d34-2c3f5aaefc2c",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi de $X$ et calculer son espérance.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "b44484f7-0361-4204-ace5-56f36d099602",
+      "id": "d206e620-6919-4c8f-b579-8f6230c751c0",
       "type": "reponse",
       "value": {
         "latex": "Soient $T_1$, $T_2$ et $T_3$ les durées de vie des alternateurs. Soit $t >0$, on a~: \n    $$\\begin{align*}\n        \\prob(X \\geq t) & = \\prob(T_1 \\geq t, T_2 \\geq t, T_3 \\geq t) + \\prob(T_1 < t, T_2 \\geq t, T_3 \\geq t) \\\\ &+ \\prob(T_1 \\geq t, T_2 < t, T_3 \\geq t) + \\prob(T_1 \\geq t, T_2 \\geq t, T_3 < t) \\\\\n        & = \\prob(T_1 \\geq t) \\prob(T_2 \\geq t) \\prob(T_3 \\geq t) + \\prob(T_1 < t) \\prob(T_2 \\geq t) \\prob(T_3 \\geq t) \\\\ & + \\prob(T_1 \\geq t) \\prob(T_2 < t) \\prob(T_3 \\geq t) + \\prob(T_1 \\geq t) \\prob(T_2 \\geq t) \\prob(T_3 < t) \\\\\n        & = e^{-3\\lambda t} + 3 e^{-2\\lambda t} (1-e^{-\\lambda t}) \\\\\n        &= 3 e^{-2\\lambda t} - 2 e^{-3\\lambda t} \n    \\end{align*}$$\n    Donc la fonction de répartition de $X$ est~: \n    $$\\begin{align*}\n        F_X(t) & = \\prob(X \\leq t) \\\\\n        & = 1 - \\prob(X \\geq t) \\\\\n        & = 1 - 3 e^{-2\\lambda t} + 2 e^{-3\\lambda t} \n    \\end{align*}$$\n    Cete fonction est dérivable sur $\\R_+$ et sa dérivée est~:\n    $$\\begin{align*}\n        f_X(t) & = 6\\lambda e^{-2\\lambda t}  - 6 \\lambda e^{-3\\lambda t} \\\\\n    \\end{align*}$$\nOn conclut que $X$ admet pour densité de probabilité $f_X(x) = 6 ( e^{-2\\lambda x}  - e^{-3\\lambda x})1_{\\R_+}(x)$. \n\nOn peut alors calculer son espérance : \n$$\\begin{align*}\n    \\E(X) & = \\int_{-\\infty}^{+\\infty} x f_X(x) dx \\\\\n    & = \\int_{0}^{+\\infty} 6 x ( e^{-2\\lambda x}  - e^{-3\\lambda x}) dx \\\\\n    &= 3 \\times \\frac{1}{2\\lambda} - 2 \\times \\frac{1}{3\\lambda} \\\\\n    & = \\frac{5}{6\\lambda} \\\\\n\\end{align*}$$",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "0fcefda1-7c0b-42bf-ac65-24d0ec14c7a3",
+      "id": "eed4299d-15df-420b-892b-1686e9183f64",
       "type": "question",
       "value": {
         "latex": "Soient les réels $t>0$, $h>0$. Sachant que la machine a déjà fonctionné pendant un temps $t$, quelle est la probabilité qu'elle fonctionne encore pendant un temps $h$ ? Déterminer la limite de cette probabilité, à $h$ fixé, lorsque $t \\to +\\infty$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "f02d3751-4a40-42a5-9061-323b286ad3e8",
+      "id": "caee230b-d400-416b-93a8-aa3fbb1460b3",
       "type": "reponse",
       "value": {
         "latex": "On exprime la probabilité conditionnelle : \n    $$\\begin{align*}\n        \\prob(X \\geq t+h | X \\geq t) & = \\frac{\\prob(X \\geq t+h, X \\geq t)}{\\prob(X \\geq t)} \\\\\n        & = \\frac{\\prob(X \\geq t+h)}{\\prob(X \\geq t)} \\\\\n        &= \\frac{3e^{-2\\lambda (t+h)} -2 e^{-3\\lambda (t+h)}}{3e^{-2\\lambda t} -2 e^{-3\\lambda t}} \\\\\n        & = \\frac{ 3 e^{-2\\lambda h} - 2 e^{-\\lambda t} e^{-3\\lambda h}}{3 - 2 e^{-\\lambda t}} \\\\\n        & \\xrightarrow[t \\to +\\infty]{} e^{-2\\lambda h}\n    \\end{align*}$$",

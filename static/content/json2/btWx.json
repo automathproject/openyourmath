@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-03-20",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:53.598Z"
+    "updatedAt": "2025-01-18T15:03:47.993Z"
   },
   "contenu": [
     {
-      "id": "ebc02172-2222-4df7-8319-93a93cbd5642",
+      "id": "62b8b853-ee38-41a6-9505-db05ea589085",
       "type": "description",
       "value": {
         "latex": "Pour une fonction $f$ continue par morceaux sur $[a;b]$, on pose $\\theta \\in [0;1]$ on considère l'approximation :\n$$\\int_a^b f(s)ds \\approx (b-a)(\\theta f(a) + (1-\\theta)f(b))$$",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "5fc9c178-bb8a-4701-9c76-74aace4dfb19",
+      "id": "6f57e295-3191-49f7-948a-9fc65d82d607",
       "type": "question",
       "value": {
         "latex": "\\'A partir de ce choix d'approximation, construire un schéma de résolution d'une EDO $y'(t)=f(t,y)$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "03d862ce-f09f-44a1-942f-3c12463dbb65",
+      "id": "aa3caf64-654d-451f-a918-695f1664ea2f",
       "type": "question",
       "value": {
         "latex": "Reconnaître des schémas usuels pour les valeurs $\\theta \\in \\{0,\\frac{1}{2},1\\}$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "959b26dc-8592-4e61-a550-52a927bf412d",
+      "id": "cbec32c7-5617-4bb1-8c5a-e90e6127bc16",
       "type": "reponse",
       "value": {
         "latex": "\\begin{itemize}\n\t\t\t\\item \tSi $\\theta =0$ : méthode d'Euler implicite (rectangle à droite) ;\n\t\t\t\\item   Si $\\theta = 1$ : méthode d'Euler explicite (rectangle à gauche) ;\n\t\t\t\\item   Si $\\theta = 1/2$ : méthode de Carnk Nikolson.\n\t\t\\end{itemize}",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "9345c592-3ca2-4094-81d3-5248640ed67c",
+      "id": "2b053c0f-2328-4642-aca4-6a38abd31044",
       "type": "question",
       "value": {
         "latex": "Montrer que le schéma est consistant d'ordre 1 si $\\theta \\neq \\frac12$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "f34c5363-fa8b-46eb-a07f-89477b1c6376",
+      "id": "4ee5aab2-2e83-40d1-b405-13c0275aee4e",
       "type": "reponse",
       "value": {
         "latex": "On calcule l'erreur de consistance : \n$$\\begin{align*}\n  h\\, e_n(h) &= \\underbrace{y(t_{n+1}) - y(t_n)}_{\\text{développement de Taylor}} - h \\theta \\underbrace{f(t_n, y(t_n))}_{y'(t_n)} - h(1-\\theta) \\underbrace{f(t_{n+1}, y(t_{n+1}))}_{y'(t_{n+1})} \\\\\n             &= h y'(t_n) + \\frac{h^2}{2}y''(t_n) + \\frac{h^3}{6} y'''(c_n) - h \\theta y'(t_n) - h(1-\\theta) \\left( y'(t_n) + hy''(t_n) + \\frac{h^2}{2}y'''(c'_n)  \\right) \\\\\n             &= h y'(t_n)(1-\\theta - (1-\\theta)) + h^2 \\left( \\frac{y''(t_n)}{2} - (1-\\theta)y''(t_n)  \\right) + h^3 \\underbrace{\\left( ... \\right)}_{\\text{borné}} \\\\\n\\end{align*}$$\t\nDonc $$|e_n(h)| \\leq h \\left| \\frac{y''(t_n)}{2} - (1-\\theta)y''(t_n)  \\right| + h^2 M$$\nce qui permet de conclure que l'ordre de consistance est $1$ si $\\theta \\neq \\frac{1}{2}$, l'ordre de consistance est $2$ si $\\theta = \\frac{1}{2}$.",

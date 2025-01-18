@@ -11,11 +11,11 @@
     "auteur": "",
     "createdAt": "2023-01-11",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:18:01.797Z"
+    "updatedAt": "2025-01-18T15:04:22.583Z"
   },
   "contenu": [
     {
-      "id": "671b6d1c-b901-4cea-b4ec-f81096aa1136",
+      "id": "6f167db0-b061-45b1-9882-9142ddc71217",
       "type": "description",
       "value": {
         "latex": "Soit $(X_n)$ une suite de variables aléatoires i.i.d. selon une loi normale $\\mathcal{N}(0,1)$. On définit la suite de variables aléatoires $(Y_n)$ par $$Y_n = \\frac{1}{n} \\sum_{k=1}^n \\sqrt{k} X_k$$",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "cb89614c-6069-4129-a065-63033a71da08",
+      "id": "c86f6b69-a0d4-4dc6-83cf-07cd7ddab581",
       "type": "question",
       "value": {
         "latex": "Etudier le comportement asymptotique en loi de la suite $(Y_n)$.",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "310676df-59a6-487f-9691-d69c216cfa88",
+      "id": "315d32e2-84a6-4e0e-ab7b-e8dd9a9228f9",
       "type": "reponse",
       "value": {
         "latex": "Les variables $\\sqrt{k}X_k$ ne sont pas identiquement distribuées ! on se lance donc dans un calcul de limite << à la main >>. \n\t\n\tPar indépendance, $Y_n$ suit une loi normale d'espérance $0$ et de variance $\\frac{1}{n^2}\\sum_{k=1}^n \\sqrt{k}^2 \\times 1 = \\frac{1}{n^2} \\times \\frac{n(n+1)}{2}$. On peut donc écrire $Y_n = \\sqrt\\frac{n(n+1)}{2n^2} Z_n$ où $Z_n$ suit une loi normale $\\mathcal{N}(0,1)$.\n\t\n\tSoit $\\varphi_{Y_n}(t)$ la fonction caractéristique de $Y_n$. On sait que $\\varphi_{Z_n}(t) = e^{\\frac{-t^2}{2}}$ donc $$\\varphi_{Y_n}(t) = \\varphi_{Z_n}\\left( \\sqrt\\frac{n(n+1)}{2n^2} t \\right) = e^{- \\frac{-n(n+1)}{2n^2}t^2}$$. \n\t\n\tEn passant à la limite, $\\varphi_{Y_n}(t) \\xrightarrow[n \\to +\\infty]{} e^{- \\frac{t^2}{4}}$. On reconnait la fonction caractéristique de $\\frac{1}{\\sqrt{2}}Z_n$ qui suit une loi normale $\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})$.\n\t\n\tOn a ainsi démontré que la suite $(Y_n)$ converge en loi vers une loi normale  $\\mathcal{N}(\\mu=0,\\sigma^2 = \\frac{1}{2})$.",

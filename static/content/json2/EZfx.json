@@ -11,11 +11,11 @@
     "auteur": "",
     "createdAt": "2022-08-25",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:35.530Z"
+    "updatedAt": "2025-01-18T15:03:00.062Z"
   },
   "contenu": [
     {
-      "id": "9701fc75-d161-46c2-9101-8207cd584878",
+      "id": "c2eebd0b-d038-4074-b74f-f564d381d672",
       "type": "description",
       "value": {
         "latex": "La bestiole est un animal dont le poids est distribué selon une loi normale de moyenne 100 g et d'écart-type 5 g.\n\n On prélève un échantillon aléatoire de 16 bestioles. On note $X_i$ le poids de la bestiole numéro $i$ ($1 \\leq i \\leq 16$).",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "ab3a4fbe-dad3-40b7-9868-07a760392651",
+      "id": "17546b68-4cc4-4637-9760-370035c6f3bc",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par  $$\\overline{X}=\\frac{\\sum\\limits_{i=1}^{16} X_i}{16}$$",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "f95673ef-d4c2-4707-84cf-0c7fbdf90c16",
+      "id": "10c5018b-90ed-49fc-b385-35e8c5f40fb4",
       "type": "reponse",
       "value": {
         "latex": "Par propriétés de somme de lois normales, on obtient que $\\overline{X}$ suit une loi normale. Il reste à calculer $\\mathbb{E}(\\overline{X}) = \\frac{1}{16} \\times 16 \\times 100 = 100$ et $V(\\overline{X}) = \\frac{1}{16^2} \\times 16 \\times 5^2 = \\frac{5^2}{16}$. On en déduit que $\\overline{X}$ suit une loi normale $\\mathcal{N}(100, \\sigma = \\frac{5}{4})$.",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "id": "4585bdb5-17f7-4ee0-8f87-abde328f86c6",
+      "id": "71b43c5b-c74a-4435-a22e-ebdb7de3019d",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par $$Q=\\frac{\\sum\\limits_{i=1} ^{16} (X_i-100)^2}{25}$$\nDéterminer le réel $q$ tel que $\\PP(Q > q) = 0.05$.",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": "178fb6c0-c3fe-442c-ab99-c08e365841c5",
+      "id": "836d0ebe-52f9-445a-be14-dd8d0777165d",
       "type": "reponse",
       "value": {
         "latex": "On réécrit $Q= \\sum\\limits_{i=1} ^{16} \\left(\\frac{X_i-100}{5}\\right)^2$ or $\\frac{X_i-100}{5}$ suit une loi $\\mathcal{N}(0,1)$ et les variables $X_i$ sont indépendantes donc par définition, $Q$ suit une loi $\\chi^2(16)$. \nOn cherche maintenant $q$ tel que $\\PP(Q \\leq q) = 0.95$ dans la table de valeurs soit $q = 26.296$.",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "id": "047bc424-7e1f-48a1-9a5b-49e45f19a463",
+      "id": "7962b2b8-b816-4f73-8f5e-c7b69776a811",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par $$V=\\frac{\\sum\\limits_{i=1} ^{16} (X_i-\\overline{X})^2}{25}$$\n  puis déterminer le réel $v$ tel que $\\PP(V > v) = 0.05$.",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "8adb3876-0229-4a68-8a92-7a4f0e8a38a2",
+      "id": "022c1e32-572c-4ec7-9746-73d7e3134572",
       "type": "reponse",
       "value": {
         "latex": "D'après le théorème de Fisher, $V$ suit une loi  $\\chi^2(15)$. Par lecture de table, on trouve $\\PP(V \\leq v) = 0.95$ pour $v=24.996$.",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "id": "00183e9e-d312-4c24-8ed4-945b2ed4eff8",
+      "id": "c6352743-a1c7-428d-938a-c269f45d0c28",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi suivie par $$W=\\frac{(\\overline{X}-100)4\\sqrt{15}}{\\sqrt{\\sum\\limits_{i=1} ^{16} (X_i-\\overline{X})^2}}$$\n    Déterminer le réel $w$ tel que $\\PP(W > w) = 0.05$.",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "id": "d18efaa5-57c8-48e4-b480-2fb371b12e84",
+      "id": "affc7c41-f1a3-4e08-9777-e45fd6996f76",
       "type": "reponse",
       "value": {
         "latex": "D'après la question 1, la variable $\\frac{\\overline{X}-100}{\\frac{5}{4}}$ suit une loi $\\mathcal{N}(0,1)$.  On réécrit maintenant :\n$$W = \\frac{\\frac{\\overline{X}-100}{\\frac{5}{4}} \\times \\frac{5}{4} \\times 4\\sqrt{15}}{\\sqrt{\\sum\\limits_{i=1} ^{16} (X_i-\\overline{X})^2}} = \\frac{\\frac{\\overline{X}-100}{\\frac{5}{4}}}{\\frac{\\sqrt{\\sum\\limits_{i=1} ^{16} (X_i-\\overline{X})^2}}{5\\sqrt{15}}} = \\frac{\\frac{\\overline{X}-100}{\\frac{5}{4}}}{\\frac{\\sqrt{V}}{\\sqrt{15}}} $$\n\tOr $V$ suit une  $\\chi^2(15)$ d'après la question précédente. Donc par définition, $W$ suit une loi de Student $St(15)$.",

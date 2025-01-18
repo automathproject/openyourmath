@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-09-22",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:31.350Z"
+    "updatedAt": "2025-01-18T15:02:43.303Z"
   },
   "contenu": [
     {
-      "id": "06545196-7757-4d63-8dd6-ec151771bf09",
+      "id": "53e55687-aacc-4488-97ae-fddae9784dc5",
       "type": "description",
       "value": {
         "latex": "On considère deux files d'attente indépendantes. Deux personnes arrivent simultanément et se présentent respectivement aux deux files d'attente. On note $X$ le temps d'attente de la première personne, $Y$ le temps d'attente de la seconde personne, en minutes. On supposera que $X$ et $Y$ suivent chacune une loi exponentielle de paramètre $\\lambda =2$.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "8f88f8e0-3302-4b24-a7e8-fed89f47ec38",
+      "id": "11a4abb2-2173-4ab7-be29-e0aeb78f8ee0",
       "type": "question",
       "value": {
         "latex": "Quel est le temps d'attente moyen pour chaque personne ?",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "e2fae86a-444f-4f58-898e-53483f796ae1",
+      "id": "8817e32c-3cd4-4286-b01f-3179c6ceb70c",
       "type": "reponse",
       "value": {
         "latex": "Puisque $X$ et $Y$ suivent chacune une loi exponentielle de paramètre $\\lambda =2$, on a $\\mathbb{E}(X)=\\mathbb{E}(Y) = 0.5$ minutes, ce qui donne le temps d'attente moyen pour chaque personne.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "68686818-8791-4315-9991-83f6b37ef29d",
+      "id": "3033c021-b5ee-41f2-92a8-6b1ae34b6c99",
       "type": "question",
       "value": {
         "latex": "Quelle est la densité de la variable $X^2$ ? la variable $-Y$ ?",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "d8146931-fd1e-4337-8217-f90e765c7abe",
+      "id": "3f6e548b-4a10-4175-a600-a4a48d23ccea",
       "type": "reponse",
       "value": {
         "latex": "Pour obtenir la loi de $X^2$, on cherche sa densité par identification. Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(X^2)) &= \\int_0^{+\\infty}  h(x^2)2e^{-2x}dx \\\\\n\t\t\t&= \\int_0^{+\\infty} 2h(u)e^{-2\\sqrt{u}} \\frac{1}{2\\sqrt{u}} du\n\t\t\\end{align*}$$\t\n\t\tPar identification, on en déduit une densité de $X^2$ définie par $f_{X^2}(x) = \\frac{e^{-2\\sqrt{u}}}{\\sqrt{u}}1_{\\R_+}(x)$.\n\t\t\n\t\tOn procède de même pour obtenir la loi de $-Y$ : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(-Y)) &= \\int_0^{+\\infty}  h(-x)2e^{-2x}dx \\\\\n\t\t\t&= \\int_0^{-\\infty} 2h(u)e^{2{u}} \\times (-du) \\\\\n\t\t\t&= \\int_{-\\infty}^0 2h(u)e^{2{u}} du \\\\\n\t\t\\end{align*}$$\n\t\tPar identification, on en déduit une densité de $-Y$ définie par $f_{-Y}(y) = {2e^{2{y}}}1_{\\R_-}(y) = f_Y(-y)$.",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "5844ce7f-4bd8-48b8-9093-31401b4a74c2",
+      "id": "b14c16b2-3d6e-4f6f-9e0c-d25d663fef87",
       "type": "question",
       "value": {
         "latex": "Calculer la probabilité que la différence d'attente entre les deux personnes soit inférieure à 1 minute.",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "17d81ae1-0e4e-4215-8155-282ea710e2dc",
+      "id": "1ba2331d-5153-4d0e-af73-86e208d61fe6",
       "type": "reponse",
       "value": {
         "latex": "On calcule $\\PP(|X-Y|<1) = \\PP(-1<X-Y<1)$ en utilisant la loi du couple $(X,Y)$. Par indépendance de $X$ et $Y$, le couple $(X,Y)$ admet pour densité $g(x,y)=2e^{-2x}\\times 2e^{-2y}1_{\\R_+^2}(x,y)$. La probabilité cherchée est \n\t\t$$\\PP(|X-Y|<1) = \\iint_D g(x,y)dxdy$$\n\t\toù $D=\\{(x,y) \\in \\mathbb{R}^2 \\, , \\, x>0, y>0, -1<x-y<1 \\} = \\{ y\\in[0;1], x \\in [0;1+y]  \\} \\cup  \\{ y\\in]1;+\\infty, x \\in [-1+y;1+y]  \\} $.\n\t\t\n\t\tOn utilise cette décomposition du domaine $D$ pour écrire l'intégrale sous forme d'une somme :\n\t\t$$\\begin{align*}\n\t\t\t\\iint_D g(x,y)dxdy &= \\int_0^1 \\int_0^{1+y}2e^{-2x}dx 2e^{-2y}dy &+&  \\int_1^{+\\infty} \\int_{y-1}^{y+1}2e^{-2x}dx 2e^{-2y}dy\t\\\\\n\t\t\t&= \\int_0^1 2e^{-2y}(1-e^{-2(1+y)})dy &+&  \\int_1^{+\\infty} (e^{-2(y-1)}-e^{-2(y+1)})  (1-e^{-2(1+y)}) \\\\\n\t\t\t&= 1-\\frac{3}{2}e^{-2}+\\frac{1}{2}e^{-6} &+& \\frac{1}{2}e^{-2}-\\frac{1}{2}e^{-6} \\\\\n\t\t\t&= 1-e^{-2} &&\n\t\\end{align*}$$",

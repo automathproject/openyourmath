@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-03-20",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:59.716Z"
+    "updatedAt": "2025-01-18T15:04:12.058Z"
   },
   "contenu": [
     {
-      "id": "4ba341b2-b430-45d8-9aee-349b0d66becc",
+      "id": "26015d93-52e4-43cb-803d-78af02cdf2a4",
       "type": "question",
       "value": {
         "latex": "Soit $f$ une fonction $\\mathcal{C}^1([-1;1])$. Écrire le polynôme $P \\in \\mathbb{R}_2[X]$ qui interpole $f$ aux points $-1$, $0$ et $1$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "ecda7532-be18-48b4-94e7-0ab8d44e1e6c",
+      "id": "bcbef030-ab7b-4f60-99b8-2265b30548b5",
       "type": "reponse",
       "value": {
         "latex": "On cherche les coefficients $a_0$, $a_1$ et $a_2$ du polynôme $P(X)=a_0+a_1X+a_2X^2$ tels que $P(-1)=f(-1)$, $P(0)=f(0)$, $P(1)=f(1)$. Après identification, on trouve \n\t\t\t$$a_0 = f(0) \\qquad a_1 = \\frac{f(1)-f(-1)}{2} \\qquad a_2 = \\frac{f(1)-2f(0)+f(-1)}{2}$$",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "f6c15376-524e-402a-b119-662d59f1c7cc",
+      "id": "623f1510-6b23-40aa-849e-853b7d21ca87",
       "type": "question",
       "value": {
         "latex": "En déduire une approximation de l'intégrale $\\int_0^1f(s)ds$.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "517e2179-6bec-42f0-a34e-8a46b642cb48",
+      "id": "115b23a1-c783-47e3-9f9f-4e17c79a5679",
       "type": "reponse",
       "value": {
         "latex": "On en déduit \n\t\t\t$$\\int_0^1 f(s)ds \\approx \\int_0^1P(s)ds = a_0 + \\frac{a_1}{2}+\\frac{a_2}{3} = \\frac{-f(-1)+8f(0)+5f(1)}{12}$$",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "ff7b4bd2-b5e0-476d-b16e-6bdeb56874f7",
+      "id": "b39f8372-a76d-43e4-ad02-18c965738754",
       "type": "question",
       "value": {
         "latex": "En déduire par changement de variable une approximation de l'intégrale $\\int_a^bf(s)ds$ pour $f$ de classe $\\mathcal{C}^1([a-(b-a);a+(b-a)])$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "bb37673a-af75-46e0-b718-292ed2e14663",
+      "id": "94411b39-1bf1-4973-abcb-1a94d8e886ec",
       "type": "reponse",
       "value": {
         "latex": "$\\int_a^bf(s)ds = (b-a)\\int_0^1f(a+(b-a)\\tau) \\approx (b-a)\\frac{-f(2a-b)+8f(a)+5f(b)}{12}$",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "e098434d-ef87-4589-bba4-8ea347b78524",
+      "id": "56c19286-3d0d-426a-b48f-d3b55801a8c2",
       "type": "question",
       "value": {
         "latex": "En déduire un schéma à deux pas implicite pour approcher la solution d'un problème de Cauchy.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "f7941668-fd67-4296-9720-31d65074424d",
+      "id": "5fdd9c04-a1a6-4b00-898c-fef7a00af98b",
       "type": "reponse",
       "value": {
         "latex": "Pour résoudre le problème de Cauchy \n\t\t\t$$\\begin{cases}y'(t)=f(t,y(t)) \\\\ y(0)=a\\end{cases}$$\n\t\t\tl'approximation d'intégrale conduit à poser \n\t\t\t$$y_{n+1}=y_n+h \\frac{-f(t_{n-1},y_{n-1})+8f(t_n,y_n)+5f(t_{n+1},y_{n+1})}{12}$$\n\t\t\tavec $y_0=a$ et $y_1$ à déterminer en prenant par exemple $y_1=y_0+hf(t_0,y_0)$.",

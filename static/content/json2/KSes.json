@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-09-27",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:40.309Z"
+    "updatedAt": "2025-01-18T15:03:09.363Z"
   },
   "contenu": [
     {
-      "id": "5cce0f50-3644-4789-b73a-f33121813b1a",
+      "id": "06688a70-0ba0-4607-8d2b-27d6670c09e7",
       "type": "description",
       "value": {
         "latex": "On considère l'intégrale \n\t$$I = \\int_0^4 \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy$$",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "cdf85c34-f05f-47a5-83f1-a1361da2a69a",
+      "id": "963f0d97-3d59-469a-a916-cc35d104433a",
       "type": "question",
       "value": {
         "latex": "Démontrer qu'il existe une fonction $\\varphi \\colon \\R \\to \\R$ telle que $I=\\mathbb{E}(\\varphi(Z_1))$ où $Z_1$ est une variable aléatoire normale $\\mathcal{N}(0,1)$.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "c7f64053-407b-4001-80af-80cdf4934628",
+      "id": "8939acac-bfa7-4785-9c85-83d61b6be19e",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de poser $\\varphi = 1_{[0;4]}$ de telle sorte qu'en appliquant le théorème de transfert à $Z_1$ admettant pour densité $f_Z(x) =  \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}$, on obtienne\n\t\t\t$$\\mathbb{E}(1_{[0;4]}(Z_1)) = \\int_\\R 1_{[0;4]}(y) \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{y^2}{2}} dy = I$$",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "663033a8-b21b-45d0-b137-a2d66e65d425",
+      "id": "59bb2477-8bea-45c6-a716-cab816ca4f7c",
       "type": "description",
       "value": {
         "latex": "On définit une suite de variables $(Z_n)_{n \\geq 1}$ indépendantes et identiquement distribuées selon une loi normale $\\mathcal{N}(0,1)$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "e548a401-6d08-430d-8991-9cb54d912ce6",
+      "id": "e5e499ed-1ccd-42ff-a6d1-223aaf8eb866",
       "type": "question",
       "value": {
         "latex": "Déterminer une fonction $g \\colon \\R \\to \\R$ telle que la suite  $\\left( \\frac{1}{n}\\sum_{i=1}^n g(Z_i)  \\right))_{n \\geq 1}$  converge presque sûrement vers $I$.",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "d9bb765e-34b4-4e6d-a8ab-8fedb6a520e8",
+      "id": "cec73204-b949-4d69-875d-a81724273630",
       "type": "reponse",
       "value": {
         "latex": "Il suffit de poser $g = \\varphi = 1_{[0;4]}$ pour que les variables $(g(Z_i))$ soient i.i.d et admettent une espérance $I$. Ainsi, d'après la Loi Forte des Grands Nombres, on a \n\t\t\t\t$$\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) \\xrightarrow[n \\to +\\infty]{p.s.} I$$",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "5f9af384-4019-4e3f-abdd-24886a47388d",
+      "id": "b7f5509f-40fc-44c9-a213-75bc6cceeff0",
       "type": "question",
       "value": {
         "latex": "Construire un intervalle de confiance $I_{conf}$ tel que $\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95$.",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "2f115ce5-e8fa-4336-982e-888ebeb3cbbc",
+      "id": "c965638c-2dac-4336-a5df-1a236e8cee34",
       "type": "reponse",
       "value": {
         "latex": "On note  $\\sigma^2 = \\mathbb{V}(g(Z_1))$. D'après le Théorème Central Limite, \n\t\t\t\t$$ \\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1) $$\n\t\t\t\tSi $n$ est grand, on peut considérer que la variable $Z'_n = \t \\frac{\\frac{1}{n}\\sum_{i=1}^n 1_{[0;4]}(Z_i) - I }{ \\frac{\\sigma}{\\sqrt{n}}}$ suit approximativement une loi $\\mathcal{N}(0,1)$. Par conséquent, d'après la table de loi,\n\t\t\t\t$$\\PP(-1{,}96 \\leq Z'_n \\leq 1{,}96) \\approx 0{,}95 \\iff  \\mathbb{P}\\left(  Z'_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}}     \\leq  I  \\leq   Z'_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right) \\approx 0{,}95   $$\n\t\t\t\tOn en déduit un intervalle de confiance $I_{conf} = \\left[  Z'_n - 1{,}96 \\frac{\\sigma}{\\sqrt{n}} ; Z'_n + 1{,}96 \\frac{\\sigma}{\\sqrt{n}} \\right] $ qui est en réalité un intervalle de confiance asymptotique. Il resterait à expliciter $\\sigma = \\sqrt{V(g(Z_1))}$.",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "778f2b7f-c202-4e70-b101-ccb85384cf50",
+      "id": "6136e76b-02b6-4635-afe5-700144b0f59a",
       "type": "description",
       "value": {
         "latex": "On définit une suite de variables $(U_n)$ indépendantes et identiquement distribuées selon une loi uniforme $\\mathcal{U}([0;4])$.",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "28248276-6dce-4787-8bbf-05abc4e30d54",
+      "id": "5e4d2f47-29b2-4e9f-83e5-9c42325b5d45",
       "type": "question",
       "value": {
         "latex": "A l'aide de cette suite, définir une suite de variables aléatoires $(Y_n)$ qui converge presque sûrement vers $I$.",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "ad9d12ab-8600-4ed6-91e9-3c0857f29bdc",
+      "id": "583c9a07-9251-44ef-8c33-5dbe2d021be6",
       "type": "reponse",
       "value": {
         "latex": "D'après la loi forte des grands nombres,\n\t\t\t\t$$\\frac{4}{n}\\sum_{i=1}^n \\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} \\xrightarrow[n \\to +\\infty]{p.s.} \\mathbb{E}\\left(\\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_1^2}{2}}\\right) = \\int_{\\R}^{} \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}} \\frac{1}{4} 1_{[0;4]}(x)  dx = I$$",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "7356426b-8b51-4f27-bba4-f5a45fd0d892",
+      "id": "4d07e547-4c5d-4b2f-be68-7cafed097fcf",
       "type": "question",
       "value": {
         "latex": "En déduire une méthode de Monte Carlo permettant d'obtenir une valeur approchée de $I$ en complétant l'algorithme suivant :\n\t\t\t\t\\texttt{n=1000;S=0 \\\\\n\t\t\t\t\tfor i in range(n): \\\\\n\t\t\t\t\t  u = ... \\\\\n\t\t\t\t\t S= S + ... \\\\\n\t\t\t\t\tprint(...)}\n\n\n\n\n\n\n",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "id": "001293c3-35f0-4d8f-a5d3-4cb731985b2f",
+      "id": "9c08c94c-7b10-4ba1-a608-84f1f4bcfcf7",
       "type": "reponse",
       "value": {
         "latex": "u = 4*rand() \\\\\n\t\t\t\tS= S + 1/sqrt(2*pi)*exp(-u**2/2) \\\\\n\t\t\t\tprint(4*S/n)",
@@ -118,7 +118,7 @@
       }
     },
     {
-      "id": "9731856c-6e8b-411d-b787-31e4617aa8e1",
+      "id": "13dfdfc6-b73a-43a2-b56d-842374950093",
       "type": "question",
       "value": {
         "latex": "Construire un intervalle de confiance $I_{conf}$ tel que $\\mathbb{P}(I \\in I_{conf}) \\approx 0{,}95$.",
@@ -126,7 +126,7 @@
       }
     },
     {
-      "id": "242d3d2c-39df-419c-9903-8b677dff33ae",
+      "id": "f7efdd83-a88b-4956-aeb0-8993825cb291",
       "type": "reponse",
       "value": {
         "latex": "On procède de même en posant $h \\colon x \\mapsto \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}$.\n\t\t\t\t\n\t\t\t\tOn note  $\\sigma'^2 = \\mathbb{V}(h(Z_1))$. D'après le Théorème Central Limite, \n\t\t\t\t$$ \\frac{\\frac{1}{n}\\sum\\limits_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma'}{\\sqrt{n}}} \\xrightarrow[n\\to+\\infty]{\\mathcal{L}} \\mathcal{N}(0,1) $$\n\t\t\t\tSi $n$ est grand, on peut considérer que la variable $Z''_n = \t \\frac{\\frac{1}{n}\\sum_{i=1}^n \\frac{4}{\\sqrt{2\\pi}}e^{-\\frac{U_i^2}{2}} - I }{ \\frac{\\sigma'}{\\sqrt{n}}}$ suit approximativement une loi $\\mathcal{N}(0,1)$. On en déduit un intervalle de confiance $I_{conf} = \\left[  Z''_n - 1{,}96 \\frac{\\sigma'}{\\sqrt{n}} ; Z''_n + 1{,}96 \\frac{\\sigma'}{\\sqrt{n}} \\right] $",
@@ -134,7 +134,7 @@
       }
     },
     {
-      "id": "e26add23-732c-4f15-88ff-02ec810dd59e",
+      "id": "e75988ef-206c-44d2-94e6-d596d99a0d60",
       "type": "question",
       "value": {
         "latex": "Afin d'obtenir une approximation de $I$, au vu des intervalles de confiance obtenus pour chaque méthode, mieux vaut-il utiliser une méthode de Monte Carlo basée sur la suite $(Z_n)$ ou la suite $(U_n)$ ?",
@@ -142,7 +142,7 @@
       }
     },
     {
-      "id": "4c760a4d-58ae-4368-8f39-fe72b84f49f0",
+      "id": "0f6313da-681f-4def-83c3-274b9d18dcbf",
       "type": "reponse",
       "value": {
         "latex": "Il reste à comparer $\\sigma$ et $\\sigma'$...",

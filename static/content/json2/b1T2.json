@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2023-03-02",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:52.906Z"
+    "updatedAt": "2025-01-18T15:03:43.386Z"
   },
   "contenu": [
     {
-      "id": "8f321964-a35c-460d-b0f7-c22d4a95213c",
+      "id": "87d61373-0b49-4e92-9cbe-4d0ae883752b",
       "type": "description",
       "value": {
         "latex": "Soit $A \\in \\mathcal{M}_{n}(\\mathbb{R})$ la matrice tridiagonale d'ordre $n > 2$ définie par \n$$A = \\begin{pmatrix}\n\t2 & -1 &  &  & & \\\\\n\t-1 & 2 & -1 &      & &\\\\\n\t&   \\ddots & \\ddots & \\ddots  && \\\\\n\t& & -1 &2 &-1 \\\\\n\t& & & -1 & 2 \\\\\n\\end{pmatrix}\n$$\n\nOn admet que l'ensemble des valeurs propres de $A$ est $$sp(A) = \\left\\{ \\lambda_k = 4 \\sin^2\\left(\\frac{k\\pi}{2(n+1)} \\right) \\, , \\, k \\in \\{1,...,n \\} \\right\\}$$\n\nOn souhaite résoudre un système linéaire $AX=b$ à l'aide d'une méthode itérative et on note $X$ sa solution.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "eff790ce-fa19-4806-8915-deee0d86d09c",
+      "id": "589f603b-0eb2-4356-8764-a2ac894697e1",
       "type": "question",
       "value": {
         "latex": "Exprimer la suite des itérés de la méthode de Jacobi sous la forme $X^{(k+1)}=BX^{(k)}+C$ en exprimant la matrice $B$ en fonction de la matrice identité $I_n$ et de la matrice $A$. La matrice $A$ est-elle à diagonale strictement dominante ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "32ff2b25-8ccb-40c9-afaa-194ccb38fbea",
+      "id": "54724987-10a0-44ae-9532-1c41380879dd",
       "type": "reponse",
       "value": {
         "latex": "Avec les notations du cours, $A=M-N$ avec $M=2I$ d'où la suite de Jacobi $x^{(k+1)}=M^{-1}Nx^{(k)}+M^{-1}b = (I-\\frac{1}{2}A) x^{(k)} + \\frac{1}{2}b$.\n\t\tLa matrice $A$ n'est pas à diagonale strictement dominante donc la convergence de la méthode de Jacobi n'est pas acquise.",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "b50572e6-4409-44fb-b054-6b7f59743537",
+      "id": "d2006560-cc76-4b37-9b4e-250a178888b9",
       "type": "question",
       "value": {
         "latex": "On définit l'erreur $e^{(k)}=X^{(k)}-X$ à la $k$-ème itération. Exprimer $e^{(k)}$ en fonction de $e^{(k-1)}$ et en déduire que $\\Vert e^{(k)}\\Vert \\leq \\vvvert B\\vvvert^k\\Vert e^{(0)}\\Vert$ où $\\Vert.\\Vert$ est une norme quelconque sur $\\mathbb{R}^{n}$ et $\\vvvert.\\vvvert$ la norme induite sur $\\mathcal{M}_{n}(\\mathbb{R})$.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "75323f14-c6b3-4917-b595-65d7b7f5ae50",
+      "id": "1040ae80-48c7-4749-9336-f16ff6c82dfc",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\t\t\te^{(k)} &= X^{k}-X\\\\\n\t\t\t&=(BX^{k-1}+ C) - (BX+C) \\\\\n\t\t\t&= B(X^{(k-1)}-X) \\\\\n\t\t\t&=B e^{(k-1)} \n\t\t\\end{align*}$$\n\t\tdonc par récurrence $e^{(k)}=B^ke^{(0)}$.\tEn passant à la norme et par inégalité des normes induites, $|| e^{(k)}|| \\leq \\vvvert B\\vvvert^k || e^{(0)}||$",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "705c463a-110b-44a5-87a2-3faff1b5b173",
+      "id": "99316ea0-6163-4f78-a28c-a73cc5edb46a",
       "type": "question",
       "value": {
         "latex": "Calculer $\\vvvert B\\vvvert_{\\infty}$. Qu'en conclure ?",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "a1a873b7-6234-4227-bb67-035aff3a9e6a",
+      "id": "53715860-0915-4b4d-a2fc-5a0e038bcf9b",
       "type": "reponse",
       "value": {
         "latex": "On calcule $B = \\begin{pmatrix}\n\t\t\t0 & \\frac{1}{2} &  &  & & \\\\\n\t\t\t\\frac{1}{2} & 0 & \\frac{1}{2} &      & &\\\\\n\t\t\t&   \\ddots & \\ddots & \\ddots  && \\\\\n\t\t\t& & \\frac{1}{2} &0 &\\frac{1}{2} \\\\\n\t\t\t& & & \\frac{1}{2} & 0 \\\\\n\t\t\\end{pmatrix}\n\t\t$ D'après le cours,   $\\displaystyle\\vvvert B\\vvvert_{\\infty} =  \\sup\\limits_{1 \\leq i \\leq N} \\sum_{j=1}^N|b_{i,j}| = \\frac{1}{2}+\\frac{1}{2} = 1$. Donc ce choix de norme ne permet pas de conclure que l'erreur tend vers $0$.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "id": "e8338b98-3e8b-4e49-9b7c-ec9d84fdfba1",
+      "id": "40d7b36c-112f-46db-905d-cdff56a8d2b5",
       "type": "question",
       "value": {
         "latex": "Vérifier que le rayon spectral de $B$ est  $\\rho(B)=\\cos\\left(\\frac{\\pi}{n+1}\\right)$.",
@@ -77,7 +77,7 @@
       }
     },
     {
-      "id": "b722776a-171a-459e-93f2-0a9a12fe437f",
+      "id": "6a3c10a6-259b-4811-b214-6bb56d83360e",
       "type": "reponse",
       "value": {
         "latex": "Les valeurs propres de $B=I-\\frac{1}{2}A$ sont les valeurs $\\mu_k = 1-2 \\sin^2\\left(\\frac{k\\pi}{2(n+1)}\\right) = \\cos\\left(\\frac{k\\pi}{n+1}\\right)$ donc $\\rho(B) = \\max\\{|\\mu_k|\\} = \\cos\\left(\\frac{\\pi}{n+1}\\right)$.",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "4839e23b-8c03-4ab5-84ac-41cce6c24bb2",
+      "id": "dbb9a4e0-cfbb-42ed-a43b-9f6de1ec5519",
       "type": "question",
       "value": {
         "latex": "En déduire que la méthode de Jacobi converge pour la matrice $A$ quelque soit l'initialisation.",
@@ -93,7 +93,7 @@
       }
     },
     {
-      "id": "3bbd65f1-efef-42da-8ac6-8747db0ed86b",
+      "id": "09ae8a24-31ff-475a-94e0-8aa845295e84",
       "type": "reponse",
       "value": {
         "latex": "On remarque que $A$ est une matrice symétrique donc $B$ est une matrice symétrique. D'après la propriété 1 admise, $||B||_2 =\\rho(B) =  \\cos\\left(\\frac{\\pi}{n+1}\\right)$ donc $0<||B||_2<1$. Donc d'après la question 2, $|| e^{(k)}||_2 \\to 0$ quelque soit l'erreur $e^{(0)}$.\n\t\tcommise au départ, autrement dit la méthode converge.",

@@ -1,5 +1,5 @@
 {
-  "uuid": "07c9cf18-51fd-4e5b-b694-d69b03806037",
+  "uuid": "e9fe5d72-84b3-4f7f-8e93-9954dcd2a5b4",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "optimisation"
@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2024-10-15",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:49.614Z"
+    "updatedAt": "2025-01-18T15:03:39.246Z"
   },
   "contenu": [
     {
-      "id": "66dcdebe-50c9-4166-8b70-5a959a17121a",
+      "id": "35715303-ca17-4e6f-a59f-dfe032031388",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f$ définie sur $[-1, 1]$ par $f(x) = x^3$. L'espace $\\mathcal{C}^0([-1, 1])$ est muni du produit scalaire $\\langle h, g \\rangle = \\int_{-1}^{1} h(x)g(x) dx$ et on note $\\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx$ la norme associée. \n\n  On cherche à déterminer le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "9110e9da-8a68-4fac-a945-928d32d68f82",
+      "id": "bcf3f2ab-12c0-4fca-b12a-da8248b7e686",
       "type": "question",
       "value": {
         "latex": "Mettre ce problème sous la forme d’un problème de moindres carrés de dimension finie. Quelle est cette dimension ?",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "0eec6e9e-8e4f-47fa-894f-248cf252f7ef",
+      "id": "4745acf9-99c9-4fe8-af6f-bdee365b412c",
       "type": "reponse",
       "value": {
         "latex": "Le problème est de trouver le polynôme $P$ de degré inférieur ou égal à 1 qui approche le mieux la fonction $f(x) = x^3$ sur l’intervalle $[-1, 1]$, au sens des moindres carrés. Autrement dit, on veut minimiser l’erreur $\\|f - P\\|^2$, où la norme est définie par :\n  \\[\n  \\|h\\|^2 = \\int_{-1}^{1} h(x)^2 dx.\n  \\]\n  Le polynôme $P(x) = ax + b$ est de degré inférieur ou égal à 1. On doit donc minimiser l'intégrale :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^3 - (ax + b) \\right)^2 dx.\n  \\]\n  Ce problème peut être formulé comme un problème de moindres carrés dans un espace vectoriel de dimension 2 (les paramètres à déterminer étant $a$ et $b$).",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "fed01967-0f69-4b48-a74a-203b5a2a3998",
+      "id": "32bed42a-859f-469b-a24a-637678e1d730",
       "type": "question",
       "value": {
         "latex": "Étudier l’existence/l’unicité des solutions de ce problème.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "f16cacbe-0be3-40ff-af9e-118f30900fe0",
+      "id": "59516388-c274-4a13-ab7b-22fd9a4c3418",
       "type": "reponse",
       "value": {
         "latex": "Le problème est quadratique en les paramètres $a$ et $b$. Par conséquent, il peut être formulé comme la minimisation d'une fonction quadratique définie positive, dont la matrice hessienne associée est définie positive. Cela garantit que le problème possède une solution unique.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "28c6f9ec-bf20-41f7-9550-9e9e16ab429d",
+      "id": "449cd944-31cb-4193-a2d9-17c6f2d64853",
       "type": "question",
       "value": {
         "latex": "Résoudre ce problème.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "5ae1af10-2e38-4990-ab5b-2ae1586ca90b",
+      "id": "1b36d684-ec49-43be-813e-8555aba31772",
       "type": "reponse",
       "value": {
         "latex": "On calcule l’intégrale de $J(a, b)$ :\n  \\[\n  J(a, b) = \\int_{-1}^{1} \\left( x^6 + a^2x^2 + b^2 - 2ax^4 - 2bx^3 + 2abx \\right) dx.\n  \\]\n  En calculant chaque terme séparément, on obtient :\n  \\[\n  J(a, b) = \\frac{2}{7} - \\frac{4}{5}a + 2a^2 + 0 \\cdot b + 0 \\cdot ab + \\text{termes constants}.\n  \\]\n  Résoudre ce problème d'optimisation quadratique donne les valeurs $a = \\frac{3}{5}$ et $b = 0$. Ainsi, le polynôme $P(x)$ qui approche le mieux $f(x) = x^3$ au sens des moindres carrés est $P(x) = \\frac{3}{5}x$.",

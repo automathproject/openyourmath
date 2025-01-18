@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2024-11-05",
     "organisation": "",
-    "updatedAt": "2025-01-03T14:18:10.791Z"
+    "updatedAt": "2025-01-18T15:05:59.689Z"
   },
   "contenu": [
     {
-      "id": "1b5a7b49-cc15-4297-8237-6a5b89a82254",
+      "id": "f29c970c-8f5d-446e-b0b1-8c2acfb6139e",
       "type": "description",
       "value": {
         "latex": "On considère une variable aléatoire $X$ suivant une loi exponentielle de paramètre $\\theta > 0$. On rappelle que sa densité est donnée par :\n$$f_\\theta(x) = \\begin{cases} \\theta e^{-\\theta x} & \\text{ si } x \\geq 0 \\\\ 0 & \\text{ sinon. } \\end{cases}$$\nOn dispose d'un échantillon $(X_1,...,X_n)$ de $n$ variables aléatoires indépendantes et de même loi que $X$. On cherche à estimer le paramètre $\\theta$ par la méthode du maximum de vraisemblance.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "9117b087-b220-4ef6-b9fc-e79cac4959ea",
+      "id": "554e1b07-a26c-4d8b-9db2-d3be78411148",
       "type": "question",
       "value": {
         "latex": "Écrire la vraisemblance $L(\\theta)$ de l'échantillon en fonction de $\\theta$ et des observations $(x_1,...,x_n)$.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "528ca7f1-cf0a-40d6-8eb4-cb11654b456f",
+      "id": "680aa2fa-e03f-445b-be19-bf4c7dcb5548",
       "type": "reponse",
       "value": {
         "latex": "Par indépendance des variables, la vraisemblance est le produit des densités :\n        $$\\begin{align*}\n            L(\\theta) &= \\prod_{i=1}^n f_\\theta(x_i) \\\\\n            &= \\prod_{i=1}^n \\theta e^{-\\theta x_i}\\mathbf{1}_{x_i \\geq 0} \\\\\n            &= \\theta^n e^{-\\theta \\sum_{i=1}^n x_i}\\mathbf{1}_{\\min(x_i) \\geq 0}\n        \\end{align*}$$",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "9699b2be-c776-4462-b66c-b3be6c631a01",
+      "id": "1f2767cc-1966-48f6-83be-4bda3c8b4f90",
       "type": "question",
       "value": {
         "latex": "En déduire la log-vraisemblance $\\ell(\\theta)$ puis calculer sa dérivée $\\ell'(\\theta)$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "f85f8456-4d03-4884-98ac-fc0f894e45e4",
+      "id": "957ae043-c892-493e-8776-e52682ce133a",
       "type": "reponse",
       "value": {
         "latex": "La log-vraisemblance est :\n        $$\\begin{align*}\n            \\ell(\\theta) &= \\ln(L(\\theta)) \\\\\n            &= n\\ln(\\theta) - \\theta \\sum_{i=1}^n x_i\n        \\end{align*}$$\n        \n        Sa dérivée est :\n        $$\\ell'(\\theta) = \\frac{n}{\\theta} - \\sum_{i=1}^n x_i$$",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "89d9f159-22ad-49be-89f7-3c484fe30a5c",
+      "id": "ac5820c7-13b8-4092-bd33-91b7a649baaa",
       "type": "question",
       "value": {
         "latex": "En déduire  l'estimateur du maximum de vraisemblance $\\widehat{\\theta}_n$ de $\\theta$.",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "057222aa-675d-4bb5-972b-25895c80a51a",
+      "id": "ff57a278-40f5-4dfa-b8a9-3ab524aae14f",
       "type": "reponse",
       "value": {
         "latex": "L'équation $\\ell'(\\theta)=0$ donne :\n        $$\\begin{align*}\n            \\frac{n}{\\theta} - \\sum_{i=1}^n x_i &= 0 \\\\\n            \\frac{n}{\\theta} &= \\sum_{i=1}^n x_i \\\\\n            \\theta &= \\frac{n}{\\sum_{i=1}^n x_i}\n        \\end{align*}$$\n\n        Donc $\\widehat{\\theta}_n = \\frac{n}{\\sum_{i=1}^n x_i} = \\frac{1}{\\overline{X_n}}$ où $\\overline{X_n}$ est la moyenne empirique.",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "3087c2b7-8629-464d-8f99-2c75fe160c63",
+      "id": "2ba79ee9-9e29-4e9e-89fe-9439d0cd20bb",
       "type": "question",
       "value": {
         "latex": "Vérifier que $\\widehat{\\theta}_n$ est bien un maximum en étudiant le signe de $\\ell''(\\theta)$.",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "f097375a-4ec5-4dcd-b47c-3395dcfafaf3",
+      "id": "d673c442-b6b3-4e4b-b31d-ddc3b9da8231",
       "type": "reponse",
       "value": {
         "latex": "On calcule la dérivée seconde :\n        $$\\ell''(\\theta) = -\\frac{n}{\\theta^2}$$\n        \n        Cette dérivée seconde est toujours négative pour $\\theta > 0$, donc $\\widehat{\\theta}_n$ correspond bien à un maximum.",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "c4943465-0b8e-43d8-b748-f17bcbeaf1f3",
+      "id": "a3cb25b0-ca78-4da7-b9a3-48d8e14d1236",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\frac{1}{\\widehat{\\theta}_n}$ est un estimateur sans biais de $\\frac{1}{\\theta}$.",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "2995c679-2045-416a-af73-ea3f127b9227",
+      "id": "af9b2224-cb6e-4be2-90c3-5ee170ad3f07",
       "type": "reponse",
       "value": {
         "latex": "On a :\n        $$\\begin{align*}\n            \\E\\left(\\frac{1}{\\widehat{\\theta}_n}\\right) &= \\E\\left(\\overline{X_n}\\right) \\\\\n            &= \\E\\left(\\frac{1}{n}\\sum_{i=1}^n X_i\\right) \\\\\n            &= \\frac{1}{n}\\sum_{i=1}^n \\E(X_i) \\\\\n            &= \\frac{1}{n} \\times n \\times \\frac{1}{\\theta} \\\\\n            &= \\frac{1}{\\theta}\n        \\end{align*}$$\n        \n        Donc $\\frac{1}{\\widehat{\\theta}_n}$ est un estimateur sans biais de $\\frac{1}{\\theta}$.",

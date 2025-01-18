@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2022-09-22",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:33.544Z"
+    "updatedAt": "2025-01-18T15:02:49.198Z"
   },
   "contenu": [
     {
-      "id": "98c5143d-cc2d-4456-b0dc-1e90664333bd",
+      "id": "a3429ea0-4a90-40c0-8696-90e57db4afcb",
       "type": "description",
       "value": {
         "latex": "On tire sur une cible munie d'un repère orthonormé centrée sur son origine $O$. On note $(X,Y)$ les coordonnées cartésiennes d'un tir. On remarque que lorsque le tireur vise le centre de la cible, la loi suivie par $(X,Y)$ admet une densité \n\t\n\t$$f(x,y)=\\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}$$\n\t\n\tOn note $R$ la distance entre le point d'impact et le point visé.",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "b533b136-cdca-422a-8210-266a7896dfd1",
+      "id": "509102b6-26d7-4fe3-9c43-d7a30c63bd34",
       "type": "question",
       "value": {
         "latex": "Calculer les lois marginales du couple $(X,Y)$. Les variables $X$ et $Y$ sont-elles indépendantes ?",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "89743bbb-1c78-4f66-8520-e0fae268b8dc",
+      "id": "10a37c67-c899-48f6-8e0b-d7ef604a4596",
       "type": "reponse",
       "value": {
         "latex": "La densité marginale pour $X$ est exprimée par \n\t\t$$\\begin{align*}\n\t\t\tf_X(x)&=\\int_\\mathbb{R}f(x,y)dy \\\\\n\t\t\t&= \\dfrac{\\sqrt{2\\pi}}{2\\pi} e^{\\frac{-x^2}{2}} \\\\\n\t\t\t&= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-x^2}{2}}\n\t\t\\end{align*}$$\n\t\tDe même, on calcule $f_Y(y)= \\dfrac{1}{\\sqrt{2\\pi}} e^{\\frac{-y^2}{2}}$. On a ainsi $f(x,y)=f_X(x) \\times f_Y(y)$ ce qui permet de conclure que $X$ et $Y$ sont deux variables indépendantes suivant chacune une loi normale centrée réduite.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "51b32a84-548a-4ee6-8ea5-ef5716747d44",
+      "id": "42572161-cb31-4fb9-bee8-85f0f42a53d9",
       "type": "question",
       "value": {
         "latex": "Ecrire la fonction de répartition de $R$ sous la forme d'une intégrale double, puis effectuer le changement de variables en coordonnées polaires pour simplifier l'expression.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "240e2452-b610-4534-8420-c70215b9242c",
+      "id": "63836c87-8b58-452d-8bd4-0d4ae92aba15",
       "type": "reponse",
       "value": {
         "latex": "On note $D_t=\\{(x,y) \\in \\mathbb{R}^2 \\, , \\, x^2+y^2 \\leq t^2\\}$. Si $t \\geq 0$, $F_R(t) = \\mathbb{P}(R \\leq t) = \\mathbb{P}((X,Y) \\in D_t)$ donc \n\t\t$$F_R(t) = \\iint_{D_t} \\dfrac{1}{2\\pi} e^{\\frac{-x^2-y^2}{2}}dxdy$$\n\t\tOn effectue dans l'intégrale double un changement de variables en coordonnées polaires : on a $dxdy=rdrd\\theta$ d'où \n\t\t$$F_R(t) = \\int_{0}^{2\\pi} \\int_0^t e^{-r^2/2}rdr \\frac{d\\theta}{2\\pi} = \\int_0^t r e^{-r^2/2}dr $$\n\t\tet $F_R(t)=0$ si $t<0$.",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "d961047a-7e4e-4c6b-9778-8a4081171390",
+      "id": "07f85a6a-168e-4a64-bea8-37095dd0d84f",
       "type": "question",
       "value": {
         "latex": "En déduire une densité de $R$. La loi obtenue s'appelle la loi de Rayleigh",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "93a612bd-93e1-49d7-ad5b-a997274e8c58",
+      "id": "d8710bea-44c4-4e3c-8c1c-e2705ac01e3f",
       "type": "reponse",
       "value": {
         "latex": "On en déduit que la fonction $f_R(r) = r e^{-r^2/2}1_{\\mathbb{R}_+} $",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "98b0fe98-1186-4f1e-b2d4-fd678d548155",
+      "id": "c3905298-485a-4cb5-927f-6122b7c24eb3",
       "type": "question",
       "value": {
         "latex": "Montrer que $R^2$ suit une loi exponentielle $\\mathcal{E}(1/2)$.",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "e84f5ceb-03ed-4a71-8ec3-93f7742cd908",
+      "id": "576c6dae-117a-4345-94f4-1582c6391e76",
       "type": "reponse",
       "value": {
         "latex": "Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(R^2)) &= \\int_0^{+\\infty}  h(r) r e^{-r^2/2}dr \\\\\n\t\t\t&= \\int_0^{+\\infty} h(u) \\frac{1}{2} e^{-\\frac{u}{2}} du \n\t\t\\end{align*}$$\t\n\t\tPar identification, on en déduit une densité de $R^2$ définie par $f_{R^2}(u) = \\frac{1}{2} e^{-\\frac{u}{2}}1_{\\mathbb{R}_+}(u)$, on reconnait une loi exponentielle $\\mathcal{E}(\\frac{1}{2})$.",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "b7142759-60fc-490d-ad58-d9546f38e1f3",
+      "id": "31657077-7dd4-492b-9dad-b4350b5204b2",
       "type": "question",
       "value": {
         "latex": "Montrer que si $\\Theta$ est la variable aléatoire telle que $X=R\\cos(\\Theta)$, $Y=R\\sin(\\Theta)$, alors $\\Theta$ suit une loi uniforme sur l'intervalle $[0;2\\pi]$.",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "f6502876-40c8-42a7-8149-18ef582f35c5",
+      "id": "c991300f-2dc0-4e1d-8014-d75d3ce53073",
       "type": "reponse",
       "value": {
         "latex": "Soit $h$ une fonction continue bornée quelconque : \n\t\t$$\\begin{align*}\n\t\t\t\\mathbb{E}(h(R,\\Theta)) &= \\iint_{} \\dfrac{1}{2\\pi} h(r(x,y),\\theta(x,y)) e^{\\frac{-x^2-y^2}{2}}dxdy \\\\\n\t\t\t&= \\int_{0}^{2\\pi} \\int_0^{+\\infty} h(r,\\theta) \\frac{1}{2\\pi} e^{-r^2} r drd\\theta \n\t\t\\end{align*}$$\n\t\tPar identification, on en déduit qu'une densité du couple $(R,\\Theta)$ est définie pour tout $(r,\\theta) \\in \\R^2$ par :\n\t\t$$g(r,\\theta) = \\frac{1}{2\\pi} re^{-r^2} \\textbf{1}_{\\R_+ \\times [0;2\\pi[}(r,\\theta)$$\n\t\t\n\t\tPour obtenir la loi de $\\Theta$, il suffit de calculer pour tout $\\theta \\in \\R$ : \n\t\t$$\\begin{align*}\n\t\tf_\\Theta(\\theta) &= \\int_\\R g(r,\\theta)dr \\\\\n\t\t                 &=  \\frac{1}{2\\pi}\\textbf{1}_{\\times [0;2\\pi[}(r,\\theta)\n\t\t\\end{align*}$$\n\t\t On en déduit que $(R,\\Theta)$ est un couple de variables aléatoires indépendantes et que $\\Theta$ suit une loi uniforme sur $[0;2\\pi[$.",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "88dab4f9-ba1c-49c9-b87b-9176b83df7dc",
+      "id": "6ce9bcc6-ef17-4f5b-9e22-3063006c8100",
       "type": "question",
       "value": {
         "latex": "En déduire une simulation de la loi du couple $(X,Y)$.",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "id": "5e1a3232-1b08-4605-a8cd-acc8a8bec920",
+      "id": "4495b458-9a6e-4523-bd5d-27ddbcff9879",
       "type": "reponse",
       "value": {
         "latex": "def Normale2():\n\t\ttheta = 2*pi*rand()\n\t\tr = sqrt(-2*log(rand()))\n\t\treturn r*cos(theta),r*sin(theta)",

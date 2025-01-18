@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2024-09-27",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:47.323Z"
+    "updatedAt": "2025-01-18T15:03:26.563Z"
   },
   "contenu": [
     {
-      "id": "0956ae73-a43c-49ec-9bbd-c15aa5747b43",
+      "id": "9407dd83-642c-467f-832f-84823319a4cc",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi de la variable aléatoire $X$ ? Quelle est son espérance, son écart-type ?",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "ce0e5a1b-1bc1-4319-a30f-c60975788e38",
+      "id": "044b706e-dec2-42b4-9bda-7903997d02eb",
       "type": "reponse",
       "value": {
         "latex": "La variable aléatoire $X$ suit une loi binomiale de paramètres $n = 1000$ et $p = 0{,}05$, ce qui se note $X \\hookrightarrow \\mathcal{B}(1000, 0{,}05)$. On a $\\mathbb{E}(X) = n \\times p = 1000 \\times 0{,}05 = 50$ et $\\sigma(X) = \\sqrt{n \\times p \\times (1-p)} = \\sqrt{1000 \\times 0{,}05 \\times 0{,}95} = \\sqrt{47{,}5}$.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "56b1ee14-68ce-46a5-b153-91c4fb414771",
+      "id": "25cf7634-ca76-421a-8ce5-578aa43348e1",
       "type": "question",
       "value": {
         "latex": "En utilisant l'inégalité de Bienaymé-Tchebychev, majorer la probabilité que le nombre de pièces fausses soit supérieur à 100.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "e17cf816-80bf-49a7-b943-6debab5ecc61",
+      "id": "ee266663-bc6e-4530-ba2f-8ee373c0006d",
       "type": "reponse",
       "value": {
         "latex": "D'après l'inégalité de Bienaymé-Tchebychev appliquée à la variable aléatoire $X$ admettant une espérance $50$, on a pour tout $k > 0$ :\n        \\[\n        \\prob(|X - \\mathbb{E}(X)| > k) \\leq \\frac{\\sigma(X)^2}{k^2}.\n        \\]\n        Donc, pour $k = 50$, on a :\n        \\[\n        \\prob(|X - 50| > 50) \\leq \\frac{47{,}5}{50^2} = 0{,}019.\n        \\]\n        Donc, $\\prob(X > 100) = \\prob(X - 50 > 50) \\leq \\prob(|X - 50| > 50) \\leq 0{,}019$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "b5dab54a-93fa-4afb-a102-26f2d200e4cd",
+      "id": "e2bbad22-cb45-402e-96a0-65b0efab63f0",
       "type": "question",
       "value": {
         "latex": "Justifier que $X$ peut être approchée par une variable suivant une loi normale de moyenne $\\mu = 50$ et d’écart-type $\\sigma = \\sqrt{47{,}5}$.",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "657d5e81-ec0b-4727-a120-3f4eb6cdd8ca",
+      "id": "13fb064e-ccd0-41b8-aeb3-ff106edce3e0",
       "type": "reponse",
       "value": {
         "latex": "Soit $S_n = X_1+\\cdots X_n$ une somme de variables aléatoires indépendantes et identiquement distribuées suivant une loi de Bernoulli de paramètre $p = 0{,}05$. D'après le théorème central limite, la variable aléatoire $\\frac{S_n - 0.05n}{\\sqrt{n\\times 0.05 \\times 0.95}}$ suit approximativement une loi normale centrée réduite pour $n$ grand (supérieur à $30$ en pratique), donc $S_n$ suit approximativement une loi normale de moyenne $0.05n$ et d'écart-type $\\sqrt{n\\times 0.05 \\times 0.95}$.\n\n        Or $X$ suit la même loi que $S_{1000}$ donc $X$ peut être approchée par une variable suivant une loi normale de moyenne $\\mu = 50$ et d’écart-type $\\sigma = \\sqrt{47{,}5}$.",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "820af4c5-21e1-4992-ac00-dc9807b34dcb",
+      "id": "05190700-ebdb-4753-a641-02530c2ab914",
       "type": "question",
       "value": {
         "latex": "À l’aide de cette approximation, estimer la probabilité que le nombre de pièces fausses soit compris entre 48 et 52.",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "48c2a67e-f18e-421e-88af-6ce8d4ed4dd3",
+      "id": "f43b702d-add0-461c-abb2-4b8636fb0174",
       "type": "reponse",
       "value": {
         "latex": "On calcule : \n        $$\\begin{align*}\n            \\prob\\left( 48 \\leq X \\leq 52 \\right) & = \\prob\\left( \\frac{48 - 50}{\\sqrt{47{,}5}} \\leq \\frac{X - 50}{\\sqrt{47{,}5}} \\leq \\frac{52 - 50}{\\sqrt{47{,}5}} \\right) \\\\\n            & = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq \\frac{X - 50}{\\sqrt{47{,}5}} \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            & = \\prob\\left( -\\frac{2}{\\sqrt{47{,}5}} \\leq Z \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) \\\\\n            &= 2 \\times \\prob\\left( Z \\leq \\frac{2}{\\sqrt{47{,}5}} \\right) - 1 \\\\\n            & = 2 \\times \\Phi\\left( \\frac{2}{\\sqrt{47{,}5}} \\right) - 1 \\\\\n            & \\approx 2 \\times 0{,}6142 - 1 \\\\\n            & \\approx 0{,}2283.\n        \\end{align*}$$",

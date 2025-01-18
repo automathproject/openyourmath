@@ -10,11 +10,11 @@
     "auteur": "",
     "createdAt": "2024-09-27",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:42.900Z"
+    "updatedAt": "2025-01-18T15:03:18.665Z"
   },
   "contenu": [
     {
-      "id": "d19f3fd1-277d-4797-a0ad-163fc13a62e3",
+      "id": "11562671-ba73-43f4-9c33-f0fc29861a52",
       "type": "description",
       "value": {
         "latex": "Le fonctionnement d’une machine est perturbé par des pannes. On considère les variables aléatoires $X_1, X_2, X_3$ définies par : $X_1$ est le temps, exprimé en heures, écoulé entre la mise en route de la machine et la première panne. $X_2$ (resp. $X_3$) est le temps, en heures, écoulé entre la remise en route de la machine après la première (resp. la deuxième) panne et la panne suivante. On suppose que les variables aléatoires $X_1, X_2, X_3$ sont indépendantes et suivent la même loi exponentielle de paramètre $\\lambda = \\frac{1}{2}$, autrement dit de densité :\n\n$$\nf(t) = \n\\begin{cases} \n\\frac{1}{2} e^{-\\frac{t}{2}} & \\text{si } t \\geq 0 \\\\\n0 & \\text{si } t < 0\n\\end{cases}\n$$",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "id": "dc61ea1d-839f-4791-9c8e-f5640fa52010",
+      "id": "3a193066-d2da-408c-b4e3-bb2a448c9a24",
       "type": "question",
       "value": {
         "latex": "Calculer l'espérance de chaque variable $X_i$ pour $i \\in \\{1,2,3\\}$ et interpréter.",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "id": "2f9fdc0b-8448-49f7-ab93-dfe0f6ada7a1",
+      "id": "bf58c320-839e-4aef-8bc0-beea1975880e",
       "type": "reponse",
       "value": {
         "latex": "D'après le cours, l'espérance d'une variable aléatoire suivant une loi exponentielle de paramètre $\\lambda$ est $\\frac{1}{\\lambda}$. Donc, l'espérance de chaque variable $X_i$ est $\\frac{1}{\\frac{1}{2}} = 2$ heures. Cela signifie que la durée moyenne entre deux pannes successives est de 2 heures.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "id": "3fdb4c82-7ed4-4865-bb80-ef635d3dcf65",
+      "id": "f3c11b87-c37f-4576-aed5-c5e19f30f079",
       "type": "question",
       "value": {
         "latex": "Pour tout $t >0 $ et $i \\in \\{1,2,3\\}$, calculer $\\prob(X_i > t)$.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "20b37e8e-5cd4-42a6-8544-e708d9665e53",
+      "id": "867d3d4f-3054-4764-8468-6073e7729795",
       "type": "reponse",
       "value": {
         "latex": "D'après le cours, la fonction de répartition d'une variable aléatoire suivant une loi exponentielle de paramètre $\\lambda$ est $F(t) = 1 - e^{-\\lambda t}$ si $t \\geq 0$. Donc, pour tout $t > 0$ et $i \\in \\{1,2,3\\}$, on a :\n        \\[\n        \\prob(X_i > t) = 1 - \\prob(X_i \\leq t) = 1 - F(t) = 1 - (1 - e^{-\\frac{t}{2}}) = e^{-\\frac{t}{2}}.\n        \\]",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "id": "77e7419a-f1c0-48e7-b8fc-4ae7013bf16c",
+      "id": "12f0b814-eb2c-4368-90c8-083ca6bb5269",
       "type": "question",
       "value": {
         "latex": "Soit $E$ l’événement : « Chacune des 3 périodes de fonctionnement de la machine dure plus de 2 heures ». Exprimer $E$ en fonction des événements $A_i = \\{X_i > 2\\}$ pour $i \\in \\{1,2,3\\}$ et calculer $\\prob(E)$.",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "id": "1e8b6103-d74a-4903-9183-ac4874aef748",
+      "id": "07600aa9-6db3-48c9-9cd8-9748659ffdb7",
       "type": "reponse",
       "value": {
         "latex": "On a $E = A_1 \\cap A_2 \\cap A_3$. Or les variables $X_i$ sont indépendantes donc les événements $A_i$ sont indépendants. Donc, $\\prob(E) = \\prob(A_1) \\times \\prob(A_2) \\times \\prob(A_3) = e^{-\\frac{2}{2}} \\times e^{-\\frac{2}{2}} \\times e^{-\\frac{2}{2}} = e^{-3}$.",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "333c8830-75b6-472e-8007-a321b5fdae09",
+      "id": "c94a059f-ee39-493e-83ea-475f5fff5edc",
       "type": "question",
       "value": {
         "latex": "Exprimer $Y$ en fonction de $X_1,X_2,X_3$ puis montrer que $\\prob(Y \\leq t) = \\left(1 - e^{-\\frac{t}{2}}\\right)^3$ pour tout $t \\geq 0$.",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "id": "1c59492c-4e8a-4c24-9373-37cc65426b6e",
+      "id": "e22c1c7e-b91a-40a9-84a7-6851ef8a2d36",
       "type": "reponse",
       "value": {
         "latex": "On a $Y = \\max(X_1,X_2,X_3)$. Donc, pour tout $t \\geq 0$, on a :\n            $$\\begin{align*}\n                \\prob(Y \\leq t) & = \\prob(\\max(X_1,X_2,X_3) \\leq t) \\\\\n                & = \\prob(X_1 \\leq t \\cap X_2 \\leq t \\cap X_3 \\leq t) \\\\\n                & = \\prob(X_1 \\leq t) \\times \\prob(X_2 \\leq t) \\times \\prob(X_3 \\leq t) \\\\\n                & = (1 - e^{-\\frac{t}{2}})^3.\n            \\end{align*}$$",
@@ -86,7 +86,7 @@
       }
     },
     {
-      "id": "51398066-370f-4839-82a5-fe05b99cc796",
+      "id": "8aeee007-f6ab-4475-81a9-b7a0efd4e890",
       "type": "question",
       "value": {
         "latex": "En déduire une fonction densité $f_Y(t)$ de $Y$.",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "e691a148-686a-4b35-920e-76f0cf7894b5",
+      "id": "afd5e7ce-36ed-4d85-b6c4-0f4dcbe1b142",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $t < 0$, $\\prob(Y \\leq t) = 0$. D'après le résultat de la question précédente, pour tout $t \\geq 0$, on a :\n            \\[\n            f_Y(t) = \\frac{d}{dt} \\prob(Y \\leq t) = \\frac{d}{dt} \\left(1 - e^{-\\frac{t}{2}}\\right)^3 = 3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2.\n            \\]\n            On en déduit qu'une densité de probabilité de $Y$ est : \\[f_Y(t) = \n                \\begin{cases} \n                    0 & \\text{si } t < 0 \\\\\n                    3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2 & \\text{si } t \\geq 0\n                \\end{cases}\n            \\].",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "bd2432b4-99f9-40b0-958e-613e8c7de8f8",
+      "id": "660c79bf-67c1-43f5-9c6a-9476c6493e19",
       "type": "question",
       "value": {
         "latex": "En intégrant par parties, montrer que pour tout $a <0$ : \n        $$\n        \\int_0^{+\\infty} t e^{at} \\, dt = \\frac{1}{a^2}.\n        $$",
@@ -110,7 +110,7 @@
       }
     },
     {
-      "id": "5680dc71-afac-4aff-b65a-0a3f25300703",
+      "id": "ab247276-8308-4f51-9d1a-be5156b01c61",
       "type": "reponse",
       "value": {
         "latex": "On a $\\int_0^{+\\infty} t e^{at} \\, dt = \\left[ t \\frac{e^{at}}{a} \\right]_0^{+\\infty} - \\int_0^{+\\infty} \\frac{e^{at}}{a} \\, dt = 0 - \\frac{1}{a} \\int_0^{+\\infty} e^{at} \\, dt = -\\frac{1}{a} \\left[ \\frac{e^{at}}{a} \\right]_0^{+\\infty} = -\\frac{1}{a} \\left(0 - \\frac{1}{a}\\right) = \\frac{1}{a^2}$.",
@@ -118,7 +118,7 @@
       }
     },
     {
-      "id": "41147b0e-3314-4c87-af9f-546bbfd128df",
+      "id": "73615a67-d277-47a9-8c03-970a1d836f27",
       "type": "question",
       "value": {
         "latex": "Démontrer que la variable aléatoire $Y$ admet une espérance, que l’on calculera. Exprimer la valeur en heures et minutes.",
@@ -126,7 +126,7 @@
       }
     },
     {
-      "id": "bdbb5012-33b9-4e7d-ac15-310ae204b41d",
+      "id": "5b888d69-070c-4f65-839d-7e3c7467c039",
       "type": "reponse",
       "value": {
         "latex": "On a $f_Y(t) = 3 \\times \\frac{1}{2} e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2$. Donc on a :\n            $$\\begin{align*}\n                \\mathbb{E}(Y) & = \\int_0^{+\\infty} t f_Y(t) \\, dt \\\\\n                & = 3 \\times \\frac{1}{2} \\int_0^{+\\infty} t e^{-\\frac{t}{2}} \\times \\left(1 - e^{-\\frac{t}{2}}\\right)^2 \\, dt \\\\\n                & = \\frac{3}{2} \\int_0^{+\\infty} t e^{-\\frac{t}{2}} \\, dt -2t e^{-t} + t e^{-\\frac{3t}{2}} \\, dt \\\\\n                &= \\frac{3}{2} \\times \\left( \\frac{1}{\\left(\\frac{1}{2}\\right)^2}  - 2 \\times  \\frac{1}{1^2}  +  \\frac{1}{\\left(\\frac{3}{2}\\right)^2} \\right) \\\\\n                &= \\frac{11}{3} = 3 + \\frac{2}{3}.\n            \\end{align*}$$\n            Donc, l'espérance de $Y$ est de 3 heures et 40 minutes. Cela signifie que la durée moyenne de fonctionnement de la machine sans interruption est de 3 heures et 40 minutes.",

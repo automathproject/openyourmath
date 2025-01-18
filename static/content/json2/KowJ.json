@@ -11,11 +11,11 @@
     "auteur": "",
     "createdAt": "2023-10-16",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:40.865Z"
+    "updatedAt": "2025-01-18T15:03:11.668Z"
   },
   "contenu": [
     {
-      "id": "d14e3622-0e2c-4ffd-928b-b75246b68c3e",
+      "id": "a06e5210-63e8-4e44-8887-26241e3e59b9",
       "type": "description",
       "value": {
         "latex": "Une entreprise compte $300$ employés. Chaque employé utilise son téléphone de manière aléatoire, en moyenne $6$ minutes par heure. Cela implique qu'à un instant donné, la probabilité qu'il soit au téléphone est de $\\frac{6}{60} =  0{,}1$. On suppose que l'utilisation du téléphone par un employé est indépendante de celle des autres employés.",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "6dcdaa66-ee6c-434e-9c28-0541376d81cf",
+      "id": "c3a63ddb-3ad9-4551-8a74-6de8523649f6",
       "type": "question",
       "value": {
         "latex": "Il est 10h00. Soit $X$ le nombre d'employés qui téléphonent à cet instant. Déterminer la loi de $X$.",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "8bd8341a-98b3-418c-91d0-04047d3315fc",
+      "id": "2ede63ba-249f-457e-8fde-0f53ea5c6cb8",
       "type": "reponse",
       "value": {
         "latex": "On a $X \\sim \\mathcal{B}(300,0{,}1)$.",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "id": "e2d7c6cb-057b-4cce-8b21-8d42293e7f74",
+      "id": "cc9b72ab-1ee5-4fde-98e0-abc3467e7b57",
       "type": "question",
       "value": {
         "latex": "Justifier que la loi de $X$ peut être approchée par une loi normale $\\mathcal{N}(30;\\sqrt{27})$.",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": "93173b92-7b6e-4a6b-a6d6-87fed4f28f8a",
+      "id": "5d69a853-3bae-4b82-b6a3-dbde5e8f4077",
       "type": "reponse",
       "value": {
         "latex": "On a $np = 300 \\times 0{,}1 = 30$ et $np(1-p) = 300 \\times 0{,}1 \\times 0{,}9 = 27$. Le paramètre $n$ est considéré comme grand ($>30$) donc les conditions d'application du théorème de Moivre-Laplace sont vérifiées. On peut donc approcher la loi de $\\frac{X-30}{\\sqrt{27}}$ par une loi normale centrée réduite, ce qui revient à approcher $X$ par une loi normale $\\mathcal{N}(30;\\sqrt{27})$.",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "id": "23ea78e3-1160-43cc-8806-c414788f5dc9",
+      "id": "cb82c14d-4326-4a2b-b0f3-aeeaaeb77d21",
       "type": "question",
       "value": {
         "latex": "Estimer le nombre $\\ell$ de lignes que l'entreprise doit installer pour que la probabilité que toutes les lignes soient occupées soit au plus égale à $2{,}5\\%$.",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "32664af2-b495-46a3-9881-0be739e39af0",
+      "id": "981d6b72-19f5-4bd0-8c39-58be5c2c059d",
       "type": "reponse",
       "value": {
         "latex": "On cherche $\\ell$ tel que $\\prob(X \\geq \\ell) \\leq 0{,}025$. On a : \n            $$\\begin{align*}\n                \\prob\\left( X \\geq \\ell \\right) &= \\prob\\left( \\frac{X - 30}{\\sqrt{27}} \\geq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n                &= 1- \\prob\\left( \\frac{X - 30}{\\sqrt{27}} \\leq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\\\\n            \\end{align*}$$\n            On cherche donc $\\ell$ tel que $\\prob \\left( \\frac{X - 30}{\\sqrt{27}} \\leq \\frac{\\ell - 30}{\\sqrt{27}} \\right) \\geq 0{,}975$. Par lecture inverse de table, on en déduit que $\\frac{\\ell - 30}{\\sqrt{27}} \\geq 1{,}96$ donc $\\ell \\geq 30 + 1{,}96 \\times \\sqrt{27} \\approx 38{,}8$. On en déduit que $\\ell = 39$.",

@@ -11,11 +11,11 @@
     "auteur": "Maxime Nguyen",
     "createdAt": "2023-09-18",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:17:32.384Z"
+    "updatedAt": "2025-01-18T15:02:45.587Z"
   },
   "contenu": [
     {
-      "id": "457124d6-ca1f-40b8-bfc0-7e624f2edee0",
+      "id": "7324da8e-3b98-4e90-aa2f-be2d5d20c316",
       "type": "description",
       "value": {
         "latex": "Une machine produit des rondelles métalliques en grande série. Une rondelle est acceptée si son diamètre extérieur est compris entre $21.9$ et $22.1$ mm. On suppose que sur l'ensemble de la production, le diamètre extérieur des rondelles est une variable aléatoire $X$ qui suit une loi normale de moyenne $22$ mm et d'écart-type $0.05$ mm.",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "c7f60f8c-d6ce-41f4-87dd-1e11d31ae449",
+      "id": "940fa1f0-cb3e-4913-9645-1607dacc0f41",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité $p$ qu'une pièce soit refusée ?",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "id": "6c6be19d-18ab-49bd-932b-efaea6fc3617",
+      "id": "7f284a13-5b0d-40ec-aa49-0a51ec494cbb",
       "type": "reponse",
       "value": {
         "latex": "On calcule la probabilité qu'une pièce soit acceptée\n\t\t$$\\begin{align*}\n\t\t\\prob(21.9\\leq X\\leq 22.1)\n\t\t&= \\prob(-2\\leq \\frac{X-22}{0.05}\\leq 2)\n\t\t=2\\prob(\\frac{X-22}{0.05}\\leq 2)-1\n\t\t=2\\times 0.9772-1\n\t\t=0.9544.\n\t\t\\end{align*}$$\n\t\tAinsi, la probabilité qu'une pièce soit refusée est $p=1-0.9544=0.0456$.",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "id": "8e98278e-d4e0-4792-9da6-cdc80f40464b",
+      "id": "f4056b74-f009-4d8d-8f6d-742c5b3f6fb6",
       "type": "question",
       "value": {
         "latex": "On prélève $100$ pièces. En utilisant une approximation par la loi de Poisson, donner une approximation de la probabilité qu'il y ait $k$ rondelles refusées, pour $k\\in\\{0,1,2,3,4\\}$.",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "id": "5e0ee2bf-3998-414a-b9d5-2c6d3b826564",
+      "id": "f95c5e46-fba0-4f9c-9980-44850b964395",
       "type": "reponse",
       "value": {
         "latex": "Soit $Y$ le nombre de rondelles refusées sur les $100$ pièces. On a $Y\\sim \\mathcal{B}(100,p)$ et $\\E(Y)=100\\times p = 4.56$ donc $Y$ peut être approchée par la variable aléatoire $Z$ de loi $\\mathcal{P}(4.56)$. Ainsi,\n\t\t\\[ \\forall k \\in\\{0,\\cdots , 4\\},\\quad \\prob(Y=k)\\simeq \\prob(Z=k)=\\frac{4.56^k}{k!}e^{-4.56}.\\]\n\t\tLes résultats demandés sont dans le tableau suivant:\n\t\t\\begin{center}\n\t\t\t\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\t\t\\hline\n\t\t\t\t$k$ & 0 & 1 & 2 & 3 & 4 \\\\\n\t\t\t\t\\hline\n\t\t\t\t$\\prob(Y=k)$ & $0.0105$ & $0.0477$ & $0.1088$ & $0.1653$ & $0.1885$ \\\\\n\t\t\t\t\\hline\n\t\t\t\\end{tabular}\n\t\t\\end{center}",
@@ -55,7 +55,7 @@
       }
     },
     {
-      "id": "7b0948a4-8896-4315-89bd-1c432b1f8809",
+      "id": "d36474b1-7eff-4051-bf11-f0a604ae2212",
       "type": "question",
       "value": {
         "latex": "On prélève $\\nombre{1000}$ pièces. Proposer une approximation de la probabilité qu'il y ait au moins $50$ pièces refusées.",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "52c12792-624d-4a43-8be9-01d7a69a6721",
+      "id": "7e720f9e-6773-42af-9d1d-a7116a878262",
       "type": "reponse",
       "value": {
         "latex": "Soit $R$ le nombre de pièces refusées parmi les $\\nombre{1000}$ pièces. Alors $Z\\sim \\mathcal{B}(\\nombre{1000},p)$ qui peut être approchée par une loi Normale:\n\t\t$$\\begin{align*}\n\t\t\\prob(Y\\geq 50) \n\t\t&\\simeq \\prob(Z\\geq 49.5) \\quad \\text{ où } Z \\sim \\mathcal{N}(45.6,\\sigma^2=43.52) \\\\\n\t\t&\\simeq \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\geq 0.59\\right) \\\\\n\t\t& \\simeq 1- \\p\\left(\\frac{Z-45.6}{\\sqrt{43.52}}\\leq 0.59\\right) \\\\\n\t\t&\\simeq 1-0.7224 \\\\\n\t\t&\\simeq 0.2776\n\t\t\\end{align*}$$\n\t\tIl y a donc environ $27.76$\\% de chances d'avoir au moins $50$ pièces refusées dans le lot de $\\nombre{1000}$ pièces.",

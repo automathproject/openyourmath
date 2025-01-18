@@ -1,5 +1,5 @@
 {
-  "uuid": "09b6c84c-ef59-4c1a-b0da-ffe774ba7f68",
+  "uuid": "62162410-c5aa-454d-857a-756b43fac1cf",
   "titre": "Optimisation quadratique, moindres carrés",
   "theme": [
     "optimisation"
@@ -9,11 +9,11 @@
     "auteur": "",
     "createdAt": "2024-10-15",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-03T14:18:06.607Z"
+    "updatedAt": "2025-01-18T15:05:49.789Z"
   },
   "contenu": [
     {
-      "id": "55b7e141-91ec-456d-bedc-f19b480460e6",
+      "id": "8a600b30-996a-4182-aa4d-a2bd0317e5cf",
       "type": "description",
       "value": {
         "latex": "Soit $N \\in \\mathbb{N}^*$, et $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$ un nuage de points. On cherche à déterminer les coefficients $a$, $b$ et $c$ de la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole.",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "id": "8d073b7c-a582-45fe-890a-ccb0e8208fdf",
+      "id": "26613ad4-cad9-44db-a5b6-746c9330decf",
       "type": "question",
       "value": {
         "latex": "Écrire ce problème comme un problème de minimisation quadratique, c’est-à-dire un problème de la forme\n  \\[\n  \\inf_{X \\in \\mathbb{R}^n} J(X) \\quad \\text{avec} \\quad J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle,\n  \\]\n  avec $A \\in \\mathcal{S}_n(\\mathbb{R})$, $b \\in \\mathbb{R}^n$. On devra donc expliciter $n$, $A$, et $b$. On utilisera la notation $S_k = \\sum_{i=1}^{N} t_i^k$.",
@@ -29,7 +29,7 @@
       }
     },
     {
-      "id": "57d7099c-41e6-4dbc-8cb3-c26ddb3aa658",
+      "id": "00a64d8e-be4e-4784-bb81-6d59fc38e19d",
       "type": "reponse",
       "value": {
         "latex": "Le problème est celui de la régression parabolique pour un nuage de points $\\{(t_i, x_i)\\}_{1 \\leq i \\leq N}$, où l'on cherche la parabole $P$ d'équation $y = at^2 + bt + c$ qui minimise la somme des carrés des distances des points $(t_i, x_i)$ à cette parabole. Le problème peut s'écrire :\n  \\[\n  \\inf_{X \\in \\mathbb{R}^3} J(X) \\quad \\text{avec} \\quad X = \\begin{pmatrix} a \\\\ b \\\\ c \\end{pmatrix} \\quad \\text{et} \\quad J(X) = \\sum_{i=1}^{N} (x_i - at_i^2 - bt_i - c)^2.\n  \\]\n  En écrivant $J(X) = \\|MX - k\\|^2$ avec $M = \\begin{pmatrix} t_1^2 & t_1 & 1 \\\\ \\vdots & \\vdots & \\vdots \\\\ t_N^2 & t_N & 1 \\end{pmatrix}$ et $k = \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix}$, on obtient\n  \\[\n  J(X) = \\frac{1}{2} \\langle AX, X \\rangle - \\langle b, X \\rangle\n  \\]\n  avec $A = M^T M$ et $b = M^T k$. La matrice $A$ est donc donnée par :\n  \\[\n  A = \\begin{pmatrix} S_4 & S_3 & S_2 \\\\ S_3 & S_2 & S_1 \\\\ S_2 & S_1 & N \\end{pmatrix}.\n  \\]",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": "d2fd7abf-31f1-4ff8-94aa-bd2130a0db0a",
+      "id": "c8e97077-660f-4f82-b1e0-416fd7c28c88",
       "type": "question",
       "value": {
         "latex": "Discuter de l’existence des solutions d’un tel problème.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "e49c3226-72d1-4070-82ad-ab4f94ea20e5",
+      "id": "9ce2990e-1531-4703-9501-978c14176f55",
       "type": "reponse",
       "value": {
         "latex": "Ce problème est équivalent à celui de minimiser la distance euclidienne de $k$ au sous-espace vectoriel $\\text{Im}(M)$, qui est de dimension finie. Il s’agit donc d’un problème de projection orthogonale, qui admet toujours une solution.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "id": "81a519b6-412f-4cce-9c54-4f1394a0bcfa",
+      "id": "d935c508-60f0-48e0-9269-0925b14e7b34",
       "type": "question",
       "value": {
         "latex": "On suppose que la matrice $A$ est définie positive. Démontrer que ce problème possède une unique solution.",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "id": "77bf550a-4f89-4122-bb03-6cb5467b5fa9",
+      "id": "8dd6aca5-3f4d-4f5f-8967-806b135d7608",
       "type": "reponse",
       "value": {
         "latex": "Si $A$ est définie positive, alors la fonction $J(X)$ est strictement convexe. Par conséquent, $J(X)$ possède un unique minimum sur $\\mathbb{R}^n$, donc le problème admet une unique solution.",
