@@ -35,7 +35,8 @@
       class="tex-link"
     >
       {uuid}.tex
-    </a>
+    </a>        <span class="metadata-separator">•</span>
+
       <span class="metadata-item">{metadata.auteur}</span>
       {#if metadata.organisation}
         <span class="metadata-separator">•</span>
