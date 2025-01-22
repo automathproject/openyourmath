@@ -10,11 +10,19 @@
     "auteur": "Maxime Nguyen",
     "createdAt": "2023-10-16",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-18T15:03:43.479Z"
+    "updatedAt": "2025-01-22T11:28:46.524Z"
   },
   "contenu": [
     {
-      "id": "6b515961-cfd3-416d-97d3-c70da18aea0a",
+      "id": "9c09ab33-37c9-4f17-a0f6-6ad19495ab58",
+      "type": "description",
+      "value": {
+        "latex": "Soient $X$ et $Y$ deux variables aléatoires indépendantes suivant chacune une loi exponentielle $\\mathcal{E}(3)$. On rappelle qu'une densité de probabilité de la loi exponentielle $\\mathcal{E}(\\lambda)$ est donnée par : $$f(x) = \\begin{cases} \n    \\lambda e^{-\\lambda x} & \\text{ si } x \\geq 0 \\\\\n    0 & \\text{ sinon }\n\\end{cases}.$$\n  \n  On note $Z = \\min(X,Y)$ la variable aléatoire donnant le minimum de $X$ et $Y$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span> deux variables aléatoires indépendantes\nsuivant chacune une loi exponentielle <span\nclass=\"math inline\">\\(\\mathcal{E}(3)\\)</span>. On rappelle qu’une\ndensité de probabilité de la loi exponentielle <span\nclass=\"math inline\">\\(\\mathcal{E}(\\lambda)\\)</span> est donnée par :\n<span class=\"math display\">\\[f(x) = \\begin{cases}\n    \\lambda e^{-\\lambda x} &amp; \\text{ si } x \\geq 0 \\\\\n    0 &amp; \\text{ sinon }\n\\end{cases}.\\]</span></p>\n<p>On note <span class=\"math inline\">\\(Z = \\min(X,Y)\\)</span> la\nvariable aléatoire donnant le minimum de <span\nclass=\"math inline\">\\(X\\)</span> et <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dd16e11d-2f8c-497b-824b-8f387b9e3cd9",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(X \\geq t)$ pour tout $t \\in \\R$.",
@@ -22,7 +30,7 @@
       }
     },
     {
-      "id": "9b4d5509-788c-4194-81e3-f24e836d3c06",
+      "id": "4d9a1264-62eb-492e-810b-d967c4587120",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(X \\geq t) &= \\int_t^{+\\infty} f(x) \\d x \\\\\n            &= \\int_t^{+\\infty} 3 e^{-3x} \\d x \\\\\n            &= \\left[ -e^{-3x} \\right]_t^{+\\infty} \\\\\n            &= e^{-3t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(X \\geq t) = 1$.",
@@ -30,7 +38,7 @@
       }
     },
     {
-      "id": "191fe452-f2e2-4d5e-910a-f94bbecd227d",
+      "id": "b4baeea3-caee-44c1-ae8e-6a05241bd6dd",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\prob(Z \\geq t)$ pour tout $t \\in \\R$.",
@@ -38,7 +46,7 @@
       }
     },
     {
-      "id": "a057fbaf-d94d-45d3-82d1-7e1e12127975",
+      "id": "59e1897e-901c-4176-b17b-66500228c37d",
       "type": "reponse",
       "value": {
         "latex": "Soit $t \\in \\R$. Si $t \\geq 0$, on a : \n        $$\\begin{align*}\n            \\prob(Z \\geq t) &= \\prob(X \\geq t \\text{ et } Y \\geq t) \\\\\n            &= \\prob(X \\geq t) \\prob(Y \\geq t) \\text{ par indépendance de $X$ et $Y$} \\\\\n            &= e^{-3t} \\times e^{-3t} \\\\\n            &= e^{-6t}.\n        \\end{align*}$$\n        Si $t < 0$, on a $\\prob(Z \\geq t) = 1$.\n\n        On voit ainsi que $Z = \\min(X,Y)$ suit une loi exponentielle $\\mathcal{E}(6)$.",
