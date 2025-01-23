@@ -36,20 +36,27 @@
 
     loadingExercise = true;
     errorMessage = '';
-    exerciseData = null; // Reset des données
-    
+
     try {
+        // Reset complet des données avant chargement
+        exerciseData = null;
         await tick();
+
         const response = await fetch(`/content/json2/${uuid}.json`);
-        
-        if (!response.ok) {
-            throw new Error(response.statusText);
-        }
+        if (!response.ok) throw new Error(response.statusText);
 
         const newData = await response.json();
+        console.log('Nouvel exercice:', newData);
+        
+        // Vérification explicite de l'UUID
+        if (newData.uuid !== uuid) {
+            console.error(`UUID mismatch: expected ${uuid}, got ${newData.uuid}`);
+            throw new Error('UUID mismatch');
+        }
+
         await tick();
         exerciseData = newData;
-        key += 1; // Force le rafraîchissement uniquement au niveau de la page
+        key += 1;
         
         if (isSmallScreen()) {
             showList = false;
@@ -105,11 +112,22 @@
   }
   
   async function handleSelect(uuid: string) {
-      if (uuid !== exerciseUuid) {
-          inputUuid = uuid;
-          goto(`?uuid=${uuid}`, { replaceState: false });
-      }
-  }
+    if (uuid !== exerciseUuid) {
+        inputUuid = uuid;
+        const timestamp = Date.now();
+        goto(`?uuid=${uuid}&t=${timestamp}`, { replaceState: true });
+    }
+}
+
+$: {
+    const currentUuid = $page.url.searchParams.get('uuid');
+    const timestamp = $page.url.searchParams.get('t');
+    if (currentUuid && currentUuid !== exerciseUuid) {
+        exerciseUuid = currentUuid;
+        inputUuid = currentUuid;
+        loadExerciseData(exerciseUuid);
+    }
+}
 </script>
 
 <section class="container">
