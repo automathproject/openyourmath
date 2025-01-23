@@ -1,3 +1,5 @@
+/**  Script pour convertir les fichiers LaTeX en JSON
+ * src/script/convertTex2JsonV3.js */
 import fs from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
