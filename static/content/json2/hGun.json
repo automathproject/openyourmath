@@ -9,11 +9,19 @@
     "auteur": "Quentin LIARD",
     "createdAt": "2023-12-01",
     "organisation": "AMSCC",
-    "updatedAt": "2025-01-18T15:04:10.162Z"
+    "updatedAt": "2025-01-23T10:29:54.760Z"
   },
   "contenu": [
     {
-      "id": "60714086-c1f1-4408-b6a4-c4ec7498a2d0",
+      "id": "f1ee16a9-bd6a-41e8-82aa-275f97ffa6c1",
+      "type": "description",
+      "value": {
+        "latex": "Pour toute variable al\\'eatoire $T$, on définit la \\textbf{transformée de Laplace} $\\mathcal{L}_{\\cdot}(T) \\colon \\R_+ \\to \\R$ par :\n\n    $$\\forall t \\in \\R_+, \\quad \\mathcal{L}_t(T)=\\mathbb{E}(e^{-tT}).$$\n\n    {\\it{On admet le r\\'esultat suivant :}}\n\n    \\begin{tcolorbox}        Si $T_1,T_2$ sont des variables al\\'eatoires absolument continues telles que pour tout $t\\geq 0$, $\\mathcal{L}_t(T_1)=\\mathcal{L}_t(T_2)$, alors les variables $T_1$ et $T_2$ suivent la m\\^eme loi. \n    \\end{tcolorbox}\n\n    On admet également que pour tout $n \\in \\N^*$ : \n    $$\\int_0^{+\\infty} x^n e^{-x} dx = n!$$\n\n    Soit $n \\in \\N^*$ quelconque et soit $Z_1,Z_2,\\cdots{},Z_n$ une famille de $n$ variables aléatoires indépendantes identiquement distribuées selon  une loi exponentielle de param\\`etre $\\frac{1}{2}$. L'objectif de l'exercice est de déterminer la loi de $S_n=\\displaystyle\\sum_{i=1}^{n}Z_i$.",
+        "html": "<p>Pour toute variable aléatoire <span class=\"math inline\">\\(T\\)</span>,\non définit la <strong>transformée de Laplace</strong> <span\nclass=\"math inline\">\\(\\mathcal{L}_{\\cdot}(T) \\colon \\R_+ \\to \\R\\)</span>\npar :</p>\n<p><span class=\"math display\">\\[\\forall t \\in \\R_+, \\quad\n\\mathcal{L}_t(T)=\\mathbb{E}(e^{-tT}).\\]</span></p>\n<p><span><em><span>On admet le résultat suivant :</span></em></span></p>\n<div class=\"tcolorbox\">\n<p>Si <span class=\"math inline\">\\(T_1,T_2\\)</span> sont des variables\naléatoires absolument continues telles que pour tout <span\nclass=\"math inline\">\\(t\\geq 0\\)</span>, <span\nclass=\"math inline\">\\(\\mathcal{L}_t(T_1)=\\mathcal{L}_t(T_2)\\)</span>,\nalors les variables <span class=\"math inline\">\\(T_1\\)</span> et <span\nclass=\"math inline\">\\(T_2\\)</span> suivent la même loi.</p>\n</div>\n<p>On admet également que pour tout <span class=\"math inline\">\\(n \\in\n\\N^*\\)</span> : <span class=\"math display\">\\[\\int_0^{+\\infty} x^n e^{-x}\ndx = n!\\]</span></p>\n<p>Soit <span class=\"math inline\">\\(n \\in \\N^*\\)</span> quelconque et\nsoit <span class=\"math inline\">\\(Z_1,Z_2,\\cdots{},Z_n\\)</span> une\nfamille de <span class=\"math inline\">\\(n\\)</span> variables aléatoires\nindépendantes identiquement distribuées selon une loi exponentielle de\nparamètre <span class=\"math inline\">\\(\\frac{1}{2}\\)</span>. L’objectif\nde l’exercice est de déterminer la loi de <span\nclass=\"math inline\">\\(S_n=\\displaystyle\\sum_{i=1}^{n}Z_i\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "26f84791-c5b4-40bc-895e-16e2f6d73072",
       "type": "question",
       "value": {
         "latex": "Soient $X$ et $Y$ deux variables aléatoires indépendantes. Démontrer que  pour tout $t\\geq 0$ : $$\\mathcal{L}_t(X+Y)=\\mathcal{L}_t(X)\\mathcal{L}_t(Y).$$",
@@ -21,7 +29,7 @@
       }
     },
     {
-      "id": "753c1933-1f57-4b80-8e68-997fbf90a54e",
+      "id": "64c45cb4-1ad3-410c-84fb-3377eb1693d1",
       "type": "reponse",
       "value": {
         "latex": "On a $\\mathcal{L}_t(Z) = \\mathbb{E}(e^{-tZ}) = \\int_0^{+\\infty} e^{-tz} \\frac{1}{2} e^{-\\frac{z}{2}} dz = \\frac{1}{2} \\int_0^{+\\infty} e^{-\\frac{z}{2}(2t+1)} dz = \\frac{1}{2} \\left[ \\frac{e^{-\\frac{z}{2}(2t+1)}}{-\\frac{2t+1}{2}} \\right]_0^{+\\infty} = \\frac{1}{2t+1}$. \n    On a $\\mathcal{L}_t(S_n) = \\prod_{i=1}^n \\mathcal{L}_t(Z_i) = \\prod_{i=1}^n \\frac{1}{2t+1} = \\left( \\frac{1}{2t+1} \\right)^n$.",
@@ -29,7 +37,7 @@
       }
     },
     {
-      "id": "edbc76dc-3b8b-45e6-8fe2-e536b03daa13",
+      "id": "9507ae8e-84a5-4f25-bbc9-50560db45fb2",
       "type": "reponse",
       "value": {
         "latex": "On a $\\int_{\\R} f_U(x) dx = \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx = \\int_0^{+\\infty} \\frac{y^{n-1}}{n-1!} e^{-y} dy = 1$. Donc $f_U$ est bien une densité de probabilité.",
@@ -37,7 +45,7 @@
       }
     },
     {
-      "id": "2447e289-7d55-44d3-8a78-84624b5104ab",
+      "id": "6c50e2b0-c0fd-476b-a30d-08ac6980542f",
       "type": "reponse",
       "value": {
         "latex": "On a \n    $$\\begin{align*}\n        \\mathcal{L}_t(U) &= \\int_0^{+\\infty} e^{-tx} \\frac{1}{2^n} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}} dx \\\\ \n        &= \\frac{1}{2^n} \\int_0^{+\\infty} \\frac{x^{n-1}}{n-1!} e^{-\\frac{x}{2}(2t+1)} dx \\\\\n        &= \\int_0^{+\\infty} \\frac{1}{2^n} \\left(\\frac{2}{2t+1}\\right)^{n-1}\\frac{y^{n-1}}{n-1!} e^{-y} \\frac{2}{2t+1} dy \\\\\n         &= \\frac{1}{(2t+1)^n}\n    \\end{align*}$$\n    Donc $U$ et $S_n$ suivent la même loi définie par la densité $f_U$.",
