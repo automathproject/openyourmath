@@ -28,41 +28,40 @@
   }
 
   async function loadExerciseData(uuid: string) {
-      if (!uuid) {
-          exerciseData = null;
-          errorMessage = 'Aucun exercice sélectionné';
-          return;
-      }
+    if (!uuid) {
+        exerciseData = null;
+        errorMessage = 'Aucun exercice sélectionné';
+        return;
+    }
 
-      loadingExercise = true;
-      errorMessage = '';
+    loadingExercise = true;
+    errorMessage = '';
+    exerciseData = null; // Reset des données
+    
+    try {
+        await tick();
+        const response = await fetch(`/content/json2/${uuid}.json`);
+        
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
 
-      try {
-          exerciseData = null;
-          key += 1;
-          await tick();
-
-          const response = await fetch(`/content/json2/${uuid}.json`);
-          
-          if (!response.ok) {
-              throw new Error(response.statusText);
-          }
-
-          const newData = await response.json();
-          await tick();
-          exerciseData = newData;
-          
-          if (isSmallScreen()) {
-              showList = false;
-          }
-      } catch (error: any) {
-          exerciseData = null;
-          errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
-          console.error('Erreur de chargement:', error);
-      } finally {
-          loadingExercise = false;
-      }
-  }
+        const newData = await response.json();
+        await tick();
+        exerciseData = newData;
+        key += 1; // Force le rafraîchissement uniquement au niveau de la page
+        
+        if (isSmallScreen()) {
+            showList = false;
+        }
+    } catch (error: any) {
+        exerciseData = null;
+        errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
+        console.error('Erreur de chargement:', error);
+    } finally {
+        loadingExercise = false;
+    }
+}
 
   onMount(() => {
       const initialUuid = get(page).url.searchParams.get('uuid');
