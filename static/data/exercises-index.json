@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalCount": 458,
-    "generatedAt": "2025-01-29T11:05:55.736Z"
+    "generatedAt": "2025-02-01T14:45:56.248Z"
   },
   "exercises": [
     {
@@ -56,7 +56,7 @@
         "auteur": "",
         "createdAt": "2023-11-15",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-18T15:03:59.845Z"
+        "updatedAt": "2025-02-01T14:45:56.095Z"
       },
       "contenu": [
         {
@@ -72,9 +72,21 @@
           }
         },
         {
+          "type": "reponse",
+          "value": {
+            "latex": "Soient \\( X \\sim \\mathcal{N}(0,1) \\) et \\( U \\) une variable discrète uniforme sur \\(\\{-1,1\\}\\), indépendantes. Pour tout \\( x \\in \\mathbb{R} \\), on a\n\\[\n\\mathbb{P}(Y\\le x) = \\mathbb{P}(UX\\le x)\n= \\mathbb{P}(\\{U=1\\}\\cap\\{X\\le x\\}) + \\mathbb{P}(\\{U=-1\\}\\cap\\{-X\\le x\\}).\n\\]\nLorsque \\( U = -1 \\), l'inégalité \\(-X\\le x\\) s'écrit \\( X\\ge -x \\). Par indépendance de \\( U \\) et \\( X \\) et en utilisant la formule des probabilités totales, on obtient\n\\[\n\\mathbb{P}(Y\\le x)\n=\\mathbb{P}(U=1)\\,\\mathbb{P}(X\\le x) + \\mathbb{P}(U=-1)\\,\\mathbb{P}(X\\ge -x).\n\\]\nÉtant donné que \\( \\mathbb{P}(U=1)=\\mathbb{P}(U=-1)=\\frac{1}{2} \\) et que la symétrie de la loi normale implique que\n\\[\n\\mathbb{P}(X\\ge -x)=\\mathbb{P}(X\\le x),\n\\]\nil vient\n\\[\n\\mathbb{P}(Y\\le x)\n=\\frac{1}{2}\\,\\mathbb{P}(X\\le x) + \\frac{1}{2}\\,\\mathbb{P}(X\\le x)\n=\\mathbb{P}(X\\le x).\n\\]\nAinsi, la fonction de répartition de \\( Y \\) est identique à celle de \\( X \\) et donc \\( Y \\sim \\mathcal{N}(0,1) \\)."
+          }
+        },
+        {
           "type": "question",
           "value": {
-            "latex": "Calculer l'espérance de \\( U \\), puis montrer que \\( \\mathbb{E}(XY) = 0 \\). En déduire que \\( \\text{Cov}(X, Y) = 0 \\)."
+            "latex": "Calculer l'espérance de \\( U \\), puis montrer que \\( \\mathbb{E}(XY) = 0 \\). En déduire que \\( \\mathrm{Cov}(X, Y) = 0 \\)."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "Tout d'abord, comme \\( U \\) prend les valeurs \\( -1 \\) et \\( 1 \\) avec même probabilité,\n\\[\n\\mathbb{E}(U)=\\frac{1}{2}(-1)+\\frac{1}{2}(1)=0.\n\\]\nEn écrivant \\( Y = UX \\), on a\n\\[\n\\mathbb{E}(XY)=\\mathbb{E}(X\\,(UX))=\\mathbb{E}(U\\,X^2).\n\\]\nComme \\( U \\) et \\( X \\) sont indépendantes, on peut séparer l'espérance :\n\\[\n\\mathbb{E}(U\\,X^2)=\\mathbb{E}(U)\\,\\mathbb{E}(X^2)=0\\times\\mathbb{E}(X^2)=0.\n\\]\nLa covariance est donnée par\n\\[\n\\mathrm{Cov}(X,Y)=\\mathbb{E}(XY)-\\mathbb{E}(X)\\,\\mathbb{E}(Y).\n\\]\nOr, \\( \\mathbb{E}(X)=0 \\) (pour une loi normale centrée) et, comme \\( Y \\sim \\mathcal{N}(0,1) \\), \\( \\mathbb{E}(Y)=0 \\). Ainsi,\n\\[\n\\mathrm{Cov}(X,Y)=0-0=0.\n\\]"
           }
         },
         {
@@ -84,9 +96,21 @@
           }
         },
         {
+          "type": "reponse",
+          "value": {
+            "latex": "Pour \\( X \\sim \\mathcal{N}(0,1) \\), on connaît que\n\\[\n\\mathbb{E}(X^2)=1.\n\\]\nD'autre part, en utilisant la densité de \\( X \\),\n\\[\nf_X(x)=\\frac{1}{\\sqrt{2\\pi}}\\,e^{-x^2/2},\n\\]\non a\n\\[\n\\mathbb{E}(X^2)=\\int_{-\\infty}^{+\\infty} x^2\\,f_X(x)\\,dx\n=\\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{+\\infty} x^2 e^{-x^2/2}\\,dx.\n\\]\nLa fonction \\( x\\mapsto x^2e^{-x^2/2} \\) est paire, donc\n\\[\n\\int_{-\\infty}^{+\\infty} x^2 e^{-x^2/2}\\,dx = 2\\int_{0}^{+\\infty} x^2 e^{-x^2/2}\\,dx.\n\\]\nAinsi,\n\\[\n1=\\frac{1}{\\sqrt{2\\pi}} \\cdot 2\\int_{0}^{+\\infty} x^2 e^{-x^2/2}\\,dx,\n\\]\nce qui donne\n\\[\n\\int_{0}^{+\\infty} x^2 e^{-x^2/2}\\,dx\n=\\frac{\\sqrt{2\\pi}}{2}.\n\\]"
+          }
+        },
+        {
           "type": "question",
           "value": {
             "latex": "En déduire, s'il existe, le moment d'ordre $4$ de $X$."
+          }
+        },
+        {
+          "type": "reponse",
+          "value": {
+            "latex": "Nous souhaitons calculer\n\\[\n\\mathbb{E}(X^4)=\\frac{1}{\\sqrt{2\\pi}}\\int_{-\\infty}^{+\\infty} x^4 e^{-x^2/2}\\,dx.\n\\]\nComme la fonction \\( x\\mapsto x^4e^{-x^2/2} \\) est paire, on peut écrire\n\\[\n\\mathbb{E}(X^4)=\\frac{2}{\\sqrt{2\\pi}}\\int_{0}^{+\\infty} x^4 e^{-x^2/2}\\,dx.\n\\]\nPour évaluer l'intégrale\n\\[\nI = \\int_{0}^{+\\infty} x^4 e^{-x^2/2}\\,dx,\n\\]\nnous effectuons une intégration par parties en posant\n\\[\n\\begin{cases}\nu = x^3, \\quad & du = 3x^2\\,dx,\\\\[1mm]\ndv = x\\,e^{-x^2/2}\\,dx, \\quad & v = -e^{-x^2/2}.\n\\end{cases}\n\\]\nAinsi, par intégration par parties,\n\\[\nI = \\Bigl[-x^3e^{-x^2/2}\\Bigr]_0^{+\\infty} + \\int_0^{+\\infty} 3x^2e^{-x^2/2}\\,dx.\n\\]\nLe terme d'évaluation aux bornes s'annule (en effet, \\( x^3 e^{-x^2/2}\\to 0 \\) quand \\( x\\to+\\infty \\) et vaut 0 en 0), ce qui donne\n\\[\nI = 3\\int_{0}^{+\\infty} x^2 e^{-x^2/2}\\,dx.\n\\]\nD'après la question précédente, on a établi que\n\\[\n\\int_{0}^{+\\infty} x^2 e^{-x^2/2}\\,dx = \\frac{\\sqrt{2\\pi}}{2}.\n\\]\nIl s'ensuit que\n\\[\nI = 3\\,\\frac{\\sqrt{2\\pi}}{2}.\n\\]\nFinalement,\n\\[\n\\mathbb{E}(X^4)=\\frac{2}{\\sqrt{2\\pi}}\\;I=\\frac{2}{\\sqrt{2\\pi}}\\cdot\\frac{3\\sqrt{2\\pi}}{2}=3.\n\\]\nAinsi, le moment d'ordre 4 de \\( X \\) existe et vaut \\( 3 \\)."
           }
         }
       ],
@@ -5703,9 +5727,9 @@
       "niveau": "",
       "metadata": {
         "auteur": "Q. Liard",
-        "createdAt": "2025-01-29T11:05:55.336Z",
+        "createdAt": "2025-02-01T14:44:23.559Z",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-29T11:05:55.336Z"
+        "updatedAt": "2025-02-01T14:44:23.559Z"
       },
       "contenu": [
         {
@@ -5733,7 +5757,7 @@
           }
         }
       ],
-      "preview": "<p>Vérifier que <span class=\"math inline\">\\(1\\)</span> est racine de <span class=\"math inline\">\\(Q\\)</span> et donner la décomposition en facteurs irr ..."
+      "preview": "<p>Vérifier que <span class=\"math inline\">\\(1\\)</span> est racine de\n<span class=\"math inline\">\\(Q\\)</span> et donner la décomposition en\nfacteurs irr ..."
     },
     {
       "uuid": "pGze",
@@ -20468,9 +20492,9 @@
       "niveau": "",
       "metadata": {
         "auteur": "Q. Liard",
-        "createdAt": "2025-01-29T11:05:55.212Z",
+        "createdAt": "2025-02-01T14:44:23.460Z",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-29T11:05:55.212Z"
+        "updatedAt": "2025-02-01T14:44:23.460Z"
       },
       "contenu": [
         {
@@ -20552,7 +20576,7 @@
           }
         }
       ],
-      "preview": "<p>L’enjeu de cet exercice est la factorisation du polynôme <span class=\"math inline\">\\(R(X)=X^9+X^6+X^3+1\\)</span>.</p>\n"
+      "preview": "<p>L’enjeu de cet exercice est la factorisation du polynôme <span\nclass=\"math inline\">\\(R(X)=X^9+X^6+X^3+1\\)</span>.</p>\n"
     },
     {
       "uuid": "taba",
@@ -20563,9 +20587,9 @@
       "niveau": "",
       "metadata": {
         "auteur": "Q. Liard",
-        "createdAt": "2025-01-29T11:05:55.483Z",
+        "createdAt": "2025-02-01T14:44:23.803Z",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-29T11:05:55.483Z"
+        "updatedAt": "2025-02-01T14:44:23.803Z"
       },
       "contenu": [
         {
@@ -20605,7 +20629,7 @@
           }
         }
       ],
-      "preview": "<p>Déterminer les racines complexes de <span class=\"math inline\">\\(P(X)=X^4-4X^3+5X^2-2X\\)</span> ainsi que leur ordre de multiplicité.</p>\n"
+      "preview": "<p>Déterminer les racines complexes de <span\nclass=\"math inline\">\\(P(X)=X^4-4X^3+5X^2-2X\\)</span> ainsi que leur\nordre de multiplicité.</p>\n"
     },
     {
       "uuid": "JHnB",
@@ -24832,9 +24856,9 @@
       "niveau": "",
       "metadata": {
         "auteur": "",
-        "createdAt": "2025-01-29T11:05:54.950Z",
+        "createdAt": "2025-02-01T14:44:23.210Z",
         "organisation": "AMSCC",
-        "updatedAt": "2025-01-29T11:05:54.950Z"
+        "updatedAt": "2025-02-01T14:44:23.210Z"
       },
       "contenu": [
         {
@@ -24904,7 +24928,7 @@
           }
         }
       ],
-      "preview": "<p>Considérer le système suivant dépendant d’un paramètre réel <span class=\"math inline\">\\(m\\)</span> :</p>\n<p><span class=\"math display\"> ..."
+      "preview": "<p>Considérer le système suivant dépendant d’un paramètre réel <span\nclass=\"math inline\">\\(m\\)</span> :</p>\n<div class=\"center\">\n<p><span class=\"math  ..."
     },
     {
       "uuid": "E7RW",
