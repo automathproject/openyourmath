@@ -22,7 +22,6 @@ To do :
 - [x] Gérer une liste d'exercices
 - [x] Faire un moteur de recherche
 - [x] Améliorer l'ergonomie du moteur de recherche
-- [ ] Gérer automatiquement les images depuis le LaTeX
+- [x] Gérer automatiquement les images depuis le LaTeX
 - [ ] Gérer l'export d'une fiche en LaTeX et en PDF
-- [ ] Fusionner la page de recherche et la page d'affichage des exercices
-- [ ] Faire une jolie page d'accueil
+- [ ] Importer la base d'exercices d'exo7
