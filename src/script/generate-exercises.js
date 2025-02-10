@@ -1,9 +1,22 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-const INPUT_DIR = './static/content/json2';
-const OUTPUT_FILE = './static/data/exercises.json';
-const OUTPUT_INDEX_FILE = './static/data/exercises-index.json';
+// Obtenir le chemin du répertoire courant
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Définir les chemins relatifs par rapport à la racine du projet
+const PROJECT_ROOT = path.join(__dirname, '../..');
+const INPUT_DIR = path.join(PROJECT_ROOT, 'static/content/json2');
+const OUTPUT_FILE = path.join(PROJECT_ROOT, 'static/data/exercises.json');
+const OUTPUT_INDEX_FILE = path.join(PROJECT_ROOT, 'static/data/exercises-index.json');
+
+// Logging des chemins pour debug
+console.log('Project root:', PROJECT_ROOT);
+console.log('Input directory:', INPUT_DIR);
+console.log('Output file:', OUTPUT_FILE);
 
 function getPreview(content, maxLength = 150) {
   if (!content) return '';
@@ -46,7 +59,6 @@ function getPreview(content, maxLength = 150) {
 }
 
 function generatePreview(exercise) {
-  // Recherche du premier contenu non vide parmi les descriptions et questions
   const firstContent = exercise.contenu.find(item => 
     (item.type === 'description' || item.type === 'question') && 
     item.value.html?.trim()
@@ -59,27 +71,53 @@ function generatePreview(exercise) {
   return '';
 }
 
+async function getAllJsonFiles(dir) {
+  try {
+    const files = await fs.readdir(dir, { withFileTypes: true });
+    const jsonFiles = [];
+
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      
+      if (file.isDirectory()) {
+        const subDirFiles = await getAllJsonFiles(fullPath);
+        jsonFiles.push(...subDirFiles);
+      } else if (file.isFile() && file.name.endsWith('.json')) {
+        jsonFiles.push(fullPath);
+      }
+    }
+
+    return jsonFiles;
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error);
+    throw error;
+  }
+}
+
 async function generateExercisesJson() {
   try {
-    // Créer le dossier de sortie s'il n'existe pas
+    // Créer les dossiers de sortie s'ils n'existent pas
     await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
+    await fs.mkdir(INPUT_DIR, { recursive: true });
     
-    // Lire tous les fichiers du dossier d'entrée
-    const files = await fs.readdir(INPUT_DIR);
+    // Lire récursivement tous les fichiers JSON
+    const jsonFiles = await getAllJsonFiles(INPUT_DIR);
+    console.log(`Found ${jsonFiles.length} JSON files to process...`);
+    
     const exercises = [];
-    console.log(`Found ${files.length} files to process...`);
     
     // Traiter chaque fichier
-    for (const file of files) {
-      if (file.endsWith('.json')) {
-        try {
-          const filePath = path.join(INPUT_DIR, file);
-          const content = await fs.readFile(filePath, 'utf-8');
-          const exercise = JSON.parse(content);
-          exercises.push(exercise);
-        } catch (error) {
-          console.error(`Error processing file ${file}:`, error.message);
-        }
+    for (const filePath of jsonFiles) {
+      try {
+        const content = await fs.readFile(filePath, 'utf-8');
+        const exercise = JSON.parse(content);
+        
+        // Ajouter le chemin relatif du fichier comme métadonnée
+        exercise.filePath = path.relative(INPUT_DIR, filePath);
+        
+        exercises.push(exercise);
+      } catch (error) {
+        console.error(`Error processing file ${filePath}:`, error.message);
       }
     }
     
@@ -133,5 +171,12 @@ async function generateExercisesJson() {
   }
 }
 
-// Exécuter le script
-generateExercisesJson();
+// Pour une utilisation comme module
+export async function initializeJsonIndex() {
+  await generateExercisesJson();
+}
+
+// Pour une utilisation directe en ligne de commande
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  generateExercisesJson();
+}

@@ -1,3 +1,5 @@
+// Description: Fichier contenant les fonctions d'initialisation de l'index des fichiers JSON.
+// src/lib/server/jsonIndex.ts
 import { JsonFileIndex } from '$lib/utils/JsonFileIndex';
 import path from 'path';
 

@@ -9,7 +9,6 @@ await initializeJsonIndex().catch(error => {
 });
 
 export const handle: Handle = async ({ event, resolve }) => {
-  // Passer le contrôle au reste de l'application
   const response = await resolve(event);
   return response;
 };

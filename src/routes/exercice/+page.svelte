@@ -10,7 +10,7 @@
   import CustomList from '../../components/CustomList.svelte';
   import AddButton from '../../components/AddButton.svelte';
   import HideColumnsButton from '../../components/buttons/HideColumnsButton.svelte';
-  import { Search } from 'lucide-svelte'; // Importez l'icône de recherche
+  import { Search } from 'lucide-svelte';
 
   let inputUuid: string = '';
   let exerciseUuid: string = '';
@@ -20,7 +20,7 @@
   let showList = true;
   $: arrowClass = showList ? 'rotate-180' : '';
   let key = 0;
-  
+
   import { browser } from '$app/environment';
 
   function isSmallScreen() {
@@ -29,46 +29,47 @@
 
   async function loadExerciseData(uuid: string) {
     if (!uuid) {
-        exerciseData = null;
-        errorMessage = 'Aucun exercice sélectionné';
-        return;
+      exerciseData = null;
+      errorMessage = 'Aucun exercice sélectionné';
+      return;
     }
 
     loadingExercise = true;
     errorMessage = '';
 
     try {
-        // Reset complet des données avant chargement
-        exerciseData = null;
-        await tick();
+      // Réinitialisation des données avant le chargement
+      exerciseData = null;
+      await tick();
 
-        const response = await fetch(`/content/json2/${uuid}.json`);
-        if (!response.ok) throw new Error(response.statusText);
+      // Appel à l'endpoint serveur que vous avez créé dans `/exercice/[uuid]/+server.ts`
+      const response = await fetch(`/exercice/${uuid}`);
+      if (!response.ok) throw new Error(response.statusText);
 
-        const newData = await response.json();
-        console.log('Nouvel exercice:', newData);
-        
-        // Vérification explicite de l'UUID
-        if (newData.uuid !== uuid) {
-            console.error(`UUID mismatch: expected ${uuid}, got ${newData.uuid}`);
-            throw new Error('UUID mismatch');
-        }
+      const newData = await response.json();
+      console.log('Nouvel exercice:', newData);
 
-        await tick();
-        exerciseData = newData;
-        key += 1;
-        
-        if (isSmallScreen()) {
-            showList = false;
-        }
+      // Vérification de cohérence de l'UUID
+      if (newData.uuid !== uuid) {
+        console.error(`UUID mismatch: attendu ${uuid}, reçu ${newData.uuid}`);
+        throw new Error('UUID mismatch');
+      }
+
+      await tick();
+      exerciseData = newData;
+      key += 1;
+
+      if (isSmallScreen()) {
+        showList = false;
+      }
     } catch (error: any) {
-        exerciseData = null;
-        errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
-        console.error('Erreur de chargement:', error);
+      exerciseData = null;
+      errorMessage = `L'exercice ${uuid} n'a pas pu être chargé.`;
+      console.error('Erreur de chargement:', error);
     } finally {
-        loadingExercise = false;
+      loadingExercise = false;
     }
-}
+  }
 
   onMount(() => {
       const initialUuid = get(page).url.searchParams.get('uuid');
@@ -117,75 +118,75 @@
         const timestamp = Date.now();
         goto(`?uuid=${uuid}&t=${timestamp}`, { replaceState: true });
     }
-}
+  }
 
-$: {
-    const currentUuid = $page.url.searchParams.get('uuid');
-    const timestamp = $page.url.searchParams.get('t');
-    if (currentUuid && currentUuid !== exerciseUuid) {
-        exerciseUuid = currentUuid;
-        inputUuid = currentUuid;
-        loadExerciseData(exerciseUuid);
-    }
-}
+  $: {
+      const currentUuid = $page.url.searchParams.get('uuid');
+      const timestamp = $page.url.searchParams.get('t');
+      if (currentUuid && currentUuid !== exerciseUuid) {
+          exerciseUuid = currentUuid;
+          inputUuid = currentUuid;
+          loadExerciseData(exerciseUuid);
+      }
+  }
 </script>
 
 <section class="container">
-    <div class="row position-relative">
-      {#if showList}
-        <div class="col-md-4 liste-container">
-          <h4>Recherche par thème</h4>
-          <Recherche onSelect={handleSelect} />
+  <div class="row position-relative">
+    {#if showList}
+      <div class="col-md-4 liste-container">
+        <h4>Recherche par thème</h4>
+        <Recherche onSelect={handleSelect} />
+      </div>
+    {/if}
+    <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
+      <HideColumnsButton bind:showList />  
+      <div class="input-container mb-3">
+        <div class="input-group">
+          <div class="search-group">
+            <input
+              type="text"
+              bind:value={inputUuid}
+              class="form-control fixed-width-input"
+              maxlength="4"
+              placeholder="Ab62"
+              on:keydown={(event) => {
+                if (event.key === 'Enter') {
+                  handleLoadExercise();
+                }
+              }}
+            />
+            <button 
+              on:click={handleLoadExercise} 
+              class="btn btn-primary btn-icon"
+              aria-label="Voir l'exercice">
+              <Search size={20} />
+            </button>
+            <AddButton uuid={exerciseUuid} />
+          </div>
+        </div>
+      </div>
+  
+      {#if loadingExercise}
+        <div class="alert alert-info" role="alert">
+          Chargement de l'exercice...
         </div>
       {/if}
-      <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
-        <HideColumnsButton bind:showList />  
-        <div class="input-container mb-3">
-            <div class="input-group">
-              <div class="search-group">
-                <input
-                  type="text"
-                  bind:value={inputUuid}
-                  class="form-control fixed-width-input"
-                  maxlength="4"
-                  placeholder="Ab62"
-                  on:keydown={(event) => {
-                    if (event.key === 'Enter') {
-                      handleLoadExercise();
-                    }
-                  }}
-                />
-                <button 
-                  on:click={handleLoadExercise} 
-                  class="btn btn-primary btn-icon"
-                  aria-label="Voir l'exercice">
-                  <Search size={20} />
-                </button>
-                <AddButton uuid={exerciseUuid} />
-              </div>
-            </div>
-          </div>
-  
-        {#if loadingExercise}
-          <div class="alert alert-info" role="alert">
-            Chargement de l'exercice...
-          </div>
-        {/if}
-        {#if errorMessage && !exerciseData}
-          <div class="alert alert-danger" role="alert">
-            {errorMessage}
-          </div>
-        {/if}
-        {#if exerciseData}
-          <div key={key}>
-            <ExerciceRenderer ExerciceData={exerciseData} />
-          </div>
-        {/if}
-      </div>
-      <div class="col-12 col-md-3 col-lg-3">
-        <CustomList showMobileButton={true} />
-      </div>
+      {#if errorMessage && !exerciseData}
+        <div class="alert alert-danger" role="alert">
+          {errorMessage}
+        </div>
+      {/if}
+      {#if exerciseData}
+        <div key={key}>
+          <ExerciceRenderer ExerciceData={exerciseData} />
+        </div>
+      {/if}
     </div>
+    <div class="col-12 col-md-3 col-lg-3">
+      <CustomList showMobileButton={true} />
+    </div>
+  </div>
 </section>
   
 <style>

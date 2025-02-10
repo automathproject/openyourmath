@@ -1,0 +1,35 @@
+{
+  "uuid": "XFPE",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6934",
+    "auteur": "ruette",
+    "createdAt": "2013-01-24",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Statistique",
+    "sousChapitre": "Tests d'hypothèses, intervalle de confiance",
+    "organisation": "",
+    "updatedAt": "2025-02-10T14:43:16.129Z"
+  },
+  "contenu": [
+    {
+      "id": "108bf47b-f2f1-402a-8c22-e94ef6c9d125",
+      "type": "description",
+      "value": {
+        "latex": "Sur un lot de  700 boulons soumis à des \nessais de rupture, 300  ont résisté. Sur un second lot de  225, 125  \nont résisté. Peut-on admettre, au seuil de  5\\%, que ces deux lots \nappartiennent à la même population ?",
+        "html": "<p>Sur un lot de 700 boulons soumis à des essais de rupture, 300 ont résisté. Sur un second lot de 225, 125 ont résisté. Peut-on admettre, au seuil de 5%, que ces deux lots appartiennent à la même population ?</p>\n"
+      }
+    },
+    {
+      "id": "397239d6-b9a7-410f-a842-1a23c7727d97",
+      "type": "reponse",
+      "value": {
+        "latex": "On choisit de comparer les fréquences observées sur les deux échantillons.\n\nOn fait l'hypothèse $H_0$ : les deux échantillons sont des tirages de \nvariables de Bernoulli indépendantes ayant la même espérance $p_{pop}$. \n\nSous l'hypothèse $H_{0}$, l'effectif $n_{i}F_{i}$ suit une loi binomiale \n$\\mathcal{B}(p_{pop},n_{i})$. Les échantillons étant de grande taille \n($n_1$, $n_2 \\geq 30$), on peut supposer que $F_{i}$ suit une loi \nnormale $\\mathcal{N}(p_{pop},\\sqrt{p_{pop}(1-p_{pop})/n_{i}})$. De plus, \npour le calcul de la variance, on peut estimer $p_{pop}$ au moyen de \nl'ensemble des données disponibles, i.e.\n\\begin{eqnarray*}\np_{pop}\\sim \\frac{300+125}{700+225}=0,46.\n\\end{eqnarray*}\nLa différence $D=F_{1}-F_{2}$ suit une loi normale d'espérance nulle et de variance\n$\n\\text{Var}(D)=\\text{Var}(F_{1})+\\text{Var}(F_{2})=p_{pop}(1-p_{pop})\n(\\frac{1}{n_{1}}+\\frac{1}{n_{2}})\\sim 0,2484(\\frac{1}{700}+\\frac{1}{225})=0,00146.\n$\n\nPar conséquent, on choisit comme fonction discriminante $T=D/\\sqrt{0.00146}=D/0,0382$, \nqui suit une loi normale standard.\nLa table donne $p(|T|>1,96)=0,05$.\nOr, sur l'échantillon mesuré, la variable $T$ prend la valeur \n$t=\\frac{-0,127}{0,0382}=-3,324$. Comme $|t|>1,96$, on rejette \n$H_{0}$. On conclut, avec au plus 5\\% de chances de se tromper, \nque les deux lots de boulons ne sont pas tirés de la même population.",
+        "html": "<p>On choisit de comparer les fréquences observées sur les deux échantillons.</p>\n<p>On fait l’hypothèse <span class=\"math inline\">\\(H_0\\)</span> : les deux échantillons sont des tirages de variables de Bernoulli indépendantes ayant la même espérance <span class=\"math inline\">\\(p_{pop}\\)</span>.</p>\n<p>Sous l’hypothèse <span class=\"math inline\">\\(H_{0}\\)</span>, l’effectif <span class=\"math inline\">\\(n_{i}F_{i}\\)</span> suit une loi binomiale <span class=\"math inline\">\\(\\mathcal{B}(p_{pop},n_{i})\\)</span>. Les échantillons étant de grande taille (<span class=\"math inline\">\\(n_1\\)</span>, <span class=\"math inline\">\\(n_2 \\geq 30\\)</span>), on peut supposer que <span class=\"math inline\">\\(F_{i}\\)</span> suit une loi normale <span class=\"math inline\">\\(\\mathcal{N}(p_{pop},\\sqrt{p_{pop}(1-p_{pop})/n_{i}})\\)</span>. De plus, pour le calcul de la variance, on peut estimer <span class=\"math inline\">\\(p_{pop}\\)</span> au moyen de l’ensemble des données disponibles, i.e. <span class=\"math display\">\\[\\begin{aligned}\np_{pop}\\sim \\frac{300+125}{700+225}=0,46.\\end{aligned}\\]</span> La différence <span class=\"math inline\">\\(D=F_{1}-F_{2}\\)</span> suit une loi normale d’espérance nulle et de variance <span class=\"math inline\">\\(\\text{Var}(D)=\\text{Var}(F_{1})+\\text{Var}(F_{2})=p_{pop}(1-p_{pop})\n(\\frac{1}{n_{1}}+\\frac{1}{n_{2}})\\sim 0,2484(\\frac{1}{700}+\\frac{1}{225})=0,00146.\\)</span></p>\n<p>Par conséquent, on choisit comme fonction discriminante <span class=\"math inline\">\\(T=D/\\sqrt{0.00146}=D/0,0382\\)</span>, qui suit une loi normale standard. La table donne <span class=\"math inline\">\\(p(|T|&gt;1,96)=0,05\\)</span>. Or, sur l’échantillon mesuré, la variable <span class=\"math inline\">\\(T\\)</span> prend la valeur <span class=\"math inline\">\\(t=\\frac{-0,127}{0,0382}=-3,324\\)</span>. Comme <span class=\"math inline\">\\(|t|&gt;1,96\\)</span>, on rejette <span class=\"math inline\">\\(H_{0}\\)</span>. On conclut, avec au plus 5% de chances de se tromper, que les deux lots de boulons ne sont pas tirés de la même population.</p>\n"
+      }
+    }
+  ]
+}
