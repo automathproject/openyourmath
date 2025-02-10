@@ -70,8 +70,11 @@
  
  /**
   * Fonction principale pour extraire les commandes LaTeX
+  * @param {string} latex - Contenu LaTeX
+  * @param {Array} commands - Liste des commandes à extraire
+  * @param {string} [fileName="fichier inconnu"] - Nom complet du fichier LaTeX (pour la gestion des erreurs)
   */
- async function extractLaTeXCommands(latex, commands) {
+ async function extractLaTeXCommands(latex, commands, fileName = "fichier inconnu") {
    const extracted = {
      uuid: "",
      titre: "",
@@ -164,9 +167,17 @@
      }
  
      if (commandObj.isContent) {
-       let htmlContent = await convertLaTeXToHTML(finalContent);
+       let htmlContent = "";
+       // Encapsulation de l'appel à Pandoc pour capter d'éventuelles erreurs
+       try {
+         htmlContent = await convertLaTeXToHTML(finalContent);
+       } catch (error) {
+         console.error(`Erreur lors de la conversion LaTeX -> HTML avec pandoc pour le fichier ${fileName} : ${error.message}`);
+         // Vous pouvez choisir de renvoyer un contenu d'erreur ou de laisser une chaîne vide
+         htmlContent = `<div class="error">Erreur de conversion pour le fichier ${fileName} : ${error.message}</div>`;
+       }
  
-       // Restaurer les SVGs dans le HTML
+       // Restaurer les SVGs dans le HTML si nécessaire
        if (deps.success) {
          htmlContent = restoreTikzSvg(htmlContent, tikzMap);
        }
@@ -229,7 +240,8 @@
      }
  
      const latexContentRaw = await fsPromises.readFile(inputFilePath, 'utf8');
-     const extractedData = await extractLaTeXCommands(latexContentRaw, commandsToExtract);
+     // On transmet inputFilePath comme nom de fichier pour la gestion des erreurs dans l'extraction
+     const extractedData = await extractLaTeXCommands(latexContentRaw, commandsToExtract, inputFilePath);
  
      if (!extractedData.uuid) {
        extractedData.uuid = generateUniqueId();
@@ -295,31 +307,31 @@
    }
  
    const commandsToExtract = [
-    // Métadonnées de base
-    { name: 'uuid', jsonKey: 'uuid', isContent: false, isVerbatim: false },
-    { name: 'exo7id', jsonKey: 'metadata.exo7id', isContent: false, isVerbatim: false },
-    { name: 'auteur', jsonKey: 'metadata.auteur', isContent: false, isVerbatim: false },
-    { name: 'datecreate', jsonKey: 'metadata.createdAt', isContent: false, isVerbatim: false },
-    
-    // Configuration de l'exercice
-    { name: 'isIndication', jsonKey: 'metadata.hasIndication', isContent: false, isVerbatim: false },
-    { name: 'isCorrection', jsonKey: 'metadata.hasCorrection', isContent: false, isVerbatim: false },
-    
-    // Structure et organisation
-    { name: 'chapitre', jsonKey: 'metadata.chapitre', isContent: false, isVerbatim: false },
-    { name: 'sousChapitre', jsonKey: 'metadata.sousChapitre', isContent: false, isVerbatim: false },
-    { name: 'titre', jsonKey: 'titre', isContent: false, isVerbatim: false },
-    { name: 'theme', jsonKey: 'theme', isContent: false, isVerbatim: false },
-    { name: 'niveau', jsonKey: 'niveau', isContent: false, isVerbatim: false },
-    { name: 'organisation', jsonKey: 'metadata.organisation', isContent: false, isVerbatim: false },
-    
-    // Contenu de l'exercice
-    { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-    { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-    { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-    { name: 'indication', jsonKey: 'contenu', isContent: true, isVerbatim: false },
-    { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },
-  ];
+     // Métadonnées de base
+     { name: 'uuid', jsonKey: 'uuid', isContent: false, isVerbatim: false },
+     { name: 'exo7id', jsonKey: 'metadata.exo7id', isContent: false, isVerbatim: false },
+     { name: 'auteur', jsonKey: 'metadata.auteur', isContent: false, isVerbatim: false },
+     { name: 'datecreate', jsonKey: 'metadata.createdAt', isContent: false, isVerbatim: false },
+     
+     // Configuration de l'exercice
+     { name: 'isIndication', jsonKey: 'metadata.hasIndication', isContent: false, isVerbatim: false },
+     { name: 'isCorrection', jsonKey: 'metadata.hasCorrection', isContent: false, isVerbatim: false },
+     
+     // Structure et organisation
+     { name: 'chapitre', jsonKey: 'metadata.chapitre', isContent: false, isVerbatim: false },
+     { name: 'sousChapitre', jsonKey: 'metadata.sousChapitre', isContent: false, isVerbatim: false },
+     { name: 'titre', jsonKey: 'titre', isContent: false, isVerbatim: false },
+     { name: 'theme', jsonKey: 'theme', isContent: false, isVerbatim: false },
+     { name: 'niveau', jsonKey: 'niveau', isContent: false, isVerbatim: false },
+     { name: 'organisation', jsonKey: 'metadata.organisation', isContent: false, isVerbatim: false },
+     
+     // Contenu de l'exercice
+     { name: 'texte', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+     { name: 'question', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+     { name: 'reponse', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+     { name: 'indication', jsonKey: 'contenu', isContent: true, isVerbatim: false },
+     { name: 'code', jsonKey: 'contenu', isContent: true, isVerbatim: true },
+   ];
  
    if (!fs.existsSync(inputPath)) {
      console.error(`Le chemin spécifié n'existe pas : ${inputPath}`);
