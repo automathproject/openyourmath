@@ -1,0 +1,43 @@
+{
+  "uuid": "xO1E",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6961",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-04-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Polynôme, fraction rationnelle",
+    "sousChapitre": "Racine, décomposition en facteurs irréductibles",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:33.323Z"
+  },
+  "contenu": [
+    {
+      "id": "581c16d6-7bc3-454c-8b29-25ea36aa55d5",
+      "type": "description",
+      "value": {
+        "latex": "Soit $n\\in\\Nn$. Montrer qu'il existe un unique $P\\in\\Cc[X]$ tel que \n$$\\forall z\\in\\Cc^* \\qquad  P\\left(z+\\frac{1}{z}\\right) = z^n+\\frac{1}{z^n}$$\n\nMontrer alors que toutes les racines de $P$ sont réelles, simples, \net appartiennent à l'intervalle $[-2,2]$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. Montrer qu’il existe un unique <span class=\"math inline\">\\(P\\in\\Cc[X]\\)</span> tel que <span class=\"math display\">\\[\\forall z\\in\\Cc^* \\qquad  P\\left(z+\\frac{1}{z}\\right) = z^n+\\frac{1}{z^n}\\]</span></p>\n<p>Montrer alors que toutes les racines de <span class=\"math inline\">\\(P\\)</span> sont réelles, simples, et appartiennent à l’intervalle <span class=\"math inline\">\\([-2,2]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cc4597d6-7487-4cd7-9dc0-5b16fd10d222",
+      "type": "indication",
+      "value": {
+        "latex": "Pour l'existence, preuve par récurrence sur $n$. Pour les racines,\nmontrer que $P(x)=2\\cos(n\\Arccos(x/2))$.",
+        "html": "<p>Pour l’existence, preuve par récurrence sur <span class=\"math inline\">\\(n\\)</span>. Pour les racines, montrer que <span class=\"math inline\">\\(P(x)=2\\cos(n\\Arccos(x/2))\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c7833ac3-dd05-4011-89e9-dd0bb717fa22",
+      "type": "reponse",
+      "value": {
+        "latex": "Commençons par remarquer que si $P$ et $Q$ sont deux polynômes \n  qui conviennent, alors pour tout $z\\in\\Cc^*$, \n$P\\left(z+\\frac{1}{z}\\right)-Q\\left(z+\\frac{1}{z}\\right)=0$. \nEn appliquant cette égalité à $z=e^{i\\theta}$, on obtient \n$(P-Q)(2\\cos\\theta)=0$. Le polynôme $P-Q$ a une infinité \nde racines, donc il est nul, ce qui montre $P=Q$.\nMontrons l'existence de $P$ par récurrence forte sur $n$:\n  \\begin{itemize}\nPour $n=0$, $P=2$ convient et pour $n=1$, $P=X$ convient.\nPassage des rangs $k\\le n$ au rang $n+1$. \n    Si on note $P_k$ le polynôme construit pour $k\\le n$, on a \n$$z^{n+1}+\\frac{1}{z^{n+1}}=(z+\\frac{1}{z})(z^n+\\frac{1}{z^n})-(z^{n-1}+\\frac{1}{z^{n-1}})\n=(z+\\frac{1}{z})P_n(z+\\frac{1}{z})-P_{n-1}(z+\\frac{1}{z})$$\ndonc $P_{n+1}(X)=XP_n(X)-P_{n-1}(X)$ convient.\nOn a ainsi construit $P_n$ pour tout $n$ (avec $\\deg P_n =n$). \n  \\end{itemize}\nFixons $n$ et notons $P$ le polynôme obtenu.\n  Pour tout $\\theta\\in\\R$, $P(e^{i\\theta}+e^{-i\\theta})=e^{in\\theta}+e^{-in\\theta}$ \n  donc $P(2\\cos(\\theta))=2\\cos(n\\theta)$. \n  \n  En posant $x=2\\cos(\\theta)$ et donc $\\theta = \\Arccos(\\frac x2)$ on obtient la relation\n  Ainsi,\n$$P(x)=2\\cos(n\\Arccos(\\frac x2)) \\qquad \\forall x\\in[-2,2]$$\nLe polynôme dérivée est $P'(x)=\\frac{n}{\\sqrt{1-(\\frac{x}{2})^2}}\\sin(n\\Arccos(\\frac x2))$, \nil s'annule en changeant de signe en chaque \n$\\alpha_k = 2\\cos(\\frac{k\\pi}{n})$, ainsi $P'(\\alpha_k)=0$ pour $k = 0,\\ldots,n$.\n\nOn calcule aussi que $P(\\alpha_k) = \\pm 2$.\nLe tableau de signe montre que $P$ est alternativement croissante \n(de $-2$ à $+2$) puis décroissante (de $+2$ à $-2$) \nsur chaque intervalle\n$[\\alpha_{k+1}, \\alpha_k]$, qui forment une partition de $[-2,2]$.\nD'après le théorème des valeurs intermédiaires, $P$ possède $n$ racines simples \n(une dans chaque intervalle $[\\alpha_{k+1}, \\alpha_k]$) dans $[-2,2]$. \nPuisque $P$ est de degré $n$, on a ainsi obtenu toutes ses racines.",
+        "html": "<p>Commençons par remarquer que si <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(Q\\)</span> sont deux polynômes qui conviennent, alors pour tout <span class=\"math inline\">\\(z\\in\\Cc^*\\)</span>, <span class=\"math inline\">\\(P\\left(z+\\frac{1}{z}\\right)-Q\\left(z+\\frac{1}{z}\\right)=0\\)</span>. En appliquant cette égalité à <span class=\"math inline\">\\(z=e^{i\\theta}\\)</span>, on obtient <span class=\"math inline\">\\((P-Q)(2\\cos\\theta)=0\\)</span>. Le polynôme <span class=\"math inline\">\\(P-Q\\)</span> a une infinité de racines, donc il est nul, ce qui montre <span class=\"math inline\">\\(P=Q\\)</span>. Montrons l’existence de <span class=\"math inline\">\\(P\\)</span> par récurrence forte sur <span class=\"math inline\">\\(n\\)</span>:</p>\n<p>Pour <span class=\"math inline\">\\(n=0\\)</span>, <span class=\"math inline\">\\(P=2\\)</span> convient et pour <span class=\"math inline\">\\(n=1\\)</span>, <span class=\"math inline\">\\(P=X\\)</span> convient. Passage des rangs <span class=\"math inline\">\\(k\\le n\\)</span> au rang <span class=\"math inline\">\\(n+1\\)</span>. Si on note <span class=\"math inline\">\\(P_k\\)</span> le polynôme construit pour <span class=\"math inline\">\\(k\\le n\\)</span>, on a <span class=\"math display\">\\[z^{n+1}+\\frac{1}{z^{n+1}}=(z+\\frac{1}{z})(z^n+\\frac{1}{z^n})-(z^{n-1}+\\frac{1}{z^{n-1}})\n=(z+\\frac{1}{z})P_n(z+\\frac{1}{z})-P_{n-1}(z+\\frac{1}{z})\\]</span> donc <span class=\"math inline\">\\(P_{n+1}(X)=XP_n(X)-P_{n-1}(X)\\)</span> convient. On a ainsi construit <span class=\"math inline\">\\(P_n\\)</span> pour tout <span class=\"math inline\">\\(n\\)</span> (avec <span class=\"math inline\">\\(\\deg P_n =n\\)</span>).</p>\n<p>Fixons <span class=\"math inline\">\\(n\\)</span> et notons <span class=\"math inline\">\\(P\\)</span> le polynôme obtenu. Pour tout <span class=\"math inline\">\\(\\theta\\in\\R\\)</span>, <span class=\"math inline\">\\(P(e^{i\\theta}+e^{-i\\theta})=e^{in\\theta}+e^{-in\\theta}\\)</span> donc <span class=\"math inline\">\\(P(2\\cos(\\theta))=2\\cos(n\\theta)\\)</span>.</p>\n<p>En posant <span class=\"math inline\">\\(x=2\\cos(\\theta)\\)</span> et donc <span class=\"math inline\">\\(\\theta = \\Arccos(\\frac x2)\\)</span> on obtient la relation Ainsi, <span class=\"math display\">\\[P(x)=2\\cos(n\\Arccos(\\frac x2)) \\qquad \\forall x\\in[-2,2]\\]</span> Le polynôme dérivée est <span class=\"math inline\">\\(P&#39;(x)=\\frac{n}{\\sqrt{1-(\\frac{x}{2})^2}}\\sin(n\\Arccos(\\frac x2))\\)</span>, il s’annule en changeant de signe en chaque <span class=\"math inline\">\\(\\alpha_k = 2\\cos(\\frac{k\\pi}{n})\\)</span>, ainsi <span class=\"math inline\">\\(P&#39;(\\alpha_k)=0\\)</span> pour <span class=\"math inline\">\\(k = 0,\\ldots,n\\)</span>.</p>\n<p>On calcule aussi que <span class=\"math inline\">\\(P(\\alpha_k) = \\pm 2\\)</span>. Le tableau de signe montre que <span class=\"math inline\">\\(P\\)</span> est alternativement croissante (de <span class=\"math inline\">\\(-2\\)</span> à <span class=\"math inline\">\\(+2\\)</span>) puis décroissante (de <span class=\"math inline\">\\(+2\\)</span> à <span class=\"math inline\">\\(-2\\)</span>) sur chaque intervalle <span class=\"math inline\">\\([\\alpha_{k+1}, \\alpha_k]\\)</span>, qui forment une partition de <span class=\"math inline\">\\([-2,2]\\)</span>. D’après le théorème des valeurs intermédiaires, <span class=\"math inline\">\\(P\\)</span> possède <span class=\"math inline\">\\(n\\)</span> racines simples (une dans chaque intervalle <span class=\"math inline\">\\([\\alpha_{k+1}, \\alpha_k]\\)</span>) dans <span class=\"math inline\">\\([-2,2]\\)</span>. Puisque <span class=\"math inline\">\\(P\\)</span> est de degré <span class=\"math inline\">\\(n\\)</span>, on a ainsi obtenu toutes ses racines.</p>\n"
+      }
+    }
+  ]
+}

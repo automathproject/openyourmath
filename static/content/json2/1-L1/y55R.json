@@ -1,0 +1,75 @@
+{
+  "uuid": "y55R",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2442",
+    "auteur": "matexo1",
+    "createdAt": "2002-02-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Matrice et application linéaire",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:34.162Z"
+  },
+  "contenu": [
+    {
+      "id": "212154f3-c24e-4a56-bd75-d73d892e4b27",
+      "type": "description",
+      "value": {
+        "latex": "Pour toute matrice carrée $A$ de dimension $n$, \non appelle trace de $A$, et l'on note $\\textrm{tr}\\, A$, la\nsomme des éléments diagonaux de $A$\\,:\n$$\\textrm{tr}\\, A = \\sum_{i = 1}^n a_{i,i}$$",
+        "html": "<p>Pour toute matrice carrée <span class=\"math inline\">\\(A\\)</span> de dimension <span class=\"math inline\">\\(n\\)</span>, on appelle trace de <span class=\"math inline\">\\(A\\)</span>, et l’on note <span class=\"math inline\">\\(\\textrm{tr}\\, A\\)</span>, la somme des éléments diagonaux de <span class=\"math inline\">\\(A\\)</span> : <span class=\"math display\">\\[\\textrm{tr}\\, A = \\sum_{i = 1}^n a_{i,i}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "dc07c07d-63c5-4b39-b726-de2a178a7800",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que si $A, B$ sont deux matrices carrées\nd'ordre $n$, alors $\\textrm{tr}(AB)=\\textrm{tr} (BA)$.",
+        "html": "<p>Montrer que si <span class=\"math inline\">\\(A, B\\)</span> sont deux matrices carrées d’ordre <span class=\"math inline\">\\(n\\)</span>, alors <span class=\"math inline\">\\(\\textrm{tr}(AB)=\\textrm{tr} (BA)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "355045e9-6f5a-426e-8d14-0658fe4e8e51",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $C=AB$ et $D=BA$.\nAlors par la définition du produit de matrice :\n$$c_{ij}=\\sum_{1\\le k \\le n} a_{ik}b_{kj} \\quad \\text{ donc } c_{ii}=\\sum_{1\\le k \\le n} a_{ik}b_{ki}$$\nAinsi \n$$\\textrm{tr}(AB) = \\textrm{tr}\\, C = \\sum_{1\\le i \\le n} c_{ii} = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} a_{ik}b_{ki}$$\n\nDe même $$\\textrm{tr}(BA) = \\textrm{tr}\\, D = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} b_{ik}a_{ki}$$\nSi dans cette dernière formule on renomme l'indice $i$ en $k$ et l'indice $k$ en $i$ (ce sont des variables muettes \ndonc on leur donne le nom qu'on veut) alors on obtient :\n$$\\textrm{tr}(BA) =\\sum_{1\\le k \\le n} \\sum_{1\\le i \\le n} b_{ki}a_{ik} =  \\sum_{1\\le i \\le n}\\sum_{1\\le k \\le n} a_{ik}b_{ki} =\\textrm{tr}(AB)$$",
+        "html": "<p>Notons <span class=\"math inline\">\\(C=AB\\)</span> et <span class=\"math inline\">\\(D=BA\\)</span>. Alors par la définition du produit de matrice : <span class=\"math display\">\\[c_{ij}=\\sum_{1\\le k \\le n} a_{ik}b_{kj} \\quad \\text{ donc } c_{ii}=\\sum_{1\\le k \\le n} a_{ik}b_{ki}\\]</span> Ainsi <span class=\"math display\">\\[\\textrm{tr}(AB) = \\textrm{tr}\\, C = \\sum_{1\\le i \\le n} c_{ii} = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} a_{ik}b_{ki}\\]</span></p>\n<p>De même <span class=\"math display\">\\[\\textrm{tr}(BA) = \\textrm{tr}\\, D = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} b_{ik}a_{ki}\\]</span> Si dans cette dernière formule on renomme l’indice <span class=\"math inline\">\\(i\\)</span> en <span class=\"math inline\">\\(k\\)</span> et l’indice <span class=\"math inline\">\\(k\\)</span> en <span class=\"math inline\">\\(i\\)</span> (ce sont des variables muettes donc on leur donne le nom qu’on veut) alors on obtient : <span class=\"math display\">\\[\\textrm{tr}(BA) =\\sum_{1\\le k \\le n} \\sum_{1\\le i \\le n} b_{ki}a_{ik} =  \\sum_{1\\le i \\le n}\\sum_{1\\le k \\le n} a_{ik}b_{ki} =\\textrm{tr}(AB)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "3ce94d0c-2cb5-49ae-9611-3cb1290fbfff",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que si $f$ est un endomorphisme d'un espace\nvectoriel $E$ de dimension $n$, $M$ sa matrice par rapport à\nune base $e$, $M'$ sa matrice par rapport à une base $e'$,\nalors $\\textrm{tr}\\, M = \\textrm{tr}\\, M'$. \nOn note $\\textrm{tr}\\, f$ la valeur commune de ces quantités.",
+        "html": "<p>Montrer que si <span class=\"math inline\">\\(f\\)</span> est un endomorphisme d’un espace vectoriel <span class=\"math inline\">\\(E\\)</span> de dimension <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(M\\)</span> sa matrice par rapport à une base <span class=\"math inline\">\\(e\\)</span>, <span class=\"math inline\">\\(M&#39;\\)</span> sa matrice par rapport à une base <span class=\"math inline\">\\(e&#39;\\)</span>, alors <span class=\"math inline\">\\(\\textrm{tr}\\, M = \\textrm{tr}\\, M&#39;\\)</span>. On note <span class=\"math inline\">\\(\\textrm{tr}\\, f\\)</span> la valeur commune de ces quantités.</p>\n"
+      }
+    },
+    {
+      "id": "688aa629-81b4-4bd0-a9d0-64b9333015b9",
+      "type": "reponse",
+      "value": {
+        "latex": "$M$ et $M'$ sont semblables donc il existe une matrice de passage $P$ telle que $M'=P^{-1}MP$ donc\n$$\\textrm{tr}\\, M' = \\textrm{tr}\\big( P^{-1}(MP) \\big) = \\textrm{tr}\\big( (MP)P^{-1} \\big) = \\textrm{tr} ( M I ) = \\textrm{tr}\\, M$$",
+        "html": "<p><span class=\"math inline\">\\(M\\)</span> et <span class=\"math inline\">\\(M&#39;\\)</span> sont semblables donc il existe une matrice de passage <span class=\"math inline\">\\(P\\)</span> telle que <span class=\"math inline\">\\(M&#39;=P^{-1}MP\\)</span> donc <span class=\"math display\">\\[\\textrm{tr}\\, M&#39; = \\textrm{tr}\\big( P^{-1}(MP) \\big) = \\textrm{tr}\\big( (MP)P^{-1} \\big) = \\textrm{tr} ( M I ) = \\textrm{tr}\\, M\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "1f4635de-da14-4607-9bff-7859c195f877",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que si $g$ est un autre endomorphisme de $E$,\n$\\textrm{tr}(f\\circ g - g\\circ f) = 0$.",
+        "html": "<p>Montrer que si <span class=\"math inline\">\\(g\\)</span> est un autre endomorphisme de <span class=\"math inline\">\\(E\\)</span>, <span class=\"math inline\">\\(\\textrm{tr}(f\\circ g - g\\circ f) = 0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c89e8e1c-ebf8-4d11-88c2-956f9ac9c2e3",
+      "type": "reponse",
+      "value": {
+        "latex": "La trace a aussi la propriété évidente que \n$$\\textrm{tr}(A+B)=\\textrm{tr}\\,A+\\textrm{tr}\\,B.$$\n\nFixons une base de $E$. Notons $A$ la matrice de $f$ dans cette base et $B$ la matrice de $g$ dans cette même base.\nAlors $AB$ est la matrice de $f\\circ g$ et $BA$ est la matrice de $g\\circ f$.\nAinsi la matrice de $f\\circ g - g\\circ f$ est $AB-BA$\nDonc\n$$\\textrm{tr}(f\\circ g - g\\circ f)= \\textrm{tr}(AB-BA) = \\textrm{tr}(AB)-\\textrm{tr}(BA)=0.$$",
+        "html": "<p>La trace a aussi la propriété évidente que <span class=\"math display\">\\[\\textrm{tr}(A+B)=\\textrm{tr}\\,A+\\textrm{tr}\\,B.\\]</span></p>\n<p>Fixons une base de <span class=\"math inline\">\\(E\\)</span>. Notons <span class=\"math inline\">\\(A\\)</span> la matrice de <span class=\"math inline\">\\(f\\)</span> dans cette base et <span class=\"math inline\">\\(B\\)</span> la matrice de <span class=\"math inline\">\\(g\\)</span> dans cette même base. Alors <span class=\"math inline\">\\(AB\\)</span> est la matrice de <span class=\"math inline\">\\(f\\circ g\\)</span> et <span class=\"math inline\">\\(BA\\)</span> est la matrice de <span class=\"math inline\">\\(g\\circ f\\)</span>. Ainsi la matrice de <span class=\"math inline\">\\(f\\circ g - g\\circ f\\)</span> est <span class=\"math inline\">\\(AB-BA\\)</span> Donc <span class=\"math display\">\\[\\textrm{tr}(f\\circ g - g\\circ f)= \\textrm{tr}(AB-BA) = \\textrm{tr}(AB)-\\textrm{tr}(BA)=0.\\]</span></p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "jNul",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4553",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Suite et série de fonctions",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:24.031Z"
+  },
+  "contenu": [
+    {
+      "id": "5597c8dc-4ed4-4c1c-bf49-894c74055867",
+      "type": "description",
+      "value": {
+        "latex": "Soit $S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1-t^n}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1-t^n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9bb60ded-7c4f-4c6e-9d70-4f614f2363d3",
+      "type": "question",
+      "value": {
+        "latex": "Pour quelles valeurs de $t$, $S$ est-elle définie~? Est-elle continue~?",
+        "html": "<p>Pour quelles valeurs de <span class=\"math inline\">\\(t\\)</span>, <span class=\"math inline\">\\(S\\)</span> est-elle définie ? Est-elle continue ?</p>\n"
+      }
+    },
+    {
+      "id": "cd5adc3e-d4be-4240-b14c-fade8bd3a00a",
+      "type": "reponse",
+      "value": {
+        "latex": "$-1<t<1$.",
+        "html": "<p><span class=\"math inline\">\\(-1&lt;t&lt;1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "af4e1280-323b-4b22-9c5a-a3a97946f20c",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'au voisinage de~$1^-$ on a $S(t) = -\\frac{\\ln(1-t)}{1-t} + O\\Bigl(\\frac1{1-t}\\Bigr)$.\nOn pourra développer $\\ln(1-t)$ en série entière.",
+        "html": "<p>Montrer qu’au voisinage de <span class=\"math inline\">\\(1^-\\)</span> on a <span class=\"math inline\">\\(S(t) = -\\frac{\\ln(1-t)}{1-t} + O\\Bigl(\\frac1{1-t}\\Bigr)\\)</span>. On pourra développer <span class=\"math inline\">\\(\\ln(1-t)\\)</span> en série entière.</p>\n"
+      }
+    },
+    {
+      "id": "c4064723-83a6-492d-9791-78b5ed85c417",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $0\\le t<1$ et $n\\ge 2$ on a~:\n$$\\begin{align*}\n(1-t)\\frac{t^n}{1-t^n}\n&= \\frac{t^n}{1+t+\\dots+t^{n-1}}\\cr\n&= \\frac{t^n}{n} + \\frac{t^n((1-t) + (1-t^2) + \\dots + (1-t^{n-1}))}{n(1+t+\\dots+t^{n-1})}\\cr\n&= \\frac{t^n}{n} + \\frac{(t^n-t^{n+1})((n-1) + (n-2)t + \\dots + t^{n-2})}{n(1+t+\\dots+t^{n-1})}\\cr\n\\end{align*}$$\nd'où $0 \\le (1-t)\\frac{t^n}{1-t^n} - \\frac{t^n}{n} \\le \\frac{n-1}{n}(t^n-t^{n+1}) \\le t^n-t^{n+1}$\n(vrai aussi si $n=1$) et en sommant~:\n$$0\\le (1-t)S(t) + \\ln(1-t) \\le 1.$$",
+        "html": "<p>Pour <span class=\"math inline\">\\(0\\le t&lt;1\\)</span> et <span class=\"math inline\">\\(n\\ge 2\\)</span> on a : <span class=\"math display\">\\[\\begin{align*}\n(1-t)\\frac{t^n}{1-t^n}\n&amp;= \\frac{t^n}{1+t+\\dots+t^{n-1}}\\cr\n&amp;= \\frac{t^n}{n} + \\frac{t^n((1-t) + (1-t^2) + \\dots + (1-t^{n-1}))}{n(1+t+\\dots+t^{n-1})}\\cr\n&amp;= \\frac{t^n}{n} + \\frac{(t^n-t^{n+1})((n-1) + (n-2)t + \\dots + t^{n-2})}{n(1+t+\\dots+t^{n-1})}\\cr\n\\end{align*}\\]</span> d’où <span class=\"math inline\">\\(0 \\le (1-t)\\frac{t^n}{1-t^n} - \\frac{t^n}{n} \\le \\frac{n-1}{n}(t^n-t^{n+1}) \\le t^n-t^{n+1}\\)</span> (vrai aussi si <span class=\"math inline\">\\(n=1\\)</span>) et en sommant : <span class=\"math display\">\\[0\\le (1-t)S(t) + \\ln(1-t) \\le 1.\\]</span></p>\n"
+      }
+    }
+  ]
+}

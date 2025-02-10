@@ -1,0 +1,59 @@
+{
+  "uuid": "Eh0e",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2377",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Compacité",
+    "sousChapitre": "Compacité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:13.323Z"
+  },
+  "contenu": [
+    {
+      "id": "6bd8c26d-e622-45e2-b5eb-0c67bb4cd81c",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f:\\Rr^n \\to \\Rr^n$ une application continue. Elle est dite {\\it propre}  si pour tout compact\n$K\\subset \\Rr^n$, l'image r\\'eciproque $f^{-1}(K)$ est compact.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f:\\Rr^n \\to \\Rr^n\\)</span> une application continue. Elle est dite <span><em>propre</em></span> si pour tout compact <span class=\"math inline\">\\(K\\subset \\Rr^n\\)</span>, l’image réciproque <span class=\"math inline\">\\(f^{-1}(K)\\)</span> est compact.</p>\n"
+      }
+    },
+    {
+      "id": "1f72b09d-39e1-4150-bf56-0a655bd95040",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que, si $f$ est propre, alors\nl'image par $f$ de tout ferm\\'e de $\\Rr^n$ est un ferm\\'e.",
+        "html": "<p>Montrer que, si <span class=\"math inline\">\\(f\\)</span> est propre, alors l’image par <span class=\"math inline\">\\(f\\)</span> de tout fermé de <span class=\"math inline\">\\(\\Rr^n\\)</span> est un fermé.</p>\n"
+      }
+    },
+    {
+      "id": "3b94925b-149a-48ab-81e2-c2acd51eae8e",
+      "type": "question",
+      "value": {
+        "latex": "\\'Etablir l'\\'equivalence suivante: l'application $f$ est propre si et seulement si elle a\nla propri\\'et\\'e:\n$$ \\|f(x)\\|\\to \\infty  \\quad \\text{quand} \\quad \\|x\\|\\to \\infty \\; .$$",
+        "html": "<p>Établir l’équivalence suivante: l’application <span class=\"math inline\">\\(f\\)</span> est propre si et seulement si elle a la propriété: <span class=\"math display\">\\[\\|f(x)\\|\\to \\infty  \\quad \\text{quand} \\quad \\|x\\|\\to \\infty \\; .\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "573a97d8-175f-472c-a145-a3a572d618b1",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons $f$ propre et soit $F$ un fermé. Montrons que $f(F)$ est un fermé. Soit $(y_n)$ une suite de $f(F)$ qui converge vers $y\\in \\Rr^n$. \nNotons $K$ l'union de $\\{y_n\\}_{n\\in\\Nn}$ et de $\\{ y\\}$. Alors $K$ est compact.\nComme $y_n \\in f(F)$, il existe $x_n\\in F$ tel que $f(x_n) = y_n$.\nEn fait $x_n \\in f^{-1}(K)$ qui est compact car $f$ est propre. Donc\nde $(x_n)$ on peut extraire une sous-suite convergente $(x_{\\phi(n)})$, on note $x$ la limite de cette sous-suite. Comme $x_{\\phi(n)} \\in F$ et que $F$ est fermé alors $x\\in F$. Comme $f$ est continue alors $y_{\\phi(n)} = f(x_{\\phi(n)})$ tend vers $f(x)$, or $y_{\\phi(n)}$ tend aussi vers $y$.\nPar unicité de la limite $y=f(x)$. Donc $y \\in f(F)$ et $f(F)$ est fermé.\nDire $ \\|f(x)\\|\\to \\infty$ quand $\\|x\\|\\to \\infty$ est équivalent à\n$$ \\forall M >0\\quad \\exists m >0\\quad \\forall x \\in \\Rr^n \\quad (x \\notin B(0,m) \\Rightarrow  f(x)\\notin B(0,M)).$$\n  \\begin{enumerate}\nSupposons $f$ propre, soit $M>0$. Alors $B(0,M)$ est un compact\n(nous sommes dans $\\Rr^n$) donc $f^{-1}(B(0,M))$ est compact donc borné, c'est-à-dire qu'il existe $m>0$ tel que $f^{-1}(B(0,M)) \\subset B(0,m)$.\nDonc si $x\\notin B(0,m)$ alors $f(x) \\notin B(0,M)$.\nRéciproquement, soit $K$ un compact de $\\Rr^n$. Comme $f$ est continue\net que $K$ est fermé alors $f^{-1}(K)$ est un fermé. Reste à montrer que $f^{-1}(K)$ est borné. Comme $K$ est compact alors il existe $M>0$ tel que \n$K \\subset B(0,M)$, par hypothèse il existe $m>0$ tel que si \n$ x\\notin B(0,m)$ alors $f(x) \\notin B(0,M)$, ce qui s'écrit aussi \npar contraposition : ``si $f(x) \\in B(0,M)$ alors $x\\in B(0,m)$'', donc\n$f^{-1}(B(0,M)) \\subset B(0,m)$. Or $K \\subset B(0,M)$ donc\n$f^{-1}(K) \\subset f^{-1}(B(0,M)) \\subset B(0,m)$. Donc\n$f^{-1}(K)$ est borné donc compact.",
+        "html": ""
+      }
+    },
+    {
+      "id": "cb6f9fc0-e89d-423e-8290-dab4c3f07871",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n  \\item Utiliser la caractérisation de la fermeture par des suites.\n  \\item Remarquer que  ``$ \\|f(x)\\|\\to \\infty$ quand $\\|x\\|\\to \\infty$'' est équivalent à\n$$ `` \\forall M >0\\quad \\exists m >0 \\forall x \\in \\Rr^n \\quad \\quad (x \\notin B(0,m) \\Rightarrow  f(x)\\notin B(0,M)). ''$$\n\\end{enumerate}",
+        "html": "<ol>\n<li><p>Utiliser la caractérisation de la fermeture par des suites.</p></li>\n<li><p>Remarquer que “<span class=\"math inline\">\\(\\|f(x)\\|\\to \\infty\\)</span> quand <span class=\"math inline\">\\(\\|x\\|\\to \\infty\\)</span>” est équivalent à <span class=\"math display\">\\[`` \\forall M &gt;0\\quad \\exists m &gt;0 \\forall x \\in \\Rr^n \\quad \\quad (x \\notin B(0,m) \\Rightarrow  f(x)\\notin B(0,M)). &#39;&#39;\\]</span></p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

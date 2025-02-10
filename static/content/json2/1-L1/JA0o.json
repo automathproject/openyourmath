@@ -1,0 +1,35 @@
+{
+  "uuid": "JA0o",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5568",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Espace vectoriel",
+    "sousChapitre": "Système de vecteurs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:28.168Z"
+  },
+  "contenu": [
+    {
+      "id": "9d5c59da-c13e-4844-a5ca-576db88f04cb",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f(x) =\\ln(1+x)$ pour $x$ réel positif. Soient $f_1 = f$, $f_2=f\\circ f$ et $f_3= f\\circ f\\circ f$. Etudier la liberté de $(f_1,f_2,f_3)$ dans $[0,+\\infty[^{[0,+\\infty[}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f(x) =\\ln(1+x)\\)</span> pour <span class=\"math inline\">\\(x\\)</span> réel positif. Soient <span class=\"math inline\">\\(f_1 = f\\)</span>, <span class=\"math inline\">\\(f_2=f\\circ f\\)</span> et <span class=\"math inline\">\\(f_3= f\\circ f\\circ f\\)</span>. Etudier la liberté de <span class=\"math inline\">\\((f_1,f_2,f_3)\\)</span> dans <span class=\"math inline\">\\([0,+\\infty[^{[0,+\\infty[}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "68ee30bc-20b5-425f-aee9-7bc3c8b175d0",
+      "type": "reponse",
+      "value": {
+        "latex": "Les fonctions $f_1$, $f_2$ et $f_3$ sont bien définies sur $\\Rr^+$.\n\nSoient $a$, $b$ et $c$ trois réels tels que $af_1+bf_2 +cf_3=0$.\n\n\\textbf{Première solution.} Si $a$ est non nul, la fonction $af_1+bf_2+cf_3$ est équivalente au voisinage de $+\\infty$ à $a\\ln x$ et ne peut donc être égale à la fonction nulle. Donc $a=0$. Puis si $b$ est non nul, la fonction $af_1+bf_2+cf_3=bf_2+cf_3$ est équivalente à $b\\ln(\\ln x)$ et ne peut être égale à la fonction nulle. Donc $b =0$. Puis $c=0$.\n\n\\textbf{Deuxième solution.} On effectue un développement limité à un ordre suffisant de la fonction $af_1+bf_2+cf_3$ quand $x$ tend vers $0$ :\n\n$f_1(x)=\\ln(1+x)\\underset{x\\rightarrow0}{=}x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3)$ puis\n\n$$\\begin{align*}\\ensuremath\nf_2(x)&=\\ln(1+f_1(x))\\underset{x\\rightarrow0}{=}\\ln\\left(1+x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3)\\right) =\\left(x-\\frac{x^2}{2}+\\frac{x^3}{3}\\right)-\\frac{1}{2}\\left(x-\\frac{x^2}{2}\\right)^2+\\frac{1}{3}x^3+o(x^3)\\\\\n &=x-x^2+\\frac{7}{6}x^3+o(x^3)\n\\end{align*}$$\n\npuis\n\n$$\\begin{align*}\\ensuremath\nf_3(x)&=\\ln(1+f_2(x))\\underset{x\\rightarrow0}{=}\\ln\\left(1+x-x^2+\\frac{7}{6}x^3+o(x^3)\\right)=\\left(x-x^2+\\frac{7}{6}x^3\\right)-\\frac{1}{2}\\left(x-x^2\\right)^2+\\frac{1}{3}x^3+o(x^3)\\\\\n &=x-\\frac{3}{2}x^2+\\frac{5}{2}x^3+o(x^3).\n\\end{align*}$$\n\nPar suite, $af_1(x)+bf_2(x)+cf_3(x)\\underset{x\\rightarrow0}{=}(a+b+c)x+\\left(-\\frac{a}{2}-b-\\frac{3c}{2}\\right)x^2+\\left(\\frac{a}{3}+\\frac{7b}{6}+\\frac{5c}{2}\\right)x^3+o(x^3)$. L'égalité $af_1+bf_2+cf_3=0$ fournit, par identification des parties régulières des développements limités à l'ordre trois en zéro :\n\n\\begin{center}\n$\\left\\{\n\\begin{array}{l}\na+b+c=0\\\\\n-\\frac{a}{2}-b-\\frac{3c}{2}=0\\\\\n\\rule{0mm}{6mm}\\frac{a}{3}+\\frac{7b}{6}+\\frac{5c}{2}\n\\end{array}\n\\right.$ ou encore $\\left\\{\n\\begin{array}{l}\na+b+c=0\\\\\na+2b+3c=0\\\\\n2a+7b+15c=0\n\\end{array}\n\\right.$.\n \\end{center}\n \n \nComme $\\left|\n\\begin{array}{ccc}\n1&1&1\\\\\n1&2&3\\\\\n2&7&15\n\\end{array}\n\\right|=\\left|\n\\begin{array}{ccc}\n1&0&0\\\\\n1&1&1\\\\\n2&5&8\n\\end{array}\n\\right|=3\\neq0$, on a donc $a=b=c=0$.",
+        "html": "<p>Les fonctions <span class=\"math inline\">\\(f_1\\)</span>, <span class=\"math inline\">\\(f_2\\)</span> et <span class=\"math inline\">\\(f_3\\)</span> sont bien définies sur <span class=\"math inline\">\\(\\Rr^+\\)</span>.</p>\n<p>Soient <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(c\\)</span> trois réels tels que <span class=\"math inline\">\\(af_1+bf_2 +cf_3=0\\)</span>.</p>\n<p><strong>Première solution.</strong> Si <span class=\"math inline\">\\(a\\)</span> est non nul, la fonction <span class=\"math inline\">\\(af_1+bf_2+cf_3\\)</span> est équivalente au voisinage de <span class=\"math inline\">\\(+\\infty\\)</span> à <span class=\"math inline\">\\(a\\ln x\\)</span> et ne peut donc être égale à la fonction nulle. Donc <span class=\"math inline\">\\(a=0\\)</span>. Puis si <span class=\"math inline\">\\(b\\)</span> est non nul, la fonction <span class=\"math inline\">\\(af_1+bf_2+cf_3=bf_2+cf_3\\)</span> est équivalente à <span class=\"math inline\">\\(b\\ln(\\ln x)\\)</span> et ne peut être égale à la fonction nulle. Donc <span class=\"math inline\">\\(b =0\\)</span>. Puis <span class=\"math inline\">\\(c=0\\)</span>.</p>\n<p><strong>Deuxième solution.</strong> On effectue un développement limité à un ordre suffisant de la fonction <span class=\"math inline\">\\(af_1+bf_2+cf_3\\)</span> quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> :</p>\n<p><span class=\"math inline\">\\(f_1(x)=\\ln(1+x)\\underset{x\\rightarrow0}{=}x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3)\\)</span> puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf_2(x)&amp;=\\ln(1+f_1(x))\\underset{x\\rightarrow0}{=}\\ln\\left(1+x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3)\\right) =\\left(x-\\frac{x^2}{2}+\\frac{x^3}{3}\\right)-\\frac{1}{2}\\left(x-\\frac{x^2}{2}\\right)^2+\\frac{1}{3}x^3+o(x^3)\\\\\n &amp;=x-x^2+\\frac{7}{6}x^3+o(x^3)\n\\end{align*}\\]</span></p>\n<p>puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf_3(x)&amp;=\\ln(1+f_2(x))\\underset{x\\rightarrow0}{=}\\ln\\left(1+x-x^2+\\frac{7}{6}x^3+o(x^3)\\right)=\\left(x-x^2+\\frac{7}{6}x^3\\right)-\\frac{1}{2}\\left(x-x^2\\right)^2+\\frac{1}{3}x^3+o(x^3)\\\\\n &amp;=x-\\frac{3}{2}x^2+\\frac{5}{2}x^3+o(x^3).\n\\end{align*}\\]</span></p>\n<p>Par suite, <span class=\"math inline\">\\(af_1(x)+bf_2(x)+cf_3(x)\\underset{x\\rightarrow0}{=}(a+b+c)x+\\left(-\\frac{a}{2}-b-\\frac{3c}{2}\\right)x^2+\\left(\\frac{a}{3}+\\frac{7b}{6}+\\frac{5c}{2}\\right)x^3+o(x^3)\\)</span>. L’égalité <span class=\"math inline\">\\(af_1+bf_2+cf_3=0\\)</span> fournit, par identification des parties régulières des développements limités à l’ordre trois en zéro :</p>\n<p><span class=\"math inline\">\\(\\left\\{\n\\begin{array}{l}\na+b+c=0\\\\\n-\\frac{a}{2}-b-\\frac{3c}{2}=0\\\\\n\\rule{0mm}{6mm}\\frac{a}{3}+\\frac{7b}{6}+\\frac{5c}{2}\n\\end{array}\n\\right.\\)</span> ou encore <span class=\"math inline\">\\(\\left\\{\n\\begin{array}{l}\na+b+c=0\\\\\na+2b+3c=0\\\\\n2a+7b+15c=0\n\\end{array}\n\\right.\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(\\left|\n\\begin{array}{ccc}\n1&amp;1&amp;1\\\\\n1&amp;2&amp;3\\\\\n2&amp;7&amp;15\n\\end{array}\n\\right|=\\left|\n\\begin{array}{ccc}\n1&amp;0&amp;0\\\\\n1&amp;1&amp;1\\\\\n2&amp;5&amp;8\n\\end{array}\n\\right|=3\\neq0\\)</span>, on a donc <span class=\"math inline\">\\(a=b=c=0\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

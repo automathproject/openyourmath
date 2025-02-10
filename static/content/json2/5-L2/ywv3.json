@@ -1,0 +1,35 @@
+{
+  "uuid": "ywv3",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4371",
+    "auteur": "quercia",
+    "createdAt": "2010-03-12",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Intégration",
+    "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:43.144Z"
+  },
+  "contenu": [
+    {
+      "id": "257d2ca8-af4e-4e75-9014-79831c3b9381",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ : $x \\mapsto  \\int_{t=0}^{+\\infty}\\frac{d t}{t^{x+1}+t+1}$.\nDéterminer son domaine de définition~; étudier sa continuité et sa monotonie.\nCalculer $ \\int_{t=1}^{+\\infty}\\frac{d t }{t^{x+1}+t}$ et en déduire des\néquivalents et les limites de~$f$ en~$0$ et en~$+\\infty$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> : <span class=\"math inline\">\\(x \\mapsto  \\int_{t=0}^{+\\infty}\\frac{d t}{t^{x+1}+t+1}\\)</span>. Déterminer son domaine de définition ; étudier sa continuité et sa monotonie. Calculer <span class=\"math inline\">\\(\\int_{t=1}^{+\\infty}\\frac{d t }{t^{x+1}+t}\\)</span> et en déduire des équivalents et les limites de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\(0\\)</span> et en <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a77527b9-80f9-4f26-b1e6-03769cb51c0d",
+      "type": "reponse",
+      "value": {
+        "latex": "$D_f = {]0,+\\infty[}$. Il y a domination locale, donc $f$ est continue.\n\nDe même, pour $x>0$ on a $f'(x) =  \\int_{t=0}^{+\\infty}\\frac{-\\ln(t)t^{x+1}}{(t^{x+1}+t+1)^2}\\,d t$.\nEn coupant l'intégrale en~$1$ et en posant $u=1/t$ dans l'intégrale sur $[1,+\\infty[$\nil vient~: $f'(x) =  \\int_{t=0}^1\\ln(t)t^{x+1}\\Bigl(\\frac1{(t+t^{x+1}+t^{x+2})^2} - \\frac1{(t^{x+1}+t+1)^2}\\Bigr)\\,d t < 0$\ncar $\\ln(t)<0$ et $t^{x+2}<1$ si $t\\in{]0,1[}$. Donc $f$ est strictement décroissante sur~$]0,+\\infty[$.\n\n$ \\int_{t=1}^{+\\infty}\\frac{d t }{t^{x+1}+t}\n=  \\int_{t=1}^{+\\infty}\\sum_{k=0}^\\infty\\frac{(-1)^k}{t^{(k+1)x+1}}\\,d t =$\n(domination du reste avec le CSA)\n$= \\sum_{k=0}^\\infty\\frac{(-1)^k}{(k+1)x}= \\frac{\\ln 2}x$.\n\n$\\Bigl|f(x)- \\int_{t=1}^{+\\infty}\\frac{1}{t^{x+1}+t}\\Bigr|\n= \\int_{t=0}^1\\frac{d t}{t^{x+1}+t+1} +  \\int_{t=1}^{+\\infty}\\frac{d t}{(t^{x+1}+t)(t^{x+1}+t+1)}\n\\le  \\int_{t=0}^1\\frac{d t}{t+1} +  \\int_{t=1}^{+\\infty}\\frac{d t}{t(t+1)} = 2\\ln 2$ \ndonc $f(x) = \\frac{\\ln 2}x + O_{x\\to0^+}(1)$.\n\nPour $x\\to+\\infty$, on a avec le TCM séparément sur $[0,1]$ et sur $[1,+\\infty[$~:\nlorsque $x\\to+\\infty$, $f(x)\\to \\int_{t=0}^1\\frac{d t}{t+1} = \\ln 2$.",
+        "html": "<p><span class=\"math inline\">\\(D_f = {]0,+\\infty[}\\)</span>. Il y a domination locale, donc <span class=\"math inline\">\\(f\\)</span> est continue.</p>\n<p>De même, pour <span class=\"math inline\">\\(x&gt;0\\)</span> on a <span class=\"math inline\">\\(f&#39;(x) =  \\int_{t=0}^{+\\infty}\\frac{-\\ln(t)t^{x+1}}{(t^{x+1}+t+1)^2}\\,d t\\)</span>. En coupant l’intégrale en <span class=\"math inline\">\\(1\\)</span> et en posant <span class=\"math inline\">\\(u=1/t\\)</span> dans l’intégrale sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> il vient : <span class=\"math inline\">\\(f&#39;(x) =  \\int_{t=0}^1\\ln(t)t^{x+1}\\Bigl(\\frac1{(t+t^{x+1}+t^{x+2})^2} - \\frac1{(t^{x+1}+t+1)^2}\\Bigr)\\,d t &lt; 0\\)</span> car <span class=\"math inline\">\\(\\ln(t)&lt;0\\)</span> et <span class=\"math inline\">\\(t^{x+2}&lt;1\\)</span> si <span class=\"math inline\">\\(t\\in{]0,1[}\\)</span>. Donc <span class=\"math inline\">\\(f\\)</span> est strictement décroissante sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\int_{t=1}^{+\\infty}\\frac{d t }{t^{x+1}+t}\n=  \\int_{t=1}^{+\\infty}\\sum_{k=0}^\\infty\\frac{(-1)^k}{t^{(k+1)x+1}}\\,d t =\\)</span> (domination du reste avec le CSA) <span class=\"math inline\">\\(= \\sum_{k=0}^\\infty\\frac{(-1)^k}{(k+1)x}= \\frac{\\ln 2}x\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\Bigl|f(x)- \\int_{t=1}^{+\\infty}\\frac{1}{t^{x+1}+t}\\Bigr|\n= \\int_{t=0}^1\\frac{d t}{t^{x+1}+t+1} +  \\int_{t=1}^{+\\infty}\\frac{d t}{(t^{x+1}+t)(t^{x+1}+t+1)}\n\\le  \\int_{t=0}^1\\frac{d t}{t+1} +  \\int_{t=1}^{+\\infty}\\frac{d t}{t(t+1)} = 2\\ln 2\\)</span> donc <span class=\"math inline\">\\(f(x) = \\frac{\\ln 2}x + O_{x\\to0^+}(1)\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(x\\to+\\infty\\)</span>, on a avec le TCM séparément sur <span class=\"math inline\">\\([0,1]\\)</span> et sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> : lorsque <span class=\"math inline\">\\(x\\to+\\infty\\)</span>, <span class=\"math inline\">\\(f(x)\\to \\int_{t=0}^1\\frac{d t}{t+1} = \\ln 2\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

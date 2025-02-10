@@ -1,0 +1,59 @@
+{
+  "uuid": "Btrd",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6875",
+    "auteur": "gammella",
+    "createdAt": "2012-05-29",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Analyse vectorielle",
+    "sousChapitre": "Forme différentielle, champ de vecteurs, circulation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:57.764Z"
+  },
+  "contenu": [
+    {
+      "id": "c981161a-d087-4338-9bb0-7bb1c5a13515",
+      "type": "description",
+      "value": {
+        "latex": "On considère la forme différentielle\n$\\omega=(x^2+y^2+2x) dx+2y dy$.",
+        "html": "<p>On considère la forme différentielle <span class=\"math inline\">\\(\\omega=(x^2+y^2+2x) dx+2y dy\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ee63bc49-ae25-4666-8dc2-30dd810d918c",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\omega$ n'est pas exacte.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\omega\\)</span> n’est pas exacte.</p>\n"
+      }
+    },
+    {
+      "id": "4257f7d8-8d55-4e42-84ff-0f985c40eed1",
+      "type": "reponse",
+      "value": {
+        "latex": "Posons $P(x,y)=x^2+y^2+2x$ et $Q(x,y)=2y$. On voit facilement\nque $ \\frac{\\partial P}{\\partial y}\\not=\\frac{\\partial Q}{\\partial x}$. La forme\n$\\omega$ n'est donc pas exacte.",
+        "html": "<p>Posons <span class=\"math inline\">\\(P(x,y)=x^2+y^2+2x\\)</span> et <span class=\"math inline\">\\(Q(x,y)=2y\\)</span>. On voit facilement que <span class=\"math inline\">\\(\\frac{\\partial P}{\\partial y}\\not=\\frac{\\partial Q}{\\partial x}\\)</span>. La forme <span class=\"math inline\">\\(\\omega\\)</span> n’est donc pas exacte.</p>\n"
+      }
+    },
+    {
+      "id": "d3a073d3-d986-4a65-92f8-27005caa7e71",
+      "type": "question",
+      "value": {
+        "latex": "Trouver une fonction $\\psi(x)$ telle que $\\psi(x) \\omega=df$. Préciser\nalors $f$. (On dit que $\\psi$ est un facteur intégrant.)",
+        "html": "<p>Trouver une fonction <span class=\"math inline\">\\(\\psi(x)\\)</span> telle que <span class=\"math inline\">\\(\\psi(x) \\omega=df\\)</span>. Préciser alors <span class=\"math inline\">\\(f\\)</span>. (On dit que <span class=\"math inline\">\\(\\psi\\)</span> est un facteur intégrant.)</p>\n"
+      }
+    },
+    {
+      "id": "e0578929-047c-4280-b30f-40299393a80e",
+      "type": "reponse",
+      "value": {
+        "latex": "Comme $\\omega$ est définie sur $\\Rr^2$, il suffit que $\\psi\\omega$ soit exacte pour que $f$ existe.\nMaintenant, $\\psi\\omega$ est exacte si et seulement si\n$$ \\frac{\\partial (\\psi(x)(x^2+y^2+2x))}{\\partial y } =  \\frac{\\partial(\\psi(x) 2y)} {\\partial x}.$$\nCeci équivaut à $2y \\psi(x)=2y\\psi'(x)$. Ainsi, $\\psi(x)=\\psi'(x)$ pour tout $x$. Donc\n$\\psi(x)=k e^x$ avec $k$ constante. On peut choisir $k=1$.\nAinsi  $$\\psi\\omega=e^x(x^2+y^2+2x) dx+e^x(2y)dy.$$ On cherche ensuite $f$ telle que :\n$$  \\left\\{ \\begin{array}{lll}\n\\frac{\\partial f} {\\partial x}& = &e^x(x^2+y^2+2x) \\\\\n\\frac{\\partial f}{\\partial y} &= &e^x(2y) \\\\\n\\end{array} \\right .$$\nEn intégrant la deuxième équation par rapport à $y$, on trouve \n$$f(x,y)=e^xy^2+c(x).$$\nEn dérivant cette expression par rapport à $x$ et en égalisant avec la première équation du système, on obtient\n$$ e^xy^2+c'(x)=e^x(x^2+y^2+2x)$$ c'est-à-dire\n$$c'(x)=e^x(x^2+2x).$$\nIl en résulte que $c(x)=x^2 e^x+c$ et donc que\n$$f(x,y)=e^x (x^2+y^2)+c$$ avec $c$ dans $\\Rr$.",
+        "html": "<p>Comme <span class=\"math inline\">\\(\\omega\\)</span> est définie sur <span class=\"math inline\">\\(\\Rr^2\\)</span>, il suffit que <span class=\"math inline\">\\(\\psi\\omega\\)</span> soit exacte pour que <span class=\"math inline\">\\(f\\)</span> existe. Maintenant, <span class=\"math inline\">\\(\\psi\\omega\\)</span> est exacte si et seulement si <span class=\"math display\">\\[\\frac{\\partial (\\psi(x)(x^2+y^2+2x))}{\\partial y } =  \\frac{\\partial(\\psi(x) 2y)} {\\partial x}.\\]</span> Ceci équivaut à <span class=\"math inline\">\\(2y \\psi(x)=2y\\psi&#39;(x)\\)</span>. Ainsi, <span class=\"math inline\">\\(\\psi(x)=\\psi&#39;(x)\\)</span> pour tout <span class=\"math inline\">\\(x\\)</span>. Donc <span class=\"math inline\">\\(\\psi(x)=k e^x\\)</span> avec <span class=\"math inline\">\\(k\\)</span> constante. On peut choisir <span class=\"math inline\">\\(k=1\\)</span>. Ainsi <span class=\"math display\">\\[\\psi\\omega=e^x(x^2+y^2+2x) dx+e^x(2y)dy.\\]</span> On cherche ensuite <span class=\"math inline\">\\(f\\)</span> telle que : <span class=\"math display\">\\[\\left\\{ \\begin{array}{lll}\n\\frac{\\partial f} {\\partial x}&amp; = &amp;e^x(x^2+y^2+2x) \\\\\n\\frac{\\partial f}{\\partial y} &amp;= &amp;e^x(2y) \\\\\n\\end{array} \\right .\\]</span> En intégrant la deuxième équation par rapport à <span class=\"math inline\">\\(y\\)</span>, on trouve <span class=\"math display\">\\[f(x,y)=e^xy^2+c(x).\\]</span> En dérivant cette expression par rapport à <span class=\"math inline\">\\(x\\)</span> et en égalisant avec la première équation du système, on obtient <span class=\"math display\">\\[e^xy^2+c&#39;(x)=e^x(x^2+y^2+2x)\\]</span> c’est-à-dire <span class=\"math display\">\\[c&#39;(x)=e^x(x^2+2x).\\]</span> Il en résulte que <span class=\"math inline\">\\(c(x)=x^2 e^x+c\\)</span> et donc que <span class=\"math display\">\\[f(x,y)=e^x (x^2+y^2)+c\\]</span> avec <span class=\"math inline\">\\(c\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "zU4L",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5598",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire",
+    "sousChapitre": "Morphismes particuliers",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:36.175Z"
+  },
+  "contenu": [
+    {
+      "id": "26669847-e0ec-4e56-bd48-b143a9cca18d",
+      "type": "description",
+      "value": {
+        "latex": "Soient $E$ un $\\Cc$-espace vectoriel de dimension finie et $f$ un endomorphisme de $E$. Montrer qu'il existe un projecteur $p$ et un automorphisme $g$ de $E$ tel que $f=g\\circ p$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(E\\)</span> un <span class=\"math inline\">\\(\\Cc\\)</span>-espace vectoriel de dimension finie et <span class=\"math inline\">\\(f\\)</span> un endomorphisme de <span class=\"math inline\">\\(E\\)</span>. Montrer qu’il existe un projecteur <span class=\"math inline\">\\(p\\)</span> et un automorphisme <span class=\"math inline\">\\(g\\)</span> de <span class=\"math inline\">\\(E\\)</span> tel que <span class=\"math inline\">\\(f=g\\circ p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e6947860-4da1-4bae-b58b-9fa39d4be907",
+      "type": "reponse",
+      "value": {
+        "latex": "Deux cas particuliers se traitent immédiatement.\n\nSi $f=0$, on prend $p=0$ et $g=Id_E$ et si $f\\in\\mathcal{GL}(E)$, on prend $p=Id_E$ et $g=f$. \n\nOn se place dorénavant dans le cas où $\\text{Ker}f$ et $\\text{Im}f$ ne sont pas réduit à ${0}$.\n\nSoit $F$ un supplémentaire de $\\text{Ker}f$ dans $E$ et $G$ un  supplémentaire de $\\text{Im}f$ dans $E$.\n\nOn sait que la restriction $f'$ de $f$ à $F$ réalise un isomorphisme de $F$ sur $\\text{Im}f$. D'autre part $\\text{dim}\\text{Ker}f=\\text{dim}G<+\\infty$ et donc $\\text{Ker}f$ et $G$ sont isomorphes. Soit $\\varphi$ un isomorphisme de $\\text{Ker}f$ sur $G$.\n\nOn définit une unique application linéaire $g$ en posant $g_{/\\text{Ker}f}=\\varphi$ et $g_{/F}=f'$.\n\n$g$ est un automorphisme de $E$. En effet,\n\n\\begin{center}\n$g(E)=g(\\text{Ker}f +F)=g(\\text{Ker}f) +g(F)=\\varphi(\\text{Ker}f) + f'(F)=G +\\text{Im}f=E$,\n\\end{center}\n\n(puisque $\\varphi$ et $f'$ sont des isomorphismes) et donc $g$ est surjective. Par suite $g$ est bijective de $E$ sur lui-même puisque $\\text{dim}E<+\\infty$.\n\nSoit $p$ la projection sur $F$ parallèlement à $\\text{Ker}f$. On a\n\n\\begin{center}\n$(g\\circ p)_{/\\text{Ker}f}= g\\circ0_{/\\text{Ker}f}= 0_{/\\text{Ker}f}=f_{/\\text{Ker}f}$ et $(g\\circ p)_{/F}=g\\circ Id_{/F}=f'=f_{/F}$.\n\\end{center}\n\nAinsi les endomorphismes $g\\circ p$ et $f$ coïncident sur deux sous espaces supplémentaires de $E$ et donc $g\\circ p=f$. Finalement, si on note $P(E)$ l'ensemble des projecteurs de $E$,\n\n\\begin{center}\n\\shadowbox{\n$\\forall f\\in\\mathcal{L}(E)$, $\\exists g\\in\\mathcal{GL}(E)$, $\\exists p\\in P(E)/\\;f=g\\circ p$.\n}\n\\end{center}",
+        "html": "<p>Deux cas particuliers se traitent immédiatement.</p>\n<p>Si <span class=\"math inline\">\\(f=0\\)</span>, on prend <span class=\"math inline\">\\(p=0\\)</span> et <span class=\"math inline\">\\(g=Id_E\\)</span> et si <span class=\"math inline\">\\(f\\in\\mathcal{GL}(E)\\)</span>, on prend <span class=\"math inline\">\\(p=Id_E\\)</span> et <span class=\"math inline\">\\(g=f\\)</span>.</p>\n<p>On se place dorénavant dans le cas où <span class=\"math inline\">\\(\\text{Ker}f\\)</span> et <span class=\"math inline\">\\(\\text{Im}f\\)</span> ne sont pas réduit à <span class=\"math inline\">\\({0}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(F\\)</span> un supplémentaire de <span class=\"math inline\">\\(\\text{Ker}f\\)</span> dans <span class=\"math inline\">\\(E\\)</span> et <span class=\"math inline\">\\(G\\)</span> un supplémentaire de <span class=\"math inline\">\\(\\text{Im}f\\)</span> dans <span class=\"math inline\">\\(E\\)</span>.</p>\n<p>On sait que la restriction <span class=\"math inline\">\\(f&#39;\\)</span> de <span class=\"math inline\">\\(f\\)</span> à <span class=\"math inline\">\\(F\\)</span> réalise un isomorphisme de <span class=\"math inline\">\\(F\\)</span> sur <span class=\"math inline\">\\(\\text{Im}f\\)</span>. D’autre part <span class=\"math inline\">\\(\\text{dim}\\text{Ker}f=\\text{dim}G&lt;+\\infty\\)</span> et donc <span class=\"math inline\">\\(\\text{Ker}f\\)</span> et <span class=\"math inline\">\\(G\\)</span> sont isomorphes. Soit <span class=\"math inline\">\\(\\varphi\\)</span> un isomorphisme de <span class=\"math inline\">\\(\\text{Ker}f\\)</span> sur <span class=\"math inline\">\\(G\\)</span>.</p>\n<p>On définit une unique application linéaire <span class=\"math inline\">\\(g\\)</span> en posant <span class=\"math inline\">\\(g_{/\\text{Ker}f}=\\varphi\\)</span> et <span class=\"math inline\">\\(g_{/F}=f&#39;\\)</span>.</p>\n<p><span class=\"math inline\">\\(g\\)</span> est un automorphisme de <span class=\"math inline\">\\(E\\)</span>. En effet,</p>\n<p><span class=\"math inline\">\\(g(E)=g(\\text{Ker}f +F)=g(\\text{Ker}f) +g(F)=\\varphi(\\text{Ker}f) + f&#39;(F)=G +\\text{Im}f=E\\)</span>,</p>\n<p>(puisque <span class=\"math inline\">\\(\\varphi\\)</span> et <span class=\"math inline\">\\(f&#39;\\)</span> sont des isomorphismes) et donc <span class=\"math inline\">\\(g\\)</span> est surjective. Par suite <span class=\"math inline\">\\(g\\)</span> est bijective de <span class=\"math inline\">\\(E\\)</span> sur lui-même puisque <span class=\"math inline\">\\(\\text{dim}E&lt;+\\infty\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(p\\)</span> la projection sur <span class=\"math inline\">\\(F\\)</span> parallèlement à <span class=\"math inline\">\\(\\text{Ker}f\\)</span>. On a</p>\n<p><span class=\"math inline\">\\((g\\circ p)_{/\\text{Ker}f}= g\\circ0_{/\\text{Ker}f}= 0_{/\\text{Ker}f}=f_{/\\text{Ker}f}\\)</span> et <span class=\"math inline\">\\((g\\circ p)_{/F}=g\\circ Id_{/F}=f&#39;=f_{/F}\\)</span>.</p>\n<p>Ainsi les endomorphismes <span class=\"math inline\">\\(g\\circ p\\)</span> et <span class=\"math inline\">\\(f\\)</span> coïncident sur deux sous espaces supplémentaires de <span class=\"math inline\">\\(E\\)</span> et donc <span class=\"math inline\">\\(g\\circ p=f\\)</span>. Finalement, si on note <span class=\"math inline\">\\(P(E)\\)</span> l’ensemble des projecteurs de <span class=\"math inline\">\\(E\\)</span>,</p>\n"
+      }
+    }
+  ]
+}

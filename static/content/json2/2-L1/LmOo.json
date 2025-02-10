@@ -1,0 +1,43 @@
+{
+  "uuid": "LmOo",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6977",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-05-06",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions hyperboliques et hyperboliques inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:48.778Z"
+  },
+  "contenu": [
+    {
+      "id": "2060a8f5-9e5d-4e6d-88a7-420c378fbd41",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a$ et $b$ deux réels positifs tels que $a^2-b^2=1$. Résoudre le système\n$$\\left\\{\\begin{array}{l}\n\\ch(x)+\\ch(y)=2a\\\\\n\\sh(x)+\\sh(y)=2b\n\\end{array}\\right.$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> deux réels positifs tels que <span class=\"math inline\">\\(a^2-b^2=1\\)</span>. Résoudre le système <span class=\"math display\">\\[\\left\\{\\begin{array}{l}\n\\ch(x)+\\ch(y)=2a\\\\\n\\sh(x)+\\sh(y)=2b\n\\end{array}\\right.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "260cb2d9-0db9-43c4-9de3-449a78d125f2",
+      "type": "indication",
+      "value": {
+        "latex": "Poser $X=e^x$ et $Y=e^y$ et se ramener à un système d'équations du type somme-produit.",
+        "html": "<p>Poser <span class=\"math inline\">\\(X=e^x\\)</span> et <span class=\"math inline\">\\(Y=e^y\\)</span> et se ramener à un système d’équations du type somme-produit.</p>\n"
+      }
+    },
+    {
+      "id": "56b28dd4-f63c-4a08-82ae-fbe25b6d0819",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{eqnarray*}\n(S)\\ \\left\\{\\begin{array}{l}\n\\ch(x)+\\ch(y)=2a\\\\\n\\sh(x)+\\sh(y)=2b\n\\end{array}\\right.\n&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\ne^x+e^{-x}+e^y+e^{-y}=4a\\\\\ne^x-e^{-x}+e^y-e^{-y}=4b\n\\end{array}\\right.\\\\\n &\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\ne^x+e^y=2a+2b\\\\\ne^x-e^{-x}+e^y-e^{-y}=4b\n\\end{array}\\right.\\\\\n &\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\ne^x+e^y=2a+2b\\\\\n-e^{-x}-e^{-y}=2b-2a\n\\end{array}\\right.\\\\\n &\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\ne^x+e^y=2(a+b)\\\\\n\\frac{1}{e^{x}}+\\frac{1}{e^{y}}=2(a-b)\n\\end{array}\\right.\n\\end{eqnarray*}\nce qui donne, en posant  $X=e^x$ et $Y=e^y$:\n\\begin{eqnarray*}\n(S)&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{1}{X}+\\frac{1}{Y}=2(a-b)\n\\end{array}\\right.\\\\\n&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{X+Y}{XY}=2(a-b)\n\\end{array}\\right.\\\\\n&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{2(a+b)}{XY}=2(a-b)\n\\end{array}\\right.\n\\end{eqnarray*}\nOr $a\\not=b$ puisque par hypothèse, $a^2-b^2=1$. Ainsi,\n\\begin{eqnarray*}\n(S)&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\nXY=\\frac{a+b}{a-b}\n\\end{array}\\right.\\\\\n&\\Longleftrightarrow& X\\ \\text{et}\\ Y\\ \\text{sont les solutions de}\\ z^2-2(a+b)z+\\frac{a+b}{a-b}=0\n\\end{eqnarray*}\n\n\\medskip\n\n\\emph{Remarque :} On rappelle\nque si $X, Y$ vérifient le système \n$\\left\\{\\begin{array}{l}\nX+Y=S\\\\\nXY=P\n\\end{array}\\right.$, alors $X$ et $Y$ sont les solutions de l'équation $z^2-Sz+P=0$.\n\\medskip\n\nOr le discriminant du trinôme $z^2-2(a+b)z+\\frac{a+b}{a-b}=0$ vaut \n$$\\Delta=4(a+b)^2-4\\frac{a+b}{a-b}=4(a+b)\\left(a+b-\\frac{1}{a-b}\\right)=\\frac{4(a+b)(a^2-b^2-1)}{a-b}=0$$ \nIl y a donc une racine double qui vaut $\\frac{2(a+b)}{2}$, ainsi $X=Y=a+b$ et donc :\n$$(S)\\Longleftrightarrow e^x=e^y=a+b$$\nOn vérifie que $a+b\\ge 0$ (car $a\\ge 0$ et $b\\ge 0$) et $a+b\\not=0$ (car $a^2-b^2=1$).\nConclusion : le système $(S)$ admet une unique solution, donnée par $\\big(x=\\ln(a+b),y=\\ln(a+b)\\big)$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{aligned}\n(S)\\ \\left\\{\\begin{array}{l}\n\\ch(x)+\\ch(y)=2a\\\\\n\\sh(x)+\\sh(y)=2b\n\\end{array}\\right.\n&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\ne^x+e^{-x}+e^y+e^{-y}=4a\\\\\ne^x-e^{-x}+e^y-e^{-y}=4b\n\\end{array}\\right.\\\\\n &amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\ne^x+e^y=2a+2b\\\\\ne^x-e^{-x}+e^y-e^{-y}=4b\n\\end{array}\\right.\\\\\n &amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\ne^x+e^y=2a+2b\\\\\n-e^{-x}-e^{-y}=2b-2a\n\\end{array}\\right.\\\\\n &amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\ne^x+e^y=2(a+b)\\\\\n\\frac{1}{e^{x}}+\\frac{1}{e^{y}}=2(a-b)\n\\end{array}\\right.\\end{aligned}\\]</span> ce qui donne, en posant <span class=\"math inline\">\\(X=e^x\\)</span> et <span class=\"math inline\">\\(Y=e^y\\)</span>: <span class=\"math display\">\\[\\begin{aligned}\n(S)&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{1}{X}+\\frac{1}{Y}=2(a-b)\n\\end{array}\\right.\\\\\n&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{X+Y}{XY}=2(a-b)\n\\end{array}\\right.\\\\\n&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\n\\frac{2(a+b)}{XY}=2(a-b)\n\\end{array}\\right.\\end{aligned}\\]</span> Or <span class=\"math inline\">\\(a\\not=b\\)</span> puisque par hypothèse, <span class=\"math inline\">\\(a^2-b^2=1\\)</span>. Ainsi, <span class=\"math display\">\\[\\begin{aligned}\n(S)&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\nX+Y=2(a+b)\\\\\nXY=\\frac{a+b}{a-b}\n\\end{array}\\right.\\\\\n&amp;\\Longleftrightarrow&amp; X\\ \\text{et}\\ Y\\ \\text{sont les solutions de}\\ z^2-2(a+b)z+\\frac{a+b}{a-b}=0\\end{aligned}\\]</span></p>\n<p><em>Remarque :</em> On rappelle que si <span class=\"math inline\">\\(X, Y\\)</span> vérifient le système <span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nX+Y=S\\\\\nXY=P\n\\end{array}\\right.\\)</span>, alors <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> sont les solutions de l’équation <span class=\"math inline\">\\(z^2-Sz+P=0\\)</span>.</p>\n<p>Or le discriminant du trinôme <span class=\"math inline\">\\(z^2-2(a+b)z+\\frac{a+b}{a-b}=0\\)</span> vaut <span class=\"math display\">\\[\\Delta=4(a+b)^2-4\\frac{a+b}{a-b}=4(a+b)\\left(a+b-\\frac{1}{a-b}\\right)=\\frac{4(a+b)(a^2-b^2-1)}{a-b}=0\\]</span> Il y a donc une racine double qui vaut <span class=\"math inline\">\\(\\frac{2(a+b)}{2}\\)</span>, ainsi <span class=\"math inline\">\\(X=Y=a+b\\)</span> et donc : <span class=\"math display\">\\[(S)\\Longleftrightarrow e^x=e^y=a+b\\]</span> On vérifie que <span class=\"math inline\">\\(a+b\\ge 0\\)</span> (car <span class=\"math inline\">\\(a\\ge 0\\)</span> et <span class=\"math inline\">\\(b\\ge 0\\)</span>) et <span class=\"math inline\">\\(a+b\\not=0\\)</span> (car <span class=\"math inline\">\\(a^2-b^2=1\\)</span>). Conclusion : le système <span class=\"math inline\">\\((S)\\)</span> admet une unique solution, donnée par <span class=\"math inline\">\\(\\big(x=\\ln(a+b),y=\\ln(a+b)\\big)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

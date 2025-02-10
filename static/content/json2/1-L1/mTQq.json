@@ -1,0 +1,75 @@
+{
+  "uuid": "mTQq",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6968",
+    "auteur": "exo7",
+    "createdAt": "2014-04-08",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Polynôme, fraction rationnelle",
+    "sousChapitre": "Fraction rationnelle",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:16.617Z"
+  },
+  "contenu": [
+    {
+      "id": "b92b339a-f954-4604-9308-687e676ee41e",
+      "type": "description",
+      "value": {
+        "latex": "Décomposer les fractions suivantes en éléments simples sur $\\Rr$, \nen raisonnant par substitution pour obtenir les coefficients.",
+        "html": "<p>Décomposer les fractions suivantes en éléments simples sur <span class=\"math inline\">\\(\\Rr\\)</span>, en raisonnant par substitution pour obtenir les coefficients.</p>\n"
+      }
+    },
+    {
+      "id": "96e9e4b7-7511-4f5d-89b3-b4f5a8a1de57",
+      "type": "question",
+      "value": {
+        "latex": "\n$F=\\frac{X^5+X^4+1}{X^3-X}$",
+        "html": "<p><span class=\"math inline\">\\(F=\\frac{X^5+X^4+1}{X^3-X}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "fb217d12-e327-45b8-aeb4-d431c3427c37",
+      "type": "question",
+      "value": {
+        "latex": "\n$G=\\frac{X^3+X+1}{(X-1)^3(X+1)}$",
+        "html": "<p><span class=\"math inline\">\\(G=\\frac{X^3+X+1}{(X-1)^3(X+1)}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "63c05617-3b68-43cb-9e93-80599e777a6a",
+      "type": "question",
+      "value": {
+        "latex": "\n$H=\\frac{X}{(X^2+1)(X^2+4)}$",
+        "html": "<p><span class=\"math inline\">\\(H=\\frac{X}{(X^2+1)(X^2+4)}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "36bcbd9a-7436-40ae-9e0e-225490c5bb2b",
+      "type": "question",
+      "value": {
+        "latex": "\n$K=\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}$",
+        "html": "<p><span class=\"math inline\">\\(K=\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "0a8b2c77-a398-4026-bd26-26d8d8f668b2",
+      "type": "reponse",
+      "value": {
+        "latex": "$F=\\frac{X^5+X^4+1}{X^3-X}$.\n\nPour obtenir la partie polynomiale, on fait une division euclidienne : \n$X^5+X^4+1=(X^3-X)(X^2+X+1)+ X^2+X+1$. Ce qui donne $F=X^2+X+1+F_1$, \noù $F_1=\\frac{X^2+X+1}{X^3-X}$. Puisque $X^3-X=X(X-1)(X+1)$, \nla décomposition en éléments simples est de la forme \n$$F_1 = \\frac{X^2+X+1}{X(X-1)(X+1)}=\\frac{a}{X}+\\frac{b}{X-1}+\\frac{c}{X+1}$$\n\nPour obtenir $a$ :\n\\begin{itemize}\non multiplie l'égalité par $X$ : $\\frac{X(X^2+X+1)}{X(X-1)(X+1)}=X \\left(\\frac{a}{X}+\\frac{b}{X-1}+\\frac{c}{X+1}\\right)$,\non simplifie $\\frac{X^2+X+1}{(X-1)(X+1)}= a+\\frac{bX}{X-1}+\\frac{cX}{X+1}$,\non remplace $X$ par $0$ et on obtient $-1= a+0+0$, donc $a=-1$.\n\\end{itemize}\n\n De même, en multipliant par $X-1$ et en remplaçant $X$ par $1$, il vient $b=\\frac{3}{2}$.\n Puis en multipliant par $X+1$ et en remplaçant $X$ par $-1$, on trouve $c=\\frac{1}{2}$.\n\nD'où\n$$\\frac{X^5+X^4+1}{X^3-X} = X^2+X+1-\\frac{1}{X}+\\frac{\\tfrac12}{X+1}+\\frac{\\tfrac32}{X-1}$$\n$G=\\frac{X^3+X+1}{(X-1)^3(X+1)}$. \n\nLa partie polynomiale est nulle. La décomposition en éléments simples est de la forme\n$G=\\frac{a}{(X-1)^3}+\\frac{b}{(X-1)^2}+\\frac{c}{X-1}+\\frac{d}{X+1}$.\n\n\\begin{itemize}\nEn multipliant les deux membres de l'égalité par $(X-1)^3$, \nen simplifiant puis en remplaçant $X$ par $1$, \non obtient $a=\\frac32$.\nDe même, en multipliant par $X+1$, \nen simplifiant puis en remplaçant $X$ par $-1$, \non obtient $d=\\frac18$.\nEn multipliant par $X$ et en regardant la limite \n  quand $X\\to +\\infty$, on obtient $1=c+d$. Donc $c=\\frac78$.\nEn remplaçant $X$ par $0$, il vient $-1=-a+b-c+d$.\n  Donc $b = \\frac54$.\n\\end{itemize}\n\nAinsi :\n$$G = \\frac{X^3+X+1}{(X-1)^3(X+1)} = \\frac{\\tfrac32}{(X-1)^3} + \\frac{\\tfrac54}{(X-1)^2} \n+ \\frac{\\tfrac78}{X-1}  + \\frac{\\tfrac18}{X+1}$$\n$H=\\frac{X}{(X^2+1)(X^2+4)}$.\n\nPuisque $X^2+1$ et $X^2+4$ sont irréductibles sur $\\Rr$, la décomposition en éléments simples sera de la forme \n$$\\frac{X}{(X^2+1)(X^2+4)} = \\frac{aX+b}{X^2+1} + \\frac{cX+d}{X^2+4}$$\n\n  \\begin{itemize}\nEn remplaçant $X$ par $0$, on obtient $0=b+\\frac{1}{4}d$.\nEn multipliant les deux membres par $X$, on obtient \n    $\\frac{X^2}{(X^2+1)(X^2+4)} = \\frac{aX^2+bX}{X^2+1} + \\frac{cX^2+dX}{X^2+4}$.\n    En calculant la limite quand $X\\to +\\infty$, on a $0=a+c$.\nEnfin, en évaluant les fractions en $X=1$ et $X=-1$, \n    on obtient $\\frac{1}{10}=\\frac{a+b}{2}+\\frac{c+d}{5}$ et \n    $\\frac{-1}{10}=\\frac{-a+b}{2}+\\frac{-c+d}{5}$.\n  \\end{itemize}\n\nLa résolution du système donne $b=d=0$, $a=\\frac{1}{3}$, $c=-\\frac{1}{3}$ et donc \n$$\\frac{X}{(X^2+1)(X^2+4)} = \\frac{\\frac{1}{3}X}{X^2+1} - \\frac{\\frac{1}{3}X}{X^2+4}$$\n$K=\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}$.\n\nPour la partie polynomiale, on fait la division euclidienne:\n$$2X^4+X^3+3X^2-6X+1=(2X^3-X^2)(X+1)+(4X^2-6X+1)$$ \nce qui donne \n$K=X+1+K_1$ où $K_1=\\frac{4X^2-6X+1}{2X^3-X^2}$.\nPour trouver la décomposition en éléments simples de $K_1$, on factorise son numérateur: \n$2X^3-X^2=2X^2(X-\\frac{1}{2})$, ce qui donne une décomposition de la forme\n$K_1=\\frac{a}{X^2}+\\frac{b}{X}+\\frac{c}{X-\\frac{1}{2}}$.\n\nOn obtient alors $a$ en multipliant les deux membres de l'égalité par\n$X^2$ puis en remplaçant $X$ par 0: $a=-1$. On obtient de\nm\\^eme $c$ en multipliant par $X-\\frac{1}{2}$ et en remplaçant $X$\npar $\\frac{1}{2}$: $c=-2$. Enfin on trouve $b$ en identifiant pour une\nvaleur particuli\\`ere non encore utilisée, par exemple $X=1$, ou mieux en\nmultipliant les deux membres par $X$ et en passant \\`a la limite pour\n$X\\to+\\infty$: $b=4$. Finalement:\n$$\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}=X+1-\\frac{1}{X^2}+\\frac{4}{X}-\\frac{2}{X-\\frac{1}{2}}$$",
+        "html": "<p><span class=\"math inline\">\\(F=\\frac{X^5+X^4+1}{X^3-X}\\)</span>.</p>\n<p>Pour obtenir la partie polynomiale, on fait une division euclidienne : <span class=\"math inline\">\\(X^5+X^4+1=(X^3-X)(X^2+X+1)+ X^2+X+1\\)</span>. Ce qui donne <span class=\"math inline\">\\(F=X^2+X+1+F_1\\)</span>, où <span class=\"math inline\">\\(F_1=\\frac{X^2+X+1}{X^3-X}\\)</span>. Puisque <span class=\"math inline\">\\(X^3-X=X(X-1)(X+1)\\)</span>, la décomposition en éléments simples est de la forme <span class=\"math display\">\\[F_1 = \\frac{X^2+X+1}{X(X-1)(X+1)}=\\frac{a}{X}+\\frac{b}{X-1}+\\frac{c}{X+1}\\]</span></p>\n<p>Pour obtenir <span class=\"math inline\">\\(a\\)</span> :</p>\n<p>on multiplie l’égalité par <span class=\"math inline\">\\(X\\)</span> : <span class=\"math inline\">\\(\\frac{X(X^2+X+1)}{X(X-1)(X+1)}=X \\left(\\frac{a}{X}+\\frac{b}{X-1}+\\frac{c}{X+1}\\right)\\)</span>, on simplifie <span class=\"math inline\">\\(\\frac{X^2+X+1}{(X-1)(X+1)}= a+\\frac{bX}{X-1}+\\frac{cX}{X+1}\\)</span>, on remplace <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(0\\)</span> et on obtient <span class=\"math inline\">\\(-1= a+0+0\\)</span>, donc <span class=\"math inline\">\\(a=-1\\)</span>.</p>\n<p>De même, en multipliant par <span class=\"math inline\">\\(X-1\\)</span> et en remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(1\\)</span>, il vient <span class=\"math inline\">\\(b=\\frac{3}{2}\\)</span>. Puis en multipliant par <span class=\"math inline\">\\(X+1\\)</span> et en remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(-1\\)</span>, on trouve <span class=\"math inline\">\\(c=\\frac{1}{2}\\)</span>.</p>\n<p>D’où <span class=\"math display\">\\[\\frac{X^5+X^4+1}{X^3-X} = X^2+X+1-\\frac{1}{X}+\\frac{\\tfrac12}{X+1}+\\frac{\\tfrac32}{X-1}\\]</span> <span class=\"math inline\">\\(G=\\frac{X^3+X+1}{(X-1)^3(X+1)}\\)</span>.</p>\n<p>La partie polynomiale est nulle. La décomposition en éléments simples est de la forme <span class=\"math inline\">\\(G=\\frac{a}{(X-1)^3}+\\frac{b}{(X-1)^2}+\\frac{c}{X-1}+\\frac{d}{X+1}\\)</span>.</p>\n<p>En multipliant les deux membres de l’égalité par <span class=\"math inline\">\\((X-1)^3\\)</span>, en simplifiant puis en remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(1\\)</span>, on obtient <span class=\"math inline\">\\(a=\\frac32\\)</span>. De même, en multipliant par <span class=\"math inline\">\\(X+1\\)</span>, en simplifiant puis en remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(-1\\)</span>, on obtient <span class=\"math inline\">\\(d=\\frac18\\)</span>. En multipliant par <span class=\"math inline\">\\(X\\)</span> et en regardant la limite quand <span class=\"math inline\">\\(X\\to +\\infty\\)</span>, on obtient <span class=\"math inline\">\\(1=c+d\\)</span>. Donc <span class=\"math inline\">\\(c=\\frac78\\)</span>. En remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(0\\)</span>, il vient <span class=\"math inline\">\\(-1=-a+b-c+d\\)</span>. Donc <span class=\"math inline\">\\(b = \\frac54\\)</span>.</p>\n<p>Ainsi : <span class=\"math display\">\\[G = \\frac{X^3+X+1}{(X-1)^3(X+1)} = \\frac{\\tfrac32}{(X-1)^3} + \\frac{\\tfrac54}{(X-1)^2} \n+ \\frac{\\tfrac78}{X-1}  + \\frac{\\tfrac18}{X+1}\\]</span> <span class=\"math inline\">\\(H=\\frac{X}{(X^2+1)(X^2+4)}\\)</span>.</p>\n<p>Puisque <span class=\"math inline\">\\(X^2+1\\)</span> et <span class=\"math inline\">\\(X^2+4\\)</span> sont irréductibles sur <span class=\"math inline\">\\(\\Rr\\)</span>, la décomposition en éléments simples sera de la forme <span class=\"math display\">\\[\\frac{X}{(X^2+1)(X^2+4)} = \\frac{aX+b}{X^2+1} + \\frac{cX+d}{X^2+4}\\]</span></p>\n<p>En remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(0\\)</span>, on obtient <span class=\"math inline\">\\(0=b+\\frac{1}{4}d\\)</span>. En multipliant les deux membres par <span class=\"math inline\">\\(X\\)</span>, on obtient <span class=\"math inline\">\\(\\frac{X^2}{(X^2+1)(X^2+4)} = \\frac{aX^2+bX}{X^2+1} + \\frac{cX^2+dX}{X^2+4}\\)</span>. En calculant la limite quand <span class=\"math inline\">\\(X\\to +\\infty\\)</span>, on a <span class=\"math inline\">\\(0=a+c\\)</span>. Enfin, en évaluant les fractions en <span class=\"math inline\">\\(X=1\\)</span> et <span class=\"math inline\">\\(X=-1\\)</span>, on obtient <span class=\"math inline\">\\(\\frac{1}{10}=\\frac{a+b}{2}+\\frac{c+d}{5}\\)</span> et <span class=\"math inline\">\\(\\frac{-1}{10}=\\frac{-a+b}{2}+\\frac{-c+d}{5}\\)</span>.</p>\n<p>La résolution du système donne <span class=\"math inline\">\\(b=d=0\\)</span>, <span class=\"math inline\">\\(a=\\frac{1}{3}\\)</span>, <span class=\"math inline\">\\(c=-\\frac{1}{3}\\)</span> et donc <span class=\"math display\">\\[\\frac{X}{(X^2+1)(X^2+4)} = \\frac{\\frac{1}{3}X}{X^2+1} - \\frac{\\frac{1}{3}X}{X^2+4}\\]</span> <span class=\"math inline\">\\(K=\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}\\)</span>.</p>\n<p>Pour la partie polynomiale, on fait la division euclidienne: <span class=\"math display\">\\[2X^4+X^3+3X^2-6X+1=(2X^3-X^2)(X+1)+(4X^2-6X+1)\\]</span> ce qui donne <span class=\"math inline\">\\(K=X+1+K_1\\)</span> où <span class=\"math inline\">\\(K_1=\\frac{4X^2-6X+1}{2X^3-X^2}\\)</span>. Pour trouver la décomposition en éléments simples de <span class=\"math inline\">\\(K_1\\)</span>, on factorise son numérateur: <span class=\"math inline\">\\(2X^3-X^2=2X^2(X-\\frac{1}{2})\\)</span>, ce qui donne une décomposition de la forme <span class=\"math inline\">\\(K_1=\\frac{a}{X^2}+\\frac{b}{X}+\\frac{c}{X-\\frac{1}{2}}\\)</span>.</p>\n<p>On obtient alors <span class=\"math inline\">\\(a\\)</span> en multipliant les deux membres de l’égalité par <span class=\"math inline\">\\(X^2\\)</span> puis en remplaçant <span class=\"math inline\">\\(X\\)</span> par 0: <span class=\"math inline\">\\(a=-1\\)</span>. On obtient de même <span class=\"math inline\">\\(c\\)</span> en multipliant par <span class=\"math inline\">\\(X-\\frac{1}{2}\\)</span> et en remplaçant <span class=\"math inline\">\\(X\\)</span> par <span class=\"math inline\">\\(\\frac{1}{2}\\)</span>: <span class=\"math inline\">\\(c=-2\\)</span>. Enfin on trouve <span class=\"math inline\">\\(b\\)</span> en identifiant pour une valeur particulière non encore utilisée, par exemple <span class=\"math inline\">\\(X=1\\)</span>, ou mieux en multipliant les deux membres par <span class=\"math inline\">\\(X\\)</span> et en passant à la limite pour <span class=\"math inline\">\\(X\\to+\\infty\\)</span>: <span class=\"math inline\">\\(b=4\\)</span>. Finalement: <span class=\"math display\">\\[\\frac{2X^4+X^3+3X^2-6X+1}{2X^3-X^2}=X+1-\\frac{1}{X^2}+\\frac{4}{X}-\\frac{2}{X-\\frac{1}{2}}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "3a16f80a-667a-484a-ae95-df8a36ea7c9b",
+      "type": "indication",
+      "value": {
+        "latex": "Les fractions $F, K$ ont une partie polynomiale, elles s'écrivent\n\n$F=X^2+X+1+\\frac{X^2+X+1}{X^3-X}$\n\n$K=X+1+\\frac{4X^2-6X+1}{2X^3-X^2}$",
+        "html": "<p>Les fractions <span class=\"math inline\">\\(F, K\\)</span> ont une partie polynomiale, elles s’écrivent</p>\n<p><span class=\"math inline\">\\(F=X^2+X+1+\\frac{X^2+X+1}{X^3-X}\\)</span></p>\n<p><span class=\"math inline\">\\(K=X+1+\\frac{4X^2-6X+1}{2X^3-X^2}\\)</span></p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "vY9e",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5681",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:23.009Z"
+  },
+  "contenu": [
+    {
+      "id": "6370e7ed-4337-4f97-ac82-2266deadb2c9",
+      "type": "description",
+      "value": {
+        "latex": "Trouver $A$ dans $\\mathcal{M}_n(\\Rr)$ telle que la comatrice de $A$ soit $\\left(\n\\begin{array}{cccc}\n1&0&\\ldots&0\\\\\n2&\\vdots& &\\vdots\\\\\n\\vdots&\\vdots& &\\vdots\\\\\nn&0&\\ldots&0\n\\end{array}\n\\right)$.",
+        "html": "<p>Trouver <span class=\"math inline\">\\(A\\)</span> dans <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span> telle que la comatrice de <span class=\"math inline\">\\(A\\)</span> soit <span class=\"math inline\">\\(\\left(\n\\begin{array}{cccc}\n1&amp;0&amp;\\ldots&amp;0\\\\\n2&amp;\\vdots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\vdots&amp; &amp;\\vdots\\\\\nn&amp;0&amp;\\ldots&amp;0\n\\end{array}\n\\right)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c5c9642d-a8a0-4d26-be5d-f8f4221d8f01",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $B$ la matrice de l'énoncé. $\\text{rg}B = 1$ et si $A$ existe, nécessairement $\\text{rg}A = n-1$ (exercice \\ref{ex:rou18bis}).\n\nUne matrice de rang $1$ admet l'écriture générale $U{^t}V$ où $U$ et $V$ sont des vecteurs colonnes non nuls. Ici $U=\\left(\n\\begin{array}{c}\n1\\\\\n2\\\\\n\\vdots\\\\\nn\n\\end{array}\n\\right)$  et $V =\\left(\n\\begin{array}{c}\n1\\\\\n0\\\\\n\\vdots\\\\\n0\n\\end{array}\n\\right)$.\n\nSi $A$ existe, $A$ doit déjà vérifier $A{^t}tB={^t}BA = 0$ ou encore $AV{^t}U= 0$ (1) et $V{^t}UA = 0$ (2). En multipliant les deux membres de l'égalité (1) par $U$ à droite puis en simplifiant par le réel non nul ${^t}UU=\\|U\\|_2^2$, on obtient $AV = 0$. Ceci montre que la première colonne de $A$ est nulle (les $n-1$ dernières devant alors former une famille libre).\n\nDe même, en multipliant les deux membres de l'égalité (2) par ${^t}V$ à gauche, on obtient ${^t}UA = 0$ et donc les colonnes de la matrice $A$ sont orthogonales à $U$ (pour le produit scalaire usuel) ce qui invite franchement à considérer la matrice $A=\\left(\n\\begin{array}{ccccc}\n0&-2&\\ldots&\\ldots&-n\\\\\n0&1&0&\\ldots&0\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&0\\\\\n0&\\ldots&\\ldots&0&1\n \\end{array}\\right)$ qui convient.",
+        "html": "<p>Soit <span class=\"math inline\">\\(B\\)</span> la matrice de l’énoncé. <span class=\"math inline\">\\(\\text{rg}B = 1\\)</span> et si <span class=\"math inline\">\\(A\\)</span> existe, nécessairement <span class=\"math inline\">\\(\\text{rg}A = n-1\\)</span> (exercice <a href=\"#ex:rou18bis\" data-reference-type=\"ref\" data-reference=\"ex:rou18bis\">[ex:rou18bis]</a>).</p>\n<p>Une matrice de rang <span class=\"math inline\">\\(1\\)</span> admet l’écriture générale <span class=\"math inline\">\\(U{^t}V\\)</span> où <span class=\"math inline\">\\(U\\)</span> et <span class=\"math inline\">\\(V\\)</span> sont des vecteurs colonnes non nuls. Ici <span class=\"math inline\">\\(U=\\left(\n\\begin{array}{c}\n1\\\\\n2\\\\\n\\vdots\\\\\nn\n\\end{array}\n\\right)\\)</span> et <span class=\"math inline\">\\(V =\\left(\n\\begin{array}{c}\n1\\\\\n0\\\\\n\\vdots\\\\\n0\n\\end{array}\n\\right)\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(A\\)</span> existe, <span class=\"math inline\">\\(A\\)</span> doit déjà vérifier <span class=\"math inline\">\\(A{^t}tB={^t}BA = 0\\)</span> ou encore <span class=\"math inline\">\\(AV{^t}U= 0\\)</span> (1) et <span class=\"math inline\">\\(V{^t}UA = 0\\)</span> (2). En multipliant les deux membres de l’égalité (1) par <span class=\"math inline\">\\(U\\)</span> à droite puis en simplifiant par le réel non nul <span class=\"math inline\">\\({^t}UU=\\|U\\|_2^2\\)</span>, on obtient <span class=\"math inline\">\\(AV = 0\\)</span>. Ceci montre que la première colonne de <span class=\"math inline\">\\(A\\)</span> est nulle (les <span class=\"math inline\">\\(n-1\\)</span> dernières devant alors former une famille libre).</p>\n<p>De même, en multipliant les deux membres de l’égalité (2) par <span class=\"math inline\">\\({^t}V\\)</span> à gauche, on obtient <span class=\"math inline\">\\({^t}UA = 0\\)</span> et donc les colonnes de la matrice <span class=\"math inline\">\\(A\\)</span> sont orthogonales à <span class=\"math inline\">\\(U\\)</span> (pour le produit scalaire usuel) ce qui invite franchement à considérer la matrice <span class=\"math inline\">\\(A=\\left(\n\\begin{array}{ccccc}\n0&amp;-2&amp;\\ldots&amp;\\ldots&amp;-n\\\\\n0&amp;1&amp;0&amp;\\ldots&amp;0\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;1\n \\end{array}\\right)\\)</span> qui convient.</p>\n"
+      }
+    }
+  ]
+}

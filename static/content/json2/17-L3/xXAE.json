@@ -1,0 +1,35 @@
+{
+  "uuid": "xXAE",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2224",
+    "auteur": "matos",
+    "createdAt": "2008-04-23",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Autre",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:14.821Z"
+  },
+  "contenu": [
+    {
+      "id": "210848d1-369b-43b6-aa87-71cc8531bd16",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que la factorisation LU pr\\'eserve la structure des matrices bande au sens suivant : \n$$a_{ij}=0 \\mbox{ pour } |i-j| \\geq p \\Rightarrow \\left\\{ \\begin{array}{ll} \nl_{ij}=0 & \\mbox{ pour } i-j \\geq p\\\\ \nu_{ij}=0 & \\mbox{ pour } j-i \\geq p \n\\end{array}\\right.$$",
+        "html": "<p>Montrer que la factorisation LU préserve la structure des matrices bande au sens suivant : <span class=\"math display\">\\[a_{ij}=0 \\mbox{ pour } |i-j| \\geq p \\Rightarrow \\left\\{ \\begin{array}{ll} \nl_{ij}=0 &amp; \\mbox{ pour } i-j \\geq p\\\\ \nu_{ij}=0 &amp; \\mbox{ pour } j-i \\geq p \n\\end{array}\\right.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "fb766742-af9c-43f3-9677-8da901793710",
+      "type": "reponse",
+      "value": {
+        "latex": "Montrons par r\\'ecurrence que $A_n=U$ est une matrice bande.\n\n$A_1=A, \\quad A_{k+1}=L_kA_k= L_kL_{k-1} \\cdots L_1A, \\quad k=1,\\cdots , n-1.$\n\nSupposons que $A_k$ est une matrice bande i.e., $a_{ij}^k=0$ pour $|i-j|\\geq p$ et montrons que $A_{k+1}$ est une matrice bande.\n$$a_{ij}^{k+1}=a_{ij}^k-\\frac{a_{ik}^k a_{kj}^k}{a_{kk}^k}$$\nSoit $|i-j|\\geq p\\Leftrightarrow |(i-k)-(j-k)|\\geq p$. On consid\\`ere deux cas:\n\\begin{itemize}\n\\item $k+1\\leq i\\leq n$ et $k\\leq j\\leq n$. Alors $i-k\\geq p$ ou $j-k\\geq p$ $\\Rightarrow a_{ik}^ka_{kj}^k=0\\Rightarrow a_{ij}^{k+1}=a_{ij}^k=0$\n\\item $i\\leq k$ ou $j\\leq k-1$ alors $ a_{ij}^{k+1}=a_{ij}^k=0$\n\\end{itemize}\ndonc $A_{k+1}$ est une matrice bande et $U$ est une matrice bande. On a $A=LU$ et la matrice triangulaire inf\\'erieure $L$ a pour \\'el\\'ements $l_{ij}=a_{ij}^j/a_{jj}^j,\\quad j\\leq i\\leq n$. Toutes les matrices $ A_j$ \\'etant des matrices bandes on a $a_{ij}^j=0$ pour $i-j\\geq p\\Rightarrow l_{ij}=0$ pour $i-j\\geq p$.",
+        "html": "<p>Montrons par récurrence que <span class=\"math inline\">\\(A_n=U\\)</span> est une matrice bande.</p>\n<p><span class=\"math inline\">\\(A_1=A, \\quad A_{k+1}=L_kA_k= L_kL_{k-1} \\cdots L_1A, \\quad k=1,\\cdots , n-1.\\)</span></p>\n<p>Supposons que <span class=\"math inline\">\\(A_k\\)</span> est une matrice bande i.e., <span class=\"math inline\">\\(a_{ij}^k=0\\)</span> pour <span class=\"math inline\">\\(|i-j|\\geq p\\)</span> et montrons que <span class=\"math inline\">\\(A_{k+1}\\)</span> est une matrice bande. <span class=\"math display\">\\[a_{ij}^{k+1}=a_{ij}^k-\\frac{a_{ik}^k a_{kj}^k}{a_{kk}^k}\\]</span> Soit <span class=\"math inline\">\\(|i-j|\\geq p\\Leftrightarrow |(i-k)-(j-k)|\\geq p\\)</span>. On considère deux cas:</p>\n<ul>\n<li><p><span class=\"math inline\">\\(k+1\\leq i\\leq n\\)</span> et <span class=\"math inline\">\\(k\\leq j\\leq n\\)</span>. Alors <span class=\"math inline\">\\(i-k\\geq p\\)</span> ou <span class=\"math inline\">\\(j-k\\geq p\\)</span> <span class=\"math inline\">\\(\\Rightarrow a_{ik}^ka_{kj}^k=0\\Rightarrow a_{ij}^{k+1}=a_{ij}^k=0\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(i\\leq k\\)</span> ou <span class=\"math inline\">\\(j\\leq k-1\\)</span> alors <span class=\"math inline\">\\(a_{ij}^{k+1}=a_{ij}^k=0\\)</span></p></li>\n</ul>\n<p>donc <span class=\"math inline\">\\(A_{k+1}\\)</span> est une matrice bande et <span class=\"math inline\">\\(U\\)</span> est une matrice bande. On a <span class=\"math inline\">\\(A=LU\\)</span> et la matrice triangulaire inférieure <span class=\"math inline\">\\(L\\)</span> a pour éléments <span class=\"math inline\">\\(l_{ij}=a_{ij}^j/a_{jj}^j,\\quad j\\leq i\\leq n\\)</span>. Toutes les matrices <span class=\"math inline\">\\(A_j\\)</span> étant des matrices bandes on a <span class=\"math inline\">\\(a_{ij}^j=0\\)</span> pour <span class=\"math inline\">\\(i-j\\geq p\\Rightarrow l_{ij}=0\\)</span> pour <span class=\"math inline\">\\(i-j\\geq p\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

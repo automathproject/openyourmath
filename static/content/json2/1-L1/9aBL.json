@@ -1,0 +1,35 @@
+{
+  "uuid": "9aBL",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5272",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Inverse, méthode de Gauss",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:13.667Z"
+  },
+  "contenu": [
+    {
+      "id": "60198f9d-f5ff-4c57-a63e-6cfbb1bc23f3",
+      "type": "description",
+      "value": {
+        "latex": "Soit $A\\in\\mathcal{M}_n(\\Cc)$ telle que~:~$\\forall i\\in\\{1,...,n\\},\\;|a_{i,i}|>\\sum_{j\\neq i}^{}|a_{i,j}|$. Montrer que $A$ est inversible.",
+        "html": "<p>Soit <span class=\"math inline\">\\(A\\in\\mathcal{M}_n(\\Cc)\\)</span> telle que : <span class=\"math inline\">\\(\\forall i\\in\\{1,...,n\\},\\;|a_{i,i}|&gt;\\sum_{j\\neq i}^{}|a_{i,j}|\\)</span>. Montrer que <span class=\"math inline\">\\(A\\)</span> est inversible.</p>\n"
+      }
+    },
+    {
+      "id": "89b84ff7-f4ec-4890-b69a-35adb340772d",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $X=\\left(\n\\begin{array}{c}\nx_1\\\\\n\\vdots\\\\\nx_n\n\\end{array}\n\\right)$  un vecteur du noyau de $A$. Supposons $X\\neq0$. Alors, si $i_0$ est un indice tel que $|x_{i_0}|=\\mbox{Max}\\{|x_i|,\\;i\\in\\{1,...,n\\}\\}$, on a  $|x_{i_0}|>0$.\n\nMais alors,\n\n$$\\begin{align*}\\ensuremath\nAX=0&\\Rightarrow\\forall i\\in\\{1,...,n\\},\\;\\sum_{j=1}^{n}a_{i,j}x_j=0\n\\\\\n &\\Rightarrow|a_{i_0,i_0}x_{i_0}|=|-\\sum_{j\\neq i_0}^{}a_{i_0,j}x_j|\\leq\\sum_{j\\neq i_0}^{}|a_{i_0,j}|.|x_j|\n \\leq|x_{i_0}|\\sum_{j\\neq i_0}^{}|a_{i_0,j}|\n\\end{align*}$$\n\net, puisque $|x_{i_0}|> 0$, on obtient $|a_{i_0,i_0}\\leq\\sum_{j\\neq i_0}^{}|a_{i_0,j}|$ contredisant les hypothèses de l'énoncé. Donc, il est absurde de supposer que $\\mbox{Ker}A$ contient un vecteur non nul et $A$ est bien inversible.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X=\\left(\n\\begin{array}{c}\nx_1\\\\\n\\vdots\\\\\nx_n\n\\end{array}\n\\right)\\)</span> un vecteur du noyau de <span class=\"math inline\">\\(A\\)</span>. Supposons <span class=\"math inline\">\\(X\\neq0\\)</span>. Alors, si <span class=\"math inline\">\\(i_0\\)</span> est un indice tel que <span class=\"math inline\">\\(|x_{i_0}|=\\mbox{Max}\\{|x_i|,\\;i\\in\\{1,...,n\\}\\}\\)</span>, on a <span class=\"math inline\">\\(|x_{i_0}|&gt;0\\)</span>.</p>\n<p>Mais alors,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nAX=0&amp;\\Rightarrow\\forall i\\in\\{1,...,n\\},\\;\\sum_{j=1}^{n}a_{i,j}x_j=0\n\\\\\n &amp;\\Rightarrow|a_{i_0,i_0}x_{i_0}|=|-\\sum_{j\\neq i_0}^{}a_{i_0,j}x_j|\\leq\\sum_{j\\neq i_0}^{}|a_{i_0,j}|.|x_j|\n \\leq|x_{i_0}|\\sum_{j\\neq i_0}^{}|a_{i_0,j}|\n\\end{align*}\\]</span></p>\n<p>et, puisque <span class=\"math inline\">\\(|x_{i_0}|&gt; 0\\)</span>, on obtient <span class=\"math inline\">\\(|a_{i_0,i_0}\\leq\\sum_{j\\neq i_0}^{}|a_{i_0,j}|\\)</span> contredisant les hypothèses de l’énoncé. Donc, il est absurde de supposer que <span class=\"math inline\">\\(\\mbox{Ker}A\\)</span> contient un vecteur non nul et <span class=\"math inline\">\\(A\\)</span> est bien inversible.</p>\n"
+      }
+    }
+  ]
+}

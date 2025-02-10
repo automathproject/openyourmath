@@ -1,0 +1,155 @@
+{
+  "uuid": "4Fy0",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5524",
+    "auteur": "rouget",
+    "createdAt": "2010-07-15",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Courbes planes",
+    "sousChapitre": "Courbes paramétrées",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:51.827Z"
+  },
+  "contenu": [
+    {
+      "id": "50b2b3e8-640e-4387-ab49-7dab67b84709",
+      "type": "description",
+      "value": {
+        "latex": "Construire les courbes de paramétrisations :",
+        "html": "<p>Construire les courbes de paramétrisations :</p>\n"
+      }
+    },
+    {
+      "id": "2c01a1ff-312f-4e18-900c-af68fde72d5f",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{(t+1)^2(t-1)}\\\\\ny=\\frac{t^2}{t^2-1}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{(t+1)^2(t-1)}\\\\\ny=\\frac{t^2}{t^2-1}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "38985616-d804-49a1-a257-7416375d2550",
+      "type": "reponse",
+      "value": {
+        "latex": "\\textbf{Domaine d'étude.}\n$M(t)$ existe si et seulement si $t\\notin\\{-1,1\\}$. Sinon, il n'y a pas de symétrie particulière (la fonction $y$ est effectivement paire, mais $x$ n'est ni paire ni impaire).\n\n\\textbf{Dérivée.} Pour $t\\in]-1,1[\\setminus\\{0\\}$,\n\n$$\\begin{align*}\\ensuremath\nx'(t)&=x(t)(3\\ln|t|-2\\ln|t+1|-\\ln|t-1|)'=\\frac{t^3}{(t+1)^2(t-1)}(\\frac{3}{t}-\\frac{2}{t+1}-\\frac{1}{t-1})\\\\\n &=\\frac{t^3}{(t+1)^2(t-1)}\\frac{3(t^2-1)-2(t^2-t)-(t^2+t)}{t(t+1)(t-1)}=\\frac{t^2(t-3)}{(t+1)^3(t-1)^2},\n\\end{align*}$$\n\net\n\n$$y'(t)=\\frac{2t(t^2-1)-2t(t^2)}{(t^2-1)^2}=\\frac{-2t}{(t^2-1)^2},$$\n\nce qui reste vrai par continuité de $x$ et $y$ en $0$.\n\n\\textbf{Etude des points singuliers.} Pour $t\\in]-1,1[$, $\\overrightarrow{\\frac{dM}{dt}}(t)=\\vec{0}\\Leftrightarrow t=0$. $M(0)=(0,0)$ est l'unique point singulier. Pour $t\\in]-1,1[\\setminus\\{0\\}$,\n\n$$\\frac{y(t)-y(0)}{x(t)-x(0)}=\\frac{t^2}{t^2-1}\\frac{(t+1)^2(t-1)}{t^3}=\\frac{t+1}{t}.$$\n\nPar suite, $\\frac{y(t)-y(0)}{x(t)-x(0)}$ tend vers $+\\infty$ quand $t$ tend vers $0$ par valeurs supérieures et vers $-\\infty$ quand $t$ tend vers $0$ par valeurs inférieures. La tangente en $M(0)$ est dirigée par $\\vec{j}$ et d'autre part, $M(0)$ est un point de rebroussement de première espèce.\n\n\\textbf{Etude quand $t$ tend vers $\\pm\\infty$.} Quand $t$ tend vers $\\pm\\infty$, $M(t)$ tend vers le point $(1,1)$. On prolonge la courbe en posant $M(\\infty)=1,1)$. On a alors\n\n$$\\frac{y(t)-y(\\infty)}{x(t)-x(\\infty)}=(\\frac{t^2}{t^2-1}-1)(\\frac{t^3}{(t+1)^2(t-1)}-1)^{-1}=\\frac{1}{t^2-1}\n\\frac{(t+1)^2(t-1)}{-t^2+t+1}=\\frac{t+1}{-t^2+t+1}\\sim-\\frac{1}{t}.$$\n\nCette expression tend donc vers $0$ quand $t$ tend vers $\\pm\\infty$ et la tangente en $M(\\infty)$ est dirigée par $\\vec{i}$.\n\n\\textbf{Etude quand $t$ tend vers 1.} Quand $t$ tend vers $1$, $x(t)\\sim{1}{4(t-1)}$ et $y(t)\\sim\\frac{1}{2(t-1)}$. Donc, $x$ et $y$ tendent vers l'inifini et il y a branche infinie. De plus, $\\frac{y(t)}{x(t)}\\sim2$. Puis,\n\n$$y(t)-2x(t)=\\frac{t^2}{t^2-1}-2\\frac{t^3}{(t+1)^2(t-1)}=\\frac{t^2(t+1)-2t^3}{(t+1)^2(t-1)}=-\\frac{t^2}{(t+1)^2}.$$\n\nCette dernière expression tend vers $-\\frac{1}{4}$ et la droite $(\\Delta)$ d'équation $y=2x-\\frac{1}{4}$ est asymptote à la courbe.\n\n\\textbf{Etude quand $t$ tend vers -1.} Quand $t$ tend vers $1$, $x(t)\\sim{1}{2(t+1)^2}$ et $y(t)\\sim\\frac{-1}{2(t+1)}$. Donc, $x$ et $y$ tendent vers l'inifini et il y a branche infinie. De plus, $\\frac{y(t)}{x(t)}\\sim-(t+1)$. Par suite, $\\frac{y(t)}{x(t)}$ tend vers $0$ quand $t$ tend vers $-1$. La courbe admet une barnche parabolique de direction $(Ox)$.\n\n\\textbf{Variations conjointes de $x$ et $y$.} On rappelle que pour $t\\in\\Rr\\setminus\\{-1,1\\}$, $x'(t)=\\frac{t^2(t-3)}{(t+1)^3(t-1)^2}$ et $y'(t)=\\frac{-2t}{(t^2-1)^2}$. On en déduit le tableau suivant~:\n\n$$\\includegraphics{../images/img005524-1}$$\n\n\nOn peut noter que la tangente en $M(3)$ est dirigée par le vecteur $\\vec{j}$. Voir graphique page suivante.\n\n$$\\includegraphics{../images/img005524-2}$$\n\n\n\nDans la suite de cet exercice, je ne détaillerai que très peu ou pas du tout l'étude de la courbe.",
+        "html": "<p><strong>Domaine d’étude.</strong> <span class=\"math inline\">\\(M(t)\\)</span> existe si et seulement si <span class=\"math inline\">\\(t\\notin\\{-1,1\\}\\)</span>. Sinon, il n’y a pas de symétrie particulière (la fonction <span class=\"math inline\">\\(y\\)</span> est effectivement paire, mais <span class=\"math inline\">\\(x\\)</span> n’est ni paire ni impaire).</p>\n<p><strong>Dérivée.</strong> Pour <span class=\"math inline\">\\(t\\in]-1,1[\\setminus\\{0\\}\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nx&#39;(t)&amp;=x(t)(3\\ln|t|-2\\ln|t+1|-\\ln|t-1|)&#39;=\\frac{t^3}{(t+1)^2(t-1)}(\\frac{3}{t}-\\frac{2}{t+1}-\\frac{1}{t-1})\\\\\n &amp;=\\frac{t^3}{(t+1)^2(t-1)}\\frac{3(t^2-1)-2(t^2-t)-(t^2+t)}{t(t+1)(t-1)}=\\frac{t^2(t-3)}{(t+1)^3(t-1)^2},\n\\end{align*}\\]</span></p>\n<p>et</p>\n<p><span class=\"math display\">\\[y&#39;(t)=\\frac{2t(t^2-1)-2t(t^2)}{(t^2-1)^2}=\\frac{-2t}{(t^2-1)^2},\\]</span></p>\n<p>ce qui reste vrai par continuité de <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span> en <span class=\"math inline\">\\(0\\)</span>.</p>\n<p><strong>Etude des points singuliers.</strong> Pour <span class=\"math inline\">\\(t\\in]-1,1[\\)</span>, <span class=\"math inline\">\\(\\overrightarrow{\\frac{dM}{dt}}(t)=\\vec{0}\\Leftrightarrow t=0\\)</span>. <span class=\"math inline\">\\(M(0)=(0,0)\\)</span> est l’unique point singulier. Pour <span class=\"math inline\">\\(t\\in]-1,1[\\setminus\\{0\\}\\)</span>,</p>\n<p><span class=\"math display\">\\[\\frac{y(t)-y(0)}{x(t)-x(0)}=\\frac{t^2}{t^2-1}\\frac{(t+1)^2(t-1)}{t^3}=\\frac{t+1}{t}.\\]</span></p>\n<p>Par suite, <span class=\"math inline\">\\(\\frac{y(t)-y(0)}{x(t)-x(0)}\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> par valeurs supérieures et vers <span class=\"math inline\">\\(-\\infty\\)</span> quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> par valeurs inférieures. La tangente en <span class=\"math inline\">\\(M(0)\\)</span> est dirigée par <span class=\"math inline\">\\(\\vec{j}\\)</span> et d’autre part, <span class=\"math inline\">\\(M(0)\\)</span> est un point de rebroussement de première espèce.</p>\n<p><strong>Etude quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(\\pm\\infty\\)</span>.</strong> Quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(\\pm\\infty\\)</span>, <span class=\"math inline\">\\(M(t)\\)</span> tend vers le point <span class=\"math inline\">\\((1,1)\\)</span>. On prolonge la courbe en posant <span class=\"math inline\">\\(M(\\infty)=1,1)\\)</span>. On a alors</p>\n<p><span class=\"math display\">\\[\\frac{y(t)-y(\\infty)}{x(t)-x(\\infty)}=(\\frac{t^2}{t^2-1}-1)(\\frac{t^3}{(t+1)^2(t-1)}-1)^{-1}=\\frac{1}{t^2-1}\n\\frac{(t+1)^2(t-1)}{-t^2+t+1}=\\frac{t+1}{-t^2+t+1}\\sim-\\frac{1}{t}.\\]</span></p>\n<p>Cette expression tend donc vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(\\pm\\infty\\)</span> et la tangente en <span class=\"math inline\">\\(M(\\infty)\\)</span> est dirigée par <span class=\"math inline\">\\(\\vec{i}\\)</span>.</p>\n<p><strong>Etude quand <span class=\"math inline\">\\(t\\)</span> tend vers 1.</strong> Quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(x(t)\\sim{1}{4(t-1)}\\)</span> et <span class=\"math inline\">\\(y(t)\\sim\\frac{1}{2(t-1)}\\)</span>. Donc, <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span> tendent vers l’inifini et il y a branche infinie. De plus, <span class=\"math inline\">\\(\\frac{y(t)}{x(t)}\\sim2\\)</span>. Puis,</p>\n<p><span class=\"math display\">\\[y(t)-2x(t)=\\frac{t^2}{t^2-1}-2\\frac{t^3}{(t+1)^2(t-1)}=\\frac{t^2(t+1)-2t^3}{(t+1)^2(t-1)}=-\\frac{t^2}{(t+1)^2}.\\]</span></p>\n<p>Cette dernière expression tend vers <span class=\"math inline\">\\(-\\frac{1}{4}\\)</span> et la droite <span class=\"math inline\">\\((\\Delta)\\)</span> d’équation <span class=\"math inline\">\\(y=2x-\\frac{1}{4}\\)</span> est asymptote à la courbe.</p>\n<p><strong>Etude quand <span class=\"math inline\">\\(t\\)</span> tend vers -1.</strong> Quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(x(t)\\sim{1}{2(t+1)^2}\\)</span> et <span class=\"math inline\">\\(y(t)\\sim\\frac{-1}{2(t+1)}\\)</span>. Donc, <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span> tendent vers l’inifini et il y a branche infinie. De plus, <span class=\"math inline\">\\(\\frac{y(t)}{x(t)}\\sim-(t+1)\\)</span>. Par suite, <span class=\"math inline\">\\(\\frac{y(t)}{x(t)}\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(-1\\)</span>. La courbe admet une barnche parabolique de direction <span class=\"math inline\">\\((Ox)\\)</span>.</p>\n<p><strong>Variations conjointes de <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span>.</strong> On rappelle que pour <span class=\"math inline\">\\(t\\in\\Rr\\setminus\\{-1,1\\}\\)</span>, <span class=\"math inline\">\\(x&#39;(t)=\\frac{t^2(t-3)}{(t+1)^3(t-1)^2}\\)</span> et <span class=\"math inline\">\\(y&#39;(t)=\\frac{-2t}{(t^2-1)^2}\\)</span>. On en déduit le tableau suivant :</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-1}\\]</span></p>\n<p>On peut noter que la tangente en <span class=\"math inline\">\\(M(3)\\)</span> est dirigée par le vecteur <span class=\"math inline\">\\(\\vec{j}\\)</span>. Voir graphique page suivante.</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-2}\\]</span></p>\n<p>Dans la suite de cet exercice, je ne détaillerai que très peu ou pas du tout l’étude de la courbe.</p>\n"
+      }
+    },
+    {
+      "id": "aed6199a-8d81-486e-9856-c6a63f5a054f",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=(t+2)e^{1/t}\\\\\ny=(t-2)e^{1/t}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=(t+2)e^{1/t}\\\\\ny=(t-2)e^{1/t}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "fe9f266f-08b3-4812-a6b8-9051d5990096",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\includegraphics{../images/img005524-3}$$",
+        "html": "<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-3}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "2c354c4d-7c5c-4110-a700-947d97337039",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=(t-1)\\ln(|t|)\\\\\ny=(t+1)\\ln(|t|)\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=(t-1)\\ln(|t|)\\\\\ny=(t+1)\\ln(|t|)\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "6ecfd33f-c759-4c1b-a30b-631405125318",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\includegraphics{../images/img005524-4}$$",
+        "html": "<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-4}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "44dac2dd-d708-4b9e-897b-5b5da54fc187",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{2t}{1+t^2}\\\\\ny=\\frac{t+2}{1-t^2}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{2t}{1+t^2}\\\\\ny=\\frac{t+2}{1-t^2}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "c4eeff4d-1416-4901-a846-d9d0d90727b0",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{2t}{1+t^2}\\\\\ny=\\frac{t+2}{1-t^2}\n\\end{array}\\right.$\n\n$$\\includegraphics{../images/img005524-5}$$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{2t}{1+t^2}\\\\\ny=\\frac{t+2}{1-t^2}\n\\end{array}\\right.\\)</span></p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-5}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "a915bab1-1f38-4829-9e37-51c16641df8b",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t}{t^2-1}\\\\\ny=\\frac{t+2}{(t-1)^2}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t}{t^2-1}\\\\\ny=\\frac{t+2}{(t-1)^2}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "e3575364-19c7-405e-88e8-da8fb9af18ed",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\includegraphics{../images/img005524-6}$$",
+        "html": "<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-6}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "40b50285-57c7-42f6-a0f6-c335eddf49de",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{t^2-9}\\\\\ny=\\frac{t(t-2)}{t-3}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{t^2-9}\\\\\ny=\\frac{t(t-2)}{t-3}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "16932a50-dc69-4535-9a87-2f314d9221e5",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{t^2-9}\\\\\ny=\\frac{t(t-2)}{t-3}\n\\end{array}\\right.$\n\n$$\\includegraphics{../images/img005524-7}$$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{t^2-9}\\\\\ny=\\frac{t(t-2)}{t-3}\n\\end{array}\\right.\\)</span></p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-7}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "02947882-3ec0-46ae-a9e4-84c676895f38",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{1+3t}\\\\\ny=\\frac{3t^2}{1+3t}\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{1+3t}\\\\\ny=\\frac{3t^2}{1+3t}\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "74521715-e20e-4f56-b68a-da43166457a4",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{1+3t}\\\\\ny=\\frac{3t^2}{1+3t}\n\\end{array}\\right.$\n\n$$\\includegraphics{../images/img005524-8}$$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=\\frac{t^3}{1+3t}\\\\\ny=\\frac{3t^2}{1+3t}\n\\end{array}\\right.\\)</span></p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-8}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "fca2bfc3-fa21-44ec-80b2-79cb0e1a44a5",
+      "type": "question",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=t^2+t^3\\\\\ny=t^2+t^3-2t^4-2t^5\n\\end{array}\\right.$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=t^2+t^3\\\\\ny=t^2+t^3-2t^4-2t^5\n\\end{array}\\right.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "bec384ad-ffb6-497d-b6ca-91a062a6f730",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\left\\{\\begin{array}{l}\nx=t^2+t^3\\\\\ny=t^2+t^3-2t^4-2t^5\n\\end{array}\\right.$\n\n$$\\includegraphics{../images/img005524-9}$$",
+        "html": "<p><span class=\"math inline\">\\(\\left\\{\\begin{array}{l}\nx=t^2+t^3\\\\\ny=t^2+t^3-2t^4-2t^5\n\\end{array}\\right.\\)</span></p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005524-9}\\]</span></p>\n"
+      }
+    }
+  ]
+}

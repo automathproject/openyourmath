@@ -1,0 +1,35 @@
+{
+  "uuid": "AYdv",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4042",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Développements limités implicites",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:33.577Z"
+  },
+  "contenu": [
+    {
+      "id": "b07fac6b-ae27-476f-b9f8-b5df262804ea",
+      "type": "description",
+      "value": {
+        "latex": "Montrez que pour $n$ entier ($n>0$) l'équation $e^x=n-x$ admet une\nunique solution positive $x_n$. Déterminer les trois premiers termes du\ndéveloppement asymptotique de $x_n$ en fonction de~$n$.",
+        "html": "<p>Montrez que pour <span class=\"math inline\">\\(n\\)</span> entier (<span class=\"math inline\">\\(n&gt;0\\)</span>) l’équation <span class=\"math inline\">\\(e^x=n-x\\)</span> admet une unique solution positive <span class=\"math inline\">\\(x_n\\)</span>. Déterminer les trois premiers termes du développement asymptotique de <span class=\"math inline\">\\(x_n\\)</span> en fonction de <span class=\"math inline\">\\(n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "834fa4ab-11c7-48dd-9e4d-32fa4b7c2c58",
+      "type": "reponse",
+      "value": {
+        "latex": "Existence et unicité de~$x_n$ par étude de la fonction\n$x \\mapsto e^x+x$ sur $\\R^+$.\nOn a clairement $x_n\\to +\\infty$ (lorsque $n\\to\\infty$) et $n=e^{x_n}+x_n$\nd'où~: $$\\ln n = \\ln(e^{x_n}+x_n) = x_n + \\ln(1+x_ne^{-x_n}) = \nx_n + x_ne^{-x_n} - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n}).$$\nOn en déduit $x_n\\sim \\ln n$. \\'Ecrivons $x_n = \\ln n + y_n$~:\n$$0 = y_n + x_ne^{-x_n} - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})$$\nd'où $y_n \\to 0$ (lorsque $n\\to\\infty$) et $y_n\\sim -x_ne^{-x_n} \\sim -\\frac{\\ln n}ne^{-y_n}\n\\sim-\\frac{\\ln n}n$. \\'Ecrivons maintenant $y_n=-\\frac{\\ln n}n+z_n$~:\n$$\\begin{align*}0 \n&= -\\frac{\\ln n}n + z_n + (\\ln n + y_n)\\frac{e^{-y_n}}n - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})\\\\\n&=z_n + \\frac{(\\ln n)(-y_n+ o(y_n))}n + y_n\\frac{e^{-y_n}}n - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})\\\\\n&=z_n + \\frac{(\\ln n)(-y_n+ o(y_n))}n + y_n\\frac{e^{-y_n}}n - \\frac{x_n^2}{2n^2}e^{-2y_n} +  o\\Bigl(\\frac{x_n^2e^{-2y_n}}{n^2}\\Bigr)\\\\\n&=z_n + \\frac{\\ln^2n}{2n^2} +  o\\Bigl(\\frac{\\ln^2n}{n^2}\\Bigr)\\cr\n\\end{align*}$$\nd'où $z_n\\sim-\\frac{\\ln^2n}{2n^2}$ et finalement,\n$x_n = \\ln n - \\frac{\\ln n}n - \\frac{\\ln^2n}{2n^2}+o\\Bigl(\\frac{\\ln^2n}{n^2}\\Bigr).$",
+        "html": "<p>Existence et unicité de <span class=\"math inline\">\\(x_n\\)</span> par étude de la fonction <span class=\"math inline\">\\(x \\mapsto e^x+x\\)</span> sur <span class=\"math inline\">\\(\\R^+\\)</span>. On a clairement <span class=\"math inline\">\\(x_n\\to +\\infty\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) et <span class=\"math inline\">\\(n=e^{x_n}+x_n\\)</span> d’où : <span class=\"math display\">\\[\\ln n = \\ln(e^{x_n}+x_n) = x_n + \\ln(1+x_ne^{-x_n}) = \nx_n + x_ne^{-x_n} - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n}).\\]</span> On en déduit <span class=\"math inline\">\\(x_n\\sim \\ln n\\)</span>. Écrivons <span class=\"math inline\">\\(x_n = \\ln n + y_n\\)</span> : <span class=\"math display\">\\[0 = y_n + x_ne^{-x_n} - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})\\]</span> d’où <span class=\"math inline\">\\(y_n \\to 0\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) et <span class=\"math inline\">\\(y_n\\sim -x_ne^{-x_n} \\sim -\\frac{\\ln n}ne^{-y_n}\n\\sim-\\frac{\\ln n}n\\)</span>. Écrivons maintenant <span class=\"math inline\">\\(y_n=-\\frac{\\ln n}n+z_n\\)</span> : <span class=\"math display\">\\[\\begin{align*}0 \n&amp;= -\\frac{\\ln n}n + z_n + (\\ln n + y_n)\\frac{e^{-y_n}}n - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})\\\\\n&amp;=z_n + \\frac{(\\ln n)(-y_n+ o(y_n))}n + y_n\\frac{e^{-y_n}}n - \\frac{x_n^2}2e^{-2x_n} +  o(x_n^2e^{-2x_n})\\\\\n&amp;=z_n + \\frac{(\\ln n)(-y_n+ o(y_n))}n + y_n\\frac{e^{-y_n}}n - \\frac{x_n^2}{2n^2}e^{-2y_n} +  o\\Bigl(\\frac{x_n^2e^{-2y_n}}{n^2}\\Bigr)\\\\\n&amp;=z_n + \\frac{\\ln^2n}{2n^2} +  o\\Bigl(\\frac{\\ln^2n}{n^2}\\Bigr)\\cr\n\\end{align*}\\]</span> d’où <span class=\"math inline\">\\(z_n\\sim-\\frac{\\ln^2n}{2n^2}\\)</span> et finalement, <span class=\"math inline\">\\(x_n = \\ln n - \\frac{\\ln n}n - \\frac{\\ln^2n}{2n^2}+o\\Bigl(\\frac{\\ln^2n}{n^2}\\Bigr).\\)</span></p>\n"
+      }
+    }
+  ]
+}

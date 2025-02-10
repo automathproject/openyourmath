@@ -1,0 +1,51 @@
+{
+  "uuid": "2dru",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4043",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Développements limités implicites",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:20.806Z"
+  },
+  "contenu": [
+    {
+      "id": "0e387e10-3864-4d9c-beb4-799dddbf7cfc",
+      "type": "description",
+      "value": {
+        "latex": "Pour tout $n$ entier naturel non nul, on donne $f_n(x) = nx^{n+1} - (n+1)x^n - \\frac12$.",
+        "html": "<p>Pour tout <span class=\"math inline\">\\(n\\)</span> entier naturel non nul, on donne <span class=\"math inline\">\\(f_n(x) = nx^{n+1} - (n+1)x^n - \\frac12\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "503caa24-32ac-4375-a858-a6993064e355",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f_n$ admet une unique racine positive notée $x_n$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f_n\\)</span> admet une unique racine positive notée <span class=\"math inline\">\\(x_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "79491c79-a653-4926-8cde-67f0f46b12b2",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que la suite $(x_n)$ converge vers une limite~$\\ell$ et trouver\n    un équivalent de $x_n-\\ell$.",
+        "html": "<p>Montrer que la suite <span class=\"math inline\">\\((x_n)\\)</span> converge vers une limite <span class=\"math inline\">\\(\\ell\\)</span> et trouver un équivalent de <span class=\"math inline\">\\(x_n-\\ell\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "815c9e6c-63cd-4ea4-aec7-56043f792343",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*} nx_n^n(x_n - 1) = x_n^n+\\frac 12 & \\Rightarrow \n    f_{n+1}(x_n) = \\frac{n+1}n\\Bigl(x_n^{n+1} + \\frac{x_n}2\\Bigr) - x_n^{n+1} - \\frac12\n                 = \\frac{x_n^{n+1}}n + \\frac{(n+1)x_n - n}{\\strut 2n} > 0\\\\ & \\Rightarrow  x_{n+1} < x_n.\\\\ \\end{align*}$$\n    Donc la suite $(x_n)$ est décroissante et minorée par~$1$, elle converge vers~$\\ell \\ge 1$.\n    \n    $0 \\le x_n - 1 = \\frac 1n+ \\frac1{2nx_n^n} \\to 0$ (lorsque $n\\to\\infty$) donc $\\ell = 1$.\n    \n    Soit $y_n = n(x_n-1) = 1 + \\frac1{2x_n^n}$.\n    On a $f(y_n) = \\frac{\\ln(2(y_n-1))}{y_n} = -\\frac{\\ln x_n}{x_n-1} = -g(x_n)$\n    et $f,g$ sont strictement coissantes sur $[1,+\\infty[$ donc les suites $(x_n)$\n    et $(y_n)$ varient en sens contraire. On en déduit que la suite $(y_n)$\n    décroît donc admet une limite $\\lambda \\ge 1$,\n    soit $x_n = 1 + \\frac\\lambda n + o\\Bigl(\\frac1n\\Bigr)$.\n    Alors $x_n^n \\to e^\\lambda$ (lorsque $n\\to\\infty$) d'où $\\lambda = 1 + \\frac1{2e^\\lambda}$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*} nx_n^n(x_n - 1) = x_n^n+\\frac 12 &amp; \\Rightarrow \n    f_{n+1}(x_n) = \\frac{n+1}n\\Bigl(x_n^{n+1} + \\frac{x_n}2\\Bigr) - x_n^{n+1} - \\frac12\n                 = \\frac{x_n^{n+1}}n + \\frac{(n+1)x_n - n}{\\strut 2n} &gt; 0\\\\ &amp; \\Rightarrow  x_{n+1} &lt; x_n.\\\\ \\end{align*}\\]</span> Donc la suite <span class=\"math inline\">\\((x_n)\\)</span> est décroissante et minorée par <span class=\"math inline\">\\(1\\)</span>, elle converge vers <span class=\"math inline\">\\(\\ell \\ge 1\\)</span>.</p>\n<p><span class=\"math inline\">\\(0 \\le x_n - 1 = \\frac 1n+ \\frac1{2nx_n^n} \\to 0\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) donc <span class=\"math inline\">\\(\\ell = 1\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(y_n = n(x_n-1) = 1 + \\frac1{2x_n^n}\\)</span>. On a <span class=\"math inline\">\\(f(y_n) = \\frac{\\ln(2(y_n-1))}{y_n} = -\\frac{\\ln x_n}{x_n-1} = -g(x_n)\\)</span> et <span class=\"math inline\">\\(f,g\\)</span> sont strictement coissantes sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> donc les suites <span class=\"math inline\">\\((x_n)\\)</span> et <span class=\"math inline\">\\((y_n)\\)</span> varient en sens contraire. On en déduit que la suite <span class=\"math inline\">\\((y_n)\\)</span> décroît donc admet une limite <span class=\"math inline\">\\(\\lambda \\ge 1\\)</span>, soit <span class=\"math inline\">\\(x_n = 1 + \\frac\\lambda n + o\\Bigl(\\frac1n\\Bigr)\\)</span>. Alors <span class=\"math inline\">\\(x_n^n \\to e^\\lambda\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) d’où <span class=\"math inline\">\\(\\lambda = 1 + \\frac1{2e^\\lambda}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "HovQ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5703",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série numérique",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:43.145Z"
+  },
+  "contenu": [
+    {
+      "id": "00f54a32-45bd-4cf6-b576-a49fb0e3ef79",
+      "type": "description",
+      "value": {
+        "latex": "Convergence et somme éventuelle de la série de terme général\n\n\\begin{center}\n\\textbf{1) (**)} $u_n =\\frac{2n^3-3n^2+1}{(n+3)!}$\\qquad\\textbf{2) (***)} $u_n=\\frac{n!}{(a+1)(a+2)\\ldots(a+n)}$, $n\\geqslant1$, $a\\in\\Rr^{+*}$ donné.\n\\end{center}",
+        "html": "<p>Convergence et somme éventuelle de la série de terme général</p>\n<p><strong>1) (**)</strong> <span class=\"math inline\">\\(u_n =\\frac{2n^3-3n^2+1}{(n+3)!}\\)</span><strong>2) (***)</strong> <span class=\"math inline\">\\(u_n=\\frac{n!}{(a+1)(a+2)\\ldots(a+n)}\\)</span>, <span class=\"math inline\">\\(n\\geqslant1\\)</span>, <span class=\"math inline\">\\(a\\in\\Rr^{+*}\\)</span> donné.</p>\n"
+      }
+    },
+    {
+      "id": "04cd213d-4222-47f5-86b5-4d57529cdf3f",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $n\\in\\Nn$.\n\n$$\\begin{align*}\\ensuremath\n2n^3-3n^2+1&=2(n+3)(n+2)(n+1)-15n^2 - 22n -11= 2(n+3)(n+2)(n+1)-15(n+3)(n+2) +53n+79\\\\\n &= 2(n+3)(n+2)(n+1)-15(n+3)(n+2)+53(n+3)-80\n\\end{align*}$$\n\nDonc\n\n$$\\begin{align*}\\ensuremath\n\\sum_{n=0}^{+\\infty}\\frac{2n^3-3n^2+1}{(n+3)!}&=\\sum_{n=0}^{+\\infty}\\left(\\frac{2}{n!}-\\frac{15}{(n+1)!}+\\frac{53}{(n+2)!}-\\frac{80}{(n+3)!}\\right)=2e-15(e-1)+53(e-2)-80\\left(e-\\frac{5}{2}\\right)\\\\\n &=-40e + 111.\n\\end{align*}$$\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{n=0}^{+\\infty}\\frac{2n^3-3n^2+1}{(n+3)!}=-40e + 111$.\n}\n\\end{center}\nPour $n\\in\\Nn$, on a $u_{n+1}=\\frac{n+1}{a+n+1}u_n$. Par suite $(n+a+1)u_{n+1}= (n+1)u_n = (n+a)u_n + (1-a)u_n$ puis\n\n\\begin{center}\n$(1-a)\\sum_{k=1}^{n}u_k=\\sum_{k=1}^{n}(k+a+1)u_{k+1}-\\sum_{k=1}^{n}(k+a)u_k =(n+a+1)u_{n+1}-(a+1)u_1 =(n+a+1)u_{n+1}-1.$\n\\end{center}\n\nSi $a = 1$, $\\forall n\\in\\Nn^*$, $u_n=\\frac{1}{n+1}$. Dans ce cas, la série diverge.\n\nSi $a\\neq 1$, $\\forall n\\in\\Nn^*$, $\\sum_{k=1}^{n}u_k=\\frac{1}{1-a}((n+a+1)u_{n+1} - 1)=\\frac{1}{a-1}- \\frac{1}{a-1}(a+n+1)u_{n+1}$.\n\nSi $a > 1$, la suite $u$ est strictement positive et la suite des sommes partielles $(S_n)$ est majorée par $\\frac{1}{a-1}$. Donc la série de terme général $u_n$ converge. Il en est de même de la suite $((a+n+1)u_{n+1})$. Soit $\\ell=\\lim_{n \\rightarrow +\\infty}(a+n+1)u_{n+1}$.\n\nSi $\\ell\\neq0$, $u_{n+1}\\underset{n\\rightarrow+\\infty}{\\sim}\\frac{\\ell}{n+a+1}$ contredisant la convergence de la série de terme général $u_n$. Donc $\\ell= 0$ et\n\n\\begin{center}\nsi $a > 1$,  $\\sum_{n=1}^{+\\infty}u_n=\\frac{1}{a-1}$.\n\\end{center}\n\nSi $0<a<1$, pour tout $n\\in\\Nn^*$, $u_n\\geqslant\\frac{1\\times2\\times\\ldots\\times n}{2\\times3\\ldots\\times(n+1)}=\\frac{1}{n+1}$. Dans ce cas, la série diverge.",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n2n^3-3n^2+1&amp;=2(n+3)(n+2)(n+1)-15n^2 - 22n -11= 2(n+3)(n+2)(n+1)-15(n+3)(n+2) +53n+79\\\\\n &amp;= 2(n+3)(n+2)(n+1)-15(n+3)(n+2)+53(n+3)-80\n\\end{align*}\\]</span></p>\n<p>Donc</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\sum_{n=0}^{+\\infty}\\frac{2n^3-3n^2+1}{(n+3)!}&amp;=\\sum_{n=0}^{+\\infty}\\left(\\frac{2}{n!}-\\frac{15}{(n+1)!}+\\frac{53}{(n+2)!}-\\frac{80}{(n+3)!}\\right)=2e-15(e-1)+53(e-2)-80\\left(e-\\frac{5}{2}\\right)\\\\\n &amp;=-40e + 111.\n\\end{align*}\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, on a <span class=\"math inline\">\\(u_{n+1}=\\frac{n+1}{a+n+1}u_n\\)</span>. Par suite <span class=\"math inline\">\\((n+a+1)u_{n+1}= (n+1)u_n = (n+a)u_n + (1-a)u_n\\)</span> puis</p>\n<p><span class=\"math inline\">\\((1-a)\\sum_{k=1}^{n}u_k=\\sum_{k=1}^{n}(k+a+1)u_{k+1}-\\sum_{k=1}^{n}(k+a)u_k =(n+a+1)u_{n+1}-(a+1)u_1 =(n+a+1)u_{n+1}-1.\\)</span></p>\n<p>Si <span class=\"math inline\">\\(a = 1\\)</span>, <span class=\"math inline\">\\(\\forall n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(u_n=\\frac{1}{n+1}\\)</span>. Dans ce cas, la série diverge.</p>\n<p>Si <span class=\"math inline\">\\(a\\neq 1\\)</span>, <span class=\"math inline\">\\(\\forall n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(\\sum_{k=1}^{n}u_k=\\frac{1}{1-a}((n+a+1)u_{n+1} - 1)=\\frac{1}{a-1}- \\frac{1}{a-1}(a+n+1)u_{n+1}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(a &gt; 1\\)</span>, la suite <span class=\"math inline\">\\(u\\)</span> est strictement positive et la suite des sommes partielles <span class=\"math inline\">\\((S_n)\\)</span> est majorée par <span class=\"math inline\">\\(\\frac{1}{a-1}\\)</span>. Donc la série de terme général <span class=\"math inline\">\\(u_n\\)</span> converge. Il en est de même de la suite <span class=\"math inline\">\\(((a+n+1)u_{n+1})\\)</span>. Soit <span class=\"math inline\">\\(\\ell=\\lim_{n \\rightarrow +\\infty}(a+n+1)u_{n+1}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(\\ell\\neq0\\)</span>, <span class=\"math inline\">\\(u_{n+1}\\underset{n\\rightarrow+\\infty}{\\sim}\\frac{\\ell}{n+a+1}\\)</span> contredisant la convergence de la série de terme général <span class=\"math inline\">\\(u_n\\)</span>. Donc <span class=\"math inline\">\\(\\ell= 0\\)</span> et</p>\n<p>si <span class=\"math inline\">\\(a &gt; 1\\)</span>, <span class=\"math inline\">\\(\\sum_{n=1}^{+\\infty}u_n=\\frac{1}{a-1}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(0&lt;a&lt;1\\)</span>, pour tout <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(u_n\\geqslant\\frac{1\\times2\\times\\ldots\\times n}{2\\times3\\ldots\\times(n+1)}=\\frac{1}{n+1}\\)</span>. Dans ce cas, la série diverge.</p>\n"
+      }
+    }
+  ]
+}

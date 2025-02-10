@@ -1,0 +1,251 @@
+{
+  "uuid": "7K8k",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5426",
+    "auteur": "exo7",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Calculs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:30.250Z"
+  },
+  "contenu": [
+    {
+      "id": "28d22104-142d-4a53-9133-f394dd59f38c",
+      "type": "description",
+      "value": {
+        "latex": "Etudier l'existence et la valeur éventuelle des limites suivantes",
+        "html": "<p>Etudier l’existence et la valeur éventuelle des limites suivantes</p>\n"
+      }
+    },
+    {
+      "id": "eef73b7e-9e61-46cb-9ef1-483f82657da7",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow \\pi/2}(\\sin x)^{1/(2x-\\pi)}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow \\pi/2}(\\sin x)^{1/(2x-\\pi)}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "f4985ce7-5758-4380-a179-8fecabb83448",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $x\\in]0,\\pi[$, $\\sin x>0$, de sorte que la fonction proposée est bien définie sur un voisinage pointé de $\\frac{\\pi}{2}$ (c'est-à-dire un voisinage de $\\frac{\\pi}{2}$ auquel on a enlevé le point $\\frac{\\pi}{2}$) et de plus $(\\sin x)^{1/(2x-\\pi)}=e^{\\ln(\\sin x)/(2x-\\pi)}$.\nQuand $x$ tend vers $\\frac{\\pi}{2}$, $\\sin x$ tend vers $1$ et donc\n\n$$\\ln(\\sin x)\\sim\\sin x-1=-\\left(1-\\cos\\left(\\frac{\\pi}{2}-x\\right)\\right)\\sim-\\frac{1}{2}\\left(\\frac{\\pi}{2}-x\\right)^2=-\\frac{(2x-\\pi)^2}{8}.$$\nDonc, $\\frac{\\ln(\\sin x)}{2x-\\pi}\\sim-\\frac{2x-\\pi}{8}\\rightarrow0$ et enfin $(\\sin x)^{1/(2x-\\pi)}=e^{\\ln(\\sin x)/(2x-\\pi)}\\rightarrow e^0=1$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow \\frac{\\pi}{2}}(\\sin x)^{1/(2x-\\pi)}=1$.\n}\n\\end{center}",
+        "html": "<p>Si <span class=\"math inline\">\\(x\\in]0,\\pi[\\)</span>, <span class=\"math inline\">\\(\\sin x&gt;0\\)</span>, de sorte que la fonction proposée est bien définie sur un voisinage pointé de <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> (c’est-à-dire un voisinage de <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> auquel on a enlevé le point <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>) et de plus <span class=\"math inline\">\\((\\sin x)^{1/(2x-\\pi)}=e^{\\ln(\\sin x)/(2x-\\pi)}\\)</span>. Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>, <span class=\"math inline\">\\(\\sin x\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\ln(\\sin x)\\sim\\sin x-1=-\\left(1-\\cos\\left(\\frac{\\pi}{2}-x\\right)\\right)\\sim-\\frac{1}{2}\\left(\\frac{\\pi}{2}-x\\right)^2=-\\frac{(2x-\\pi)^2}{8}.\\]</span> Donc, <span class=\"math inline\">\\(\\frac{\\ln(\\sin x)}{2x-\\pi}\\sim-\\frac{2x-\\pi}{8}\\rightarrow0\\)</span> et enfin <span class=\"math inline\">\\((\\sin x)^{1/(2x-\\pi)}=e^{\\ln(\\sin x)/(2x-\\pi)}\\rightarrow e^0=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5023b1d4-e5c5-48d9-a9ba-933a3d44a865",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow \\pi/2}|\\tan x|^{\\cos x}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow \\pi/2}|\\tan x|^{\\cos x}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "1436b014-bb8a-4e60-9956-5a40f6b2e62c",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $x\\in]0,\\pi[\\setminus\\left\\{\\frac{\\pi}{2}\\right\\}$, $|\\tan x|>0$, de sorte que la fonction proposée est bien définie sur un voisinage pointé de $\\frac{\\pi}{2}$ et de plus $|\\tan x|^{\\cos x}=e^{\\cos x\\ln(|\\tan x|)}$. Quand $x$ tend vers $\\frac{\\pi}{2}$, \n\n$$\\ln|\\tan x|=\\ln|\\sin x|-\\ln|\\cos x|\\sim-\\ln|\\cos x|,$$\npuis $\\cos x\\ln|\\tan x|\\sim-\\cos x\\ln|\\cos x|\\rightarrow0$ (car, quand $u$ tend vers $0$, $u\\ln u\\rightarrow 0$).\nDonc, $|\\tan x|^{\\cos x}=e^{\\cos x\\ln|\\tan x|}\\rightarrow e^0=1$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow \\frac{\\pi}{2}}|\\tan x|^{\\cos x}=1$.\n}\n\\end{center}",
+        "html": "<p>Si <span class=\"math inline\">\\(x\\in]0,\\pi[\\setminus\\left\\{\\frac{\\pi}{2}\\right\\}\\)</span>, <span class=\"math inline\">\\(|\\tan x|&gt;0\\)</span>, de sorte que la fonction proposée est bien définie sur un voisinage pointé de <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> et de plus <span class=\"math inline\">\\(|\\tan x|^{\\cos x}=e^{\\cos x\\ln(|\\tan x|)}\\)</span>. Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>,</p>\n<p><span class=\"math display\">\\[\\ln|\\tan x|=\\ln|\\sin x|-\\ln|\\cos x|\\sim-\\ln|\\cos x|,\\]</span> puis <span class=\"math inline\">\\(\\cos x\\ln|\\tan x|\\sim-\\cos x\\ln|\\cos x|\\rightarrow0\\)</span> (car, quand <span class=\"math inline\">\\(u\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(u\\ln u\\rightarrow 0\\)</span>). Donc, <span class=\"math inline\">\\(|\\tan x|^{\\cos x}=e^{\\cos x\\ln|\\tan x|}\\rightarrow e^0=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "976cae9a-e97c-412f-86d1-1d5224eca84b",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{n\\rightarrow +\\infty}\\left(\\cos(\\frac{n\\pi}{3n+1})+\\sin(\\frac{n\\pi}{6n+1})\\right)^n$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}\\left(\\cos(\\frac{n\\pi}{3n+1})+\\sin(\\frac{n\\pi}{6n+1})\\right)^n\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "cebe3a85-d18b-4d1f-9695-1b9e71468040",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $n$ tend vers $+\\infty$, $\\cos\\frac{n\\pi}{3n+1}+\\sin\\frac{n\\pi}{6n+1}\\rightarrow\\cos\\frac{\\pi}{3}+\\sin\\frac{\\pi}{6}=1$ (et on est en présence d'une indétermination du type $1^{+\\infty}$). Quand $n$ tend vers $+\\infty$,\n\n$$\\begin{align*}\\ensuremath\n\\cos\\frac{n\\pi}{3n+1}&=\\cos\\left(\\frac{\\pi}{3}\\left(1+\\frac{1}{3n}\\right)^{-1}\\right)\n=\\cos\\left(\\frac{\\pi}{3}-\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n &=\\frac{1}{2}\\cos\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)+\\frac{\\sqrt{3}}{2}\\sin\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)=\\frac{1}{2}\\left(1+o\\left(\\frac{1}{n}\\right)\\right)+\\frac{\\sqrt{3}}{2}\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n  &=\\frac{1}{2}+\\frac{\\sqrt{3}\\pi}{18n}+o\\left(\\frac{1}{n}\\right)\n\\end{align*}$$\nDe même, \n\n$$\\begin{align*}\\ensuremath\n\\sin\\frac{n\\pi}{6n+1}&=\\sin\\left(\\frac{\\pi}{6}\\left(1+\\frac{1}{6n}\\right)^{-1}\\right)=\\sin\\left(\\frac{\\pi}{6}-\\frac{\\pi}{36n}\n+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n &=\\frac{1}{2}\\cos\\left(\\frac{\\pi}{36n}+o\\left(\\frac{1}{n}\\right)\\right)-\\frac{\\sqrt{3}}{2}\n \\sin\\left(\\frac{\\pi}{36n}+o\\left(\\frac{1}{n}\\right)\\right)\n =\\frac{1}{2}-\\frac{\\sqrt{3}\\pi}{72n}+o\\left(\\frac{1}{n}\\right).\n\\end{align*}$$\nPuis, \n\n$$n\\ln\\left(\\cos\\frac{n\\pi}{3n+1}+\\sin\\frac{n\\pi}{6n+1}\\right)=n\\ln\\left(1+\\frac{\\sqrt{3}\\pi}{24n}+ o\\left(\\frac{1}{n}\\right)\\right)= n\\left(\\frac{\\sqrt{3}\\pi}{24n}+o\\left(\\frac{1}{n}\\right)\\right)=\\frac{\\sqrt{3}\\pi}{24}+o(1),$$\net donc\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{n\\rightarrow +\\infty}\\left(\\cos\\frac{n\\pi}{3n+1}+\\sin\\frac{n\\pi}{6n+1}\\right)^n=e^{\\sqrt{3}\\pi/24}$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, <span class=\"math inline\">\\(\\cos\\frac{n\\pi}{3n+1}+\\sin\\frac{n\\pi}{6n+1}\\rightarrow\\cos\\frac{\\pi}{3}+\\sin\\frac{\\pi}{6}=1\\)</span> (et on est en présence d’une indétermination du type <span class=\"math inline\">\\(1^{+\\infty}\\)</span>). Quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\cos\\frac{n\\pi}{3n+1}&amp;=\\cos\\left(\\frac{\\pi}{3}\\left(1+\\frac{1}{3n}\\right)^{-1}\\right)\n=\\cos\\left(\\frac{\\pi}{3}-\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n &amp;=\\frac{1}{2}\\cos\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)+\\frac{\\sqrt{3}}{2}\\sin\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)=\\frac{1}{2}\\left(1+o\\left(\\frac{1}{n}\\right)\\right)+\\frac{\\sqrt{3}}{2}\\left(\\frac{\\pi}{9n}+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n  &amp;=\\frac{1}{2}+\\frac{\\sqrt{3}\\pi}{18n}+o\\left(\\frac{1}{n}\\right)\n\\end{align*}\\]</span> De même,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\sin\\frac{n\\pi}{6n+1}&amp;=\\sin\\left(\\frac{\\pi}{6}\\left(1+\\frac{1}{6n}\\right)^{-1}\\right)=\\sin\\left(\\frac{\\pi}{6}-\\frac{\\pi}{36n}\n+o\\left(\\frac{1}{n}\\right)\\right)\\\\\n &amp;=\\frac{1}{2}\\cos\\left(\\frac{\\pi}{36n}+o\\left(\\frac{1}{n}\\right)\\right)-\\frac{\\sqrt{3}}{2}\n \\sin\\left(\\frac{\\pi}{36n}+o\\left(\\frac{1}{n}\\right)\\right)\n =\\frac{1}{2}-\\frac{\\sqrt{3}\\pi}{72n}+o\\left(\\frac{1}{n}\\right).\n\\end{align*}\\]</span> Puis,</p>\n<p><span class=\"math display\">\\[n\\ln\\left(\\cos\\frac{n\\pi}{3n+1}+\\sin\\frac{n\\pi}{6n+1}\\right)=n\\ln\\left(1+\\frac{\\sqrt{3}\\pi}{24n}+ o\\left(\\frac{1}{n}\\right)\\right)= n\\left(\\frac{\\sqrt{3}\\pi}{24n}+o\\left(\\frac{1}{n}\\right)\\right)=\\frac{\\sqrt{3}\\pi}{24}+o(1),\\]</span> et donc</p>\n"
+      }
+    },
+    {
+      "id": "d6c0925b-e83c-4e97-8433-4131d70ecf85",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow 0}(\\cos x)^{\\ln|x|}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow 0}(\\cos x)^{\\ln|x|}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "990db8c8-9041-4de5-80a3-1df49d3efba8",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $0$, $\\ln(\\cos x)\\sim\\cos x-1\\sim-\\frac{x^2}{2}$. Puis, $\\ln|x|\\ln(\\cos x)\\sim-\\frac{x^2}{2}\\ln|x|\\rightarrow0$.\nDonc, $(\\cos x)^{\\ln|x|}\\rightarrow e^0=1$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x\\rightarrow 0}(\\cos x)^{\\ln|x|}=1$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(\\ln(\\cos x)\\sim\\cos x-1\\sim-\\frac{x^2}{2}\\)</span>. Puis, <span class=\"math inline\">\\(\\ln|x|\\ln(\\cos x)\\sim-\\frac{x^2}{2}\\ln|x|\\rightarrow0\\)</span>. Donc, <span class=\"math inline\">\\((\\cos x)^{\\ln|x|}\\rightarrow e^0=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "86274398-5a8e-491a-8e41-572f6042eccc",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow \\pi/2}\\cos x.e^{1/(1-\\sin x)}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow \\pi/2}\\cos x.e^{1/(1-\\sin x)}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "7737a083-e950-4598-a512-2c5aa8d95495",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $\\frac{\\pi}{2}$, $\\frac{1}{1-\\sin x}$ tend vers $+\\infty$. Posons $h=x-\\frac{\\pi}{2}$ puis $\\varepsilon=\\mbox{sgn}(h)$, de sorte que \n\n$$(\\cos x)e^{1/(1-\\sin x)}=-\\varepsilon|\\sin h|e^{1/(1-\\cos h)}=-\\varepsilon e^{\\ln|\\sin h|+\\frac{1}{1-\\cos h}}.$$\nOr, quand $h$ tend vers $0$, \n\n$$\\ln|\\sin h|+\\frac{1}{1-\\cos h}=\\frac{(1-\\cos h)\\ln|\\sin h|+1}{1-\\cos h}=\\frac{(-\\frac{h^2}{2}+o(h^2))(\\ln|h|+o(\\ln|h|))+1}{\\frac{h^2}{2}+o(h^2)}=\\frac{1+o(1)}{\\frac{h^2}{2}+o(h^2)}\n\\sim\\frac{2}{h^2},$$ et donc, quand $h$ tend vers $0$, $\\ln|\\sin h|+\\frac{1}{1-\\cos h}\\sim\\frac{2}{h^2}\\rightarrow+\\infty$. Par suite,\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x\\rightarrow \\pi/2,\\;x<\\pi/2}\\cos(x)e^{1/(1-\\sin x)}=+\\infty$ et $\\lim_{x\\rightarrow \\pi/2,\\;x>\\pi/2}\\cos(x)e^{1/(1-\\sin x)}=-\\infty$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>, <span class=\"math inline\">\\(\\frac{1}{1-\\sin x}\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Posons <span class=\"math inline\">\\(h=x-\\frac{\\pi}{2}\\)</span> puis <span class=\"math inline\">\\(\\varepsilon=\\mbox{sgn}(h)\\)</span>, de sorte que</p>\n<p><span class=\"math display\">\\[(\\cos x)e^{1/(1-\\sin x)}=-\\varepsilon|\\sin h|e^{1/(1-\\cos h)}=-\\varepsilon e^{\\ln|\\sin h|+\\frac{1}{1-\\cos h}}.\\]</span> Or, quand <span class=\"math inline\">\\(h\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>,</p>\n<p><span class=\"math display\">\\[\\ln|\\sin h|+\\frac{1}{1-\\cos h}=\\frac{(1-\\cos h)\\ln|\\sin h|+1}{1-\\cos h}=\\frac{(-\\frac{h^2}{2}+o(h^2))(\\ln|h|+o(\\ln|h|))+1}{\\frac{h^2}{2}+o(h^2)}=\\frac{1+o(1)}{\\frac{h^2}{2}+o(h^2)}\n\\sim\\frac{2}{h^2},\\]</span> et donc, quand <span class=\"math inline\">\\(h\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(\\ln|\\sin h|+\\frac{1}{1-\\cos h}\\sim\\frac{2}{h^2}\\rightarrow+\\infty\\)</span>. Par suite,</p>\n"
+      }
+    },
+    {
+      "id": "bd9380d9-820c-429c-a139-e7cd7c8db1ca",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow \\pi/3}\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow \\pi/3}\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "b93e7148-af95-451b-972d-6c14006b8b44",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $x\\in\\Rr$, $2\\cos^2x-3\\cos x+1=(2\\cos x-1)(\\cos x-1)$ et donc \n\n$$\\forall x\\in\\Rr,\\;2\\cos^2x-3\\cos x+1=0\\Leftrightarrow x\\in\\left(\\pm\\frac{\\pi}{3}+2\\pi\\Zz\\right)\\cup2\\pi\\Zz.$$\nPour $x\\notin\\left(\\pm\\frac{\\pi}{3}+2\\pi\\Zz\\right)\\cup2\\pi\\Zz$,\n  \n$$\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}=\\frac{(2\\cos x-1)(\\cos x+1)}{(2\\cos x-1)(\\cos x-1)}\n=\\frac{\\cos x+1}{\\cos x-1},$$\net donc, $\\lim_{x\\rightarrow \\pi/3}\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}=\\frac{\\frac{1}{2}+1}{\\frac{1}{2}-1}=-3$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x\\rightarrow \\pi/3}\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}=-3$.\n}\n\\end{center}",
+        "html": "<p>Pour <span class=\"math inline\">\\(x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(2\\cos^2x-3\\cos x+1=(2\\cos x-1)(\\cos x-1)\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\forall x\\in\\Rr,\\;2\\cos^2x-3\\cos x+1=0\\Leftrightarrow x\\in\\left(\\pm\\frac{\\pi}{3}+2\\pi\\Zz\\right)\\cup2\\pi\\Zz.\\]</span> Pour <span class=\"math inline\">\\(x\\notin\\left(\\pm\\frac{\\pi}{3}+2\\pi\\Zz\\right)\\cup2\\pi\\Zz\\)</span>,</p>\n<p><span class=\"math display\">\\[\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}=\\frac{(2\\cos x-1)(\\cos x+1)}{(2\\cos x-1)(\\cos x-1)}\n=\\frac{\\cos x+1}{\\cos x-1},\\]</span> et donc, <span class=\"math inline\">\\(\\lim_{x\\rightarrow \\pi/3}\\frac{2\\cos^2x+\\cos x-1}{2\\cos^2x-3\\cos x+1}=\\frac{\\frac{1}{2}+1}{\\frac{1}{2}-1}=-3\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6eae2e1a-3705-4d24-b062-bb78d3c775fa",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow 0}\\left(\\frac{1+\\tan x}{1+\\tanh x}\\right)^{1/\\sin x}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow 0}\\left(\\frac{1+\\tan x}{1+\\tanh x}\\right)^{1/\\sin x}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "2be78075-d08c-4320-bef7-c26355afdd55",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $0$, \n \n$$\\frac{1+\\tan x}{1+\\tanh x}=\\frac{1+x+o(x)}{1+x+o(x)}=(1+x+o(x)(1-x+o(x))=1+o(x).$$\nPuis, quand $x$ tend vers $0$,\n\n$$\\frac{1}{\\sin x}\\ln\\left(\\frac{1+\\tan x}{1+\\tanh x}\\right)=\\frac{\\ln(1+o(x))}{x+o(x)}=\\frac{o(x)}{x+o(x)}=\\frac{o(1)}{1+o(1)}\\rightarrow0.$$\nDonc, \n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x\\rightarrow 0}\\left(\\frac{1+\\tan x}{1+\\tanh x}\\right)^{1/\\sin x}=1$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>,</p>\n<p><span class=\"math display\">\\[\\frac{1+\\tan x}{1+\\tanh x}=\\frac{1+x+o(x)}{1+x+o(x)}=(1+x+o(x)(1-x+o(x))=1+o(x).\\]</span> Puis, quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>,</p>\n<p><span class=\"math display\">\\[\\frac{1}{\\sin x}\\ln\\left(\\frac{1+\\tan x}{1+\\tanh x}\\right)=\\frac{\\ln(1+o(x))}{x+o(x)}=\\frac{o(x)}{x+o(x)}=\\frac{o(1)}{1+o(1)}\\rightarrow0.\\]</span> Donc,</p>\n"
+      }
+    },
+    {
+      "id": "67c8bd5c-56ce-459d-a601-b203a8cc7c14",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow e,\\;x<e}(\\ln x)^{\\ln(e-x)}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow e,\\;x&lt;e}(\\ln x)^{\\ln(e-x)}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "4eef67dd-29f1-4ca8-8ad2-dd761458a44c",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $e$ par valeurs inférieures, $\\ln(x)$ tend vers $1$ et donc\n\n$$\\ln(\\ln x)\\sim\\ln x-1=\\ln\\left(\\frac{x}{e}\\right)\\sim\\frac{x}{e}-1=-\\frac{1}{e}(e-x),$$\npuis,\n\n$$\\ln(e-x)\\ln(\\ln x)\\sim-\\frac{1}{e}(e-x)\\ln(e-x)\\rightarrow 0,$$\net donc $(\\ln x)^{\\ln(e-x)}=e^{\\ln(e-x)\\ln(\\ln x)}\\rightarrow 1$.\n\n\\begin{center}\n\\shadowbox{\n$\\displaystyle\\lim_{\\substack{x\\rightarrow e\\\\ x<e}}(\\ln x)^{\\ln(e-x)}=1$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(e\\)</span> par valeurs inférieures, <span class=\"math inline\">\\(\\ln(x)\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\ln(\\ln x)\\sim\\ln x-1=\\ln\\left(\\frac{x}{e}\\right)\\sim\\frac{x}{e}-1=-\\frac{1}{e}(e-x),\\]</span> puis,</p>\n<p><span class=\"math display\">\\[\\ln(e-x)\\ln(\\ln x)\\sim-\\frac{1}{e}(e-x)\\ln(e-x)\\rightarrow 0,\\]</span> et donc <span class=\"math inline\">\\((\\ln x)^{\\ln(e-x)}=e^{\\ln(e-x)\\ln(\\ln x)}\\rightarrow 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9a179b04-20d1-4b89-af7b-51aaa7915245",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow 1,\\;x>1}\\frac{x^x-1}{\\ln(1-\\sqrt{x^2-1})}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow 1,\\;x&gt;1}\\frac{x^x-1}{\\ln(1-\\sqrt{x^2-1})}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "728e1694-077d-42d6-a1da-c32a19a6e799",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $1$ par valeurs supérieures, $x\\ln x\\rightarrow0$, et donc\n\n$$x^x-1=e^{x\\ln x}-1\\sim x\\ln x\\sim1\\times(x-1)=x-1.$$\nEnsuite, $\\sqrt{x^2-1}$ tend vers $0$ et donc\n\n$$\\ln(1-\\sqrt{x^2-1})\\sim-\\sqrt{x^2-1}=-\\sqrt{(x-1)(x+1)}\\sim-\\sqrt{2(x-1)}.$$\nFinalement, quand $x$ tend vers $1$ par valeurs supérieures, \n\n$$\\frac{x^x-1}{\\ln(1-\\sqrt{x^2-1})}\\sim\\frac{x-1}{-\\sqrt{2(x-1)}}=-\\frac{1}{\\sqrt{2}}\\sqrt{x-1}\\rightarrow0.$$\n\n\\begin{center}\n\\shadowbox{\n$\\displaystyle\\lim_{\\substack{x\\rightarrow 1\\\\ x>e}}\\frac{x^x-1}{\\ln(1-\\sqrt{x^2-1})}=0$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span> par valeurs supérieures, <span class=\"math inline\">\\(x\\ln x\\rightarrow0\\)</span>, et donc</p>\n<p><span class=\"math display\">\\[x^x-1=e^{x\\ln x}-1\\sim x\\ln x\\sim1\\times(x-1)=x-1.\\]</span> Ensuite, <span class=\"math inline\">\\(\\sqrt{x^2-1}\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\ln(1-\\sqrt{x^2-1})\\sim-\\sqrt{x^2-1}=-\\sqrt{(x-1)(x+1)}\\sim-\\sqrt{2(x-1)}.\\]</span> Finalement, quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span> par valeurs supérieures,</p>\n<p><span class=\"math display\">\\[\\frac{x^x-1}{\\ln(1-\\sqrt{x^2-1})}\\sim\\frac{x-1}{-\\sqrt{2(x-1)}}=-\\frac{1}{\\sqrt{2}}\\sqrt{x-1}\\rightarrow0.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "30791c36-f5e5-436c-b135-df43e7595e5c",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow +\\infty}\\frac{x\\ln(\\ch x-1)}{x^2+1}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}\\frac{x\\ln(\\ch x-1)}{x^2+1}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "0cc5c208-b8bc-41c3-9eea-0cb986677ce5",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $+\\infty$, \n\n$$\\ln(\\ch x-1)\\sim\\ln(\\ch x)\\sim\\ln\\left(\\frac{e^x}{2}\\right)=x-\\ln2\\sim x,$$ et donc \n\n$$\\frac{x\\ln(\\ch x-1)}{x^2+1}\\sim\\frac{x\\times x}{x^2}=1.$$\n\n\\begin{center}\n\\shadowbox{\n$\\displaystyle\\lim_{x\\rightarrow+\\infty}\\frac{x\\ln(\\ch x-1)}{x^2+1}=1$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p><span class=\"math display\">\\[\\ln(\\ch x-1)\\sim\\ln(\\ch x)\\sim\\ln\\left(\\frac{e^x}{2}\\right)=x-\\ln2\\sim x,\\]</span> et donc</p>\n<p><span class=\"math display\">\\[\\frac{x\\ln(\\ch x-1)}{x^2+1}\\sim\\frac{x\\times x}{x^2}=1.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "9b0f6db1-dd4e-4fe5-b6f2-0d07ef5f2de5",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow 0,\\;x>0}\\frac{(\\sin x)^x-x^{\\sin x}}{\\ln(x-x^2)+x-\\ln x}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow 0,\\;x&gt;0}\\frac{(\\sin x)^x-x^{\\sin x}}{\\ln(x-x^2)+x-\\ln x}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "4d770377-8f3f-48e8-a07b-2240065d8c83",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $0$ par valeurs supérieures,\n\n$$\\ln(x-x^2)+x-\\ln x=x+\\ln(1-x)=-\\frac{x^2}{2}+o(x^2)\\sim-\\frac{x^2}{2}.$$\nEnsuite,\n\n$$(\\sin x)^x=e^{x\\ln(\\sin x)}=e^{x\\ln(x-\\frac{x^3}{6}+o(x^3))}=e^{x\\ln x}e^{x\\ln(1-\\frac{x^2}{6}+o(x^2))}=x^xe^{-\\frac{x^3}{6}+o(x^3)}=x^x\\left(1-\\frac{x^3}{6}+o(x^3)\\right),$$\net,\n\n$$x^{\\sin x}=e^{(x-\\frac{x^3}{6}+o(x^3))\\ln x}=e^{x\\ln x}e^{-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)}=x^x\\left(1-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right).$$\nDonc,\n\n$$(\\sin x)^x-x^{\\sin x}=x^x\\left(1-\\frac{x^3}{6}+o(x^3)\\right)-x^x\\left(1-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right)=x^x\\left(\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right)\\sim\\frac{x^3\\ln x}{6},$$\net enfin\n\n$$\\frac{(\\sin x)^x-x^{\\sin x}}{\\ln(x-x2^)+x-\\ln x}\\sim\\frac{x^3\\ln x/6}{-x^2/2}=-\\frac{x\\ln x}{3}\\rightarrow0.$$\n\n\\begin{center}\n\\shadowbox{\n$\\displaystyle\\lim_{\\substack{x\\rightarrow 0\\\\ x>0}}\\frac{(\\sin x)^x-x^{\\sin x}}{\\ln(x-x2^)+x-\\ln x}=0$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> par valeurs supérieures,</p>\n<p><span class=\"math display\">\\[\\ln(x-x^2)+x-\\ln x=x+\\ln(1-x)=-\\frac{x^2}{2}+o(x^2)\\sim-\\frac{x^2}{2}.\\]</span> Ensuite,</p>\n<p><span class=\"math display\">\\[(\\sin x)^x=e^{x\\ln(\\sin x)}=e^{x\\ln(x-\\frac{x^3}{6}+o(x^3))}=e^{x\\ln x}e^{x\\ln(1-\\frac{x^2}{6}+o(x^2))}=x^xe^{-\\frac{x^3}{6}+o(x^3)}=x^x\\left(1-\\frac{x^3}{6}+o(x^3)\\right),\\]</span> et,</p>\n<p><span class=\"math display\">\\[x^{\\sin x}=e^{(x-\\frac{x^3}{6}+o(x^3))\\ln x}=e^{x\\ln x}e^{-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)}=x^x\\left(1-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right).\\]</span> Donc,</p>\n<p><span class=\"math display\">\\[(\\sin x)^x-x^{\\sin x}=x^x\\left(1-\\frac{x^3}{6}+o(x^3)\\right)-x^x\\left(1-\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right)=x^x\\left(\\frac{x^3\\ln x}{6}+o(x^3\\ln x)\\right)\\sim\\frac{x^3\\ln x}{6},\\]</span> et enfin</p>\n<p><span class=\"math display\">\\[\\frac{(\\sin x)^x-x^{\\sin x}}{\\ln(x-x2^)+x-\\ln x}\\sim\\frac{x^3\\ln x/6}{-x^2/2}=-\\frac{x\\ln x}{3}\\rightarrow0.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "1f99ba6d-3bcb-4973-9a07-e04a2382026a",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)^x$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)^x\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "f566b2f5-7cb0-44af-87b1-5589b1c33cbf",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $+\\infty$,\n\n$$\\ln(x+1)=\\ln x+\\ln\\left(1+\\frac{1}{x}\\right)=\\ln x+\\frac{1}{x}+o\\left(\\frac{1}{x}\\right),$$\npuis\n \n$$\\frac{\\ln(x+1)}{\\ln x}=1+\\frac{1}{x\\ln x}+o\\left(\\frac{1}{x\\ln x}\\right).$$\n \n\nEnsuite,\n\n$$x\\ln\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)=x\\ln\\left(1+\\frac{1}{x\\ln x}+o\\left(\\frac{1}{x\\ln x}\\right)\\right)=\\frac{1}{\\ln x}+o\\left(\\frac{1}{\\ln x}\\right)\\rightarrow0.$$\nDonc, $\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)^x=\\text{exp}\\left(x\\ln\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)\\right)\\rightarrow e^0=1$.\n\n\\begin{center}\n\\shadowbox{\n$\\displaystyle\\lim_{x\\rightarrow+\\infty}\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)^x=1$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p><span class=\"math display\">\\[\\ln(x+1)=\\ln x+\\ln\\left(1+\\frac{1}{x}\\right)=\\ln x+\\frac{1}{x}+o\\left(\\frac{1}{x}\\right),\\]</span> puis</p>\n<p><span class=\"math display\">\\[\\frac{\\ln(x+1)}{\\ln x}=1+\\frac{1}{x\\ln x}+o\\left(\\frac{1}{x\\ln x}\\right).\\]</span></p>\n<p>Ensuite,</p>\n<p><span class=\"math display\">\\[x\\ln\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)=x\\ln\\left(1+\\frac{1}{x\\ln x}+o\\left(\\frac{1}{x\\ln x}\\right)\\right)=\\frac{1}{\\ln x}+o\\left(\\frac{1}{\\ln x}\\right)\\rightarrow0.\\]</span> Donc, <span class=\"math inline\">\\(\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)^x=\\text{exp}\\left(x\\ln\\left(\\frac{\\ln(x+1)}{\\ln x}\\right)\\right)\\rightarrow e^0=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "be941fc4-874e-485e-b0de-ef31808747b4",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x \\rightarrow 1/\\sqrt{2}}\\frac{(\\Arcsin x)^2-\\frac{\\pi^2}{16}}{2x^2-1}$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x \\rightarrow 1/\\sqrt{2}}\\frac{(\\Arcsin x)^2-\\frac{\\pi^2}{16}}{2x^2-1}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "29a3c778-d143-4653-b59c-66c93f4f4dc6",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $\\frac{1}{\\sqrt{2}}$,\n\n$$\\begin{align*}\\ensuremath\n\\frac{(\\Arcsin x)^2-\\frac{\\pi^2}{16}}{2x^2-1}&=\\frac{1}{2}\\times\\frac{\\Arcsin x+\\frac{\\pi}{4}}{x+\\frac{1}{\\sqrt{2}}}\n\\times\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}\\sim\\frac{1}{2}\\times\\frac{\\frac{\\pi}{4}+\\frac{\\pi}{4}}{\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}}\\times\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}=\\frac{\\pi}{4\\sqrt{2}}\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}\\\\\n &\\rightarrow\\frac{\\pi}{4\\sqrt{2}}(\\Arcsin)'(\\frac{1}{\\sqrt{2}})=\\frac{\\pi}{4\\sqrt{2}}\\frac{1}{\\sqrt{1-\\frac{1}{2}}}=\\frac{\\pi}{4}.\n\\end{align*}$$\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow 1/\\sqrt{2}}\\frac{(\\Arcsin x)^2-\\frac{\\pi^2}{16}}{2x^2-1}=\\frac{\\pi}{4}\n$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(\\frac{1}{\\sqrt{2}}\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\frac{(\\Arcsin x)^2-\\frac{\\pi^2}{16}}{2x^2-1}&amp;=\\frac{1}{2}\\times\\frac{\\Arcsin x+\\frac{\\pi}{4}}{x+\\frac{1}{\\sqrt{2}}}\n\\times\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}\\sim\\frac{1}{2}\\times\\frac{\\frac{\\pi}{4}+\\frac{\\pi}{4}}{\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}}\\times\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}=\\frac{\\pi}{4\\sqrt{2}}\\frac{\\Arcsin x-\\frac{\\pi}{4}}{x-\\frac{1}{\\sqrt{2}}}\\\\\n &amp;\\rightarrow\\frac{\\pi}{4\\sqrt{2}}(\\Arcsin)&#39;(\\frac{1}{\\sqrt{2}})=\\frac{\\pi}{4\\sqrt{2}}\\frac{1}{\\sqrt{1-\\frac{1}{2}}}=\\frac{\\pi}{4}.\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "0997ec60-e6f9-4ec0-ba99-05b0b03f71a9",
+      "type": "question",
+      "value": {
+        "latex": "$\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\cos(a+\\frac{1}{x})}{\\cos a}\\right)^x\\;(\\mbox{où}\\;\\cos a\\neq0)$",
+        "html": "<p><span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\cos(a+\\frac{1}{x})}{\\cos a}\\right)^x\\;(\\mbox{où}\\;\\cos a\\neq0)\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "3090af96-1550-437f-9242-bc490e89ed9a",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $+\\infty$,\n\n$$\\begin{align*}\\ensuremath\nx\\ln\\left(\\frac{\\cos\\left(a+\\frac{1}{x}\\right)}{\\cos a}\\right)&=x\\ln\\left(\\cos\\frac{1}{x}-\\tan a\\sin\\frac{1}{x}\\right)=x\\ln\\left(1-\\frac{\\tan a}{x}+o\\left(\\frac{1}{x}\\right)\\right)=x\\left(-\\frac{\\tan a}{x}+o\\left(\\frac{1}{x}\\right)\\right)\\\\\n &=-\\tan a+o(1),\n\\end{align*}$$\net donc $\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\cos\\left(a+\\frac{1}{x}\\right)}{\\cos a}\\right)^x=e^{-\\tan a}$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\cos\\left(a+\\frac{1}{x}\\right)}{\\cos a}\\right)^x=e^{-\\tan a}\n$.\n}\n\\end{center}",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nx\\ln\\left(\\frac{\\cos\\left(a+\\frac{1}{x}\\right)}{\\cos a}\\right)&amp;=x\\ln\\left(\\cos\\frac{1}{x}-\\tan a\\sin\\frac{1}{x}\\right)=x\\ln\\left(1-\\frac{\\tan a}{x}+o\\left(\\frac{1}{x}\\right)\\right)=x\\left(-\\frac{\\tan a}{x}+o\\left(\\frac{1}{x}\\right)\\right)\\\\\n &amp;=-\\tan a+o(1),\n\\end{align*}\\]</span> et donc <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}\\left(\\frac{\\cos\\left(a+\\frac{1}{x}\\right)}{\\cos a}\\right)^x=e^{-\\tan a}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

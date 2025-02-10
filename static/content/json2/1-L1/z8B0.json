@@ -1,0 +1,35 @@
+{
+  "uuid": "z8B0",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5263",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Propriétés élémentaires, généralités",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:35.597Z"
+  },
+  "contenu": [
+    {
+      "id": "659f2744-6367-44ab-adfd-0bcbad8dbcfb",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que $\\{\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&x\\\\\nx&1\n\\end{array}\n\\right),\\;x\\in]-1,1[\\}$ est un groupe pour la multiplication des matrices.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\{\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&amp;x\\\\\nx&amp;1\n\\end{array}\n\\right),\\;x\\in]-1,1[\\}\\)</span> est un groupe pour la multiplication des matrices.</p>\n"
+      }
+    },
+    {
+      "id": "4dd501af-800f-40a1-9f79-e5e823dee0a9",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $x\\in]-1,1[$, posons $M(x)=\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&x\\\\\nx&1\n\\end{array}\n\\right)$. Posons ensuite $G=\\{M(x),\\;x\\in]-1,1[\\}$.\n\nSoit alors $x\\in]-1,1[$. Posons $a=\\Argth x$ de sorte que $x=\\mbox{th}a$. On a \n\n$$M(x)=\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&x\\\\\nx&1\n\\end{array}\n\\right)=\\ch a\\left(\n\\begin{array}{cc}\n1&\\tanh a\\\\\n\\tanh a&1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\n\\ch a&\\sh a\\\\\n\\sh a&\\ch a\n\\end{array}\n\\right).$$\n\nPosons, pour $a\\in\\Rr$, $N(a)=\\left(\n\\begin{array}{cc}\n\\ch a&\\sh a\\\\\n\\sh a&\\ch a\n\\end{array}\n\\right)$. On a ainsi $\\forall x\\in]-1,1[,\\;M(x)=N(\\Argth x)$ ou aussi, $\\forall a\\in\\Rr,\\;N(a)=M(\\mbox{th}a)$. Par suite, $G=\\{N(a),\\;a\\in\\Rr\\}$.\n\nSoit alors $(a,b)\\in\\Rr^2$.\n\n$$\\begin{align*}\\ensuremath\nN(a)N(b)&=\\left(\n\\begin{array}{cc}\n\\ch a&\\sh a\\\\\n\\sh a&\\ch a\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\n\\ch b&\\sh b\\\\\n\\sh b&\\ch b\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\n\\ch a\\ch b+\\sh a\\sh b&\\sh a\\ch b+\\sh b\\ch a\\\\\n\\sh a\\ch b+\\sh b\\ch a&\\ch a\\ch b+\\sh a\\sh b\n\\end{array}\n\\right)\n\\\\\n &=\\left(\n\\begin{array}{cc}\n\\ch(a+b)&\\sh(a+b)\\\\\n\\sh(a+b)&\\ch(a+b)\n\\end{array}\n\\right)\n=N(a+b).\n\\end{align*}$$\n\nMontrons alors que $G$ est un sous-groupe de $(\\mathcal{GL}_2(\\Rr),\\times)$.\n\n$N(0)=I_2\\in G$ et donc $G$ est non vide.\n\n$\\forall a\\in\\Rr,\\;\\mbox{det}(N(a))=\\ch^2a-\\sh^2a=1\\neq0$ et donc $G\\subset\\mathcal{GL}_2(\\Rr)$.\n\n$\\forall(a,b)\\in\\Rr^2,\\;N(a)N(b)=N(a+b)\\in G$.\n\n$\\forall a\\in\\Rr,\\;(N(a))^{-1}=\\left(\n\\begin{array}{cc}\n\\ch a&-\\sh a\\\\\n-\\sh a&\\ch a\n\\end{array}\n\\right)=N(-a)\\in G$.\n\nOn a montré que $G$ est un sous-groupe de $(\\mathcal{GL}_2(\\Rr),\\times)$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(x\\in]-1,1[\\)</span>, posons <span class=\"math inline\">\\(M(x)=\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&amp;x\\\\\nx&amp;1\n\\end{array}\n\\right)\\)</span>. Posons ensuite <span class=\"math inline\">\\(G=\\{M(x),\\;x\\in]-1,1[\\}\\)</span>.</p>\n<p>Soit alors <span class=\"math inline\">\\(x\\in]-1,1[\\)</span>. Posons <span class=\"math inline\">\\(a=\\Argth x\\)</span> de sorte que <span class=\"math inline\">\\(x=\\mbox{th}a\\)</span>. On a</p>\n<p><span class=\"math display\">\\[M(x)=\\frac{1}{\\sqrt{1-x^2}}\\left(\n\\begin{array}{cc}\n1&amp;x\\\\\nx&amp;1\n\\end{array}\n\\right)=\\ch a\\left(\n\\begin{array}{cc}\n1&amp;\\tanh a\\\\\n\\tanh a&amp;1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\n\\ch a&amp;\\sh a\\\\\n\\sh a&amp;\\ch a\n\\end{array}\n\\right).\\]</span></p>\n<p>Posons, pour <span class=\"math inline\">\\(a\\in\\Rr\\)</span>, <span class=\"math inline\">\\(N(a)=\\left(\n\\begin{array}{cc}\n\\ch a&amp;\\sh a\\\\\n\\sh a&amp;\\ch a\n\\end{array}\n\\right)\\)</span>. On a ainsi <span class=\"math inline\">\\(\\forall x\\in]-1,1[,\\;M(x)=N(\\Argth x)\\)</span> ou aussi, <span class=\"math inline\">\\(\\forall a\\in\\Rr,\\;N(a)=M(\\mbox{th}a)\\)</span>. Par suite, <span class=\"math inline\">\\(G=\\{N(a),\\;a\\in\\Rr\\}\\)</span>.</p>\n<p>Soit alors <span class=\"math inline\">\\((a,b)\\in\\Rr^2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nN(a)N(b)&amp;=\\left(\n\\begin{array}{cc}\n\\ch a&amp;\\sh a\\\\\n\\sh a&amp;\\ch a\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\n\\ch b&amp;\\sh b\\\\\n\\sh b&amp;\\ch b\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\n\\ch a\\ch b+\\sh a\\sh b&amp;\\sh a\\ch b+\\sh b\\ch a\\\\\n\\sh a\\ch b+\\sh b\\ch a&amp;\\ch a\\ch b+\\sh a\\sh b\n\\end{array}\n\\right)\n\\\\\n &amp;=\\left(\n\\begin{array}{cc}\n\\ch(a+b)&amp;\\sh(a+b)\\\\\n\\sh(a+b)&amp;\\ch(a+b)\n\\end{array}\n\\right)\n=N(a+b).\n\\end{align*}\\]</span></p>\n<p>Montrons alors que <span class=\"math inline\">\\(G\\)</span> est un sous-groupe de <span class=\"math inline\">\\((\\mathcal{GL}_2(\\Rr),\\times)\\)</span>.</p>\n<p><span class=\"math inline\">\\(N(0)=I_2\\in G\\)</span> et donc <span class=\"math inline\">\\(G\\)</span> est non vide.</p>\n<p><span class=\"math inline\">\\(\\forall a\\in\\Rr,\\;\\mbox{det}(N(a))=\\ch^2a-\\sh^2a=1\\neq0\\)</span> et donc <span class=\"math inline\">\\(G\\subset\\mathcal{GL}_2(\\Rr)\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\forall(a,b)\\in\\Rr^2,\\;N(a)N(b)=N(a+b)\\in G\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\forall a\\in\\Rr,\\;(N(a))^{-1}=\\left(\n\\begin{array}{cc}\n\\ch a&amp;-\\sh a\\\\\n-\\sh a&amp;\\ch a\n\\end{array}\n\\right)=N(-a)\\in G\\)</span>.</p>\n<p>On a montré que <span class=\"math inline\">\\(G\\)</span> est un sous-groupe de <span class=\"math inline\">\\((\\mathcal{GL}_2(\\Rr),\\times)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

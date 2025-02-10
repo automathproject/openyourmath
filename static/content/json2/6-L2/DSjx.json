@@ -1,0 +1,43 @@
+{
+  "uuid": "DSjx",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6881",
+    "auteur": "gammella",
+    "createdAt": "2012-05-29",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Analyse vectorielle",
+    "sousChapitre": "Forme différentielle, champ de vecteurs, circulation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:46:03.803Z"
+  },
+  "contenu": [
+    {
+      "id": "b1049524-3ecc-434e-aaa9-a3e9ceb6e9a1",
+      "type": "description",
+      "value": {
+        "latex": "En utilisant la formule de Green-Riemann, calculer\n$I= \\iint_{\\mathcal{D}} xydxdy$\no\\`u $$\\mathcal{D}=\\{(x,y)\\in \\Rr^2\\, |\\, x\\geq0; y\\geq 0;x+y\\leq 1\\}.$$",
+        "html": "<p>En utilisant la formule de Green-Riemann, calculer <span class=\"math inline\">\\(I= \\iint_{\\mathcal{D}} xydxdy\\)</span> où <span class=\"math display\">\\[\\mathcal{D}=\\{(x,y)\\in \\Rr^2\\, |\\, x\\geq0; y\\geq 0;x+y\\leq 1\\}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "5f95d588-33ab-4479-98db-4f2dba683a11",
+      "type": "indication",
+      "value": {
+        "latex": "On rappelle la formule de Green-Riemann qui permet de faire le lien entre intégrale\ndouble et intégrale curviligne :\n\n\\textbf{Théorème.} \nSoit $\\mathcal{D}$ un domaine de $\\Rr^2$ limité par une courbe\nfermée $\\mathcal{C}$ que l'on suppose coupée\npar toute parallèle aux axes en deux points au plus. On considère une forme\ndifférentielle\n$\\omega=Pdx+Qdy$  définie sur $\\mathcal{D}$. Si\nles fonctions $P$ et $Q$ sont de classe $C^{1}$, on a :\n$$\\int_{\\mathcal{ C}^+} Pdx+Qdy=\\iint_{\\mathcal{D}} ( \\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y} ) dx dy$$\no\\`u l'on a noté $\\mathcal{C}^{+}$ la courbe $\\mathcal{C}$ que l'on a\norientée dans le sens direct.",
+        "html": "<p>On rappelle la formule de Green-Riemann qui permet de faire le lien entre intégrale double et intégrale curviligne :</p>\n<p><strong>Théorème.</strong> Soit <span class=\"math inline\">\\(\\mathcal{D}\\)</span> un domaine de <span class=\"math inline\">\\(\\Rr^2\\)</span> limité par une courbe fermée <span class=\"math inline\">\\(\\mathcal{C}\\)</span> que l’on suppose coupée par toute parallèle aux axes en deux points au plus. On considère une forme différentielle <span class=\"math inline\">\\(\\omega=Pdx+Qdy\\)</span> définie sur <span class=\"math inline\">\\(\\mathcal{D}\\)</span>. Si les fonctions <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(Q\\)</span> sont de classe <span class=\"math inline\">\\(C^{1}\\)</span>, on a : <span class=\"math display\">\\[\\int_{\\mathcal{ C}^+} Pdx+Qdy=\\iint_{\\mathcal{D}} ( \\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y} ) dx dy\\]</span> où l’on a noté <span class=\"math inline\">\\(\\mathcal{C}^{+}\\)</span> la courbe <span class=\"math inline\">\\(\\mathcal{C}\\)</span> que l’on a orientée dans le sens direct.</p>\n"
+      }
+    },
+    {
+      "id": "28bef5a9-b48f-4505-87e9-d4b3cb69d23d",
+      "type": "reponse",
+      "value": {
+        "latex": "On rapporte le plan à un repère orthonormé direct d'origine $O$.\nD'après la formule de Green-Riemann, en choisissant de prendre $P=0$ et\n$Q=x^2y$ de sorte que  $ \\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}=xy$, on obtient :\n$$I= \\iint_{\\mathcal{D}} xydxdy=\\int_{T} x^2ydy$$\no\\`u l'on a noté $T$ le triangle $OAB$ orienté dans le sens direct\navec $O(0,0)$, $A(1,0)$ et $B(1,1)$.\nAinsi \n$$I=\\iint_{\\mathcal{D}} xydxdy=\\int_{\\overset{\\frown}{OA}} x^2ydy\n+\\int_{\\overset{\\frown}{AB}} x^2ydy+\n\\int_{\\overset{\\frown}{BO}} x^2ydy.$$\nL'intégrale curviligne d'une forme différentielle sur un chemin est indépendant du paramétrage choisi \npour ce chemin. Pour le calcul, nous choisissons de paramétrer\n$\\overset{\\frown}{OA}$ par $x=t$ et $y=0$ avec $t$ variant de $0$ à $1$ et ainsi\n$\\int_{\\overset{\\frown}{OA}} x^2ydy=0$. \nDe m\\^eme, nous choisissons de paramétrer\n$\\overset{\\frown}{BO}$ par $x=0$ et $y=t$ avec $t$ variant de $1$ à $0$ et ainsi\n$\\int_{\\overset{\\frown}{BO}} x^2ydy=0$. \nEnfin, nous choisissons de paramétrer\n$\\overset{\\frown}{AB}$ par $x=t$ et $y=1-t$ avec $t$ allant de $1$ à $0$ et donc :\n$$I= \\iint_{\\mathcal{D}} xydxdy=\\int_{\\overset{\\frown}{AB}} x^2ydy\n= \\int_1^0  \\frac{t^2(1-t) }{2}(-dt)\n= \\int_0^1  \\frac{t^2(1-t)}{2} dt = \n   \\frac{1}{24}.$$\n Remarquons qu'il n'aurait pas été plus difficile ici de calculer directement l'intégrale\n double sans utiliser la formule de Green-Riemann :\n $$\\iint_{\\mathcal{D}} xy dx dy=\n  \\int_{0^1} (\\int_{0}^{1-x} xy dy) dx=  \\int_0^1 x [\\frac{y^2}{2}]_0^{1-x} dx\n = \\int_0^1 x\\frac{(1-x)^2}{2}dx =  \\frac{1}{24}.$$",
+        "html": "<p>On rapporte le plan à un repère orthonormé direct d’origine <span class=\"math inline\">\\(O\\)</span>. D’après la formule de Green-Riemann, en choisissant de prendre <span class=\"math inline\">\\(P=0\\)</span> et <span class=\"math inline\">\\(Q=x^2y\\)</span> de sorte que <span class=\"math inline\">\\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}=xy\\)</span>, on obtient : <span class=\"math display\">\\[I= \\iint_{\\mathcal{D}} xydxdy=\\int_{T} x^2ydy\\]</span> où l’on a noté <span class=\"math inline\">\\(T\\)</span> le triangle <span class=\"math inline\">\\(OAB\\)</span> orienté dans le sens direct avec <span class=\"math inline\">\\(O(0,0)\\)</span>, <span class=\"math inline\">\\(A(1,0)\\)</span> et <span class=\"math inline\">\\(B(1,1)\\)</span>. Ainsi <span class=\"math display\">\\[I=\\iint_{\\mathcal{D}} xydxdy=\\int_{\\overset{\\frown}{OA}} x^2ydy\n+\\int_{\\overset{\\frown}{AB}} x^2ydy+\n\\int_{\\overset{\\frown}{BO}} x^2ydy.\\]</span> L’intégrale curviligne d’une forme différentielle sur un chemin est indépendant du paramétrage choisi pour ce chemin. Pour le calcul, nous choisissons de paramétrer <span class=\"math inline\">\\(\\overset{\\frown}{OA}\\)</span> par <span class=\"math inline\">\\(x=t\\)</span> et <span class=\"math inline\">\\(y=0\\)</span> avec <span class=\"math inline\">\\(t\\)</span> variant de <span class=\"math inline\">\\(0\\)</span> à <span class=\"math inline\">\\(1\\)</span> et ainsi <span class=\"math inline\">\\(\\int_{\\overset{\\frown}{OA}} x^2ydy=0\\)</span>. De même, nous choisissons de paramétrer <span class=\"math inline\">\\(\\overset{\\frown}{BO}\\)</span> par <span class=\"math inline\">\\(x=0\\)</span> et <span class=\"math inline\">\\(y=t\\)</span> avec <span class=\"math inline\">\\(t\\)</span> variant de <span class=\"math inline\">\\(1\\)</span> à <span class=\"math inline\">\\(0\\)</span> et ainsi <span class=\"math inline\">\\(\\int_{\\overset{\\frown}{BO}} x^2ydy=0\\)</span>. Enfin, nous choisissons de paramétrer <span class=\"math inline\">\\(\\overset{\\frown}{AB}\\)</span> par <span class=\"math inline\">\\(x=t\\)</span> et <span class=\"math inline\">\\(y=1-t\\)</span> avec <span class=\"math inline\">\\(t\\)</span> allant de <span class=\"math inline\">\\(1\\)</span> à <span class=\"math inline\">\\(0\\)</span> et donc : <span class=\"math display\">\\[I= \\iint_{\\mathcal{D}} xydxdy=\\int_{\\overset{\\frown}{AB}} x^2ydy\n= \\int_1^0  \\frac{t^2(1-t) }{2}(-dt)\n= \\int_0^1  \\frac{t^2(1-t)}{2} dt = \n   \\frac{1}{24}.\\]</span> Remarquons qu’il n’aurait pas été plus difficile ici de calculer directement l’intégrale double sans utiliser la formule de Green-Riemann : <span class=\"math display\">\\[\\iint_{\\mathcal{D}} xy dx dy=\n  \\int_{0^1} (\\int_{0}^{1-x} xy dy) dx=  \\int_0^1 x [\\frac{y^2}{2}]_0^{1-x} dx\n = \\int_0^1 x\\frac{(1-x)^2}{2}dx =  \\frac{1}{24}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

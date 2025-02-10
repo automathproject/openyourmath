@@ -1,0 +1,35 @@
+{
+  "uuid": "CrAS",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5481",
+    "auteur": "rouget",
+    "createdAt": "2010-07-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Equation différentielle",
+    "sousChapitre": "Résolution d'équation différentielle du premier ordre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:45.375Z"
+  },
+  "contenu": [
+    {
+      "id": "fd03750f-958c-40a0-a1ff-23c69b055ca0",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a$ un réel non nul. Soit $f$ continue sur $\\Rr$ et pèriodique de pèriode $T\\neq0$. Montrer que l'équation\ndifférentielle $y'+ay=f$ admet une et une seule solution périodique sur $\\Rr$, de période $T$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel non nul. Soit <span class=\"math inline\">\\(f\\)</span> continue sur <span class=\"math inline\">\\(\\Rr\\)</span> et pèriodique de pèriode <span class=\"math inline\">\\(T\\neq0\\)</span>. Montrer que l’équation différentielle <span class=\"math inline\">\\(y&#39;+ay=f\\)</span> admet une et une seule solution périodique sur <span class=\"math inline\">\\(\\Rr\\)</span>, de période <span class=\"math inline\">\\(T\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4cc2c764-cc5f-4299-b674-0d6001b22343",
+      "type": "reponse",
+      "value": {
+        "latex": "On sait que les solutions sur $\\Rr$ de l'équation proposée sont les fonctions de la forme~:\n\n$$g~:~x\\mapsto\\lambda e^{-ax}+e^{-ax}\\int_{0}^{x}e^{at}f(t)\\;dt,\\;\\lambda\\in\\Rr.$$\nDans ce cas, pour $x\\in\\Rr$, $g(x+T)=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{x+T}e^{at}f(t)\\;dt$. Or,\n\n$$\\begin{align*}\\ensuremath\n\\int_{0}^{x+T}e^{at}f(t)\\;dt&=\\int_{0}^{x}e^{at}f(t)\\;dt+\\int_{x}^{x+T}e^{at}f(t)\\;dt=\\int_{0}^{x}e^{at}f(t)\\;dt+\\int_{0}^{T}\ne^{a(u+T)}f(u+T)\\;du\\\\\n &=\\int_{0}^{x}e^{at}f(t)\\;dt+e^{aT}\\int_{0}^{T}e^{au}f(u)du.\n\\end{align*}$$\n\nDonc,\n\n$$\\begin{align*}\\ensuremath\ng(x+T)&=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{x}e^{at}f(t)\\;dt+e^{-ax}\\int_{0}^{T}e^{au}f(u)\\;du\\\\\n &=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{T}e^{at}f(t)\\;dt+g(x)-\\lambda e^{-ax}.\n\\end{align*}$$\n\nPar suite,\n\n$$\\begin{align*}\\ensuremath\ng\\;\\mbox{est}\\;T\\mbox{-périodique}&\\Leftrightarrow\\forall\nx\\in\\Rr,\\;\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{T}e^{at}f(t)\\;dt-\\lambda e^{-ax}=0\\\\\n &\\Leftrightarrow\\lambda(1-e^{-aT})=e^{-aT}\\int_{0}^{T}e^{at}f(t)\\;dt\\Leftrightarrow\\lambda=\\frac{e^{-aT}}{1-e^{-aT}}\\int_{0}^{T}e^{at}f(t)\\;dt\n\\end{align*}$$\n\n($e^{-aT}\\neq1$ car $a\\neq0$ et $T\\neq0$). D'où l'existence et l'unicité d'une solution $T$-périodique~:\n\n$$\\forall x\\in\\Rr,\\;g(x)=\\frac{e^{-aT}}{1-e^{-aT}}\\int_{0}^{T}e^{at}f(t)\\;dte^{-ax}+e^{-ax}\\int_{0}^{x}e^{at}f(t)\\;dt.$$",
+        "html": "<p>On sait que les solutions sur <span class=\"math inline\">\\(\\Rr\\)</span> de l’équation proposée sont les fonctions de la forme :</p>\n<p><span class=\"math display\">\\[g~:~x\\mapsto\\lambda e^{-ax}+e^{-ax}\\int_{0}^{x}e^{at}f(t)\\;dt,\\;\\lambda\\in\\Rr.\\]</span> Dans ce cas, pour <span class=\"math inline\">\\(x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(g(x+T)=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{x+T}e^{at}f(t)\\;dt\\)</span>. Or,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\int_{0}^{x+T}e^{at}f(t)\\;dt&amp;=\\int_{0}^{x}e^{at}f(t)\\;dt+\\int_{x}^{x+T}e^{at}f(t)\\;dt=\\int_{0}^{x}e^{at}f(t)\\;dt+\\int_{0}^{T}\ne^{a(u+T)}f(u+T)\\;du\\\\\n &amp;=\\int_{0}^{x}e^{at}f(t)\\;dt+e^{aT}\\int_{0}^{T}e^{au}f(u)du.\n\\end{align*}\\]</span></p>\n<p>Donc,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\ng(x+T)&amp;=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{x}e^{at}f(t)\\;dt+e^{-ax}\\int_{0}^{T}e^{au}f(u)\\;du\\\\\n &amp;=\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{T}e^{at}f(t)\\;dt+g(x)-\\lambda e^{-ax}.\n\\end{align*}\\]</span></p>\n<p>Par suite,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\ng\\;\\mbox{est}\\;T\\mbox{-périodique}&amp;\\Leftrightarrow\\forall\nx\\in\\Rr,\\;\\lambda e^{-a(x+T)}+e^{-a(x+T)}\\int_{0}^{T}e^{at}f(t)\\;dt-\\lambda e^{-ax}=0\\\\\n &amp;\\Leftrightarrow\\lambda(1-e^{-aT})=e^{-aT}\\int_{0}^{T}e^{at}f(t)\\;dt\\Leftrightarrow\\lambda=\\frac{e^{-aT}}{1-e^{-aT}}\\int_{0}^{T}e^{at}f(t)\\;dt\n\\end{align*}\\]</span></p>\n<p>(<span class=\"math inline\">\\(e^{-aT}\\neq1\\)</span> car <span class=\"math inline\">\\(a\\neq0\\)</span> et <span class=\"math inline\">\\(T\\neq0\\)</span>). D’où l’existence et l’unicité d’une solution <span class=\"math inline\">\\(T\\)</span>-périodique :</p>\n<p><span class=\"math display\">\\[\\forall x\\in\\Rr,\\;g(x)=\\frac{e^{-aT}}{1-e^{-aT}}\\int_{0}^{T}e^{at}f(t)\\;dte^{-ax}+e^{-ax}\\int_{0}^{x}e^{at}f(t)\\;dt.\\]</span></p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "h1gq",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4198",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Extremums locaux",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:21.720Z"
+  },
+  "contenu": [
+    {
+      "id": "33778ef3-711e-46ca-b5c3-20ac8c1c2588",
+      "type": "description",
+      "value": {
+        "latex": "$E$ désigne l'espace affine euclidien classique. $D_1$, $D_2$, $D_3$\nsont trois droites deux à deux non parallèles.\n\\smallskip\nSoit $f : {D_1\\times D_2\\times D_3} \\to \\R, {(M_1,M_2,M_3)} \\mapsto\n{\\|\\vec{M_1M_2}\\|^2 + \\|\\vec{M_2M_3}\\|^2 + \\|\\vec{M_3M_1}\\|^2.}$",
+        "html": "<p><span class=\"math inline\">\\(E\\)</span> désigne l’espace affine euclidien classique. <span class=\"math inline\">\\(D_1\\)</span>, <span class=\"math inline\">\\(D_2\\)</span>, <span class=\"math inline\">\\(D_3\\)</span> sont trois droites deux à deux non parallèles. Soit <span class=\"math inline\">\\(f : {D_1\\times D_2\\times D_3} \\to \\R, {(M_1,M_2,M_3)} \\mapsto\n{\\|\\vec{M_1M_2}\\|^2 + \\|\\vec{M_2M_3}\\|^2 + \\|\\vec{M_3M_1}\\|^2.}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "12997042-ab51-466f-8aab-ed2d69e0d20f",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $f$ admet un minimum atteint pour un unique triplet.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(f\\)</span> admet un minimum atteint pour un unique triplet.</p>\n"
+      }
+    },
+    {
+      "id": "187a6025-e8f5-4a05-bd90-3120c33f9ebc",
+      "type": "reponse",
+      "value": {
+        "latex": "On fixe $A_i\\in D_i$ et $\\vec u_i$ un vecteur directeur\n    de~$D_i$. Soit $M_i = A_i + x_i\\vec u_i$. Alors\n\n    $$\\begin{align*}f(M_1,M_2,M_3) &= f(A_1,A_2,A_3)\\\\\n                    &+ 2\\Bigl(\n                        (\\vec{A_1A_2}\\mid x_2\\vec u_2 - x_1\\vec u_1)\n                      + (\\vec{A_2A_3}\\mid x_3\\vec u_3 - x_2\\vec u_2)\n                      + (\\vec{A_3A_1}\\mid x_1\\vec u_1 - x_3\\vec u_3)\n                     \\Bigr)\\\\\n                    &+ \\Bigl(\n                        \\|x_2\\vec u_2 - x_1\\vec u_1\\|^2\n                      + \\|x_3\\vec u_3 - x_2\\vec u_2\\|^2\n                      + \\|x_1\\vec u_1 - x_3\\vec u_3\\|^2\n                     \\Bigr)\\\\\n                    &= a + b(x_1,x_2,x_3) + c(x_1,x_2,x_3).\n\\end{align*}$$\n\n    $b$ est une forme linéaire et $c$ est une forme quadratique positive,\n    et même définie positive car $\\vec u_1,\\vec u_2,\\vec u_3$ sont deux\n    à deux non colinéaires. Il en résulte que\n    $f(M_1,M_2,M_3) \\to +\\infty$ lorsque $|x_1|+|x_2|+|x_3|\\to\\infty$, donc par\n    continuité, $f$ admet un minimum.\n    \n    Choisissons alors $A_1,A_2,A_3$ de sorte que $f(A_1,A_2,A_3)$ soit égal\n    à ce minimum. On a alors $b=0$ car $(A_1,A_2,A_3)$ est point critique\n    de~$f$, d'où $f(M_1,M_2,M_3) > f(A_1,A_2,A_3)$ si $(x_1,x_2,x_3)\\ne(0,0,0)$\n    vu la définie-positivité de~$c$. Ceci prouve l'unicité du triplet\n    où $f$ atteint son minimum.",
+        "html": "<p>On fixe <span class=\"math inline\">\\(A_i\\in D_i\\)</span> et <span class=\"math inline\">\\(\\vec u_i\\)</span> un vecteur directeur de <span class=\"math inline\">\\(D_i\\)</span>. Soit <span class=\"math inline\">\\(M_i = A_i + x_i\\vec u_i\\)</span>. Alors</p>\n<p><span class=\"math display\">\\[\\begin{align*}f(M_1,M_2,M_3) &amp;= f(A_1,A_2,A_3)\\\\\n                    &amp;+ 2\\Bigl(\n                        (\\vec{A_1A_2}\\mid x_2\\vec u_2 - x_1\\vec u_1)\n                      + (\\vec{A_2A_3}\\mid x_3\\vec u_3 - x_2\\vec u_2)\n                      + (\\vec{A_3A_1}\\mid x_1\\vec u_1 - x_3\\vec u_3)\n                     \\Bigr)\\\\\n                    &amp;+ \\Bigl(\n                        \\|x_2\\vec u_2 - x_1\\vec u_1\\|^2\n                      + \\|x_3\\vec u_3 - x_2\\vec u_2\\|^2\n                      + \\|x_1\\vec u_1 - x_3\\vec u_3\\|^2\n                     \\Bigr)\\\\\n                    &amp;= a + b(x_1,x_2,x_3) + c(x_1,x_2,x_3).\n\\end{align*}\\]</span></p>\n<p><span class=\"math inline\">\\(b\\)</span> est une forme linéaire et <span class=\"math inline\">\\(c\\)</span> est une forme quadratique positive, et même définie positive car <span class=\"math inline\">\\(\\vec u_1,\\vec u_2,\\vec u_3\\)</span> sont deux à deux non colinéaires. Il en résulte que <span class=\"math inline\">\\(f(M_1,M_2,M_3) \\to +\\infty\\)</span> lorsque <span class=\"math inline\">\\(|x_1|+|x_2|+|x_3|\\to\\infty\\)</span>, donc par continuité, <span class=\"math inline\">\\(f\\)</span> admet un minimum.</p>\n<p>Choisissons alors <span class=\"math inline\">\\(A_1,A_2,A_3\\)</span> de sorte que <span class=\"math inline\">\\(f(A_1,A_2,A_3)\\)</span> soit égal à ce minimum. On a alors <span class=\"math inline\">\\(b=0\\)</span> car <span class=\"math inline\">\\((A_1,A_2,A_3)\\)</span> est point critique de <span class=\"math inline\">\\(f\\)</span>, d’où <span class=\"math inline\">\\(f(M_1,M_2,M_3) &gt; f(A_1,A_2,A_3)\\)</span> si <span class=\"math inline\">\\((x_1,x_2,x_3)\\ne(0,0,0)\\)</span> vu la définie-positivité de <span class=\"math inline\">\\(c\\)</span>. Ceci prouve l’unicité du triplet où <span class=\"math inline\">\\(f\\)</span> atteint son minimum.</p>\n"
+      }
+    },
+    {
+      "id": "f0f11dc0-f85c-42f7-b1de-1b0f01f9e060",
+      "type": "question",
+      "value": {
+        "latex": "Dans le cas où $D_1$, $D_2$, $D_3$ sont coplanaires et délimitent\n    un triangle équilatéral, trouver ce triplet.",
+        "html": "<p>Dans le cas où <span class=\"math inline\">\\(D_1\\)</span>, <span class=\"math inline\">\\(D_2\\)</span>, <span class=\"math inline\">\\(D_3\\)</span> sont coplanaires et délimitent un triangle équilatéral, trouver ce triplet.</p>\n"
+      }
+    },
+    {
+      "id": "d57fe2b6-9dd7-44d8-8727-4f8501d6af86",
+      "type": "reponse",
+      "value": {
+        "latex": "On soup\\c conne fortement le triplet constitué des milieux\n    des côtés. En notant $A_1,A_2,A_3$ ces milieux, il suffit de\n    vérifier que la forme linéaire $b$ de la réponse précédente\n    est nulle, et c'est clairement le cas après regroupement autour\n    de~$x_1$, $x_2$, $x_3$.",
+        "html": "<p>On soupçonne fortement le triplet constitué des milieux des côtés. En notant <span class=\"math inline\">\\(A_1,A_2,A_3\\)</span> ces milieux, il suffit de vérifier que la forme linéaire <span class=\"math inline\">\\(b\\)</span> de la réponse précédente est nulle, et c’est clairement le cas après regroupement autour de <span class=\"math inline\">\\(x_1\\)</span>, <span class=\"math inline\">\\(x_2\\)</span>, <span class=\"math inline\">\\(x_3\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

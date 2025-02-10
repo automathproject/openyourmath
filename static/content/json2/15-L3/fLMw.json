@@ -1,0 +1,51 @@
+{
+  "uuid": "fLMw",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2374",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Compacité",
+    "sousChapitre": "Compacité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:24.671Z"
+  },
+  "contenu": [
+    {
+      "id": "f5024e15-3549-4a0e-ab3a-76d70e7a6a1a",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ un espace m\\'etrique.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> un espace métrique.</p>\n"
+      }
+    },
+    {
+      "id": "d8bc7b1a-1cb0-4efc-b16c-86cb99c34a9e",
+      "type": "question",
+      "value": {
+        "latex": "Soit $(F_n)_n$ une suite d\\'ecroissante de ferm\\'es de $X$\net soit $(x_n)_n$ une suite convergente telle que $x_n\\in F_n$\npour tout $n\\geq 0$. Montrer que\n$$\\lim _{n\\rightarrow \\infty} x_n\n\\in \\bigcap _{n\\geq 0} F_n\\;\\; .$$\n Donner un exemple pour lequel\n$\\bigcap _{n\\geq 0} F_n =\\emptyset$.",
+        "html": "<p>Soit <span class=\"math inline\">\\((F_n)_n\\)</span> une suite décroissante de fermés de <span class=\"math inline\">\\(X\\)</span> et soit <span class=\"math inline\">\\((x_n)_n\\)</span> une suite convergente telle que <span class=\"math inline\">\\(x_n\\in F_n\\)</span> pour tout <span class=\"math inline\">\\(n\\geq 0\\)</span>. Montrer que <span class=\"math display\">\\[\\lim _{n\\rightarrow \\infty} x_n\n\\in \\bigcap _{n\\geq 0} F_n\\;\\; .\\]</span> Donner un exemple pour lequel <span class=\"math inline\">\\(\\bigcap _{n\\geq 0} F_n =\\emptyset\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c3045c27-08df-4556-acab-3fd8d7c4e6a4",
+      "type": "question",
+      "value": {
+        "latex": "Soit maintenant $(K_n)_n$ une suite d\\'ecroissante de\n{\\it compacts}  non vides de $X$. V\\'erifier que $K=\\bigcap_{n\\geq 0} K_n $\nest non vide et que tout ouvert $\\Omega$ qui contient $K$ contient\ntous les $K_n$ \\`a partir d'un certain rang.",
+        "html": "<p>Soit maintenant <span class=\"math inline\">\\((K_n)_n\\)</span> une suite décroissante de <span><em>compacts</em></span> non vides de <span class=\"math inline\">\\(X\\)</span>. Vérifier que <span class=\"math inline\">\\(K=\\bigcap_{n\\geq 0} K_n\\)</span> est non vide et que tout ouvert <span class=\"math inline\">\\(\\Omega\\)</span> qui contient <span class=\"math inline\">\\(K\\)</span> contient tous les <span class=\"math inline\">\\(K_n\\)</span> à partir d’un certain rang.</p>\n"
+      }
+    },
+    {
+      "id": "2f3b5efe-a704-4360-ae9a-78373d83fc36",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $x = \\lim x_n$. Soit $N\\in \\Nn$ ; montrons que $x$ est dans $F_N$. On a $x_N \\in F_N$, $x_{N+1} \\in F_{N+1} \\subset F_N$, $x_{N+2} \\in F_{N+2} \\subset F_{N+1} \\subset F_N$, etc. Donc pour tout $n\\ge N$ alors $x_n \\in F_N$. Comme $F_N$ est fermé, alors la limite $x$ est aussi dans $F_N$.\nCeci étant vrai quelque soit $N$, alors $x\\in \\bigcap_N F_N$.\n\nPour construire un exemple comme demandé il est nécessaire que de toute suite on ne puisse pas extraire de sous-suite convergente. Prenons par exemple dans $\\Rr$, $F_n = [n,+\\infty[$, alors $\\bigcap_n F_n = \\varnothing$.\n\\begin{enumerate}\nPour chaque $n$ on prend $x_n \\in K_n$, alors pour tout\n$n$, $x_n \\in K_0$ qui est compact donc on peut extraire une sous-suite convergente. Si $x$ est la limite de cette sous-suite alors $x \\in K$.\nDonc $K$ est non vide.\nPar l'absurde supposons que c'est faux, alors\n$$\\forall N\\in\\Nn \\quad \\exists n \\ge N \\quad \\exists x_n \\in K_n \\text{ tel que } x_n\\notin \\Omega.$$\nDe la suite $(x_n)$, on peut extraire une sous-suite $x_{\\phi(n)}$\nqui converge vers $x\\in K$. Or $x_n \\in X\\setminus \\Omega$ qui est fermé\ndonc $x\\in X\\setminus \\Omega$. Comme $K\\subset \\Omega$ alors $x\\notin K$\nce qui est contradictoire.",
+        "html": ""
+      }
+    }
+  ]
+}

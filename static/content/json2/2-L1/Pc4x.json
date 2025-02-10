@@ -1,0 +1,35 @@
+{
+  "uuid": "Pc4x",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4502",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série numérique",
+    "sousChapitre": "Familles sommables",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:53.229Z"
+  },
+  "contenu": [
+    {
+      "id": "a250b07c-302c-400b-ac8f-e2167b667b43",
+      "type": "description",
+      "value": {
+        "latex": "Déterminer l'ensemble de définition de $f(x) = \\sum_{k=2}^\\infty\\frac{(-1)^k}{x+k}$.\nMontrer que $f$ est de classe $\\mathcal{C}^\\infty$ sur son domaine et la développer\nen série entière.",
+        "html": "<p>Déterminer l’ensemble de définition de <span class=\"math inline\">\\(f(x) = \\sum_{k=2}^\\infty\\frac{(-1)^k}{x+k}\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^\\infty\\)</span> sur son domaine et la développer en série entière.</p>\n"
+      }
+    },
+    {
+      "id": "55324f0a-6f42-4098-8f8a-c9f492bd9d50",
+      "type": "reponse",
+      "value": {
+        "latex": "La série converge pour tout $x\\notin\\{-2,-3,\\dots\\}$ car le critère\ndes séries alternées s'applique à partir d'un certain rang (fonction de~$x$).\nIl en va de même pour toutes les séries obtenues par dérivations successives\nterme à terme, et ces séries convergent localement uniformément (le reste\nd'une série vérifant le CSA est majoré en valeur absolue par la valeur\nabsolue du premier terme figurant dans le reste) donc $f$ est $\\mathcal{C}^\\infty$.\n\nPour $|x|<2$ on a\n$$f(x) = \\sum_{k=2}^\\infty\\sum_{n=0}^\\infty\\frac{(-1)^k}k\\Bigl(\\frac{-x}k\\Bigr)^n\n      = \\sum_{k=2}^\\infty\\sum_{n=0}^\\infty\\frac{(-1)^{k+n}}{k^{n+1}}x^n\n      = (1-\\ln2) + \\sum_{n=1}^\\infty(-1)^n(1-(1-2^{-n})\\zeta(n+1))x^n.$$",
+        "html": "<p>La série converge pour tout <span class=\"math inline\">\\(x\\notin\\{-2,-3,\\dots\\}\\)</span> car le critère des séries alternées s’applique à partir d’un certain rang (fonction de <span class=\"math inline\">\\(x\\)</span>). Il en va de même pour toutes les séries obtenues par dérivations successives terme à terme, et ces séries convergent localement uniformément (le reste d’une série vérifant le CSA est majoré en valeur absolue par la valeur absolue du premier terme figurant dans le reste) donc <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(\\mathcal{C}^\\infty\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(|x|&lt;2\\)</span> on a <span class=\"math display\">\\[f(x) = \\sum_{k=2}^\\infty\\sum_{n=0}^\\infty\\frac{(-1)^k}k\\Bigl(\\frac{-x}k\\Bigr)^n\n      = \\sum_{k=2}^\\infty\\sum_{n=0}^\\infty\\frac{(-1)^{k+n}}{k^{n+1}}x^n\n      = (1-\\ln2) + \\sum_{n=1}^\\infty(-1)^n(1-(1-2^{-n})\\zeta(n+1))x^n.\\]</span></p>\n"
+      }
+    }
+  ]
+}

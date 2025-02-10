@@ -1,0 +1,91 @@
+{
+  "uuid": "sGga",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5586",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire",
+    "sousChapitre": "Image et noyau, théorème du rang",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:25.618Z"
+  },
+  "contenu": [
+    {
+      "id": "c3179b0a-7ff7-4b22-aa50-c2022244a381",
+      "type": "description",
+      "value": {
+        "latex": "Soient $E$ un espace vectoriel et $f$ un endomorphisme de $E$. Pour $k\\in\\Nn$, on pose $N_k= \\text{Ker}(f^k)$ et $I_k=\\text{Im}(f^k)$ puis $N=\\displaystyle\\bigcup_{k\\in\\Nn}N_k$ et $I=\\displaystyle\\bigcap_{k\\in\\Nn}I_k$. ($N$ est le nilespace de $f$ et $I$ le c\\oe ur de $f$)",
+        "html": "<p>Soient <span class=\"math inline\">\\(E\\)</span> un espace vectoriel et <span class=\"math inline\">\\(f\\)</span> un endomorphisme de <span class=\"math inline\">\\(E\\)</span>. Pour <span class=\"math inline\">\\(k\\in\\Nn\\)</span>, on pose <span class=\"math inline\">\\(N_k= \\text{Ker}(f^k)\\)</span> et <span class=\"math inline\">\\(I_k=\\text{Im}(f^k)\\)</span> puis <span class=\"math inline\">\\(N=\\displaystyle\\bigcup_{k\\in\\Nn}N_k\\)</span> et <span class=\"math inline\">\\(I=\\displaystyle\\bigcap_{k\\in\\Nn}I_k\\)</span>. (<span class=\"math inline\">\\(N\\)</span> est le nilespace de <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(I\\)</span> le cœur de <span class=\"math inline\">\\(f\\)</span>)</p>\n"
+      }
+    },
+    {
+      "id": "c0d90ca0-49a0-4a82-a15b-2729972bff31",
+      "type": "question",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "dbaa053e-1ac2-4bdf-ab7e-5d12c3b30f81",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "ea0bd129-84c7-4801-b37d-6b77929f9b70",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que les suites $(N_k)_{k\\in\\Nn}$ et $(I_k)_{k\\in\\Nn}$ sont respectivement croissante et décroissante pour l'inclusion.",
+        "html": "<p>Montrer que les suites <span class=\"math inline\">\\((N_k)_{k\\in\\Nn}\\)</span> et <span class=\"math inline\">\\((I_k)_{k\\in\\Nn}\\)</span> sont respectivement croissante et décroissante pour l’inclusion.</p>\n"
+      }
+    },
+    {
+      "id": "fa2d7913-682c-4384-9e1b-d2c38ebcd7bd",
+      "type": "reponse",
+      "value": {
+        "latex": "Soient $k\\in\\Nn$ et $x\\in E$. $x\\in N_k\\Rightarrow f^k(x)=0\\Rightarrow f(f^k(x)) = 0\\Rightarrow x\\in N_{k+1}$. \n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $N_k\\subset N_{k+1}$.\n}\n\\end{center}\n\nSoient $k\\in\\Nn$ et $y\\in I_{k+1}\\Rightarrow\\exists x\\in E/\\;y = f^{k+1}(x)\\Rightarrow\\exists x\\in E/\\;y = f^k(f(x))\\Rightarrow y\\in I_k$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $I_{k+1}\\subset I_{k}$.\n}\n\\end{center}",
+        "html": "<p>Soient <span class=\"math inline\">\\(k\\in\\Nn\\)</span> et <span class=\"math inline\">\\(x\\in E\\)</span>. <span class=\"math inline\">\\(x\\in N_k\\Rightarrow f^k(x)=0\\Rightarrow f(f^k(x)) = 0\\Rightarrow x\\in N_{k+1}\\)</span>.</p>\n<p>Soient <span class=\"math inline\">\\(k\\in\\Nn\\)</span> et <span class=\"math inline\">\\(y\\in I_{k+1}\\Rightarrow\\exists x\\in E/\\;y = f^{k+1}(x)\\Rightarrow\\exists x\\in E/\\;y = f^k(f(x))\\Rightarrow y\\in I_k\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4e2de451-dea0-463a-bcb9-277d7b019c46",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $N$ et $I$ sont stables par $f$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(N\\)</span> et <span class=\"math inline\">\\(I\\)</span> sont stables par <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2ca036cf-169a-4f76-ab63-0a3e10ed8511",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $x\\in N$. Il existe un entier $k$ tel que $x$ est dans $N_k$ ou encore tel que $f^k(x)=0$. Mais alors $f^k(f(x)) = f(f^k(x))=0$ et $f(x)$ est dans $N_k$ et donc dans $N$. Ainsi, $N$ est stable par $f$.\n\nSoit $y\\in I$. Alors, pour tout naturel $k$, il existe $x_k\\in E$ tel que $y=f^k(x_k)$. Mais alors, pour tout entier $k$, $f(y)=f(f^k(x_k))=f^k(f(x))$ est dans $I_k$, et donc $f(y)$ est dans $I$. $I$ est stable par $f$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(x\\in N\\)</span>. Il existe un entier <span class=\"math inline\">\\(k\\)</span> tel que <span class=\"math inline\">\\(x\\)</span> est dans <span class=\"math inline\">\\(N_k\\)</span> ou encore tel que <span class=\"math inline\">\\(f^k(x)=0\\)</span>. Mais alors <span class=\"math inline\">\\(f^k(f(x)) = f(f^k(x))=0\\)</span> et <span class=\"math inline\">\\(f(x)\\)</span> est dans <span class=\"math inline\">\\(N_k\\)</span> et donc dans <span class=\"math inline\">\\(N\\)</span>. Ainsi, <span class=\"math inline\">\\(N\\)</span> est stable par <span class=\"math inline\">\\(f\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(y\\in I\\)</span>. Alors, pour tout naturel <span class=\"math inline\">\\(k\\)</span>, il existe <span class=\"math inline\">\\(x_k\\in E\\)</span> tel que <span class=\"math inline\">\\(y=f^k(x_k)\\)</span>. Mais alors, pour tout entier <span class=\"math inline\">\\(k\\)</span>, <span class=\"math inline\">\\(f(y)=f(f^k(x_k))=f^k(f(x))\\)</span> est dans <span class=\"math inline\">\\(I_k\\)</span>, et donc <span class=\"math inline\">\\(f(y)\\)</span> est dans <span class=\"math inline\">\\(I\\)</span>. <span class=\"math inline\">\\(I\\)</span> est stable par <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d2c41b0e-2762-4b19-a55a-eecc557e0267",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\forall k\\in\\Nn$, $(N_k =N_{k+1})\\Rightarrow(N_{k+1}=N_{k+2})$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\forall k\\in\\Nn\\)</span>, <span class=\"math inline\">\\((N_k =N_{k+1})\\Rightarrow(N_{k+1}=N_{k+2})\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7a017e74-d4e1-457a-a0a8-76b4b4844b00",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $N_k=N_{k+1}$, on a déjà $N_{k+1}\\subset N_{k+2}$. Montrons que $N_{k+2}\\subset N_{k+1}$.\n\nSoit $x\\in N_{k+2}$. Alors $f^{k+1}(f(x))=0$ et donc $f(x)\\in N_{k+1}= N_k$. Donc, $f^k(f(x))=0$ ou encore $x$ est dans $N_{k+1}$. On a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $[(N_k = N_{k+1})\\Rightarrow (N_{k+1}= N_{k+2})]$.\n}\n\\end{center}",
+        "html": "<p>Si <span class=\"math inline\">\\(N_k=N_{k+1}\\)</span>, on a déjà <span class=\"math inline\">\\(N_{k+1}\\subset N_{k+2}\\)</span>. Montrons que <span class=\"math inline\">\\(N_{k+2}\\subset N_{k+1}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in N_{k+2}\\)</span>. Alors <span class=\"math inline\">\\(f^{k+1}(f(x))=0\\)</span> et donc <span class=\"math inline\">\\(f(x)\\in N_{k+1}= N_k\\)</span>. Donc, <span class=\"math inline\">\\(f^k(f(x))=0\\)</span> ou encore <span class=\"math inline\">\\(x\\)</span> est dans <span class=\"math inline\">\\(N_{k+1}\\)</span>. On a montré que</p>\n"
+      }
+    }
+  ]
+}

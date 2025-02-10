@@ -1,0 +1,59 @@
+{
+  "uuid": "7J9f",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2582",
+    "auteur": "delaunay",
+    "createdAt": "2009-05-19",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:00.446Z"
+  },
+  "contenu": [
+    {
+      "id": "1a215de5-b4c6-4f8a-b0d3-c4c08991f28e",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a\\in\\R$ et $A$ la matrice suivante\n$$A=\\begin{pmatrix}1&0&a \\\\  0&a&1 \\\\  a&1&0\\end{pmatrix}$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\in\\R\\)</span> et <span class=\"math inline\">\\(A\\)</span> la matrice suivante <span class=\"math display\">\\[A=\\begin{pmatrix}1&amp;0&amp;a \\\\  0&amp;a&amp;1 \\\\  a&amp;1&amp;0\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "54bf961b-0b3c-48e7-98ca-cd66b8a94b06",
+      "type": "question",
+      "value": {
+        "latex": "Calculer le d\\'eterminant de $A$ et d\\'eterminer \npour quelles valeurs de $a$ la matrice est inversible.",
+        "html": "<p>Calculer le déterminant de <span class=\"math inline\">\\(A\\)</span> et déterminer pour quelles valeurs de <span class=\"math inline\">\\(a\\)</span> la matrice est inversible.</p>\n"
+      }
+    },
+    {
+      "id": "c58772a2-b684-45f4-906e-6c7cacd79f9c",
+      "type": "reponse",
+      "value": {
+        "latex": "Calculons le d\\'eterminant de $A$ et d\\'eterminons \npour quelles valeurs de $a$ la matrice est inversible.\n\n$$\\det A=\\begin{vmatrix}1&0&a \\\\  0&a&1 \\\\  a&1&0\\end{vmatrix}=\\begin{vmatrix}a&1 \\\\ 1&0\\end{vmatrix}+a\\begin{vmatrix}0&a \\\\  a&1\\end{vmatrix}=-1-a^3.$$\nLa matrice $A$ est inversible si et seulement si son d\\'eterminant est non nul, c'est-\\`a-dire si et seulement si $1+a^3\\neq 0$, ce qui \\'equivaut \\`a $a\\neq-1$ car $a\\in \\R$.",
+        "html": "<p>Calculons le déterminant de <span class=\"math inline\">\\(A\\)</span> et déterminons pour quelles valeurs de <span class=\"math inline\">\\(a\\)</span> la matrice est inversible.</p>\n<p><span class=\"math display\">\\[\\det A=\\begin{vmatrix}1&amp;0&amp;a \\\\  0&amp;a&amp;1 \\\\  a&amp;1&amp;0\\end{vmatrix}=\\begin{vmatrix}a&amp;1 \\\\ 1&amp;0\\end{vmatrix}+a\\begin{vmatrix}0&amp;a \\\\  a&amp;1\\end{vmatrix}=-1-a^3.\\]</span> La matrice <span class=\"math inline\">\\(A\\)</span> est inversible si et seulement si son déterminant est non nul, c’est-à-dire si et seulement si <span class=\"math inline\">\\(1+a^3\\neq 0\\)</span>, ce qui équivaut à <span class=\"math inline\">\\(a\\neq-1\\)</span> car <span class=\"math inline\">\\(a\\in \\R\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3d8b6cba-f3c7-4965-9e4a-610c5a23f631",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $A^{-1}$ lorsque $A$ est inversible.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(A^{-1}\\)</span> lorsque <span class=\"math inline\">\\(A\\)</span> est inversible.</p>\n"
+      }
+    },
+    {
+      "id": "5a784947-ed8e-4b8a-8618-c18540a92d1c",
+      "type": "reponse",
+      "value": {
+        "latex": "Calculons $A^{-1}$ lorsque $A$ est inversible, c'est-\\`a-dire $a\\neq-1$. Pour cela nous allons d\\'eterminer la comatrice $\\tilde A$ de $A$. On a \n$$\\tilde A=\\begin{pmatrix}-1&a&-a^2 \\\\  a&-a^2&-1 \\\\  -a^2&-1&a\\end{pmatrix},$$\non remarque que $\\tilde A=^t\\!\\!\\!\\tilde A$ et on a bien $A ^t\\!\\!\\tilde A=^t\\!\\!\\!\\tilde AA=(-1-a^3)I_3$ d'o\\`u\n$$A^{-1}={\\frac{1}{(-1-a^3)}}\\tilde A={\\frac{1}{-1-a^3}}\\begin{pmatrix}-1&a&-a^2 \\\\  a&-a^2&-1 \\\\  -a^2&-1&a\\end{pmatrix}.$$",
+        "html": "<p>Calculons <span class=\"math inline\">\\(A^{-1}\\)</span> lorsque <span class=\"math inline\">\\(A\\)</span> est inversible, c’est-à-dire <span class=\"math inline\">\\(a\\neq-1\\)</span>. Pour cela nous allons déterminer la comatrice <span class=\"math inline\">\\(\\tilde A\\)</span> de <span class=\"math inline\">\\(A\\)</span>. On a <span class=\"math display\">\\[\\tilde A=\\begin{pmatrix}-1&amp;a&amp;-a^2 \\\\  a&amp;-a^2&amp;-1 \\\\  -a^2&amp;-1&amp;a\\end{pmatrix},\\]</span> on remarque que <span class=\"math inline\">\\(\\tilde A=^t\\!\\!\\!\\tilde A\\)</span> et on a bien <span class=\"math inline\">\\(A ^t\\!\\!\\tilde A=^t\\!\\!\\!\\tilde AA=(-1-a^3)I_3\\)</span> d’où <span class=\"math display\">\\[A^{-1}={\\frac{1}{(-1-a^3)}}\\tilde A={\\frac{1}{-1-a^3}}\\begin{pmatrix}-1&amp;a&amp;-a^2 \\\\  a&amp;-a^2&amp;-1 \\\\  -a^2&amp;-1&amp;a\\end{pmatrix}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

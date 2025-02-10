@@ -1,0 +1,35 @@
+{
+  "uuid": "dOm9",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2498",
+    "auteur": "sarkis",
+    "createdAt": "2009-04-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Différentiabilité, calcul de différentielles",
+    "sousChapitre": "Différentiabilité, calcul de différentielles",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:50.754Z"
+  },
+  "contenu": [
+    {
+      "id": "3bb6f08f-a9a5-419f-8125-5d3c16ec82dc",
+      "type": "description",
+      "value": {
+        "latex": "Soient $E$ et $F$ deux espaces\nnorm\\'es r\\'eels et $f:E \\rightarrow F$ une application born\\'ee\nsur la boule unit\\'e de $E$ et v\\'erifiant\n$$f(x+y)=f(x)+f(y) \\mbox{ pour tout } x,y \\in E.$$\nMontrez que $f$ est lin\\'eaire continue.",
+        "html": "<p>Soient <span class=\"math inline\">\\(E\\)</span> et <span class=\"math inline\">\\(F\\)</span> deux espaces normés réels et <span class=\"math inline\">\\(f:E \\rightarrow F\\)</span> une application bornée sur la boule unité de <span class=\"math inline\">\\(E\\)</span> et vérifiant <span class=\"math display\">\\[f(x+y)=f(x)+f(y) \\mbox{ pour tout } x,y \\in E.\\]</span> Montrez que <span class=\"math inline\">\\(f\\)</span> est linéaire continue.</p>\n"
+      }
+    },
+    {
+      "id": "6261860d-e0b7-4ac5-b88c-7ed7b763c3a5",
+      "type": "reponse",
+      "value": {
+        "latex": "On montre par r\\'ecurrence que $f(nx)=nx$ si $n\\in \\mathbb{N}$.\nMontrer $f(-x)=-f(x)$ pour arriver à $f(nx)=nf(x)$ si $n \\in\n\\mathbb{Z}$ puis $f(\\frac{p}{q}x)=\\frac{p}{q}f(x)$ $p,q \\in\n\\mathbb{Z}$. Ainsi $f$ est lin\\'eaire sur $\\mathbb{Q}$. Il reste\n\\`a montrer qu'elle l'est sur $\\mathbb{R}$. Soit $x \\in E$ et\n$\\lambda \\in \\mathbb{R}$, il reste \\`a montrer que $f(\\lambda\nx)=\\lambda f(x)$. Prenons $\\{\\lambda_n\\}_{n \\in \\mathbb{N}}$ tel\nque $\\lim_{n\\rightarrow \\infty}\\lambda_n=\\lambda$. On a alors\n$$f(\\lambda_x)=f(\\lambda_n x +\n(\\lambda-\\lambda_n)x)=\\lambda_n f(x)+f((\\lambda-\\lambda_n)x).$$\nSoit $c_n \\in \\mathbb{\\mathbb{Q}}$ tel que\n$$||(\\lambda-\\lambda_n)x||_E \\leq c_n \\leq 2\n||(\\lambda-\\lambda_n)x||_E.$$ Alors\n$$f((\\lambda-\\lambda_n)x)=f(c_n\\frac{\\lambda-\\lambda_n}{c_n}x)=c_nf(\\frac{\\lambda-\\lambda_n}{c_n}x)$$\net\n$$||\\frac{\\lambda-\\lambda_n}{c_n}x|| \\leq 1.$$\nL'application $f$ \\'etant born\\'e sur la boulle unit\\'e par une\nconstante $M > 0$, on a $$||f((\\lambda-\\lambda_n)x)||\\leq c_nM$$\net donc $$||f((\\lambda-\\lambda_n)x)||\\leq c_n M\\leq\n2M||(\\lambda-\\lambda_n)x||_E$$ et donc $$\\lim_{n\\rightarrow\n\\infty}f((\\lambda-\\lambda_n)x)=0$$, en remarquant qu'on a aussi\n$$\\lim_{n\\rightarrow \\infty}\\lambda_nf(x)=\\lambda f(x)$$ on obtient\n$$f(\\lambda x)=\\lim_{n \\rightarrow \\infty}[\\lambda_n\nf(x)+f((\\lambda-\\lambda_n)x)]=\\lambda f(x).$$",
+        "html": "<p>On montre par récurrence que <span class=\"math inline\">\\(f(nx)=nx\\)</span> si <span class=\"math inline\">\\(n\\in \\mathbb{N}\\)</span>. Montrer <span class=\"math inline\">\\(f(-x)=-f(x)\\)</span> pour arriver à <span class=\"math inline\">\\(f(nx)=nf(x)\\)</span> si <span class=\"math inline\">\\(n \\in\n\\mathbb{Z}\\)</span> puis <span class=\"math inline\">\\(f(\\frac{p}{q}x)=\\frac{p}{q}f(x)\\)</span> <span class=\"math inline\">\\(p,q \\in\n\\mathbb{Z}\\)</span>. Ainsi <span class=\"math inline\">\\(f\\)</span> est linéaire sur <span class=\"math inline\">\\(\\mathbb{Q}\\)</span>. Il reste à montrer qu’elle l’est sur <span class=\"math inline\">\\(\\mathbb{R}\\)</span>. Soit <span class=\"math inline\">\\(x \\in E\\)</span> et <span class=\"math inline\">\\(\\lambda \\in \\mathbb{R}\\)</span>, il reste à montrer que <span class=\"math inline\">\\(f(\\lambda\nx)=\\lambda f(x)\\)</span>. Prenons <span class=\"math inline\">\\(\\{\\lambda_n\\}_{n \\in \\mathbb{N}}\\)</span> tel que <span class=\"math inline\">\\(\\lim_{n\\rightarrow \\infty}\\lambda_n=\\lambda\\)</span>. On a alors <span class=\"math display\">\\[f(\\lambda_x)=f(\\lambda_n x +\n(\\lambda-\\lambda_n)x)=\\lambda_n f(x)+f((\\lambda-\\lambda_n)x).\\]</span> Soit <span class=\"math inline\">\\(c_n \\in \\mathbb{\\mathbb{Q}}\\)</span> tel que <span class=\"math display\">\\[||(\\lambda-\\lambda_n)x||_E \\leq c_n \\leq 2\n||(\\lambda-\\lambda_n)x||_E.\\]</span> Alors <span class=\"math display\">\\[f((\\lambda-\\lambda_n)x)=f(c_n\\frac{\\lambda-\\lambda_n}{c_n}x)=c_nf(\\frac{\\lambda-\\lambda_n}{c_n}x)\\]</span> et <span class=\"math display\">\\[||\\frac{\\lambda-\\lambda_n}{c_n}x|| \\leq 1.\\]</span> L’application <span class=\"math inline\">\\(f\\)</span> étant borné sur la boulle unité par une constante <span class=\"math inline\">\\(M &gt; 0\\)</span>, on a <span class=\"math display\">\\[||f((\\lambda-\\lambda_n)x)||\\leq c_nM\\]</span> et donc <span class=\"math display\">\\[||f((\\lambda-\\lambda_n)x)||\\leq c_n M\\leq\n2M||(\\lambda-\\lambda_n)x||_E\\]</span> et donc <span class=\"math display\">\\[\\lim_{n\\rightarrow\n\\infty}f((\\lambda-\\lambda_n)x)=0\\]</span>, en remarquant qu’on a aussi <span class=\"math display\">\\[\\lim_{n\\rightarrow \\infty}\\lambda_nf(x)=\\lambda f(x)\\]</span> on obtient <span class=\"math display\">\\[f(\\lambda x)=\\lim_{n \\rightarrow \\infty}[\\lambda_n\nf(x)+f((\\lambda-\\lambda_n)x)]=\\lambda f(x).\\]</span></p>\n"
+      }
+    }
+  ]
+}

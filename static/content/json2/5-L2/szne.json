@@ -1,0 +1,35 @@
+{
+  "uuid": "szne",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4604",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série entière",
+    "sousChapitre": "Equations différentielles",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:36.702Z"
+  },
+  "contenu": [
+    {
+      "id": "f69c0e74-f3f9-46ea-bc1c-1567908c52f5",
+      "type": "description",
+      "value": {
+        "latex": "Pour $|x| < 1$ on pose~: $Z(x) = \\sum_{n=1}^\\infty \\zeta(2n)x^n$.\n\nMontrer que $Z$ vérifie l'équation différentielle~:\n$2xZ'(x) - 2Z^2(x) + Z(x) = 3x\\zeta(2)$ (écrire $Z(x)$ comme somme d'une\nsérie double, intervertir les sommations, remplacer et \\dots\\ simplifier).\n\nEn déduire la relation de récurrence~:\n$\\forall\\ n\\ge 2,\\ (n+\\frac12)\\zeta(2n) = \\sum_{p=1}^{n-1}\\zeta(2p)\\zeta(2n-2p)$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(|x| &lt; 1\\)</span> on pose : <span class=\"math inline\">\\(Z(x) = \\sum_{n=1}^\\infty \\zeta(2n)x^n\\)</span>.</p>\n<p>Montrer que <span class=\"math inline\">\\(Z\\)</span> vérifie l’équation différentielle : <span class=\"math inline\">\\(2xZ&#39;(x) - 2Z^2(x) + Z(x) = 3x\\zeta(2)\\)</span> (écrire <span class=\"math inline\">\\(Z(x)\\)</span> comme somme d’une série double, intervertir les sommations, remplacer et … simplifier).</p>\n<p>En déduire la relation de récurrence : <span class=\"math inline\">\\(\\forall\\ n\\ge 2,\\ (n+\\frac12)\\zeta(2n) = \\sum_{p=1}^{n-1}\\zeta(2p)\\zeta(2n-2p)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "568733cf-2b89-4fc7-9656-d474cdd40a34",
+      "type": "reponse",
+      "value": {
+        "latex": "$Z(x) = \\sum_{n,p\\ge 1} \\frac{x^n}{p^{2n}} = \\sum_{p\\ge 1}\\frac{x}{p^2-x}$.\n\n$Z'(x) = \\sum_{p\\ge 1}\\frac{p^2}{(p^2-x)^2} = \\sum_{p\\ge 1}\\frac{1}{p^2-x} + \\sum_{p\\ge 1}\\frac{x}{(p^2-x)^2}$.\n\n$Z^2(x) = \\sum_{p,q\\ge 1}\\frac{x^2}{(p^2-x)(q^2-x)}\n  = \\sum_{p\\ne q}\\frac{x^2}{q^2-p^2}\\Bigl(\\frac{1}{p^2-x} - \\frac{1}{q^2-x}\\Bigr) + \\sum_{p\\ge1}\\frac{x^2}{(p^2-x)^2}$\n\n$Z^2(x)-xZ'(x) + Z(x) = 2\\sum_{p\\ne q}\\frac{x^2}{(q^2-p^2)(p^2-x)}$.\n\nA $p$ fixé, $\\sum_{q\\ne p}\\frac1{q^2-p^2} = \\frac{1}{2p}\\sum_{q\\ne p}\\Bigl(\\frac1{q-p}-\\frac1{q+p}\\Bigr) = \\frac1{2p}\\Bigl(\\frac1p + \\frac1{2p}\\Bigr) = \\frac{3}{4p^2}$.\n\nDonc $Z^2(x)-xZ'(x) + Z(x) = \\frac32\\sum_{p\\ge 1}\\frac{x^2}{p^2(p^2-x)} = \\frac32(Z(x)-x\\zeta(2))$.\n\nRmq~: $2Z(x^2) = 1-\\pi x\\mathrm{cotan}(\\pi x)$ (Euler).",
+        "html": "<p><span class=\"math inline\">\\(Z(x) = \\sum_{n,p\\ge 1} \\frac{x^n}{p^{2n}} = \\sum_{p\\ge 1}\\frac{x}{p^2-x}\\)</span>.</p>\n<p><span class=\"math inline\">\\(Z&#39;(x) = \\sum_{p\\ge 1}\\frac{p^2}{(p^2-x)^2} = \\sum_{p\\ge 1}\\frac{1}{p^2-x} + \\sum_{p\\ge 1}\\frac{x}{(p^2-x)^2}\\)</span>.</p>\n<p><span class=\"math inline\">\\(Z^2(x) = \\sum_{p,q\\ge 1}\\frac{x^2}{(p^2-x)(q^2-x)}\n  = \\sum_{p\\ne q}\\frac{x^2}{q^2-p^2}\\Bigl(\\frac{1}{p^2-x} - \\frac{1}{q^2-x}\\Bigr) + \\sum_{p\\ge1}\\frac{x^2}{(p^2-x)^2}\\)</span></p>\n<p><span class=\"math inline\">\\(Z^2(x)-xZ&#39;(x) + Z(x) = 2\\sum_{p\\ne q}\\frac{x^2}{(q^2-p^2)(p^2-x)}\\)</span>.</p>\n<p>A <span class=\"math inline\">\\(p\\)</span> fixé, <span class=\"math inline\">\\(\\sum_{q\\ne p}\\frac1{q^2-p^2} = \\frac{1}{2p}\\sum_{q\\ne p}\\Bigl(\\frac1{q-p}-\\frac1{q+p}\\Bigr) = \\frac1{2p}\\Bigl(\\frac1p + \\frac1{2p}\\Bigr) = \\frac{3}{4p^2}\\)</span>.</p>\n<p>Donc <span class=\"math inline\">\\(Z^2(x)-xZ&#39;(x) + Z(x) = \\frac32\\sum_{p\\ge 1}\\frac{x^2}{p^2(p^2-x)} = \\frac32(Z(x)-x\\zeta(2))\\)</span>.</p>\n<p>Rmq : <span class=\"math inline\">\\(2Z(x^2) = 1-\\pi x\\mathrm{cotan}(\\pi x)\\)</span> (Euler).</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "uuid": "i1Ll",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6965",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-04-08",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Polynôme, fraction rationnelle",
+    "sousChapitre": "Fraction rationnelle",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:09.363Z"
+  },
+  "contenu": [
+    {
+      "id": "e77d8d5e-17fc-49c5-91bc-c7ac42dc099d",
+      "type": "description",
+      "value": {
+        "latex": "Soit $F=\\frac{P}{Q}$ une fraction rationnelle écrite sous forme irréductible. \nOn suppose qu'il existe une fraction rationnelle $G$ telle que \n$$G\\left(\\frac{P(X)}{Q(X)}\\right)=X$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(F=\\frac{P}{Q}\\)</span> une fraction rationnelle écrite sous forme irréductible. On suppose qu’il existe une fraction rationnelle <span class=\"math inline\">\\(G\\)</span> telle que <span class=\"math display\">\\[G\\left(\\frac{P(X)}{Q(X)}\\right)=X\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8d687707-14ed-40b7-a674-7a4d39fcd77f",
+      "type": "question",
+      "value": {
+        "latex": "Si $G=\\frac{a_nX^n+\\cdots+a_1X+a_0}{b_nX^n+\\cdots+b_1X+b_0}$, montrer que $P$ divise $(a_0-b_0X)$ et que $Q$ divise $(a_n-b_nX)$.",
+        "html": "<p>Si <span class=\"math inline\">\\(G=\\frac{a_nX^n+\\cdots+a_1X+a_0}{b_nX^n+\\cdots+b_1X+b_0}\\)</span>, montrer que <span class=\"math inline\">\\(P\\)</span> divise <span class=\"math inline\">\\((a_0-b_0X)\\)</span> et que <span class=\"math inline\">\\(Q\\)</span> divise <span class=\"math inline\">\\((a_n-b_nX)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d475abc8-1a58-458a-a9a4-e68ebeafad32",
+      "type": "reponse",
+      "value": {
+        "latex": "Posons $G=\\frac{A}{B}$ et $F = \\frac{P}{Q}$ (avec $A,B,P,Q$ des polynômes).\nOn réécrit l'identité $G(F(X))=X$ sous la forme $A(F(X))=XB(F(X))$. \nPosons $n=\\mathrm{max}(\\mathrm{deg}A,\\mathrm{deg}B)$.\nAlors $n\\ge 1$ car sinon, \n$A$ et $B$ seraient constants et $G(\\frac{P}{Q})=X$ aussi.\n\nOn a donc $A=\\sum_{k=0}^na_kX^k$ et $B=\\sum_{k=0}^nb_kX^k$, où $(a_n,b_n)\\neq(0,0)$, et l'identité devient\n$$\\sum_{k=0}^na_k\\left(\\frac{P}{Q}\\right)^k=X\\sum_{k=0}^nb_k\\left(\\frac{P}{Q}\\right)^k$$\nEn multipliant par $Q^n$, cela donne\n$$\\sum_{k=0}^n a_kP^kQ^{n-k}= \\sum_{k=0}^n b_k X P^kQ^{n-k}.$$\nDonc \n$$(a_0-b_0X)Q^n \\quad + \\quad (\\cdots + (a_k-b_kX) P^kQ^{n-k} + \\cdots)\\quad + \\quad (a_n-b_nX)P^n = 0$$\noù les termes dans la parenthèse centrale sont tous divisibles par $P$ et par $Q$. \nComme $Q$ divise aussi le premier terme, alors $Q$ divise $(a_n-b_nX)P^n$.\nD'après le lemme de Gauss, puisque $P$ et $Q$ sont premiers entre eux, alors $Q$ divise $(a_n-b_nX)$. \nDe même, $P$ divise tous les termes de la parenthèse centrale et le dernier, donc $P$ divise aussi $(a_0-b_0X)Q^n$, \ndonc $P$ divise $(a_0-b_0X)$.",
+        "html": "<p>Posons <span class=\"math inline\">\\(G=\\frac{A}{B}\\)</span> et <span class=\"math inline\">\\(F = \\frac{P}{Q}\\)</span> (avec <span class=\"math inline\">\\(A,B,P,Q\\)</span> des polynômes). On réécrit l’identité <span class=\"math inline\">\\(G(F(X))=X\\)</span> sous la forme <span class=\"math inline\">\\(A(F(X))=XB(F(X))\\)</span>. Posons <span class=\"math inline\">\\(n=\\mathrm{max}(\\mathrm{deg}A,\\mathrm{deg}B)\\)</span>. Alors <span class=\"math inline\">\\(n\\ge 1\\)</span> car sinon, <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span> seraient constants et <span class=\"math inline\">\\(G(\\frac{P}{Q})=X\\)</span> aussi.</p>\n<p>On a donc <span class=\"math inline\">\\(A=\\sum_{k=0}^na_kX^k\\)</span> et <span class=\"math inline\">\\(B=\\sum_{k=0}^nb_kX^k\\)</span>, où <span class=\"math inline\">\\((a_n,b_n)\\neq(0,0)\\)</span>, et l’identité devient <span class=\"math display\">\\[\\sum_{k=0}^na_k\\left(\\frac{P}{Q}\\right)^k=X\\sum_{k=0}^nb_k\\left(\\frac{P}{Q}\\right)^k\\]</span> En multipliant par <span class=\"math inline\">\\(Q^n\\)</span>, cela donne <span class=\"math display\">\\[\\sum_{k=0}^n a_kP^kQ^{n-k}= \\sum_{k=0}^n b_k X P^kQ^{n-k}.\\]</span> Donc <span class=\"math display\">\\[(a_0-b_0X)Q^n \\quad + \\quad (\\cdots + (a_k-b_kX) P^kQ^{n-k} + \\cdots)\\quad + \\quad (a_n-b_nX)P^n = 0\\]</span> où les termes dans la parenthèse centrale sont tous divisibles par <span class=\"math inline\">\\(P\\)</span> et par <span class=\"math inline\">\\(Q\\)</span>. Comme <span class=\"math inline\">\\(Q\\)</span> divise aussi le premier terme, alors <span class=\"math inline\">\\(Q\\)</span> divise <span class=\"math inline\">\\((a_n-b_nX)P^n\\)</span>. D’après le lemme de Gauss, puisque <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(Q\\)</span> sont premiers entre eux, alors <span class=\"math inline\">\\(Q\\)</span> divise <span class=\"math inline\">\\((a_n-b_nX)\\)</span>. De même, <span class=\"math inline\">\\(P\\)</span> divise tous les termes de la parenthèse centrale et le dernier, donc <span class=\"math inline\">\\(P\\)</span> divise aussi <span class=\"math inline\">\\((a_0-b_0X)Q^n\\)</span>, donc <span class=\"math inline\">\\(P\\)</span> divise <span class=\"math inline\">\\((a_0-b_0X)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8c9a15cf-5dbe-4481-b761-bed0ba39aea1",
+      "type": "question",
+      "value": {
+        "latex": "En déduire que $F=\\frac{P}{Q}$ est de la forme $F(X)=\\frac{aX+b}{cX+d}$.",
+        "html": "<p>En déduire que <span class=\"math inline\">\\(F=\\frac{P}{Q}\\)</span> est de la forme <span class=\"math inline\">\\(F(X)=\\frac{aX+b}{cX+d}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "12dfa29d-b421-4b3d-a6d9-d95c05ce03cf",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons de plus qu'on a écrit $G=\\frac{A}{B}$ sous forme irréductible, \nc'est-à-dire avec $\\pgcd(A,B)=1$. \nVu que $a_n$ et $b_n$ ne sont pas tous les deux nuls, alors $a_n-b_nX$ n'est pas le polynôme nul.\nComme $Q$ divise $a_n-b_nX$ alors nécessairement $Q$ est de degré au plus $1$ ; on écrit $Q(X)=cX+d$. \nPar ailleurs, $a_0-b_0X$ n'est pas non plus le polynôme nul, car sinon on aurait $a_0=b_0=0$ et \ndonc $A$ et $B$ seraient tous les deux sans terme constant, donc divisibles par $X$ \n(ce qui est impossible puisqu'ils sont premiers entre eux).  \nDonc $P$ est aussi de degré au plus $1$ et on écrit $P(X)=aX+b$. \nConclusion : $F(X)=\\frac{aX+b}{cX+d}$.\nNotez que $a$ et $b$ ne sont pas tous les deux nuls en même temps (de même pour $b$ et $d$).",
+        "html": "<p>Supposons de plus qu’on a écrit <span class=\"math inline\">\\(G=\\frac{A}{B}\\)</span> sous forme irréductible, c’est-à-dire avec <span class=\"math inline\">\\(\\pgcd(A,B)=1\\)</span>. Vu que <span class=\"math inline\">\\(a_n\\)</span> et <span class=\"math inline\">\\(b_n\\)</span> ne sont pas tous les deux nuls, alors <span class=\"math inline\">\\(a_n-b_nX\\)</span> n’est pas le polynôme nul. Comme <span class=\"math inline\">\\(Q\\)</span> divise <span class=\"math inline\">\\(a_n-b_nX\\)</span> alors nécessairement <span class=\"math inline\">\\(Q\\)</span> est de degré au plus <span class=\"math inline\">\\(1\\)</span> ; on écrit <span class=\"math inline\">\\(Q(X)=cX+d\\)</span>. Par ailleurs, <span class=\"math inline\">\\(a_0-b_0X\\)</span> n’est pas non plus le polynôme nul, car sinon on aurait <span class=\"math inline\">\\(a_0=b_0=0\\)</span> et donc <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span> seraient tous les deux sans terme constant, donc divisibles par <span class=\"math inline\">\\(X\\)</span> (ce qui est impossible puisqu’ils sont premiers entre eux). Donc <span class=\"math inline\">\\(P\\)</span> est aussi de degré au plus <span class=\"math inline\">\\(1\\)</span> et on écrit <span class=\"math inline\">\\(P(X)=aX+b\\)</span>. Conclusion : <span class=\"math inline\">\\(F(X)=\\frac{aX+b}{cX+d}\\)</span>. Notez que <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> ne sont pas tous les deux nuls en même temps (de même pour <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(d\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "d928d7ee-faa1-4a03-a633-acbb6dc16deb",
+      "type": "question",
+      "value": {
+        "latex": "Pour $Y=\\frac{aX+b}{cX+d}$, exprimer $X$ en fonction de $Y$. En déduire l'expression de $G$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(Y=\\frac{aX+b}{cX+d}\\)</span>, exprimer <span class=\"math inline\">\\(X\\)</span> en fonction de <span class=\"math inline\">\\(Y\\)</span>. En déduire l’expression de <span class=\"math inline\">\\(G\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0dd3b340-6254-4871-8768-0a1c0e6f2c14",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $Y = \\frac{aX+b}{cX+d}$ avec $(a,b) \\neq (0,0)$,\nalors $X = -\\frac{dY-b}{cY-a}$. \nAutrement dit si on note\n$\\phi(X)= \\frac{aX+b}{cX+d}$, alors sa bijection réciproque est \n$\\phi^{-1}(Y) = -\\frac{dY-b}{cY-a}$.\n\nNous avons prouvé que $G\\left( \\frac{aX+b}{cX+d}\\right) =X$.\nCette identité s'écrit $G\\big( \\phi(X) \\big)=X$.\nAppliquée en $X = \\phi^{-1}(Y)$ elle devient\n$G\\big( \\phi( \\phi^{-1}(Y) ) \\big)=\\phi^{-1}(Y)$, c'est-à-dire\n$G(Y) = \\phi^{-1}(Y)$.\nAinsi $G(Y) = -\\frac{dY-b}{cY-a}$.",
+        "html": "<p>Si <span class=\"math inline\">\\(Y = \\frac{aX+b}{cX+d}\\)</span> avec <span class=\"math inline\">\\((a,b) \\neq (0,0)\\)</span>, alors <span class=\"math inline\">\\(X = -\\frac{dY-b}{cY-a}\\)</span>. Autrement dit si on note <span class=\"math inline\">\\(\\phi(X)= \\frac{aX+b}{cX+d}\\)</span>, alors sa bijection réciproque est <span class=\"math inline\">\\(\\phi^{-1}(Y) = -\\frac{dY-b}{cY-a}\\)</span>.</p>\n<p>Nous avons prouvé que <span class=\"math inline\">\\(G\\left( \\frac{aX+b}{cX+d}\\right) =X\\)</span>. Cette identité s’écrit <span class=\"math inline\">\\(G\\big( \\phi(X) \\big)=X\\)</span>. Appliquée en <span class=\"math inline\">\\(X = \\phi^{-1}(Y)\\)</span> elle devient <span class=\"math inline\">\\(G\\big( \\phi( \\phi^{-1}(Y) ) \\big)=\\phi^{-1}(Y)\\)</span>, c’est-à-dire <span class=\"math inline\">\\(G(Y) = \\phi^{-1}(Y)\\)</span>. Ainsi <span class=\"math inline\">\\(G(Y) = -\\frac{dY-b}{cY-a}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "299c97a2-86db-4bd2-a3d0-52cff31148bb",
+      "type": "indication",
+      "value": {
+        "latex": "\\'Ecrire $G=\\frac{A}{B}$ sous forme irréductible (on pourra choisir par exemple \n$n=\\mathrm{max}(\\mathrm{deg}A,\\mathrm{deg}B)$).",
+        "html": "<p>Écrire <span class=\"math inline\">\\(G=\\frac{A}{B}\\)</span> sous forme irréductible (on pourra choisir par exemple <span class=\"math inline\">\\(n=\\mathrm{max}(\\mathrm{deg}A,\\mathrm{deg}B)\\)</span>).</p>\n"
+      }
+    }
+  ]
+}

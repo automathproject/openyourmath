@@ -1,0 +1,51 @@
+{
+  "uuid": "pFlK",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5379",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:12.505Z"
+  },
+  "contenu": [
+    {
+      "id": "22d6eead-6635-4c8d-8a25-a5ec1d138c01",
+      "type": "description",
+      "value": {
+        "latex": "Soit $E$ un ensemble contenant au moins $n$ éléments et $(f_1,f_2...,f_n)$ un $n$-uplet de fonctions de $E$ dans $\\Cc$. Montrer que les propositions suivantes sont équivalentes~:",
+        "html": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un ensemble contenant au moins <span class=\"math inline\">\\(n\\)</span> éléments et <span class=\"math inline\">\\((f_1,f_2...,f_n)\\)</span> un <span class=\"math inline\">\\(n\\)</span>-uplet de fonctions de <span class=\"math inline\">\\(E\\)</span> dans <span class=\"math inline\">\\(\\Cc\\)</span>. Montrer que les propositions suivantes sont équivalentes :</p>\n"
+      }
+    },
+    {
+      "id": "d33eeb5e-6675-41a7-b30e-d041ce9ee6ea",
+      "type": "question",
+      "value": {
+        "latex": "la famille $(f_1,...,f_n)$ est libre ;",
+        "html": "<p>la famille <span class=\"math inline\">\\((f_1,...,f_n)\\)</span> est libre ;</p>\n"
+      }
+    },
+    {
+      "id": "e00d7741-d71d-4b31-9690-077d93697f5d",
+      "type": "question",
+      "value": {
+        "latex": "il existe $n$ éléments $a_1$, $a_2$,..., $a_n$ dans $E$ tels que $\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}\\neq0$.",
+        "html": "<p>il existe <span class=\"math inline\">\\(n\\)</span> éléments <span class=\"math inline\">\\(a_1\\)</span>, <span class=\"math inline\">\\(a_2\\)</span>,..., <span class=\"math inline\">\\(a_n\\)</span> dans <span class=\"math inline\">\\(E\\)</span> tels que <span class=\"math inline\">\\(\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}\\neq0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "127ee121-562c-4996-aecb-2903d53e1936",
+      "type": "reponse",
+      "value": {
+        "latex": "$(1)\\Rightarrow(2)$. Montrons par récurrence sur $n\\geq1$ que~:~$(\\forall(a_1,...,a_n)\\in E^n/\\;(\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}= 0)\\Rightarrow((f_1,...,f_n)$ liée).\n\nPour $n=1$,\n\n$$(\\forall a_1\\in E/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq1}=0)\\Rightarrow(\\forall a_1/\\;f_1(a_1)=0)\\Rightarrow(f_1=0)\\Rightarrow(f_1)\\;\\mbox{liée}.$$\n\nSoit $n\\geq2$. Supposons que $(\\forall(a_1,...,a_{n-1})\\in E^{n-1}/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}=0)\\Rightarrow(f_1,...,f_{n-1})$ liée.\n\nSoient $f_1$,..., $f_n$ $n$ fonctions telles que $\\forall(a_1,...,a_n)\\in E^n/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}=0$.\n\nSi $(f_1,...,f_{n-1})$ est liée alors $(f_1,...,f_n)$ est liée en tant que sur famille d'une famille liée. Si $(f_1,...,f_{n-1})$ est libre, par hypothèse de récurrence, il existe $a_1$,...,$a_{n-1}$ $n-1$ éléments de $E$ tels que $\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}\\neq 0$. Mais, par hypothèse, on a~:\n\n$$\\forall x\\in E,\\;\\mbox{det}(f_i(a_1),...,f_i(a_{n-1}),f_i(x))_{1\\leq i\\leq n}=0.$$\n\nEn développant ce déterminant suivant sa dernière colonne, on obtient une égalité du type $\\sum_{i=1}^{n}\\lambda_if_i(x)=0$ où les $\\lambda_i$ sont indépendants de $x$ ou encore une égalité du type $\\sum_{i=1}^{n}\\lambda_if_i=0$ avec $\\lambda_n=\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}\\neq0$ ce qui montre encore que $(f_1,...,f_n)$ est liée.\n\n$(2)\\Rightarrow(1)$. On suppose que $\\exists(a_1,...,a_n)\\in E^n/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}\\neq 0)$. Montrons que $(f_1,...,f_n)$ est libre.\n\nSoit $(\\lambda_1,...,\\lambda_n)\\in\\Cc^n$ tel que $\\sum_{i=1}^{n}\\lambda_if_i=0$. En particulier~:~$\\forall j\\in\\{1,...,n\\},\\;\\sum_{i=1}^{n}\\lambda_if_i(a_j)=0$. Les $n$ égalités précédentes fournissent un système d'équations linéaires en les $\\lambda_i$ à $n$ inconnues, $n$ équations, de déterminant non nul et homogène ou encore un système de \\textsc{Cramer} homogène dont on sait qu'il admet pour unique solution $(\\lambda_1,...,\\lambda_n)=(0,...,0)$. On a montré que $(f_1,...,f_n)$ est libre.",
+        "html": "<p><span class=\"math inline\">\\((1)\\Rightarrow(2)\\)</span>. Montrons par récurrence sur <span class=\"math inline\">\\(n\\geq1\\)</span> que : <span class=\"math inline\">\\((\\forall(a_1,...,a_n)\\in E^n/\\;(\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}= 0)\\Rightarrow((f_1,...,f_n)\\)</span> liée).</p>\n<p>Pour <span class=\"math inline\">\\(n=1\\)</span>,</p>\n<p><span class=\"math display\">\\[(\\forall a_1\\in E/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq1}=0)\\Rightarrow(\\forall a_1/\\;f_1(a_1)=0)\\Rightarrow(f_1=0)\\Rightarrow(f_1)\\;\\mbox{liée}.\\]</span></p>\n<p>Soit <span class=\"math inline\">\\(n\\geq2\\)</span>. Supposons que <span class=\"math inline\">\\((\\forall(a_1,...,a_{n-1})\\in E^{n-1}/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}=0)\\Rightarrow(f_1,...,f_{n-1})\\)</span> liée.</p>\n<p>Soient <span class=\"math inline\">\\(f_1\\)</span>,..., <span class=\"math inline\">\\(f_n\\)</span> <span class=\"math inline\">\\(n\\)</span> fonctions telles que <span class=\"math inline\">\\(\\forall(a_1,...,a_n)\\in E^n/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}=0\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\((f_1,...,f_{n-1})\\)</span> est liée alors <span class=\"math inline\">\\((f_1,...,f_n)\\)</span> est liée en tant que sur famille d’une famille liée. Si <span class=\"math inline\">\\((f_1,...,f_{n-1})\\)</span> est libre, par hypothèse de récurrence, il existe <span class=\"math inline\">\\(a_1\\)</span>,...,<span class=\"math inline\">\\(a_{n-1}\\)</span> <span class=\"math inline\">\\(n-1\\)</span> éléments de <span class=\"math inline\">\\(E\\)</span> tels que <span class=\"math inline\">\\(\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}\\neq 0\\)</span>. Mais, par hypothèse, on a :</p>\n<p><span class=\"math display\">\\[\\forall x\\in E,\\;\\mbox{det}(f_i(a_1),...,f_i(a_{n-1}),f_i(x))_{1\\leq i\\leq n}=0.\\]</span></p>\n<p>En développant ce déterminant suivant sa dernière colonne, on obtient une égalité du type <span class=\"math inline\">\\(\\sum_{i=1}^{n}\\lambda_if_i(x)=0\\)</span> où les <span class=\"math inline\">\\(\\lambda_i\\)</span> sont indépendants de <span class=\"math inline\">\\(x\\)</span> ou encore une égalité du type <span class=\"math inline\">\\(\\sum_{i=1}^{n}\\lambda_if_i=0\\)</span> avec <span class=\"math inline\">\\(\\lambda_n=\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n-1}\\neq0\\)</span> ce qui montre encore que <span class=\"math inline\">\\((f_1,...,f_n)\\)</span> est liée.</p>\n<p><span class=\"math inline\">\\((2)\\Rightarrow(1)\\)</span>. On suppose que <span class=\"math inline\">\\(\\exists(a_1,...,a_n)\\in E^n/\\;\\mbox{det}(f_i(a_j))_{1\\leq i,j\\leq n}\\neq 0)\\)</span>. Montrons que <span class=\"math inline\">\\((f_1,...,f_n)\\)</span> est libre.</p>\n<p>Soit <span class=\"math inline\">\\((\\lambda_1,...,\\lambda_n)\\in\\Cc^n\\)</span> tel que <span class=\"math inline\">\\(\\sum_{i=1}^{n}\\lambda_if_i=0\\)</span>. En particulier : <span class=\"math inline\">\\(\\forall j\\in\\{1,...,n\\},\\;\\sum_{i=1}^{n}\\lambda_if_i(a_j)=0\\)</span>. Les <span class=\"math inline\">\\(n\\)</span> égalités précédentes fournissent un système d’équations linéaires en les <span class=\"math inline\">\\(\\lambda_i\\)</span> à <span class=\"math inline\">\\(n\\)</span> inconnues, <span class=\"math inline\">\\(n\\)</span> équations, de déterminant non nul et homogène ou encore un système de <span class=\"smallcaps\">Cramer</span> homogène dont on sait qu’il admet pour unique solution <span class=\"math inline\">\\((\\lambda_1,...,\\lambda_n)=(0,...,0)\\)</span>. On a montré que <span class=\"math inline\">\\((f_1,...,f_n)\\)</span> est libre.</p>\n"
+      }
+    }
+  ]
+}

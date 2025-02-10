@@ -1,0 +1,123 @@
+{
+  "uuid": "Vn9T",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5233",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Suite",
+    "sousChapitre": "Convergence",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:02.340Z"
+  },
+  "contenu": [
+    {
+      "id": "14bb0115-bf11-4c78-8b1d-220db2df5ee0",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "91fb20e7-71a9-4e49-85e5-e14d1388ad8f",
+      "type": "question",
+      "value": {
+        "latex": "Soit $u$ une suite de réels strictement positifs. Montrer que si la suite $(\\frac{u_{n+1}}{u_n})$ converge vers un réel $\\ell$, alors $(\\sqrt[n]{u_n})$ converge et a même limite.",
+        "html": "<p>Soit <span class=\"math inline\">\\(u\\)</span> une suite de réels strictement positifs. Montrer que si la suite <span class=\"math inline\">\\((\\frac{u_{n+1}}{u_n})\\)</span> converge vers un réel <span class=\"math inline\">\\(\\ell\\)</span>, alors <span class=\"math inline\">\\((\\sqrt[n]{u_n})\\)</span> converge et a même limite.</p>\n"
+      }
+    },
+    {
+      "id": "4e13e2ef-289f-4bed-98b0-60e4a815f0e0",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons $\\ell>0$. Soit $\\varepsilon$ un réel strictement positif, élément de $]0,\\ell[$.\n$\\exists n_0\\in\\Nn/\\;\\forall n\\in\\Nn,\\;(n\\geq n_0\\Rightarrow0< \\ell-\\frac{\\varepsilon}{2}<\\frac{u_{n+1}}{u_n}<\\ell+\\frac{\\varepsilon}{2})$.\nPour $n>n_0$, puisque $u_n=\\frac{u_n}{u_{n-1}}\\frac{u_{n-1}}{u_{n-2}}\\frac{u_{n-2}}{u_{n-3}}...\\frac{u_{n_0+1}}{u_{n_0}}u_{n_0}$, on a \n$u_{n_0}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{n-n_0}\\leq  u_n\\leq u_{n_0}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{n-n_0}$, et donc \n\n$$(u_{n_0})^{1/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)\\leq \\sqrt[n]{u_n}\\leq(u_{n_0})^{1/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right).$$\nMaintenant, le membre de gauche de cet encadrement tend vers $\\ell-\\frac{\\varepsilon}{2}$, et le membre de droite rend vers $\\ell+\\frac{\\varepsilon}{2}$. Par suite, on peut trouver un entier naturel $n_1\\geq n_0$ tel que, pour $n\\geq n_1$, $(u_{n_0})^{1/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)>\\ell-\\varepsilon$, et $(u_{n_0})^{1/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)<\\ell+\\varepsilon$. Pour $n\\geq n_1$, on a alors $\\ell-\\varepsilon<\\sqrt[n]{u_n}<\\ell+\\varepsilon$.\nOn a montré que $\\forall\\varepsilon>0,\\;\\exists n_1\\in\\Nn/\\;(\\forall n\\in\\Nn),\\;(n\\geq n_1\\Rightarrow\\ell-\\varepsilon<\\sqrt[n]{u_n}<\\ell+\\varepsilon)$. Donc, $\\sqrt[n]{u_n}$ tend vers $\\ell$.\nOn traite de façon analogue le cas $\\ell=0$.",
+        "html": "<p>Supposons <span class=\"math inline\">\\(\\ell&gt;0\\)</span>. Soit <span class=\"math inline\">\\(\\varepsilon\\)</span> un réel strictement positif, élément de <span class=\"math inline\">\\(]0,\\ell[\\)</span>. <span class=\"math inline\">\\(\\exists n_0\\in\\Nn/\\;\\forall n\\in\\Nn,\\;(n\\geq n_0\\Rightarrow0&lt; \\ell-\\frac{\\varepsilon}{2}&lt;\\frac{u_{n+1}}{u_n}&lt;\\ell+\\frac{\\varepsilon}{2})\\)</span>. Pour <span class=\"math inline\">\\(n&gt;n_0\\)</span>, puisque <span class=\"math inline\">\\(u_n=\\frac{u_n}{u_{n-1}}\\frac{u_{n-1}}{u_{n-2}}\\frac{u_{n-2}}{u_{n-3}}...\\frac{u_{n_0+1}}{u_{n_0}}u_{n_0}\\)</span>, on a <span class=\"math inline\">\\(u_{n_0}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{n-n_0}\\leq  u_n\\leq u_{n_0}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{n-n_0}\\)</span>, et donc</p>\n<p><span class=\"math display\">\\[(u_{n_0})^{1/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)\\leq \\sqrt[n]{u_n}\\leq(u_{n_0})^{1/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right).\\]</span> Maintenant, le membre de gauche de cet encadrement tend vers <span class=\"math inline\">\\(\\ell-\\frac{\\varepsilon}{2}\\)</span>, et le membre de droite rend vers <span class=\"math inline\">\\(\\ell+\\frac{\\varepsilon}{2}\\)</span>. Par suite, on peut trouver un entier naturel <span class=\"math inline\">\\(n_1\\geq n_0\\)</span> tel que, pour <span class=\"math inline\">\\(n\\geq n_1\\)</span>, <span class=\"math inline\">\\((u_{n_0})^{1/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell-\\frac{\\varepsilon}{2}\\right)&gt;\\ell-\\varepsilon\\)</span>, et <span class=\"math inline\">\\((u_{n_0})^{1/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)^{-n_0/n}\\left(\\ell+\\frac{\\varepsilon}{2}\\right)&lt;\\ell+\\varepsilon\\)</span>. Pour <span class=\"math inline\">\\(n\\geq n_1\\)</span>, on a alors <span class=\"math inline\">\\(\\ell-\\varepsilon&lt;\\sqrt[n]{u_n}&lt;\\ell+\\varepsilon\\)</span>. On a montré que <span class=\"math inline\">\\(\\forall\\varepsilon&gt;0,\\;\\exists n_1\\in\\Nn/\\;(\\forall n\\in\\Nn),\\;(n\\geq n_1\\Rightarrow\\ell-\\varepsilon&lt;\\sqrt[n]{u_n}&lt;\\ell+\\varepsilon)\\)</span>. Donc, <span class=\"math inline\">\\(\\sqrt[n]{u_n}\\)</span> tend vers <span class=\"math inline\">\\(\\ell\\)</span>. On traite de façon analogue le cas <span class=\"math inline\">\\(\\ell=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d66acb7a-0225-4ba2-bf71-810ec942c93b",
+      "type": "question",
+      "value": {
+        "latex": "Etudier la réciproque.",
+        "html": "<p>Etudier la réciproque.</p>\n"
+      }
+    },
+    {
+      "id": "ec069ac8-8f88-4257-9f74-05ce7d7f6307",
+      "type": "reponse",
+      "value": {
+        "latex": "Soient $a$ et $b$ deux réels tels que $0<a<b$. Soit $u$ la suite définie par \n\n$$\\forall p\\in\\Nn,\\;u_{2p}=a^pb^p\\;\\mbox{et}\\;u_{2p+1}=a^{p+1}b^p.$$\n(on part de $1$ puis on multiplie alternativement par $a$ ou $b$).\nAlors, $\\sqrt[2p]{u_{2p}}=\\sqrt{ab}$ et $\\sqrt[2p+1]{u_{2p+1}}=a^{\\frac{p+1}{2p+1}}b^{\\frac{p}{2p+1}}\\rightarrow\\sqrt{ab}$. Donc, $\\sqrt[n]{u_n}$ tend vers $\\sqrt{ab}$ (et en particulier converge).\nOn a bien sûr $\\frac{u_{2p+1}}{u_{2p}}=a$ et $\\frac{u_{2p+2}}{u_{2p+1}}=b$. La suite $\\left(\\frac{u_{n+1}}{u_n}\\right)$ admet donc deux suites extraites convergentes de limites distinctes et est ainsi divergente. La réciproque du 1) est donc fausse.",
+        "html": "<p>Soient <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> deux réels tels que <span class=\"math inline\">\\(0&lt;a&lt;b\\)</span>. Soit <span class=\"math inline\">\\(u\\)</span> la suite définie par</p>\n<p><span class=\"math display\">\\[\\forall p\\in\\Nn,\\;u_{2p}=a^pb^p\\;\\mbox{et}\\;u_{2p+1}=a^{p+1}b^p.\\]</span> (on part de <span class=\"math inline\">\\(1\\)</span> puis on multiplie alternativement par <span class=\"math inline\">\\(a\\)</span> ou <span class=\"math inline\">\\(b\\)</span>). Alors, <span class=\"math inline\">\\(\\sqrt[2p]{u_{2p}}=\\sqrt{ab}\\)</span> et <span class=\"math inline\">\\(\\sqrt[2p+1]{u_{2p+1}}=a^{\\frac{p+1}{2p+1}}b^{\\frac{p}{2p+1}}\\rightarrow\\sqrt{ab}\\)</span>. Donc, <span class=\"math inline\">\\(\\sqrt[n]{u_n}\\)</span> tend vers <span class=\"math inline\">\\(\\sqrt{ab}\\)</span> (et en particulier converge). On a bien sûr <span class=\"math inline\">\\(\\frac{u_{2p+1}}{u_{2p}}=a\\)</span> et <span class=\"math inline\">\\(\\frac{u_{2p+2}}{u_{2p+1}}=b\\)</span>. La suite <span class=\"math inline\">\\(\\left(\\frac{u_{n+1}}{u_n}\\right)\\)</span> admet donc deux suites extraites convergentes de limites distinctes et est ainsi divergente. La réciproque du 1) est donc fausse.</p>\n"
+      }
+    },
+    {
+      "id": "2db6b78f-a731-4c92-8f24-ce7ec41741f9",
+      "type": "question",
+      "value": {
+        "latex": "Application~:~limites de \n  \\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "3d399be1-c026-4df8-9c64-855898272506",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "baae84c2-2aba-410b-9d94-c2b340b4354a",
+      "type": "question",
+      "value": {
+        "latex": "$\\sqrt[n]{C_{2n}^n}$,",
+        "html": "<p><span class=\"math inline\">\\(\\sqrt[n]{C_{2n}^n}\\)</span>,</p>\n"
+      }
+    },
+    {
+      "id": "713c515a-7c73-4249-b997-4284682cf17a",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n$ entier naturel donné, posons $u_n=\\dbinom{2n}{n}$.\n \n$$\\frac{u_{n+1}}{u_n}=\\frac{(2n+2)!}{(2n)!}\\frac{n!^2}{(n+1)!^2}=\\frac{(2n+2)(2n+1)}{(n+1)^2}=\\frac{4n+2}{n+1}.$$\nAinsi, $\\frac{u_{n+1}}{u_n}$ tend vers $4$ quand $n$ tend vers $+\\infty$, et donc $\\sqrt[n]{\\dbinom{2n}{n}}$ tend vers $4$ quand $n$ tend vers $+\\infty$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné, posons <span class=\"math inline\">\\(u_n=\\dbinom{2n}{n}\\)</span>.</p>\n<p><span class=\"math display\">\\[\\frac{u_{n+1}}{u_n}=\\frac{(2n+2)!}{(2n)!}\\frac{n!^2}{(n+1)!^2}=\\frac{(2n+2)(2n+1)}{(n+1)^2}=\\frac{4n+2}{n+1}.\\]</span> Ainsi, <span class=\"math inline\">\\(\\frac{u_{n+1}}{u_n}\\)</span> tend vers <span class=\"math inline\">\\(4\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, et donc <span class=\"math inline\">\\(\\sqrt[n]{\\dbinom{2n}{n}}\\)</span> tend vers <span class=\"math inline\">\\(4\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bf144a21-4be5-4f38-983d-618e68d1b867",
+      "type": "question",
+      "value": {
+        "latex": "$\\frac{n}{\\sqrt[n]{n!}}$,",
+        "html": "<p><span class=\"math inline\">\\(\\frac{n}{\\sqrt[n]{n!}}\\)</span>,</p>\n"
+      }
+    },
+    {
+      "id": "bbd999ba-3092-4d6f-9ca7-1ee4e08c9247",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n$ entier naturel donné, posons $u_n=\\frac{n^n}{n!}$.\n \n$$\\frac{u_{n+1}}{u_n}=\\frac{(n+1)^{n+1}}{n^n}\\frac{n!}{(n+1)!}=\\left(1+\\frac{1}{n}\\right)^n.$$\nAinsi, $\\frac{u_{n+1}}{u_n}$ tend vers $e$ quand $n$ tend vers $+\\infty$, et donc $\\sqrt[n]{u_n}=\\frac{n}{\\sqrt[n]{n!}}$ tend vers $e$ quand $n$ tend vers $+\\infty$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné, posons <span class=\"math inline\">\\(u_n=\\frac{n^n}{n!}\\)</span>.</p>\n<p><span class=\"math display\">\\[\\frac{u_{n+1}}{u_n}=\\frac{(n+1)^{n+1}}{n^n}\\frac{n!}{(n+1)!}=\\left(1+\\frac{1}{n}\\right)^n.\\]</span> Ainsi, <span class=\"math inline\">\\(\\frac{u_{n+1}}{u_n}\\)</span> tend vers <span class=\"math inline\">\\(e\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, et donc <span class=\"math inline\">\\(\\sqrt[n]{u_n}=\\frac{n}{\\sqrt[n]{n!}}\\)</span> tend vers <span class=\"math inline\">\\(e\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ff511587-c63f-4619-b80d-25b91cb18d16",
+      "type": "question",
+      "value": {
+        "latex": "$\\frac{1}{n^2}\\sqrt[n]{\\frac{(3n)!}{n!}}$.",
+        "html": "<p><span class=\"math inline\">\\(\\frac{1}{n^2}\\sqrt[n]{\\frac{(3n)!}{n!}}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6c2c0525-f48f-43d4-9f08-b1e8bdb963ba",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n$ entier naturel donné, posons $u_n=\\frac{(3n)!}{n^{2n}n!}$.\n\n$$\\begin{align*}\n\\frac{u_{n+1}}{u_n}&=\\frac{(3n+3)!}{(3n)!}\\frac{n^{2n}}{(n+1)^{2n+2}}\\frac{n!}{(n+1)!}\n=\\frac{(3n+3)(3n+2)(3n+1)}{(n+1)^2(n+1)}\\left(\\frac{n}{n+1}\\right)^{2n}\\\\\n &=\n\\frac{3(3n+2)(3n+1)}{(n+1)^2}\\left(1+\\frac{1}{n}\\right)^{-2n}.\n\\end{align*}$$\nMaintenant, $\\left(1+\\frac{1}{n}\\right)^{-2n}=e^{-2n\\ln(1+1/n)}=e^{-2n(\\frac{1}{n}+o(\\frac{1}{n}))}=e^{-2+o(1)}$, et donc $\\frac{u_{n+1}}{u_n}$ tend vers $27e^{-2}$. Par suite, $\\frac{1}{n^2}\\sqrt[n]{\\frac{(3n)!}{n!}}$ tend vers $\\frac{27}{e^2}$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné, posons <span class=\"math inline\">\\(u_n=\\frac{(3n)!}{n^{2n}n!}\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\frac{u_{n+1}}{u_n}&amp;=\\frac{(3n+3)!}{(3n)!}\\frac{n^{2n}}{(n+1)^{2n+2}}\\frac{n!}{(n+1)!}\n=\\frac{(3n+3)(3n+2)(3n+1)}{(n+1)^2(n+1)}\\left(\\frac{n}{n+1}\\right)^{2n}\\\\\n &amp;=\n\\frac{3(3n+2)(3n+1)}{(n+1)^2}\\left(1+\\frac{1}{n}\\right)^{-2n}.\n\\end{align*}\\]</span> Maintenant, <span class=\"math inline\">\\(\\left(1+\\frac{1}{n}\\right)^{-2n}=e^{-2n\\ln(1+1/n)}=e^{-2n(\\frac{1}{n}+o(\\frac{1}{n}))}=e^{-2+o(1)}\\)</span>, et donc <span class=\"math inline\">\\(\\frac{u_{n+1}}{u_n}\\)</span> tend vers <span class=\"math inline\">\\(27e^{-2}\\)</span>. Par suite, <span class=\"math inline\">\\(\\frac{1}{n^2}\\sqrt[n]{\\frac{(3n)!}{n!}}\\)</span> tend vers <span class=\"math inline\">\\(\\frac{27}{e^2}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "uuid": "RPBn",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2580",
+    "auteur": "delaunay",
+    "createdAt": "2009-05-19",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Valeur propre, vecteur propre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:34.345Z"
+  },
+  "contenu": [
+    {
+      "id": "06afed69-04ba-4fd3-a541-c18a9538d217",
+      "type": "description",
+      "value": {
+        "latex": "Soit $M$ la matrice de $\\R^4$ suivante\n$$M=\\begin{pmatrix}0&1&0&0 \\\\  2&0&-1&0 \\\\  0&7&0&6 \\\\  0&0&3&0\\end{pmatrix}$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(M\\)</span> la matrice de <span class=\"math inline\">\\(\\R^4\\)</span> suivante <span class=\"math display\">\\[M=\\begin{pmatrix}0&amp;1&amp;0&amp;0 \\\\  2&amp;0&amp;-1&amp;0 \\\\  0&amp;7&amp;0&amp;6 \\\\  0&amp;0&amp;3&amp;0\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "3792e550-806c-4cab-83fa-6f53816fc697",
+      "type": "question",
+      "value": {
+        "latex": "D\\'eterminer les valeurs propres de $M$ et ses sous-espaces propres.",
+        "html": "<p>Déterminer les valeurs propres de <span class=\"math inline\">\\(M\\)</span> et ses sous-espaces propres.</p>\n"
+      }
+    },
+    {
+      "id": "551b8d04-dabc-40ca-b3fa-680276d4c1df",
+      "type": "reponse",
+      "value": {
+        "latex": "D\\'eterminons les valeurs propres de $M$ et ses sous-espaces propres.\n\nLes valeurs propres de $M$ sont les r\\'eels $\\lambda$ tels que $\\det (M-\\lambda I)=0$.\n$$\\det(M-\\lambda I)=\\begin{vmatrix}-\\lambda&1&0&0 \\\\  2&-\\lambda&-1&0 \\\\  0&7&-\\lambda&6 \\\\  0&0&3&-\\lambda\\end{vmatrix}=\\lambda^4-13\\lambda^2+36=(\\lambda^2-4)(\\lambda^2-9)=(\\lambda-2)(\\lambda+2)(\\lambda-3)(\\lambda+3).$$\nLes valeurs propres de $M$ sont donc $2,-2,3$ et $-3$. Notons $E_2$, $E_{-2}$, $E_3$ et $E_{-3}$ les sous-espaces propres associ\\'es.\n\n$$\\begin{align*}\nE_2&=\\{X\\in\\R^4,MX=2X\\} \\\\ &=\\left\\{(x,y,z,t)\\in \\R^4,y=2x,2x-z=2y,7y+6t=2z,3z=2t\\right\\} \n\\end{align*}$$\n$${\\hbox{or}}\\ \\left\\{$$\\begin{align*}y&=2x \\\\  2x-z&=2y \\\\  7y+6t&=2z \\\\  3z&=2t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=2x \\\\  2x-z&=4x \\\\  14x+9z&=2z \\\\  3z&=2t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=2x \\\\  z&=-2x \\\\  t&=-3x\\end{align*}$$\\right.$$\nainsi, $E_2$ est la droite vectorielle engendr\\'ee par le vecteur $u_1=(1,2,-2,-3)$.\n\n$$\\begin{align*}\nE_{-2}&=\\{X\\in\\R^4,MX=-2X\\} \\\\ &=\\left\\{(x,y,z,t)\\in \\R^4,y=-2x,2x-z=-2y,7y+6t=-2z,3z=-2t\\right\\} \n\\end{align*}$$\n$${\\hbox{or}}\\ \\left\\{$$\\begin{align*}y&=-2x \\\\  2x-z&=-2y \\\\  7y+6t&=-2z \\\\  3z&=-2t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=-2x \\\\  2x-z&=4x \\\\  -14x-9z&=2z \\\\  3z&=-2t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=-2x \\\\  z&=-2x \\\\  t&=3x\\end{align*}$$\\right.$$\nainsi, $E_{-2}$ est la droite vectorielle engendr\\'ee par le vecteur $u_2=(1,-2,-2,3)$.\n\n$$\\begin{align*}\nE_3&=\\{X\\in\\R^4,MX=3X\\} \\\\  &=\\left\\{(x,y,z,t)\\in \\R^4,y=3x,2x-z=3y,7y+6t=3z,3z=3t\\right\\}\n\\end{align*}$$\n$${\\hbox{or}}\\ \\left\\{$$\\begin{align*}y&=3x \\\\  2x-z&=3y \\\\  7y+6t&=3z \\\\  3z&=3t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=3x \\\\  2x-z&=9x \\\\  21x+6t&=3z \\\\  z&=t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=3x \\\\  z&=-7x \\\\  t&=-7x\\end{align*}$$\\right.$$\nainsi, $E_3$ est la droite vectorielle engendr\\'ee par le vecteur $u_3=(1,3,-7,-7)$.\n\n$$\\begin{align*}\nE_{-3}&=\\{X\\in\\R^4,MX=-3X\\} \\\\ &=\\left\\{(x,y,z,t)\\in \\R^4,y=-3x,2x-z=-3y,7y+6t=-3z,3z=-3t\\right\\}\n\\end{align*}$$\n$${\\hbox{or}}\\ \\left\\{$$\\begin{align*}y&=-3x \\\\  2x-z&=-3y \\\\  7y+6t&=-3z \\\\  3z&=-3t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=-3x \\\\  2x-z&=9x \\\\  -21x-6z&=-3z \\\\  z&=-t\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}y&=-3x \\\\  z&=-7x \\\\  t&=7x\\end{align*}$$\\right.$$\nainsi, $E_{-3}$ est la droite vectorielle engendr\\'ee par le vecteur $u_4=(1,-3,-7,7)$.",
+        "html": "<p>Déterminons les valeurs propres de <span class=\"math inline\">\\(M\\)</span> et ses sous-espaces propres.</p>\n<p>Les valeurs propres de <span class=\"math inline\">\\(M\\)</span> sont les réels <span class=\"math inline\">\\(\\lambda\\)</span> tels que <span class=\"math inline\">\\(\\det (M-\\lambda I)=0\\)</span>. <span class=\"math display\">\\[\\det(M-\\lambda I)=\\begin{vmatrix}-\\lambda&amp;1&amp;0&amp;0 \\\\  2&amp;-\\lambda&amp;-1&amp;0 \\\\  0&amp;7&amp;-\\lambda&amp;6 \\\\  0&amp;0&amp;3&amp;-\\lambda\\end{vmatrix}=\\lambda^4-13\\lambda^2+36=(\\lambda^2-4)(\\lambda^2-9)=(\\lambda-2)(\\lambda+2)(\\lambda-3)(\\lambda+3).\\]</span> Les valeurs propres de <span class=\"math inline\">\\(M\\)</span> sont donc <span class=\"math inline\">\\(2,-2,3\\)</span> et <span class=\"math inline\">\\(-3\\)</span>. Notons <span class=\"math inline\">\\(E_2\\)</span>, <span class=\"math inline\">\\(E_{-2}\\)</span>, <span class=\"math inline\">\\(E_3\\)</span> et <span class=\"math inline\">\\(E_{-3}\\)</span> les sous-espaces propres associés.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nE_2&amp;=\\{X\\in\\R^4,MX=2X\\} \\\\ &amp;=\\left\\{(x,y,z,t)\\in \\R^4,y=2x,2x-z=2y,7y+6t=2z,3z=2t\\right\\} \n\\end{align*}\\]</span> <span class=\"math display\">\\[{\\hbox{or}}\\ \\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=2x \\\\  2x-z&amp;=2y \\\\  7y+6t&amp;=2z \\\\  3z&amp;=2t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=2x \\\\  2x-z&amp;=4x \\\\  14x+9z&amp;=2z \\\\  3z&amp;=2t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=2x \\\\  z&amp;=-2x \\\\  t&amp;=-3x\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> ainsi, <span class=\"math inline\">\\(E_2\\)</span> est la droite vectorielle engendrée par le vecteur <span class=\"math inline\">\\(u_1=(1,2,-2,-3)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nE_{-2}&amp;=\\{X\\in\\R^4,MX=-2X\\} \\\\ &amp;=\\left\\{(x,y,z,t)\\in \\R^4,y=-2x,2x-z=-2y,7y+6t=-2z,3z=-2t\\right\\} \n\\end{align*}\\]</span> <span class=\"math display\">\\[{\\hbox{or}}\\ \\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-2x \\\\  2x-z&amp;=-2y \\\\  7y+6t&amp;=-2z \\\\  3z&amp;=-2t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-2x \\\\  2x-z&amp;=4x \\\\  -14x-9z&amp;=2z \\\\  3z&amp;=-2t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-2x \\\\  z&amp;=-2x \\\\  t&amp;=3x\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> ainsi, <span class=\"math inline\">\\(E_{-2}\\)</span> est la droite vectorielle engendrée par le vecteur <span class=\"math inline\">\\(u_2=(1,-2,-2,3)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nE_3&amp;=\\{X\\in\\R^4,MX=3X\\} \\\\  &amp;=\\left\\{(x,y,z,t)\\in \\R^4,y=3x,2x-z=3y,7y+6t=3z,3z=3t\\right\\}\n\\end{align*}\\]</span> <span class=\"math display\">\\[{\\hbox{or}}\\ \\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=3x \\\\  2x-z&amp;=3y \\\\  7y+6t&amp;=3z \\\\  3z&amp;=3t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=3x \\\\  2x-z&amp;=9x \\\\  21x+6t&amp;=3z \\\\  z&amp;=t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=3x \\\\  z&amp;=-7x \\\\  t&amp;=-7x\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> ainsi, <span class=\"math inline\">\\(E_3\\)</span> est la droite vectorielle engendrée par le vecteur <span class=\"math inline\">\\(u_3=(1,3,-7,-7)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nE_{-3}&amp;=\\{X\\in\\R^4,MX=-3X\\} \\\\ &amp;=\\left\\{(x,y,z,t)\\in \\R^4,y=-3x,2x-z=-3y,7y+6t=-3z,3z=-3t\\right\\}\n\\end{align*}\\]</span> <span class=\"math display\">\\[{\\hbox{or}}\\ \\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-3x \\\\  2x-z&amp;=-3y \\\\  7y+6t&amp;=-3z \\\\  3z&amp;=-3t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-3x \\\\  2x-z&amp;=9x \\\\  -21x-6z&amp;=-3z \\\\  z&amp;=-t\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ny&amp;=-3x \\\\  z&amp;=-7x \\\\  t&amp;=7x\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> ainsi, <span class=\"math inline\">\\(E_{-3}\\)</span> est la droite vectorielle engendrée par le vecteur <span class=\"math inline\">\\(u_4=(1,-3,-7,7)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "046bf842-fc91-4628-84c3-1b242278d177",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $M$ est diagonalisable.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(M\\)</span> est diagonalisable.</p>\n"
+      }
+    },
+    {
+      "id": "8c805b09-b00a-45ee-ab81-39f9dc391966",
+      "type": "reponse",
+      "value": {
+        "latex": "Montrons que $M$ est diagonalisable. \n\nLa matrice $M$ admet quatre valeurs propres distinctes, ce qui prouve que les quatres vecteurs propres correspondants sont lin\\'eairement ind\\'ependants. En effet, les vecteurs $u_1,u_2,u_3$ et $u_4$ d\\'etermin\\'es en $1)$ forment une base de $\\R^4$. L'endomorphisme dont la matrice est $M$ dans la base canonique de $\\R^4$ est repr\\'esent\\'e par une matrice diagonale dans la base\n$(u_1,u_2,u_3,u_4)$ puisque $Mu_1=2u_1, Mu_2=-2u_2$, \n$Mu_3=3u_3$ et $Mu_4=-3u_4$.",
+        "html": "<p>Montrons que <span class=\"math inline\">\\(M\\)</span> est diagonalisable.</p>\n<p>La matrice <span class=\"math inline\">\\(M\\)</span> admet quatre valeurs propres distinctes, ce qui prouve que les quatres vecteurs propres correspondants sont linéairement indépendants. En effet, les vecteurs <span class=\"math inline\">\\(u_1,u_2,u_3\\)</span> et <span class=\"math inline\">\\(u_4\\)</span> déterminés en <span class=\"math inline\">\\(1)\\)</span> forment une base de <span class=\"math inline\">\\(\\R^4\\)</span>. L’endomorphisme dont la matrice est <span class=\"math inline\">\\(M\\)</span> dans la base canonique de <span class=\"math inline\">\\(\\R^4\\)</span> est représenté par une matrice diagonale dans la base <span class=\"math inline\">\\((u_1,u_2,u_3,u_4)\\)</span> puisque <span class=\"math inline\">\\(Mu_1=2u_1, Mu_2=-2u_2\\)</span>, <span class=\"math inline\">\\(Mu_3=3u_3\\)</span> et <span class=\"math inline\">\\(Mu_4=-3u_4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "61416e9d-4384-4ddc-bba2-3c340803ea7a",
+      "type": "question",
+      "value": {
+        "latex": "D\\'eterminer une base de vecteurs propres et $P$ la matrice de passage.",
+        "html": "<p>Déterminer une base de vecteurs propres et <span class=\"math inline\">\\(P\\)</span> la matrice de passage.</p>\n"
+      }
+    },
+    {
+      "id": "049054f1-6034-4fc2-9b37-35c76ee01f06",
+      "type": "reponse",
+      "value": {
+        "latex": "D\\'eterminons une base de vecteurs propres et $P$ la matrice de passage.\n\nUne base de vecteurs propres a \\'et\\'e d\\'etermin\\'ee dans les questions pr\\'ec\\'edentes. C'est la base $(u_1,u_2,u_3,u_4)$ et la matrice de passage est la matrice \n$$P=\\begin{pmatrix}1&1&1&1 \\\\  2&-2&3&-3 \\\\  -2&-2&-7&-7 \\\\  -3&3&-7&7\\end{pmatrix}$$",
+        "html": "<p>Déterminons une base de vecteurs propres et <span class=\"math inline\">\\(P\\)</span> la matrice de passage.</p>\n<p>Une base de vecteurs propres a été déterminée dans les questions précédentes. C’est la base <span class=\"math inline\">\\((u_1,u_2,u_3,u_4)\\)</span> et la matrice de passage est la matrice <span class=\"math display\">\\[P=\\begin{pmatrix}1&amp;1&amp;1&amp;1 \\\\  2&amp;-2&amp;3&amp;-3 \\\\  -2&amp;-2&amp;-7&amp;-7 \\\\  -3&amp;3&amp;-7&amp;7\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8c0d75ea-5c21-4802-85d4-42273422569a",
+      "type": "question",
+      "value": {
+        "latex": "On a $D=P^{-1}MP$, pour $k\\in\\N$ exprimer $M^k$ en fonction de $D^k$, puis calculer $M^k$.",
+        "html": "<p>On a <span class=\"math inline\">\\(D=P^{-1}MP\\)</span>, pour <span class=\"math inline\">\\(k\\in\\N\\)</span> exprimer <span class=\"math inline\">\\(M^k\\)</span> en fonction de <span class=\"math inline\">\\(D^k\\)</span>, puis calculer <span class=\"math inline\">\\(M^k\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2e8fb0e6-391a-41e4-8709-404c556282cf",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $D=P^{-1}MP$, pour $k\\in\\N$ exprimons $M^k$ en fonction de $D^k$, puis calculons $M^k$.\n\nOn a $$D=\\begin{pmatrix}2&0&0&0 \\\\  0&-2&0&0 \\\\  0&0&3&0 \\\\  0&0&0&-3\\end{pmatrix}\\ {\\hbox{donc}}\\ \nD^k=\\begin{pmatrix}2^k&0&0&0 \\\\  0&(-2)^k&0&0 \\\\  0&0&3^k&0 \\\\  0&0&0&(-3)^k\\end{pmatrix}.$$\n\nMais, $M=PDP^{-1}$, d'o\\`u, pour $k\\in\\N$, $M^k=(PDP^{-1})^k=PD^kP^{-1}$. \n\nPour calculer $M^k$, il faut donc d\\'eterminer la matrice $P^{-1}$ qui exprime les coordonn\\'ees des vecteurs de la base canonique de $\\R^4$ dans la base $(u_1,u_2,u_3,u_4)$.\n\nOn r\\'esout le syst\\`eme, et on a :\n$$$$\\begin{align*}u_1&=i+2j-2k-3l \\\\  u_2&=i-2j-2k+3l \\\\  u_3&=i+3j-7k-7t \\\\  u_4&=i-3j-7k+7l\\end{align*}$$\\iff\n\\left\\{$$\\begin{align*}i&={\\frac{1}{10}}(7u_1+7u_2-2u_3-2u_4) \\\\  \nj&={\\frac{1}{10}}(7u_1-7u_2-3u_3+3u_4) \\\\  \nk&={\\frac{1}{10}}(u_1+u_2-u_3-u_4) \\\\  \nl&={\\frac{1}{10}}(3u_1-3u_2-2u_3+2u_4)\\end{align*}$$\\right.$$\nd'o\\`u\n$$P^{-1}={\\frac{1}{10}}\\begin{pmatrix}7&7&1&3 \\\\  7&-7&1&-3 \\\\  -2&-3&-1&-2 \\\\  -2&3&-1&2\\end{pmatrix}$$\net \n$$M^k=PD^kP^{-1}={\\frac{1}{10}}\\begin{pmatrix}1&1&1&1 \\\\  2&-2&3&-3 \\\\  -2&-2&-7&-7 \\\\  -3&3&7&7\\end{pmatrix}\n\\begin{pmatrix}2^k&0&0&0 \\\\  0&(-2)^k&0&0 \\\\  0&0&3^k&0 \\\\  0&0&0&(-3)^k\\end{pmatrix}\n\\begin{pmatrix}7&7&1&3 \\\\  7&-7&1&-3 \\\\  -2&-3&-1&-2 \\\\  -2&3&-1&2\\end{pmatrix}.$$",
+        "html": "<p>On a <span class=\"math inline\">\\(D=P^{-1}MP\\)</span>, pour <span class=\"math inline\">\\(k\\in\\N\\)</span> exprimons <span class=\"math inline\">\\(M^k\\)</span> en fonction de <span class=\"math inline\">\\(D^k\\)</span>, puis calculons <span class=\"math inline\">\\(M^k\\)</span>.</p>\n<p>On a <span class=\"math display\">\\[D=\\begin{pmatrix}2&amp;0&amp;0&amp;0 \\\\  0&amp;-2&amp;0&amp;0 \\\\  0&amp;0&amp;3&amp;0 \\\\  0&amp;0&amp;0&amp;-3\\end{pmatrix}\\ {\\hbox{donc}}\\ \nD^k=\\begin{pmatrix}2^k&amp;0&amp;0&amp;0 \\\\  0&amp;(-2)^k&amp;0&amp;0 \\\\  0&amp;0&amp;3^k&amp;0 \\\\  0&amp;0&amp;0&amp;(-3)^k\\end{pmatrix}.\\]</span></p>\n<p>Mais, <span class=\"math inline\">\\(M=PDP^{-1}\\)</span>, d’où, pour <span class=\"math inline\">\\(k\\in\\N\\)</span>, <span class=\"math inline\">\\(M^k=(PDP^{-1})^k=PD^kP^{-1}\\)</span>.</p>\n<p>Pour calculer <span class=\"math inline\">\\(M^k\\)</span>, il faut donc déterminer la matrice <span class=\"math inline\">\\(P^{-1}\\)</span> qui exprime les coordonnées des vecteurs de la base canonique de <span class=\"math inline\">\\(\\R^4\\)</span> dans la base <span class=\"math inline\">\\((u_1,u_2,u_3,u_4)\\)</span>.</p>\n<p>On résout le système, et on a : <span class=\"math display\">\\[\\]</span><span class=\"math display\">\\[\\begin{aligned}\nu_1&amp;=i+2j-2k-3l \\\\  u_2&amp;=i-2j-2k+3l \\\\  u_3&amp;=i+3j-7k-7t \\\\  u_4&amp;=i-3j-7k+7l\\end{aligned}\\]</span><span class=\"math display\">\\[\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\ni&amp;={\\frac{1}{10}}(7u_1+7u_2-2u_3-2u_4) \\\\  \nj&amp;={\\frac{1}{10}}(7u_1-7u_2-3u_3+3u_4) \\\\  \nk&amp;={\\frac{1}{10}}(u_1+u_2-u_3-u_4) \\\\  \nl&amp;={\\frac{1}{10}}(3u_1-3u_2-2u_3+2u_4)\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> d’où <span class=\"math display\">\\[P^{-1}={\\frac{1}{10}}\\begin{pmatrix}7&amp;7&amp;1&amp;3 \\\\  7&amp;-7&amp;1&amp;-3 \\\\  -2&amp;-3&amp;-1&amp;-2 \\\\  -2&amp;3&amp;-1&amp;2\\end{pmatrix}\\]</span> et <span class=\"math display\">\\[M^k=PD^kP^{-1}={\\frac{1}{10}}\\begin{pmatrix}1&amp;1&amp;1&amp;1 \\\\  2&amp;-2&amp;3&amp;-3 \\\\  -2&amp;-2&amp;-7&amp;-7 \\\\  -3&amp;3&amp;7&amp;7\\end{pmatrix}\n\\begin{pmatrix}2^k&amp;0&amp;0&amp;0 \\\\  0&amp;(-2)^k&amp;0&amp;0 \\\\  0&amp;0&amp;3^k&amp;0 \\\\  0&amp;0&amp;0&amp;(-3)^k\\end{pmatrix}\n\\begin{pmatrix}7&amp;7&amp;1&amp;3 \\\\  7&amp;-7&amp;1&amp;-3 \\\\  -2&amp;-3&amp;-1&amp;-2 \\\\  -2&amp;3&amp;-1&amp;2\\end{pmatrix}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

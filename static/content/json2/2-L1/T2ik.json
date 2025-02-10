@@ -1,0 +1,107 @@
+{
+  "uuid": "T2ik",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5218",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Propriétés de R",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:59.003Z"
+  },
+  "contenu": [
+    {
+      "id": "af4fc1b5-1832-47c1-b4da-ea617cf1c14a",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "fe148279-6bc4-4010-9129-bfb97e66a1dd",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que les sous groupes du groupe $(\\Rr,+)$ sont soit de la forme $a\\Zz$, $a$ réel donné, soit denses dans $\\Rr$.\n\nIndication~:~pour $G$ sous-groupe donné de $(\\Rr,+)$, non réduit à $\\{0\\}$, considérer $a=\\mbox{Inf }(G\\cap]0;+\\infty[)$ puis envisager les deux cas $a=0$ et $a>0$.\n\n(Definition~:~$G$ est dense dans $\\Rr$ si et seulement si~:~$(\\forall x\\in\\Rr,\\;\\forall\\varepsilon>0,\\;\\exists y\\in G/\\;|y-x|<\\varepsilon)$.",
+        "html": "<p>Montrer que les sous groupes du groupe <span class=\"math inline\">\\((\\Rr,+)\\)</span> sont soit de la forme <span class=\"math inline\">\\(a\\Zz\\)</span>, <span class=\"math inline\">\\(a\\)</span> réel donné, soit denses dans <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n<p>Indication : pour <span class=\"math inline\">\\(G\\)</span> sous-groupe donné de <span class=\"math inline\">\\((\\Rr,+)\\)</span>, non réduit à <span class=\"math inline\">\\(\\{0\\}\\)</span>, considérer <span class=\"math inline\">\\(a=\\mbox{Inf }(G\\cap]0;+\\infty[)\\)</span> puis envisager les deux cas <span class=\"math inline\">\\(a=0\\)</span> et <span class=\"math inline\">\\(a&gt;0\\)</span>.</p>\n<p>(Definition : <span class=\"math inline\">\\(G\\)</span> est dense dans <span class=\"math inline\">\\(\\Rr\\)</span> si et seulement si : <span class=\"math inline\">\\((\\forall x\\in\\Rr,\\;\\forall\\varepsilon&gt;0,\\;\\exists y\\in G/\\;|y-x|&lt;\\varepsilon)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e35f5755-7840-4b47-831b-fd0026ac5863",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $G$ un sous groupe non nul de $(\\Rr,+)$ ($\\{0\\}=0.\\Zz$ est du type voulu).\nIl existe dans $G$ un réel non nul $x_0$.\nPuisque $G$ est un sous groupe de $(\\Rr,+)$, le réel $-x_0$ est aussi dans $G$ et l'un des deux réels $x_0$ ou $-x_0$ est strictement positif. Soit alors $A=G\\cap]0,+\\infty[$.\nD'après ce qui précède, $A$ est une partie non vide et minorée (par $0$) de $\\Rr$. $A$ admet donc une borne inférieure que l'on note $a$.\n\n\\textbf{1er cas.} Si $a=0$, montrons dans ce cas que $G$ est dense dans $\\Rr$ (c'est par exemple le cas de $(\\Qq,+)$).\nSoient $x$ un réel et $\\varepsilon$ un réel strictement positif.\nPuisque $\\mbox{inf }A=\\mbox{inf}(G\\cap]0,+\\infty[)=0$, il existe dans $G$ un élément $g$ tel que $0<g<\\varepsilon$. \nPuis il existe un entier relatif $n$ tel que $ng\\leq x-\\varepsilon<(n+1)g$ à savoir $n=E\\left(\\frac{x-\\varepsilon}{g}\\right)$.\nSoit $y=(n+1)g$. D'une part, $y$ est dans $G$ (si $n+1=0$, $(n+1)g=0\\in G$, si $n+1>0$, $(n+1)g=g+g+...+g\\in G$ et si $n+1<0$, $(n+1)g=-(-(n+1)g)\\in G$) et d'autre part\n\n$$x-\\varepsilon<(n+1)g=ng+g<x-\\varepsilon+\\varepsilon=x.$$\nOn a montré que $\\forall x\\in\\Rr,\\;\\forall\\varepsilon>0,\\;\\exists y\\in G/\\;x-\\varepsilon<y<x$ et donc \n\\begin{center}\n\\shadowbox{\nsi $G\\neq\\{0\\}$ et si $\\text{inf}\\left(G\\cap]0,+\\infty[\\right)=0$, $G$ est dense dans $\\Rr$.\n}\n\\end{center}\n\\textbf{2ème cas.} Si $a>0$, montrons dans ce cas que $G=a\\Zz$. Pour cela, montrons tout d'abord que $a$ est dans $G$.\nMais si $a$ n'est pas élément de $G$, par définition de $a$, il existe un réel $x$ dans $G\\cap]a,2a[$ puis il existe un réel $y$ dans $G\\cap]a,x[$. Le réel $x-y$ est alors dans $G\\cap]0,a[$ ce qui est impossible. Donc $a$ est élément de $G$.\nMontrons alors que $G=a\\Zz$. Puisque $a$ est dans $G$, $G$ contient encore $a+a=2a$, puis $a+a+a=3a$ et plus généralement tous les $na$, $n\\in\\Nn^*$. Puisque $G$ contient aussi les opposés de ces nombres et également $0=0\\times a$, $G$ contient finalement tous les $na$, $n\\in\\Zz$. On a ainsi montré que $a\\Zz\\subset G$.\nRéciproquement, soit $x$ un élément de $G$ et $n=E\\left(\\frac{x}{a}\\right)(\\in\\Zz)$. Alors, $n\\leq\\frac{x}{a}<n+1$ puis $0\\leq x-na<a$. \nOr, $x$ est dans $G$ et $na$ est dans $G$. Donc, $x-na$ est dans $G\\cap[0,a[=\\{0\\}$, puis $x=na\\in a\\Zz$. On a ainsi montré l'inclusion contraire et donc $G=a\\Zz$.\n\n\\begin{center}\n\\shadowbox{\nsi $\\text{inf}\\left(G\\cap]0,+\\infty[\\right)=a>0$, $G=a\\Zz$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(G\\)</span> un sous groupe non nul de <span class=\"math inline\">\\((\\Rr,+)\\)</span> (<span class=\"math inline\">\\(\\{0\\}=0.\\Zz\\)</span> est du type voulu). Il existe dans <span class=\"math inline\">\\(G\\)</span> un réel non nul <span class=\"math inline\">\\(x_0\\)</span>. Puisque <span class=\"math inline\">\\(G\\)</span> est un sous groupe de <span class=\"math inline\">\\((\\Rr,+)\\)</span>, le réel <span class=\"math inline\">\\(-x_0\\)</span> est aussi dans <span class=\"math inline\">\\(G\\)</span> et l’un des deux réels <span class=\"math inline\">\\(x_0\\)</span> ou <span class=\"math inline\">\\(-x_0\\)</span> est strictement positif. Soit alors <span class=\"math inline\">\\(A=G\\cap]0,+\\infty[\\)</span>. D’après ce qui précède, <span class=\"math inline\">\\(A\\)</span> est une partie non vide et minorée (par <span class=\"math inline\">\\(0\\)</span>) de <span class=\"math inline\">\\(\\Rr\\)</span>. <span class=\"math inline\">\\(A\\)</span> admet donc une borne inférieure que l’on note <span class=\"math inline\">\\(a\\)</span>.</p>\n<p><strong>1er cas.</strong> Si <span class=\"math inline\">\\(a=0\\)</span>, montrons dans ce cas que <span class=\"math inline\">\\(G\\)</span> est dense dans <span class=\"math inline\">\\(\\Rr\\)</span> (c’est par exemple le cas de <span class=\"math inline\">\\((\\Qq,+)\\)</span>). Soient <span class=\"math inline\">\\(x\\)</span> un réel et <span class=\"math inline\">\\(\\varepsilon\\)</span> un réel strictement positif. Puisque <span class=\"math inline\">\\(\\mbox{inf }A=\\mbox{inf}(G\\cap]0,+\\infty[)=0\\)</span>, il existe dans <span class=\"math inline\">\\(G\\)</span> un élément <span class=\"math inline\">\\(g\\)</span> tel que <span class=\"math inline\">\\(0&lt;g&lt;\\varepsilon\\)</span>. Puis il existe un entier relatif <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(ng\\leq x-\\varepsilon&lt;(n+1)g\\)</span> à savoir <span class=\"math inline\">\\(n=E\\left(\\frac{x-\\varepsilon}{g}\\right)\\)</span>. Soit <span class=\"math inline\">\\(y=(n+1)g\\)</span>. D’une part, <span class=\"math inline\">\\(y\\)</span> est dans <span class=\"math inline\">\\(G\\)</span> (si <span class=\"math inline\">\\(n+1=0\\)</span>, <span class=\"math inline\">\\((n+1)g=0\\in G\\)</span>, si <span class=\"math inline\">\\(n+1&gt;0\\)</span>, <span class=\"math inline\">\\((n+1)g=g+g+...+g\\in G\\)</span> et si <span class=\"math inline\">\\(n+1&lt;0\\)</span>, <span class=\"math inline\">\\((n+1)g=-(-(n+1)g)\\in G\\)</span>) et d’autre part</p>\n<p><span class=\"math display\">\\[x-\\varepsilon&lt;(n+1)g=ng+g&lt;x-\\varepsilon+\\varepsilon=x.\\]</span> On a montré que <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;\\forall\\varepsilon&gt;0,\\;\\exists y\\in G/\\;x-\\varepsilon&lt;y&lt;x\\)</span> et donc</p>\n<p><strong>2ème cas.</strong> Si <span class=\"math inline\">\\(a&gt;0\\)</span>, montrons dans ce cas que <span class=\"math inline\">\\(G=a\\Zz\\)</span>. Pour cela, montrons tout d’abord que <span class=\"math inline\">\\(a\\)</span> est dans <span class=\"math inline\">\\(G\\)</span>. Mais si <span class=\"math inline\">\\(a\\)</span> n’est pas élément de <span class=\"math inline\">\\(G\\)</span>, par définition de <span class=\"math inline\">\\(a\\)</span>, il existe un réel <span class=\"math inline\">\\(x\\)</span> dans <span class=\"math inline\">\\(G\\cap]a,2a[\\)</span> puis il existe un réel <span class=\"math inline\">\\(y\\)</span> dans <span class=\"math inline\">\\(G\\cap]a,x[\\)</span>. Le réel <span class=\"math inline\">\\(x-y\\)</span> est alors dans <span class=\"math inline\">\\(G\\cap]0,a[\\)</span> ce qui est impossible. Donc <span class=\"math inline\">\\(a\\)</span> est élément de <span class=\"math inline\">\\(G\\)</span>. Montrons alors que <span class=\"math inline\">\\(G=a\\Zz\\)</span>. Puisque <span class=\"math inline\">\\(a\\)</span> est dans <span class=\"math inline\">\\(G\\)</span>, <span class=\"math inline\">\\(G\\)</span> contient encore <span class=\"math inline\">\\(a+a=2a\\)</span>, puis <span class=\"math inline\">\\(a+a+a=3a\\)</span> et plus généralement tous les <span class=\"math inline\">\\(na\\)</span>, <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>. Puisque <span class=\"math inline\">\\(G\\)</span> contient aussi les opposés de ces nombres et également <span class=\"math inline\">\\(0=0\\times a\\)</span>, <span class=\"math inline\">\\(G\\)</span> contient finalement tous les <span class=\"math inline\">\\(na\\)</span>, <span class=\"math inline\">\\(n\\in\\Zz\\)</span>. On a ainsi montré que <span class=\"math inline\">\\(a\\Zz\\subset G\\)</span>. Réciproquement, soit <span class=\"math inline\">\\(x\\)</span> un élément de <span class=\"math inline\">\\(G\\)</span> et <span class=\"math inline\">\\(n=E\\left(\\frac{x}{a}\\right)(\\in\\Zz)\\)</span>. Alors, <span class=\"math inline\">\\(n\\leq\\frac{x}{a}&lt;n+1\\)</span> puis <span class=\"math inline\">\\(0\\leq x-na&lt;a\\)</span>. Or, <span class=\"math inline\">\\(x\\)</span> est dans <span class=\"math inline\">\\(G\\)</span> et <span class=\"math inline\">\\(na\\)</span> est dans <span class=\"math inline\">\\(G\\)</span>. Donc, <span class=\"math inline\">\\(x-na\\)</span> est dans <span class=\"math inline\">\\(G\\cap[0,a[=\\{0\\}\\)</span>, puis <span class=\"math inline\">\\(x=na\\in a\\Zz\\)</span>. On a ainsi montré l’inclusion contraire et donc <span class=\"math inline\">\\(G=a\\Zz\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "421d05fe-aadf-422a-b64e-37e88f0a9757",
+      "type": "question",
+      "value": {
+        "latex": "Application 1. Montrer que $\\{a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2\\}$ est dense dans $\\Rr$.",
+        "html": "<p>Application 1. Montrer que <span class=\"math inline\">\\(\\{a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2\\}\\)</span> est dense dans <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "19f3cb39-6e6b-4417-82d4-814700102630",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $G=\\{a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2\\}$. On vérifie aisément que $G$ est un sous-groupe de $(\\Rr,+)$. Maintenant, la formule du binôme de \\textsc{Newton} montre que, pour chaque entier naturel $n$,\n\n\\begin{center}\n$(\\sqrt{2}-1)^n\\in G\\cap]0,+\\infty[$.\n\\end{center}\nOr, $0<\\sqrt{2}-1<1$ et donc $\\lim_{n\\rightarrow +\\infty}(\\sqrt{2}-1)^n=0$. Ceci montre que $\\mbox{inf}(G\\cap]0;+\\infty[)=0$ et donc que $G$ est dense dans $\\Rr$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(G=\\{a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2\\}\\)</span>. On vérifie aisément que <span class=\"math inline\">\\(G\\)</span> est un sous-groupe de <span class=\"math inline\">\\((\\Rr,+)\\)</span>. Maintenant, la formule du binôme de <span class=\"smallcaps\">Newton</span> montre que, pour chaque entier naturel <span class=\"math inline\">\\(n\\)</span>,</p>\n<p><span class=\"math inline\">\\((\\sqrt{2}-1)^n\\in G\\cap]0,+\\infty[\\)</span>.</p>\n<p>Or, <span class=\"math inline\">\\(0&lt;\\sqrt{2}-1&lt;1\\)</span> et donc <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}(\\sqrt{2}-1)^n=0\\)</span>. Ceci montre que <span class=\"math inline\">\\(\\mbox{inf}(G\\cap]0;+\\infty[)=0\\)</span> et donc que <span class=\"math inline\">\\(G\\)</span> est dense dans <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "53794ef4-dfad-455b-9abb-4c09cc99d7e3",
+      "type": "question",
+      "value": {
+        "latex": "Application 2 (groupe des périodes d'une fonction).\n\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "6d6bc8e3-e0ac-4b23-8fb6-025776633829",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "1cd26441-bf15-4c9e-b31a-5291dbb1ddee",
+      "type": "question",
+      "value": {
+        "latex": "Soit $f$ une fonction définie sur $\\Rr$ à valeurs dans $\\Rr$. Montrer que l'ensemble des périodes de $f$ est un sous groupe de $(\\Rr,+)$ (ce sous-groupe est réduit à $\\{0\\}$ si $f$ n'est pas périodique).",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une fonction définie sur <span class=\"math inline\">\\(\\Rr\\)</span> à valeurs dans <span class=\"math inline\">\\(\\Rr\\)</span>. Montrer que l’ensemble des périodes de <span class=\"math inline\">\\(f\\)</span> est un sous groupe de <span class=\"math inline\">\\((\\Rr,+)\\)</span> (ce sous-groupe est réduit à <span class=\"math inline\">\\(\\{0\\}\\)</span> si <span class=\"math inline\">\\(f\\)</span> n’est pas périodique).</p>\n"
+      }
+    },
+    {
+      "id": "4c4ce3fd-f0d5-4a47-8083-f140a418d845",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $f$ une application de $\\Rr$ dans $\\Rr$ et $G_f=\\{T\\in\\Rr/\\;\\forall x\\in\\Rr,\\;f(x+T)=f(x)\\}$.\n$0$ est élément de $G_f$ (et c'est même le seul élément de $G_f$ si $f$ n'est pas périodique) et donc $G\\neq\\varnothing$.\nDe plus, si $T$ et $T'$ sont deux éléments de $G$ alors, pour $x$ réel donné~:\n\n$$f(x+(T-T'))=f((x-T')+T)=f(x-T')=f(x-T'+T')=f(x),$$\net $T-T'$ est encore un élément de $G$. On a montré que\n\n\\begin{center}\n\\shadowbox{\n$G_f$ est un sous groupe de $(\\Rr,+)$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de <span class=\"math inline\">\\(\\Rr\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span> et <span class=\"math inline\">\\(G_f=\\{T\\in\\Rr/\\;\\forall x\\in\\Rr,\\;f(x+T)=f(x)\\}\\)</span>. <span class=\"math inline\">\\(0\\)</span> est élément de <span class=\"math inline\">\\(G_f\\)</span> (et c’est même le seul élément de <span class=\"math inline\">\\(G_f\\)</span> si <span class=\"math inline\">\\(f\\)</span> n’est pas périodique) et donc <span class=\"math inline\">\\(G\\neq\\varnothing\\)</span>. De plus, si <span class=\"math inline\">\\(T\\)</span> et <span class=\"math inline\">\\(T&#39;\\)</span> sont deux éléments de <span class=\"math inline\">\\(G\\)</span> alors, pour <span class=\"math inline\">\\(x\\)</span> réel donné :</p>\n<p><span class=\"math display\">\\[f(x+(T-T&#39;))=f((x-T&#39;)+T)=f(x-T&#39;)=f(x-T&#39;+T&#39;)=f(x),\\]</span> et <span class=\"math inline\">\\(T-T&#39;\\)</span> est encore un élément de <span class=\"math inline\">\\(G\\)</span>. On a montré que</p>\n"
+      }
+    },
+    {
+      "id": "2055f728-3f15-4ae7-8612-9ab4d0139b25",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'une fonction continue sur $\\Rr$ qui admet $1$ et $\\sqrt{2}$ pour périodes, est constante sur $\\Rr$.",
+        "html": "<p>Montrer qu’une fonction continue sur <span class=\"math inline\">\\(\\Rr\\)</span> qui admet <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(\\sqrt{2}\\)</span> pour périodes, est constante sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4c43d4ce-7def-471f-bb61-f4f610752355",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $f$ une application de $\\Rr$ dans $\\Rr$ admettant $1$ et $\\sqrt{2}$ pour périodes. $G_f$ contient encore tous les nombres de la forme $a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2$ et est donc dense dans $\\Rr$.\nMontrons que si de plus $f$ est continue sur $\\Rr$, $f$ est constante.\nSoit $x$ un réel quelconque. On va montrer que $f(x)=f(0)$.\nRemarque préliminaire : soit $T$ une période strictement positive de $f$.\nIl existe un entier relatif $p$ tel que $pT\\leq x<(p+1)T$ à savoir $p=E\\left(\\frac{x}{T}\\right)$. On a alors $f(x)=f(x-pT)$ avec $0\\leq x-pT<T$.\nSoit alors $n\\in\\Nn^*$. Puisque $G_f$ est dense dans $\\Rr$, il existe dans $G_f$ un réel $T_n$ tel que $0<T_n<\\frac{1}{n}$ (ce qui implique que $\\lim_{n\\rightarrow +\\infty}T_n=0$).\nMais alors, puisque $0<x-E\\left(\\frac{x}{T_n}\\right)T_n<T_n$, on a aussi $\\lim_{n\\rightarrow +\\infty}x-E\\left(\\frac{x}{T_n}\\right)T_n=0$.\nMaintenant, la suite $\\left(f\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)\\right)_{n\\in\\Nn^*}$ est constante égale à $f(x)$) et donc convergente vers $f(x)$. On en déduit que\n\n$$\\begin{align*}\nf(x)&=\\lim_{n\\rightarrow +\\infty}f\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)= f\\left(\\lim_{n\\rightarrow +\\infty}\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)\\right)\\quad(\\mbox{par continuité de}\\;f\\;\\text{en}\\;0)\\\\\n &=f(0)\n\\end{align*}$$\nce qu'il fallait démontrer.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de <span class=\"math inline\">\\(\\Rr\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span> admettant <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(\\sqrt{2}\\)</span> pour périodes. <span class=\"math inline\">\\(G_f\\)</span> contient encore tous les nombres de la forme <span class=\"math inline\">\\(a+b\\sqrt{2},\\;(a,b)\\in\\Zz^2\\)</span> et est donc dense dans <span class=\"math inline\">\\(\\Rr\\)</span>. Montrons que si de plus <span class=\"math inline\">\\(f\\)</span> est continue sur <span class=\"math inline\">\\(\\Rr\\)</span>, <span class=\"math inline\">\\(f\\)</span> est constante. Soit <span class=\"math inline\">\\(x\\)</span> un réel quelconque. On va montrer que <span class=\"math inline\">\\(f(x)=f(0)\\)</span>. Remarque préliminaire : soit <span class=\"math inline\">\\(T\\)</span> une période strictement positive de <span class=\"math inline\">\\(f\\)</span>. Il existe un entier relatif <span class=\"math inline\">\\(p\\)</span> tel que <span class=\"math inline\">\\(pT\\leq x&lt;(p+1)T\\)</span> à savoir <span class=\"math inline\">\\(p=E\\left(\\frac{x}{T}\\right)\\)</span>. On a alors <span class=\"math inline\">\\(f(x)=f(x-pT)\\)</span> avec <span class=\"math inline\">\\(0\\leq x-pT&lt;T\\)</span>. Soit alors <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>. Puisque <span class=\"math inline\">\\(G_f\\)</span> est dense dans <span class=\"math inline\">\\(\\Rr\\)</span>, il existe dans <span class=\"math inline\">\\(G_f\\)</span> un réel <span class=\"math inline\">\\(T_n\\)</span> tel que <span class=\"math inline\">\\(0&lt;T_n&lt;\\frac{1}{n}\\)</span> (ce qui implique que <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}T_n=0\\)</span>). Mais alors, puisque <span class=\"math inline\">\\(0&lt;x-E\\left(\\frac{x}{T_n}\\right)T_n&lt;T_n\\)</span>, on a aussi <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}x-E\\left(\\frac{x}{T_n}\\right)T_n=0\\)</span>. Maintenant, la suite <span class=\"math inline\">\\(\\left(f\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)\\right)_{n\\in\\Nn^*}\\)</span> est constante égale à <span class=\"math inline\">\\(f(x)\\)</span>) et donc convergente vers <span class=\"math inline\">\\(f(x)\\)</span>. On en déduit que</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nf(x)&amp;=\\lim_{n\\rightarrow +\\infty}f\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)= f\\left(\\lim_{n\\rightarrow +\\infty}\\left(x-E\\left(\\frac{x}{T_n}\\right)T_n\\right)\\right)\\quad(\\mbox{par continuité de}\\;f\\;\\text{en}\\;0)\\\\\n &amp;=f(0)\n\\end{align*}\\]</span> ce qu’il fallait démontrer.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "kjIH",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4365",
+    "auteur": "quercia",
+    "createdAt": "2010-03-12",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Intégration",
+    "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:26.330Z"
+  },
+  "contenu": [
+    {
+      "id": "3577d195-5754-4f82-9a78-1dde443ebded",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "4aac256a-a948-40a5-a4a3-42fa8b603fae",
+      "type": "question",
+      "value": {
+        "latex": "Développer, pour tout $x>0$, $s(x) =  \\int_{t=0}^{+\\infty}\\frac{\\sin t}{e^{xt}-1}\\,d t$\n    en série de fractions rationnelles.",
+        "html": "<p>Développer, pour tout <span class=\"math inline\">\\(x&gt;0\\)</span>, <span class=\"math inline\">\\(s(x) =  \\int_{t=0}^{+\\infty}\\frac{\\sin t}{e^{xt}-1}\\,d t\\)</span> en série de fractions rationnelles.</p>\n"
+      }
+    },
+    {
+      "id": "5aa83de5-0a40-4fe0-9cdb-c18d5bfa193b",
+      "type": "reponse",
+      "value": {
+        "latex": "$s(x) =   \\int_{t=0}^{+\\infty} \\sum_{k=1}^\\infty\\sin(t)e^{-kxt}\\,d t$.\n\nOn a $|\\sin(t)e^{-kxt}| \\le te^{-kxt}$ et $ \\int_{t=0}^{+\\infty}te^{-kxt}\\,d t = \\frac 1{k^2}$\ndonc $\\sum_{k=1}^{\\infty} \\int_{t=0}^{+\\infty}|\\sin(t)e^{-kxt}|\\,d t$ converge\nce qui légitime l'interversion intégrale-série.\nD'où $s(x) = \\sum_{k=1}^\\infty \\int_{t=0}^{+\\infty}\\sin(t)e^{-kxt}\\,d t\n           = \\sum_{k=1}^{\\infty}\\frac1{k^2x^2+1}$.",
+        "html": "<p><span class=\"math inline\">\\(s(x) =   \\int_{t=0}^{+\\infty} \\sum_{k=1}^\\infty\\sin(t)e^{-kxt}\\,d t\\)</span>.</p>\n<p>On a <span class=\"math inline\">\\(|\\sin(t)e^{-kxt}| \\le te^{-kxt}\\)</span> et <span class=\"math inline\">\\(\\int_{t=0}^{+\\infty}te^{-kxt}\\,d t = \\frac 1{k^2}\\)</span> donc <span class=\"math inline\">\\(\\sum_{k=1}^{\\infty} \\int_{t=0}^{+\\infty}|\\sin(t)e^{-kxt}|\\,d t\\)</span> converge ce qui légitime l’interversion intégrale-série. D’où <span class=\"math inline\">\\(s(x) = \\sum_{k=1}^\\infty \\int_{t=0}^{+\\infty}\\sin(t)e^{-kxt}\\,d t\n           = \\sum_{k=1}^{\\infty}\\frac1{k^2x^2+1}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dd7f7747-7cc1-436f-b331-0fc9a965ba04",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'en $0^+$, $s(x)$ est équivalente à $\\frac\\pi{2x}$.",
+        "html": "<p>Montrer qu’en <span class=\"math inline\">\\(0^+\\)</span>, <span class=\"math inline\">\\(s(x)\\)</span> est équivalente à <span class=\"math inline\">\\(\\frac\\pi{2x}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "89b37892-02bd-4f5a-8a22-9d61e4e8876c",
+      "type": "reponse",
+      "value": {
+        "latex": "Sachant (?) que $ \\int_{t=0}^{+\\infty}\\frac{\\sin t}t\\,d t = \\frac\\pi2$, on obtient~:\n\n$$\\begin{align*}\nxs(x)-\\frac\\pi2\n&=  \\int_{t=0}^{+\\infty}\\Bigl(\\frac{x\\sin t}{e^{xt}-1}-\\frac{\\sin t}{t}\\Bigr)\\,d t\\cr\n&=  \\int_{u=0}^{+\\infty}\\Bigl(\\frac{1}{e^{u}-1}-\\frac{1}{u}\\Bigr)\\sin\\Bigl(\\frac ux\\Bigr)\\,d u\\cr\n&= -x\\Bigr[\\underbrace{\\Bigl(\\frac{1}{e^{u}-1}-\\frac{1}{u}\\Bigr)}_{\\to{\\textstyle\\frac12} \\text{ si } u\\to0^+}\\cos\\Bigl(\\frac ux\\Bigr)\\Bigr]_{u=0}^{+\\infty}\n   +x \\int_{u=0}^{+\\infty}\\underbrace{\\Bigl(\\frac{-e^u}{(e^{u}-1)^2}+\\frac{1}{u^2}\\Bigr)}_{\\to{\\textstyle\\frac1{12}\\text{ si } u\\to0^+ }}\\cos\\Bigl(\\frac ux\\Bigr)\\,d u\\cr\n&= x(\\text{quantité bornée})\\to 0 \\text{ si } u\\to0^+.\\cr\n\\end{align*}$$",
+        "html": "<p>Sachant (?) que <span class=\"math inline\">\\(\\int_{t=0}^{+\\infty}\\frac{\\sin t}t\\,d t = \\frac\\pi2\\)</span>, on obtient :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nxs(x)-\\frac\\pi2\n&amp;=  \\int_{t=0}^{+\\infty}\\Bigl(\\frac{x\\sin t}{e^{xt}-1}-\\frac{\\sin t}{t}\\Bigr)\\,d t\\cr\n&amp;=  \\int_{u=0}^{+\\infty}\\Bigl(\\frac{1}{e^{u}-1}-\\frac{1}{u}\\Bigr)\\sin\\Bigl(\\frac ux\\Bigr)\\,d u\\cr\n&amp;= -x\\Bigr[\\underbrace{\\Bigl(\\frac{1}{e^{u}-1}-\\frac{1}{u}\\Bigr)}_{\\to{\\textstyle\\frac12} \\text{ si } u\\to0^+}\\cos\\Bigl(\\frac ux\\Bigr)\\Bigr]_{u=0}^{+\\infty}\n   +x \\int_{u=0}^{+\\infty}\\underbrace{\\Bigl(\\frac{-e^u}{(e^{u}-1)^2}+\\frac{1}{u^2}\\Bigr)}_{\\to{\\textstyle\\frac1{12}\\text{ si } u\\to0^+ }}\\cos\\Bigl(\\frac ux\\Bigr)\\,d u\\cr\n&amp;= x(\\text{quantité bornée})\\to 0 \\text{ si } u\\to0^+.\\cr\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

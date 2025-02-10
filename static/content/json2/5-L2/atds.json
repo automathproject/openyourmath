@@ -1,0 +1,91 @@
+{
+  "uuid": "atds",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4625",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série de Fourier",
+    "sousChapitre": "Calcul de coefficients",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:13.753Z"
+  },
+  "contenu": [
+    {
+      "id": "9c9f76db-eeab-4dbd-bfc1-66aadec86c60",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a\\in {]-1,1[}$ et $g$ : $x \\mapsto\\frac{1-a\\cos x}{ 1-2a\\cos x +a^2}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\in {]-1,1[}\\)</span> et <span class=\"math inline\">\\(g\\)</span> : <span class=\"math inline\">\\(x \\mapsto\\frac{1-a\\cos x}{ 1-2a\\cos x +a^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9695102a-2c48-4cc8-bd5b-f396d306ce69",
+      "type": "question",
+      "value": {
+        "latex": "Prouver~: $\\forall\\ x\\in\\R,\\ g(x)=\\sum_{n=0}^{\\infty} a^n\\cos nx$.",
+        "html": "<p>Prouver : <span class=\"math inline\">\\(\\forall\\ x\\in\\R,\\ g(x)=\\sum_{n=0}^{\\infty} a^n\\cos nx\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "39f9d3a0-e6ad-487a-a4e8-5c3d08cf1990",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\sum_{n=0}^\\infty a^n\\cos nx = \\Re\\Bigl(\\sum_{n=0}^\\infty (ae^{ix})^n\\Bigr)\n    =\\Re\\Bigl(\\frac1{1-ae^{ix}}\\Bigr) = g(x)$.",
+        "html": "<p><span class=\"math inline\">\\(\\sum_{n=0}^\\infty a^n\\cos nx = \\Re\\Bigl(\\sum_{n=0}^\\infty (ae^{ix})^n\\Bigr)\n    =\\Re\\Bigl(\\frac1{1-ae^{ix}}\\Bigr) = g(x)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5711d09a-f9f8-481b-80ff-e3ade16adbd6",
+      "type": "question",
+      "value": {
+        "latex": "Quel est le mode de convergence de la série~?",
+        "html": "<p>Quel est le mode de convergence de la série ?</p>\n"
+      }
+    },
+    {
+      "id": "952fb016-c1e0-45d2-9574-4b2964792576",
+      "type": "reponse",
+      "value": {
+        "latex": "Il y a convergence normale.",
+        "html": "<p>Il y a convergence normale.</p>\n"
+      }
+    },
+    {
+      "id": "a402063d-0d41-4da1-bec8-94c96343587d",
+      "type": "question",
+      "value": {
+        "latex": "Soit $f : \\R \\to \\C$ continue par morceaux et $2\\pi$-périodique.\n    Montrer que $h$ : $x \\mapsto \\int_{t=0}^{2\\pi}g(x-t)f(t)\\,d t$\n    est somme d'une série trigonométrique uniformément convergente.\n    Que peut-on déduire pour~$h$~?\\vrule height 12pt width 0pt",
+        "html": "<p>Soit <span class=\"math inline\">\\(f : \\R \\to \\C\\)</span> continue par morceaux et <span class=\"math inline\">\\(2\\pi\\)</span>-périodique. Montrer que <span class=\"math inline\">\\(h\\)</span> : <span class=\"math inline\">\\(x \\mapsto \\int_{t=0}^{2\\pi}g(x-t)f(t)\\,d t\\)</span> est somme d’une série trigonométrique uniformément convergente. Que peut-on déduire pour <span class=\"math inline\">\\(h\\)</span> ?height 12pt width 0pt</p>\n"
+      }
+    },
+    {
+      "id": "7b043c6a-6742-4e10-a0b6-c32efb5ddf86",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*} h(x)\n    &=  \\int_{t=0}^{2\\pi}\\sum_{n=0}^\\infty a^n\\cos(nx-nt)f(t)\\,d t\\cr\n    &= \\sum_{n=0}^\\infty \\int_{t=0}^{2\\pi} a^n\\cos(nx-nt)f(t)\\,d t\\cr\n    &= \\sum_{n=0}^\\infty\\Bigl(\\cos(nx) \\int_{t=0}^{2\\pi} a^n\\cos(nt)f(t)\\,d t + \\sin(nx) \\int_{t=0}^{2\\pi} a^n\\sin(nt)f(t)\\,d t\\Bigr)\\cr\n    &= \\sum_{n=0}^\\infty(\\pi a^na_n(f)\\cos(nx) + \\pi a^nb_n(f)\\sin(nx)).\\cr\n    \\end{align*}$$\n    Il y a convergence normale car $|a|<1$ et les coefficients de Fourier\n    de~$f$ sont bornés.\n    On en déduit que $h$ est continue, puis que les coefficients de Fourier de~$h$\n    sont $a^na_n(f)$ et $a^nb_n(f)$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*} h(x)\n    &amp;=  \\int_{t=0}^{2\\pi}\\sum_{n=0}^\\infty a^n\\cos(nx-nt)f(t)\\,d t\\cr\n    &amp;= \\sum_{n=0}^\\infty \\int_{t=0}^{2\\pi} a^n\\cos(nx-nt)f(t)\\,d t\\cr\n    &amp;= \\sum_{n=0}^\\infty\\Bigl(\\cos(nx) \\int_{t=0}^{2\\pi} a^n\\cos(nt)f(t)\\,d t + \\sin(nx) \\int_{t=0}^{2\\pi} a^n\\sin(nt)f(t)\\,d t\\Bigr)\\cr\n    &amp;= \\sum_{n=0}^\\infty(\\pi a^na_n(f)\\cos(nx) + \\pi a^nb_n(f)\\sin(nx)).\\cr\n    \\end{align*}\\]</span> Il y a convergence normale car <span class=\"math inline\">\\(|a|&lt;1\\)</span> et les coefficients de Fourier de <span class=\"math inline\">\\(f\\)</span> sont bornés. On en déduit que <span class=\"math inline\">\\(h\\)</span> est continue, puis que les coefficients de Fourier de <span class=\"math inline\">\\(h\\)</span> sont <span class=\"math inline\">\\(a^na_n(f)\\)</span> et <span class=\"math inline\">\\(a^nb_n(f)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4a0f447a-f2f4-4c54-a7a2-ffcd87cc9115",
+      "type": "question",
+      "value": {
+        "latex": "Soit $\\lambda\\in\\R$. Trouver toutes les fonctions $f : \\R \\to \\C$\n    continues par morceaux et $2\\pi$-périodiques telles que~:\n    $\\forall\\ x\\in\\R,\\ f(x)=\\lambda \\int_{t=0}^{2\\pi}g(x-t)f(t)\\,d t +\\sum_{n=1}^{\\infty}\\frac{\\cos nx}{n^2}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\lambda\\in\\R\\)</span>. Trouver toutes les fonctions <span class=\"math inline\">\\(f : \\R \\to \\C\\)</span> continues par morceaux et <span class=\"math inline\">\\(2\\pi\\)</span>-périodiques telles que : <span class=\"math inline\">\\(\\forall\\ x\\in\\R,\\ f(x)=\\lambda \\int_{t=0}^{2\\pi}g(x-t)f(t)\\,d t +\\sum_{n=1}^{\\infty}\\frac{\\cos nx}{n^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b9f17229-4ef7-4ab0-aa22-84c275e1e5ba",
+      "type": "reponse",
+      "value": {
+        "latex": "Les coefficients de Fourier des deux membres doivent être égaux, ce qui\n    donne~: $a_n(f)= \\frac1{n^2(1-\\pi\\lambda a^n)}$ et $b_n(f) = 0$ si pour\n    tout~$n\\in\\N^*$ on a $\\pi\\lambda a^n\\ne 1$ (sinon il n'y a pas de solution),\n    et $a_0(f) = 0$ si $2\\pi\\lambda\\ne1$, $a_0(f)$ quelconque sinon.\n    Réciproquement, en posant ${f(x) = [a_0/2] + \\sum_{n=1}^\\infty\\frac{\\cos nx}{n^2(1-\\pi\\lambda a^n)}}$\n    on définit $f$, $2\\pi$-périodique continue (la série converge normalement),\n    solution de l'équation par égalité des coefficients de Fourier de chaque membre.",
+        "html": "<p>Les coefficients de Fourier des deux membres doivent être égaux, ce qui donne : <span class=\"math inline\">\\(a_n(f)= \\frac1{n^2(1-\\pi\\lambda a^n)}\\)</span> et <span class=\"math inline\">\\(b_n(f) = 0\\)</span> si pour tout <span class=\"math inline\">\\(n\\in\\N^*\\)</span> on a <span class=\"math inline\">\\(\\pi\\lambda a^n\\ne 1\\)</span> (sinon il n’y a pas de solution), et <span class=\"math inline\">\\(a_0(f) = 0\\)</span> si <span class=\"math inline\">\\(2\\pi\\lambda\\ne1\\)</span>, <span class=\"math inline\">\\(a_0(f)\\)</span> quelconque sinon. Réciproquement, en posant <span class=\"math inline\">\\({f(x) = [a_0/2] + \\sum_{n=1}^\\infty\\frac{\\cos nx}{n^2(1-\\pi\\lambda a^n)}}\\)</span> on définit <span class=\"math inline\">\\(f\\)</span>, <span class=\"math inline\">\\(2\\pi\\)</span>-périodique continue (la série converge normalement), solution de l’équation par égalité des coefficients de Fourier de chaque membre.</p>\n"
+      }
+    }
+  ]
+}

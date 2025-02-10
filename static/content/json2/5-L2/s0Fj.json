@@ -1,0 +1,43 @@
+{
+  "uuid": "s0Fj",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2634",
+    "auteur": "debievre",
+    "createdAt": "2009-05-19",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Différentiabilité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:35.317Z"
+  },
+  "contenu": [
+    {
+      "id": "194f2d6d-238d-4fe8-9b29-b0643bd25480",
+      "type": "description",
+      "value": {
+        "latex": "Utiliser une approximation affine bien choisie pour calculer une valeur approch\\'ee des nombres suivants:\n\\[\n\\exp[\\sin(3.16)\\cos(0.02))], \\quad \\arctan[\\sqrt{4.03}-2\\exp(0.01)].\n\\]",
+        "html": "<p>Utiliser une approximation affine bien choisie pour calculer une valeur approchée des nombres suivants: <span class=\"math display\">\\[\\exp[\\sin(3.16)\\cos(0.02))], \\quad \\arctan[\\sqrt{4.03}-2\\exp(0.01)].\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "4689b011-969f-4c91-8400-0b610ef98126",
+      "type": "indication",
+      "value": {
+        "latex": "Prendre\n$$\\begin{align*}\nf(x,y)&=\\exp[\\sin(\\pi+x)\\cos y]=\\exp[-\\sin x \\cos y ],\n\\\\\nh(x,y)&=\\arctan[\\sqrt{4+x}-2\\exp(y)] .\n\\end{align*}$$",
+        "html": "<p>Prendre <span class=\"math display\">\\[\\begin{align*}\nf(x,y)&amp;=\\exp[\\sin(\\pi+x)\\cos y]=\\exp[-\\sin x \\cos y ],\n\\\\\nh(x,y)&amp;=\\arctan[\\sqrt{4+x}-2\\exp(y)] .\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "f4815d14-fa92-47d1-8a43-fcc587159bb7",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*}\n\\frac{\\partial f}{\\partial x}&= -\\cos x \\cos y\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial f}{\\partial y}&= \\sin x \\sin y\\exp[-\\sin x \\cos y ]\n\\end{align*}$$\netc. d'o\\`u, avec $\\frac{\\partial f}{\\partial x}(0,0)=-1$ et\n$\\frac{\\partial f}{\\partial y}(0,0)=0$,\n\\[\nf(x,y)\n=\nf(0,0)+\\frac{\\partial f}{\\partial x}(0,0)x+\\frac{\\partial f}{\\partial y}(0,0)y\n+\\ldots\n=1-x +\\ldots\n\\]\nAvec $x=0,0184$ on trouve, pour\n$\\exp[\\sin(3.16)\\cos(0.02))]$,\nla valeur approch\\'ee $1-0,0184 =0,9816$. \n\nN.B. On peut faire mieux si n\\'ecessaire : Avec\n$$\\begin{align*}\n\\frac{\\partial^2 f}{\\partial x^2}&= (\\sin x \\cos y\n+\\cos^2 x \\cos^2 y)\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial^2 f}{\\partial x \\partial y}&\n= (\\cos x \\sin y+\\cos x \\cos y \\sin x \\sin y)\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial^2 f}{\\partial y^2}&=(\\sin x \\cos y\n+\\sin^2 x \\sin^2 y)\\exp[-\\sin x \\cos y ]\n\\end{align*}$$\non trouve\n\\[\nf(x,y)\n=\nf(0,0)+\\frac{\\partial f}{\\partial x}(0,0)x+\\frac{\\partial f}{\\partial y}(0,0)y\n+\\ldots\n=1-x++\\tfrac 12 x^2 +\\ldots\n\\]\netc.\n\nDe m\\^eme,\n$$\\begin{align*}\n\\frac{\\partial h}{\\partial x}&= \\frac 1 {2(1+(\\sqrt{4+x}-2\\exp(y))^2)\\sqrt{4+x}}\n\\\\\n\\frac{\\partial h}{\\partial y}&= -\\frac {2\\exp(y)} {1+(\\sqrt{4+x}-2\\exp(y))^2}\n\\end{align*}$$\netc. d'o\\`u,  avec $\\frac{\\partial h}{\\partial x}(0,0)=\\tfrac 14$ et\n$\\frac{\\partial h}{\\partial y}(0,0)=-2$,\n\\[\nh(x,y)\n=\nh(0,0)+\\frac{\\partial h}{\\partial x}(0,0)x+\\frac{\\partial h}{\\partial y}(0,0)y\n+\\ldots\n=\\tfrac 14 x-2y +\\ldots .\n\\]\nAvec $x=0,03$ et $y=0,01$ on trouve, pour\n$ \\arctan[\\sqrt{4.03}-2\\exp(0.01)]$,\nla valeur approch\\'ee $0,0075-0,02 =-0,00125$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*}\n\\frac{\\partial f}{\\partial x}&amp;= -\\cos x \\cos y\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial f}{\\partial y}&amp;= \\sin x \\sin y\\exp[-\\sin x \\cos y ]\n\\end{align*}\\]</span> etc. d’où, avec <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(0,0)=-1\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(0,0)=0\\)</span>, <span class=\"math display\">\\[f(x,y)\n=\nf(0,0)+\\frac{\\partial f}{\\partial x}(0,0)x+\\frac{\\partial f}{\\partial y}(0,0)y\n+\\ldots\n=1-x +\\ldots\\]</span> Avec <span class=\"math inline\">\\(x=0,0184\\)</span> on trouve, pour <span class=\"math inline\">\\(\\exp[\\sin(3.16)\\cos(0.02))]\\)</span>, la valeur approchée <span class=\"math inline\">\\(1-0,0184 =0,9816\\)</span>.</p>\n<p>N.B. On peut faire mieux si nécessaire : Avec <span class=\"math display\">\\[\\begin{align*}\n\\frac{\\partial^2 f}{\\partial x^2}&amp;= (\\sin x \\cos y\n+\\cos^2 x \\cos^2 y)\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial^2 f}{\\partial x \\partial y}&amp;\n= (\\cos x \\sin y+\\cos x \\cos y \\sin x \\sin y)\\exp[-\\sin x \\cos y ]\n\\\\\n\\frac{\\partial^2 f}{\\partial y^2}&amp;=(\\sin x \\cos y\n+\\sin^2 x \\sin^2 y)\\exp[-\\sin x \\cos y ]\n\\end{align*}\\]</span> on trouve <span class=\"math display\">\\[f(x,y)\n=\nf(0,0)+\\frac{\\partial f}{\\partial x}(0,0)x+\\frac{\\partial f}{\\partial y}(0,0)y\n+\\ldots\n=1-x++\\tfrac 12 x^2 +\\ldots\\]</span> etc.</p>\n<p>De même, <span class=\"math display\">\\[\\begin{align*}\n\\frac{\\partial h}{\\partial x}&amp;= \\frac 1 {2(1+(\\sqrt{4+x}-2\\exp(y))^2)\\sqrt{4+x}}\n\\\\\n\\frac{\\partial h}{\\partial y}&amp;= -\\frac {2\\exp(y)} {1+(\\sqrt{4+x}-2\\exp(y))^2}\n\\end{align*}\\]</span> etc. d’où, avec <span class=\"math inline\">\\(\\frac{\\partial h}{\\partial x}(0,0)=\\tfrac 14\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial h}{\\partial y}(0,0)=-2\\)</span>, <span class=\"math display\">\\[h(x,y)\n=\nh(0,0)+\\frac{\\partial h}{\\partial x}(0,0)x+\\frac{\\partial h}{\\partial y}(0,0)y\n+\\ldots\n=\\tfrac 14 x-2y +\\ldots .\\]</span> Avec <span class=\"math inline\">\\(x=0,03\\)</span> et <span class=\"math inline\">\\(y=0,01\\)</span> on trouve, pour <span class=\"math inline\">\\(\\arctan[\\sqrt{4.03}-2\\exp(0.01)]\\)</span>, la valeur approchée <span class=\"math inline\">\\(0,0075-0,02 =-0,00125\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "k3RY",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5401",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Continuité, limite et étude de fonctions réelles",
+    "sousChapitre": "Continuité : théorie",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:22.017Z"
+  },
+  "contenu": [
+    {
+      "id": "4de90698-85ac-4943-a431-1dbf10958146",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ périodique et continue sur $\\Rr$. Montrer que $f$ est bornée et uniformément continue sur $\\Rr$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> périodique et continue sur <span class=\"math inline\">\\(\\Rr\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est bornée et uniformément continue sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0ee77611-c71d-42c3-b393-d45a4ea30eec",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $T$ une pèriode strictement positive de $f$. $f$ est continue sur le segment $[0,T]$ et donc est bornée sur ce segment. $f$ est par suite bornée sur $\\Rr$ par $T$-périodicité.\n\nSoit $\\varepsilon>0$.\n\n$f$ est continue sur le segment $[0,T]$ et donc, d'après le théorème de \\textsc{Heine}, $f$ est uniformément continue sur ce segment. Donc,\n\n$$\\exists\\alpha\\in]0,T[/\\;\\forall(x,y)\\in[0,T],\\;(|x-y|<\\alpha\\Rightarrow|f(x)-f(y)|<\\frac{\\varepsilon}{2}.$$\n\nSoient $x$ et $y$ deux réels tels que $|x-y|<\\alpha$. Si il existe un entier naturel $k$ tel que $(x,y)\\in[kT,(k+1)T]$, alors $x-kT\\in[0,T]$, $y-kT\\in[0,T]$, puis $|(x-kT)-(y-kT)|=|y-x|<\\alpha$ et donc $|f(x)-f(y)|<\\frac{\\varepsilon}{2}<\\varepsilon$.\n\nSinon, en supposant par exemple que $x\\leq y$, puisque l'on a choisi $\\alpha<T$, \n\n$$\\exists k\\in\\Zz/\\;(k-1)T\\leq x\\leq kT\\leq y\\leq(k+1)T.$$\n\nMais alors, $|x-kT|=|y-x|<\\alpha$ et $|y-kT|\\leq|y-x|<\\alpha$. Par suite,\n\n$$|f(x)-f(y)|\\leq|f(x)-f(kT)|+|f(y)-f(kT)|<\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.$$\n\nDans tous les cas, si $|x-y|<\\alpha$, alors $|f(x)-f(y)|<\\varepsilon$. On a montré que \n\n$$\\forall\\varepsilon>0,\\;\\exists\\alpha>0/\\;\\forall(x,y)\\in\\Rr^2,\\;(|x-y|<\\alpha\\Rightarrow|f(x)-f(y)|<\\varepsilon).$$\n\n$f$ est donc uniformément continue sur $\\Rr$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(T\\)</span> une pèriode strictement positive de <span class=\"math inline\">\\(f\\)</span>. <span class=\"math inline\">\\(f\\)</span> est continue sur le segment <span class=\"math inline\">\\([0,T]\\)</span> et donc est bornée sur ce segment. <span class=\"math inline\">\\(f\\)</span> est par suite bornée sur <span class=\"math inline\">\\(\\Rr\\)</span> par <span class=\"math inline\">\\(T\\)</span>-périodicité.</p>\n<p>Soit <span class=\"math inline\">\\(\\varepsilon&gt;0\\)</span>.</p>\n<p><span class=\"math inline\">\\(f\\)</span> est continue sur le segment <span class=\"math inline\">\\([0,T]\\)</span> et donc, d’après le théorème de <span class=\"smallcaps\">Heine</span>, <span class=\"math inline\">\\(f\\)</span> est uniformément continue sur ce segment. Donc,</p>\n<p><span class=\"math display\">\\[\\exists\\alpha\\in]0,T[/\\;\\forall(x,y)\\in[0,T],\\;(|x-y|&lt;\\alpha\\Rightarrow|f(x)-f(y)|&lt;\\frac{\\varepsilon}{2}.\\]</span></p>\n<p>Soient <span class=\"math inline\">\\(x\\)</span> et <span class=\"math inline\">\\(y\\)</span> deux réels tels que <span class=\"math inline\">\\(|x-y|&lt;\\alpha\\)</span>. Si il existe un entier naturel <span class=\"math inline\">\\(k\\)</span> tel que <span class=\"math inline\">\\((x,y)\\in[kT,(k+1)T]\\)</span>, alors <span class=\"math inline\">\\(x-kT\\in[0,T]\\)</span>, <span class=\"math inline\">\\(y-kT\\in[0,T]\\)</span>, puis <span class=\"math inline\">\\(|(x-kT)-(y-kT)|=|y-x|&lt;\\alpha\\)</span> et donc <span class=\"math inline\">\\(|f(x)-f(y)|&lt;\\frac{\\varepsilon}{2}&lt;\\varepsilon\\)</span>.</p>\n<p>Sinon, en supposant par exemple que <span class=\"math inline\">\\(x\\leq y\\)</span>, puisque l’on a choisi <span class=\"math inline\">\\(\\alpha&lt;T\\)</span>,</p>\n<p><span class=\"math display\">\\[\\exists k\\in\\Zz/\\;(k-1)T\\leq x\\leq kT\\leq y\\leq(k+1)T.\\]</span></p>\n<p>Mais alors, <span class=\"math inline\">\\(|x-kT|=|y-x|&lt;\\alpha\\)</span> et <span class=\"math inline\">\\(|y-kT|\\leq|y-x|&lt;\\alpha\\)</span>. Par suite,</p>\n<p><span class=\"math display\">\\[|f(x)-f(y)|\\leq|f(x)-f(kT)|+|f(y)-f(kT)|&lt;\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\\]</span></p>\n<p>Dans tous les cas, si <span class=\"math inline\">\\(|x-y|&lt;\\alpha\\)</span>, alors <span class=\"math inline\">\\(|f(x)-f(y)|&lt;\\varepsilon\\)</span>. On a montré que</p>\n<p><span class=\"math display\">\\[\\forall\\varepsilon&gt;0,\\;\\exists\\alpha&gt;0/\\;\\forall(x,y)\\in\\Rr^2,\\;(|x-y|&lt;\\alpha\\Rightarrow|f(x)-f(y)|&lt;\\varepsilon).\\]</span></p>\n<p><span class=\"math inline\">\\(f\\)</span> est donc uniformément continue sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

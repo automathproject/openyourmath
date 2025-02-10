@@ -1,0 +1,75 @@
+{
+  "uuid": "ot53",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2591",
+    "auteur": "delaunay",
+    "createdAt": "2009-05-19",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:11.858Z"
+  },
+  "contenu": [
+    {
+      "id": "f5470c61-c91d-4701-891c-d0ee9ea1ff08",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a\\in\\R$, notons $A$ la matrice suivante\n$$A=\\begin{pmatrix}0&1 \\\\  -a&1+a\\end{pmatrix}.$$\nOn d\\'efinit une suite $(u_n)_{n\\in\\N}$, par la donn\\'ee de $u_0$ et $u_1$ et la relation de r\\'ecurrence suivante, pour $n\\in\\N$\n$$u_{n+2}=(1+a)u_{n+1}-au_n$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\in\\R\\)</span>, notons <span class=\"math inline\">\\(A\\)</span> la matrice suivante <span class=\"math display\">\\[A=\\begin{pmatrix}0&amp;1 \\\\  -a&amp;1+a\\end{pmatrix}.\\]</span> On définit une suite <span class=\"math inline\">\\((u_n)_{n\\in\\N}\\)</span>, par la donnée de <span class=\"math inline\">\\(u_0\\)</span> et <span class=\"math inline\">\\(u_1\\)</span> et la relation de récurrence suivante, pour <span class=\"math inline\">\\(n\\in\\N\\)</span> <span class=\"math display\">\\[u_{n+2}=(1+a)u_{n+1}-au_n\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "ed787a79-dc28-4da7-816f-1bf98a896d23",
+      "type": "question",
+      "value": {
+        "latex": "Pour quelles valeurs de $a$ la matrice $A$ est-elle diagonalisable ?",
+        "html": "<p>Pour quelles valeurs de <span class=\"math inline\">\\(a\\)</span> la matrice <span class=\"math inline\">\\(A\\)</span> est-elle diagonalisable ?</p>\n"
+      }
+    },
+    {
+      "id": "af9f6aea-4db4-452c-a875-0528006f76f8",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\it Pour quelles valeurs de $a$ la matrice $A$ est-elle diagonalisable ?}\n\nCalculons le polyn\\^ome caract\\'eristique $P_A(X)$ :\n$$P_A(X)=\\begin{vmatrix}-X&1 \\\\  -a& 1+a-X\\end{vmatrix}=-X(1+a-X)+a=X^2-(1+a)X+a.$$\nLa matrice $A$ est diagonalisable sur $\\R$ si le polyn\\^ome $P_A$ admet deux racines distinctes dans $\\R$. En effet, si $P_A$ admet une racine double $r$ et $A$ diagonalisable, alors l'endomorphisme de matrice $A$ est \\'egal \\`a $r\\mathrm{Id}_E$, ce qui n'est pas le cas. Calculons donc le discriminant du polyn\\^ome caract\\'eristique.\n$$\\Delta=(1+a)^2-4a=1+a^2+2a-4a=1+a^2-2a=(1-a)^2.$$\nAinsi la matrice $A$ est diagonalisable pour tout $a\\neq 1$.",
+        "html": "<p><span><em>Pour quelles valeurs de <span class=\"math inline\">\\(a\\)</span> la matrice <span class=\"math inline\">\\(A\\)</span> est-elle diagonalisable ?</em></span></p>\n<p>Calculons le polynôme caractéristique <span class=\"math inline\">\\(P_A(X)\\)</span> : <span class=\"math display\">\\[P_A(X)=\\begin{vmatrix}-X&amp;1 \\\\  -a&amp; 1+a-X\\end{vmatrix}=-X(1+a-X)+a=X^2-(1+a)X+a.\\]</span> La matrice <span class=\"math inline\">\\(A\\)</span> est diagonalisable sur <span class=\"math inline\">\\(\\R\\)</span> si le polynôme <span class=\"math inline\">\\(P_A\\)</span> admet deux racines distinctes dans <span class=\"math inline\">\\(\\R\\)</span>. En effet, si <span class=\"math inline\">\\(P_A\\)</span> admet une racine double <span class=\"math inline\">\\(r\\)</span> et <span class=\"math inline\">\\(A\\)</span> diagonalisable, alors l’endomorphisme de matrice <span class=\"math inline\">\\(A\\)</span> est égal à <span class=\"math inline\">\\(r\\mathrm{Id}_E\\)</span>, ce qui n’est pas le cas. Calculons donc le discriminant du polynôme caractéristique. <span class=\"math display\">\\[\\Delta=(1+a)^2-4a=1+a^2+2a-4a=1+a^2-2a=(1-a)^2.\\]</span> Ainsi la matrice <span class=\"math inline\">\\(A\\)</span> est diagonalisable pour tout <span class=\"math inline\">\\(a\\neq 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e63e71df-fc64-4ff7-9dbe-9472dcfcf0b9",
+      "type": "question",
+      "value": {
+        "latex": "Lorsque $A$ est diagonalisable, calculer $A^n$ pour $n\\in \\N$.",
+        "html": "<p>Lorsque <span class=\"math inline\">\\(A\\)</span> est diagonalisable, calculer <span class=\"math inline\">\\(A^n\\)</span> pour <span class=\"math inline\">\\(n\\in \\N\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5049e9b4-c6c9-4c3e-a6a8-ee73383c60e8",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\it Lorsque $A$ est diagonalisable, calculons $A^n$ pour $n\\in \\N$}.\n\nLorsque $A$ est diagonalisable, il existe une matrice inversible $P$ et une matrice diagonale $D$ telles que $A=PDP^{-1}$, ainsi pour tout $n\\in\\N$, on a $A^n=PD^nP^{-1}$. D\\'eterminons les matrices $P$ et $D$. Pour cela calculons les deux valeurs propres de $A$, ce sont les racines du polyn\\^ome $P_A$, on a donc \n$$\\lambda_1={\\frac{1+a+1-a}{2}}=1\\ {\\hbox{et}}\\ \\lambda_2={\\frac{1+a-1+a}{2}}=a.$$\nD\\'eterminons maintenant des vecteurs propres associ\\'es aux valeurs propres $1$ et $a$. On cherche des vecteurs $\\vec{e_1}$ et $\\vec{e_2}$ tels que \n$A\\vec{e_1}=\\vec{e_1}$ et $A\\vec{e_2}=a\\vec{e_2}$.\n$$\\begin{pmatrix}0&1 \\\\  -a&1+a\\end{pmatrix}\\begin{pmatrix}x \\\\  y\\end{pmatrix}=\\begin{pmatrix}x \\\\  y\\end{pmatrix}\\iff y=x$$ et\n$$\\begin{pmatrix}0&1 \\\\  -a&1+a\\end{pmatrix}\\begin{pmatrix}x \\\\  y\\end{pmatrix}=a\\begin{pmatrix}x \\\\  y\\end{pmatrix}\\iff y=ax$$\nainsi on peut choisir $\\vec e_1=(1,1)$ et $\\vec e_2=(1,a)$. On a alors\n$$P=\\begin{pmatrix}1&1 \\\\  1&a\\end{pmatrix},\\  D=\\begin{pmatrix}1&0 \\\\  0&a\\end{pmatrix},\\ \nP^{-1}={\\frac{1} {a-1}}\\begin{pmatrix}a&-1 \\\\  -1&1\\end{pmatrix}.$$\nD'o\\`u, pour tout $n\\in\\N$, \n$$A^n=PD^nP^{-1}=P\\begin{pmatrix}1&0 \\\\  0&a^n\\end{pmatrix}P^{-1}={\\frac{1} {a-1}}\\begin{pmatrix}a-a^n&a^n-1 \\\\  a-a^{n+1}&a^{n+1}-1\\end{pmatrix}$$",
+        "html": "<p><span><em>Lorsque <span class=\"math inline\">\\(A\\)</span> est diagonalisable, calculons <span class=\"math inline\">\\(A^n\\)</span> pour <span class=\"math inline\">\\(n\\in \\N\\)</span></em></span>.</p>\n<p>Lorsque <span class=\"math inline\">\\(A\\)</span> est diagonalisable, il existe une matrice inversible <span class=\"math inline\">\\(P\\)</span> et une matrice diagonale <span class=\"math inline\">\\(D\\)</span> telles que <span class=\"math inline\">\\(A=PDP^{-1}\\)</span>, ainsi pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>, on a <span class=\"math inline\">\\(A^n=PD^nP^{-1}\\)</span>. Déterminons les matrices <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(D\\)</span>. Pour cela calculons les deux valeurs propres de <span class=\"math inline\">\\(A\\)</span>, ce sont les racines du polynôme <span class=\"math inline\">\\(P_A\\)</span>, on a donc <span class=\"math display\">\\[\\lambda_1={\\frac{1+a+1-a}{2}}=1\\ {\\hbox{et}}\\ \\lambda_2={\\frac{1+a-1+a}{2}}=a.\\]</span> Déterminons maintenant des vecteurs propres associés aux valeurs propres <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(a\\)</span>. On cherche des vecteurs <span class=\"math inline\">\\(\\vec{e_1}\\)</span> et <span class=\"math inline\">\\(\\vec{e_2}\\)</span> tels que <span class=\"math inline\">\\(A\\vec{e_1}=\\vec{e_1}\\)</span> et <span class=\"math inline\">\\(A\\vec{e_2}=a\\vec{e_2}\\)</span>. <span class=\"math display\">\\[\\begin{pmatrix}0&amp;1 \\\\  -a&amp;1+a\\end{pmatrix}\\begin{pmatrix}x \\\\  y\\end{pmatrix}=\\begin{pmatrix}x \\\\  y\\end{pmatrix}\\iff y=x\\]</span> et <span class=\"math display\">\\[\\begin{pmatrix}0&amp;1 \\\\  -a&amp;1+a\\end{pmatrix}\\begin{pmatrix}x \\\\  y\\end{pmatrix}=a\\begin{pmatrix}x \\\\  y\\end{pmatrix}\\iff y=ax\\]</span> ainsi on peut choisir <span class=\"math inline\">\\(\\vec e_1=(1,1)\\)</span> et <span class=\"math inline\">\\(\\vec e_2=(1,a)\\)</span>. On a alors <span class=\"math display\">\\[P=\\begin{pmatrix}1&amp;1 \\\\  1&amp;a\\end{pmatrix},\\  D=\\begin{pmatrix}1&amp;0 \\\\  0&amp;a\\end{pmatrix},\\ \nP^{-1}={\\frac{1} {a-1}}\\begin{pmatrix}a&amp;-1 \\\\  -1&amp;1\\end{pmatrix}.\\]</span> D’où, pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>, <span class=\"math display\">\\[A^n=PD^nP^{-1}=P\\begin{pmatrix}1&amp;0 \\\\  0&amp;a^n\\end{pmatrix}P^{-1}={\\frac{1} {a-1}}\\begin{pmatrix}a-a^n&amp;a^n-1 \\\\  a-a^{n+1}&amp;a^{n+1}-1\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "35c86059-9a74-44f0-afd0-fe0ab83683bc",
+      "type": "question",
+      "value": {
+        "latex": "On suppose $A$ diagonalisable. On note $U_n$ le vecteur $U_{n}=\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}$, exprimer $U_{n+1}$ en fonction de $U_n$ et de $A$, puis $U_n$ en fonction de $U_0$ et de $A$.",
+        "html": "<p>On suppose <span class=\"math inline\">\\(A\\)</span> diagonalisable. On note <span class=\"math inline\">\\(U_n\\)</span> le vecteur <span class=\"math inline\">\\(U_{n}=\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}\\)</span>, exprimer <span class=\"math inline\">\\(U_{n+1}\\)</span> en fonction de <span class=\"math inline\">\\(U_n\\)</span> et de <span class=\"math inline\">\\(A\\)</span>, puis <span class=\"math inline\">\\(U_n\\)</span> en fonction de <span class=\"math inline\">\\(U_0\\)</span> et de <span class=\"math inline\">\\(A\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2a6b0bf1-f0f8-4b2c-8ad5-b7f507097a6b",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\it On suppose $A$ diagonalisable. On note $U_n$ le vecteur $U_{n}=\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}$,  on exprime $U_{n+1}$ en fonction de $U_n$ et de $A$, puis $U_n$ en fonction de $U_0$ et de $A$.}\n\nOn a, par d\\'efinition, pour tout $n\\in\\N$, $u_{n+2}=(1+a)u_{n+1}-au_n$, ainsi, \n$$U_{n+1}=\\begin{pmatrix}u_{n+1} \\\\  u_{n+2}\\end{pmatrix}=\\begin{pmatrix}0&1 \\\\  -a&1+a\\end{pmatrix}\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}=AU_n.$$\nOn a donc $U_1=AU_0$, montrons par r\\'ecurrence sur $n$, que pour tout $n\\in\\N$, $U_n=A^nU_0$. C'est vrai pour $n=0$, $U_0=A^0U_0=IU_0=U_0$ et pour $n=1$. Soit $n$ fix\\'e pour lequel on suppose $U_n=A^nU_0$, on a alors $U^{n+1}=AU_n=A.A^nU_0=A^{n+1}U_0$, le r\\'esultat est donc vrai pour tout entier naturel $n$.\n\nLa matrice $A$ \\'etant suppos\\'ee diagonalisable, on a donc, pour $n\\in\\N$,\n$$U_n=A^nU_0=PD^nP^{-1}U_0={\\frac {1}{a-1}}\\begin{pmatrix}a-a^n&a^n-1 \\\\  a-a^{n+1}&a^{n+1}-1\\end{pmatrix}\\begin{pmatrix}u_{0} \\\\  u_{1}\\end{pmatrix},$$\nainsi on peut exprimer pour $n\\in\\N$, le terme g\\'en\\'eral de la suite $u_n$ en fonction des premiers termes $u_0$ et $u_1$, on a \n$$u_n={\\frac{1} {a-1}}\\left((a-a^n)u_0+(a^n-1)u_1\\right).$$",
+        "html": "<p><span><em>On suppose <span class=\"math inline\">\\(A\\)</span> diagonalisable. On note <span class=\"math inline\">\\(U_n\\)</span> le vecteur <span class=\"math inline\">\\(U_{n}=\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}\\)</span>, on exprime <span class=\"math inline\">\\(U_{n+1}\\)</span> en fonction de <span class=\"math inline\">\\(U_n\\)</span> et de <span class=\"math inline\">\\(A\\)</span>, puis <span class=\"math inline\">\\(U_n\\)</span> en fonction de <span class=\"math inline\">\\(U_0\\)</span> et de <span class=\"math inline\">\\(A\\)</span>.</em></span></p>\n<p>On a, par définition, pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>, <span class=\"math inline\">\\(u_{n+2}=(1+a)u_{n+1}-au_n\\)</span>, ainsi, <span class=\"math display\">\\[U_{n+1}=\\begin{pmatrix}u_{n+1} \\\\  u_{n+2}\\end{pmatrix}=\\begin{pmatrix}0&amp;1 \\\\  -a&amp;1+a\\end{pmatrix}\\begin{pmatrix}u_{n} \\\\  u_{n+1}\\end{pmatrix}=AU_n.\\]</span> On a donc <span class=\"math inline\">\\(U_1=AU_0\\)</span>, montrons par récurrence sur <span class=\"math inline\">\\(n\\)</span>, que pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>, <span class=\"math inline\">\\(U_n=A^nU_0\\)</span>. C’est vrai pour <span class=\"math inline\">\\(n=0\\)</span>, <span class=\"math inline\">\\(U_0=A^0U_0=IU_0=U_0\\)</span> et pour <span class=\"math inline\">\\(n=1\\)</span>. Soit <span class=\"math inline\">\\(n\\)</span> fixé pour lequel on suppose <span class=\"math inline\">\\(U_n=A^nU_0\\)</span>, on a alors <span class=\"math inline\">\\(U^{n+1}=AU_n=A.A^nU_0=A^{n+1}U_0\\)</span>, le résultat est donc vrai pour tout entier naturel <span class=\"math inline\">\\(n\\)</span>.</p>\n<p>La matrice <span class=\"math inline\">\\(A\\)</span> étant supposée diagonalisable, on a donc, pour <span class=\"math inline\">\\(n\\in\\N\\)</span>, <span class=\"math display\">\\[U_n=A^nU_0=PD^nP^{-1}U_0={\\frac {1}{a-1}}\\begin{pmatrix}a-a^n&amp;a^n-1 \\\\  a-a^{n+1}&amp;a^{n+1}-1\\end{pmatrix}\\begin{pmatrix}u_{0} \\\\  u_{1}\\end{pmatrix},\\]</span> ainsi on peut exprimer pour <span class=\"math inline\">\\(n\\in\\N\\)</span>, le terme général de la suite <span class=\"math inline\">\\(u_n\\)</span> en fonction des premiers termes <span class=\"math inline\">\\(u_0\\)</span> et <span class=\"math inline\">\\(u_1\\)</span>, on a <span class=\"math display\">\\[u_n={\\frac{1} {a-1}}\\left((a-a^n)u_0+(a^n-1)u_1\\right).\\]</span></p>\n"
+      }
+    }
+  ]
+}

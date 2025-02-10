@@ -1,0 +1,107 @@
+{
+  "uuid": "CHFV",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "7411",
+    "auteur": "mourougane",
+    "createdAt": "2021-08-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Matrice et application linéaire",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:17.171Z"
+  },
+  "contenu": [
+    {
+      "id": "8a3779c3-8d25-4066-8636-ab2dd38f4d55",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f : \\Rr^3 \\rightarrow \\Rr^3$ l'application linéaire définie par\r\n$$f(x,y,z) = (4x + y + z, 4x + 7y +2z, -6x -6y-z).$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(f : \\Rr^3 \\rightarrow \\Rr^3\\)</span> l’application linéaire définie par <span class=\"math display\">\\[f(x,y,z) = (4x + y + z, 4x + 7y +2z, -6x -6y-z).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "3bc35ba4-b0c5-435a-8f1a-67c25d0df631",
+      "type": "question",
+      "value": {
+        "latex": "\\'Ecrire la matrice $A$ de $f$ dans la base canonique $\\mathcal{B}$ de $\\Rr^3$.",
+        "html": "<p>Écrire la matrice <span class=\"math inline\">\\(A\\)</span> de <span class=\"math inline\">\\(f\\)</span> dans la base canonique <span class=\"math inline\">\\(\\mathcal{B}\\)</span> de <span class=\"math inline\">\\(\\Rr^3\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "00d6305c-dc1f-4503-af11-23000dd73d4c",
+      "type": "reponse",
+      "value": {
+        "latex": "$$A = [f]_{\\mathcal{B}}^{\\mathcal{B}} = \\left( {\\begin{array}{ccc}\r\n 4 & 1 & 1 \\\\\r\n 4 & 7 & 2 \\\\\r\n -6 & -6 & -1 \\\\\r\n \\end{array} } \\right)$$",
+        "html": "<p><span class=\"math display\">\\[A = [f]_{\\mathcal{B}}^{\\mathcal{B}} = \\left( {\\begin{array}{ccc}\n 4 &amp; 1 &amp; 1 \\\\\n 4 &amp; 7 &amp; 2 \\\\\n -6 &amp; -6 &amp; -1 \\\\\n \\end{array} } \\right)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "c29110dc-645d-4824-8c94-b7e347796aeb",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que les vecteurs $v_1 = (1,0,-2)$, $v_2 = (1,-1,0)$ et $v_3 = (0,-1,1)$ forment une base de $\\Rr^3$ que l'on note $\\mathcal{B}'$.",
+        "html": "<p>Montrer que les vecteurs <span class=\"math inline\">\\(v_1 = (1,0,-2)\\)</span>, <span class=\"math inline\">\\(v_2 = (1,-1,0)\\)</span> et <span class=\"math inline\">\\(v_3 = (0,-1,1)\\)</span> forment une base de <span class=\"math inline\">\\(\\Rr^3\\)</span> que l’on note <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8d98f667-588f-4407-8fd2-4e183648fe5e",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour montrer que les vecteurs $v_1$, $v_2$ et $v_3$ forment un système libre de $\\Rr^3$, on considère $\\lambda_1,~\\lambda_2,~\\lambda_3 \\in \\Rr$ tels que \r\n\t$$\\lambda_1 v_1 + \\lambda_2 v_2 + \\lambda_3 v_3 = 0$$\r\net on veut montrer qu'alors nécessairement $\\lambda_1 = \\lambda_2 = \\lambda_3 = 0$. Cela revient à montrer que le système\r\n\t$$\\left( {\\begin{array}{ccc}\r\n 1 & 1 & 0 \\\\\r\n 0 & -1 & -1 \\\\\r\n -2 & 0 & 1 \\\\\r\n \\end{array} } \\right) \r\n\\left( {\\begin{array}{c}\r\n\\lambda_1 \\\\\r\n\\lambda_2 \\\\\r\n\\lambda_3\r\n \\end{array} } \\right) = \r\n \\left( {\\begin{array}{c}\r\n0 \\\\\r\n0 \\\\\r\n0\r\n \\end{array} } \\right)$$ \r\npossède pour unique solution $\\lambda_1 = \\lambda_2 = \\lambda_3 = 0$.\r\nOn applique alors l'algorithme de Gauss à la matrice \r\n$$\\left( {\\begin{array}{ccc}\r\n 1 & 1 & 0 \\\\\r\n 0 & -1 & -1 \\\\\r\n -2 & 0 & 1 \\\\\r\n \\end{array} } \\right) $$\r\n Après avoir échelonné complètement cette matrice, on obtient le système équivalent suivant\r\n $$\\left( {\\begin{array}{ccc}\r\n 1 & 0 & 0 \\\\\r\n 0 & 1 & 0 \\\\\r\n 0 & 0 & 1 \\\\\r\n \\end{array} } \\right)\r\n\\left( {\\begin{array}{c}\r\n\\lambda_1 \\\\\r\n\\lambda_2 \\\\\r\n\\lambda_3\r\n \\end{array} } \\right) = \r\n \\left( {\\begin{array}{c}\r\n0 \\\\\r\n0 \\\\\r\n0\r\n \\end{array} } \\right)$$ \r\n qui a pour unique solution $\\lambda_1 = \\lambda_2 = \\lambda_3 = 0$. Les vecteurs $v_1$, $v_2$ et $v_3$ forment donc un système libre de $3$ éléments dans l'espace vectoriel $\\Rr^3$ qui est de dimension $3$, donc ils forment un système également générateur de $\\Rr^3$ et c'est une base de $\\Rr^3$.",
+        "html": "<p>Pour montrer que les vecteurs <span class=\"math inline\">\\(v_1\\)</span>, <span class=\"math inline\">\\(v_2\\)</span> et <span class=\"math inline\">\\(v_3\\)</span> forment un système libre de <span class=\"math inline\">\\(\\Rr^3\\)</span>, on considère <span class=\"math inline\">\\(\\lambda_1,~\\lambda_2,~\\lambda_3 \\in \\Rr\\)</span> tels que <span class=\"math display\">\\[\\lambda_1 v_1 + \\lambda_2 v_2 + \\lambda_3 v_3 = 0\\]</span> et on veut montrer qu’alors nécessairement <span class=\"math inline\">\\(\\lambda_1 = \\lambda_2 = \\lambda_3 = 0\\)</span>. Cela revient à montrer que le système <span class=\"math display\">\\[\\left( {\\begin{array}{ccc}\n 1 &amp; 1 &amp; 0 \\\\\n 0 &amp; -1 &amp; -1 \\\\\n -2 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right) \n\\left( {\\begin{array}{c}\n\\lambda_1 \\\\\n\\lambda_2 \\\\\n\\lambda_3\n \\end{array} } \\right) = \n \\left( {\\begin{array}{c}\n0 \\\\\n0 \\\\\n0\n \\end{array} } \\right)\\]</span> possède pour unique solution <span class=\"math inline\">\\(\\lambda_1 = \\lambda_2 = \\lambda_3 = 0\\)</span>. On applique alors l’algorithme de Gauss à la matrice <span class=\"math display\">\\[\\left( {\\begin{array}{ccc}\n 1 &amp; 1 &amp; 0 \\\\\n 0 &amp; -1 &amp; -1 \\\\\n -2 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right)\\]</span> Après avoir échelonné complètement cette matrice, on obtient le système équivalent suivant <span class=\"math display\">\\[\\left( {\\begin{array}{ccc}\n 1 &amp; 0 &amp; 0 \\\\\n 0 &amp; 1 &amp; 0 \\\\\n 0 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right)\n\\left( {\\begin{array}{c}\n\\lambda_1 \\\\\n\\lambda_2 \\\\\n\\lambda_3\n \\end{array} } \\right) = \n \\left( {\\begin{array}{c}\n0 \\\\\n0 \\\\\n0\n \\end{array} } \\right)\\]</span> qui a pour unique solution <span class=\"math inline\">\\(\\lambda_1 = \\lambda_2 = \\lambda_3 = 0\\)</span>. Les vecteurs <span class=\"math inline\">\\(v_1\\)</span>, <span class=\"math inline\">\\(v_2\\)</span> et <span class=\"math inline\">\\(v_3\\)</span> forment donc un système libre de <span class=\"math inline\">\\(3\\)</span> éléments dans l’espace vectoriel <span class=\"math inline\">\\(\\Rr^3\\)</span> qui est de dimension <span class=\"math inline\">\\(3\\)</span>, donc ils forment un système également générateur de <span class=\"math inline\">\\(\\Rr^3\\)</span> et c’est une base de <span class=\"math inline\">\\(\\Rr^3\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f092b4f7-76cf-4803-921f-06b561df3176",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la matrice de passage $[Id_{R^3}]_{\\mathcal{B}'}^{\\mathcal{B}}$ de $\\mathcal{B}$ à $\\mathcal{B}'$, et la matrice de passage $[Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}'}$ de $\\mathcal{B}'$ à $\\mathcal{B}$.",
+        "html": "<p>Déterminer la matrice de passage <span class=\"math inline\">\\([Id_{R^3}]_{\\mathcal{B}&#39;}^{\\mathcal{B}}\\)</span> de <span class=\"math inline\">\\(\\mathcal{B}\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span>, et la matrice de passage <span class=\"math inline\">\\([Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}&#39;}\\)</span> de <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ca1a0bf7-3c5d-4bc1-9617-05e3441e76b7",
+      "type": "reponse",
+      "value": {
+        "latex": "La matrice de passage $P := [Id_{R^3}]_{\\mathcal{B}'}^{\\mathcal{B}}$ de $\\mathcal{B}$ à $\\mathcal{B}'$ est \r\n\t$$P = \r\n\\left( {\\begin{array}{ccc}\r\n 1 & 1 & 0 \\\\\r\n 0 & -1 & -1 \\\\\r\n -2 & 0 & 1 \\\\\r\n \\end{array} } \\right)$$\r\n La matrice de passage $[Id_{\\Rr^3}]_{\\mathcal{B}}^{\\mathcal{B}'}$ de $\\mathcal{B}'$ à $\\mathcal{B}$ est l'inverse de la matrice de passage $[Id_{\\Rr^3}]_{\\mathcal{B}'}^{\\mathcal{B}}$ de $\\mathcal{B}$ à $\\mathcal{B}'$ i.e. $[Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}'} = P^{-1}$. Pour calculer l'inverse de $P$, on applique l'algorithme de Gauss à la matrice \r\n$$\\left( {\\begin{array}{ccc | ccc}\r\n 1 & 1 & 0 & 1 & 0 & 0 \\\\\r\n 0 & -1 & -1 & 0 & 1 & 0 \\\\\r\n -2 & 0 & 1 & 0 & 0 & 1 \\\\\r\n \\end{array} } \\right)$$\r\n Pour ce faire, on reprend les opérations effectuées sur la matrice $P$ lors de la question précédente pour obtenir \r\n$$\\left( {\\begin{array}{ccc | ccc}\r\n 1 & 0 & 0 & -1 & -1 & -1 \\\\\r\n 0 & 1 & 0 & 2 & 1 & 1 \\\\\r\n 0 & 0 & 1 & -2 & -2 & -1 \\\\\r\n \\end{array} } \\right)$$ \r\net ainsi \r\n$$[Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}'} = P^{-1} = \r\n\\left( {\\begin{array}{ccc}\r\n  -1 & -1 & -1 \\\\\r\n 2 & 1 & 1 \\\\\r\n -2 & -2 & -1 \\\\\r\n \\end{array} } \\right)$$",
+        "html": "<p>La matrice de passage <span class=\"math inline\">\\(P := [Id_{R^3}]_{\\mathcal{B}&#39;}^{\\mathcal{B}}\\)</span> de <span class=\"math inline\">\\(\\mathcal{B}\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span> est <span class=\"math display\">\\[P = \n\\left( {\\begin{array}{ccc}\n 1 &amp; 1 &amp; 0 \\\\\n 0 &amp; -1 &amp; -1 \\\\\n -2 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right)\\]</span> La matrice de passage <span class=\"math inline\">\\([Id_{\\Rr^3}]_{\\mathcal{B}}^{\\mathcal{B}&#39;}\\)</span> de <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}\\)</span> est l’inverse de la matrice de passage <span class=\"math inline\">\\([Id_{\\Rr^3}]_{\\mathcal{B}&#39;}^{\\mathcal{B}}\\)</span> de <span class=\"math inline\">\\(\\mathcal{B}\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span> i.e. <span class=\"math inline\">\\([Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}&#39;} = P^{-1}\\)</span>. Pour calculer l’inverse de <span class=\"math inline\">\\(P\\)</span>, on applique l’algorithme de Gauss à la matrice <span class=\"math display\">\\[\\left( {\\begin{array}{ccc | ccc}\n 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\\\\n 0 &amp; -1 &amp; -1 &amp; 0 &amp; 1 &amp; 0 \\\\\n -2 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right)\\]</span> Pour ce faire, on reprend les opérations effectuées sur la matrice <span class=\"math inline\">\\(P\\)</span> lors de la question précédente pour obtenir <span class=\"math display\">\\[\\left( {\\begin{array}{ccc | ccc}\n 1 &amp; 0 &amp; 0 &amp; -1 &amp; -1 &amp; -1 \\\\\n 0 &amp; 1 &amp; 0 &amp; 2 &amp; 1 &amp; 1 \\\\\n 0 &amp; 0 &amp; 1 &amp; -2 &amp; -2 &amp; -1 \\\\\n \\end{array} } \\right)\\]</span> et ainsi <span class=\"math display\">\\[[Id_{R^3}]_{\\mathcal{B}}^{\\mathcal{B}&#39;} = P^{-1} = \n\\left( {\\begin{array}{ccc}\n  -1 &amp; -1 &amp; -1 \\\\\n 2 &amp; 1 &amp; 1 \\\\\n -2 &amp; -2 &amp; -1 \\\\\n \\end{array} } \\right)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "70ec0014-8b75-4a02-b2b9-ee33a5d6771e",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la matrice $M$ de $f$ dans la base $\\mathcal{B}'$.",
+        "html": "<p>Déterminer la matrice <span class=\"math inline\">\\(M\\)</span> de <span class=\"math inline\">\\(f\\)</span> dans la base <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1faf9b11-4cb3-4a6b-8586-0c438c9b3e7e",
+      "type": "reponse",
+      "value": {
+        "latex": "On utilise la formule \r\n $$[f]_{\\mathcal{B}'}^{\\mathcal{B}'} = [Id_{\\Rr^3}]_{\\mathcal{B}}^{\\mathcal{B}'} [f]_{\\mathcal{B}}^{\\mathcal{B}} [Id_{\\Rr^3}]_{\\mathcal{B}'}^{\\mathcal{B}}$$\r\n et on a alors \r\n\\begin{equation*}\r\nM = P^{-1}A P = \r\n \\left( {\\begin{array}{ccc}\r\n 2 & 0 & 0 \\\\\r\n 0 & 3 & 0 \\\\\r\n 0 & 0 & 5 \\\\\r\n \\end{array} } \\right)\\end{equation*}",
+        "html": "<p>On utilise la formule <span class=\"math display\">\\[[f]_{\\mathcal{B}&#39;}^{\\mathcal{B}&#39;} = [Id_{\\Rr^3}]_{\\mathcal{B}}^{\\mathcal{B}&#39;} [f]_{\\mathcal{B}}^{\\mathcal{B}} [Id_{\\Rr^3}]_{\\mathcal{B}&#39;}^{\\mathcal{B}}\\]</span> et on a alors <span class=\"math display\">\\[M = P^{-1}A P = \n \\left( {\\begin{array}{ccc}\n 2 &amp; 0 &amp; 0 \\\\\n 0 &amp; 3 &amp; 0 \\\\\n 0 &amp; 0 &amp; 5 \\\\\n \\end{array} } \\right)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "4822fee4-6674-47d6-83f0-e1638c2341dc",
+      "type": "question",
+      "value": {
+        "latex": "En déduire $A^n$ pour tout $n \\in \\mathbb{N}^{*}$.",
+        "html": "<p>En déduire <span class=\"math inline\">\\(A^n\\)</span> pour tout <span class=\"math inline\">\\(n \\in \\mathbb{N}^{*}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "45b05261-e029-4bf9-9fc0-ceddf0c3607e",
+      "type": "reponse",
+      "value": {
+        "latex": "On a\r\n $$A = P M P^{-1}$$\r\n donc pour tout $n \\in \\mathbb{N}^*$\r\n $$A^n = P M^n P^{-1} = \r\n \\left( {\\begin{array}{ccc}\r\n 1 & 1 & 0 \\\\\r\n 0 & -1 & -1 \\\\\r\n -2 & 0 & 1 \\\\\r\n \\end{array} } \\right) \r\n \\left( {\\begin{array}{ccc}\r\n  2^n & 0 & 0 \\\\\r\n 0 & 3^n & 0 \\\\\r\n 0 & 0 & 5^n \\\\\r\n \\end{array} } \\right) \r\n \\left( {\\begin{array}{ccc}\r\n  -1 & -1 & -1 \\\\\r\n 2 & 1 & 1 \\\\\r\n -2 & -2 & -1 \\\\\r\n \\end{array} } \\right) $$\r\n $$= \r\n \\left( {\\begin{array}{ccc}\r\n  -2^n + 2.3^n & -2^n + 3^n & -2^n + 3^n \\\\\r\n -2.3^n + 2.5^n & -3^n + 2.5^n & -3^n + 5^n \\\\\r\n 2.2^n - 2.5^n & 2.2^n - 2.5^n & 2.2^n - 5^n \\\\\r\n \\end{array} } \\right)$$",
+        "html": "<p>On a <span class=\"math display\">\\[A = P M P^{-1}\\]</span> donc pour tout <span class=\"math inline\">\\(n \\in \\mathbb{N}^*\\)</span> <span class=\"math display\">\\[A^n = P M^n P^{-1} = \n \\left( {\\begin{array}{ccc}\n 1 &amp; 1 &amp; 0 \\\\\n 0 &amp; -1 &amp; -1 \\\\\n -2 &amp; 0 &amp; 1 \\\\\n \\end{array} } \\right) \n \\left( {\\begin{array}{ccc}\n  2^n &amp; 0 &amp; 0 \\\\\n 0 &amp; 3^n &amp; 0 \\\\\n 0 &amp; 0 &amp; 5^n \\\\\n \\end{array} } \\right) \n \\left( {\\begin{array}{ccc}\n  -1 &amp; -1 &amp; -1 \\\\\n 2 &amp; 1 &amp; 1 \\\\\n -2 &amp; -2 &amp; -1 \\\\\n \\end{array} } \\right)\\]</span> <span class=\"math display\">\\[= \n \\left( {\\begin{array}{ccc}\n  -2^n + 2.3^n &amp; -2^n + 3^n &amp; -2^n + 3^n \\\\\n -2.3^n + 2.5^n &amp; -3^n + 2.5^n &amp; -3^n + 5^n \\\\\n 2.2^n - 2.5^n &amp; 2.2^n - 2.5^n &amp; 2.2^n - 5^n \\\\\n \\end{array} } \\right)\\]</span></p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "uuid": "NEXX",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5774",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Espace euclidien, espace normé",
+    "sousChapitre": "Produit scalaire, norme",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:27.166Z"
+  },
+  "contenu": [
+    {
+      "id": "d6d6f1d8-109f-4eea-8c2a-9bcb5a412ab9",
+      "type": "description",
+      "value": {
+        "latex": "Soit $E=\\Rr[X]$. Pour $(P,Q)\\in E^2$, on pose $\\varphi(P,Q)=\\int_{-1}^{1}\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\;dt$. Pour $n\\in\\Nn$, on note $T_n$ le $n$-ème polynôme de \\textsc{Tchebychev} de première espèce c'est-à-dire l'unique polynôme tel que $\\forall\\theta\\in\\Rr$, $T_n(\\cos\\theta)=\\cos(n\\theta)$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(E=\\Rr[X]\\)</span>. Pour <span class=\"math inline\">\\((P,Q)\\in E^2\\)</span>, on pose <span class=\"math inline\">\\(\\varphi(P,Q)=\\int_{-1}^{1}\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\;dt\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, on note <span class=\"math inline\">\\(T_n\\)</span> le <span class=\"math inline\">\\(n\\)</span>-ème polynôme de <span class=\"smallcaps\">Tchebychev</span> de première espèce c’est-à-dire l’unique polynôme tel que <span class=\"math inline\">\\(\\forall\\theta\\in\\Rr\\)</span>, <span class=\"math inline\">\\(T_n(\\cos\\theta)=\\cos(n\\theta)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a85fa630-3580-41c4-9b0f-bf679865c18a",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\varphi$ est un produit scalaire sur $E$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\varphi\\)</span> est un produit scalaire sur <span class=\"math inline\">\\(E\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "031ec8e6-cb06-4deb-9b70-1d12f1a7e633",
+      "type": "reponse",
+      "value": {
+        "latex": "\\textbullet~Soit $(P,Q)\\in E^2$. L'application $t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}$ est continue sur $]-1,1[$. Ensuite, l'application $t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1+t}}$ est bornée au voisinage de $1$ car continue en $1$ et donc quand $t$ tend vers $1$, $\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}=\\frac{P(t)Q(t)}{\\sqrt{1+t}}\\times\\frac{1}{\\sqrt{1-t}}=O\\left(\\frac{1}{\\sqrt{1-t}}\\right)$. Puisque $\\frac{1}{2}<1$, on en déduit que l'application $t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}$ est intégrable sur un voisinage de $1$ à gauche. De même, quand $t$ tend vers $1$, $\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}=O\\left(\\frac{1}{\\sqrt{1+t}}\\right)$ et l'application $t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}$ est intégrable sur un voisinage de $-1$ à droite. Finalement, l'application $t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}$ est intégrable sur $]-1,1[$ et $\\varphi(P,Q)$ existe.\n\n\\textbullet~La symétrie, la bilinéarité et la positivité de $\\varphi$ sont claires. De plus, pour $P\\in E$,\n\n$$\\begin{align*}\\ensuremath\n\\varphi(P,P)=0&\\Rightarrow\\int_{-1}^{1}\\frac{P^2(t)}{\\sqrt{1-t^2}}\\;dt=0\\\\\n &\\Rightarrow\\forall t\\in]-1,1[,\\;\\frac{P^2(t)}{\\sqrt{1-t^2}}=0\\;(\\text{fonction continue, positive, d'intégrale nulle})\\\\\n &\\Rightarrow\\forall t\\in]-1,1[,P(t)=0\\Rightarrow P=0\\;(\\text{polynôme ayant une infinité de racines}).\n\\end{align*}$$\n\nAinsi, l'application $\\varphi$ est définie et finalement\n\n\\begin{center}\n\\shadowbox{\nl'application $\\varphi$ est un produit scalaire sur $E$.\n}\n\\end{center}",
+        "html": "<p> Soit <span class=\"math inline\">\\((P,Q)\\in E^2\\)</span>. L’application <span class=\"math inline\">\\(t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\)</span> est continue sur <span class=\"math inline\">\\(]-1,1[\\)</span>. Ensuite, l’application <span class=\"math inline\">\\(t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1+t}}\\)</span> est bornée au voisinage de <span class=\"math inline\">\\(1\\)</span> car continue en <span class=\"math inline\">\\(1\\)</span> et donc quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}=\\frac{P(t)Q(t)}{\\sqrt{1+t}}\\times\\frac{1}{\\sqrt{1-t}}=O\\left(\\frac{1}{\\sqrt{1-t}}\\right)\\)</span>. Puisque <span class=\"math inline\">\\(\\frac{1}{2}&lt;1\\)</span>, on en déduit que l’application <span class=\"math inline\">\\(t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\)</span> est intégrable sur un voisinage de <span class=\"math inline\">\\(1\\)</span> à gauche. De même, quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span>, <span class=\"math inline\">\\(\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}=O\\left(\\frac{1}{\\sqrt{1+t}}\\right)\\)</span> et l’application <span class=\"math inline\">\\(t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\)</span> est intégrable sur un voisinage de <span class=\"math inline\">\\(-1\\)</span> à droite. Finalement, l’application <span class=\"math inline\">\\(t\\mapsto\\frac{P(t)Q(t)}{\\sqrt{1-t^2}}\\)</span> est intégrable sur <span class=\"math inline\">\\(]-1,1[\\)</span> et <span class=\"math inline\">\\(\\varphi(P,Q)\\)</span> existe.</p>\n<p> La symétrie, la bilinéarité et la positivité de <span class=\"math inline\">\\(\\varphi\\)</span> sont claires. De plus, pour <span class=\"math inline\">\\(P\\in E\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\varphi(P,P)=0&amp;\\Rightarrow\\int_{-1}^{1}\\frac{P^2(t)}{\\sqrt{1-t^2}}\\;dt=0\\\\\n &amp;\\Rightarrow\\forall t\\in]-1,1[,\\;\\frac{P^2(t)}{\\sqrt{1-t^2}}=0\\;(\\text{fonction continue, positive, d&#39;intégrale nulle})\\\\\n &amp;\\Rightarrow\\forall t\\in]-1,1[,P(t)=0\\Rightarrow P=0\\;(\\text{polynôme ayant une infinité de racines}).\n\\end{align*}\\]</span></p>\n<p>Ainsi, l’application <span class=\"math inline\">\\(\\varphi\\)</span> est définie et finalement</p>\n"
+      }
+    },
+    {
+      "id": "68f52981-a3a9-466d-9778-87ec880d6c07",
+      "type": "question",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "f7765263-5f02-4819-a891-750721a845de",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "2d54bbaa-6ec9-4cb9-848d-e446c495315d",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $(T_n)_{n\\in\\Nn}$ est une base orthogonale de l'espace préhilbertien $(E,\\varphi)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\((T_n)_{n\\in\\Nn}\\)</span> est une base orthogonale de l’espace préhilbertien <span class=\"math inline\">\\((E,\\varphi)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "34858a27-0763-40cb-a0ca-f6a0f82d7a6b",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $(n,p)\\in\\Nn^2$. En posant $t=\\cos\\theta$, on obtient\n\n\\begin{center}\n$\\varphi(T_n,T_p)=\\int_{-1}^{1}\\frac{T_n(t)T_p(t)}{\\sqrt{1-t^2}}\\;dt=\\int_{\\pi}^{0}\\frac{T_n(\\cos\\theta)T_p(\\cos\\theta)}{\\sqrt{1-\\cos^2\\theta}}\\;(-\\sin\\theta d\\theta)=\\int_{0}^{\\pi}\\cos(n\\theta)\\cos(p\\theta)\\;d\\theta$.\n\\end{center}\n\nSi de plus, $n\\neq p$, \n\n\\begin{center}\n$\\varphi(T_n,T_p)=\\frac{1}{2}\\int_{0}^{\\pi}(\\cos((n+p)\\theta)+\\cos((n-p)\\theta))\\;d\\theta=\\frac{1}{2}\\left[\\frac{\\sin((n+p)\\theta)}{n+p}+\\frac{\\sin((n-p)\\theta)}{n-p}\\right]_0^\\pi=0$.\n\\end{center}\n\nAinsi, la famille $(T_n)_{n\\in\\Nn}$ est orthogonale. De plus, on sait que $\\forall n\\in\\Nn$, $\\text{deg}(T_n)=n$ et on a donc montré que\n\n\\begin{center}\n\\shadowbox{\nla famille $(T_n)_{n\\in\\Nn}$ est une base orthogonale de l'espace préhilbertien $(E,\\varphi)$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\((n,p)\\in\\Nn^2\\)</span>. En posant <span class=\"math inline\">\\(t=\\cos\\theta\\)</span>, on obtient</p>\n<p><span class=\"math inline\">\\(\\varphi(T_n,T_p)=\\int_{-1}^{1}\\frac{T_n(t)T_p(t)}{\\sqrt{1-t^2}}\\;dt=\\int_{\\pi}^{0}\\frac{T_n(\\cos\\theta)T_p(\\cos\\theta)}{\\sqrt{1-\\cos^2\\theta}}\\;(-\\sin\\theta d\\theta)=\\int_{0}^{\\pi}\\cos(n\\theta)\\cos(p\\theta)\\;d\\theta\\)</span>.</p>\n<p>Si de plus, <span class=\"math inline\">\\(n\\neq p\\)</span>,</p>\n<p><span class=\"math inline\">\\(\\varphi(T_n,T_p)=\\frac{1}{2}\\int_{0}^{\\pi}(\\cos((n+p)\\theta)+\\cos((n-p)\\theta))\\;d\\theta=\\frac{1}{2}\\left[\\frac{\\sin((n+p)\\theta)}{n+p}+\\frac{\\sin((n-p)\\theta)}{n-p}\\right]_0^\\pi=0\\)</span>.</p>\n<p>Ainsi, la famille <span class=\"math inline\">\\((T_n)_{n\\in\\Nn}\\)</span> est orthogonale. De plus, on sait que <span class=\"math inline\">\\(\\forall n\\in\\Nn\\)</span>, <span class=\"math inline\">\\(\\text{deg}(T_n)=n\\)</span> et on a donc montré que</p>\n"
+      }
+    },
+    {
+      "id": "abb711c0-b7f9-4247-aaea-c74825755cc3",
+      "type": "question",
+      "value": {
+        "latex": "Pour $n\\in\\Nn$, déterminer $\\|T_n\\|$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, déterminer <span class=\"math inline\">\\(\\|T_n\\|\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c655d32d-6d27-4d7f-8a4c-5360dce7d5f7",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $n\\in\\Nn$. Quand $p=n$, la formule précédente fournit\n\n\\begin{center}\n$\\|T_n\\|^2=\\frac{1}{2}\\int_{0}^{\\pi}(1+\\cos(2n\\theta))\\;d\\theta=\\left\\{\n\\begin{array}{l}\n\\pi\\;\\text{si}\\;n=0\\\\\n\\frac{\\pi}{2}\\;\\text{si}\\;n\\geqslant1\n\\end{array}\n\\right.$,\n\\end{center}\n\net donc\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn$, $\\|T_n\\|=\\left\\{\n\\begin{array}{l}\n\\rule[-2mm]{0mm}{0mm}\\sqrt{\\pi}\\;\\text{si}\\;n=0\\\\\n\\sqrt{\\frac{\\pi}{2}}\\;\\text{si}\\;n\\geqslant1\n\\end{array}\n\\right.$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. Quand <span class=\"math inline\">\\(p=n\\)</span>, la formule précédente fournit</p>\n<p><span class=\"math inline\">\\(\\|T_n\\|^2=\\frac{1}{2}\\int_{0}^{\\pi}(1+\\cos(2n\\theta))\\;d\\theta=\\left\\{\n\\begin{array}{l}\n\\pi\\;\\text{si}\\;n=0\\\\\n\\frac{\\pi}{2}\\;\\text{si}\\;n\\geqslant1\n\\end{array}\n\\right.\\)</span>,</p>\n<p>et donc</p>\n"
+      }
+    }
+  ]
+}

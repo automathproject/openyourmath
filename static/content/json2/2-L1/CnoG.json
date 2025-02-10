@@ -1,0 +1,75 @@
+{
+  "uuid": "CnoG",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "3872",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Continuité, limite et étude de fonctions réelles",
+    "sousChapitre": "Continuité : théorie",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:36.430Z"
+  },
+  "contenu": [
+    {
+      "id": "7af0d311-a468-463b-aef5-bf6e58bf9c02",
+      "type": "description",
+      "value": {
+        "latex": "\\",
+        "html": "<p> </p>\n"
+      }
+    },
+    {
+      "id": "a39e34b7-e1e9-4988-86f3-68a537a93d04",
+      "type": "question",
+      "value": {
+        "latex": "Existe-t-il toujours~$\\varphi$ lipschitzienne telle que $\\varphi\\le f$\n    où $f : {\\R^n} \\to \\R$ est une application continue donnée~?",
+        "html": "<p>Existe-t-il toujours <span class=\"math inline\">\\(\\varphi\\)</span> lipschitzienne telle que <span class=\"math inline\">\\(\\varphi\\le f\\)</span> où <span class=\"math inline\">\\(f : {\\R^n} \\to \\R\\)</span> est une application continue donnée ?</p>\n"
+      }
+    },
+    {
+      "id": "300c2037-3067-4dde-a327-293d0421cf1e",
+      "type": "reponse",
+      "value": {
+        "latex": "Non. Si $\\varphi$ est lipschitzienne alors $\\varphi(x) = O(\\|x\\|)$\n    lorsque $\\|x\\|$ tend vers l'infini, donc toute fonction $f$ à décroissance\n    suffisament rapide vers $-\\infty$ n'est pas minorable par une fonction\n    lipschitzienne. Contre-exemple explicite~: $f(x) = -\\|x\\|^2$.",
+        "html": "<p>Non. Si <span class=\"math inline\">\\(\\varphi\\)</span> est lipschitzienne alors <span class=\"math inline\">\\(\\varphi(x) = O(\\|x\\|)\\)</span> lorsque <span class=\"math inline\">\\(\\|x\\|\\)</span> tend vers l’infini, donc toute fonction <span class=\"math inline\">\\(f\\)</span> à décroissance suffisament rapide vers <span class=\"math inline\">\\(-\\infty\\)</span> n’est pas minorable par une fonction lipschitzienne. Contre-exemple explicite : <span class=\"math inline\">\\(f(x) = -\\|x\\|^2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "aeb57f8f-5988-46ce-a4b4-2002ab09a8f5",
+      "type": "question",
+      "value": {
+        "latex": "Soit~$k>0$. Trouver une CNS sur~$f$ pour qu'il existe $\\varphi : {\\R^n}\\to \\R$\n    $k$-lipschitzienne minorant~$f$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(k&gt;0\\)</span>. Trouver une CNS sur <span class=\"math inline\">\\(f\\)</span> pour qu’il existe <span class=\"math inline\">\\(\\varphi : {\\R^n}\\to \\R\\)</span> <span class=\"math inline\">\\(k\\)</span>-lipschitzienne minorant <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "636530f5-9394-4ff4-9cdb-8d00fe8f51b8",
+      "type": "reponse",
+      "value": {
+        "latex": "CNS~: $x \\mapsto f(x)+k\\|x\\|$ est minorée.",
+        "html": "<p>CNS : <span class=\"math inline\">\\(x \\mapsto f(x)+k\\|x\\|\\)</span> est minorée.</p>\n"
+      }
+    },
+    {
+      "id": "5504a714-2cc4-4291-bbb0-cbdab12b8fec",
+      "type": "question",
+      "value": {
+        "latex": "On suppose cette CNS vérifiée pour~$k_0>0$. Montrer que si $k\\ge k_0$\n    alors il existe $\\varphi_k$, $k$-lipschitzienne minorant~$f$ et maximale\n    pour l'ordre usuel des fonctions.",
+        "html": "<p>On suppose cette CNS vérifiée pour <span class=\"math inline\">\\(k_0&gt;0\\)</span>. Montrer que si <span class=\"math inline\">\\(k\\ge k_0\\)</span> alors il existe <span class=\"math inline\">\\(\\varphi_k\\)</span>, <span class=\"math inline\">\\(k\\)</span>-lipschitzienne minorant <span class=\"math inline\">\\(f\\)</span> et maximale pour l’ordre usuel des fonctions.</p>\n"
+      }
+    },
+    {
+      "id": "089599af-286a-4dcd-889a-dce6d082c77b",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $\\varphi(x) = \\sup\\{g(x),\\ g\\ k$-lipschitzienne minorant $f\\}$.\n    Il suffit de vérifier que~$\\varphi$ est $k$-lipschitzienne, ce sera alors\n    la plus grande fonction $k$-lipschitzienne minorant~$f$. Soient~$x,y\\in\\R^n$,\n    $\\varepsilon>0$ et~$g_x,g_y$ des fonctions $k$-lipschitziennes minorant~$f$ telles\n    que $g_y(x)\\le\\varphi(x)\\le g_x(x)+\\varepsilon$ et $g_x(y)\\le\\varphi(y)\\le g_y(y)+\\varepsilon$.\n    On a~: \n$$\\begin{align*}\n    \\varphi(y)&\\le g_y(y)+\\varepsilon\\le g_y(x)+k\\|x-y\\|+\\varepsilon\\le\\varphi(x)+k\\|x-y\\|+\\varepsilon,\\\\\n    \\varphi(y)&\\ge g_x(y)\\ge g_x(x)-k\\|x-y\\|\\ge\\varphi(x)-k\\|x-y\\|-\\varepsilon.\\\\\n\\end{align*}$$\n    Donc $|\\varphi(x)-\\varphi(y)|\\le k\\|x-y\\|+\\varepsilon$ et on fait tendre $\\varepsilon$\n    vers~$0^+$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(\\varphi(x) = \\sup\\{g(x),\\ g\\ k\\)</span>-lipschitzienne minorant <span class=\"math inline\">\\(f\\}\\)</span>. Il suffit de vérifier que <span class=\"math inline\">\\(\\varphi\\)</span> est <span class=\"math inline\">\\(k\\)</span>-lipschitzienne, ce sera alors la plus grande fonction <span class=\"math inline\">\\(k\\)</span>-lipschitzienne minorant <span class=\"math inline\">\\(f\\)</span>. Soient <span class=\"math inline\">\\(x,y\\in\\R^n\\)</span>, <span class=\"math inline\">\\(\\varepsilon&gt;0\\)</span> et <span class=\"math inline\">\\(g_x,g_y\\)</span> des fonctions <span class=\"math inline\">\\(k\\)</span>-lipschitziennes minorant <span class=\"math inline\">\\(f\\)</span> telles que <span class=\"math inline\">\\(g_y(x)\\le\\varphi(x)\\le g_x(x)+\\varepsilon\\)</span> et <span class=\"math inline\">\\(g_x(y)\\le\\varphi(y)\\le g_y(y)+\\varepsilon\\)</span>. On a : <span class=\"math display\">\\[\\begin{align*}\n    \\varphi(y)&amp;\\le g_y(y)+\\varepsilon\\le g_y(x)+k\\|x-y\\|+\\varepsilon\\le\\varphi(x)+k\\|x-y\\|+\\varepsilon,\\\\\n    \\varphi(y)&amp;\\ge g_x(y)\\ge g_x(x)-k\\|x-y\\|\\ge\\varphi(x)-k\\|x-y\\|-\\varepsilon.\\\\\n\\end{align*}\\]</span> Donc <span class=\"math inline\">\\(|\\varphi(x)-\\varphi(y)|\\le k\\|x-y\\|+\\varepsilon\\)</span> et on fait tendre <span class=\"math inline\">\\(\\varepsilon\\)</span> vers <span class=\"math inline\">\\(0^+\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

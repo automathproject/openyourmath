@@ -1,0 +1,35 @@
+{
+  "uuid": "rZv4",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5929",
+    "auteur": "tumpach",
+    "createdAt": "2010-11-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Autre",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:06.027Z"
+  },
+  "contenu": [
+    {
+      "id": "a2caaf8d-a00a-4f40-8498-a3ea31e6e6b7",
+      "type": "description",
+      "value": {
+        "latex": "On d\\'efinit la mesure ext\\'erieure de Lebesgue sur $\\mathbb{R}$,\n$~m_{*}: \\mathcal{P}(\\mathbb{R}) \\rightarrow \\mathbb{R},~$ par la\nformule\n$$\nm_{*}(A) = \\inf \\left\\{\\sum_{i-1}^{\\infty} (b_{i} - a_{i}) ~|~ A\n\\subset \\bigcup_{i=1}^{\\infty} ]a_{i}, b_{i}[ \\right\\}.\n$$\nMontrer qu'il s'agit bien d'une mesure ext\\'erieure.",
+        "html": "<p>On définit la mesure extérieure de Lebesgue sur <span class=\"math inline\">\\(\\mathbb{R}\\)</span>, <span class=\"math inline\">\\(~m_{*}: \\mathcal{P}(\\mathbb{R}) \\rightarrow \\mathbb{R},~\\)</span> par la formule <span class=\"math display\">\\[m_{*}(A) = \\inf \\left\\{\\sum_{i-1}^{\\infty} (b_{i} - a_{i}) ~|~ A\n\\subset \\bigcup_{i=1}^{\\infty} ]a_{i}, b_{i}[ \\right\\}.\\]</span> Montrer qu’il s’agit bien d’une mesure extérieure.</p>\n"
+      }
+    },
+    {
+      "id": "b3673d07-659d-4c22-88f8-c4f05f99f9bf",
+      "type": "reponse",
+      "value": {
+        "latex": "Il est clair que $m_{*}(\\emptyset)=0$ et que si $A\\subset B\\subset\n\\mathbb{R}$, alors $m_{*}(A)\\leq m_{*}(B)$, il faut donc\nuniquement d\\'emontrer que $m_{*}$ est $\\sigma$-sous-additive.\n\nSoit $\\{A_n\\}_{n\\in \\mathbb{N}}\\subset \\mathcal{P}(\\mathbb{R})$,\nfixons $\\varepsilon>0$ et notons $A=\\bigcup\\limits_{n=1}^\\infty\nA_n$. Par d\\'efinition de l'infimum, pour tout $n\\in \\mathbb{N}$,\non peut trouver une suite $\\{(a_i^n,b_i^n)\\}$ telle que\n$A_n\\subset \\bigcup\\limits_{i=1}^\\infty ]a_i^n,b_i^n[$ et\n$$\n\\sum\\limits_{i=1}^\\infty (b_i^n-a_i^n)\\leq\nm_{*}(A_n)+\\frac{\\varepsilon}{2^n}\n$$\nComme  $A\\subset\n\\bigcup\\limits_{i,n} ]a_i^n,b_i^n[$, on  a\n$$\nm_{*}(A)\\leq\\sum\\limits_{n,i} (b_i^n-a_i^n)\\leq \\sum\\limits_{n=1}^\\infty\\sum\\limits_{i=1}^\\infty (b_i^n-a_i^n)\n\\leq\n\\sum\\limits_{n=1}^\\infty(m_{*}(A_n)+\\frac{\\varepsilon}{2^n})=\\varepsilon + \\sum\\limits_{n=1}^\\infty\nm_{*}(A_n).\n$$\nOn a donc la $\\sigma$-sous-additivit\\'e\\;\n$m_{*}(A)\\leq\\sum\\limits_{n=1}^\\infty m_{*}(A_n)$ \\;puisque\n$\\varepsilon$ est arbitraire.",
+        "html": "<p>Il est clair que <span class=\"math inline\">\\(m_{*}(\\emptyset)=0\\)</span> et que si <span class=\"math inline\">\\(A\\subset B\\subset\n\\mathbb{R}\\)</span>, alors <span class=\"math inline\">\\(m_{*}(A)\\leq m_{*}(B)\\)</span>, il faut donc uniquement démontrer que <span class=\"math inline\">\\(m_{*}\\)</span> est <span class=\"math inline\">\\(\\sigma\\)</span>-sous-additive.</p>\n<p>Soit <span class=\"math inline\">\\(\\{A_n\\}_{n\\in \\mathbb{N}}\\subset \\mathcal{P}(\\mathbb{R})\\)</span>, fixons <span class=\"math inline\">\\(\\varepsilon&gt;0\\)</span> et notons <span class=\"math inline\">\\(A=\\bigcup\\limits_{n=1}^\\infty\nA_n\\)</span>. Par définition de l’infimum, pour tout <span class=\"math inline\">\\(n\\in \\mathbb{N}\\)</span>, on peut trouver une suite <span class=\"math inline\">\\(\\{(a_i^n,b_i^n)\\}\\)</span> telle que <span class=\"math inline\">\\(A_n\\subset \\bigcup\\limits_{i=1}^\\infty ]a_i^n,b_i^n[\\)</span> et <span class=\"math display\">\\[\\sum\\limits_{i=1}^\\infty (b_i^n-a_i^n)\\leq\nm_{*}(A_n)+\\frac{\\varepsilon}{2^n}\\]</span> Comme <span class=\"math inline\">\\(A\\subset\n\\bigcup\\limits_{i,n} ]a_i^n,b_i^n[\\)</span>, on a <span class=\"math display\">\\[m_{*}(A)\\leq\\sum\\limits_{n,i} (b_i^n-a_i^n)\\leq \\sum\\limits_{n=1}^\\infty\\sum\\limits_{i=1}^\\infty (b_i^n-a_i^n)\n\\leq\n\\sum\\limits_{n=1}^\\infty(m_{*}(A_n)+\\frac{\\varepsilon}{2^n})=\\varepsilon + \\sum\\limits_{n=1}^\\infty\nm_{*}(A_n).\\]</span> On a donc la <span class=\"math inline\">\\(\\sigma\\)</span>-sous-additivité <span class=\"math inline\">\\(m_{*}(A)\\leq\\sum\\limits_{n=1}^\\infty m_{*}(A_n)\\)</span> puisque <span class=\"math inline\">\\(\\varepsilon\\)</span> est arbitraire.</p>\n"
+      }
+    }
+  ]
+}

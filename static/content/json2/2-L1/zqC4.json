@@ -1,0 +1,83 @@
+{
+  "uuid": "zqC4",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "745",
+    "auteur": "bodin",
+    "createdAt": "1998-09-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions circulaires inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:49.204Z"
+  },
+  "contenu": [
+    {
+      "id": "4f2616de-144f-445e-b3a1-04bb20fd8022",
+      "type": "description",
+      "value": {
+        "latex": "Une statue de hauteur $s$ est placée sur un \npiédestal de hauteur $p$.",
+        "html": "<p>Une statue de hauteur <span class=\"math inline\">\\(s\\)</span> est placée sur un piédestal de hauteur <span class=\"math inline\">\\(p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4e7f7ddf-6b19-49ac-a829-7c75d95c2877",
+      "type": "question",
+      "value": {
+        "latex": "\\`A quelle distance $x_0$ doit se placer un observateur\n(dont la taille est supposée négligeable) pour voir la statue sous un \nangle maximal $\\alpha_0$?",
+        "html": "<p>À quelle distance <span class=\"math inline\">\\(x_0\\)</span> doit se placer un observateur (dont la taille est supposée négligeable) pour voir la statue sous un angle maximal <span class=\"math inline\">\\(\\alpha_0\\)</span>?</p>\n"
+      }
+    },
+    {
+      "id": "74b08b57-e6da-45a5-afac-c76259f58a38",
+      "type": "reponse",
+      "value": {
+        "latex": "On note $x$ la distance de l'observateur au pied de la statue.\nOn note $\\alpha$ l'angle d'observation de la statue seule, et $\\beta$\nl'angle d'observation du piédestal seul.\n\n\\begin{center}\n__TIKZ_8504e7f4-114a-44ca-a9b0-e19ab578962f__\n\\end{center}\n\nNous avons les relations trigonométriques dans les triangles rectangles :\n$$\\tan(\\alpha+\\beta) = \\frac{p+s}{x} \\qquad\\text{ et }\\qquad \\tan\\beta = \\frac{p}{x}$$\nOn en déduit les deux identités :\n$$\\alpha+\\beta = \\Arctan\\left(\\frac{p+s}{x}\\right) \\qquad\\text{ et }\\qquad \\beta = \\Arctan\\left(\\frac{p}{x}\\right)$$\nà partir desquelles on obtient $\\alpha=\\alpha(x)=\\Arctan\\left(\\frac{p+s}{x}\\right)-\\Arctan\\left(\\frac{p}{x}\\right)$.\n\n\\'Etudions cette fonction sur $]0,+\\infty[$ : elle est dérivable et \n$$\\alpha'(x)=\\frac{-\\frac{s+p}{x^2}}{1+\\left(\\frac{s+p}{x}\\right)^2}-\\frac{-\\frac{p}{x^2}}{1+\\left(\\frac{p}{x}\\right)^2}=\\frac{s}{(x^2+p^2)(x^2+(s+p)^2)}\\big(p(p+s)-x^2\\big)$$\nAinsi $\\alpha'$ ne s'annule sur $]0,+\\infty[$ qu'en $x_0 = \\sqrt{p(p+s)}$.\nPar des considérations physiques, à la limite en $0$ et en $+\\infty$, \nl'angle $\\alpha$ est nul,\nalors en $x_0$ nous obtenons un angle $\\alpha$ maximum.\nDonc la distance optimale de vision est  $x_0 = \\sqrt{p(p+s)}$.",
+        "html": ""
+      }
+    },
+    {
+      "id": "2d25cc89-b8b3-41ae-a3db-7bbdeb6c60ed",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que $\\alpha_0=\\Arctan \\frac{s}{2\\sqrt{p(p+s)}}$.",
+        "html": "<p>Vérifier que <span class=\"math inline\">\\(\\alpha_0=\\Arctan \\frac{s}{2\\sqrt{p(p+s)}}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "897ae15b-e8ec-453c-8027-e20a0290144d",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour calculer l'angle maximum $\\alpha_0$ correspondant, on pourrait \ncalculer $\\alpha_0 = \\alpha(x_0)$ à partir de la définition de la fonction\n$\\alpha(x)$. Pour obtenir une formule plus simple nous \nutilisons la formule trigonométrique suivante : si\n$a$, $b$ et $a-b$ sont dans l'intervalle de définition de la fonction $\\tan$, alors\n$\\tan(a-b)=\\frac{\\tan a-\\tan b}{1+\\tan a \\tan b}$, ce qui donne ici\n$$\\tan\\alpha_0 = \\tan\\big( (\\alpha_0+\\beta_0) - \\beta_0 \\big)\n=\\frac{\\frac{p+s}{x_0}-\\frac{p}{x_0}}{1+\\frac{p+s}{x_0}\\cdot\\frac{p}{x_0}}\n= \\frac{s}{2x_0}=\\frac{s}{2\\sqrt{p(p+s)}}$$\nComme $\\alpha_0\\in]-\\frac{\\pi}{2},\\frac{\\pi}{2}[$, \non en déduit $\\alpha_0 = \\Arctan \\frac{s}{2x_0} = \\Arctan \\frac{s}{2\\sqrt{p(p+s)}}$.",
+        "html": "<p>Pour calculer l’angle maximum <span class=\"math inline\">\\(\\alpha_0\\)</span> correspondant, on pourrait calculer <span class=\"math inline\">\\(\\alpha_0 = \\alpha(x_0)\\)</span> à partir de la définition de la fonction <span class=\"math inline\">\\(\\alpha(x)\\)</span>. Pour obtenir une formule plus simple nous utilisons la formule trigonométrique suivante : si <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(a-b\\)</span> sont dans l’intervalle de définition de la fonction <span class=\"math inline\">\\(\\tan\\)</span>, alors <span class=\"math inline\">\\(\\tan(a-b)=\\frac{\\tan a-\\tan b}{1+\\tan a \\tan b}\\)</span>, ce qui donne ici <span class=\"math display\">\\[\\tan\\alpha_0 = \\tan\\big( (\\alpha_0+\\beta_0) - \\beta_0 \\big)\n=\\frac{\\frac{p+s}{x_0}-\\frac{p}{x_0}}{1+\\frac{p+s}{x_0}\\cdot\\frac{p}{x_0}}\n= \\frac{s}{2x_0}=\\frac{s}{2\\sqrt{p(p+s)}}\\]</span> Comme <span class=\"math inline\">\\(\\alpha_0\\in]-\\frac{\\pi}{2},\\frac{\\pi}{2}[\\)</span>, on en déduit <span class=\"math inline\">\\(\\alpha_0 = \\Arctan \\frac{s}{2x_0} = \\Arctan \\frac{s}{2\\sqrt{p(p+s)}}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "fb4d192c-d27f-40b8-af9f-1bd07161a3af",
+      "type": "question",
+      "value": {
+        "latex": "Application à la statue de la liberté : haute de $46$ mètres avec un piédestal de \n$47$ mètres.",
+        "html": "<p>Application à la statue de la liberté : haute de <span class=\"math inline\">\\(46\\)</span> mètres avec un piédestal de <span class=\"math inline\">\\(47\\)</span> mètres.</p>\n"
+      }
+    },
+    {
+      "id": "d45da1fc-6312-4d89-9f03-4b402f6ae7a2",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour la statue de la liberté, on a la hauteur de la statue $s=46$ mètres\net la hauteur du piédestal $p=47$ mètres.\nOn trouve donc \n$$x_0 = \\sqrt{p(p+s)} \\simeq 65,40 \\text{mètres} \\qquad \n\\alpha_0 = \\Arctan \\frac{s}{2\\sqrt{p(p+s)}} \\simeq 19^\\circ.$$\n\nVoici les représentations de la statue et de la fonction $\\alpha(x)$ pour ces valeurs de $s$\net $p$.",
+        "html": "<p>Pour la statue de la liberté, on a la hauteur de la statue <span class=\"math inline\">\\(s=46\\)</span> mètres et la hauteur du piédestal <span class=\"math inline\">\\(p=47\\)</span> mètres. On trouve donc <span class=\"math display\">\\[x_0 = \\sqrt{p(p+s)} \\simeq 65,40 \\text{mètres} \\qquad \n\\alpha_0 = \\Arctan \\frac{s}{2\\sqrt{p(p+s)}} \\simeq 19^\\circ.\\]</span></p>\n<p>Voici les représentations de la statue et de la fonction <span class=\"math inline\">\\(\\alpha(x)\\)</span> pour ces valeurs de <span class=\"math inline\">\\(s\\)</span> et <span class=\"math inline\">\\(p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d125ef85-babf-416d-bd58-8bdf73beb26b",
+      "type": "indication",
+      "value": {
+        "latex": "Faire un dessin. Calculer l'angle d'observation $\\alpha$ en fonction de la distance $x$\net étudier cette fonction. Pour simplifier l'expression de $\\alpha_0$, \ncalculer $\\tan\\alpha_0$ à l'aide de la formule donnant $\\tan(a-b)$.",
+        "html": "<p>Faire un dessin. Calculer l’angle d’observation <span class=\"math inline\">\\(\\alpha\\)</span> en fonction de la distance <span class=\"math inline\">\\(x\\)</span> et étudier cette fonction. Pour simplifier l’expression de <span class=\"math inline\">\\(\\alpha_0\\)</span>, calculer <span class=\"math inline\">\\(\\tan\\alpha_0\\)</span> à l’aide de la formule donnant <span class=\"math inline\">\\(\\tan(a-b)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

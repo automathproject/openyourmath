@@ -1,0 +1,43 @@
+{
+  "uuid": "HGYs",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2406",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Théorème du point fixe",
+    "sousChapitre": "Théorème du point fixe",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:15.056Z"
+  },
+  "contenu": [
+    {
+      "id": "339b1ee8-dd0d-4acd-b5af-77ce9fabaac2",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X = ({\\cal C}^1([0,1]),N)$ avec $N(f) = \\|f\\|_\\infty+\\|f'\\|_\\infty$.\nMontrer qu'il existe une fonction $f\\in X$ qui est\npoint fixe de l'op\\'erateur $T$ donn\\'e par\n$$ Tf(x)= 1 + \\int _0^x f(t-t^2)\\, dt \\; .$$\nOn pourra commencer par \\'etablir que $T\\circ T$ est une\ncontraction. Utiliser ceci pour \\'etablir l'existence d'une\nfonction unique $f\\in X$ qui v\\'erifie $f(0)=1 $\net $f'(x) = f(x-x^2) $.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X = ({\\cal C}^1([0,1]),N)\\)</span> avec <span class=\"math inline\">\\(N(f) = \\|f\\|_\\infty+\\|f&#39;\\|_\\infty\\)</span>. Montrer qu’il existe une fonction <span class=\"math inline\">\\(f\\in X\\)</span> qui est point fixe de l’opérateur <span class=\"math inline\">\\(T\\)</span> donné par <span class=\"math display\">\\[Tf(x)= 1 + \\int _0^x f(t-t^2)\\, dt \\; .\\]</span> On pourra commencer par établir que <span class=\"math inline\">\\(T\\circ T\\)</span> est une contraction. Utiliser ceci pour établir l’existence d’une fonction unique <span class=\"math inline\">\\(f\\in X\\)</span> qui vérifie <span class=\"math inline\">\\(f(0)=1\\)</span> et <span class=\"math inline\">\\(f&#39;(x) = f(x-x^2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0d8af814-c595-4081-a6e6-3a4c64bc6aa1",
+      "type": "indication",
+      "value": {
+        "latex": "Faire soigneusement le calcul : $(T\\circ T f)(x)=1+x+\\int_0^x\\int_0^{t-t^2}f(u-u^2)dudt$.\nSe souvenir que $X$ est complet et utiliser l'exercice \\ref{exoiter}.",
+        "html": "<p>Faire soigneusement le calcul : <span class=\"math inline\">\\((T\\circ T f)(x)=1+x+\\int_0^x\\int_0^{t-t^2}f(u-u^2)dudt\\)</span>. Se souvenir que <span class=\"math inline\">\\(X\\)</span> est complet et utiliser l’exercice <a href=\"#exoiter\" data-reference-type=\"ref\" data-reference=\"exoiter\">[exoiter]</a>.</p>\n"
+      }
+    },
+    {
+      "id": "93ac0830-6801-4258-a1f4-763834037361",
+      "type": "reponse",
+      "value": {
+        "latex": "$(T\\circ T f)(x)= 1+\\int _0^x Tf(t-t^2) dt = 1+\\int _0^x(1+\\int_0^{t-t^2}f(u-u^2)du)dt\n=1+x+\\int_0^x\\int_0^{t-t^2}f(u-u^2)dudt$.\nDe plus $(T\\circ T f)'(x) = 1+\\int_0^{x-x^2}f(u-u^2)du$.\nEn remarquant que pour $t\\in[0,1]$, $t-t^2\\le \\frac 14$, on montre que\n$|T\\circ Tf(x)-T\\circ Tg(x)| \\le \\frac 14 \\|f-g\\|_\\infty$\net que $|(T\\circ Tf)'(x)-(T\\circ Tg)'(x)| \\le \\frac 14 \\|f-g\\|_\\infty$\nDonc $N(T\\circ Tf-T\\circ T g)\\le \\frac 12 \\|f-g\\|_\\infty \\le \\frac 12 N(f-g)$.\nDonc $T\\circ T$ est une contraction et $X$ est complet donc $T\\circ T$ admet \nun unique point fixe, par l'exercice \\ref{exoiter}, $T$ admet un unique point fixe.\nRemarquons que $Tf=f$ est équivalent à $f(0)=1$ et $f'(x)=f(x-x^2)$.\nDonc l'existence et l'unicité du point fixe pour $T$ donne l'existence et l'unicité de la solution\nau problème posé.",
+        "html": "<p><span class=\"math inline\">\\((T\\circ T f)(x)= 1+\\int _0^x Tf(t-t^2) dt = 1+\\int _0^x(1+\\int_0^{t-t^2}f(u-u^2)du)dt\n=1+x+\\int_0^x\\int_0^{t-t^2}f(u-u^2)dudt\\)</span>. De plus <span class=\"math inline\">\\((T\\circ T f)&#39;(x) = 1+\\int_0^{x-x^2}f(u-u^2)du\\)</span>. En remarquant que pour <span class=\"math inline\">\\(t\\in[0,1]\\)</span>, <span class=\"math inline\">\\(t-t^2\\le \\frac 14\\)</span>, on montre que <span class=\"math inline\">\\(|T\\circ Tf(x)-T\\circ Tg(x)| \\le \\frac 14 \\|f-g\\|_\\infty\\)</span> et que <span class=\"math inline\">\\(|(T\\circ Tf)&#39;(x)-(T\\circ Tg)&#39;(x)| \\le \\frac 14 \\|f-g\\|_\\infty\\)</span> Donc <span class=\"math inline\">\\(N(T\\circ Tf-T\\circ T g)\\le \\frac 12 \\|f-g\\|_\\infty \\le \\frac 12 N(f-g)\\)</span>. Donc <span class=\"math inline\">\\(T\\circ T\\)</span> est une contraction et <span class=\"math inline\">\\(X\\)</span> est complet donc <span class=\"math inline\">\\(T\\circ T\\)</span> admet un unique point fixe, par l’exercice <a href=\"#exoiter\" data-reference-type=\"ref\" data-reference=\"exoiter\">[exoiter]</a>, <span class=\"math inline\">\\(T\\)</span> admet un unique point fixe. Remarquons que <span class=\"math inline\">\\(Tf=f\\)</span> est équivalent à <span class=\"math inline\">\\(f(0)=1\\)</span> et <span class=\"math inline\">\\(f&#39;(x)=f(x-x^2)\\)</span>. Donc l’existence et l’unicité du point fixe pour <span class=\"math inline\">\\(T\\)</span> donne l’existence et l’unicité de la solution au problème posé.</p>\n"
+      }
+    }
+  ]
+}

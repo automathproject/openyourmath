@@ -1,0 +1,35 @@
+{
+  "uuid": "Vg02",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5649",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:40.794Z"
+  },
+  "contenu": [
+    {
+      "id": "a9ee4a4e-68b9-4577-a2a2-bbdccbf2a5e0",
+      "type": "description",
+      "value": {
+        "latex": "\\label{exo:rou15}\nSoient $a_0$, ... , $a_{n-1}$ $n$ nombres complexes et $A=\\left(\n\\begin{array}{ccccc}\n0&\\ldots&\\ldots&0&a_0\\\\\n1&\\ddots& &\\vdots&a_1\\\\\n0&\\ddots&\\ddots&\\vdots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0&\\vdots\\\\\n0&\\ldots&0&1&a_{n-1}\n\\end{array}\n\\right)$. Calculer $\\text{det}(A-xI_n)$.",
+        "html": "<p><span id=\"exo:rou15\" label=\"exo:rou15\">[exo:rou15]</span> Soient <span class=\"math inline\">\\(a_0\\)</span>, ... , <span class=\"math inline\">\\(a_{n-1}\\)</span> <span class=\"math inline\">\\(n\\)</span> nombres complexes et <span class=\"math inline\">\\(A=\\left(\n\\begin{array}{ccccc}\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;a_0\\\\\n1&amp;\\ddots&amp; &amp;\\vdots&amp;a_1\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0&amp;\\vdots\\\\\n0&amp;\\ldots&amp;0&amp;1&amp;a_{n-1}\n\\end{array}\n\\right)\\)</span>. Calculer <span class=\"math inline\">\\(\\text{det}(A-xI_n)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5a206cca-8e51-4c69-977b-55321b219371",
+      "type": "reponse",
+      "value": {
+        "latex": "En développant suivant la dernière colonne, on obtient\n\n\\begin{center}\n$\\text{det}(A-xI_n)=\\left|\n\\begin{array}{ccccc}\n-x&0&\\ldots&0&a_0\\\\\n1&\\ddots&\\ddots&\\vdots&a_1\\\\\n0&\\ddots&\\ddots&0&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&-x&a_{n-1}\\\\\n0&\\ldots&0&1&a_n-x\n\\end{array}\n\\right|= (-x)^n(a_n-x)+\\sum_{k=0}^{n-1}(-1)^{n-k+1}a_k\\Delta_k$\n\\end{center}\n\noù $\\Delta_k=\\left|\n\\begin{array}{cccccccc}\n-x&0&\\ldots&0&\\times&\\ldots&\\ldots&\\times\\\\\n\\times&\\ddots&\\ddots&\\vdots&\\vdots& & &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0&\\vdots& &  &\\vdots\\\\\n\\times&\\ldots&\\times&-x&\\times&\\ldots&\\ldots&\\times\\\\\n0&\\ldots&\\ldots&0&1&\\times&\\ldots&\\times\\\\\n\\vdots& & &\\vdots&0&\\ddots &\\ddots&\\vdots\\\\\n\\vdots& & &\\vdots&\\vdots&\\ddots&\\ddots&\\times\\\\\n0&\\ldots&\\ldots&0&0&\\ldots&0&1\\\\\n\\end{array}\n\\right|= (-x)^k1^{n-k}=(-x)^k$ (déterminant par blocs)\n\t\t\n\nFinalement, \n\n$$\\begin{align*}\\ensuremath\n\\text{det}(A-xI_n)=(-x)^n(a_n-x) +\\sum_{k=0}^{n-1}(-1)^{n-k+1}a_k(-x)^k=(-1)^{n+1}\\left(x^{n+1}-\\sum_{k=0}^{n}a_kx^k\\right).\n\\end{align*}$$",
+        "html": "<p>En développant suivant la dernière colonne, on obtient</p>\n<p><span class=\"math inline\">\\(\\text{det}(A-xI_n)=\\left|\n\\begin{array}{ccccc}\n-x&amp;0&amp;\\ldots&amp;0&amp;a_0\\\\\n1&amp;\\ddots&amp;\\ddots&amp;\\vdots&amp;a_1\\\\\n0&amp;\\ddots&amp;\\ddots&amp;0&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;-x&amp;a_{n-1}\\\\\n0&amp;\\ldots&amp;0&amp;1&amp;a_n-x\n\\end{array}\n\\right|= (-x)^n(a_n-x)+\\sum_{k=0}^{n-1}(-1)^{n-k+1}a_k\\Delta_k\\)</span></p>\n<p>où <span class=\"math inline\">\\(\\Delta_k=\\left|\n\\begin{array}{cccccccc}\n-x&amp;0&amp;\\ldots&amp;0&amp;\\times&amp;\\ldots&amp;\\ldots&amp;\\times\\\\\n\\times&amp;\\ddots&amp;\\ddots&amp;\\vdots&amp;\\vdots&amp; &amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0&amp;\\vdots&amp; &amp;  &amp;\\vdots\\\\\n\\times&amp;\\ldots&amp;\\times&amp;-x&amp;\\times&amp;\\ldots&amp;\\ldots&amp;\\times\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;1&amp;\\times&amp;\\ldots&amp;\\times\\\\\n\\vdots&amp; &amp; &amp;\\vdots&amp;0&amp;\\ddots &amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp; &amp;\\vdots&amp;\\vdots&amp;\\ddots&amp;\\ddots&amp;\\times\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;0&amp;\\ldots&amp;0&amp;1\\\\\n\\end{array}\n\\right|= (-x)^k1^{n-k}=(-x)^k\\)</span> (déterminant par blocs)</p>\n<p>Finalement,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\text{det}(A-xI_n)=(-x)^n(a_n-x) +\\sum_{k=0}^{n-1}(-1)^{n-k+1}a_k(-x)^k=(-1)^{n+1}\\left(x^{n+1}-\\sum_{k=0}^{n}a_kx^k\\right).\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

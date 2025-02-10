@@ -1,0 +1,35 @@
+{
+  "uuid": "CTqp",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5482",
+    "auteur": "rouget",
+    "createdAt": "2010-07-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Espace euclidien, espace normé",
+    "sousChapitre": "Produit scalaire, norme",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:08.845Z"
+  },
+  "contenu": [
+    {
+      "id": "53c0acb6-4dad-46b3-84c2-260507801320",
+      "type": "description",
+      "value": {
+        "latex": "Pour $A=(a_{i,j})_{1\\leq i,j\\leq n}\\in\\mathcal{M}_n(\\Rr)$, $N(A)=\\mbox{Tr}(^tAA)$. Montrer que $N$ est une norme vérifiant de plus $N(AB)\\leq N(A)N(B)$ pour toutes matrices carrées $A$ et $B$. $N$ est-elle associée à un produit scalaire~?",
+        "html": "<p>Pour <span class=\"math inline\">\\(A=(a_{i,j})_{1\\leq i,j\\leq n}\\in\\mathcal{M}_n(\\Rr)\\)</span>, <span class=\"math inline\">\\(N(A)=\\mbox{Tr}(^tAA)\\)</span>. Montrer que <span class=\"math inline\">\\(N\\)</span> est une norme vérifiant de plus <span class=\"math inline\">\\(N(AB)\\leq N(A)N(B)\\)</span> pour toutes matrices carrées <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span>. <span class=\"math inline\">\\(N\\)</span> est-elle associée à un produit scalaire ?</p>\n"
+      }
+    },
+    {
+      "id": "8d9ae20d-5cfe-4cfa-b5ac-9ef8517fe4f9",
+      "type": "reponse",
+      "value": {
+        "latex": "Posons $\\varphi~:~(A,B)\\mapsto\\mbox{Tr}({^t}AB)$. Montrons que $\\varphi$ est un produit scalaire sur $\\mathcal{M}_n(\\Rr)$. \n\\textbf{1ère solution.} \\textbullet~$\\varphi$ est symétrique. En effet, pour $(A,B)\\in(\\mathcal{M}_n(\\Rr))^2$,\n\n$$\\varphi(A,B)=\\mbox{Tr}(^{t}AB)=\\mbox{Tr}({^t}({^t}AB))=\\mbox{Tr}({^t}BA)=\\varphi(B,A).$$\n\n\\textbullet~$\\varphi$ est bilinéaire par linéarité de la trace et de la transposition.\n\\textbullet~Si $A=(a_{i,j})_{1\\leq i,j\\leq n}\\in\\mathcal{M}_n(\\Rr)\\setminus\\{0\\}$, alors\n\n$$\\varphi(A,A)=\\sum_{i=1}^{n}\\left(\\sum_{j=1}^{n}a_{i,j}a_{i,j}\\right)=\\sum_{i,j}^{}a_{i,j}^2>0$$\ncar au moins un des réels de cette somme est strictement positif. $\\varphi$ est donc définie, positive.\n\n\\textbf{2ème solution.} Posons $A=(a_{i,j})$ et $B=(b_{i,j})$. On a\n\n\\begin{center}\n$\\text{Tr}({^t}AB)=\\sum_{j=1}^{n}\\left(\\sum_{i=1}^{n}a_{i,j}b_{i,j}\\right)=\\sum_{1\\leq i,j\\leq n}^{}a_{i,j}b_{i,j}$.\n\\end{center}\nAinsi, $\\varphi$ est le produit scalaire canonique sur $\\mathcal{M}_n(\\Rr)$ et en particulier, $\\varphi$ est un produit scalaire sur $\\mathcal{M}_n(\\Rr)$.\n$N$ n'est autre que la norme associée au produit scalaire $\\varphi$ (et en particulier, $N$ est une norme).\nSoit $(A,B)\\in(\\mathcal{M}_n(\\Rr))^2$.\n\n$$\\begin{align*}\\ensuremath\nN(AB)^2&=\\sum_{i,j}^{}\\left(\\sum_{k=1}^{n}a_{i,k}b_{k,j}\\right)^2\\\\\n &\\leq\\sum_{i,j}^{}\\left(\\sum_{k=1}^{n}a_{i,k}^2\\right)\\left(\\sum_{l=1}^{n}b_{l,j}^2\\right)\\;(\\mbox{d'après l'inégalité de \\textsc{Cauchy}-\\textsc{Schwarz}})\\\\\n &=\\sum_{i,j,k,l}^{}a_{i,k}^2b_{l,j}^2=\\left(\\sum_{i,k}^{}a_{i,k}^2\\right)\\left(\\sum_{l,j}^{}b_{l,j}^2\\right)=N(A)^2N(B)^2,\n\\end{align*}$$\net donc,\n\n\\begin{center}\n\\shadowbox{\n$\\forall(A,B)\\in(\\mathcal{M}_n(\\Rr))^2,\\;N(AB)\\leq N(A)N(B)$.\n}\n\\end{center}",
+        "html": "<p>Posons <span class=\"math inline\">\\(\\varphi~:~(A,B)\\mapsto\\mbox{Tr}({^t}AB)\\)</span>. Montrons que <span class=\"math inline\">\\(\\varphi\\)</span> est un produit scalaire sur <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span>. <strong>1ère solution.</strong>  <span class=\"math inline\">\\(\\varphi\\)</span> est symétrique. En effet, pour <span class=\"math inline\">\\((A,B)\\in(\\mathcal{M}_n(\\Rr))^2\\)</span>,</p>\n<p><span class=\"math display\">\\[\\varphi(A,B)=\\mbox{Tr}(^{t}AB)=\\mbox{Tr}({^t}({^t}AB))=\\mbox{Tr}({^t}BA)=\\varphi(B,A).\\]</span></p>\n<p> <span class=\"math inline\">\\(\\varphi\\)</span> est bilinéaire par linéarité de la trace et de la transposition.  Si <span class=\"math inline\">\\(A=(a_{i,j})_{1\\leq i,j\\leq n}\\in\\mathcal{M}_n(\\Rr)\\setminus\\{0\\}\\)</span>, alors</p>\n<p><span class=\"math display\">\\[\\varphi(A,A)=\\sum_{i=1}^{n}\\left(\\sum_{j=1}^{n}a_{i,j}a_{i,j}\\right)=\\sum_{i,j}^{}a_{i,j}^2&gt;0\\]</span> car au moins un des réels de cette somme est strictement positif. <span class=\"math inline\">\\(\\varphi\\)</span> est donc définie, positive.</p>\n<p><strong>2ème solution.</strong> Posons <span class=\"math inline\">\\(A=(a_{i,j})\\)</span> et <span class=\"math inline\">\\(B=(b_{i,j})\\)</span>. On a</p>\n<p><span class=\"math inline\">\\(\\text{Tr}({^t}AB)=\\sum_{j=1}^{n}\\left(\\sum_{i=1}^{n}a_{i,j}b_{i,j}\\right)=\\sum_{1\\leq i,j\\leq n}^{}a_{i,j}b_{i,j}\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(\\varphi\\)</span> est le produit scalaire canonique sur <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span> et en particulier, <span class=\"math inline\">\\(\\varphi\\)</span> est un produit scalaire sur <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span>. <span class=\"math inline\">\\(N\\)</span> n’est autre que la norme associée au produit scalaire <span class=\"math inline\">\\(\\varphi\\)</span> (et en particulier, <span class=\"math inline\">\\(N\\)</span> est une norme). Soit <span class=\"math inline\">\\((A,B)\\in(\\mathcal{M}_n(\\Rr))^2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nN(AB)^2&amp;=\\sum_{i,j}^{}\\left(\\sum_{k=1}^{n}a_{i,k}b_{k,j}\\right)^2\\\\\n &amp;\\leq\\sum_{i,j}^{}\\left(\\sum_{k=1}^{n}a_{i,k}^2\\right)\\left(\\sum_{l=1}^{n}b_{l,j}^2\\right)\\;(\\mbox{d&#39;après l&#39;inégalité de \\textsc{Cauchy}-\\textsc{Schwarz}})\\\\\n &amp;=\\sum_{i,j,k,l}^{}a_{i,k}^2b_{l,j}^2=\\left(\\sum_{i,k}^{}a_{i,k}^2\\right)\\left(\\sum_{l,j}^{}b_{l,j}^2\\right)=N(A)^2N(B)^2,\n\\end{align*}\\]</span> et donc,</p>\n"
+      }
+    }
+  ]
+}

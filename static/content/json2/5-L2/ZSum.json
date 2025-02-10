@@ -1,0 +1,43 @@
+{
+  "uuid": "ZSum",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2639",
+    "auteur": "debievre",
+    "createdAt": "2009-05-19",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Différentielle seconde",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:12.172Z"
+  },
+  "contenu": [
+    {
+      "id": "d432cea3-42e7-4c95-83b9-707481f8e7b4",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f\\colon \\R^2\\setminus\\{(0,0)\\}\\longrightarrow \\R$ \nune fonction\nde classe $C^2$ et soient $r$ et $\\theta$ les coordonn\\'ees\npolaires standard dans le plan de telle sorte que\nl'association\n\\[\n]0,+\\infty[\\times  ]0,2\\pi[\\longrightarrow  \\R^2\\setminus\\{(0,0)\\},\n\\quad\n(r,\\theta)\\longmapsto (x,y)=(r\\cos\\theta, r\\sin\\theta),\n\\]\nsoit un changement de variables.\nSoit $F$ la fonction d\\'efinie par \n\\[\nF(r,\\theta)=f(r\\cos\\theta, r\\sin\\theta).\n\\]\nC'est \\lq\\lq l'expression de $f$ \nen coordonn\\'ees polaires\\rq\\rq. \nMontrer que\n\\begin{equation}\n\\frac{\\partial^2 f}{\\partial x^2}(x,y)+\\frac{\\partial^2 f}{\\partial y^2}(x,y)=\n\\frac{\\partial^2F}{\\partial r^2}(r,\\theta)+\\frac{1}{r}\\frac{\\partial F}{\\partial r}(r,\\theta)+\\frac{1}{r^2}\\frac{\\partial^2 F}{\\partial \\theta^2}(r,\\theta).\n\\label{laplace}\n\\end{equation}\nCette formule\ncalcule ``le Laplacien en coordonn\\'ees polaires.'' \nL'exercice ne d\\'epend pas de la connaissance\ndu Laplacien cependant.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\colon \\R^2\\setminus\\{(0,0)\\}\\longrightarrow \\R\\)</span> une fonction de classe <span class=\"math inline\">\\(C^2\\)</span> et soient <span class=\"math inline\">\\(r\\)</span> et <span class=\"math inline\">\\(\\theta\\)</span> les coordonnées polaires standard dans le plan de telle sorte que l’association <span class=\"math display\">\\[]0,+\\infty[\\times  ]0,2\\pi[\\longrightarrow  \\R^2\\setminus\\{(0,0)\\},\n\\quad\n(r,\\theta)\\longmapsto (x,y)=(r\\cos\\theta, r\\sin\\theta),\\]</span> soit un changement de variables. Soit <span class=\"math inline\">\\(F\\)</span> la fonction définie par <span class=\"math display\">\\[F(r,\\theta)=f(r\\cos\\theta, r\\sin\\theta).\\]</span> C’est ‘‘l’expression de <span class=\"math inline\">\\(f\\)</span> en coordonnées polaires’’. Montrer que <span class=\"math display\">\\[\\frac{\\partial^2 f}{\\partial x^2}(x,y)+\\frac{\\partial^2 f}{\\partial y^2}(x,y)=\n\\frac{\\partial^2F}{\\partial r^2}(r,\\theta)+\\frac{1}{r}\\frac{\\partial F}{\\partial r}(r,\\theta)+\\frac{1}{r^2}\\frac{\\partial^2 F}{\\partial \\theta^2}(r,\\theta).\n\\label{laplace}\\]</span> Cette formule calcule “le Laplacien en coordonnées polaires.” L’exercice ne dépend pas de la connaissance du Laplacien cependant.</p>\n"
+      }
+    },
+    {
+      "id": "8e956df1-447d-4969-ac40-3d4a9c6b36c3",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n \\item  Montrer que\n$$\\frac{\\partial^2F}{\\partial r^2}+\\frac{1}{r}\\frac{\\partial F}{\\partial r}=\n\\frac1r\\frac{\\partial}{\\partial r} r\\frac{\\partial}{\\partial r}F.$$\n \\item Montrer que\n$$r\\frac{\\partial F}{\\partial r}=x\\frac{\\partial f}{\\partial x}+y\\frac{\\partial f}{\\partial y}.$$\n \\item Montrer que\n$$\\frac{\\partial F}{\\partial \\theta}=x\\frac{\\partial f}{\\partial y}-y\\frac{\\partial f}{\\partial x}$$\n \\item Utiliser ces r\\'esultats, puis calculer encore un peu pour obtenir le r\\'esultat souhait\\'e. \n\\end{enumerate}",
+        "html": "<ol>\n<li><p>Montrer que <span class=\"math display\">\\[\\frac{\\partial^2F}{\\partial r^2}+\\frac{1}{r}\\frac{\\partial F}{\\partial r}=\n\\frac1r\\frac{\\partial}{\\partial r} r\\frac{\\partial}{\\partial r}F.\\]</span></p></li>\n<li><p>Montrer que <span class=\"math display\">\\[r\\frac{\\partial F}{\\partial r}=x\\frac{\\partial f}{\\partial x}+y\\frac{\\partial f}{\\partial y}.\\]</span></p></li>\n<li><p>Montrer que <span class=\"math display\">\\[\\frac{\\partial F}{\\partial \\theta}=x\\frac{\\partial f}{\\partial y}-y\\frac{\\partial f}{\\partial x}\\]</span></p></li>\n<li><p>Utiliser ces résultats, puis calculer encore un peu pour obtenir le résultat souhaité.</p></li>\n</ol>\n"
+      }
+    },
+    {
+      "id": "a7a6a20b-4915-445c-8e29-9c75ab1efa89",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\frac{\\partial }{\\partial r}\\left (r \\frac{\\partial F}{\\partial r}\\right)=\n\\frac{\\partial F}{\\partial r} +r \\frac{\\partial^2 F}{\\partial r^2}$\n$\\frac{\\partial F}{\\partial r}=\n\\frac{\\partial f}{\\partial x}\\frac xr+ \\frac{\\partial f}{\\partial y}\\frac yr$\n$\\frac{\\partial F}{\\partial \\theta}=\n\\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial \\theta}\n+ \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial \\theta}\n= -y \\frac{\\partial f}{\\partial x}+x\\frac{\\partial f}{\\partial y}\n$\nEn prenant la somme des trois \\'equations suivantes\n$$\\begin{align*}\nr^2 \\frac{\\partial^2 F}{\\partial r^2}&=\nx^2 \\frac{\\partial^2 f}{\\partial x^2}\n+2xy \\frac{\\partial^2 f}{\\partial x \\partial y}\n+\ny^2 \\frac{\\partial^2 f}{\\partial y^2}\n\\\\\nr\\frac{\\partial F}{\\partial r}&=\nx\\frac{\\partial f}{\\partial x}+ y\\frac{\\partial f}{\\partial y}\n\\\\\n\\frac{\\partial^2 F}{\\partial \\theta^2}&=\nx^2 \\frac{\\partial^2 f}{\\partial y^2}\n-2xy \\frac{\\partial^2 f}{\\partial x \\partial y}\n+\ny^2 \\frac{\\partial^2 f}{\\partial x^2}\n-\nx \\frac{\\partial f}{\\partial x}\n-\ny\\frac{\\partial f}{\\partial y}\n\\end{align*}$$\non trouve le r\\'esultat cherch\\'e.",
+        "html": "<p><span class=\"math inline\">\\(\\frac{\\partial }{\\partial r}\\left (r \\frac{\\partial F}{\\partial r}\\right)=\n\\frac{\\partial F}{\\partial r} +r \\frac{\\partial^2 F}{\\partial r^2}\\)</span> <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial r}=\n\\frac{\\partial f}{\\partial x}\\frac xr+ \\frac{\\partial f}{\\partial y}\\frac yr\\)</span> <span class=\"math inline\">\\(\\frac{\\partial F}{\\partial \\theta}=\n\\frac{\\partial f}{\\partial x}\\frac{\\partial x}{\\partial \\theta}\n+ \\frac{\\partial f}{\\partial y}\\frac{\\partial y}{\\partial \\theta}\n= -y \\frac{\\partial f}{\\partial x}+x\\frac{\\partial f}{\\partial y}\\)</span> En prenant la somme des trois équations suivantes <span class=\"math display\">\\[\\begin{align*}\nr^2 \\frac{\\partial^2 F}{\\partial r^2}&amp;=\nx^2 \\frac{\\partial^2 f}{\\partial x^2}\n+2xy \\frac{\\partial^2 f}{\\partial x \\partial y}\n+\ny^2 \\frac{\\partial^2 f}{\\partial y^2}\n\\\\\nr\\frac{\\partial F}{\\partial r}&amp;=\nx\\frac{\\partial f}{\\partial x}+ y\\frac{\\partial f}{\\partial y}\n\\\\\n\\frac{\\partial^2 F}{\\partial \\theta^2}&amp;=\nx^2 \\frac{\\partial^2 f}{\\partial y^2}\n-2xy \\frac{\\partial^2 f}{\\partial x \\partial y}\n+\ny^2 \\frac{\\partial^2 f}{\\partial x^2}\n-\nx \\frac{\\partial f}{\\partial x}\n-\ny\\frac{\\partial f}{\\partial y}\n\\end{align*}\\]</span> on trouve le résultat cherché.</p>\n"
+      }
+    }
+  ]
+}

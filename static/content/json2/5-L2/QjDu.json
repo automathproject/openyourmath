@@ -1,0 +1,35 @@
+{
+  "uuid": "QjDu",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4624",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série de Fourier",
+    "sousChapitre": "Calcul de coefficients",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:02.136Z"
+  },
+  "contenu": [
+    {
+      "id": "7d01f5ae-6b2d-48fb-b9b3-f27deb542f13",
+      "type": "description",
+      "value": {
+        "latex": "Développer en série de Fourier $f\\ :\\ t  \\mapsto \\frac1{1-\\cos\\alpha\\cos t}$\navec $0<\\alpha<\\pi$.\nIndication~: on pourra utiliser une relation de récurrence entre les\ncoefficients à partir de $(1-\\cos\\alpha\\cos t)f(t) = 1$.",
+        "html": "<p>Développer en série de Fourier <span class=\"math inline\">\\(f\\ :\\ t  \\mapsto \\frac1{1-\\cos\\alpha\\cos t}\\)</span> avec <span class=\"math inline\">\\(0&lt;\\alpha&lt;\\pi\\)</span>. Indication : on pourra utiliser une relation de récurrence entre les coefficients à partir de <span class=\"math inline\">\\((1-\\cos\\alpha\\cos t)f(t) = 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "754c53fa-2fcd-4bff-8601-8650d6d49c01",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\left\\{\\begin{array}{lll}2a_k &= &(a_{k-1}+a_{k+1})\\cos\\alpha\\cr\n       a_0 &= &a_1\\cos\\alpha+2\\hfill\\cr\\end{array}\\right.\n       \\Rightarrow  a_k = A\\tan(\\frac\\pi4-\\frac\\alpha2)^k\n                                          + B\\mathrm{cotan}(\\frac\\pi4-\\frac\\alpha2)^k.$$\n\nComme $a_k\\to 0$ (lorsque $k\\to\\infty$) on a $B=0$ d'où $A=\\frac2{\\sin\\alpha}$.\nFinalement, $f(t) = \\frac2{\\sin\\alpha}\\Bigl(\\frac12+\\sum_{k=1}^\\infty\n\\Bigl(\\frac{1-\\sin\\alpha}{\\cos\\alpha}\\Bigr)^k\\cos(kt)\\Bigr)$.",
+        "html": "<p><span class=\"math display\">\\[\\left\\{\\begin{array}{lll}2a_k &amp;= &amp;(a_{k-1}+a_{k+1})\\cos\\alpha\\cr\n       a_0 &amp;= &amp;a_1\\cos\\alpha+2\\hfill\\cr\\end{array}\\right.\n       \\Rightarrow  a_k = A\\tan(\\frac\\pi4-\\frac\\alpha2)^k\n                                          + B\\mathrm{cotan}(\\frac\\pi4-\\frac\\alpha2)^k.\\]</span></p>\n<p>Comme <span class=\"math inline\">\\(a_k\\to 0\\)</span> (lorsque <span class=\"math inline\">\\(k\\to\\infty\\)</span>) on a <span class=\"math inline\">\\(B=0\\)</span> d’où <span class=\"math inline\">\\(A=\\frac2{\\sin\\alpha}\\)</span>. Finalement, <span class=\"math inline\">\\(f(t) = \\frac2{\\sin\\alpha}\\Bigl(\\frac12+\\sum_{k=1}^\\infty\n\\Bigl(\\frac{1-\\sin\\alpha}{\\cos\\alpha}\\Bigr)^k\\cos(kt)\\Bigr)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

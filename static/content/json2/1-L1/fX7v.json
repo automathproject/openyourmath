@@ -1,0 +1,35 @@
+{
+  "uuid": "fX7v",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5622",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Noyau, image",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:05.290Z"
+  },
+  "contenu": [
+    {
+      "id": "d4453b8e-9895-475e-ba61-b8afd5aefc69",
+      "type": "description",
+      "value": {
+        "latex": "Soient $A\\in\\mathcal{M}_n(\\Cc)$ et $B$ l'élément de $\\mathcal{M}_{np}(\\Cc)$ défini par blocs par $B=\\left(\n\\begin{array}{cccc}\nA&0&\\ldots&0\\\\\n0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0\\\\\n0&\\ldots&0&A\n\\end{array}\n\\right)$. Déterminer le rang de $B$ en fonction du rang de $A$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(A\\in\\mathcal{M}_n(\\Cc)\\)</span> et <span class=\"math inline\">\\(B\\)</span> l’élément de <span class=\"math inline\">\\(\\mathcal{M}_{np}(\\Cc)\\)</span> défini par blocs par <span class=\"math inline\">\\(B=\\left(\n\\begin{array}{cccc}\nA&amp;0&amp;\\ldots&amp;0\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;0&amp;A\n\\end{array}\n\\right)\\)</span>. Déterminer le rang de <span class=\"math inline\">\\(B\\)</span> en fonction du rang de <span class=\"math inline\">\\(A\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e9e55e9c-e5ee-4820-8071-d7f5ee76f7f4",
+      "type": "reponse",
+      "value": {
+        "latex": "On note $r$ le rang de $A$. Si $r=0$, $A$ est nulle et donc $B$ est nulle.\n\nSinon, il existe deux matrices carrées inversibles $P$ et $Q$ de format $n$ telles que $A=PJ_rQ$ où $J_r=\\left(\n\\begin{array}{cc}\nI_r&0\\\\\n0&0\n\\end{array}\n\\right)$. Soient $P'=\\left(\n\\begin{array}{cccc}\nP&0&\\ldots&0\\\\\n0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0\\\\\n0&\\ldots&0&P\n\\end{array}\n\\right)\\in\\mathcal{M}_{np}(\\Cc)$ et $Q'=\\left(\n\\begin{array}{cccc}\nP&0&\\ldots&0\\\\\n0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0\\\\\n0&\\ldots&0&Q\n\\end{array}\n\\right)\\in\\mathcal{M}_{np}(\\Cc)$. Puisque $\\text{det}(P')=(\\text{det}(P))^p\\neq0$ et $\\text{det}(Q')=(\\text{det}(Q))^p\\neq0$, les matrices $P'$ et $Q'$ sont inversibles. De plus, un calcul par blocs montre que\n\n\\begin{center}\n$B=\\left(\n\\begin{array}{cccc}\nPJ_rQ&0&\\ldots&0\\\\\n0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0\\\\\n0&\\ldots&0&PJ_rQ\n\\end{array}\n\\right)=P'J_r'Q'$ où $J_r'=\\left(\n\\begin{array}{cccc}\nJ_r&0&\\ldots&0\\\\\n0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&0\\\\\n0&\\ldots&0&J_r\n\\end{array}\n\\right)$.\n\\end{center}\n\nLa matrice $B$ est équivalente a la matrice $J_r'$ et a donc même rang que $J_r'$. Enfin, en supprimant les lignes nulles et les colonnes nulles, on voit que la matrice $J_r'$ a même rang que la matrice $I_{pr}$ à savoir $pr$. Dans tous les cas, on a montré que  \n\n\\begin{center}\n\\shadowbox{\n$\\text{rg}B =p\\text{rg}A$.\n}\n\\end{center}",
+        "html": "<p>On note <span class=\"math inline\">\\(r\\)</span> le rang de <span class=\"math inline\">\\(A\\)</span>. Si <span class=\"math inline\">\\(r=0\\)</span>, <span class=\"math inline\">\\(A\\)</span> est nulle et donc <span class=\"math inline\">\\(B\\)</span> est nulle.</p>\n<p>Sinon, il existe deux matrices carrées inversibles <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(Q\\)</span> de format <span class=\"math inline\">\\(n\\)</span> telles que <span class=\"math inline\">\\(A=PJ_rQ\\)</span> où <span class=\"math inline\">\\(J_r=\\left(\n\\begin{array}{cc}\nI_r&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)\\)</span>. Soient <span class=\"math inline\">\\(P&#39;=\\left(\n\\begin{array}{cccc}\nP&amp;0&amp;\\ldots&amp;0\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;0&amp;P\n\\end{array}\n\\right)\\in\\mathcal{M}_{np}(\\Cc)\\)</span> et <span class=\"math inline\">\\(Q&#39;=\\left(\n\\begin{array}{cccc}\nP&amp;0&amp;\\ldots&amp;0\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;0&amp;Q\n\\end{array}\n\\right)\\in\\mathcal{M}_{np}(\\Cc)\\)</span>. Puisque <span class=\"math inline\">\\(\\text{det}(P&#39;)=(\\text{det}(P))^p\\neq0\\)</span> et <span class=\"math inline\">\\(\\text{det}(Q&#39;)=(\\text{det}(Q))^p\\neq0\\)</span>, les matrices <span class=\"math inline\">\\(P&#39;\\)</span> et <span class=\"math inline\">\\(Q&#39;\\)</span> sont inversibles. De plus, un calcul par blocs montre que</p>\n<p><span class=\"math inline\">\\(B=\\left(\n\\begin{array}{cccc}\nPJ_rQ&amp;0&amp;\\ldots&amp;0\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;0&amp;PJ_rQ\n\\end{array}\n\\right)=P&#39;J_r&#39;Q&#39;\\)</span> où <span class=\"math inline\">\\(J_r&#39;=\\left(\n\\begin{array}{cccc}\nJ_r&amp;0&amp;\\ldots&amp;0\\\\\n0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;0&amp;J_r\n\\end{array}\n\\right)\\)</span>.</p>\n<p>La matrice <span class=\"math inline\">\\(B\\)</span> est équivalente a la matrice <span class=\"math inline\">\\(J_r&#39;\\)</span> et a donc même rang que <span class=\"math inline\">\\(J_r&#39;\\)</span>. Enfin, en supprimant les lignes nulles et les colonnes nulles, on voit que la matrice <span class=\"math inline\">\\(J_r&#39;\\)</span> a même rang que la matrice <span class=\"math inline\">\\(I_{pr}\\)</span> à savoir <span class=\"math inline\">\\(pr\\)</span>. Dans tous les cas, on a montré que</p>\n"
+      }
+    }
+  ]
+}

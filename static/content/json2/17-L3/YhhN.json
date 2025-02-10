@@ -1,0 +1,35 @@
+{
+  "uuid": "YhhN",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2228",
+    "auteur": "matos",
+    "createdAt": "2008-04-23",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Autre",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:13.292Z"
+  },
+  "contenu": [
+    {
+      "id": "08e03b8d-b6c4-45cf-b078-616b8442e771",
+      "type": "description",
+      "value": {
+        "latex": "Soit $A\\in\\Rr^{n\\times n}$ telle que $A^T$ soit \\`a diagonale strictement dominante. Montrer que $A$ admet une d\\'ecomposition LU avec $L^T$ \\`a diagonale strictement dominante.",
+        "html": "<p>Soit <span class=\"math inline\">\\(A\\in\\Rr^{n\\times n}\\)</span> telle que <span class=\"math inline\">\\(A^T\\)</span> soit à diagonale strictement dominante. Montrer que <span class=\"math inline\">\\(A\\)</span> admet une décomposition LU avec <span class=\"math inline\">\\(L^T\\)</span> à diagonale strictement dominante.</p>\n"
+      }
+    },
+    {
+      "id": "6e064e07-0e93-4690-829a-797af9378fb2",
+      "type": "reponse",
+      "value": {
+        "latex": "$$A=A_1=\\left(\\begin{array}{cc}\n\\alpha & u^T\\\\v&B_1\\end{array}\\right),\\quad B_1=(b_{ij})_{i,j=1}^{n-1}$$\n$A^T$ \\'etant \\`a diagonale strictement dominante on a:\n$$|\\alpha|>\\sum_{i=1}^{n-1}|v_i|,\\quad |u_i| +\\sum_{j\\neq i}|b_{ji}|<|b_{ii}|$$\nIl suffit de montrer que\n\\begin{itemize}\n\\item la premi\\`ere colonne de $L$ v\\'erifie $|l_{11}|>\\sum_{i\\neq 1}|l_{i1}|$\n\\item $B_2$ est telle que\n$$A_2=\\left(\\begin{array}{cc}\\alpha & u^T\\\\0& B_2\\end{array}\\right), \\quad C=B_2=B_1-\\frac{1}{\\alpha} vu^T$$\nv\\'erifie $|c_{ii}|>\\sum_{j\\neq i}|c_{ji}|$ avec $C_{ij}=B_{ij}-\\frac{1}{\\alpha}v_iu_j$ et it\\'erer.\n\\end{itemize}\n\\begin{itemize}\n\\item premi\\`ere colonne de $L$: $l_{i1}=v_i/\\alpha \\Rightarrow \\sum_{i=2}^n |l_{i1}|=\\sum_{i=1}^{n-1}\\frac{|v_i|}{\\alpha}<1$\n\\item $\\sum_{i\\neq j}|c_{ij}| =\\sum_{i\\neq j}\\left|b_{ij}-\\frac{1}{\\alpha}v_iw_j\\right|\\leq \\sum_{i\\neq j}|b_{ij}| +\\frac{1}{|\\alpha|}|w_j|\\sum_{i\\neq j}|v_i|$\n$$\\leq |b_{jj}| - |u_j| + \\frac{1}{|\\alpha|}|u_j| (|\\alpha|-|v_j|)\n\\leq\\left|b_{jj}-\\frac{1}{\\alpha} u_jv_j\\right|=|c_{jj}|$$\ndonc $B_2^T$ est de diagonale strictement dominante. La d\\'emonstration se finit par r\\'ecurrence.\n\\end{itemize}",
+        "html": "<p><span class=\"math display\">\\[A=A_1=\\left(\\begin{array}{cc}\n\\alpha &amp; u^T\\\\v&amp;B_1\\end{array}\\right),\\quad B_1=(b_{ij})_{i,j=1}^{n-1}\\]</span> <span class=\"math inline\">\\(A^T\\)</span> étant à diagonale strictement dominante on a: <span class=\"math display\">\\[|\\alpha|&gt;\\sum_{i=1}^{n-1}|v_i|,\\quad |u_i| +\\sum_{j\\neq i}|b_{ji}|&lt;|b_{ii}|\\]</span> Il suffit de montrer que</p>\n<ul>\n<li><p>la première colonne de <span class=\"math inline\">\\(L\\)</span> vérifie <span class=\"math inline\">\\(|l_{11}|&gt;\\sum_{i\\neq 1}|l_{i1}|\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(B_2\\)</span> est telle que <span class=\"math display\">\\[A_2=\\left(\\begin{array}{cc}\\alpha &amp; u^T\\\\0&amp; B_2\\end{array}\\right), \\quad C=B_2=B_1-\\frac{1}{\\alpha} vu^T\\]</span> vérifie <span class=\"math inline\">\\(|c_{ii}|&gt;\\sum_{j\\neq i}|c_{ji}|\\)</span> avec <span class=\"math inline\">\\(C_{ij}=B_{ij}-\\frac{1}{\\alpha}v_iu_j\\)</span> et itérer.</p></li>\n</ul>\n<ul>\n<li><p>première colonne de <span class=\"math inline\">\\(L\\)</span>: <span class=\"math inline\">\\(l_{i1}=v_i/\\alpha \\Rightarrow \\sum_{i=2}^n |l_{i1}|=\\sum_{i=1}^{n-1}\\frac{|v_i|}{\\alpha}&lt;1\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\sum_{i\\neq j}|c_{ij}| =\\sum_{i\\neq j}\\left|b_{ij}-\\frac{1}{\\alpha}v_iw_j\\right|\\leq \\sum_{i\\neq j}|b_{ij}| +\\frac{1}{|\\alpha|}|w_j|\\sum_{i\\neq j}|v_i|\\)</span> <span class=\"math display\">\\[\\leq |b_{jj}| - |u_j| + \\frac{1}{|\\alpha|}|u_j| (|\\alpha|-|v_j|)\n\\leq\\left|b_{jj}-\\frac{1}{\\alpha} u_jv_j\\right|=|c_{jj}|\\]</span> donc <span class=\"math inline\">\\(B_2^T\\)</span> est de diagonale strictement dominante. La démonstration se finit par récurrence.</p></li>\n</ul>\n"
+      }
+    }
+  ]
+}

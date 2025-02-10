@@ -1,0 +1,59 @@
+{
+  "uuid": "K23W",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5434",
+    "auteur": "exo7",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Calculs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:47.115Z"
+  },
+  "contenu": [
+    {
+      "id": "21a6b929-3efb-4bf3-8bc8-e72ec7404719",
+      "type": "description",
+      "value": {
+        "latex": "Soient $a>0$ et $b>0$. Pour $n\\in\\Nn^*$ et $x\\in\\Rr$, on pose $f_n(x)=\\left(1+\\frac{x}{n}\\right)^n$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(a&gt;0\\)</span> et <span class=\"math inline\">\\(b&gt;0\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span> et <span class=\"math inline\">\\(x\\in\\Rr\\)</span>, on pose <span class=\"math inline\">\\(f_n(x)=\\left(1+\\frac{x}{n}\\right)^n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "63704225-b7f3-447d-9f7d-cac785f81f15",
+      "type": "question",
+      "value": {
+        "latex": "Equivalent simple quand $n$ tend vers $+\\infty$ de $f_n(a+b)-f_n(a)f_n(b)$.",
+        "html": "<p>Equivalent simple quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> de <span class=\"math inline\">\\(f_n(a+b)-f_n(a)f_n(b)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "136f2fe9-8e9d-4f8d-8172-727c50d45587",
+      "type": "reponse",
+      "value": {
+        "latex": "$$f_n(a)=\\text{exp}\\left(n\\ln\\left(1+\\frac{a}{n}\\right)\\right)\\underset{n\\rightarrow+\\infty}{=}\\text{exp}\\left(a-\\frac{a^2}{2n}+o\\left(\\frac{1}{n}\\right)\\right)= e^a\\left(1-\\frac{a^2}{2n}+o\\left(\\frac{1}{n}\\right)\\right).$$\nEn remplaçant $a$ par $b$ ou $a+b$, on obtient\n\n$$\\begin{align*}\\ensuremath\nf_n(a+b)-f_n(a)f_n(b)&\\underset{n\\rightarrow+\\infty}{=}e^{a+b}\\left(1-\\frac{(a+b)^2}{2n}\\right)-e^a\\left(1-\\frac{a^2}{2n}\\right)e^b\\left(1-\\frac{b^2}{2n}\\right)+o\\left(\\frac{1}{n}\\right)\\\\\n &=e^{a+b}\\frac{-(a+b)^2+a^2+b^2}{2n}+o\\left(\\frac{1}{n}\\right)=-\\frac{ab\\;e^{a+b}}{n}+o\\left(\\frac{1}{n}\\right).\n\\end{align*}$$\nDonc, si $ab\\neq0$, $f_n(a+b)-f_n(a)f_n(b)\\underset{n\\rightarrow+\\infty}{\\sim}-\\frac{ab\\;e^{a+b}}{n}$. Si $ab=0$, il est clair que $f_n(a+b)-f_n(a)f_n(b)=0$.",
+        "html": "<p><span class=\"math display\">\\[f_n(a)=\\text{exp}\\left(n\\ln\\left(1+\\frac{a}{n}\\right)\\right)\\underset{n\\rightarrow+\\infty}{=}\\text{exp}\\left(a-\\frac{a^2}{2n}+o\\left(\\frac{1}{n}\\right)\\right)= e^a\\left(1-\\frac{a^2}{2n}+o\\left(\\frac{1}{n}\\right)\\right).\\]</span> En remplaçant <span class=\"math inline\">\\(a\\)</span> par <span class=\"math inline\">\\(b\\)</span> ou <span class=\"math inline\">\\(a+b\\)</span>, on obtient</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf_n(a+b)-f_n(a)f_n(b)&amp;\\underset{n\\rightarrow+\\infty}{=}e^{a+b}\\left(1-\\frac{(a+b)^2}{2n}\\right)-e^a\\left(1-\\frac{a^2}{2n}\\right)e^b\\left(1-\\frac{b^2}{2n}\\right)+o\\left(\\frac{1}{n}\\right)\\\\\n &amp;=e^{a+b}\\frac{-(a+b)^2+a^2+b^2}{2n}+o\\left(\\frac{1}{n}\\right)=-\\frac{ab\\;e^{a+b}}{n}+o\\left(\\frac{1}{n}\\right).\n\\end{align*}\\]</span> Donc, si <span class=\"math inline\">\\(ab\\neq0\\)</span>, <span class=\"math inline\">\\(f_n(a+b)-f_n(a)f_n(b)\\underset{n\\rightarrow+\\infty}{\\sim}-\\frac{ab\\;e^{a+b}}{n}\\)</span>. Si <span class=\"math inline\">\\(ab=0\\)</span>, il est clair que <span class=\"math inline\">\\(f_n(a+b)-f_n(a)f_n(b)=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e122393f-7752-464d-b906-29bfac61170a",
+      "type": "question",
+      "value": {
+        "latex": "Même question pour $e^{-a}f_n(a)-1+\\frac{a^2}{2n}$.",
+        "html": "<p>Même question pour <span class=\"math inline\">\\(e^{-a}f_n(a)-1+\\frac{a^2}{2n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cca73687-63d2-4a4a-a6db-f7077806dced",
+      "type": "reponse",
+      "value": {
+        "latex": "$e^{-a}f_n(a)\\underset{n\\rightarrow+\\infty}{=}\\text{exp}\\left(-a+\\left(a-\\frac{a^2}{2n}+\\frac{a^3}{3n^2}\\right)+o\\left(\\frac{1}{n^2}\\right)\\right)\n=1+\\left(-\\frac{a^2}{2n}+\\frac{a^3}{3n^2}\\right)+\\frac{1}{2}\\left(-\\frac{a^2}{2n}\\right)^2+o\\left(\\frac{1}{n^2}\\right)$, et donc\n\n$$e^{-a}f_n(a)-1+\\frac{a^2}{2n}\\underset{n\\rightarrow+\\infty}{\\sim}\\left(\\frac{a^3}{3}+\\frac{a^4}{8}\\right)\\frac{1}{n^2}.$$",
+        "html": "<p><span class=\"math inline\">\\(e^{-a}f_n(a)\\underset{n\\rightarrow+\\infty}{=}\\text{exp}\\left(-a+\\left(a-\\frac{a^2}{2n}+\\frac{a^3}{3n^2}\\right)+o\\left(\\frac{1}{n^2}\\right)\\right)\n=1+\\left(-\\frac{a^2}{2n}+\\frac{a^3}{3n^2}\\right)+\\frac{1}{2}\\left(-\\frac{a^2}{2n}\\right)^2+o\\left(\\frac{1}{n^2}\\right)\\)</span>, et donc</p>\n<p><span class=\"math display\">\\[e^{-a}f_n(a)-1+\\frac{a^2}{2n}\\underset{n\\rightarrow+\\infty}{\\sim}\\left(\\frac{a^3}{3}+\\frac{a^4}{8}\\right)\\frac{1}{n^2}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

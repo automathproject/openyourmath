@@ -1,0 +1,43 @@
+{
+  "uuid": "LWBe",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6863",
+    "auteur": "bodin",
+    "createdAt": "2012-04-13",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Longueur, aire, volume",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:48.545Z"
+  },
+  "contenu": [
+    {
+      "id": "97520c24-0895-49d6-a1bf-38dcfe090e94",
+      "type": "description",
+      "value": {
+        "latex": "Calculer l'aire intérieure d'une ellipse d'équation :\n$$\\frac{x^2}{a^2}+ \\frac{y^2}{b^2} = 1.$$\n\n\\emph{Indications.}  On pourra calculer seulement la partie de l'ellipse correspondant\nà $x\\ge 0$, $y\\ge 0$. Puis exprimer $y$ en fonction de $x$. Enfin calculer une intégrale.",
+        "html": "<p>Calculer l’aire intérieure d’une ellipse d’équation : <span class=\"math display\">\\[\\frac{x^2}{a^2}+ \\frac{y^2}{b^2} = 1.\\]</span></p>\n<p><em>Indications.</em> On pourra calculer seulement la partie de l’ellipse correspondant à <span class=\"math inline\">\\(x\\ge 0\\)</span>, <span class=\"math inline\">\\(y\\ge 0\\)</span>. Puis exprimer <span class=\"math inline\">\\(y\\)</span> en fonction de <span class=\"math inline\">\\(x\\)</span>. Enfin calculer une intégrale.</p>\n"
+      }
+    },
+    {
+      "id": "b110d871-0357-4bed-a269-c5483c4b82f0",
+      "type": "indication",
+      "value": {
+        "latex": "Il faut se ramener au calcul de $\\displaystyle \\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx$.",
+        "html": "<p>Il faut se ramener au calcul de <span class=\"math inline\">\\(\\displaystyle \\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "75c786fa-e8d4-4c08-85e2-6d70e56aa906",
+      "type": "reponse",
+      "value": {
+        "latex": "Calculons seulement un quart de l'aire : la partie du quadrant $x\\ge 0, y\\ge 0$.\nPour ce quadrant les points de l'ellipse ont une abscisse $x$ qui vérifie $0 \\le x \\le a$.\nEt la relation $\\frac{x^2}{a^2}+ \\frac{y^2}{b^2} = 1$ donne $y = b\\sqrt{1-\\frac{x^2}{a^2}}$.\n\n\\medskip\n\nNous devons donc calculer l'aire sous la courbe d'équation $y = b\\sqrt{1-\\frac{x^2}{a^2}}$,\nau-dessus de l'axe des abscisses et entre les droites d'équations $(x=0)$ et $(x=a)$ (faites un dessin !).\n\nCette aire vaut donc : $\\displaystyle \\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx$.\nNous allons calculer cette intégrale à l'aide du changement de variable \n$x=a \\cos u$ qui donne $dx = -a\\sin u \\, du$. La variable $x$ variant de \n$x=0$ à $x=a$ alors la nouvelle variable $u$ varie du $u=\\frac \\pi 2$ (pour lequel on a bien\n$a\\cos \\frac\\pi 2 = 0$) à $u=\\frac \\pi 2$ (pour lequel on a bien\n$a\\cos 0 = a$). Autrement dit la fonction $u \\mapsto a\\cos u$ est une bijection\nde $[\\frac\\pi2,0]$ vers $[0,a]$.\n\n$$\\begin{align*}\n\\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx\n  & = \\int_{\\frac \\pi 2}^0 b \\sqrt{1-\\cos^2 u} (-a \\sin u \\, du) \\quad \\text{ en posant } x=a \\cos u \\\\\n  & = \\int_{\\frac \\pi 2}^0 b\\sin u (-a \\sin u \\, du) \\\\\n  & = ab \\int_0^{\\frac \\pi 2} \\sin^2 u \\, du \\\\\n  & = ab \\int_0^{\\frac \\pi 2} \\frac{1-\\cos(2u)}{2} \\, du \\\\ \n  &= ab \\left[ \\frac u2 - \\frac{\\sin(2u)}{4} \\right]_0^{\\frac \\pi 2} \\\\\n  &= \\frac{\\pi a b}{4} \\\\\n\\end{align*}$$\nL'aire d'un quart d'ellipse est donc $\\frac{\\pi a b}{4}$. \n\nConclusion : l'aire d'une ellipse est $\\pi a b$, où $a$ et $b$ sont les longueurs des demi-axes.\nSi $a=b=r$ on retrouve que l'aire d'un disque de rayon $r$ est $\\pi r^2$.",
+        "html": "<p>Calculons seulement un quart de l’aire : la partie du quadrant <span class=\"math inline\">\\(x\\ge 0, y\\ge 0\\)</span>. Pour ce quadrant les points de l’ellipse ont une abscisse <span class=\"math inline\">\\(x\\)</span> qui vérifie <span class=\"math inline\">\\(0 \\le x \\le a\\)</span>. Et la relation <span class=\"math inline\">\\(\\frac{x^2}{a^2}+ \\frac{y^2}{b^2} = 1\\)</span> donne <span class=\"math inline\">\\(y = b\\sqrt{1-\\frac{x^2}{a^2}}\\)</span>.</p>\n<p>Nous devons donc calculer l’aire sous la courbe d’équation <span class=\"math inline\">\\(y = b\\sqrt{1-\\frac{x^2}{a^2}}\\)</span>, au-dessus de l’axe des abscisses et entre les droites d’équations <span class=\"math inline\">\\((x=0)\\)</span> et <span class=\"math inline\">\\((x=a)\\)</span> (faites un dessin !).</p>\n<p>Cette aire vaut donc : <span class=\"math inline\">\\(\\displaystyle \\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx\\)</span>. Nous allons calculer cette intégrale à l’aide du changement de variable <span class=\"math inline\">\\(x=a \\cos u\\)</span> qui donne <span class=\"math inline\">\\(dx = -a\\sin u \\, du\\)</span>. La variable <span class=\"math inline\">\\(x\\)</span> variant de <span class=\"math inline\">\\(x=0\\)</span> à <span class=\"math inline\">\\(x=a\\)</span> alors la nouvelle variable <span class=\"math inline\">\\(u\\)</span> varie du <span class=\"math inline\">\\(u=\\frac \\pi 2\\)</span> (pour lequel on a bien <span class=\"math inline\">\\(a\\cos \\frac\\pi 2 = 0\\)</span>) à <span class=\"math inline\">\\(u=\\frac \\pi 2\\)</span> (pour lequel on a bien <span class=\"math inline\">\\(a\\cos 0 = a\\)</span>). Autrement dit la fonction <span class=\"math inline\">\\(u \\mapsto a\\cos u\\)</span> est une bijection de <span class=\"math inline\">\\([\\frac\\pi2,0]\\)</span> vers <span class=\"math inline\">\\([0,a]\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\int_0^a b\\sqrt{1-\\frac{x^2}{a^2}} dx\n  &amp; = \\int_{\\frac \\pi 2}^0 b \\sqrt{1-\\cos^2 u} (-a \\sin u \\, du) \\quad \\text{ en posant } x=a \\cos u \\\\\n  &amp; = \\int_{\\frac \\pi 2}^0 b\\sin u (-a \\sin u \\, du) \\\\\n  &amp; = ab \\int_0^{\\frac \\pi 2} \\sin^2 u \\, du \\\\\n  &amp; = ab \\int_0^{\\frac \\pi 2} \\frac{1-\\cos(2u)}{2} \\, du \\\\ \n  &amp;= ab \\left[ \\frac u2 - \\frac{\\sin(2u)}{4} \\right]_0^{\\frac \\pi 2} \\\\\n  &amp;= \\frac{\\pi a b}{4} \\\\\n\\end{align*}\\]</span> L’aire d’un quart d’ellipse est donc <span class=\"math inline\">\\(\\frac{\\pi a b}{4}\\)</span>.</p>\n<p>Conclusion : l’aire d’une ellipse est <span class=\"math inline\">\\(\\pi a b\\)</span>, où <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> sont les longueurs des demi-axes. Si <span class=\"math inline\">\\(a=b=r\\)</span> on retrouve que l’aire d’un disque de rayon <span class=\"math inline\">\\(r\\)</span> est <span class=\"math inline\">\\(\\pi r^2\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

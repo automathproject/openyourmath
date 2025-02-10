@@ -1,0 +1,35 @@
+{
+  "uuid": "LMxM",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2858",
+    "auteur": "burnol",
+    "createdAt": "2009-12-15",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Théorème des résidus",
+    "sousChapitre": "Théorème des résidus",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:46.445Z"
+  },
+  "contenu": [
+    {
+      "id": "010e6c47-7f63-4e17-979f-fb6fff62366d",
+      "type": "description",
+      "value": {
+        "latex": "\\label{ex:burnol2.1}\nSoit $f$ présentant en $z_0$ un \\emph{pôle simple}. Soit\n$C_r(\\alpha,\\beta)$ l'arc de cercle $w= z_0 + r\ne^{i\\theta}$, $\\alpha\\leq \\theta\\leq\\beta$, parcouru dans le\nsens direct des $\\theta$ et avec $0<\\beta - \\alpha\\leq\n2\\pi$. Prouver:\n\\[ \\lim_{r\\to0} \\int_{C_r(\\alpha,\\beta)} f(z)\\,dz = 2\\pi\ni\\;\\frac{\\beta-\\alpha}{2\\pi}\\;\\mathrm{Res}(f,z_0)\\] \nQue se passe-t-il si le pôle est d'ordre plus élevé?",
+        "html": "<p><span id=\"ex:burnol2.1\" label=\"ex:burnol2.1\">[ex:burnol2.1]</span> Soit <span class=\"math inline\">\\(f\\)</span> présentant en <span class=\"math inline\">\\(z_0\\)</span> un <em>pôle simple</em>. Soit <span class=\"math inline\">\\(C_r(\\alpha,\\beta)\\)</span> l’arc de cercle <span class=\"math inline\">\\(w= z_0 + r\ne^{i\\theta}\\)</span>, <span class=\"math inline\">\\(\\alpha\\leq \\theta\\leq\\beta\\)</span>, parcouru dans le sens direct des <span class=\"math inline\">\\(\\theta\\)</span> et avec <span class=\"math inline\">\\(0&lt;\\beta - \\alpha\\leq\n2\\pi\\)</span>. Prouver: <span class=\"math display\">\\[\\lim_{r\\to0} \\int_{C_r(\\alpha,\\beta)} f(z)\\,dz = 2\\pi\ni\\;\\frac{\\beta-\\alpha}{2\\pi}\\;\\mathrm{Res}(f,z_0)\\]</span> Que se passe-t-il si le pôle est d’ordre plus élevé?</p>\n"
+      }
+    },
+    {
+      "id": "cd623be3-67b9-48e0-8901-0601852a1a51",
+      "type": "reponse",
+      "value": {
+        "latex": "Dans le calcul des int\\'egrales on est souvent confront\\'e \\` a des passages \\` a la limite\n(du genre $\\lim_{R\\to \\infty } \\int_{C_R} f(z) \\, dz$\nou $\\lim_{r\\to 0 } \\int_{C_r} f(z) \\, dz$  dans le cas ou $0$ est une singularit\\'e que l'on contourne,\n$C_R$ un morceaux de cercle comme dans les exercices ici). Cet exercice et le suivant donnent des outils\ntr\\`es pratiques pour ce genre de calculs.\\\\\nSi $f$ a $z_0$ comme p\\^ole simple, sa s\\'erie de Laurent en $z_0$ est de la forme\n$$ f(z) = a_{-1}(z-z_0)^{-1} +a_0 +a_1(z-z_0)+.... =\\sum_{k\\geq -1} a_k (z-z_0)^k .$$\nPar convergence normale de cette s\\'erie\n\\begin{eqnarray*}\n\\int_{C_r(\\alpha , \\beta )} f(z) \\, dz &=& \\sum_{k\\geq -1} a_k \\int_{C_r(\\alpha , \\beta )} (z-z_0)^k \\, dz\n= \\sum_{k\\geq -1} a_k \\int_\\alpha ^\\beta (re^{i\\theta })^k ire^{i\\theta } \\, d\\theta \\\\\n&=& ia_{-1}(\\beta -\\alpha ) + r\\sum_{k\\geq 0}\\left( r^k a_{k}\\frac{e^{i(k+1)\\beta } -e^{i(k+1)\\alpha } }{(k+1)} \\right).\n\\end{eqnarray*}\nOn en d\\'eduit l'enonc\\'e de l'exercice en observant que\n $\\left| \\frac{e^{i(k+1)\\beta } -e^{i(k+1)\\alpha } }{(k+1)} \\right| \\leq \\frac{2}{k+1}$ et en faisant tendre $r\\to 0$.",
+        "html": "<p>Dans le calcul des intégrales on est souvent confronté à des passages à la limite (du genre <span class=\"math inline\">\\(\\lim_{R\\to \\infty } \\int_{C_R} f(z) \\, dz\\)</span> ou <span class=\"math inline\">\\(\\lim_{r\\to 0 } \\int_{C_r} f(z) \\, dz\\)</span> dans le cas ou <span class=\"math inline\">\\(0\\)</span> est une singularité que l’on contourne, <span class=\"math inline\">\\(C_R\\)</span> un morceaux de cercle comme dans les exercices ici). Cet exercice et le suivant donnent des outils très pratiques pour ce genre de calculs.<br />\nSi <span class=\"math inline\">\\(f\\)</span> a <span class=\"math inline\">\\(z_0\\)</span> comme pôle simple, sa série de Laurent en <span class=\"math inline\">\\(z_0\\)</span> est de la forme <span class=\"math display\">\\[f(z) = a_{-1}(z-z_0)^{-1} +a_0 +a_1(z-z_0)+.... =\\sum_{k\\geq -1} a_k (z-z_0)^k .\\]</span> Par convergence normale de cette série <span class=\"math display\">\\[\\begin{aligned}\n\\int_{C_r(\\alpha , \\beta )} f(z) \\, dz &amp;=&amp; \\sum_{k\\geq -1} a_k \\int_{C_r(\\alpha , \\beta )} (z-z_0)^k \\, dz\n= \\sum_{k\\geq -1} a_k \\int_\\alpha ^\\beta (re^{i\\theta })^k ire^{i\\theta } \\, d\\theta \\\\\n&amp;=&amp; ia_{-1}(\\beta -\\alpha ) + r\\sum_{k\\geq 0}\\left( r^k a_{k}\\frac{e^{i(k+1)\\beta } -e^{i(k+1)\\alpha } }{(k+1)} \\right).\\end{aligned}\\]</span> On en déduit l’enoncé de l’exercice en observant que <span class=\"math inline\">\\(\\left| \\frac{e^{i(k+1)\\beta } -e^{i(k+1)\\alpha } }{(k+1)} \\right| \\leq \\frac{2}{k+1}\\)</span> et en faisant tendre <span class=\"math inline\">\\(r\\to 0\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

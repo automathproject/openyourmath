@@ -1,0 +1,35 @@
+{
+  "uuid": "U9KV",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5295",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Arithmétique",
+    "sousChapitre": "Arithmétique de Z",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:37.416Z"
+  },
+  "contenu": [
+    {
+      "id": "f4a99695-1eb0-40d3-adb1-faa5de5c2a1c",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que, pour tout entier naturel $n$, $2^{n+1}$ divise $E((1+\\sqrt{3})^{2n+1})$.",
+        "html": "<p>Montrer que, pour tout entier naturel <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(2^{n+1}\\)</span> divise <span class=\"math inline\">\\(E((1+\\sqrt{3})^{2n+1})\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5261ec1c-944f-4a49-a0a2-4b85fb29c18e",
+      "type": "reponse",
+      "value": {
+        "latex": "Posons $(1+\\sqrt{3})^n=a_n+b_n\\sqrt{3}$ où $a_n$ et $b_n$ sont des entiers naturels. On a alors $(1-\\sqrt{3})^n=a_n-b_n\\sqrt{3}$ et donc \n\n$$(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}=2a_{2n+1}\\in\\Nn.$$\n\nMais de plus, $-1<1-\\sqrt{3}< 0$ et donc, puisque $2n+1$ est impair, $-1<(1-\\sqrt{3})^{2n+1}<0$. Par suite, \n\n$$2a_{2n+1}<(1+\\sqrt{3})^{2n+1}<2a_{2n+1}+1,$$\n\nce qui montre que $E((1+\\sqrt{3})^{2n+1})=2a_{2n+1}=(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}$ et montre déjà que $E((1+\\sqrt{3})^{2n+1})$ est un entier pair. Mais on en veut plus~:\n\n$$\\begin{align*}\\ensuremath\n(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}&=(1+\\sqrt{3})((1+\\sqrt{3})^2)^n+(1-\\sqrt{3})((1-\\sqrt{3})^2)^n\\\\\n &=(1+\\sqrt{3})(4+2\\sqrt{3})^n+(1-\\sqrt{3})(4-2\\sqrt{3})^n\\\\\n &=2^n((1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n)\n\\end{align*}$$\n\nMontrons enfin que $(1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n$ est un entier, pair. Mais, $(1+\\sqrt{3})(2+\\sqrt{3})^n$ est de la forme $A+B\\sqrt{3}$ où $A$ et $B$ sont des entiers naturels et donc, puisque $(1-\\sqrt{3})(2-\\sqrt{3})^n=A-B\\sqrt{3}$, on a finalement $(1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n=2A$ où $A$ est un entier.\n\nDonc, $(1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n$ est un entier pair, ou encore $(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}=E((1+\\sqrt{3})^{2n+1})$ est un entier divisible par $2^{n+1}$.",
+        "html": "<p>Posons <span class=\"math inline\">\\((1+\\sqrt{3})^n=a_n+b_n\\sqrt{3}\\)</span> où <span class=\"math inline\">\\(a_n\\)</span> et <span class=\"math inline\">\\(b_n\\)</span> sont des entiers naturels. On a alors <span class=\"math inline\">\\((1-\\sqrt{3})^n=a_n-b_n\\sqrt{3}\\)</span> et donc</p>\n<p><span class=\"math display\">\\[(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}=2a_{2n+1}\\in\\Nn.\\]</span></p>\n<p>Mais de plus, <span class=\"math inline\">\\(-1&lt;1-\\sqrt{3}&lt; 0\\)</span> et donc, puisque <span class=\"math inline\">\\(2n+1\\)</span> est impair, <span class=\"math inline\">\\(-1&lt;(1-\\sqrt{3})^{2n+1}&lt;0\\)</span>. Par suite,</p>\n<p><span class=\"math display\">\\[2a_{2n+1}&lt;(1+\\sqrt{3})^{2n+1}&lt;2a_{2n+1}+1,\\]</span></p>\n<p>ce qui montre que <span class=\"math inline\">\\(E((1+\\sqrt{3})^{2n+1})=2a_{2n+1}=(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}\\)</span> et montre déjà que <span class=\"math inline\">\\(E((1+\\sqrt{3})^{2n+1})\\)</span> est un entier pair. Mais on en veut plus :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n(1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}&amp;=(1+\\sqrt{3})((1+\\sqrt{3})^2)^n+(1-\\sqrt{3})((1-\\sqrt{3})^2)^n\\\\\n &amp;=(1+\\sqrt{3})(4+2\\sqrt{3})^n+(1-\\sqrt{3})(4-2\\sqrt{3})^n\\\\\n &amp;=2^n((1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n)\n\\end{align*}\\]</span></p>\n<p>Montrons enfin que <span class=\"math inline\">\\((1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n\\)</span> est un entier, pair. Mais, <span class=\"math inline\">\\((1+\\sqrt{3})(2+\\sqrt{3})^n\\)</span> est de la forme <span class=\"math inline\">\\(A+B\\sqrt{3}\\)</span> où <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span> sont des entiers naturels et donc, puisque <span class=\"math inline\">\\((1-\\sqrt{3})(2-\\sqrt{3})^n=A-B\\sqrt{3}\\)</span>, on a finalement <span class=\"math inline\">\\((1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n=2A\\)</span> où <span class=\"math inline\">\\(A\\)</span> est un entier.</p>\n<p>Donc, <span class=\"math inline\">\\((1+\\sqrt{3})(2+\\sqrt{3})^n+(1-\\sqrt{3})(2-\\sqrt{3})^n\\)</span> est un entier pair, ou encore <span class=\"math inline\">\\((1+\\sqrt{3})^{2n+1}+(1-\\sqrt{3})^{2n+1}=E((1+\\sqrt{3})^{2n+1})\\)</span> est un entier divisible par <span class=\"math inline\">\\(2^{n+1}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

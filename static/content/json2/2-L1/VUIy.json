@@ -1,0 +1,35 @@
+{
+  "uuid": "VUIy",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5090",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions circulaires inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:01.923Z"
+  },
+  "contenu": [
+    {
+      "id": "3fd13d8f-c490-43d3-b00e-b4e5fe12b0c1",
+      "type": "description",
+      "value": {
+        "latex": "Calculer $u_n=\\Arctan\\frac{2}{1^2}+\\Arctan\\frac{2}{2^2}+...+\\Arctan\\frac{2}{n^2}$ pour $n$ entier naturel non nul\ndonné puis déterminer $\\lim_{n\\rightarrow +\\infty}u_n$. (Utiliser l'exercice \\ref{exo:suprou2} 4))",
+        "html": "<p>Calculer <span class=\"math inline\">\\(u_n=\\Arctan\\frac{2}{1^2}+\\Arctan\\frac{2}{2^2}+...+\\Arctan\\frac{2}{n^2}\\)</span> pour <span class=\"math inline\">\\(n\\)</span> entier naturel non nul donné puis déterminer <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}u_n\\)</span>. (Utiliser l’exercice <a href=\"#exo:suprou2\" data-reference-type=\"ref\" data-reference=\"exo:suprou2\">[exo:suprou2]</a> 4))</p>\n"
+      }
+    },
+    {
+      "id": "a1d29ae7-a38c-4a62-9adc-a89164a99306",
+      "type": "reponse",
+      "value": {
+        "latex": "(On va retrouver le résultat de l'exercice \\ref{exo:suprou2} dans un cas particulier)\n \n \n Soient $a$ et $b$ deux réels positifs. Alors, $\\Arctan a\\in\\left[0,\\frac{\\pi}{2}\\right[$, $\\Arctan b\\in\\left[0,\\frac{\\pi}{2}\\right[$ et donc, $\\Arctan a-\\Arctan b\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$. De plus, \n\n$$\\tan(\\Arctan a-\\Arctan b)=\\frac{\\tan(\\Arctan a)-\\tan(\\Arctan b)}{1+\\tan(\\Arctan a)\\tan(\\Arctan b)}=\\frac{a-b}{1+ab},$$\net donc, puisque $\\Arctan a-\\Arctan b\\in]-\\frac{\\pi}{2},\\frac{\\pi}{2}[$,\n\n\\begin{center}\n\\shadowbox{\n$\\forall a\\geq0,\\;\\forall b\\geq0,\\;\\Arctan a-\\Arctan b\n=\\Arctan\\left(\\frac{a-b}{1+ab}\\right).$\n}\n\\end{center}\nSoit alors $k$ un entier naturel non nul.\n$\\Arctan\\frac{2}{k^2}=\\Arctan\\frac{(k+1)-(k-1)}{1+(k-1)(k+1)}=\\Arctan(k+1)-\\Arctan(k-1)$ (puisque $k-1$ et $k+1$ sont\npositifs). Par suite, si $n$ est un entier naturel non nul donné,\n\n$$\\begin{align*}\nu_n&=\\sum_{k=1}^{n}\\Arctan\\frac{2}{k^2}=\\sum_{k=1}^{n}(\\Arctan(k+1)-\\Arctan(k-1))=\\sum_{k=2}^{n+1}\\Arctan\nk-\\sum_{k=0}^{n-1}\\Arctan k\\\\\n &=\\Arctan(n+1)+\\Arctan n-\\frac{\\pi}{4}.\n\\end{align*}$$\nLa limite de $u_n$ vaut donc\n$\\frac{\\pi}{2}+\\frac{\\pi}{2}-\\frac{\\pi}{4}=\\frac{3\\pi}{4}$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{n\\rightarrow +\\infty}u_n=\\frac{3\\pi}{4}$.\n}\n\\end{center}",
+        "html": "<p>(On va retrouver le résultat de l’exercice <a href=\"#exo:suprou2\" data-reference-type=\"ref\" data-reference=\"exo:suprou2\">[exo:suprou2]</a> dans un cas particulier)</p>\n<p>Soient <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> deux réels positifs. Alors, <span class=\"math inline\">\\(\\Arctan a\\in\\left[0,\\frac{\\pi}{2}\\right[\\)</span>, <span class=\"math inline\">\\(\\Arctan b\\in\\left[0,\\frac{\\pi}{2}\\right[\\)</span> et donc, <span class=\"math inline\">\\(\\Arctan a-\\Arctan b\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>. De plus,</p>\n<p><span class=\"math display\">\\[\\tan(\\Arctan a-\\Arctan b)=\\frac{\\tan(\\Arctan a)-\\tan(\\Arctan b)}{1+\\tan(\\Arctan a)\\tan(\\Arctan b)}=\\frac{a-b}{1+ab},\\]</span> et donc, puisque <span class=\"math inline\">\\(\\Arctan a-\\Arctan b\\in]-\\frac{\\pi}{2},\\frac{\\pi}{2}[\\)</span>,</p>\n<p>Soit alors <span class=\"math inline\">\\(k\\)</span> un entier naturel non nul. <span class=\"math inline\">\\(\\Arctan\\frac{2}{k^2}=\\Arctan\\frac{(k+1)-(k-1)}{1+(k-1)(k+1)}=\\Arctan(k+1)-\\Arctan(k-1)\\)</span> (puisque <span class=\"math inline\">\\(k-1\\)</span> et <span class=\"math inline\">\\(k+1\\)</span> sont positifs). Par suite, si <span class=\"math inline\">\\(n\\)</span> est un entier naturel non nul donné,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nu_n&amp;=\\sum_{k=1}^{n}\\Arctan\\frac{2}{k^2}=\\sum_{k=1}^{n}(\\Arctan(k+1)-\\Arctan(k-1))=\\sum_{k=2}^{n+1}\\Arctan\nk-\\sum_{k=0}^{n-1}\\Arctan k\\\\\n &amp;=\\Arctan(n+1)+\\Arctan n-\\frac{\\pi}{4}.\n\\end{align*}\\]</span> La limite de <span class=\"math inline\">\\(u_n\\)</span> vaut donc <span class=\"math inline\">\\(\\frac{\\pi}{2}+\\frac{\\pi}{2}-\\frac{\\pi}{4}=\\frac{3\\pi}{4}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

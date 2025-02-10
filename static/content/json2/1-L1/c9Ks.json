@@ -1,0 +1,35 @@
+{
+  "uuid": "c9Ks",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "217",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Logique, ensemble, raisonnement",
+    "sousChapitre": "Relation d'équivalence, relation d'ordre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:59.101Z"
+  },
+  "contenu": [
+    {
+      "id": "b61d9d98-53ca-4662-8f7d-af544f74599b",
+      "type": "description",
+      "value": {
+        "latex": "Soit $ (E, \\leq)$ un ensemble ordonn\\'e. On d\\'efinit sur\n$\\mathcal{P} (E)\\setminus\\left\\{ \\emptyset \\right\\}$ la relation\n$\\prec$ par \n$$X \\prec Y \\quad \\text{ ssi } \\quad (X = Y \\ \\text{ ou } \\ \n\\forall x \\in X \\  \\forall y \\in Y \\  x \\leq y).$$ \nV\\'erifier que c'est une relation d'ordre.",
+        "html": "<p>Soit <span class=\"math inline\">\\((E, \\leq)\\)</span> un ensemble ordonné. On définit sur <span class=\"math inline\">\\(\\mathcal{P} (E)\\setminus\\left\\{ \\emptyset \\right\\}\\)</span> la relation <span class=\"math inline\">\\(\\prec\\)</span> par <span class=\"math display\">\\[X \\prec Y \\quad \\text{ ssi } \\quad (X = Y \\ \\text{ ou } \\ \n\\forall x \\in X \\  \\forall y \\in Y \\  x \\leq y).\\]</span> Vérifier que c’est une relation d’ordre.</p>\n"
+      }
+    },
+    {
+      "id": "7983f9af-565a-4f83-b173-344d48cbde6b",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{itemize}\n \\item Reflexivit\\'e : pour tout $X\\in\\mathcal{P} (E)$ on a $X \\prec X$ car $X=X$.\n \\item Anti-sym\\'etrie : pour $X,Y\\in\\mathcal{P} (E)$ tels que $X \\prec Y$ et $Y \\prec X$, alors par d\\'efinition de $\\prec$ on a \n$$\\forall x \\in X \\quad \\forall y \\in Y \\quad x\\leqslant y \\text{ et } y \\leqslant x.$$\nComme la relation $\\le$ est une relation d'ordre alors $x\\leqslant y$ et $y \\leqslant x$ implique $x=y$.\nDonc \n$$\\forall x \\in X \\quad \\forall y \\in Y \\quad x = y,$$\nce qui implique que $X=Y$ (dans ce cas en fait $X$ est vide ou un singleton).\n\n \\item Transitivit\\'e : soit $X,Y, Z \\in\\mathcal{P} (E)$ tels que  $X \\prec Y$ et $Y \\prec Z$.\nSi $X=Y$ ou $Y=Z$ alors il est clair que $X \\prec Z$. Supposons que $X\\neq Y$ et $Y\\neq Z$\nalors \n$$\\forall x \\in X \\quad \\forall y \\in Y \\quad x\\leqslant y \\qquad \\text{ et } \\qquad \\forall y \\in Y \\quad \\forall z \\in Z \\quad y\\leqslant z.$$\n\nDonc on a \n$$\\forall x \\in X \\quad \\forall y \\in Y \\quad \\forall z \\in Z \\quad x \\leqslant y \\text{ et }  y \\leqslant z,$$ \nalors par transitivit\\'e de  la relation $\\le$ on obtient :\n$$\\forall x \\in X \\quad \\forall z \\in Z \\quad x \\leqslant z.$$ \nDonc $X \\prec Z$.\n \\end{itemize}",
+        "html": "<ul>\n<li><p>Reflexivité : pour tout <span class=\"math inline\">\\(X\\in\\mathcal{P} (E)\\)</span> on a <span class=\"math inline\">\\(X \\prec X\\)</span> car <span class=\"math inline\">\\(X=X\\)</span>.</p></li>\n<li><p>Anti-symétrie : pour <span class=\"math inline\">\\(X,Y\\in\\mathcal{P} (E)\\)</span> tels que <span class=\"math inline\">\\(X \\prec Y\\)</span> et <span class=\"math inline\">\\(Y \\prec X\\)</span>, alors par définition de <span class=\"math inline\">\\(\\prec\\)</span> on a <span class=\"math display\">\\[\\forall x \\in X \\quad \\forall y \\in Y \\quad x\\leqslant y \\text{ et } y \\leqslant x.\\]</span> Comme la relation <span class=\"math inline\">\\(\\le\\)</span> est une relation d’ordre alors <span class=\"math inline\">\\(x\\leqslant y\\)</span> et <span class=\"math inline\">\\(y \\leqslant x\\)</span> implique <span class=\"math inline\">\\(x=y\\)</span>. Donc <span class=\"math display\">\\[\\forall x \\in X \\quad \\forall y \\in Y \\quad x = y,\\]</span> ce qui implique que <span class=\"math inline\">\\(X=Y\\)</span> (dans ce cas en fait <span class=\"math inline\">\\(X\\)</span> est vide ou un singleton).</p></li>\n<li><p>Transitivité : soit <span class=\"math inline\">\\(X,Y, Z \\in\\mathcal{P} (E)\\)</span> tels que <span class=\"math inline\">\\(X \\prec Y\\)</span> et <span class=\"math inline\">\\(Y \\prec Z\\)</span>. Si <span class=\"math inline\">\\(X=Y\\)</span> ou <span class=\"math inline\">\\(Y=Z\\)</span> alors il est clair que <span class=\"math inline\">\\(X \\prec Z\\)</span>. Supposons que <span class=\"math inline\">\\(X\\neq Y\\)</span> et <span class=\"math inline\">\\(Y\\neq Z\\)</span> alors <span class=\"math display\">\\[\\forall x \\in X \\quad \\forall y \\in Y \\quad x\\leqslant y \\qquad \\text{ et } \\qquad \\forall y \\in Y \\quad \\forall z \\in Z \\quad y\\leqslant z.\\]</span></p>\n<p>Donc on a <span class=\"math display\">\\[\\forall x \\in X \\quad \\forall y \\in Y \\quad \\forall z \\in Z \\quad x \\leqslant y \\text{ et }  y \\leqslant z,\\]</span> alors par transitivité de la relation <span class=\"math inline\">\\(\\le\\)</span> on obtient : <span class=\"math display\">\\[\\forall x \\in X \\quad \\forall z \\in Z \\quad x \\leqslant z.\\]</span> Donc <span class=\"math inline\">\\(X \\prec Z\\)</span>.</p></li>\n</ul>\n"
+      }
+    }
+  ]
+}

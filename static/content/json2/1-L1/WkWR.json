@@ -1,0 +1,43 @@
+{
+  "uuid": "WkWR",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5284",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Dénombrement",
+    "sousChapitre": "Cardinal",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:50.536Z"
+  },
+  "contenu": [
+    {
+      "id": "e36679e5-2daa-407e-a38b-cd5861c533c3",
+      "type": "description",
+      "value": {
+        "latex": "On part du point de coordonnées $(0,0)$ pour rejoindre le point de coordonnées $(p,q)$ ($p$ et $q$ entiers naturels donnés) en se déplaçant à chaque étape d'une unité vers la droite ou vers le haut. Combien y a-t-il de chemins possibles~?",
+        "html": "<p>On part du point de coordonnées <span class=\"math inline\">\\((0,0)\\)</span> pour rejoindre le point de coordonnées <span class=\"math inline\">\\((p,q)\\)</span> (<span class=\"math inline\">\\(p\\)</span> et <span class=\"math inline\">\\(q\\)</span> entiers naturels donnés) en se déplaçant à chaque étape d’une unité vers la droite ou vers le haut. Combien y a-t-il de chemins possibles ?</p>\n"
+      }
+    },
+    {
+      "id": "492e7b92-08c0-4a03-8be1-e345733be254",
+      "type": "indication",
+      "value": {
+        "latex": "Coder un chemin par un mot : $D$ pour droite, $H$ pour haut.",
+        "html": "<p>Coder un chemin par un mot : <span class=\"math inline\">\\(D\\)</span> pour droite, <span class=\"math inline\">\\(H\\)</span> pour haut.</p>\n"
+      }
+    },
+    {
+      "id": "25d3778c-7ba2-4070-8915-587a8b3bae3c",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $H=$ \"vers le haut\"  et $D=$ \"vers la droite\". \nUn exemple de chemin de $(0,0)$ à $(p,q)$ est le mot $DD...DHH...H$ \noù $D$ est écrit $p$ fois et $H$ est écrit $q$ fois. \nLe nombre de chemins cherché est clairement le nombre d'anagrammes \ndu mot précédent. \n\n\nLe nombre de choix de l'emplacement du $H$ est $C_{p+q}^q$. Une fois que les lettres $H$\nsont placées il n'y a plus de choix pour les lettres $D$.\nIl y a donc $C_{p+q}^q$ chemins possibles.\n\nRemarque : si on place d'abord les lettres $D$ alors on a $C_{p+q}^p$ choix possibles.\nMais on trouve bien sûr le même nombre de chemins car $C_{p+q}^p = C_{p+q}^{(p+q) - p} = C_{p+q}^q$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(H=\\)</span> \"vers le haut\" et <span class=\"math inline\">\\(D=\\)</span> \"vers la droite\". Un exemple de chemin de <span class=\"math inline\">\\((0,0)\\)</span> à <span class=\"math inline\">\\((p,q)\\)</span> est le mot <span class=\"math inline\">\\(DD...DHH...H\\)</span> où <span class=\"math inline\">\\(D\\)</span> est écrit <span class=\"math inline\">\\(p\\)</span> fois et <span class=\"math inline\">\\(H\\)</span> est écrit <span class=\"math inline\">\\(q\\)</span> fois. Le nombre de chemins cherché est clairement le nombre d’anagrammes du mot précédent.</p>\n<p>Le nombre de choix de l’emplacement du <span class=\"math inline\">\\(H\\)</span> est <span class=\"math inline\">\\(C_{p+q}^q\\)</span>. Une fois que les lettres <span class=\"math inline\">\\(H\\)</span> sont placées il n’y a plus de choix pour les lettres <span class=\"math inline\">\\(D\\)</span>. Il y a donc <span class=\"math inline\">\\(C_{p+q}^q\\)</span> chemins possibles.</p>\n<p>Remarque : si on place d’abord les lettres <span class=\"math inline\">\\(D\\)</span> alors on a <span class=\"math inline\">\\(C_{p+q}^p\\)</span> choix possibles. Mais on trouve bien sûr le même nombre de chemins car <span class=\"math inline\">\\(C_{p+q}^p = C_{p+q}^{(p+q) - p} = C_{p+q}^q\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

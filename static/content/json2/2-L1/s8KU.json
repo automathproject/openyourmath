@@ -1,0 +1,67 @@
+{
+  "uuid": "s8KU",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2100",
+    "auteur": "bodin",
+    "createdAt": "2008-02-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Somme de Riemann",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:32.461Z"
+  },
+  "contenu": [
+    {
+      "id": "2448edce-92d4-4521-b117-4694d8e63a6b",
+      "type": "description",
+      "value": {
+        "latex": "Calculer la limite des suites suivantes :",
+        "html": "<p>Calculer la limite des suites suivantes :</p>\n"
+      }
+    },
+    {
+      "id": "6b9e4730-713a-4c48-8802-ca7381a8a285",
+      "type": "question",
+      "value": {
+        "latex": "$\\displaystyle u_n=n\\sum_{k=0}^{n-1}\\frac 1{k^2+n^2}$",
+        "html": "<p><span class=\"math inline\">\\(\\displaystyle u_n=n\\sum_{k=0}^{n-1}\\frac 1{k^2+n^2}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "248b0220-3282-4282-8f09-c3c7493680ab",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit \n$$u_n =n \\sum_{k=0}^{n-1}\\frac 1{k^2+n^2} = \\frac 1n  \\sum_{k=0}^{n-1}\\frac 1{1+\\big(\\frac k n \\big)^2}.$$\nEn posant $f(x) = \\frac 1 {1+x^2}$ nous venons d'écrire la somme de Riemann correspondant à \n$\\int_0^1 f(x) dx$. Cette intégrale se calcule facilement : \n$$\\int_0^1 f(t) dt = \\int_0^1 \\frac {dx} {1+x^2} = \\big[\\arctan x\\big]_0^1 = \\frac \\pi 4.$$\nLa somme de Riemann $u_n$ convergeant vers $\\int_0^1 f(x) dx$ nous venons de montrer que\n$(u_n)$ converge vers $\\frac \\pi 4$.",
+        "html": "<p>Soit <span class=\"math display\">\\[u_n =n \\sum_{k=0}^{n-1}\\frac 1{k^2+n^2} = \\frac 1n  \\sum_{k=0}^{n-1}\\frac 1{1+\\big(\\frac k n \\big)^2}.\\]</span> En posant <span class=\"math inline\">\\(f(x) = \\frac 1 {1+x^2}\\)</span> nous venons d’écrire la somme de Riemann correspondant à <span class=\"math inline\">\\(\\int_0^1 f(x) dx\\)</span>. Cette intégrale se calcule facilement : <span class=\"math display\">\\[\\int_0^1 f(t) dt = \\int_0^1 \\frac {dx} {1+x^2} = \\big[\\arctan x\\big]_0^1 = \\frac \\pi 4.\\]</span> La somme de Riemann <span class=\"math inline\">\\(u_n\\)</span> convergeant vers <span class=\"math inline\">\\(\\int_0^1 f(x) dx\\)</span> nous venons de montrer que <span class=\"math inline\">\\((u_n)\\)</span> converge vers <span class=\"math inline\">\\(\\frac \\pi 4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f6e9d070-bd56-4843-8b9b-f6bba04c68e4",
+      "type": "question",
+      "value": {
+        "latex": "$\\displaystyle v_n=\\prod\\limits_{k=1}^n\\left(1+\\frac{k^2}{n^2}\\right) ^{\\frac 1n}$",
+        "html": "<p><span class=\"math inline\">\\(\\displaystyle v_n=\\prod\\limits_{k=1}^n\\left(1+\\frac{k^2}{n^2}\\right) ^{\\frac 1n}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "4c608e68-46b1-4d72-8beb-2773e15d8442",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $v_n=\\prod\\limits_{k=1}^n\\left(1+\\frac{k^2}{n^2}\\right) ^{\\frac 1n}$, notons \n$$w_n = \\ln v_n = \\sum_{k=1}^n \\ln\\left( \\left(1+\\frac{k^2}{n^2}\\right)^{\\frac 1n} \\right) \n= \\frac 1 n \\sum_{k=1}^n \\ln \\left(1+\\frac{k^2}{n^2}\\right).$$\nEn posant $g(x) = \\ln (1+x^2)$ nous reconnaissons la somme de Riemann correspondant à\n$I = \\int_0^1 g(x)dx$.\n\nCalculons cette intégrale : \n$$\\begin{align*}\n I &= \\int_0^1 g(x)dx = \\int_0^1 \\ln(1+x^2) dx \\\\\n   &= \\big[x\\ln(1+x^2)\\big]_0^1 - \\int_0^1 x \\frac{2x}{1+x^2}dx \\quad \\text{par intégration par parties} \\\\\n   &= \\ln 2 -2 \\int_0^1 1-\\frac 1{1+x^2} dx \\\\\n   &= \\ln 2  - 2\\big[x-\\arctan x\\big]_0^1 \\\\\n   &= \\ln 2 - 2 + \\frac \\pi 2. \\\\\n\\end{align*}$$\n\n\nNous venons de prouver que $w_n=\\ln v_n$ converge vers $I=\\ln 2 - 2 + \\frac \\pi 2$,\ndonc $v_n = \\exp w_n$ converge vers $\\exp(\\ln 2 - 2 + \\frac \\pi 2) = 2e^{\\frac \\pi 2 -2}$.\nBilan $(v_n)$ a pour limite $2e^{\\frac \\pi 2 -2}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(v_n=\\prod\\limits_{k=1}^n\\left(1+\\frac{k^2}{n^2}\\right) ^{\\frac 1n}\\)</span>, notons <span class=\"math display\">\\[w_n = \\ln v_n = \\sum_{k=1}^n \\ln\\left( \\left(1+\\frac{k^2}{n^2}\\right)^{\\frac 1n} \\right) \n= \\frac 1 n \\sum_{k=1}^n \\ln \\left(1+\\frac{k^2}{n^2}\\right).\\]</span> En posant <span class=\"math inline\">\\(g(x) = \\ln (1+x^2)\\)</span> nous reconnaissons la somme de Riemann correspondant à <span class=\"math inline\">\\(I = \\int_0^1 g(x)dx\\)</span>.</p>\n<p>Calculons cette intégrale : <span class=\"math display\">\\[\\begin{align*}\n I &amp;= \\int_0^1 g(x)dx = \\int_0^1 \\ln(1+x^2) dx \\\\\n   &amp;= \\big[x\\ln(1+x^2)\\big]_0^1 - \\int_0^1 x \\frac{2x}{1+x^2}dx \\quad \\text{par intégration par parties} \\\\\n   &amp;= \\ln 2 -2 \\int_0^1 1-\\frac 1{1+x^2} dx \\\\\n   &amp;= \\ln 2  - 2\\big[x-\\arctan x\\big]_0^1 \\\\\n   &amp;= \\ln 2 - 2 + \\frac \\pi 2. \\\\\n\\end{align*}\\]</span></p>\n<p>Nous venons de prouver que <span class=\"math inline\">\\(w_n=\\ln v_n\\)</span> converge vers <span class=\"math inline\">\\(I=\\ln 2 - 2 + \\frac \\pi 2\\)</span>, donc <span class=\"math inline\">\\(v_n = \\exp w_n\\)</span> converge vers <span class=\"math inline\">\\(\\exp(\\ln 2 - 2 + \\frac \\pi 2) = 2e^{\\frac \\pi 2 -2}\\)</span>. Bilan <span class=\"math inline\">\\((v_n)\\)</span> a pour limite <span class=\"math inline\">\\(2e^{\\frac \\pi 2 -2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1457aab7-3849-4aad-ad8e-bb6f9314f0be",
+      "type": "indication",
+      "value": {
+        "latex": "On pourra essayer de reconnaître des sommes de Riemann, puis calculer des intégrales. \nPour le produit composer par la fonction $\\ln$, afin de transformer le produit en une somme.",
+        "html": "<p>On pourra essayer de reconnaître des sommes de Riemann, puis calculer des intégrales. Pour le produit composer par la fonction <span class=\"math inline\">\\(\\ln\\)</span>, afin de transformer le produit en une somme.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "uuid": "Fjia",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2093",
+    "auteur": "bodin",
+    "createdAt": "2008-02-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Théorie",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:40.457Z"
+  },
+  "contenu": [
+    {
+      "id": "0dd264af-a0cb-4988-8f78-73ba962bd0f4",
+      "type": "description",
+      "value": {
+        "latex": "Soit $F(x)=\\displaystyle \\int_x^{x^2}\\frac{1}{\\ln t}d t$",
+        "html": "<p>Soit <span class=\"math inline\">\\(F(x)=\\displaystyle \\int_x^{x^2}\\frac{1}{\\ln t}d t\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "a85062a4-4339-47f5-8b5c-bd1f115489ee",
+      "type": "question",
+      "value": {
+        "latex": "Quel est l'ensemble de d\\'efinition de $F$. $F$ est-elle continue,\nd\\'erivable sur son ensemble de d\\'efinition ?",
+        "html": "<p>Quel est l’ensemble de définition de <span class=\"math inline\">\\(F\\)</span>. <span class=\"math inline\">\\(F\\)</span> est-elle continue, dérivable sur son ensemble de définition ?</p>\n"
+      }
+    },
+    {
+      "id": "6e7ef606-9c24-4cc1-8238-3e07f3b2d8a7",
+      "type": "reponse",
+      "value": {
+        "latex": "$F$ est d\\'efinie sur $]0,1[\\cup ]1,+\\infty[$. $F$ est continue et d\\'erivable sur $]0,1[$\net sur $]1,+\\infty[$. Pour vois cela il suffit d'\\'ecrire $F(x)= \\int_x^a \\frac{dt}{\\ln t}+\\int_a^{x^2} \\frac{dt}{\\ln t}$. La premi\\`ere de ces fonctions est continue et d\\'erivable (c'est une primitive), la seconde est la compos\\'ee de $x\\mapsto x^2$ avec $x\\mapsto \\int_a^{x} \\frac{dt}{\\ln t}$ et est donc aussi continue et d\\'erivable.\nOn pourrait m\\^eme calculer la d\\'eriv\\'ee.",
+        "html": "<p><span class=\"math inline\">\\(F\\)</span> est définie sur <span class=\"math inline\">\\(]0,1[\\cup ]1,+\\infty[\\)</span>. <span class=\"math inline\">\\(F\\)</span> est continue et dérivable sur <span class=\"math inline\">\\(]0,1[\\)</span> et sur <span class=\"math inline\">\\(]1,+\\infty[\\)</span>. Pour vois cela il suffit d’écrire <span class=\"math inline\">\\(F(x)= \\int_x^a \\frac{dt}{\\ln t}+\\int_a^{x^2} \\frac{dt}{\\ln t}\\)</span>. La première de ces fonctions est continue et dérivable (c’est une primitive), la seconde est la composée de <span class=\"math inline\">\\(x\\mapsto x^2\\)</span> avec <span class=\"math inline\">\\(x\\mapsto \\int_a^{x} \\frac{dt}{\\ln t}\\)</span> et est donc aussi continue et dérivable. On pourrait même calculer la dérivée.</p>\n"
+      }
+    },
+    {
+      "id": "1d394ed0-628b-49c5-9e27-fd9609fadbec",
+      "type": "question",
+      "value": {
+        "latex": "D\\'eterminer $\\lim_{x\\to 1^+} F(x)$ en comparant $F$ \\`a $H(x)=\\displaystyle \\int_x^{x^2}\\frac{1}{t\\ln t}d t$.",
+        "html": "<p>Déterminer <span class=\"math inline\">\\(\\lim_{x\\to 1^+} F(x)\\)</span> en comparant <span class=\"math inline\">\\(F\\)</span> à <span class=\"math inline\">\\(H(x)=\\displaystyle \\int_x^{x^2}\\frac{1}{t\\ln t}d t\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d42a10a0-29f3-4766-aa61-e38fc4a0a46f",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $f(t) = \\frac 1{\\ln t}$ et $g(t) = \\frac 1{t\\ln t}$. On se place sur $]1,+\\infty[$.\nBien \\'evidemment $g(t) \\leqslant f(t)$, mais nous avons aussi que pour $\\epsilon >0$ fix\\'e il existe $x>1$ tel que\npour tout $t\\in [1,x^2]$ on ait $\\frac 1t \\leqslant 1+\\epsilon$ donc sur $]1,x^2]$ nous avons $f(t) \\leqslant (1+\\epsilon)g(t)$.\nPar int\\'egration de l'in\\'egalit\\'e $g(t) \\leqslant f(t) \\leqslant (1+\\epsilon)g(t)$ sur $[x,x^2]$ nous obtenons pour $x$ assez proche de $1$ :\n$$H(x) \\leqslant F(x)  \\leqslant (1+\\epsilon)H(x).$$\n\nIl ne reste plus qu'a calculer $H(x)$. En fait $g(t) = \\frac 1{t\\ln t}$ est la d\\'eriv\\'ee de la fonction $h(t) = \\ln (\\ln t)$. Donc \n$$\\begin{align*}\nH(x) = \\int_x^{x^2}\\frac{dt}{t\\ln t} \n &= [ \\ln (\\ln t) ]_x^{x^2}  = \\ln (\\ln (x^2))-\\ln (\\ln x) \\\\\n &= \\ln (2 \\ln x)-\\ln (\\ln x) = \\ln \\frac {2 \\ln x}{\\ln x} \\\\\n &= \\ln 2. \\\\\n\\end{align*}$$\n\nNous obtenons alors, pour $\\epsilon >0$ fix\\'e et $x>1$ assez proche de $1$, l'encadrement \n$$\\ln 2 \\leqslant F(x) \\leqslant (1+\\epsilon) \\ln 2.$$\n\nDonc la limite de $F(x)$ quand $x\\to 1^+$ est $\\ln 2$.",
+        "html": "<p>Notons <span class=\"math inline\">\\(f(t) = \\frac 1{\\ln t}\\)</span> et <span class=\"math inline\">\\(g(t) = \\frac 1{t\\ln t}\\)</span>. On se place sur <span class=\"math inline\">\\(]1,+\\infty[\\)</span>. Bien évidemment <span class=\"math inline\">\\(g(t) \\leqslant f(t)\\)</span>, mais nous avons aussi que pour <span class=\"math inline\">\\(\\epsilon &gt;0\\)</span> fixé il existe <span class=\"math inline\">\\(x&gt;1\\)</span> tel que pour tout <span class=\"math inline\">\\(t\\in [1,x^2]\\)</span> on ait <span class=\"math inline\">\\(\\frac 1t \\leqslant 1+\\epsilon\\)</span> donc sur <span class=\"math inline\">\\(]1,x^2]\\)</span> nous avons <span class=\"math inline\">\\(f(t) \\leqslant (1+\\epsilon)g(t)\\)</span>. Par intégration de l’inégalité <span class=\"math inline\">\\(g(t) \\leqslant f(t) \\leqslant (1+\\epsilon)g(t)\\)</span> sur <span class=\"math inline\">\\([x,x^2]\\)</span> nous obtenons pour <span class=\"math inline\">\\(x\\)</span> assez proche de <span class=\"math inline\">\\(1\\)</span> : <span class=\"math display\">\\[H(x) \\leqslant F(x)  \\leqslant (1+\\epsilon)H(x).\\]</span></p>\n<p>Il ne reste plus qu’a calculer <span class=\"math inline\">\\(H(x)\\)</span>. En fait <span class=\"math inline\">\\(g(t) = \\frac 1{t\\ln t}\\)</span> est la dérivée de la fonction <span class=\"math inline\">\\(h(t) = \\ln (\\ln t)\\)</span>. Donc <span class=\"math display\">\\[\\begin{align*}\nH(x) = \\int_x^{x^2}\\frac{dt}{t\\ln t} \n &amp;= [ \\ln (\\ln t) ]_x^{x^2}  = \\ln (\\ln (x^2))-\\ln (\\ln x) \\\\\n &amp;= \\ln (2 \\ln x)-\\ln (\\ln x) = \\ln \\frac {2 \\ln x}{\\ln x} \\\\\n &amp;= \\ln 2. \\\\\n\\end{align*}\\]</span></p>\n<p>Nous obtenons alors, pour <span class=\"math inline\">\\(\\epsilon &gt;0\\)</span> fixé et <span class=\"math inline\">\\(x&gt;1\\)</span> assez proche de <span class=\"math inline\">\\(1\\)</span>, l’encadrement <span class=\"math display\">\\[\\ln 2 \\leqslant F(x) \\leqslant (1+\\epsilon) \\ln 2.\\]</span></p>\n<p>Donc la limite de <span class=\"math inline\">\\(F(x)\\)</span> quand <span class=\"math inline\">\\(x\\to 1^+\\)</span> est <span class=\"math inline\">\\(\\ln 2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b4830fb3-197e-4ec5-ad28-1dd025f15f28",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n  \\item Soit faire comme l'exercice \\ref{ex:compint}, soit s\\'eparer l'int\\'egrale en deux, et pour l'une faire un changement de variable $u=x^2$.\n  \\item $H(x)$ se calcule explicitement et montrer qu'en fait $H$ est une fonction constante, ensuite il faut comparer $H(x)$ et $F(x)$.\n  \\end{enumerate}",
+        "html": "<ol>\n<li><p>Soit faire comme l’exercice <a href=\"#ex:compint\" data-reference-type=\"ref\" data-reference=\"ex:compint\">[ex:compint]</a>, soit séparer l’intégrale en deux, et pour l’une faire un changement de variable <span class=\"math inline\">\\(u=x^2\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(H(x)\\)</span> se calcule explicitement et montrer qu’en fait <span class=\"math inline\">\\(H\\)</span> est une fonction constante, ensuite il faut comparer <span class=\"math inline\">\\(H(x)\\)</span> et <span class=\"math inline\">\\(F(x)\\)</span>.</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

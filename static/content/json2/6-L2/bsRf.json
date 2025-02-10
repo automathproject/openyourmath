@@ -1,0 +1,43 @@
+{
+  "uuid": "bsRf",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6990",
+    "auteur": "blanc-centi",
+    "createdAt": "2015-07-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Courbes planes",
+    "sousChapitre": "Coordonnées polaires",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:46:30.543Z"
+  },
+  "contenu": [
+    {
+      "id": "7929d730-50ce-4ba4-9f01-8051cc6a30b1",
+      "type": "description",
+      "value": {
+        "latex": "On considère les courbes $\\mathcal{C}_1$ et $\\mathcal{C}_2$ {\\it (des limaçons de Pascal)} \nrespectivement données en polaires par \n$$r_1(\\theta)=1+\\cos\\theta\\quad\\quad r_2(\\theta)=3+\\cos\\theta$$\nPour $i=1,2$, on note $N_i(\\theta)$ la droite orthogonale au point $M_i(\\theta)\\in\\mathcal{C}_i$. \nVérifier que pour tout $\\theta\\not\\equiv 0\\ [2\\pi]$, les droites $N_1(\\theta)$ et $N_2(\\theta)$ sont sécantes, en un point $P(\\theta)$. Déterminer le lieu du point $P$ quand $\\theta$ varie.",
+        "html": "<p>On considère les courbes <span class=\"math inline\">\\(\\mathcal{C}_1\\)</span> et <span class=\"math inline\">\\(\\mathcal{C}_2\\)</span> <span><em>(des limaçons de Pascal)</em></span> respectivement données en polaires par <span class=\"math display\">\\[r_1(\\theta)=1+\\cos\\theta\\quad\\quad r_2(\\theta)=3+\\cos\\theta\\]</span> Pour <span class=\"math inline\">\\(i=1,2\\)</span>, on note <span class=\"math inline\">\\(N_i(\\theta)\\)</span> la droite orthogonale au point <span class=\"math inline\">\\(M_i(\\theta)\\in\\mathcal{C}_i\\)</span>. Vérifier que pour tout <span class=\"math inline\">\\(\\theta\\not\\equiv 0\\ [2\\pi]\\)</span>, les droites <span class=\"math inline\">\\(N_1(\\theta)\\)</span> et <span class=\"math inline\">\\(N_2(\\theta)\\)</span> sont sécantes, en un point <span class=\"math inline\">\\(P(\\theta)\\)</span>. Déterminer le lieu du point <span class=\"math inline\">\\(P\\)</span> quand <span class=\"math inline\">\\(\\theta\\)</span> varie.</p>\n"
+      }
+    },
+    {
+      "id": "99182926-7830-4a30-a64d-8473357a852d",
+      "type": "indication",
+      "value": {
+        "latex": "Utiliser le repère de Frenet $(\\vec{u}_\\theta,\\vec{v}_\\theta)$.",
+        "html": "<p>Utiliser le repère de Frenet <span class=\"math inline\">\\((\\vec{u}_\\theta,\\vec{v}_\\theta)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8b6d13a2-c2be-4795-83ce-3ea81bc51c37",
+      "type": "reponse",
+      "value": {
+        "latex": "Les deux équations sont $2\\pi$-périodiques en $\\theta$, soit donc $\\theta\\in[0;2\\pi[$, cherchons pour chaque courbe le vecteur tangent au point $M_i(\\theta)$. Déjà, $\\mathcal{C}_2$ ne passe pas par le p\\^ole mais $\\mathcal{C}_1$ oui, pour $\\theta=\\pi$: elle a donc en $M_1(\\pi)$ une tangente horizontale (dirigée par le vecteur $\\vec{u}_\\pi$) et $N_1(\\pi)$ est l'axe $(Oy)$. Dans tous les autres cas, la tangente à $\\mathcal{C}_i$ au point $M_i(\\theta)$ est dirigée par le vecteur\n$$\\overrightarrow{\\frac{\\dd OM_i}{\\dd \\theta}}(\\theta)=r'(\\theta)\\vec{u}_\\theta+r(\\theta)\\vec{v}_\\theta=-\\sin\\theta\\,\\vec{u}_\\theta+(a_i+\\cos\\theta)\\vec{v}_\\theta$$\noù $a_1=1,a_2=3$. Le vecteur directeur de $N_i(\\theta)$ est donc\n$$\\vec{n_i}(\\theta):=(a_i+\\cos\\theta)\\vec{u}_\\theta+\\sin\\theta\\,\\vec{v}_\\theta$$ \net \n$M\\in N_i(\\theta)\\Longleftrightarrow \\exists t\\in\\R\\ |\\ \\overrightarrow{OM}=\\overrightarrow{OM_i(\\theta)}+t\\cdot\\vec{n_i}(\\theta)$.\nFinalement, \n$$\\forall \\theta\\not=\\pi,\\ N_i(\\theta)\n=\\big\\{(1+t)(a_i+\\cos\\theta)\\vec{u}_\\theta+t\\sin\\theta\\,\\vec{v}_\\theta\\ |\\ t\\in\\R\\big\\}$$\net le résultat s'étend au cas $\\theta=\\pi$ pour $i=2$.\n\\begin{itemize}\n\\item Si $\\theta=\\pi$, $N_1(\\pi)=(Oy)$ et $N_2(\\pi)=\\{2(1+t)\\vec{u}_\\pi\\ |\\ t\\in\\R\\}=(Ox)$, ces deux droites s'intersectent en $O$.\n\\item Si $\\theta\\not=\\pi$, $N_1(\\theta)$ et $N_2(\\theta)$ sont sécantes si et seulement si les vecteurs $\\vec{n_1}(\\theta)$ et $\\vec{n_2}(\\theta)$ ne sont pas colinéaires, c'est-à-dire si et seulement si $\\begin{array}{|cc|}1+\\cos\\theta&3+\\cos\\theta\\\\ \\sin\\theta&\\sin\\theta\\end{array}\\not=0$ \\textsl{i.e.} $\\sin\\theta\\not=0$. Ainsi, pour $\\theta\\not=0$, les droites $N_1(\\theta)$ et $N_2(\\theta)$ sont sécantes en un point $P(\\theta)$, que l'on peut déterminer: \n\\begin{eqnarray*}\n\\lefteqn{(1+t_1)(1+\\cos\\theta)\\vec{u}_\\theta+t_1\\sin\\theta\\,\\vec{v}_\\theta=(1+t_2)(3+\\cos\\theta)\\vec{u}_\\theta+t_2\\sin\\theta\\,\\vec{v}_\\theta}\\\\\n&\\Longleftrightarrow& \\begin{cases}(1+t_1)(1+\\cos\\theta)=(1+t_2)(3+\\cos\\theta)\\cr t_1\\sin\\theta=t_2\\sin\\theta\\end{cases}\\\\\n&\\Longleftrightarrow& \\begin{cases}t_1=-1\\cr t_1=t_2\\end{cases}\n\\end{eqnarray*}\npuisqu'ici $\\sin\\theta\\not=0$. \nOn obtient alors $\\overrightarrow{OP(\\theta)}=-\\sin\\theta\\,\\vec{v}_\\theta$. \n\\end{itemize}\n\nLa formule donnant $P(\\theta)$ pour $\\theta\\not=\\pi$ est en fait encore valable en $\\theta=\\pi$ puisqu'on retrouve dans ce cas $P(\\pi)=O$. En coordonnées cartésiennes, on a donc\n$$\\forall\\theta\\in]0;2\\pi[,\\ P(\\theta)=(\\sin^2\\theta, -\\sin\\theta\\cos\\theta)$$\nRemarquons que \n\\begin{eqnarray*}\n(\\sin^2\\theta, -\\sin\\theta\\cos\\theta)&=&\\left(\\frac{1-\\cos(2\\theta)}{2},-\\frac{1}{2}\\sin(2\\theta)\\right)\\\\\n &=&\\left(\\frac{1}{2},0\\right)-\\frac{1}{2}\\big(\\cos(2\\theta),\\sin(2\\theta)\\big)\n\\end{eqnarray*}\nLorsque $\\theta$ décrit $]0;2\\pi[$, $2\\theta$ décrit $]0;4\\pi[$ et \n$\\big(\\cos(2\\theta),\\sin(2\\theta)\\big)$ décrit (deux fois, sauf en $(1,0)$ où l'on ne passe \nqu'une fois) le cercle unité. Par conséquent $\\{P(\\theta)\\ |\\ \\theta\\in]0;2\\pi[\\}$ \nest le cercle de centre $(\\frac{1}{2},0)$ et de rayon $\\frac{1}{2}$.\n\n\\begin{center}\n__TIKZ_8d4596be-2b2e-4c59-8831-cff3504078f5__  \n\\end{center}",
+        "html": ""
+      }
+    }
+  ]
+}

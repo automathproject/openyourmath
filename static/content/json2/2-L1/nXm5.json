@@ -1,0 +1,43 @@
+{
+  "uuid": "nXm5",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6973",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-05-06",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions circulaires inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:26.651Z"
+  },
+  "contenu": [
+    {
+      "id": "95f72923-a4b4-44d1-80f0-a2cc402b9ce7",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que pour tout $x>0$, on a\n$$\\Arctan\\left(\\frac{1}{2x^2}\\right)=\\Arctan\\left(\\frac{x}{x+1}\\right)-\\Arctan\\left(\\frac{x-1}{x}\\right).$$\nEn déduire une expression de $\\displaystyle S_n=\\sum_{k=1}^n\\Arctan\\left(\\frac{1}{2k^2}\\right)$ \net calculer $\\displaystyle\\lim_{n\\to +\\infty}S_n$.",
+        "html": "<p>Montrer que pour tout <span class=\"math inline\">\\(x&gt;0\\)</span>, on a <span class=\"math display\">\\[\\Arctan\\left(\\frac{1}{2x^2}\\right)=\\Arctan\\left(\\frac{x}{x+1}\\right)-\\Arctan\\left(\\frac{x-1}{x}\\right).\\]</span> En déduire une expression de <span class=\"math inline\">\\(\\displaystyle S_n=\\sum_{k=1}^n\\Arctan\\left(\\frac{1}{2k^2}\\right)\\)</span> et calculer <span class=\"math inline\">\\(\\displaystyle\\lim_{n\\to +\\infty}S_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e5e86f5f-90bb-46e5-ab97-783e249d7b3a",
+      "type": "indication",
+      "value": {
+        "latex": "Dériver la différence des deux expressions.",
+        "html": "<p>Dériver la différence des deux expressions.</p>\n"
+      }
+    },
+    {
+      "id": "296ee7ca-8127-4504-858a-27c7b5752b77",
+      "type": "reponse",
+      "value": {
+        "latex": "Posons $f(x)=\\Arctan\\left(\\frac{1}{2x^2}\\right)-\\Arctan\\left(\\frac{x}{x+1}\\right)+\\Arctan\\left(\\frac{x-1}{x}\\right)$ \npour tout $x>0$. La fonction $f$ est dérivable, et\n\\begin{eqnarray*}\nf'(x)\n &=& \\frac{-\\frac{2}{2x^3}}{1+\\left(\\frac{1}{2x^2}\\right)^2}-\n\\frac{\\frac{1}{(1+x)^2}}{1+\\left( \\frac{x}{x+1} \\right)^2}\n+\\frac{\\frac{1}{x^2}}{1+\\left( \\frac{x-1}{x} \\right)^2}\\\\\n &=& \\frac{-4x}{4x^4+1}-\\frac{1}{(1+x)^2+x^2}+\\frac{1}{x^2+(x-1)^2}\\\\\n &=& \\frac{-4x}{4x^4+1}+\\frac{-\\big(x^2+(x-1)^2\\big)+\\big((1+x)^2+x^2\\big)}{\\big((1+x)^2+x^2\\big)\\big(x^2+(x-1)^2\\big)}\\\\\n &=& 0\n\\end{eqnarray*}\nAinsi $f$ est une fonction constante. \nOr $f(x)\\xrightarrow[x\\to +\\infty]{}\\Arctan 0-\\Arctan 1+\\Arctan 1=0$. Donc la constante vaut $0$, \nd'où l'égalité cherchée. \n\nAlors :\n\\begin{eqnarray*}\nS_n\n &=&\\sum_{k=1}^n\\Arctan\\left(\\frac{1}{2k^2}\\right)\\\\\n &=&\\sum_{k=1}^n\\Arctan\\left(\\frac{k}{k+1}\\right)-\\sum_{k=1}^n\\Arctan\\left(\\frac{k-1}{k}\\right)\n \\quad \\text{(par l'identité prouvée)}\\\\\n &=&\\sum_{k=1}^n\\Arctan\\left(\\frac{k}{k+1}\\right)-\\sum_{k'=0}^{n-1}\\Arctan\\left(\\frac{k'}{k'+1}\\right)\n \\quad \\text{(en posant $k'=k-1$)}\\\\\n &=&\\Arctan\\left(\\frac{n}{n+1}\\right)-\\Arctan\\left(\\frac{0}{0+1}\\right)\n \\quad \\text{(les sommes se simplifient)}\\\\\n &=&\\Arctan\\left(1-\\frac{1}{n+1}\\right)\n \\quad \\text{(car $\\tfrac{n}{n+1} = 1-\\tfrac{1}{n+1}$)} \\\\\n\\end{eqnarray*} \nAinsi $S_n\\xrightarrow[n\\to +\\infty]{}\\Arctan 1=\\frac{\\pi}{4}$.",
+        "html": "<p>Posons <span class=\"math inline\">\\(f(x)=\\Arctan\\left(\\frac{1}{2x^2}\\right)-\\Arctan\\left(\\frac{x}{x+1}\\right)+\\Arctan\\left(\\frac{x-1}{x}\\right)\\)</span> pour tout <span class=\"math inline\">\\(x&gt;0\\)</span>. La fonction <span class=\"math inline\">\\(f\\)</span> est dérivable, et <span class=\"math display\">\\[\\begin{aligned}\nf&#39;(x)\n &amp;=&amp; \\frac{-\\frac{2}{2x^3}}{1+\\left(\\frac{1}{2x^2}\\right)^2}-\n\\frac{\\frac{1}{(1+x)^2}}{1+\\left( \\frac{x}{x+1} \\right)^2}\n+\\frac{\\frac{1}{x^2}}{1+\\left( \\frac{x-1}{x} \\right)^2}\\\\\n &amp;=&amp; \\frac{-4x}{4x^4+1}-\\frac{1}{(1+x)^2+x^2}+\\frac{1}{x^2+(x-1)^2}\\\\\n &amp;=&amp; \\frac{-4x}{4x^4+1}+\\frac{-\\big(x^2+(x-1)^2\\big)+\\big((1+x)^2+x^2\\big)}{\\big((1+x)^2+x^2\\big)\\big(x^2+(x-1)^2\\big)}\\\\\n &amp;=&amp; 0\\end{aligned}\\]</span> Ainsi <span class=\"math inline\">\\(f\\)</span> est une fonction constante. Or <span class=\"math inline\">\\(f(x)\\xrightarrow[x\\to +\\infty]{}\\Arctan 0-\\Arctan 1+\\Arctan 1=0\\)</span>. Donc la constante vaut <span class=\"math inline\">\\(0\\)</span>, d’où l’égalité cherchée.</p>\n<p>Alors : <span class=\"math display\">\\[\\begin{aligned}\nS_n\n &amp;=&amp;\\sum_{k=1}^n\\Arctan\\left(\\frac{1}{2k^2}\\right)\\\\\n &amp;=&amp;\\sum_{k=1}^n\\Arctan\\left(\\frac{k}{k+1}\\right)-\\sum_{k=1}^n\\Arctan\\left(\\frac{k-1}{k}\\right)\n \\quad \\text{(par l&#39;identité prouvée)}\\\\\n &amp;=&amp;\\sum_{k=1}^n\\Arctan\\left(\\frac{k}{k+1}\\right)-\\sum_{k&#39;=0}^{n-1}\\Arctan\\left(\\frac{k&#39;}{k&#39;+1}\\right)\n \\quad \\text{(en posant $k&#39;=k-1$)}\\\\\n &amp;=&amp;\\Arctan\\left(\\frac{n}{n+1}\\right)-\\Arctan\\left(\\frac{0}{0+1}\\right)\n \\quad \\text{(les sommes se simplifient)}\\\\\n &amp;=&amp;\\Arctan\\left(1-\\frac{1}{n+1}\\right)\n \\quad \\text{(car $\\tfrac{n}{n+1} = 1-\\tfrac{1}{n+1}$)} \\\\\\end{aligned}\\]</span> Ainsi <span class=\"math inline\">\\(S_n\\xrightarrow[n\\to +\\infty]{}\\Arctan 1=\\frac{\\pi}{4}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

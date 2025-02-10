@@ -1,0 +1,43 @@
+{
+  "uuid": "wMcJ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2361",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire bornée",
+    "sousChapitre": "Application linéaire bornée",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:31.047Z"
+  },
+  "contenu": [
+    {
+      "id": "f8092983-9f92-4f3f-8cb4-25d46846c419",
+      "type": "description",
+      "value": {
+        "latex": "Soient $E_1, E_2$ et $F$ des espaces norm\\'es sur $\\Rr$\net soit $B: E_1 \\times E_2 \\to F$ une application bilin\\'eaire.\nMontrer que $B$ est continue si et seulement s'il existe\n$M>0$ tel que\n$$ \\|B(x) \\|\\leq M \\| x_1\\| \\| x_2\\|\\quad  \\text{pour tout } x=(x_1,x_2) \\in E_1\\times E_2 \\; .$$",
+        "html": "<p>Soient <span class=\"math inline\">\\(E_1, E_2\\)</span> et <span class=\"math inline\">\\(F\\)</span> des espaces normés sur <span class=\"math inline\">\\(\\Rr\\)</span> et soit <span class=\"math inline\">\\(B: E_1 \\times E_2 \\to F\\)</span> une application bilinéaire. Montrer que <span class=\"math inline\">\\(B\\)</span> est continue si et seulement s’il existe <span class=\"math inline\">\\(M&gt;0\\)</span> tel que <span class=\"math display\">\\[\\|B(x) \\|\\leq M \\| x_1\\| \\| x_2\\|\\quad  \\text{pour tout } x=(x_1,x_2) \\in E_1\\times E_2 \\; .\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "e27662d0-e6af-4cc0-a0a7-c88b87f5ec39",
+      "type": "indication",
+      "value": {
+        "latex": "Si la relation est vérifiée montrer que $B$ est continue en $x$ en calculant $B(x+y)-B(x)$.\nSi $B$ est continue alors en particulier $B$ est continue en $(0,0)$, fixer \nle $\\epsilon$ de cette continuité,...",
+        "html": "<p>Si la relation est vérifiée montrer que <span class=\"math inline\">\\(B\\)</span> est continue en <span class=\"math inline\">\\(x\\)</span> en calculant <span class=\"math inline\">\\(B(x+y)-B(x)\\)</span>. Si <span class=\"math inline\">\\(B\\)</span> est continue alors en particulier <span class=\"math inline\">\\(B\\)</span> est continue en <span class=\"math inline\">\\((0,0)\\)</span>, fixer le <span class=\"math inline\">\\(\\epsilon\\)</span> de cette continuité,...</p>\n"
+      }
+    },
+    {
+      "id": "9b133c58-f5ef-48f0-89a0-04009ece842d",
+      "type": "reponse",
+      "value": {
+        "latex": "Sens $\\Leftarrow$.  Soit $M>0$ tel que $ \\|B(x) \\|\\leq M \\| x_1\\| \\| x_2\\|$.\nMontrons que $B$ en continue au point $x=(x_1,x_2)$ fixé. Soit $y=(y_1,y_2)$ alors\n$$B(x+y)-B(x)=B(x_1+y_1,x_2+y_2)-B(x_1,x_2)= B(x_1,y_2)+B(x_2,y_1)+B(y_1,y_2).$$\nDonc $$\\|B(x+y)-B(x)\\| \\le  M\\| x_1\\| \\| y_2\\|+M\\| x_2\\| \\| y_1\\|+M\\| y_1\\| \\| y_2\\|.$$\nPour $\\|y_1\\| \\le \\frac{\\epsilon}{M\\| x_1\\|}$ on a  $M\\| x_1\\| \\| y_2\\| \\le \\epsilon$\n(si $x_1=0$ il n'y a rien à choisir ici). \nPour $\\|y_2\\| \\le \\frac{\\epsilon}{M\\| x_2\\|}$ on a  $M\\| x_2\\| \\| y_1\\| \\le \\epsilon$\n(si $x_2=0$ il n'y a rien à choisir ici).\nEnfin pour $\\|y_1\\|\\le \\sqrt {\\frac \\epsilon M}$ et $\\|y_2\\|\\le \\sqrt {\\frac \\epsilon M}$\non a $M\\| y_1\\| \\| y_2\\|\\le \\epsilon$.\nDonc en prenant $\\eta = \\min (\\frac{\\epsilon}{M\\| x_1\\|},\\frac{\\epsilon}{M\\| x_2\\|},\\sqrt {\\frac \\epsilon M})$, on obtient que pour $\\|y\\| = \\max (\\|y_1\\|,\\|y_2\\|) \\le \\eta$ on a $\\|B(x+y)-B(x)\\| \\le 3\\epsilon$.\nCe qui prouve la continuité.\nDonc $B$ est continue sur $E_1\\times E_2$.\nSens $\\Rightarrow$. Si $B$ est continue partout, en particulier \nelle est continue en $0$. Je choisis $\\epsilon =1$, il existe $\\eta >0$\ntel que $\\|x\\| \\le \\eta$ alors $\\|B(x)\\|\\le 1$. Donc pour $\\|x_1\\|\\le \\eta$\net $\\|x_2\\|\\le \\eta$ on a $\\|B(x_1,x_2)\\|\\le 1$.\nSoit maintenant $y = (y_1,y_2) \\in E_1\\times E_2$, ($y_1\\neq 0, y_2\\neq 0$) on a $(\\eta \\frac{y_1}{\\| y_1 \\|},\\eta \\frac{y_2}{\\| y_2 \\|})$ de norme $\\le \\eta$ donc\n$B(\\eta \\frac{y_1}{\\| y_1 \\|},\\eta \\frac{y_2}{\\| y_2 \\|}) \\le 1$ et par bilinéarité cela fournit :\n$B(y_1,y_2)\\le \\frac{1}{\\eta^2}{\\| y_1 \\|}{\\| y_2 \\|}$, et ce pour tout $(y_1,y_2)$. La constante cherchée étant $\\frac 1{\\eta^2}$.",
+        "html": "<p>Sens <span class=\"math inline\">\\(\\Leftarrow\\)</span>. Soit <span class=\"math inline\">\\(M&gt;0\\)</span> tel que <span class=\"math inline\">\\(\\|B(x) \\|\\leq M \\| x_1\\| \\| x_2\\|\\)</span>. Montrons que <span class=\"math inline\">\\(B\\)</span> en continue au point <span class=\"math inline\">\\(x=(x_1,x_2)\\)</span> fixé. Soit <span class=\"math inline\">\\(y=(y_1,y_2)\\)</span> alors <span class=\"math display\">\\[B(x+y)-B(x)=B(x_1+y_1,x_2+y_2)-B(x_1,x_2)= B(x_1,y_2)+B(x_2,y_1)+B(y_1,y_2).\\]</span> Donc <span class=\"math display\">\\[\\|B(x+y)-B(x)\\| \\le  M\\| x_1\\| \\| y_2\\|+M\\| x_2\\| \\| y_1\\|+M\\| y_1\\| \\| y_2\\|.\\]</span> Pour <span class=\"math inline\">\\(\\|y_1\\| \\le \\frac{\\epsilon}{M\\| x_1\\|}\\)</span> on a <span class=\"math inline\">\\(M\\| x_1\\| \\| y_2\\| \\le \\epsilon\\)</span> (si <span class=\"math inline\">\\(x_1=0\\)</span> il n’y a rien à choisir ici). Pour <span class=\"math inline\">\\(\\|y_2\\| \\le \\frac{\\epsilon}{M\\| x_2\\|}\\)</span> on a <span class=\"math inline\">\\(M\\| x_2\\| \\| y_1\\| \\le \\epsilon\\)</span> (si <span class=\"math inline\">\\(x_2=0\\)</span> il n’y a rien à choisir ici). Enfin pour <span class=\"math inline\">\\(\\|y_1\\|\\le \\sqrt {\\frac \\epsilon M}\\)</span> et <span class=\"math inline\">\\(\\|y_2\\|\\le \\sqrt {\\frac \\epsilon M}\\)</span> on a <span class=\"math inline\">\\(M\\| y_1\\| \\| y_2\\|\\le \\epsilon\\)</span>. Donc en prenant <span class=\"math inline\">\\(\\eta = \\min (\\frac{\\epsilon}{M\\| x_1\\|},\\frac{\\epsilon}{M\\| x_2\\|},\\sqrt {\\frac \\epsilon M})\\)</span>, on obtient que pour <span class=\"math inline\">\\(\\|y\\| = \\max (\\|y_1\\|,\\|y_2\\|) \\le \\eta\\)</span> on a <span class=\"math inline\">\\(\\|B(x+y)-B(x)\\| \\le 3\\epsilon\\)</span>. Ce qui prouve la continuité. Donc <span class=\"math inline\">\\(B\\)</span> est continue sur <span class=\"math inline\">\\(E_1\\times E_2\\)</span>. Sens <span class=\"math inline\">\\(\\Rightarrow\\)</span>. Si <span class=\"math inline\">\\(B\\)</span> est continue partout, en particulier elle est continue en <span class=\"math inline\">\\(0\\)</span>. Je choisis <span class=\"math inline\">\\(\\epsilon =1\\)</span>, il existe <span class=\"math inline\">\\(\\eta &gt;0\\)</span> tel que <span class=\"math inline\">\\(\\|x\\| \\le \\eta\\)</span> alors <span class=\"math inline\">\\(\\|B(x)\\|\\le 1\\)</span>. Donc pour <span class=\"math inline\">\\(\\|x_1\\|\\le \\eta\\)</span> et <span class=\"math inline\">\\(\\|x_2\\|\\le \\eta\\)</span> on a <span class=\"math inline\">\\(\\|B(x_1,x_2)\\|\\le 1\\)</span>. Soit maintenant <span class=\"math inline\">\\(y = (y_1,y_2) \\in E_1\\times E_2\\)</span>, (<span class=\"math inline\">\\(y_1\\neq 0, y_2\\neq 0\\)</span>) on a <span class=\"math inline\">\\((\\eta \\frac{y_1}{\\| y_1 \\|},\\eta \\frac{y_2}{\\| y_2 \\|})\\)</span> de norme <span class=\"math inline\">\\(\\le \\eta\\)</span> donc <span class=\"math inline\">\\(B(\\eta \\frac{y_1}{\\| y_1 \\|},\\eta \\frac{y_2}{\\| y_2 \\|}) \\le 1\\)</span> et par bilinéarité cela fournit : <span class=\"math inline\">\\(B(y_1,y_2)\\le \\frac{1}{\\eta^2}{\\| y_1 \\|}{\\| y_2 \\|}\\)</span>, et ce pour tout <span class=\"math inline\">\\((y_1,y_2)\\)</span>. La constante cherchée étant <span class=\"math inline\">\\(\\frac 1{\\eta^2}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

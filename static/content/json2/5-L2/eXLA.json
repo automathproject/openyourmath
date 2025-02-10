@@ -1,0 +1,35 @@
+{
+  "uuid": "eXLA",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5737",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Suite et série de fonctions",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:17.024Z"
+  },
+  "contenu": [
+    {
+      "id": "14cadde0-fc26-42bf-8abe-5bc3a95a0991",
+      "type": "description",
+      "value": {
+        "latex": "Pour $x\\in]-1,1[$, on pose $f(x)=\\sum_{n=1}^{+\\infty}x^{n^2}$. Trouver un équivalent simple de $f$ en $1$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(x\\in]-1,1[\\)</span>, on pose <span class=\"math inline\">\\(f(x)=\\sum_{n=1}^{+\\infty}x^{n^2}\\)</span>. Trouver un équivalent simple de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\(1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "781ecbcd-330a-4aeb-bc16-be27ed9c3c4d",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $x\\in]-1,1[$. Pour $n\\in\\Nn^*$, $\\left|x^{n^2}\\right|=|x|^{n^2}\\leqslant|x|^n$. Puisque la série numérique de terme général $|x|^n$ converge, on en déduit que la série de terme général $x^{n^2}$ est absolument convergente et en particulier convergente. Donc, $f$ est bien définie sur $]-1,1[$.\n\nSoit $x\\in]0,1[$. La fonction $t\\mapsto x^{t^2}=e^{t^2\\ln x}$ est décroissante sur $[0,+\\infty[$. Donc, $\\forall k\\in\\Nn^*$, $\\int_{k}^{k+1}x^{t^2}\\;dt\\leqslant x^{k^2}\\leqslant\\int_{k-1}^{k}x^{t^2}\\;dt$. En sommant ces inégalités, on obtient\n\n\\begin{center}\n$\\forall x\\in]0,1[$, $\\int_{1}^{+\\infty}x^{t^2}\\;dt\\leqslant f(x)\\leqslant\\int_{0}^{+\\infty}x^{t^2}\\;dt$\\quad$(*)$.\n\\end{center}\n\nSoit $x\\in]0,1[$. En posant $u=t\\sqrt{-\\ln x}$, on obtient\n\n\\begin{center}\n$\\int_{0}^{+\\infty}x^{t^2}\\;dt=\\int_{0}^{+\\infty}e^{t^2\\ln x}\\;dt=\\int_{0}^{+\\infty}e^{-(t\\sqrt{-\\ln x})^2}\\;dt=\\frac{1}{\\sqrt{-\\ln x}}\\int_{0}^{+\\infty}e^{-u^2}\\;du=\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}$.\n\\end{center}\n\nL'encadrement $(*)$ s'écrit alors\n\n\\begin{center}\n$\\forall x\\in]0,1[$, $\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}-\\int_{0}^{1}x^{t^2}\\;dt\\leqslant f(x)\\leqslant\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}$.\n\\end{center}\n\nComme $\\displaystyle\\lim_{\\substack{x\\rightarrow1\\\\\nx<1}}\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}=+\\infty$, on a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{n=1}^{+\\infty}x^{n^2}\\underset{x\\rightarrow1,\\;x<1}{\\sim}\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(x\\in]-1,1[\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(\\left|x^{n^2}\\right|=|x|^{n^2}\\leqslant|x|^n\\)</span>. Puisque la série numérique de terme général <span class=\"math inline\">\\(|x|^n\\)</span> converge, on en déduit que la série de terme général <span class=\"math inline\">\\(x^{n^2}\\)</span> est absolument convergente et en particulier convergente. Donc, <span class=\"math inline\">\\(f\\)</span> est bien définie sur <span class=\"math inline\">\\(]-1,1[\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in]0,1[\\)</span>. La fonction <span class=\"math inline\">\\(t\\mapsto x^{t^2}=e^{t^2\\ln x}\\)</span> est décroissante sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>. Donc, <span class=\"math inline\">\\(\\forall k\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(\\int_{k}^{k+1}x^{t^2}\\;dt\\leqslant x^{k^2}\\leqslant\\int_{k-1}^{k}x^{t^2}\\;dt\\)</span>. En sommant ces inégalités, on obtient</p>\n<p><span class=\"math inline\">\\(\\forall x\\in]0,1[\\)</span>, <span class=\"math inline\">\\(\\int_{1}^{+\\infty}x^{t^2}\\;dt\\leqslant f(x)\\leqslant\\int_{0}^{+\\infty}x^{t^2}\\;dt\\)</span><span class=\"math inline\">\\((*)\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in]0,1[\\)</span>. En posant <span class=\"math inline\">\\(u=t\\sqrt{-\\ln x}\\)</span>, on obtient</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{+\\infty}x^{t^2}\\;dt=\\int_{0}^{+\\infty}e^{t^2\\ln x}\\;dt=\\int_{0}^{+\\infty}e^{-(t\\sqrt{-\\ln x})^2}\\;dt=\\frac{1}{\\sqrt{-\\ln x}}\\int_{0}^{+\\infty}e^{-u^2}\\;du=\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}\\)</span>.</p>\n<p>L’encadrement <span class=\"math inline\">\\((*)\\)</span> s’écrit alors</p>\n<p><span class=\"math inline\">\\(\\forall x\\in]0,1[\\)</span>, <span class=\"math inline\">\\(\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}-\\int_{0}^{1}x^{t^2}\\;dt\\leqslant f(x)\\leqslant\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(\\displaystyle\\lim_{\\substack{x\\rightarrow1\\\\\nx&lt;1}}\\frac{\\sqrt{\\pi}}{2\\sqrt{-\\ln x}}=+\\infty\\)</span>, on a montré que</p>\n"
+      }
+    }
+  ]
+}

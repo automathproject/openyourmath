@@ -1,0 +1,83 @@
+{
+  "uuid": "2W4z",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "574",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Suite",
+    "sousChapitre": "Suites équivalentes, suites négligeables",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:20.725Z"
+  },
+  "contenu": [
+    {
+      "id": "78295918-9114-48f1-b0f0-f628c1d6974a",
+      "type": "description",
+      "value": {
+        "latex": "Soit $n \\geq 1$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(n \\geq 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e911c3f4-3cba-41ba-a15a-3fce79810ee6",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que l'\\'equation $\\sum\\limits_{k = 1}^n{x^k} = 1$ admet une unique solution,\nnotée $a_n$, dans $[0, 1]$.",
+        "html": "<p>Montrer que l’équation <span class=\"math inline\">\\(\\sum\\limits_{k = 1}^n{x^k} = 1\\)</span> admet une unique solution, notée <span class=\"math inline\">\\(a_n\\)</span>, dans <span class=\"math inline\">\\([0, 1]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7c48018e-408a-4f89-a4e3-4dae08394d2d",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f_n$ est continue\nsur $[0,1]$. De plus $f_n(0) = -1 < 0$ et $f_n(1) = n-1\\geqslant 0$.\nD'apr\\`es le th\\'eor\\`eme des valeurs interm\\'ediaires, $f_n$, admet un\nz\\'ero dans l'intervalle $[0,1]$. De plus elle strictement\ncroissante (calculez sa d\\'eriv\\'ee) sur $[0,1]$ donc ce z\\'ero est\nunique.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f_n\\)</span> est continue sur <span class=\"math inline\">\\([0,1]\\)</span>. De plus <span class=\"math inline\">\\(f_n(0) = -1 &lt; 0\\)</span> et <span class=\"math inline\">\\(f_n(1) = n-1\\geqslant 0\\)</span>. D’après le théorème des valeurs intermédiaires, <span class=\"math inline\">\\(f_n\\)</span>, admet un zéro dans l’intervalle <span class=\"math inline\">\\([0,1]\\)</span>. De plus elle strictement croissante (calculez sa dérivée) sur <span class=\"math inline\">\\([0,1]\\)</span> donc ce zéro est unique.</p>\n"
+      }
+    },
+    {
+      "id": "79d11539-e77d-4834-bd46-d3a4f84510f3",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $ (a_n)_{n \\in \\Nn}$ est d\\'ecroissante minor\\'ee par $\\frac12$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\((a_n)_{n \\in \\Nn}\\)</span> est décroissante minorée par <span class=\"math inline\">\\(\\frac12\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3740ccdf-4ca1-482b-9dec-e646c25ddb4f",
+      "type": "reponse",
+      "value": {
+        "latex": "Calculons $f_n(a_{n-1})$.\n$$\\begin{align*}\nf_n(a_{n-1}) &= \\sum_{k=1}^{n} a_{n-1}^k  - 1 \\\\\n     &= a_{n-1}^n + \\sum_{k=1}^{n-1} a_{n-1}^k  - 1 \\\\\n     &= a_{n-1}^n + f_{n-1}(a_{n-1})  \\\\\n     &= a_{n-1}^n \\text{\\ \\  (car $f_{n-1}(a_{n-1})=0$ par d\\'efinition de $a_{n-1}$).}\n\\end{align*}$$\n\nNous obtenons l'in\\'egalit\\'e\n$$ 0 = f_n(a_n) < f_n(a_{n-1}) = a_{n-1}^n.$$\nOr $f_n$ est strictement croissante, l'in\\'egalit\\'e ci-dessus\nimplique donc $ a_n < a_{n-1}$.\nNous venons de d\\'emontrer que la suite $(a_n)_n$ est d\\'ecroissante.\n\n\nRemarquons avant d'aller plus loin que $f_n(x)$ est la somme d'une\nsuite g\\'eom\\'etrique :\n$$f_n(x) = \\frac{1-x^{n+1}}{1-x}-2.$$\n\n\\'Evaluons maintenant $f_n(\\frac12)$, \\`a l'aide de l'expression\npr\\'ec\\'edente\n$$f_n(\\frac12) = \\frac{1-(\\frac12)^{n+1}}{1-{\\frac12}}-2 = -\\frac 1 {2^n} < 0.$$\nDonc $ f_n(\\frac12) < f_n(a_n)=0$ entra\\^{\\i}ne $\\frac12 < a_n$.\n\nPour r\\'esumer, nous avons montré que la suite $(a_n)_n$ est\nstrictement d\\'ecroissante et minor\\'ee par $\\frac12$.",
+        "html": "<p>Calculons <span class=\"math inline\">\\(f_n(a_{n-1})\\)</span>. <span class=\"math display\">\\[\\begin{align*}\nf_n(a_{n-1}) &amp;= \\sum_{k=1}^{n} a_{n-1}^k  - 1 \\\\\n     &amp;= a_{n-1}^n + \\sum_{k=1}^{n-1} a_{n-1}^k  - 1 \\\\\n     &amp;= a_{n-1}^n + f_{n-1}(a_{n-1})  \\\\\n     &amp;= a_{n-1}^n \\text{\\ \\  (car $f_{n-1}(a_{n-1})=0$ par définition de $a_{n-1}$).}\n\\end{align*}\\]</span></p>\n<p>Nous obtenons l’inégalité <span class=\"math display\">\\[0 = f_n(a_n) &lt; f_n(a_{n-1}) = a_{n-1}^n.\\]</span> Or <span class=\"math inline\">\\(f_n\\)</span> est strictement croissante, l’inégalité ci-dessus implique donc <span class=\"math inline\">\\(a_n &lt; a_{n-1}\\)</span>. Nous venons de démontrer que la suite <span class=\"math inline\">\\((a_n)_n\\)</span> est décroissante.</p>\n<p>Remarquons avant d’aller plus loin que <span class=\"math inline\">\\(f_n(x)\\)</span> est la somme d’une suite géométrique : <span class=\"math display\">\\[f_n(x) = \\frac{1-x^{n+1}}{1-x}-2.\\]</span></p>\n<p>Évaluons maintenant <span class=\"math inline\">\\(f_n(\\frac12)\\)</span>, à l’aide de l’expression précédente <span class=\"math display\">\\[f_n(\\frac12) = \\frac{1-(\\frac12)^{n+1}}{1-{\\frac12}}-2 = -\\frac 1 {2^n} &lt; 0.\\]</span> Donc <span class=\"math inline\">\\(f_n(\\frac12) &lt; f_n(a_n)=0\\)</span> entraı̂ne <span class=\"math inline\">\\(\\frac12 &lt; a_n\\)</span>.</p>\n<p>Pour résumer, nous avons montré que la suite <span class=\"math inline\">\\((a_n)_n\\)</span> est strictement décroissante et minorée par <span class=\"math inline\">\\(\\frac12\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "fcb8f4b0-54ea-4ce1-bc27-62ab600593bb",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $ (a_n)$ converge vers $\\frac 12$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\((a_n)\\)</span> converge vers <span class=\"math inline\">\\(\\frac 12\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a096c0ba-9aab-4124-ae05-b95c72a24ead",
+      "type": "reponse",
+      "value": {
+        "latex": "Comme $(a_n)_n$ est\nd\\'ecroissante et minor\\'ee par $\\frac12$ alors elle converge, nous\nnotons $\\ell$ sa limite :\n$$ \\frac 12 \\leqslant \\ell < a_n.$$\nAppliquons $f_n$ (qui est strictement croissante) \\`a cette\nin\\'egalit\\'e :\n $$ f_n\\left(\\frac 12\\right) \\leqslant f_n(\\ell) < f_n(a_n),$$\nqui s'\\'ecrit aussi :\n$$ -\\frac 1 {2^n} \\leqslant f_n(\\ell) < 0,$$\net ceci quelque soit $n\\geqslant 1$. La suite $(f_n(\\ell))_n$ converge\ndonc vers $0$ (th\\'eor\\`eme des  ``gendarmes''). Mais nous savons\naussi que\n$$f_n(\\ell) = \\frac{1-\\ell^{n+1}}{1-\\ell}-2 ;$$\ndonc $(f_n(\\ell))_n$ converge vers $\\frac{1}{1-\\ell}-2$ car\n$(\\ell^n)_n$ converge vers $0$. Donc\n$$\\frac{1}{1-\\ell}-2 = 0, \\text{ d'o\\`u } \\ell = \\frac12.$$",
+        "html": "<p>Comme <span class=\"math inline\">\\((a_n)_n\\)</span> est décroissante et minorée par <span class=\"math inline\">\\(\\frac12\\)</span> alors elle converge, nous notons <span class=\"math inline\">\\(\\ell\\)</span> sa limite : <span class=\"math display\">\\[\\frac 12 \\leqslant \\ell &lt; a_n.\\]</span> Appliquons <span class=\"math inline\">\\(f_n\\)</span> (qui est strictement croissante) à cette inégalité : <span class=\"math display\">\\[f_n\\left(\\frac 12\\right) \\leqslant f_n(\\ell) &lt; f_n(a_n),\\]</span> qui s’écrit aussi : <span class=\"math display\">\\[-\\frac 1 {2^n} \\leqslant f_n(\\ell) &lt; 0,\\]</span> et ceci quelque soit <span class=\"math inline\">\\(n\\geqslant 1\\)</span>. La suite <span class=\"math inline\">\\((f_n(\\ell))_n\\)</span> converge donc vers <span class=\"math inline\">\\(0\\)</span> (théorème des “gendarmes”). Mais nous savons aussi que <span class=\"math display\">\\[f_n(\\ell) = \\frac{1-\\ell^{n+1}}{1-\\ell}-2 ;\\]</span> donc <span class=\"math inline\">\\((f_n(\\ell))_n\\)</span> converge vers <span class=\"math inline\">\\(\\frac{1}{1-\\ell}-2\\)</span> car <span class=\"math inline\">\\((\\ell^n)_n\\)</span> converge vers <span class=\"math inline\">\\(0\\)</span>. Donc <span class=\"math display\">\\[\\frac{1}{1-\\ell}-2 = 0, \\text{ d&#39;o\\`u } \\ell = \\frac12.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "d00525fc-5b2e-4a1c-8b3d-629cf799516a",
+      "type": "indication",
+      "value": {
+        "latex": "On notera  $f_n : [0,1] \\longrightarrow \\Rr$ la fonction\nd\\'efinie par $ f_n(x) = \\sum_{k=1}^n x^k \\ \\ - 1.$\n\\begin{enumerate}\n    \\item C'est une \\'etude de la fonction $f_n$.\n    \\item On sait que $f_n(a_n)=0$. Montrer par un calcul que $f_n(a_{n-1}) > 0$,\nen d\\'eduire la d\\'ecroissance de $(a_n)$. En calculant $f_n(\\frac 12)$ montrer que \nla suite  $(a_n)$ est minor\\'ee par $\\frac 12$.\n    \\item Une fois \\'etablie la convergence de  $(a_n)$ vers une limite $\\ell$,\ncomposer l'in\\'egalit\\'e $ \\frac 12 \\leqslant \\ell < a_n$ par $f_n$. Conclure.\n\\end{enumerate}",
+        "html": "<p>On notera <span class=\"math inline\">\\(f_n : [0,1] \\longrightarrow \\Rr\\)</span> la fonction définie par <span class=\"math inline\">\\(f_n(x) = \\sum_{k=1}^n x^k \\ \\ - 1.\\)</span></p>\n<ol>\n<li><p>C’est une étude de la fonction <span class=\"math inline\">\\(f_n\\)</span>.</p></li>\n<li><p>On sait que <span class=\"math inline\">\\(f_n(a_n)=0\\)</span>. Montrer par un calcul que <span class=\"math inline\">\\(f_n(a_{n-1}) &gt; 0\\)</span>, en déduire la décroissance de <span class=\"math inline\">\\((a_n)\\)</span>. En calculant <span class=\"math inline\">\\(f_n(\\frac 12)\\)</span> montrer que la suite <span class=\"math inline\">\\((a_n)\\)</span> est minorée par <span class=\"math inline\">\\(\\frac 12\\)</span>.</p></li>\n<li><p>Une fois établie la convergence de <span class=\"math inline\">\\((a_n)\\)</span> vers une limite <span class=\"math inline\">\\(\\ell\\)</span>, composer l’inégalité <span class=\"math inline\">\\(\\frac 12 \\leqslant \\ell &lt; a_n\\)</span> par <span class=\"math inline\">\\(f_n\\)</span>. Conclure.</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

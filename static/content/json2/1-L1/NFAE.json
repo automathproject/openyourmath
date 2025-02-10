@@ -1,0 +1,35 @@
+{
+  "uuid": "NFAE",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5266",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:35.394Z"
+  },
+  "contenu": [
+    {
+      "id": "4cfa8cb9-c195-492d-94e8-3a49b707f619",
+      "type": "description",
+      "value": {
+        "latex": "Soit $A\\in\\mathcal{M}_{3,2}(\\Rr)$ et $B\\in\\mathcal{M}_{2,3}(\\Rr)$ telles que~:\n\n$$AB=\n\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)\n.$$\n\nMontrer l'existence d'au moins un couple $(A,B)$ vérifiant les conditions de l'énoncé puis calculer $BA$. (Indication. Calculer $(AB)^2$ et utiliser le rang.)",
+        "html": "<p>Soit <span class=\"math inline\">\\(A\\in\\mathcal{M}_{3,2}(\\Rr)\\)</span> et <span class=\"math inline\">\\(B\\in\\mathcal{M}_{2,3}(\\Rr)\\)</span> telles que :</p>\n<p><span class=\"math display\">\\[AB=\n\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)\n.\\]</span></p>\n<p>Montrer l’existence d’au moins un couple <span class=\"math inline\">\\((A,B)\\)</span> vérifiant les conditions de l’énoncé puis calculer <span class=\"math inline\">\\(BA\\)</span>. (Indication. Calculer <span class=\"math inline\">\\((AB)^2\\)</span> et utiliser le rang.)</p>\n"
+      }
+    },
+    {
+      "id": "60f062bf-c8b7-4f7a-9be8-890561d4501b",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $(i,j)$ la base canonique de $\\Rr^2$ et $(e_1,e_2,e_3)$ la base canonique de $\\Rr^3$. On cherche $f\\in\\mathcal{L}(\\Rr^2,\\Rr^3)$ et $g\\in\\mathcal{L}(\\Rr^3,\\Rr^2)$ tels que\n\n$$f\\circ g(e_1)=-e_2+e_3,\\;f\\circ g(e_2)=-e_1+e_3\\;\\mbox{et}\\;f\\circ g(e_3)=-e_1-e_2+2e_3(=f\\circ g(e_1+e_2)).$$\n\nOn pose $g(e_1)=i$, $g(e_2)=j$ et $g(e_3)=i+j$, puis $f(i)=-e_2+e_3$ et $f(j)=-e_1+e_3$. Les applications linéaires $f$ et $g$ conviennent, ou encore si on pose\n\n$$A=\\left(\n\\begin{array}{cc}\n0&-1\\\\\n-1&0\\\\\n1&1\n\\end{array}\n\\right)\\;\\mbox{et}\\;B=\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n0&1&1\n\\end{array}\n\\right),$$\n\nalors $AB=\\left(\n\\begin{array}{cc}\n0&-1\\\\\n-1&0\\\\\n1&1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&0&1\\\\\n0&1&1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)$.\n\n$A$ et $B$ désignent maintenant deux matrices quelconques, éléments de $\\mathcal{M}_{3,2}(\\Rr)$ et $\\mathcal{M}_{2,3}(\\Rr)$ respectivement, telles que $AB=\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)$. Calculons $(AB)^2$. On obtient\n\n$$(AB)^2=\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n0&-1&-1\\\\\n-1&0&-1\\\\\n1&1&2\n\\end{array}\n\\right)=AB.$$\n\nMais alors, en multipliant les deux membres de cette égalité par $B$ à gauche et $A$ à droite, on obtient\n\n$$(BA)^3=(BA)^2\\;(*).$$\n\nNotons alors que \n\n$$\\mbox{rg}(BA)\\geq\\mbox{rg}(ABAB)=\\mbox{rg}((AB)^2)=\\mbox{rg}(AB)=2,$$\n\net donc, $BA$ étant une matrice carrée de format $2$, $\\mbox{rg}(BA)=2$. $BA$ est donc une matrice inversible. Par suite, on peut simplifier les deux membres de l'égalité $(*)$ par $(BA)^2$ et on obtient $BA=I_2$.",
+        "html": "<p>Soit <span class=\"math inline\">\\((i,j)\\)</span> la base canonique de <span class=\"math inline\">\\(\\Rr^2\\)</span> et <span class=\"math inline\">\\((e_1,e_2,e_3)\\)</span> la base canonique de <span class=\"math inline\">\\(\\Rr^3\\)</span>. On cherche <span class=\"math inline\">\\(f\\in\\mathcal{L}(\\Rr^2,\\Rr^3)\\)</span> et <span class=\"math inline\">\\(g\\in\\mathcal{L}(\\Rr^3,\\Rr^2)\\)</span> tels que</p>\n<p><span class=\"math display\">\\[f\\circ g(e_1)=-e_2+e_3,\\;f\\circ g(e_2)=-e_1+e_3\\;\\mbox{et}\\;f\\circ g(e_3)=-e_1-e_2+2e_3(=f\\circ g(e_1+e_2)).\\]</span></p>\n<p>On pose <span class=\"math inline\">\\(g(e_1)=i\\)</span>, <span class=\"math inline\">\\(g(e_2)=j\\)</span> et <span class=\"math inline\">\\(g(e_3)=i+j\\)</span>, puis <span class=\"math inline\">\\(f(i)=-e_2+e_3\\)</span> et <span class=\"math inline\">\\(f(j)=-e_1+e_3\\)</span>. Les applications linéaires <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(g\\)</span> conviennent, ou encore si on pose</p>\n<p><span class=\"math display\">\\[A=\\left(\n\\begin{array}{cc}\n0&amp;-1\\\\\n-1&amp;0\\\\\n1&amp;1\n\\end{array}\n\\right)\\;\\mbox{et}\\;B=\\left(\n\\begin{array}{ccc}\n1&amp;0&amp;1\\\\\n0&amp;1&amp;1\n\\end{array}\n\\right),\\]</span></p>\n<p>alors <span class=\"math inline\">\\(AB=\\left(\n\\begin{array}{cc}\n0&amp;-1\\\\\n-1&amp;0\\\\\n1&amp;1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&amp;0&amp;1\\\\\n0&amp;1&amp;1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)\\)</span>.</p>\n<p><span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span> désignent maintenant deux matrices quelconques, éléments de <span class=\"math inline\">\\(\\mathcal{M}_{3,2}(\\Rr)\\)</span> et <span class=\"math inline\">\\(\\mathcal{M}_{2,3}(\\Rr)\\)</span> respectivement, telles que <span class=\"math inline\">\\(AB=\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)\\)</span>. Calculons <span class=\"math inline\">\\((AB)^2\\)</span>. On obtient</p>\n<p><span class=\"math display\">\\[(AB)^2=\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n0&amp;-1&amp;-1\\\\\n-1&amp;0&amp;-1\\\\\n1&amp;1&amp;2\n\\end{array}\n\\right)=AB.\\]</span></p>\n<p>Mais alors, en multipliant les deux membres de cette égalité par <span class=\"math inline\">\\(B\\)</span> à gauche et <span class=\"math inline\">\\(A\\)</span> à droite, on obtient</p>\n<p><span class=\"math display\">\\[(BA)^3=(BA)^2\\;(*).\\]</span></p>\n<p>Notons alors que</p>\n<p><span class=\"math display\">\\[\\mbox{rg}(BA)\\geq\\mbox{rg}(ABAB)=\\mbox{rg}((AB)^2)=\\mbox{rg}(AB)=2,\\]</span></p>\n<p>et donc, <span class=\"math inline\">\\(BA\\)</span> étant une matrice carrée de format <span class=\"math inline\">\\(2\\)</span>, <span class=\"math inline\">\\(\\mbox{rg}(BA)=2\\)</span>. <span class=\"math inline\">\\(BA\\)</span> est donc une matrice inversible. Par suite, on peut simplifier les deux membres de l’égalité <span class=\"math inline\">\\((*)\\)</span> par <span class=\"math inline\">\\((BA)^2\\)</span> et on obtient <span class=\"math inline\">\\(BA=I_2\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

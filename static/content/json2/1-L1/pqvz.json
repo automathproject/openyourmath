@@ -1,0 +1,35 @@
+{
+  "uuid": "pqvz",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5333",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Polynôme, fraction rationnelle",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:22.014Z"
+  },
+  "contenu": [
+    {
+      "id": "87863773-17c7-4cfb-b30a-e47a9885b724",
+      "type": "description",
+      "value": {
+        "latex": "Soit $n\\in\\Nn^*$. Montrer que $(X-1)^{2n}-X^{2n}+2X-1$ est divisible par $2X^3-3X^2+X$ puis déterminer le quotient.",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>. Montrer que <span class=\"math inline\">\\((X-1)^{2n}-X^{2n}+2X-1\\)</span> est divisible par <span class=\"math inline\">\\(2X^3-3X^2+X\\)</span> puis déterminer le quotient.</p>\n"
+      }
+    },
+    {
+      "id": "7f44e49b-5659-4fcc-a607-429be7700482",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n\\geq0$, posons $P_n=(X-1)^{2n}-X^{2n}+2X-1$. $P_n(0)=P_n(1)=P_n(\\frac{1}{2})=0$. $P_n$ admet $0$, $1$ et $\\frac{1}{2}$ pour racines et est donc divisible par $X(X-1)(2X-1)=2X^3-3X^2+X$.\n\nSi $n=0$ ou $n=1$, le quotient est nul. Si $n=2$, le quotient vaut $-2$.\n\nSoit $n\\geq 3$. On met succesivement $2X-1$ puis $X-1$ puis $X$ en facteur~:\n$$\\begin{align*}\\ensuremath\nP_n&=((X-1)^2)^n-(X^2)^n+(2X-1)=((X-1)2-X2)\\sum_{k=0}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+(2X-1)\\\\\n &=(2X-1)(-\\sum_{k=0}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+1)=(2X-1)(-\\sum_{k=1}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+1-X^{2n-2})\\\\\n &=(2X-1)(-(X-1)\\sum_{k=1}^{n-1}(X-1)^{2k-1}X^{2(n-1-k)}-(X-1)\\sum_{k=0}^{2n-1}X^k)\\\\\n &=(2X-1)(X-1)(-\\sum_{k=1}^{n-1}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=0}^{2n-1}X^k)\\\\\n &=(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=1}^{2n-1}X^k-1-(X-1)^{2n-3})\\\\\n &=(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=1}^{2n-3}X^k-\\sum_{k=1}^{2n-3}(-1)^{2n-3-k}C_{2n-3}^kX^k)\\\\\n &= X(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2n-2k-3}-\n \\sum_{k=1}^{2n-3}X^{k-1}-\\sum_{k=1}^{2n-3}(-1)^{2n-3-k}C_{2n-3}^kX^{k-1})\n\\end{align*}$$",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\geq0\\)</span>, posons <span class=\"math inline\">\\(P_n=(X-1)^{2n}-X^{2n}+2X-1\\)</span>. <span class=\"math inline\">\\(P_n(0)=P_n(1)=P_n(\\frac{1}{2})=0\\)</span>. <span class=\"math inline\">\\(P_n\\)</span> admet <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(\\frac{1}{2}\\)</span> pour racines et est donc divisible par <span class=\"math inline\">\\(X(X-1)(2X-1)=2X^3-3X^2+X\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(n=0\\)</span> ou <span class=\"math inline\">\\(n=1\\)</span>, le quotient est nul. Si <span class=\"math inline\">\\(n=2\\)</span>, le quotient vaut <span class=\"math inline\">\\(-2\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\geq 3\\)</span>. On met succesivement <span class=\"math inline\">\\(2X-1\\)</span> puis <span class=\"math inline\">\\(X-1\\)</span> puis <span class=\"math inline\">\\(X\\)</span> en facteur : <span class=\"math display\">\\[\\begin{align*}\\ensuremath\nP_n&amp;=((X-1)^2)^n-(X^2)^n+(2X-1)=((X-1)2-X2)\\sum_{k=0}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+(2X-1)\\\\\n &amp;=(2X-1)(-\\sum_{k=0}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+1)=(2X-1)(-\\sum_{k=1}^{n-1}(X-1)^{2k}X^{2(n-1-k)}+1-X^{2n-2})\\\\\n &amp;=(2X-1)(-(X-1)\\sum_{k=1}^{n-1}(X-1)^{2k-1}X^{2(n-1-k)}-(X-1)\\sum_{k=0}^{2n-1}X^k)\\\\\n &amp;=(2X-1)(X-1)(-\\sum_{k=1}^{n-1}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=0}^{2n-1}X^k)\\\\\n &amp;=(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=1}^{2n-1}X^k-1-(X-1)^{2n-3})\\\\\n &amp;=(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2(n-1-k)}-\\sum_{k=1}^{2n-3}X^k-\\sum_{k=1}^{2n-3}(-1)^{2n-3-k}C_{2n-3}^kX^k)\\\\\n &amp;= X(2X-1)(X-1)(-\\sum_{k=1}^{n-2}(X-1)^{2k-1}X^{2n-2k-3}-\n \\sum_{k=1}^{2n-3}X^{k-1}-\\sum_{k=1}^{2n-3}(-1)^{2n-3-k}C_{2n-3}^kX^{k-1})\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

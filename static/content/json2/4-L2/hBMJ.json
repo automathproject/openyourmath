@@ -1,0 +1,35 @@
+{
+  "uuid": "hBMJ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1635",
+    "auteur": "barraud",
+    "createdAt": "2003-09-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:59.557Z"
+  },
+  "contenu": [
+    {
+      "id": "767205c8-c4d3-4390-8856-bd9e7770a3bc",
+      "type": "description",
+      "value": {
+        "latex": "La matrice suivante est-elle diagonalisable, triangularisable~? Effectuer\nexplicitement la réduction.\n  $$\n  A=\n  \\begin{pmatrix}\n     3& 2& 4\\\\ \n    -1& 3&-1\\\\\n    -2&-1&-3\n  \\end{pmatrix}\n  $$",
+        "html": "<p>La matrice suivante est-elle diagonalisable, triangularisable ? Effectuer explicitement la réduction. <span class=\"math display\">\\[A=\n  \\begin{pmatrix}\n     3&amp; 2&amp; 4\\\\ \n    -1&amp; 3&amp;-1\\\\\n    -2&amp;-1&amp;-3\n  \\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "ad6e746b-2b7c-44db-9057-8e35bf41e9e0",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\chi_{A}=(-1-X)(2-X)^{2}$. Donc $A$ est diagonalisable ssi $\\dim\n  \\ker(A-2I)=2$. Or $\\mathrm{rg}(A-2I)=2$, donc $\\dim \\ker(A-2I)=1$ donc $A$\n  n'est pas diagonalisable. Cependant, $\\chi_{A}$ est scindé sur $\\R$\n  donc $A$ est triangularisable sur $\\R$.\n\n  $\\Big(\\begin{smallmatrix}x\\\\y\\\\z\\end{smallmatrix}\\Big)\\in\\ker(A+I)\n  \\Leftrightarrow\\Big\\{\\begin{smallmatrix}\n    4x+2y+4z=0\\\\-x+4y-z=0\\\\-2x-y-2z=0\n  \\end{smallmatrix}\n  \\Leftrightarrow\\big\\{\\begin{smallmatrix}\n    x+z=0\\\\y=0\n  \\end{smallmatrix}$ donc $\\ker(A+I)=\\R\\Big(\\begin{smallmatrix}\n    1\\\\0\\\\-1\n  \\end{smallmatrix}\\Big)$\n\nDe m\\^eme,\n \n  $\\Big(\\begin{smallmatrix}x\\\\y\\\\z\\end{smallmatrix}\\Big)\\in\\ker(A-2I)\n  \\Leftrightarrow\\Big\\{\\begin{smallmatrix}\n    x+2y+4z=0\\\\-x+y-z=0\\\\-2x-y-5z=0\n  \\end{smallmatrix}\n  \\Leftrightarrow\\big\\{\\begin{smallmatrix}\n    x=2y\\\\z=-y\n  \\end{smallmatrix}$ donc $\\ker(A+I)=\\R\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)$\n\nOn sait que $\\ker((A-2I)^{2})$ est de dimension 2, et que $\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)\\in\\ker(A-2I)\\subset\\ker((A-2I)^{2})$.\n On cherche donc un deuxième vecteur dans $\\ker((A-2I)^{2})$, linéairement\n indépendant de $\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)$.\n\n$(A-2I)^{2}=\\Big(\\begin{smallmatrix}\n    -9&0&-18\\\\0&0&0\\\\9&0&18\n  \\end{smallmatrix}\\Big)$\ndonc $\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)$\nconvient. De plus~: $A\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)=\\Big(\\begin{smallmatrix}\n    2\\\\3\\\\-1\n  \\end{smallmatrix}\\Big)=\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)+2\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)$.\n\nDonc en posant $P=\\Big(\\begin{smallmatrix}\n    1&2&0\\\\0&1&1\\\\-1&-1&0\n  \\end{smallmatrix}\\Big)$, on obtient\n$P^{-1}AP=\\Big(\\begin{smallmatrix}\n    -1&0&0\\\\0&2&1\\\\0&0&2\n  \\end{smallmatrix}\\Big)$.",
+        "html": "<p><span class=\"math inline\">\\(\\chi_{A}=(-1-X)(2-X)^{2}\\)</span>. Donc <span class=\"math inline\">\\(A\\)</span> est diagonalisable ssi <span class=\"math inline\">\\(\\dim\n  \\ker(A-2I)=2\\)</span>. Or <span class=\"math inline\">\\(\\mathrm{rg}(A-2I)=2\\)</span>, donc <span class=\"math inline\">\\(\\dim \\ker(A-2I)=1\\)</span> donc <span class=\"math inline\">\\(A\\)</span> n’est pas diagonalisable. Cependant, <span class=\"math inline\">\\(\\chi_{A}\\)</span> est scindé sur <span class=\"math inline\">\\(\\R\\)</span> donc <span class=\"math inline\">\\(A\\)</span> est triangularisable sur <span class=\"math inline\">\\(\\R\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\Big(\\begin{smallmatrix}x\\\\y\\\\z\\end{smallmatrix}\\Big)\\in\\ker(A+I)\n  \\Leftrightarrow\\Big\\{\\begin{smallmatrix}\n    4x+2y+4z=0\\\\-x+4y-z=0\\\\-2x-y-2z=0\n  \\end{smallmatrix}\n  \\Leftrightarrow\\big\\{\\begin{smallmatrix}\n    x+z=0\\\\y=0\n  \\end{smallmatrix}\\)</span> donc <span class=\"math inline\">\\(\\ker(A+I)=\\R\\Big(\\begin{smallmatrix}\n    1\\\\0\\\\-1\n  \\end{smallmatrix}\\Big)\\)</span></p>\n<p>De même,</p>\n<p><span class=\"math inline\">\\(\\Big(\\begin{smallmatrix}x\\\\y\\\\z\\end{smallmatrix}\\Big)\\in\\ker(A-2I)\n  \\Leftrightarrow\\Big\\{\\begin{smallmatrix}\n    x+2y+4z=0\\\\-x+y-z=0\\\\-2x-y-5z=0\n  \\end{smallmatrix}\n  \\Leftrightarrow\\big\\{\\begin{smallmatrix}\n    x=2y\\\\z=-y\n  \\end{smallmatrix}\\)</span> donc <span class=\"math inline\">\\(\\ker(A+I)=\\R\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)\\)</span></p>\n<p>On sait que <span class=\"math inline\">\\(\\ker((A-2I)^{2})\\)</span> est de dimension 2, et que <span class=\"math inline\">\\(\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)\\in\\ker(A-2I)\\subset\\ker((A-2I)^{2})\\)</span>. On cherche donc un deuxième vecteur dans <span class=\"math inline\">\\(\\ker((A-2I)^{2})\\)</span>, linéairement indépendant de <span class=\"math inline\">\\(\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)\\)</span>.</p>\n<p><span class=\"math inline\">\\((A-2I)^{2}=\\Big(\\begin{smallmatrix}\n    -9&amp;0&amp;-18\\\\0&amp;0&amp;0\\\\9&amp;0&amp;18\n  \\end{smallmatrix}\\Big)\\)</span> donc <span class=\"math inline\">\\(\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)\\)</span> convient. De plus : <span class=\"math inline\">\\(A\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)=\\Big(\\begin{smallmatrix}\n    2\\\\3\\\\-1\n  \\end{smallmatrix}\\Big)=\\Big(\\begin{smallmatrix}\n    2\\\\1\\\\-1\n  \\end{smallmatrix}\\Big)+2\\Big(\\begin{smallmatrix}\n    0\\\\1\\\\0\n  \\end{smallmatrix}\\Big)\\)</span>.</p>\n<p>Donc en posant <span class=\"math inline\">\\(P=\\Big(\\begin{smallmatrix}\n    1&amp;2&amp;0\\\\0&amp;1&amp;1\\\\-1&amp;-1&amp;0\n  \\end{smallmatrix}\\Big)\\)</span>, on obtient <span class=\"math inline\">\\(P^{-1}AP=\\Big(\\begin{smallmatrix}\n    -1&amp;0&amp;0\\\\0&amp;2&amp;1\\\\0&amp;0&amp;2\n  \\end{smallmatrix}\\Big)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "johh",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5625",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:12.657Z"
+  },
+  "contenu": [
+    {
+      "id": "6f6138ae-ec4b-4dd8-b419-4fdebfe6ef30",
+      "type": "description",
+      "value": {
+        "latex": "Soient $A$ et $B$ deux matrices carrées de format $n$ telles que $AB-BA=A$. Calculer la trace de $A^{2010}$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B\\)</span> deux matrices carrées de format <span class=\"math inline\">\\(n\\)</span> telles que <span class=\"math inline\">\\(AB-BA=A\\)</span>. Calculer la trace de <span class=\"math inline\">\\(A^{2010}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "41f75c60-d0e6-493b-a26b-8d2d9f33d3c4",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $p$ un entier supérieur ou égal à $2$.\n\n$$\\begin{align*}\nA^pB -BA^p&=A^pB-A^{p-1}BA+A^{p-1}BA-A^{p-2}BA^2+A^{p-2}BA^2-...+ABA^{p-1}-BA^p\\\\\n &=\\sum_{k=0}^{}(A^{p-k}BA^k-A^{p-k-1}BA^{k+1})=\\sum_{k=0}^{}A^{p-k-1}(AB-BA)A^k=\\sum_{k=0}^{}A^{p-k-1}AA^k\\sum_{k=0}^{}A^p\\\\\n &=pA^p.\n\\end{align*}$$\n\nDonc $2010\\times\\text{Tr}(A^{2010})=\\text{Tr}(2010\\;A^{2010})=\\text{Tr}(A^{2010}B)-\\text{Tr}(BA^{2010})=0$ et $\\text{Tr}(A^{2010})=0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(p\\)</span> un entier supérieur ou égal à <span class=\"math inline\">\\(2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nA^pB -BA^p&amp;=A^pB-A^{p-1}BA+A^{p-1}BA-A^{p-2}BA^2+A^{p-2}BA^2-...+ABA^{p-1}-BA^p\\\\\n &amp;=\\sum_{k=0}^{}(A^{p-k}BA^k-A^{p-k-1}BA^{k+1})=\\sum_{k=0}^{}A^{p-k-1}(AB-BA)A^k=\\sum_{k=0}^{}A^{p-k-1}AA^k\\sum_{k=0}^{}A^p\\\\\n &amp;=pA^p.\n\\end{align*}\\]</span></p>\n<p>Donc <span class=\"math inline\">\\(2010\\times\\text{Tr}(A^{2010})=\\text{Tr}(2010\\;A^{2010})=\\text{Tr}(A^{2010}B)-\\text{Tr}(BA^{2010})=0\\)</span> et <span class=\"math inline\">\\(\\text{Tr}(A^{2010})=0\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

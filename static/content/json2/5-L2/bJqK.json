@@ -1,0 +1,59 @@
+{
+  "uuid": "bJqK",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4620",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série entière",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:14.153Z"
+  },
+  "contenu": [
+    {
+      "id": "cf7ed402-ea36-445a-96a7-7afcf611889e",
+      "type": "description",
+      "value": {
+        "latex": "Soit $D$ le disque ouvert de~$\\C$ de centre~$0$ et rayon~$1$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(D\\)</span> le disque ouvert de <span class=\"math inline\">\\(\\C\\)</span> de centre <span class=\"math inline\">\\(0\\)</span> et rayon <span class=\"math inline\">\\(1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0f3314c9-477f-460a-a041-06626dbde05f",
+      "type": "question",
+      "value": {
+        "latex": "Soit $\\varphi(z) = \\sum_{n\\in\\N}a_nz^n$ une série entière de rayon $R\\ge 1$\n    et $r\\in{]0,1[}$.\n    Montrer que $$a_n = \\frac1{2\\pi r^n} \\int_{\\theta=0}^{2\\pi}\\varphi(re^{i\\theta})e^{-in\\theta}\\, d\\theta.$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\varphi(z) = \\sum_{n\\in\\N}a_nz^n\\)</span> une série entière de rayon <span class=\"math inline\">\\(R\\ge 1\\)</span> et <span class=\"math inline\">\\(r\\in{]0,1[}\\)</span>. Montrer que <span class=\"math display\">\\[a_n = \\frac1{2\\pi r^n} \\int_{\\theta=0}^{2\\pi}\\varphi(re^{i\\theta})e^{-in\\theta}\\, d\\theta.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "34f40834-124a-41d4-9bf4-1784077f7307",
+      "type": "question",
+      "value": {
+        "latex": "Soit $E$ l'ensemble des fonctions de~$\\overline D$ dans~$\\C$ continues\n    et dont la restriction à~$D$ est somme d'une série entière. Montrer que\n    $f \\mapsto\\|f\\| = \\sup\\{|f(z)|,\\ z\\in\\overline D\\}$ définit une norme sur~$E$ et\n    que pour cette norme $E$ est complet.",
+        "html": "<p>Soit <span class=\"math inline\">\\(E\\)</span> l’ensemble des fonctions de <span class=\"math inline\">\\(\\overline D\\)</span> dans <span class=\"math inline\">\\(\\C\\)</span> continues et dont la restriction à <span class=\"math inline\">\\(D\\)</span> est somme d’une série entière. Montrer que <span class=\"math inline\">\\(f \\mapsto\\|f\\| = \\sup\\{|f(z)|,\\ z\\in\\overline D\\}\\)</span> définit une norme sur <span class=\"math inline\">\\(E\\)</span> et que pour cette norme <span class=\"math inline\">\\(E\\)</span> est complet.</p>\n"
+      }
+    },
+    {
+      "id": "a1ccf286-f79f-4558-a875-1a12d288680e",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que l'ensemble des polynômes à coefficients complexes est dense dans~$E$.",
+        "html": "<p>Montrer que l’ensemble des polynômes à coefficients complexes est dense dans <span class=\"math inline\">\\(E\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4299ffea-a587-4401-8297-513b12364f31",
+      "type": "reponse",
+      "value": {
+        "latex": "Complétude~: soit $(f_k)$ une suite d'éléments de~$E$ de Cauchy,\n    $f_k(z) = \\sum_{n\\in\\N}a_{n,k}z^n$. On a, à $k$ et $n$ fixés, par convergence dominée~:\n    $$\\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}f_k(e^{i\\theta})e^{-in\\theta}\\, d\\theta\n      = \\lim_{r\\to 1^-}\\frac1{2\\pi r^n} \\int_{\\theta=0}^{2\\pi}f_k(re^{i\\theta})e^{-in\\theta}\\, d\\theta\n      = a_{n,k}.$$\n    La suite $(f_k)$\n    converge uniformément sur~$\\overline D$ vers une fonction $\\varphi : {\\overline D} \\to \\C$\n    continue. On note~:\n    $$a_n = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\varphi(e^{i\\theta})e^{-in\\theta}\\, d\\theta\n          = \\lim_{k\\to\\infty} a_{n,k}.$$\n    La suite $(a_n)$ est bornée, donc le rayon de convergence de $\\sum_{n\\in\\N}a_nz^n$\n    est supérieur ou égal à~$1$. Pour $z\\in D$ fixé on a alors lorsque $k\\to\\infty$ :\n    $$\\begin{align*} f_k(z)\n        &= \\sum_{n\\in\\N}a_{n,k}z^n\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\Bigl(\\sum_{n\\in\\N}f_k(e^{i\\theta})e^{-in\\theta}z^n\\Bigr)\\, d\\theta\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f_k(e^{i\\theta})}{1-ze^{-i\\theta}}\\, d\\theta\\cr\n        &\\to \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{\\varphi(e^{i\\theta})}{1-ze^{-i\\theta}}\\, d\\theta\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\Bigl(\\sum_{n\\in\\N}\\varphi(e^{i\\theta})e^{-in\\theta}z^n\\Bigr)\\, d\\theta\n         = \\sum_{n\\in\\N}a_nz^n\\cr\n    \\end{align*}$$\n    ce qui prouve que $\\varphi\\in E$. Enfin on a $\\|f_k-\\varphi\\| \\to 0$ lorsque $k\\to\\infty$\n    par convergence uniforme, d'où $\\varphi = \\lim_{k\\to\\infty}f_k$ dans~$E$.\nSoit $f\\in E$ et $f_n(z) = f\\Bigl(\\frac{nz}{n+1}\\Bigr)$.\n    Comme $f$ est uniformément continue, $f_n$ converge uniformément vers~$f$\n    sur $\\overline D$. Soit $\\varepsilon>0$ et $n$ tel que $\\|f-f_n\\|_\\infty \\le \\varepsilon$.\n    Comme $f_n$ est développable en série entière avec un rayon au moins égal à $1+\\frac1n$,\n    son développement converge uniformément vers~$f_n$ sur $\\overline D$ donc\n    il existe $P\\in\\C[X]$ tel que $\\|f_n-P\\|_\\infty \\le \\varepsilon$.",
+        "html": "<p>Complétude : soit <span class=\"math inline\">\\((f_k)\\)</span> une suite d’éléments de <span class=\"math inline\">\\(E\\)</span> de Cauchy, <span class=\"math inline\">\\(f_k(z) = \\sum_{n\\in\\N}a_{n,k}z^n\\)</span>. On a, à <span class=\"math inline\">\\(k\\)</span> et <span class=\"math inline\">\\(n\\)</span> fixés, par convergence dominée : <span class=\"math display\">\\[\\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}f_k(e^{i\\theta})e^{-in\\theta}\\, d\\theta\n      = \\lim_{r\\to 1^-}\\frac1{2\\pi r^n} \\int_{\\theta=0}^{2\\pi}f_k(re^{i\\theta})e^{-in\\theta}\\, d\\theta\n      = a_{n,k}.\\]</span> La suite <span class=\"math inline\">\\((f_k)\\)</span> converge uniformément sur <span class=\"math inline\">\\(\\overline D\\)</span> vers une fonction <span class=\"math inline\">\\(\\varphi : {\\overline D} \\to \\C\\)</span> continue. On note : <span class=\"math display\">\\[a_n = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\varphi(e^{i\\theta})e^{-in\\theta}\\, d\\theta\n          = \\lim_{k\\to\\infty} a_{n,k}.\\]</span> La suite <span class=\"math inline\">\\((a_n)\\)</span> est bornée, donc le rayon de convergence de <span class=\"math inline\">\\(\\sum_{n\\in\\N}a_nz^n\\)</span> est supérieur ou égal à <span class=\"math inline\">\\(1\\)</span>. Pour <span class=\"math inline\">\\(z\\in D\\)</span> fixé on a alors lorsque <span class=\"math inline\">\\(k\\to\\infty\\)</span> : <span class=\"math display\">\\[\\begin{align*} f_k(z)\n        &amp;= \\sum_{n\\in\\N}a_{n,k}z^n\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\Bigl(\\sum_{n\\in\\N}f_k(e^{i\\theta})e^{-in\\theta}z^n\\Bigr)\\, d\\theta\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f_k(e^{i\\theta})}{1-ze^{-i\\theta}}\\, d\\theta\\cr\n        &amp;\\to \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{\\varphi(e^{i\\theta})}{1-ze^{-i\\theta}}\\, d\\theta\n         = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\Bigl(\\sum_{n\\in\\N}\\varphi(e^{i\\theta})e^{-in\\theta}z^n\\Bigr)\\, d\\theta\n         = \\sum_{n\\in\\N}a_nz^n\\cr\n    \\end{align*}\\]</span> ce qui prouve que <span class=\"math inline\">\\(\\varphi\\in E\\)</span>. Enfin on a <span class=\"math inline\">\\(\\|f_k-\\varphi\\| \\to 0\\)</span> lorsque <span class=\"math inline\">\\(k\\to\\infty\\)</span> par convergence uniforme, d’où <span class=\"math inline\">\\(\\varphi = \\lim_{k\\to\\infty}f_k\\)</span> dans <span class=\"math inline\">\\(E\\)</span>. Soit <span class=\"math inline\">\\(f\\in E\\)</span> et <span class=\"math inline\">\\(f_n(z) = f\\Bigl(\\frac{nz}{n+1}\\Bigr)\\)</span>. Comme <span class=\"math inline\">\\(f\\)</span> est uniformément continue, <span class=\"math inline\">\\(f_n\\)</span> converge uniformément vers <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(\\overline D\\)</span>. Soit <span class=\"math inline\">\\(\\varepsilon&gt;0\\)</span> et <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(\\|f-f_n\\|_\\infty \\le \\varepsilon\\)</span>. Comme <span class=\"math inline\">\\(f_n\\)</span> est développable en série entière avec un rayon au moins égal à <span class=\"math inline\">\\(1+\\frac1n\\)</span>, son développement converge uniformément vers <span class=\"math inline\">\\(f_n\\)</span> sur <span class=\"math inline\">\\(\\overline D\\)</span> donc il existe <span class=\"math inline\">\\(P\\in\\C[X]\\)</span> tel que <span class=\"math inline\">\\(\\|f_n-P\\|_\\infty \\le \\varepsilon\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

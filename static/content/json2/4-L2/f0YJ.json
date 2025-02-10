@@ -1,0 +1,35 @@
+{
+  "uuid": "f0YJ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1673",
+    "auteur": "gineste",
+    "createdAt": "2001-11-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:55.842Z"
+  },
+  "contenu": [
+    {
+      "id": "1068d930-c3d8-41de-9ba3-c2c3d003ab6a",
+      "type": "description",
+      "value": {
+        "latex": "Soit\n$K$ un corps commutatif quelconque, et soit $F=\\mathcal{M}_n(K)$\nl'espace vectoriel sur $K$ des matrices carrées d'ordre $n$ à\ncoefficients dans $K.$ Si $i$ et $j$ sont des entiers compris\nentre 1 et $n$, on note par $F_{ij}$ l'élément de $F$ dont le\ncoefficient $(i,j)$ est 1 et dont les autres coefficients sont\nnuls. Montrer que les $F_{ij}$ forment une base de $F$. Dimension\nde $F$? Soit $D$ dans $F$ et diagonale. Soient $\\alpha$ et $\\beta$\ndans $K$ et soit l'endomorphisme $\\Phi$ de $F$ qui à la matrice\n$X$ fait correspondre la matrice $\\Phi(X)=\\alpha XD+ \\beta DX.$\nCalculer $\\Phi(F_{ij}).$ $\\Phi$ est il un endomorphisme\ndiagonalisable? Donner son polynôme caractéristique en fonction\ndes coefficients de $D$ et de $\\alpha$ et $\\beta$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(K\\)</span> un corps commutatif quelconque, et soit <span class=\"math inline\">\\(F=\\mathcal{M}_n(K)\\)</span> l’espace vectoriel sur <span class=\"math inline\">\\(K\\)</span> des matrices carrées d’ordre <span class=\"math inline\">\\(n\\)</span> à coefficients dans <span class=\"math inline\">\\(K.\\)</span> Si <span class=\"math inline\">\\(i\\)</span> et <span class=\"math inline\">\\(j\\)</span> sont des entiers compris entre 1 et <span class=\"math inline\">\\(n\\)</span>, on note par <span class=\"math inline\">\\(F_{ij}\\)</span> l’élément de <span class=\"math inline\">\\(F\\)</span> dont le coefficient <span class=\"math inline\">\\((i,j)\\)</span> est 1 et dont les autres coefficients sont nuls. Montrer que les <span class=\"math inline\">\\(F_{ij}\\)</span> forment une base de <span class=\"math inline\">\\(F\\)</span>. Dimension de <span class=\"math inline\">\\(F\\)</span>? Soit <span class=\"math inline\">\\(D\\)</span> dans <span class=\"math inline\">\\(F\\)</span> et diagonale. Soient <span class=\"math inline\">\\(\\alpha\\)</span> et <span class=\"math inline\">\\(\\beta\\)</span> dans <span class=\"math inline\">\\(K\\)</span> et soit l’endomorphisme <span class=\"math inline\">\\(\\Phi\\)</span> de <span class=\"math inline\">\\(F\\)</span> qui à la matrice <span class=\"math inline\">\\(X\\)</span> fait correspondre la matrice <span class=\"math inline\">\\(\\Phi(X)=\\alpha XD+ \\beta DX.\\)</span> Calculer <span class=\"math inline\">\\(\\Phi(F_{ij}).\\)</span> <span class=\"math inline\">\\(\\Phi\\)</span> est il un endomorphisme diagonalisable? Donner son polynôme caractéristique en fonction des coefficients de <span class=\"math inline\">\\(D\\)</span> et de <span class=\"math inline\">\\(\\alpha\\)</span> et <span class=\"math inline\">\\(\\beta\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "1f8354e1-b335-421a-a49e-f606d1d57035",
+      "type": "reponse",
+      "value": {
+        "latex": "Si\n$X=(x_{ij})_{1\\leq i,j\\leq n}\\in F,$ il est clair que\n$X=\\sum_{1\\leq i,j\\leq n}x_{ij}F_{ij}.$ C'est donc une famille\ng\\'en\\'eratrice. Elle est ind\\'ependante, car si $\\sum_{1\\leq\ni,j\\leq n}x_{ij}F_{ij}$ est la matrice nulle, cela implique que\n$x_{ij} =0$ pour tous $i$ et $j.$ C'est donc une base de $F$. Elle\nest de taille $n^2$, donc $F$ est de dimension $n^2.$ Ensuite, si\n$D=\\mathrm{diag}(d_1,\\ldots,d_n)$ et si $X=(x_{ij})_{1\\leq i,j\\leq\nn}$ alors le coefficient $(i,j)$ de la matrice $\\Phi(X)=\\alpha\nXD+\\beta DX$ est $(\\alpha d_j+\\beta d_i)x_{ij}.$ Donc $\\Phi\n(F_{ij})=(\\alpha d_j+\\beta d_i)F_{ij},$ ce qui est dire que\n$F_{ij}$ est un vecteur propre de $\\Phi$ pour la valeur propre\n$\\alpha d_j+\\beta d_i.$ L'espace $F$ admet donc une base de\nvecteurs propres de $\\Phi.$ D'apr\\`es le cours, cela entra\\^ine\nque $\\Phi$ est diagonalisable. Si on le repr\\'esente dans la base\nde vecteurs propres, le d\\'eterminant de $\\Phi$ est donc le\nproduit des \\'el\\'ements diagonaux, c'est \\`a dire $\\det\n\\Phi=\\prod_{i=1}^n\\prod_{j=1}^n(\\alpha d_j+\\beta d_i).$ Plus\ng\\'en\\'eralement\n $\\det (\\Phi-\\lambda \\mathrm{id}_F)=\n\\prod_{i=1}^n\\prod_{j=1}^n(\\alpha d_j+\\beta d_i-\\lambda).$",
+        "html": "<p>Si <span class=\"math inline\">\\(X=(x_{ij})_{1\\leq i,j\\leq n}\\in F,\\)</span> il est clair que <span class=\"math inline\">\\(X=\\sum_{1\\leq i,j\\leq n}x_{ij}F_{ij}.\\)</span> C’est donc une famille génératrice. Elle est indépendante, car si <span class=\"math inline\">\\(\\sum_{1\\leq\ni,j\\leq n}x_{ij}F_{ij}\\)</span> est la matrice nulle, cela implique que <span class=\"math inline\">\\(x_{ij} =0\\)</span> pour tous <span class=\"math inline\">\\(i\\)</span> et <span class=\"math inline\">\\(j.\\)</span> C’est donc une base de <span class=\"math inline\">\\(F\\)</span>. Elle est de taille <span class=\"math inline\">\\(n^2\\)</span>, donc <span class=\"math inline\">\\(F\\)</span> est de dimension <span class=\"math inline\">\\(n^2.\\)</span> Ensuite, si <span class=\"math inline\">\\(D=\\mathrm{diag}(d_1,\\ldots,d_n)\\)</span> et si <span class=\"math inline\">\\(X=(x_{ij})_{1\\leq i,j\\leq\nn}\\)</span> alors le coefficient <span class=\"math inline\">\\((i,j)\\)</span> de la matrice <span class=\"math inline\">\\(\\Phi(X)=\\alpha\nXD+\\beta DX\\)</span> est <span class=\"math inline\">\\((\\alpha d_j+\\beta d_i)x_{ij}.\\)</span> Donc <span class=\"math inline\">\\(\\Phi\n(F_{ij})=(\\alpha d_j+\\beta d_i)F_{ij},\\)</span> ce qui est dire que <span class=\"math inline\">\\(F_{ij}\\)</span> est un vecteur propre de <span class=\"math inline\">\\(\\Phi\\)</span> pour la valeur propre <span class=\"math inline\">\\(\\alpha d_j+\\beta d_i.\\)</span> L’espace <span class=\"math inline\">\\(F\\)</span> admet donc une base de vecteurs propres de <span class=\"math inline\">\\(\\Phi.\\)</span> D’après le cours, cela entraîne que <span class=\"math inline\">\\(\\Phi\\)</span> est diagonalisable. Si on le représente dans la base de vecteurs propres, le déterminant de <span class=\"math inline\">\\(\\Phi\\)</span> est donc le produit des éléments diagonaux, c’est à dire <span class=\"math inline\">\\(\\det\n\\Phi=\\prod_{i=1}^n\\prod_{j=1}^n(\\alpha d_j+\\beta d_i).\\)</span> Plus généralement <span class=\"math inline\">\\(\\det (\\Phi-\\lambda \\mathrm{id}_F)=\n\\prod_{i=1}^n\\prod_{j=1}^n(\\alpha d_j+\\beta d_i-\\lambda).\\)</span></p>\n"
+      }
+    }
+  ]
+}

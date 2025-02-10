@@ -1,0 +1,91 @@
+{
+  "uuid": "QcIp",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5669",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Applications",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:33.046Z"
+  },
+  "contenu": [
+    {
+      "id": "b831b68f-f52f-4772-92ef-e274df7fa16f",
+      "type": "description",
+      "value": {
+        "latex": "Pour $\\sigma\\in S_n$, $n\\geqslant 2$, on définit la matrice $P_\\sigma$ par $P_\\sigma=(\\delta_{i,\\sigma(j)})_{1\\leqslant i,j\\leqslant n}$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(\\sigma\\in S_n\\)</span>, <span class=\"math inline\">\\(n\\geqslant 2\\)</span>, on définit la matrice <span class=\"math inline\">\\(P_\\sigma\\)</span> par <span class=\"math inline\">\\(P_\\sigma=(\\delta_{i,\\sigma(j)})_{1\\leqslant i,j\\leqslant n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "770704f2-9993-436c-bede-0096d27e575f",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\text{det}(P_\\sigma)$ pour tout $\\sigma\\in S_n$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\text{det}(P_\\sigma)\\)</span> pour tout <span class=\"math inline\">\\(\\sigma\\in S_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "761fed26-24e4-43c0-90cd-cf88359f31de",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $\\sigma\\in S_n$.\n\n\\begin{center}\n$\\text{det}(P_\\sigma)=\\sum_{\\sigma'\\in S_n}^{}\\varepsilon(\\sigma')p_{\\sigma'(1),1}\\ldots p_{\\sigma'(n),n}=\\sum_{\\sigma'\\in S_n}^{}\\varepsilon(\\sigma')\\delta_{\\sigma'(1),\\sigma(1)}\\ldots \\delta_{\\sigma'(n),\\sigma(n)}=\\varepsilon(\\sigma)$,\n\\end{center}\n\ncar $\\delta_{\\sigma'(1),\\sigma(1)}\\ldots \\delta_{\\sigma'(n),\\sigma(n)}\\neq0\\Leftrightarrow\\forall i\\in\\llbracket1,n\\rrbracket,\\;\\sigma'(i)=\\sigma(i)\\Leftrightarrow \\sigma'=\\sigma$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall\\sigma\\in S_n$, $\\text{det}(P_\\sigma)=\\varepsilon(\\sigma)$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\sigma\\in S_n\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\text{det}(P_\\sigma)=\\sum_{\\sigma&#39;\\in S_n}^{}\\varepsilon(\\sigma&#39;)p_{\\sigma&#39;(1),1}\\ldots p_{\\sigma&#39;(n),n}=\\sum_{\\sigma&#39;\\in S_n}^{}\\varepsilon(\\sigma&#39;)\\delta_{\\sigma&#39;(1),\\sigma(1)}\\ldots \\delta_{\\sigma&#39;(n),\\sigma(n)}=\\varepsilon(\\sigma)\\)</span>,</p>\n<p>car <span class=\"math inline\">\\(\\delta_{\\sigma&#39;(1),\\sigma(1)}\\ldots \\delta_{\\sigma&#39;(n),\\sigma(n)}\\neq0\\Leftrightarrow\\forall i\\in\\llbracket1,n\\rrbracket,\\;\\sigma&#39;(i)=\\sigma(i)\\Leftrightarrow \\sigma&#39;=\\sigma\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2d2122d2-87f7-465b-adbd-534d23c1b74f",
+      "type": "question",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "a3a7eca2-aae3-4c54-8a01-0355ae6c5046",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}",
+        "html": ""
+      }
+    },
+    {
+      "id": "dace3857-e1dd-4948-abc9-1ec296e5cb99",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\forall(\\sigma,\\sigma')\\in S_n^2$, $P_\\sigma\\times P_{\\sigma'}=P_{\\sigma\\circ\\sigma'}$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\forall(\\sigma,\\sigma&#39;)\\in S_n^2\\)</span>, <span class=\"math inline\">\\(P_\\sigma\\times P_{\\sigma&#39;}=P_{\\sigma\\circ\\sigma&#39;}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6e9545a5-9631-44af-9d80-784fd218e440",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $(\\sigma,\\sigma')\\in S_n^2$. Soit $(i,j)\\in\\llbracket1,n\\rrbracket^2$. Le coefficient ligne $i$, colonne $j$, de la matrice $P_\\sigma\\times P_{\\sigma'}$ vaut\n\n\\begin{center}\n$\\sum_{k=1}^{n}\\delta_{i,\\sigma(k)}\\delta_{k,\\sigma'(j)}$.\n\\end{center}\n\nDans cette somme, si $k\\neq\\sigma'(j)$, le terme correspondant est nul et quand $k=\\sigma'(j)$, le terme correspondant vaut $\\delta_{i,\\sigma(\\sigma'(j))}$. Finalement, le coefficient ligne $i$, colonne $j$, de la matrice $P_\\sigma\\times P_{\\sigma'}$ vaut $\\delta_{i,\\sigma(\\sigma'(j))}$ qui est encore le coefficient ligne $i$, colonne $j$, de la matrice $P_{\\sigma\\circ\\sigma'}$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall(\\sigma,\\sigma')\\in S_n^2$, $P_\\sigma\\times P_{\\sigma'}=P_{\\sigma\\circ\\sigma'}$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\((\\sigma,\\sigma&#39;)\\in S_n^2\\)</span>. Soit <span class=\"math inline\">\\((i,j)\\in\\llbracket1,n\\rrbracket^2\\)</span>. Le coefficient ligne <span class=\"math inline\">\\(i\\)</span>, colonne <span class=\"math inline\">\\(j\\)</span>, de la matrice <span class=\"math inline\">\\(P_\\sigma\\times P_{\\sigma&#39;}\\)</span> vaut</p>\n<p><span class=\"math inline\">\\(\\sum_{k=1}^{n}\\delta_{i,\\sigma(k)}\\delta_{k,\\sigma&#39;(j)}\\)</span>.</p>\n<p>Dans cette somme, si <span class=\"math inline\">\\(k\\neq\\sigma&#39;(j)\\)</span>, le terme correspondant est nul et quand <span class=\"math inline\">\\(k=\\sigma&#39;(j)\\)</span>, le terme correspondant vaut <span class=\"math inline\">\\(\\delta_{i,\\sigma(\\sigma&#39;(j))}\\)</span>. Finalement, le coefficient ligne <span class=\"math inline\">\\(i\\)</span>, colonne <span class=\"math inline\">\\(j\\)</span>, de la matrice <span class=\"math inline\">\\(P_\\sigma\\times P_{\\sigma&#39;}\\)</span> vaut <span class=\"math inline\">\\(\\delta_{i,\\sigma(\\sigma&#39;(j))}\\)</span> qui est encore le coefficient ligne <span class=\"math inline\">\\(i\\)</span>, colonne <span class=\"math inline\">\\(j\\)</span>, de la matrice <span class=\"math inline\">\\(P_{\\sigma\\circ\\sigma&#39;}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "836371a9-d86d-4ae3-b1cb-47d4e7ce8440",
+      "type": "question",
+      "value": {
+        "latex": "On pose $G=\\{P_\\sigma,\\;\\sigma\\in S_n\\}$. Montrer que $(G,\\times)$ est un groupe isomorphe à $S_n$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(G=\\{P_\\sigma,\\;\\sigma\\in S_n\\}\\)</span>. Montrer que <span class=\"math inline\">\\((G,\\times)\\)</span> est un groupe isomorphe à <span class=\"math inline\">\\(S_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "029c868b-26cd-48a6-bb22-f7158f241aed",
+      "type": "reponse",
+      "value": {
+        "latex": "Montrons que $G$ est un sous-groupe du groupe $(GL_n(\\Rr),\\times)$. $G$ contient $I_n=P_{Id}$ et d'autre part, $G$ est contenu dans $GL_n(\\Rr)$ d'après 1).\n\n\\begin{center}\n\\shadowbox{\n$(G,\\times)$ est un sous-groupe de $(GL_n(\\Rr),\\times)$.\n}\n\\end{center}",
+        "html": "<p>Montrons que <span class=\"math inline\">\\(G\\)</span> est un sous-groupe du groupe <span class=\"math inline\">\\((GL_n(\\Rr),\\times)\\)</span>. <span class=\"math inline\">\\(G\\)</span> contient <span class=\"math inline\">\\(I_n=P_{Id}\\)</span> et d’autre part, <span class=\"math inline\">\\(G\\)</span> est contenu dans <span class=\"math inline\">\\(GL_n(\\Rr)\\)</span> d’après 1).</p>\n"
+      }
+    }
+  ]
+}

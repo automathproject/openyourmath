@@ -1,0 +1,35 @@
+{
+  "uuid": "9HFP",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5378",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Système linéaire, rang",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:03.373Z"
+  },
+  "contenu": [
+    {
+      "id": "255514b6-9bb8-4240-b0e7-3df6dec03dfc",
+      "type": "description",
+      "value": {
+        "latex": "Résoudre le système~:~$x_1+x_2=0$, $x_{k-1}+x_k+x_{k+1}=0$ pour $k=2,...,n-1$, $x_{n-1}+x_n=0$.",
+        "html": "<p>Résoudre le système : <span class=\"math inline\">\\(x_1+x_2=0\\)</span>, <span class=\"math inline\">\\(x_{k-1}+x_k+x_{k+1}=0\\)</span> pour <span class=\"math inline\">\\(k=2,...,n-1\\)</span>, <span class=\"math inline\">\\(x_{n-1}+x_n=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "26179b1e-1681-4f7b-a2aa-68b5d0149cad",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $D_n$ le déterminant du système pour $n\\geq3$.\n\nEn développant ce déterminant suivant sa première colonne, on obtient la relation de récurrence~:\n \n$$\\forall n\\geq5,\\;D_n=D_{n-1}-D_{n-2},$$\n\nce qui fournit aisément par récurrence, en tenant compte de $D_3=D_4=-1$~:\n\n$$\\forall k\\geq1,\\;D_{3k}=D_{3k+1}=(-1)^k\\;\\mbox{et}\\;D_{3k+2}=0.$$\n\nPour $n$ élément de $3\\Nn^*\\cup(1+3\\Nn^*)$, le système est de \\textsc{Cramer} et homogène et admet donc une et une seule solution à savoir la solution nulle.\n\nPour $n=3k+2$, puisque $D_n=0$ mais que le mineur de format $n-1$ constitué des $n-1$ premières lignes et colonnes est $D_{n-1}$ et est donc non nul, le système est homogène de rang $n-1$ et l'ensemble des solutions est un sous-espace vectoriel de $\\Rr^n$ de dimension $1$. On trouve aisément $\\mathcal{S}=\\{\\lambda(1,-1,0,1,-1,0...,1,-1),\\;;\\lambda\\in\\Rr\\}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(D_n\\)</span> le déterminant du système pour <span class=\"math inline\">\\(n\\geq3\\)</span>.</p>\n<p>En développant ce déterminant suivant sa première colonne, on obtient la relation de récurrence :</p>\n<p><span class=\"math display\">\\[\\forall n\\geq5,\\;D_n=D_{n-1}-D_{n-2},\\]</span></p>\n<p>ce qui fournit aisément par récurrence, en tenant compte de <span class=\"math inline\">\\(D_3=D_4=-1\\)</span> :</p>\n<p><span class=\"math display\">\\[\\forall k\\geq1,\\;D_{3k}=D_{3k+1}=(-1)^k\\;\\mbox{et}\\;D_{3k+2}=0.\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(n\\)</span> élément de <span class=\"math inline\">\\(3\\Nn^*\\cup(1+3\\Nn^*)\\)</span>, le système est de <span class=\"smallcaps\">Cramer</span> et homogène et admet donc une et une seule solution à savoir la solution nulle.</p>\n<p>Pour <span class=\"math inline\">\\(n=3k+2\\)</span>, puisque <span class=\"math inline\">\\(D_n=0\\)</span> mais que le mineur de format <span class=\"math inline\">\\(n-1\\)</span> constitué des <span class=\"math inline\">\\(n-1\\)</span> premières lignes et colonnes est <span class=\"math inline\">\\(D_{n-1}\\)</span> et est donc non nul, le système est homogène de rang <span class=\"math inline\">\\(n-1\\)</span> et l’ensemble des solutions est un sous-espace vectoriel de <span class=\"math inline\">\\(\\Rr^n\\)</span> de dimension <span class=\"math inline\">\\(1\\)</span>. On trouve aisément <span class=\"math inline\">\\(\\mathcal{S}=\\{\\lambda(1,-1,0,1,-1,0...,1,-1),\\;;\\lambda\\in\\Rr\\}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

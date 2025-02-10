@@ -1,0 +1,107 @@
+{
+  "uuid": "gCVS",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5761",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série entière",
+    "sousChapitre": "Développement en série entière",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:20.677Z"
+  },
+  "contenu": [
+    {
+      "id": "54cc0962-0eae-435e-9d8e-ccb86c0434e5",
+      "type": "description",
+      "value": {
+        "latex": "Pour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, on pose $f(x) =\\tan x$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, on pose <span class=\"math inline\">\\(f(x) =\\tan x\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "fca06fc2-7428-4d6c-8953-23a8ae1ee49e",
+      "type": "question",
+      "value": {
+        "latex": "Montrer qu'il existe une suite de polynômes $(P_n)_{n\\in\\Nn}$ telle que pour tout entier naturel $n$, $f^{(n)}= P_n\\circ f$ et que les $P_n$ sont à coefficients entiers naturels. (Utiliser $\\tan' = 1+\\tan^2$).",
+        "html": "<p>Montrer qu’il existe une suite de polynômes <span class=\"math inline\">\\((P_n)_{n\\in\\Nn}\\)</span> telle que pour tout entier naturel <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(f^{(n)}= P_n\\circ f\\)</span> et que les <span class=\"math inline\">\\(P_n\\)</span> sont à coefficients entiers naturels. (Utiliser <span class=\"math inline\">\\(\\tan&#39; = 1+\\tan^2\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "9ac429f3-d015-47ea-aff3-2b5c7c39fc5d",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f$ est de classe $C^\\infty$ sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$ en tant que quotient de fonctions de classe $C^\\infty$ sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$ dont le dénominateur ne s'annule pas sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$ et de plus $f'= 1 + f^2$.\n\nMontrons par récurrence que pour tout naturel $n$, il existe un polynôme $P_n$ à coefficients entiers naturels tel que $f^{(n)}= P_n\\circ f$ (ou encore $\\forall x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, $\\tan^{(n)}(x) = P_n(\\tan x)$).\n\n\\textbullet~C'est vrai pour $n=0$ avec $P_0=X$ et pour $n =1$ avec $P_1= 1+X^2$.\n\n\\textbullet~Soit $n\\geqslant1$. Supposons que pour tout $k\\in\\llbracket0,n\\rrbracket$, il existe un polynôme $P_k$ à coefficients entiers naturels tel que $f^{(k)}= P_k\\circ f$. D'après la formule de \\textsc{Leibniz},\n\n\\begin{center}\n$f^{(n+1)}=(1+f^2)^{(n)}= (f^2)^{(n)}=\\sum_{k=0}^{n}\\dbinom{n}{k}f^{(k)}f^{(n-k)}=\\left(\\sum_{k=0}^{n}\\dbinom{n}{k}P_kP_{n-k}\\right)\\circ f$\n\\end{center}\n\net le polynôme $P_{n+1}=\\sum_{k=0}^{n}\\dbinom{n}{k}P_kP_{n-k}$ est un polynôme à coefficients entiers naturels tel que $\\tan^{(n+1)}=P_{n+1}\\circ f$.\n\n\\textbf{Remarque.} On aurait pu aussi dériver l'égalité $f^{(n)}=P_n\\circ f$ pour obtenir $f^{(n+1)}= f'\\times P_n'\\circ f = (P_1\\times P_n')\\circ f$ mais on a déjà dans l'idée une relation de récurrence sur les coefficients du développement de $\\tan$ qui n'est pas fournie par cette dernière égalité.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^\\infty\\)</span> sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span> en tant que quotient de fonctions de classe <span class=\"math inline\">\\(C^\\infty\\)</span> sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span> dont le dénominateur ne s’annule pas sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span> et de plus <span class=\"math inline\">\\(f&#39;= 1 + f^2\\)</span>.</p>\n<p>Montrons par récurrence que pour tout naturel <span class=\"math inline\">\\(n\\)</span>, il existe un polynôme <span class=\"math inline\">\\(P_n\\)</span> à coefficients entiers naturels tel que <span class=\"math inline\">\\(f^{(n)}= P_n\\circ f\\)</span> (ou encore <span class=\"math inline\">\\(\\forall x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, <span class=\"math inline\">\\(\\tan^{(n)}(x) = P_n(\\tan x)\\)</span>).</p>\n<p> C’est vrai pour <span class=\"math inline\">\\(n=0\\)</span> avec <span class=\"math inline\">\\(P_0=X\\)</span> et pour <span class=\"math inline\">\\(n =1\\)</span> avec <span class=\"math inline\">\\(P_1= 1+X^2\\)</span>.</p>\n<p> Soit <span class=\"math inline\">\\(n\\geqslant1\\)</span>. Supposons que pour tout <span class=\"math inline\">\\(k\\in\\llbracket0,n\\rrbracket\\)</span>, il existe un polynôme <span class=\"math inline\">\\(P_k\\)</span> à coefficients entiers naturels tel que <span class=\"math inline\">\\(f^{(k)}= P_k\\circ f\\)</span>. D’après la formule de <span class=\"smallcaps\">Leibniz</span>,</p>\n<p><span class=\"math inline\">\\(f^{(n+1)}=(1+f^2)^{(n)}= (f^2)^{(n)}=\\sum_{k=0}^{n}\\dbinom{n}{k}f^{(k)}f^{(n-k)}=\\left(\\sum_{k=0}^{n}\\dbinom{n}{k}P_kP_{n-k}\\right)\\circ f\\)</span></p>\n<p>et le polynôme <span class=\"math inline\">\\(P_{n+1}=\\sum_{k=0}^{n}\\dbinom{n}{k}P_kP_{n-k}\\)</span> est un polynôme à coefficients entiers naturels tel que <span class=\"math inline\">\\(\\tan^{(n+1)}=P_{n+1}\\circ f\\)</span>.</p>\n<p><strong>Remarque.</strong> On aurait pu aussi dériver l’égalité <span class=\"math inline\">\\(f^{(n)}=P_n\\circ f\\)</span> pour obtenir <span class=\"math inline\">\\(f^{(n+1)}= f&#39;\\times P_n&#39;\\circ f = (P_1\\times P_n&#39;)\\circ f\\)</span> mais on a déjà dans l’idée une relation de récurrence sur les coefficients du développement de <span class=\"math inline\">\\(\\tan\\)</span> qui n’est pas fournie par cette dernière égalité.</p>\n"
+      }
+    },
+    {
+      "id": "2f27a974-f544-44e5-a643-6dd233635f16",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant la formule de \\textsc{Taylor}-\\textsc{Laplace}, montrer que la série de \\textsc{Taylor} à l'origine de $f$ a un rayon de convergence $R$ supérieur ou égal à $\\frac{\\pi}{2}$.",
+        "html": "<p>En utilisant la formule de <span class=\"smallcaps\">Taylor</span>-<span class=\"smallcaps\">Laplace</span>, montrer que la série de <span class=\"smallcaps\">Taylor</span> à l’origine de <span class=\"math inline\">\\(f\\)</span> a un rayon de convergence <span class=\"math inline\">\\(R\\)</span> supérieur ou égal à <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bee4651d-c989-48bd-b49b-39d64dfe7f60",
+      "type": "reponse",
+      "value": {
+        "latex": "Soient $x\\in\\left[0,\\frac{\\pi}{2}\\right[$ et $n\\in\\Nn$. La formule de \\textsc{Taylor}-\\textsc{Laplace} à l'ordre $n$ en $0$ fournit\n\n\\begin{center}\n$f(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(0)}{k!}x^k+\\int_{0}^{x}\\frac{(x-t)^n}{n!}f^{(n+1)}(t)\\;dt $.\n\\end{center}\n\nLe 1) montre que pour tout réel $t$ de $\\left[0,\\frac{\\pi}{2}\\right[$ et tout entier naturel $k$, $f^{(k)}(t)=P_{k}(\\tan t)\\geqslant 0$.\n\nDonc, d'une part $\\frac{f^{(k)}(0)}{k!}x^k\\geqslant0$ et d'autre part,\n\n\\begin{center}\n$\\sum_{k=0}^{n}\\frac{f^{(k)}(0)}{k!}x^k=f(x)-\\int_{0}^{x}\\frac{(x-t)^n}{n!}f^{(n+1)}(t)\\;dt$.\n\\end{center}\n\nLa suite des sommes partielles de la série de terme général $\\frac{f^{(k)}(0)}{k!}x^k\\geqslant0$ est majorée et donc la série de terme général $\\frac{f^{(k)}(0)}{k!}x^k$ converge.\n\nAinsi, la série de \\textsc{Taylor} de $f$ à l'origine converge pour tout réel $x$ de $\\left[0,\\frac{\\pi}{2}\\right[$. Son rayon de convergence $R$ est donc supérieur ou égal à $\\frac{\\pi}{2}$ (et donc la série de terme général $\\frac{f^{(k)}(0)}{k!}x^k$ converge aussi pour $x\\in\\left]-\\frac{\\pi}{2},0\\right]$). Il n'y a par contre aucune raison pour le moment pour que sa somme soit $f$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(x\\in\\left[0,\\frac{\\pi}{2}\\right[\\)</span> et <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. La formule de <span class=\"smallcaps\">Taylor</span>-<span class=\"smallcaps\">Laplace</span> à l’ordre <span class=\"math inline\">\\(n\\)</span> en <span class=\"math inline\">\\(0\\)</span> fournit</p>\n<p><span class=\"math inline\">\\(f(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(0)}{k!}x^k+\\int_{0}^{x}\\frac{(x-t)^n}{n!}f^{(n+1)}(t)\\;dt\\)</span>.</p>\n<p>Le 1) montre que pour tout réel <span class=\"math inline\">\\(t\\)</span> de <span class=\"math inline\">\\(\\left[0,\\frac{\\pi}{2}\\right[\\)</span> et tout entier naturel <span class=\"math inline\">\\(k\\)</span>, <span class=\"math inline\">\\(f^{(k)}(t)=P_{k}(\\tan t)\\geqslant 0\\)</span>.</p>\n<p>Donc, d’une part <span class=\"math inline\">\\(\\frac{f^{(k)}(0)}{k!}x^k\\geqslant0\\)</span> et d’autre part,</p>\n<p><span class=\"math inline\">\\(\\sum_{k=0}^{n}\\frac{f^{(k)}(0)}{k!}x^k=f(x)-\\int_{0}^{x}\\frac{(x-t)^n}{n!}f^{(n+1)}(t)\\;dt\\)</span>.</p>\n<p>La suite des sommes partielles de la série de terme général <span class=\"math inline\">\\(\\frac{f^{(k)}(0)}{k!}x^k\\geqslant0\\)</span> est majorée et donc la série de terme général <span class=\"math inline\">\\(\\frac{f^{(k)}(0)}{k!}x^k\\)</span> converge.</p>\n<p>Ainsi, la série de <span class=\"smallcaps\">Taylor</span> de <span class=\"math inline\">\\(f\\)</span> à l’origine converge pour tout réel <span class=\"math inline\">\\(x\\)</span> de <span class=\"math inline\">\\(\\left[0,\\frac{\\pi}{2}\\right[\\)</span>. Son rayon de convergence <span class=\"math inline\">\\(R\\)</span> est donc supérieur ou égal à <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> (et donc la série de terme général <span class=\"math inline\">\\(\\frac{f^{(k)}(0)}{k!}x^k\\)</span> converge aussi pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},0\\right]\\)</span>). Il n’y a par contre aucune raison pour le moment pour que sa somme soit <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "befd88cc-a256-4c8d-97bc-5a1877ef8ad3",
+      "type": "question",
+      "value": {
+        "latex": "On note $a_n$ les coefficients du développement précédent et $g$ la somme de la série entière associée à la suite $(a_n)_{n\\in\\Nn}$. Montrer que pour tout entier naturel non nul $n$, $(n+1)a_{n+1}= \\sum_{k=0}^{n}a_ka_{n-k}$. En déduire que pour tout $x$ de $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, $f(x) = g(x)$ et que $R=\\frac{\\pi}{2}$.",
+        "html": "<p>On note <span class=\"math inline\">\\(a_n\\)</span> les coefficients du développement précédent et <span class=\"math inline\">\\(g\\)</span> la somme de la série entière associée à la suite <span class=\"math inline\">\\((a_n)_{n\\in\\Nn}\\)</span>. Montrer que pour tout entier naturel non nul <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\((n+1)a_{n+1}= \\sum_{k=0}^{n}a_ka_{n-k}\\)</span>. En déduire que pour tout <span class=\"math inline\">\\(x\\)</span> de <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, <span class=\"math inline\">\\(f(x) = g(x)\\)</span> et que <span class=\"math inline\">\\(R=\\frac{\\pi}{2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "48bfb7a4-c723-46d3-8836-2fce3da9afcd",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n$ entier naturel donné, posons $a_n =\\frac{f^{(n)}(0)}{n!}$ puis pour $x$ dans $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, posons $g(x) =\\sum_{n=0}^{+\\infty}a_nx_n$.\n\nOn a vu que $\\forall n\\in\\Nn^*$, $P_{n+1}=\\sum_{k=0}^{n}P_kP_{n-k}$. On divise les deux membres de ces égalités par $n!$ et on prend la valeur en $0$ ($=\\tan0$). On obtient\n\n\\begin{center}\n$\\forall n\\in\\Nn^*$, $(n+1)a_{n+1}=a_ka_{n-k}$ et aussi $a_0 = 0$ et $a_1 = 1$.\n\\end{center}\n\nDonc, pour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$,\n\n$$\\begin{align*}\\ensuremath\ng'(x)&=\\sum_{n=0}^{+\\infty}(n+1)a_{n+1}x^n=1+\\sum_{n=1}^{+\\infty}\\left(\\sum_{k=0}^{n}a_ka_{n-k}\\right)x^n =1+\\sum_{n=0}^{+\\infty}\\left(\\sum_{k=0}^{n}a_ka_{n-k}\\right)x^n=1 +\\left(\\sum_{n=0}^{+\\infty}a_nx^n\\right)^2\\\\\n &= 1 + g^2(x).\n\\end{align*}$$\n\nDe plus, $g(0) = a_0 = 0$.\n\nPour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, posons alors $h(x) =\\Arctan(g(x))$. La fonction $h$ est dérivable sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$ et pour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$\n\n\\begin{center}\n$h'(x)=\\frac{g'(x)}{1+g^2(x)}= 1$ puis $h(x) =h(0)+(x-0) = x$.\n\\end{center}\n\nAinsi, pour tout $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, $g(x) =\\tan x = f(x)$. Ceci montre déjà que $f$ est développable en série entière sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$. Mais quand $x$ tend vers $\\frac{\\pi}{2}$  par valeurs inférieures, $g(x) = f(x)$ tend vers $+\\infty$ et donc $R\\leqslant\\frac{\\pi}{2}$ puis $R=\\frac{\\pi}{2}$.\n\nEn résumé, la fonction tangente est développable en série entière sur $\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$ et pour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, $\\tan x =\\sum_{n=0}^{+\\infty}a_nx^n$ où\n$a_0 = 0$, $a_1 = 1$ et $\\forall n\\in\\Nn^*$, $(n+1)a_{n+1}=\\sum_{k=0}^{n}a_ka_{n-k}$. De plus, $\\forall n\\in\\Nn$, $a_{2n}= 0$ puisque la fonction tangente est impaire.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné, posons <span class=\"math inline\">\\(a_n =\\frac{f^{(n)}(0)}{n!}\\)</span> puis pour <span class=\"math inline\">\\(x\\)</span> dans <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, posons <span class=\"math inline\">\\(g(x) =\\sum_{n=0}^{+\\infty}a_nx_n\\)</span>.</p>\n<p>On a vu que <span class=\"math inline\">\\(\\forall n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(P_{n+1}=\\sum_{k=0}^{n}P_kP_{n-k}\\)</span>. On divise les deux membres de ces égalités par <span class=\"math inline\">\\(n!\\)</span> et on prend la valeur en <span class=\"math inline\">\\(0\\)</span> (<span class=\"math inline\">\\(=\\tan0\\)</span>). On obtient</p>\n<p><span class=\"math inline\">\\(\\forall n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\((n+1)a_{n+1}=a_ka_{n-k}\\)</span> et aussi <span class=\"math inline\">\\(a_0 = 0\\)</span> et <span class=\"math inline\">\\(a_1 = 1\\)</span>.</p>\n<p>Donc, pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\ng&#39;(x)&amp;=\\sum_{n=0}^{+\\infty}(n+1)a_{n+1}x^n=1+\\sum_{n=1}^{+\\infty}\\left(\\sum_{k=0}^{n}a_ka_{n-k}\\right)x^n =1+\\sum_{n=0}^{+\\infty}\\left(\\sum_{k=0}^{n}a_ka_{n-k}\\right)x^n=1 +\\left(\\sum_{n=0}^{+\\infty}a_nx^n\\right)^2\\\\\n &amp;= 1 + g^2(x).\n\\end{align*}\\]</span></p>\n<p>De plus, <span class=\"math inline\">\\(g(0) = a_0 = 0\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, posons alors <span class=\"math inline\">\\(h(x) =\\Arctan(g(x))\\)</span>. La fonction <span class=\"math inline\">\\(h\\)</span> est dérivable sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span> et pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span></p>\n<p><span class=\"math inline\">\\(h&#39;(x)=\\frac{g&#39;(x)}{1+g^2(x)}= 1\\)</span> puis <span class=\"math inline\">\\(h(x) =h(0)+(x-0) = x\\)</span>.</p>\n<p>Ainsi, pour tout <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, <span class=\"math inline\">\\(g(x) =\\tan x = f(x)\\)</span>. Ceci montre déjà que <span class=\"math inline\">\\(f\\)</span> est développable en série entière sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>. Mais quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> par valeurs inférieures, <span class=\"math inline\">\\(g(x) = f(x)\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> et donc <span class=\"math inline\">\\(R\\leqslant\\frac{\\pi}{2}\\)</span> puis <span class=\"math inline\">\\(R=\\frac{\\pi}{2}\\)</span>.</p>\n<p>En résumé, la fonction tangente est développable en série entière sur <span class=\"math inline\">\\(\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span> et pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>, <span class=\"math inline\">\\(\\tan x =\\sum_{n=0}^{+\\infty}a_nx^n\\)</span> où <span class=\"math inline\">\\(a_0 = 0\\)</span>, <span class=\"math inline\">\\(a_1 = 1\\)</span> et <span class=\"math inline\">\\(\\forall n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\((n+1)a_{n+1}=\\sum_{k=0}^{n}a_ka_{n-k}\\)</span>. De plus, <span class=\"math inline\">\\(\\forall n\\in\\Nn\\)</span>, <span class=\"math inline\">\\(a_{2n}= 0\\)</span> puisque la fonction tangente est impaire.</p>\n"
+      }
+    },
+    {
+      "id": "4bec6e51-aae8-4dbc-9e70-a0633489ff15",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $a_0$, $a_1$, $a_2$,..., $a_7$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(a_0\\)</span>, <span class=\"math inline\">\\(a_1\\)</span>, <span class=\"math inline\">\\(a_2\\)</span>,..., <span class=\"math inline\">\\(a_7\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c70d8028-54e9-45ba-bc7f-9b93b4db97db",
+      "type": "reponse",
+      "value": {
+        "latex": "$a_0 = a_2 = a_4 = a_6 = 0$ puis $a_1 = 1$.\n\n$3a_3 = a_0a_2 + a_1^2 + a_2a_0 = 1$ et  donc $a_3 =\\frac{1}{3}$.\n\n$5a_5 =2a_1a_3=\\frac{2}{3}$ et donc $a_5 =\\frac{2}{15}$.\n\n$7a_7 =2a_1a_5 + a_3^2=\\frac{4}{15}+\\frac{1}{9}=\\frac{51}{135}=\\frac{17}{45}$ et $a_7=\\frac{17}{315}$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$, $\\tan x = x +\\frac{x^3}{2}+\\frac{2x^5}{15}+\\frac{17x^7}{315}+ ...$\n}\n\\end{center}",
+        "html": "<p><span class=\"math inline\">\\(a_0 = a_2 = a_4 = a_6 = 0\\)</span> puis <span class=\"math inline\">\\(a_1 = 1\\)</span>.</p>\n<p><span class=\"math inline\">\\(3a_3 = a_0a_2 + a_1^2 + a_2a_0 = 1\\)</span> et donc <span class=\"math inline\">\\(a_3 =\\frac{1}{3}\\)</span>.</p>\n<p><span class=\"math inline\">\\(5a_5 =2a_1a_3=\\frac{2}{3}\\)</span> et donc <span class=\"math inline\">\\(a_5 =\\frac{2}{15}\\)</span>.</p>\n<p><span class=\"math inline\">\\(7a_7 =2a_1a_5 + a_3^2=\\frac{4}{15}+\\frac{1}{9}=\\frac{51}{135}=\\frac{17}{45}\\)</span> et <span class=\"math inline\">\\(a_7=\\frac{17}{315}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bc8a81e1-c588-4beb-b1ba-e8ec87b4929e",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que la fonction $x\\mapsto\\tanh x$ est développable en série entière. Préciser le rayon et la valeur des coefficients en fonction des $a_n$.",
+        "html": "<p>Vérifier que la fonction <span class=\"math inline\">\\(x\\mapsto\\tanh x\\)</span> est développable en série entière. Préciser le rayon et la valeur des coefficients en fonction des <span class=\"math inline\">\\(a_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "38e9e411-db19-4edd-bdc0-3c5186f3e70b",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour tout  réel $x$, $\\tanh(x) =\\frac{1}{x}\\tan(ix)$ et donc pour $x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[$,\n\n\\begin{center}\n$\\tanh(x) =\\frac{1}{i}\\sum_{n=0}^{+\\infty}a_{2n+1}(ix)^{2n+1}=\\sum_{n=0}^{+\\infty}(-1)^na_{2n+1}x^{2n+1}$.\n\\end{center}\n\nCette série entière a aussi pour rayon de convergence $\\frac{\\pi}{2}$.",
+        "html": "<p>Pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\(\\tanh(x) =\\frac{1}{x}\\tan(ix)\\)</span> et donc pour <span class=\"math inline\">\\(x\\in\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[\\)</span>,</p>\n<p><span class=\"math inline\">\\(\\tanh(x) =\\frac{1}{i}\\sum_{n=0}^{+\\infty}a_{2n+1}(ix)^{2n+1}=\\sum_{n=0}^{+\\infty}(-1)^na_{2n+1}x^{2n+1}\\)</span>.</p>\n<p>Cette série entière a aussi pour rayon de convergence <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

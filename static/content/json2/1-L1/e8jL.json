@@ -1,0 +1,91 @@
+{
+  "uuid": "e8jL",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "7413",
+    "auteur": "mourougane",
+    "createdAt": "2021-08-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Inverse, méthode de Gauss",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:02.030Z"
+  },
+  "contenu": [
+    {
+      "id": "38f3053a-290f-4395-926c-2739f29d1b31",
+      "type": "description",
+      "value": {
+        "latex": "Pour un entier $n\\geq 2$ et $x$ dans $\\Rr$, considérons la matrice d'ordre $n$:\r\n\\[\r\nD_n =\r\n\\left ( {\\begin{array}{cccc}\r\n x & 1 & \\ldots & 1 \\\\\r\n 1 & x & \\ddots & \\vdots \\\\\r\n \\vdots & \\ddots & \\ddots & 1 \\\\\r\n 1 & \\ldots & 1 & x\r\n \\end{array} } \\right ).\r\n\\]",
+        "html": "<p>Pour un entier <span class=\"math inline\">\\(n\\geq 2\\)</span> et <span class=\"math inline\">\\(x\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span>, considérons la matrice d’ordre <span class=\"math inline\">\\(n\\)</span>: <span class=\"math display\">\\[D_n =\n\\left ( {\\begin{array}{cccc}\n x &amp; 1 &amp; \\ldots &amp; 1 \\\\\n 1 &amp; x &amp; \\ddots &amp; \\vdots \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp; 1 \\\\\n 1 &amp; \\ldots &amp; 1 &amp; x\n \\end{array} } \\right ).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "aa630cad-49b0-4e7e-8381-9ddcee0db905",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $det(D_2)$ et $det(D_3)$.",
+        "html": "<p>Calculer <span class=\"math inline\">\\(det(D_2)\\)</span> et <span class=\"math inline\">\\(det(D_3)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4dc2d29d-3fbb-4857-ae4b-259ebdf2b86b",
+      "type": "reponse",
+      "value": {
+        "latex": "$det(D_2)=x^2-1=(x+1)(x-1)$, $det(D_3)=x^3-3x+2=(x+2)(x-1)^2$",
+        "html": "<p><span class=\"math inline\">\\(det(D_2)=x^2-1=(x+1)(x-1)\\)</span>, <span class=\"math inline\">\\(det(D_3)=x^3-3x+2=(x+2)(x-1)^2\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "b306d883-bf9c-4f03-93a4-23a04a784328",
+      "type": "question",
+      "value": {
+        "latex": "Montrer d'abord que\r\n \\[\r\n det(D_n)= \\left | {\\begin{array}{ccccc}\r\n x+n-1 & x+n-1 & \\ldots & \\ldots & x+n-1 \\\\\r\n 1 & x & 1& \\ldots & 1 \\\\\r\n \\vdots & \\ddots & \\ddots &\\ddots& \\vdots \\\\\r\n \\vdots &\\ldots & \\ddots & \\ddots & 1 \\\\\r\n 1 & \\ldots & \\ldots & 1 & x\r\n \\end{array} } \\right |,\r\n\\]\r\n \r\n et ensuite\r\n \r\n \\[\r\n det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\r\n 1 & 1 & \\ldots & 1 \\\\\r\n 1 & x & \\ddots & \\vdots \\\\\r\n \\vdots & \\ddots & \\ddots & 1 \\\\\r\n 1 & \\ldots & 1 & x\r\n \\end{array} } \\right |.\r\n\\]",
+        "html": "<p>Montrer d’abord que <span class=\"math display\">\\[det(D_n)= \\left | {\\begin{array}{ccccc}\n x+n-1 &amp; x+n-1 &amp; \\ldots &amp; \\ldots &amp; x+n-1 \\\\\n 1 &amp; x &amp; 1&amp; \\ldots &amp; 1 \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp;\\ddots&amp; \\vdots \\\\\n \\vdots &amp;\\ldots &amp; \\ddots &amp; \\ddots &amp; 1 \\\\\n 1 &amp; \\ldots &amp; \\ldots &amp; 1 &amp; x\n \\end{array} } \\right |,\\]</span></p>\n<p>et ensuite</p>\n<p><span class=\"math display\">\\[det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\n 1 &amp; 1 &amp; \\ldots &amp; 1 \\\\\n 1 &amp; x &amp; \\ddots &amp; \\vdots \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp; 1 \\\\\n 1 &amp; \\ldots &amp; 1 &amp; x\n \\end{array} } \\right |.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "871e8b4f-bfad-42f9-b961-be661d1053a8",
+      "type": "reponse",
+      "value": {
+        "latex": "Sommer toutes les lignes à la première ligne, on a :\r\n\r\n\\[\r\n det(D_n)= \\left | {\\begin{array}{ccccc}\r\n x+n-1 & x+n-1 & \\ldots & \\ldots & x+n-1 \\\\\r\n 1 & x & 1& \\ldots & 1 \\\\\r\n \\vdots & \\ddots & \\ddots &\\ddots& \\vdots \\\\\r\n \\vdots &\\ldots & \\ddots & \\ddots & 1 \\\\\r\n 1 & \\ldots & \\ldots & 1 & x\r\n \\end{array} } \\right |,\r\n\\]\r\net comme tous les éléments sur la première ligne sont $x+n-1$, donc \r\n\\[\r\n det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\r\n 1 & 1 & \\ldots & 1 \\\\\r\n 1 & x & \\ddots & \\vdots \\\\\r\n \\vdots & \\ddots & \\ddots & 1 \\\\\r\n 1 & \\ldots & 1 & x\r\n \\end{array} } \\right |\r\n\\]",
+        "html": "<p>Sommer toutes les lignes à la première ligne, on a :</p>\n<p><span class=\"math display\">\\[det(D_n)= \\left | {\\begin{array}{ccccc}\n x+n-1 &amp; x+n-1 &amp; \\ldots &amp; \\ldots &amp; x+n-1 \\\\\n 1 &amp; x &amp; 1&amp; \\ldots &amp; 1 \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp;\\ddots&amp; \\vdots \\\\\n \\vdots &amp;\\ldots &amp; \\ddots &amp; \\ddots &amp; 1 \\\\\n 1 &amp; \\ldots &amp; \\ldots &amp; 1 &amp; x\n \\end{array} } \\right |,\\]</span> et comme tous les éléments sur la première ligne sont <span class=\"math inline\">\\(x+n-1\\)</span>, donc <span class=\"math display\">\\[det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\n 1 &amp; 1 &amp; \\ldots &amp; 1 \\\\\n 1 &amp; x &amp; \\ddots &amp; \\vdots \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp; 1 \\\\\n 1 &amp; \\ldots &amp; 1 &amp; x\n \\end{array} } \\right |\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "22a0df37-ade2-4c6a-b53c-3ceff807487a",
+      "type": "question",
+      "value": {
+        "latex": "En utilisant la méthode du pivot de Gauss, calculer $det(D_n)$ pour tout $n$.",
+        "html": "<p>En utilisant la méthode du pivot de Gauss, calculer <span class=\"math inline\">\\(det(D_n)\\)</span> pour tout <span class=\"math inline\">\\(n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7d6028a6-ad3f-45c5-a448-ffdbd833210c",
+      "type": "reponse",
+      "value": {
+        "latex": "Par la méthode du pivot de Gauss, $L_2-L_1,L_3-L_1 \\ldots, L_n-L_1,$, on obtient un détermiant de la forme triangulaire \r\n\\[\r\n det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\r\n 1 & 1 & \\ldots & 1 \\\\\r\n 0 & x-1 & \\ddots & \\vdots \\\\\r\n \\vdots & \\ddots & \\ddots & 0 \\\\\r\n 0 & \\ldots & 0 & x-1\r\n \\end{array} } \\right |.\r\n\\]\r\nDonc $det(D_n)= (x+n-1)(x-1)^{n-1}$.",
+        "html": "<p>Par la méthode du pivot de Gauss, <span class=\"math inline\">\\(L_2-L_1,L_3-L_1 \\ldots, L_n-L_1,\\)</span>, on obtient un détermiant de la forme triangulaire <span class=\"math display\">\\[det(D_n)= (x+n-1)\\left | {\\begin{array}{cccc}\n 1 &amp; 1 &amp; \\ldots &amp; 1 \\\\\n 0 &amp; x-1 &amp; \\ddots &amp; \\vdots \\\\\n \\vdots &amp; \\ddots &amp; \\ddots &amp; 0 \\\\\n 0 &amp; \\ldots &amp; 0 &amp; x-1\n \\end{array} } \\right |.\\]</span> Donc <span class=\"math inline\">\\(det(D_n)= (x+n-1)(x-1)^{n-1}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7ccaf3b0-0258-4353-ab24-148f6c681b49",
+      "type": "question",
+      "value": {
+        "latex": "Pour chaque $n$, pour quelles valeurs de $x$ la matrice $D_n$ est-elle inversible?",
+        "html": "<p>Pour chaque <span class=\"math inline\">\\(n\\)</span>, pour quelles valeurs de <span class=\"math inline\">\\(x\\)</span> la matrice <span class=\"math inline\">\\(D_n\\)</span> est-elle inversible?</p>\n"
+      }
+    },
+    {
+      "id": "11a5929a-40af-4e01-9bee-b69755edc547",
+      "type": "reponse",
+      "value": {
+        "latex": "$D_n$ est inversible si et seulement si $det(D_n) \\neq 0$, donc $x \\neq 1-n$ et $x \\neq 1$.",
+        "html": "<p><span class=\"math inline\">\\(D_n\\)</span> est inversible si et seulement si <span class=\"math inline\">\\(det(D_n) \\neq 0\\)</span>, donc <span class=\"math inline\">\\(x \\neq 1-n\\)</span> et <span class=\"math inline\">\\(x \\neq 1\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

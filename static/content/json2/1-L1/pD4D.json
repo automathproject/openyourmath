@@ -1,0 +1,75 @@
+{
+  "uuid": "pD4D",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5193",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire",
+    "sousChapitre": "Morphismes particuliers",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:21.210Z"
+  },
+  "contenu": [
+    {
+      "id": "4987bfc9-1d6e-4bcf-b116-1f12c799d9f4",
+      "type": "description",
+      "value": {
+        "latex": "Soient $\\Kk$ un sous-corps de $\\Cc$ et $E$ un $\\Kk$-espace vectoriel de dimension finie notée $n$. Soit $u$ un endomorphisme de $E$.\nOn dit que $u$ est nilpotent si et seulement si $\\exists k\\in\\Nn^*/\\;u^k=0$ et on appelle alors indice de\nnilpotence de $u$ le plus petit de ces entiers $k$ (par exemple, le seul endomorphisme $u$, nilpotent d'indice $1$ est\n$0$).",
+        "html": "<p>Soient <span class=\"math inline\">\\(\\Kk\\)</span> un sous-corps de <span class=\"math inline\">\\(\\Cc\\)</span> et <span class=\"math inline\">\\(E\\)</span> un <span class=\"math inline\">\\(\\Kk\\)</span>-espace vectoriel de dimension finie notée <span class=\"math inline\">\\(n\\)</span>. Soit <span class=\"math inline\">\\(u\\)</span> un endomorphisme de <span class=\"math inline\">\\(E\\)</span>. On dit que <span class=\"math inline\">\\(u\\)</span> est nilpotent si et seulement si <span class=\"math inline\">\\(\\exists k\\in\\Nn^*/\\;u^k=0\\)</span> et on appelle alors indice de nilpotence de <span class=\"math inline\">\\(u\\)</span> le plus petit de ces entiers <span class=\"math inline\">\\(k\\)</span> (par exemple, le seul endomorphisme <span class=\"math inline\">\\(u\\)</span>, nilpotent d’indice <span class=\"math inline\">\\(1\\)</span> est <span class=\"math inline\">\\(0\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "5dd9ae5c-715e-4d03-833b-dfe4efbc9d09",
+      "type": "question",
+      "value": {
+        "latex": "Soit $u$ un endomorphisme nilpotent d'indice $p$. Montrer qu'il existe un vecteur $x$ de $E$ tel que la\nfamille\n\n$(x,\\;u(x),...,\\;u^{p-1}(x))$ soit libre.",
+        "html": "<p>Soit <span class=\"math inline\">\\(u\\)</span> un endomorphisme nilpotent d’indice <span class=\"math inline\">\\(p\\)</span>. Montrer qu’il existe un vecteur <span class=\"math inline\">\\(x\\)</span> de <span class=\"math inline\">\\(E\\)</span> tel que la famille</p>\n<p><span class=\"math inline\">\\((x,\\;u(x),...,\\;u^{p-1}(x))\\)</span> soit libre.</p>\n"
+      }
+    },
+    {
+      "id": "afd73620-4171-48cf-bc9b-799277ed591d",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $p(\\in\\Nn^*)$ l'indice de nilpotence de $u$.\n\nPar définition, $u^{p-1}\\neq0$ et plus généralement, pour $1\\leq k\\leq p-1$, $u^k\\neq0$ car si $u^k= 0$ alors $u^{p-1}=u^k\\circ u^{p-1-k}=0$ ce qui n'est pas.\n\nPuisque $u^{p-1}\\neq0$, il existe au moins un vecteur $x$ non nul tel que $u^{p-1}(x)\\neq0$.\n\nMontrons que la famille $(u^k(x))_{0\\leq k\\leq p-1}$ est libre.\n\nSoit $(\\lambda_k)_{0\\leq k\\leq p-1}\\in\\Kk^p$ tel que $\\sum_{k=0}^{p-1}\\lambda_ku^k(x)=0$. Supposons qu'au moins un des coefficients $\\lambda_k$ ne soit pas nul. Soit $i=\\mbox{Min }\\{k\\in\\{0,...,p-1\\}/\\;\\lambda_k\\neq0\\}$.\n\n$$\\begin{align*}\n\\sum_{k=0}^{p-1}\\lambda_ku^k(x)=0&\\Rightarrow\\sum_{k=i}^{p-1}\\lambda_ku^k(x)=0\n\\Rightarrow u^{p-1-i}(\\sum_{k=i}^{p-1}\\lambda_ku^k(x))=0\\Rightarrow\\sum_{k=i}^{p-1}\\lambda_ku^{p-1-i+k}(x)=0\\\\\n &\\Rightarrow\\lambda_iu^{p-1}(x)=0\\quad(\\mbox{car pour}\\;k\\geq i+1,\\;p-1-i+k\\geq p\\;\\mbox{et donc}\\;u^{p-1-i+k}=0)\\\\\n &\\Rightarrow\\lambda_i=0\\quad(\\mbox{car}\\;u^{p-1}(x)\\neq0)\n\\end{align*}$$ \n\nce qui contredit la définition de $i$.\n\nDonc tous les coefficients $\\lambda_k$ sont nuls et on a montré que la famille $(u^k(x))_{0\\leq k\\leq p-1}$ est libre.",
+        "html": "<p>Soit <span class=\"math inline\">\\(p(\\in\\Nn^*)\\)</span> l’indice de nilpotence de <span class=\"math inline\">\\(u\\)</span>.</p>\n<p>Par définition, <span class=\"math inline\">\\(u^{p-1}\\neq0\\)</span> et plus généralement, pour <span class=\"math inline\">\\(1\\leq k\\leq p-1\\)</span>, <span class=\"math inline\">\\(u^k\\neq0\\)</span> car si <span class=\"math inline\">\\(u^k= 0\\)</span> alors <span class=\"math inline\">\\(u^{p-1}=u^k\\circ u^{p-1-k}=0\\)</span> ce qui n’est pas.</p>\n<p>Puisque <span class=\"math inline\">\\(u^{p-1}\\neq0\\)</span>, il existe au moins un vecteur <span class=\"math inline\">\\(x\\)</span> non nul tel que <span class=\"math inline\">\\(u^{p-1}(x)\\neq0\\)</span>.</p>\n<p>Montrons que la famille <span class=\"math inline\">\\((u^k(x))_{0\\leq k\\leq p-1}\\)</span> est libre.</p>\n<p>Soit <span class=\"math inline\">\\((\\lambda_k)_{0\\leq k\\leq p-1}\\in\\Kk^p\\)</span> tel que <span class=\"math inline\">\\(\\sum_{k=0}^{p-1}\\lambda_ku^k(x)=0\\)</span>. Supposons qu’au moins un des coefficients <span class=\"math inline\">\\(\\lambda_k\\)</span> ne soit pas nul. Soit <span class=\"math inline\">\\(i=\\mbox{Min }\\{k\\in\\{0,...,p-1\\}/\\;\\lambda_k\\neq0\\}\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\sum_{k=0}^{p-1}\\lambda_ku^k(x)=0&amp;\\Rightarrow\\sum_{k=i}^{p-1}\\lambda_ku^k(x)=0\n\\Rightarrow u^{p-1-i}(\\sum_{k=i}^{p-1}\\lambda_ku^k(x))=0\\Rightarrow\\sum_{k=i}^{p-1}\\lambda_ku^{p-1-i+k}(x)=0\\\\\n &amp;\\Rightarrow\\lambda_iu^{p-1}(x)=0\\quad(\\mbox{car pour}\\;k\\geq i+1,\\;p-1-i+k\\geq p\\;\\mbox{et donc}\\;u^{p-1-i+k}=0)\\\\\n &amp;\\Rightarrow\\lambda_i=0\\quad(\\mbox{car}\\;u^{p-1}(x)\\neq0)\n\\end{align*}\\]</span></p>\n<p>ce qui contredit la définition de <span class=\"math inline\">\\(i\\)</span>.</p>\n<p>Donc tous les coefficients <span class=\"math inline\">\\(\\lambda_k\\)</span> sont nuls et on a montré que la famille <span class=\"math inline\">\\((u^k(x))_{0\\leq k\\leq p-1}\\)</span> est libre.</p>\n"
+      }
+    },
+    {
+      "id": "06059f5b-1eaf-4404-bd83-29ad296a5be2",
+      "type": "question",
+      "value": {
+        "latex": "Soit $u$ un endomorphisme nilpotent. Montrer que $u^n=0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(u\\)</span> un endomorphisme nilpotent. Montrer que <span class=\"math inline\">\\(u^n=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "99e52b80-389d-492c-ad35-d16671392dbb",
+      "type": "reponse",
+      "value": {
+        "latex": "Le cardinal d'une famille libre est inférieur ou égal à la dimension de l'espace et donc $p\\leq n$. \nPar suite, $u^n=u^p\\circ u^{n-p}=0$.",
+        "html": "<p>Le cardinal d’une famille libre est inférieur ou égal à la dimension de l’espace et donc <span class=\"math inline\">\\(p\\leq n\\)</span>. Par suite, <span class=\"math inline\">\\(u^n=u^p\\circ u^{n-p}=0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dfc1ec75-7cf7-4fc9-b038-ac114b9ec5f4",
+      "type": "question",
+      "value": {
+        "latex": "On suppose dans cette question que $u$ est nilpotent d'indice $n$. Déterminer $\\mbox{rg}u$.",
+        "html": "<p>On suppose dans cette question que <span class=\"math inline\">\\(u\\)</span> est nilpotent d’indice <span class=\"math inline\">\\(n\\)</span>. Déterminer <span class=\"math inline\">\\(\\mbox{rg}u\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4a01919e-73b7-473f-82c8-a2775bdbf1c0",
+      "type": "reponse",
+      "value": {
+        "latex": "On applique l'exerice \\ref{exo:suprou10}.\n\nPuisque $u^{n-1}\\neq0$, on a $N_{n-1}\\underset{\\neq}{\\subset}N_n$.\nPar suite (d'après l'exercice \\ref{exo:suprou12}, 2), c)), les inclusions $N_0\\subset N_1\\subset...\\subset N_n=E$ sont toutes strictes et donc \n\n$$0<\\mbox{dim }N_1<\\mbox{dim }N_2 ...<\\mbox{dim }N_n=n.$$\n\nPour $k\\in\\{0,...,n\\}$, notons $d_k$ est la dimension de $N_k$. Pour $k\\in\\{0,...,n-1\\}$, on a $d_{k+1}\\geq d_k$ et une récurrence facile montre que, pour $k\\in\\{0,...,n\\}$, on a $d_k\\geq k$.\n\nMais si de plus, pour un certain indice $i$ élément de $\\{1,...,n-1\\}$, on a $d_i=\\mbox{dim }N_i>i$, alors, par une récurrence facile, pour $i\\leq k\\leq n$, on a $d_k>k$ et en particulier $d_n>n$ ce qui n'est pas. Donc,\n\n$$\\forall k\\in\\{0,...,n\\},\\;\\mbox{dim }(N_k)=k,$$\n\nou encore, d'après le théorème du rang,\n\n$\\forall k\\in\\{0,...,n\\},\\;\\mbox{rg }(u^k)=n-k$, et en particulier $\\mbox{rg }(u)=n-1$.",
+        "html": "<p>On applique l’exerice <a href=\"#exo:suprou10\" data-reference-type=\"ref\" data-reference=\"exo:suprou10\">[exo:suprou10]</a>.</p>\n<p>Puisque <span class=\"math inline\">\\(u^{n-1}\\neq0\\)</span>, on a <span class=\"math inline\">\\(N_{n-1}\\underset{\\neq}{\\subset}N_n\\)</span>. Par suite (d’après l’exercice <a href=\"#exo:suprou12\" data-reference-type=\"ref\" data-reference=\"exo:suprou12\">[exo:suprou12]</a>, 2), c)), les inclusions <span class=\"math inline\">\\(N_0\\subset N_1\\subset...\\subset N_n=E\\)</span> sont toutes strictes et donc</p>\n<p><span class=\"math display\">\\[0&lt;\\mbox{dim }N_1&lt;\\mbox{dim }N_2 ...&lt;\\mbox{dim }N_n=n.\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(k\\in\\{0,...,n\\}\\)</span>, notons <span class=\"math inline\">\\(d_k\\)</span> est la dimension de <span class=\"math inline\">\\(N_k\\)</span>. Pour <span class=\"math inline\">\\(k\\in\\{0,...,n-1\\}\\)</span>, on a <span class=\"math inline\">\\(d_{k+1}\\geq d_k\\)</span> et une récurrence facile montre que, pour <span class=\"math inline\">\\(k\\in\\{0,...,n\\}\\)</span>, on a <span class=\"math inline\">\\(d_k\\geq k\\)</span>.</p>\n<p>Mais si de plus, pour un certain indice <span class=\"math inline\">\\(i\\)</span> élément de <span class=\"math inline\">\\(\\{1,...,n-1\\}\\)</span>, on a <span class=\"math inline\">\\(d_i=\\mbox{dim }N_i&gt;i\\)</span>, alors, par une récurrence facile, pour <span class=\"math inline\">\\(i\\leq k\\leq n\\)</span>, on a <span class=\"math inline\">\\(d_k&gt;k\\)</span> et en particulier <span class=\"math inline\">\\(d_n&gt;n\\)</span> ce qui n’est pas. Donc,</p>\n<p><span class=\"math display\">\\[\\forall k\\in\\{0,...,n\\},\\;\\mbox{dim }(N_k)=k,\\]</span></p>\n<p>ou encore, d’après le théorème du rang,</p>\n<p><span class=\"math inline\">\\(\\forall k\\in\\{0,...,n\\},\\;\\mbox{rg }(u^k)=n-k\\)</span>, et en particulier <span class=\"math inline\">\\(\\mbox{rg }(u)=n-1\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

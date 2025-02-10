@@ -1,0 +1,91 @@
+{
+  "uuid": "FF1D",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4496",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série numérique",
+    "sousChapitre": "Familles sommables",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:39.896Z"
+  },
+  "contenu": [
+    {
+      "id": "cd86561d-bafd-4833-ab0c-9df65452664f",
+      "type": "description",
+      "value": {
+        "latex": "Soit $S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1+t^n}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1+t^n}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7831c0a9-94b1-442f-97ac-71d51a0912c0",
+      "type": "question",
+      "value": {
+        "latex": "Pour quelles valeurs de~$t$ $S(t)$ a-t-elle un sens~?",
+        "html": "<p>Pour quelles valeurs de <span class=\"math inline\">\\(t\\)</span> <span class=\"math inline\">\\(S(t)\\)</span> a-t-elle un sens ?</p>\n"
+      }
+    },
+    {
+      "id": "8ccd5f52-6fd6-4e78-886f-e93a3b53b1bc",
+      "type": "reponse",
+      "value": {
+        "latex": "$|t|<1$.",
+        "html": "<p><span class=\"math inline\">\\(|t|&lt;1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "84e73fbf-a8c0-4438-8659-4643f32eeb1c",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $S(t) = \\sum_{k=1}^\\infty (-1)^{k-1}\\frac{t^k}{1-t^k}$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(S(t) = \\sum_{k=1}^\\infty (-1)^{k-1}\\frac{t^k}{1-t^k}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2f3c497a-c4ea-4d59-a407-53621919cf7f",
+      "type": "reponse",
+      "value": {
+        "latex": "$S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1+t^n}\n                   = \\sum_{n=1}^\\infty \\sum_{k=1}^\\infty (-1)^{k-1}t^{kn}$\n    et on peut échanger les deux sommes car il y a convergence absolue.",
+        "html": "<p><span class=\"math inline\">\\(S(t) = \\sum_{n=1}^\\infty \\frac{t^n}{1+t^n}\n                   = \\sum_{n=1}^\\infty \\sum_{k=1}^\\infty (-1)^{k-1}t^{kn}\\)</span> et on peut échanger les deux sommes car il y a convergence absolue.</p>\n"
+      }
+    },
+    {
+      "id": "364afe52-881c-465c-8aae-89dc1dff110c",
+      "type": "question",
+      "value": {
+        "latex": "Soit $F_m(t) = \\sum_{k=1}^m (-1)^{k-1}\\frac{t^k(1-t)}{1-t^k}$.\n    Montrer que $(F_m(t))$ converge uniformément vers $(1-t)S(t)$ sur $[0,1]$.\n    En déduire la limite en~$1$ de $(1-t)S(t)$.\n    On rappelle que $\\ln2 = \\sum_{m=1}^\\infty \\frac{(-1)^{m-1}}m$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(F_m(t) = \\sum_{k=1}^m (-1)^{k-1}\\frac{t^k(1-t)}{1-t^k}\\)</span>. Montrer que <span class=\"math inline\">\\((F_m(t))\\)</span> converge uniformément vers <span class=\"math inline\">\\((1-t)S(t)\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>. En déduire la limite en <span class=\"math inline\">\\(1\\)</span> de <span class=\"math inline\">\\((1-t)S(t)\\)</span>. On rappelle que <span class=\"math inline\">\\(\\ln2 = \\sum_{m=1}^\\infty \\frac{(-1)^{m-1}}m\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "51c6efb1-ed7b-4a90-9840-af6f9e433e37",
+      "type": "reponse",
+      "value": {
+        "latex": "On suppose $t\\in{]0,1[}$.\n    $\\frac{d}{d x}\\Bigl(\\frac{t^x}{1-t^x}\\Bigr) = \\frac{t^x\\ln t}{(1-t^x)^2} < 0$\n    donc le critère des séries alternées s'applique,\n    le reste est majoré en valeur absolue par le premier terme du reste.\n    $0\\le\\frac{t^k(1-t)}{1-t^k} = \\frac t{1+\\frac1t+\\dots+\\frac1{t^{k-1}}}\\le\\frac1k$\n    donc le terme général converge uniformément vers~$0$.\n    \n    Par interversion de limite (puisqu'il y a convergence uniforme) on\n    obtient $\\lim_{t\\to1^-}(1-t)S(t) = \\sum_{k=1}^\\infty\\frac{(-1)^{k-1}}k=\\ln 2$.",
+        "html": "<p>On suppose <span class=\"math inline\">\\(t\\in{]0,1[}\\)</span>. <span class=\"math inline\">\\(\\frac{d}{d x}\\Bigl(\\frac{t^x}{1-t^x}\\Bigr) = \\frac{t^x\\ln t}{(1-t^x)^2} &lt; 0\\)</span> donc le critère des séries alternées s’applique, le reste est majoré en valeur absolue par le premier terme du reste. <span class=\"math inline\">\\(0\\le\\frac{t^k(1-t)}{1-t^k} = \\frac t{1+\\frac1t+\\dots+\\frac1{t^{k-1}}}\\le\\frac1k\\)</span> donc le terme général converge uniformément vers <span class=\"math inline\">\\(0\\)</span>.</p>\n<p>Par interversion de limite (puisqu’il y a convergence uniforme) on obtient <span class=\"math inline\">\\(\\lim_{t\\to1^-}(1-t)S(t) = \\sum_{k=1}^\\infty\\frac{(-1)^{k-1}}k=\\ln 2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "bf51c78d-a5c8-4bdc-adde-fa33b4282481",
+      "type": "question",
+      "value": {
+        "latex": "Calculer le développement en série entière de~$S(t)$.\n    Donner une interprétation arithmétique des coefficients de ce développement\n    et préciser leur signe en fonction de~$n$.",
+        "html": "<p>Calculer le développement en série entière de <span class=\"math inline\">\\(S(t)\\)</span>. Donner une interprétation arithmétique des coefficients de ce développement et préciser leur signe en fonction de <span class=\"math inline\">\\(n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "32f04867-5d6d-40fc-bec4-12ce5148dbb1",
+      "type": "reponse",
+      "value": {
+        "latex": "$S(t) = \\sum_{n=1}^\\infty \\sum_{k=1}^\\infty (-1)^{k-1}t^{kn}\n                   = \\sum_{p=1}^\\infty \\sum_{kn=p} (-1)^{k-1}t^p\n                   = \\sum_{p=1}^\\infty \\sigma(p)t^p$\n\n    avec $\\sigma(p) = (\\text{nombre de diviseurs impairs de }p)\n                    -(\\text{nombre de diviseurs pairs de }p) = \\sigma_i(p)-\\sigma_p(p)$.\n   Si $p=2^\\alpha q$ avec $q$ impair alors $\\sigma_p(p) = \\alpha\\sigma_i(p)= \\alpha\\sigma_i(q)$\n   donc $\\sigma(p) > 0$ ssi $p$ est impair {\\it (très joli exercice)}.",
+        "html": "<p><span class=\"math inline\">\\(S(t) = \\sum_{n=1}^\\infty \\sum_{k=1}^\\infty (-1)^{k-1}t^{kn}\n                   = \\sum_{p=1}^\\infty \\sum_{kn=p} (-1)^{k-1}t^p\n                   = \\sum_{p=1}^\\infty \\sigma(p)t^p\\)</span></p>\n<p>avec <span class=\"math inline\">\\(\\sigma(p) = (\\text{nombre de diviseurs impairs de }p)\n                    -(\\text{nombre de diviseurs pairs de }p) = \\sigma_i(p)-\\sigma_p(p)\\)</span>. Si <span class=\"math inline\">\\(p=2^\\alpha q\\)</span> avec <span class=\"math inline\">\\(q\\)</span> impair alors <span class=\"math inline\">\\(\\sigma_p(p) = \\alpha\\sigma_i(p)= \\alpha\\sigma_i(q)\\)</span> donc <span class=\"math inline\">\\(\\sigma(p) &gt; 0\\)</span> ssi <span class=\"math inline\">\\(p\\)</span> est impair <span><em>(très joli exercice)</em></span>.</p>\n"
+      }
+    }
+  ]
+}

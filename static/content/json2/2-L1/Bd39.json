@@ -1,0 +1,59 @@
+{
+  "uuid": "Bd39",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5442",
+    "auteur": "rouget",
+    "createdAt": "2010-07-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Calculs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:34.877Z"
+  },
+  "contenu": [
+    {
+      "id": "84c5cec5-35b9-4165-a344-f90e4da25ff5",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "2c02cc40-afa4-437f-b9a6-10c47158e505",
+      "type": "question",
+      "value": {
+        "latex": "Développement limité à l'ordre $n$ en $0$ de $f(x)=\\frac{1}{(1-x)^2(1+x)}$.",
+        "html": "<p>Développement limité à l’ordre <span class=\"math inline\">\\(n\\)</span> en <span class=\"math inline\">\\(0\\)</span> de <span class=\"math inline\">\\(f(x)=\\frac{1}{(1-x)^2(1+x)}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "179cb3e1-5393-4348-bc26-0e145a84cbea",
+      "type": "reponse",
+      "value": {
+        "latex": "Quand $x$ tend vers $0$,\n  \n$$\\begin{align*}\\ensuremath\n\\frac{1}{(1-x)^2(1+x)}&=\\frac{1}{4}\\frac{1}{1-x}+\\frac{1}{2}\\frac{1}{(1-x)^2}+\\frac{1}{4}\\frac{1}{1+x}\n\\underset{x\\rightarrow0}{=}\\frac{1}{4}\\left(\\sum_{k=0}^{n}x^k+2\\sum_{k=0}^{n}(k+1)x^k+\\sum_{k=0}^{n}(-1)^kx^k\\right)+o(x^n)\\\\\n &=\\sum_{k=0}^{n}\\frac{2k+3+(-1)^k}{4}x^k+o(x^n).\n\\end{align*}$$",
+        "html": "<p>Quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\frac{1}{(1-x)^2(1+x)}&amp;=\\frac{1}{4}\\frac{1}{1-x}+\\frac{1}{2}\\frac{1}{(1-x)^2}+\\frac{1}{4}\\frac{1}{1+x}\n\\underset{x\\rightarrow0}{=}\\frac{1}{4}\\left(\\sum_{k=0}^{n}x^k+2\\sum_{k=0}^{n}(k+1)x^k+\\sum_{k=0}^{n}(-1)^kx^k\\right)+o(x^n)\\\\\n &amp;=\\sum_{k=0}^{n}\\frac{2k+3+(-1)^k}{4}x^k+o(x^n).\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "780de792-b83b-4e30-b78b-9ab355bee5b7",
+      "type": "question",
+      "value": {
+        "latex": "Soit $a_k$ le $k$-ème coefficient. Montrer que $a_k$ est le nombre de solutions dans $\\Nn^2$ de l'équation $p+2q=k$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a_k\\)</span> le <span class=\"math inline\">\\(k\\)</span>-ème coefficient. Montrer que <span class=\"math inline\">\\(a_k\\)</span> est le nombre de solutions dans <span class=\"math inline\">\\(\\Nn^2\\)</span> de l’équation <span class=\"math inline\">\\(p+2q=k\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "58ec121b-eb19-4795-9365-bfb22ef99a8b",
+      "type": "reponse",
+      "value": {
+        "latex": "On a aussi,\n\n$$\\begin{align*}\\ensuremath\n\\frac{1}{(1-x)^2(1+x)}&=\\frac{1}{(1-x)(1-x^2)}\\underset{x\\rightarrow0}{=}\\left(\\sum_{k=0}^{n}x^p\\right)\\left(\\sum_{k=0}^{n}x^{2q}\\right)+o(x^n)\\\\\n &=\\sum_{k=0}^{n}\\left(\\sum_{p+2q=k}^{}1\\right)x^k+o(x^n)=\\sum_{k=0}^{n}a_kx^k+o(x^n).\n\\end{align*}$$\nPar unicité des coefficients d'un développement limité, on a donc\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $a_k=\\frac{2k+3+(-1)^k}{4}$.\n}\n\\end{center}\n($a_k$ est le nombre de façons de payer $k$ euros en pièces de $1$ et $2$ euros).",
+        "html": "<p>On a aussi,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\frac{1}{(1-x)^2(1+x)}&amp;=\\frac{1}{(1-x)(1-x^2)}\\underset{x\\rightarrow0}{=}\\left(\\sum_{k=0}^{n}x^p\\right)\\left(\\sum_{k=0}^{n}x^{2q}\\right)+o(x^n)\\\\\n &amp;=\\sum_{k=0}^{n}\\left(\\sum_{p+2q=k}^{}1\\right)x^k+o(x^n)=\\sum_{k=0}^{n}a_kx^k+o(x^n).\n\\end{align*}\\]</span> Par unicité des coefficients d’un développement limité, on a donc</p>\n<p>(<span class=\"math inline\">\\(a_k\\)</span> est le nombre de façons de payer <span class=\"math inline\">\\(k\\)</span> euros en pièces de <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(2\\)</span> euros).</p>\n"
+      }
+    }
+  ]
+}

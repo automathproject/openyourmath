@@ -1,0 +1,99 @@
+{
+  "uuid": "CwM1",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "239",
+    "auteur": "cousquer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Dénombrement",
+    "sousChapitre": "Cardinal",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:18.439Z"
+  },
+  "contenu": [
+    {
+      "id": "21d203b5-a631-40ca-a8d8-33b645a44a16",
+      "type": "description",
+      "value": {
+        "latex": "On considère les mains de $5$~cartes que l'on peut extraire d'un jeu de\n$52$~cartes.",
+        "html": "<p>On considère les mains de <span class=\"math inline\">\\(5\\)</span> cartes que l’on peut extraire d’un jeu de <span class=\"math inline\">\\(52\\)</span> cartes.</p>\n"
+      }
+    },
+    {
+      "id": "29ced961-f28b-4f64-9550-163511ad68f9",
+      "type": "question",
+      "value": {
+        "latex": "Combien y a-t-il de mains différentes~?",
+        "html": "<p>Combien y a-t-il de mains différentes ?</p>\n"
+      }
+    },
+    {
+      "id": "be58f664-43d1-4cf6-a669-67d4e1e01e79",
+      "type": "reponse",
+      "value": {
+        "latex": "Il s'agit donc de choisir $5$ cartes parmi $52$ : il y a donc $C_{52}^5$ mains différentes.\nCeci peut être calculé : $C_{52}^5 = \\frac{52\\cdot51\\cdot50\\cdot49\\cdot48}{5!} = 2598960$.",
+        "html": "<p>Il s’agit donc de choisir <span class=\"math inline\">\\(5\\)</span> cartes parmi <span class=\"math inline\">\\(52\\)</span> : il y a donc <span class=\"math inline\">\\(C_{52}^5\\)</span> mains différentes. Ceci peut être calculé : <span class=\"math inline\">\\(C_{52}^5 = \\frac{52\\cdot51\\cdot50\\cdot49\\cdot48}{5!} = 2598960\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ca56f1d9-cfe1-41e1-9013-aafacc844782",
+      "type": "question",
+      "value": {
+        "latex": "Combien y a-t-il de mains comprenant exactement un as~?",
+        "html": "<p>Combien y a-t-il de mains comprenant exactement un as ?</p>\n"
+      }
+    },
+    {
+      "id": "d239deb0-0470-449f-9c04-ee90bf80bc75",
+      "type": "reponse",
+      "value": {
+        "latex": "Il y a $4$ choix pour l'as (l'as de pique ou l'as de c{\\oe}ur ou ...), puis il faut choisir les $4$ cartes restantes\nparmi $48$ cartes (on ne peut pas rechoisir un as). Bilan $4 \\times C_{48}^4$ mains comprenant exactement un as.",
+        "html": "<p>Il y a <span class=\"math inline\">\\(4\\)</span> choix pour l’as (l’as de pique ou l’as de c<span>œ</span>ur ou ...), puis il faut choisir les <span class=\"math inline\">\\(4\\)</span> cartes restantes parmi <span class=\"math inline\">\\(48\\)</span> cartes (on ne peut pas rechoisir un as). Bilan <span class=\"math inline\">\\(4 \\times C_{48}^4\\)</span> mains comprenant exactement un as.</p>\n"
+      }
+    },
+    {
+      "id": "893fc829-4ca3-4765-bf37-398978bc5781",
+      "type": "question",
+      "value": {
+        "latex": "Combien y a-t-il de mains comprenant au moins un valet~?",
+        "html": "<p>Combien y a-t-il de mains comprenant au moins un valet ?</p>\n"
+      }
+    },
+    {
+      "id": "1fdc3457-56e1-4a70-aa70-8742ad67b4a6",
+      "type": "reponse",
+      "value": {
+        "latex": "Il est beaucoup plus facile de compter d'abord les mains qui ne contiennent aucun valet :\nil faut choisir $5$ cartes parmi $48$ (on exclut les valets) ; il y a donc $C_{48}^5$ mains ne contenant aucun valet.\nLes autres mains sont les mains qui contiennent au moins un valet : il y en a donc $C_{52}^5 - C_{48}^5$.",
+        "html": "<p>Il est beaucoup plus facile de compter d’abord les mains qui ne contiennent aucun valet : il faut choisir <span class=\"math inline\">\\(5\\)</span> cartes parmi <span class=\"math inline\">\\(48\\)</span> (on exclut les valets) ; il y a donc <span class=\"math inline\">\\(C_{48}^5\\)</span> mains ne contenant aucun valet. Les autres mains sont les mains qui contiennent au moins un valet : il y en a donc <span class=\"math inline\">\\(C_{52}^5 - C_{48}^5\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "30f9537e-8970-4ce4-b102-a5f6f89c07d4",
+      "type": "question",
+      "value": {
+        "latex": "Combien y a-t-il de mains comprenant (à la fois) au moins un roi et au\nmoins une dame~?",
+        "html": "<p>Combien y a-t-il de mains comprenant (à la fois) au moins un roi et au moins une dame ?</p>\n"
+      }
+    },
+    {
+      "id": "e84e7bbd-f1cd-4a10-9aeb-8aa771bd1326",
+      "type": "reponse",
+      "value": {
+        "latex": "Nous allons d'abord compter le nombre de mains que ne contiennent pas de roi ou pas de dame.\nLe nombre de mains qui ne contiennent pas de roi est $C_{48}^5$ (comme la question 3.). Le nombre de mains qui ne contiennent\npas de dame est aussi $C_{48}^5$. \nLe nombre de mains ne contenant pas de roi ou pas de dame \\emph{n'est pas} $C_{48}^5 + C_{48}^5$,\ncar on aurait compté deux fois les mains ne contenant ni roi, ni dame (il y a $C_{44}^5$ telles mains).\nLe nombre de mains ne contenant pas de roi ou pas de dame est donc : $2C_{48}^5-C_{44}^5$ (on retire une fois les mains comptées deux fois !).\nCe que nous cherchons ce sont toutes les autres mains : celles qui contiennent au moins un roi et au moins une dame.\nLeur nombre est donc : $C_{52}^5 - 2C_{48}^5 + C_{44}^5$.",
+        "html": "<p>Nous allons d’abord compter le nombre de mains que ne contiennent pas de roi ou pas de dame. Le nombre de mains qui ne contiennent pas de roi est <span class=\"math inline\">\\(C_{48}^5\\)</span> (comme la question 3.). Le nombre de mains qui ne contiennent pas de dame est aussi <span class=\"math inline\">\\(C_{48}^5\\)</span>. Le nombre de mains ne contenant pas de roi ou pas de dame <em>n’est pas</em> <span class=\"math inline\">\\(C_{48}^5 + C_{48}^5\\)</span>, car on aurait compté deux fois les mains ne contenant ni roi, ni dame (il y a <span class=\"math inline\">\\(C_{44}^5\\)</span> telles mains). Le nombre de mains ne contenant pas de roi ou pas de dame est donc : <span class=\"math inline\">\\(2C_{48}^5-C_{44}^5\\)</span> (on retire une fois les mains comptées deux fois !). Ce que nous cherchons ce sont toutes les autres mains : celles qui contiennent au moins un roi et au moins une dame. Leur nombre est donc : <span class=\"math inline\">\\(C_{52}^5 - 2C_{48}^5 + C_{44}^5\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "26ce6711-d190-47f4-a24a-516eb875174f",
+      "type": "indication",
+      "value": {
+        "latex": "Petits rappels : dans un jeu de $52$ cartes il y a $4$ ``couleurs'' (pique, c{\\oe}ur, carreau, trèfle)\net $13$ ``valeurs'' ($1 =$ As, $2,3,\\ldots,10$, Valet, Dame, Roi).\nUne ``main'' c'est juste choisir $5$ cartes parmi les $52$, l'ordre du choix n'important pas.",
+        "html": "<p>Petits rappels : dans un jeu de <span class=\"math inline\">\\(52\\)</span> cartes il y a <span class=\"math inline\">\\(4\\)</span> “couleurs” (pique, c<span>œ</span>ur, carreau, trèfle) et <span class=\"math inline\">\\(13\\)</span> “valeurs” (<span class=\"math inline\">\\(1 =\\)</span> As, <span class=\"math inline\">\\(2,3,\\ldots,10\\)</span>, Valet, Dame, Roi). Une “main” c’est juste choisir <span class=\"math inline\">\\(5\\)</span> cartes parmi les <span class=\"math inline\">\\(52\\)</span>, l’ordre du choix n’important pas.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "8ufJ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5723",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Intégrale impropre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:31.130Z"
+  },
+  "contenu": [
+    {
+      "id": "23d13774-04ae-47a1-b20a-c7226211dd81",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ définie, continue, positive et décroissante sur $[1,+\\infty[$, intégrable sur $[1,+\\infty[$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> définie, continue, positive et décroissante sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>, intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "2f09b490-89ff-40e9-a9c3-7dc13d1b9b90",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $xf(x)$ tend vers $0$ quand $x$ tend vers $+\\infty$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(xf(x)\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ae174f6a-f076-4d0d-9797-7ad685ab4419",
+      "type": "reponse",
+      "value": {
+        "latex": "Puisque $f$ est continue, positive et décroissante sur $[1,+\\infty[$, pour $x\\geqslant2$ on a\n\n\\begin{center}\n$0\\leqslant xf(x) = 2\\left(x-\\frac{x}{2}\\right)f(x)\\leqslant2\\int_{x/2}^{x}f(t)\\;dt =2\\left(/dint{x/2}{+\\infty}f(t)\\;dt-\\int_{x}^{+\\infty}f(t)\\;dt\\right)$\n\\end{center}\n\nCette dernière expression tend vers $0$ quand $x$ tend vers $+\\infty$ car $f$ est intégrable sur $[1,+\\infty[$. Donc si $f$ est continue, positive, décroissante et intégrable sur $[1,+\\infty[$ alors $f(x) \\underset{x\\rightarrow+\\infty}{=}o\\left(\\frac{1}{x}\\right)$.",
+        "html": "<p>Puisque <span class=\"math inline\">\\(f\\)</span> est continue, positive et décroissante sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>, pour <span class=\"math inline\">\\(x\\geqslant2\\)</span> on a</p>\n<p><span class=\"math inline\">\\(0\\leqslant xf(x) = 2\\left(x-\\frac{x}{2}\\right)f(x)\\leqslant2\\int_{x/2}^{x}f(t)\\;dt =2\\left(/dint{x/2}{+\\infty}f(t)\\;dt-\\int_{x}^{+\\infty}f(t)\\;dt\\right)\\)</span></p>\n<p>Cette dernière expression tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> car <span class=\"math inline\">\\(f\\)</span> est intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>. Donc si <span class=\"math inline\">\\(f\\)</span> est continue, positive, décroissante et intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> alors <span class=\"math inline\">\\(f(x) \\underset{x\\rightarrow+\\infty}{=}o\\left(\\frac{1}{x}\\right)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e3c0e81c-1472-4e89-a56e-7c481c904aa1",
+      "type": "question",
+      "value": {
+        "latex": "Existence et calcul de $\\int_{1}^{+\\infty}x(f(x+1)-f(x))dx$.",
+        "html": "<p>Existence et calcul de <span class=\"math inline\">\\(\\int_{1}^{+\\infty}x(f(x+1)-f(x))dx\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d83495ad-3f70-4e4a-8baa-9471dcb0467e",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $x\\mapsto x(f(x) - f(x+1))$ est continue et positive sur $[1,+\\infty[$.\n\nSoit $X\\geqslant 1$.\n\n$$\\begin{align*}\\ensuremath\n\\int_{1}^{X}x(f(x) - f(x+1))\\;dx&=\\int_{1}^{X}xf(x)\\;dx -\\int_{2}^{X+1}(x-1)f(x)\\;dx =\\int_{1}^{X}xf(x)\\;dx -  \\int_{2}^{X+1}xf(x)\\;dx +\\int_{2}^{X+1}f(x)\\;dx\\\\\n &=\\int_{1}^{2}xf(x)\\;dx -\\int_{X}^{X+1}xf(x)\\;dx +\\int_{2}^{X+1} f(x)\\;dx.\n\\end{align*}$$\n\nMaintenant $0\\leqslant\\int_{X}^{X+1}xf(x)\\;dx\\leqslant(X+1-X)(X+1)f(X)\\leqslant2Xf(X)$. D'après 1), cette dernière expression tend vers $0$ quand $X$ tend vers $+\\infty$. Donc, quand $X$ tend vers $+\\infty$,  $\\int_{1}^{X}x(f(x) - f(x+1))\\;dx$ tend vers $\\int_{1}^{2}xf(x)\\;dx+\\int_{2}^{+\\infty} f(x)\\;dx$.\n\nPuisque la fonction $x\\mapsto x(f(x) - f(x+1))$ est continue et positive sur $[1,+\\infty[$, on sait que $x\\mapsto x(f(x) - f(x+1))$ est intégrable sur $[1,+\\infty[$ si et seulement si la fonction $X\\mapsto\\int_{1}^{X}x(f(x) - f(x+1))\\;dx$ a une limite réelle quand $X$ tend vers $+\\infty$. Donc la fonction $x\\mapsto x(f(x) - f(x+1))$ est intégrable sur $[1,+\\infty[$ et\n\n\\begin{center}\n\\shadowbox{\n$\\int_{1}^{+\\infty}x(f(x) - f(x+1))\\;dx =\\int_{1}^{2}xf(x)\\;dx +\\int_{2}^{+\\infty}f(x)\\;dx$.\n}\n\\end{center}",
+        "html": "<p>La fonction <span class=\"math inline\">\\(x\\mapsto x(f(x) - f(x+1))\\)</span> est continue et positive sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(X\\geqslant 1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\int_{1}^{X}x(f(x) - f(x+1))\\;dx&amp;=\\int_{1}^{X}xf(x)\\;dx -\\int_{2}^{X+1}(x-1)f(x)\\;dx =\\int_{1}^{X}xf(x)\\;dx -  \\int_{2}^{X+1}xf(x)\\;dx +\\int_{2}^{X+1}f(x)\\;dx\\\\\n &amp;=\\int_{1}^{2}xf(x)\\;dx -\\int_{X}^{X+1}xf(x)\\;dx +\\int_{2}^{X+1} f(x)\\;dx.\n\\end{align*}\\]</span></p>\n<p>Maintenant <span class=\"math inline\">\\(0\\leqslant\\int_{X}^{X+1}xf(x)\\;dx\\leqslant(X+1-X)(X+1)f(X)\\leqslant2Xf(X)\\)</span>. D’après 1), cette dernière expression tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Donc, quand <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, <span class=\"math inline\">\\(\\int_{1}^{X}x(f(x) - f(x+1))\\;dx\\)</span> tend vers <span class=\"math inline\">\\(\\int_{1}^{2}xf(x)\\;dx+\\int_{2}^{+\\infty} f(x)\\;dx\\)</span>.</p>\n<p>Puisque la fonction <span class=\"math inline\">\\(x\\mapsto x(f(x) - f(x+1))\\)</span> est continue et positive sur <span class=\"math inline\">\\([1,+\\infty[\\)</span>, on sait que <span class=\"math inline\">\\(x\\mapsto x(f(x) - f(x+1))\\)</span> est intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> si et seulement si la fonction <span class=\"math inline\">\\(X\\mapsto\\int_{1}^{X}x(f(x) - f(x+1))\\;dx\\)</span> a une limite réelle quand <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Donc la fonction <span class=\"math inline\">\\(x\\mapsto x(f(x) - f(x+1))\\)</span> est intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> et</p>\n"
+      }
+    }
+  ]
+}

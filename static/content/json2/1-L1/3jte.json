@@ -1,0 +1,43 @@
+{
+  "uuid": "3jte",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "929",
+    "auteur": "legall",
+    "createdAt": "1998-09-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire",
+    "sousChapitre": "Définition",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:03.226Z"
+  },
+  "contenu": [
+    {
+      "id": "4eb8561a-5dc9-40ee-845c-d00dcb8c72cb",
+      "type": "description",
+      "value": {
+        "latex": "D\\'eterminer si les applications $f_{i}$ suivantes sont lin\\'eaires :\n$$\\begin{array}{rl}\nf_1 : \\Rr^2 \\to \\Rr^2 & f_1(x,y)=(2x+y,x-y)  \\\\\nf_2 : \\Rr^3 \\to \\Rr^3 & f_2(x,y,z)=(xy,x,y) \\\\\nf_3 : \\Rr^3 \\to \\Rr^3 & f_3(x,y,z)=(2x+y+z,y-z,x+y) \\\\\nf_4 : \\Rr^2 \\to \\Rr^4 & f_4(x,y)=(y,0,x-7y,x+y) \\\\\nf_5 : \\Rr_3[X] \\to \\Rr^3 & f_5(P) = \\big( P(-1), P(0), P(1) \\big) \\\\\n\\end{array}\n$$",
+        "html": "<p>Déterminer si les applications <span class=\"math inline\">\\(f_{i}\\)</span> suivantes sont linéaires : <span class=\"math display\">\\[\\begin{array}{rl}\nf_1 : \\Rr^2 \\to \\Rr^2 &amp; f_1(x,y)=(2x+y,x-y)  \\\\\nf_2 : \\Rr^3 \\to \\Rr^3 &amp; f_2(x,y,z)=(xy,x,y) \\\\\nf_3 : \\Rr^3 \\to \\Rr^3 &amp; f_3(x,y,z)=(2x+y+z,y-z,x+y) \\\\\nf_4 : \\Rr^2 \\to \\Rr^4 &amp; f_4(x,y)=(y,0,x-7y,x+y) \\\\\nf_5 : \\Rr_3[X] \\to \\Rr^3 &amp; f_5(P) = \\big( P(-1), P(0), P(1) \\big) \\\\\n\\end{array}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "ad983b3b-c21c-4c83-a0cd-6f427aedaf85",
+      "type": "indication",
+      "value": {
+        "latex": "Une seule application n'est pas lin\\'eaire.",
+        "html": "<p>Une seule application n’est pas linéaire.</p>\n"
+      }
+    },
+    {
+      "id": "9601699e-b444-403f-937a-bc5880a32cc6",
+      "type": "reponse",
+      "value": {
+        "latex": "$f_1$ est linéaire. Pour $(x,y) \\in \\Rr^2$ et $(x',y')\\in \\Rr^2$ :\n$$\\begin{align*}\nf_1\\big( (x,y)+(x',y') \\big) \n  & = f_1\\big( x+x',y+y' \\big) \\\\\n  & = \\big(2(x+x')+ (y+y'), (x+x')-(y+y') \\big) \\\\\n  & = \\big(2x+y +2x'+y', x-y+x'-y' \\big) \\\\\n  & = \\big(2x+y,x-y \\big) + \\big(2x'+y',x'-y' \\big) \\\\\n  & = f_1(x,y)+f_1(x',y')\n\\end{align*}$$\n\nPour $(x,y)\\in \\Rr^2$ et $\\lambda\\in \\Rr$ :\n$$f_1\\big( \\lambda \\cdot (x,y)\\big) = f_1\\big(\\lambda x,\\lambda y\\big)\n = \\big( 2\\lambda x+\\lambda y,\\lambda x - \\lambda y \\big) = \\lambda \\cdot\\big(2x+y,x-y \\big) \n= \\lambda \\cdot f_1(x,y).$$\n$f_2$ n'est pas lin\\'eaire, en effet par exemple $f_2(1,1,0)+f_2(1,1,0)$ n'est pas \\'egal \\`a $f_2(2,2,0)$.\n$f_3$ est linéaire : il faut vérifier d'abord que pour tout $(x,y,z)$ et $(x',y',z')$ alors\n$f_3\\big( (x,y,z) + (x',y',z') \\big) = f_3(x,y,z)+f_3(x',y',z')$. Et ensuite que pour tout $(x,y,z)$ et $\\lambda$\non a $f_3\\big(\\lambda\\cdot(x,y,z) \\big) = \\lambda \\cdot f_3(x,y,z)$.\n$f_4$ est linéaire : il faut vérifier d'abord que pour tout $(x,y)$ et $(x',y')$ alors\n$f_4\\big( (x,y) + (x',y') \\big) = f_4(x,y)+f_4(x',y')$. Et ensuite que pour tout $(x,y)$ et $\\lambda$\non a $f_4\\big(\\lambda\\cdot(x,y) \\big) = \\lambda \\cdot f_4(x,y)$.\n$f_5$ est lin\\'eaire : soient $P,P' \\in \\Rr_3[X]$ alors \n\n$$\\begin{align*}\nf_5\\big(P+P'\\big) \n  & = \\big( (P+P')(-1), (P+P')(0), (P+P')(1) \\big) \\\\\n  & = \\big( P(-1)+P'(-1), P(0)+P'(0), P(1)+P'(1) \\big) \\\\\n  & = \\big( P(-1), P(0), P(1) \\big)  + \\big( P'(-1), P'(0), P'(1) \\big) \\\\\n  & = f_5(P)+f_5(P')  \\\\\n\\end{align*}$$\n\nEt si $P\\in \\Rr_3[X]$ et $\\lambda \\in \\Rr$ :\n$$\\begin{align*}\nf_5\\big( \\lambda \\cdot P\\big) \n  & =  \\big( (\\lambda P)(-1), (\\lambda P)(0), (\\lambda P)(1) \\big) \\\\\n  & = \\big( \\lambda \\times P(-1), \\lambda \\times P(0), \\lambda \\times P(1) \\big) \\\\\n  & = \\lambda \\cdot \\big( P(-1), P(0), P(1) \\big) \\\\\n  & = \\lambda \\cdot f_5(P) \\\\\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(f_1\\)</span> est linéaire. Pour <span class=\"math inline\">\\((x,y) \\in \\Rr^2\\)</span> et <span class=\"math inline\">\\((x&#39;,y&#39;)\\in \\Rr^2\\)</span> : <span class=\"math display\">\\[\\begin{align*}\nf_1\\big( (x,y)+(x&#39;,y&#39;) \\big) \n  &amp; = f_1\\big( x+x&#39;,y+y&#39; \\big) \\\\\n  &amp; = \\big(2(x+x&#39;)+ (y+y&#39;), (x+x&#39;)-(y+y&#39;) \\big) \\\\\n  &amp; = \\big(2x+y +2x&#39;+y&#39;, x-y+x&#39;-y&#39; \\big) \\\\\n  &amp; = \\big(2x+y,x-y \\big) + \\big(2x&#39;+y&#39;,x&#39;-y&#39; \\big) \\\\\n  &amp; = f_1(x,y)+f_1(x&#39;,y&#39;)\n\\end{align*}\\]</span></p>\n<p>Pour <span class=\"math inline\">\\((x,y)\\in \\Rr^2\\)</span> et <span class=\"math inline\">\\(\\lambda\\in \\Rr\\)</span> : <span class=\"math display\">\\[f_1\\big( \\lambda \\cdot (x,y)\\big) = f_1\\big(\\lambda x,\\lambda y\\big)\n = \\big( 2\\lambda x+\\lambda y,\\lambda x - \\lambda y \\big) = \\lambda \\cdot\\big(2x+y,x-y \\big) \n= \\lambda \\cdot f_1(x,y).\\]</span> <span class=\"math inline\">\\(f_2\\)</span> n’est pas linéaire, en effet par exemple <span class=\"math inline\">\\(f_2(1,1,0)+f_2(1,1,0)\\)</span> n’est pas égal à <span class=\"math inline\">\\(f_2(2,2,0)\\)</span>. <span class=\"math inline\">\\(f_3\\)</span> est linéaire : il faut vérifier d’abord que pour tout <span class=\"math inline\">\\((x,y,z)\\)</span> et <span class=\"math inline\">\\((x&#39;,y&#39;,z&#39;)\\)</span> alors <span class=\"math inline\">\\(f_3\\big( (x,y,z) + (x&#39;,y&#39;,z&#39;) \\big) = f_3(x,y,z)+f_3(x&#39;,y&#39;,z&#39;)\\)</span>. Et ensuite que pour tout <span class=\"math inline\">\\((x,y,z)\\)</span> et <span class=\"math inline\">\\(\\lambda\\)</span> on a <span class=\"math inline\">\\(f_3\\big(\\lambda\\cdot(x,y,z) \\big) = \\lambda \\cdot f_3(x,y,z)\\)</span>. <span class=\"math inline\">\\(f_4\\)</span> est linéaire : il faut vérifier d’abord que pour tout <span class=\"math inline\">\\((x,y)\\)</span> et <span class=\"math inline\">\\((x&#39;,y&#39;)\\)</span> alors <span class=\"math inline\">\\(f_4\\big( (x,y) + (x&#39;,y&#39;) \\big) = f_4(x,y)+f_4(x&#39;,y&#39;)\\)</span>. Et ensuite que pour tout <span class=\"math inline\">\\((x,y)\\)</span> et <span class=\"math inline\">\\(\\lambda\\)</span> on a <span class=\"math inline\">\\(f_4\\big(\\lambda\\cdot(x,y) \\big) = \\lambda \\cdot f_4(x,y)\\)</span>. <span class=\"math inline\">\\(f_5\\)</span> est linéaire : soient <span class=\"math inline\">\\(P,P&#39; \\in \\Rr_3[X]\\)</span> alors</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nf_5\\big(P+P&#39;\\big) \n  &amp; = \\big( (P+P&#39;)(-1), (P+P&#39;)(0), (P+P&#39;)(1) \\big) \\\\\n  &amp; = \\big( P(-1)+P&#39;(-1), P(0)+P&#39;(0), P(1)+P&#39;(1) \\big) \\\\\n  &amp; = \\big( P(-1), P(0), P(1) \\big)  + \\big( P&#39;(-1), P&#39;(0), P&#39;(1) \\big) \\\\\n  &amp; = f_5(P)+f_5(P&#39;)  \\\\\n\\end{align*}\\]</span></p>\n<p>Et si <span class=\"math inline\">\\(P\\in \\Rr_3[X]\\)</span> et <span class=\"math inline\">\\(\\lambda \\in \\Rr\\)</span> : <span class=\"math display\">\\[\\begin{align*}\nf_5\\big( \\lambda \\cdot P\\big) \n  &amp; =  \\big( (\\lambda P)(-1), (\\lambda P)(0), (\\lambda P)(1) \\big) \\\\\n  &amp; = \\big( \\lambda \\times P(-1), \\lambda \\times P(0), \\lambda \\times P(1) \\big) \\\\\n  &amp; = \\lambda \\cdot \\big( P(-1), P(0), P(1) \\big) \\\\\n  &amp; = \\lambda \\cdot f_5(P) \\\\\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

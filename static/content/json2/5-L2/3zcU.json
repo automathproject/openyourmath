@@ -1,0 +1,35 @@
+{
+  "uuid": "3zcU",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4360",
+    "auteur": "quercia",
+    "createdAt": "2010-03-12",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Intégration",
+    "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:36.261Z"
+  },
+  "contenu": [
+    {
+      "id": "83d22d2b-4cdf-44f2-afb9-fb68bfa877d6",
+      "type": "description",
+      "value": {
+        "latex": "On pose pour $n\\ge2$ $u_n= \\int_{x=0}^{+\\infty} \\frac1{1+x^n}\\, d x$.\nMontrer que la suite $(u_n)$ converge, puis que la série $\\sum(u_n-1)$ converge\négalement.",
+        "html": "<p>On pose pour <span class=\"math inline\">\\(n\\ge2\\)</span> <span class=\"math inline\">\\(u_n= \\int_{x=0}^{+\\infty} \\frac1{1+x^n}\\, d x\\)</span>. Montrer que la suite <span class=\"math inline\">\\((u_n)\\)</span> converge, puis que la série <span class=\"math inline\">\\(\\sum(u_n-1)\\)</span> converge également.</p>\n"
+      }
+    },
+    {
+      "id": "abac5365-ae34-46c3-b1ed-17dce5cb5359",
+      "type": "reponse",
+      "value": {
+        "latex": "$u_n \\to 1$ (lorsque $n\\to\\infty$) par convergence dominée.\n\n$u_n-1 =  \\int_{x=0}^1\\Bigl(\\frac{1+x^{n-2}}{1+x^n}-1\\Bigr)\\,d x\n       = \\frac1n \\int_{u=0}^1\\frac{u^{1-1/n}}{1+u}(u^{-2/n}-1)\\,d u$.\n\nOn a $0\\le u^{-2/n}-1=\\exp\\Bigl(-\\frac{2\\ln(u)}n\\Bigr)-1\\le -\\frac{2\\ln(u)}n\\exp\\Bigl(-\\frac{2\\ln(u)}n\\Bigr)$\n\nd'où $0\\le u_n\\le\\frac2{n^2} \\int_{u=0}^1\\frac{u^{1-3/n}(-\\ln u)}{1+u}\\,d u\n= O\\Bigl(\\frac1{n^2}\\Bigr)$.",
+        "html": "<p><span class=\"math inline\">\\(u_n \\to 1\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) par convergence dominée.</p>\n<p><span class=\"math inline\">\\(u_n-1 =  \\int_{x=0}^1\\Bigl(\\frac{1+x^{n-2}}{1+x^n}-1\\Bigr)\\,d x\n       = \\frac1n \\int_{u=0}^1\\frac{u^{1-1/n}}{1+u}(u^{-2/n}-1)\\,d u\\)</span>.</p>\n<p>On a <span class=\"math inline\">\\(0\\le u^{-2/n}-1=\\exp\\Bigl(-\\frac{2\\ln(u)}n\\Bigr)-1\\le -\\frac{2\\ln(u)}n\\exp\\Bigl(-\\frac{2\\ln(u)}n\\Bigr)\\)</span></p>\n<p>d’où <span class=\"math inline\">\\(0\\le u_n\\le\\frac2{n^2} \\int_{u=0}^1\\frac{u^{1-3/n}(-\\ln u)}{1+u}\\,d u\n= O\\Bigl(\\frac1{n^2}\\Bigr)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

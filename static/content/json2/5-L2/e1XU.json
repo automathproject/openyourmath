@@ -1,0 +1,67 @@
+{
+  "uuid": "e1XU",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6994",
+    "auteur": "blanc-centi",
+    "createdAt": "2015-07-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Equation différentielle",
+    "sousChapitre": "Résolution d'équation différentielle du premier ordre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:16.501Z"
+  },
+  "contenu": [
+    {
+      "id": "d673487a-73dc-4fae-b3b9-4ef07ec994b8",
+      "type": "description",
+      "value": {
+        "latex": "Résoudre les équations différentielles suivantes en trouvant \nune solution particulière par la méthode de variation de la constante :",
+        "html": "<p>Résoudre les équations différentielles suivantes en trouvant une solution particulière par la méthode de variation de la constante :</p>\n"
+      }
+    },
+    {
+      "id": "da2698ca-0d55-4582-89b9-81a6d5debb53",
+      "type": "question",
+      "value": {
+        "latex": "$y' - (2x - \\frac{1}{x})y = 1$ sur $]0;+\\infty[$",
+        "html": "<p><span class=\"math inline\">\\(y&#39; - (2x - \\frac{1}{x})y = 1\\)</span> sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "d6a54f3c-ba5f-465a-aa0e-3aad1475812c",
+      "type": "question",
+      "value": {
+        "latex": "$y'-y = x^k \\exp(x)$ sur $\\R$, avec $k \\in \\Nn$",
+        "html": "<p><span class=\"math inline\">\\(y&#39;-y = x^k \\exp(x)\\)</span> sur <span class=\"math inline\">\\(\\R\\)</span>, avec <span class=\"math inline\">\\(k \\in \\Nn\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "f68796bc-af39-4977-8879-13f94a907b7d",
+      "type": "question",
+      "value": {
+        "latex": "$x(1+\\ln^2(x))y'+2\\ln(x)y=1$ sur $]0;+\\infty[$",
+        "html": "<p><span class=\"math inline\">\\(x(1+\\ln^2(x))y&#39;+2\\ln(x)y=1\\)</span> sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "3ede5cf6-abbf-4226-9b8f-5ad2e142fa1b",
+      "type": "reponse",
+      "value": {
+        "latex": "$y' - (2x - \\frac{1}{x})y = 1$ sur $]0;+\\infty[$\n  \\begin{enumerate}\n\\textbf{Résolution de l'équation homogène $y' - (2x - \\frac{1}{x})y = 0$.}\n    \n    Une primitive de $a(x) = 2x - \\frac1x$ est $A(x) = x^2 - \\ln x$,\n    donc les solutions de l'équation homogène sont les $y(x) = \\lambda \\exp(x^2 - \\ln x) = \\lambda \\frac1x\\exp(x^2)$,\n    pour $\\lambda$ une constante réelle quelconque.\n\\textbf{Recherche d'une solution particulière.}\n    \n    Nous allons utiliser la méthode de variation de la constante pour trouver une solution particulière \n    à l'équation $y' - (2x - \\frac{1}{x})y = 1$.\n    On cherche une telle solution sous la forme $y_0(x) = \\lambda(x) \\frac1x\\exp(x^2)$ \n    où $x \\mapsto \\lambda(x)$ est maintenant une fonction.\n    \n    On calcule d'abord \n    $$y_0'(x) = \\lambda'(x) \\frac1x\\exp(x^2) + \\lambda(x) \\left(-\\frac{1}{x^2}+2\\right) \\exp(x^2)$$\n    \n    Maintenant :\n    $$\\begin{align*}\n          & y_0 \\quad \\text{ est  solution de }  y' - (2x + \\frac{1}{x})y = 1 \\\\\n    \\iff & y_0' - (2x - \\frac{1}{x})y_0 = 1 \\\\\n    \\iff& \\lambda'(x) x\\exp(x^2) + \\lambda(x) \\left(-\\frac{1}{x^2}+2\\right) \\exp(x^2)\n        - (2x - \\frac{1}{x})\\lambda(x) \\frac1x\\exp(x^2) = 1 \\\\\n    \\iff& \\lambda'(x) \\frac1x\\exp(x^2) = 1 \\qquad \\text{cela doit se simplifier !}\\\\\n    \\iff& \\lambda'(x) = x\\exp(-x^2)\n    \\end{align*}$$\n    \n    Ainsi on peut prendre $\\lambda(x) = -\\frac12\\exp(x^2)$, ce qui fournit la solution particulière :\n    $$y_0(x) = \\lambda(x) \\frac1x\\exp(x^2) = -\\frac12\\exp(-x^2)\\frac1x\\exp(x^2) = -\\frac1{2x}$$\n    \n    Pour se rassurer, on n'oublie pas de vérifier que c'est bien une solution !\n\\textbf{Solution générale.}    \n    \n    L'ensemble des solutions s'obtient par la somme de la solution particulière avec les solutions de l'équation\n    homogène. Autrement dit, les solutions sont les :\n    $$y(x) = -\\frac1{2x} + \\lambda \\frac1x\\exp(x^2)\\qquad (\\lambda\\in\\Rr).$$",
+        "html": ""
+      }
+    },
+    {
+      "id": "0055264c-97bb-472e-b655-93637f18f1ee",
+      "type": "indication",
+      "value": {
+        "latex": "Solution particulière :\n\\begin{enumerate}\n  \\item $-\\frac1{2x}$\n  \n  \\item $\\frac{x^{k+1}}{k+1} \\exp(x)$\n  \n  \\item $\\frac{\\ln x}{1+\\ln^2(x)}$\n\\end{enumerate}",
+        "html": "<p>Solution particulière :</p>\n<ol>\n<li><p><span class=\"math inline\">\\(-\\frac1{2x}\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\frac{x^{k+1}}{k+1} \\exp(x)\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\frac{\\ln x}{1+\\ln^2(x)}\\)</span></p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

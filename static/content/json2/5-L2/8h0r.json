@@ -1,0 +1,35 @@
+{
+  "uuid": "8h0r",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4663",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série de Fourier",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:41.104Z"
+  },
+  "contenu": [
+    {
+      "id": "2bf4aba7-067a-4bdb-9dd6-b694e1b2a61f",
+      "type": "description",
+      "value": {
+        "latex": "Soit un réel $\\beta > 1$ et\n$a_k = \\iint_{[0,1]^2}e^{-|x-x'|^\\beta}e^{2i\\pi k(x-x')}\\,d x\\,d x'$.\nTrouver un équivalent quand $n$ tend vers l'infini de\n$\\sum_{|k|>n\\text{ ou }|\\ell|>n} a_ka_\\ell$,\n$k$ et~$\\ell$ étant des entiers relatifs.",
+        "html": "<p>Soit un réel <span class=\"math inline\">\\(\\beta &gt; 1\\)</span> et <span class=\"math inline\">\\(a_k = \\iint_{[0,1]^2}e^{-|x-x&#39;|^\\beta}e^{2i\\pi k(x-x&#39;)}\\,d x\\,d x&#39;\\)</span>. Trouver un équivalent quand <span class=\"math inline\">\\(n\\)</span> tend vers l’infini de <span class=\"math inline\">\\(\\sum_{|k|&gt;n\\text{ ou }|\\ell|&gt;n} a_ka_\\ell\\)</span>, <span class=\"math inline\">\\(k\\)</span> et <span class=\"math inline\">\\(\\ell\\)</span> étant des entiers relatifs.</p>\n"
+      }
+    },
+    {
+      "id": "55270e05-2952-4194-a6b9-98952723d1eb",
+      "type": "reponse",
+      "value": {
+        "latex": "Intégration à $x'-x$ constant~: $a_k =  \\int_{y=-1}^1 e^{-|y|^\\beta}(1-|y|)e^{-2ik\\pi y}\\,d y$\nest le $2k$-ème coefficient de Fourier de la fonction $f$, $2$-périodique,\ntelle que ${f(y) = e^{-|y|^\\beta}(1-|y|)}$ si $-1\\le y\\le 1$\ndonc le $k$-ème coefficient de Fourier de $g$, $1$-périodique, telle\nque ${g(y) = \\frac12(f(y) + f(y+1))}$.\nSoit $g_n$ la $n$-ème somme partielle de la série de Fourier de~$g$,\n$g_n(y) = \\sum_{|k|\\le n}a_ke^{2ik\\pi y}$.\n\nOn a par convergence normale de la série de Fourier de~$g$~:\n$\\sum_{|k|>n\\text{ ou }|\\ell|>n} a_ka_\\ell = g^2(0) - g_n^2(0)$.\n\n$$\\begin{align*}\ng(0)-g_n(0) \n&=  \\int_{y=-{\\frac 1 2}}^{\\frac 1 2} \\frac{g(0)-g(y)}{\\sin\\pi y}\\sin((2n+1)\\pi y)\\,d y\\cr\n&= 2 \\int_{y=0}^{\\frac 1 2} \\frac{g(0)-g(y)}{\\sin\\pi y}\\sin((2n+1)\\pi y)\\,d y\\cr\n&= 2\\Bigl[-\\frac{g(0)-g(y)}{\\sin\\pi y}\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\Bigr]_{y=0}^{\\frac 1 2}\n+2 \\int_{y=0}^{\\frac 1 2} \\frac{d}{d y}\\Bigl(\\frac{g(0)-g(y)}{\\sin\\pi y}\\Bigr)\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\,d y\\cr\n&=\\frac{1-e^{-1}}{(2n+1)\\pi^2} +  \\int_{y=0}^{\\frac 1 2}\\mathrm{fct continue}(y)\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\,d y\\cr\n&\\sim\\frac{1-e^{-1}}{(2n+1)\\pi^2}.\\cr\n\\end{align*}$$\n$g(0)+g_n(0) \\to 2g(0) = 1$ (lorsque $n\\to\\infty$) d'où\n$\\sum_{|k|>n\\text{ ou }|\\ell|>n} a_ka_\\ell\\sim\\frac{1-e^{-1}}{(2n+1)\\pi^2}$.",
+        "html": "<p>Intégration à <span class=\"math inline\">\\(x&#39;-x\\)</span> constant : <span class=\"math inline\">\\(a_k =  \\int_{y=-1}^1 e^{-|y|^\\beta}(1-|y|)e^{-2ik\\pi y}\\,d y\\)</span> est le <span class=\"math inline\">\\(2k\\)</span>-ème coefficient de Fourier de la fonction <span class=\"math inline\">\\(f\\)</span>, <span class=\"math inline\">\\(2\\)</span>-périodique, telle que <span class=\"math inline\">\\({f(y) = e^{-|y|^\\beta}(1-|y|)}\\)</span> si <span class=\"math inline\">\\(-1\\le y\\le 1\\)</span> donc le <span class=\"math inline\">\\(k\\)</span>-ème coefficient de Fourier de <span class=\"math inline\">\\(g\\)</span>, <span class=\"math inline\">\\(1\\)</span>-périodique, telle que <span class=\"math inline\">\\({g(y) = \\frac12(f(y) + f(y+1))}\\)</span>. Soit <span class=\"math inline\">\\(g_n\\)</span> la <span class=\"math inline\">\\(n\\)</span>-ème somme partielle de la série de Fourier de <span class=\"math inline\">\\(g\\)</span>, <span class=\"math inline\">\\(g_n(y) = \\sum_{|k|\\le n}a_ke^{2ik\\pi y}\\)</span>.</p>\n<p>On a par convergence normale de la série de Fourier de <span class=\"math inline\">\\(g\\)</span> : <span class=\"math inline\">\\(\\sum_{|k|&gt;n\\text{ ou }|\\ell|&gt;n} a_ka_\\ell = g^2(0) - g_n^2(0)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\ng(0)-g_n(0) \n&amp;=  \\int_{y=-{\\frac 1 2}}^{\\frac 1 2} \\frac{g(0)-g(y)}{\\sin\\pi y}\\sin((2n+1)\\pi y)\\,d y\\cr\n&amp;= 2 \\int_{y=0}^{\\frac 1 2} \\frac{g(0)-g(y)}{\\sin\\pi y}\\sin((2n+1)\\pi y)\\,d y\\cr\n&amp;= 2\\Bigl[-\\frac{g(0)-g(y)}{\\sin\\pi y}\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\Bigr]_{y=0}^{\\frac 1 2}\n+2 \\int_{y=0}^{\\frac 1 2} \\frac{d}{d y}\\Bigl(\\frac{g(0)-g(y)}{\\sin\\pi y}\\Bigr)\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\,d y\\cr\n&amp;=\\frac{1-e^{-1}}{(2n+1)\\pi^2} +  \\int_{y=0}^{\\frac 1 2}\\mathrm{fct continue}(y)\\frac{\\cos((2n+1)\\pi y)}{(2n+1)\\pi}\\,d y\\cr\n&amp;\\sim\\frac{1-e^{-1}}{(2n+1)\\pi^2}.\\cr\n\\end{align*}\\]</span> <span class=\"math inline\">\\(g(0)+g_n(0) \\to 2g(0) = 1\\)</span> (lorsque <span class=\"math inline\">\\(n\\to\\infty\\)</span>) d’où <span class=\"math inline\">\\(\\sum_{|k|&gt;n\\text{ ou }|\\ell|&gt;n} a_ka_\\ell\\sim\\frac{1-e^{-1}}{(2n+1)\\pi^2}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

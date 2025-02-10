@@ -1,0 +1,59 @@
+{
+  "uuid": "1sis",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5222",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Suite",
+    "sousChapitre": "Convergence",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:19.977Z"
+  },
+  "contenu": [
+    {
+      "id": "995360c4-92c5-4e2c-a702-7f80ec9aea03",
+      "type": "description",
+      "value": {
+        "latex": "\\label{exo:suprou3bis}\nPour $n$ entier naturel non nul, on pose $H_n=\\sum_{k=1}^{n}\\frac{1}{k}$ (série harmonique).",
+        "html": "<p><span id=\"exo:suprou3bis\" label=\"exo:suprou3bis\">[exo:suprou3bis]</span> Pour <span class=\"math inline\">\\(n\\)</span> entier naturel non nul, on pose <span class=\"math inline\">\\(H_n=\\sum_{k=1}^{n}\\frac{1}{k}\\)</span> (série harmonique).</p>\n"
+      }
+    },
+    {
+      "id": "5471df3a-b379-42f6-9169-ec1499e28792",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que~:~$\\forall n\\in\\Nn^*,\\;\\ln(n+1)<H_n<1+\\ln(n)$ et en déduire $\\lim_{n\\rightarrow +\\infty}H_n$.",
+        "html": "<p>Montrer que : <span class=\"math inline\">\\(\\forall n\\in\\Nn^*,\\;\\ln(n+1)&lt;H_n&lt;1+\\ln(n)\\)</span> et en déduire <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}H_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "53c0be02-63a7-41e5-8cd9-699a290a47c3",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $x\\mapsto\\frac{1}{x}$ est continue et décroissante sur $]0,+\\infty[$ et donc, pour $k\\in\\Nn^*$, on a~:\n \n$$\\frac{1}{k+1}=(k+1-k)\\frac{1}{k+1}\\leq\\int_{k}^{k+1}\\frac{1}{x}\\;dx\\leq(k+1-k)\\frac{1}{k}=\\frac{1}{k}.$$\nDonc, pour $k\\geq1$,  $\\frac{1}{k}\\geq\\int_{k}^{k+1}\\frac{1}{x}\\;dx$ et, pour $k\\geq2$, $\\frac{1}{k}\\leq\\int_{k-1}^{k}\\frac{1}{x}\\;dx$.\nEn sommant ces inégalités, on obtient pour $n\\geq1$,\n\n$$H_n=\\sum_{k=1}^{n}\\frac{1}{k}\\geq\\sum_{k=1}^{n}\\int_{k}^{k+1}\\frac{1}{x}\\;dx=\\int_{1}^{n+1}\\frac{1}{x}\\;dx=\\ln(n+1),$$ \net pour $n\\geq2$,\n\n$$H_n=1+\\sum_{k=2}^{n}\\frac{1}{k}\\leq1+\\sum_{k=2}^{n}\\int_{k-1}^{k}\\frac{1}{x}\\;dx=1+\\int_{1}^{n}\\frac{1}{x}\\;dx=1+\\ln n,$$\ncette dernière inégalité restant vraie quand $n=1$. Donc,\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn^*,\\;\\ln(n+1)\\leq H_n\\leq1+\\ln n.$\n}\n\\end{center}",
+        "html": "<p>La fonction <span class=\"math inline\">\\(x\\mapsto\\frac{1}{x}\\)</span> est continue et décroissante sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span> et donc, pour <span class=\"math inline\">\\(k\\in\\Nn^*\\)</span>, on a :</p>\n<p><span class=\"math display\">\\[\\frac{1}{k+1}=(k+1-k)\\frac{1}{k+1}\\leq\\int_{k}^{k+1}\\frac{1}{x}\\;dx\\leq(k+1-k)\\frac{1}{k}=\\frac{1}{k}.\\]</span> Donc, pour <span class=\"math inline\">\\(k\\geq1\\)</span>, <span class=\"math inline\">\\(\\frac{1}{k}\\geq\\int_{k}^{k+1}\\frac{1}{x}\\;dx\\)</span> et, pour <span class=\"math inline\">\\(k\\geq2\\)</span>, <span class=\"math inline\">\\(\\frac{1}{k}\\leq\\int_{k-1}^{k}\\frac{1}{x}\\;dx\\)</span>. En sommant ces inégalités, on obtient pour <span class=\"math inline\">\\(n\\geq1\\)</span>,</p>\n<p><span class=\"math display\">\\[H_n=\\sum_{k=1}^{n}\\frac{1}{k}\\geq\\sum_{k=1}^{n}\\int_{k}^{k+1}\\frac{1}{x}\\;dx=\\int_{1}^{n+1}\\frac{1}{x}\\;dx=\\ln(n+1),\\]</span> et pour <span class=\"math inline\">\\(n\\geq2\\)</span>,</p>\n<p><span class=\"math display\">\\[H_n=1+\\sum_{k=2}^{n}\\frac{1}{k}\\leq1+\\sum_{k=2}^{n}\\int_{k-1}^{k}\\frac{1}{x}\\;dx=1+\\int_{1}^{n}\\frac{1}{x}\\;dx=1+\\ln n,\\]</span> cette dernière inégalité restant vraie quand <span class=\"math inline\">\\(n=1\\)</span>. Donc,</p>\n"
+      }
+    },
+    {
+      "id": "893ac2ea-10ab-4c68-ab39-d6048185597b",
+      "type": "question",
+      "value": {
+        "latex": "Pour $n$ entier naturel non nul, on pose $u_n=H_n-\\ln(n)$ et $v_n=H_n-\\ln(n+1)$. Montrer que les suites $(u_n)$ et $(v_n)$ convergent vers un réel $\\gamma\\in\\left[\\frac{1}{2},1\\right]$ ($\\gamma$ est appelée la constante d'\\textsc{Euler}). Donner une valeur approchée de $\\gamma$ à $10^{-2}$ près.",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel non nul, on pose <span class=\"math inline\">\\(u_n=H_n-\\ln(n)\\)</span> et <span class=\"math inline\">\\(v_n=H_n-\\ln(n+1)\\)</span>. Montrer que les suites <span class=\"math inline\">\\((u_n)\\)</span> et <span class=\"math inline\">\\((v_n)\\)</span> convergent vers un réel <span class=\"math inline\">\\(\\gamma\\in\\left[\\frac{1}{2},1\\right]\\)</span> (<span class=\"math inline\">\\(\\gamma\\)</span> est appelée la constante d’<span class=\"smallcaps\">Euler</span>). Donner une valeur approchée de <span class=\"math inline\">\\(\\gamma\\)</span> à <span class=\"math inline\">\\(10^{-2}\\)</span> près.</p>\n"
+      }
+    },
+    {
+      "id": "6061c4ae-c873-45db-ac07-1ca19f5c709d",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $n$ un entier naturel non nul.\n$$u_{n+1}-u_n=\\frac{1}{n+1}-\\ln(n+1)+\\ln n=\\frac{1}{n+1}-\\int_{n}^{n+1}\\frac{1}{x}\\;dx=\\int_{n}^{n+1}\\left(\\frac{1}{n+1}-\\frac{1}{x}\\right)\\;dx\\leq0$$\ncar la fonction $x\\mapsto\\frac{1}{x}$ décroit sur $[n,n+1]$. De même,\n\n$$v_{n+1}-v_n=\\frac{1}{n+1}-\\ln(n+2)+\\ln(n+1)=\\frac{1}{n+1}-\\int_{n+1}^{n+2}\\frac{1}{x}\\;dx=\\int_{n+1}^{n+2}\\left(\\frac{1}{n+1}-\\frac{1}{x}\\right)\\;dx\\geq0$$\ncar la fonction $x\\mapsto\\frac{1}{x}$ décroit sur $[n+1,n+2]$. Enfin,\n\n$$u_n-v_n=\\ln(n+1)-\\ln n=\\ln\\left(1+\\frac{1}{n}\\right)$$ \net donc la suite $u-v$ tend vers 0 quand $n$ tend vers $+\\infty$.\nFinalement, la suite $u$ décroit, la suite $v$ croit et la suite $u-v$ tend vers $0$. On en déduit que les suites $u$ et $v$ sont adjacentes, et en particulier convergentes et de même limite. Notons $\\gamma$ cette limite.\nPour tout entier naturel non nul $n$, on a $v_n\\leq\\gamma\\leq u_n$, et en particulier, $v_3\\leq\\gamma\\leq u_1$ avec $v_3=0,5...$ et $u_1=1$. Donc, $\\gamma\\in\\left[\\frac{1}{2},1\\right]$.\nPlus précisément, pour $n$ entier naturel non nul donné, on a\n\n$$0\\leq u_n-v_n\\leq\\frac{10^{-2}}{2}\\Leftrightarrow\\ln\\left(1+\\frac{1}{n}\\right)\\leq0,005\\Leftrightarrow\\frac{1}{n}\\leq e^{0,005}-1\\Leftrightarrow n\\geq\\frac{1}{e^{0,005}-1}=199,5...\\Leftrightarrow n\\geq200.$$\nDonc $0\\leq\\gamma-v_{100}\\leq\\frac{10^{-2}}{2}$ et une valeur approchée de $v_{200}$ à $\\frac{10^{-2}}{2}$ près (c'est-à-dire arrondie à la 3 ème décimale la plus proche) est une valeur approchée de $\\gamma$ à $10^{-2}$ près. On trouve $\\gamma=0,57$ à $10^{-2}$ près par défaut. Plus précisémént,\n\n\\begin{center}\n\\shadowbox{\n$\\gamma=0,5772156649...$ ($\\gamma$ est la constante d'\\textsc{Euler}).\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\)</span> un entier naturel non nul. <span class=\"math display\">\\[u_{n+1}-u_n=\\frac{1}{n+1}-\\ln(n+1)+\\ln n=\\frac{1}{n+1}-\\int_{n}^{n+1}\\frac{1}{x}\\;dx=\\int_{n}^{n+1}\\left(\\frac{1}{n+1}-\\frac{1}{x}\\right)\\;dx\\leq0\\]</span> car la fonction <span class=\"math inline\">\\(x\\mapsto\\frac{1}{x}\\)</span> décroit sur <span class=\"math inline\">\\([n,n+1]\\)</span>. De même,</p>\n<p><span class=\"math display\">\\[v_{n+1}-v_n=\\frac{1}{n+1}-\\ln(n+2)+\\ln(n+1)=\\frac{1}{n+1}-\\int_{n+1}^{n+2}\\frac{1}{x}\\;dx=\\int_{n+1}^{n+2}\\left(\\frac{1}{n+1}-\\frac{1}{x}\\right)\\;dx\\geq0\\]</span> car la fonction <span class=\"math inline\">\\(x\\mapsto\\frac{1}{x}\\)</span> décroit sur <span class=\"math inline\">\\([n+1,n+2]\\)</span>. Enfin,</p>\n<p><span class=\"math display\">\\[u_n-v_n=\\ln(n+1)-\\ln n=\\ln\\left(1+\\frac{1}{n}\\right)\\]</span> et donc la suite <span class=\"math inline\">\\(u-v\\)</span> tend vers 0 quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Finalement, la suite <span class=\"math inline\">\\(u\\)</span> décroit, la suite <span class=\"math inline\">\\(v\\)</span> croit et la suite <span class=\"math inline\">\\(u-v\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>. On en déduit que les suites <span class=\"math inline\">\\(u\\)</span> et <span class=\"math inline\">\\(v\\)</span> sont adjacentes, et en particulier convergentes et de même limite. Notons <span class=\"math inline\">\\(\\gamma\\)</span> cette limite. Pour tout entier naturel non nul <span class=\"math inline\">\\(n\\)</span>, on a <span class=\"math inline\">\\(v_n\\leq\\gamma\\leq u_n\\)</span>, et en particulier, <span class=\"math inline\">\\(v_3\\leq\\gamma\\leq u_1\\)</span> avec <span class=\"math inline\">\\(v_3=0,5...\\)</span> et <span class=\"math inline\">\\(u_1=1\\)</span>. Donc, <span class=\"math inline\">\\(\\gamma\\in\\left[\\frac{1}{2},1\\right]\\)</span>. Plus précisément, pour <span class=\"math inline\">\\(n\\)</span> entier naturel non nul donné, on a</p>\n<p><span class=\"math display\">\\[0\\leq u_n-v_n\\leq\\frac{10^{-2}}{2}\\Leftrightarrow\\ln\\left(1+\\frac{1}{n}\\right)\\leq0,005\\Leftrightarrow\\frac{1}{n}\\leq e^{0,005}-1\\Leftrightarrow n\\geq\\frac{1}{e^{0,005}-1}=199,5...\\Leftrightarrow n\\geq200.\\]</span> Donc <span class=\"math inline\">\\(0\\leq\\gamma-v_{100}\\leq\\frac{10^{-2}}{2}\\)</span> et une valeur approchée de <span class=\"math inline\">\\(v_{200}\\)</span> à <span class=\"math inline\">\\(\\frac{10^{-2}}{2}\\)</span> près (c’est-à-dire arrondie à la 3 ème décimale la plus proche) est une valeur approchée de <span class=\"math inline\">\\(\\gamma\\)</span> à <span class=\"math inline\">\\(10^{-2}\\)</span> près. On trouve <span class=\"math inline\">\\(\\gamma=0,57\\)</span> à <span class=\"math inline\">\\(10^{-2}\\)</span> près par défaut. Plus précisémént,</p>\n"
+      }
+    }
+  ]
+}

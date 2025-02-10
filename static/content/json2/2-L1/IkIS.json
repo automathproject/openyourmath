@@ -1,0 +1,67 @@
+{
+  "uuid": "IkIS",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2096",
+    "auteur": "bodin",
+    "createdAt": "2008-02-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Polynôme en sin, cos ou en sh, ch",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:45.032Z"
+  },
+  "contenu": [
+    {
+      "id": "af540c12-534d-4c36-a952-5ea0bc44509c",
+      "type": "description",
+      "value": {
+        "latex": "Soit $\\displaystyle I_n=\\int_0^{\\frac \\pi 2}(\\sin x)^n \\, d x$ \\ \\ pour $n\\in \\N$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\displaystyle I_n=\\int_0^{\\frac \\pi 2}(\\sin x)^n \\, d x\\)</span>   pour <span class=\"math inline\">\\(n\\in \\N\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "4c27b87b-ecf8-4f9f-904a-3403c91a08e8",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $I_{n+2}=\\frac{n+1}{n+2}I_n$. Expliciter $I_n$. En déduire $\\int_{-1}^1\\left( 1-x^2\\right) ^n d x$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(I_{n+2}=\\frac{n+1}{n+2}I_n\\)</span>. Expliciter <span class=\"math inline\">\\(I_n\\)</span>. En déduire <span class=\"math inline\">\\(\\int_{-1}^1\\left( 1-x^2\\right) ^n d x\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b815acff-d74b-44a7-b0d9-6c8fd5d9b678",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\left( I_n\\right) _n$ est positive décroissante. Montrer que $I_n\\sim I_{n+1}$",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\left( I_n\\right) _n\\)</span> est positive décroissante. Montrer que <span class=\"math inline\">\\(I_n\\sim I_{n+1}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "ad9eb221-8b65-498f-bf81-1f7bfea424f0",
+      "type": "question",
+      "value": {
+        "latex": "Simplifier $I_n \\cdot I_{n+1}$. Montrer que $I_n\\sim \\sqrt{\n\\frac \\pi {2n}}$. En déduire \n$\\frac{1 \\cdot 3 \\cdots \\left( 2n+1\\right) }{2 \\cdot 4 \\cdots \\left( 2n\\right) }\\sim 2\\sqrt{\\frac n \\pi }$.",
+        "html": "<p>Simplifier <span class=\"math inline\">\\(I_n \\cdot I_{n+1}\\)</span>. Montrer que <span class=\"math inline\">\\(I_n\\sim \\sqrt{\n\\frac \\pi {2n}}\\)</span>. En déduire <span class=\"math inline\">\\(\\frac{1 \\cdot 3 \\cdots \\left( 2n+1\\right) }{2 \\cdot 4 \\cdots \\left( 2n\\right) }\\sim 2\\sqrt{\\frac n \\pi }\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "581cbdc0-f185-42d2-b27f-73aa1c6ee514",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}\n$$ I_{n+2}  = \\int_0^{\\frac \\pi 2} \\sin^{n+1} x \\cdot \\sin x \\,  dx.$$\nEn posant $u(x) = \\sin^{n+1} x$ et $v'(x) = \\sin x$ et en intégrant par parties nous obtenons\n$$\\begin{align*}\nI_{n+2} &= \\bigg[ -\\cos x \\sin^{n+1}x \\bigg]_0^{\\frac \\pi 2} \\ \\  + \\ \\ (n+1)\\int_0^{\\frac \\pi 2} \\cos^2x \\sin^nx \\, dx \\\\\n &= 0 \\ \\  + \\ \\ (n+1)\\int_0^{\\frac \\pi 2} (1-\\sin^2x)\\sin^nx \\, dx \\\\\n &= (n+1)I_n-(n+1)I_{n+2}.  \\\\\n\\end{align*}$$\n\nDonc $(n+2)I_{n+2}=(n+1)I_n$.\nConclusion \n$$I_{n+2} = \\frac{n+1}{n+2} I_n.$$\nNous avons donc une formule de récurrence pour $I_n$ qui s'exprime en fonction de $I_{n-2}$\nqui a son tour s'exprime en fonction de $I_{n-4}$, etc. On se ramène ainsi à l'intégrale de $I_0$ (si $n$ est pair) \nou bien de $I_1$ (si $n$ est impair). Un petit calcul donne $I_0=\\frac \\pi 2$ et $I_1=1$.\nPar récurrence nous avons donc pour $n$ pair :\n$$I_n = \\frac{1\\cdot3 \\cdots (n-1) }{2 \\cdot 4 \\cdots n} \\frac \\pi 2,$$\net pour $n$ impair :\n$$I_n = \\frac{2 \\cdot 4 \\cdots (n-1)}{1 \\cdot 3 \\cdots n}.$$\nPour calculer $\\int_{-1}^1\\left( 1-x^2\\right) ^n d x$ nous allons nous ramener à une intégrale de Wallis.\nAvec le changement de variable $x=\\cos u$, on montre assez facilement que :\n$$\\begin{align*}\n \\int_{-1}^1\\left( 1-x^2\\right) ^n d x \n   &=  2\\int_0^1\\left( 1-x^2\\right) ^n d x\\\\\n   &=  2\\int_{\\frac \\pi 2}^{0}  \\left( 1-\\cos ^2 u\\right) ^n (- \\sin u \\, du)  \\quad \\text{ avec } x=\\cos u \\\\\n   &=  2\\int_0^{\\frac \\pi 2}  \\sin^{2n+1} u \\, du  \\\\\n   &= 2I_{2n+1}\\\\\n\\end{align*}$$",
+        "html": ""
+      }
+    },
+    {
+      "id": "980cb084-8b49-46d7-b7d8-a4e963f95ab6",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n  \\item Faire une intégration par parties afin d'exprimer $I_{n+2}$ en fonction de $I_n$. \nPour le calcul explicite on distinguera le cas des $n$ pairs et impairs.\n  \\item Rappel : $u_n\\sim v_n$ est équivalent à $\\frac{u_n}{v_n} \\to 1$. \nUtiliser la décroissance de $I_n$ pour encadrer $\\frac{I_{n+1}}{I_n}$.\n  \\end{enumerate}",
+        "html": "<ol>\n<li><p>Faire une intégration par parties afin d’exprimer <span class=\"math inline\">\\(I_{n+2}\\)</span> en fonction de <span class=\"math inline\">\\(I_n\\)</span>. Pour le calcul explicite on distinguera le cas des <span class=\"math inline\">\\(n\\)</span> pairs et impairs.</p></li>\n<li><p>Rappel : <span class=\"math inline\">\\(u_n\\sim v_n\\)</span> est équivalent à <span class=\"math inline\">\\(\\frac{u_n}{v_n} \\to 1\\)</span>. Utiliser la décroissance de <span class=\"math inline\">\\(I_n\\)</span> pour encadrer <span class=\"math inline\">\\(\\frac{I_{n+1}}{I_n}\\)</span>.</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

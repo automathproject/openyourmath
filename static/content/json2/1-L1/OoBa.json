@@ -1,0 +1,35 @@
+{
+  "uuid": "OoBa",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5623",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Noyau, image",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:37.947Z"
+  },
+  "contenu": [
+    {
+      "id": "5296e313-2e6e-4477-8673-eace68ff4523",
+      "type": "description",
+      "value": {
+        "latex": "Soit $H$ un élément de $\\mathcal{M}_n(\\Cc)$ tel que $\\forall A\\in\\mathcal{M}_n(\\Cc),\\;\\exists\\lambda_A\\in\\Cc/\\;HAH=\\lambda_AH$. Montrer que $\\text{rg}H\\leqslant 1$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(H\\)</span> un élément de <span class=\"math inline\">\\(\\mathcal{M}_n(\\Cc)\\)</span> tel que <span class=\"math inline\">\\(\\forall A\\in\\mathcal{M}_n(\\Cc),\\;\\exists\\lambda_A\\in\\Cc/\\;HAH=\\lambda_AH\\)</span>. Montrer que <span class=\"math inline\">\\(\\text{rg}H\\leqslant 1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "07c079d4-0f79-4e1f-a454-8aa373e532e1",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $r$ le rang de $H$. Il existe deux matrices carrées inversibles $P$ et $Q$ de format $n$ telles que $H =PJ_rQ$ où $J_r=\\left(\n\\begin{array}{cc}\nI_r&0\\\\\n0&0\n\\end{array}\n\\right)$. L'égalité $HAH =\\lambda_AH$ s'écrit après simplifications $J_rQAPJ_r=\\lambda_AJ_r$.\nMaintenant , quand $A$ décrit $\\mathcal{M}_n(\\Kk)$, la matrice $B=QAP$ décrit également $\\mathcal{M}_n(\\Kk)$ (par exemple, l'application qui à $A$ associe $QAP$ est une permutation de $\\mathcal{M}_n(\\Kk)$ de réciproque l'application qui à $A$ associe $Q^{-1}AP^{-1}$).\n\nL'énoncé s'écrit maintenant de manière plus simple : montrons que $(\\forall B\\in\\mathcal{M}_n(\\Kk),\\;\\exists\\lambda_B\\in\\Kk/\\;J_rBJ_r =\\lambda_BJ_r)\\Rightarrow r\\leqslant 1$.\n\nUn calcul par blocs fournit en posant $B=\\left(\n\\begin{array}{cc}\nB_1&B_3\\\\\nB_2&B_4\n\\end{array}\n\\right)$\n\n\\begin{center}\n$J_rBJ_r=\\left(\n\\begin{array}{cc}\nI_r&0\\\\\n0&0\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nB_1&B_3\\\\\nB_2&B_4\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nI_r&0\\\\\n0&0\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\nB_1&0\\\\\nB_2&0\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nI_r&0\\\\\n0&0\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\nB_1&0\\\\\n0&0\n\\end{array}\n\\right)$\n\\end{center} \n\nMais si $r\\geqslant 2$, il existe des matrices carrées $B_1$ de format $r$ qui ne sont pas des matrices scalaires et donc telles que $B_1$ n'est pas colinéaire à $I_r$. Donc $r\\leqslant 1$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(r\\)</span> le rang de <span class=\"math inline\">\\(H\\)</span>. Il existe deux matrices carrées inversibles <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(Q\\)</span> de format <span class=\"math inline\">\\(n\\)</span> telles que <span class=\"math inline\">\\(H =PJ_rQ\\)</span> où <span class=\"math inline\">\\(J_r=\\left(\n\\begin{array}{cc}\nI_r&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)\\)</span>. L’égalité <span class=\"math inline\">\\(HAH =\\lambda_AH\\)</span> s’écrit après simplifications <span class=\"math inline\">\\(J_rQAPJ_r=\\lambda_AJ_r\\)</span>. Maintenant , quand <span class=\"math inline\">\\(A\\)</span> décrit <span class=\"math inline\">\\(\\mathcal{M}_n(\\Kk)\\)</span>, la matrice <span class=\"math inline\">\\(B=QAP\\)</span> décrit également <span class=\"math inline\">\\(\\mathcal{M}_n(\\Kk)\\)</span> (par exemple, l’application qui à <span class=\"math inline\">\\(A\\)</span> associe <span class=\"math inline\">\\(QAP\\)</span> est une permutation de <span class=\"math inline\">\\(\\mathcal{M}_n(\\Kk)\\)</span> de réciproque l’application qui à <span class=\"math inline\">\\(A\\)</span> associe <span class=\"math inline\">\\(Q^{-1}AP^{-1}\\)</span>).</p>\n<p>L’énoncé s’écrit maintenant de manière plus simple : montrons que <span class=\"math inline\">\\((\\forall B\\in\\mathcal{M}_n(\\Kk),\\;\\exists\\lambda_B\\in\\Kk/\\;J_rBJ_r =\\lambda_BJ_r)\\Rightarrow r\\leqslant 1\\)</span>.</p>\n<p>Un calcul par blocs fournit en posant <span class=\"math inline\">\\(B=\\left(\n\\begin{array}{cc}\nB_1&amp;B_3\\\\\nB_2&amp;B_4\n\\end{array}\n\\right)\\)</span></p>\n<p><span class=\"math inline\">\\(J_rBJ_r=\\left(\n\\begin{array}{cc}\nI_r&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nB_1&amp;B_3\\\\\nB_2&amp;B_4\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nI_r&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\nB_1&amp;0\\\\\nB_2&amp;0\n\\end{array}\n\\right)\\left(\n\\begin{array}{cc}\nI_r&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)=\\left(\n\\begin{array}{cc}\nB_1&amp;0\\\\\n0&amp;0\n\\end{array}\n\\right)\\)</span></p>\n<p>Mais si <span class=\"math inline\">\\(r\\geqslant 2\\)</span>, il existe des matrices carrées <span class=\"math inline\">\\(B_1\\)</span> de format <span class=\"math inline\">\\(r\\)</span> qui ne sont pas des matrices scalaires et donc telles que <span class=\"math inline\">\\(B_1\\)</span> n’est pas colinéaire à <span class=\"math inline\">\\(I_r\\)</span>. Donc <span class=\"math inline\">\\(r\\leqslant 1\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

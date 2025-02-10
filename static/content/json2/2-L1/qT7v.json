@@ -1,0 +1,35 @@
+{
+  "uuid": "qT7v",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5447",
+    "auteur": "rouget",
+    "createdAt": "2010-07-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Somme de Riemann",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:30.124Z"
+  },
+  "contenu": [
+    {
+      "id": "5f8b26c0-4f70-424d-ac88-32329627f072",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ une fonction de classe $C^2$ sur $[0,1]$. Déterminer le réel $a$ tel que :\n \n$$\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=1}^{n-1}f(\\frac{k}{n})\\underset{n\\rightarrow+\\infty}{=}\\frac{a}{n}+o(\\frac{1}{n}).$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une fonction de classe <span class=\"math inline\">\\(C^2\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>. Déterminer le réel <span class=\"math inline\">\\(a\\)</span> tel que :</p>\n<p><span class=\"math display\">\\[\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=1}^{n-1}f(\\frac{k}{n})\\underset{n\\rightarrow+\\infty}{=}\\frac{a}{n}+o(\\frac{1}{n}).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "431cad8e-8f94-4205-bdb7-79e5c6376aba",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons $f$ de classe $C^2$ sur $[0,1]$.\nSoit $F$ une primitive de $f$ sur $[0,1]$. Soit $n$ un entier naturel non nul.\n\n$$u_n=\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=0}^{n-1}f(\\frac{k}{n})=\\sum_{k=0}^{n-1}(\\int_{k/n}^{(k+1)/n}f(t)\\;dt-\\frac{1}{n}f(\\frac{k}{n}))=\\sum_{k=0}^{n-1}(F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})).$$\n\n$f$ est de classe $C^2$ sur le segment $[0,1]$. Par suite, $F^{(3)}=f''$ est définie et bornée sur ce segment. En notant $M_2$ la borne supérieure de $|f''|$ sur $[0,1]$, l'inégalité de \\textsc{Taylor}-\\textsc{Lagrange} à l'ordre 3 appliquée à $F$ sur le segment $[0,1]$ fournit\n\n$$\\left|F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})-\\frac{1}{2n^2}F''(\\frac{k}{n})\\right|\n\\leq\\frac{(1/n)^3M_2}{6},$$\n\net donc,\n \n$$\\begin{align*}\\ensuremath\n\\left|\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})-\\frac{1}{2n^2}F''(\\frac{k}{n})]\n\\right|&\\leq\\sum_{k=0}^{n-1}|F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})-\\frac{1}{2n^2}F''(\\frac{k}{n})|\\\\\n &\\leq\\sum_{k=0}^{n-1}\\frac{(1/n)^3M_2}{6}=\\frac{M_2}{6n^2}.\n\\end{align*}$$\n\nAinsi, $\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})-\\frac{1}{2n^2}F''(\\frac{k}{n})]=O(\\frac{1}{n^2})$, ou encore $\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F'(\\frac{k}{n})-\\frac{1}{2n^2}F''(\\frac{k}{n})]=o(\\frac{1}{n})$, ou enfin,\n\n$$u_n=\\sum_{k=0}^{n-1}\\frac{1}{2n^2}F''(\\frac{k}{n})+o(\\frac{1}{n}).$$\n\nMaintenant, \n\n$$\\sum_{k=0}^{n-1}\\frac{1}{2n^2}F''(\\frac{k}{n})=\\frac{1}{2n}.\\frac{1}{n}\\sum_{k=0}^{n-1}f'(\\frac{k}{n}).$$\n\nOr, la fonction $f'$ est continue sur le segment $[0,1]$. Par suite, la somme de \\textsc{Riemann} $\\frac{1}{n}\\sum_{k=0}^{n-1}f'(\\frac{k}{n})$ tend vers $\\int_{0}^{1}f'(t)\\;dt=f(1)-f(0)$ et donc \n\n$$\\frac{1}{2n}\\frac{1}{n}\\sum_{k=0}^{n-1}f'(\\frac{k}{n})=\\frac{1}{2n}(f(1)-f(0)+o(1))=\\frac{f(1)-f(0)}{2n}+o(\\frac{1}{n}).$$\n\nFinalement,\n\n$$\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=0}^{n-1}f(\\frac{k}{n})=\\frac{f(1)-f(0)}{2n}+o(\\frac{1}{n}).$$",
+        "html": "<p>Supposons <span class=\"math inline\">\\(f\\)</span> de classe <span class=\"math inline\">\\(C^2\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>. Soit <span class=\"math inline\">\\(F\\)</span> une primitive de <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>. Soit <span class=\"math inline\">\\(n\\)</span> un entier naturel non nul.</p>\n<p><span class=\"math display\">\\[u_n=\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=0}^{n-1}f(\\frac{k}{n})=\\sum_{k=0}^{n-1}(\\int_{k/n}^{(k+1)/n}f(t)\\;dt-\\frac{1}{n}f(\\frac{k}{n}))=\\sum_{k=0}^{n-1}(F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})).\\]</span></p>\n<p><span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^2\\)</span> sur le segment <span class=\"math inline\">\\([0,1]\\)</span>. Par suite, <span class=\"math inline\">\\(F^{(3)}=f&#39;&#39;\\)</span> est définie et bornée sur ce segment. En notant <span class=\"math inline\">\\(M_2\\)</span> la borne supérieure de <span class=\"math inline\">\\(|f&#39;&#39;|\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>, l’inégalité de <span class=\"smallcaps\">Taylor</span>-<span class=\"smallcaps\">Lagrange</span> à l’ordre 3 appliquée à <span class=\"math inline\">\\(F\\)</span> sur le segment <span class=\"math inline\">\\([0,1]\\)</span> fournit</p>\n<p><span class=\"math display\">\\[\\left|F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})-\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})\\right|\n\\leq\\frac{(1/n)^3M_2}{6},\\]</span></p>\n<p>et donc,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\left|\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})-\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})]\n\\right|&amp;\\leq\\sum_{k=0}^{n-1}|F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})-\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})|\\\\\n &amp;\\leq\\sum_{k=0}^{n-1}\\frac{(1/n)^3M_2}{6}=\\frac{M_2}{6n^2}.\n\\end{align*}\\]</span></p>\n<p>Ainsi, <span class=\"math inline\">\\(\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})-\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})]=O(\\frac{1}{n^2})\\)</span>, ou encore <span class=\"math inline\">\\(\\sum_{k=0}^{n-1}[F(\\frac{k+1}{n})-F(\\frac{k}{n})-\\frac{1}{n}F&#39;(\\frac{k}{n})-\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})]=o(\\frac{1}{n})\\)</span>, ou enfin,</p>\n<p><span class=\"math display\">\\[u_n=\\sum_{k=0}^{n-1}\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})+o(\\frac{1}{n}).\\]</span></p>\n<p>Maintenant,</p>\n<p><span class=\"math display\">\\[\\sum_{k=0}^{n-1}\\frac{1}{2n^2}F&#39;&#39;(\\frac{k}{n})=\\frac{1}{2n}.\\frac{1}{n}\\sum_{k=0}^{n-1}f&#39;(\\frac{k}{n}).\\]</span></p>\n<p>Or, la fonction <span class=\"math inline\">\\(f&#39;\\)</span> est continue sur le segment <span class=\"math inline\">\\([0,1]\\)</span>. Par suite, la somme de <span class=\"smallcaps\">Riemann</span> <span class=\"math inline\">\\(\\frac{1}{n}\\sum_{k=0}^{n-1}f&#39;(\\frac{k}{n})\\)</span> tend vers <span class=\"math inline\">\\(\\int_{0}^{1}f&#39;(t)\\;dt=f(1)-f(0)\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\frac{1}{2n}\\frac{1}{n}\\sum_{k=0}^{n-1}f&#39;(\\frac{k}{n})=\\frac{1}{2n}(f(1)-f(0)+o(1))=\\frac{f(1)-f(0)}{2n}+o(\\frac{1}{n}).\\]</span></p>\n<p>Finalement,</p>\n<p><span class=\"math display\">\\[\\int_{0}^{1}f(t)\\;dt-\\frac{1}{n}\\sum_{k=0}^{n-1}f(\\frac{k}{n})=\\frac{f(1)-f(0)}{2n}+o(\\frac{1}{n}).\\]</span></p>\n"
+      }
+    }
+  ]
+}

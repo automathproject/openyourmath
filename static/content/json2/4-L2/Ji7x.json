@@ -1,0 +1,43 @@
+{
+  "uuid": "Ji7x",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2453",
+    "auteur": "matexo1",
+    "createdAt": "2002-02-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:22.124Z"
+  },
+  "contenu": [
+    {
+      "id": "5c4fd2f3-b1c8-422a-93d3-9f0ad8223e1a",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que\n$$\\left|\n\\begin{array}{ccccc}\n1 & t_1 & t_1^2 & \\ldots & t_1^{n-1} \\\\\n1 & t_2 & t_2^2 & \\ldots & t_2^{n-1} \\\\\\\n\\ldots&\\ldots&\\ldots& \\ldots & \\ldots \\\\\n1 & t_n & t_n^2 & \\ldots & t_n^{n-1}\n\\end{array}\\right|\n = \\prod_{1 \\le i < j \\le n} (t_j - t_i) $$",
+        "html": "<p>Montrer que <span class=\"math display\">\\[\\left|\n\\begin{array}{ccccc}\n1 &amp; t_1 &amp; t_1^2 &amp; \\ldots &amp; t_1^{n-1} \\\\\n1 &amp; t_2 &amp; t_2^2 &amp; \\ldots &amp; t_2^{n-1} \\\\\\\n\\ldots&amp;\\ldots&amp;\\ldots&amp; \\ldots &amp; \\ldots \\\\\n1 &amp; t_n &amp; t_n^2 &amp; \\ldots &amp; t_n^{n-1}\n\\end{array}\\right|\n = \\prod_{1 \\le i &lt; j \\le n} (t_j - t_i)\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b79ac7a2-1f4e-4124-a248-fedcf08f47ed",
+      "type": "indication",
+      "value": {
+        "latex": "Faire les opérations suivantes sur les colonnes\n$C_n \\leftarrow C_n-t_n C_{n-1}$,\npuis $C_{n-1} \\leftarrow C_{n-1}-t_n C_{n-2}$,...,\n$C_2 \\leftarrow  C_2-t_nC_1$.\nDévelopper par rapport a la bonne ligne et reconnaître\nque l'on obtient le déterminant recherché mais au rang $n-1$.",
+        "html": "<p>Faire les opérations suivantes sur les colonnes <span class=\"math inline\">\\(C_n \\leftarrow C_n-t_n C_{n-1}\\)</span>, puis <span class=\"math inline\">\\(C_{n-1} \\leftarrow C_{n-1}-t_n C_{n-2}\\)</span>,..., <span class=\"math inline\">\\(C_2 \\leftarrow  C_2-t_nC_1\\)</span>. Développer par rapport a la bonne ligne et reconnaître que l’on obtient le déterminant recherché mais au rang <span class=\"math inline\">\\(n-1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cf445b7a-712f-41b9-8394-4ea403416916",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $V_n$ le déterminant à calculer\net $C_1,\\ldots,C_n$ les colonnes de la matrice correspondante.\n\nNous allons faire les opérations suivantes sur les colonnes\nen partant de la dernière colonne.\n$C_n$ est remplacée par $C_n-t_n C_{n-1}$,\npuis $C_{n-1}$ est remplacée par $C_{n-1}-t_n C_{n-2}$,...\njusqu'à $C_2$ qui est remplacée par $C_2-t_nC_1$.\nOn obtient donc\n\n$$V_n=\\begin{vmatrix}\n1 & t_1 & t_1^2 & \\ldots & t_1^{n-1} \\\\\n1 & t_2 & t_2^2 & \\ldots & t_2^{n-1} \\\\\\\n\\ldots&\\ldots&\\ldots& \\ldots & \\ldots \\\\\n1 & t_n & t_n^2 & \\ldots & t_n^{n-1}\n\\end{vmatrix} \n= \n\\begin{vmatrix}\n1 & t_1-t_n & t_1^2-t_1t_n & \\ldots & t_1^{n-1}-t_1^{n-2}t_n \\\\\n1 & t_2-t_n & t_2^2-t_2t_n & \\ldots & t_2^{n-1}-t_2^{n-2}t_n \\\\\\\n\\ldots&\\ldots&\\ldots& \\ldots & \\ldots \\\\\n1 & 0 & 0 & \\ldots & 0\n\\end{vmatrix}\n$$\n\nOn développe par rapport à la dernière ligne et on écrit $t_i^k-t_i^{k-1}t_n=t_i^{k-1}(t_i-t_n)$ pour obtenir :\n$$V_n = (-1)^{n-1}\\begin{vmatrix}\n t_1-t_n & t_1(t_1-t_n) & \\ldots & t_1^{n-2}(t_1-t_n) \\\\\n t_2-t_n & t_2(t_2-t_n) & \\ldots & t_2^{n-2}(t_2-t_n) \\\\\\\n\\ldots&\\ldots& \\ldots & \\ldots \\\\\n t_{n-1}-t_n & \\ldots & \\ldots & \\ldots\n\\end{vmatrix}$$\n\nNous utilisons maintenant la linéarité du déterminant par rapport à chacune des lignes :\non factorise la première ligne par $t_1-t_n$ ; la second par $t_2-t_n$,...\nOn obtient \n$$V_n = (-1)^{n-1}(t_1-t_n)(t_2-t_n)\\cdots(t_{n-1}-t_n)\n\\begin{vmatrix}\n1 & t_1 & t_1^2 & \\ldots & t_1^{n-2} \\\\\n1 & t_2 & t_2^2 & \\ldots & t_2^{n-2} \\\\\\\n\\ldots&\\ldots&\\ldots& \\ldots & \\ldots \\\\\n1 & t_{n-1} & t_{n-1}^2 & \\ldots & t_{n-1}^{n-2}\n\\end{vmatrix} \n$$\nDonc $$V_n = V_{n-1}\\prod_{j=1}^{n-1}(t_n-t_j).$$\n\nSi maintenant on suppose la formule connue pour $V_{n-1}$\nc'est-à-dire $V_{n-1}(t_1,\\ldots,t_{n-1})\n= \\prod_{1 \\le i < j \\le n-1} (t_j - t_i)$\n\nAlors on obtient par récurrence que\n$$V_n(t_1,\\ldots,t_{n-1},t_n)= V_{n-1}(t_1,\\ldots,t_{n-1})\\prod_{j=1}^{n-1}(t_n-t_j) =  \\prod_{1 \\le i < j \\le n} (t_j - t_i).$$",
+        "html": "<p>Notons <span class=\"math inline\">\\(V_n\\)</span> le déterminant à calculer et <span class=\"math inline\">\\(C_1,\\ldots,C_n\\)</span> les colonnes de la matrice correspondante.</p>\n<p>Nous allons faire les opérations suivantes sur les colonnes en partant de la dernière colonne. <span class=\"math inline\">\\(C_n\\)</span> est remplacée par <span class=\"math inline\">\\(C_n-t_n C_{n-1}\\)</span>, puis <span class=\"math inline\">\\(C_{n-1}\\)</span> est remplacée par <span class=\"math inline\">\\(C_{n-1}-t_n C_{n-2}\\)</span>,... jusqu’à <span class=\"math inline\">\\(C_2\\)</span> qui est remplacée par <span class=\"math inline\">\\(C_2-t_nC_1\\)</span>. On obtient donc</p>\n<p><span class=\"math display\">\\[V_n=\\begin{vmatrix}\n1 &amp; t_1 &amp; t_1^2 &amp; \\ldots &amp; t_1^{n-1} \\\\\n1 &amp; t_2 &amp; t_2^2 &amp; \\ldots &amp; t_2^{n-1} \\\\\\\n\\ldots&amp;\\ldots&amp;\\ldots&amp; \\ldots &amp; \\ldots \\\\\n1 &amp; t_n &amp; t_n^2 &amp; \\ldots &amp; t_n^{n-1}\n\\end{vmatrix} \n= \n\\begin{vmatrix}\n1 &amp; t_1-t_n &amp; t_1^2-t_1t_n &amp; \\ldots &amp; t_1^{n-1}-t_1^{n-2}t_n \\\\\n1 &amp; t_2-t_n &amp; t_2^2-t_2t_n &amp; \\ldots &amp; t_2^{n-1}-t_2^{n-2}t_n \\\\\\\n\\ldots&amp;\\ldots&amp;\\ldots&amp; \\ldots &amp; \\ldots \\\\\n1 &amp; 0 &amp; 0 &amp; \\ldots &amp; 0\n\\end{vmatrix}\\]</span></p>\n<p>On développe par rapport à la dernière ligne et on écrit <span class=\"math inline\">\\(t_i^k-t_i^{k-1}t_n=t_i^{k-1}(t_i-t_n)\\)</span> pour obtenir : <span class=\"math display\">\\[V_n = (-1)^{n-1}\\begin{vmatrix}\n t_1-t_n &amp; t_1(t_1-t_n) &amp; \\ldots &amp; t_1^{n-2}(t_1-t_n) \\\\\n t_2-t_n &amp; t_2(t_2-t_n) &amp; \\ldots &amp; t_2^{n-2}(t_2-t_n) \\\\\\\n\\ldots&amp;\\ldots&amp; \\ldots &amp; \\ldots \\\\\n t_{n-1}-t_n &amp; \\ldots &amp; \\ldots &amp; \\ldots\n\\end{vmatrix}\\]</span></p>\n<p>Nous utilisons maintenant la linéarité du déterminant par rapport à chacune des lignes : on factorise la première ligne par <span class=\"math inline\">\\(t_1-t_n\\)</span> ; la second par <span class=\"math inline\">\\(t_2-t_n\\)</span>,... On obtient <span class=\"math display\">\\[V_n = (-1)^{n-1}(t_1-t_n)(t_2-t_n)\\cdots(t_{n-1}-t_n)\n\\begin{vmatrix}\n1 &amp; t_1 &amp; t_1^2 &amp; \\ldots &amp; t_1^{n-2} \\\\\n1 &amp; t_2 &amp; t_2^2 &amp; \\ldots &amp; t_2^{n-2} \\\\\\\n\\ldots&amp;\\ldots&amp;\\ldots&amp; \\ldots &amp; \\ldots \\\\\n1 &amp; t_{n-1} &amp; t_{n-1}^2 &amp; \\ldots &amp; t_{n-1}^{n-2}\n\\end{vmatrix}\\]</span> Donc <span class=\"math display\">\\[V_n = V_{n-1}\\prod_{j=1}^{n-1}(t_n-t_j).\\]</span></p>\n<p>Si maintenant on suppose la formule connue pour <span class=\"math inline\">\\(V_{n-1}\\)</span> c’est-à-dire <span class=\"math inline\">\\(V_{n-1}(t_1,\\ldots,t_{n-1})\n= \\prod_{1 \\le i &lt; j \\le n-1} (t_j - t_i)\\)</span></p>\n<p>Alors on obtient par récurrence que <span class=\"math display\">\\[V_n(t_1,\\ldots,t_{n-1},t_n)= V_{n-1}(t_1,\\ldots,t_{n-1})\\prod_{j=1}^{n-1}(t_n-t_j) =  \\prod_{1 \\le i &lt; j \\le n} (t_j - t_i).\\]</span></p>\n"
+      }
+    }
+  ]
+}

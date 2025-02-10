@@ -1,0 +1,35 @@
+{
+  "uuid": "x6Cl",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4591",
+    "auteur": "quercia",
+    "createdAt": "2010-03-14",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série entière",
+    "sousChapitre": "Développement en série entière",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:41.291Z"
+  },
+  "contenu": [
+    {
+      "id": "13d9cd09-6c75-47d1-af64-2c6949111936",
+      "type": "description",
+      "value": {
+        "latex": "Soit~$\\alpha>0$. On considère la fonction $f_\\alpha$ : $x \\mapsto\\sum_{n=1}^\\infty e^{-n^\\alpha}e^{inx}$.\nMontrer que~$f$ est $\\mathcal{C}^\\infty$. Donner une CNS sur~$\\alpha$ pour que~$f$\nsoit développable en série entière en tout point de~$\\R$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\alpha&gt;0\\)</span>. On considère la fonction <span class=\"math inline\">\\(f_\\alpha\\)</span> : <span class=\"math inline\">\\(x \\mapsto\\sum_{n=1}^\\infty e^{-n^\\alpha}e^{inx}\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(\\mathcal{C}^\\infty\\)</span>. Donner une CNS sur <span class=\"math inline\">\\(\\alpha\\)</span> pour que <span class=\"math inline\">\\(f\\)</span> soit développable en série entière en tout point de <span class=\"math inline\">\\(\\R\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dae6d921-c281-465c-859b-e9c30df8fce1",
+      "type": "reponse",
+      "value": {
+        "latex": "Il y a dérivation terme à terme facilement et indéfiniment.\n\nDSE au voisinage de~$0$~: on envisage de permuter les $\\Sigma$ dans~:\n$f_\\alpha(x) = \\sum_{n=1}^\\infty\\sum_{p=0}^\\infty e^{-n^\\alpha}\\frac{(inx)^p}{p!}$,\nce qui est légitime si la série $\\sum_{n=1}^\\infty e^{-n^\\alpha}e^{n|x|}$ converge.\nOn en déduit qu'une condition suffisante pour que~$f$ soit DSE au voisinage de~$0$\nest $\\alpha \\ge 1$ (avec convergence si $x\\in{]-1,1[}$ pour $\\alpha = 1$ et pour\ntout~$x\\in\\R$ si $\\alpha > 1$).\n\nCas $\\alpha < 1$~: $|f^{(k)}(0)| = \\sum_{n=1}^\\infty e^{-n^\\alpha}n^k\n\\ge e^{-N^\\alpha}N^k$ avec $N=\\lfloor k^{1/\\alpha}\\rfloor$ donc pour $r>0$\nfixé et $k$ tendant vers l'infini on~a\n$\\ln\\Bigl(\\Bigl|\\frac{f^{(k)}(0)r^k}{k!}\\Bigr|\\Bigr) \\sim\n \\Bigl(\\frac1\\alpha-1\\Bigr)k\\ln(k)$\net la série de terme général $\\frac{f^{(k)}(0)r^k}{k!}$ diverge grossièrement.\n\nDSE au voisinage de~$a\\ne 0$~: même raisonnement en écrivant\n$f(x) = \\sum_{n=1}^\\infty\\sum_{p=0}^\\infty e^{-n^\\alpha}e^{ina}\\frac{(in(x-a))^p}{p!}$.\nEn conclusion, $f$ est analytique sur~$\\R$ si et seulement si~$\\alpha\\ge 1$.",
+        "html": "<p>Il y a dérivation terme à terme facilement et indéfiniment.</p>\n<p>DSE au voisinage de <span class=\"math inline\">\\(0\\)</span> : on envisage de permuter les <span class=\"math inline\">\\(\\Sigma\\)</span> dans : <span class=\"math inline\">\\(f_\\alpha(x) = \\sum_{n=1}^\\infty\\sum_{p=0}^\\infty e^{-n^\\alpha}\\frac{(inx)^p}{p!}\\)</span>, ce qui est légitime si la série <span class=\"math inline\">\\(\\sum_{n=1}^\\infty e^{-n^\\alpha}e^{n|x|}\\)</span> converge. On en déduit qu’une condition suffisante pour que <span class=\"math inline\">\\(f\\)</span> soit DSE au voisinage de <span class=\"math inline\">\\(0\\)</span> est <span class=\"math inline\">\\(\\alpha \\ge 1\\)</span> (avec convergence si <span class=\"math inline\">\\(x\\in{]-1,1[}\\)</span> pour <span class=\"math inline\">\\(\\alpha = 1\\)</span> et pour tout <span class=\"math inline\">\\(x\\in\\R\\)</span> si <span class=\"math inline\">\\(\\alpha &gt; 1\\)</span>).</p>\n<p>Cas <span class=\"math inline\">\\(\\alpha &lt; 1\\)</span> : <span class=\"math inline\">\\(|f^{(k)}(0)| = \\sum_{n=1}^\\infty e^{-n^\\alpha}n^k\n\\ge e^{-N^\\alpha}N^k\\)</span> avec <span class=\"math inline\">\\(N=\\lfloor k^{1/\\alpha}\\rfloor\\)</span> donc pour <span class=\"math inline\">\\(r&gt;0\\)</span> fixé et <span class=\"math inline\">\\(k\\)</span> tendant vers l’infini on a <span class=\"math inline\">\\(\\ln\\Bigl(\\Bigl|\\frac{f^{(k)}(0)r^k}{k!}\\Bigr|\\Bigr) \\sim\n \\Bigl(\\frac1\\alpha-1\\Bigr)k\\ln(k)\\)</span> et la série de terme général <span class=\"math inline\">\\(\\frac{f^{(k)}(0)r^k}{k!}\\)</span> diverge grossièrement.</p>\n<p>DSE au voisinage de <span class=\"math inline\">\\(a\\ne 0\\)</span> : même raisonnement en écrivant <span class=\"math inline\">\\(f(x) = \\sum_{n=1}^\\infty\\sum_{p=0}^\\infty e^{-n^\\alpha}e^{ina}\\frac{(in(x-a))^p}{p!}\\)</span>. En conclusion, <span class=\"math inline\">\\(f\\)</span> est analytique sur <span class=\"math inline\">\\(\\R\\)</span> si et seulement si <span class=\"math inline\">\\(\\alpha\\ge 1\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "uuid": "mFAl",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2092",
+    "auteur": "bodin",
+    "createdAt": "2008-02-04",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Théorie",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:25.105Z"
+  },
+  "contenu": [
+    {
+      "id": "5e1bf1ac-0f06-43ad-8056-8b14d91a43c3",
+      "type": "description",
+      "value": {
+        "latex": "\\label{ex:compint}\nSoient $u$ et $v$ deux fonctions d\\'erivables sur $\\R$ et $f$ une fonction\ncontinue sur $\\R$.",
+        "html": "<p><span id=\"ex:compint\" label=\"ex:compint\">[ex:compint]</span> Soient <span class=\"math inline\">\\(u\\)</span> et <span class=\"math inline\">\\(v\\)</span> deux fonctions dérivables sur <span class=\"math inline\">\\(\\R\\)</span> et <span class=\"math inline\">\\(f\\)</span> une fonction continue sur <span class=\"math inline\">\\(\\R\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e812f8ef-85ed-41f9-bea6-8f0079a355a1",
+      "type": "question",
+      "value": {
+        "latex": "On pose $\\displaystyle F(x)=\\displaystyle \\int_{u(x)}^{v(x)}f(t)d t$. Montrer que $F$ est\nd\\'erivable sur $\\R$ et calculer sa d\\'eriv\\'ee.",
+        "html": "<p>On pose <span class=\"math inline\">\\(\\displaystyle F(x)=\\displaystyle \\int_{u(x)}^{v(x)}f(t)d t\\)</span>. Montrer que <span class=\"math inline\">\\(F\\)</span> est dérivable sur <span class=\"math inline\">\\(\\R\\)</span> et calculer sa dérivée.</p>\n"
+      }
+    },
+    {
+      "id": "dc09b29a-7d90-4180-a84d-c28f6770f34e",
+      "type": "reponse",
+      "value": {
+        "latex": "Commen\\c{c}ons plus simplement avec la fonction \n$$H(x) =  \\int_{a}^{v(x)}f(t)dt.$$\nEn fait $H$ est la composition de la fonction $x\\mapsto v(x)$ avec la fonction\n$G : x \\mapsto \\int_{a}^{x}f(t)dt$ : \n$$H = G \\circ v.$$\nLa fonction $v$ est d\\'erivable et la fonction $G$ aussi (c'est une primitive) donc\nla compos\\'ee $H=G\\circ v$ est d\\'erivable, de plus $H'(x) = v'(x)\\cdot G'(v(x))$.\nEn pratique comme $G'(x) = f(x)$ cela donne $H'(x) = v'(x) f(v(x))$.\n\n\\emph{Remarque :} Il n'est pas n\\'ecessaire de conna\\^\\i tre cette formule mais il est important de savoir refaire ce petit raisonnement.\n\nOn montrerait de m\\^eme que la fonction $x\\to\\int_{u(x)}^{a}f(t)dt$ est d\\'erivable de d\\'eriv\\'ee $-u'(x)f(u(x))$.\nRevenons \\`a notre fonction $F(x) = \\int_{u(x)}^{v(x)}f(t)d t =  \\int_{u(x)}^{a}f(t)dt+ \\int_{a}^{v(x)}f(t)dt$, \nc'est la somme de deux fonctions d\\'erivables donc est d\\'erivable de d\\'eriv\\'ee :\n$$F'(x) = v(x)f(v(x))-u'(x)f(u(x)).$$",
+        "html": "<p>Commençons plus simplement avec la fonction <span class=\"math display\">\\[H(x) =  \\int_{a}^{v(x)}f(t)dt.\\]</span> En fait <span class=\"math inline\">\\(H\\)</span> est la composition de la fonction <span class=\"math inline\">\\(x\\mapsto v(x)\\)</span> avec la fonction <span class=\"math inline\">\\(G : x \\mapsto \\int_{a}^{x}f(t)dt\\)</span> : <span class=\"math display\">\\[H = G \\circ v.\\]</span> La fonction <span class=\"math inline\">\\(v\\)</span> est dérivable et la fonction <span class=\"math inline\">\\(G\\)</span> aussi (c’est une primitive) donc la composée <span class=\"math inline\">\\(H=G\\circ v\\)</span> est dérivable, de plus <span class=\"math inline\">\\(H&#39;(x) = v&#39;(x)\\cdot G&#39;(v(x))\\)</span>. En pratique comme <span class=\"math inline\">\\(G&#39;(x) = f(x)\\)</span> cela donne <span class=\"math inline\">\\(H&#39;(x) = v&#39;(x) f(v(x))\\)</span>.</p>\n<p><em>Remarque :</em> Il n’est pas nécessaire de connaı̂tre cette formule mais il est important de savoir refaire ce petit raisonnement.</p>\n<p>On montrerait de même que la fonction <span class=\"math inline\">\\(x\\to\\int_{u(x)}^{a}f(t)dt\\)</span> est dérivable de dérivée <span class=\"math inline\">\\(-u&#39;(x)f(u(x))\\)</span>. Revenons à notre fonction <span class=\"math inline\">\\(F(x) = \\int_{u(x)}^{v(x)}f(t)d t =  \\int_{u(x)}^{a}f(t)dt+ \\int_{a}^{v(x)}f(t)dt\\)</span>, c’est la somme de deux fonctions dérivables donc est dérivable de dérivée : <span class=\"math display\">\\[F&#39;(x) = v(x)f(v(x))-u&#39;(x)f(u(x)).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "f7c3a0e4-3595-47c4-91f5-97371b8a4018",
+      "type": "question",
+      "value": {
+        "latex": "Calculer la d\\'eriv\\'ee de $\\displaystyle G(x)=\\int_x^{2x}\\frac{d t}{1+t^2+t^4}$.",
+        "html": "<p>Calculer la dérivée de <span class=\"math inline\">\\(\\displaystyle G(x)=\\int_x^{2x}\\frac{d t}{1+t^2+t^4}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6344b0a7-f519-4bad-abbd-f8648100dfe6",
+      "type": "reponse",
+      "value": {
+        "latex": "On applique ceci \\`a $u(x) = x$ et $v(x) = 2x$ nous obtenons :\n$$G'(x) = \\frac{2}{1+(2x)^2+(2x)^4}-\\frac{1}{1+x^2+x^4}.$$",
+        "html": "<p>On applique ceci à <span class=\"math inline\">\\(u(x) = x\\)</span> et <span class=\"math inline\">\\(v(x) = 2x\\)</span> nous obtenons : <span class=\"math display\">\\[G&#39;(x) = \\frac{2}{1+(2x)^2+(2x)^4}-\\frac{1}{1+x^2+x^4}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "6589715b-22c2-456b-8f0c-f222a24b46e5",
+      "type": "indication",
+      "value": {
+        "latex": "Se ramener \\`a une composition de fonctions ou revenir \\`a la d\\'efinition de la d\\'eriv\\'ee avec le taux d'accroissement.",
+        "html": "<p>Se ramener à une composition de fonctions ou revenir à la définition de la dérivée avec le taux d’accroissement.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "uuid": "S214",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1800",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Différentiabilité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:04.066Z"
+  },
+  "contenu": [
+    {
+      "id": "69e61688-a920-4870-a64a-6c888303bc65",
+      "type": "description",
+      "value": {
+        "latex": "Soit la fonction $f \\colon \\R^{2} \\longrightarrow \\R$ d\\'efinie par\n\\[\n\\begin{array}{lll}\nf(x, y)= xy\\frac{x^{2}-y^{2}}\n{x^{2} + y^{2}}& \\mathrm{ si } &(x, y) \\neq (0,0),\\\\\n f(0, 0)= 0\n\\end{array}\n\\]\n\\'Etudier la continuit\\'e de $f$. Montrer que $f$ est de classe $C^{1}$.",
+        "html": "<p>Soit la fonction <span class=\"math inline\">\\(f \\colon \\R^{2} \\longrightarrow \\R\\)</span> définie par <span class=\"math display\">\\[\\begin{array}{lll}\nf(x, y)= xy\\frac{x^{2}-y^{2}}\n{x^{2} + y^{2}}&amp; \\mathrm{ si } &amp;(x, y) \\neq (0,0),\\\\\n f(0, 0)= 0\n\\end{array}\\]</span> Étudier la continuité de <span class=\"math inline\">\\(f\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^{1}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "73eb3c79-8ab9-4cce-8728-e2a563326c54",
+      "type": "indication",
+      "value": {
+        "latex": "Il est \\'evident que, en tout point $(x,y)$ distinct de l'origine,\nla fonction $f$ est continue et que les d\\'eriv\\'ees partielles y\nexistent et sont continues. Il suffit de montrer que\n$f$ est continue en $(0,0)$ et que les d\\'eriv\\'ees partielles y\nexistent et y sont continues.",
+        "html": "<p>Il est évident que, en tout point <span class=\"math inline\">\\((x,y)\\)</span> distinct de l’origine, la fonction <span class=\"math inline\">\\(f\\)</span> est continue et que les dérivées partielles y existent et sont continues. Il suffit de montrer que <span class=\"math inline\">\\(f\\)</span> est continue en <span class=\"math inline\">\\((0,0)\\)</span> et que les dérivées partielles y existent et y sont continues.</p>\n"
+      }
+    },
+    {
+      "id": "72e6ba85-92fc-4ed2-a2e0-cef8753f4c04",
+      "type": "reponse",
+      "value": {
+        "latex": "Puisque $\\left|\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\\right|$ reste born\\'e,\n\\[\n\\mathrm{lim}_{(x,y)\\to (0,0)}f(x,y)= \\mathrm{lim}_{(x,y)\\to (0,0)}xy\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}xy =0\n\\]\nd'o\\`u $f$ est continue en $(0,0)$.\nDe m\\^eme,\n$$\\begin{align*}\n\\mathrm{lim}_{(x,y)\\to (0,0)}\\frac{f(x,y)}x&= \\mathrm{lim}_{(x,y)\\to (0,0)}y\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}y =0\n\\\\\n\\mathrm{lim}_{(x,y)\\to (0,0)}\\frac{f(x,y)}y&= \\mathrm{lim}_{(x,y)\\to (0,0)}x\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}x =0\n\\end{align*}$$\nd'o\\`u les d\\'eriv\\'ees partielles\n$\\frac{\\partial f}{\\partial x}(0,0)$ et $\\frac{\\partial f}{\\partial y}(0,0)$\nexistent, et\n$\\frac{\\partial f}{\\partial x}(0,0)=0$ et $\\frac{\\partial f}{\\partial y}(0,0)=0$.\nEn plus, en dehors de l'origine,\n$$\\begin{align*}\n\\frac{\\partial f}{\\partial x}&= \\frac{f(x,y)}x + xy \\frac{\\partial}{\\partial x}\n\\frac{x^{2}-y^{2}}{x^{2} + y^{2}} = \\frac{f(x,y)}x +  4\\frac{x^{2}y^{3}}{(x^{2} + y^{2})^2}\n\\\\\n\\frac{\\partial f}{\\partial y}&= \\frac{f(x,y)}y +  xy \\frac{\\partial}{\\partial y}\n\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}  = \\frac{f(x,y)}x +  4\\frac{x^{3}y^{2}}{(x^{2} + y^{2})^2} .\n\\end{align*}$$\nPuisque\n\\[\n\\mathrm{lim}_{(x,y) \\to (0,0)}\\frac{x^{2}y^{3}}{(x^{2} + y^{2})^2}=0,\\ \n\\mathrm{lim}_{(x,y) \\to (0,0)}\\frac{x^{3}y^{2}}{(x^{2} + y^{2})^2}=0,\n\\]\nil s'ensuit que\n\\[\n\\mathrm{lim}_{(u,v) \\to (0,0)}\\frac{\\partial f}{\\partial x}(u,v) =0,\\ \n\\mathrm{lim}_{(u,v) \\to (0,0)}\\frac{\\partial f}{\\partial y}(u,v) =0,\n\\]\nd'o\\`u les d\\'eriv\\'ees partielles $\\frac{\\partial f}{\\partial x}$ et\n$\\frac{\\partial f}{\\partial y}$ sont continues en $(0,0)$.",
+        "html": "<p>Puisque <span class=\"math inline\">\\(\\left|\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\\right|\\)</span> reste borné, <span class=\"math display\">\\[\\mathrm{lim}_{(x,y)\\to (0,0)}f(x,y)= \\mathrm{lim}_{(x,y)\\to (0,0)}xy\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}xy =0\\]</span> d’où <span class=\"math inline\">\\(f\\)</span> est continue en <span class=\"math inline\">\\((0,0)\\)</span>. De même, <span class=\"math display\">\\[\\begin{align*}\n\\mathrm{lim}_{(x,y)\\to (0,0)}\\frac{f(x,y)}x&amp;= \\mathrm{lim}_{(x,y)\\to (0,0)}y\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}y =0\n\\\\\n\\mathrm{lim}_{(x,y)\\to (0,0)}\\frac{f(x,y)}y&amp;= \\mathrm{lim}_{(x,y)\\to (0,0)}x\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}\n= \\mathrm{lim}_{(x,y)\\to (0,0)}x =0\n\\end{align*}\\]</span> d’où les dérivées partielles <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(0,0)\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(0,0)\\)</span> existent, et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(0,0)=0\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(0,0)=0\\)</span>. En plus, en dehors de l’origine, <span class=\"math display\">\\[\\begin{align*}\n\\frac{\\partial f}{\\partial x}&amp;= \\frac{f(x,y)}x + xy \\frac{\\partial}{\\partial x}\n\\frac{x^{2}-y^{2}}{x^{2} + y^{2}} = \\frac{f(x,y)}x +  4\\frac{x^{2}y^{3}}{(x^{2} + y^{2})^2}\n\\\\\n\\frac{\\partial f}{\\partial y}&amp;= \\frac{f(x,y)}y +  xy \\frac{\\partial}{\\partial y}\n\\frac{x^{2}-y^{2}}{x^{2} + y^{2}}  = \\frac{f(x,y)}x +  4\\frac{x^{3}y^{2}}{(x^{2} + y^{2})^2} .\n\\end{align*}\\]</span> Puisque <span class=\"math display\">\\[\\mathrm{lim}_{(x,y) \\to (0,0)}\\frac{x^{2}y^{3}}{(x^{2} + y^{2})^2}=0,\\ \n\\mathrm{lim}_{(x,y) \\to (0,0)}\\frac{x^{3}y^{2}}{(x^{2} + y^{2})^2}=0,\\]</span> il s’ensuit que <span class=\"math display\">\\[\\mathrm{lim}_{(u,v) \\to (0,0)}\\frac{\\partial f}{\\partial x}(u,v) =0,\\ \n\\mathrm{lim}_{(u,v) \\to (0,0)}\\frac{\\partial f}{\\partial y}(u,v) =0,\\]</span> d’où les dérivées partielles <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}\\)</span> sont continues en <span class=\"math inline\">\\((0,0)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

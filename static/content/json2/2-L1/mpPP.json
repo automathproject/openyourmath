@@ -1,0 +1,115 @@
+{
+  "uuid": "mpPP",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6867",
+    "auteur": "bodin",
+    "createdAt": "2012-04-13",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Primitives diverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:25.875Z"
+  },
+  "contenu": [
+    {
+      "id": "2e395710-2d22-460c-aac3-cd313d099181",
+      "type": "description",
+      "value": {
+        "latex": "Calculer les intégrales suivantes :",
+        "html": "<p>Calculer les intégrales suivantes :</p>\n"
+      }
+    },
+    {
+      "id": "50eba189-075f-4343-a263-39527da20c38",
+      "type": "question",
+      "value": {
+        "latex": "$\\int_0^{\\frac \\pi 2}x\\sin x \\, dx$ \\quad (intégration par parties)",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}x\\sin x \\, dx\\)</span> (intégration par parties)</p>\n"
+      }
+    },
+    {
+      "id": "1c76a686-0c0b-48f3-bb1b-94d9010db084",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\int_0^{\\frac \\pi 2}x\\sin x \\, dx$\n\nPar intégration par parties avec $u=x$, $v'=\\sin x$ :\n$$\\begin{align*}\n\\int_0^{\\frac \\pi 2}x\\sin x \\, dx \n  &= \\big[ uv \\big]_0^{\\frac \\pi 2} - \\int_0^{\\frac \\pi 2} u'v \\\\\n  &= \\big[ -x\\cos x \\big]_0^{\\frac \\pi 2}  + \\int_0^{\\frac \\pi 2} \\cos x \\, dx \\\\\n  &= \\big[ -x\\cos x \\big]_0^{\\frac \\pi 2} +  \\big[ \\sin x \\big]_0^{\\frac \\pi 2} \\\\\n  &= 0-0 \\quad + \\quad 1-0 \\\\\n  &= 1 \\\\\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}x\\sin x \\, dx\\)</span></p>\n<p>Par intégration par parties avec <span class=\"math inline\">\\(u=x\\)</span>, <span class=\"math inline\">\\(v&#39;=\\sin x\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n\\int_0^{\\frac \\pi 2}x\\sin x \\, dx \n  &amp;= \\big[ uv \\big]_0^{\\frac \\pi 2} - \\int_0^{\\frac \\pi 2} u&#39;v \\\\\n  &amp;= \\big[ -x\\cos x \\big]_0^{\\frac \\pi 2}  + \\int_0^{\\frac \\pi 2} \\cos x \\, dx \\\\\n  &amp;= \\big[ -x\\cos x \\big]_0^{\\frac \\pi 2} +  \\big[ \\sin x \\big]_0^{\\frac \\pi 2} \\\\\n  &amp;= 0-0 \\quad + \\quad 1-0 \\\\\n  &amp;= 1 \\\\\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b68fe14a-325f-48f0-a8b0-4208097d785f",
+      "type": "question",
+      "value": {
+        "latex": "$\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx$ \\quad (à l'aide d'un changement de variable simple)",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx\\)</span> (à l’aide d’un changement de variable simple)</p>\n"
+      }
+    },
+    {
+      "id": "73d38d48-e845-44fd-ac92-49e74657e5b7",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx$\n\nPosons le changement de variable $u=e^x$ avec $x=\\ln u$ et $du = e^x\\, dx$.\nLa variable $x$ varie de $x=0$ à $x=1$, donc la variable $u=e^x$ varie de\n$u=1$ à $u=e$.\n\n$$\\begin{align*}\n\\int_0^1 \\frac{e^x \\, dx}{\\sqrt{e^x+1}} \\,  dx \n  &= \\int_1^e \\frac{du}{\\sqrt{u+1}} \\\\\n  &= \\big[ 2\\sqrt{u+1} \\big]_1^e \\\\\n  &= 2\\sqrt{e+1} -2\\sqrt 2 \\\\\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx\\)</span></p>\n<p>Posons le changement de variable <span class=\"math inline\">\\(u=e^x\\)</span> avec <span class=\"math inline\">\\(x=\\ln u\\)</span> et <span class=\"math inline\">\\(du = e^x\\, dx\\)</span>. La variable <span class=\"math inline\">\\(x\\)</span> varie de <span class=\"math inline\">\\(x=0\\)</span> à <span class=\"math inline\">\\(x=1\\)</span>, donc la variable <span class=\"math inline\">\\(u=e^x\\)</span> varie de <span class=\"math inline\">\\(u=1\\)</span> à <span class=\"math inline\">\\(u=e\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\int_0^1 \\frac{e^x \\, dx}{\\sqrt{e^x+1}} \\,  dx \n  &amp;= \\int_1^e \\frac{du}{\\sqrt{u+1}} \\\\\n  &amp;= \\big[ 2\\sqrt{u+1} \\big]_1^e \\\\\n  &amp;= 2\\sqrt{e+1} -2\\sqrt 2 \\\\\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "747eb040-31c2-481f-827a-3da9a686d681",
+      "type": "question",
+      "value": {
+        "latex": "$\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx$ \\quad (changement de variable $x=\\tan t$)",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx\\)</span> (changement de variable <span class=\"math inline\">\\(x=\\tan t\\)</span>)</p>\n"
+      }
+    },
+    {
+      "id": "b206e928-1748-491c-bf60-2b0cf7ed0b84",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx$\n\nPosons le changement de variable $x=\\tan t$, \nalors on a $dx = (1+\\tan^2 t) dt$, $t=\\arctan x$ et  on sait aussi que $1+\\tan^2 t = \\frac{1}{\\cos^2 t}$.\nComme $x$ varie de $x=0$ à $x=1$ alors $t$ doit varier de $t=\\arctan 0=0$ à $t=\\arctan 1 = \\frac \\pi4$.\n\n$$\\begin{align*}\n\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx \n  &= \\int_0^{\\frac\\pi4}  \\frac{1}{(1+\\tan^2 t)^2} (1+\\tan^2 t) dt \\\\\n  &= \\int_0^{\\frac\\pi4}  \\frac{dt}{1+\\tan^2 t}\\\\\n  &=  \\int_0^{\\frac\\pi4}  \\cos^2 t \\, dt \\\\\n  & = \\frac 12 \\int_0^{\\frac\\pi4} (\\cos(2t)+1) \\, dt\\\\\n  &= \\frac12 \\Big[ \\frac12 \\sin(2t) + t \\Big]_0^{\\frac\\pi4} \\\\\n  &= \\frac 14 + \\frac \\pi8 \\\\\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx\\)</span></p>\n<p>Posons le changement de variable <span class=\"math inline\">\\(x=\\tan t\\)</span>, alors on a <span class=\"math inline\">\\(dx = (1+\\tan^2 t) dt\\)</span>, <span class=\"math inline\">\\(t=\\arctan x\\)</span> et on sait aussi que <span class=\"math inline\">\\(1+\\tan^2 t = \\frac{1}{\\cos^2 t}\\)</span>. Comme <span class=\"math inline\">\\(x\\)</span> varie de <span class=\"math inline\">\\(x=0\\)</span> à <span class=\"math inline\">\\(x=1\\)</span> alors <span class=\"math inline\">\\(t\\)</span> doit varier de <span class=\"math inline\">\\(t=\\arctan 0=0\\)</span> à <span class=\"math inline\">\\(t=\\arctan 1 = \\frac \\pi4\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx \n  &amp;= \\int_0^{\\frac\\pi4}  \\frac{1}{(1+\\tan^2 t)^2} (1+\\tan^2 t) dt \\\\\n  &amp;= \\int_0^{\\frac\\pi4}  \\frac{dt}{1+\\tan^2 t}\\\\\n  &amp;=  \\int_0^{\\frac\\pi4}  \\cos^2 t \\, dt \\\\\n  &amp; = \\frac 12 \\int_0^{\\frac\\pi4} (\\cos(2t)+1) \\, dt\\\\\n  &amp;= \\frac12 \\Big[ \\frac12 \\sin(2t) + t \\Big]_0^{\\frac\\pi4} \\\\\n  &amp;= \\frac 14 + \\frac \\pi8 \\\\\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "e8e34edb-25ab-4181-a03a-6c5ceb9b2b5f",
+      "type": "question",
+      "value": {
+        "latex": "$\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx$ \\quad (décomposition en\néléments simples)",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx\\)</span> (décomposition en éléments simples)</p>\n"
+      }
+    },
+    {
+      "id": "cc9e1e3b-8054-4eb7-881b-97c55e73b69e",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx$\n\nCommençons par décomposer la fraction en éléments simples :\n$$\\frac{3x+1}{\\left( x+1\\right) ^2} = \\frac{\\alpha}{x+1}+\\frac{\\beta}{(x+1)^2}\n= \\frac{3}{x+1}-\\frac{2}{(x+1)^2}$$\noù l'on a trouvé $\\alpha=3$ et $\\beta=-2$.\nLa première est une intégrale du type $\\int \\frac 1u = [\\ln |u|]$ et la seconde\n$\\int \\frac 1{u^2} = [ -\\frac 1u ]$.\n\n$$\\begin{align*}\n\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx\n  &=   3 \\int_0^1 \\frac{1}{x+1} dx   - 2 \\int_0^1 \\frac{1}{(x+1)^2} \\, dx \\\\\n  &= 3 \\Big[ \\ln|x+1| \\Big]_0^1  - 2 \\Big[ - \\frac{1}{x+1} \\Big]_0^1 \\\\\n  &= 3 \\ln 2 - 0 \\quad + \\quad 1 - 2 \\\\\n  &= 3 \\ln 2 - 1 \\\\\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx\\)</span></p>\n<p>Commençons par décomposer la fraction en éléments simples : <span class=\"math display\">\\[\\frac{3x+1}{\\left( x+1\\right) ^2} = \\frac{\\alpha}{x+1}+\\frac{\\beta}{(x+1)^2}\n= \\frac{3}{x+1}-\\frac{2}{(x+1)^2}\\]</span> où l’on a trouvé <span class=\"math inline\">\\(\\alpha=3\\)</span> et <span class=\"math inline\">\\(\\beta=-2\\)</span>. La première est une intégrale du type <span class=\"math inline\">\\(\\int \\frac 1u = [\\ln |u|]\\)</span> et la seconde <span class=\"math inline\">\\(\\int \\frac 1{u^2} = [ -\\frac 1u ]\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\,  dx\n  &amp;=   3 \\int_0^1 \\frac{1}{x+1} dx   - 2 \\int_0^1 \\frac{1}{(x+1)^2} \\, dx \\\\\n  &amp;= 3 \\Big[ \\ln|x+1| \\Big]_0^1  - 2 \\Big[ - \\frac{1}{x+1} \\Big]_0^1 \\\\\n  &amp;= 3 \\ln 2 - 0 \\quad + \\quad 1 - 2 \\\\\n  &amp;= 3 \\ln 2 - 1 \\\\\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "25200c28-26a6-4f9c-b2b9-bc386a92d2b5",
+      "type": "question",
+      "value": {
+        "latex": "$\\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx$ \\quad (changement de variable $u=\\frac 1x$)",
+        "html": "<p><span class=\"math inline\">\\(\\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx\\)</span> (changement de variable <span class=\"math inline\">\\(u=\\frac 1x\\)</span>)</p>\n"
+      }
+    },
+    {
+      "id": "9ad6ca26-21e8-4666-a6c6-83a35b0abbd3",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $I = \\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx$.\n\nPosons le changement de variable $u=\\frac 1x$ et \non a $x=\\frac 1u$, $dx = -\\frac{du}{u^2}$.\nAlors $x$ variant de $x=\\frac 12$ à $x=2$,\n$u$ varie lui de $u=2$ à $u=\\frac 12$ (l'ordre est important !).\n\n$$\\begin{align*}\nI &= \\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx  \\\\\n  &= \\int_2^{\\frac 12}\\left( 1+u^2 \\right) \\arctan \\frac 1u  \\, \\left(-\\frac{du}{u^2}\\right)  \\\\\n  &= \\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1\\right) \\arctan \\frac 1u  \\, du  \\\\\n  &= \\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1\\right) \\left( \\frac \\pi 2 - \\arctan u \\right)   \\, du  \\quad \\text{car} \\quad \\arctan u+\\arctan \\frac1u=\\frac\\pi2\\\\\n  &= \\frac \\pi 2\\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1 \\right)\\, du  -  \\int_{\\frac 12}^2  \\left( \\frac1{u^2} + 1\\right)\\arctan u  \\, du  \\\\  \n  &= \\frac \\pi 2 \\left[ -\\frac1{u} + u\\right]_{\\frac 12}^2  -  I \\\\  \n  &= \\frac{3\\pi}{2} - I\\\\\n\\end{align*}$$\n\nConclusion : $I = \\frac{3\\pi}{4}.$",
+        "html": "<p>Notons <span class=\"math inline\">\\(I = \\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx\\)</span>.</p>\n<p>Posons le changement de variable <span class=\"math inline\">\\(u=\\frac 1x\\)</span> et on a <span class=\"math inline\">\\(x=\\frac 1u\\)</span>, <span class=\"math inline\">\\(dx = -\\frac{du}{u^2}\\)</span>. Alors <span class=\"math inline\">\\(x\\)</span> variant de <span class=\"math inline\">\\(x=\\frac 12\\)</span> à <span class=\"math inline\">\\(x=2\\)</span>, <span class=\"math inline\">\\(u\\)</span> varie lui de <span class=\"math inline\">\\(u=2\\)</span> à <span class=\"math inline\">\\(u=\\frac 12\\)</span> (l’ordre est important !).</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nI &amp;= \\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx  \\\\\n  &amp;= \\int_2^{\\frac 12}\\left( 1+u^2 \\right) \\arctan \\frac 1u  \\, \\left(-\\frac{du}{u^2}\\right)  \\\\\n  &amp;= \\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1\\right) \\arctan \\frac 1u  \\, du  \\\\\n  &amp;= \\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1\\right) \\left( \\frac \\pi 2 - \\arctan u \\right)   \\, du  \\quad \\text{car} \\quad \\arctan u+\\arctan \\frac1u=\\frac\\pi2\\\\\n  &amp;= \\frac \\pi 2\\int_{\\frac 12}^2 \\left( \\frac1{u^2} + 1 \\right)\\, du  -  \\int_{\\frac 12}^2  \\left( \\frac1{u^2} + 1\\right)\\arctan u  \\, du  \\\\  \n  &amp;= \\frac \\pi 2 \\left[ -\\frac1{u} + u\\right]_{\\frac 12}^2  -  I \\\\  \n  &amp;= \\frac{3\\pi}{2} - I\\\\\n\\end{align*}\\]</span></p>\n<p>Conclusion : <span class=\"math inline\">\\(I = \\frac{3\\pi}{4}.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "3e893b61-a162-42c1-a860-dbd58de86e11",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n  \\item $\\int_0^{\\frac \\pi 2}x\\sin x \\, dx=1$ (intégration par parties $v'=\\sin x$, $u=x$)\n\n  \\item $\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx=2\\sqrt{e+1} -2\\sqrt 2$ (à l'aide du changement de variable $u=e^x$)\n\n  \\item $\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx=\\frac \\pi 8+\\frac 14$\n(changement de variable $x=\\tan t$, $dx = (1+\\tan^2 t) dt$ et $1+\\tan^2 t = \\frac{1}{\\cos^2 t}$)\n\n  \\item $\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\, dx=3\\ln 2-1$ (décomposition en\néléments simples de la forme\n$\\frac{3x+1}{\\left( x+1\\right) ^2} = \\frac{\\alpha}{x+1}+\\frac{\\beta}{(x+1)^2}$)\n\n  \\item $\\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx=\\frac{3\\pi }4$\n(changement de variables $u=\\frac 1x$ et $\\arctan x+\\arctan \\frac 1x= \\pm \\frac \\pi 2$)\n\n\\end{enumerate}",
+        "html": "<ol>\n<li><p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}x\\sin x \\, dx=1\\)</span> (intégration par parties <span class=\"math inline\">\\(v&#39;=\\sin x\\)</span>, <span class=\"math inline\">\\(u=x\\)</span>)</p></li>\n<li><p><span class=\"math inline\">\\(\\int_0^1 \\frac{e^x}{\\sqrt{e^x+1}} \\,  dx=2\\sqrt{e+1} -2\\sqrt 2\\)</span> (à l’aide du changement de variable <span class=\"math inline\">\\(u=e^x\\)</span>)</p></li>\n<li><p><span class=\"math inline\">\\(\\int_0^1\\frac 1{\\left( 1+x^2\\right) ^2} \\, dx=\\frac \\pi 8+\\frac 14\\)</span> (changement de variable <span class=\"math inline\">\\(x=\\tan t\\)</span>, <span class=\"math inline\">\\(dx = (1+\\tan^2 t) dt\\)</span> et <span class=\"math inline\">\\(1+\\tan^2 t = \\frac{1}{\\cos^2 t}\\)</span>)</p></li>\n<li><p><span class=\"math inline\">\\(\\int_0^1\\frac{3x+1}{\\left( x+1\\right) ^2} \\, dx=3\\ln 2-1\\)</span> (décomposition en éléments simples de la forme <span class=\"math inline\">\\(\\frac{3x+1}{\\left( x+1\\right) ^2} = \\frac{\\alpha}{x+1}+\\frac{\\beta}{(x+1)^2}\\)</span>)</p></li>\n<li><p><span class=\"math inline\">\\(\\int_{\\frac 12}^2\\left( 1+\\frac 1{x^2}\\right) \\arctan x \\, dx=\\frac{3\\pi }4\\)</span> (changement de variables <span class=\"math inline\">\\(u=\\frac 1x\\)</span> et <span class=\"math inline\">\\(\\arctan x+\\arctan \\frac 1x= \\pm \\frac \\pi 2\\)</span>)</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

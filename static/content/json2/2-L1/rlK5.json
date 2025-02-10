@@ -1,0 +1,123 @@
+{
+  "uuid": "rlK5",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5715",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Calcul d'intégrales",
+    "sousChapitre": "Intégrale impropre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:32.096Z"
+  },
+  "contenu": [
+    {
+      "id": "0428928c-4977-4625-97cf-561f0702a0cb",
+      "type": "description",
+      "value": {
+        "latex": "\\label{ex:rou3}\n\n(Hors programme) Etudier la convergence des intégrales impropres suivantes :",
+        "html": "<p><span id=\"ex:rou3\" label=\"ex:rou3\">[ex:rou3]</span></p>\n<p>(Hors programme) Etudier la convergence des intégrales impropres suivantes :</p>\n"
+      }
+    },
+    {
+      "id": "52bdfa1d-c774-4a07-af65-2bac1fa03b40",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(**)} $\\displaystyle \\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx$",
+        "html": "<p><strong>(**)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "c7afe010-8a39-4f29-bbdd-ea24c8ff9527",
+      "type": "reponse",
+      "value": {
+        "latex": "Soient $\\varepsilon$ et $X$ deux réels tels que $0<\\varepsilon<X$. Les deux fonction $x\\mapsto1-\\cos x$ et $x\\mapsto\\frac{1}{x}$ sont de classe $C^1$ sur le segment $[\\varepsilon,X]$. On peut donc effectuer une intégration par parties et on obtient\n\n\n\n\\begin{center}\n\n$\\int_{\\varepsilon}^{X}\\frac{\\sin x}{x}\\;dx=\\left[\\frac{1-\\cos x}{x}\\right]_1^X+\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx=\\frac{1-\\cos X}{X}-\\frac{1-\\cos \\varepsilon}{\\varepsilon}+\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx$.\n\n\\end{center}\n\n\n\n\\textbullet~La fonction $x\\mapsto\\frac{1-\\cos x}{x^2}$ est continue sur $]0,+\\infty[$, est prolongeable par continuité en $0$ car $\\lim_{x \\rightarrow 0}\\frac{1-\\cos x}{x^2}=\\frac{1}{2}$ et donc intégrable sur un voisinage de $0$, est dominée par $\\frac{1}{x^2}$ en $+\\infty$ et donc intégrable sur un voisinage de $+\\infty$. La fonction $x\\mapsto\\frac{1-\\cos x}{x^2}$ est donc intégrable sur $]0,+\\infty[$ et $\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx$ a une limite réelle quand $\\varepsilon$ tend vers $0$ et $X$ tend vers $+\\infty$.\n\n\n\n\\textbullet~$\\left|\\frac{1-\\cos X}{X}\\right|\\leqslant\\frac{1}{X}$ et donc $\\lim_{X \\rightarrow +\\infty}\\frac{1-\\cos X}{X}=0$.\n\n\n\n\\textbullet~$\\frac{1-\\cos\\varepsilon}{\\varepsilon}\\underset{\\varepsilon\\rightarrow0}{\\sim}\\frac{\\varepsilon}{2}$ et donc $\\lim_{\\varepsilon \\rightarrow \\varepsilon}\\frac{1-\\cos \\varepsilon}{\\varepsilon}=0$.\n\n\n\nOn en déduit que $\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx$ est une intégrale convergente et de plus\n\n\n\n\\begin{center}\n\n$\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx=\\int_{0}^{+\\infty}\\frac{1-\\cos x}{x^2}\\;dx=\\int_{0}^{+\\infty}\\frac{2\\sin^2(x/2)}{x^2}\\;dx=\\int_{0}^{+\\infty}\\frac{2\\sin^2(u)}{4u^2}\\;2du=\\int_{0}^{+\\infty}\\frac{\\sin^2(u)}{u^2}\\;du$.\n\n\\end{center}\n\n  \n\n\\begin{center}\n\n\\shadowbox{\n\nL'intégrale $\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx$ converge et de plus $\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx=\\int_{0}^{+\\infty}\\frac{1-\\cos x}{x^2}\\;dx=\\int_{0}^{+\\infty}\\frac{\\sin^2x}{x^2}\\;dx$.\n\n}\n\n\\end{center}",
+        "html": "<p>Soient <span class=\"math inline\">\\(\\varepsilon\\)</span> et <span class=\"math inline\">\\(X\\)</span> deux réels tels que <span class=\"math inline\">\\(0&lt;\\varepsilon&lt;X\\)</span>. Les deux fonction <span class=\"math inline\">\\(x\\mapsto1-\\cos x\\)</span> et <span class=\"math inline\">\\(x\\mapsto\\frac{1}{x}\\)</span> sont de classe <span class=\"math inline\">\\(C^1\\)</span> sur le segment <span class=\"math inline\">\\([\\varepsilon,X]\\)</span>. On peut donc effectuer une intégration par parties et on obtient</p>\n<p><span class=\"math inline\">\\(\\int_{\\varepsilon}^{X}\\frac{\\sin x}{x}\\;dx=\\left[\\frac{1-\\cos x}{x}\\right]_1^X+\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx=\\frac{1-\\cos X}{X}-\\frac{1-\\cos \\varepsilon}{\\varepsilon}+\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx\\)</span>.</p>\n<p> La fonction <span class=\"math inline\">\\(x\\mapsto\\frac{1-\\cos x}{x^2}\\)</span> est continue sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>, est prolongeable par continuité en <span class=\"math inline\">\\(0\\)</span> car <span class=\"math inline\">\\(\\lim_{x \\rightarrow 0}\\frac{1-\\cos x}{x^2}=\\frac{1}{2}\\)</span> et donc intégrable sur un voisinage de <span class=\"math inline\">\\(0\\)</span>, est dominée par <span class=\"math inline\">\\(\\frac{1}{x^2}\\)</span> en <span class=\"math inline\">\\(+\\infty\\)</span> et donc intégrable sur un voisinage de <span class=\"math inline\">\\(+\\infty\\)</span>. La fonction <span class=\"math inline\">\\(x\\mapsto\\frac{1-\\cos x}{x^2}\\)</span> est donc intégrable sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span> et <span class=\"math inline\">\\(\\int_{\\varepsilon}^{X}\\frac{1-\\cos x}{x^2}\\;dx\\)</span> a une limite réelle quand <span class=\"math inline\">\\(\\varepsilon\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> et <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n<p> <span class=\"math inline\">\\(\\left|\\frac{1-\\cos X}{X}\\right|\\leqslant\\frac{1}{X}\\)</span> et donc <span class=\"math inline\">\\(\\lim_{X \\rightarrow +\\infty}\\frac{1-\\cos X}{X}=0\\)</span>.</p>\n<p> <span class=\"math inline\">\\(\\frac{1-\\cos\\varepsilon}{\\varepsilon}\\underset{\\varepsilon\\rightarrow0}{\\sim}\\frac{\\varepsilon}{2}\\)</span> et donc <span class=\"math inline\">\\(\\lim_{\\varepsilon \\rightarrow \\varepsilon}\\frac{1-\\cos \\varepsilon}{\\varepsilon}=0\\)</span>.</p>\n<p>On en déduit que <span class=\"math inline\">\\(\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx\\)</span> est une intégrale convergente et de plus</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{+\\infty}\\frac{\\sin x}{x}\\;dx=\\int_{0}^{+\\infty}\\frac{1-\\cos x}{x^2}\\;dx=\\int_{0}^{+\\infty}\\frac{2\\sin^2(x/2)}{x^2}\\;dx=\\int_{0}^{+\\infty}\\frac{2\\sin^2(u)}{4u^2}\\;2du=\\int_{0}^{+\\infty}\\frac{\\sin^2(u)}{u^2}\\;du\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d3bfe22d-9775-4d81-829e-c16452f162e9",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(**)} $\\displaystyle \\int_{0}^{+\\infty}\\frac{\\sin x}{x^a}\\;dx$",
+        "html": "<p><strong>(**)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}\\frac{\\sin x}{x^a}\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "dda4ec6f-cea1-45a1-8960-55be83c7024c",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f~:~ x\\mapsto\\frac{\\sin x}{x^a}$ est continue sur $]0,+\\infty[$.\n\n\n\n\\textbullet~Sur $]0,1[$, la fonction $f$ est de signe constant et l'existence de $\\lim_{\\varepsilon \\rightarrow 0}\\int_{\\varepsilon}^{1}f(x)\\;dx$ équivaut à l'intégrabilité de la fonction $f$ sur $]0,1]$. Puisque $f$ est équivalente en $0$ à $\\frac{1}{x^{a-1}}$, l'intégrale impropre $\\int_{0}^{1}f(x)\\;dx$ converge en $0$ si et seulement si $a > 0$. On suppose dorénavant $a>0$.\n\n\n\n\\textbullet~Soit $X>1$. Les deux fonction $x\\mapsto -\\cos x$ et $x\\mapsto\\frac{1}{x^a}$ sont de classe $C^1$ sur le segment $[1,X]$. On peut donc effectuer une intégration par parties et on obtient\n\n\n\n\\begin{center}\n\n$\\int_{1}^{X}\\frac{\\sin x}{x^a}\\;dx=\\left[\\frac{-\\cos x}{x^a}\\right]_1^X-a\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx=-\\frac{\\cos X}{X^a}+\\cos1-a\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx$.\n\n\\end{center}\n\n\n\nMaintenant, $\\left|\\frac{\\cos x}{x^{a+1}}\\right|\\leqslant\\frac{1}{x^{a+1}}$ et puisque $a+1>1$, la fonction $x\\mapsto\\frac{\\cos x}{x^{a+1}}$ est intégrable sur un voisinage de $+\\infty$. On en déduit que la fonction $X\\mapsto\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx$ a une limite réelle quand $X$ tend vers $+\\infty$. Comme d'autre part, la fonction $X\\mapsto-\\frac{\\cos X}{X^a}+\\cos1$ a une limite réelle quand $X$ tend vers $+\\infty$, on a montré que l'intégrale impropre $\\int_{1}^{+\\infty}f(x)\\;dx$ converge en $+\\infty$.\n\n\n\nFinalement\n\n  \n\n\\begin{center}\n\n\\shadowbox{\n\nl'intégrale $\\int_{0}^{+\\infty}\\frac{\\sin x}{x^a}\\;dx$ converge si et seulement si $a > 0$.\n\n}\n\n\\end{center}",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f~:~ x\\mapsto\\frac{\\sin x}{x^a}\\)</span> est continue sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>.</p>\n<p> Sur <span class=\"math inline\">\\(]0,1[\\)</span>, la fonction <span class=\"math inline\">\\(f\\)</span> est de signe constant et l’existence de <span class=\"math inline\">\\(\\lim_{\\varepsilon \\rightarrow 0}\\int_{\\varepsilon}^{1}f(x)\\;dx\\)</span> équivaut à l’intégrabilité de la fonction <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(]0,1]\\)</span>. Puisque <span class=\"math inline\">\\(f\\)</span> est équivalente en <span class=\"math inline\">\\(0\\)</span> à <span class=\"math inline\">\\(\\frac{1}{x^{a-1}}\\)</span>, l’intégrale impropre <span class=\"math inline\">\\(\\int_{0}^{1}f(x)\\;dx\\)</span> converge en <span class=\"math inline\">\\(0\\)</span> si et seulement si <span class=\"math inline\">\\(a &gt; 0\\)</span>. On suppose dorénavant <span class=\"math inline\">\\(a&gt;0\\)</span>.</p>\n<p> Soit <span class=\"math inline\">\\(X&gt;1\\)</span>. Les deux fonction <span class=\"math inline\">\\(x\\mapsto -\\cos x\\)</span> et <span class=\"math inline\">\\(x\\mapsto\\frac{1}{x^a}\\)</span> sont de classe <span class=\"math inline\">\\(C^1\\)</span> sur le segment <span class=\"math inline\">\\([1,X]\\)</span>. On peut donc effectuer une intégration par parties et on obtient</p>\n<p><span class=\"math inline\">\\(\\int_{1}^{X}\\frac{\\sin x}{x^a}\\;dx=\\left[\\frac{-\\cos x}{x^a}\\right]_1^X-a\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx=-\\frac{\\cos X}{X^a}+\\cos1-a\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx\\)</span>.</p>\n<p>Maintenant, <span class=\"math inline\">\\(\\left|\\frac{\\cos x}{x^{a+1}}\\right|\\leqslant\\frac{1}{x^{a+1}}\\)</span> et puisque <span class=\"math inline\">\\(a+1&gt;1\\)</span>, la fonction <span class=\"math inline\">\\(x\\mapsto\\frac{\\cos x}{x^{a+1}}\\)</span> est intégrable sur un voisinage de <span class=\"math inline\">\\(+\\infty\\)</span>. On en déduit que la fonction <span class=\"math inline\">\\(X\\mapsto\\int_{1}^{X}\\frac{\\cos x}{x^{a+1}}\\;dx\\)</span> a une limite réelle quand <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Comme d’autre part, la fonction <span class=\"math inline\">\\(X\\mapsto-\\frac{\\cos X}{X^a}+\\cos1\\)</span> a une limite réelle quand <span class=\"math inline\">\\(X\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, on a montré que l’intégrale impropre <span class=\"math inline\">\\(\\int_{1}^{+\\infty}f(x)\\;dx\\)</span> converge en <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n<p>Finalement</p>\n"
+      }
+    },
+    {
+      "id": "54f8606e-56e5-44f4-9561-b96bbe038f9b",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(**)} $\\displaystyle \\int_{0}^{+\\infty}e^{ix^2}\\;dx$",
+        "html": "<p><strong>(**)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}e^{ix^2}\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "d3f54869-e975-4459-b98e-16a6818c0e8c",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $X$ un réel strictement positif. Le changement de variables $t = x^2$ suivi d'une intégration par parties fournit :\n\n\n\n\\begin{center}\n\n$\\int_{1}^{X}e^{ix^2}\\;dx=\\int_{1}^{X^2}\\frac{e^{it}}{2\\sqrt{t}}\\;dt =\\frac{i}{2}\\left(-\\frac{e^{iX}}{\\sqrt{X}}+e^i-\\frac{1}{2}\\int_{1}^{X}\\frac{e^{it}}{t^{3/2}}\\;dt\\right)$\n\n\\end{center}\n\n\n\nMaintenant, $\\lim_{X \\rightarrow +\\infty}\\frac{e^{iX}}{\\sqrt{X}}=0$ car $\\left|\\frac{e^{iX}}{\\sqrt{X}}\\right|=\\frac{1}{\\sqrt{X}}$. D'autre part, la fonction $t\\mapsto\\frac{e^{it}}{t^{3/2}}$ est intégrable sur $[1,+\\infty[$ car $\\left|\\frac{e^{it}}{t^{3/2}}\\right|=\\frac{1}{t^{3/2}}$.  Ainsi, $\\int_{1}^{+\\infty}e^{ix^2}\\;dx$ est une intégrale convergente et puisque d'autre part la fonction $x\\mapsto e^{ix^2}$ est continue sur $[0,+\\infty[$, on a montré que\n\n\n\n\\begin{center}\n\n\\shadowbox{\n\nl'intégrale $\\int_{0}^{+\\infty}e^{ix^2}\\;dx$ converge.\n\n}\n\n\\end{center}\n\n\n\nOn en déduit encore que les intégrales $\\int_{0}^{+\\infty}\\cos(x^2)\\;dx$ et $\\int_{0}^{+\\infty}\\sin(x^2)\\;dx$ sont des intégrales convergentes (intégrales de \\textsc{Fresnel}).",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> un réel strictement positif. Le changement de variables <span class=\"math inline\">\\(t = x^2\\)</span> suivi d’une intégration par parties fournit :</p>\n<p><span class=\"math inline\">\\(\\int_{1}^{X}e^{ix^2}\\;dx=\\int_{1}^{X^2}\\frac{e^{it}}{2\\sqrt{t}}\\;dt =\\frac{i}{2}\\left(-\\frac{e^{iX}}{\\sqrt{X}}+e^i-\\frac{1}{2}\\int_{1}^{X}\\frac{e^{it}}{t^{3/2}}\\;dt\\right)\\)</span></p>\n<p>Maintenant, <span class=\"math inline\">\\(\\lim_{X \\rightarrow +\\infty}\\frac{e^{iX}}{\\sqrt{X}}=0\\)</span> car <span class=\"math inline\">\\(\\left|\\frac{e^{iX}}{\\sqrt{X}}\\right|=\\frac{1}{\\sqrt{X}}\\)</span>. D’autre part, la fonction <span class=\"math inline\">\\(t\\mapsto\\frac{e^{it}}{t^{3/2}}\\)</span> est intégrable sur <span class=\"math inline\">\\([1,+\\infty[\\)</span> car <span class=\"math inline\">\\(\\left|\\frac{e^{it}}{t^{3/2}}\\right|=\\frac{1}{t^{3/2}}\\)</span>. Ainsi, <span class=\"math inline\">\\(\\int_{1}^{+\\infty}e^{ix^2}\\;dx\\)</span> est une intégrale convergente et puisque d’autre part la fonction <span class=\"math inline\">\\(x\\mapsto e^{ix^2}\\)</span> est continue sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>, on a montré que</p>\n<p>On en déduit encore que les intégrales <span class=\"math inline\">\\(\\int_{0}^{+\\infty}\\cos(x^2)\\;dx\\)</span> et <span class=\"math inline\">\\(\\int_{0}^{+\\infty}\\sin(x^2)\\;dx\\)</span> sont des intégrales convergentes (intégrales de <span class=\"smallcaps\">Fresnel</span>).</p>\n"
+      }
+    },
+    {
+      "id": "b9145df7-6db6-47ff-bfb8-e6becad530f3",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(**)} $\\displaystyle \\int_{0}^{+\\infty}x^3\\sin(x^8)\\;dx$",
+        "html": "<p><strong>(**)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}x^3\\sin(x^8)\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "df6e0031-d0fb-4b01-a6a9-00d229434ce1",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f~:~x\\mapsto x^3\\sin(x^8)$ est continue sur $[0,+\\infty[$.\n\nSoit $X>0$. Le changement de variables $t = x^4$ fournit\n\n\n\n\\begin{center}\n\n$\\int_{0}^{X}x^3\\sin(x^8)dx =\\frac{1}{4}\\int_{0}^{X^4}\\sin(t^2)\\;dt=\\frac{1}{4}\\text{Im}\\left(\\int_{0}^{X^4}e^{it^2}\\;dt\\right)$.\n\n\\end{center}\n\n\n\nD'après 3), $\\int_{0}^{+\\infty}e^{it^2}\\;dt$ est une intégrale convergente et donc $\\int_{0}^{+\\infty}x^3\\sin(x^8)\\;dx$ converge.",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f~:~x\\mapsto x^3\\sin(x^8)\\)</span> est continue sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(X&gt;0\\)</span>. Le changement de variables <span class=\"math inline\">\\(t = x^4\\)</span> fournit</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{X}x^3\\sin(x^8)dx =\\frac{1}{4}\\int_{0}^{X^4}\\sin(t^2)\\;dt=\\frac{1}{4}\\text{Im}\\left(\\int_{0}^{X^4}e^{it^2}\\;dt\\right)\\)</span>.</p>\n<p>D’après 3), <span class=\"math inline\">\\(\\int_{0}^{+\\infty}e^{it^2}\\;dt\\)</span> est une intégrale convergente et donc <span class=\"math inline\">\\(\\int_{0}^{+\\infty}x^3\\sin(x^8)\\;dx\\)</span> converge.</p>\n"
+      }
+    },
+    {
+      "id": "ef1608ec-fa48-4dd7-a3c8-379235061534",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(**)} $\\displaystyle \\int_{0}^{+\\infty}\\cos(e^x)\\;dx$",
+        "html": "<p><strong>(**)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}\\cos(e^x)\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "db2652c5-6f9b-4750-b398-3b28ce2906d8",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $f~:~x\\mapsto\\cos(e^x)$ est continue sur $[0,+\\infty[$.\n\nSoit $X>0$. Le changement de variables $t = e^x$ fournit\n\n\n\n\\begin{center}\n\n$\\int_{0}^{X}\\cos(e^x)\\;dx=\\int_{1}^{e^X}\\frac{\\cos t}{t}\\;dt$.\n\n \\end{center}\n\n \n\n\n\nOn montre la convergence en $+\\infty$ de cette intégrale par une intégration par parties analogue à celle de la question 1). L'intégrale impropre  $\\int_{0}^{+\\infty}\\cos(e^x)\\;dx$ converge .",
+        "html": "<p>La fonction <span class=\"math inline\">\\(f~:~x\\mapsto\\cos(e^x)\\)</span> est continue sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(X&gt;0\\)</span>. Le changement de variables <span class=\"math inline\">\\(t = e^x\\)</span> fournit</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{X}\\cos(e^x)\\;dx=\\int_{1}^{e^X}\\frac{\\cos t}{t}\\;dt\\)</span>.</p>\n<p>On montre la convergence en <span class=\"math inline\">\\(+\\infty\\)</span> de cette intégrale par une intégration par parties analogue à celle de la question 1). L’intégrale impropre <span class=\"math inline\">\\(\\int_{0}^{+\\infty}\\cos(e^x)\\;dx\\)</span> converge .</p>\n"
+      }
+    },
+    {
+      "id": "192dad59-fed0-4e36-b271-dbff743b836c",
+      "type": "question",
+      "value": {
+        "latex": "\\textbf{(****)} $\\displaystyle \\int_{0}^{+\\infty}\\frac{1}{1+x^3\\sin^2x}\\;dx$",
+        "html": "<p><strong>(****)</strong> <span class=\"math inline\">\\(\\displaystyle \\int_{0}^{+\\infty}\\frac{1}{1+x^3\\sin^2x}\\;dx\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "2cdbadd5-02ec-4dba-820c-2ac7d3efe8ae",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour tout réel $x\\geqslant0$, $1+x^3\\sin^2x\\geqslant 1>0$ et donc la fonction $f~:~x\\mapsto\\frac{1}{1+x^3\\sin^2x}$ est continue sur $[0,+\\infty[$.\\rule[-6mm]{0mm}{0mm}\n\n\n\nLa fonction $f$ étant positive, la convergence de l'intégrale proposée équivaut à l'intégrabilité de la fonction $f$ sur $[0,+\\infty[$, intégrabilité elle-même équivalente à la convergence de la série numérique de terme général $u_n =\\int_{n\\pi}^{(n+1)\\pi}\\frac{1}{1+x^3\\sin^2x}\\;dx$.\n\n\n\nSoit $n\\in\\Nn^*$. On a $u_n\\geqslant0$ et d'autre part\n\n\n\n$$\\begin{align*}\\ensuremath\n\nu_n&=\\int_{n\\pi}^{(n+1)\\pi}\\frac{1}{1+x^3\\sin^2x}\\;dx=\\int_{0}^{\\pi}\\frac{1}{1+(u+n\\pi)^3\\sin^2u}\\;du\\\\\n\n &\\leqslant\\int_{0}^{\\pi}\\frac{1}{1+n^3\\pi^3\\sin^2}\\;du = 2\\int_{0}^{\\pi/2}\\frac{1}{1+n^3\\pi^3\\sin^2u}\\;du\\\\\n\n &\\leqslant2\\int_{0}^{\\pi/2}\\frac{1}{1+n^3\\pi^3\\left(\\frac{2u}{\\pi}\\right)^2}\\;du\\;(\\text{par concavité de la fonction sinus sur}\\;[0,\\pi])\\\\\n\n &= 2\\times\\frac{1}{2\\sqrt{\\pi}n^{3/2}}\\int_{0}^{(n\\pi)^{3/2}}\\frac{1}{1+v^2}\\;dv\\leqslant\\frac{1}{\\sqrt{\\pi}n^{3/2}}\\int_{0}^{+\\infty}\\frac{1}{1+v^2}\\;dv =\\frac{\\sqrt{\\pi}}{2n^{3/2}}.\n\n\\end{align*}$$\n\n\n\n\t\n\nDonc, pour $n\\in\\Nn^*$, $0\\leqslant u_n\\leqslant\\frac{\\sqrt{\\pi}}{2n^{3/2}}$ et la série de terme général $u_n$ converge. On en déduit que la fonction $f~:~x\\mapsto\\frac{1}{1+x^3\\sin^2x}$ est intégrable sur $[0,+\\infty[$.",
+        "html": "<p>Pour tout réel <span class=\"math inline\">\\(x\\geqslant0\\)</span>, <span class=\"math inline\">\\(1+x^3\\sin^2x\\geqslant 1&gt;0\\)</span> et donc la fonction <span class=\"math inline\">\\(f~:~x\\mapsto\\frac{1}{1+x^3\\sin^2x}\\)</span> est continue sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>.</p>\n<hr />\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> étant positive, la convergence de l’intégrale proposée équivaut à l’intégrabilité de la fonction <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>, intégrabilité elle-même équivalente à la convergence de la série numérique de terme général <span class=\"math inline\">\\(u_n =\\int_{n\\pi}^{(n+1)\\pi}\\frac{1}{1+x^3\\sin^2x}\\;dx\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>. On a <span class=\"math inline\">\\(u_n\\geqslant0\\)</span> et d’autre part</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\nu_n&amp;=\\int_{n\\pi}^{(n+1)\\pi}\\frac{1}{1+x^3\\sin^2x}\\;dx=\\int_{0}^{\\pi}\\frac{1}{1+(u+n\\pi)^3\\sin^2u}\\;du\\\\\n\n &amp;\\leqslant\\int_{0}^{\\pi}\\frac{1}{1+n^3\\pi^3\\sin^2}\\;du = 2\\int_{0}^{\\pi/2}\\frac{1}{1+n^3\\pi^3\\sin^2u}\\;du\\\\\n\n &amp;\\leqslant2\\int_{0}^{\\pi/2}\\frac{1}{1+n^3\\pi^3\\left(\\frac{2u}{\\pi}\\right)^2}\\;du\\;(\\text{par concavité de la fonction sinus sur}\\;[0,\\pi])\\\\\n\n &amp;= 2\\times\\frac{1}{2\\sqrt{\\pi}n^{3/2}}\\int_{0}^{(n\\pi)^{3/2}}\\frac{1}{1+v^2}\\;dv\\leqslant\\frac{1}{\\sqrt{\\pi}n^{3/2}}\\int_{0}^{+\\infty}\\frac{1}{1+v^2}\\;dv =\\frac{\\sqrt{\\pi}}{2n^{3/2}}.\n\n\\end{align*}\\]</span></p>\n<p>Donc, pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(0\\leqslant u_n\\leqslant\\frac{\\sqrt{\\pi}}{2n^{3/2}}\\)</span> et la série de terme général <span class=\"math inline\">\\(u_n\\)</span> converge. On en déduit que la fonction <span class=\"math inline\">\\(f~:~x\\mapsto\\frac{1}{1+x^3\\sin^2x}\\)</span> est intégrable sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

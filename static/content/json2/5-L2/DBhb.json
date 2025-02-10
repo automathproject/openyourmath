@@ -1,0 +1,35 @@
+{
+  "uuid": "DBhb",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5895",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Différentiabilité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:46.026Z"
+  },
+  "contenu": [
+    {
+      "id": "256d62e0-3844-469e-b374-c78ff7984983",
+      "type": "description",
+      "value": {
+        "latex": "Soit $\\begin{array}[t]{cccc}\nf~:&GL_n(\\Rr)&\\rightarrow&M_n(\\Rr)\\\\\n &A&\\mapsto&A^{-1}\n\\end{array}$. Montrer que $f$ est différentiable en tout point de $M_n(\\Rr)\\setminus\\{0\\}$ et déterminer sa différentielle.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\begin{array}[t]{cccc}\nf~:&amp;GL_n(\\Rr)&amp;\\rightarrow&amp;M_n(\\Rr)\\\\\n &amp;A&amp;\\mapsto&amp;A^{-1}\n\\end{array}\\)</span>. Montrer que <span class=\"math inline\">\\(f\\)</span> est différentiable en tout point de <span class=\"math inline\">\\(M_n(\\Rr)\\setminus\\{0\\}\\)</span> et déterminer sa différentielle.</p>\n"
+      }
+    },
+    {
+      "id": "0d9ed4a7-44ac-4004-b392-eed193c3adac",
+      "type": "reponse",
+      "value": {
+        "latex": "On munit $\\mathcal{M}_n(\\Rr)$ d'une norme sous-multiplicative $\\|\\;\\|$. Soit $A\\in GL_n(\\Rr)$. On sait que $GL_n(\\Rr)$ est un ouvert de $\\mathcal{M}_n(\\Rr)$ et donc pour $H\\in\\mathcal{M}_n(\\Rr)$ de norme suffisamment petite, $A+H\\in GL_n(\\Rr)$. Pour un tel $H$\n\n\\begin{center}\n$(A+H)^{-1}-A^{-1}=(A+H)^{-1}(I_n-(A+H)A^{-1})=-(A+H)^{-1}HA^{-1}$\n\\end{center}\n\npuis\n\n$$\\begin{align*}\\ensuremath\n(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}&=-(A+H)^{-1}HA^{-1}+A^{-1}HA^{-1}=(A+H)^{-1}(-HA^{-1}+(A+H)A^{-1}HA^{-1})\\\\\n &=(A+H)^{-1}HA^{-1}HA^{-1}.\n\\end{align*}$$\n\nPar suite, $\\left\\|f(A+H)-f(A)+A^{-1}HA^{-1}\\right\\|=\\left\\|(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}\\right\\|\\leqslant\\left\\|(A+H)^{-1}\\right\\|\\left\\|A^{-1}\\right\\|^2\\left\\|H\\right\\|^2$. \n\nMaintenant, la formule $M^{-1}= \\frac{1}{\\text{det}(M)}{^t}(\\text{com}(M))$, valable pour tout $M\\in GL_n(\\Rr)$, et la continuité du déterminant montre que l'application $M\\mapsto M^{-1}$ est continue sur l'ouvert $GL_n(\\Rr)$. On en déduit que $\\left\\|(A+H)^{-1}\\right\\|$ tend vers $\\left\\|A^{-1}\\right\\|$ quand $H$ tend vers $0$. Par suite,\n\n\\begin{center}\n$\\lim_{H \\rightarrow 0}\\left\\|(A+H)^{-1}\\right\\|\\left\\|A^{-1}\\right\\|^2\\left\\|H\\right\\|=0$ et donc $\\lim_{H \\rightarrow 0} \\frac{1}{\\|H\\|}\\left\\|(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}\\right\\|=0$.\n\\end{center}\n\nComme l'application $H\\mapsto -A^{-1}HA^{-1}$ est linéaire, c'est la différentielle de $f$ en $A$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall A\\in GL_n(\\Rr)$, $\\forall H\\in\\mathcal{M}_n(\\Rr)$, $df_A(H)=-A^{-1}HA^{-1}$.\n}\n\\end{center}",
+        "html": "<p>On munit <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span> d’une norme sous-multiplicative <span class=\"math inline\">\\(\\|\\;\\|\\)</span>. Soit <span class=\"math inline\">\\(A\\in GL_n(\\Rr)\\)</span>. On sait que <span class=\"math inline\">\\(GL_n(\\Rr)\\)</span> est un ouvert de <span class=\"math inline\">\\(\\mathcal{M}_n(\\Rr)\\)</span> et donc pour <span class=\"math inline\">\\(H\\in\\mathcal{M}_n(\\Rr)\\)</span> de norme suffisamment petite, <span class=\"math inline\">\\(A+H\\in GL_n(\\Rr)\\)</span>. Pour un tel <span class=\"math inline\">\\(H\\)</span></p>\n<p><span class=\"math inline\">\\((A+H)^{-1}-A^{-1}=(A+H)^{-1}(I_n-(A+H)A^{-1})=-(A+H)^{-1}HA^{-1}\\)</span></p>\n<p>puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}&amp;=-(A+H)^{-1}HA^{-1}+A^{-1}HA^{-1}=(A+H)^{-1}(-HA^{-1}+(A+H)A^{-1}HA^{-1})\\\\\n &amp;=(A+H)^{-1}HA^{-1}HA^{-1}.\n\\end{align*}\\]</span></p>\n<p>Par suite, <span class=\"math inline\">\\(\\left\\|f(A+H)-f(A)+A^{-1}HA^{-1}\\right\\|=\\left\\|(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}\\right\\|\\leqslant\\left\\|(A+H)^{-1}\\right\\|\\left\\|A^{-1}\\right\\|^2\\left\\|H\\right\\|^2\\)</span>.</p>\n<p>Maintenant, la formule <span class=\"math inline\">\\(M^{-1}= \\frac{1}{\\text{det}(M)}{^t}(\\text{com}(M))\\)</span>, valable pour tout <span class=\"math inline\">\\(M\\in GL_n(\\Rr)\\)</span>, et la continuité du déterminant montre que l’application <span class=\"math inline\">\\(M\\mapsto M^{-1}\\)</span> est continue sur l’ouvert <span class=\"math inline\">\\(GL_n(\\Rr)\\)</span>. On en déduit que <span class=\"math inline\">\\(\\left\\|(A+H)^{-1}\\right\\|\\)</span> tend vers <span class=\"math inline\">\\(\\left\\|A^{-1}\\right\\|\\)</span> quand <span class=\"math inline\">\\(H\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>. Par suite,</p>\n<p><span class=\"math inline\">\\(\\lim_{H \\rightarrow 0}\\left\\|(A+H)^{-1}\\right\\|\\left\\|A^{-1}\\right\\|^2\\left\\|H\\right\\|=0\\)</span> et donc <span class=\"math inline\">\\(\\lim_{H \\rightarrow 0} \\frac{1}{\\|H\\|}\\left\\|(A+H)^{-1}-A^{-1}+A^{-1}HA^{-1}\\right\\|=0\\)</span>.</p>\n<p>Comme l’application <span class=\"math inline\">\\(H\\mapsto -A^{-1}HA^{-1}\\)</span> est linéaire, c’est la différentielle de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\(A\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

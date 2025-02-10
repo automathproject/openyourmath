@@ -1,0 +1,91 @@
+{
+  "uuid": "kTRu",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2581",
+    "auteur": "delaunay",
+    "createdAt": "2009-05-19",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:04.672Z"
+  },
+  "contenu": [
+    {
+      "id": "9014fc40-8b82-4efe-a437-45f826f8b30b",
+      "type": "description",
+      "value": {
+        "latex": "Soit $u$ l'endomorphisme de $\\R^3$ dont la matrice dans la base canonique est  \n$$A=\\begin{pmatrix}-3&-2&-2 \\\\  2&1&2 \\\\  3&3&2\\end{pmatrix}$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(u\\)</span> l’endomorphisme de <span class=\"math inline\">\\(\\R^3\\)</span> dont la matrice dans la base canonique est <span class=\"math display\">\\[A=\\begin{pmatrix}-3&amp;-2&amp;-2 \\\\  2&amp;1&amp;2 \\\\  3&amp;3&amp;2\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "742e9fc0-66a9-43cc-b329-8a7b23bb8a11",
+      "type": "question",
+      "value": {
+        "latex": "D\\'eterminer et factoriser le polyn\\^ome caract\\'eristique de $A$.",
+        "html": "<p>Déterminer et factoriser le polynôme caractéristique de <span class=\"math inline\">\\(A\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3e60e393-9a45-4831-8ab8-5abf71a819a2",
+      "type": "reponse",
+      "value": {
+        "latex": "D\\'eterminons le polyn\\^ome caract\\'eristique de $A$.\n\nOn a \n$$$$\\begin{align*}P_A(X)&=\\begin{vmatrix}-3-X&-2&-2 \\\\ 2&1-X&2 \\\\ 3&3&2-X\\end{vmatrix}\n=\\begin{vmatrix}-3-X&0&-2 \\\\ 2&-1-X&2 \\\\ 3&1+X&2-X\\end{vmatrix} \\\\ \n&=\\begin{vmatrix}-3-X&0&-2 \\\\ 5&0&4-X \\\\ 3&1+X&2-X\\end{vmatrix}\n=-(1+X)\\begin{vmatrix}-3-X&-2 \\\\ 5&4-X\\end{vmatrix} \\\\ \n&=-(1+X)[(X-4)(X+3)+10]=-(1+X)(X^2-X-2)=-(1+X)^2(X-2)\\end{align*}$$$$",
+        "html": "<p>Déterminons le polynôme caractéristique de <span class=\"math inline\">\\(A\\)</span>.</p>\n<p>On a <span class=\"math display\">\\[\\]</span><span class=\"math display\">\\[\\begin{aligned}\nP_A(X)&amp;=\\begin{vmatrix}-3-X&amp;-2&amp;-2 \\\\ 2&amp;1-X&amp;2 \\\\ 3&amp;3&amp;2-X\\end{vmatrix}\n=\\begin{vmatrix}-3-X&amp;0&amp;-2 \\\\ 2&amp;-1-X&amp;2 \\\\ 3&amp;1+X&amp;2-X\\end{vmatrix} \\\\ \n&amp;=\\begin{vmatrix}-3-X&amp;0&amp;-2 \\\\ 5&amp;0&amp;4-X \\\\ 3&amp;1+X&amp;2-X\\end{vmatrix}\n=-(1+X)\\begin{vmatrix}-3-X&amp;-2 \\\\ 5&amp;4-X\\end{vmatrix} \\\\ \n&amp;=-(1+X)[(X-4)(X+3)+10]=-(1+X)(X^2-X-2)=-(1+X)^2(X-2)\\end{aligned}\\]</span><span class=\"math display\">\\[\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "5ad3092e-ca36-49ba-9567-69fa7d0c4f2f",
+      "type": "question",
+      "value": {
+        "latex": "D\\'emontrer que les valeurs propres de $A$ sont $-1$ et $2$. D\\'eterminer les sous-espaces propres associ\\'es.",
+        "html": "<p>Démontrer que les valeurs propres de <span class=\"math inline\">\\(A\\)</span> sont <span class=\"math inline\">\\(-1\\)</span> et <span class=\"math inline\">\\(2\\)</span>. Déterminer les sous-espaces propres associés.</p>\n"
+      }
+    },
+    {
+      "id": "b7f1fdc3-e066-42d0-ab1d-220eef766039",
+      "type": "reponse",
+      "value": {
+        "latex": "D\\'emontrons que les valeurs propres de $A$ sont $-1$ et $2$ et d\\'eterminons les sous-espaces propres associ\\'es. \n\nLes valeurs propres de $A$ sont les racines du polyn\\^ome caract\\'eristique, ce sont donc bien les r\\'eels $-1$ et $2$.\n\nLes sous-espaces propres associ\\'es sont les ensembles \n$$E_{-1}=\\left\\{(x,y,z)\\in\\R^3,\\ A\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=-\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}\\right\\}=\\ker(A+I_3)$$\net\n$$E_{2}=\\left\\{(x,y,z)\\in\\R^3,\\ A\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=2\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}\\right\\}=\\ker(A-2I_3)$$\nOn a \n$$(x,y,z)\\in E_{-1}\\iff\\left\\{$$\\begin{align*}-3x-2y-2z&=-x \\\\  2x+y+2z&=-y \\\\  3x+3y+2z&=-z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}-2x-2y-2z&=0 \\\\  2x+2y+2z&=0 \\\\  3x+3y+3z&=0\\end{align*}$$\\right.$$\nLe sous-espace caract\\'eristique $E_{-1}$ associ\\'e \\`a la valeur propre $-1$ est donc le plan vectoriel d'\\'equation $x+y+z=0$, il est de dimension $2$, \\'egale \\`a la multiplicit\\'e de la racine $-1$.\n\nOn a \n$$(x,y,z)\\in E_{2}\\iff\\left\\{$$\\begin{align*}-3x-2y-2z&=2x \\\\  2x+y+2z&=2y \\\\  3x+3y+2z&=2z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}-5x-2y-2z&=0 \\\\  2x-y+2z&=0 \\\\  3x+3y&=0\\end{align*}$$\\right.$$\nce qui \\'equivaut \\`a $y=-x$ et $2z=-3x$.\n\nLe sous-espace caract\\'eristique $E_{2}$ associ\\'e \\`a la valeur propre $2$ est donc la droite vectorielle engendr\\'ee par le vecteur $(2,-2,-3)$ , il est de dimension $1$, \\'egale \\`a la multiplicit\\'e de la racine $2$.",
+        "html": "<p>Démontrons que les valeurs propres de <span class=\"math inline\">\\(A\\)</span> sont <span class=\"math inline\">\\(-1\\)</span> et <span class=\"math inline\">\\(2\\)</span> et déterminons les sous-espaces propres associés.</p>\n<p>Les valeurs propres de <span class=\"math inline\">\\(A\\)</span> sont les racines du polynôme caractéristique, ce sont donc bien les réels <span class=\"math inline\">\\(-1\\)</span> et <span class=\"math inline\">\\(2\\)</span>.</p>\n<p>Les sous-espaces propres associés sont les ensembles <span class=\"math display\">\\[E_{-1}=\\left\\{(x,y,z)\\in\\R^3,\\ A\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=-\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}\\right\\}=\\ker(A+I_3)\\]</span> et <span class=\"math display\">\\[E_{2}=\\left\\{(x,y,z)\\in\\R^3,\\ A\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=2\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}\\right\\}=\\ker(A-2I_3)\\]</span> On a <span class=\"math display\">\\[(x,y,z)\\in E_{-1}\\iff\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\n-3x-2y-2z&amp;=-x \\\\  2x+y+2z&amp;=-y \\\\  3x+3y+2z&amp;=-z\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\n\\iff\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\n-2x-2y-2z&amp;=0 \\\\  2x+2y+2z&amp;=0 \\\\  3x+3y+3z&amp;=0\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> Le sous-espace caractéristique <span class=\"math inline\">\\(E_{-1}\\)</span> associé à la valeur propre <span class=\"math inline\">\\(-1\\)</span> est donc le plan vectoriel d’équation <span class=\"math inline\">\\(x+y+z=0\\)</span>, il est de dimension <span class=\"math inline\">\\(2\\)</span>, égale à la multiplicité de la racine <span class=\"math inline\">\\(-1\\)</span>.</p>\n<p>On a <span class=\"math display\">\\[(x,y,z)\\in E_{2}\\iff\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\n-3x-2y-2z&amp;=2x \\\\  2x+y+2z&amp;=2y \\\\  3x+3y+2z&amp;=2z\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\n\\iff\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\n-5x-2y-2z&amp;=0 \\\\  2x-y+2z&amp;=0 \\\\  3x+3y&amp;=0\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> ce qui équivaut à <span class=\"math inline\">\\(y=-x\\)</span> et <span class=\"math inline\">\\(2z=-3x\\)</span>.</p>\n<p>Le sous-espace caractéristique <span class=\"math inline\">\\(E_{2}\\)</span> associé à la valeur propre <span class=\"math inline\">\\(2\\)</span> est donc la droite vectorielle engendrée par le vecteur <span class=\"math inline\">\\((2,-2,-3)\\)</span> , il est de dimension <span class=\"math inline\">\\(1\\)</span>, égale à la multiplicité de la racine <span class=\"math inline\">\\(2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5e099285-a017-4a22-b785-fe4be448e609",
+      "type": "question",
+      "value": {
+        "latex": "D\\'emontrer que $A$ est diagonalisable et donner une base de $\\R^3$ dans laquelle la matrice de $u$ est diagonale.",
+        "html": "<p>Démontrer que <span class=\"math inline\">\\(A\\)</span> est diagonalisable et donner une base de <span class=\"math inline\">\\(\\R^3\\)</span> dans laquelle la matrice de <span class=\"math inline\">\\(u\\)</span> est diagonale.</p>\n"
+      }
+    },
+    {
+      "id": "1a0361ae-2a30-4869-8df2-dd4729b7e3c8",
+      "type": "reponse",
+      "value": {
+        "latex": "D\\'emontrons que $A$ est diagonalisable et donnons une base de $\\R^3$ dans laquelle la matrice de $u$ est diagonale.\n\nLa question pr\\'ec\\'edente et les r\\'esultats obtenus sur les dimensions des sous-espaces propres permettent d'affirmer que la matrice $A$ est diagonalisable. Une base de $\\R^3$ obtenue \\`a partir de bases des sous-espaces propres est une base de vecteurs propres dans laquelle la matrice de $u$ est diagonale. Par exemple dans la base form\\'ee des vecteurs  $u_1=(1,-1,0)$, $u_2=(1,0,-1)$ et \n$u_3=(2,-2,-3)$, la matrice de $u$ est la matrice $D$ qui s'\\'ecrit\n$$D=\\begin{pmatrix}-1&0&0 \\\\  0&-1&0 \\\\  0&0&2\\end{pmatrix}$$",
+        "html": "<p>Démontrons que <span class=\"math inline\">\\(A\\)</span> est diagonalisable et donnons une base de <span class=\"math inline\">\\(\\R^3\\)</span> dans laquelle la matrice de <span class=\"math inline\">\\(u\\)</span> est diagonale.</p>\n<p>La question précédente et les résultats obtenus sur les dimensions des sous-espaces propres permettent d’affirmer que la matrice <span class=\"math inline\">\\(A\\)</span> est diagonalisable. Une base de <span class=\"math inline\">\\(\\R^3\\)</span> obtenue à partir de bases des sous-espaces propres est une base de vecteurs propres dans laquelle la matrice de <span class=\"math inline\">\\(u\\)</span> est diagonale. Par exemple dans la base formée des vecteurs <span class=\"math inline\">\\(u_1=(1,-1,0)\\)</span>, <span class=\"math inline\">\\(u_2=(1,0,-1)\\)</span> et <span class=\"math inline\">\\(u_3=(2,-2,-3)\\)</span>, la matrice de <span class=\"math inline\">\\(u\\)</span> est la matrice <span class=\"math inline\">\\(D\\)</span> qui s’écrit <span class=\"math display\">\\[D=\\begin{pmatrix}-1&amp;0&amp;0 \\\\  0&amp;-1&amp;0 \\\\  0&amp;0&amp;2\\end{pmatrix}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "e6dd8695-7015-4781-a22c-1d2409931753",
+      "type": "question",
+      "value": {
+        "latex": "Trouver une matrice $P$ telle que $P^{-1}AP$ soit diagonale.",
+        "html": "<p>Trouver une matrice <span class=\"math inline\">\\(P\\)</span> telle que <span class=\"math inline\">\\(P^{-1}AP\\)</span> soit diagonale.</p>\n"
+      }
+    },
+    {
+      "id": "b49650a5-bd3d-4b84-b464-dec42ae7b320",
+      "type": "reponse",
+      "value": {
+        "latex": "Trouvons une matrice $P$ telle que $P^{-1}AP$ soit diagonale.\n\nLa matrice cherch\\'ee $P$ est la matrice de passage exprimant la base de vecteurs propres $(u_1,u_2,u_3)$ dans la base canonique.\n C'est donc la matrice\n$$P=\\begin{pmatrix}1&1&2 \\\\  -1&0&-2 \\\\  0&-1&-3\\end{pmatrix}.$$\nOn a $P^{-1}AP=D$.",
+        "html": "<p>Trouvons une matrice <span class=\"math inline\">\\(P\\)</span> telle que <span class=\"math inline\">\\(P^{-1}AP\\)</span> soit diagonale.</p>\n<p>La matrice cherchée <span class=\"math inline\">\\(P\\)</span> est la matrice de passage exprimant la base de vecteurs propres <span class=\"math inline\">\\((u_1,u_2,u_3)\\)</span> dans la base canonique. C’est donc la matrice <span class=\"math display\">\\[P=\\begin{pmatrix}1&amp;1&amp;2 \\\\  -1&amp;0&amp;-2 \\\\  0&amp;-1&amp;-3\\end{pmatrix}.\\]</span> On a <span class=\"math inline\">\\(P^{-1}AP=D\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

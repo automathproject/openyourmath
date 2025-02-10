@@ -1,0 +1,59 @@
+{
+  "uuid": "sIog",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5438",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Développement limité",
+    "sousChapitre": "Calculs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:32.729Z"
+  },
+  "contenu": [
+    {
+      "id": "fade5c97-11f3-41f9-8fcc-4e5a52ec617b",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "261ce703-a1ca-4e14-9303-da6fe5c08d97",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que l'équation $x+\\ln x=k$ admet, pour $k$ réel donné, une unique solution dans $]0,+\\infty[$, notée $x_k$.",
+        "html": "<p>Montrer que l’équation <span class=\"math inline\">\\(x+\\ln x=k\\)</span> admet, pour <span class=\"math inline\">\\(k\\)</span> réel donné, une unique solution dans <span class=\"math inline\">\\(]0,+\\infty[\\)</span>, notée <span class=\"math inline\">\\(x_k\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "23dd7d4a-8d92-48fd-95b6-c027ab00afbc",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $x>0$, posons $f(x)=x+\\ln x$. $f$ est continue sur $]0,+\\infty[$, strictement croissante sur $]0,+\\infty[$ en tant que somme de deux fonctions continues et strictement croissantes sur $]0,+\\infty[$. $f$ réalise donc une bijection de $]0,+\\infty[$ sur $f\\left(]0,+\\infty[\\right)=\\left]\\lim_{x\\rightarrow 0,\\;x>0}f(x),\\lim_{x\\rightarrow +\\infty}f(x)\\right[=]-\\infty,+\\infty[=\\Rr$. En particulier,\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Rr,\\;\\exists!x_k\\in]0,+\\infty[/\\;f(x_k)=k.$\n}\n\\end{center}",
+        "html": "<p>Pour <span class=\"math inline\">\\(x&gt;0\\)</span>, posons <span class=\"math inline\">\\(f(x)=x+\\ln x\\)</span>. <span class=\"math inline\">\\(f\\)</span> est continue sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>, strictement croissante sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span> en tant que somme de deux fonctions continues et strictement croissantes sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>. <span class=\"math inline\">\\(f\\)</span> réalise donc une bijection de <span class=\"math inline\">\\(]0,+\\infty[\\)</span> sur <span class=\"math inline\">\\(f\\left(]0,+\\infty[\\right)=\\left]\\lim_{x\\rightarrow 0,\\;x&gt;0}f(x),\\lim_{x\\rightarrow +\\infty}f(x)\\right[=]-\\infty,+\\infty[=\\Rr\\)</span>. En particulier,</p>\n"
+      }
+    },
+    {
+      "id": "02546bcd-07c8-4527-9c9e-66b44f51c616",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que, quand $k$ tend vers $+\\infty$, on a~:~$x_k=ak+b\\ln k+c\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right)$ où $a$, $b$ et $c$ sont des constantes à déterminer.",
+        "html": "<p>Montrer que, quand <span class=\"math inline\">\\(k\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, on a : <span class=\"math inline\">\\(x_k=ak+b\\ln k+c\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right)\\)</span> où <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span> et <span class=\"math inline\">\\(c\\)</span> sont des constantes à déterminer.</p>\n"
+      }
+    },
+    {
+      "id": "12c3d862-427b-4516-900a-d24e4bb4dc13",
+      "type": "reponse",
+      "value": {
+        "latex": "$f\\left(\\frac{k}{2}\\right)=\\frac{k}{2}+\\ln\\frac{k}{2}<k$ pour $k$ suffisament grand (car $k-(\\frac{k}{2}+\\ln\\frac{k}{2})=\\frac{k}{2}-\\ln\\frac{k}{2}\\underset{k\\rightarrow+\\infty}{\\rightarrow}+\\infty$ d'après les théorèmes de croissances comparées). Donc, pour $k$ suffisament grand, $f\\left(\\frac{k}{2}\\right)<f(x_k)$. Puisque $f$ est strictement croissante sur $]0,+\\infty[$, on en déduit que $x_k>\\frac{k}{2}$ pour $k$ suffisament grand et donc que $\\lim_{k\\rightarrow +\\infty}x_k=+\\infty$. Mais alors, $k=x_k+\\ln x_k\\sim x_k$ et donc, quand $k$ tend vers $+\\infty$,\n\n\\begin{center}\n\\shadowbox{\n$x_k\\underset{k\\rightarrow+\\infty}{=}k+o(k).$\n}\n\\end{center}\nPosons $y_k=x_k-k$. On a $y_k=o(k)$ et de plus $y_k+\\ln(y_k+k)=0$ ce qui s'écrit~:\n\n$$y_k=-\\ln(k+y_k)=-\\ln(k+o(k))=-\\ln k+\\ln(1+o(1))=-\\ln k+o(1).$$\nDonc,\n\n\\begin{center}\n\\shadowbox{\n$x_k\\underset{k\\rightarrow+\\infty}{=}k-\\ln k+o(1).$\n}\n\\end{center}\nPosons $z_k=y_k+\\ln k=x_k-k+\\ln k$. Alors, $z_k=o(1)$ et $-\\ln k+z_k=-\\ln(k-\\ln k+z_k)$. Par suite,\n\n$$z_k=\\ln k-\\ln(k-\\ln k+o(1))=-\\ln\\left(1-\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right)\\right)=\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right).$$\n\nFinalement,\n\n\\begin{center}\n\\shadowbox{\n$x_k\\underset{k\\rightarrow+\\infty}{=}k-\\ln k+\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right).$\n}\n\\end{center}",
+        "html": "<p><span class=\"math inline\">\\(f\\left(\\frac{k}{2}\\right)=\\frac{k}{2}+\\ln\\frac{k}{2}&lt;k\\)</span> pour <span class=\"math inline\">\\(k\\)</span> suffisament grand (car <span class=\"math inline\">\\(k-(\\frac{k}{2}+\\ln\\frac{k}{2})=\\frac{k}{2}-\\ln\\frac{k}{2}\\underset{k\\rightarrow+\\infty}{\\rightarrow}+\\infty\\)</span> d’après les théorèmes de croissances comparées). Donc, pour <span class=\"math inline\">\\(k\\)</span> suffisament grand, <span class=\"math inline\">\\(f\\left(\\frac{k}{2}\\right)&lt;f(x_k)\\)</span>. Puisque <span class=\"math inline\">\\(f\\)</span> est strictement croissante sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>, on en déduit que <span class=\"math inline\">\\(x_k&gt;\\frac{k}{2}\\)</span> pour <span class=\"math inline\">\\(k\\)</span> suffisament grand et donc que <span class=\"math inline\">\\(\\lim_{k\\rightarrow +\\infty}x_k=+\\infty\\)</span>. Mais alors, <span class=\"math inline\">\\(k=x_k+\\ln x_k\\sim x_k\\)</span> et donc, quand <span class=\"math inline\">\\(k\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p>Posons <span class=\"math inline\">\\(y_k=x_k-k\\)</span>. On a <span class=\"math inline\">\\(y_k=o(k)\\)</span> et de plus <span class=\"math inline\">\\(y_k+\\ln(y_k+k)=0\\)</span> ce qui s’écrit :</p>\n<p><span class=\"math display\">\\[y_k=-\\ln(k+y_k)=-\\ln(k+o(k))=-\\ln k+\\ln(1+o(1))=-\\ln k+o(1).\\]</span> Donc,</p>\n<p>Posons <span class=\"math inline\">\\(z_k=y_k+\\ln k=x_k-k+\\ln k\\)</span>. Alors, <span class=\"math inline\">\\(z_k=o(1)\\)</span> et <span class=\"math inline\">\\(-\\ln k+z_k=-\\ln(k-\\ln k+z_k)\\)</span>. Par suite,</p>\n<p><span class=\"math display\">\\[z_k=\\ln k-\\ln(k-\\ln k+o(1))=-\\ln\\left(1-\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right)\\right)=\\frac{\\ln k}{k}+o\\left(\\frac{\\ln k}{k}\\right).\\]</span></p>\n<p>Finalement,</p>\n"
+      }
+    }
+  ]
+}

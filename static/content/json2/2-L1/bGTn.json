@@ -1,0 +1,35 @@
+{
+  "uuid": "bGTn",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1937",
+    "auteur": "gineste",
+    "createdAt": "2001-11-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série numérique",
+    "sousChapitre": "Série à  termes positifs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:09.293Z"
+  },
+  "contenu": [
+    {
+      "id": "f4eefc9d-75eb-4df7-a213-bc3e978e294f",
+      "type": "description",
+      "value": {
+        "latex": "Étudier, suivant les valeurs de $p \\in \\Nn$, la nature de la série de terme général \n\\[\nu_n = \\frac{1! + 2! + \\cdots + n!}{(n+p)!} \\cdotp\n\\]",
+        "html": "<p>Étudier, suivant les valeurs de <span class=\"math inline\">\\(p \\in \\Nn\\)</span>, la nature de la série de terme général <span class=\"math display\">\\[u_n = \\frac{1! + 2! + \\cdots + n!}{(n+p)!} \\cdotp\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "217c98b9-4ddb-4915-a3d5-af55cc5a8291",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{itemize}\n\\item Pour $p = 0$:\n\\[ \nu_n = \\frac{ 1! + 2! + \\cdots + n! }{ n! } = 1 + \\frac{ 1! + 2! + \\cdots + (n-1)! }{ n! } > 1 \n\\]\n$u_n$ ne tend pas vers $ 0 $ donc, $ \\sum u_n $ diverge grossièrement pour $ p=0 $. \n\n\\item Pour $p = 1$:\n\\[ \nu_n = \\frac{1}{ (n+1)! } + \\frac{2!}{ (n+1)! } + \\cdots + \\frac{ (n-1)! }{ (n+1)! } + \\frac{n!}{ (n+1)! } \n\\]\n\\[ \nu_n \\geq \\frac{n!}{ (n+1)! } = \\frac{1}{ n + 1 }  \\cdotp\n\\]\nOr $\\sum \\frac{1}{n + 1}$ diverge, donc $\\sum u_n$ diverge pour $p = 1$ .\n\n\\item Pour $p = 2$:\n\\[ u_n = \\frac{1}{ (n+2)! } + \\frac{2!}{ (n+2)! } + \\cdots + \\frac{ (n-1)! }{ (n+2)! } + \\frac{n!}{ (n+2)! } \n\\]\nOn serait tenté de dire que l'on a une somme de séries convergentes, donc $\\sum u_n$ converge. \nPas de chance, le nombre de terme croît en fonction de $n$, donc à l'infini, on en a une infinité \net on ne peut rien conclure.\n\\[ \nu_n = \\sum_{k=1}^{n} \\frac{k!}{ (n + 2)!} = \\sum_{k=1}^{n-1} \\frac{k!}{(n + 2)!} + \\frac{n!}{(n + 2)!}  \n   \\leq \\frac{n (n - 1)!}{(n + 2)!} + \\frac{n!}{(n + 2)!} \\]\n\\[ u_n \\leq 2\\frac{n!}{(n + 2)!} = \\frac{2}{(n + 1)(n + 2)} \\sim \\frac{2}{n^2} \\]\nOr $\\sum \\frac{1}{n^2}$ converge, donc $\\sum u_n$ converge pour $p = 2$. \n\n\\item Pour $p \\geq 3$:\n\\[ \nu_n = \\frac{ 1! + 2! + \\cdots + n! }{( n + p)! } \\leq \\frac{ n \\, n! }{ (n + p)! } = \\frac{ n \\, n! }{n! (n+1) \\cdots (n+p) } \n\\]\nEn simplifiant par $ n! $ et en posant $ u_n \\leq \\frac{ n }{ (n+1) \\cdots (n+p)}$ et\n\\[ \n\\frac{ n }{ (n+1) \\cdots (n+p)} \\thicksim  \\frac{n}{n^p} \n= \\frac{1}{n^{p - 1}} \\text{ avec } p \\geq 3\n\\] \nOr $\\sum \\frac{1}{n^{p - 1}}$ est une série de Riemann convergente car $p-1 \\geq 2$, \ndonc $\\sum u_n $ converge pour $p \\geq 3$. \n\nNote: on peut aussi remarquer que $u_n$ (quand $p\\geq3$) est majoré par $u_n$ (quand $p=2$), or ce dernier est convergent.\n\\end{itemize}\n\\medskip\n\n(\\emph{Corrigé de Eugène Ndiaye})",
+        "html": "<ul>\n<li><p>Pour <span class=\"math inline\">\\(p = 0\\)</span>: <span class=\"math display\">\\[u_n = \\frac{ 1! + 2! + \\cdots + n! }{ n! } = 1 + \\frac{ 1! + 2! + \\cdots + (n-1)! }{ n! } &gt; 1\\]</span> <span class=\"math inline\">\\(u_n\\)</span> ne tend pas vers <span class=\"math inline\">\\(0\\)</span> donc, <span class=\"math inline\">\\(\\sum u_n\\)</span> diverge grossièrement pour <span class=\"math inline\">\\(p=0\\)</span>.</p></li>\n<li><p>Pour <span class=\"math inline\">\\(p = 1\\)</span>: <span class=\"math display\">\\[u_n = \\frac{1}{ (n+1)! } + \\frac{2!}{ (n+1)! } + \\cdots + \\frac{ (n-1)! }{ (n+1)! } + \\frac{n!}{ (n+1)! }\\]</span> <span class=\"math display\">\\[u_n \\geq \\frac{n!}{ (n+1)! } = \\frac{1}{ n + 1 }  \\cdotp\\]</span> Or <span class=\"math inline\">\\(\\sum \\frac{1}{n + 1}\\)</span> diverge, donc <span class=\"math inline\">\\(\\sum u_n\\)</span> diverge pour <span class=\"math inline\">\\(p = 1\\)</span> .</p></li>\n<li><p>Pour <span class=\"math inline\">\\(p = 2\\)</span>: <span class=\"math display\">\\[u_n = \\frac{1}{ (n+2)! } + \\frac{2!}{ (n+2)! } + \\cdots + \\frac{ (n-1)! }{ (n+2)! } + \\frac{n!}{ (n+2)! }\\]</span> On serait tenté de dire que l’on a une somme de séries convergentes, donc <span class=\"math inline\">\\(\\sum u_n\\)</span> converge. Pas de chance, le nombre de terme croît en fonction de <span class=\"math inline\">\\(n\\)</span>, donc à l’infini, on en a une infinité et on ne peut rien conclure. <span class=\"math display\">\\[u_n = \\sum_{k=1}^{n} \\frac{k!}{ (n + 2)!} = \\sum_{k=1}^{n-1} \\frac{k!}{(n + 2)!} + \\frac{n!}{(n + 2)!}  \n   \\leq \\frac{n (n - 1)!}{(n + 2)!} + \\frac{n!}{(n + 2)!}\\]</span> <span class=\"math display\">\\[u_n \\leq 2\\frac{n!}{(n + 2)!} = \\frac{2}{(n + 1)(n + 2)} \\sim \\frac{2}{n^2}\\]</span> Or <span class=\"math inline\">\\(\\sum \\frac{1}{n^2}\\)</span> converge, donc <span class=\"math inline\">\\(\\sum u_n\\)</span> converge pour <span class=\"math inline\">\\(p = 2\\)</span>.</p></li>\n<li><p>Pour <span class=\"math inline\">\\(p \\geq 3\\)</span>: <span class=\"math display\">\\[u_n = \\frac{ 1! + 2! + \\cdots + n! }{( n + p)! } \\leq \\frac{ n \\, n! }{ (n + p)! } = \\frac{ n \\, n! }{n! (n+1) \\cdots (n+p) }\\]</span> En simplifiant par <span class=\"math inline\">\\(n!\\)</span> et en posant <span class=\"math inline\">\\(u_n \\leq \\frac{ n }{ (n+1) \\cdots (n+p)}\\)</span> et <span class=\"math display\">\\[\\frac{ n }{ (n+1) \\cdots (n+p)} \\thicksim  \\frac{n}{n^p} \n= \\frac{1}{n^{p - 1}} \\text{ avec } p \\geq 3\\]</span> Or <span class=\"math inline\">\\(\\sum \\frac{1}{n^{p - 1}}\\)</span> est une série de Riemann convergente car <span class=\"math inline\">\\(p-1 \\geq 2\\)</span>, donc <span class=\"math inline\">\\(\\sum u_n\\)</span> converge pour <span class=\"math inline\">\\(p \\geq 3\\)</span>.</p>\n<p>Note: on peut aussi remarquer que <span class=\"math inline\">\\(u_n\\)</span> (quand <span class=\"math inline\">\\(p\\geq3\\)</span>) est majoré par <span class=\"math inline\">\\(u_n\\)</span> (quand <span class=\"math inline\">\\(p=2\\)</span>), or ce dernier est convergent.</p></li>\n</ul>\n<p>(<em>Corrigé de Eugène Ndiaye</em>)</p>\n"
+      }
+    }
+  ]
+}

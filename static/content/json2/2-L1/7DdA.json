@@ -1,0 +1,35 @@
+{
+  "uuid": "7DdA",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5712",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Série numérique",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:29.226Z"
+  },
+  "contenu": [
+    {
+      "id": "163b9911-62ee-4e72-9828-c8b86932ed97",
+      "type": "description",
+      "value": {
+        "latex": "Convergence et somme de la série de terme général $u_n=\\frac{\\pi}{4}-\\sum_{k=0}^{n}\\frac{(-1)^k}{2k+1}$, $n\\geqslant 0$.",
+        "html": "<p>Convergence et somme de la série de terme général <span class=\"math inline\">\\(u_n=\\frac{\\pi}{4}-\\sum_{k=0}^{n}\\frac{(-1)^k}{2k+1}\\)</span>, <span class=\"math inline\">\\(n\\geqslant 0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "3750f830-a94d-4446-bd4f-646c7b24be45",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $n\\in\\Nn$.\n\n$$\\begin{align*}\\ensuremath\nu_n&=\\frac{\\pi}{4}-\\sum_{k=0}^{n}\\frac{(-1)^k}{2k+1}=\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt-\\sum_{k=0}^{n}(-1)^k\\int_{0}^{1}t^{2k}\\;dt=\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt-\\int_{0}^{1}\\frac{1-(-t^2)^{n+1}}{1+t^2}\\;dt\\\\\n &= (-1)^{n+1}\\int_{0}^{1}\\frac{t^{2n+2}}{1+t^2}\\;dt.\n\\end{align*}$$\n\nPar suite, pour $N\\in\\Nn$,\n\n$$\\begin{align*}\\ensuremath\n\\sum_{n=0}^{N}u_n=\\int_{0}^{1}\\sum_{n=0}^{N}\\frac{(-t^2)^{n+1}}{1+t^2}\\;dt  =\\int_{0}^{1}(-t^2)\\frac{1-(-t^2)^{N+1}}{(1+t^2)^2}\\;dt=-\\int_{0}^{1}\\frac{t^2}{(1+t^2)^2}\\;dt+(-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt.\n\\end{align*}$$\n\nOr $\\left|(-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt\\right|=\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt\\leqslant\\int_{0}^{1}t^{2N+2}\\;dt=\\frac{1}{2N+3}$. Comme $\\frac{1}{2N+3}$ tend vers $0$ quand $N$ tend vers $+\\infty$, il en est de même de $(-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt$. On en déduit que la série de terme général $u_n$, $n\\in\\Nn$, converge et de plus\n\n$$\\begin{align*}\\ensuremath\n\\sum_{n=0}^{+\\infty}u_n&=-\\int_{0}^{1}\\frac{t^2}{(1+t^2)^2}\\;dt=\\int_{0}^{1}\\frac{t}{2}\\times\\frac{-2t}{(1+t^2)^2}\\;dt\\\\\n &=\\left[\\frac{t}{2}\\times\\frac{1}{1+t^2}\\right]_0^1-\\int_{0}^{1}\\frac{1}{2}\\times\\frac{1}{1+t^2}\\;dt=\\frac{1}{4}-\\frac{\\pi}{8}.\n\\end{align*}$$\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{n=0}^{+\\infty}\\left(\\frac{\\pi}{4}-\\sum_{k=0}^{n}\\frac{(-1)^k}{2k+1}\\right)=\\frac{1}{4}-\\frac{\\pi}{8}$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nu_n&amp;=\\frac{\\pi}{4}-\\sum_{k=0}^{n}\\frac{(-1)^k}{2k+1}=\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt-\\sum_{k=0}^{n}(-1)^k\\int_{0}^{1}t^{2k}\\;dt=\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt-\\int_{0}^{1}\\frac{1-(-t^2)^{n+1}}{1+t^2}\\;dt\\\\\n &amp;= (-1)^{n+1}\\int_{0}^{1}\\frac{t^{2n+2}}{1+t^2}\\;dt.\n\\end{align*}\\]</span></p>\n<p>Par suite, pour <span class=\"math inline\">\\(N\\in\\Nn\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\sum_{n=0}^{N}u_n=\\int_{0}^{1}\\sum_{n=0}^{N}\\frac{(-t^2)^{n+1}}{1+t^2}\\;dt  =\\int_{0}^{1}(-t^2)\\frac{1-(-t^2)^{N+1}}{(1+t^2)^2}\\;dt=-\\int_{0}^{1}\\frac{t^2}{(1+t^2)^2}\\;dt+(-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt.\n\\end{align*}\\]</span></p>\n<p>Or <span class=\"math inline\">\\(\\left|(-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt\\right|=\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt\\leqslant\\int_{0}^{1}t^{2N+2}\\;dt=\\frac{1}{2N+3}\\)</span>. Comme <span class=\"math inline\">\\(\\frac{1}{2N+3}\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(N\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, il en est de même de <span class=\"math inline\">\\((-1)^{N+1}\\int_{0}^{1}\\frac{t^{2N+2}}{(1+t^2)^2}\\;dt\\)</span>. On en déduit que la série de terme général <span class=\"math inline\">\\(u_n\\)</span>, <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, converge et de plus</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\sum_{n=0}^{+\\infty}u_n&amp;=-\\int_{0}^{1}\\frac{t^2}{(1+t^2)^2}\\;dt=\\int_{0}^{1}\\frac{t}{2}\\times\\frac{-2t}{(1+t^2)^2}\\;dt\\\\\n &amp;=\\left[\\frac{t}{2}\\times\\frac{1}{1+t^2}\\right]_0^1-\\int_{0}^{1}\\frac{1}{2}\\times\\frac{1}{1+t^2}\\;dt=\\frac{1}{4}-\\frac{\\pi}{8}.\n\\end{align*}\\]</span></p>\n"
+      }
+    }
+  ]
+}

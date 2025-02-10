@@ -1,0 +1,59 @@
+{
+  "uuid": "gC2P",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4081",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Equation différentielle",
+    "sousChapitre": "Equations différentielles linéaires",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:20.431Z"
+  },
+  "contenu": [
+    {
+      "id": "7c65eed4-b547-4163-9dc8-9e159592c863",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ continue et intégrable sur~$\\R$. On considère l'équation\ndifférentielle $(E)$ : $y' - y + f = 0$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> continue et intégrable sur <span class=\"math inline\">\\(\\R\\)</span>. On considère l’équation différentielle <span class=\"math inline\">\\((E)\\)</span> : <span class=\"math inline\">\\(y&#39; - y + f = 0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c280e6b7-a53d-4850-b5b9-19ffb96dfb8d",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $(E)$ admet une unique solution $F$ bornée sur~$\\R$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\((E)\\)</span> admet une unique solution <span class=\"math inline\">\\(F\\)</span> bornée sur <span class=\"math inline\">\\(\\R\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f94a9b52-840c-4fd1-bde2-ca85a2b74d83",
+      "type": "reponse",
+      "value": {
+        "latex": "Formule de Duhamel : $y(t) = - \\int_{x=0}^t e^{t-x}f(x)\\,d x + \\lambda e^t$.\n\n    Par convergence dominée, l'intégrale tend vers $0$ quand $t$ tend vers $-\\infty$\n    donc toutes les solutions de~$(E)$ sont bornées au voisinage de $-\\infty$.\n\n    Pour $t\\ge 0$ on a $y(t) = e^t\\Bigl(\\lambda- \\int_{x=0}^t e^{-x}f(x)\\,d x\\Bigr)$\n    donc il y a au plus une valeur de $\\lambda$ telle que $y$ soit éventuellement\n    bornée au voisinage de $+\\infty$, c'est $\\lambda =  \\int_{x=0}^{+\\infty} e^{-x}f(x)\\,d x$.\n\n    Pour ce choix on a~:\n    $|y(t)| = \\Bigl| \\int_{x=t}^{+\\infty}e^{t-x}f(x)\\,d x\\Bigr|\n    \\le \\int_{x=t}^{+\\infty}|f(x)|\\,d x \\to 0$ lorsque $t\\to+\\infty$.",
+        "html": "<p>Formule de Duhamel : <span class=\"math inline\">\\(y(t) = - \\int_{x=0}^t e^{t-x}f(x)\\,d x + \\lambda e^t\\)</span>.</p>\n<p>Par convergence dominée, l’intégrale tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(t\\)</span> tend vers <span class=\"math inline\">\\(-\\infty\\)</span> donc toutes les solutions de <span class=\"math inline\">\\((E)\\)</span> sont bornées au voisinage de <span class=\"math inline\">\\(-\\infty\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(t\\ge 0\\)</span> on a <span class=\"math inline\">\\(y(t) = e^t\\Bigl(\\lambda- \\int_{x=0}^t e^{-x}f(x)\\,d x\\Bigr)\\)</span> donc il y a au plus une valeur de <span class=\"math inline\">\\(\\lambda\\)</span> telle que <span class=\"math inline\">\\(y\\)</span> soit éventuellement bornée au voisinage de <span class=\"math inline\">\\(+\\infty\\)</span>, c’est <span class=\"math inline\">\\(\\lambda =  \\int_{x=0}^{+\\infty} e^{-x}f(x)\\,d x\\)</span>.</p>\n<p>Pour ce choix on a : <span class=\"math inline\">\\(|y(t)| = \\Bigl| \\int_{x=t}^{+\\infty}e^{t-x}f(x)\\,d x\\Bigr|\n    \\le \\int_{x=t}^{+\\infty}|f(x)|\\,d x \\to 0\\)</span> lorsque <span class=\"math inline\">\\(t\\to+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d2fcb42f-e878-4595-ba84-40d8d32c053b",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $F$ est intégrable sur $\\R$ et comparer $ \\int_{-\\infty}^{+\\infty} F$ et  $ \\int_{-\\infty}^{+\\infty} f$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(F\\)</span> est intégrable sur <span class=\"math inline\">\\(\\R\\)</span> et comparer <span class=\"math inline\">\\(\\int_{-\\infty}^{+\\infty} F\\)</span> et <span class=\"math inline\">\\(\\int_{-\\infty}^{+\\infty} f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ff4610d1-aee9-4ced-882f-24e3e3262464",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\begin{align*} \\int_{t=a}^b|F(t)|\\,d t\n    &\\le  \\int_{t=a}^b \\int_{x=t}^{+\\infty}e^{t-x}|f(x)|\\,d xd t\\\\\n    &\\le  \\int_{x=a}^b \\int_{t=a}^xe^{t-x}|f(x)|\\,d td x\n       +  \\int_{x=b}^{+\\infty} \\int_{t=a}^be^{t-x}|f(x)|\\,d td x\\\\\n    &\\le  \\int_{x=a}^b(1-e^{a-x})|f(x)|\\,d x\n       +  \\int_{x=b}^{+\\infty}(e^{b-x}-e^{a-x})|f(x)|\\,d td x\\\\\n    &\\le  \\int_{x=-\\infty}^{+\\infty}|f(x)|\\,d x\\\\ \\end{align*}$$\n    donc $F$ est intégrable. $F' = F-f$ est aussi intégrable et\n    $ \\int_{t=-\\infty}^{+\\infty}F'(t)\\,d t = \\Bigl[F(t)\\Bigr]_{t=-\\infty}^{+\\infty} = 0$\n    d'où $ \\int_{-\\infty}^{+\\infty} F = \\int_{-\\infty}^{+\\infty} f$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{align*} \\int_{t=a}^b|F(t)|\\,d t\n    &amp;\\le  \\int_{t=a}^b \\int_{x=t}^{+\\infty}e^{t-x}|f(x)|\\,d xd t\\\\\n    &amp;\\le  \\int_{x=a}^b \\int_{t=a}^xe^{t-x}|f(x)|\\,d td x\n       +  \\int_{x=b}^{+\\infty} \\int_{t=a}^be^{t-x}|f(x)|\\,d td x\\\\\n    &amp;\\le  \\int_{x=a}^b(1-e^{a-x})|f(x)|\\,d x\n       +  \\int_{x=b}^{+\\infty}(e^{b-x}-e^{a-x})|f(x)|\\,d td x\\\\\n    &amp;\\le  \\int_{x=-\\infty}^{+\\infty}|f(x)|\\,d x\\\\ \\end{align*}\\]</span> donc <span class=\"math inline\">\\(F\\)</span> est intégrable. <span class=\"math inline\">\\(F&#39; = F-f\\)</span> est aussi intégrable et <span class=\"math inline\">\\(\\int_{t=-\\infty}^{+\\infty}F&#39;(t)\\,d t = \\Bigl[F(t)\\Bigr]_{t=-\\infty}^{+\\infty} = 0\\)</span> d’où <span class=\"math inline\">\\(\\int_{-\\infty}^{+\\infty} F = \\int_{-\\infty}^{+\\infty} f\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

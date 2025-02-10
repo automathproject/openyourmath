@@ -1,0 +1,35 @@
+{
+  "uuid": "okaM",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "3066",
+    "auteur": "quercia",
+    "createdAt": "2010-03-08",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Propriétés de R",
+    "sousChapitre": "Les rationnels",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:28.219Z"
+  },
+  "contenu": [
+    {
+      "id": "e4e4bba7-ade6-455f-84ff-3b8316b090d5",
+      "type": "description",
+      "value": {
+        "latex": "Soit $a \\in \\Q^+$ tel que $\\sqrt a \\notin \\Q$.\n\nMontrer qu'il existe $C>0$ tel que pour tout rationnel $r=\\frac pq$, on a :\n$\\bigl|r-\\sqrt a\\bigr| \\ge \\frac C{q^2}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(a \\in \\Q^+\\)</span> tel que <span class=\"math inline\">\\(\\sqrt a \\notin \\Q\\)</span>.</p>\n<p>Montrer qu’il existe <span class=\"math inline\">\\(C&gt;0\\)</span> tel que pour tout rationnel <span class=\"math inline\">\\(r=\\frac pq\\)</span>, on a : <span class=\"math inline\">\\(\\bigl|r-\\sqrt a\\bigr| \\ge \\frac C{q^2}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "afa075c3-f66c-42e4-9cb1-597d83b01a5e",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons d'abord $\\bigl|r-\\sqrt a\\bigr| \\le \\frac 1{q^2}$.\nCela implique $|r| \\le \\sqrt a + 1$.\n\nMajorons $|r^2-a|$ :\n$$|r^2-a|=|r-\\sqrt a| \\times |r+\\sqrt a| \\le |r-\\sqrt a| \\times \\big( |r|+\\sqrt a \\big) \\le |r-\\sqrt a| \\times \\big( 2\\sqrt a+1 \\big)$$\n\nMinorons $|r^2-a|$, en posant $r=\\frac pq$, $a=\\frac mn$.\n$$|r^2-a|=\\left|\\left(\\frac pq\\right)^2-\\frac mn \\right| =\\left| \\frac{np^2-mq^2}{nq^2}\\right| \\ge \\frac{1}{nq^2}$$\nLa dernière inégalité provient que le numérateur $np^2-mq^2$ n'est pas nul (sinon $\\sqrt a$ serait rationnel).\n\nOn déduit de ces deux majorations : \n$$\\frac{1}{nq^2} \\le |r^2-a| \\le |r-\\sqrt a| \\times \\big( 2\\sqrt a+1 \\big)$$\nEt donc :\n$$ |r-\\sqrt a| \\ge  \\frac{1}{n( 2\\sqrt a+1)}\\frac{1}{q^2}.$$\n\n\nCette inégalité est aussi clairement vérifier si $\\bigl|r-\\sqrt a\\bigr| > \\frac 1{q^2}$.\n\nLa constante $C=\\frac{1}{n( 2\\sqrt a+1)}$ convient.",
+        "html": "<p>Supposons d’abord <span class=\"math inline\">\\(\\bigl|r-\\sqrt a\\bigr| \\le \\frac 1{q^2}\\)</span>. Cela implique <span class=\"math inline\">\\(|r| \\le \\sqrt a + 1\\)</span>.</p>\n<p>Majorons <span class=\"math inline\">\\(|r^2-a|\\)</span> : <span class=\"math display\">\\[|r^2-a|=|r-\\sqrt a| \\times |r+\\sqrt a| \\le |r-\\sqrt a| \\times \\big( |r|+\\sqrt a \\big) \\le |r-\\sqrt a| \\times \\big( 2\\sqrt a+1 \\big)\\]</span></p>\n<p>Minorons <span class=\"math inline\">\\(|r^2-a|\\)</span>, en posant <span class=\"math inline\">\\(r=\\frac pq\\)</span>, <span class=\"math inline\">\\(a=\\frac mn\\)</span>. <span class=\"math display\">\\[|r^2-a|=\\left|\\left(\\frac pq\\right)^2-\\frac mn \\right| =\\left| \\frac{np^2-mq^2}{nq^2}\\right| \\ge \\frac{1}{nq^2}\\]</span> La dernière inégalité provient que le numérateur <span class=\"math inline\">\\(np^2-mq^2\\)</span> n’est pas nul (sinon <span class=\"math inline\">\\(\\sqrt a\\)</span> serait rationnel).</p>\n<p>On déduit de ces deux majorations : <span class=\"math display\">\\[\\frac{1}{nq^2} \\le |r^2-a| \\le |r-\\sqrt a| \\times \\big( 2\\sqrt a+1 \\big)\\]</span> Et donc : <span class=\"math display\">\\[|r-\\sqrt a| \\ge  \\frac{1}{n( 2\\sqrt a+1)}\\frac{1}{q^2}.\\]</span></p>\n<p>Cette inégalité est aussi clairement vérifier si <span class=\"math inline\">\\(\\bigl|r-\\sqrt a\\bigr| &gt; \\frac 1{q^2}\\)</span>.</p>\n<p>La constante <span class=\"math inline\">\\(C=\\frac{1}{n( 2\\sqrt a+1)}\\)</span> convient.</p>\n"
+      }
+    }
+  ]
+}

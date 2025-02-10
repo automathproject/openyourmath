@@ -1,0 +1,59 @@
+{
+  "uuid": "4Wj8",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "3380",
+    "auteur": "quercia",
+    "createdAt": "2010-03-09",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Inverse, méthode de Gauss",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:04.594Z"
+  },
+  "contenu": [
+    {
+      "id": "4e87645c-5306-45a9-9a50-2bd5bec24287",
+      "type": "description",
+      "value": {
+        "latex": "Soit $M \\in \\mathcal{M}_n(\\R)$ antisymétrique.",
+        "html": "<p>Soit <span class=\"math inline\">\\(M \\in \\mathcal{M}_n(\\R)\\)</span> antisymétrique.</p>\n"
+      }
+    },
+    {
+      "id": "5df4fb1f-0408-446d-88cd-971c4d99e026",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $I+M$ est inversible (si $(I+M)X = 0$, calculer ${}^t\\!(MX)(MX)$).",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(I+M\\)</span> est inversible (si <span class=\"math inline\">\\((I+M)X = 0\\)</span>, calculer <span class=\"math inline\">\\({}^t\\!(MX)(MX)\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "065a6b13-40ab-4a72-be6a-3fb08ef3ae5e",
+      "type": "question",
+      "value": {
+        "latex": "Soit $A = (I-M)(I+M)^{-1}$. Montrer que ${}^t\\!A = A^{-1}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(A = (I-M)(I+M)^{-1}\\)</span>. Montrer que <span class=\"math inline\">\\({}^t\\!A = A^{-1}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "16082792-049f-4914-bf51-6f30e278e2af",
+      "type": "reponse",
+      "value": {
+        "latex": "Nous allons montrer que $I+M$ est inversible en montrant que si un vecteur $X$ vérifie\n$(I+M)X = 0$ alors $X=0$.\n\nNous allons estimer ${}^t\\!(MX)(MX)$ de deux façons.\nD'une part c'est un produit de la forme ${}^t\\!Y Y = \\| Y\\|^2$ et donc ${}^t\\!(MX)(MX) \\ge 0$.\n\nD'autre part :\n$$\\begin{align*}\n{}^t\\!(MX)(MX) \n & = {}^t\\!(MX) (-X) \\quad \\text{ car } (I+M)X = 0 \\text{ donc } MX = -X \\\\\n & = {}^t\\!X {}^t\\!M (-X)    \\quad \\text{ car } {}^t\\!(AB)={}^t\\! B {}^t\\!A \\\\\n & = {}^t\\!X (-M) (-X)    \\quad \\text{ car } {}^t\\!M=-M \\\\\n & = {}^t\\!X MX \\\\\n & = {}^t\\!X (-X) \\\\\n & = -{}^t\\!XX \\\\\n & = - \\|X\\|^2 \\\\\n\\end{align*}$$\nQui est donc négatif.\n\nSeule possibilité $\\|X\\|^2=0$ donc $X=0$ (= le vecteur nul) et donc $I+M$ inversible.\n\\begin{enumerate}\nCalculons $A^{-1}$.\n$$A^{-1} =\\big( (I-M)\\times(I+M)^{-1} \\big)^{-1} = \\big( (I+M)^{-1} \\big)^{-1} \\times(I-M)^{-1} = (I+M)\\times(I-M)^{-1}$$\n(n'oubliez pas que $(AB)^{-1}=B^{-1}A^{-1}$).\nCalculons ${}^t\\!A$.\n$$\\begin{align*}\n{}^t\\!A \n  & = {}^t\\!\\big( (I-M) \\times (I+M)^{-1} \\big) \\\\\n  & = {}^t\\!\\big( (I+M)^{-1} \\big) \\times {}^t\\!(I-M) \\qquad \\text{ car } {}^t\\!(AB)={}^t\\!B{}^t\\!A \\\\\n  & = \\big( {}^t\\!(I+M) \\big)^{-1}\\times{}^t\\!(I-M) \\qquad \\text{ car } {}^t\\!(A^{-1})=\\big({}^tA\\big)^{-1} \\\\\n  & = \\big( I+{}^t\\!M) \\big)^{-1}\\times(I-{}^t\\!M) \\qquad \\text{ car } {}^t\\!(A+B)={}^t\\!A+{}^t\\!B \\\\\n  & = (I-M) ^{-1}\\times (I+M) \\qquad \\text{ car ici } {}^{t}\\!{M} = -M \\\\  \n\\end{align*}$$\nMontrons que $I+M$ et $(I-M) ^{-1}$ commutent.\n\nTout d'abord $I+M$ et $I-M$ commutent car $(I+M)(I-M) = I-M^2 = (I-M)(I+M)$.\nMaintenant nous avons le petit résultat suivant :\n\n\\textbf{Lemme.} Si $AB=BA$ alors $AB^{-1}=B^{-1}A$.\n\nPour la preuve on écrit :\n$$AB=BA \\Rightarrow B^{-1}(AB)B^{-1}=B^{-1}(BA)B^{-1} \\Rightarrow B^{-1}A=AB^{-1}.$$\n\nEn appliquant ceci à $I+M$ et $I-M$ on trouve $(I+M)\\times (I-M) ^{-1}= (I-M) ^{-1}\\times(I+M)$\net donc $A^{-1}={}^t\\!A$.",
+        "html": ""
+      }
+    },
+    {
+      "id": "c6bdfa50-cf37-4319-a67d-d64b51701d09",
+      "type": "indication",
+      "value": {
+        "latex": "$M$ antisymétrique signifie ${}^{t}\\!{M}=-M$.\n\\begin{enumerate}\n  \\item Si $Y$ est un vecteur alors ${}^t\\!Y Y = \\| Y\\|^2$ est un réel positif ou nul.\n  \\item $I-M$ et $(I+M)^{-1}$ commutent.\n\\end{enumerate}",
+        "html": "<p><span class=\"math inline\">\\(M\\)</span> antisymétrique signifie <span class=\"math inline\">\\({}^{t}\\!{M}=-M\\)</span>.</p>\n<ol>\n<li><p>Si <span class=\"math inline\">\\(Y\\)</span> est un vecteur alors <span class=\"math inline\">\\({}^t\\!Y Y = \\| Y\\|^2\\)</span> est un réel positif ou nul.</p></li>\n<li><p><span class=\"math inline\">\\(I-M\\)</span> et <span class=\"math inline\">\\((I+M)^{-1}\\)</span> commutent.</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "uuid": "JNIf",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "635",
+    "auteur": "gourio",
+    "createdAt": "2001-09-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Continuité, limite et étude de fonctions réelles",
+    "sousChapitre": "Limite de fonctions",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:46.259Z"
+  },
+  "contenu": [
+    {
+      "id": "40368c57-09e4-414f-b075-845b04167a12",
+      "type": "description",
+      "value": {
+        "latex": "Calculer :\n$$\\lim\\limits_{x\\rightarrow 0}\\frac{x}{2+\\sin \\frac{1}{x}}\n,\\ \\ \\lim\\limits_{x\\rightarrow +\\infty }(\\ln (1+e^{-x}))^{\\frac{1}{x}}\n,\\ \\ \\lim\\limits_{x\\rightarrow 0^{+}}x^{\\frac{1}{\\ln (e^{x}-1)}}.$$",
+        "html": "<p>Calculer : <span class=\"math display\">\\[\\lim\\limits_{x\\rightarrow 0}\\frac{x}{2+\\sin \\frac{1}{x}}\n,\\ \\ \\lim\\limits_{x\\rightarrow +\\infty }(\\ln (1+e^{-x}))^{\\frac{1}{x}}\n,\\ \\ \\lim\\limits_{x\\rightarrow 0^{+}}x^{\\frac{1}{\\ln (e^{x}-1)}}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "0fd1ba09-757a-4e31-b159-9d63d0565413",
+      "type": "indication",
+      "value": {
+        "latex": "R\\'{e}ponses : $0,\\frac{1}{e},e.$\n\\begin{enumerate}\n \\item Borner $\\sin\\frac 1x$.\n \\item Utiliser que $\\ln(1+t) = t \\cdot \\mu(t)$, pour une certaine fonction $\\mu$ qui vérifie $\\mu(t) \\to 1$ lorsque $t\\to 0$.\n \\item Utiliser que $e^t-1 = t \\cdot \\mu(t)$, pour une certaine fonction $\\mu$ qui vérifie $\\mu(t) \\to 1$ lorsque $t\\to 0$.\n\\end{enumerate}",
+        "html": "<p>Réponses : <span class=\"math inline\">\\(0,\\frac{1}{e},e.\\)</span></p>\n<ol>\n<li><p>Borner <span class=\"math inline\">\\(\\sin\\frac 1x\\)</span>.</p></li>\n<li><p>Utiliser que <span class=\"math inline\">\\(\\ln(1+t) = t \\cdot \\mu(t)\\)</span>, pour une certaine fonction <span class=\"math inline\">\\(\\mu\\)</span> qui vérifie <span class=\"math inline\">\\(\\mu(t) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(t\\to 0\\)</span>.</p></li>\n<li><p>Utiliser que <span class=\"math inline\">\\(e^t-1 = t \\cdot \\mu(t)\\)</span>, pour une certaine fonction <span class=\"math inline\">\\(\\mu\\)</span> qui vérifie <span class=\"math inline\">\\(\\mu(t) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(t\\to 0\\)</span>.</p></li>\n</ol>\n"
+      }
+    },
+    {
+      "id": "16820845-b3cc-4038-a3df-755aaf6c7573",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{enumerate}\n \\item Comme $-1 \\le \\sin \\frac 1x \\le +1$ alors $1 \\le 2 + \\sin \\frac 1x \\le +3$.\nDonc pour $x>0$, nous obtenons $\\frac x3 \\le \\frac{x}{2+\\sin \\frac{1}{x}} \\le x$.\nOn obtient une inégalité similaire pour $x<0$.\nCela implique $\\lim\\limits_{x\\rightarrow 0}\\frac{x}{2+\\sin \\frac{1}{x}} = 0$.\n\n \\item Sachant que $\\frac{\\ln (1+t)}{t} \\to 1$ lorsque $t \\to 0$, on peut le reformuler\nainsi $\\ln(1+t) = t \\cdot \\mu(t)$, pour une certaine fonction $\\mu$ qui vérifie $\\mu(t) \\to 1$ lorsque $t\\to 0$.\nDonc $\\ln (1+e^{-x}) = e^{-x} \\mu(e^{-x})$.\nMaintenant \n\n$$\\begin{align*}\n(\\ln (1+e^{-x}))^{\\frac{1}{x}} \n  &= \\exp \\left(\\frac{1}{x} \\ln\\left( \\ln (1+e^{-x}) \\right)  \\right) \\\\\n  &= \\exp \\left(\\frac{1}{x} \\ln \\left( e^{-x} \\mu(e^{-x}) \\right)  \\right) \\\\\n  &= \\exp \\left(\\frac{1}{x} \\left( -x + \\ln \\mu(e^{-x}) \\right)  \\right) \\\\\n  &= \\exp \\left( -1 + \\frac{\\ln \\mu(e^{-x})}{x}  \\right) \\\\\n\\end{align*}$$\n$\\mu(e^{-x}) \\to 1$ donc $\\ln\\mu(e^{-x}) \\to 0$, donc $\\frac{\\ln \\mu(e^{-x})}{x} \\to 0$ lorsque $x \\to +\\infty$.\n\nBilan : la limite est $\\exp(-1)=\\frac 1 e$.\n \\item\n\n\n \\item Sachant $\\frac{e^x - 1}{x} \\to 1$ lorsque $x\\to 0$, on reformule ceci\nen $e^x-1 = x \\cdot \\mu(x)$, pour une certaine fonction $\\mu$ qui vérifie $\\mu(x) \\to 1$ lorsque $x\\to 0$.\nCela donne $\\ln (e^x-1) = \\ln (x \\cdot \\mu(x)) = \\ln x + \\ln \\mu(x).$\n$$\\begin{align*}\n x^{\\frac{1}{\\ln (e^{x}-1)}} \n  &= \\exp\\left( \\frac{1}{\\ln (e^{x}-1)} \\ln x  \\right) \\\\\n  &= \\exp\\left( \\frac{1}{\\ln x + \\ln \\mu(x)} \\ln x  \\right) \\\\\n  &= \\exp\\left( \\frac{1}{1 + \\frac{\\ln \\mu(x)}{\\ln x}} \\right) \\\\\n\\end{align*}$$\nMaintenant $\\mu(x) \\to 1$ donc $\\ln \\mu(x) \\to 0$, et $\\ln x \\to - \\infty$ lorsque $x \\to 0$.\nDonc $\\frac{\\ln \\mu(x)}{\\ln x} \\to 0$.\nCela donne \n$$\\lim\\limits_{x\\rightarrow 0^{+}}x^{\\frac{1}{\\ln (e^{x}-1)}} = \\lim\\limits_{x\\rightarrow 0^{+}} \\exp\\left( \\frac{1}{1 + \\frac{\\ln \\mu(x)}{\\ln x}} \\right) = \\exp\\left(1\\right) = e.$$",
+        "html": ""
+      }
+    }
+  ]
+}

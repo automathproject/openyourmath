@@ -1,0 +1,83 @@
+{
+  "uuid": "G7dF",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2367",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Application linéaire bornée",
+    "sousChapitre": "Application linéaire bornée",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:14.506Z"
+  },
+  "contenu": [
+    {
+      "id": "1cd24466-eac1-4c14-a44e-e0a2308771fa",
+      "type": "description",
+      "value": {
+        "latex": "\\label{exoferm}\nSoit $X$ un espace norm\\'e, $L:X\\to \\Rr$ une forme lin\\'eaire non nulle\net $H = L^{-1}(\\{0\\})$ son noyau.",
+        "html": "<p><span id=\"exoferm\" label=\"exoferm\">[exoferm]</span> Soit <span class=\"math inline\">\\(X\\)</span> un espace normé, <span class=\"math inline\">\\(L:X\\to \\Rr\\)</span> une forme linéaire non nulle et <span class=\"math inline\">\\(H = L^{-1}(\\{0\\})\\)</span> son noyau.</p>\n"
+      }
+    },
+    {
+      "id": "c2a05b6a-4b47-457f-a953-2df21a7c18dd",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que, si $L$ est continue, alors $H$ est un sous-espace ferm\\'e dans $X$.\n\\'Etablir la relation\n$$ \\mathrm{dist}(a,H) = \\frac{|L(a)|}{\\|L\\|} \\quad \\text{pour tout } a\\in X \\; .$$",
+        "html": "<p>Montrer que, si <span class=\"math inline\">\\(L\\)</span> est continue, alors <span class=\"math inline\">\\(H\\)</span> est un sous-espace fermé dans <span class=\"math inline\">\\(X\\)</span>. Établir la relation <span class=\"math display\">\\[\\mathrm{dist}(a,H) = \\frac{|L(a)|}{\\|L\\|} \\quad \\text{pour tout } a\\in X \\; .\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "7647f6d6-2cde-407b-813d-37c9b1ed5924",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $L(a) = 0$ alors $a\\in H$ donc $\\mathrm{dist}(a,H) = 0$ donc la relation est vraie. Supposons que $L(a) \\neq 0$. Alors on a $X = H+\\Rr.a$.\nEn effet pour $x\\in X$, il existe $\\lambda \\in \\Rr$ tel que $L(x)=\\lambda L(a)$. \nDonc $L(x-\\lambda a)=0$. Posons $h= x-\\lambda a$, alors $h\\in H$ et $x = h+\\lambda a$ est la décomposition suivant $H+\\Rr.a$.\n\nSi $L$ est continue alors $\\| L\\|$ est finie.\n\n$$\\begin{align*}\n \\| L \\| &= \\sup_{x\\in X, x \\neq 0} \\frac{\\| L(x) \\|}{\\|x\\|} \\\\\n         &= \\sup_{h\\in H, \\lambda \\in \\Rr, h+\\lambda a \\neq0} \\frac{\\| L(h+\\lambda a) \\|}{\\|h + \\lambda a\\|} \\\\\n         &= |L(a)|\\sup_{h\\in H, \\lambda \\in \\Rr, h+\\lambda a \\neq0} \\frac{|\\lambda|}{\\|h + \\lambda a\\|} \\\\\n         &= |L(a)|\\sup_{h\\in H} \\frac{1}{\\|h + a\\|} \\\\\n         &= |L(a)|\\frac{1}{\\inf_{h\\in H} {\\|h + a\\|}} \\\\\n         &= |L(a)|\\frac{1}{\\mathrm{dist}(a,H)} \\\\\n\\end{align*}$$\n\nCe qui était l'égalité demandée.",
+        "html": "<p>Si <span class=\"math inline\">\\(L(a) = 0\\)</span> alors <span class=\"math inline\">\\(a\\in H\\)</span> donc <span class=\"math inline\">\\(\\mathrm{dist}(a,H) = 0\\)</span> donc la relation est vraie. Supposons que <span class=\"math inline\">\\(L(a) \\neq 0\\)</span>. Alors on a <span class=\"math inline\">\\(X = H+\\Rr.a\\)</span>. En effet pour <span class=\"math inline\">\\(x\\in X\\)</span>, il existe <span class=\"math inline\">\\(\\lambda \\in \\Rr\\)</span> tel que <span class=\"math inline\">\\(L(x)=\\lambda L(a)\\)</span>. Donc <span class=\"math inline\">\\(L(x-\\lambda a)=0\\)</span>. Posons <span class=\"math inline\">\\(h= x-\\lambda a\\)</span>, alors <span class=\"math inline\">\\(h\\in H\\)</span> et <span class=\"math inline\">\\(x = h+\\lambda a\\)</span> est la décomposition suivant <span class=\"math inline\">\\(H+\\Rr.a\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(L\\)</span> est continue alors <span class=\"math inline\">\\(\\| L\\|\\)</span> est finie.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n \\| L \\| &amp;= \\sup_{x\\in X, x \\neq 0} \\frac{\\| L(x) \\|}{\\|x\\|} \\\\\n         &amp;= \\sup_{h\\in H, \\lambda \\in \\Rr, h+\\lambda a \\neq0} \\frac{\\| L(h+\\lambda a) \\|}{\\|h + \\lambda a\\|} \\\\\n         &amp;= |L(a)|\\sup_{h\\in H, \\lambda \\in \\Rr, h+\\lambda a \\neq0} \\frac{|\\lambda|}{\\|h + \\lambda a\\|} \\\\\n         &amp;= |L(a)|\\sup_{h\\in H} \\frac{1}{\\|h + a\\|} \\\\\n         &amp;= |L(a)|\\frac{1}{\\inf_{h\\in H} {\\|h + a\\|}} \\\\\n         &amp;= |L(a)|\\frac{1}{\\mathrm{dist}(a,H)} \\\\\n\\end{align*}\\]</span></p>\n<p>Ce qui était l’égalité demandée.</p>\n"
+      }
+    },
+    {
+      "id": "2467712e-1478-4e8b-83ab-6d238a61c9ad",
+      "type": "question",
+      "value": {
+        "latex": "R\\'eciproquement, supposons que le noyau $H$ est un ferm\\'e. D\\'emontrer alors\nque $\\mathrm{dist}(a,H)>0$ d\\`es que $a\\in X\\setminus H$ et en d\\'eduire que $L$ est continue\nde norme au plus $|L(a)|/\\mathrm{dist}(a,H)$.",
+        "html": "<p>Réciproquement, supposons que le noyau <span class=\"math inline\">\\(H\\)</span> est un fermé. Démontrer alors que <span class=\"math inline\">\\(\\mathrm{dist}(a,H)&gt;0\\)</span> dès que <span class=\"math inline\">\\(a\\in X\\setminus H\\)</span> et en déduire que <span class=\"math inline\">\\(L\\)</span> est continue de norme au plus <span class=\"math inline\">\\(|L(a)|/\\mathrm{dist}(a,H)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c2220cba-315d-44e6-a3b3-25d2fd04f016",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $H$ est fermé alors $\\mathrm{dist}(a,H)>0$ si $a\\notin H$ (voir les exercices sur les compacts), par l'égalité démontrée ci-dessus on a $\\| L \\|$ finie\ndonc $L$ est continue.",
+        "html": "<p>Si <span class=\"math inline\">\\(H\\)</span> est fermé alors <span class=\"math inline\">\\(\\mathrm{dist}(a,H)&gt;0\\)</span> si <span class=\"math inline\">\\(a\\notin H\\)</span> (voir les exercices sur les compacts), par l’égalité démontrée ci-dessus on a <span class=\"math inline\">\\(\\| L \\|\\)</span> finie donc <span class=\"math inline\">\\(L\\)</span> est continue.</p>\n"
+      }
+    },
+    {
+      "id": "12587ae5-3114-4d5c-a662-a44f46146d9a",
+      "type": "question",
+      "value": {
+        "latex": "Peut-on g\\'en\\'eraliser ceci a des applications lin\\'eaires entre espaces\nnorm\\'es?",
+        "html": "<p>Peut-on généraliser ceci a des applications linéaires entre espaces normés?</p>\n"
+      }
+    },
+    {
+      "id": "d8cd1598-8ee6-4279-b88d-7a7100c2f829",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $X = \\Rr[x]$. Pour $P(x) = \\sum _{k=0}^p a_k x^k$\non pose $\\|P\\|= \\sup_k |a_k|$, et $V(P)(x) = \\sum _{k=1}^n k a_k x^k$.\nAlors $\\mathrm{Ker}\\, V = \\{0\\}$ est fermé  mais $V$ n'est pas continue\n(voir l'exercice \\ref{exopol}).",
+        "html": "<p>Soit <span class=\"math inline\">\\(X = \\Rr[x]\\)</span>. Pour <span class=\"math inline\">\\(P(x) = \\sum _{k=0}^p a_k x^k\\)</span> on pose <span class=\"math inline\">\\(\\|P\\|= \\sup_k |a_k|\\)</span>, et <span class=\"math inline\">\\(V(P)(x) = \\sum _{k=1}^n k a_k x^k\\)</span>. Alors <span class=\"math inline\">\\(\\mathrm{Ker}\\, V = \\{0\\}\\)</span> est fermé mais <span class=\"math inline\">\\(V\\)</span> n’est pas continue (voir l’exercice <a href=\"#exopol\" data-reference-type=\"ref\" data-reference=\"exopol\">[exopol]</a>).</p>\n"
+      }
+    },
+    {
+      "id": "683dd86e-141a-4735-ae0c-982d579e7970",
+      "type": "indication",
+      "value": {
+        "latex": "\\begin{enumerate}\n  \\item Montrer d'abord que $X$ se décompose sous la forme $H+\\Rr.a$.\n  \\item ...\n  \\item Non ! Chercher un contre-exemple dans les exercices précédents.\n\\end{enumerate}",
+        "html": "<ol>\n<li><p>Montrer d’abord que <span class=\"math inline\">\\(X\\)</span> se décompose sous la forme <span class=\"math inline\">\\(H+\\Rr.a\\)</span>.</p></li>\n<li><p>...</p></li>\n<li><p>Non ! Chercher un contre-exemple dans les exercices précédents.</p></li>\n</ol>\n"
+      }
+    }
+  ]
+}

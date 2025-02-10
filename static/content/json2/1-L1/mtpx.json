@@ -1,0 +1,139 @@
+{
+  "uuid": "mtpx",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "7410",
+    "auteur": "mourougane",
+    "createdAt": "2021-08-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Espace vectoriel",
+    "sousChapitre": "Système de vecteurs",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:17.341Z"
+  },
+  "contenu": [
+    {
+      "id": "e4b29bea-6720-4c44-ae86-80feba3ab487",
+      "type": "description",
+      "value": {
+        "latex": "Dans $\\Rr^4$ on considère les quatre vecteurs\r\n$$v_1=(1,0,-1,1),\\ \\ v_2=(2,1,0,1), \\ \\ v_3 =(1,1,1,0), \\ \\ v_4=(3,1,-1,2). $$ \r\nSoit $V=Vect(v_1,v_2,v_3,v_4)$. De plus, soit \r\n$$H=\\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ -3x+y+2z-t=0 \\}.$$",
+        "html": "<p>Dans <span class=\"math inline\">\\(\\Rr^4\\)</span> on considère les quatre vecteurs <span class=\"math display\">\\[v_1=(1,0,-1,1),\\ \\ v_2=(2,1,0,1), \\ \\ v_3 =(1,1,1,0), \\ \\ v_4=(3,1,-1,2).\\]</span> Soit <span class=\"math inline\">\\(V=Vect(v_1,v_2,v_3,v_4)\\)</span>. De plus, soit <span class=\"math display\">\\[H=\\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ -3x+y+2z-t=0 \\}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "36676025-0cfd-4a56-abbc-6198db73d8a1",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\dim V =2$. Le systême $(v_1,v_2,v_3,v_4)$ est-il libre? Est-il générateur de $\\Rr^4$?",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\dim V =2\\)</span>. Le systême <span class=\"math inline\">\\((v_1,v_2,v_3,v_4)\\)</span> est-il libre? Est-il générateur de <span class=\"math inline\">\\(\\Rr^4\\)</span>?</p>\n"
+      }
+    },
+    {
+      "id": "1d1c1404-b3b8-4ed9-b51b-fcaf7a6ef250",
+      "type": "reponse",
+      "value": {
+        "latex": "On observe que $v_3 = v_2 - v_1$ et que $v_4=v_1+v_2$ donc $V=Vect(v_1,v_2,v_3,v_4)=Vect(v_1,v_2)$. Comme de plus $v_1$ et $v_2$ sont linéairement indépendants, $(v_1,v_2)$ est une base de $V$. Donc $\\dim(V)=2$. Le système n'est pas libre car par exemple $v_3=v_2-v_1$ est une relation de dépendance linéaire non triviale. Le système n'est pas générateur de $\\Rr^4$ car $\\dim(V)=2<4$ donc $Vect(v_1,v_2,v_3,v_4)=V\\neq \\Rr^4$.",
+        "html": "<p>On observe que <span class=\"math inline\">\\(v_3 = v_2 - v_1\\)</span> et que <span class=\"math inline\">\\(v_4=v_1+v_2\\)</span> donc <span class=\"math inline\">\\(V=Vect(v_1,v_2,v_3,v_4)=Vect(v_1,v_2)\\)</span>. Comme de plus <span class=\"math inline\">\\(v_1\\)</span> et <span class=\"math inline\">\\(v_2\\)</span> sont linéairement indépendants, <span class=\"math inline\">\\((v_1,v_2)\\)</span> est une base de <span class=\"math inline\">\\(V\\)</span>. Donc <span class=\"math inline\">\\(\\dim(V)=2\\)</span>. Le système n’est pas libre car par exemple <span class=\"math inline\">\\(v_3=v_2-v_1\\)</span> est une relation de dépendance linéaire non triviale. Le système n’est pas générateur de <span class=\"math inline\">\\(\\Rr^4\\)</span> car <span class=\"math inline\">\\(\\dim(V)=2&lt;4\\)</span> donc <span class=\"math inline\">\\(Vect(v_1,v_2,v_3,v_4)=V\\neq \\Rr^4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "dc85d518-41c4-4409-a1fe-149cbcbef130",
+      "type": "question",
+      "value": {
+        "latex": "Donner une base de $V$, la compléter en une base de $\\Rr^4$.",
+        "html": "<p>Donner une base de <span class=\"math inline\">\\(V\\)</span>, la compléter en une base de <span class=\"math inline\">\\(\\Rr^4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5b4b8116-56ab-41a5-9707-7b5b0c37d95a",
+      "type": "reponse",
+      "value": {
+        "latex": "Comme nous l'avons vu dans la question 1, $(v_1,v_2)$ est une base de $V$. On échelonne la matrice dont les lignes sont les vecteurs $v_1$ et $v_2$.\r\n\r\n\\[\r\n\\left( {\\begin{array}{cccc}\r\n 1 & 0 & -1& 1 \\\\\r\n 2 & 1 & 0 &1 \\\\\r\n \\end{array} } \\right)\r\n\\to\r\n\\left( {\\begin{array}{cccc}\r\n 1 & 0 & -1& 1 \\\\\r\n 0 & 1 & 2 & -1 \\\\\r\n \\end{array} } \\right)\r\n\\]\r\n\r\nMaintenant on voit que l'on peut compléter la base $(v_1,v_2)$ en une base de $\\Rr^4$ en ajoutant les vecteurs $(0,0,1,0)$ et $(0,0,0,1)$ car la matrice\r\n\\[\r\n\\left( {\\begin{array}{cccc}\r\n 1 & 0 & -1& 1 \\\\\r\n 0 & 1 & 2 &-1 \\\\\r\n 0& 0& 1 & 0 \\\\\r\n 0 & 0 & 0 & 1\\\\\r\n \\end{array} } \\right)\r\n\\]\r\nest de rang 4.",
+        "html": "<p>Comme nous l’avons vu dans la question 1, <span class=\"math inline\">\\((v_1,v_2)\\)</span> est une base de <span class=\"math inline\">\\(V\\)</span>. On échelonne la matrice dont les lignes sont les vecteurs <span class=\"math inline\">\\(v_1\\)</span> et <span class=\"math inline\">\\(v_2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\left( {\\begin{array}{cccc}\n 1 &amp; 0 &amp; -1&amp; 1 \\\\\n 2 &amp; 1 &amp; 0 &amp;1 \\\\\n \\end{array} } \\right)\n\\to\n\\left( {\\begin{array}{cccc}\n 1 &amp; 0 &amp; -1&amp; 1 \\\\\n 0 &amp; 1 &amp; 2 &amp; -1 \\\\\n \\end{array} } \\right)\\]</span></p>\n<p>Maintenant on voit que l’on peut compléter la base <span class=\"math inline\">\\((v_1,v_2)\\)</span> en une base de <span class=\"math inline\">\\(\\Rr^4\\)</span> en ajoutant les vecteurs <span class=\"math inline\">\\((0,0,1,0)\\)</span> et <span class=\"math inline\">\\((0,0,0,1)\\)</span> car la matrice <span class=\"math display\">\\[\\left( {\\begin{array}{cccc}\n 1 &amp; 0 &amp; -1&amp; 1 \\\\\n 0 &amp; 1 &amp; 2 &amp;-1 \\\\\n 0&amp; 0&amp; 1 &amp; 0 \\\\\n 0 &amp; 0 &amp; 0 &amp; 1\\\\\n \\end{array} } \\right)\\]</span> est de rang 4.</p>\n"
+      }
+    },
+    {
+      "id": "706e7e7f-68a1-4b6c-a258-ef6c39d1e59b",
+      "type": "question",
+      "value": {
+        "latex": "Calculer des équations cartésiennes pour $V$.",
+        "html": "<p>Calculer des équations cartésiennes pour <span class=\"math inline\">\\(V\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "b9bcf796-7900-4649-8432-20e26b65d722",
+      "type": "reponse",
+      "value": {
+        "latex": "$V=Vect(v_1,v_2)$. Maintenant soit $(x,y,z,t)\\in \\Rr^4$. $(x,y,z,t)\\in V$ si et seulement si $\\exists \\lambda,\\mu \\in \\Rr $ tels que $(x,y,z,t)=\\lambda v_1 + \\mu v_2$.\r\nIl nous suffit donc de voir pour quelles valeurs de $(x,y,z,t)$ ce système d'équations a une solution. Le système s'écrit :\r\n\\[\r\n\\left( {\\begin{array}{cc|c}\r\n 1 & 2 & x \\\\\r\n 0 & 1 & y \\\\\r\n -1& 0& z \\\\\r\n 1 & 1 & t\\\\\r\n \\end{array} } \\right)\r\n \\to\r\n \\left( {\\begin{array}{cc|c}\r\n 1 & 2 & x \\\\\r\n 0 & 1 &y \\\\\r\n 0& 2& z+x \\\\\r\n 0 & -1 & t-x\\\\\r\n \\end{array} } \\right)\r\n \\to\r\n \\left( {\\begin{array}{cc|c}\r\n 1 & 2 & x \\\\\r\n 0 & 1 & y \\\\\r\n 0& 0& z+x-2y \\\\\r\n 0 & 0 & t-x+y\\\\\r\n \\end{array} } \\right)\r\n\\]\r\nLe système a donc une solution si et seulement si $z+x-2y=0$ et $t-x+y=0$,ce sont des équations cartesiennes pour $V$, c'est à dire que\r\n$$V=\\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ x-2y+z=0 \\ \\ et \\ \\ -x+y+t=0 \\}.$$",
+        "html": "<p><span class=\"math inline\">\\(V=Vect(v_1,v_2)\\)</span>. Maintenant soit <span class=\"math inline\">\\((x,y,z,t)\\in \\Rr^4\\)</span>. <span class=\"math inline\">\\((x,y,z,t)\\in V\\)</span> si et seulement si <span class=\"math inline\">\\(\\exists \\lambda,\\mu \\in \\Rr\\)</span> tels que <span class=\"math inline\">\\((x,y,z,t)=\\lambda v_1 + \\mu v_2\\)</span>. Il nous suffit donc de voir pour quelles valeurs de <span class=\"math inline\">\\((x,y,z,t)\\)</span> ce système d’équations a une solution. Le système s’écrit : <span class=\"math display\">\\[\\left( {\\begin{array}{cc|c}\n 1 &amp; 2 &amp; x \\\\\n 0 &amp; 1 &amp; y \\\\\n -1&amp; 0&amp; z \\\\\n 1 &amp; 1 &amp; t\\\\\n \\end{array} } \\right)\n \\to\n \\left( {\\begin{array}{cc|c}\n 1 &amp; 2 &amp; x \\\\\n 0 &amp; 1 &amp;y \\\\\n 0&amp; 2&amp; z+x \\\\\n 0 &amp; -1 &amp; t-x\\\\\n \\end{array} } \\right)\n \\to\n \\left( {\\begin{array}{cc|c}\n 1 &amp; 2 &amp; x \\\\\n 0 &amp; 1 &amp; y \\\\\n 0&amp; 0&amp; z+x-2y \\\\\n 0 &amp; 0 &amp; t-x+y\\\\\n \\end{array} } \\right)\\]</span> Le système a donc une solution si et seulement si <span class=\"math inline\">\\(z+x-2y=0\\)</span> et <span class=\"math inline\">\\(t-x+y=0\\)</span>,ce sont des équations cartesiennes pour <span class=\"math inline\">\\(V\\)</span>, c’est à dire que <span class=\"math display\">\\[V=\\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ x-2y+z=0 \\ \\ et \\ \\ -x+y+t=0 \\}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "e9dc3bd0-eccc-471c-9e2c-204b2e8ce0fb",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $H$ est un sous-espace vectoriel de $\\Rr^4$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(H\\)</span> est un sous-espace vectoriel de <span class=\"math inline\">\\(\\Rr^4\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d89b2420-7b73-4c3e-93f1-dc6fb7a9fb05",
+      "type": "reponse",
+      "value": {
+        "latex": "$H$ est un sous-espace vectoriel de $\\Rr^4$ car c'est l'ensemble des solutions d'une équation linéaire et homogène.",
+        "html": "<p><span class=\"math inline\">\\(H\\)</span> est un sous-espace vectoriel de <span class=\"math inline\">\\(\\Rr^4\\)</span> car c’est l’ensemble des solutions d’une équation linéaire et homogène.</p>\n"
+      }
+    },
+    {
+      "id": "5ed62577-528c-40a8-9880-a69f8a666062",
+      "type": "question",
+      "value": {
+        "latex": "Trouver une représentation paramétrique de $H$, et en déduire une base de $H$. Que vaut $\\dim H$?",
+        "html": "<p>Trouver une représentation paramétrique de <span class=\"math inline\">\\(H\\)</span>, et en déduire une base de <span class=\"math inline\">\\(H\\)</span>. Que vaut <span class=\"math inline\">\\(\\dim H\\)</span>?</p>\n"
+      }
+    },
+    {
+      "id": "ac4130d7-b6c1-45b9-b81d-d8f02d47d737",
+      "type": "reponse",
+      "value": {
+        "latex": "\\begin{eqnarray}\r\nH &=& \\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ -3x+y+2z-t=0 \\} \\nonumber \\\\\r\n &=& \\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ y=3x-2z+t \\} \\nonumber \\\\\r\n &=& \\{(x,3x-2z+t,z,t) \\ / \\ \\ x,z,t\\in \\Rr \\} \\nonumber \\\\\r\n &=& \\{x(1,3,0,0)+z(0,-2,1,0)+t(0,1,0,1) \\ / \\ \\ x,z,t\\in \\Rr \\} \\nonumber\r\n\\end{eqnarray}\r\nOn a donc $H=Vect((1,3,0,0),(0,-2,1,0),(0,1,0,1))$. De plus le système $((1,3,0,0),(0,-2,1,0),(0,1,0,1))$ est une base de $H$ car \r\n \\[\r\nrang \\left( {\\begin{array}{cccc}\r\n 1 & 3 & 0& 0 \\\\\r\n 0 & 1 & 0 &1 \\\\\r\n 0 & -2 & 1 &0 \\\\\r\n \\end{array} } \\right)\r\n=\r\nrang \\left( {\\begin{array}{cccc}\r\n 1 & 3 & 0& 0 \\\\\r\n 0 & 1 & 0 &1 \\\\\r\n 0 & 0 & 1 &2 \\\\\r\n \\end{array} } \\right)=3.\r\n\\]\r\nEt donc $\\dim(H)=3$.",
+        "html": "<p><span class=\"math display\">\\[\\begin{aligned}\nH &amp;=&amp; \\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ -3x+y+2z-t=0 \\} \\nonumber \\\\\n &amp;=&amp; \\{(x,y,z,t)\\in\\Rr^4 \\ / \\ \\ y=3x-2z+t \\} \\nonumber \\\\\n &amp;=&amp; \\{(x,3x-2z+t,z,t) \\ / \\ \\ x,z,t\\in \\Rr \\} \\nonumber \\\\\n &amp;=&amp; \\{x(1,3,0,0)+z(0,-2,1,0)+t(0,1,0,1) \\ / \\ \\ x,z,t\\in \\Rr \\} \\nonumber\\end{aligned}\\]</span> On a donc <span class=\"math inline\">\\(H=Vect((1,3,0,0),(0,-2,1,0),(0,1,0,1))\\)</span>. De plus le système <span class=\"math inline\">\\(((1,3,0,0),(0,-2,1,0),(0,1,0,1))\\)</span> est une base de <span class=\"math inline\">\\(H\\)</span> car <span class=\"math display\">\\[rang \\left( {\\begin{array}{cccc}\n 1 &amp; 3 &amp; 0&amp; 0 \\\\\n 0 &amp; 1 &amp; 0 &amp;1 \\\\\n 0 &amp; -2 &amp; 1 &amp;0 \\\\\n \\end{array} } \\right)\n=\nrang \\left( {\\begin{array}{cccc}\n 1 &amp; 3 &amp; 0&amp; 0 \\\\\n 0 &amp; 1 &amp; 0 &amp;1 \\\\\n 0 &amp; 0 &amp; 1 &amp;2 \\\\\n \\end{array} } \\right)=3.\\]</span> Et donc <span class=\"math inline\">\\(\\dim(H)=3\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "598c3c2f-8084-41b8-bfba-4f55526f86e4",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $v_3\\in H$ et que $v_1\\notin H$. En déduire $\\dim(V\\cap H)$ et $\\dim(V+H)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(v_3\\in H\\)</span> et que <span class=\"math inline\">\\(v_1\\notin H\\)</span>. En déduire <span class=\"math inline\">\\(\\dim(V\\cap H)\\)</span> et <span class=\"math inline\">\\(\\dim(V+H)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c71ba232-ab5d-4649-b0da-6112c88c314d",
+      "type": "reponse",
+      "value": {
+        "latex": "$v_3\\in H$ car $-3\\times 1 +1\\times 1 + 2\\times 1 -1\\times 0 = 0$. Mais $v_1\\notin H$ car $-3\\times 1 +1\\times 0 + 2\\times -1 -1\\times 1 = -6\\neq 0$.\r\n\r\nComme $v_3\\in V$ et que l'on vient de voir que $v_3\\in H$, on en déduit que $v_3\\in V\\cap H$ et donc que $Vect(v_3)\\subseteq V\\cap H$.\r\n On a donc obtenu que $\\dim (V\\cap H)\\geq 1$. Comme de plus $V\\cap H \\subseteq V$ on sait que $\\dim (V\\cap H)\\leq 2$. Maintenant si on avait $\\dim (V\\cap H)=2$ cela impliquerait que $V\\cap H =V$ et donc que $V\\subseteq H$, ce qui est faux car $v_1\\in V$ mais $v_1\\notin H$. \r\n On obtient donc $\\dim (V \\cap H)=1$.\r\n \r\nEn utilisant la formule de Grassmann on obtient alors que $$\\dim (V+H)=\\dim (V)+\\dim (H)-\\dim (V\\cap H)=2+3-1=4.$$",
+        "html": "<p><span class=\"math inline\">\\(v_3\\in H\\)</span> car <span class=\"math inline\">\\(-3\\times 1 +1\\times 1 + 2\\times 1 -1\\times 0 = 0\\)</span>. Mais <span class=\"math inline\">\\(v_1\\notin H\\)</span> car <span class=\"math inline\">\\(-3\\times 1 +1\\times 0 + 2\\times -1 -1\\times 1 = -6\\neq 0\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(v_3\\in V\\)</span> et que l’on vient de voir que <span class=\"math inline\">\\(v_3\\in H\\)</span>, on en déduit que <span class=\"math inline\">\\(v_3\\in V\\cap H\\)</span> et donc que <span class=\"math inline\">\\(Vect(v_3)\\subseteq V\\cap H\\)</span>. On a donc obtenu que <span class=\"math inline\">\\(\\dim (V\\cap H)\\geq 1\\)</span>. Comme de plus <span class=\"math inline\">\\(V\\cap H \\subseteq V\\)</span> on sait que <span class=\"math inline\">\\(\\dim (V\\cap H)\\leq 2\\)</span>. Maintenant si on avait <span class=\"math inline\">\\(\\dim (V\\cap H)=2\\)</span> cela impliquerait que <span class=\"math inline\">\\(V\\cap H =V\\)</span> et donc que <span class=\"math inline\">\\(V\\subseteq H\\)</span>, ce qui est faux car <span class=\"math inline\">\\(v_1\\in V\\)</span> mais <span class=\"math inline\">\\(v_1\\notin H\\)</span>. On obtient donc <span class=\"math inline\">\\(\\dim (V \\cap H)=1\\)</span>.</p>\n<p>En utilisant la formule de Grassmann on obtient alors que <span class=\"math display\">\\[\\dim (V+H)=\\dim (V)+\\dim (H)-\\dim (V\\cap H)=2+3-1=4.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "50f42c26-0b2a-425f-bd26-a19337cff0c9",
+      "type": "question",
+      "value": {
+        "latex": "Donner une base de $V\\cap H$.",
+        "html": "<p>Donner une base de <span class=\"math inline\">\\(V\\cap H\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "fd23027c-18b5-4ec5-8014-11511d9ff5ea",
+      "type": "reponse",
+      "value": {
+        "latex": "On a vu que $\\dim(V\\cap H)=1$ et que $Vect(v_3)\\in V\\cap H$ donc on obtient $Vect(v_3)= V\\cap H$ et donc $(v_3)$ est une base de $V\\cap H$.",
+        "html": "<p>On a vu que <span class=\"math inline\">\\(\\dim(V\\cap H)=1\\)</span> et que <span class=\"math inline\">\\(Vect(v_3)\\in V\\cap H\\)</span> donc on obtient <span class=\"math inline\">\\(Vect(v_3)= V\\cap H\\)</span> et donc <span class=\"math inline\">\\((v_3)\\)</span> est une base de <span class=\"math inline\">\\(V\\cap H\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

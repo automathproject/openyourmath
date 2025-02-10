@@ -1,0 +1,59 @@
+{
+  "uuid": "QLUZ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5373",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:32.652Z"
+  },
+  "contenu": [
+    {
+      "id": "ea58e111-a105-47e9-88c4-f5df73cff30e",
+      "type": "description",
+      "value": {
+        "latex": "Soient $a_{i,j}$ ($(i,j)$ élément de $\\{1,...,n\\}^2$) $n^2$ fonctions de $\\Rr$ dans $\\Rr$, dérivables sur $\\Rr$ et $A=(ai,j)_{1\\leq i,j\\leq n}$. Calculer la dérivée de la fonction $x\\mapsto\\mbox{det}(A(x))$.\n\nApplications. Calculer",
+        "html": "<p>Soient <span class=\"math inline\">\\(a_{i,j}\\)</span> (<span class=\"math inline\">\\((i,j)\\)</span> élément de <span class=\"math inline\">\\(\\{1,...,n\\}^2\\)</span>) <span class=\"math inline\">\\(n^2\\)</span> fonctions de <span class=\"math inline\">\\(\\Rr\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span>, dérivables sur <span class=\"math inline\">\\(\\Rr\\)</span> et <span class=\"math inline\">\\(A=(ai,j)_{1\\leq i,j\\leq n}\\)</span>. Calculer la dérivée de la fonction <span class=\"math inline\">\\(x\\mapsto\\mbox{det}(A(x))\\)</span>.</p>\n<p>Applications. Calculer</p>\n"
+      }
+    },
+    {
+      "id": "68a3eb0b-c63d-49df-9289-b78e2ebb5f89",
+      "type": "question",
+      "value": {
+        "latex": "$\\left|\\begin{array}{ccccc}\nx+1&1&\\ldots& &1\\\\\n1&x+1&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&1\\\\\n1&\\ldots&\\ldots&1&x+1\n\\end{array}\n\\right|$",
+        "html": "<p><span class=\"math inline\">\\(\\left|\\begin{array}{ccccc}\nx+1&amp;1&amp;\\ldots&amp; &amp;1\\\\\n1&amp;x+1&amp;\\ddots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;1\\\\\n1&amp;\\ldots&amp;\\ldots&amp;1&amp;x+1\n\\end{array}\n\\right|\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "958feaf6-67ac-498b-8f24-d07f60b86c06",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $\\Delta_n(x)=\\left|\\begin{array}{ccccc}\nx+1&1&\\ldots& &1\\\\\n1&x+1&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&1\\\\\n1&\\ldots&\\ldots&1&x+1\n\\end{array}\n\\right|$. $\\Delta_n$ est un polynôme dont la dérivée est d'après ce qui précède, $\\Delta_{n}'=\\sum_{k=1}^{n}\\delta_k$ où $\\delta_k$ est le déterminant déduit de $\\Delta_n$ en remplaçant sa $k$-ème colonne par le $k$-ème vecteur de la base canonique de $M_{n,1}(\\Kk)$. En développant $\\delta_k$ par rapport à sa $k$-ème colonne, on obtient $\\delta_k=\\Delta_{n-1}$ et donc $\\Delta_{n}'=n\\Delta_{n-1}$.\nEnsuite, on a déjà $\\Delta_1=X+1$ puis $\\Delta_2=(X+1)^2-1=X^2+2X$ ...\nMontrons par récurrence que pour $n\\geq1$, $\\Delta_n=X^n+nX^{n-1}$.\nC'est vrai pour $n=1$ puis, si pour $n\\geq1$, $\\Delta_n=X^n+nX^{n-1}$ alors $\\Delta_{n+1}'=(n+1)X^n+(n+1)nX^{n-1}$ et, par intégration,  $\\Delta_{n+1}=X^{n+1}+(n+1)X^n+\\Delta_{n+1}(0)$. Mais, puisque $n\\geq1$, on a $n+1\\geq2$ et $\\Delta_{n+1}(0)$ est un déterminant ayant au moins deux colonnes identiques. Par suite, $\\Delta_{n+1}(0)=0$ ce qui montre que $\\Delta_{n+1}=X^{n+1}+(n+1)X^n$. Le résultat est démontré par récurrence.\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn^*,\\;\\Delta_n=x^n+nx^{n-1}$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\Delta_n(x)=\\left|\\begin{array}{ccccc}\nx+1&amp;1&amp;\\ldots&amp; &amp;1\\\\\n1&amp;x+1&amp;\\ddots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;1\\\\\n1&amp;\\ldots&amp;\\ldots&amp;1&amp;x+1\n\\end{array}\n\\right|\\)</span>. <span class=\"math inline\">\\(\\Delta_n\\)</span> est un polynôme dont la dérivée est d’après ce qui précède, <span class=\"math inline\">\\(\\Delta_{n}&#39;=\\sum_{k=1}^{n}\\delta_k\\)</span> où <span class=\"math inline\">\\(\\delta_k\\)</span> est le déterminant déduit de <span class=\"math inline\">\\(\\Delta_n\\)</span> en remplaçant sa <span class=\"math inline\">\\(k\\)</span>-ème colonne par le <span class=\"math inline\">\\(k\\)</span>-ème vecteur de la base canonique de <span class=\"math inline\">\\(M_{n,1}(\\Kk)\\)</span>. En développant <span class=\"math inline\">\\(\\delta_k\\)</span> par rapport à sa <span class=\"math inline\">\\(k\\)</span>-ème colonne, on obtient <span class=\"math inline\">\\(\\delta_k=\\Delta_{n-1}\\)</span> et donc <span class=\"math inline\">\\(\\Delta_{n}&#39;=n\\Delta_{n-1}\\)</span>. Ensuite, on a déjà <span class=\"math inline\">\\(\\Delta_1=X+1\\)</span> puis <span class=\"math inline\">\\(\\Delta_2=(X+1)^2-1=X^2+2X\\)</span> ... Montrons par récurrence que pour <span class=\"math inline\">\\(n\\geq1\\)</span>, <span class=\"math inline\">\\(\\Delta_n=X^n+nX^{n-1}\\)</span>. C’est vrai pour <span class=\"math inline\">\\(n=1\\)</span> puis, si pour <span class=\"math inline\">\\(n\\geq1\\)</span>, <span class=\"math inline\">\\(\\Delta_n=X^n+nX^{n-1}\\)</span> alors <span class=\"math inline\">\\(\\Delta_{n+1}&#39;=(n+1)X^n+(n+1)nX^{n-1}\\)</span> et, par intégration, <span class=\"math inline\">\\(\\Delta_{n+1}=X^{n+1}+(n+1)X^n+\\Delta_{n+1}(0)\\)</span>. Mais, puisque <span class=\"math inline\">\\(n\\geq1\\)</span>, on a <span class=\"math inline\">\\(n+1\\geq2\\)</span> et <span class=\"math inline\">\\(\\Delta_{n+1}(0)\\)</span> est un déterminant ayant au moins deux colonnes identiques. Par suite, <span class=\"math inline\">\\(\\Delta_{n+1}(0)=0\\)</span> ce qui montre que <span class=\"math inline\">\\(\\Delta_{n+1}=X^{n+1}+(n+1)X^n\\)</span>. Le résultat est démontré par récurrence.</p>\n"
+      }
+    },
+    {
+      "id": "ce349ff1-9e65-4b45-b3fc-1f44db16c863",
+      "type": "question",
+      "value": {
+        "latex": "$\\left|\\begin{array}{ccccc}\nx+a_1&x&\\ldots& &x\\\\\nx&x+a_2&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&x\\\\\nx&\\ldots&\\ldots&x&x+a_n\n\\end{array}\n\\right|$",
+        "html": "<p><span class=\"math inline\">\\(\\left|\\begin{array}{ccccc}\nx+a_1&amp;x&amp;\\ldots&amp; &amp;x\\\\\nx&amp;x+a_2&amp;\\ddots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;x\\\\\nx&amp;\\ldots&amp;\\ldots&amp;x&amp;x+a_n\n\\end{array}\n\\right|\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "3aa2ffbf-d7d5-418f-ac8a-c24343372acd",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $\\Delta_n(x)=\\left|\\begin{array}{ccccc}\nx+a_1&x&\\ldots& &x\\\\\nx&x+a_2&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&x\\\\\nx&\\ldots&\\ldots&x&x+a_n\n\\end{array}\n\\right|$. $\\Delta_n=\\mbox{det}(a_1e_1+xC,...,a_ne_n+xC)$ où $e_k$ est le $k$-ème vecteur de la base canonique de $M_{n,1}(\\Kk)$ et $C$ est la colonne dont toutes les composantes sont égales à $1$. Par linéarité par rapport à chaque colonne, $\\Delta_n$ est somme de $2^n$ déterminants mais dès que $C$ apparait deux fois, le déterminant correspondant est nul. Donc, $\\Delta_n=\\mbox{det}(a_1e_1,...,a_ne_n)+\\sum_{}^{}\\mbox{det}(a_1e_1,...,xC,...,a_ne_n)$. Ceci montre que $\\Delta_n$ est un polynôme de degré inférieur ou égal à $1$.\nLa formule de \\textsc{Taylor} fournit alors : $\\Delta_n=\\Delta_n(0)+X\\Delta_{n}'(0)$. Immédiatement, $\\Delta_n(0)=\\prod_{k=1}^{n}a_k=\\sigma_n$ puis $\\Delta_{n}'(0)=\\sum_{k=1}^{n}\\mbox{det}(a_1e_1,...,C,...,a_ne_n)=\\sum_{k=1}^{n}\\prod_{i\\neq k}^{}a_i=\\sigma_{n-1}$. Donc, $\\Delta_n=\\sigma_n+X\\sigma_{n-1}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\Delta_n(x)=\\left|\\begin{array}{ccccc}\nx+a_1&amp;x&amp;\\ldots&amp; &amp;x\\\\\nx&amp;x+a_2&amp;\\ddots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;x\\\\\nx&amp;\\ldots&amp;\\ldots&amp;x&amp;x+a_n\n\\end{array}\n\\right|\\)</span>. <span class=\"math inline\">\\(\\Delta_n=\\mbox{det}(a_1e_1+xC,...,a_ne_n+xC)\\)</span> où <span class=\"math inline\">\\(e_k\\)</span> est le <span class=\"math inline\">\\(k\\)</span>-ème vecteur de la base canonique de <span class=\"math inline\">\\(M_{n,1}(\\Kk)\\)</span> et <span class=\"math inline\">\\(C\\)</span> est la colonne dont toutes les composantes sont égales à <span class=\"math inline\">\\(1\\)</span>. Par linéarité par rapport à chaque colonne, <span class=\"math inline\">\\(\\Delta_n\\)</span> est somme de <span class=\"math inline\">\\(2^n\\)</span> déterminants mais dès que <span class=\"math inline\">\\(C\\)</span> apparait deux fois, le déterminant correspondant est nul. Donc, <span class=\"math inline\">\\(\\Delta_n=\\mbox{det}(a_1e_1,...,a_ne_n)+\\sum_{}^{}\\mbox{det}(a_1e_1,...,xC,...,a_ne_n)\\)</span>. Ceci montre que <span class=\"math inline\">\\(\\Delta_n\\)</span> est un polynôme de degré inférieur ou égal à <span class=\"math inline\">\\(1\\)</span>. La formule de <span class=\"smallcaps\">Taylor</span> fournit alors : <span class=\"math inline\">\\(\\Delta_n=\\Delta_n(0)+X\\Delta_{n}&#39;(0)\\)</span>. Immédiatement, <span class=\"math inline\">\\(\\Delta_n(0)=\\prod_{k=1}^{n}a_k=\\sigma_n\\)</span> puis <span class=\"math inline\">\\(\\Delta_{n}&#39;(0)=\\sum_{k=1}^{n}\\mbox{det}(a_1e_1,...,C,...,a_ne_n)=\\sum_{k=1}^{n}\\prod_{i\\neq k}^{}a_i=\\sigma_{n-1}\\)</span>. Donc, <span class=\"math inline\">\\(\\Delta_n=\\sigma_n+X\\sigma_{n-1}\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

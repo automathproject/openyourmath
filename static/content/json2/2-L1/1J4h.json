@@ -1,0 +1,43 @@
+{
+  "uuid": "1J4h",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6976",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-05-06",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions hyperboliques et hyperboliques inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:18.650Z"
+  },
+  "contenu": [
+    {
+      "id": "103c688b-867a-4983-8d72-e039f45e785d",
+      "type": "description",
+      "value": {
+        "latex": "Soit $x$ un réel fixé. Pour $n\\in\\Nn^*$, on pose\n$$C_n=\\sum_{k=1}^n\\ch(kx)\\qquad\\text{ et }\\qquad S_n=\\sum_{k=1}^n\\sh(kx).$$\nCalculer $C_n$ et $S_n$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(x\\)</span> un réel fixé. Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, on pose <span class=\"math display\">\\[C_n=\\sum_{k=1}^n\\ch(kx)\\qquad\\text{ et }\\qquad S_n=\\sum_{k=1}^n\\sh(kx).\\]</span> Calculer <span class=\"math inline\">\\(C_n\\)</span> et <span class=\"math inline\">\\(S_n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "846c7323-aa7d-4be7-805d-314bd75faacd",
+      "type": "indication",
+      "value": {
+        "latex": "Commencer par calculer $C_n+S_n$ et $C_n-S_n$ à l'aide des fonctions $\\ch$ et $\\sh$.",
+        "html": "<p>Commencer par calculer <span class=\"math inline\">\\(C_n+S_n\\)</span> et <span class=\"math inline\">\\(C_n-S_n\\)</span> à l’aide des fonctions <span class=\"math inline\">\\(\\ch\\)</span> et <span class=\"math inline\">\\(\\sh\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "e05aa643-5d0f-492f-bdcc-39445feaf6b3",
+      "type": "reponse",
+      "value": {
+        "latex": "Puisque $\\ch x+\\sh x=e^x$ et $\\ch x-\\sh x=e^{-x}$, \nles expressions $C_n+S_n=\\sum_{k=1}^ne^{kx}$ et $C_n-S_n=\\sum_{k=1}^ne^{-kx}$ \nsont des sommes de termes de suites géométriques, de raison respectivement $e^x$ et $e^{-x}$.\n\nSi $x=0$, on a directement $C_n=\\sum_{k=1}^n1=n$ et $S_n=\\sum_{k=1}^n0=0$.\n\nSupposons $x\\not=0$, alors $e^{x}\\not=1$. \nDonc\n\\begin{eqnarray*}\nC_n+S_n\n  &=& \\sum_{k=1}^ne^{kx} = \\frac{e^x-e^{(n+1)x}}{1-e^x}\\\\\n  &=& e^x\\,\\frac{1-e^{nx}}{1-e^x}\\\\\n  &=& e^x\\ \\frac{e^{\\frac{nx}{2}}(e^{-\\frac{nx}{2}}-e^{\\frac{nx}{2}})}{e^{\\frac x2}(e^{-\\frac x2}-e^{\\frac x2})}\\\\\n  &=& e^{\\frac{(n+1)x}{2}}\\ \\frac{e^{\\frac{nx}{2}}-e^{-\\frac{nx}{2}}}{e^{\\frac x2}-e^{-\\frac x2}}\\\\\n  &=& e^{\\frac{(n+1)x}{2}}\\ \\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}\n\\end{eqnarray*}\n\nDe même $C_n-S_n = \\sum_{k=1}^ne^{-kx}$ ; c'est donc la même formule que ci-dessus en remplaçant $x$ par $-x$.\nAinsi :\n$$C_n-S_n = e^{-\\frac{(n+1)x}{2}}\\ \\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}$$\n\nEn utilisant $C_n=\\frac{(C_n+S_n)+(C_n-S_n)}{2}$ et $S_n=\\frac{(C_n+S_n)-(C_n-S_n)}{2}$, on récupère donc\n$$C_n=\\frac{e^{\\frac{(n+1)x}{2}}+e^{-\\frac{(n+1)x}{2}}}{2}\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}=\\ch\\left(\\tfrac{(n+1)x}{2}\\right)\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}$$\n$$S_n=\\frac{e^{\\frac{(n+1)x}{2}}-e^{-(n+1)\\frac x2}}{2}\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}=\\sh\\left(\\tfrac{(n+1)x}{2}\\right)\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}$$",
+        "html": "<p>Puisque <span class=\"math inline\">\\(\\ch x+\\sh x=e^x\\)</span> et <span class=\"math inline\">\\(\\ch x-\\sh x=e^{-x}\\)</span>, les expressions <span class=\"math inline\">\\(C_n+S_n=\\sum_{k=1}^ne^{kx}\\)</span> et <span class=\"math inline\">\\(C_n-S_n=\\sum_{k=1}^ne^{-kx}\\)</span> sont des sommes de termes de suites géométriques, de raison respectivement <span class=\"math inline\">\\(e^x\\)</span> et <span class=\"math inline\">\\(e^{-x}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x=0\\)</span>, on a directement <span class=\"math inline\">\\(C_n=\\sum_{k=1}^n1=n\\)</span> et <span class=\"math inline\">\\(S_n=\\sum_{k=1}^n0=0\\)</span>.</p>\n<p>Supposons <span class=\"math inline\">\\(x\\not=0\\)</span>, alors <span class=\"math inline\">\\(e^{x}\\not=1\\)</span>. Donc <span class=\"math display\">\\[\\begin{aligned}\nC_n+S_n\n  &amp;=&amp; \\sum_{k=1}^ne^{kx} = \\frac{e^x-e^{(n+1)x}}{1-e^x}\\\\\n  &amp;=&amp; e^x\\,\\frac{1-e^{nx}}{1-e^x}\\\\\n  &amp;=&amp; e^x\\ \\frac{e^{\\frac{nx}{2}}(e^{-\\frac{nx}{2}}-e^{\\frac{nx}{2}})}{e^{\\frac x2}(e^{-\\frac x2}-e^{\\frac x2})}\\\\\n  &amp;=&amp; e^{\\frac{(n+1)x}{2}}\\ \\frac{e^{\\frac{nx}{2}}-e^{-\\frac{nx}{2}}}{e^{\\frac x2}-e^{-\\frac x2}}\\\\\n  &amp;=&amp; e^{\\frac{(n+1)x}{2}}\\ \\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}\\end{aligned}\\]</span></p>\n<p>De même <span class=\"math inline\">\\(C_n-S_n = \\sum_{k=1}^ne^{-kx}\\)</span> ; c’est donc la même formule que ci-dessus en remplaçant <span class=\"math inline\">\\(x\\)</span> par <span class=\"math inline\">\\(-x\\)</span>. Ainsi : <span class=\"math display\">\\[C_n-S_n = e^{-\\frac{(n+1)x}{2}}\\ \\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}\\]</span></p>\n<p>En utilisant <span class=\"math inline\">\\(C_n=\\frac{(C_n+S_n)+(C_n-S_n)}{2}\\)</span> et <span class=\"math inline\">\\(S_n=\\frac{(C_n+S_n)-(C_n-S_n)}{2}\\)</span>, on récupère donc <span class=\"math display\">\\[C_n=\\frac{e^{\\frac{(n+1)x}{2}}+e^{-\\frac{(n+1)x}{2}}}{2}\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}=\\ch\\left(\\tfrac{(n+1)x}{2}\\right)\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}\\]</span> <span class=\"math display\">\\[S_n=\\frac{e^{\\frac{(n+1)x}{2}}-e^{-(n+1)\\frac x2}}{2}\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}=\\sh\\left(\\tfrac{(n+1)x}{2}\\right)\\,\\frac{\\sh\\frac{nx}{2}}{\\sh\\frac{x}{2}}\\]</span></p>\n"
+      }
+    }
+  ]
+}

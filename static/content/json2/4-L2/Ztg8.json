@@ -1,0 +1,67 @@
+{
+  "uuid": "Ztg8",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "3483",
+    "auteur": "quercia",
+    "createdAt": "2010-03-10",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Système linéaire, rang",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:48.344Z"
+  },
+  "contenu": [
+    {
+      "id": "083f2493-e52f-45b4-9557-1373b08f3ad9",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "643be8b5-8096-4d9a-a121-b795a563cd8a",
+      "type": "question",
+      "value": {
+        "latex": "Soient deux matrices $B \\in \\mathcal{M}_{n,r}(\\R)$ et $C \\in \\mathcal{M}_{r,n}(\\R)$ de même rang $r$.\n    Montrer que $A = BC$ est de rang $r$.",
+        "html": "<p>Soient deux matrices <span class=\"math inline\">\\(B \\in \\mathcal{M}_{n,r}(\\R)\\)</span> et <span class=\"math inline\">\\(C \\in \\mathcal{M}_{r,n}(\\R)\\)</span> de même rang <span class=\"math inline\">\\(r\\)</span>. Montrer que <span class=\"math inline\">\\(A = BC\\)</span> est de rang <span class=\"math inline\">\\(r\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8066128b-0d1e-429c-8153-66779f274307",
+      "type": "question",
+      "value": {
+        "latex": "Réciproquement, soit $A \\in \\mathcal{M}_n(\\R)$ de rang $r \\ge 1$.\n    Montrer qu'il existe des matrices $B$ et $C$ comme\n    précédemment telles que $A = BC$.",
+        "html": "<p>Réciproquement, soit <span class=\"math inline\">\\(A \\in \\mathcal{M}_n(\\R)\\)</span> de rang <span class=\"math inline\">\\(r \\ge 1\\)</span>. Montrer qu’il existe des matrices <span class=\"math inline\">\\(B\\)</span> et <span class=\"math inline\">\\(C\\)</span> comme précédemment telles que <span class=\"math inline\">\\(A = BC\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d10d6761-0e26-4f72-8b30-9a01e9889936",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer explicitement une telle décomposition pour\n    $A = \\begin{pmatrix}1 & 2 & 3 & 4 \\cr 2 & 3 & 4 & 5 \\cr\n    3 & 4 & 5 & 6 \\cr 4 & 5 & 6 & a\\cr\\end{pmatrix}$, $a \\in \\R$.",
+        "html": "<p>Déterminer explicitement une telle décomposition pour <span class=\"math inline\">\\(A = \\begin{pmatrix}1 &amp; 2 &amp; 3 &amp; 4 \\cr 2 &amp; 3 &amp; 4 &amp; 5 \\cr\n    3 &amp; 4 &amp; 5 &amp; 6 \\cr 4 &amp; 5 &amp; 6 &amp; a\\cr\\end{pmatrix}\\)</span>, <span class=\"math inline\">\\(a \\in \\R\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "56bea398-93d2-48f6-ae60-17e8aeaf4f02",
+      "type": "question",
+      "value": {
+        "latex": "Supposons de plus $A$ symétrique. Montrer que $CB$ est aussi de rang $r$.",
+        "html": "<p>Supposons de plus <span class=\"math inline\">\\(A\\)</span> symétrique. Montrer que <span class=\"math inline\">\\(CB\\)</span> est aussi de rang <span class=\"math inline\">\\(r\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "c0b259b4-983c-46eb-8f87-bb8058915ea5",
+      "type": "reponse",
+      "value": {
+        "latex": "$B$ admet $r$ lignes indépendantes d'indices $i_1,\\dots,i_r$\n    et $C$ admet $r$ colonnes indépendantes d'indices $j_1,\\dots,j_r$.\n    Soient $B'$ et $C'$ les sous matrices carrées associées dans $B$ et $C$.\n    Alors la sous-matrice de~$A$ d'indices $i_1,\\dots,i_r$ pour les lignes\n    et $j_1,\\dots,j_r$ pour les colonnes est $B'C'$, de rang~$r$.\n    Donc $\\mathrm{rg}(A)\\ge r$ et l'inégalité inverse est bien connue.\nSoient $i_1,\\dots,i_r$ $r$ indices tels que les\n    lignes associées dans~$A$ sont linéairement indépendantes,\n    et $B\\in\\mathcal{M}_{r,n}(\\R)$ la sous-matrice correpondante. Par construction, $\\mathrm{rg}(B)=r$.\n    Chaque ligne de~$A$\n    étant combinaison linéaire des lignes de~$B$, il existe $C\\in\\mathcal{M}_{r,n}(\\R)$\n    telle que $A=BC$. Et on a $r=\\mathrm{nb.lignes}(C)\\ge\\mathrm{rg}(C)\\ge \\mathrm{rg}(A)=r$.\nComprendre dans cette question que $B,C$ ne sont pas\n    forcément les matrices construites en {\\bf 2}.\n    Notons $\\mathrm{vect}(X)$ l'espace vectoriel engendré par les colonnes\n    d'une matrice~$X$. De $A=BC={}^tC{}^tB$ on tire\n    $\\mathrm{vect}(A)\\subset\\mathrm{vect}(B)$ et $\\mathrm{vect}(A)\\subset\\mathrm{vect}({}^tC)$,\n    et tous ces espaces sont de dimension~$r$, donc ils sont égaux.\n    On en déduit qu'il existe une matrice~$P\\in GL_r(\\R)$ telle\n    que $B={}^tCP$ d'où $CB=C{}^tCP$. $\\mathrm{rg}(C{}^tC)=\\mathrm{rg}(C)=r$ et $P$\n    est inversible donc $\\mathrm{rg}(CB)=r$.",
+        "html": "<p><span class=\"math inline\">\\(B\\)</span> admet <span class=\"math inline\">\\(r\\)</span> lignes indépendantes d’indices <span class=\"math inline\">\\(i_1,\\dots,i_r\\)</span> et <span class=\"math inline\">\\(C\\)</span> admet <span class=\"math inline\">\\(r\\)</span> colonnes indépendantes d’indices <span class=\"math inline\">\\(j_1,\\dots,j_r\\)</span>. Soient <span class=\"math inline\">\\(B&#39;\\)</span> et <span class=\"math inline\">\\(C&#39;\\)</span> les sous matrices carrées associées dans <span class=\"math inline\">\\(B\\)</span> et <span class=\"math inline\">\\(C\\)</span>. Alors la sous-matrice de <span class=\"math inline\">\\(A\\)</span> d’indices <span class=\"math inline\">\\(i_1,\\dots,i_r\\)</span> pour les lignes et <span class=\"math inline\">\\(j_1,\\dots,j_r\\)</span> pour les colonnes est <span class=\"math inline\">\\(B&#39;C&#39;\\)</span>, de rang <span class=\"math inline\">\\(r\\)</span>. Donc <span class=\"math inline\">\\(\\mathrm{rg}(A)\\ge r\\)</span> et l’inégalité inverse est bien connue. Soient <span class=\"math inline\">\\(i_1,\\dots,i_r\\)</span> <span class=\"math inline\">\\(r\\)</span> indices tels que les lignes associées dans <span class=\"math inline\">\\(A\\)</span> sont linéairement indépendantes, et <span class=\"math inline\">\\(B\\in\\mathcal{M}_{r,n}(\\R)\\)</span> la sous-matrice correpondante. Par construction, <span class=\"math inline\">\\(\\mathrm{rg}(B)=r\\)</span>. Chaque ligne de <span class=\"math inline\">\\(A\\)</span> étant combinaison linéaire des lignes de <span class=\"math inline\">\\(B\\)</span>, il existe <span class=\"math inline\">\\(C\\in\\mathcal{M}_{r,n}(\\R)\\)</span> telle que <span class=\"math inline\">\\(A=BC\\)</span>. Et on a <span class=\"math inline\">\\(r=\\mathrm{nb.lignes}(C)\\ge\\mathrm{rg}(C)\\ge \\mathrm{rg}(A)=r\\)</span>. Comprendre dans cette question que <span class=\"math inline\">\\(B,C\\)</span> ne sont pas forcément les matrices construites en <span><strong>2</strong></span>. Notons <span class=\"math inline\">\\(\\mathrm{vect}(X)\\)</span> l’espace vectoriel engendré par les colonnes d’une matrice <span class=\"math inline\">\\(X\\)</span>. De <span class=\"math inline\">\\(A=BC={}^tC{}^tB\\)</span> on tire <span class=\"math inline\">\\(\\mathrm{vect}(A)\\subset\\mathrm{vect}(B)\\)</span> et <span class=\"math inline\">\\(\\mathrm{vect}(A)\\subset\\mathrm{vect}({}^tC)\\)</span>, et tous ces espaces sont de dimension <span class=\"math inline\">\\(r\\)</span>, donc ils sont égaux. On en déduit qu’il existe une matrice <span class=\"math inline\">\\(P\\in GL_r(\\R)\\)</span> telle que <span class=\"math inline\">\\(B={}^tCP\\)</span> d’où <span class=\"math inline\">\\(CB=C{}^tCP\\)</span>. <span class=\"math inline\">\\(\\mathrm{rg}(C{}^tC)=\\mathrm{rg}(C)=r\\)</span> et <span class=\"math inline\">\\(P\\)</span> est inversible donc <span class=\"math inline\">\\(\\mathrm{rg}(CB)=r\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

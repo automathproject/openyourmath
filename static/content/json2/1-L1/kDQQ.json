@@ -1,0 +1,43 @@
+{
+  "uuid": "kDQQ",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2444",
+    "auteur": "matexo1",
+    "createdAt": "2002-02-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Propriétés élémentaires, généralités",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:13.350Z"
+  },
+  "contenu": [
+    {
+      "id": "faef139c-076b-41c1-ac63-8918eb72d4bf",
+      "type": "description",
+      "value": {
+        "latex": "Soient $A, B$ deux matrices semblables (i.e. il existe $P$\ninversible telle que $B = P^{-1} A P$). Montrer que si l'une est\ninversible, l'autre aussi\\,; que si l'une est idempotente, l'autre\naussi\\,; que si l'une est nilpotente, l'autre aussi\\,; que si $A =\n\\lambda I$, alors $A = B$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(A, B\\)</span> deux matrices semblables (i.e. il existe <span class=\"math inline\">\\(P\\)</span> inversible telle que <span class=\"math inline\">\\(B = P^{-1} A P\\)</span>). Montrer que si l’une est inversible, l’autre aussi ; que si l’une est idempotente, l’autre aussi ; que si l’une est nilpotente, l’autre aussi ; que si <span class=\"math inline\">\\(A =\n\\lambda I\\)</span>, alors <span class=\"math inline\">\\(A = B\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8b4b175b-16bb-4d35-8059-f8f5b8e46f60",
+      "type": "indication",
+      "value": {
+        "latex": "$A$ est \\emph{idempotente} s'il existe un $n$ tel que $A^n=I$ (la matrice identité).\n\n$A$ est \\emph{nilpotente} s'il existe un $n$ tel que $A^n=(0)$ (la matrice nulle).",
+        "html": "<p><span class=\"math inline\">\\(A\\)</span> est <em>idempotente</em> s’il existe un <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(A^n=I\\)</span> (la matrice identité).</p>\n<p><span class=\"math inline\">\\(A\\)</span> est <em>nilpotente</em> s’il existe un <span class=\"math inline\">\\(n\\)</span> tel que <span class=\"math inline\">\\(A^n=(0)\\)</span> (la matrice nulle).</p>\n"
+      }
+    },
+    {
+      "id": "dc7c1f87-1c00-4039-99db-797c42187cc6",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons $A$ inversible, alors il existe $A'$ tel que $A\\times A'=I$ et $A'\\times A=I$.\nNotons alors $B'= P^{-1} A'P$. On a\n$$B \\times B' = \\big(P^{-1}A P \\big)\\times \\big(P^{-1} A' P\\big)=P^{-1}A \\big(P P^{-1}\\big)A' P \n= P^{-1}A A' P=P^{-1} I P=I$$\nDe même $B' \\times B=I$. Donc $B$ est inversible d'inverse $B'$.\nSupposons que $A^n=I$. Alors \n$$\\begin{array}{rcl}\nB^n \n&=&\\big(P^{-1} A P\\big)^n= \\big(P^{-1} A P \\big)\\big(P^{-1} A P \\big)\\cdots \\big(P^{-1} A P \\big) \\\\\n&=&P^{-1} A (P P^{-1}) A (P P^{-1}) \\cdots  A P \\\\\n&=& P^{-1} A^n P  \\\\\n&=& P^{-1} I P = I \\\\\n\\end{array}$$\nDonc $B$ est idempotente.\nSi $A^n=(0)$ alors le même calcul qu'au-dessus conduit à $B^n=(0)$.\nSi $A = \\lambda I$ alors $B=P^{-1} (\\lambda I) P = \\lambda I \\times P^{-1}P= \\lambda I$\n(car la matrice $\\lambda I$ commute avec toutes les matrices).",
+        "html": "<p>Supposons <span class=\"math inline\">\\(A\\)</span> inversible, alors il existe <span class=\"math inline\">\\(A&#39;\\)</span> tel que <span class=\"math inline\">\\(A\\times A&#39;=I\\)</span> et <span class=\"math inline\">\\(A&#39;\\times A=I\\)</span>. Notons alors <span class=\"math inline\">\\(B&#39;= P^{-1} A&#39;P\\)</span>. On a <span class=\"math display\">\\[B \\times B&#39; = \\big(P^{-1}A P \\big)\\times \\big(P^{-1} A&#39; P\\big)=P^{-1}A \\big(P P^{-1}\\big)A&#39; P \n= P^{-1}A A&#39; P=P^{-1} I P=I\\]</span> De même <span class=\"math inline\">\\(B&#39; \\times B=I\\)</span>. Donc <span class=\"math inline\">\\(B\\)</span> est inversible d’inverse <span class=\"math inline\">\\(B&#39;\\)</span>. Supposons que <span class=\"math inline\">\\(A^n=I\\)</span>. Alors <span class=\"math display\">\\[\\begin{array}{rcl}\nB^n \n&amp;=&amp;\\big(P^{-1} A P\\big)^n= \\big(P^{-1} A P \\big)\\big(P^{-1} A P \\big)\\cdots \\big(P^{-1} A P \\big) \\\\\n&amp;=&amp;P^{-1} A (P P^{-1}) A (P P^{-1}) \\cdots  A P \\\\\n&amp;=&amp; P^{-1} A^n P  \\\\\n&amp;=&amp; P^{-1} I P = I \\\\\n\\end{array}\\]</span> Donc <span class=\"math inline\">\\(B\\)</span> est idempotente. Si <span class=\"math inline\">\\(A^n=(0)\\)</span> alors le même calcul qu’au-dessus conduit à <span class=\"math inline\">\\(B^n=(0)\\)</span>. Si <span class=\"math inline\">\\(A = \\lambda I\\)</span> alors <span class=\"math inline\">\\(B=P^{-1} (\\lambda I) P = \\lambda I \\times P^{-1}P= \\lambda I\\)</span> (car la matrice <span class=\"math inline\">\\(\\lambda I\\)</span> commute avec toutes les matrices).</p>\n"
+      }
+    }
+  ]
+}

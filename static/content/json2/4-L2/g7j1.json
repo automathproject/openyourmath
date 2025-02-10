@@ -1,0 +1,35 @@
+{
+  "uuid": "g7j1",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1672",
+    "auteur": "gineste",
+    "createdAt": "2001-11-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:57.802Z"
+  },
+  "contenu": [
+    {
+      "id": "b1c66871-f610-4c62-9781-15ea392a7a63",
+      "type": "description",
+      "value": {
+        "latex": "On\nconsidère l'endomorphisme $a$ de $E=\\Rr^2$ dont la matrice\nreprésentative $A=[a]_e^e$ dans la base canonique $e$ est $\\left[\n\\begin{array}{ll}7&-10\\\\5&-8 \\end{array} \\right].$ Calculer la\ntrace, le déterminant, le polynôme caractéristique et le spectre\nde $a$. Quel théorème du cours garantit l'existence d'une base\n$f=(\\vec{f}_1,\\vec{f}_2)$ de vecteurs propres? Choisir ensuite $f$\ntelle que $[\\mathrm{id}_E]_f^e$ et $[\\mathrm{id}_E]_e^f$ soient à\ncoefficients entiers. Dessiner $\\vec{f}_1$ et $\\vec{f}_2$, en\nprenant des unités d'axes assez petites. Dessiner quelques\nvecteurs $\\vec{x}$ et leurs images $a(\\vec{x})$ à l'aide de $f$.\n\nTrouver deux matrices $P$ et $D$ carrées d'ordre 2 telles que $D$ soit\ndiagonale, $P$ inversible et $A=PDP^{-1}$. Calculer $[a^{50}]_f^f$,\n$[a^{50}]_e^e$ et $A^{50}$. Calculer $\\lim_{n\\infty}\\frac{1}{3^{2n}}a^{2n}.$",
+        "html": "<p>On considère l’endomorphisme <span class=\"math inline\">\\(a\\)</span> de <span class=\"math inline\">\\(E=\\Rr^2\\)</span> dont la matrice représentative <span class=\"math inline\">\\(A=[a]_e^e\\)</span> dans la base canonique <span class=\"math inline\">\\(e\\)</span> est <span class=\"math inline\">\\(\\left[\n\\begin{array}{ll}7&amp;-10\\\\5&amp;-8 \\end{array} \\right].\\)</span> Calculer la trace, le déterminant, le polynôme caractéristique et le spectre de <span class=\"math inline\">\\(a\\)</span>. Quel théorème du cours garantit l’existence d’une base <span class=\"math inline\">\\(f=(\\vec{f}_1,\\vec{f}_2)\\)</span> de vecteurs propres? Choisir ensuite <span class=\"math inline\">\\(f\\)</span> telle que <span class=\"math inline\">\\([\\mathrm{id}_E]_f^e\\)</span> et <span class=\"math inline\">\\([\\mathrm{id}_E]_e^f\\)</span> soient à coefficients entiers. Dessiner <span class=\"math inline\">\\(\\vec{f}_1\\)</span> et <span class=\"math inline\">\\(\\vec{f}_2\\)</span>, en prenant des unités d’axes assez petites. Dessiner quelques vecteurs <span class=\"math inline\">\\(\\vec{x}\\)</span> et leurs images <span class=\"math inline\">\\(a(\\vec{x})\\)</span> à l’aide de <span class=\"math inline\">\\(f\\)</span>.</p>\n<p>Trouver deux matrices <span class=\"math inline\">\\(P\\)</span> et <span class=\"math inline\">\\(D\\)</span> carrées d’ordre 2 telles que <span class=\"math inline\">\\(D\\)</span> soit diagonale, <span class=\"math inline\">\\(P\\)</span> inversible et <span class=\"math inline\">\\(A=PDP^{-1}\\)</span>. Calculer <span class=\"math inline\">\\([a^{50}]_f^f\\)</span>, <span class=\"math inline\">\\([a^{50}]_e^e\\)</span> et <span class=\"math inline\">\\(A^{50}\\)</span>. Calculer <span class=\"math inline\">\\(\\lim_{n\\infty}\\frac{1}{3^{2n}}a^{2n}.\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "a9aa3a93-7ed5-4014-b554-289a9339fc49",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\mathrm{tr} a=\\mathrm{tr} A=-1,$ $\\det a=\\det A=-6$\n$$P_a(X)=X^2-\\mathrm{tr} X+\\det a=X^2+X-6=(X-2)(X+3).$$ Donc le spectre est\n$\\{2,-3\\}$, il est de taille 2 comme l'espace est de dimension 2.\nD'apr\\`es le cours, $a$ est diagonalisable et les espaces propres\nde dimension 1. L'espace propre associ\\'e \\`a la valeur propre 2\nest l'ensemble des $(x,y)$ tels que $7x-10y=2x$ ou $x=2y.$ On peut\nprendre $\\vec{f}_1=(2,1)$ pour base de cet espace propre. L'espace\npropre associ\\'e \\`a la valeur propre $-3$ est l'ensemble des\n$(x,y)$ tels que $7x-10y=-3x$ ou $x=y.$ On peut prendre\n$\\vec{f}_2=(1,1)$ pour base de cet espace propre. Alors si\n$f=(\\vec{f}_1,\\vec{f}_2)$ on a\n\n$$P=[\\mathrm{id}_E]_f^e=\\left[\\begin{array}{rr}2&1\\\\1&1\\end{array}\\right],\\ \\\nP^{-1}=[\\mathrm{id}_E]_e^f=\\left[\\begin{array}{rr}\n1&-1\\\\-1&2\\end{array}\\right],\\ \\\nD=[a]_f^f=\\left[\\begin{array}{rr}2&0\\\\0&-3\\end{array}\\right].$$\n\n$$D^{50}=[a^{50}]_f^f=\\left[\\begin{array}{rr}2^{50}&0\\\\0&(-3)^{50}\\end{array}\\right],\n\\ A^{50}=[a^{50}]_e^e=PD^{50}P^{-1}=\\left[\\begin{array}{rr}\n2.2^{50}-(-3)^{50}&-2.2^{50}+2.(-3)^{50}\\\\2^{50}-(-3)^{50}&-2^{50}+2.(-3)^{50}\n\\end{array}\\right]$$\nDonc $\\lim_{n\\infty}\\frac{1}{3^{2n}}[a^{2n}]_f^f=L=\n\\left[\\begin{array}{rr}0&0\\\\0&1\\end{array}\\right],$ et\n$\\lim_{n\\infty}\\frac{1}{3^{2n}}[a^{2n}]_e^e=PLP^{-1}=\\left[\\begin{array}{rr}\n-1&2\\\\-1&2\\end{array}\\right].$",
+        "html": "<p><span class=\"math inline\">\\(\\mathrm{tr} a=\\mathrm{tr} A=-1,\\)</span> <span class=\"math inline\">\\(\\det a=\\det A=-6\\)</span> <span class=\"math display\">\\[P_a(X)=X^2-\\mathrm{tr} X+\\det a=X^2+X-6=(X-2)(X+3).\\]</span> Donc le spectre est <span class=\"math inline\">\\(\\{2,-3\\}\\)</span>, il est de taille 2 comme l’espace est de dimension 2. D’après le cours, <span class=\"math inline\">\\(a\\)</span> est diagonalisable et les espaces propres de dimension 1. L’espace propre associé à la valeur propre 2 est l’ensemble des <span class=\"math inline\">\\((x,y)\\)</span> tels que <span class=\"math inline\">\\(7x-10y=2x\\)</span> ou <span class=\"math inline\">\\(x=2y.\\)</span> On peut prendre <span class=\"math inline\">\\(\\vec{f}_1=(2,1)\\)</span> pour base de cet espace propre. L’espace propre associé à la valeur propre <span class=\"math inline\">\\(-3\\)</span> est l’ensemble des <span class=\"math inline\">\\((x,y)\\)</span> tels que <span class=\"math inline\">\\(7x-10y=-3x\\)</span> ou <span class=\"math inline\">\\(x=y.\\)</span> On peut prendre <span class=\"math inline\">\\(\\vec{f}_2=(1,1)\\)</span> pour base de cet espace propre. Alors si <span class=\"math inline\">\\(f=(\\vec{f}_1,\\vec{f}_2)\\)</span> on a</p>\n<p><span class=\"math display\">\\[P=[\\mathrm{id}_E]_f^e=\\left[\\begin{array}{rr}2&amp;1\\\\1&amp;1\\end{array}\\right],\\ \\\nP^{-1}=[\\mathrm{id}_E]_e^f=\\left[\\begin{array}{rr}\n1&amp;-1\\\\-1&amp;2\\end{array}\\right],\\ \\\nD=[a]_f^f=\\left[\\begin{array}{rr}2&amp;0\\\\0&amp;-3\\end{array}\\right].\\]</span></p>\n<p><span class=\"math display\">\\[D^{50}=[a^{50}]_f^f=\\left[\\begin{array}{rr}2^{50}&amp;0\\\\0&amp;(-3)^{50}\\end{array}\\right],\n\\ A^{50}=[a^{50}]_e^e=PD^{50}P^{-1}=\\left[\\begin{array}{rr}\n2.2^{50}-(-3)^{50}&amp;-2.2^{50}+2.(-3)^{50}\\\\2^{50}-(-3)^{50}&amp;-2^{50}+2.(-3)^{50}\n\\end{array}\\right]\\]</span> Donc <span class=\"math inline\">\\(\\lim_{n\\infty}\\frac{1}{3^{2n}}[a^{2n}]_f^f=L=\n\\left[\\begin{array}{rr}0&amp;0\\\\0&amp;1\\end{array}\\right],\\)</span> et <span class=\"math inline\">\\(\\lim_{n\\infty}\\frac{1}{3^{2n}}[a^{2n}]_e^e=PLP^{-1}=\\left[\\begin{array}{rr}\n-1&amp;2\\\\-1&amp;2\\end{array}\\right].\\)</span></p>\n"
+      }
+    }
+  ]
+}

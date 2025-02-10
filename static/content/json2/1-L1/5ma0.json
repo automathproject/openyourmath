@@ -1,0 +1,35 @@
+{
+  "uuid": "5ma0",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "21",
+    "auteur": "bodin",
+    "createdAt": "1998-09-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Nombres complexes",
+    "sousChapitre": "Forme cartésienne, forme polaire",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:06.799Z"
+  },
+  "contenu": [
+    {
+      "id": "71873984-2099-42cb-97f5-c171cb1d0891",
+      "type": "description",
+      "value": {
+        "latex": "Soient $\\alpha$ et $\\beta$ deux nombres r\\'eels. Mettre le nombre complexe $z  =\ne^{i\\alpha}+e^{i\\beta}$ sous forme trigonom\\'etrique $z = \\rho e^{i\\gamma}$ (indication :\nposer $u = \\frac {\\alpha + \\beta}{2}$, $v = \\frac {\\alpha - \\beta}{2}$).\n\nEn d\\'eduire la valeur de\n$$ \\sum_{p=0}^{n}C_n^p \\cos  [p\\alpha + (n-p)\\beta ].$$",
+        "html": "<p>Soient <span class=\"math inline\">\\(\\alpha\\)</span> et <span class=\"math inline\">\\(\\beta\\)</span> deux nombres réels. Mettre le nombre complexe <span class=\"math inline\">\\(z  =\ne^{i\\alpha}+e^{i\\beta}\\)</span> sous forme trigonométrique <span class=\"math inline\">\\(z = \\rho e^{i\\gamma}\\)</span> (indication : poser <span class=\"math inline\">\\(u = \\frac {\\alpha + \\beta}{2}\\)</span>, <span class=\"math inline\">\\(v = \\frac {\\alpha - \\beta}{2}\\)</span>).</p>\n<p>En déduire la valeur de <span class=\"math display\">\\[\\sum_{p=0}^{n}C_n^p \\cos  [p\\alpha + (n-p)\\beta ].\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "6c6d2ba1-1c07-4357-9b3d-5cbfcfc3b590",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $(\\alpha,\\beta)\\in\\R^2$ et $z$ le nombre complexe\n$z=e^{i\\alpha}+e^{i\\beta}$. Soit $u=\\frac{\\alpha+\\beta}{2}$ et\n$v=\\frac{\\alpha-\\beta}{2}$. Alors, $\\alpha=u+v$ et $\\beta=u-v$ et\n:\n$$\\begin{align*}\n   z &= e^{i\\alpha}+e^{i\\beta}\\\\\n     &= e^{iu+iv} + e^{iu-iv} \\\\\n     &= e^{iu} (e^{iv}+e^{-iv}) \\\\\n     &= 2 \\cos(v)e^{iu} \\\\\n     &= 2 \\cos(\\frac{\\alpha-\\beta}{2})e^{i\\frac{\\alpha+\\beta}{2}}\n\\end{align*}$$\nOn en d\\'eduit la forme trigonom\\'etrique de $z$ :\n$$\n   |z|=2|\\cos(\\frac{\\alpha-\\beta}{2})|\n \\quad\\text{ et, lorsque $\\cos(\\frac{\\alpha-\\beta}{2})\\neq0$ :}\\quad\n $$\n$$ Arg(z)=\n   \\begin{cases}\n      \\frac{\\alpha+\\beta}{2} [2\\pi] & \\text{ si $\\cos\\frac{\\alpha-\\beta}{2}> 0$}\\\\\n      \\pi+\\frac{\\alpha+\\beta}{2} [2\\pi] & \\text{ si $\\cos\\frac{\\alpha-\\beta}{2}< 0$}\\\\\n   \\end{cases}\n$$\n(Attention, si $\\cos\\frac{\\alpha-\\beta}{2}<0$, $z=2\\cos ve^{iu}$\nn'est pas la forme trigonom\\'etrique de $z$ !).\n\nSoit $n\\in\\N$. Calculons $z^n$ de deux façons diff\\'erentes :\nd'une part\n$$z^n=(e^{i\\alpha}+e^{i\\beta})^n = \\sum_{p=0}^n{C_{n}^p e^{ip\\alpha}e^{i(n-p)\\beta}},$$ et d'autre\npart, en utilisant la forme obtenue plus haut: $z^n=2^n\n\\cos^n{v}\\,e^{inu}$. En comparant les parties r\\'eelles des\nexpressions obtenues on obtient :\n$$\n\\sum_{p=0}^n C_{n}^p \\cos[p\\alpha+(n-p)\\beta] =\n   2^n\\cos^n\\frac{\\alpha-\\beta}{2}\\cos(n\\frac{\\alpha+\\beta}{2}).\n$$",
+        "html": "<p>Soit <span class=\"math inline\">\\((\\alpha,\\beta)\\in\\R^2\\)</span> et <span class=\"math inline\">\\(z\\)</span> le nombre complexe <span class=\"math inline\">\\(z=e^{i\\alpha}+e^{i\\beta}\\)</span>. Soit <span class=\"math inline\">\\(u=\\frac{\\alpha+\\beta}{2}\\)</span> et <span class=\"math inline\">\\(v=\\frac{\\alpha-\\beta}{2}\\)</span>. Alors, <span class=\"math inline\">\\(\\alpha=u+v\\)</span> et <span class=\"math inline\">\\(\\beta=u-v\\)</span> et : <span class=\"math display\">\\[\\begin{align*}\n   z &amp;= e^{i\\alpha}+e^{i\\beta}\\\\\n     &amp;= e^{iu+iv} + e^{iu-iv} \\\\\n     &amp;= e^{iu} (e^{iv}+e^{-iv}) \\\\\n     &amp;= 2 \\cos(v)e^{iu} \\\\\n     &amp;= 2 \\cos(\\frac{\\alpha-\\beta}{2})e^{i\\frac{\\alpha+\\beta}{2}}\n\\end{align*}\\]</span> On en déduit la forme trigonométrique de <span class=\"math inline\">\\(z\\)</span> : <span class=\"math display\">\\[|z|=2|\\cos(\\frac{\\alpha-\\beta}{2})|\n \\quad\\text{ et, lorsque $\\cos(\\frac{\\alpha-\\beta}{2})\\neq0$ :}\\quad\\]</span> <span class=\"math display\">\\[Arg(z)=\n   \\begin{cases}\n      \\frac{\\alpha+\\beta}{2} [2\\pi] &amp; \\text{ si $\\cos\\frac{\\alpha-\\beta}{2}&gt; 0$}\\\\\n      \\pi+\\frac{\\alpha+\\beta}{2} [2\\pi] &amp; \\text{ si $\\cos\\frac{\\alpha-\\beta}{2}&lt; 0$}\\\\\n   \\end{cases}\\]</span> (Attention, si <span class=\"math inline\">\\(\\cos\\frac{\\alpha-\\beta}{2}&lt;0\\)</span>, <span class=\"math inline\">\\(z=2\\cos ve^{iu}\\)</span> n’est pas la forme trigonométrique de <span class=\"math inline\">\\(z\\)</span> !).</p>\n<p>Soit <span class=\"math inline\">\\(n\\in\\N\\)</span>. Calculons <span class=\"math inline\">\\(z^n\\)</span> de deux façons différentes : d’une part <span class=\"math display\">\\[z^n=(e^{i\\alpha}+e^{i\\beta})^n = \\sum_{p=0}^n{C_{n}^p e^{ip\\alpha}e^{i(n-p)\\beta}},\\]</span> et d’autre part, en utilisant la forme obtenue plus haut: <span class=\"math inline\">\\(z^n=2^n\n\\cos^n{v}\\,e^{inu}\\)</span>. En comparant les parties réelles des expressions obtenues on obtient : <span class=\"math display\">\\[\\sum_{p=0}^n C_{n}^p \\cos[p\\alpha+(n-p)\\beta] =\n   2^n\\cos^n\\frac{\\alpha-\\beta}{2}\\cos(n\\frac{\\alpha+\\beta}{2}).\\]</span></p>\n"
+      }
+    }
+  ]
+}

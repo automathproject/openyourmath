@@ -1,0 +1,59 @@
+{
+  "uuid": "B5dV",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4187",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Dérivée partielle",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:43.788Z"
+  },
+  "contenu": [
+    {
+      "id": "2fc1fbb9-bc0a-4946-9d5c-c8ede8671489",
+      "type": "description",
+      "value": {
+        "latex": "Soient $f$ et $g$ deux fonctions de classe $\\mathcal{C}^1$ sur $\\R$ à valeurs\ndans $\\R$ vérifiant~: $\\forall\\ x\\in\\R,\\ f'(x)\\ge 1$ et $|g'(x)| < 1$.\nSoit $\\varphi$ définie sur $\\R^2$ par $\\varphi(x,y) = (f(x)+g(y), f(y) + g(x))$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(g\\)</span> deux fonctions de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> sur <span class=\"math inline\">\\(\\R\\)</span> à valeurs dans <span class=\"math inline\">\\(\\R\\)</span> vérifiant : <span class=\"math inline\">\\(\\forall\\ x\\in\\R,\\ f&#39;(x)\\ge 1\\)</span> et <span class=\"math inline\">\\(|g&#39;(x)| &lt; 1\\)</span>. Soit <span class=\"math inline\">\\(\\varphi\\)</span> définie sur <span class=\"math inline\">\\(\\R^2\\)</span> par <span class=\"math inline\">\\(\\varphi(x,y) = (f(x)+g(y), f(y) + g(x))\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8d176baa-09e5-4343-8238-4f571bab8bc6",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\varphi$ est un $\\mathcal{C}^1$-difféomorphisme de $\\R^2$ sur $\\varphi(\\R^2)$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\varphi\\)</span> est un <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span>-difféomorphisme de <span class=\"math inline\">\\(\\R^2\\)</span> sur <span class=\"math inline\">\\(\\varphi(\\R^2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "f3042b26-e64a-4945-a7e1-112f0b765f1e",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\det(J_\\varphi(x,y)) =  f'(x)f'(y) - g'(x)g'(y) > 0$ donc le théorème\n    d'inversion locale s'applique, il suffit de vérifier l'injectivité de~$\\varphi$.\n    Si $\\varphi(x,y) = \\varphi(u,v)$ alors~:\n    $$\\begin{align*}&|x-u| \\le |f(x)-f(u)| = |g(v)-g(y)| \\le |v-y|\\\\\n               &|v-y| \\le |f(v)-f(y)| = |g(x)-g(u)| \\le |x-u|\\\\ \n\\end{align*}$$\n    d'où $|x-u| \\le |x-u|$ et il y a inégalité stricte si $v\\ne y$ ce qui est\n    absurde donc $v=y$ et de même $u=x$.",
+        "html": "<p><span class=\"math inline\">\\(\\det(J_\\varphi(x,y)) =  f&#39;(x)f&#39;(y) - g&#39;(x)g&#39;(y) &gt; 0\\)</span> donc le théorème d’inversion locale s’applique, il suffit de vérifier l’injectivité de <span class=\"math inline\">\\(\\varphi\\)</span>. Si <span class=\"math inline\">\\(\\varphi(x,y) = \\varphi(u,v)\\)</span> alors : <span class=\"math display\">\\[\\begin{align*}&amp;|x-u| \\le |f(x)-f(u)| = |g(v)-g(y)| \\le |v-y|\\\\\n               &amp;|v-y| \\le |f(v)-f(y)| = |g(x)-g(u)| \\le |x-u|\\\\ \n\\end{align*}\\]</span> d’où <span class=\"math inline\">\\(|x-u| \\le |x-u|\\)</span> et il y a inégalité stricte si <span class=\"math inline\">\\(v\\ne y\\)</span> ce qui est absurde donc <span class=\"math inline\">\\(v=y\\)</span> et de même <span class=\"math inline\">\\(u=x\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7fd28394-3b74-4261-8070-cfc22bc1090d",
+      "type": "question",
+      "value": {
+        "latex": "On suppose qu'il existe $k\\in{]0,1[}$ tel que $\\forall\\ x\\in\\R$, $|g'(x)| < k$~;\n    montrer que $\\varphi(\\R^2) = \\R^2$.",
+        "html": "<p>On suppose qu’il existe <span class=\"math inline\">\\(k\\in{]0,1[}\\)</span> tel que <span class=\"math inline\">\\(\\forall\\ x\\in\\R\\)</span>, <span class=\"math inline\">\\(|g&#39;(x)| &lt; k\\)</span> ; montrer que <span class=\"math inline\">\\(\\varphi(\\R^2) = \\R^2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "ab539ec9-364e-4e96-a820-db25b245f00e",
+      "type": "reponse",
+      "value": {
+        "latex": "On a $\\varphi(x,y) = (u,v)$ si et seulement si $x = f^{-1}(u-g(y))$ et\n    $y = f^{-1}(v - g(f^{-1}(u-g(y)))) = h(y)$. $h$ est $k^2$-lipschitzienne\n    donc le théorème du point fixe s'applique.",
+        "html": "<p>On a <span class=\"math inline\">\\(\\varphi(x,y) = (u,v)\\)</span> si et seulement si <span class=\"math inline\">\\(x = f^{-1}(u-g(y))\\)</span> et <span class=\"math inline\">\\(y = f^{-1}(v - g(f^{-1}(u-g(y)))) = h(y)\\)</span>. <span class=\"math inline\">\\(h\\)</span> est <span class=\"math inline\">\\(k^2\\)</span>-lipschitzienne donc le théorème du point fixe s’applique.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "tOoW",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2848",
+    "auteur": "burnol",
+    "createdAt": "2009-12-15",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Théorème des résidus",
+    "sousChapitre": "Théorème des résidus",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:07.176Z"
+  },
+  "contenu": [
+    {
+      "id": "f5ac2858-50c5-4dfb-8a9e-7c4789426f7a",
+      "type": "description",
+      "value": {
+        "latex": "Déterminer pour $A, B, C$ réels, avec $A^2 > B^2 + C^2$ la\nvaleur de :\n\\[ \\frac1{2\\pi}\\int_0^{2\\pi} \\frac{d\\theta}{A + B\\sin\\theta + C\\cos\\theta}\\]\nOn aura intérêt, comme première étape, à poser $B =\nR\\cos\\phi$, $C=R\\sin\\phi$, mais on peut aussi se frotter\nplus directement au résidu (utiliser bien sûr\n$z=e^{i\\theta}$ ou dans ce genre).",
+        "html": "<p>Déterminer pour <span class=\"math inline\">\\(A, B, C\\)</span> réels, avec <span class=\"math inline\">\\(A^2 &gt; B^2 + C^2\\)</span> la valeur de : <span class=\"math display\">\\[\\frac1{2\\pi}\\int_0^{2\\pi} \\frac{d\\theta}{A + B\\sin\\theta + C\\cos\\theta}\\]</span> On aura intérêt, comme première étape, à poser <span class=\"math inline\">\\(B =\nR\\cos\\phi\\)</span>, <span class=\"math inline\">\\(C=R\\sin\\phi\\)</span>, mais on peut aussi se frotter plus directement au résidu (utiliser bien sûr <span class=\"math inline\">\\(z=e^{i\\theta}\\)</span> ou dans ce genre).</p>\n"
+      }
+    },
+    {
+      "id": "e8770598-f4ca-4275-abcd-cc3c90c3cd4e",
+      "type": "reponse",
+      "value": {
+        "latex": "Si $A=R\\cos (\\Phi) $ et $B=R\\sin (\\Phi)$ on a\n$$ \\int _0^{2\\pi} \\frac{d\\theta}{A+B\\sin(\\theta )+C\\cos(\\theta )} = \\int _0^{2\\pi} \\frac{d\\theta}{A+R\\sin(\\theta +\\Phi)} =\\int _0^{2\\pi} \\frac{d\\alpha}{A+R\\sin(\\alpha )}.$$\nPour trouver la valeur de cette derni\\`ere int\\'egrale posons $z=e^{i\\alpha }$. Alors $d\\alpha = -i \\frac{dz}{z}$ et\n$$ I=\\int _0^{2\\pi} \\frac{d\\alpha}{A+R\\sin(\\alpha )} = \\int _{|z|=1} \\frac{-i\\, dz}{z( A+R\\frac{z-\\overline{z}}{2i})}=\n\\int _{|z|=1} \\frac{2 dz}{Rz^2 +2iAz -R}.$$\nLe d\\'enominateur de cette derni\\`ere expression s'annule en\n$$z^\\pm =\\frac{-2iA\\pm \\sqrt{-4A^2+4R^2}}{2R}= -i\\left( \\frac{A}{R} \\mp \\sqrt{\\left(\\frac{A}{R} \\right)^2 -1}    \\right)$$\nUn calcul \\'el\\'ementaire montre que seulement la racine $z^+= -i\\left( \\frac{A}{R} - \\sqrt{\\left(\\frac{A}{R} \\right)^2 -1} \\right)$ est dans le disque unit\\'e ouvert pourvu que $A>0$ (le cas $A<0$ est similaire). Il s'ensuit par le th\\'eor\\`eme du r\\'esidu que\n$$\\frac{1}{2\\pi}I= i \\frac{2}{R}\\frac{1}{z^+-z^-}= \\frac{1}{R\\sqrt{\\left(\\frac{A}{R} \\right)^2 -1}}=\\frac{1}{\\sqrt{A^2-R^2}}.$$",
+        "html": "<p>Si <span class=\"math inline\">\\(A=R\\cos (\\Phi)\\)</span> et <span class=\"math inline\">\\(B=R\\sin (\\Phi)\\)</span> on a <span class=\"math display\">\\[\\int _0^{2\\pi} \\frac{d\\theta}{A+B\\sin(\\theta )+C\\cos(\\theta )} = \\int _0^{2\\pi} \\frac{d\\theta}{A+R\\sin(\\theta +\\Phi)} =\\int _0^{2\\pi} \\frac{d\\alpha}{A+R\\sin(\\alpha )}.\\]</span> Pour trouver la valeur de cette dernière intégrale posons <span class=\"math inline\">\\(z=e^{i\\alpha }\\)</span>. Alors <span class=\"math inline\">\\(d\\alpha = -i \\frac{dz}{z}\\)</span> et <span class=\"math display\">\\[I=\\int _0^{2\\pi} \\frac{d\\alpha}{A+R\\sin(\\alpha )} = \\int _{|z|=1} \\frac{-i\\, dz}{z( A+R\\frac{z-\\overline{z}}{2i})}=\n\\int _{|z|=1} \\frac{2 dz}{Rz^2 +2iAz -R}.\\]</span> Le dénominateur de cette dernière expression s’annule en <span class=\"math display\">\\[z^\\pm =\\frac{-2iA\\pm \\sqrt{-4A^2+4R^2}}{2R}= -i\\left( \\frac{A}{R} \\mp \\sqrt{\\left(\\frac{A}{R} \\right)^2 -1}    \\right)\\]</span> Un calcul élémentaire montre que seulement la racine <span class=\"math inline\">\\(z^+= -i\\left( \\frac{A}{R} - \\sqrt{\\left(\\frac{A}{R} \\right)^2 -1} \\right)\\)</span> est dans le disque unité ouvert pourvu que <span class=\"math inline\">\\(A&gt;0\\)</span> (le cas <span class=\"math inline\">\\(A&lt;0\\)</span> est similaire). Il s’ensuit par le théorème du résidu que <span class=\"math display\">\\[\\frac{1}{2\\pi}I= i \\frac{2}{R}\\frac{1}{z^+-z^-}= \\frac{1}{R\\sqrt{\\left(\\frac{A}{R} \\right)^2 -1}}=\\frac{1}{\\sqrt{A^2-R^2}}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

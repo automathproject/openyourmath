@@ -1,0 +1,75 @@
+{
+  "uuid": "7CVa",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5260",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Noyau, image",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:08.994Z"
+  },
+  "contenu": [
+    {
+      "id": "df6c5e01-f001-4fc1-8a93-026dd74652f3",
+      "type": "description",
+      "value": {
+        "latex": "Soit $\\begin{array}[t]{cccc}\nf~:&\\Rr_n[X]&\\rightarrow&\\Rr_{n+1}[X]\\\\\n &P&\\mapsto&Q=e^{X^2}(Pe^{-X^2})'\n\\end{array}$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\begin{array}[t]{cccc}\nf~:&amp;\\Rr_n[X]&amp;\\rightarrow&amp;\\Rr_{n+1}[X]\\\\\n &amp;P&amp;\\mapsto&amp;Q=e^{X^2}(Pe^{-X^2})&#39;\n\\end{array}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6f88ad2b-59c7-443c-bc81-e823cb4aeb27",
+      "type": "question",
+      "value": {
+        "latex": "Vérifier que $f\\in(\\mathcal{L}(\\Rr_n[X],\\Rr_{n+1}[X])$.",
+        "html": "<p>Vérifier que <span class=\"math inline\">\\(f\\in(\\mathcal{L}(\\Rr_n[X],\\Rr_{n+1}[X])\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8467ba9b-a06a-47ec-8fb6-5e09cbafd9c0",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $P$ élément de $\\Rr_n[X]$, \n\n$$f(P)=e^{X^2}(Pe^{-X^2})'=e^{X^2}(P'e^{-X^2}-2XPe^{-X^2})=P'-2XP.$$\n\nAinsi, si $P$ est un polynôme de degré infèrieur ou égal à $n$, $f(P)=P'-2XP$ est un polynôme de degré inférieur ou égal à $n+1$, et $f$ est bien une application de $\\Rr_n[X]$ dans $\\Rr_{n+1}[X]$.\n\nDe plus, pour $(\\lambda,\\mu)\\in\\Rr^2$ et $(P,Q)\\in\\Rr_n[X]$, on a~:\n\n$$f(\\lambda P+\\mu Q)=(\\lambda P+\\mu Q)'-2X(\\lambda P+\\mu Q)=\\lambda(P'-2XP)+\\mu(Q'-2XQ)=\\lambda f(P)+\\mu f(Q).$$\n\n$f$ est élément de $\\mathcal{L}(\\Rr_n[X],\\Rr_{n+1}[X])$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(P\\)</span> élément de <span class=\"math inline\">\\(\\Rr_n[X]\\)</span>,</p>\n<p><span class=\"math display\">\\[f(P)=e^{X^2}(Pe^{-X^2})&#39;=e^{X^2}(P&#39;e^{-X^2}-2XPe^{-X^2})=P&#39;-2XP.\\]</span></p>\n<p>Ainsi, si <span class=\"math inline\">\\(P\\)</span> est un polynôme de degré infèrieur ou égal à <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(f(P)=P&#39;-2XP\\)</span> est un polynôme de degré inférieur ou égal à <span class=\"math inline\">\\(n+1\\)</span>, et <span class=\"math inline\">\\(f\\)</span> est bien une application de <span class=\"math inline\">\\(\\Rr_n[X]\\)</span> dans <span class=\"math inline\">\\(\\Rr_{n+1}[X]\\)</span>.</p>\n<p>De plus, pour <span class=\"math inline\">\\((\\lambda,\\mu)\\in\\Rr^2\\)</span> et <span class=\"math inline\">\\((P,Q)\\in\\Rr_n[X]\\)</span>, on a :</p>\n<p><span class=\"math display\">\\[f(\\lambda P+\\mu Q)=(\\lambda P+\\mu Q)&#39;-2X(\\lambda P+\\mu Q)=\\lambda(P&#39;-2XP)+\\mu(Q&#39;-2XQ)=\\lambda f(P)+\\mu f(Q).\\]</span></p>\n<p><span class=\"math inline\">\\(f\\)</span> est élément de <span class=\"math inline\">\\(\\mathcal{L}(\\Rr_n[X],\\Rr_{n+1}[X])\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d450eaa9-8b28-4b4b-9889-b4e503b0de04",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer la matrice de $f$ relativement aux bases canoniques de $\\Rr_n[X]$ et $\\Rr_{n+1}[X]$.",
+        "html": "<p>Déterminer la matrice de <span class=\"math inline\">\\(f\\)</span> relativement aux bases canoniques de <span class=\"math inline\">\\(\\Rr_n[X]\\)</span> et <span class=\"math inline\">\\(\\Rr_{n+1}[X]\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "a279bb92-91d5-452a-aa5c-6b51ff3f1231",
+      "type": "reponse",
+      "value": {
+        "latex": "La matrice $A$ cherchée est élément de $\\mathcal{M}_{n+1,n}(\\Rr)$.\n\nPour $k=0$, $f(X^k)=f(1)=-2X$ et pour $1\\leq k\\leq n$, $f(X^k)=kX^{k-1}-2X^{k+1}$. On a donc~:\n\n$$A=\n\\left(\n\\begin{array}{cccccc}\n0&1&0&\\ldots&\\ldots&0\\\\\n-2&0&2&0& &\\vdots\\\\\n0&-2&0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\ddots&0\\\\\n & & &\\ddots&\\ddots&n\\\\\n\\vdots& & &\\ddots&-2&0\\\\\n0&\\ldots& &\\ldots&0&-2\n\\end{array}\n\\right).$$",
+        "html": "<p>La matrice <span class=\"math inline\">\\(A\\)</span> cherchée est élément de <span class=\"math inline\">\\(\\mathcal{M}_{n+1,n}(\\Rr)\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(k=0\\)</span>, <span class=\"math inline\">\\(f(X^k)=f(1)=-2X\\)</span> et pour <span class=\"math inline\">\\(1\\leq k\\leq n\\)</span>, <span class=\"math inline\">\\(f(X^k)=kX^{k-1}-2X^{k+1}\\)</span>. On a donc :</p>\n<p><span class=\"math display\">\\[A=\n\\left(\n\\begin{array}{cccccc}\n0&amp;1&amp;0&amp;\\ldots&amp;\\ldots&amp;0\\\\\n-2&amp;0&amp;2&amp;0&amp; &amp;\\vdots\\\\\n0&amp;-2&amp;0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n &amp; &amp; &amp;\\ddots&amp;\\ddots&amp;n\\\\\n\\vdots&amp; &amp; &amp;\\ddots&amp;-2&amp;0\\\\\n0&amp;\\ldots&amp; &amp;\\ldots&amp;0&amp;-2\n\\end{array}\n\\right).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b53584c5-b411-47c7-98a2-c332e4f73771",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer $\\mbox{Ker}f$ et $\\mbox{rg}f$.",
+        "html": "<p>Déterminer <span class=\"math inline\">\\(\\mbox{Ker}f\\)</span> et <span class=\"math inline\">\\(\\mbox{rg}f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "64126eb6-2bf6-4b98-9f66-67b98794223a",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $P\\in\\Rr_n[X]$ tel que $f(P)=0$.\n\nSi $P$ n'est pas nul, $-2XP$ a un degré strictement plus grand que $P'$ et donc $f(P)$ n'est pas nul. Par suite, $\\mbox{Ker}f=\\{0\\}$ ($f$ est donc injective) et d'après le théorème du rang, $\\mbox{rg}f=\\mbox{dim}(\\Rr_n[X])-0=n+1$, ce qui montre que $\\mbox{Im}f$ n'est pas $\\Rr_{n+1}[X]$ ($f$ n'est pas surjective).",
+        "html": "<p>Soit <span class=\"math inline\">\\(P\\in\\Rr_n[X]\\)</span> tel que <span class=\"math inline\">\\(f(P)=0\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(P\\)</span> n’est pas nul, <span class=\"math inline\">\\(-2XP\\)</span> a un degré strictement plus grand que <span class=\"math inline\">\\(P&#39;\\)</span> et donc <span class=\"math inline\">\\(f(P)\\)</span> n’est pas nul. Par suite, <span class=\"math inline\">\\(\\mbox{Ker}f=\\{0\\}\\)</span> (<span class=\"math inline\">\\(f\\)</span> est donc injective) et d’après le théorème du rang, <span class=\"math inline\">\\(\\mbox{rg}f=\\mbox{dim}(\\Rr_n[X])-0=n+1\\)</span>, ce qui montre que <span class=\"math inline\">\\(\\mbox{Im}f\\)</span> n’est pas <span class=\"math inline\">\\(\\Rr_{n+1}[X]\\)</span> (<span class=\"math inline\">\\(f\\)</span> n’est pas surjective).</p>\n"
+      }
+    }
+  ]
+}

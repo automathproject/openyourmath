@@ -1,0 +1,59 @@
+{
+  "uuid": "Scdk",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5645",
+    "auteur": "rouget",
+    "createdAt": "2010-10-16",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:35.494Z"
+  },
+  "contenu": [
+    {
+      "id": "88d815e9-2890-4874-8cf6-1fe4fbd12cff",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "abc73381-b64c-49af-98be-8a36a2e565bf",
+      "type": "question",
+      "value": {
+        "latex": "Soient $a_{i,j}$, $1\\leqslant i,j\\leqslant n$, $n^2$ fonctions dérivables sur $\\Rr$ à valeurs dans $\\Cc$. Soit $d=\\text{det}(a_{i,j})_{1\\leqslant i,j\\leqslant n}$.\n\nMontrer que $d$ est dérivable sur $\\Rr$ et calculer $d'$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(a_{i,j}\\)</span>, <span class=\"math inline\">\\(1\\leqslant i,j\\leqslant n\\)</span>, <span class=\"math inline\">\\(n^2\\)</span> fonctions dérivables sur <span class=\"math inline\">\\(\\Rr\\)</span> à valeurs dans <span class=\"math inline\">\\(\\Cc\\)</span>. Soit <span class=\"math inline\">\\(d=\\text{det}(a_{i,j})_{1\\leqslant i,j\\leqslant n}\\)</span>.</p>\n<p>Montrer que <span class=\"math inline\">\\(d\\)</span> est dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span> et calculer <span class=\"math inline\">\\(d&#39;\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "6586755f-9ac0-4aea-bb45-de9b6d9fce48",
+      "type": "reponse",
+      "value": {
+        "latex": "$d=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)a_{\\sigma(1),1}...a_{\\sigma(n),n}$ est dérivable sur $\\Rr$ en tant que combinaison linéaire de produits de fonctions dérivables sur $\\Rr$ et de plus\n\n$$\\begin{align*}\\ensuremath\nd'&=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)(a_{\\sigma(1),1}...a_{\\sigma(n),n})'=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)\\sum_{i=1}^{n}a_{\\sigma(1),1}...a_{\\sigma(i),i}'\\ldots a_{\\sigma(n),n}=\\sum_{i=1}^{n}\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)a_{\\sigma(1),1}...a_{\\sigma(i),i}'\\ldots a_{\\sigma(n),n}\\\\\n   &=\\sum_{i=1}^{n}\\text{det}(C_1,...,C_i',...,C_n)\\;(\\text{où}\\;C_1,...,C_n\\;\\text{sont les colonnes de la matrice}).\n\\end{align*}$$",
+        "html": "<p><span class=\"math inline\">\\(d=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)a_{\\sigma(1),1}...a_{\\sigma(n),n}\\)</span> est dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span> en tant que combinaison linéaire de produits de fonctions dérivables sur <span class=\"math inline\">\\(\\Rr\\)</span> et de plus</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nd&#39;&amp;=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)(a_{\\sigma(1),1}...a_{\\sigma(n),n})&#39;=\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)\\sum_{i=1}^{n}a_{\\sigma(1),1}...a_{\\sigma(i),i}&#39;\\ldots a_{\\sigma(n),n}=\\sum_{i=1}^{n}\\sum_{\\sigma\\in  S_n}^{}\\varepsilon(\\sigma)a_{\\sigma(1),1}...a_{\\sigma(i),i}&#39;\\ldots a_{\\sigma(n),n}\\\\\n   &amp;=\\sum_{i=1}^{n}\\text{det}(C_1,...,C_i&#39;,...,C_n)\\;(\\text{où}\\;C_1,...,C_n\\;\\text{sont les colonnes de la matrice}).\n\\end{align*}\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "86a26600-8806-4e89-894a-c6f46eade666",
+      "type": "question",
+      "value": {
+        "latex": "Application : calculer $d_n(x)=\\left|\n\\begin{array}{cccc}\nx+1&1&\\ldots&1\\\\\n1&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&1\\\\\n1&\\ldots&1&x+1\n\\end{array}\n\\right|$.",
+        "html": "<p>Application : calculer <span class=\"math inline\">\\(d_n(x)=\\left|\n\\begin{array}{cccc}\nx+1&amp;1&amp;\\ldots&amp;1\\\\\n1&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;1\\\\\n1&amp;\\ldots&amp;1&amp;x+1\n\\end{array}\n\\right|\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9237e539-13ab-4101-b385-b5a3deb835b2",
+      "type": "reponse",
+      "value": {
+        "latex": "\\textbf{1 ère solution.} D'après ce qui précède, la fonction $d_n$ est dérivable sur $\\Rr$ et pour $n\\geqslant 2$ et $x$ réel, on a\n\n$$\\begin{align*}\\ensuremath\nd_n'(x)&=\\sum_{i=1}^{n}\\left|\n\\begin{array}{ccccccccc}\nx+1&1&\\ldots&1&0&1&\\ldots&\\ldots&1\\\\\n1&\\ddots&\\ddots&\\vdots&\\vdots&\\vdots\\\\\n\\vdots&\\ddots&\\ddots&1&\\vdots\\\\\n & &\\ddots&x+1&0&\\vdots\\\\\n\\vdots& & &1&1&1\\\\\n & & &\\vdots&0&x+1&\\ddots\\\\\n & & & &\\vdots&1&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& & &\\vdots&\\vdots&\\vdots&\\ddots&\\ddots&1\\\\\n1&\\ldots&\\ldots&1&0&1&\\ldots&1&x+1\n\\end{array}\n\\right|(\\text{la colonne particulière est la colonne}\\;i)\\\\\n &=\\sum_{i=1}^{n}d_{n-1}(x)(\\text{en développant le}\\;i\\text{-ème déterminant par rapport à sa}\\;i\\text{-ème colonne})\\\\\n &=nd_{n-1}(x).\n\\end{align*}$$\n\nEn résumé, $\\forall n\\geqslant 2$, $\\forall x\\in\\Rr$, $d_n(x)=nd_{n-1}(x)$. D'autre part $\\forall x\\in\\Rr$, $d_1(x)=x+1$ et $\\forall n\\geqslant 2$, $d_n(0) = 0$ (déterminant ayant deux colonnes identiques).\n\nMontrons alors par récurrence que \n$\\forall n\\geqslant 1$, $\\forall x\\in\\Rr$, $d_n(x) =x^n+nx^{n-1}$.\n\n\\textbullet~C'est vrai pour $n=1$.\n\n\\textbullet~Soit $n\\geqslant1$. Supposons que $\\forall n\\geqslant 1$, $\\forall x\\in\\Rr$, $d_n(x) =x^n+nx^{n-1}$. Alors, pour $x\\in\\Rr$,\n\n\\begin{center}\n$d_{n+1}(x)=d_{n+1}(0)+\\int_{0}^{x}d_{n+1}'(t)\\;dt=(n+1)\\int_{0}^{x}d_n(t\\;dt)=x^{n+1}+(n+1)x^n$.\n\\end{center}\n\nOn a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\geqslant 1$, $\\forall x\\in\\Rr$, $d_n(x)=x^n+nx^{n-1}$.\n}\n\\end{center}\n\n\\textbf{2 ème solution.} $d_n$ est clairement un polynôme de degré $n$ unitaire.\nPour $n\\geqslant 2$, puisque dn(0) = 0 et que $d_n'= nd_{n-1}$, $0$ est racine de $d_n$, $d_n'$, ..., $d_n^{(n-2)}$ et est donc racine d'ordre $n-1$ au moins de $d_n$. \nEnfin, $d_n(-n)=0$ car la somme des colonnes du déterminant obtenu est nulle.\nFinalement $\\forall n\\geqslant2$, $\\forall x\\in\\Rr$, $d_n(x) = x^{n-1}(x+n)$ ce qui reste vrai pour $n=1$.\n\nUne variante peut être obtenue avec des connaissances sur la réduction.",
+        "html": "<p><strong>1 ère solution.</strong> D’après ce qui précède, la fonction <span class=\"math inline\">\\(d_n\\)</span> est dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span> et pour <span class=\"math inline\">\\(n\\geqslant 2\\)</span> et <span class=\"math inline\">\\(x\\)</span> réel, on a</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nd_n&#39;(x)&amp;=\\sum_{i=1}^{n}\\left|\n\\begin{array}{ccccccccc}\nx+1&amp;1&amp;\\ldots&amp;1&amp;0&amp;1&amp;\\ldots&amp;\\ldots&amp;1\\\\\n1&amp;\\ddots&amp;\\ddots&amp;\\vdots&amp;\\vdots&amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;1&amp;\\vdots\\\\\n &amp; &amp;\\ddots&amp;x+1&amp;0&amp;\\vdots\\\\\n\\vdots&amp; &amp; &amp;1&amp;1&amp;1\\\\\n &amp; &amp; &amp;\\vdots&amp;0&amp;x+1&amp;\\ddots\\\\\n &amp; &amp; &amp; &amp;\\vdots&amp;1&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp; &amp;\\vdots&amp;\\vdots&amp;\\vdots&amp;\\ddots&amp;\\ddots&amp;1\\\\\n1&amp;\\ldots&amp;\\ldots&amp;1&amp;0&amp;1&amp;\\ldots&amp;1&amp;x+1\n\\end{array}\n\\right|(\\text{la colonne particulière est la colonne}\\;i)\\\\\n &amp;=\\sum_{i=1}^{n}d_{n-1}(x)(\\text{en développant le}\\;i\\text{-ème déterminant par rapport à sa}\\;i\\text{-ème colonne})\\\\\n &amp;=nd_{n-1}(x).\n\\end{align*}\\]</span></p>\n<p>En résumé, <span class=\"math inline\">\\(\\forall n\\geqslant 2\\)</span>, <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(d_n(x)=nd_{n-1}(x)\\)</span>. D’autre part <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(d_1(x)=x+1\\)</span> et <span class=\"math inline\">\\(\\forall n\\geqslant 2\\)</span>, <span class=\"math inline\">\\(d_n(0) = 0\\)</span> (déterminant ayant deux colonnes identiques).</p>\n<p>Montrons alors par récurrence que <span class=\"math inline\">\\(\\forall n\\geqslant 1\\)</span>, <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(d_n(x) =x^n+nx^{n-1}\\)</span>.</p>\n<p> C’est vrai pour <span class=\"math inline\">\\(n=1\\)</span>.</p>\n<p> Soit <span class=\"math inline\">\\(n\\geqslant1\\)</span>. Supposons que <span class=\"math inline\">\\(\\forall n\\geqslant 1\\)</span>, <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(d_n(x) =x^n+nx^{n-1}\\)</span>. Alors, pour <span class=\"math inline\">\\(x\\in\\Rr\\)</span>,</p>\n<p><span class=\"math inline\">\\(d_{n+1}(x)=d_{n+1}(0)+\\int_{0}^{x}d_{n+1}&#39;(t)\\;dt=(n+1)\\int_{0}^{x}d_n(t\\;dt)=x^{n+1}+(n+1)x^n\\)</span>.</p>\n<p>On a montré que</p>\n<p><strong>2 ème solution.</strong> <span class=\"math inline\">\\(d_n\\)</span> est clairement un polynôme de degré <span class=\"math inline\">\\(n\\)</span> unitaire. Pour <span class=\"math inline\">\\(n\\geqslant 2\\)</span>, puisque dn(0) = 0 et que <span class=\"math inline\">\\(d_n&#39;= nd_{n-1}\\)</span>, <span class=\"math inline\">\\(0\\)</span> est racine de <span class=\"math inline\">\\(d_n\\)</span>, <span class=\"math inline\">\\(d_n&#39;\\)</span>, ..., <span class=\"math inline\">\\(d_n^{(n-2)}\\)</span> et est donc racine d’ordre <span class=\"math inline\">\\(n-1\\)</span> au moins de <span class=\"math inline\">\\(d_n\\)</span>. Enfin, <span class=\"math inline\">\\(d_n(-n)=0\\)</span> car la somme des colonnes du déterminant obtenu est nulle. Finalement <span class=\"math inline\">\\(\\forall n\\geqslant2\\)</span>, <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(d_n(x) = x^{n-1}(x+n)\\)</span> ce qui reste vrai pour <span class=\"math inline\">\\(n=1\\)</span>.</p>\n<p>Une variante peut être obtenue avec des connaissances sur la réduction.</p>\n"
+      }
+    }
+  ]
+}

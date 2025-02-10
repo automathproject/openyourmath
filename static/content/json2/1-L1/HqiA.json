@@ -1,0 +1,35 @@
+{
+  "uuid": "HqiA",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5314",
+    "auteur": "rouget",
+    "createdAt": "2010-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Polynôme, fraction rationnelle",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:26.788Z"
+  },
+  "contenu": [
+    {
+      "id": "a98b5489-0882-4bbc-a3a5-7e1fe9730a31",
+      "type": "description",
+      "value": {
+        "latex": "On pose $\\omega_k=e^{2ik\\pi/n}$ et $Q=1+2X+...+nX^{n-1}$. Calculer $\\prod_{k=0}^{n-1}Q(\\omega_k)$.",
+        "html": "<p>On pose <span class=\"math inline\">\\(\\omega_k=e^{2ik\\pi/n}\\)</span> et <span class=\"math inline\">\\(Q=1+2X+...+nX^{n-1}\\)</span>. Calculer <span class=\"math inline\">\\(\\prod_{k=0}^{n-1}Q(\\omega_k)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9cd37543-79e7-4ebf-8921-834ec58cf127",
+      "type": "reponse",
+      "value": {
+        "latex": "Tout d'abord\n$$Q=(1+X+...+X^n)'=(\\frac{X^{n+1}-1}{X-1})'=\\frac{(n+1)X^n(X-1)-X^{n+1}}{(X-1)^2}=\\frac{nX^{n+1}-(n+1)X^n+1}{(X-1)^2}.$$\n\nEnsuite, $\\omega_0=1$ et donc, $Q(\\omega_0)=1+2+...+n=\\frac{n(n+1)}{2}$. Puis, pour $1\\leq k\\leq n-1$, $\\omega_k\\neq1$ et donc, puisque $\\omega_k^n=1$,\n\n$$Q(\\omega_k)=\\frac{n\\omega_k^{n+1}-(n+1)\\omega_k^n+1}{(\\omega_k-1)^2}=\\frac{n\\omega_k-(n+1)+1}{(\\omega_k-1)^2}\n=\\frac{n}{\\omega_k-1}.$$\n\nPar suite, \n\n$$\\prod_{k=0}^{n-1}Q(\\omega_k)=\\frac{n(n+1)}{2}\\prod_{k=1}^{n-1}\\frac{n}{\\omega_k-1}=\\frac{n^n(n+1)}{2\\prod_{k=1}^{n-1}(\\omega_k-1)}.$$\n\nMais, $X^n-1=(X-1)(1+X+...+X^{n-1})$ et d'autre part $X^n-1=\\prod_{k=0}^{n-1}(X-e^{2ik\\pi/n})=(X-1)\\prod_{k=1}^{n-1}(X-\\omega_k)$. Par intégrité de $\\Rr[X]$, $\\prod_{k=1}^{n-1}(X-e^{2ik\\pi/n})=1+X+...+X^{n-1}$ (Une autre rédaction possible est~:~$\\forall z\\in\\Cc,\\;(z-1)\\prod_{k=1}^{n-1}(z-\\omega_k)=(z-1)(1+z+...+z^{n-1})$ et donc $\\forall z\\in\\Cc\\setminus\\{1\\}$, $\\prod_{k=1}^{n-1}(z-\\omega_k)=1+z+...+z^{n-1}$ et finalement $\\forall z\\in\\Cc,\\;\\prod_{k=1}^{n-1}(z-\\omega_k)=1+z+...+z^{n-1}$ car les deux polynômes ci-contre coincident en une infinité de valeurs de $z$.)\n\nEn particulier, $\\prod_{k=1}^{n-1}(1-\\omega_k)=1+1^2+...+1^{n-1}=n$ ou encore $\\prod_{k=1}^{n-1}(\\omega_k-1)=(-1)^{n-1}n$.\nDonc,\n\n$$\\prod_{k=0}^{n-1}Q(\\omega_k)=\\frac{n^n(n+1)}{2}\\frac{1}{(-1)^{n-1}n}=\\frac{(-1)^{n-1}n^{n-1}(n+1)}{2}.$$",
+        "html": "<p>Tout d’abord <span class=\"math display\">\\[Q=(1+X+...+X^n)&#39;=(\\frac{X^{n+1}-1}{X-1})&#39;=\\frac{(n+1)X^n(X-1)-X^{n+1}}{(X-1)^2}=\\frac{nX^{n+1}-(n+1)X^n+1}{(X-1)^2}.\\]</span></p>\n<p>Ensuite, <span class=\"math inline\">\\(\\omega_0=1\\)</span> et donc, <span class=\"math inline\">\\(Q(\\omega_0)=1+2+...+n=\\frac{n(n+1)}{2}\\)</span>. Puis, pour <span class=\"math inline\">\\(1\\leq k\\leq n-1\\)</span>, <span class=\"math inline\">\\(\\omega_k\\neq1\\)</span> et donc, puisque <span class=\"math inline\">\\(\\omega_k^n=1\\)</span>,</p>\n<p><span class=\"math display\">\\[Q(\\omega_k)=\\frac{n\\omega_k^{n+1}-(n+1)\\omega_k^n+1}{(\\omega_k-1)^2}=\\frac{n\\omega_k-(n+1)+1}{(\\omega_k-1)^2}\n=\\frac{n}{\\omega_k-1}.\\]</span></p>\n<p>Par suite,</p>\n<p><span class=\"math display\">\\[\\prod_{k=0}^{n-1}Q(\\omega_k)=\\frac{n(n+1)}{2}\\prod_{k=1}^{n-1}\\frac{n}{\\omega_k-1}=\\frac{n^n(n+1)}{2\\prod_{k=1}^{n-1}(\\omega_k-1)}.\\]</span></p>\n<p>Mais, <span class=\"math inline\">\\(X^n-1=(X-1)(1+X+...+X^{n-1})\\)</span> et d’autre part <span class=\"math inline\">\\(X^n-1=\\prod_{k=0}^{n-1}(X-e^{2ik\\pi/n})=(X-1)\\prod_{k=1}^{n-1}(X-\\omega_k)\\)</span>. Par intégrité de <span class=\"math inline\">\\(\\Rr[X]\\)</span>, <span class=\"math inline\">\\(\\prod_{k=1}^{n-1}(X-e^{2ik\\pi/n})=1+X+...+X^{n-1}\\)</span> (Une autre rédaction possible est : <span class=\"math inline\">\\(\\forall z\\in\\Cc,\\;(z-1)\\prod_{k=1}^{n-1}(z-\\omega_k)=(z-1)(1+z+...+z^{n-1})\\)</span> et donc <span class=\"math inline\">\\(\\forall z\\in\\Cc\\setminus\\{1\\}\\)</span>, <span class=\"math inline\">\\(\\prod_{k=1}^{n-1}(z-\\omega_k)=1+z+...+z^{n-1}\\)</span> et finalement <span class=\"math inline\">\\(\\forall z\\in\\Cc,\\;\\prod_{k=1}^{n-1}(z-\\omega_k)=1+z+...+z^{n-1}\\)</span> car les deux polynômes ci-contre coincident en une infinité de valeurs de <span class=\"math inline\">\\(z\\)</span>.)</p>\n<p>En particulier, <span class=\"math inline\">\\(\\prod_{k=1}^{n-1}(1-\\omega_k)=1+1^2+...+1^{n-1}=n\\)</span> ou encore <span class=\"math inline\">\\(\\prod_{k=1}^{n-1}(\\omega_k-1)=(-1)^{n-1}n\\)</span>. Donc,</p>\n<p><span class=\"math display\">\\[\\prod_{k=0}^{n-1}Q(\\omega_k)=\\frac{n^n(n+1)}{2}\\frac{1}{(-1)^{n-1}n}=\\frac{(-1)^{n-1}n^{n-1}(n+1)}{2}.\\]</span></p>\n"
+      }
+    }
+  ]
+}

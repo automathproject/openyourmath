@@ -1,0 +1,35 @@
+{
+  "uuid": "Txn4",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1169",
+    "auteur": "cousquer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Système linéaire, rang",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:37.075Z"
+  },
+  "contenu": [
+    {
+      "id": "af593ae4-0ab0-4147-a568-a626f312d80c",
+      "type": "description",
+      "value": {
+        "latex": "Discuter et résoudre suivant les valeurs des réels \n$\\lambda$, $a$, $b$, $c$, $d$ le système :\n$$ (S)\\;\\left\\{\\begin{array}{rcl}\n    (1+\\lambda)x+y+z+t &=&a\\\\ \n    x+(1+\\lambda)y+z+t &=&b \\\\\n    x+y+(1+\\lambda)z+t &=&c \\\\ \n    x+y+z+(1+\\lambda)t &=&d\n\\end{array}\\right.$$",
+        "html": "<p>Discuter et résoudre suivant les valeurs des réels <span class=\"math inline\">\\(\\lambda\\)</span>, <span class=\"math inline\">\\(a\\)</span>, <span class=\"math inline\">\\(b\\)</span>, <span class=\"math inline\">\\(c\\)</span>, <span class=\"math inline\">\\(d\\)</span> le système : <span class=\"math display\">\\[(S)\\;\\left\\{\\begin{array}{rcl}\n    (1+\\lambda)x+y+z+t &amp;=&amp;a\\\\ \n    x+(1+\\lambda)y+z+t &amp;=&amp;b \\\\\n    x+y+(1+\\lambda)z+t &amp;=&amp;c \\\\ \n    x+y+z+(1+\\lambda)t &amp;=&amp;d\n\\end{array}\\right.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "4fd3d704-b846-4b37-a811-9ef360b5f4b9",
+      "type": "reponse",
+      "value": {
+        "latex": "On commence par simplifier le système en effectuant les opérations suivantes sur les lignes :\n$L_1 \\leftarrow L_1 -L_4$, $L_2 \\leftarrow L_2 -L_4$, $L_3 \\leftarrow L_3 -L_4$ : \n$$ (S) \\iff \\left\\{\\begin{array}{rcrcrcccl}\n    \\lambda x &&  &&  &-& \\lambda t &=& a-d\\\\ \n     && \\lambda y&  &&-& \\lambda t &=&b-d \\\\\n    &&&&  \\lambda z&-& \\lambda t &=&c-d \\\\ \n    x&+&y&+&z&+&(1+\\lambda)t &=&d\n\\end{array}\\right.$$\nTraitons le cas particulier $\\lambda = 0$.\nSi $\\lambda=0$ alors le système n'a des solutions que si $a=b=c=d$.\nLes solutions sont alors les $(x,y,z,t)$ qui vérifie $x+y+z+t=d$.\n(C'est un espace de dimension $3$ dans $\\Rr^4$.)\nSi $\\lambda\\neq 0$ alors on peut faire l'opération suivante sur la dernière ligne : \n$L_4 \\leftarrow L_4 - \\frac 1\\lambda L_1 - \\frac1\\lambda L_2 - \\frac1\\lambda L_3$ pour obtenir :\n$$ (S) \\iff \\left\\{\\begin{array}{rcrcrcccl}\n    \\lambda x &&  &&  &-& \\lambda t &=& a-d\\\\ \n     && \\lambda y&  &&-& \\lambda t &=&b-d \\\\\n    &&&&  \\lambda z&-& \\lambda t &=&c-d \\\\ \n    &&&&&&(\\lambda+4)t &=&d - \\frac 1\\lambda(a+b+c-3d)\n\\end{array}\\right.$$\nCas particulier $\\lambda=-4$. La dernière ligne devient\n$0=a+b+c+d$. \nDonc si $a+b+c+d\\neq 0$ alors il n'y a pas de solutions.\n\nSi $\\lambda=-4$ et $a+b+c+d=0$ alors existe une infinité de solutions :\n$$\\left\\{\\Big(t-\\frac{a-d}{4}, t-\\frac{b-d}{4}, t-\\frac{c-d}{4}, t\\Big) \\mid t\\in\\Rr \\right\\}.$$\nCas général : $\\lambda\\neq 0$ et $\\lambda\\neq -4$.\nOn calcule d'abord $t= \\frac{1}{\\lambda+4}\\left(d - \\frac 1\\lambda(a+b+c-3d)\\right)$ \net en remplaçant par la valeur de $t$ obtenue on en \ndéduit les valeurs pour \n$x=t+\\frac1\\lambda(a-d),y=t+\\frac1\\lambda(b-d),z=t+\\frac1\\lambda(c-d)$. Il existe donc une solution unique :\n$$\\left(\\frac{(\\lambda+3)a-b-c-d}{\\lambda(\\lambda+4)}, \\frac{(\\lambda+3)b-a-c-d}{\\lambda(\\lambda+4)}, \\frac{(\\lambda+3)c-a-b-d}{\\lambda(\\lambda+4)},\\frac{(\\lambda+3)d-a-b-c}{\\lambda(\\lambda+4)}\\right).$$",
+        "html": "<p>On commence par simplifier le système en effectuant les opérations suivantes sur les lignes : <span class=\"math inline\">\\(L_1 \\leftarrow L_1 -L_4\\)</span>, <span class=\"math inline\">\\(L_2 \\leftarrow L_2 -L_4\\)</span>, <span class=\"math inline\">\\(L_3 \\leftarrow L_3 -L_4\\)</span> : <span class=\"math display\">\\[(S) \\iff \\left\\{\\begin{array}{rcrcrcccl}\n    \\lambda x &amp;&amp;  &amp;&amp;  &amp;-&amp; \\lambda t &amp;=&amp; a-d\\\\ \n     &amp;&amp; \\lambda y&amp;  &amp;&amp;-&amp; \\lambda t &amp;=&amp;b-d \\\\\n    &amp;&amp;&amp;&amp;  \\lambda z&amp;-&amp; \\lambda t &amp;=&amp;c-d \\\\ \n    x&amp;+&amp;y&amp;+&amp;z&amp;+&amp;(1+\\lambda)t &amp;=&amp;d\n\\end{array}\\right.\\]</span> Traitons le cas particulier <span class=\"math inline\">\\(\\lambda = 0\\)</span>. Si <span class=\"math inline\">\\(\\lambda=0\\)</span> alors le système n’a des solutions que si <span class=\"math inline\">\\(a=b=c=d\\)</span>. Les solutions sont alors les <span class=\"math inline\">\\((x,y,z,t)\\)</span> qui vérifie <span class=\"math inline\">\\(x+y+z+t=d\\)</span>. (C’est un espace de dimension <span class=\"math inline\">\\(3\\)</span> dans <span class=\"math inline\">\\(\\Rr^4\\)</span>.) Si <span class=\"math inline\">\\(\\lambda\\neq 0\\)</span> alors on peut faire l’opération suivante sur la dernière ligne : <span class=\"math inline\">\\(L_4 \\leftarrow L_4 - \\frac 1\\lambda L_1 - \\frac1\\lambda L_2 - \\frac1\\lambda L_3\\)</span> pour obtenir : <span class=\"math display\">\\[(S) \\iff \\left\\{\\begin{array}{rcrcrcccl}\n    \\lambda x &amp;&amp;  &amp;&amp;  &amp;-&amp; \\lambda t &amp;=&amp; a-d\\\\ \n     &amp;&amp; \\lambda y&amp;  &amp;&amp;-&amp; \\lambda t &amp;=&amp;b-d \\\\\n    &amp;&amp;&amp;&amp;  \\lambda z&amp;-&amp; \\lambda t &amp;=&amp;c-d \\\\ \n    &amp;&amp;&amp;&amp;&amp;&amp;(\\lambda+4)t &amp;=&amp;d - \\frac 1\\lambda(a+b+c-3d)\n\\end{array}\\right.\\]</span> Cas particulier <span class=\"math inline\">\\(\\lambda=-4\\)</span>. La dernière ligne devient <span class=\"math inline\">\\(0=a+b+c+d\\)</span>. Donc si <span class=\"math inline\">\\(a+b+c+d\\neq 0\\)</span> alors il n’y a pas de solutions.</p>\n<p>Si <span class=\"math inline\">\\(\\lambda=-4\\)</span> et <span class=\"math inline\">\\(a+b+c+d=0\\)</span> alors existe une infinité de solutions : <span class=\"math display\">\\[\\left\\{\\Big(t-\\frac{a-d}{4}, t-\\frac{b-d}{4}, t-\\frac{c-d}{4}, t\\Big) \\mid t\\in\\Rr \\right\\}.\\]</span> Cas général : <span class=\"math inline\">\\(\\lambda\\neq 0\\)</span> et <span class=\"math inline\">\\(\\lambda\\neq -4\\)</span>. On calcule d’abord <span class=\"math inline\">\\(t= \\frac{1}{\\lambda+4}\\left(d - \\frac 1\\lambda(a+b+c-3d)\\right)\\)</span> et en remplaçant par la valeur de <span class=\"math inline\">\\(t\\)</span> obtenue on en déduit les valeurs pour <span class=\"math inline\">\\(x=t+\\frac1\\lambda(a-d),y=t+\\frac1\\lambda(b-d),z=t+\\frac1\\lambda(c-d)\\)</span>. Il existe donc une solution unique : <span class=\"math display\">\\[\\left(\\frac{(\\lambda+3)a-b-c-d}{\\lambda(\\lambda+4)}, \\frac{(\\lambda+3)b-a-c-d}{\\lambda(\\lambda+4)}, \\frac{(\\lambda+3)c-a-b-d}{\\lambda(\\lambda+4)},\\frac{(\\lambda+3)d-a-b-c}{\\lambda(\\lambda+4)}\\right).\\]</span></p>\n"
+      }
+    }
+  ]
+}

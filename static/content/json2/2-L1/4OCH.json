@@ -1,0 +1,43 @@
+{
+  "uuid": "4OCH",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "6979",
+    "auteur": "blanc-centi",
+    "createdAt": "2014-05-06",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Fonctions circulaires et hyperboliques inverses",
+    "sousChapitre": "Fonctions hyperboliques et hyperboliques inverses",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:41:24.245Z"
+  },
+  "contenu": [
+    {
+      "id": "ebfa406c-cb47-432f-ac0e-7cd96ee07f93",
+      "type": "description",
+      "value": {
+        "latex": "\\'Etudier le domaine de définition de la fonction $f$ définie par \n$$f(x)=\\Argch\\left[\\frac{1}{2}\\left(x+\\frac{1}{x}\\right)\\right]$$\net simplifier son expression lorsqu'elle a un sens.",
+        "html": "<p>Étudier le domaine de définition de la fonction <span class=\"math inline\">\\(f\\)</span> définie par <span class=\"math display\">\\[f(x)=\\Argch\\left[\\frac{1}{2}\\left(x+\\frac{1}{x}\\right)\\right]\\]</span> et simplifier son expression lorsqu’elle a un sens.</p>\n"
+      }
+    },
+    {
+      "id": "b3f2ee8e-516b-438e-a573-2950eb18278a",
+      "type": "indication",
+      "value": {
+        "latex": "On trouve $f(x)=|\\ln x|$ pour tout $x>0$.",
+        "html": "<p>On trouve <span class=\"math inline\">\\(f(x)=|\\ln x|\\)</span> pour tout <span class=\"math inline\">\\(x&gt;0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "9a110bac-be94-4c70-9dcb-1e65edefe0f5",
+      "type": "reponse",
+      "value": {
+        "latex": "La fonction $\\Argch$ est définie sur $[1,+\\infty[$. Or\n\\begin{eqnarray*}\n\\frac{1}{2}\\left(x+\\frac{1}{x}\\right)\\ge 1\n &\\Longleftrightarrow&\\frac{x^2+1}{x}\\ge 2\\\\\n &\\Longleftrightarrow&\\frac{x^2+1-2x}{x}\\ge 0\\\\\n &\\Longleftrightarrow&\\frac{(x-1)^2}{x}\\ge 0\\\\\n &\\Longleftrightarrow& x > 0 \n\\end{eqnarray*}\ndonc $f$ est définie sur $]0,+\\infty[$. \n\n\\medskip\n\nSoit $x>0$, alors $y=\\frac{1}{2}\\left(x+\\frac{1}{x}\\right)\\ge 1$\net on sait que $\\Argch y=\\ln(y+\\sqrt{y^2-1})$. Ainsi\n$\\sqrt{y^2-1}=\\sqrt{\\frac{1}{4}\\left(x+\\frac{1}{x}\\right)^2-1}\n=\\sqrt{\\frac{(x^2+1)^2}{4x^2}-1}=\\sqrt{\\frac{(x^2-1)^2}{4x^2}}\n=\\left|\\frac{x^2-1}{2x}\\right|$,\non obtient\n$$f(x)=\\Argch y=\\ln(y+\\sqrt{y^2-1})=\\ln\\left(\\frac{x^2+1}{2x}+\\left|\\frac{x^2-1}{2x}\\right|\\right)$$\n\n\nOn a supposé $x>0$, il suffit donc de distinguer les cas $x\\ge 1$ et $0<x\\le 1$.\n\\begin{itemize}\n  \\item Si $x\\ge 1$, $\\displaystyle f(x)=\\ln\\left(\\frac{x^2+1}{2x}+\\frac{x^2-1}{2x}\\right)=\\ln x$.\n  \\item Si $0<x\\le 1$, $\\displaystyle f(x)=\\ln\\left(\\frac{x^2+1}{2x}+\\frac{1-x^2}{2x}\\right)=\\ln \\frac{1}{x}=-\\ln x$.\n\\end{itemize}\n\nPuisque $\\ln x$ est positif si $x\\ge 1$ et négatif si $x\\le 1$, \non obtient dans les deux cas $f(x)=|\\ln x|$.\n\n\\begin{center}\n__TIKZ_26fa93dd-6499-4fe0-bf6a-f01a5c0ea590__  \n\\end{center}",
+        "html": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "dKOb",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "7002",
+    "auteur": "blanc-centi",
+    "createdAt": "2015-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Equation différentielle",
+    "sousChapitre": "Résolution d'équation différentielle du premier ordre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:15.522Z"
+  },
+  "contenu": [
+    {
+      "id": "a22b80f9-3ae7-4377-a5cc-3466733fa196",
+      "type": "description",
+      "value": {
+        "latex": "\\",
+        "html": "<p> </p>\n"
+      }
+    },
+    {
+      "id": "18137747-116a-4af8-9698-b5a64bb49d59",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que toute solution sur $\\R$ de $y'+e^{x^2}y=0$ tend vers 0 en $+\\infty$.",
+        "html": "<p>Montrer que toute solution sur <span class=\"math inline\">\\(\\R\\)</span> de <span class=\"math inline\">\\(y&#39;+e^{x^2}y=0\\)</span> tend vers 0 en <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "7fd6d0d5-2ca9-47ed-b40e-470b8bbbf259",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $A(x) = \\int_0^xe^{t^2}\\,\\dd t$, une primitive de $e^{x^2}$.\nOn ne sait pas expliciter cette primitive.\nLes solutions de $y'+e^{x^2}y=0$ s'écrivent \n$f(x)=\\lambda e^{-A(x)}$. \n\nSi $x\\ge 1$, on a par positivité de l'intégrale $A(x) = \\int_0^xe^{t^2}\\,\\dd t\\ge 0$ et \ncomme $e^{t^2} \\ge 1$ alors \n$$A(x) = \\int_0^xe^{t^2}\\,\\dd t \\ge \\int_0^x 1 \\,\\dd t = x$$\nEn conséquence :\n$$0 \\le e^{-A(x)} \\le e^{-x}$$\nAinsi, \n$$0\\le |f(x)|\\le |\\lambda|e^{-x}$$ et $f(x)\\xrightarrow[x\\to +\\infty]{}0$.",
+        "html": "<p>Notons <span class=\"math inline\">\\(A(x) = \\int_0^xe^{t^2}\\,\\dd t\\)</span>, une primitive de <span class=\"math inline\">\\(e^{x^2}\\)</span>. On ne sait pas expliciter cette primitive. Les solutions de <span class=\"math inline\">\\(y&#39;+e^{x^2}y=0\\)</span> s’écrivent <span class=\"math inline\">\\(f(x)=\\lambda e^{-A(x)}\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x\\ge 1\\)</span>, on a par positivité de l’intégrale <span class=\"math inline\">\\(A(x) = \\int_0^xe^{t^2}\\,\\dd t\\ge 0\\)</span> et comme <span class=\"math inline\">\\(e^{t^2} \\ge 1\\)</span> alors <span class=\"math display\">\\[A(x) = \\int_0^xe^{t^2}\\,\\dd t \\ge \\int_0^x 1 \\,\\dd t = x\\]</span> En conséquence : <span class=\"math display\">\\[0 \\le e^{-A(x)} \\le e^{-x}\\]</span> Ainsi, <span class=\"math display\">\\[0\\le |f(x)|\\le |\\lambda|e^{-x}\\]</span> et <span class=\"math inline\">\\(f(x)\\xrightarrow[x\\to +\\infty]{}0\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "28eb65aa-3f8e-4f31-b16d-88bc26454281",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que toute solution sur $\\R$ de $y''+e^{x^2}y=0$ est bornée.\n(\\emph{Indication :} étudier la fonction auxiliaire $u(x)=y(x)^2+e^{-x^2}y'(x)^2$.)",
+        "html": "<p>Montrer que toute solution sur <span class=\"math inline\">\\(\\R\\)</span> de <span class=\"math inline\">\\(y&#39;&#39;+e^{x^2}y=0\\)</span> est bornée. (<em>Indication :</em> étudier la fonction auxiliaire <span class=\"math inline\">\\(u(x)=y(x)^2+e^{-x^2}y&#39;(x)^2\\)</span>.)</p>\n"
+      }
+    },
+    {
+      "id": "af80518c-5ebd-4834-aeec-2f97ad06c2f5",
+      "type": "reponse",
+      "value": {
+        "latex": "Supposons que $y$ vérifie sur $\\R$ l'équation, et \nposons $u(x)=y(x)^2+e^{-x^2}y'(x)^2$. La fonction $u$ est à valeurs positives, \ndérivable, et \n$$u'(x) = 2y'(x)y(x)+e^{-x^2}2y''(x)y'(x)-2xe^{-x^2}y'(x)^2$$\nen utilisant que $e^{-x^2}y''(x) = -y(x)$ \n(car $y$ est solution de l'équation différentielle) on obtient :\n$$u'(x)=-2xe^{-x^2}y'^2.$$ \n\nAinsi la fonction $u$ est croissante sur $]-\\infty;0[$ \net décroissante sur $]0;+\\infty[$, donc pour tout $x\\in\\R$, $0 \\le u(x)\\le u(0)$. \nOr $y^2(x)\\le u(x)$ par construction, donc\n$$\\forall x\\in\\R,\\qquad |y(x)|\\le \\sqrt{u(0)}=\\sqrt{y(0)^2+y'(0)^2}$$",
+        "html": "<p>Supposons que <span class=\"math inline\">\\(y\\)</span> vérifie sur <span class=\"math inline\">\\(\\R\\)</span> l’équation, et posons <span class=\"math inline\">\\(u(x)=y(x)^2+e^{-x^2}y&#39;(x)^2\\)</span>. La fonction <span class=\"math inline\">\\(u\\)</span> est à valeurs positives, dérivable, et <span class=\"math display\">\\[u&#39;(x) = 2y&#39;(x)y(x)+e^{-x^2}2y&#39;&#39;(x)y&#39;(x)-2xe^{-x^2}y&#39;(x)^2\\]</span> en utilisant que <span class=\"math inline\">\\(e^{-x^2}y&#39;&#39;(x) = -y(x)\\)</span> (car <span class=\"math inline\">\\(y\\)</span> est solution de l’équation différentielle) on obtient : <span class=\"math display\">\\[u&#39;(x)=-2xe^{-x^2}y&#39;^2.\\]</span></p>\n<p>Ainsi la fonction <span class=\"math inline\">\\(u\\)</span> est croissante sur <span class=\"math inline\">\\(]-\\infty;0[\\)</span> et décroissante sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span>, donc pour tout <span class=\"math inline\">\\(x\\in\\R\\)</span>, <span class=\"math inline\">\\(0 \\le u(x)\\le u(0)\\)</span>. Or <span class=\"math inline\">\\(y^2(x)\\le u(x)\\)</span> par construction, donc <span class=\"math display\">\\[\\forall x\\in\\R,\\qquad |y(x)|\\le \\sqrt{u(0)}=\\sqrt{y(0)^2+y&#39;(0)^2}\\]</span></p>\n"
+      }
+    }
+  ]
+}

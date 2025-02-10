@@ -1,0 +1,35 @@
+{
+  "uuid": "YN7p",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5423",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Dérivabilité des fonctions réelles",
+    "sousChapitre": "Autre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:05.877Z"
+  },
+  "contenu": [
+    {
+      "id": "098832ba-a6fc-42a9-99ad-707f868b5649",
+      "type": "description",
+      "value": {
+        "latex": "Soit $f$ de classe $C^1$ sur $\\Rr$ vérifiant pour tout $x$ réel, $f\\circ f(x)=\\frac{x}{2}+3$. En remarquant que $f(\\frac{x}{2}+3)=\\frac{f(x)}{2}+3$, montrer que $f'$ est constante puis déterminer $f$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\Rr\\)</span> vérifiant pour tout <span class=\"math inline\">\\(x\\)</span> réel, <span class=\"math inline\">\\(f\\circ f(x)=\\frac{x}{2}+3\\)</span>. En remarquant que <span class=\"math inline\">\\(f(\\frac{x}{2}+3)=\\frac{f(x)}{2}+3\\)</span>, montrer que <span class=\"math inline\">\\(f&#39;\\)</span> est constante puis déterminer <span class=\"math inline\">\\(f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "5c440f67-2f4c-4448-8ce3-dbd31ad54743",
+      "type": "reponse",
+      "value": {
+        "latex": "$$\\forall x\\in\\Rr f(\\frac{x}{2}+3)=f(f\\circ f(x))=f\\circ f(f(x))=\\frac{f(x)}{2}+3.$$\n\nPuisque $f$ est dérivable sur $\\Rr$, on obtient en dérivant $\\forall x\\in\\Rr,\\;\\frac{1}{2}f'(\\frac{x}{2}+3)=\\frac{1}{2}f'(x)$,\n\net donc\n\n$$\\forall x\\in\\Rr,\\;f'(\\frac{x}{2}+3)=f'(x).$$\n\nSoit alors $x$ un réel donné et $u$ la suite définie par $u_0=x$ et $\\forall n\\in\\Nn,\\;u_{n+1}=\\frac{1}{2}u_n+3$.\n\nD'après ce qui précède, $\\forall n\\in\\Nn,\\;f'(x)=f'(u_n)$.\nMaintenant, $u$ est une suite arithmético-géométrique et on sait que \n\n$$\\forall n\\in\\Nn,\\;u_n-6=\\frac{1}{2^n}(u_0-6)$$ \n\nce qui montre que la suite $u$ converge vers $6$. La suite $(f'(u_n))_{n\\geq0}$ est constante, de valeur $f'(x)$. $f'$ étant continue sur $\\Rr$, on en déduit que\n\n$$\\forall x\\in\\Rr,\\;f'(x)=\\lim_{n\\rightarrow +\\infty}f'(u_n)=f'(\\lim_{n\\rightarrow +\\infty}u_n)=f'(6),$$\n\nce qui montre que la fonction $f'$ est constante sur $\\Rr$ et donc que $f$ est affine.\n\nRéciproquement, pour $x$ réel, posons $f(x)=ax+b$.\n \n$$\\begin{align*}\\ensuremath\nf\\;\\mbox{solution}&\\Leftrightarrow\\forall x\\in\\Rr,\\;a(ax+b)+b=\\frac{x}{2}+3\\Leftrightarrow\\forall x\\in\\Rr,\\;(a^2-\\frac{1}{2})x+ab+b-3=0\\\\\n &\\Leftrightarrow a^2=\\frac{1}{2}\\;\\mbox{et}\\;(a+1)b=3\\Leftrightarrow(a=\\frac{1}{\\sqrt{2}}\\;\\mbox{et}\\;b=3(2-\\sqrt{2}))\\;\\mbox{ou}\\;(a=-\\frac{1}{\\sqrt{2}}\\;\\mbox{et}\\;b=3(2+\\sqrt{2})).\n\\end{align*}$$\n\nOn trouve deux fonctions solutions, les fonctions $f_1$ et $f_2$ définies par~:\n\n$$\\forall x\\in\\Rr,\\;f_1(x)=\\frac{1}{\\sqrt{2}}x+3(2-\\sqrt{2})\\;\\mbox{et}\\;f_2(x)=-\\frac{1}{\\sqrt{2}}x+3(2+\\sqrt{2}).$$",
+        "html": "<p><span class=\"math display\">\\[\\forall x\\in\\Rr f(\\frac{x}{2}+3)=f(f\\circ f(x))=f\\circ f(f(x))=\\frac{f(x)}{2}+3.\\]</span></p>\n<p>Puisque <span class=\"math inline\">\\(f\\)</span> est dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span>, on obtient en dérivant <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;\\frac{1}{2}f&#39;(\\frac{x}{2}+3)=\\frac{1}{2}f&#39;(x)\\)</span>,</p>\n<p>et donc</p>\n<p><span class=\"math display\">\\[\\forall x\\in\\Rr,\\;f&#39;(\\frac{x}{2}+3)=f&#39;(x).\\]</span></p>\n<p>Soit alors <span class=\"math inline\">\\(x\\)</span> un réel donné et <span class=\"math inline\">\\(u\\)</span> la suite définie par <span class=\"math inline\">\\(u_0=x\\)</span> et <span class=\"math inline\">\\(\\forall n\\in\\Nn,\\;u_{n+1}=\\frac{1}{2}u_n+3\\)</span>.</p>\n<p>D’après ce qui précède, <span class=\"math inline\">\\(\\forall n\\in\\Nn,\\;f&#39;(x)=f&#39;(u_n)\\)</span>. Maintenant, <span class=\"math inline\">\\(u\\)</span> est une suite arithmético-géométrique et on sait que</p>\n<p><span class=\"math display\">\\[\\forall n\\in\\Nn,\\;u_n-6=\\frac{1}{2^n}(u_0-6)\\]</span></p>\n<p>ce qui montre que la suite <span class=\"math inline\">\\(u\\)</span> converge vers <span class=\"math inline\">\\(6\\)</span>. La suite <span class=\"math inline\">\\((f&#39;(u_n))_{n\\geq0}\\)</span> est constante, de valeur <span class=\"math inline\">\\(f&#39;(x)\\)</span>. <span class=\"math inline\">\\(f&#39;\\)</span> étant continue sur <span class=\"math inline\">\\(\\Rr\\)</span>, on en déduit que</p>\n<p><span class=\"math display\">\\[\\forall x\\in\\Rr,\\;f&#39;(x)=\\lim_{n\\rightarrow +\\infty}f&#39;(u_n)=f&#39;(\\lim_{n\\rightarrow +\\infty}u_n)=f&#39;(6),\\]</span></p>\n<p>ce qui montre que la fonction <span class=\"math inline\">\\(f&#39;\\)</span> est constante sur <span class=\"math inline\">\\(\\Rr\\)</span> et donc que <span class=\"math inline\">\\(f\\)</span> est affine.</p>\n<p>Réciproquement, pour <span class=\"math inline\">\\(x\\)</span> réel, posons <span class=\"math inline\">\\(f(x)=ax+b\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf\\;\\mbox{solution}&amp;\\Leftrightarrow\\forall x\\in\\Rr,\\;a(ax+b)+b=\\frac{x}{2}+3\\Leftrightarrow\\forall x\\in\\Rr,\\;(a^2-\\frac{1}{2})x+ab+b-3=0\\\\\n &amp;\\Leftrightarrow a^2=\\frac{1}{2}\\;\\mbox{et}\\;(a+1)b=3\\Leftrightarrow(a=\\frac{1}{\\sqrt{2}}\\;\\mbox{et}\\;b=3(2-\\sqrt{2}))\\;\\mbox{ou}\\;(a=-\\frac{1}{\\sqrt{2}}\\;\\mbox{et}\\;b=3(2+\\sqrt{2})).\n\\end{align*}\\]</span></p>\n<p>On trouve deux fonctions solutions, les fonctions <span class=\"math inline\">\\(f_1\\)</span> et <span class=\"math inline\">\\(f_2\\)</span> définies par :</p>\n<p><span class=\"math display\">\\[\\forall x\\in\\Rr,\\;f_1(x)=\\frac{1}{\\sqrt{2}}x+3(2-\\sqrt{2})\\;\\mbox{et}\\;f_2(x)=-\\frac{1}{\\sqrt{2}}x+3(2+\\sqrt{2}).\\]</span></p>\n"
+      }
+    }
+  ]
+}

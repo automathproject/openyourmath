@@ -1,0 +1,43 @@
+{
+  "uuid": "h3fz",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1064",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Propriétés élémentaires, généralités",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:07.706Z"
+  },
+  "contenu": [
+    {
+      "id": "ce0b7287-2820-44cb-9fcf-1d6753711033",
+      "type": "description",
+      "value": {
+        "latex": "Que peut-on dire d'une matrice $A \\in \\mathcal{M}_n (\\Rr)$ qui vérifie $\\text{tr} (A \\ {}^{t}\\!{A}) = 0$ ?",
+        "html": "<p>Que peut-on dire d’une matrice <span class=\"math inline\">\\(A \\in \\mathcal{M}_n (\\Rr)\\)</span> qui vérifie <span class=\"math inline\">\\(\\text{tr} (A \\ {}^{t}\\!{A}) = 0\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "56e4c3bc-909b-4bd3-a833-2ac0b19aa91d",
+      "type": "indication",
+      "value": {
+        "latex": "Appliquer la formule du produit pour calculer les coefficients diagonaux de $A\\ {}^{t}\\!{A}$",
+        "html": "<p>Appliquer la formule du produit pour calculer les coefficients diagonaux de <span class=\"math inline\">\\(A\\ {}^{t}\\!{A}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "4576f725-d505-4fb6-95c2-90a8b4d5c1ec",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $A=(a_{ij})$, notons $B = {}^{t}\\!{A}$ si les coefficients sont $B=(b_{ij})$ \nalors par définition de la transposée on a $b_{ij}= a_{ji}$.\n\nEnsuite notons $C = A \\times B$ alors par définition du produit de matrices \nle coefficients $c_{ij}$ de $C$ s'obtient par la formule :\n$$c_{ij} = \\sum_{k=1}^n a_{ik}b_{kj}.$$\n\nAppliquons ceci avec $B = {}^{t}\\!{A}$\n$$c_{ij} = \\sum_{k=1}^n a_{ik}b_{kj} = \\sum_{k=1}^n a_{ik}a_{jk}.$$\nEt pour un coefficient de la diagonale on a $i=j$ donc \n$$c_{ii} =  \\sum_{k=1}^n a_{ik}^2.$$\n\nLa trace étant la somme des coefficients sur la diagonale on a :\n$$\\text{tr} (A \\ {}^{t}\\!{A}) = \\text{tr} (C) \n= \\sum_{i=1}^n c_{ii} =  \\sum_{i=1}^n \\sum_{k=1}^n a_{ik}^2 = \\sum_{1\\le i,k \\le n} a_{ik}^2.$$\n\nSi on change l'indice $k$ en $j$ on obtient \n$$\\text{tr} (A \\ {}^{t}\\!{A})  = \\sum_{1\\le i,j \\le n} a_{ij}^2.$$\n\nDonc cette trace vaut la somme des carrés de tous les coefficients.\n\nConséquence : si $\\text{tr} (A \\ {}^{t}\\!{A}) = 0$ alors la somme des carrés \n$\\sum_{1\\le i,j \\le n} a_{ij}^2$ est nulle \ndonc chaque carré $a_{ij}^2$ est nul. Ainsi $a_{ij}=0$ (pour tout $i,j$) autrement dit $A$ est la matrice nulle.",
+        "html": "<p>Notons <span class=\"math inline\">\\(A=(a_{ij})\\)</span>, notons <span class=\"math inline\">\\(B = {}^{t}\\!{A}\\)</span> si les coefficients sont <span class=\"math inline\">\\(B=(b_{ij})\\)</span> alors par définition de la transposée on a <span class=\"math inline\">\\(b_{ij}= a_{ji}\\)</span>.</p>\n<p>Ensuite notons <span class=\"math inline\">\\(C = A \\times B\\)</span> alors par définition du produit de matrices le coefficients <span class=\"math inline\">\\(c_{ij}\\)</span> de <span class=\"math inline\">\\(C\\)</span> s’obtient par la formule : <span class=\"math display\">\\[c_{ij} = \\sum_{k=1}^n a_{ik}b_{kj}.\\]</span></p>\n<p>Appliquons ceci avec <span class=\"math inline\">\\(B = {}^{t}\\!{A}\\)</span> <span class=\"math display\">\\[c_{ij} = \\sum_{k=1}^n a_{ik}b_{kj} = \\sum_{k=1}^n a_{ik}a_{jk}.\\]</span> Et pour un coefficient de la diagonale on a <span class=\"math inline\">\\(i=j\\)</span> donc <span class=\"math display\">\\[c_{ii} =  \\sum_{k=1}^n a_{ik}^2.\\]</span></p>\n<p>La trace étant la somme des coefficients sur la diagonale on a : <span class=\"math display\">\\[\\text{tr} (A \\ {}^{t}\\!{A}) = \\text{tr} (C) \n= \\sum_{i=1}^n c_{ii} =  \\sum_{i=1}^n \\sum_{k=1}^n a_{ik}^2 = \\sum_{1\\le i,k \\le n} a_{ik}^2.\\]</span></p>\n<p>Si on change l’indice <span class=\"math inline\">\\(k\\)</span> en <span class=\"math inline\">\\(j\\)</span> on obtient <span class=\"math display\">\\[\\text{tr} (A \\ {}^{t}\\!{A})  = \\sum_{1\\le i,j \\le n} a_{ij}^2.\\]</span></p>\n<p>Donc cette trace vaut la somme des carrés de tous les coefficients.</p>\n<p>Conséquence : si <span class=\"math inline\">\\(\\text{tr} (A \\ {}^{t}\\!{A}) = 0\\)</span> alors la somme des carrés <span class=\"math inline\">\\(\\sum_{1\\le i,j \\le n} a_{ij}^2\\)</span> est nulle donc chaque carré <span class=\"math inline\">\\(a_{ij}^2\\)</span> est nul. Ainsi <span class=\"math inline\">\\(a_{ij}=0\\)</span> (pour tout <span class=\"math inline\">\\(i,j\\)</span>) autrement dit <span class=\"math inline\">\\(A\\)</span> est la matrice nulle.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "uuid": "FiIz",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5364",
+    "auteur": "rouget",
+    "createdAt": "2010-07-06",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Déterminant, système linéaire",
+    "sousChapitre": "Calcul de déterminants",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:43:15.133Z"
+  },
+  "contenu": [
+    {
+      "id": "c9b78930-b8d1-4c32-a170-6aa7b0f683be",
+      "type": "description",
+      "value": {
+        "latex": "Calculer :",
+        "html": "<p>Calculer :</p>\n"
+      }
+    },
+    {
+      "id": "6706970b-83fe-453c-9097-c57dc4e21648",
+      "type": "question",
+      "value": {
+        "latex": "$\\mbox{det}(|i-j|)_{1\\leq i,j\\leq n}$",
+        "html": "<p><span class=\"math inline\">\\(\\mbox{det}(|i-j|)_{1\\leq i,j\\leq n}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "d07c2082-a32f-4c7a-b2dd-cfb40686af23",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $n\\geq2$, posons $\\Delta_n=\\left|\n\\begin{array}{ccccc}\n0&1&2&\\ldots&n-1\\\\\n1&0&1& &n-2\\\\\n2&1&0&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&1\\\\\nn-1&n-2&\\ldots&1&0\n\\end{array}\n\\right|$. Tout d'abord, on fait apparaître beaucoup de $1$.\nPour cela, on effectue les transformations $C_1\\leftarrow C_1-C_2$ puis $C_2\\leftarrow C_2-C_3$ puis \\ldots puis $C_{n-1}=C_{n-1}-C_n$. On obtient\n\n$$\\Delta_n=\\mbox{det}(C_1-C_2,C_2-C_3,...,C_{n-1}-C_n,C_n)=\\left|\n\\begin{array}{ccccc}\n-1&-1&\\ldots&-1&n-1\\\\\n1&-1& &\\vdots&n-2\\\\\n1&1&-1&\\vdots&\\vdots\\\\\n\\vdots& &\\ddots&-1&1\\\\\n1&1&\\ldots&1&0\n\\end{array}\n\\right|.$$\nOn fait alors apparaître un déterminant triangulaire en constatant que $\\mbox{det}(L_1,L_2,...,L_n)=\\mbox{det}(L_1,L_2+L_1,...,L_{n-1}+L_1,L_n+L_1)$. On obtient\n\n$$\\Delta_n=\\left|\n\\begin{array}{ccccc}\n-1&\\times&\\ldots&\\ldots&\\times\\\\\n0&-2&\\ddots& &\\vdots\\\\\n0&0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&-2&\\times\\\\\n0&\\ldots&\\ldots&0&n-1\n\\end{array}\n\\right|=(1-n)(-2)^{n-2}.$$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\geq2,\\;\\Delta_n=(1-n)(-2)^{n-2}$.\n}\n\\end{center}",
+        "html": "<p>Pour <span class=\"math inline\">\\(n\\geq2\\)</span>, posons <span class=\"math inline\">\\(\\Delta_n=\\left|\n\\begin{array}{ccccc}\n0&amp;1&amp;2&amp;\\ldots&amp;n-1\\\\\n1&amp;0&amp;1&amp; &amp;n-2\\\\\n2&amp;1&amp;0&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;1\\\\\nn-1&amp;n-2&amp;\\ldots&amp;1&amp;0\n\\end{array}\n\\right|\\)</span>. Tout d’abord, on fait apparaître beaucoup de <span class=\"math inline\">\\(1\\)</span>. Pour cela, on effectue les transformations <span class=\"math inline\">\\(C_1\\leftarrow C_1-C_2\\)</span> puis <span class=\"math inline\">\\(C_2\\leftarrow C_2-C_3\\)</span> puis …puis <span class=\"math inline\">\\(C_{n-1}=C_{n-1}-C_n\\)</span>. On obtient</p>\n<p><span class=\"math display\">\\[\\Delta_n=\\mbox{det}(C_1-C_2,C_2-C_3,...,C_{n-1}-C_n,C_n)=\\left|\n\\begin{array}{ccccc}\n-1&amp;-1&amp;\\ldots&amp;-1&amp;n-1\\\\\n1&amp;-1&amp; &amp;\\vdots&amp;n-2\\\\\n1&amp;1&amp;-1&amp;\\vdots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;-1&amp;1\\\\\n1&amp;1&amp;\\ldots&amp;1&amp;0\n\\end{array}\n\\right|.\\]</span> On fait alors apparaître un déterminant triangulaire en constatant que <span class=\"math inline\">\\(\\mbox{det}(L_1,L_2,...,L_n)=\\mbox{det}(L_1,L_2+L_1,...,L_{n-1}+L_1,L_n+L_1)\\)</span>. On obtient</p>\n<p><span class=\"math display\">\\[\\Delta_n=\\left|\n\\begin{array}{ccccc}\n-1&amp;\\times&amp;\\ldots&amp;\\ldots&amp;\\times\\\\\n0&amp;-2&amp;\\ddots&amp; &amp;\\vdots\\\\\n0&amp;0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;-2&amp;\\times\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;n-1\n\\end{array}\n\\right|=(1-n)(-2)^{n-2}.\\]</span>.</p>\n"
+      }
+    },
+    {
+      "id": "77e0ae04-9a21-43fd-b4e9-1556feb507ac",
+      "type": "question",
+      "value": {
+        "latex": "$\\mbox{det}(\\sin(a_i+a_j))_{1\\leq i,j\\leq n}$ ($a_1$,...,$a_n$ étant $n$ réels donnés)",
+        "html": "<p><span class=\"math inline\">\\(\\mbox{det}(\\sin(a_i+a_j))_{1\\leq i,j\\leq n}\\)</span> (<span class=\"math inline\">\\(a_1\\)</span>,...,<span class=\"math inline\">\\(a_n\\)</span> étant <span class=\"math inline\">\\(n\\)</span> réels donnés)</p>\n"
+      }
+    },
+    {
+      "id": "6c3a6892-e777-480b-b821-d8552844ca7a",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\forall(i,j)\\in\\llbracket1,n\\rrbracket^2,\\;\\sin(a_i+a_j)=\\sin a_i\\cos a_j+\\cos a_i\\sin a_j$ et donc si on pose $C=\\left(\n\\begin{array}{c}\n\\cos a_1\\\\\n\\cos a_2\\\\\n\\vdots\\\\\n\\cos a_n\n\\end{array}\n\\right)$ et $S=\\left(\n\\begin{array}{c}\n\\sin a_1\\\\\n\\sin a_2\\\\\n\\vdots\\\\\n\\sin a_n\n\\end{array}\n\\right)$,\non a $\\forall j\\in\\llbracket1,n\\rrbracket,\\;C_j=\\cos a_jS+\\sin a_jC$. En particulier, $\\mbox{Vect}(C_1,...,C_n)\\subset\\mbox{Vect}(C,S)$ et le rang de la matrice proposée est inférieur ou égal à $2$. Donc,\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\geq3,\\;\\mbox{det}(\\sin(a_i+a_j))_{1\\leq i,j\\leq n}=0.$\n}\n\\end{center}\nSi $n=2$, $\\mbox{det}(\\sin(a_i+a_j))_{1\\leq i,j\\leq 2}=\\sin(2a_1)\\sin(2a_2)-\\sin^2(a_1+a_2)$.",
+        "html": "<p><span class=\"math inline\">\\(\\forall(i,j)\\in\\llbracket1,n\\rrbracket^2,\\;\\sin(a_i+a_j)=\\sin a_i\\cos a_j+\\cos a_i\\sin a_j\\)</span> et donc si on pose <span class=\"math inline\">\\(C=\\left(\n\\begin{array}{c}\n\\cos a_1\\\\\n\\cos a_2\\\\\n\\vdots\\\\\n\\cos a_n\n\\end{array}\n\\right)\\)</span> et <span class=\"math inline\">\\(S=\\left(\n\\begin{array}{c}\n\\sin a_1\\\\\n\\sin a_2\\\\\n\\vdots\\\\\n\\sin a_n\n\\end{array}\n\\right)\\)</span>, on a <span class=\"math inline\">\\(\\forall j\\in\\llbracket1,n\\rrbracket,\\;C_j=\\cos a_jS+\\sin a_jC\\)</span>. En particulier, <span class=\"math inline\">\\(\\mbox{Vect}(C_1,...,C_n)\\subset\\mbox{Vect}(C,S)\\)</span> et le rang de la matrice proposée est inférieur ou égal à <span class=\"math inline\">\\(2\\)</span>. Donc,</p>\n<p>Si <span class=\"math inline\">\\(n=2\\)</span>, <span class=\"math inline\">\\(\\mbox{det}(\\sin(a_i+a_j))_{1\\leq i,j\\leq 2}=\\sin(2a_1)\\sin(2a_2)-\\sin^2(a_1+a_2)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "97d749b0-2568-4ad5-94ec-383fb37c92d4",
+      "type": "question",
+      "value": {
+        "latex": "$\\left|\n\\begin{array}{cccccc}\na&0&\\ldots& &\\ldots&b\\\\\n0&a&\\ddots& &b&0\\\\\n\\vdots&0&\\ddots& &0&\\vdots\\\\\n\\vdots&0& &\\ddots&0&\\vdots\\\\\n0&b& & &a&0\\\\\nb&0&\\ldots& &\\ldots&a\n\\end{array}\n\\right|$",
+        "html": "<p><span class=\"math inline\">\\(\\left|\n\\begin{array}{cccccc}\na&amp;0&amp;\\ldots&amp; &amp;\\ldots&amp;b\\\\\n0&amp;a&amp;\\ddots&amp; &amp;b&amp;0\\\\\n\\vdots&amp;0&amp;\\ddots&amp; &amp;0&amp;\\vdots\\\\\n\\vdots&amp;0&amp; &amp;\\ddots&amp;0&amp;\\vdots\\\\\n0&amp;b&amp; &amp; &amp;a&amp;0\\\\\nb&amp;0&amp;\\ldots&amp; &amp;\\ldots&amp;a\n\\end{array}\n\\right|\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "2a458041-f7c7-4a19-aab8-8256cd582bf3",
+      "type": "reponse",
+      "value": {
+        "latex": "L'exercice n'a de sens que si le format $n$ est pair. Posons $n=2p$ où $p$ est un entier naturel non nul.\n\n$$\\begin{align*}\\ensuremath\n\\Delta_n&=\\left|\\begin{array}{cccccc}\na&0&\\ldots&\\ldots&0&b\\\\\n0&\\ddots&0&0& &0\\\\\n\\vdots&0&a&b&0&\\vdots\\\\\n\\vdots&0&b&a&0&\\vdots\\\\\n0& &0&0&\\ddots&0\\\\\nb&0&\\ldots&\\ldots&0&a\n\\end{array}\n\\right|\n=\\left|\\begin{array}{cccccc}\na+b&0&\\ldots&\\ldots&0&b\\\\\n0&\\ddots&0&0& &0\\\\\n\\vdots&0&a+b&b&0&\\vdots\\\\\n\\vdots&0&b+a&a&0&\\vdots\\\\\n0& &0&0&\\ddots&0\\\\\nb+a&0&\\ldots&\\ldots&0&a\n\\end{array}\n\\right|\\;(\\mbox{pour}\\;1\\leq j\\leq p,\\;C_j\\leftarrow C_j+C_{2p+1-j})\\\\\n &=(a+b)^p\\left|\\begin{array}{cccccc}\n1&0&\\ldots&\\ldots&0&b\\\\\n0&\\ddots&0&0& &0\\\\\n\\vdots&0&1&b&0&\\vdots\\\\\n\\vdots&0&1&a&0&\\vdots\\\\\n0& &0&0&\\ddots&0\\\\\n1&0&\\ldots&\\ldots&0&a\n\\end{array}\n\\right|\\;(\\mbox{par linéarité par rapport aux colonnes}\\;C_1,\\;C_2,...,\\;C_p)\n\\end{align*}$$\n\n$$\n=(a+b)^p\\left|\\begin{array}{cccccc}\n1&0&\\ldots&\\ldots&0&b\\\\\n0&\\ddots&0&0& &0\\\\\n\\vdots&0&1&b&0&\\vdots\\\\\n & &\\ddots&a-b&0&\\vdots\\\\\n\\vdots& & &\\ddots&\\ddots&0\\\\\n0&0&\\ldots&\\ldots&0&a-b\n\\end{array}\n\\right| (\\mbox{pour}\\;p+1\\leq i\\leq2p,\\;L_i\\leftarrow L_i-L_{2p+1-i}).\n$$\net $\\Delta_n=(a+b)^p(a-b)^p=(a^2-b^2)^p$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall p\\in\\Nn^*,\\;\\Delta_{2p}=(a^2-b^2)^p$.\n}\n\\end{center}",
+        "html": "<p>L’exercice n’a de sens que si le format <span class=\"math inline\">\\(n\\)</span> est pair. Posons <span class=\"math inline\">\\(n=2p\\)</span> où <span class=\"math inline\">\\(p\\)</span> est un entier naturel non nul.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\Delta_n&amp;=\\left|\\begin{array}{cccccc}\na&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;b\\\\\n0&amp;\\ddots&amp;0&amp;0&amp; &amp;0\\\\\n\\vdots&amp;0&amp;a&amp;b&amp;0&amp;\\vdots\\\\\n\\vdots&amp;0&amp;b&amp;a&amp;0&amp;\\vdots\\\\\n0&amp; &amp;0&amp;0&amp;\\ddots&amp;0\\\\\nb&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;a\n\\end{array}\n\\right|\n=\\left|\\begin{array}{cccccc}\na+b&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;b\\\\\n0&amp;\\ddots&amp;0&amp;0&amp; &amp;0\\\\\n\\vdots&amp;0&amp;a+b&amp;b&amp;0&amp;\\vdots\\\\\n\\vdots&amp;0&amp;b+a&amp;a&amp;0&amp;\\vdots\\\\\n0&amp; &amp;0&amp;0&amp;\\ddots&amp;0\\\\\nb+a&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;a\n\\end{array}\n\\right|\\;(\\mbox{pour}\\;1\\leq j\\leq p,\\;C_j\\leftarrow C_j+C_{2p+1-j})\\\\\n &amp;=(a+b)^p\\left|\\begin{array}{cccccc}\n1&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;b\\\\\n0&amp;\\ddots&amp;0&amp;0&amp; &amp;0\\\\\n\\vdots&amp;0&amp;1&amp;b&amp;0&amp;\\vdots\\\\\n\\vdots&amp;0&amp;1&amp;a&amp;0&amp;\\vdots\\\\\n0&amp; &amp;0&amp;0&amp;\\ddots&amp;0\\\\\n1&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;a\n\\end{array}\n\\right|\\;(\\mbox{par linéarité par rapport aux colonnes}\\;C_1,\\;C_2,...,\\;C_p)\n\\end{align*}\\]</span></p>\n<p><span class=\"math display\">\\[=(a+b)^p\\left|\\begin{array}{cccccc}\n1&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;b\\\\\n0&amp;\\ddots&amp;0&amp;0&amp; &amp;0\\\\\n\\vdots&amp;0&amp;1&amp;b&amp;0&amp;\\vdots\\\\\n &amp; &amp;\\ddots&amp;a-b&amp;0&amp;\\vdots\\\\\n\\vdots&amp; &amp; &amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;0&amp;\\ldots&amp;\\ldots&amp;0&amp;a-b\n\\end{array}\n\\right| (\\mbox{pour}\\;p+1\\leq i\\leq2p,\\;L_i\\leftarrow L_i-L_{2p+1-i}).\\]</span> et <span class=\"math inline\">\\(\\Delta_n=(a+b)^p(a-b)^p=(a^2-b^2)^p\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "60b492bb-5949-480a-aabb-4430c12e49bc",
+      "type": "question",
+      "value": {
+        "latex": "$\\left|\\begin{array}{ccccc}\n1&1&\\ldots& &1\\\\\n1&1&0&\\ldots&0\\\\\n\\vdots&0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\vdots&\\ddots&1&0\\\\\n1&0&\\ldots&0&1\n\\end{array}\n\\right|$",
+        "html": "<p><span class=\"math inline\">\\(\\left|\\begin{array}{ccccc}\n1&amp;1&amp;\\ldots&amp; &amp;1\\\\\n1&amp;1&amp;0&amp;\\ldots&amp;0\\\\\n\\vdots&amp;0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\vdots&amp;\\ddots&amp;1&amp;0\\\\\n1&amp;0&amp;\\ldots&amp;0&amp;1\n\\end{array}\n\\right|\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "e9f5dd50-f309-4d6d-8fb8-3462ac1019a5",
+      "type": "reponse",
+      "value": {
+        "latex": "On retranche à la première colonne la somme de toutes les autres et on obtient\n\n$$D_n=\\left|\\begin{array}{ccccc}\n1&1&\\ldots& &1\\\\\n1&1&0&\\ldots&0\\\\\n\\vdots&0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\vdots&\\ddots&1&0\\\\\n1&0&\\ldots&0&1\n\\end{array}\n\\right|=\\left|\\begin{array}{ccccc}\n-(n-2)&1&\\ldots& &1\\\\\n0&1&0&\\ldots&0\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&1&0\\\\\n0&\\ldots&\\ldots&0&1\n\\end{array}\n\\right|=-(n-2).$$",
+        "html": "<p>On retranche à la première colonne la somme de toutes les autres et on obtient</p>\n<p><span class=\"math display\">\\[D_n=\\left|\\begin{array}{ccccc}\n1&amp;1&amp;\\ldots&amp; &amp;1\\\\\n1&amp;1&amp;0&amp;\\ldots&amp;0\\\\\n\\vdots&amp;0&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp;\\vdots&amp;\\ddots&amp;1&amp;0\\\\\n1&amp;0&amp;\\ldots&amp;0&amp;1\n\\end{array}\n\\right|=\\left|\\begin{array}{ccccc}\n-(n-2)&amp;1&amp;\\ldots&amp; &amp;1\\\\\n0&amp;1&amp;0&amp;\\ldots&amp;0\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;1&amp;0\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;1\n\\end{array}\n\\right|=-(n-2).\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "b1f34cb6-6c4d-4430-8b42-0f0f2c6630dc",
+      "type": "question",
+      "value": {
+        "latex": "$\\mbox{det}(C_{n+i-1}^{j-1})_{1\\leq i,j\\leq p+1}$",
+        "html": "<p><span class=\"math inline\">\\(\\mbox{det}(C_{n+i-1}^{j-1})_{1\\leq i,j\\leq p+1}\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "b827333c-f9c5-4176-a97f-baf2f5d4e81e",
+      "type": "reponse",
+      "value": {
+        "latex": "Pour $1\\leq i\\leq p$,\n\n$$L_{i+1}-L_i=(C_{n+i}^0-C_{n+i-1}^0,C_{n+i}^1-C_{n+i-1}^1,...,C_{n+i}^p-C_{n+i-1}^p)=(0,C_{n+i-1}^0,C_{n+i-1}^1,...,C_{n+i-1}^{p-1}).$$\nOn remplace alors dans cet ordre $L_p$ par $L_p-L_{p-1}$ puis $L_{p-1}$ par $L_{p-1}-L_{p-2}$ puis ... puis $L_2$ par $L_2-L_1$ pour obtenir, avec des notations évidentes\n\n$$\\mbox{det}(A_p)=\\left|\n\\begin{array}{cc}\n1& \\\\\n0&A_{p-1}\n\\end{array}\\right|=\\mbox{det}(A_{p-1}).$$\nPar suite, $\\mbox{det}(A_p)=\\mbox{det}(A_{p-1})=...=\\mbox{det}(A_1)=1$.",
+        "html": "<p>Pour <span class=\"math inline\">\\(1\\leq i\\leq p\\)</span>,</p>\n<p><span class=\"math display\">\\[L_{i+1}-L_i=(C_{n+i}^0-C_{n+i-1}^0,C_{n+i}^1-C_{n+i-1}^1,...,C_{n+i}^p-C_{n+i-1}^p)=(0,C_{n+i-1}^0,C_{n+i-1}^1,...,C_{n+i-1}^{p-1}).\\]</span> On remplace alors dans cet ordre <span class=\"math inline\">\\(L_p\\)</span> par <span class=\"math inline\">\\(L_p-L_{p-1}\\)</span> puis <span class=\"math inline\">\\(L_{p-1}\\)</span> par <span class=\"math inline\">\\(L_{p-1}-L_{p-2}\\)</span> puis ... puis <span class=\"math inline\">\\(L_2\\)</span> par <span class=\"math inline\">\\(L_2-L_1\\)</span> pour obtenir, avec des notations évidentes</p>\n<p><span class=\"math display\">\\[\\mbox{det}(A_p)=\\left|\n\\begin{array}{cc}\n1&amp; \\\\\n0&amp;A_{p-1}\n\\end{array}\\right|=\\mbox{det}(A_{p-1}).\\]</span> Par suite, <span class=\"math inline\">\\(\\mbox{det}(A_p)=\\mbox{det}(A_{p-1})=...=\\mbox{det}(A_1)=1\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "d3452ac2-4f31-45f3-840b-06abd09167e2",
+      "type": "question",
+      "value": {
+        "latex": "$\\left|\\begin{array}{cccccc}\n-X&1&0&\\ldots&\\ldots&0\\\\\n0&-X&1&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&\\ddots&\\ddots&0\\\\\n0&\\ldots&\\ldots&0&-X&1\\\\\na_0&\\ldots& &\\ldots&a_{n-2}&a_{n-1}-X\n\\end{array}\n\\right|$",
+        "html": "<p><span class=\"math inline\">\\(\\left|\\begin{array}{cccccc}\n-X&amp;1&amp;0&amp;\\ldots&amp;\\ldots&amp;0\\\\\n0&amp;-X&amp;1&amp;\\ddots&amp; &amp;\\vdots\\\\\n\\vdots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;\\vdots\\\\\n\\vdots&amp; &amp;\\ddots&amp;\\ddots&amp;\\ddots&amp;0\\\\\n0&amp;\\ldots&amp;\\ldots&amp;0&amp;-X&amp;1\\\\\na_0&amp;\\ldots&amp; &amp;\\ldots&amp;a_{n-2}&amp;a_{n-1}-X\n\\end{array}\n\\right|\\)</span></p>\n"
+      }
+    },
+    {
+      "id": "9cd41e8b-5493-433c-a240-135e6a05554c",
+      "type": "reponse",
+      "value": {
+        "latex": "En développant suivant la dernière ligne, on obtient~:\n\n$$D_n=(a_{n-1}-X)(-X)^{n-1}+\\sum_{k=0}^{n-2}(-1)^{n+k+1}a_k\\Delta_k,$$\noù $\\Delta_k=\\left|\n\\begin{array}{ccc|ccc}\n-X&1&0& & & \\\\\n0&\\ddots&1& & & \\\\\n0&0&-X& & & \\\\\n\\hline\n0& &0&1&0&0\\\\\n & & &-X&\\ddots&0\\\\\n0& &0&0&-X&1\\\\\n\\end{array}\n\\right|=(-1)^{k}X^k$ et donc \n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\geq2,\\;D_n=(-1)^n\\left(X^n-\\sum_{k=0}^{n-1}a_kX^k\\right).$\n}\n\\end{center}",
+        "html": "<p>En développant suivant la dernière ligne, on obtient :</p>\n<p><span class=\"math display\">\\[D_n=(a_{n-1}-X)(-X)^{n-1}+\\sum_{k=0}^{n-2}(-1)^{n+k+1}a_k\\Delta_k,\\]</span> où <span class=\"math inline\">\\(\\Delta_k=\\left|\n\\begin{array}{ccc|ccc}\n-X&amp;1&amp;0&amp; &amp; &amp; \\\\\n0&amp;\\ddots&amp;1&amp; &amp; &amp; \\\\\n0&amp;0&amp;-X&amp; &amp; &amp; \\\\\n\\hline\n0&amp; &amp;0&amp;1&amp;0&amp;0\\\\\n &amp; &amp; &amp;-X&amp;\\ddots&amp;0\\\\\n0&amp; &amp;0&amp;0&amp;-X&amp;1\\\\\n\\end{array}\n\\right|=(-1)^{k}X^k\\)</span> et donc</p>\n"
+      }
+    }
+  ]
+}

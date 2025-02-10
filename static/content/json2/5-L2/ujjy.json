@@ -1,0 +1,51 @@
+{
+  "uuid": "ujjy",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "7000",
+    "auteur": "blanc-centi",
+    "createdAt": "2015-07-04",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Equation différentielle",
+    "sousChapitre": "Résolution d'équation différentielle du deuxième ordre",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:45:38.173Z"
+  },
+  "contenu": [
+    {
+      "id": "e46ff325-c438-48fb-8e38-5ee7f904a29b",
+      "type": "description",
+      "value": {
+        "latex": "Résoudre les équations différentielles suivantes à l'aide du changement de variable suggéré.",
+        "html": "<p>Résoudre les équations différentielles suivantes à l’aide du changement de variable suggéré.</p>\n"
+      }
+    },
+    {
+      "id": "4678369e-b8c3-47cd-86e1-7c9263188f27",
+      "type": "question",
+      "value": {
+        "latex": "$x^2y''+xy'+y=0$, sur $]0;+\\infty[$, en posant $x=e^t$;",
+        "html": "<p><span class=\"math inline\">\\(x^2y&#39;&#39;+xy&#39;+y=0\\)</span>, sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span>, en posant <span class=\"math inline\">\\(x=e^t\\)</span>;</p>\n"
+      }
+    },
+    {
+      "id": "8bf45342-9459-4866-b94c-8ee298de6834",
+      "type": "question",
+      "value": {
+        "latex": "$(1+x^2)^2y''+2x(1+x^2)y'+my=0$, sur $\\R$, en posant $x=\\tan t$ (en fonction de $m\\in\\R$).",
+        "html": "<p><span class=\"math inline\">\\((1+x^2)^2y&#39;&#39;+2x(1+x^2)y&#39;+my=0\\)</span>, sur <span class=\"math inline\">\\(\\R\\)</span>, en posant <span class=\"math inline\">\\(x=\\tan t\\)</span> (en fonction de <span class=\"math inline\">\\(m\\in\\R\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "ebf4754e-f4c6-41ca-b54f-84ead95fc04e",
+      "type": "reponse",
+      "value": {
+        "latex": "Puisqu'on cherche $y$ fonction de $x\\in]0;+\\infty[$, et que l'application $t\\mapsto e^t$ \nest bijective de $\\R$ sur $]0;+\\infty[$, on peut poser $x=e^t$ et $z(t)=y(e^t)$. \nOn a alors $t= \\ln x$ et $y(x) = z(\\ln x)$.\nCe qui donne :\n\\begin{eqnarray*}\ny(x)&=&z(\\ln x)=z(t)\\\\\ny'(x)&=&\\frac{1}{x}z'(\\ln x)=e^{-t}z'(t)\\\\\ny''(x)&=&-\\frac{1}{x^2}z'(\\ln x)+\\frac{1}{x^2}z''(\\ln x)=-e^{-2t}z'(t)+e^{-2t}z''(t)\n\\end{eqnarray*}\nEn remplaçant, on obtient donc que \n$$\\forall x\\in]0;+\\infty[,\\ x^2y''+xy'+y=0\\Longleftrightarrow\\forall t\\in\\R,\\ z''(t)+z(t)=0$$\nautrement dit, $z(t)=\\lambda\\cos t+\\mu\\sin t$ où $\\lambda,\\mu\\in\\R$. \nFinalement, les solutions de l'équation de départ sont de la forme \n$$y(x) = z(\\ln x) = \\lambda\\cos(\\ln x)+\\mu\\sin(\\ln x)$$ où $\\lambda,\\mu\\in\\R$.\nL'application $t\\mapsto \\tan t$ étant bijective de \n$]-\\frac{\\pi}{2};\\frac{\\pi}{2}[$ sur $\\R$, on peut poser \n$x=\\tan t$ et $z(t)=y(\\tan t)$. On a alors $t = \\arctan x$ et ainsi :\n\\begin{eqnarray*}\ny(x)&=&z(\\arctan x)=z(t)\\\\\ny'(x)&=&\\frac{1}{1+x^2}z'(\\arctan x)\\\\\ny''(x)&=&\\frac{1}{(1+x^2)^2}\\big(z''(\\arctan x)-2xz'(\\arctan x)\\big)\n\\end{eqnarray*}\nEn remplaçant, on obtient que $z$ est solution de l'équation différentielle $z''+mz=0$. Pour résoudre cette équation, on doit distinguer trois cas:\n\\begin{itemize}\n$m<0$: alors $z(t)=\\lambda e^{\\sqrt{-m}t}+\\mu e^{-\\sqrt{-m}t}$ et donc  \n$$y(x)=\\lambda e^{\\sqrt{-m}\\arctan x}+\\mu e^{-\\sqrt{-m}\\arctan x},$$\n$m=0$: $z''=0$ et donc $z(t)=\\lambda t+\\mu$ et $y(x)=\\lambda\\arctan x+\\mu$,\n$m>0$: alors $z(t)=\\lambda\\cos(\\sqrt{m}t)+\\mu\\sin(\\sqrt{m}t)$ et donc \n$$y(x)=\\lambda\\cos(\\sqrt{m}\\arctan x)+\\mu\\sin(\\sqrt{m}\\arctan x)$$\noù $\\lambda,\\mu\\in\\R$.\n\\end{itemize}",
+        "html": "<p>Puisqu’on cherche <span class=\"math inline\">\\(y\\)</span> fonction de <span class=\"math inline\">\\(x\\in]0;+\\infty[\\)</span>, et que l’application <span class=\"math inline\">\\(t\\mapsto e^t\\)</span> est bijective de <span class=\"math inline\">\\(\\R\\)</span> sur <span class=\"math inline\">\\(]0;+\\infty[\\)</span>, on peut poser <span class=\"math inline\">\\(x=e^t\\)</span> et <span class=\"math inline\">\\(z(t)=y(e^t)\\)</span>. On a alors <span class=\"math inline\">\\(t= \\ln x\\)</span> et <span class=\"math inline\">\\(y(x) = z(\\ln x)\\)</span>. Ce qui donne : <span class=\"math display\">\\[\\begin{aligned}\ny(x)&amp;=&amp;z(\\ln x)=z(t)\\\\\ny&#39;(x)&amp;=&amp;\\frac{1}{x}z&#39;(\\ln x)=e^{-t}z&#39;(t)\\\\\ny&#39;&#39;(x)&amp;=&amp;-\\frac{1}{x^2}z&#39;(\\ln x)+\\frac{1}{x^2}z&#39;&#39;(\\ln x)=-e^{-2t}z&#39;(t)+e^{-2t}z&#39;&#39;(t)\\end{aligned}\\]</span> En remplaçant, on obtient donc que <span class=\"math display\">\\[\\forall x\\in]0;+\\infty[,\\ x^2y&#39;&#39;+xy&#39;+y=0\\Longleftrightarrow\\forall t\\in\\R,\\ z&#39;&#39;(t)+z(t)=0\\]</span> autrement dit, <span class=\"math inline\">\\(z(t)=\\lambda\\cos t+\\mu\\sin t\\)</span> où <span class=\"math inline\">\\(\\lambda,\\mu\\in\\R\\)</span>. Finalement, les solutions de l’équation de départ sont de la forme <span class=\"math display\">\\[y(x) = z(\\ln x) = \\lambda\\cos(\\ln x)+\\mu\\sin(\\ln x)\\]</span> où <span class=\"math inline\">\\(\\lambda,\\mu\\in\\R\\)</span>. L’application <span class=\"math inline\">\\(t\\mapsto \\tan t\\)</span> étant bijective de <span class=\"math inline\">\\(]-\\frac{\\pi}{2};\\frac{\\pi}{2}[\\)</span> sur <span class=\"math inline\">\\(\\R\\)</span>, on peut poser <span class=\"math inline\">\\(x=\\tan t\\)</span> et <span class=\"math inline\">\\(z(t)=y(\\tan t)\\)</span>. On a alors <span class=\"math inline\">\\(t = \\arctan x\\)</span> et ainsi : <span class=\"math display\">\\[\\begin{aligned}\ny(x)&amp;=&amp;z(\\arctan x)=z(t)\\\\\ny&#39;(x)&amp;=&amp;\\frac{1}{1+x^2}z&#39;(\\arctan x)\\\\\ny&#39;&#39;(x)&amp;=&amp;\\frac{1}{(1+x^2)^2}\\big(z&#39;&#39;(\\arctan x)-2xz&#39;(\\arctan x)\\big)\\end{aligned}\\]</span> En remplaçant, on obtient que <span class=\"math inline\">\\(z\\)</span> est solution de l’équation différentielle <span class=\"math inline\">\\(z&#39;&#39;+mz=0\\)</span>. Pour résoudre cette équation, on doit distinguer trois cas:</p>\n<p><span class=\"math inline\">\\(m&lt;0\\)</span>: alors <span class=\"math inline\">\\(z(t)=\\lambda e^{\\sqrt{-m}t}+\\mu e^{-\\sqrt{-m}t}\\)</span> et donc <span class=\"math display\">\\[y(x)=\\lambda e^{\\sqrt{-m}\\arctan x}+\\mu e^{-\\sqrt{-m}\\arctan x},\\]</span> <span class=\"math inline\">\\(m=0\\)</span>: <span class=\"math inline\">\\(z&#39;&#39;=0\\)</span> et donc <span class=\"math inline\">\\(z(t)=\\lambda t+\\mu\\)</span> et <span class=\"math inline\">\\(y(x)=\\lambda\\arctan x+\\mu\\)</span>, <span class=\"math inline\">\\(m&gt;0\\)</span>: alors <span class=\"math inline\">\\(z(t)=\\lambda\\cos(\\sqrt{m}t)+\\mu\\sin(\\sqrt{m}t)\\)</span> et donc <span class=\"math display\">\\[y(x)=\\lambda\\cos(\\sqrt{m}\\arctan x)+\\mu\\sin(\\sqrt{m}\\arctan x)\\]</span> où <span class=\"math inline\">\\(\\lambda,\\mu\\in\\R\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

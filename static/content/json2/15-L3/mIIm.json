@@ -1,0 +1,43 @@
+{
+  "uuid": "mIIm",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2388",
+    "auteur": "mayer",
+    "createdAt": "2003-10-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Connexité",
+    "sousChapitre": "Connexité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:26.959Z"
+  },
+  "contenu": [
+    {
+      "id": "9839eee8-1fe7-47ff-aca7-486f737d68fd",
+      "type": "description",
+      "value": {
+        "latex": "Dans $\\Rr^2$, soit $B_a$ l'ensemble $\\{a\\}\\times ]0,1]$ si $a$\nest rationnel et $B_a=\\{a\\}\\times [-1,0]$ si $a$ est irrationnel.\nMontrer que $B = \\bigcup _{a\\in \\Rr } B_a$ est une partie\nconnexe de $\\Rr^2$.",
+        "html": "<p>Dans <span class=\"math inline\">\\(\\Rr^2\\)</span>, soit <span class=\"math inline\">\\(B_a\\)</span> l’ensemble <span class=\"math inline\">\\(\\{a\\}\\times ]0,1]\\)</span> si <span class=\"math inline\">\\(a\\)</span> est rationnel et <span class=\"math inline\">\\(B_a=\\{a\\}\\times [-1,0]\\)</span> si <span class=\"math inline\">\\(a\\)</span> est irrationnel. Montrer que <span class=\"math inline\">\\(B = \\bigcup _{a\\in \\Rr } B_a\\)</span> est une partie connexe de <span class=\"math inline\">\\(\\Rr^2\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "82e751f6-ec67-4440-aa43-f95769bbebc9",
+      "type": "indication",
+      "value": {
+        "latex": "Définir $g : \\Rr \\longrightarrow \\{0,1\\}$ tel que $g(x)$ prend  la valeur\nqu'a $f$ sur $B_x$.\nMontrer pour chaque points de $\\Rr\\setminus \\Qq$, $g$ est constante dans un voisinage \nde ce point,\npuis faire la m\\^eme chose pour un point de $\\Qq$. Conclure.",
+        "html": "<p>Définir <span class=\"math inline\">\\(g : \\Rr \\longrightarrow \\{0,1\\}\\)</span> tel que <span class=\"math inline\">\\(g(x)\\)</span> prend la valeur qu’a <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(B_x\\)</span>. Montrer pour chaque points de <span class=\"math inline\">\\(\\Rr\\setminus \\Qq\\)</span>, <span class=\"math inline\">\\(g\\)</span> est constante dans un voisinage de ce point, puis faire la même chose pour un point de <span class=\"math inline\">\\(\\Qq\\)</span>. Conclure.</p>\n"
+      }
+    },
+    {
+      "id": "c50a1803-f008-404d-a33a-63eb865bbe1b",
+      "type": "reponse",
+      "value": {
+        "latex": "L'ensemble $B$ est connexe si\net seulement si toute fonction continue $f:B\\to \\{0,1\\}$ est\nconstante. Soit alors $f:B\\to \\{0,1\\}$ une fonction continue et\nmontrons qu'elle est constante.\nRemarquons que la restriction de $f$ \\`a tout ensemble $B_a$ est constante ($B_a$ est connexe).\n\nOn définit $g : \\Rr \\longrightarrow \\{0,1\\}$ tel que $g(x)$ prend  la valeur\nqu'a $f$ sur $B_x$.\nNous allons montrer que $g$ est localement constante (on ne sait pas si $g$ est continue).\n\n\\begin{itemize}\n\\item Soit $a \\notin \\Qq$ alors on a $(a,0)\\in B$, $f$ est une fonction continue et\n$\\{f(a,0)\\}$ est un ouvert de $\\{0,1\\}$, donc $f^{-1}(\\{ f(a,0) \\})$ est un ouvert de $B$.\nDonc il existe $\\epsilon >0$ tel que si\n$(x,y) \\in (]a-\\epsilon,a+\\epsilon[\\times ]-\\epsilon,\\epsilon[)\\times B$ alors\n$f(x,y)=f(a,0)$. Alors pour $x\\in ]a-\\epsilon,a+\\epsilon[$ on a $g(x)=g(a)$ :\nsi $x\\notin \\Qq$ alors $g(x)=f(x,0)=f(a,0)=g(a)$; et si $x\\in \\Qq$ alors\n$g(x)= f(x,\\frac \\epsilon 2) = f(a,0)=g(a)$.\nDonc $g$ est localement constante au voisinage des point irrationnels.\n\n  \\item Si $a\\in \\Qq$ et soit $b\\in ]0,1]$ alors $f$ est continue en $(a,b)$ donc il existe\n$\\epsilon >0$ tel que pour tout $x\\in ]a-\\epsilon,a+\\epsilon[\\cap \\Qq$,\n$g(x)=f(x,b)=f(a,b)=g(a)$.\nSi maintenant $x\\in ]a-\\epsilon,a+\\epsilon[\\cap (\\Rr \\setminus \\Qq)$, on prend une \nsuite $(x_n)$ de rationnels qui tendent vers $x$. \nComme $f$ est continue alors\n$g(a)=g(x_n)=f(x_n,b)$ tend vers $f(x,b)=g(x)$. Donc $g(a)=g(x)$.\nNous avons montrer que $g$ est localement constante au voisinage des point rationnels.\n\n  \\item Bilan : $g$ est localement constante sur $\\Rr$.\n\\end{itemize}\n\nComme $\\Rr$ est connexe, alors $g$ est constante sur $\\Rr$. Donc\n$f$ est constante sur $\\Rr$. Ce qu'il fallait démontrer.",
+        "html": "<p>L’ensemble <span class=\"math inline\">\\(B\\)</span> est connexe si et seulement si toute fonction continue <span class=\"math inline\">\\(f:B\\to \\{0,1\\}\\)</span> est constante. Soit alors <span class=\"math inline\">\\(f:B\\to \\{0,1\\}\\)</span> une fonction continue et montrons qu’elle est constante. Remarquons que la restriction de <span class=\"math inline\">\\(f\\)</span> à tout ensemble <span class=\"math inline\">\\(B_a\\)</span> est constante (<span class=\"math inline\">\\(B_a\\)</span> est connexe).</p>\n<p>On définit <span class=\"math inline\">\\(g : \\Rr \\longrightarrow \\{0,1\\}\\)</span> tel que <span class=\"math inline\">\\(g(x)\\)</span> prend la valeur qu’a <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\(B_x\\)</span>. Nous allons montrer que <span class=\"math inline\">\\(g\\)</span> est localement constante (on ne sait pas si <span class=\"math inline\">\\(g\\)</span> est continue).</p>\n<ul>\n<li><p>Soit <span class=\"math inline\">\\(a \\notin \\Qq\\)</span> alors on a <span class=\"math inline\">\\((a,0)\\in B\\)</span>, <span class=\"math inline\">\\(f\\)</span> est une fonction continue et <span class=\"math inline\">\\(\\{f(a,0)\\}\\)</span> est un ouvert de <span class=\"math inline\">\\(\\{0,1\\}\\)</span>, donc <span class=\"math inline\">\\(f^{-1}(\\{ f(a,0) \\})\\)</span> est un ouvert de <span class=\"math inline\">\\(B\\)</span>. Donc il existe <span class=\"math inline\">\\(\\epsilon &gt;0\\)</span> tel que si <span class=\"math inline\">\\((x,y) \\in (]a-\\epsilon,a+\\epsilon[\\times ]-\\epsilon,\\epsilon[)\\times B\\)</span> alors <span class=\"math inline\">\\(f(x,y)=f(a,0)\\)</span>. Alors pour <span class=\"math inline\">\\(x\\in ]a-\\epsilon,a+\\epsilon[\\)</span> on a <span class=\"math inline\">\\(g(x)=g(a)\\)</span> : si <span class=\"math inline\">\\(x\\notin \\Qq\\)</span> alors <span class=\"math inline\">\\(g(x)=f(x,0)=f(a,0)=g(a)\\)</span>; et si <span class=\"math inline\">\\(x\\in \\Qq\\)</span> alors <span class=\"math inline\">\\(g(x)= f(x,\\frac \\epsilon 2) = f(a,0)=g(a)\\)</span>. Donc <span class=\"math inline\">\\(g\\)</span> est localement constante au voisinage des point irrationnels.</p></li>\n<li><p>Si <span class=\"math inline\">\\(a\\in \\Qq\\)</span> et soit <span class=\"math inline\">\\(b\\in ]0,1]\\)</span> alors <span class=\"math inline\">\\(f\\)</span> est continue en <span class=\"math inline\">\\((a,b)\\)</span> donc il existe <span class=\"math inline\">\\(\\epsilon &gt;0\\)</span> tel que pour tout <span class=\"math inline\">\\(x\\in ]a-\\epsilon,a+\\epsilon[\\cap \\Qq\\)</span>, <span class=\"math inline\">\\(g(x)=f(x,b)=f(a,b)=g(a)\\)</span>. Si maintenant <span class=\"math inline\">\\(x\\in ]a-\\epsilon,a+\\epsilon[\\cap (\\Rr \\setminus \\Qq)\\)</span>, on prend une suite <span class=\"math inline\">\\((x_n)\\)</span> de rationnels qui tendent vers <span class=\"math inline\">\\(x\\)</span>. Comme <span class=\"math inline\">\\(f\\)</span> est continue alors <span class=\"math inline\">\\(g(a)=g(x_n)=f(x_n,b)\\)</span> tend vers <span class=\"math inline\">\\(f(x,b)=g(x)\\)</span>. Donc <span class=\"math inline\">\\(g(a)=g(x)\\)</span>. Nous avons montrer que <span class=\"math inline\">\\(g\\)</span> est localement constante au voisinage des point rationnels.</p></li>\n<li><p>Bilan : <span class=\"math inline\">\\(g\\)</span> est localement constante sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p></li>\n</ul>\n<p>Comme <span class=\"math inline\">\\(\\Rr\\)</span> est connexe, alors <span class=\"math inline\">\\(g\\)</span> est constante sur <span class=\"math inline\">\\(\\Rr\\)</span>. Donc <span class=\"math inline\">\\(f\\)</span> est constante sur <span class=\"math inline\">\\(\\Rr\\)</span>. Ce qu’il fallait démontrer.</p>\n"
+      }
+    }
+  ]
+}

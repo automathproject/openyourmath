@@ -1,0 +1,35 @@
+{
+  "uuid": "3P5M",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "4197",
+    "auteur": "quercia",
+    "createdAt": "2010-03-11",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Fonction de plusieurs variables",
+    "sousChapitre": "Extremums locaux",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:35.718Z"
+  },
+  "contenu": [
+    {
+      "id": "394bbf0c-85bd-4a83-b257-d5e8f674de4e",
+      "type": "description",
+      "value": {
+        "latex": "$D_1$, $D_2$, $D_3$ sont trois droites d'un plan portant les côtés\nd'un triangle équilatéral de côté~$a$.\nOn pose $$\\varphi : {D_1\\times D_2\\times D_3} \\to \\R, {(M,N,P)} \\mapsto {MN+NP+PM.}$$\nDéterminer $\\min\\varphi$ et les triplets $(M,N,P)$ où ce minimum est atteint.",
+        "html": "<p><span class=\"math inline\">\\(D_1\\)</span>, <span class=\"math inline\">\\(D_2\\)</span>, <span class=\"math inline\">\\(D_3\\)</span> sont trois droites d’un plan portant les côtés d’un triangle équilatéral de côté <span class=\"math inline\">\\(a\\)</span>. On pose <span class=\"math display\">\\[\\varphi : {D_1\\times D_2\\times D_3} \\to \\R, {(M,N,P)} \\mapsto {MN+NP+PM.}\\]</span> Déterminer <span class=\"math inline\">\\(\\min\\varphi\\)</span> et les triplets <span class=\"math inline\">\\((M,N,P)\\)</span> où ce minimum est atteint.</p>\n"
+      }
+    },
+    {
+      "id": "4ad65e48-8977-4fbd-b523-d64e269cde44",
+      "type": "reponse",
+      "value": {
+        "latex": "Le minimum demandé existe car $\\varphi(M,N,P)\\to+\\infty$ quand l'un au\nmoins des points $M,N,P$ tend vers l'infini sur sa droite personnelle.\nSoient $D_1\\cap D_2 = \\{A\\}$, $D_2\\cap D_3 = \\{B\\}$, $D_3\\cap D_1 = \\{C\\}$\net $A'$, $B'$, $C'$ les milieux de $[B,C]$, $[C,A]$ et $[A,B]$.\nDéjà on a $\\varphi(B',C',A') = \\frac32a$ et $\\varphi(A,N,P) \\ge 2AP \\ge a\\sqrt3$\ndonc le minimum n'est pas atteint lorsque l'un des points $M,N,P$ est confondu\navec l'un des points $A,B,C$, ni non plus si l'un des points $M,N,P$\nest hors du triangle $ABC$.\nPour $N,P$ fixés hors de $D_1$, on fait varier $M$ sur $D_1$~: $M = A + t\\vec{AB}$ avec $t\\in\\R$\net on considère $f(t) = \\varphi(M,N,P)$.\nAlors $f'(t) = \\Bigl(\\vec{AB} \\mid \\frac{\\vec{MN}}{MN} + \\frac{\\vec{MP}}{MP}\\Bigr)$\ndonc $f(t)$ est minimal lorsque $D_1$ est la bissectrice extérieure des\ndemi-droites $[MN)$ et $[MP)$.\n\nSoit $(M,N,P)$ un triplet réalisant le minimum de~$\\varphi$ et $\\alpha,\\beta,\\gamma$\nles angles du triangle $MNP$ en $P,M$ et $N$. Les angles du triangle\n$AMN$ sont $\\pi/3$, $(\\pi-\\beta)/2$ et $(\\pi-\\gamma)/2$ d'où\n$2\\pi/3 = \\beta+\\gamma = \\pi-\\alpha$ et donc $\\alpha = \\pi/3 = \\beta = \\gamma$.\nOn en déduit que $(MP)$ est paralèle à $(AB)$, $(MN)$ à $(BC)$ et $(NP)$ à $(AC)$\npuis que $(M,N,P) = (B',C',A')$.",
+        "html": "<p>Le minimum demandé existe car <span class=\"math inline\">\\(\\varphi(M,N,P)\\to+\\infty\\)</span> quand l’un au moins des points <span class=\"math inline\">\\(M,N,P\\)</span> tend vers l’infini sur sa droite personnelle. Soient <span class=\"math inline\">\\(D_1\\cap D_2 = \\{A\\}\\)</span>, <span class=\"math inline\">\\(D_2\\cap D_3 = \\{B\\}\\)</span>, <span class=\"math inline\">\\(D_3\\cap D_1 = \\{C\\}\\)</span> et <span class=\"math inline\">\\(A&#39;\\)</span>, <span class=\"math inline\">\\(B&#39;\\)</span>, <span class=\"math inline\">\\(C&#39;\\)</span> les milieux de <span class=\"math inline\">\\([B,C]\\)</span>, <span class=\"math inline\">\\([C,A]\\)</span> et <span class=\"math inline\">\\([A,B]\\)</span>. Déjà on a <span class=\"math inline\">\\(\\varphi(B&#39;,C&#39;,A&#39;) = \\frac32a\\)</span> et <span class=\"math inline\">\\(\\varphi(A,N,P) \\ge 2AP \\ge a\\sqrt3\\)</span> donc le minimum n’est pas atteint lorsque l’un des points <span class=\"math inline\">\\(M,N,P\\)</span> est confondu avec l’un des points <span class=\"math inline\">\\(A,B,C\\)</span>, ni non plus si l’un des points <span class=\"math inline\">\\(M,N,P\\)</span> est hors du triangle <span class=\"math inline\">\\(ABC\\)</span>. Pour <span class=\"math inline\">\\(N,P\\)</span> fixés hors de <span class=\"math inline\">\\(D_1\\)</span>, on fait varier <span class=\"math inline\">\\(M\\)</span> sur <span class=\"math inline\">\\(D_1\\)</span> : <span class=\"math inline\">\\(M = A + t\\vec{AB}\\)</span> avec <span class=\"math inline\">\\(t\\in\\R\\)</span> et on considère <span class=\"math inline\">\\(f(t) = \\varphi(M,N,P)\\)</span>. Alors <span class=\"math inline\">\\(f&#39;(t) = \\Bigl(\\vec{AB} \\mid \\frac{\\vec{MN}}{MN} + \\frac{\\vec{MP}}{MP}\\Bigr)\\)</span> donc <span class=\"math inline\">\\(f(t)\\)</span> est minimal lorsque <span class=\"math inline\">\\(D_1\\)</span> est la bissectrice extérieure des demi-droites <span class=\"math inline\">\\([MN)\\)</span> et <span class=\"math inline\">\\([MP)\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\((M,N,P)\\)</span> un triplet réalisant le minimum de <span class=\"math inline\">\\(\\varphi\\)</span> et <span class=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> les angles du triangle <span class=\"math inline\">\\(MNP\\)</span> en <span class=\"math inline\">\\(P,M\\)</span> et <span class=\"math inline\">\\(N\\)</span>. Les angles du triangle <span class=\"math inline\">\\(AMN\\)</span> sont <span class=\"math inline\">\\(\\pi/3\\)</span>, <span class=\"math inline\">\\((\\pi-\\beta)/2\\)</span> et <span class=\"math inline\">\\((\\pi-\\gamma)/2\\)</span> d’où <span class=\"math inline\">\\(2\\pi/3 = \\beta+\\gamma = \\pi-\\alpha\\)</span> et donc <span class=\"math inline\">\\(\\alpha = \\pi/3 = \\beta = \\gamma\\)</span>. On en déduit que <span class=\"math inline\">\\((MP)\\)</span> est paralèle à <span class=\"math inline\">\\((AB)\\)</span>, <span class=\"math inline\">\\((MN)\\)</span> à <span class=\"math inline\">\\((BC)\\)</span> et <span class=\"math inline\">\\((NP)\\)</span> à <span class=\"math inline\">\\((AC)\\)</span> puis que <span class=\"math inline\">\\((M,N,P) = (B&#39;,C&#39;,A&#39;)\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

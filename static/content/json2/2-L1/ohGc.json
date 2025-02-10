@@ -1,0 +1,35 @@
+{
+  "uuid": "ohGc",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5241",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Suite",
+    "sousChapitre": "Convergence",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:42:28.100Z"
+  },
+  "contenu": [
+    {
+      "id": "38296f0e-6b9d-4a38-8bc3-bc375f1e0672",
+      "type": "description",
+      "value": {
+        "latex": "Montrer que, pour $n\\geq2$, \n\n\\begin{center}\n$\\cos\\left(\\frac{\\pi}{2^{n}}\\right)=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...+\\sqrt{2}}}$ ($n-1$ radicaux) et $\\sin\\left(\\frac{\\pi}{2^{n}}\\right)=\\frac{1}{2}\\sqrt{2-\\sqrt{2+...+\\sqrt{2}}}$ ($n-1$ radicaux).\n\\end{center}\nEn déduire $\\lim_{n\\rightarrow +\\infty}2^n\\sqrt{2-\\sqrt{2+...+\\sqrt{2}}}$ ($n$ radicaux).",
+        "html": "<p>Montrer que, pour <span class=\"math inline\">\\(n\\geq2\\)</span>,</p>\n<p><span class=\"math inline\">\\(\\cos\\left(\\frac{\\pi}{2^{n}}\\right)=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...+\\sqrt{2}}}\\)</span> (<span class=\"math inline\">\\(n-1\\)</span> radicaux) et <span class=\"math inline\">\\(\\sin\\left(\\frac{\\pi}{2^{n}}\\right)=\\frac{1}{2}\\sqrt{2-\\sqrt{2+...+\\sqrt{2}}}\\)</span> (<span class=\"math inline\">\\(n-1\\)</span> radicaux).</p>\n<p>En déduire <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}2^n\\sqrt{2-\\sqrt{2+...+\\sqrt{2}}}\\)</span> (<span class=\"math inline\">\\(n\\)</span> radicaux).</p>\n"
+      }
+    },
+    {
+      "id": "70d56525-8519-4a9d-abc8-ae96f01b88a5",
+      "type": "reponse",
+      "value": {
+        "latex": "L'égalité proposée est vraie pour $n=2$ car $\\cos\\frac{\\pi}{2^2}=\\cos\\frac{\\pi}{4}=\\frac{\\sqrt{2}}{2}$.\n\nSoit $n\\geq2$. Supposons que $\\cos(\\frac{\\pi}{2^{n}})=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}}$ ($n-1$ radicaux).\n\nAlors, puisque $\\cos(\\frac{\\pi}{2^{n+1}})>0$ (car $\\frac{\\pi}{2^{n+1}}$ est dans $]0,\\frac{\\pi}{2}[$), \n\n$$\\cos(\\frac{\\pi}{2^{n+1}})=\\sqrt{\\frac{1+\\cos(\\frac{\\pi}{2^{n}})}{2}}=\\sqrt{\\frac{1}{2}(1+\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}})}=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}},\\;(n\\;\\mbox{radicaux}).$$\n\nOn a montré par récurrence que, pour $n\\geq2$, $\\cos(\\frac{\\pi}{2^{n}})=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}}$ ($n-1$ radicaux).\n \nEnsuite, pour $n\\geq2$, \n\n$$\\sin(\\frac{\\pi}{2^{n}})=\\sqrt{\\frac{1}{2}(1-\\cos(\\frac{\\pi}{2^{n-1}})}=\\frac{1}{2}\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}\\;(n-1\\;\\mbox{radicaux})$$\n\nEnfin, \n\n$$2^n\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}=2^n.2\\sin\\frac{\\pi}{2^{n+1}}\\sim2^{n+1}\\frac{\\pi}{2^{n+1}}=\\pi.$$\n\nDonc, $\\lim_{n\\rightarrow +\\infty}2^n\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}=\\pi$.",
+        "html": "<p>L’égalité proposée est vraie pour <span class=\"math inline\">\\(n=2\\)</span> car <span class=\"math inline\">\\(\\cos\\frac{\\pi}{2^2}=\\cos\\frac{\\pi}{4}=\\frac{\\sqrt{2}}{2}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\geq2\\)</span>. Supposons que <span class=\"math inline\">\\(\\cos(\\frac{\\pi}{2^{n}})=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}}\\)</span> (<span class=\"math inline\">\\(n-1\\)</span> radicaux).</p>\n<p>Alors, puisque <span class=\"math inline\">\\(\\cos(\\frac{\\pi}{2^{n+1}})&gt;0\\)</span> (car <span class=\"math inline\">\\(\\frac{\\pi}{2^{n+1}}\\)</span> est dans <span class=\"math inline\">\\(]0,\\frac{\\pi}{2}[\\)</span>),</p>\n<p><span class=\"math display\">\\[\\cos(\\frac{\\pi}{2^{n+1}})=\\sqrt{\\frac{1+\\cos(\\frac{\\pi}{2^{n}})}{2}}=\\sqrt{\\frac{1}{2}(1+\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}})}=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}},\\;(n\\;\\mbox{radicaux}).\\]</span></p>\n<p>On a montré par récurrence que, pour <span class=\"math inline\">\\(n\\geq2\\)</span>, <span class=\"math inline\">\\(\\cos(\\frac{\\pi}{2^{n}})=\\frac{1}{2}\\sqrt{2+\\sqrt{2+...\\sqrt{2}}}\\)</span> (<span class=\"math inline\">\\(n-1\\)</span> radicaux).</p>\n<p>Ensuite, pour <span class=\"math inline\">\\(n\\geq2\\)</span>,</p>\n<p><span class=\"math display\">\\[\\sin(\\frac{\\pi}{2^{n}})=\\sqrt{\\frac{1}{2}(1-\\cos(\\frac{\\pi}{2^{n-1}})}=\\frac{1}{2}\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}\\;(n-1\\;\\mbox{radicaux})\\]</span></p>\n<p>Enfin,</p>\n<p><span class=\"math display\">\\[2^n\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}=2^n.2\\sin\\frac{\\pi}{2^{n+1}}\\sim2^{n+1}\\frac{\\pi}{2^{n+1}}=\\pi.\\]</span></p>\n<p>Donc, <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}2^n\\sqrt{2-\\sqrt{2+...\\sqrt{2}}}=\\pi\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

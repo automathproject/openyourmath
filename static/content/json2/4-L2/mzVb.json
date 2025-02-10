@@ -1,0 +1,59 @@
+{
+  "uuid": "mzVb",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2604",
+    "auteur": "delaunay",
+    "createdAt": "2009-05-19",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
+    "sousChapitre": "Diagonalisation",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:44:08.204Z"
+  },
+  "contenu": [
+    {
+      "id": "ff2263ae-4102-4710-a698-90efb629615e",
+      "type": "description",
+      "value": {
+        "latex": "Soit $\\theta\\in \\R$, on consid\\`ere l'endomorphisme $f$ de $\\R^3$ dont la matrice dans la base canonique est la suivante\n$$A=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta&0 \\\\  \\sin\\theta&\\cos\\theta&0 \\\\ 0&0&1 \\\\ \\end{pmatrix}.$$",
+        "html": "<p>Soit <span class=\"math inline\">\\(\\theta\\in \\R\\)</span>, on considère l’endomorphisme <span class=\"math inline\">\\(f\\)</span> de <span class=\"math inline\">\\(\\R^3\\)</span> dont la matrice dans la base canonique est la suivante <span class=\"math display\">\\[A=\\begin{pmatrix}\\cos\\theta&amp;-\\sin\\theta&amp;0 \\\\  \\sin\\theta&amp;\\cos\\theta&amp;0 \\\\ 0&amp;0&amp;1 \\\\ \\end{pmatrix}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "8aa67bcd-9f5e-4c31-98c7-c19005049885",
+      "type": "question",
+      "value": {
+        "latex": "Quelle est la nature géométrique de cet endomorphisme ?",
+        "html": "<p>Quelle est la nature géométrique de cet endomorphisme ?</p>\n"
+      }
+    },
+    {
+      "id": "3b314825-a29a-4fab-9212-04a3cd256958",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\it Déterminons la nature géométrique de cet endomorphisme.}\n\nNotons $(\\vec i,\\vec j,\\vec k)$ la base canonique de $\\R^3$, la matrice $A$ est la matrice de la rotation d'axe $\\R\\vec k$ d'angle $\\theta$. \n\nOn peut ajouter que les vecteurs colinéaires à $\\vec k$ sont fixes. Un vecteur de coordonnées $(x,y,z)$ est envoyé sur le vecteur $(x\\cos\\theta-y\\sin\\theta,x\\sin\\theta+y\\cos\\theta,z)$, sa composante dans le plan engendré par $\\vec i$ et $\\vec j$ subit la rotation plane d'angle $\\theta$.",
+        "html": "<p><span><em>Déterminons la nature géométrique de cet endomorphisme.</em></span></p>\n<p>Notons <span class=\"math inline\">\\((\\vec i,\\vec j,\\vec k)\\)</span> la base canonique de <span class=\"math inline\">\\(\\R^3\\)</span>, la matrice <span class=\"math inline\">\\(A\\)</span> est la matrice de la rotation d’axe <span class=\"math inline\">\\(\\R\\vec k\\)</span> d’angle <span class=\"math inline\">\\(\\theta\\)</span>.</p>\n<p>On peut ajouter que les vecteurs colinéaires à <span class=\"math inline\">\\(\\vec k\\)</span> sont fixes. Un vecteur de coordonnées <span class=\"math inline\">\\((x,y,z)\\)</span> est envoyé sur le vecteur <span class=\"math inline\">\\((x\\cos\\theta-y\\sin\\theta,x\\sin\\theta+y\\cos\\theta,z)\\)</span>, sa composante dans le plan engendré par <span class=\"math inline\">\\(\\vec i\\)</span> et <span class=\"math inline\">\\(\\vec j\\)</span> subit la rotation plane d’angle <span class=\"math inline\">\\(\\theta\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8b1536b3-5d0c-43eb-98bb-e065df9af088",
+      "type": "question",
+      "value": {
+        "latex": "Démontrer que, pour tout $\\theta\\in\\R\\setminus\\pi\\Z$, la matrice $A$ admet une unique valeur propre réelle. Quel est le sous-espace propre associé ? Que se passe-t-il si $\\theta\\in\\pi\\Z$ ?",
+        "html": "<p>Démontrer que, pour tout <span class=\"math inline\">\\(\\theta\\in\\R\\setminus\\pi\\Z\\)</span>, la matrice <span class=\"math inline\">\\(A\\)</span> admet une unique valeur propre réelle. Quel est le sous-espace propre associé ? Que se passe-t-il si <span class=\"math inline\">\\(\\theta\\in\\pi\\Z\\)</span> ?</p>\n"
+      }
+    },
+    {
+      "id": "9c7da0ec-7932-45dd-9fdf-44162a0c5a0e",
+      "type": "reponse",
+      "value": {
+        "latex": "{\\it Démontrons que, pour tout $\\theta\\in\\R\\setminus\\pi\\Z$, la matrice $A$ admet une unique valeur propre réelle et déterminons son sous-espace propre associé}. \n\nCalculons le polyn\\^ome caractéristique de la matrice $A$.\n$$\\begin{align*}\n P_A(X)=\\begin{vmatrix}\\cos\\theta-X&-\\sin\\theta&0 \\\\  \\sin\\theta&\\cos\\theta-X&0 \\\\ 0&0&1-X \\\\ \\end{vmatrix} &=[(\\cos\\theta-X)^2+\\sin^2\\theta](1-X) \\\\  &=(1-X)(X^2-2X\\cos\\theta+1\n\\end{align*}$$\nCherchons les racines du polynôme $X^2-2X\\cos\\theta+1$, pour cela on calcule son discrimminant réduit\n$$\\Delta'=\\cos^2\\theta-1=-\\sin^2\\theta<0,$$\nen effet, si $\\theta\\in\\R\\setminus\\pi\\Z$, alors $\\sin\\theta\\neq 0$, donc le polyn\\^ome $P_A$ n'admet qu'une racine réelle $\\lambda=1$. Son sous-espace propre associé est de dimension $1$, c'est l'axe $\\R\\vec k$ de la rotation. \n\n{\\it Cas où $\\theta\\in\\pi\\Z$ }\n\nOn distingue les cas $\\theta=n\\pi$ avec $n$ pair ou impair :\n\n- Si $\\theta=2n\\pi,\\ n\\in\\Z$, alors $\\displaystyle A=\\begin{pmatrix}1&0&0 \\\\  0&1&0 \\\\ 0&0&1 \\\\ \\end{pmatrix}$, c'est la matrice de l'identité.\n\n- Si $\\theta=(2n+1)\\pi,\\ n\\in\\Z$, alors $\\displaystyle A=\\begin{pmatrix}-1&0&0 \\\\  0&-1&0 \\\\ 0&0&1 \\\\ \\end{pmatrix}$, c'est la matrice de la symétrie orthogonale par rapport à l'axe $\\R\\vec k$. Elle admet deux valeurs propres, la valeur propre $1$ dont le sous-espace propre est l'axe $\\R\\vec k$ et la valeur propre $-1$ dont le sous-espace propre est le plan $\\R\\vec i+\\R\\vec j$.",
+        "html": "<p><span><em>Démontrons que, pour tout <span class=\"math inline\">\\(\\theta\\in\\R\\setminus\\pi\\Z\\)</span>, la matrice <span class=\"math inline\">\\(A\\)</span> admet une unique valeur propre réelle et déterminons son sous-espace propre associé</em></span>.</p>\n<p>Calculons le polynôme caractéristique de la matrice <span class=\"math inline\">\\(A\\)</span>. <span class=\"math display\">\\[\\begin{align*}\n P_A(X)=\\begin{vmatrix}\\cos\\theta-X&amp;-\\sin\\theta&amp;0 \\\\  \\sin\\theta&amp;\\cos\\theta-X&amp;0 \\\\ 0&amp;0&amp;1-X \\\\ \\end{vmatrix} &amp;=[(\\cos\\theta-X)^2+\\sin^2\\theta](1-X) \\\\  &amp;=(1-X)(X^2-2X\\cos\\theta+1\n\\end{align*}\\]</span> Cherchons les racines du polynôme <span class=\"math inline\">\\(X^2-2X\\cos\\theta+1\\)</span>, pour cela on calcule son discrimminant réduit <span class=\"math display\">\\[\\Delta&#39;=\\cos^2\\theta-1=-\\sin^2\\theta&lt;0,\\]</span> en effet, si <span class=\"math inline\">\\(\\theta\\in\\R\\setminus\\pi\\Z\\)</span>, alors <span class=\"math inline\">\\(\\sin\\theta\\neq 0\\)</span>, donc le polynôme <span class=\"math inline\">\\(P_A\\)</span> n’admet qu’une racine réelle <span class=\"math inline\">\\(\\lambda=1\\)</span>. Son sous-espace propre associé est de dimension <span class=\"math inline\">\\(1\\)</span>, c’est l’axe <span class=\"math inline\">\\(\\R\\vec k\\)</span> de la rotation.</p>\n<p><span><em>Cas où <span class=\"math inline\">\\(\\theta\\in\\pi\\Z\\)</span></em> </span></p>\n<p>On distingue les cas <span class=\"math inline\">\\(\\theta=n\\pi\\)</span> avec <span class=\"math inline\">\\(n\\)</span> pair ou impair :</p>\n<p>- Si <span class=\"math inline\">\\(\\theta=2n\\pi,\\ n\\in\\Z\\)</span>, alors <span class=\"math inline\">\\(\\displaystyle A=\\begin{pmatrix}1&amp;0&amp;0 \\\\  0&amp;1&amp;0 \\\\ 0&amp;0&amp;1 \\\\ \\end{pmatrix}\\)</span>, c’est la matrice de l’identité.</p>\n<p>- Si <span class=\"math inline\">\\(\\theta=(2n+1)\\pi,\\ n\\in\\Z\\)</span>, alors <span class=\"math inline\">\\(\\displaystyle A=\\begin{pmatrix}-1&amp;0&amp;0 \\\\  0&amp;-1&amp;0 \\\\ 0&amp;0&amp;1 \\\\ \\end{pmatrix}\\)</span>, c’est la matrice de la symétrie orthogonale par rapport à l’axe <span class=\"math inline\">\\(\\R\\vec k\\)</span>. Elle admet deux valeurs propres, la valeur propre <span class=\"math inline\">\\(1\\)</span> dont le sous-espace propre est l’axe <span class=\"math inline\">\\(\\R\\vec k\\)</span> et la valeur propre <span class=\"math inline\">\\(-1\\)</span> dont le sous-espace propre est le plan <span class=\"math inline\">\\(\\R\\vec i+\\R\\vec j\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

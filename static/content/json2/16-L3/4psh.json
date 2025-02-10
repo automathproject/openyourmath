@@ -1,0 +1,35 @@
+{
+  "uuid": "4psh",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "2680",
+    "auteur": "matexo1",
+    "createdAt": "2002-02-01",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Singularité",
+    "sousChapitre": "Singularité",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:40:34.718Z"
+  },
+  "contenu": [
+    {
+      "id": "0ab2f297-7896-4b70-9132-7692d27a6d63",
+      "type": "description",
+      "value": {
+        "latex": "{\\`A} l'aide de la formule\n$$ f^{(n)}(a) = {n!\\over 2i\\pi } \\int_\\Gamma {f(z)\\over (z-a)^{n+1}} \\,dz$$\no{\\`u} $f$ est m{\\'e}romorphe dans un domaine contenant le contour simple \n$\\Gamma$, et $a$ est\nun point int{\\'e}rieur {\\`a} $\\Gamma$, montrer que l'on a\n$$ \\left(x^n\\over n!\\right)^2 = {1\\over 2i\\pi } \n\\int_C {x^n e^{xz}\\over n! z^{n+1}} \\,dz$$\no{\\`u} $C$ est le cercle unit{\\'e} de $\\C$. En d{\\'e}duire que l'on a\n$$ \\sum_{n=0}^{+\\infty } {x^{2n}\\over \\left(n!\\right)^2} = {1\\over 2\\pi }\n \\int_0^{2\\pi } e^{2x\\cos \\theta}\\,d\\theta. $$",
+        "html": "<p><span>À</span> l’aide de la formule <span class=\"math display\">\\[f^{(n)}(a) = {n!\\over 2i\\pi } \\int_\\Gamma {f(z)\\over (z-a)^{n+1}} \\,dz\\]</span> o<span>ù</span> <span class=\"math inline\">\\(f\\)</span> est m<span>é</span>romorphe dans un domaine contenant le contour simple <span class=\"math inline\">\\(\\Gamma\\)</span>, et <span class=\"math inline\">\\(a\\)</span> est un point int<span>é</span>rieur <span>à</span> <span class=\"math inline\">\\(\\Gamma\\)</span>, montrer que l’on a <span class=\"math display\">\\[\\left(x^n\\over n!\\right)^2 = {1\\over 2i\\pi } \n\\int_C {x^n e^{xz}\\over n! z^{n+1}} \\,dz\\]</span> o<span>ù</span> <span class=\"math inline\">\\(C\\)</span> est le cercle unit<span>é</span> de <span class=\"math inline\">\\(\\C\\)</span>. En d<span>é</span>duire que l’on a <span class=\"math display\">\\[\\sum_{n=0}^{+\\infty } {x^{2n}\\over \\left(n!\\right)^2} = {1\\over 2\\pi }\n \\int_0^{2\\pi } e^{2x\\cos \\theta}\\,d\\theta.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "313ef557-57f9-4a9c-8b33-50e8e0b8e0d1",
+      "type": "reponse",
+      "value": {
+        "latex": "On pose $f(z) = e^{xz}$. Alors $f^{(n)} (0)= x^n$, donc\n$$ x^n = {n!\\over 2i\\pi } \\int_C {e^{xz}\\over z^{n+1}}\\,dz $$\nd'o{\\`u} la formule demand{\\'e}e par multiplication par $x^n/(n!)^2$.\n\nSur $C$, on a $|z|=1$, et donc la s{\\'e}rie $\\sum x^n /(n! z^{n})$ est\nuniform{\\'e}ment convergente par rapport {\\`a} $z$ (et sa limite est bien s{\\^u}r {\\'e}gale {\\`a}\n$e^{x/z}$). Donc on peut inverser les signes $\\sum$ et $\\int$:\n$$\\begin{array}{cccccc}\\sum_{n=0}^{+\\infty } \\left(x^n\\over n!\\right)^2\n&= {1\\over 2i\\pi }\\sum_{n=0}^{+\\infty } \\int_C {e^{xz}\\over z}\\,\\left({x^n\\over n! z^n}\\right)\\,dz \\cr\n&= {1\\over 2i\\pi } \\int_C {1\\over z}\\,e^{xz}\\,e^{x\\over z}\\ dz \\cr\n&= {1\\over 2i\\pi } \\int_0^{2\\pi } e^{-i\\theta} e^{x(e^{i\\theta}+e^{-i\\theta})} \\,{i e^{i\\theta}\\,d\\theta}\n &(z = e^{i\\theta})\\cr\n&= {1\\over 2\\pi } \\int_0^{2\\pi } e^{2x\\cos\\theta}\\,d\\theta.\n\\end{array}$$",
+        "html": "<p>On pose <span class=\"math inline\">\\(f(z) = e^{xz}\\)</span>. Alors <span class=\"math inline\">\\(f^{(n)} (0)= x^n\\)</span>, donc <span class=\"math display\">\\[x^n = {n!\\over 2i\\pi } \\int_C {e^{xz}\\over z^{n+1}}\\,dz\\]</span> d’o<span>ù</span> la formule demand<span>é</span>e par multiplication par <span class=\"math inline\">\\(x^n/(n!)^2\\)</span>.</p>\n<p>Sur <span class=\"math inline\">\\(C\\)</span>, on a <span class=\"math inline\">\\(|z|=1\\)</span>, et donc la s<span>é</span>rie <span class=\"math inline\">\\(\\sum x^n /(n! z^{n})\\)</span> est uniform<span>é</span>ment convergente par rapport <span>à</span> <span class=\"math inline\">\\(z\\)</span> (et sa limite est bien s<span>û</span>r <span>é</span>gale <span>à</span> <span class=\"math inline\">\\(e^{x/z}\\)</span>). Donc on peut inverser les signes <span class=\"math inline\">\\(\\sum\\)</span> et <span class=\"math inline\">\\(\\int\\)</span>: <span class=\"math display\">\\[\\begin{array}{cccccc}\\sum_{n=0}^{+\\infty } \\left(x^n\\over n!\\right)^2\n&amp;= {1\\over 2i\\pi }\\sum_{n=0}^{+\\infty } \\int_C {e^{xz}\\over z}\\,\\left({x^n\\over n! z^n}\\right)\\,dz \\cr\n&amp;= {1\\over 2i\\pi } \\int_C {1\\over z}\\,e^{xz}\\,e^{x\\over z}\\ dz \\cr\n&amp;= {1\\over 2i\\pi } \\int_0^{2\\pi } e^{-i\\theta} e^{x(e^{i\\theta}+e^{-i\\theta})} \\,{i e^{i\\theta}\\,d\\theta}\n &amp;(z = e^{i\\theta})\\cr\n&amp;= {1\\over 2\\pi } \\int_0^{2\\pi } e^{2x\\cos\\theta}\\,d\\theta.\n\\end{array}\\]</span></p>\n"
+      }
+    }
+  ]
+}

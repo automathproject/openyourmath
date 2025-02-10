@@ -1,0 +1,67 @@
+{
+  "uuid": "H6Wv",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "157",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Logique, ensemble, raisonnement",
+    "sousChapitre": "Récurrence",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:25.221Z"
+  },
+  "contenu": [
+    {
+      "id": "eb947560-2e1c-4616-bb7f-e86052adc378",
+      "type": "description",
+      "value": {
+        "latex": "Soit $X$ un ensemble. Pour $f \\in \\mathcal{F} (X, X)$, on d\\'efinit $f^0 = id$ et\npar r\\'ecurrence pour $n \\in \\Nn$ $f^{n + 1} = f^n \\circ f$.",
+        "html": "<p>Soit <span class=\"math inline\">\\(X\\)</span> un ensemble. Pour <span class=\"math inline\">\\(f \\in \\mathcal{F} (X, X)\\)</span>, on définit <span class=\"math inline\">\\(f^0 = id\\)</span> et par récurrence pour <span class=\"math inline\">\\(n \\in \\Nn\\)</span> <span class=\"math inline\">\\(f^{n + 1} = f^n \\circ f\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "0ef39679-10aa-44d0-8640-9daa4722830e",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que $\\forall n \\in \\Nn$ $f^{n + 1} = f \\circ f^n$.",
+        "html": "<p>Montrer que <span class=\"math inline\">\\(\\forall n \\in \\Nn\\)</span> <span class=\"math inline\">\\(f^{n + 1} = f \\circ f^n\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "41d1feae-8e10-4bc8-847b-78bf3b88becd",
+      "type": "reponse",
+      "value": {
+        "latex": "Montrons la proposition demand\\'ee par r\\'ecurrence:\nsoit $\\mathcal{A}_{n}$ l'assertion $f^{n + 1} = f \\circ f^n$.\nCette assertion est vraie pour $n=0$. Pour $n\\in \\Nn$ supposons\n$\\mathcal{A}_{n}$ vraie. Alors\n$$f^{n + 2} = f^{n + 1} \\circ f = (f \\circ f^n) \\circ f = f \\circ (f^n \\circ f) = f \\circ f^{n + 1}.$$\nNous avons utiliser la definition de $f^{n + 2}$, puis la proposition $\\mathcal{A}_{n}$,\npuis l'associativit\\'e de la composition, puis la d\\'efinition de $f^{n + 1}$.\nDonc $\\mathcal{A}_{n+1}$ est vraie. Par le principe de r\\'ecurrence\n$$\\forall \\in \\Nn \\ \\ f^n\\circ f = f\\circ f^n.$$",
+        "html": "<p>Montrons la proposition demandée par récurrence: soit <span class=\"math inline\">\\(\\mathcal{A}_{n}\\)</span> l’assertion <span class=\"math inline\">\\(f^{n + 1} = f \\circ f^n\\)</span>. Cette assertion est vraie pour <span class=\"math inline\">\\(n=0\\)</span>. Pour <span class=\"math inline\">\\(n\\in \\Nn\\)</span> supposons <span class=\"math inline\">\\(\\mathcal{A}_{n}\\)</span> vraie. Alors <span class=\"math display\">\\[f^{n + 2} = f^{n + 1} \\circ f = (f \\circ f^n) \\circ f = f \\circ (f^n \\circ f) = f \\circ f^{n + 1}.\\]</span> Nous avons utiliser la definition de <span class=\"math inline\">\\(f^{n + 2}\\)</span>, puis la proposition <span class=\"math inline\">\\(\\mathcal{A}_{n}\\)</span>, puis l’associativité de la composition, puis la définition de <span class=\"math inline\">\\(f^{n + 1}\\)</span>. Donc <span class=\"math inline\">\\(\\mathcal{A}_{n+1}\\)</span> est vraie. Par le principe de récurrence <span class=\"math display\">\\[\\forall \\in \\Nn \\ \\ f^n\\circ f = f\\circ f^n.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "bd27984f-9bdf-4a93-94df-313b56fff10f",
+      "type": "question",
+      "value": {
+        "latex": "Montrer que si $f$ est bijective alors $\\forall n \\in \\Nn$ $ (f^{-1})^n\n = (f^n)^{-1}$.",
+        "html": "<p>Montrer que si <span class=\"math inline\">\\(f\\)</span> est bijective alors <span class=\"math inline\">\\(\\forall n \\in \\Nn\\)</span> <span class=\"math inline\">\\((f^{-1})^n\n = (f^n)^{-1}\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "cc0bfc7d-ad97-4922-8221-367aa8e4e06a",
+      "type": "reponse",
+      "value": {
+        "latex": "On proc\\`ede de m\\^eme par r\\'ecurrence:\nsoit $\\mathcal{A}_{n}$ l'assertion $ (f^{-1})^n  = (f^n)^{-1}$.\nCette assertion est vraie pour $n=0$. Pour $n\\in \\Nn$ supposons\n$\\mathcal{A}_{n}$ vraie. Alors\n$$(f^{-1})^{n+1} = (f^{-1})^{n} \\circ f^{-1} = (f^n)^{-1} \\circ f^{-1} = (f\\circ f^n)^{-1} =\n ( f^n \\circ f)^{-1} = ( f^{n+1})^{-1} .$$\nDonc $\\mathcal{A}_{n+1}$ est vraie. Par le principe de r\\'ecurrence\n$$\\forall \\in \\Nn \\ \\ (f^{-1})^n\n = (f^n)^{-1}.$$",
+        "html": "<p>On procède de même par récurrence: soit <span class=\"math inline\">\\(\\mathcal{A}_{n}\\)</span> l’assertion <span class=\"math inline\">\\((f^{-1})^n  = (f^n)^{-1}\\)</span>. Cette assertion est vraie pour <span class=\"math inline\">\\(n=0\\)</span>. Pour <span class=\"math inline\">\\(n\\in \\Nn\\)</span> supposons <span class=\"math inline\">\\(\\mathcal{A}_{n}\\)</span> vraie. Alors <span class=\"math display\">\\[(f^{-1})^{n+1} = (f^{-1})^{n} \\circ f^{-1} = (f^n)^{-1} \\circ f^{-1} = (f\\circ f^n)^{-1} =\n ( f^n \\circ f)^{-1} = ( f^{n+1})^{-1} .\\]</span> Donc <span class=\"math inline\">\\(\\mathcal{A}_{n+1}\\)</span> est vraie. Par le principe de récurrence <span class=\"math display\">\\[\\forall \\in \\Nn \\ \\ (f^{-1})^n\n = (f^n)^{-1}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "13cc72f9-9023-4db4-9458-3eac2271b0e3",
+      "type": "indication",
+      "value": {
+        "latex": "Pour les deux questions, travailler par r\\'ecurrence.",
+        "html": "<p>Pour les deux questions, travailler par récurrence.</p>\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "uuid": "HT8S",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "1063",
+    "auteur": "ridde",
+    "createdAt": "1999-11-01",
+    "hasIndication": "true",
+    "hasCorrection": "true",
+    "chapitre": "Matrice",
+    "sousChapitre": "Propriétés élémentaires, généralités",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:38:25.602Z"
+  },
+  "contenu": [
+    {
+      "id": "74818a19-7e3f-45a0-bc6d-89cb778e38c0",
+      "type": "description",
+      "value": {
+        "latex": "Soient $A$ et $B \\in \\mathcal{M}_n(\\Rr)$ telles que $\\forall X \\in \\mathcal{M}_n (\\Rr)$,\n$\\text{tr} (AX) = \\text{tr} (BX)$. Montrer que $A = B$.",
+        "html": "<p>Soient <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(B \\in \\mathcal{M}_n(\\Rr)\\)</span> telles que <span class=\"math inline\">\\(\\forall X \\in \\mathcal{M}_n (\\Rr)\\)</span>, <span class=\"math inline\">\\(\\text{tr} (AX) = \\text{tr} (BX)\\)</span>. Montrer que <span class=\"math inline\">\\(A = B\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "907c8f5e-9649-48a7-bb8c-7a3e739699eb",
+      "type": "indication",
+      "value": {
+        "latex": "Essayer avec $X$ la matrice élémentaire $E_{ij}$ (des zéros partout sauf le coefficient $1$ à la\n $i$-ème ligne et la $j$-ème colonne).",
+        "html": "<p>Essayer avec <span class=\"math inline\">\\(X\\)</span> la matrice élémentaire <span class=\"math inline\">\\(E_{ij}\\)</span> (des zéros partout sauf le coefficient <span class=\"math inline\">\\(1\\)</span> à la <span class=\"math inline\">\\(i\\)</span>-ème ligne et la <span class=\"math inline\">\\(j\\)</span>-ème colonne).</p>\n"
+      }
+    },
+    {
+      "id": "58cbe149-0d06-4548-b2e1-48fceefce32a",
+      "type": "reponse",
+      "value": {
+        "latex": "Notons $E_{ij}$ la matrice élémentaire (des zéros partout sauf le coefficient $1$ à la\n $i$-ème ligne et la $j$-ème colonne).\n\nSoit $A = (a_{ij})  \\in \\mathcal{M}_n(\\Rr)$.\nAlors \n$$A \\times E_{ij} = \n\\begin{pmatrix}  \n0 & 0 & \\cdots & 0 & a_{1i} & 0 & \\cdots \\\\\n0 & 0 & \\cdots & 0 & a_{2i} & 0 & \\cdots \\\\\n\\vdots&  & \\cdots & & \\vdots &  & \\cdots \\\\\n0 & 0 & \\cdots & 0 & a_{ji} & 0 & \\cdots \\\\\n\\vdots&  & \\cdots & & \\vdots &  & \\cdots \\\\\n0 & 0 & \\cdots & 0 & a_{ni} & 0 & \\cdots \\\\\n\\end{pmatrix}$$\nLa seule colonne non nulle est la $j$-ème colonne.\n\nLa trace est la somme des éléments sur la diagonale. Ici le seul élément non nul de la diagonale est\n$a_{ji}$, on en déduit donc \n$$\\text{tr} (A \\times E_{ij})=a_{ji}$$\n(attention à l'inversion des indices).\n\nMaintenant prenons deux matrices $A, B$ telles que $\\text{tr} (AX) = \\text{tr} (BX)$\npour toute matrice $X$. Alors pour $X=E_{ij}$ on en déduit $a_{ji}=b_{ji}$.\nOn fait ceci pour toutes les matrices élémentaires $E_{ij}$ avec $1 \\le i,j \\le n$\nce qui implique $A=B$.",
+        "html": "<p>Notons <span class=\"math inline\">\\(E_{ij}\\)</span> la matrice élémentaire (des zéros partout sauf le coefficient <span class=\"math inline\">\\(1\\)</span> à la <span class=\"math inline\">\\(i\\)</span>-ème ligne et la <span class=\"math inline\">\\(j\\)</span>-ème colonne).</p>\n<p>Soit <span class=\"math inline\">\\(A = (a_{ij})  \\in \\mathcal{M}_n(\\Rr)\\)</span>. Alors <span class=\"math display\">\\[A \\times E_{ij} = \n\\begin{pmatrix}  \n0 &amp; 0 &amp; \\cdots &amp; 0 &amp; a_{1i} &amp; 0 &amp; \\cdots \\\\\n0 &amp; 0 &amp; \\cdots &amp; 0 &amp; a_{2i} &amp; 0 &amp; \\cdots \\\\\n\\vdots&amp;  &amp; \\cdots &amp; &amp; \\vdots &amp;  &amp; \\cdots \\\\\n0 &amp; 0 &amp; \\cdots &amp; 0 &amp; a_{ji} &amp; 0 &amp; \\cdots \\\\\n\\vdots&amp;  &amp; \\cdots &amp; &amp; \\vdots &amp;  &amp; \\cdots \\\\\n0 &amp; 0 &amp; \\cdots &amp; 0 &amp; a_{ni} &amp; 0 &amp; \\cdots \\\\\n\\end{pmatrix}\\]</span> La seule colonne non nulle est la <span class=\"math inline\">\\(j\\)</span>-ème colonne.</p>\n<p>La trace est la somme des éléments sur la diagonale. Ici le seul élément non nul de la diagonale est <span class=\"math inline\">\\(a_{ji}\\)</span>, on en déduit donc <span class=\"math display\">\\[\\text{tr} (A \\times E_{ij})=a_{ji}\\]</span> (attention à l’inversion des indices).</p>\n<p>Maintenant prenons deux matrices <span class=\"math inline\">\\(A, B\\)</span> telles que <span class=\"math inline\">\\(\\text{tr} (AX) = \\text{tr} (BX)\\)</span> pour toute matrice <span class=\"math inline\">\\(X\\)</span>. Alors pour <span class=\"math inline\">\\(X=E_{ij}\\)</span> on en déduit <span class=\"math inline\">\\(a_{ji}=b_{ji}\\)</span>. On fait ceci pour toutes les matrices élémentaires <span class=\"math inline\">\\(E_{ij}\\)</span> avec <span class=\"math inline\">\\(1 \\le i,j \\le n\\)</span> ce qui implique <span class=\"math inline\">\\(A=B\\)</span>.</p>\n"
+      }
+    }
+  ]
+}

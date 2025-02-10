@@ -1,0 +1,59 @@
+{
+  "uuid": "igQp",
+  "titre": "",
+  "theme": "",
+  "niveau": "",
+  "metadata": {
+    "exo7id": "5070",
+    "auteur": "rouget",
+    "createdAt": "2010-06-30",
+    "hasIndication": "false",
+    "hasCorrection": "true",
+    "chapitre": "Nombres complexes",
+    "sousChapitre": "Trigonométrie",
+    "organisation": "",
+    "updatedAt": "2025-02-10T15:39:10.536Z"
+  },
+  "contenu": [
+    {
+      "id": "64958fa6-ec15-46bb-aa84-33adfe937698",
+      "type": "description",
+      "value": {
+        "latex": "",
+        "html": "\n"
+      }
+    },
+    {
+      "id": "18225673-418d-4df5-a08d-8c06ce859191",
+      "type": "question",
+      "value": {
+        "latex": "Calculer $\\prod_{k=1}^{n}\\cos\\left(\\frac{a}{2^k}\\right)$ pour $a$ élément donné de $]0,\\pi[$ (penser à $\\sin(2x)=2\\sin x\\cos x$).",
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\prod_{k=1}^{n}\\cos\\left(\\frac{a}{2^k}\\right)\\)</span> pour <span class=\"math inline\">\\(a\\)</span> élément donné de <span class=\"math inline\">\\(]0,\\pi[\\)</span> (penser à <span class=\"math inline\">\\(\\sin(2x)=2\\sin x\\cos x\\)</span>).</p>\n"
+      }
+    },
+    {
+      "id": "cbe37570-552e-46fb-8d6e-12628ed4bd0a",
+      "type": "reponse",
+      "value": {
+        "latex": "Soit $n\\in\\Nn^*$. Puisque $a$ est dans $]0,\\pi[$ alors, pour tout entier naturel non nul $k$, $\\frac{a}{2^k}$ est dans $]0,\\pi[$ et donc\n$\\sin\\frac{a}{2^k}\\neq0$. De plus, puisque $\\sin\\left(\\frac{a}{2^{k-1}}\\right)=\\sin\\left(2\\times\\frac{a}{2^k}\\right)=2\\sin\\left(\\frac{a}{2^k}\\right)\\cos\\left(\\frac{a}{2^k}\\right)$, on a~:\n\n$$\\prod_{k=1}^{n}\\cos\\left(\\frac{a}{2^k}\\right)=\\prod_{k=1}^{n}\\frac{\\sin\\left(\\frac{a}{2^{k-1}}\\right)}{2\\sin\\left(\\frac{a}{2^k}\\right)}=\\frac{1}{2^{\nn}}\n\\frac{\\sin(a)\\sin\\left(\\frac{a}{2}\\right)\\ldots\\sin\\left(\\frac{a}{2^{n-1}}\\right)}\n{\\sin\\left(\\frac{a}{2}\\right)\\ldots\\sin\\left(\\frac{a}{2^{n-1}}\\right)\\sin\\left(\\frac{a}{2^{n}}\\right)}=\\frac{\\sin\na}{2^{n}\\sin\\frac{a}{2^n}}.$$\n\n\\begin{center}\n\\shadowbox{\n$\\forall a\\in]0,\\pi[$, $\\forall n\\in\\Nn^*$, $\\prod_{k=1}^{n}\\cos\\left(\\frac{a}{2^k}\\right)=\\frac{\\sin\na}{2^{n}\\sin\\frac{a}{2^n}}$.\n}\n\\end{center}",
+        "html": "<p>Soit <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>. Puisque <span class=\"math inline\">\\(a\\)</span> est dans <span class=\"math inline\">\\(]0,\\pi[\\)</span> alors, pour tout entier naturel non nul <span class=\"math inline\">\\(k\\)</span>, <span class=\"math inline\">\\(\\frac{a}{2^k}\\)</span> est dans <span class=\"math inline\">\\(]0,\\pi[\\)</span> et donc <span class=\"math inline\">\\(\\sin\\frac{a}{2^k}\\neq0\\)</span>. De plus, puisque <span class=\"math inline\">\\(\\sin\\left(\\frac{a}{2^{k-1}}\\right)=\\sin\\left(2\\times\\frac{a}{2^k}\\right)=2\\sin\\left(\\frac{a}{2^k}\\right)\\cos\\left(\\frac{a}{2^k}\\right)\\)</span>, on a :</p>\n<p><span class=\"math display\">\\[\\prod_{k=1}^{n}\\cos\\left(\\frac{a}{2^k}\\right)=\\prod_{k=1}^{n}\\frac{\\sin\\left(\\frac{a}{2^{k-1}}\\right)}{2\\sin\\left(\\frac{a}{2^k}\\right)}=\\frac{1}{2^{\nn}}\n\\frac{\\sin(a)\\sin\\left(\\frac{a}{2}\\right)\\ldots\\sin\\left(\\frac{a}{2^{n-1}}\\right)}\n{\\sin\\left(\\frac{a}{2}\\right)\\ldots\\sin\\left(\\frac{a}{2^{n-1}}\\right)\\sin\\left(\\frac{a}{2^{n}}\\right)}=\\frac{\\sin\na}{2^{n}\\sin\\frac{a}{2^n}}.\\]</span></p>\n"
+      }
+    },
+    {
+      "id": "cc6b4760-7ce8-40c4-a724-9b99f85cdb3b",
+      "type": "question",
+      "value": {
+        "latex": "Déterminer $\\lim_{n\\rightarrow +\\infty}\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)$.",
+        "html": "<p>Déterminer <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)\\)</span>.</p>\n"
+      }
+    },
+    {
+      "id": "8128a653-c0f5-40d3-bb00-1775d05d11b6",
+      "type": "reponse",
+      "value": {
+        "latex": "$\\forall k\\in\\Nn^*,\\;\\cos\\left(\\frac{a}{2^k}\\right)>0$ car $\\frac{a}{2^k}$ est dans $]0,\\frac{\\pi}{2}[$. Puis\n\n$$\\begin{align*}\n\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)&=\\ln\\left(\\prod_{k=1}^{n}\\cos(\\frac{a}{2^k})\\right)=\\ln\\left(\\frac{\\sin\na}{2^{n}\\sin\\frac{a}{2^n}}\\right)=\\ln\\left(\\frac{\\sin a}{a}\\right)-\\ln\\left(\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}}\\right).\n\\end{align*}$$\nMaintenant, $\\lim_{n\\rightarrow +\\infty}\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}}=\\lim_{x\\rightarrow 0}\\frac{\\sin x}{x}=1$ et donc,\n\n$$\\lim_{n\\rightarrow +\\infty}\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)=\\lim_{n\\rightarrow +\\infty}\\left(\\ln(\\frac{\\sin\na}{a})-\\ln(\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}})\\right)=\\ln\\left(\\frac{\\sin a}{a}\\right).$$\n\n\\begin{center}\n\\shadowbox{\n$\\forall a\\in]0,\\pi[$, $\\lim_{n\\rightarrow +\\infty}\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)=\\ln\\left(\\frac{\\sin a}{a}\\right)$.\n}\n\\end{center}",
+        "html": "<p><span class=\"math inline\">\\(\\forall k\\in\\Nn^*,\\;\\cos\\left(\\frac{a}{2^k}\\right)&gt;0\\)</span> car <span class=\"math inline\">\\(\\frac{a}{2^k}\\)</span> est dans <span class=\"math inline\">\\(]0,\\frac{\\pi}{2}[\\)</span>. Puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)&amp;=\\ln\\left(\\prod_{k=1}^{n}\\cos(\\frac{a}{2^k})\\right)=\\ln\\left(\\frac{\\sin\na}{2^{n}\\sin\\frac{a}{2^n}}\\right)=\\ln\\left(\\frac{\\sin a}{a}\\right)-\\ln\\left(\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}}\\right).\n\\end{align*}\\]</span> Maintenant, <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}}=\\lim_{x\\rightarrow 0}\\frac{\\sin x}{x}=1\\)</span> et donc,</p>\n<p><span class=\"math display\">\\[\\lim_{n\\rightarrow +\\infty}\\sum_{k=1}^{n}\\ln\\left(\\cos(\\frac{a}{2^k})\\right)=\\lim_{n\\rightarrow +\\infty}\\left(\\ln(\\frac{\\sin\na}{a})-\\ln(\\frac{\\sin\\frac{a}{2^n}}{\\frac{a}{2^n}})\\right)=\\ln\\left(\\frac{\\sin a}{a}\\right).\\]</span></p>\n"
+      }
+    }
+  ]
+}
