@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Equation différentielle",
     "sousChapitre": "Résolution d'équation différentielle du deuxième ordre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:26.600Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:20.909Z"
   },
   "contenu": [
     {
-      "id": "49872f7e-1aea-441e-b9c0-1e95bea992fe",
+      "id": "c9cf8cc4-8f2c-4ae2-a331-f846a1c224ae",
       "type": "description",
       "value": {
         "latex": "Résoudre sur $]0;\\pi[$ l'équation différentielle\n$y''+y=\\mathrm{cotan}\\, x$, où $\\mathrm{cotan}\\, x = \\frac{\\cos x}{\\sin x}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "bc3ced62-7b6a-4f95-8d90-b170a72ca884",
+      "id": "312edd9f-1e6d-47a8-849f-534e12120d87",
       "type": "indication",
       "value": {
         "latex": "Utiliser la méthode de variation de la constante.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "6991bc6c-4817-4ff2-bc8f-ca67b64f986e",
+      "id": "55573f1d-4631-4816-9080-bc53a1bf32da",
       "type": "reponse",
       "value": {
         "latex": "Les solutions de l'équation homogène sont les $\\lambda\\cos x+\\mu\\sin x$. \nEn posant $y_1(x)=\\cos x$ et $y_2(x)=\\sin x$, on va chercher les solutions sous \nla forme $\\lambda y_1+\\mu y_2$, vérifiant\n\\begin{eqnarray*}\n\\left\\{\\begin{array}{l}\n\\lambda'y_1+\\mu'y_2=0\\\\\n\\lambda'y'_1+\\mu'y'_2=\\mathrm{cotan}\\, x\n\\end{array}\\right.\n&\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\n\\lambda'\\cos x+\\mu'\\sin x=0\\\\\n\\lambda'(-\\sin x)+\\mu'\\cos x=\\mathrm{cotan}\\, x\n\\end{array}\\right.\\\\\n\\ &\\Longleftrightarrow&\n\\left\\{\\begin{array}{l}\n\\lambda'(x)=\\frac{\\begin{array}{|cc|}0&\\sin x\\\\\\mathrm{cotan}\\, x&\\cos x \\end{array}}{\\begin{array}{|cc|}\\cos x&\\sin x\\\\-\\sin x&\\cos x \\end{array}}\\\\\n\\ \\\\\n\\mu'(x)=\\frac{\\begin{array}{|cc|}\\cos x&0\\\\-\\sin x&\\mathrm{cotan}\\, x \\end{array}}{\\begin{array}{|cc|}\\cos x&\\sin x\\\\-\\sin x&\\cos x \\end{array}}\n\\end{array}\\right.\n\\end{eqnarray*}\nd'après les formules de Cramer, où $\\begin{array}{|cc|}\\cos x&\\sin x\\\\-\\sin x&\\cos x \\end{array}=1$. On obtient donc \n$$\\left\\{\\begin{array}{l}\n\\lambda'(x)=-\\cos x\\\\\n\\mu'(x)=\\frac{\\cos^2x}{\\sin x}\n\\end{array}\\right.\n$$\nce qui donne une primitive $\\lambda(x)=-\\sin x$. \n\nPour $\\mu$, on cherche à primitiver \n$\\frac{\\cos^2x}{\\sin x}$ à l'aide du changement de variable $t=\\cos x$ (et donc $\\dd t= -\\sin t \\,\\dd x$), \non calcule une primitive\n\\begin{eqnarray*}\n\\int \\frac{\\cos^2x}{\\sin x}\\,\\dd x&=&-\\int\\frac{t^2}{1-t^2}\\,\\dd t=t-\\int\\frac{1}{1-t^2}\\,\\dd t\\\\ \n &=&t+\\frac{1}{2}\\ln(1-t) -\\frac{1}{2}\\ln(1-t)= \\cos x + \\frac{1}{2}\\ln(1-\\cos x) - \\frac{1}{2}\\ln(1-\\cos x)\n\\end{eqnarray*}\nEn remplaçant, les solutions générales sont les \n$$y(x)=c_1\\cos x+c_2\\sin x +  (-\\sin x)\\cos x+\\left(\\cos x + \\frac{1}{2}\\ln(1-\\cos x) - \\frac{1}{2}\\ln(1-\\cos x)\\right)\\sin x$$\nqui se simplifie $y(x)=c_1\\cos x+c_2\\sin x + \\frac{1}{2}\\sin x\\ln\\frac{1-\\cos x}{1+\\cos x}$, $c_1,c_2\\in\\Rr$.",
         "html": "<p>Les solutions de l’équation homogène sont les <span class=\"math inline\">\\(\\lambda\\cos x+\\mu\\sin x\\)</span>. En posant <span class=\"math inline\">\\(y_1(x)=\\cos x\\)</span> et <span class=\"math inline\">\\(y_2(x)=\\sin x\\)</span>, on va chercher les solutions sous la forme <span class=\"math inline\">\\(\\lambda y_1+\\mu y_2\\)</span>, vérifiant <span class=\"math display\">\\[\\begin{aligned}\n\\left\\{\\begin{array}{l}\n\\lambda&#39;y_1+\\mu&#39;y_2=0\\\\\n\\lambda&#39;y&#39;_1+\\mu&#39;y&#39;_2=\\mathrm{cotan}\\, x\n\\end{array}\\right.\n&amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\n\\lambda&#39;\\cos x+\\mu&#39;\\sin x=0\\\\\n\\lambda&#39;(-\\sin x)+\\mu&#39;\\cos x=\\mathrm{cotan}\\, x\n\\end{array}\\right.\\\\\n\\ &amp;\\Longleftrightarrow&amp;\n\\left\\{\\begin{array}{l}\n\\lambda&#39;(x)=\\frac{\\begin{array}{|cc|}0&amp;\\sin x\\\\\\mathrm{cotan}\\, x&amp;\\cos x \\end{array}}{\\begin{array}{|cc|}\\cos x&amp;\\sin x\\\\-\\sin x&amp;\\cos x \\end{array}}\\\\\n\\ \\\\\n\\mu&#39;(x)=\\frac{\\begin{array}{|cc|}\\cos x&amp;0\\\\-\\sin x&amp;\\mathrm{cotan}\\, x \\end{array}}{\\begin{array}{|cc|}\\cos x&amp;\\sin x\\\\-\\sin x&amp;\\cos x \\end{array}}\n\\end{array}\\right.\\end{aligned}\\]</span> d’après les formules de Cramer, où <span class=\"math inline\">\\(\\begin{array}{|cc|}\\cos x&amp;\\sin x\\\\-\\sin x&amp;\\cos x \\end{array}=1\\)</span>. On obtient donc <span class=\"math display\">\\[\\left\\{\\begin{array}{l}\n\\lambda&#39;(x)=-\\cos x\\\\\n\\mu&#39;(x)=\\frac{\\cos^2x}{\\sin x}\n\\end{array}\\right.\\]</span> ce qui donne une primitive <span class=\"math inline\">\\(\\lambda(x)=-\\sin x\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(\\mu\\)</span>, on cherche à primitiver <span class=\"math inline\">\\(\\frac{\\cos^2x}{\\sin x}\\)</span> à l’aide du changement de variable <span class=\"math inline\">\\(t=\\cos x\\)</span> (et donc <span class=\"math inline\">\\(\\dd t= -\\sin t \\,\\dd x\\)</span>), on calcule une primitive <span class=\"math display\">\\[\\begin{aligned}\n\\int \\frac{\\cos^2x}{\\sin x}\\,\\dd x&amp;=&amp;-\\int\\frac{t^2}{1-t^2}\\,\\dd t=t-\\int\\frac{1}{1-t^2}\\,\\dd t\\\\ \n &amp;=&amp;t+\\frac{1}{2}\\ln(1-t) -\\frac{1}{2}\\ln(1-t)= \\cos x + \\frac{1}{2}\\ln(1-\\cos x) - \\frac{1}{2}\\ln(1-\\cos x)\\end{aligned}\\]</span> En remplaçant, les solutions générales sont les <span class=\"math display\">\\[y(x)=c_1\\cos x+c_2\\sin x +  (-\\sin x)\\cos x+\\left(\\cos x + \\frac{1}{2}\\ln(1-\\cos x) - \\frac{1}{2}\\ln(1-\\cos x)\\right)\\sin x\\]</span> qui se simplifie <span class=\"math inline\">\\(y(x)=c_1\\cos x+c_2\\sin x + \\frac{1}{2}\\sin x\\ln\\frac{1-\\cos x}{1+\\cos x}\\)</span>, <span class=\"math inline\">\\(c_1,c_2\\in\\Rr\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Résoudre sur <span class=\"math inline\">\\(]0;\\pi[\\)</span> l’équation différentielle <span class=\"math inline\">\\(y&#39;&#39;+y=\\mathrm{cotan}\\, x\\)< ..."
 }

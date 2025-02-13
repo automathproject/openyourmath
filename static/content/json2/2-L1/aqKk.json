@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Continuité, limite et étude de fonctions réelles",
     "sousChapitre": "Limite de fonctions",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:08.728Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:56.234Z"
   },
   "contenu": [
     {
-      "id": "84a5dc86-fa14-491d-bbed-491b47e42497",
+      "id": "7dc749a9-4b89-48d5-bc04-4be00ac23e13",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c2bfa821-41ba-41c7-9473-2c580b613500",
+      "id": "3aa41065-1876-4b09-84b1-93528bea9bf4",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer que $\\displaystyle{ \\lim_{x\\rightarrow 0}\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{ x}=1}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "0e95e823-217c-4bb6-a206-954f03742074",
+      "id": "f6d844fa-2b4b-4f0d-99e6-e0a7173ed7cf",
       "type": "question",
       "value": {
         "latex": "Soient $m,n$ des entiers positifs. \\'Etudier $\\displaystyle{\\lim_{x\\rightarrow 0}\\frac{\\sqrt{1+x^m}-\n\\sqrt{1-x^m}}{ x^n}}$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "636d7523-1416-49f1-8ca4-3c3ba6f45bb2",
+      "id": "1a90aaea-d4d9-411c-ac4f-dce99fb77e2a",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer que $\\displaystyle{ \\lim_{x\\rightarrow 0}\\frac{1}{ x}(\\sqrt{1+x+x^2}-1)=\n\\frac{1}{ 2}}$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "32b3e0cf-7340-4722-acf6-eed99a231921",
+      "id": "2ca21531-d7a9-44a3-b464-b2d1cb88e983",
       "type": "reponse",
       "value": {
         "latex": "G\\'en\\'eralement pour calculer des limites faisant intervenir des sommes de racines carr\\'ees,  il est utile de faire intervenir ``l'expression conjugu\\'ee\": \n$$\\sqrt a - \\sqrt b = \\frac{(\\sqrt a - \\sqrt b)(\\sqrt a + \\sqrt b)}{\\sqrt a + \\sqrt b} = \\frac{a-b}{\\sqrt a + \\sqrt b}.$$\nLes racines au num\\'erateur ont ``disparu\" en utilisant l'identit\\'e\n$(x-y)(x+y) = x^2-y^2$.\n\nAppliquons ceci sur un exemple :\n$$\\begin{align*}\n f(x) &= \n  \\frac{\\sqrt{1+x^m}-\\sqrt{1-x^m}}{x^n} \\\\\n     &=  \\frac{(\\sqrt{1+x^m}-\\sqrt{1-x^m})(\\sqrt{1+x^m}+\\sqrt{1-x^m})}{x^n(\\sqrt{1+x^m}+\\sqrt{1-x^m})} \\\\\n   &= \\frac{1+x^m-(1-x^m)}{x^n(\\sqrt{1+x^m}+\\sqrt{1-x^m})}  \\\\\n   &= \\frac{2x^m}{x^n(\\sqrt{1+x^m}+\\sqrt{1-x^m})}  \\\\\n   &= \\frac{2x^{m-n}}{\\sqrt{1+x^m}+\\sqrt{1-x^m}}  \\\\\n\\end{align*}$$\nEt nous avons \n$$ \\lim_{x \\rightarrow 0} \\frac 2 {\\sqrt{1+x^m}+\\sqrt{1-x^m}} = 1.$$\nDonc l'\\'etude de la limite de $f$ en $0$ est la m\\^eme que celle de la fonction $x \\mapsto x^{m-n}$.\n\nDistinguons plusieurs cas pour la limite de $f$ en $0$.\n\\begin{itemize}\n  \\item Si $m > n$ alors $x^{m-n}$, et donc $f(x)$, tendent vers $0$.\n  \\item Si $m=n$ alors $x^{m-n}$ et $f(x)$ tendent vers $1$.\n  \\item Si $m < n$ alors $x^{m-n} = \\frac 1 {x^{n-m}}  = \\frac 1 {x^k}$ avec $k = n-m$ un exposant positif. Si $k$ est pair alors les limites \n\\`a droite et \\`a gauche de $\\frac 1{x^k}$ sont $+\\infty$. \nPour $k$ impair la limite \\`a droite vaut $+\\infty$ et la limite \\`a gauche vaut $-\\infty$. Conclusion pour $k=n-m>0$ pair, la limite de $f$ en $0$ vaut $+\\infty$ et pour $k = n-m>0$ impair $f$ \\emph{n'a pas de limite en $0$} car les limites \\`a droite et \\`a gauche ne sont pas \\'egales.\n\\end{itemize}",
@@ -56,12 +56,13 @@
       }
     },
     {
-      "id": "1f0ad6e0-e08f-4463-b445-9f670f2ca6cb",
+      "id": "fd6965f2-8469-4c91-8207-0409f5bcc264",
       "type": "indication",
       "value": {
         "latex": "Utiliser l'expression conjugu\\'ee.",
         "html": "<p>Utiliser l’expression conjuguée.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Démontrer que <span class=\"math inline\">\\(\\displaystyle{ \\lim_{x\\rightarrow 0}\\frac{\\sqrt{1+x}-\\sqrt{1-x}}{ x}=1}\\)</span>.</p>\n"
 }

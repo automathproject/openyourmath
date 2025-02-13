@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Application linéaire",
     "sousChapitre": "Image et noyau, théorème du rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:37.583Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:50.105Z"
   },
   "contenu": [
     {
-      "id": "bfc81312-4f56-4005-945d-8b41a57f8ec9",
+      "id": "faa0c487-9def-49a8-9b28-203aef979ead",
       "type": "description",
       "value": {
         "latex": "Soient $E$ et $F$ deux $\\Kk$-espaces vectoriels et $f$ une application linéaire de $E$ vers $F$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f9eedf19-2248-4fc0-bc26-70b452dd9b76",
+      "id": "d5d84e7f-9a59-47c5-bfbc-deac21fcb9d1",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\left[\\left(\\forall g\\in\\mathcal{L}(F,E),\\;f\\circ g\\circ f=0\\Rightarrow g = 0\\right)\\Rightarrow f\\;\\text{bijective}\\right]$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "df79e22c-1d65-477f-895e-b0ed24d989b4",
+      "id": "2571a08d-cea6-47a1-ab77-8b1a9de12287",
       "type": "reponse",
       "value": {
         "latex": "Si $N=\\text{Ker}f\\neq\\{0\\}$, considérons $g$ non nul tel que $\\text{Im}g\\neq\\{0\\}$ et $\\text{Im}g\\subset\\text{Ker}f$.\n\nPour un tel $g$, $f\\circ g = 0$ puis $f\\circ g\\circ f = 0$ et donc $g = 0$ par hypothèse, contredisant $g$ non nulle. Donc $\\text{Ker}f =\\{0\\}$.\n\nSi $\\text{Im}f\\neq F$, on choisit $g$ nulle sur $\\text{Im}f$ et non nulle  sur un supplémentaire de $\\text{Im}f$ (dont l'existence est admise en dimension infinie). Alors, $g\\circ f = 0$ puis $f\\circ g\\circ f = 0$ et donc $g = 0$ contredisant $g$ non nulle. Donc $\\text{Im}f = F$.\n\nFinalement, $f$ est bien un isomorphisme de $E$ sur $F$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "45d2830b-6a1c-4adf-bb71-90754e0fa2ec",
+      "id": "0b05403c-da66-4c36-a6fd-c9de170343d2",
       "type": "question",
       "value": {
         "latex": "On pose $\\text{dim}E=p$, $\\text{dim}F=n$ et $\\text{rg}f=r$. Calculer la dimension de $\\{g\\in\\mathcal{L}(F,E)/\\;f\\circ g\\circ f =0\\}$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "9f107ef5-e435-4411-831e-ee67ce6a5b3b",
+      "id": "728f4a74-d728-46b9-8fdf-2d67a4e1777b",
       "type": "reponse",
       "value": {
         "latex": "Soit $A=\\{g\\in\\mathcal{L}(F,E)/\\;f\\circ g\\circ f = 0\\}$. Tout d'abord $A$ est bien un sous-espace vectoriel de $\\mathcal{L}(F,E)$ car contient l'application nulle et est stable par combinaison linéaire (ou bien $A$ est le noyau de l'application linéaire de $\\mathcal{L}(F,E)$ dans $\\mathcal{L}(E,F)$ qui à $g$ associe $f\\circ g\\circ f$).\n\nSoit $J$ un supplémentaire de $I=\\text{Im}f$ dans $F$. Un élément $g$ de $\\mathcal{L}(F,E)$ est entièrement déterminé par ses restrictions à $I$ et $J$.\n\n\\begin{center}\n$f\\circ g\\circ f = 0\\Leftrightarrow(f\\circ g)_{/I}= 0\\;\\text{et}\\;g_{/J}\\;\\text{est quelconque}\\Leftrightarrow g(I)\\subset N$.\n\\end{center}\n\nPour être le plus méticuleux possible, on peut alors considérer l'application $G$ de $\\mathcal{L}(I,N)\\times\\mathcal{L}(J,E)$ dans $\\mathcal{L}(F,E)$ qui à un couple $(g_1,g_2)$ associe l'unique application linéaire $g$ de $F$ dans $E$ telle que $g_{/I}= g_1$ et $g_{/J}=g_2$. $G$ est linéaire et injective d'image $A$. Donc \n\n\\begin{center}\n$\\text{dim}A =\\text{dim}\\mathcal{L}(I,N)\\times\\text{dim}\\mathcal{L}(J,E)=\\text{dim}\\mathcal{L}(I,N) + \\text{dim}\\mathcal{L}(J,E) = r(p - r) + (n - r)p = pn - r^2$.\n\\end{center}",
         "html": "<p>Soit <span class=\"math inline\">\\(A=\\{g\\in\\mathcal{L}(F,E)/\\;f\\circ g\\circ f = 0\\}\\)</span>. Tout d’abord <span class=\"math inline\">\\(A\\)</span> est bien un sous-espace vectoriel de <span class=\"math inline\">\\(\\mathcal{L}(F,E)\\)</span> car contient l’application nulle et est stable par combinaison linéaire (ou bien <span class=\"math inline\">\\(A\\)</span> est le noyau de l’application linéaire de <span class=\"math inline\">\\(\\mathcal{L}(F,E)\\)</span> dans <span class=\"math inline\">\\(\\mathcal{L}(E,F)\\)</span> qui à <span class=\"math inline\">\\(g\\)</span> associe <span class=\"math inline\">\\(f\\circ g\\circ f\\)</span>).</p>\n<p>Soit <span class=\"math inline\">\\(J\\)</span> un supplémentaire de <span class=\"math inline\">\\(I=\\text{Im}f\\)</span> dans <span class=\"math inline\">\\(F\\)</span>. Un élément <span class=\"math inline\">\\(g\\)</span> de <span class=\"math inline\">\\(\\mathcal{L}(F,E)\\)</span> est entièrement déterminé par ses restrictions à <span class=\"math inline\">\\(I\\)</span> et <span class=\"math inline\">\\(J\\)</span>.</p>\n<p><span class=\"math inline\">\\(f\\circ g\\circ f = 0\\Leftrightarrow(f\\circ g)_{/I}= 0\\;\\text{et}\\;g_{/J}\\;\\text{est quelconque}\\Leftrightarrow g(I)\\subset N\\)</span>.</p>\n<p>Pour être le plus méticuleux possible, on peut alors considérer l’application <span class=\"math inline\">\\(G\\)</span> de <span class=\"math inline\">\\(\\mathcal{L}(I,N)\\times\\mathcal{L}(J,E)\\)</span> dans <span class=\"math inline\">\\(\\mathcal{L}(F,E)\\)</span> qui à un couple <span class=\"math inline\">\\((g_1,g_2)\\)</span> associe l’unique application linéaire <span class=\"math inline\">\\(g\\)</span> de <span class=\"math inline\">\\(F\\)</span> dans <span class=\"math inline\">\\(E\\)</span> telle que <span class=\"math inline\">\\(g_{/I}= g_1\\)</span> et <span class=\"math inline\">\\(g_{/J}=g_2\\)</span>. <span class=\"math inline\">\\(G\\)</span> est linéaire et injective d’image <span class=\"math inline\">\\(A\\)</span>. Donc</p>\n<p><span class=\"math inline\">\\(\\text{dim}A =\\text{dim}\\mathcal{L}(I,N)\\times\\text{dim}\\mathcal{L}(J,E)=\\text{dim}\\mathcal{L}(I,N) + \\text{dim}\\mathcal{L}(J,E) = r(p - r) + (n - r)p = pn - r^2\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(E\\)</span> et <span class=\"math inline\">\\(F\\)</span> deux <span class=\"math inline\">\\(\\Kk\\)</span>-espaces vecto ..."
 }

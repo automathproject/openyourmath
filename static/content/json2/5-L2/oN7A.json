@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:31.013Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:25.532Z"
   },
   "contenu": [
     {
-      "id": "61dc95cb-5aec-4d1d-b04b-a1befa7dba19",
+      "id": "3605e81b-92c2-4b63-97d4-ff87b375c70a",
       "type": "description",
       "value": {
         "latex": "Pour $x\\in\\Rr$, on pose $F(x)=\\int_{0}^{1}\\frac{e^{-x^2(1+t^2)}}{1+t^2}\\;dt$ et $G(x)=\\left(\\int_{0}^{x}e^{-t^2}\\;dt\\right)^2$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b3523955-f80f-493b-9872-28736f8bc392",
+      "id": "9f12fe00-bb55-4847-9fe1-f2572fdbc602",
       "type": "question",
       "value": {
         "latex": "Montrer que $F$ est de classe $C^1$ sur $\\Rr$ et préciser $F'$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "84dd10df-37ab-45d3-990b-498e96c86c70",
+      "id": "b44e9567-f656-4575-b832-2cdab9026c0a",
       "type": "reponse",
       "value": {
         "latex": "Soit $A>0$. Soit $\\begin{array}[t]{cccc}\n\\Phi~:&[-A,A]\\times[0,1]&\\rightarrow&\\Rr\\\\\n &(x,t)&\\mapsto&\\frac{e^{-x^2(1+t^2)}}{1+t^2}\n\\end{array}$.\n\n\\textbullet~Pour chaque $x$ de $[-A,A]$, la fonction $t\\mapsto F(x,t)$ est continue sur le segment $[0,1]$ et donc intégrable sur ce segment.\n\n\\textbullet~La fonction $\\Phi$ admet sur $[-A,A]\\times[0,1]$ une dérivée partielle par rapport à sa première variable $x$ définie par :\n\n\\begin{center}\n$\\forall(x,t)\\in[-A,A]\\times[0,1]$, $\\frac{\\partial \\Phi}{\\partial x}(x,t)=-2xe^{-x^2(1+t^2)}$.\n\\end{center}\n\nDe plus,\n\n- pour chaque $x\\in[-A,A]$, la fonction $t\\mapsto \\frac{\\partial \\Phi}{\\partial x}(x,t)$ est continue par morceaux sur le segment $[0,1]$,\n\n- pour chaque $t\\in[0,1]$, la fonction $x\\mapsto \\frac{\\partial \\Phi}{\\partial x}(x,t)$ est continue par morceaux sur $\\Rr$,\n\n- pour chaque $(x,t)\\in[-A,A]\\times[0,1]$, $\\left|\\frac{\\partial \\Phi}{\\partial x}(x,t)\\right|\\leqslant 2A=\\varphi(t)$, la fonction $\\varphi$ étant continue et donc intégrable sur le\n\nsegment $[0,1]$.\n\nD'après le théorème de dérivation des intégrales à paramètres (théorème de \\textsc{Leibniz}), la fonction $F$ est de classe $C^1$ sur $[-A,A]$ et sa dérivée s'obtient en dérivant sous le signe somme. Ceci étant vrai pour tout $A>0$, $F$ est de classe $C^1$ sur $\\Rr$ et\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr$, $F'(x)=-2x\\int_{0}^{1}e^{-x^2(1+t^2)}\\;dt$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "76eae55d-680c-4cd7-99c3-2b59880ae649",
+      "id": "1fa4e8ce-e2b5-4a5c-abf5-4ef9525ad365",
       "type": "question",
       "value": {
         "latex": "Montrer que $G$ est de classe $C^1$ sur $\\Rr$ et préciser $G'$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "1f63928d-0d60-47e1-b52d-4c881e72e8da",
+      "id": "264a9624-8dd6-445c-8f87-47169725dc7f",
       "type": "reponse",
       "value": {
         "latex": "La fonction $x\\mapsto e^{-x^2}$ est continue sur $\\Rr$. On en déduit que la fonction $x\\mapsto\\int_{0}^{x}e^{-t^2}\\;dt$ est de classe $C^1$ sur $\\Rr$. Il en est de même de la fonction $G$ et pour tout réel $x$,\n\n\\begin{center}\n\\shadowbox{\n$G'(x)=2e^{-x^2}\\int_{0}^{x}e^{-t^2}\\;dt$.\n}\n\\end{center}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b32c2220-9d2d-4741-82e3-60a19aed0237",
+      "id": "d65f5e02-a725-4447-8076-630563dfec1a",
       "type": "question",
       "value": {
         "latex": "Montrer que la fonction $F+G$  est constante sur $\\Rr$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "d076a7e0-9469-43e9-b34c-66dc4cd566c0",
+      "id": "dbb7f374-792b-42ac-a15e-68e695ec4932",
       "type": "reponse",
       "value": {
         "latex": "Soit $x\\in\\Rr^*$. En posant $u=xt$, on obtient\n\n\\begin{center}\n$F'(x)=-2x\\int_{0}^{1}e^{-x^2(1+t^2)}\\;dt=-2e^{-x^2}\\int_{0}^{1}e^{-(xt)^2}\\;xdt=-e^{-x^2}\\int_{0}^{x}e^{-u^2}\\;du=-G'(x)$,\n\\end{center}\n\ncette égalité restant vraie quand $x=0$ par continuité des fonctions $F'$ et $G'$ sur $\\Rr$.\n\nAinsi, $F'+G'=0$ et donc $\\forall x\\in\\Rr$, $F(x)+G(x)=F(0)+G(0)=\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt=\\frac{\\pi}{4}$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr$, $F(x)+G(x)=\\frac{\\pi}{4}$.\n}\n\\end{center}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "d367633d-f565-4232-aaf3-2c0dcdca28cb",
+      "id": "8a08be60-67d9-440b-b727-63127a4994ea",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\lim_{x \\rightarrow +\\infty}F(x)$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "fcddfe28-5e44-4920-b795-505029fcf17e",
+      "id": "501342e5-8994-4726-8d17-aefa2431b7d6",
       "type": "reponse",
       "value": {
         "latex": "Pour $x\\in\\Rr$,\n\n\\begin{center}\n$|F(x)|=\\int_{0}^{1}\\frac{e^{-x^2(1+t^2)}}{1+t^2}\\;dt\\leqslant e^{-x^2}\\int_{0}^{1}\\frac{1}{1+t^2}\\;dt=\\frac{\\pi}{4e^{x^2}}$,\n\\end{center}\n\net puisque $\\lim_{x \\rightarrow +\\infty}\\frac{\\pi}{4e^{x^2}}=0$, on a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow +\\infty}F(x)=0$.\n}\n\\end{center}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "25050bce-2238-42f8-97a6-d9d145acdad1",
+      "id": "67cf5a4f-802d-4b7a-b3a4-16514c0eb02b",
       "type": "question",
       "value": {
         "latex": "En déduire $I$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "c39d4dae-3222-4b78-8946-877c034dded8",
+      "id": "2043aef9-d02d-4936-8443-d6ac7e280b6a",
       "type": "reponse",
       "value": {
         "latex": "Pour $x>0$, on a $\\int_{0}^{x}e^{-t^2}\\;dt\\geqslant0$ et donc d'après la question 3),\n\n\\begin{center}\n$\\int_{0}^{x}e^{-t^2}\\;dt=\\sqrt{G(x)}=\\sqrt{\\frac{\\pi}{2}-F(x)}$.\n\\end{center}\n\nLa question 4) permet alors d'affirmer que $\\lim_{x \\rightarrow +\\infty}G(x)=\\frac{\\sqrt{\\pi}}{2}$ et donc que\n\n\\begin{center}\n\\shadowbox{\n$\\int_{0}^{+\\infty}e^{-t^2}\\;dt=\\frac{\\sqrt{\\pi}}{2}$.\n}\n\\end{center}",
         "html": "<p>Pour <span class=\"math inline\">\\(x&gt;0\\)</span>, on a <span class=\"math inline\">\\(\\int_{0}^{x}e^{-t^2}\\;dt\\geqslant0\\)</span> et donc d’après la question 3),</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{x}e^{-t^2}\\;dt=\\sqrt{G(x)}=\\sqrt{\\frac{\\pi}{2}-F(x)}\\)</span>.</p>\n<p>La question 4) permet alors d’affirmer que <span class=\"math inline\">\\(\\lim_{x \\rightarrow +\\infty}G(x)=\\frac{\\sqrt{\\pi}}{2}\\)</span> et donc que</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(x\\in\\Rr\\)</span>, on pose <span class=\"math inline\">\\(F(x)=\\int_{0}^{1}\\frac{e^{-x^2(1+t^2)}}{1+t^2}\\;dt\\)</span>  ..."
 }

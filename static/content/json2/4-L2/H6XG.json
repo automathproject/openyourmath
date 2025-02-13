@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:18.179Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:07.223Z"
   },
   "contenu": [
     {
-      "id": "1a0e5337-0200-4a06-8b6b-22a3a26ba7c5",
+      "id": "9237aabc-0353-4c9c-baaa-704895963c6c",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel de dimension $3$. On note ${\\cal B}=(\\vec e_1,\\vec e_2,\\vec e_3)$ une base de $E$, si $\\vec u$ est un vecteur de $E$ on note $(x,y,z)$  ses coordonnées dans la base $\\cal B$. Soit \n$f$ une application linéaire de $E$ dans lui-même, définie par\n$$\\begin{align*}\nf:E &\\longrightarrow E \\\\  \\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}&\\longmapsto \\begin{pmatrix}x' \\\\  y' \\\\  z'\\end{pmatrix}= \\begin{pmatrix}-x+y-z \\\\  2x+2z \\\\  4x-2y+4z\\end{pmatrix}\n\\end{align*}$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "2ee63008-4ecf-471d-a491-c109aa40558f",
+      "id": "f1186630-df60-4259-aafc-e4bc0159069a",
       "type": "question",
       "value": {
         "latex": "Donner la matrice $A$ de $f$ dans la base $\\cal B$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "cd3a68c3-bbfc-4870-be3b-d826401b00f1",
+      "id": "422201b9-3aaa-46a3-b72a-fc64f47a7c00",
       "type": "reponse",
       "value": {
         "latex": "{\\it Ecrivons la matrice $A$ de $f$ dans la base $\\cal B$}.\n\nOn a $f(\\vec e_1)=(-1,2,4)$, $f(\\vec e_2)=(1,0,-2)$ et $f(\\vec e_3)=(-1,2,4)$. D'où la matrice\n$$A=\\begin{pmatrix}-1&1&-1 \\\\ 2&0&2 \\\\ 4&-2&4\\end{pmatrix}.$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "929b7335-b6c4-4e5a-8386-9d0b96c83a17",
+      "id": "d7da1ea4-421d-419f-8cdc-b79f9caf50be",
       "type": "question",
       "value": {
         "latex": "Déterminer les sous-espaces $\\ker f$ et $\\Im f$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "2bf9f8c5-1471-4944-836d-1ad946e7f366",
+      "id": "dc82f1d9-5a99-4734-9ceb-f82b38e43b45",
       "type": "reponse",
       "value": {
         "latex": "{\\it Déterminons les sous-espaces $\\ker f$ et $\\Im f$.}\n\nLe sous-espace vectoriel $\\Im f$ est engendré par les vecteurs $f(\\vec e_1)$, $f(\\vec e_2)$ et $f(\\vec e_3)=f(\\vec e_1)$, c'est donc le plan vectoriel engendré par les vecteurs $f(\\vec e_1)=(-1,2,4)$ et $f(\\vec e_2)=(1,0,-2)$ qui sont clairement linéairement indépendants.\n\nPour le noyau, on a $\\ker f=\\{\\vec u\\in E,\\ f(\\vec u)=\\vec 0\\}$, ainsi,\n$$\\vec u=(x,y,z)\\in\\ker f\\iff \\left\\{$$\\begin{align*}-x+y-z=0 \\\\  2(x+z)=0 \\\\  4x-2y+4z=0\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}x+z=0 \\\\  y=0\\end{align*}$$\\right.$$\nC'est donc la droite vectorielle engendrée par le vecteur $\\vec v=(1,0,-1)$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "e8eedc3c-a966-4705-9a76-a45a3c98d586",
+      "id": "2a4dc4ca-2b92-4562-8a0e-11776c10a989",
       "type": "question",
       "value": {
         "latex": "Soient $\\vec u_1=(1,0,-1)$, $\\vec u_2=(1,2,0)$ et $\\vec u_3=(0,1,1)$. Démontrer que $(\\vec u_1,\\vec u_2,\\vec u_3)$ est une base de $E$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "829c429a-2b17-4fda-b683-b8e9711a2637",
+      "id": "2c07acee-71f7-4853-9b03-36a4b19f27c3",
       "type": "reponse",
       "value": {
         "latex": "Soient $\\vec u_1=(1,0,-1)$, $\\vec u_2=(1,2,0)$ et $\\vec u_3=(0,1,1)$. {\\it Démontrons que $(\\vec u_1,\\vec u_2,\\vec u_3)$ est une base de $E$.}\n\nPour cela nous allons vérifier que le déterminant de leurs coordonnées est non nul,\n$$\\begin{vmatrix}1&1&0 \\\\ 0&2&1 \\\\ -1&0&1\\end{vmatrix}=\\begin{vmatrix}2&1 \\\\ 0&1\\end{vmatrix}-\\begin{vmatrix}1&0 \\\\ 2&1\\end{vmatrix}=2-1=1\\neq0.$$\nAinsi, les trois vecteurs $\\vec u_1,\\vec u_2,\\vec u_3$ sont linéairement indépendants, ils forment donc une base de $E$, car $E$ est de dimension $3$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "f7c76125-8116-4ad6-ba61-cb8493a34cde",
+      "id": "bc7ce9f2-593b-4978-a257-d4d0bb3bca7e",
       "type": "question",
       "value": {
         "latex": "Calculer $f(\\vec u_1)$, $f(\\vec u_2)$ et $f(\\vec u_3)$ et déterminer la matrice $B$ de $f$ dans la base $(\\vec u_1,\\vec u_2,\\vec u_3)$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "12dcb631-f18d-4687-8087-ad9e2036538c",
+      "id": "3cd4094e-5d53-4fa4-ba47-0a898308753c",
       "type": "reponse",
       "value": {
         "latex": "{\\it Calculons $f(\\vec u_1)$, $f(\\vec u_2)$ et $f(\\vec u_3)$ et déterminons la matrice $B$ de $f$ dans la base $(\\vec u_1,\\vec u_2,\\vec u_3)$.}\n\nOn a $f(\\vec u_1)=\\vec 0$,\n\n$f(\\vec u_2)=\\begin{pmatrix}-1+2 \\\\  2 \\\\  4-4 \\\\ \\end{pmatrix}=\\begin{pmatrix}1 \\\\ 2 \\\\ 0\\end{pmatrix}=\\vec u_2$.\n\n$f(\\vec u_3)=\\begin{pmatrix}1-1 \\\\  2 \\\\  -4+2 \\\\\\end{pmatrix}=\\begin{pmatrix}0 \\\\ 2 \\\\ 2\\end{pmatrix}=2\\vec u_3$.\n\nAinsi la matrice $B$ de $f$ dans la base $(\\vec u_1,\\vec u_2,\\vec u_3)$ s'écrit\n$$B=\\begin{pmatrix}0&0&0 \\\\ 0&1&0 \\\\ 0&0&2\\end{pmatrix}.$$",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "a793ad0b-d3f1-4dd0-b2e2-b0380271d43e",
+      "id": "b0ea8fa9-cca3-42a5-a1a8-add24506d2d6",
       "type": "question",
       "value": {
         "latex": "Déterminer les valeurs propres de $f$ et, pour chacune, un vecteur propre.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "8514d83b-88de-436e-b27f-ad42407d7dad",
+      "id": "87e01a40-e983-4718-91a6-14ade423936a",
       "type": "reponse",
       "value": {
         "latex": "{\\it Déterminons les valeurs propres de $f$ et, pour chacune, un vecteur propre.}\n\nD'après la question précédente, les valeurs propres de $f$ sont $0,1$ et $2$, et les vecteurs propres sont $\\vec u_1$ pour la valeur propre $0$, $\\vec u_2$ pour la valeur propre $1$ et $\\vec u_3$ pour la valeur propre $2$.",
         "html": "<p><span><em>Déterminons les valeurs propres de <span class=\"math inline\">\\(f\\)</span> et, pour chacune, un vecteur propre.</em></span></p>\n<p>D’après la question précédente, les valeurs propres de <span class=\"math inline\">\\(f\\)</span> sont <span class=\"math inline\">\\(0,1\\)</span> et <span class=\"math inline\">\\(2\\)</span>, et les vecteurs propres sont <span class=\"math inline\">\\(\\vec u_1\\)</span> pour la valeur propre <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(\\vec u_2\\)</span> pour la valeur propre <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(\\vec u_3\\)</span> pour la valeur propre <span class=\"math inline\">\\(2\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel de dimension <span class=\"math inline\">\\(3\\)</span>. On note <span class=\"math inli ..."
 }

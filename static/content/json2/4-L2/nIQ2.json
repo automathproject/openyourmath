@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Produit scalaire, norme",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:09.360Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:00.894Z"
   },
   "contenu": [
     {
-      "id": "0b2d40c0-84ab-4e1f-b7d5-28c8bdcb1d89",
+      "id": "b13c1b7a-2fcd-4965-8e9c-8b3c62563363",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un $\\Rr$ espace vectoriel de dimension finie. Soit $||\\;||$ une norme sur $E$ vérifiant l'identité du parallèlogramme, c'est-à-dire~:~$\\forall(x,y)\\in E^2,\\;||x+y||^2+||x-y||^2=2(||x||^2+||y||^2)$. On se propose de démontrer que $||\\;||$ est associée à un produit scalaire.\nOn définit sur $E^2$ une application $f$ par~:~$\\forall(x,y)\\in E^2,\\;f(x,y)=\\frac{1}{4}(||x+y||^2-||x-y||^2)$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "2de6ab3a-e450-4fea-bf63-cd682c32c7db",
+      "id": "bab7f285-f9c1-498d-87c0-c32f327a330f",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $(x,y,z)$ de $E^3$, on a~:~$f(x+z,y)+f(x-z,y)=2f(x,y)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "682fb0ee-e64c-4974-a2af-7c401e77b749",
+      "id": "6ead2cd6-ca2a-40fe-ba6f-8f59f4c64340",
       "type": "reponse",
       "value": {
         "latex": "Soit $(x,y,z)\\in\\Rr^3$.\n\n$$\\begin{align*}\\ensuremath f(x+z,y)+f(x-z,y)&=\\frac{1}{4}(||x+z+y||^2+||x-z+y||^2-||x+z-y||^2-||x-z-y||^2)\\\\\n &=\\frac{1}{4}\\left(2(||x+y||^2+||z||^2)-2(||x-y||^2+||z||^2)\\right)=2f(x,y).\n\\end{align*}$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "aea86ebd-1096-46c6-8a3a-38aeb6144f44",
+      "id": "8611135b-d7fd-4095-a9e4-45f387cc93b1",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $(x,y)$ de $E^2$, on a~:~$f(2x,y)=2f(x,y)$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "fa037887-46a2-4695-a45a-d511058f0001",
+      "id": "8eaf4252-6538-44dc-94c3-103b7387dd7a",
       "type": "reponse",
       "value": {
         "latex": "$2f(x,y)= f(x+x,y)+f(x-x,y)=f(2x,y)+f(0,y)$ mais $f(0,y)=(||y||^2-||-y||^2)=0$ (définition d'une norme).",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "e80c350b-7fb5-4d7d-9c3b-d1a9569f89f3",
+      "id": "ef04c5ff-23ac-4afb-9290-164be7326126",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $(x,y)$ de $E^2$ et tout rationnel $r$, on a~:~$f(rx,y)=rf(x,y)$.\n\nOn admettra que pour tout réel $\\lambda$ et tout $(x,y)$ de $E^2$ on a~:~$f(\\lambda x,y)=\\lambda f(x,y)$ ( ce résultat provient de la continuité de $f$).",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "69790fb9-8097-446c-8ddd-a1d3248a0e0e",
+      "id": "e8bca4a1-8975-497b-94ae-25cd3b004aac",
       "type": "reponse",
       "value": {
         "latex": "\\textbullet~Montrons par récurrence que $\\forall n\\in\\Nn,\\;f(nx,y)=nf(x,y)$.\nC'est clair pour $n=0$ et $n=1$.\nSoit $n\\geq0$. Si l'égalité est vraie pour $n$ et $n+1$ alors d'après 1), \n\n$$f((n+2)x,y)+f(nx,y)=f((n+1)x+x,y)+f((n+1)x-x,y)=2f((n+1)x,y),$$\net donc, par hypothèse de récurrence,\n\n$$f((n+2)x,y)=2f((n+1)x,y)-f(nx,y)=2(n+1)f(x,y)-nf(x,y)=(n+2)f(x,y).$$\nLe résultat est démontré par récurrence.\n\\textbullet~Soit $n\\in\\Nn^*$, $f(x,y)=f\\left(n\\times\\frac{1}{n}.x,y\\right)=nf\\left(\\frac{1}{n}x,y\\right)$ et donc $f\\left(\\frac{1}{n}x,y\\right)=\\frac{1}{n}f(x,y)$.\n\\textbullet~Soit alors $r=\\frac{p}{q}$, $p\\in\\Nn$, $q\\in\\Nn^*$, $f(rx,y)=\\frac{1}{q}f(px,y)=p\\frac{1}{q}f(x,y)=rf(x,y)$ et donc, pour tout rationnel positif $r$, $f(rx,y)=rf(x,y)$.\nEnfin, si $r\\leq0$, $f(rx,y)+f(-rx,y)=2f(0,y)=0$ (d'après 1)) et donc= $f(-rx,y)=-f(-rx,y)=rf(x,y)$.\n\n\\begin{center}\n$\\forall(x,y)\\in E^2,\\;\\forall r\\in\\Qq,\\;f(rx,y)=rf(x,y)$.\n\\end{center}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "f007f13b-5211-4f66-a911-90e02bbdbf3e",
+      "id": "16a84170-1eb6-478d-a991-78842f54ed3a",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $(u,v,w)$ de $E^3$, $f(u,w)+f(v,w)=f(u+v,w)$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "3b75e9da-29cf-419c-b59e-90d3c59e9246",
+      "id": "d1e0e04b-a7e4-48ae-8fe3-2feaf7efad8a",
       "type": "reponse",
       "value": {
         "latex": "On pose $x=\\frac{1}{2}(u+v)$ et $y=\\frac{1}{2}(u-v)$.\n\n$$f(u,w)+f(v,w)=f(x+y,w)+f(x-y,w)=2f(x,w)=2f\\left(\\frac{1}{2}(u+v),w\\right)=f(u+v,w).$$",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "0c2c94e7-4079-4fbb-be94-397598babc4f",
+      "id": "adcfc564-06fe-4db9-87a5-576c2dd5b6fb",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est bilinéaire.",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "c047df45-b788-467f-8bdd-43b5fcef84c0",
+      "id": "6d84a3f8-8350-4755-8eef-544edf973fff",
       "type": "reponse",
       "value": {
         "latex": "f est symétrique (définition d'une norme) et linéaire par rapport à sa première variable (d'après 3) et 4)).\nDonc f est bilinéaire.",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "1e53a6a4-12ba-4b91-8fbb-3964c06f0f7f",
+      "id": "f6b0e25a-de4c-4f43-9824-219331f8c46e",
       "type": "question",
       "value": {
         "latex": "Montrer que $||\\;||$ est une norme euclidienne.",
@@ -112,12 +112,13 @@
       }
     },
     {
-      "id": "3da3c0db-51a4-46f6-8d26-8cdd384dd7cf",
+      "id": "b5b0a5a0-baca-4859-b5b8-a21ee60ea422",
       "type": "reponse",
       "value": {
         "latex": "f est une forme bilinéaire symétrique.\nPour $x\\in E$, $f(x,x)=\\frac{1}{4}(||x+x||^2+||x-x||^2)=\\frac{1}{4}||2x||^2=||x||^2$ (définition d'une norme) ce qui montre tout à la fois que $f$ est définie positive et donc un produit scalaire, et que $||\\;||$ est la norme associée. $||\\;||$ est donc une norme euclidienne.",
         "html": "<p>f est une forme bilinéaire symétrique. Pour <span class=\"math inline\">\\(x\\in E\\)</span>, <span class=\"math inline\">\\(f(x,x)=\\frac{1}{4}(||x+x||^2+||x-x||^2)=\\frac{1}{4}||2x||^2=||x||^2\\)</span> (définition d’une norme) ce qui montre tout à la fois que <span class=\"math inline\">\\(f\\)</span> est définie positive et donc un produit scalaire, et que <span class=\"math inline\">\\(||\\;||\\)</span> est la norme associée. <span class=\"math inline\">\\(||\\;||\\)</span> est donc une norme euclidienne.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un <span class=\"math inline\">\\(\\Rr\\)</span> espace vectoriel de dimension finie. Soit <span class=\"math ..."
 }

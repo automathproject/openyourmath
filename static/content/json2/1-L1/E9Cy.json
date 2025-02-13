@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Arithmétique dans Z",
     "sousChapitre": "Nombres premiers, nombres premiers entre eux",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:20.189Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:31.124Z"
   },
   "contenu": [
     {
-      "id": "2c9d9b71-3359-4747-8047-65aaa04da003",
+      "id": "db407d7f-df32-40f0-ae77-7f9db1ad5e74",
       "type": "description",
       "value": {
         "latex": "Soient $a,b$ des entiers sup\\'erieurs ou \\'egaux\n\\`a $1$. Montrer :",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "0ca5e489-d21e-40e6-b3f9-acc8fcbc300f",
+      "id": "6dc0dad9-a296-4101-95b2-b72d239889f9",
       "type": "question",
       "value": {
         "latex": "$(2^a-1) | (2^{ab}-1)$ ;",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "b95d3200-a710-410d-b6a3-2a33f49e20df",
+      "id": "20e0ac29-ab22-4ac9-a5a2-61fe91d4e5ac",
       "type": "reponse",
       "value": {
         "latex": "Nous savons que\n$$x^b-1 = (x-1)(x^{b-1}+\\cdots+x+1),$$\npour $x=2^a$ nous obtenons :\n$$2^{ab}-1 = {(2^{a})}^b -1\n     = (2^a-1)\\left( 2^{a(b-1)}+\\cdots+2^{a}+1 \\right).$$\nDonc $(2^a-1) | (2^{ab}-1)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "ee35bdb5-c1e3-4c99-bb67-8a0abd72137d",
+      "id": "259a575a-51e4-4f95-a2a5-e08e4c60c0bf",
       "type": "question",
       "value": {
         "latex": "$2^p-1 \\text{ premier}\\ \\   \\Rightarrow \\ \\  p \\text { premier }$ ;",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "c8ab9fc4-4fa3-4492-8ed1-6c997a3248ce",
+      "id": "00dcec1d-2572-454e-8bb7-5eda5c96d868",
       "type": "reponse",
       "value": {
         "latex": "Montrons la contraposée.\nSupposons que $p$ ne soit pas premier. Donc $p=ab$ avec $1<p,q<a$.\nPar la question précédente $2^a-1$ divise $2^p-1$\n(et $1 < 2^a-1 < 2^p-1)$. Donc $2^p - 1$ n'est pas un nombre premier.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "93b9d4cd-5404-4f23-808d-4bf449e45bf9",
+      "id": "7488ed47-55ce-4090-b347-5a574ae858e7",
       "type": "question",
       "value": {
         "latex": "$\\pgcd(2^a-1,2^b-1) =  2^{\\pgcd(a,b)}-1$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "7bfd2ed2-bdf4-4fa5-b832-d9162a07e68f",
+      "id": "55e2abee-711e-427a-98c9-b4dcca93bd55",
       "type": "reponse",
       "value": {
         "latex": "Nous supposons $a \\ge b$.\nNous allons montrer que faire l'algorithme d'Euclide pour le couple $(2^a-1,2^b-1)$\nrevient à faire l'algorithme d'Euclide pour $(a,b)$.\nTout d'abord rappellons la formule qui est à la base de l'algorithme d'Euclide :\n$\\pgcd(a,b) = \\pgcd(a-b,b)$. \nAppliqué à $2^a-1$ et $2^b-1$ cela donne directement $\\pgcd(2^a-1,2^b-1) = \\pgcd(2^a-2^b,2^b-1)$.\nMais $2^a-2^b = 2^b(2^{a-b}-1)$ d'où\n $\\pgcd(2^a-1,2^b-1) = \\pgcd(2^b(2^{a-b}-1),2^b-1) = \\pgcd(2^{a-b}-1,2^b-1)$.\nLa dernière égalité vient du fait $2^b$ et $2^b-1$ sont premiers entre eux (deux entiers consécutifs\nsont toujours premiers entre eux).\n\nNous avons montrer : $\\pgcd(2^a-1,2^b-1) =\\pgcd(2^{a-b}-1,2^b-1)$.\nCette formule est à mettre en parallèle de $\\pgcd(a,b) = \\pgcd(a-b,b)$.\nEn itérant cette formule nous obtenons que si $a=bq+r$ alors :\n $\\pgcd(2^a-1,2^b-1) = \\pgcd(2^{a-bq}-1,2^b-1) = \\pgcd(2^r-1,2^b-1)$\nà comparer avec \n$\\pgcd(a,b)=\\pgcd(a-bq,b)=\\pgcd(r,b)$.\nNous avons notre première étape de l'algorithme d'Euclide.\nEn itérant l'algorithme d'Euclide pour $(a,b)$,\nnous nous arêtons au dernier reste non nul:\n$\\pgcd(a,b) = \\pgcd(b,r) = \\cdots = \\pgcd(r_n,0)=r_n$.\nCe qui va donner pour nous\n$\\pgcd(2^a-1,2^b-1) = \\pgcd(2^b-1,2^r-1) = \\cdots = \\pgcd(2^{r_n}-1,2^0-1) = 2^{r_n}-1$.\n\nBilan : $\\pgcd(2^a-1,2^b-1) =  2^{\\pgcd(a,b)}-1$.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "ea749578-4b62-428d-8061-e1f4adc4cfa9",
+      "id": "15315378-63f2-44ff-a7e2-983953d5305e",
       "type": "indication",
       "value": {
         "latex": "Pour 1. utiliser l'\\'egalit\\'e \n$$x^b-1 = (x-1)(x^{b-1}+\\cdots+x+1).$$\n\nPour 2. raisonner par contraposition et utiliser la question 1.\n\nLa question 3. est difficile ! Supposer $a\\ge b$.\nCommencer par \nmontrer que $\\pgcd(2^a-1,2^b-1) = \\pgcd(2^a-2^b,2^b-1) = \\pgcd(2^{a-b}-1,2^b - 1)$.\nCela vour permettra de comparer l'agorithme d'Euclide pour le calcul de $\\pgcd(a,b)$ avec\nl'algorithme d'Euclide pour le calcul de  $\\pgcd(2^a-1,2^b-1)$.",
         "html": "<p>Pour 1. utiliser l’égalité <span class=\"math display\">\\[x^b-1 = (x-1)(x^{b-1}+\\cdots+x+1).\\]</span></p>\n<p>Pour 2. raisonner par contraposition et utiliser la question 1.</p>\n<p>La question 3. est difficile ! Supposer <span class=\"math inline\">\\(a\\ge b\\)</span>. Commencer par montrer que <span class=\"math inline\">\\(\\pgcd(2^a-1,2^b-1) = \\pgcd(2^a-2^b,2^b-1) = \\pgcd(2^{a-b}-1,2^b - 1)\\)</span>. Cela vour permettra de comparer l’agorithme d’Euclide pour le calcul de <span class=\"math inline\">\\(\\pgcd(a,b)\\)</span> avec l’algorithme d’Euclide pour le calcul de <span class=\"math inline\">\\(\\pgcd(2^a-1,2^b-1)\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(a,b\\)</span> des entiers supérieurs ou égaux à <span class=\"math inline\">\\(1\\)</span>. Montrer :</p>\n"
 }

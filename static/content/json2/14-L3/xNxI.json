@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégrales multiples, théorème de Fubini",
     "sousChapitre": "Intégrales multiples, théorème de Fubini",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:06.505Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:47.083Z"
   },
   "contenu": [
     {
-      "id": "a3028bff-0f7f-4bc6-b958-0e82854da553",
+      "id": "ab006960-1950-4f29-93a0-fe9f80047be0",
       "type": "description",
       "value": {
         "latex": "Soit $f(x,y)=\n\\frac{x^2-y^2}{(x^2+y^2)^2}$. Montrer que\n$$\n\\int_{-1}^{1} \\left(\\int_{-1}^{1}f(x,y)dx\\right) dy \\neq\n\\int_{-1}^{1} \\left(\\int_{-1}^{1} f(x,y)dy\\right) dx.\n$$\nY a-t-il contradiction avec le th\\'{e}or\\`{e}me de Fubini ? (on\npourra calculer l'int\\'egrale de $|f|$ sur l'anneau\n$S_\\varepsilon=\\{(x,y)\\in\\mathbb{R}^2| \\varepsilon\\leq x^2+y^2\\leq\n1\\}$.)",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "ff8c56d7-e197-43c8-8d59-e1091e46f479",
+      "id": "dd4de4f7-bb6e-4f58-be64-5bba9511a248",
       "type": "reponse",
       "value": {
         "latex": "On a\n$$\\begin{align*}\\int_{-1}^1\\left(\\int_{-1}^1\n\\frac{x^2-y^2}{(x^2+y^2)^2}dx\\right) dy=&\\int_{-1}^1\\left(\\left.-\n\\frac{x}{(x^2+y^2)}\\right|_{-1}^1\\right) dy \\\\=&\\left.-\\int_{-1}^1\n\\frac{2}{(1+y^2)} dy =-2 \\arctan y \\right|_{-1}^1=-\\pi.\n\\end{align*}$$\n$$\\begin{align*}\\int_{-1}^1\\left(\\int_{-1}^1 \\frac{x^2-y^2}{(x^2+y^2)^2}dy\\right) dx=&\\int_{-1}^1\\left(\\left.\n\\frac{y}{(x^2+y^2)}\\right|_{-1}^1\\right) dx \\\\=&\\left.\\int_{-1}^1\n\\frac{2}{(x^2+1)} dx =2 \\arctan x \\right|_{-1}^1=\\pi.\n\\end{align*}$$\nIl n'y a pas de contradiction avec le th\\'{e}or\\`{e}me de Fubini\ncar la fonction $f$ n'appartient pas \\`a\n$\\mathcal{L}^1([-1,1]\\times[-1,1])$. En effet, soit\n$S_\\varepsilon=\\{(x,y)\\in\\mathbb{R}^2| \\varepsilon\\leq x^2+y^2\\leq\n1\\}$. On a\n$$\\int_{[-1,1]\\times[-1,1]}|f| d\\mu \n\\geq \\int_{S_\\varepsilon} |f| d\\mu =\\int_{\\theta=0}^{2\\pi}\\int_{r=\\varepsilon}^1\\frac{|\\cos 2\\theta|}{r}dr\nd\\theta\n= 4\\int_{\\theta=0}^{\\frac{\\pi}{2}}\\int_{r=\\varepsilon}^1 \\frac{|\\cos 2\\theta|}{r} dr\nd\\theta = -4 \\log \\varepsilon\\rightarrow \\infty$$ lorsque\n$\\varepsilon\\rightarrow 0,$ et donc $f\\notin\n\\mathcal{L}^1([-1,1]\\times[-1,1]).$",
         "html": "<p>On a <span class=\"math display\">\\[\\begin{align*}\\int_{-1}^1\\left(\\int_{-1}^1\n\\frac{x^2-y^2}{(x^2+y^2)^2}dx\\right) dy=&amp;\\int_{-1}^1\\left(\\left.-\n\\frac{x}{(x^2+y^2)}\\right|_{-1}^1\\right) dy \\\\=&amp;\\left.-\\int_{-1}^1\n\\frac{2}{(1+y^2)} dy =-2 \\arctan y \\right|_{-1}^1=-\\pi.\n\\end{align*}\\]</span> <span class=\"math display\">\\[\\begin{align*}\\int_{-1}^1\\left(\\int_{-1}^1 \\frac{x^2-y^2}{(x^2+y^2)^2}dy\\right) dx=&amp;\\int_{-1}^1\\left(\\left.\n\\frac{y}{(x^2+y^2)}\\right|_{-1}^1\\right) dx \\\\=&amp;\\left.\\int_{-1}^1\n\\frac{2}{(x^2+1)} dx =2 \\arctan x \\right|_{-1}^1=\\pi.\n\\end{align*}\\]</span> Il n’y a pas de contradiction avec le théorème de Fubini car la fonction <span class=\"math inline\">\\(f\\)</span> n’appartient pas à <span class=\"math inline\">\\(\\mathcal{L}^1([-1,1]\\times[-1,1])\\)</span>. En effet, soit <span class=\"math inline\">\\(S_\\varepsilon=\\{(x,y)\\in\\mathbb{R}^2| \\varepsilon\\leq x^2+y^2\\leq\n1\\}\\)</span>. On a <span class=\"math display\">\\[\\int_{[-1,1]\\times[-1,1]}|f| d\\mu \n\\geq \\int_{S_\\varepsilon} |f| d\\mu =\\int_{\\theta=0}^{2\\pi}\\int_{r=\\varepsilon}^1\\frac{|\\cos 2\\theta|}{r}dr\nd\\theta\n= 4\\int_{\\theta=0}^{\\frac{\\pi}{2}}\\int_{r=\\varepsilon}^1 \\frac{|\\cos 2\\theta|}{r} dr\nd\\theta = -4 \\log \\varepsilon\\rightarrow \\infty\\]</span> lorsque <span class=\"math inline\">\\(\\varepsilon\\rightarrow 0,\\)</span> et donc <span class=\"math inline\">\\(f\\notin\n\\mathcal{L}^1([-1,1]\\times[-1,1]).\\)</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f(x,y)=\n\\frac{x^2-y^2}{(x^2+y^2)^2}\\)</span>. Montrer que <span class=\"math display\"> ..."
 }

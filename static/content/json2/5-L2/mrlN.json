@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:28.692Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:23.198Z"
   },
   "contenu": [
     {
-      "id": "f3b1fb90-5abd-48b9-aefa-c3e1ea98bd74",
+      "id": "e3c5b4ba-2dae-4fda-af42-3d3dfda6564d",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "ec107835-8064-4330-bb5a-4d6170d6ace6",
+      "id": "68bc40b7-ed15-4e36-bdb4-ddd6fc20851f",
       "type": "question",
       "value": {
         "latex": "Soient $f$ et $g$ deux fonctions définies sur $\\Rr$, continues et $T$-périodiques ($T$ réel strictement positif). Pour $x\\in\\Rr$, on pose\n\n\\begin{center}\n$f*g(x)=\\int_{0}^{T}f(x-t)g(t)\\;dt$.\n\\end{center}\n\nMontrer que la fonction $f*g$ est définie sur $\\Rr$, continue et $T$-périodique.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "1185df00-a641-4636-afdb-add2e57d2d86",
+      "id": "8b91480f-6fb7-4bd7-bf57-ece9f88df66a",
       "type": "reponse",
       "value": {
         "latex": "\\textbullet~Soit $x\\in\\Rr$. La fonction $t\\mapsto f(x-t)g(t)$ est continue sur le segment $[0,T]$ et donc intégrable sur ce segment. Par suite, $f*g(x)$ existe.\n\n\\textbullet~Soit $x\\in\\Rr$. $f*g(x+T)=\\int_{0}^{T}f(x+T-t)g(t)\\;dt=\\int_{0}^{T}f(x-t)g(t)\\;dt=f*g(x)$. Donc la fonction $f*g$ est $T$-périodique.\n\n\\textbullet~Les fonction $f$ et $g$ sont continues sur $\\Rr$ et $T$-périodiques. Ces fonctions sont en particulier bornées sur $\\Rr$. On note $M_1$ et $M_2$ des majorants sur $\\Rr$ des fonctions $|f|$ et $|g|$ respectivement.\n\nSoit $\\begin{array}[t]{cccc}\n\\Phi~:&\\Rr\\times[0,T]&\\rightarrow&\\Rr\\\\\n &(x,t)&\\mapsto&f(x-t)g(t)\n\\end{array}$.\n\n- Pour chaque $x\\in\\Rr$, la fonction $t\\mapsto\\Phi(x,t)$ est continue par morceaux sur $[0,T]$.\n\n- Pour chaque $t\\in[0,T]$, la fonction $x\\mapsto\\Phi(x,t)$ est continue sur $\\Rr$.\n \n\n- Pour chaque $(x,t)\\in\\Rr\\times[0,T]$, $|\\Phi(x,t)|\\leqslant M_1M_2=\\varphi(t)$. De plus, la fonction $\\varphi$ est continue et donc intégrable sur le segment $[0,T]$.\n\nD'après le théorème de continuité des intégrales à paramètres, la fonction $f*g$ est continue sur $\\Rr$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "674e191c-dcdb-4c5a-bc5c-7773361666e6",
+      "id": "fed24e5e-c725-4af0-845b-e771990cc723",
       "type": "question",
       "value": {
         "latex": "$*$ est donc une loi interne sur $E$, l'espace vectoriel des fonctions définies et continues sur $\\Rr$ et $T$-périodiques. Montrer que cette loi est commutative.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "2831d51b-b7fc-4aad-bb24-53e77840d79a",
+      "id": "4a00acc9-c830-4d89-9fc6-254ebe6c0f5c",
       "type": "reponse",
       "value": {
         "latex": "Soient $f$ et $g$ deux éléments de $E$. Soit $x\\in\\Rr$. En posant $u=x-t$, on obtient\n\n$$\\begin{align*}\\ensuremath\nf*g(x)&=\\int_{0}^{T}f(x-t)g(t)\\;dt=\\int_{x}^{x-T}f(u)g(u-t)\\;(-du)=\\int_{x-T}^{x}g(u-t)f(u)\\;du\\\\\n &=\\int_{0}^{T}g(u-t)f(u)\\;du\\;(\\text{car la fonction}\\;u\\mapsto g(u-t)f(u)\\;\\text{est}\\;T\\text{-périodique})\\\\\n &=g*f(x).\n\\end{align*}$$",
         "html": "<p>Soient <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(g\\)</span> deux éléments de <span class=\"math inline\">\\(E\\)</span>. Soit <span class=\"math inline\">\\(x\\in\\Rr\\)</span>. En posant <span class=\"math inline\">\\(u=x-t\\)</span>, on obtient</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf*g(x)&amp;=\\int_{0}^{T}f(x-t)g(t)\\;dt=\\int_{x}^{x-T}f(u)g(u-t)\\;(-du)=\\int_{x-T}^{x}g(u-t)f(u)\\;du\\\\\n &amp;=\\int_{0}^{T}g(u-t)f(u)\\;du\\;(\\text{car la fonction}\\;u\\mapsto g(u-t)f(u)\\;\\text{est}\\;T\\text{-périodique})\\\\\n &amp;=g*f(x).\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(f\\)</span> et <span class=\"math inline\">\\(g\\)</span> deux fonctions définies sur <span class=\"math inline\"> ..."
 }

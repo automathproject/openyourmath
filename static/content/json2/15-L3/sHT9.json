@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace topologique, espace métrique",
     "sousChapitre": "Espace topologique, espace métrique",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:29.699Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:11.802Z"
   },
   "contenu": [
     {
-      "id": "5a60913c-83d7-4059-8c5a-62810f73bfbe",
+      "id": "1365ed2b-64a2-4945-ae72-8e110d8b6624",
       "type": "description",
       "value": {
         "latex": "On note $X=l^{\\infty}$ l'espace des suites r\\'eelles born\\'ees, et $Y=c_0$\nl'espace des suites r\\'eelles tendant vers $0$, tous deux munis de la\nm\\'etrique (\\`a v\\'erifier) $d(x,y)=\\sup_n\\vert x(n)-y(n)\\vert$. Montrer que $Y$\nest ferm\\'e dans $X$.  Montrer que l'ensemble des suites nulles \\`a\npartir d'un certain rang est dense dans\n$Y$ mais pas dans $X$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "696dbf70-a9e6-403b-ad06-6bc27fd0f0d4",
+      "id": "8f13d017-5efa-4987-91b5-e36c7dee453a",
       "type": "indication",
       "value": {
         "latex": "Une suite de $l^\\infty$ est notée $(x^p)_{p\\in \\Nn}$, pour chaque $p \\ge 0$, $x^p$ est elle m\\^eme une suite $x^p = (x^p(0), x^p(1), x^p(2), \\ldots)$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "444aaed1-18e9-43ab-9f9f-a08a5258f7f2",
+      "id": "90903bc7-4d5a-437f-b7f1-f5c88013dd45",
       "type": "reponse",
       "value": {
         "latex": "Une suite de $l^\\infty$ est notée $(x^p)_{p\\in \\Nn}$, pour chaque $p \\ge 0$, $x^p$ est elle m\\^eme une suite $x^p = (x^p(0), x^p(1), x^p(2), \\ldots)$. \n(Il convient de garder la tête froide : on regarde des suites de suites !)\nIl faut montrer que $Y$ est fermé  dans $X$.\nSoit donc $(x^p)$ une suite de $Y$ qui converge vers $x \\in X$. Il faut donc montrer qu'en fait $x\\in Y$, c'est-à-dire que $x= (x(0),x(1),\\ldots)$ est une suite tendant vers $0$.\nSoit $\\epsilon >0$ comme $x^p \\rightarrow x$ alors il existe $P$ tel que\nsi $p \\ge P$ on ait $d(x^p,x) < \\epsilon$. Par la définition\nde $d$ on a pour $p \\ge P$ et pour tout $n\\in \\Nn$, $|x^p(n)-x(n)| < \\epsilon$.\nFixons $p=P$, alors $x^P \\in Y$ donc $x^P$ est une suite tendant vers $0$,\ndonc il existe $N$ tel que si $n\\ge N$ alors $|x^P(n)|<\\epsilon$.\nRéunissons tout cela, pour $n\\ge N$ :\n$$|x(n)|=|x(n)-x^P(n)+x^P(n)| \\le | x(n)-x^P(n)|+|x^P(n)| \\le 2\\epsilon.$$\n Donc la suite $x$ tend vers $0$, donc $x\\in Y$ et $Y$ est fermé.\nNotons $Z$ l'ensemble des suites nulles à partir d'un certain rang.\nPour $y = (y(0),y(1),y(2),\\ldots) \\in Y$, définissons la suite \n$y^0 = (y(0),0,0,\\ldots)$, $y^1=(y(0),y(1),0,0,\\ldots)$,... $y^p=(y(0),\\ldots,y(p-1),y(p),0,0,0,\\ldots)$. La suite\n$(y^p)$ est bien une suite d'éléments de $Z$. De plus\n$d(y^p,y) = \\sup_{n\\in \\Nn} |y^p(n)-y(n)| = \\sup_{n > p} |y(n)|$\nor la suite $y(n)$ tend vers $0$ donc $d(y^p,y)$ tend vers $0$ quand\n$p$ tend vers $+\\infty$.\n\nOn montre facilement (par l'absurde) que l'élément $x = (1,1,1,\\ldots )\\in X$\nn'est limite d'aucune suite d'éléments de $Z$, (ni d'ailleurs de $Y$).",
         "html": "<p>Une suite de <span class=\"math inline\">\\(l^\\infty\\)</span> est notée <span class=\"math inline\">\\((x^p)_{p\\in \\Nn}\\)</span>, pour chaque <span class=\"math inline\">\\(p \\ge 0\\)</span>, <span class=\"math inline\">\\(x^p\\)</span> est elle même une suite <span class=\"math inline\">\\(x^p = (x^p(0), x^p(1), x^p(2), \\ldots)\\)</span>. (Il convient de garder la tête froide : on regarde des suites de suites !) Il faut montrer que <span class=\"math inline\">\\(Y\\)</span> est fermé dans <span class=\"math inline\">\\(X\\)</span>. Soit donc <span class=\"math inline\">\\((x^p)\\)</span> une suite de <span class=\"math inline\">\\(Y\\)</span> qui converge vers <span class=\"math inline\">\\(x \\in X\\)</span>. Il faut donc montrer qu’en fait <span class=\"math inline\">\\(x\\in Y\\)</span>, c’est-à-dire que <span class=\"math inline\">\\(x= (x(0),x(1),\\ldots)\\)</span> est une suite tendant vers <span class=\"math inline\">\\(0\\)</span>. Soit <span class=\"math inline\">\\(\\epsilon &gt;0\\)</span> comme <span class=\"math inline\">\\(x^p \\rightarrow x\\)</span> alors il existe <span class=\"math inline\">\\(P\\)</span> tel que si <span class=\"math inline\">\\(p \\ge P\\)</span> on ait <span class=\"math inline\">\\(d(x^p,x) &lt; \\epsilon\\)</span>. Par la définition de <span class=\"math inline\">\\(d\\)</span> on a pour <span class=\"math inline\">\\(p \\ge P\\)</span> et pour tout <span class=\"math inline\">\\(n\\in \\Nn\\)</span>, <span class=\"math inline\">\\(|x^p(n)-x(n)| &lt; \\epsilon\\)</span>. Fixons <span class=\"math inline\">\\(p=P\\)</span>, alors <span class=\"math inline\">\\(x^P \\in Y\\)</span> donc <span class=\"math inline\">\\(x^P\\)</span> est une suite tendant vers <span class=\"math inline\">\\(0\\)</span>, donc il existe <span class=\"math inline\">\\(N\\)</span> tel que si <span class=\"math inline\">\\(n\\ge N\\)</span> alors <span class=\"math inline\">\\(|x^P(n)|&lt;\\epsilon\\)</span>. Réunissons tout cela, pour <span class=\"math inline\">\\(n\\ge N\\)</span> : <span class=\"math display\">\\[|x(n)|=|x(n)-x^P(n)+x^P(n)| \\le | x(n)-x^P(n)|+|x^P(n)| \\le 2\\epsilon.\\]</span> Donc la suite <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>, donc <span class=\"math inline\">\\(x\\in Y\\)</span> et <span class=\"math inline\">\\(Y\\)</span> est fermé. Notons <span class=\"math inline\">\\(Z\\)</span> l’ensemble des suites nulles à partir d’un certain rang. Pour <span class=\"math inline\">\\(y = (y(0),y(1),y(2),\\ldots) \\in Y\\)</span>, définissons la suite <span class=\"math inline\">\\(y^0 = (y(0),0,0,\\ldots)\\)</span>, <span class=\"math inline\">\\(y^1=(y(0),y(1),0,0,\\ldots)\\)</span>,... <span class=\"math inline\">\\(y^p=(y(0),\\ldots,y(p-1),y(p),0,0,0,\\ldots)\\)</span>. La suite <span class=\"math inline\">\\((y^p)\\)</span> est bien une suite d’éléments de <span class=\"math inline\">\\(Z\\)</span>. De plus <span class=\"math inline\">\\(d(y^p,y) = \\sup_{n\\in \\Nn} |y^p(n)-y(n)| = \\sup_{n &gt; p} |y(n)|\\)</span> or la suite <span class=\"math inline\">\\(y(n)\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> donc <span class=\"math inline\">\\(d(y^p,y)\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(p\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n<p>On montre facilement (par l’absurde) que l’élément <span class=\"math inline\">\\(x = (1,1,1,\\ldots )\\in X\\)</span> n’est limite d’aucune suite d’éléments de <span class=\"math inline\">\\(Z\\)</span>, (ni d’ailleurs de <span class=\"math inline\">\\(Y\\)</span>).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On note <span class=\"math inline\">\\(X=l^{\\infty}\\)</span> l’espace des suites réelles bornées, et <span class=\"math inline\">\\(Y=c_0\\)</span> l’espa ..."
 }

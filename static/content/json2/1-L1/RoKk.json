@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Inverse, méthode de Gauss",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:42.866Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:55.626Z"
   },
   "contenu": [
     {
-      "id": "fed95dbf-2aff-4f83-b8f3-cb76c9d45cb9",
+      "id": "9ce20bf1-6f31-4c6c-989b-7e8c3c1ebb95",
       "type": "description",
       "value": {
         "latex": "Soit $A=(a_{i,j})_{1\\leq i,j\\leq n}$ $(n\\geq2)$ définie par \n\n$$\\forall i\\in\\{1,...,n\\},\\;a_{i,j}=\n\\left\\{\n\\begin{array}{l}\ni\\;\\mbox{si}\\;i=j\\\\\n1\\;\\mbox{si}\\;i>j\\\\\n0\\;\\mbox{si}\\;i<j\n\\end{array}\n\\right..$$\n\nMontrer que $A$ est inversible et calculer son inverse.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "65824e71-4d8e-47f4-9780-36efa7f91458",
+      "id": "1470ba13-705d-43c4-be34-4c1238745092",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\mathcal{B}=(e_i)_{1\\leq i\\leq n}$ la base canonique de $\\Cc^n$ et $(e_i')_{1\\leq i\\leq n}$ la famille d'éléments de $\\Cc^n$ de matrice $A$ dans la base $\\mathcal{B}$.\n\nPar définition, on a\n\n$$\\forall i\\in\\{1,...,n-1\\},\\;e_i'=ie_i+\\sum_{j=i+1}^{n}e_j\\;\\mbox{et}\\;e_n'=ne_n.$$\n\nEn retranchant membre à membre ces égalités, on obtient\n\n$$\\forall i\\in\\{1,...,n-1\\},\\;e_i'-e_{i+1}'=i(e_i-e_{i+1})\\;\\mbox{et}\\;e_n'=ne_n,$$\n\nou encore\n\n$$\\forall i\\in\\{1,...,n-1\\},\\;e_i-e_{i+1}=\\frac{1}{i}(e_i'-e_{i+1}')\\;\\mbox{et}\\;e_n=\\frac{1}{n}e_n'.$$\n\nMais alors, pour $i\\in\\{1,...,n-1\\}$, on a\n\n$$\\begin{align*}\\ensuremath\ne_i&=\\sum_{j=i}^{n-1}(e_j-e_{j+1})+e_n=\\sum_{j=i}^{n-1}\\frac{1}{j}(e_j'-e_{j+1}')+\\frac{1}{n}e_n'\n=\\sum_{j=i}^{n-1}\\frac{1}{j}e_j'-\\sum_{j=i+1}^{n}\\frac{1}{j-1}e_j'+\\frac{1}{n}e_n'\\\\\n &=\\frac{1}{i}e_i'+\\sum_{j=i+1}^{n}\\frac{1}{j}e_j'-\\sum_{j=i+1}^{n}\\frac{1}{j-1}e_j'\\\\\n &=\\frac{1}{i}e_i'-\\sum_{j=i+1}^{n}\\frac{1}{j(j-1)}e_j'\n\\end{align*}$$\n\nMais alors, $\\Cc^n=\\mbox{Vect}(e_1,...,e_n)\\subset\\mbox{Vect}(e_1',...,e_n')$, ce qui montre que la famille $\\mathcal{B}'=(e_1',...,e_n')$ est génératrice de $\\Cc^n$ et donc une base de $\\Cc^n$. Par suite, $A$ est inversible et \n\n$$A^{-1}=\\mbox{Mat}_{\\mathcal{B}'}\\mathcal{B}=(a_{i,j}')_{1\\leq i,j\\leq n}\\;\\mbox{où}\\;\na_{i,j}'=\n\\left\\{\n\\begin{array}{l}\n\\frac{1}{i}\\;\\mbox{si}\\;i=j\\\\\n-\\frac{1}{i(i-1)}\\;\\mbox{si}\\;i>j\\\\\n0\\;\\mbox{si}\\;i<j\n\\end{array}\n\\right..\n$$",
         "html": "<p>Soit <span class=\"math inline\">\\(\\mathcal{B}=(e_i)_{1\\leq i\\leq n}\\)</span> la base canonique de <span class=\"math inline\">\\(\\Cc^n\\)</span> et <span class=\"math inline\">\\((e_i&#39;)_{1\\leq i\\leq n}\\)</span> la famille d’éléments de <span class=\"math inline\">\\(\\Cc^n\\)</span> de matrice <span class=\"math inline\">\\(A\\)</span> dans la base <span class=\"math inline\">\\(\\mathcal{B}\\)</span>.</p>\n<p>Par définition, on a</p>\n<p><span class=\"math display\">\\[\\forall i\\in\\{1,...,n-1\\},\\;e_i&#39;=ie_i+\\sum_{j=i+1}^{n}e_j\\;\\mbox{et}\\;e_n&#39;=ne_n.\\]</span></p>\n<p>En retranchant membre à membre ces égalités, on obtient</p>\n<p><span class=\"math display\">\\[\\forall i\\in\\{1,...,n-1\\},\\;e_i&#39;-e_{i+1}&#39;=i(e_i-e_{i+1})\\;\\mbox{et}\\;e_n&#39;=ne_n,\\]</span></p>\n<p>ou encore</p>\n<p><span class=\"math display\">\\[\\forall i\\in\\{1,...,n-1\\},\\;e_i-e_{i+1}=\\frac{1}{i}(e_i&#39;-e_{i+1}&#39;)\\;\\mbox{et}\\;e_n=\\frac{1}{n}e_n&#39;.\\]</span></p>\n<p>Mais alors, pour <span class=\"math inline\">\\(i\\in\\{1,...,n-1\\}\\)</span>, on a</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\ne_i&amp;=\\sum_{j=i}^{n-1}(e_j-e_{j+1})+e_n=\\sum_{j=i}^{n-1}\\frac{1}{j}(e_j&#39;-e_{j+1}&#39;)+\\frac{1}{n}e_n&#39;\n=\\sum_{j=i}^{n-1}\\frac{1}{j}e_j&#39;-\\sum_{j=i+1}^{n}\\frac{1}{j-1}e_j&#39;+\\frac{1}{n}e_n&#39;\\\\\n &amp;=\\frac{1}{i}e_i&#39;+\\sum_{j=i+1}^{n}\\frac{1}{j}e_j&#39;-\\sum_{j=i+1}^{n}\\frac{1}{j-1}e_j&#39;\\\\\n &amp;=\\frac{1}{i}e_i&#39;-\\sum_{j=i+1}^{n}\\frac{1}{j(j-1)}e_j&#39;\n\\end{align*}\\]</span></p>\n<p>Mais alors, <span class=\"math inline\">\\(\\Cc^n=\\mbox{Vect}(e_1,...,e_n)\\subset\\mbox{Vect}(e_1&#39;,...,e_n&#39;)\\)</span>, ce qui montre que la famille <span class=\"math inline\">\\(\\mathcal{B}&#39;=(e_1&#39;,...,e_n&#39;)\\)</span> est génératrice de <span class=\"math inline\">\\(\\Cc^n\\)</span> et donc une base de <span class=\"math inline\">\\(\\Cc^n\\)</span>. Par suite, <span class=\"math inline\">\\(A\\)</span> est inversible et</p>\n<p><span class=\"math display\">\\[A^{-1}=\\mbox{Mat}_{\\mathcal{B}&#39;}\\mathcal{B}=(a_{i,j}&#39;)_{1\\leq i,j\\leq n}\\;\\mbox{où}\\;\na_{i,j}&#39;=\n\\left\\{\n\\begin{array}{l}\n\\frac{1}{i}\\;\\mbox{si}\\;i=j\\\\\n-\\frac{1}{i(i-1)}\\;\\mbox{si}\\;i&gt;j\\\\\n0\\;\\mbox{si}\\;i&lt;j\n\\end{array}\n\\right..\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A=(a_{i,j})_{1\\leq i,j\\leq n}\\)</span> <span class=\"math inline\">\\((n\\geq2)\\)</span> définie par</p>\n<p><span clas ..."
 }

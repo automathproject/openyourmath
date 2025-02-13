@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite et série de fonctions",
     "sousChapitre": "Continuité, dérivabilité",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:36.122Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:30.929Z"
   },
   "contenu": [
     {
-      "id": "d6eb20d6-6c48-4de7-967a-fdf5e1258395",
+      "id": "c3f7cdc5-c33b-4cdd-be8b-c089e1209447",
       "type": "description",
       "value": {
         "latex": "Soit $f$ une application continue sur $[0,1]$ à valeurs dans $\\Rr$. Pour $n$ entier naturel non nul, on définit le $n$-ème polynôme de \\textsc{Bernstein} associé à $f$ par \n\n\\begin{center}\n$B_n(f) =\\sum_{k=0}^{n}\\dbinom{n}{k}f\\left(\\frac{k}{n}\\right)X^k(1-X)^{n-k}$.\n\\end{center}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "0238a50c-8816-428a-a684-05e3b6efce84",
+      "id": "3d7e0e54-7fb5-4664-bae3-300f963d8d70",
       "type": "question",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "bfc1cee1-6b67-4bc6-b5b8-04767adc59cd",
+      "id": "adc6ca2b-0061-428b-b73e-997e9fefcd09",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "c4d86ea9-d855-49a4-a6ef-3df244cd625b",
+      "id": "5c89489d-9701-44cf-9c7b-0d65fe247dc6",
       "type": "question",
       "value": {
         "latex": "Calculer $B_n(f)$ quand $f$ est la fonction $x\\mapsto 1$,  quand $f$ est la fonction $x\\mapsto x$, quand $f$ est la fonction $x\\mapsto x(x-1)$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "434baf50-8bc6-4f69-a5c2-9d5510688648",
+      "id": "b0d2a998-b59b-4b95-aa04-9269183161f4",
       "type": "reponse",
       "value": {
         "latex": "Soit $n\\in\\Nn^*$.\n\n\\textbullet~Si $\\forall x\\in[0,1]$, $f(x)= 1$,\n\n\\begin{center}\n$B_n(f)=\\sum_{k=0}^{n}\\dbinom{n}{k}X^k(1-X)^{n-k}= (X+(1-X))^n = 1$.\n\\end{center}\n\n\\textbullet~Si $\\forall x\\in[0,1]$, $f(x)=x$,\n\n$$\\begin{align*}\\ensuremath\nB_n(f)&=\\sum_{k=0}^{n}\\frac{k}{n}\\dbinom{n}{k}X^k(1-X)^{n-k}=\\sum_{k=1}^{n}\\dbinom{n-1}{k-1}X^k(1-X)^{n-k}=X\\sum_{k=1}^{n}\\dbinom{n-1}{k-1}X^{k-1}(1-X)^{(n-1)-(k-1)}\\\\\n &= X\\sum_{k=0}^{n-1}\\dbinom{n-1}{k}X^k(1-X)^{n-1-k}= X.\n\\end{align*}$$\n\t\n\n\\textbullet~Si $\\forall x\\in[0,1]$, $f(x)=x(x-1)$, alors $B_n(f)=\\sum_{k=0}^{n}\\dbinom{n}{k}\\frac{k}{n}\\left(\\frac{k}{n}-1\\right)X^k(1-X)^{n-k}$ et donc $B_1(f)=0$. Pour $n\\geqslant2$ et $k\\in\\llbracket1,n-1\\rrbracket$\n\n\\begin{center}\n$\\frac{k}{n}\\left(\\frac{k}{n}-1\\right)\\dbinom{n}{k}=-\\frac{1}{n^2}k(n-k)\\frac{n!}{k!(n-k)!}=-\\frac{n-1}{n}\\frac{(n-2)!}{(k-1)(n-k-1)!}=-\\frac{n-1}{n}\\dbinom{n-2}{k-1}$.\n\\end{center}\n\nPar suite,\n\n$$\\begin{align*}\\ensuremath\nB_n(f)&=-\\frac{n-1}{n}\\sum_{k=1}^{n-1}\\dbinom{n-2}{k-1}X^k(1-X)^{n-k}  = -\\frac{n-1}{n}X(1-X)   \\sum_{k=1}^{n-1}X^{k-1}(1-X)^{(n-2)-(k-1)}\\\\\n &=-\\frac{n-1}{n}X(1-X)\\sum_{k=0}^{n-2}\\dbinom{n-2}{k}X^k(1-X)^{n-2-k}=-\\frac{n-1}{n} X(1-X).\n\\end{align*}$$\n\nce qui reste vrai pour n = 1.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "bd0e54a6-7c1a-4f01-a2bb-5dfc4a1446f5",
+      "id": "eac128de-1f9b-4392-acbf-aa77bc141a63",
       "type": "question",
       "value": {
         "latex": "En déduire que $\\sum_{k=0}^{n}\\dbinom{n}{k}(k-nX)^2X^k(1-X)^{n-k}= nX(1-X)$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "7ecfb08b-1a20-407a-bc87-1c3f2b110382",
+      "id": "a8629657-9590-4578-bf73-c678f33a50d8",
       "type": "reponse",
       "value": {
         "latex": "D'après la question précédente\n\n$$\\begin{align*}\\ensuremath\n\\sum_{k=0}^{n}\\dbinom{n}{k}(k-nX)^2X^k(1-X)^{n-k}&=\\sum_{k=0}^{n}\\dbinom{n}{k}k^2X^k(1-X)^{n-k}- 2nX\\sum_{k=0}^{n}\\dbinom{n}{k}kX^k(1-X)^{n-k}+n^2X^2\\sum_{k=0}^{n}\\dbinom{n}{k}X^k(1-X)^{n-k}\\\\\n &=\\sum_{k=0}^{n}\\dbinom{n}{k}k(k-n)X^k(1-X)^{n-k}-n(2X-1)\\sum_{k=0}^{n}\\dbinom{n}{k}kX^k(1-X)^{n-k}\\\\\n  &+n^2X^2\\sum_{k=0}^{n}\\dbinom{n}{k}X^k(1-X)^{n-k}\\\\\n  &=n^2\\sum_{k=0}^{n}\\frac{k}{n}\\left(\\frac{k}{n}-1\\right)\\dbinom{n}{k}X^k(1-X)^{n-k}-n^2(2X-1)\\sum_{k=0}^{n}\\dbinom{n}{k}\\frac{k}{n}X^k(1-X)^{n-k}+n^2X^2\\\\\n &= -n(n-1)X(1-X) -n^2(2X-1)X + n^2X^2 = -nX^2 + nX = nX(1-X).\n\\end{align*}$$",
         "html": "<p>D’après la question précédente</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\sum_{k=0}^{n}\\dbinom{n}{k}(k-nX)^2X^k(1-X)^{n-k}&amp;=\\sum_{k=0}^{n}\\dbinom{n}{k}k^2X^k(1-X)^{n-k}- 2nX\\sum_{k=0}^{n}\\dbinom{n}{k}kX^k(1-X)^{n-k}+n^2X^2\\sum_{k=0}^{n}\\dbinom{n}{k}X^k(1-X)^{n-k}\\\\\n &amp;=\\sum_{k=0}^{n}\\dbinom{n}{k}k(k-n)X^k(1-X)^{n-k}-n(2X-1)\\sum_{k=0}^{n}\\dbinom{n}{k}kX^k(1-X)^{n-k}\\\\\n  &amp;+n^2X^2\\sum_{k=0}^{n}\\dbinom{n}{k}X^k(1-X)^{n-k}\\\\\n  &amp;=n^2\\sum_{k=0}^{n}\\frac{k}{n}\\left(\\frac{k}{n}-1\\right)\\dbinom{n}{k}X^k(1-X)^{n-k}-n^2(2X-1)\\sum_{k=0}^{n}\\dbinom{n}{k}\\frac{k}{n}X^k(1-X)^{n-k}+n^2X^2\\\\\n &amp;= -n(n-1)X(1-X) -n^2(2X-1)X + n^2X^2 = -nX^2 + nX = nX(1-X).\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application continue sur <span class=\"math inline\">\\([0,1]\\)</span> à valeurs dans <span class=\"mat ..."
 }

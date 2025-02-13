@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série entière",
     "sousChapitre": "Analycité",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:36.782Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:29.357Z"
   },
   "contenu": [
     {
-      "id": "f4669494-6b13-406e-b70c-4ff149938c60",
+      "id": "498ad7cf-56fe-46c7-ada5-59ef1e65dc14",
       "type": "description",
       "value": {
         "latex": "Soit $U$ un ouvert de~$\\C$ contenant $0$ et $f : U \\to \\C$ analytique.\nOn note $\\sum_{n=0}^\\infty a_nz^n$ le développement en série entière\nde $f$ en~$0$, $R$ son rayon et~$d$ la distance de~$0$ à~$\\mathrm{fr}(U)$\n($d=+\\infty$ si $U=\\C$).",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6eb7e9b5-8792-4f03-9c9c-9ec1d37c7eeb",
+      "id": "f0f58191-e017-4664-803e-83f5ba2e61a7",
       "type": "question",
       "value": {
         "latex": "Montrer, pour $0<r<\\min(R,d)$ et $n\\in\\N$~:\n    $a_n = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{r^ne^{in\\theta}}\\, d\\theta$.\n    \\label{formule-c}",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "5ded3f53-baa4-4fdb-a4bc-c6b0fbcc9443",
+      "id": "03eaf29c-f5ef-4438-922b-cb5ebe4a5d32",
       "type": "reponse",
       "value": {
         "latex": "Calcul.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d7844c7e-00ee-43e3-a817-be9c0e507178",
+      "id": "d4ba62d8-c68e-47ea-8481-7333327c4dcf",
       "type": "question",
       "value": {
         "latex": "Montrer que l'application $r \\mapsto  \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{e^{in\\theta}}\\, d\\theta$\n    est analytique sur~$[0,d[$ (minorer le rayon de convergence du\n    DSE de~$f$ en $r_0e^{i\\theta}$ et majorer en module les coefficients lorsque\n    $\\theta$ décrit~$[0,2\\pi]$ et $r_0$ est fixé dans~$[0,d[$ à l'aide\n    d'un recouvrement ouvert de~$[0,2\\pi]$). En déduire que l'égalité de la question \\ref{formule-c}.\\\n    a lieu pour tout $r\\in{[0,d[}$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "68e40aea-7f09-4b64-b847-dfe3fd47b612",
+      "id": "dde49c85-96e1-4019-b331-8b951702f453",
       "type": "reponse",
       "value": {
         "latex": "Soit $0<r_0<d$ et $R(\\theta)$ le rayon de la série de Taylor de~$f$ en $r_0e^{i\\theta}$.\n    Le cercle de centre $0$ et de rayon $r_0$ est recouvert par les disques ouverts\n    $D(r_0e^{i\\theta}, \\frac12R(\\theta))$, $\\theta$ variant de $0$ à~$2\\pi$,\n    donc on peut en extraire un recouvrement fini~; soit $\\rho$ le rayon minimum\n    des disques extraits. Alors pour $0\\le\\theta\\le2\\pi$ on a $R(\\theta) \\ge \\rho$\n    (cf. analycité de la somme d'une série entière dans le disque ouvert de convergence).\n    \n    D'après la première question on a~:\n    $\\Bigl|\\frac{f^{(n)}(r_0e^{i\\theta})}{n!}\\Bigr| \\le \\frac M{\\rho^n}$\n    où $M$ majore $|f|$ sur $\\overline D(0,r_0+\\rho)$ d'où pour $|r-r_0|<\\rho$~:\n    $$ \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{e^{in\\theta}}\\, d\\theta\n      =  \\int_{\\theta=0}^{2\\pi} \\sum_{k=0}^\\infty\n           \\frac{f^{(k)}(r_0e^{i\\theta})}{k!} (r-r_0)^k e^{i(k-n)\\theta}\\, d\\theta\n      = \\sum_{k=0}^\\infty (r-r_0)^k  \\int_{\\theta=0}^{2\\pi}\n           \\frac{f^{(k)}(r_0e^{i\\theta})}{k!} e^{i(k-n)\\theta}\\, d\\theta.$$\n    ce qui démontre l'analycité de $\\varphi = r \\mapsto  \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{e^{in\\theta}}\\, d\\theta$\n    sur $]0,d[$.\n    \n    Enfin, $\\varphi(r) = a_nr^n$ au voisinage de~$0$ d'où $\\varphi(r) = a_nr^n$\n    sur~$[0,d[$ par prolongement analytique.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "f3ac09a5-c746-4a50-ad58-ff35d0bff014",
+      "id": "9faae36b-ecc0-4bcc-8d89-4891f6df0948",
       "type": "question",
       "value": {
         "latex": "Pour $0<r<d$ et $|z|<r$ on pose $g(z)= \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{re^{i\\theta}-z}re^{i\\theta}\\, d\\theta$.\n    Montrer que $g$ est la somme d'une série entière de rayon supérieur\n    ou égal à~$r$ et que $g$ coïncide avec $f$ sur $\\mathring D(0,r)$.\n\n  \\bigskip\n\nApplications~:",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "fc7c74fb-df0a-4cdb-9240-2e01db003187",
+      "id": "76185917-bf07-4c63-982c-2c8f26d5649b",
       "type": "reponse",
       "value": {
         "latex": "$g(z)= \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{re^{i\\theta}-z}re^{i\\theta}\\, d\\theta\n                  = \\frac1{2\\pi} \\int_{\\theta=0}^{2\\pi}f(re^{i\\theta})\\sum_{k=0}^\\infty \\frac{z^k}{r^ke^{ik\\theta}}\\, d\\theta\n                  = \\sum_{k=0}^\\infty \\frac{z^k}{2\\pi} \\int_{\\theta=0}^{2\\pi}\\frac{f(re^{i\\theta})}{r^ke^{ik\\theta}}\\, d\\theta\n                  = \\sum_{k=0}^\\infty a_kz^k$.\n\n             Le rayon est au moins égal à~$r$ car $f$ est bornée sur $\\overline D(0,r)$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "6e69c2c5-33a9-4797-a49f-3607b7585644",
+      "id": "1f4e7f53-4acf-4f0a-aca8-aa383acc8946",
       "type": "question",
       "value": {
         "latex": "$R\\ge d$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "8a406a23-abf6-4899-9ebe-3a57024f375a",
+      "id": "7479ba70-c4e8-48f0-8218-d323bee06afd",
       "type": "reponse",
       "value": {
         "latex": "résulte de la question {3.}.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "17043624-e297-42fa-a0a6-880ef926c3d3",
+      "id": "41f00057-8112-490b-8b08-f1c11ac60a2c",
       "type": "question",
       "value": {
         "latex": "Si $U=\\C$ et $f$ est bornée alors $f$ est constante (théorème de Liouville).",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "b71a8507-8e0e-486e-bf5a-e9694e19f1e6",
+      "id": "4c7a55db-1ed1-4545-8617-b738a4f223a1",
       "type": "reponse",
       "value": {
         "latex": "D'après la question {1.}, $|a_n| \\le \\|f\\|_\\infty/r^n$ pour tout $r>0$ donc $a_n = 0$ si $n\\ge 1$.",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "48e29e03-0b17-4875-961b-46ca97459424",
+      "id": "134c363a-e060-4380-bc95-bfa5acfbf5cc",
       "type": "question",
       "value": {
         "latex": "Si $P\\in\\C[X]$ ne s'annule pas alors $P$ est constant (théorème de d'Alembert-Gauss).",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "c027af5d-cc4a-40f4-84ac-b4d194a24c63",
+      "id": "b23b75cc-6359-4486-a942-7797236e2794",
       "type": "reponse",
       "value": {
         "latex": "$1/P$ est analytique bornée sur~$\\C$.",
@@ -120,7 +120,7 @@
       }
     },
     {
-      "id": "12354269-f81c-4ee9-92d0-b44b818ec86f",
+      "id": "7e1591ea-8b4d-4b97-ad23-43e83722f490",
       "type": "question",
       "value": {
         "latex": "Si $(f_n)$ est une suite de fonctions analytiques convergeant uniformément\n    sur~$U$ vers une fonction~$f$ alors $f$ est analytique sur~$U$ (théorème de Weierstrass, comparer avec le cas réel).",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "8fc303a9-0c2a-4708-8243-b84495fdc7ff",
+      "id": "0f39a165-f100-43e6-864e-8bb0a8c850ec",
       "type": "reponse",
       "value": {
         "latex": "On peut passer à la limite uniforme (ou dominée) dans la question {3.}.",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "fdfff859-20e7-48a5-b81b-7b7bd891a28c",
+      "id": "d9dd7ab6-f2d7-493a-b9fe-ddfb42500839",
       "type": "question",
       "value": {
         "latex": "La composée de deux fonctions analytiques est analytique.",
@@ -144,12 +144,13 @@
       }
     },
     {
-      "id": "e8e6160a-210b-4d37-996f-c073c23aa9d5",
+      "id": "0609878f-d057-4c22-be6b-44c3d7ba61b6",
       "type": "reponse",
       "value": {
         "latex": "$f(z) = \\sum_{n=0}^\\infty a_nz^n  \\Rightarrow  f\\circ g(z) = \\sum_{n=0}^\\infty a_ng^n(z)$\n      et il y a convergence localement uniforme.",
         "html": "<p><span class=\"math inline\">\\(f(z) = \\sum_{n=0}^\\infty a_nz^n  \\Rightarrow  f\\circ g(z) = \\sum_{n=0}^\\infty a_ng^n(z)\\)</span> et il y a convergence localement uniforme.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(U\\)</span> un ouvert de <span class=\"math inline\">\\(\\C\\)</span> contenant <span class=\"math inline\">\\(0\\)</span> e ..."
 }

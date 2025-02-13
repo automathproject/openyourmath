@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Dénombrement",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:07.642Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:22.741Z"
   },
   "contenu": [
     {
-      "id": "44b1b4b8-fda1-4c9b-bd7e-7ebcebdd4c88",
+      "id": "dff9dcb5-f045-4826-8735-1557074edaee",
       "type": "description",
       "value": {
         "latex": "Quelle est la probabilité $p_n$ pour que dans un groupe de $n$ personnes choisies au hasard, deux personnes au moins aient le même anniversaire (on considèrera que l'année a toujours $365$ jours, tous équiprobables). Montrer que pour $n\\geq23$, on a $p_n\\geq\\frac{1}{2}$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "7ef75cad-9fd4-4c66-822e-a44f92710a9b",
+      "id": "81313e19-65e0-40e8-913c-1020479e23aa",
       "type": "reponse",
       "value": {
         "latex": "Si $n\\geq366$, on a clairement $p_n=1$ (Principe des tiroirs~:~si $366$ personnes sont à associer à $365$ dates d'anniversaire, alors $2$ personnes au moins sont à associer à la même date d'anniversaire).\n\nSi $2\\leq n\\leq 365$, on a $p_n=1-q_n$ où $q_n$ est la probabilité que les dates d'anniversaire soient deux à deux distinctes. Il y a $(365)^n$ répartitions possibles des dates d'anniversaires (cas possibles) et parmi ces répartitions, il y en a $365.364.363....(365-n+1)$ telles que les dates d'anniversaire soient deux à deux distinctes. Finalement \n\n$$p_n=1-\\frac{1}{(365)^n}365.364.363....(365-n+1)=1-\\prod_{k=1}^{n-1}\\frac{365-k}{365}=1-\\prod_{k=1}^{n-1}(1-\\frac{k}{365}).$$\n\nEnsuite,\n\n$$p_n\\geq\\frac{1}{2}\\Leftrightarrow\\prod_{k=1}^{n-1}(1-\\frac{k}{365})\\leq\\frac{1}{2}\\Leftrightarrow\\sum_{k=1}^{n-1}\\ln(1-\\frac{k}{365}) \\leq\\ln\\frac{1}{2}\\Leftrightarrow\\sum_{k=1}^{n-1}-\\ln(1-\\frac{k}{365})\\geq\\ln2.$$\n\nMaintenant, soit $x\\in[0,1[$. On a\n\n$$-\\ln(1-x)=\\int_{0}^{x}\\frac{1}{1-t}dt\\geq\\int_{0}^{x}\\frac{1}{1-0}dt=x.$$\n\nPour $k$ élément de $\\{1,...,n-1\\}(\\subset\\{1,...,364\\})$, $\\frac{k}{365}$ est un réel élément de $[0,1[$.\n\nEn appliquant l'inégalité précédente, on obtient \n\n$$\\sum_{k=1}^{n-1}-\\ln(1-\\frac{k}{365})\\geq\\sum_{k=1}^{n-1}\\frac{k}{365}=\\frac{n(n-1)}{730}.$$\n\nAinsi,\n\n$$p_n\\geq\\frac{1}{2}\\Leftarrow\\frac{n(n-1)}{730}\\geq\\ln 2\\Leftrightarrow n^2-n-730\\ln2\\geq0\\Leftrightarrow n\\geq\\frac{1+\\sqrt{1+2920\\ln2}}{2}=22,99...\\Leftrightarrow n\\geq23.$$\n\nFinalement, dans un groupe d'au moins $23$ personnes, il y a plus d'une chance sur deux que deux personnes au moins aient la même date d'anniversaire.",
         "html": "<p>Si <span class=\"math inline\">\\(n\\geq366\\)</span>, on a clairement <span class=\"math inline\">\\(p_n=1\\)</span> (Principe des tiroirs : si <span class=\"math inline\">\\(366\\)</span> personnes sont à associer à <span class=\"math inline\">\\(365\\)</span> dates d’anniversaire, alors <span class=\"math inline\">\\(2\\)</span> personnes au moins sont à associer à la même date d’anniversaire).</p>\n<p>Si <span class=\"math inline\">\\(2\\leq n\\leq 365\\)</span>, on a <span class=\"math inline\">\\(p_n=1-q_n\\)</span> où <span class=\"math inline\">\\(q_n\\)</span> est la probabilité que les dates d’anniversaire soient deux à deux distinctes. Il y a <span class=\"math inline\">\\((365)^n\\)</span> répartitions possibles des dates d’anniversaires (cas possibles) et parmi ces répartitions, il y en a <span class=\"math inline\">\\(365.364.363....(365-n+1)\\)</span> telles que les dates d’anniversaire soient deux à deux distinctes. Finalement</p>\n<p><span class=\"math display\">\\[p_n=1-\\frac{1}{(365)^n}365.364.363....(365-n+1)=1-\\prod_{k=1}^{n-1}\\frac{365-k}{365}=1-\\prod_{k=1}^{n-1}(1-\\frac{k}{365}).\\]</span></p>\n<p>Ensuite,</p>\n<p><span class=\"math display\">\\[p_n\\geq\\frac{1}{2}\\Leftrightarrow\\prod_{k=1}^{n-1}(1-\\frac{k}{365})\\leq\\frac{1}{2}\\Leftrightarrow\\sum_{k=1}^{n-1}\\ln(1-\\frac{k}{365}) \\leq\\ln\\frac{1}{2}\\Leftrightarrow\\sum_{k=1}^{n-1}-\\ln(1-\\frac{k}{365})\\geq\\ln2.\\]</span></p>\n<p>Maintenant, soit <span class=\"math inline\">\\(x\\in[0,1[\\)</span>. On a</p>\n<p><span class=\"math display\">\\[-\\ln(1-x)=\\int_{0}^{x}\\frac{1}{1-t}dt\\geq\\int_{0}^{x}\\frac{1}{1-0}dt=x.\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(k\\)</span> élément de <span class=\"math inline\">\\(\\{1,...,n-1\\}(\\subset\\{1,...,364\\})\\)</span>, <span class=\"math inline\">\\(\\frac{k}{365}\\)</span> est un réel élément de <span class=\"math inline\">\\([0,1[\\)</span>.</p>\n<p>En appliquant l’inégalité précédente, on obtient</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n-1}-\\ln(1-\\frac{k}{365})\\geq\\sum_{k=1}^{n-1}\\frac{k}{365}=\\frac{n(n-1)}{730}.\\]</span></p>\n<p>Ainsi,</p>\n<p><span class=\"math display\">\\[p_n\\geq\\frac{1}{2}\\Leftarrow\\frac{n(n-1)}{730}\\geq\\ln 2\\Leftrightarrow n^2-n-730\\ln2\\geq0\\Leftrightarrow n\\geq\\frac{1+\\sqrt{1+2920\\ln2}}{2}=22,99...\\Leftrightarrow n\\geq23.\\]</span></p>\n<p>Finalement, dans un groupe d’au moins <span class=\"math inline\">\\(23\\)</span> personnes, il y a plus d’une chance sur deux que deux personnes au moins aient la même date d’anniversaire.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Quelle est la probabilité <span class=\"math inline\">\\(p_n\\)</span> pour que dans un groupe de <span class=\"math inline\">\\(n\\)</span> personnes choi ..."
 }

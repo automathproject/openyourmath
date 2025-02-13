@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Théorie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:19.767Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:05.367Z"
   },
   "contenu": [
     {
-      "id": "6e72111f-d7d9-4140-acb2-ea77bfbcb1b3",
+      "id": "ab1fba56-c821-4120-ae5c-4050f1fb0265",
       "type": "description",
       "value": {
         "latex": "Soit $E$ l'ensemble des fonctions continues strictement positives sur $[a,b]$.\n\nSoit $\\begin{array}[t]{cccc}\n\\varphi~:&E&\\rightarrow&\\Rr\\\\\n &f&\\mapsto&\\left(\\int_{a}^{b}f(t)\\;dt\\right)\\left(\\int_{a}^{b}\\frac{1}{f(t)}\\;dt\\right)\n \\end{array}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "4dff25dc-0f71-4bfc-a28e-4d473b0cdad0",
+      "id": "aea3b280-1240-4714-84f3-4799d099defd",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\varphi(E)$ n'est pas majoré.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "fa2305c8-19bc-414a-8354-f2ff7ce2e4a3",
+      "id": "c8466bde-05f5-438a-9a65-74a0a2b888a8",
       "type": "reponse",
       "value": {
         "latex": "Soient $m$ un réel strictement positif et, pour $t\\in\\Rr$, $f_m(t)=e^{mt}$. $f_m$ est bien un élément de $E$ et de plus,\n\n$$\\begin{align*}\\ensuremath\n\\varphi(f_m)&=\\frac{1}{m^2}(e^{mb}-e^{ma})(e^{-ma}-e^{-mb})\\\\\n &=\\frac{1}{m^2}e^{m(a+b)/2}(e^{m(b-a)/2}+e^{-m(b-a)/2})e^{-m(a+b)/2}(e^{m(b-a)/2}+e^{-m(b-a)/2})\\\\\n &=\\frac{4\\sh^2(m(b-a)/2)}{m^2}.\n\\end{align*}$$ \n\nCette expression tend vers $+\\infty$ quand $m$ tend vers $+\\infty$ et $\\varphi(E)$ n'est pas majoré.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d4a8bde1-10ac-42e6-ad05-2bc83b5474e2",
+      "id": "a3d9e070-7b6b-439a-8b31-87643e82e62a",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\varphi(E)$ est minoré. Trouver $m=\\mbox{Inf}\\{\\varphi(f),\\;f\\in E\\}$. Montrer que cette borne infèrieure est atteinte et trouver toutes les $f$ de $E$ telles que $\\varphi(f)=m$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "dce6c889-2619-49e8-82be-3db8f539a0f2",
+      "id": "3a978a76-fdc6-4790-8c63-f1e0b8354b11",
       "type": "reponse",
       "value": {
         "latex": "Soit $f$ continue et strictement positive sur $[a,b]$. L'inégalité \nde \\textsc{Cauchy}-\\textsc{Schwarz} montre que~:\n\n$$\\varphi(f)=\\int_{a}^{b}\\left(\\sqrt{f(t)}\\right)^2\\;dt\\int_{a}^{b}\\left(\\frac{1}{\\sqrt{f(t)}}\\right)^2\\;dt\\geq\\left(\n\\int_{a}^{b}\\sqrt{f(t)}\\frac{1}{\\sqrt{f(t)}}\\;dt\\right)^2=(b-a)^2,$$\n\navec égalité si et seulement si la famille de fonctions $(\\sqrt{f(t)},\\frac{1}{\\sqrt{f(t)}})$ est liée ou encore si et seulement si $\\exists\\lambda\\in\\Rr_+^*/\\;\\forall t\\in[a,b],\\;\\sqrt{f(t)}=\\lambda\\frac{1}{\\sqrt{f(t)}}$ ou enfin si et seulement si $\\exists\\lambda\\in\\Rr_+^*/\\;\\forall t\\in[a,b],\\;f(t)=\\lambda$, c'est-à-dire que $f$ est une constante strictement positive.\n\nTout ceci montre que $\\varphi(E)$ admet un minimum égal à $(b-a)^2$ et obtenu pour toute fonction $f$ qui est une  constante strictement positive.",
         "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> continue et strictement positive sur <span class=\"math inline\">\\([a,b]\\)</span>. L’inégalité de <span class=\"smallcaps\">Cauchy</span>-<span class=\"smallcaps\">Schwarz</span> montre que :</p>\n<p><span class=\"math display\">\\[\\varphi(f)=\\int_{a}^{b}\\left(\\sqrt{f(t)}\\right)^2\\;dt\\int_{a}^{b}\\left(\\frac{1}{\\sqrt{f(t)}}\\right)^2\\;dt\\geq\\left(\n\\int_{a}^{b}\\sqrt{f(t)}\\frac{1}{\\sqrt{f(t)}}\\;dt\\right)^2=(b-a)^2,\\]</span></p>\n<p>avec égalité si et seulement si la famille de fonctions <span class=\"math inline\">\\((\\sqrt{f(t)},\\frac{1}{\\sqrt{f(t)}})\\)</span> est liée ou encore si et seulement si <span class=\"math inline\">\\(\\exists\\lambda\\in\\Rr_+^*/\\;\\forall t\\in[a,b],\\;\\sqrt{f(t)}=\\lambda\\frac{1}{\\sqrt{f(t)}}\\)</span> ou enfin si et seulement si <span class=\"math inline\">\\(\\exists\\lambda\\in\\Rr_+^*/\\;\\forall t\\in[a,b],\\;f(t)=\\lambda\\)</span>, c’est-à-dire que <span class=\"math inline\">\\(f\\)</span> est une constante strictement positive.</p>\n<p>Tout ceci montre que <span class=\"math inline\">\\(\\varphi(E)\\)</span> admet un minimum égal à <span class=\"math inline\">\\((b-a)^2\\)</span> et obtenu pour toute fonction <span class=\"math inline\">\\(f\\)</span> qui est une constante strictement positive.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> l’ensemble des fonctions continues strictement positives sur <span class=\"math inline\">\\([a,b]\\)</span> ..."
 }

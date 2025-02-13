@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:05.573Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:46.132Z"
   },
   "contenu": [
     {
-      "id": "43461c53-d670-4d6f-b114-d991b97f42bb",
+      "id": "98bb807d-7431-47e8-9f48-31a2b333bde1",
       "type": "description",
       "value": {
         "latex": "Soit $\\Omega'$ l'ouvert de $\\mathbb{R}^{n}$ d\\'efini par\n$$\n\\Omega' = \\{(r, \\theta_1, \\dots, \\theta_{n-1})\\in\\mathbb{R}^{n}~|~\n0< r, 0 <\\theta_1, \\dots, \\theta_{n-2} < \\pi, 0 < \\theta_{n-1} <\n2\\pi\\}.\n$$\nSoit l'application $S$ de $\\Omega'$ dans $\\mathbb{R}^{n}$\nd\\'efinie par\n$$\n\\begin{array}{lcl}\nx_1 &= &r \\cos \\theta_1,\\\\\nx_2 &=& r \\sin \\theta_1 \\cos \\theta_2,\\\\\n\\vdots & & \\\\\nx_{n-2} &=&  r \\sin \\theta_1 \\sin \\theta_2 \\dots \\cos \\theta_{n-2}\\\\\nx_{n-1} &=& r \\sin \\theta_1 \\sin\\theta_2 \\dots \\sin \\theta_{n-2}\n\\cos \\theta_{n-1}\\\\\nx_{n} &=& r \\sin \\theta_1 \\sin \\theta_2 \\dots \\sin\\theta_{n-2}\n\\sin \\theta_{n-1},\n\\end{array}\n$$\no\\`u $(x_1, \\dots, x_n)$ sont les coordonn\\'ees cart\\'esiennes de\n$x\\in\\mathbb{R}^n$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a0a552ca-a652-4e35-a756-2cb9373ace49",
+      "id": "b6b39b8d-0c93-430d-9bfc-86cc1cf39044",
       "type": "question",
       "value": {
         "latex": "Soit $\\Omega = \\mathbb{R}^n\\setminus\\{\nx\\in\\mathbb{R}^n~|~x_{n} = 0~\\text{et}~x_{n-1} \\geq 0~\\}.$ Montrer\nque $\\Omega$ est une partie ouverte de $\\mathbb{R}^n$ dont le\ncompl\\'ementaire est de mesure nulle, et que $S$ est un\ndiff\\'eomorphisme de $\\Omega'$ sur $\\Omega$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "115fd495-9f01-4835-a940-54f4f0e59b9a",
+      "id": "89e388b9-42ca-4800-a57c-e132b1bc3001",
       "type": "reponse",
       "value": {
         "latex": "Posons $\\Omega = \\mathbb{R}^n\\setminus\\{\nx\\in\\mathbb{R}^n~|~x_{n} = 0~\\text{et}~x_{n-1} \\geq 0~\\}.$ Comme\n$0 < \\theta_{n-1} < 2\\pi$, l'image de $\\Omega'$ par $S$ est\nincluse dans $\\Omega$. R\\'eciproquement, soit $x$ un \\'el\\'ement\nde $\\Omega$. Posons $r = |x|$, alors pour tout $i \\in\\{1, \\dots,\nn-2\\}$, on peut d\\'efinir par r\\'ecurrence $\\theta_i\\in(0, \\pi)$\ngr\\^ace \\`a son cosinus~:\n$$\n\\cos\\theta_{i} = \\frac{x_{i}}{r\n\\sin\\theta_1\\dots\\sin\\theta_{i-1}}.\n$$\nQuant \\`a $\\theta_{n-1}$, il est d\\'etermin\\'e par son sinus et\nson cosinus. Comme $x_{n} \\neq 0$ ou $x_{n-1} < 0$,\nn\\'ecessairement $\\theta_{n-1} \\neq 0(\\text{modulo}~2\\pi)$.\n\nL'application $S$ est contin\\^ument diff\\'erentiable, car chacune\nde ses composantes l'est. La matrice jacobienne a ses vecteurs\ncolonnes orthogonaux, et de norme respectivement $1$, $r$,\n$r\\sin\\theta_{1}$, $\\dots$,\n$r\\sin\\theta_{1}\\dots\\sin\\theta_{n-2}$. Son d\\'eterminant vaut\nalors $r^{n-1}\\left(\\sin \\theta_{1}\\right)^{n-2}\\dots\n\\sin\\theta_{n-2}.$ Comme ce d\\'eterminant ne s'annule jamais, $S$\nest un diff\\'eomorphisme de $\\Omega'$ sur $\\Omega$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "764b5b36-3272-456b-bb95-7ce79fa58334",
+      "id": "60dd3665-6d54-4a52-8e49-cc7780cb03ee",
       "type": "question",
       "value": {
         "latex": "Soit $f$\nune fonction bor\\'elienne positive sur $\\mathbb{R}^{n}$. Montrer\nque\n$$\n\\begin{array}{lcl}\n\\int_{\\mathbb{R}^n} f(x)\\,dx &=& \\int_{\\Omega'} (f\\circ S)(r,\n\\theta_1, \\dots, \\theta_{n-1})\\,r^{n-1}\n\\sin^{n-2}\\theta_{1}\\,\\sin^{n-3}\\theta_2 \\dots \\sin\n\\theta_{n-2}\\,dr\\,d\\theta_1 \\dots d\\theta_{n-1}\\\\ & & \\\\ & =&\n\\int_{\\Omega'} (f\\circ S)(r, \\theta_1, \\dots,\n\\theta_{n-1})\\,r^{n-1}\\,dr\\,d\\sigma,\n\\end{array}\n$$\no\\`u $d\\sigma$ est la mesure uniforme sur la sph\\`ere unit\\'e de\n$\\mathbb{R}^{n}$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "21afa1e2-a207-489d-aaa4-a90253c714e4",
+      "id": "4b5ed045-8d22-49f7-834c-26ed4210bfea",
       "type": "reponse",
       "value": {
         "latex": "C'est la formule du changement de variable.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "986366a8-272e-496d-ab51-055032b59e22",
+      "id": "b2ddb1e4-9c2d-44e7-8003-031137f78748",
       "type": "question",
       "value": {
         "latex": "En utilisant les coordonn\\'ees\nsph\\'eriques, calculer le volume $\\mathcal{V}_4$ de la boule\nunit\\'e de $\\mathbb{R}^4$ et l'aire $\\mathcal{A}_{3}$ de la\nsph\\`ere unit\\'e $\\mathcal{S}^3$ de $\\mathbb{R}^4$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "b7c8f3d3-b35e-49f2-a129-40e88019d1d5",
+      "id": "223dff39-76b3-4f5a-90f5-92374f159c88",
       "type": "reponse",
       "value": {
         "latex": "On a~:\n$$\n\\begin{array}{lcl} \\mathcal{V}_{4} &=& \\int_{r = 0}^{1}\\int_{\\theta_1 =\n0}^{\\pi}\\int_{\\theta_{2} = 0}^{\\pi} \\int_{\\theta_3 = 0}^{2\\pi}\nr^3\\sin^{2}\\theta_{1}\\sin\\theta_{2}\\,dr\nd\\theta_1 d\\theta_2 d\\theta_3\\\\\n& = &\n2\\pi\\left[\\frac{r^4}{4}\\right]_{0}^{1}\\left(\\int_{0}^{\\pi}\\sin^{2}\\theta_1\nd\\theta_1\\right)\\left(\\int_{0}^{\\pi}\\sin\\theta_2\nd\\theta_2\\right)\\\\\n& = & \\frac{\\pi}{2}\\left(\\int_{0}^{\\pi}\\frac{1 -\\cos 2\\theta_1}{2}\nd\\theta_1\\right)\\left[-\\cos\\theta_2\\right]_{0}^{\\pi}\\\\\n& = & \\frac{\\pi^2}{2}.\\\\\n \\mathcal{A}_{3} &=& \\int_{\\theta_1 =0}^{\\pi}\\int_{\\theta_{2} = 0}^{\\pi} \\int_{\\theta_3 = 0}^{2\\pi}\n\\sin^{2}\\theta_{1}\\sin\\theta_{2}\\,\nd\\theta_1 d\\theta_2 d\\theta_3\\\\\n& = & 2\\pi^2.\n\\end{array}\n$$",
         "html": "<p>On a : <span class=\"math display\">\\[\\begin{array}{lcl} \\mathcal{V}_{4} &amp;=&amp; \\int_{r = 0}^{1}\\int_{\\theta_1 =\n0}^{\\pi}\\int_{\\theta_{2} = 0}^{\\pi} \\int_{\\theta_3 = 0}^{2\\pi}\nr^3\\sin^{2}\\theta_{1}\\sin\\theta_{2}\\,dr\nd\\theta_1 d\\theta_2 d\\theta_3\\\\\n&amp; = &amp;\n2\\pi\\left[\\frac{r^4}{4}\\right]_{0}^{1}\\left(\\int_{0}^{\\pi}\\sin^{2}\\theta_1\nd\\theta_1\\right)\\left(\\int_{0}^{\\pi}\\sin\\theta_2\nd\\theta_2\\right)\\\\\n&amp; = &amp; \\frac{\\pi}{2}\\left(\\int_{0}^{\\pi}\\frac{1 -\\cos 2\\theta_1}{2}\nd\\theta_1\\right)\\left[-\\cos\\theta_2\\right]_{0}^{\\pi}\\\\\n&amp; = &amp; \\frac{\\pi^2}{2}.\\\\\n \\mathcal{A}_{3} &amp;=&amp; \\int_{\\theta_1 =0}^{\\pi}\\int_{\\theta_{2} = 0}^{\\pi} \\int_{\\theta_3 = 0}^{2\\pi}\n\\sin^{2}\\theta_{1}\\sin\\theta_{2}\\,\nd\\theta_1 d\\theta_2 d\\theta_3\\\\\n&amp; = &amp; 2\\pi^2.\n\\end{array}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\Omega&#39;\\)</span> l’ouvert de <span class=\"math inline\">\\(\\mathbb{R}^{n}\\)</span> défini par <span class=\"math  ..."
 }

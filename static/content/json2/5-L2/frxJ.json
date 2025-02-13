@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:20.121Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:14.278Z"
   },
   "contenu": [
     {
-      "id": "5e651317-f43b-44d0-b403-2a557ecd9d49",
+      "id": "b5f64305-5fb5-4c4f-959e-960d4a4d1357",
       "type": "description",
       "value": {
         "latex": "Etude complète de $F(x)=\\int_{x}^{2x}\\frac{dt}{\\sqrt{t^4+t^2+1}}$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "3c769a5a-3365-4707-b08f-97cd9a63e3af",
+      "id": "8bc1af1b-0cff-40ac-b4b4-b4e2e55e6740",
       "type": "reponse",
       "value": {
         "latex": "Pour $t\\in\\Rr$, posons $g(t)=\\frac{1}{\\sqrt{t^4+t^2+1}}$. $g$ est continue sur $\\Rr$ et admet donc des primitives sur $\\Rr$. Soit $G$ une primitive de $g$ sur $\\Rr$.\n\n\\textbf{Définition, dérivabilté, dérivée.}\n\nPuisque $g$ est continue sur $\\Rr$, $F$ est définie sur $\\Rr$ et pour tout réel $x$, $F(x)=G(2x)-G(x)$. $G$ est de classe $C^1$ sur $\\Rr$ et donc $F$ est de classe $C^1$ sur $\\Rr$ et pour tout réel $x$,\n\n$$F'(x)=2G'(2x)-G'(x)=2g(2x)-g(x)=\\frac{2}{\\sqrt{16x^4-4x^2+1}}-\\frac{1}{\\sqrt{x^4+x^2+1}}.$$\n\n\\textbf{Parité.}\n\nSoit $x\\in\\Rr$. En posant $t=-u$ et donc $dt=-du$, on obtient, en notant que $g$ est paire\n\n$$F(-x)=\\int_{-x}^{-2x}g(t)\\;dt=\\int_{x}^{2x}g(-u).-du=-\\int_{x}^{2x}g(u)\\;du=-F(x).$$\n\n$F$ est donc impaire.\n\n\\textbf{Variations.}\n\nPour $x$ réel,\n\n$$\\begin{align*}\\ensuremath\n\\mbox{sgn}(F'(x))&=\\mbox{sgn}(\\frac{2}{\\sqrt{16x^4-4x^2+1}}-\\frac{1}{\\sqrt{x^4+x^2+1}})=\\mbox{sgn}(2\\sqrt{x^4+x^2+1}-\\sqrt{16x^4-4x^2+1})\\\\\n &=\\mbox{sgn}(4(x^4+x^2+1)-(16x^4+4x^2+1))\\;(\\mbox{par croissance de}\\;t\\mapsto t^2\\;\\mbox{sur}\\;\\Rr^+)\\\\\n  &=\\mbox{sgn}(-12x^4+3)=\\mbox{sgn}(1-4x^4)=\\mbox{sgn}(1-2x^2).\n\\end{align*}$$\n\n$F$ est donc strictement croissante sur $[-\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}]$ et strictement décroissante sur $]-\\infty,-\\frac{1}{\\sqrt{2}}]$ et sur $[\\frac{1}{\\sqrt{2}},+\\infty[$.\n\n\\textbf{Etude en} $\\bf{+{\\infty}}$.\n\nPour $x>0$, $0\\leq F(x)\\leq\\int_{x}^{2x}\\frac{1}{\\sqrt{x^4}}\\;dt=\\frac{2x-x}{x^2}=\\frac{1}{x}$. Comme $\\frac{1}{x}$ tend vers $0$ quand $x$ tend vers $+\\infty$, le théorème des gendarmes permet d'affirmer que $\\lim_{x\\rightarrow +\\infty}F(x)=0$.\n\n\\textbf{Graphe.}\n\n$$\\includegraphics{../images/img005460-1}$$",
         "html": "<p>Pour <span class=\"math inline\">\\(t\\in\\Rr\\)</span>, posons <span class=\"math inline\">\\(g(t)=\\frac{1}{\\sqrt{t^4+t^2+1}}\\)</span>. <span class=\"math inline\">\\(g\\)</span> est continue sur <span class=\"math inline\">\\(\\Rr\\)</span> et admet donc des primitives sur <span class=\"math inline\">\\(\\Rr\\)</span>. Soit <span class=\"math inline\">\\(G\\)</span> une primitive de <span class=\"math inline\">\\(g\\)</span> sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n<p><strong>Définition, dérivabilté, dérivée.</strong></p>\n<p>Puisque <span class=\"math inline\">\\(g\\)</span> est continue sur <span class=\"math inline\">\\(\\Rr\\)</span>, <span class=\"math inline\">\\(F\\)</span> est définie sur <span class=\"math inline\">\\(\\Rr\\)</span> et pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\(F(x)=G(2x)-G(x)\\)</span>. <span class=\"math inline\">\\(G\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\Rr\\)</span> et donc <span class=\"math inline\">\\(F\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\Rr\\)</span> et pour tout réel <span class=\"math inline\">\\(x\\)</span>,</p>\n<p><span class=\"math display\">\\[F&#39;(x)=2G&#39;(2x)-G&#39;(x)=2g(2x)-g(x)=\\frac{2}{\\sqrt{16x^4-4x^2+1}}-\\frac{1}{\\sqrt{x^4+x^2+1}}.\\]</span></p>\n<p><strong>Parité.</strong></p>\n<p>Soit <span class=\"math inline\">\\(x\\in\\Rr\\)</span>. En posant <span class=\"math inline\">\\(t=-u\\)</span> et donc <span class=\"math inline\">\\(dt=-du\\)</span>, on obtient, en notant que <span class=\"math inline\">\\(g\\)</span> est paire</p>\n<p><span class=\"math display\">\\[F(-x)=\\int_{-x}^{-2x}g(t)\\;dt=\\int_{x}^{2x}g(-u).-du=-\\int_{x}^{2x}g(u)\\;du=-F(x).\\]</span></p>\n<p><span class=\"math inline\">\\(F\\)</span> est donc impaire.</p>\n<p><strong>Variations.</strong></p>\n<p>Pour <span class=\"math inline\">\\(x\\)</span> réel,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\mbox{sgn}(F&#39;(x))&amp;=\\mbox{sgn}(\\frac{2}{\\sqrt{16x^4-4x^2+1}}-\\frac{1}{\\sqrt{x^4+x^2+1}})=\\mbox{sgn}(2\\sqrt{x^4+x^2+1}-\\sqrt{16x^4-4x^2+1})\\\\\n &amp;=\\mbox{sgn}(4(x^4+x^2+1)-(16x^4+4x^2+1))\\;(\\mbox{par croissance de}\\;t\\mapsto t^2\\;\\mbox{sur}\\;\\Rr^+)\\\\\n  &amp;=\\mbox{sgn}(-12x^4+3)=\\mbox{sgn}(1-4x^4)=\\mbox{sgn}(1-2x^2).\n\\end{align*}\\]</span></p>\n<p><span class=\"math inline\">\\(F\\)</span> est donc strictement croissante sur <span class=\"math inline\">\\([-\\frac{1}{\\sqrt{2}},\\frac{1}{\\sqrt{2}}]\\)</span> et strictement décroissante sur <span class=\"math inline\">\\(]-\\infty,-\\frac{1}{\\sqrt{2}}]\\)</span> et sur <span class=\"math inline\">\\([\\frac{1}{\\sqrt{2}},+\\infty[\\)</span>.</p>\n<p><strong>Etude en</strong> <span class=\"math inline\">\\(\\bf{+{\\infty}}\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(x&gt;0\\)</span>, <span class=\"math inline\">\\(0\\leq F(x)\\leq\\int_{x}^{2x}\\frac{1}{\\sqrt{x^4}}\\;dt=\\frac{2x-x}{x^2}=\\frac{1}{x}\\)</span>. Comme <span class=\"math inline\">\\(\\frac{1}{x}\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, le théorème des gendarmes permet d’affirmer que <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}F(x)=0\\)</span>.</p>\n<p><strong>Graphe.</strong></p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005460-1}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Etude complète de <span class=\"math inline\">\\(F(x)=\\int_{x}^{2x}\\frac{dt}{\\sqrt{t^4+t^2+1}}\\)</span>.</p>\n"
 }

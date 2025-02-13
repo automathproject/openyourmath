@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Développement limité",
     "sousChapitre": "Formule de Taylor",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:38.014Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:26.875Z"
   },
   "contenu": [
     {
-      "id": "bbaf1d53-880f-48b0-a9f0-9d0d5ace6769",
+      "id": "1b0f216f-9719-4c9b-842a-2e7e36ca35ee",
       "type": "description",
       "value": {
         "latex": "Soit $a$ un nombre réel et $f : ] a , +\\infty [ \\rightarrow \\Rr$ une application de classe $C^2$. \nOn suppose $f$ et $f''$ bornées ; on pose $\\displaystyle  M_0=\\sup _{x>a}\\vert f(x)\\vert$ et \n$\\displaystyle  M_2=\\sup_{x> a}\\vert f''(x)\\vert$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "fb40296c-b9f2-47d5-ad0a-c7d23905abd9",
+      "id": "d04312f8-cb76-4e59-ad52-471a27aae88a",
       "type": "question",
       "value": {
         "latex": "En appliquant une formule de Taylor reliant $f(x)$ et $f(x+h)$, montrer que, pour tout \n$x>a$ et tout $h>0$, on a~: $\\displaystyle \\vert f'(x)\\vert \\leq \\frac{h}{2}M_2+\\frac{2}{h}M_0$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "6c5f1f77-cf4f-425a-9a6d-d1507253cb76",
+      "id": "ac70ba74-7389-4d61-b751-b7803d449d10",
       "type": "reponse",
       "value": {
         "latex": "La formule de Taylor-Lagrange à l'ordre $2$ entre $x$ et $x+h$ (avec $h>0$) donne :\n$$f(x+h) = f(x) + f'(x) h  + f''(c_{x,h}) \\frac{h^2}{2!} $$\noù $c_{x,h} \\in ]x,x+h[$.\n\nCela donne :\n$$f'(x) h = f(x+h) - f(x)  - f''(c_{x,h}) \\frac{h^2}{2!}.$$\n\nOn peut maintenant majorer $f'(x)$ :\n$$\\begin{align*}\nh|f'(x)| \n   & \\le \\left|f(x+h) \\right| + \\left| f(x) \\right| + \\frac{h^2}{2}\\left| f''(c_{x,h})\\right|  \\\\\n   & \\le 2M_0 + \\frac {h^2}{2} M_2 \\\\\n\\end{align*}$$\nDonc\n$$|f'(x)|\\le \\frac{2}{h}{M_0} + \\frac{h}{2}M_2.$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "95b12e28-0bdd-4da0-a54e-2b7a8383ffe1",
+      "id": "7c5dbc29-70c8-413d-b5c5-7963f74bbb29",
       "type": "question",
       "value": {
         "latex": "En déduire que $f'$ est bornée sur $]a,+\\infty[$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "698d6870-4502-49d1-9f38-30827e4c61b9",
+      "id": "46f8b785-c76a-484e-bf7c-4e070c8d89a4",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\phi : ]0,+\\infty[ \\rightarrow \\Rr$ la fonction définie par $\\phi(h) = \\frac {h}{2}M_2+\\frac{2}{h}M_0$.\nC'est une fonction continue et dérivable. La limite en $0$ et $+\\infty$ est $+\\infty$.\nLa dérivée $\\phi'(h)=\\frac12 M_2-\\frac{2M_0}{h^2}$ s'annule en $h_0 = 2\\sqrt{\\frac{M_0}{M_2}}$ et en ce point \n$\\phi$ atteint son minimum\n$\\phi(h_0) = 2\\sqrt{M_0M_2}$.\n\nFixons $x>a$. Comme pour tout $h>0$ on a $|f'(x)| \\le \\frac {h}{2}M_2+\\frac{2}{h}M_0 =\\phi(h)$ alors en particulier pour \n$h=h_0$ on obtient $|f'(x)| \\le \\phi(h_0)= 2\\sqrt{M_0M_2}$. Et donc $f'$ est bornée.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b205f038-17e5-459d-bf09-90efb66486e1",
+      "id": "ac7bd4ca-17fb-429e-a3db-3fc1e72a2daa",
       "type": "question",
       "value": {
         "latex": "\\'Etablir le résultat suivant : soit $g : ]0,+\\infty[ \\rightarrow \\Rr$ une application\nde classe $C^2$ à dérivée seconde bornée et telle que $\\displaystyle \\lim _{x\\rightarrow +\\infty }g(x)=0$. \nAlors $\\displaystyle\\lim _{x\\rightarrow +\\infty }g'(x)=0$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "b7567e4a-06e1-4306-93cf-2c3341b77370",
+      "id": "85ca9174-8fd6-4b8f-8797-792e20a6c0fc",
       "type": "reponse",
       "value": {
         "latex": "Fixons $\\epsilon >0$. $g''$ est bornée, notons $M_2 = \\sup_{x> 0}\\vert g''(x)\\vert$. Comme $g(x)\\to 0$ alors il \nexiste $a>0$ tel que sur l'intervalle $]a,+\\infty[$, $g$ soit aussi petit que l'on veut. Plus précisément nous choisissons $a$ de sorte que \n$$M_0 = \\sup_{x>a}\\vert g(x)\\vert \\le \\frac{\\epsilon^2}{4M_2}.$$\n\n\nLa première question appliquée à $g$ sur l'intervalle $]a,+\\infty[$ implique \nque pour tout $h>0$ : \n$$|g'(x)| \\le  \\frac{2}{h}M_0 + \\frac {h}{2} M_2 $$\n\nEn particulier pour $h = \\frac{\\epsilon}{M_2}$ et en utilisant $M_0  \\le \\frac{\\epsilon^2}{4M_2}$\non obtient :\n$$|g'(x)| \\le  \\frac{2}{\\frac{\\epsilon}{M_2}}\\frac{\\epsilon^2}{4M_2} + \\frac{\\frac{\\epsilon}{M_2}}{2} M_2 \\le \\epsilon.$$\n\nAinsi pour chaque $\\epsilon$ on a trouvé $a>0$ tel que si $x>a$ alors $|g'(x)|\\le \\epsilon$.\nC'est exactement dire que $\\lim_{x\\to+\\infty} g'(x)=0$.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "f3a96fff-e7f4-4452-95e1-c8ee99249da3",
+      "id": "1e4d5916-2531-4311-b484-ba849372cef3",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item La formule à appliquer est celle de Taylor-Lagrange à l'ordre $2$.\n  \\item \\'Etudier la fonction $\\phi(h) = \\frac{h}{2}M_2+\\frac{2}{h}M_0$ et trouver $\\inf_{h>0} \\phi(h)$.\n  \\item Il faut choisir un $a>0$ tel que $g(x)$ soit assez petit sur $]a,+\\infty[$ ; puis appliquer\nles questions précédentes à $g$ sur cet intervalle.\n\\end{enumerate}",
         "html": "<ol>\n<li><p>La formule à appliquer est celle de Taylor-Lagrange à l’ordre <span class=\"math inline\">\\(2\\)</span>.</p></li>\n<li><p>Étudier la fonction <span class=\"math inline\">\\(\\phi(h) = \\frac{h}{2}M_2+\\frac{2}{h}M_0\\)</span> et trouver <span class=\"math inline\">\\(\\inf_{h&gt;0} \\phi(h)\\)</span>.</p></li>\n<li><p>Il faut choisir un <span class=\"math inline\">\\(a&gt;0\\)</span> tel que <span class=\"math inline\">\\(g(x)\\)</span> soit assez petit sur <span class=\"math inline\">\\(]a,+\\infty[\\)</span> ; puis appliquer les questions précédentes à <span class=\"math inline\">\\(g\\)</span> sur cet intervalle.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un nombre réel et <span class=\"math inline\">\\(f : ] a , +\\infty [ \\rightarrow \\Rr\\)</span> une applicat ..."
 }

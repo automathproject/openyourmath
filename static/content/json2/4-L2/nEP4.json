@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:08.994Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:00.485Z"
   },
   "contenu": [
     {
-      "id": "ad1f02dd-c869-43dd-9aa2-d7da98f6a421",
+      "id": "52a72891-1338-4a38-986e-be8fdd417880",
       "type": "description",
       "value": {
         "latex": "\\centerline{\\bf I}\n\nSoit $\\alpha\\in\\R$ et $A_\\alpha\\in M_3(\\R)$ la matrice suivante\n$$A_\\alpha=\\begin{pmatrix}-1 & 0 & \\alpha+1 \\\\  1&-2&0 \\\\ -1&1&\\alpha\\end{pmatrix}$$\n{\\it Premi\\`ere partie} :",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "58173692-aa8b-4679-bbb5-c24347798289",
+      "id": "fa442930-d53c-4f85-8f37-e70ed7e1fd6e",
       "type": "question",
       "value": {
         "latex": "Factoriser le polyn\\^ome caract\\'eristique $P_{A_\\alpha}(X)$ en produit de facteurs du premier degr\\'e.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "3ad6438f-8d01-4e9d-b947-71712a01c6ed",
+      "id": "a6420834-64c0-40d5-84d6-5d2f466dca22",
       "type": "reponse",
       "value": {
         "latex": "{\\it Factorisons le polyn\\^ome caract\\'eristique $P_{A_\\alpha}(X)$ en produit de facteurs du premier degr\\'e.}\n\nOn a\n$$\\begin{align*}\nP_{A_\\alpha}(X)\n&=\\begin{vmatrix}-1-X & 0 & \\alpha+1 \\\\  1&-2-X&0 \\\\ -1&1&\\alpha-X\\end{vmatrix}\n=\\begin{vmatrix}-1-X & 0 & \\alpha+1 \\\\  -1-X&-2-X&0 \\\\ 0&1&\\alpha-X\\end{vmatrix} \\\\ \n&=\\begin{vmatrix}-1-X & 0 & \\alpha+1 \\\\  0&-2-X&-\\alpha-1 \\\\ -1&1&\\alpha-X\\end{vmatrix} \\\\ \n&=(-1-X)[(-2-X)(\\alpha-X)+\\alpha+1] \\\\ \n&=-(X+1)[X^2+(2-\\alpha)X+1-\\alpha].\n\\end{align*}$$\nFactorisons le polyn\\^ome $X^2+(2-\\alpha)X+1-\\alpha$, son discriminant est \\'egal \\`a\n$$\\Delta=(2-\\alpha)^2-4(1-\\alpha)=\\alpha^2.$$\nOn a donc $\\sqrt{\\Delta}=|\\alpha|$, ce qui nous donne les deux racines \n$$\\lambda_1={\\frac{\\alpha-2-\\alpha}{2}}=-1\\ \\ {\\hbox{et}}\\ \\ \n\\lambda_2={\\frac{\\alpha-2+\\alpha}{2}}=\\alpha-1.$$\nLe polyn\\^ome caract\\'eristique $P_{A_\\alpha}(X)$ se factorise donc en\n$$P_{A_\\alpha}(X)=-(X+1)^2(X-\\alpha+1).$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "b1828569-72a6-428f-b72b-6c533525b982",
+      "id": "d2d50754-50d7-4247-9640-41bda964815b",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer selon la valeur du param\\`etre $\\alpha$ les valeurs propres distinctes de $A_\\alpha$ et leur multiplicit\\'e.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "e6e34e0f-6f35-42f5-b3c9-b017f0d950dd",
+      "id": "9dd629d9-22f2-4ca2-a32a-fb8ebaac36b2",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'eterminons selon la valeur du param\\`etre $\\alpha$ les valeurs propres distinctes de $A_\\alpha$ et leur multiplicit\\'e.}\n\nLes valeurs propres de $A_\\alpha$ sont les racines du polyn\\^ome caract\\'eristique $P_{A_\\alpha}$, ainsi,\n\n- si $\\alpha=0$, la matrice $A_\\alpha$ admet une valeur propre triple $\\lambda=-1$,\n\n- si $\\alpha\\neq0$, la matrice $A_\\alpha$ admet deux valeurs propres distinctes\n$\\lambda_1=-1$ valeur propre double et $\\lambda_2=\\alpha-1$, valeur propre simple.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "c6b27f9a-d1b3-4f52-96f1-77bbfdb977aa",
+      "id": "a8dc36e0-8450-4d05-ba46-96bd14a52d7c",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer les valeurs de $\\alpha$ pour lesquelles la matrice $A_\\alpha$ est diagonalisable.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "45813083-0376-4eb9-8e4f-7e7e917d5357",
+      "id": "bb3a197f-4c12-45b1-bd3f-afae5ec2ee17",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'eterminons les valeurs de $\\alpha$ pour lesquelles la matrice $A_\\alpha$ est diagonalisable.}\n\nIl est clair que dans le cas $\\alpha=0$, la matrice n'est pas diagonalisable, en effet si elle l'\\'etait, il existerait une matrice inversible $P$ telle que $A_\\alpha=P(-I)P^{-1}=-I$, ce qui n'est pas le cas.\n\nSi $\\alpha\\neq0$, la matrice $A_\\alpha$ est diagonalisable si le sous-espace propre associ\\'e \\`a la valeur propre $-1$ est de dimension $2$. D\\'eterminons ce sous-espace propre.\n\n$$E_{-1}=\\ker(A_\\alpha+I)=\\left\\{(x,y,z)\\in\\R^3,\\ \\begin{pmatrix}-1 & 0 & \\alpha+1 \\\\  1&-2&0 \\\\ -1&1&\\alpha\\end{pmatrix}\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=\\begin{pmatrix}-x \\\\  -y \\\\  -z\\end{pmatrix}\\right\\}$$\nainsi,\n$$(x,y,z)\\in E_{-1}\\iff\\left\\{$$\\begin{align*}-x+(\\alpha+1)z&=-x \\\\  x-2y&=-y \\\\  -x+y+\\alpha z&=-z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}(\\alpha+1)z&=0 \\\\  x-y=0\\end{align*}$$\\right.$$\nIl faut distinguer les cas $\\alpha=-1$ et $\\alpha\\neq -1$.\n\n- Si $\\alpha=-1$, le sous-espace $E_{-1}$ est le plan vectoriel d'\\'equation $x=y$, dans ce cas la matrice $A_\\alpha$ est diagonalisable.\n\n- Si $\\alpha\\neq -1$, le sous-espace $E_{-1}$ est la droite vectorielle engendr\\'ee par le vecteur\n$(1,1,0)$, dans ce cas la matrice $A_\\alpha$ n'est pas diagonalisable.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "b529d4b1-f480-4345-a231-fd316813c7b2",
+      "id": "1d410e3b-33d2-474a-8cc2-56a9136572e5",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer selon la valeur de $\\alpha$ le polyn\\^ome minimal de $A_\\alpha$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "9ac13c06-63c1-422e-ab60-59514c340c90",
+      "id": "f65ec3ec-3c2e-4434-9c1a-7be4ba4bdcf5",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'eterminons selon la valeur de $\\alpha$ le polyn\\^ome minimal de $A_\\alpha$.}\n\n Notons $Q_A$ le polyn\\^ome minimal de $A_\\alpha$. On sait que la matrice $A_\\alpha$ est diagonalisable sur $\\R$ si et seulement si son polyn\\^ome minimal a toutes ses racines dans $\\R$ et que celles-ci sont simples. Or, nous venons de d\\'emontrer que $A_\\alpha$ est diagonalisable sur $\\R$ si et seulement $\\alpha=-1$, on a donc \n\n- Si $\\alpha=-1$, $A_\\alpha$ est diagonalisable, donc $Q_A(X)=(X+1)(X-\\alpha+1)=(X+1)(X+2)$.\n\n- Si $\\alpha\\neq -1$, $A_\\alpha$ n'est pas diagonalisable, donc $Q_A(X)=P_A(X)=(X+1)^2(X-\\alpha+1)$.",
         "html": "<p><span><em>Déterminons selon la valeur de <span class=\"math inline\">\\(\\alpha\\)</span> le polynôme minimal de <span class=\"math inline\">\\(A_\\alpha\\)</span>.</em></span></p>\n<p>Notons <span class=\"math inline\">\\(Q_A\\)</span> le polynôme minimal de <span class=\"math inline\">\\(A_\\alpha\\)</span>. On sait que la matrice <span class=\"math inline\">\\(A_\\alpha\\)</span> est diagonalisable sur <span class=\"math inline\">\\(\\R\\)</span> si et seulement si son polynôme minimal a toutes ses racines dans <span class=\"math inline\">\\(\\R\\)</span> et que celles-ci sont simples. Or, nous venons de démontrer que <span class=\"math inline\">\\(A_\\alpha\\)</span> est diagonalisable sur <span class=\"math inline\">\\(\\R\\)</span> si et seulement <span class=\"math inline\">\\(\\alpha=-1\\)</span>, on a donc</p>\n<p>- Si <span class=\"math inline\">\\(\\alpha=-1\\)</span>, <span class=\"math inline\">\\(A_\\alpha\\)</span> est diagonalisable, donc <span class=\"math inline\">\\(Q_A(X)=(X+1)(X-\\alpha+1)=(X+1)(X+2)\\)</span>.</p>\n<p>- Si <span class=\"math inline\">\\(\\alpha\\neq -1\\)</span>, <span class=\"math inline\">\\(A_\\alpha\\)</span> n’est pas diagonalisable, donc <span class=\"math inline\">\\(Q_A(X)=P_A(X)=(X+1)^2(X-\\alpha+1)\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p><strong>I</strong></p>\n<p>Soit <span class=\"math inline\">\\(\\alpha\\in\\R\\)</span> et <span class=\"math inline\">\\(A_\\alpha\\in M_3(\\R)\\)</span> la matr ..."
 }

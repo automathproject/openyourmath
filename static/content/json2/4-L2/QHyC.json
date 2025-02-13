@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:32.420Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:22.041Z"
   },
   "contenu": [
     {
-      "id": "62a68ad7-d5ef-4e45-9f12-3afe32f78840",
+      "id": "9a1e1697-dda7-4819-9bda-200435c5ec5f",
       "type": "description",
       "value": {
         "latex": "Soit $A$ la matrice de $M_3(\\R)$ suivante :\n$$A=\\begin{pmatrix}0&1&0 \\\\  -4&4&0 \\\\ -2&1&2\\end{pmatrix}.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "fb7b4b46-f243-49cb-9595-ca74750532eb",
+      "id": "2e25eb09-6d97-4f14-8065-f27653c98597",
       "type": "question",
       "value": {
         "latex": "La matrice $A$ est-elle diagonalisable ?",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f2cf2ce8-22bc-41aa-857f-6541433824bd",
+      "id": "99289bec-9e9f-4805-9f62-36f65b802351",
       "type": "reponse",
       "value": {
         "latex": "{\\it La matrice $A$ est-elle diagonalisable ?}\n\nCalculons son polyn\\^ome caract\\'eristique \n$$P_A(X)=\\begin{vmatrix}-X&1&0 \\\\  -4&4-X&0 \\\\ -2&1&2-X\\end{vmatrix}=(2-X)(X^2-4X+4)=(2-X)^3.$$\nla matrice $A$ admet une unique valeur propre $2$, si elle \\'etait diagonalisable, elle serait semblable \\`a la matrice $2.I_3$, elle serait donc \\'egale \\`a $2I_3$ ce qui n'est pas le cas, elle n'est donc pas diagonalisable.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "727facd7-47d1-4ef8-a83a-02cc9bce77f6",
+      "id": "aa3a510f-7743-4bcc-a6c8-1cedbf29cb0f",
       "type": "question",
       "value": {
         "latex": "Calculer $(A-2I_3)^2$, puis $(A-2I_3)^n$ pour tout $n\\in\\N$. En d\\'eduire $A^n$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "65fcecd7-deb1-47ec-8898-107288cf0557",
+      "id": "19b77267-ab60-444f-ad30-e1e340df559e",
       "type": "reponse",
       "value": {
         "latex": "{\\it Calculons $(A-2I_3)^2$, puis $(A-2I_3)^n$ pour tout $n\\in\\N$}.\n\nOn a \n$$(A-2I_3)^2=\\begin{pmatrix}-2&1&0 \\\\  -4&2&0 \\\\ -2&1&0\\end{pmatrix}\\begin{pmatrix}-2&1&0 \\\\  -4&2&0 \\\\ -2&1&0\\end{pmatrix}=\\begin{pmatrix}0&0&0 \\\\  0&0&0 \\\\ 0&0&0\\end{pmatrix},$$\nainsi, $(A-2I_3)^0=I$, $(A-2I_3)^1=\\begin{pmatrix}-2&1&0 \\\\  -4&2&0 \\\\ -2&1&0\\end{pmatrix}$, et,  pour tout $n\\geq2$, on a $(A-2I_3)^n=0$.\n\n{\\it On en d\\'eduit $A^n$}\n\nNotons $B=A-2I_3$, on a $A=A-2I_3+2I_3=B+2I_3$ avec $B^n=0$ pour $n\\geq2$. Par ailleurs, les matrices $B$ et $2I_3$ commutent, ainsi\n$$A^n=(B+2I_3)^n=\\sum^n_{k=0}C_n^kB^k(2I_3)^{n-k}$$\no\\`u les $C_n^k$ sont les coefficients du bin\\^ome de Newton :\n$$C_n^k={\\frac{n!}{k!(n-k)!}}.$$ \nOr, pour $k\\geq2$, on a $B^k=0$ d'o\\`u pour $n\\geq2$,\n$$\\begin{align*}\nA^n&=C_n^0B^0(2I_3)^n+C_n^1B^1(2I_3)^{n-1} \\\\ \n&=2^nI_3+2^{n-1}nB \\\\ \n&=2^nI_3+2^{n-1}n(A-2I_3) \\\\ \n&=2^n(1-n)I_3+2^{n-1}nA.\n\\end{align*}$$",
         "html": "<p><span><em>Calculons <span class=\"math inline\">\\((A-2I_3)^2\\)</span>, puis <span class=\"math inline\">\\((A-2I_3)^n\\)</span> pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span></em></span>.</p>\n<p>On a <span class=\"math display\">\\[(A-2I_3)^2=\\begin{pmatrix}-2&amp;1&amp;0 \\\\  -4&amp;2&amp;0 \\\\ -2&amp;1&amp;0\\end{pmatrix}\\begin{pmatrix}-2&amp;1&amp;0 \\\\  -4&amp;2&amp;0 \\\\ -2&amp;1&amp;0\\end{pmatrix}=\\begin{pmatrix}0&amp;0&amp;0 \\\\  0&amp;0&amp;0 \\\\ 0&amp;0&amp;0\\end{pmatrix},\\]</span> ainsi, <span class=\"math inline\">\\((A-2I_3)^0=I\\)</span>, <span class=\"math inline\">\\((A-2I_3)^1=\\begin{pmatrix}-2&amp;1&amp;0 \\\\  -4&amp;2&amp;0 \\\\ -2&amp;1&amp;0\\end{pmatrix}\\)</span>, et, pour tout <span class=\"math inline\">\\(n\\geq2\\)</span>, on a <span class=\"math inline\">\\((A-2I_3)^n=0\\)</span>.</p>\n<p><span><em>On en déduit <span class=\"math inline\">\\(A^n\\)</span></em></span></p>\n<p>Notons <span class=\"math inline\">\\(B=A-2I_3\\)</span>, on a <span class=\"math inline\">\\(A=A-2I_3+2I_3=B+2I_3\\)</span> avec <span class=\"math inline\">\\(B^n=0\\)</span> pour <span class=\"math inline\">\\(n\\geq2\\)</span>. Par ailleurs, les matrices <span class=\"math inline\">\\(B\\)</span> et <span class=\"math inline\">\\(2I_3\\)</span> commutent, ainsi <span class=\"math display\">\\[A^n=(B+2I_3)^n=\\sum^n_{k=0}C_n^kB^k(2I_3)^{n-k}\\]</span> où les <span class=\"math inline\">\\(C_n^k\\)</span> sont les coefficients du binôme de Newton : <span class=\"math display\">\\[C_n^k={\\frac{n!}{k!(n-k)!}}.\\]</span> Or, pour <span class=\"math inline\">\\(k\\geq2\\)</span>, on a <span class=\"math inline\">\\(B^k=0\\)</span> d’où pour <span class=\"math inline\">\\(n\\geq2\\)</span>, <span class=\"math display\">\\[\\begin{align*}\nA^n&amp;=C_n^0B^0(2I_3)^n+C_n^1B^1(2I_3)^{n-1} \\\\ \n&amp;=2^nI_3+2^{n-1}nB \\\\ \n&amp;=2^nI_3+2^{n-1}n(A-2I_3) \\\\ \n&amp;=2^n(1-n)I_3+2^{n-1}nA.\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A\\)</span> la matrice de <span class=\"math inline\">\\(M_3(\\R)\\)</span> suivante : <span class=\"math display\"> ..."
 }

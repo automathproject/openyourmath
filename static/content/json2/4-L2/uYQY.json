@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Applications",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:21.159Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:13.013Z"
   },
   "contenu": [
     {
-      "id": "7b6bfa8d-c7d2-414b-8742-eb8dd75409c9",
+      "id": "656f17be-dd9a-4648-9aed-38a496f4d045",
       "type": "description",
       "value": {
         "latex": "Soit $p$ un nombre premier et $a_0,\\dots ,a_{p-1}\\in\\Z$.\nMontrer que le déterminant de la matrice \n$A=(a_{j-i\\text{ mod }p})\\in\\mathcal{M}_p(\\Z)$ vérifie~:\n$\\det (A)\\equiv a_0+\\dots +a_{p-1}$ mod $p$. \n\n{\\it Indication: écrire $A=\\sum_{k=0}^{p-1} a_kJ^k$ et calculer $A^p$.}",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "2c88e71c-3998-4d1b-9540-12488dc582de",
+      "id": "13e84ef8-516e-41c8-b747-68644a1e06c3",
       "type": "reponse",
       "value": {
         "latex": "On se place dans $\\Z/p\\Z$ et on considère $J = (\\delta_{i,i+1\\bmod p})$.\nOn a $J^p = I$ et $A = a_0J^0 + \\dots a_{p-1}J^{p-1}$ donc\n$A^p = (a_0^p+\\dots + a_{p-1}^p)I$ (car on est en caractéristique $p$).\n\nOn en déduit $\\det(A) = \\det(A)^p = (a_0^p+\\dots + a_{p-1}^p)^p = a_0+\\dots + a_{p-1}$.\n\nAutre méthode en restant dans~$\\Z$~:\n$\\det(A) = \\sum_{\\sigma\\in S_p} \\varepsilon(\\sigma)a_{1,\\sigma(1)}\\dots a_{p,\\sigma(p)}\n         = \\sum_{\\sigma\\in S_p} \\varepsilon(\\sigma)a_{\\sigma(1)-1\\bmod p}\\dots a_{\\sigma(p)-p\\bmod p}$.\nNotons $x(\\sigma) = \\varepsilon(\\sigma)a_{\\sigma(1)-1\\bmod p}\\dots a_{\\sigma(p)-p\\bmod p}$ et\n$c$ le cycle $(1,2,\\dots,p)$. Alors $x(\\sigma) = x(c^{-k}\\circ\\sigma\\circ c^k)$\npour tout $k\\in\\Z$. Le nombre de permutations distinctes que l'on obtient\nà $\\sigma$ fixé en faisant varier $k$ est égal à $1$ si $\\sigma$ et $c$ commutent,\net à $p$ sinon, d'après la relation~: $\\mathrm{Card}\\,(\\text{orbite})\\times\\mathrm{Card}\\,(\\text{stabilisateur}) = \\mathrm{Card}\\,({<c>}) =p$.\nDe plus, $c$ et $\\sigma$ commutent si et seulement si $\\sigma\\in{<c>}$ (facile),\nd'où $\\det(A)\\equiv \\sum_{k=0}^{p-1}\\varepsilon(c^k)a_{k}^p \\equiv a_0+\\dots+a_{p-1}\\bmod p$.",
         "html": "<p>On se place dans <span class=\"math inline\">\\(\\Z/p\\Z\\)</span> et on considère <span class=\"math inline\">\\(J = (\\delta_{i,i+1\\bmod p})\\)</span>. On a <span class=\"math inline\">\\(J^p = I\\)</span> et <span class=\"math inline\">\\(A = a_0J^0 + \\dots a_{p-1}J^{p-1}\\)</span> donc <span class=\"math inline\">\\(A^p = (a_0^p+\\dots + a_{p-1}^p)I\\)</span> (car on est en caractéristique <span class=\"math inline\">\\(p\\)</span>).</p>\n<p>On en déduit <span class=\"math inline\">\\(\\det(A) = \\det(A)^p = (a_0^p+\\dots + a_{p-1}^p)^p = a_0+\\dots + a_{p-1}\\)</span>.</p>\n<p>Autre méthode en restant dans <span class=\"math inline\">\\(\\Z\\)</span> : <span class=\"math inline\">\\(\\det(A) = \\sum_{\\sigma\\in S_p} \\varepsilon(\\sigma)a_{1,\\sigma(1)}\\dots a_{p,\\sigma(p)}\n         = \\sum_{\\sigma\\in S_p} \\varepsilon(\\sigma)a_{\\sigma(1)-1\\bmod p}\\dots a_{\\sigma(p)-p\\bmod p}\\)</span>. Notons <span class=\"math inline\">\\(x(\\sigma) = \\varepsilon(\\sigma)a_{\\sigma(1)-1\\bmod p}\\dots a_{\\sigma(p)-p\\bmod p}\\)</span> et <span class=\"math inline\">\\(c\\)</span> le cycle <span class=\"math inline\">\\((1,2,\\dots,p)\\)</span>. Alors <span class=\"math inline\">\\(x(\\sigma) = x(c^{-k}\\circ\\sigma\\circ c^k)\\)</span> pour tout <span class=\"math inline\">\\(k\\in\\Z\\)</span>. Le nombre de permutations distinctes que l’on obtient à <span class=\"math inline\">\\(\\sigma\\)</span> fixé en faisant varier <span class=\"math inline\">\\(k\\)</span> est égal à <span class=\"math inline\">\\(1\\)</span> si <span class=\"math inline\">\\(\\sigma\\)</span> et <span class=\"math inline\">\\(c\\)</span> commutent, et à <span class=\"math inline\">\\(p\\)</span> sinon, d’après la relation : <span class=\"math inline\">\\(\\mathrm{Card}\\,(\\text{orbite})\\times\\mathrm{Card}\\,(\\text{stabilisateur}) = \\mathrm{Card}\\,({&lt;c&gt;}) =p\\)</span>. De plus, <span class=\"math inline\">\\(c\\)</span> et <span class=\"math inline\">\\(\\sigma\\)</span> commutent si et seulement si <span class=\"math inline\">\\(\\sigma\\in{&lt;c&gt;}\\)</span> (facile), d’où <span class=\"math inline\">\\(\\det(A)\\equiv \\sum_{k=0}^{p-1}\\varepsilon(c^k)a_{k}^p \\equiv a_0+\\dots+a_{p-1}\\bmod p\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(p\\)</span> un nombre premier et <span class=\"math inline\">\\(a_0,\\dots ,a_{p-1}\\in\\Z\\)</span>. Montrer que le déter ..."
 }

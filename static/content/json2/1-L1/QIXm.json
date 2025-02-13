@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Application linéaire",
     "sousChapitre": "Image et noyau, théorème du rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:40.269Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:52.990Z"
   },
   "contenu": [
     {
-      "id": "66e8405e-f6cb-43f0-ab24-efc8f94c1bc0",
+      "id": "667d730b-d89a-4511-aa64-f36e43ee6ce2",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel de dimension $3$, $\\{e_1,e_2,e_3\\}$ une base\nde $E$, et $t$ un param\\`etre r\\'eel. \\\\\nD\\'emontrer que la donn\\'ee de\n$\\left\\{\n\\begin{array}{rcl}\n    \\phi(e_1) & = & e_1+e_2  \\\\\n    \\phi(e_2) & = & e_1-e_2  \\\\\n    \\phi(e_3) & = & e_1+t e_3\n\\end{array}\\right.$\nd\\'efinit une application lin\\'eaire\n$\\phi$ de $E$ dans $E$. \\'Ecrire le transform\\'e du vecteur \n$x=\\alpha_1e_1+\\alpha_2e_2+\\alpha_3e_3$. Comment choisir $t$ pour que \n$\\phi$ soit injective ? surjective ?",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "53c4283a-2c35-425a-aee6-4cc81af447a4",
+      "id": "a7747ae1-a405-48ca-85e6-4546e5232c4b",
       "type": "indication",
       "value": {
         "latex": "$t=0$ est un cas à part.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "62c82ac8-bb19-4d1e-a64a-edc0de5ce401",
+      "id": "e045b03c-6bfe-43f0-a617-f4a708047c8a",
       "type": "reponse",
       "value": {
         "latex": "Comment est d\\'efinie $\\phi$ \\`a partir de la d\\'efinition sur les \\'el\\'ements de la base ?\nPour  $x\\in E$ alors $x$ s'\\'ecrit dans la base  $\\{e_1,e_2,e_3\\}$, $x=\\alpha_1e_1+\\alpha_2e_2+\\alpha_3e_3$. \nEt $\\phi$ est d\\'efinie sur $E$ par la formule\n$$\\phi(x)=\\alpha_1 \\phi(e_1) + \\alpha_2 \\phi(e_2) + \\alpha_3 \\phi(e_3).$$\nSoit ici :\n$$\\phi(x) = (\\alpha_1+\\alpha_2+\\alpha_3) e_1 + (\\alpha_1-\\alpha_2)e_2 + t\\alpha_3e_3.$$\n\nCette d\\'efinition rend automatiquement $\\phi$ lin\\'eaire (v\\'erifiez-le si vous n'\\^etes pas convaincu !).\nOn cherche \\`a savoir si $\\phi$ est injective.\nSoit $x\\in E$ tel que $\\phi(x)=0$ donc\n$(\\alpha_1+\\alpha_2+\\alpha_3) e_1 + (\\alpha_1-\\alpha_2)e_2 + t\\alpha_3e_3=0$. Comme $\\{e_1,e_2,e_3\\}$ est une base alors tous les coefficients sont nuls :\n$$\\alpha_1+\\alpha_2+\\alpha_3=0, \\quad \\alpha_1-\\alpha_2=0, \\quad  t\\alpha_3 = 0.$$\nSi $t \\neq 0$ alors en résolvant le syst\\`eme on obtient $\\alpha_1=0$, $\\alpha_2=0$,\n$\\alpha_3=0$. Donc $x=0$ et $\\phi$ est injective.\n\nSi $t =0$, alors $\\phi$ n'est pas injective, en résolvant le m\\^eme syst\\`eme on obtient\ndes solutions non triviales, par exemple $\\alpha_1=1$, $\\alpha_2=1$, $\\alpha_3=-2$.\nDonc pour $x= e_1+e_2-2e_3$ on obtient $\\phi(x)=0$.\nPour la surjectivité on peut soit faire des calculs, soit appliquer la formule du rang. \nExaminons cette deuxi\\`eme m\\'ethode. $\\phi$ est surjective si et seulement si \nla dimension de $\\Im \\phi$ est \\'egale\n\\`a la dimension de l'espace d'arriv\\'ee (ici $E$ de dimension $3$).\nOr on a une formule pour $\\dim \\Im \\phi$ :\n$$\\dim \\ker \\phi + \\dim \\Im \\phi = \\dim E.$$\nSi $t \\neq 0$, $\\phi$ est injective donc $\\ker \\phi = \\{0\\}$ est de dimension $0$.\nDonc $\\dim \\Im \\phi =3$ et $\\phi$ est surjective.\n\nSi $t = 0$ alors $\\phi$ n'est pas injective donc $\\ker \\phi$ est de dimension au moins $1$\n(en fait $1$ exactement), donc  $\\dim \\Im \\phi \\leqslant 2$. Donc $\\phi$ n'est pas surjective.\n\n\nOn remarque que $\\phi$ est injective si et seulement si elle est surjective.\nCe qui est un r\\'esultat du cours pour les applications ayant l'espace \nde d\\'epart et d'arriv\\'ee de m\\^eme dimension (finie).",
         "html": "<p>Comment est définie <span class=\"math inline\">\\(\\phi\\)</span> à partir de la définition sur les éléments de la base ? Pour <span class=\"math inline\">\\(x\\in E\\)</span> alors <span class=\"math inline\">\\(x\\)</span> s’écrit dans la base <span class=\"math inline\">\\(\\{e_1,e_2,e_3\\}\\)</span>, <span class=\"math inline\">\\(x=\\alpha_1e_1+\\alpha_2e_2+\\alpha_3e_3\\)</span>. Et <span class=\"math inline\">\\(\\phi\\)</span> est définie sur <span class=\"math inline\">\\(E\\)</span> par la formule <span class=\"math display\">\\[\\phi(x)=\\alpha_1 \\phi(e_1) + \\alpha_2 \\phi(e_2) + \\alpha_3 \\phi(e_3).\\]</span> Soit ici : <span class=\"math display\">\\[\\phi(x) = (\\alpha_1+\\alpha_2+\\alpha_3) e_1 + (\\alpha_1-\\alpha_2)e_2 + t\\alpha_3e_3.\\]</span></p>\n<p>Cette définition rend automatiquement <span class=\"math inline\">\\(\\phi\\)</span> linéaire (vérifiez-le si vous n’êtes pas convaincu !). On cherche à savoir si <span class=\"math inline\">\\(\\phi\\)</span> est injective. Soit <span class=\"math inline\">\\(x\\in E\\)</span> tel que <span class=\"math inline\">\\(\\phi(x)=0\\)</span> donc <span class=\"math inline\">\\((\\alpha_1+\\alpha_2+\\alpha_3) e_1 + (\\alpha_1-\\alpha_2)e_2 + t\\alpha_3e_3=0\\)</span>. Comme <span class=\"math inline\">\\(\\{e_1,e_2,e_3\\}\\)</span> est une base alors tous les coefficients sont nuls : <span class=\"math display\">\\[\\alpha_1+\\alpha_2+\\alpha_3=0, \\quad \\alpha_1-\\alpha_2=0, \\quad  t\\alpha_3 = 0.\\]</span> Si <span class=\"math inline\">\\(t \\neq 0\\)</span> alors en résolvant le système on obtient <span class=\"math inline\">\\(\\alpha_1=0\\)</span>, <span class=\"math inline\">\\(\\alpha_2=0\\)</span>, <span class=\"math inline\">\\(\\alpha_3=0\\)</span>. Donc <span class=\"math inline\">\\(x=0\\)</span> et <span class=\"math inline\">\\(\\phi\\)</span> est injective.</p>\n<p>Si <span class=\"math inline\">\\(t =0\\)</span>, alors <span class=\"math inline\">\\(\\phi\\)</span> n’est pas injective, en résolvant le même système on obtient des solutions non triviales, par exemple <span class=\"math inline\">\\(\\alpha_1=1\\)</span>, <span class=\"math inline\">\\(\\alpha_2=1\\)</span>, <span class=\"math inline\">\\(\\alpha_3=-2\\)</span>. Donc pour <span class=\"math inline\">\\(x= e_1+e_2-2e_3\\)</span> on obtient <span class=\"math inline\">\\(\\phi(x)=0\\)</span>. Pour la surjectivité on peut soit faire des calculs, soit appliquer la formule du rang. Examinons cette deuxième méthode. <span class=\"math inline\">\\(\\phi\\)</span> est surjective si et seulement si la dimension de <span class=\"math inline\">\\(\\Im \\phi\\)</span> est égale à la dimension de l’espace d’arrivée (ici <span class=\"math inline\">\\(E\\)</span> de dimension <span class=\"math inline\">\\(3\\)</span>). Or on a une formule pour <span class=\"math inline\">\\(\\dim \\Im \\phi\\)</span> : <span class=\"math display\">\\[\\dim \\ker \\phi + \\dim \\Im \\phi = \\dim E.\\]</span> Si <span class=\"math inline\">\\(t \\neq 0\\)</span>, <span class=\"math inline\">\\(\\phi\\)</span> est injective donc <span class=\"math inline\">\\(\\ker \\phi = \\{0\\}\\)</span> est de dimension <span class=\"math inline\">\\(0\\)</span>. Donc <span class=\"math inline\">\\(\\dim \\Im \\phi =3\\)</span> et <span class=\"math inline\">\\(\\phi\\)</span> est surjective.</p>\n<p>Si <span class=\"math inline\">\\(t = 0\\)</span> alors <span class=\"math inline\">\\(\\phi\\)</span> n’est pas injective donc <span class=\"math inline\">\\(\\ker \\phi\\)</span> est de dimension au moins <span class=\"math inline\">\\(1\\)</span> (en fait <span class=\"math inline\">\\(1\\)</span> exactement), donc <span class=\"math inline\">\\(\\dim \\Im \\phi \\leqslant 2\\)</span>. Donc <span class=\"math inline\">\\(\\phi\\)</span> n’est pas surjective.</p>\n<p>On remarque que <span class=\"math inline\">\\(\\phi\\)</span> est injective si et seulement si elle est surjective. Ce qui est un résultat du cours pour les applications ayant l’espace de départ et d’arrivée de même dimension (finie).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel de dimension <span class=\"math inline\">\\(3\\)</span>, <span class=\"math inline\"> ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Injection, surjection, bijection",
     "sousChapitre": "Injection, surjection",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:23.254Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:34.479Z"
   },
   "contenu": [
     {
-      "id": "6155b656-1817-44e7-af57-3be92084518c",
+      "id": "5516fab9-19c1-4835-a94f-ad7e9bf6a12c",
       "type": "description",
       "value": {
         "latex": "Les applications suivantes sont-elles injectives, surjectives, bijectives ?",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "822525a1-5c04-4b14-896b-f38bc5186258",
+      "id": "77492dce-6f53-4c14-afc7-3fa633ef06ed",
       "type": "question",
       "value": {
         "latex": "$f : {\\Nn} \\to {\\Nn}, {n} \\mapsto {n + 1}$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "17d3ba45-7fff-4978-847f-a02c61519a58",
+      "id": "5a6b998a-a8d5-4a77-ba2b-b633797c394b",
       "type": "reponse",
       "value": {
         "latex": "$f$ n'est pas surjective car $0$ n'a pas d'antécédent : en effet il n'existe pas de $n\\in\\Nn$ tel que $f(n)=0$ (si ce $n$ existait ce serait $n=-1$\nqui n'est pas un élément de $\\Nn$). Par contre $f$ est injective : soient $n,n' \\in \\Nn$ tels que $f(n)=f(n')$ alors\n$n+1=n'+1$ donc $n=n'$. Bilan $f$ est injective, non surjective et donc non bijective.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "15ba12ba-a18b-4d9f-909b-b992c15467f2",
+      "id": "4bd14b56-07c3-4b10-a97b-ffa9ee8e4a37",
       "type": "question",
       "value": {
         "latex": "$g : {\\Zz} \\to {\\Zz}, {n}\\mapsto{n + 1}$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "884f17cb-5ec9-4070-b49f-f0c61527957e",
+      "id": "55e9d94e-3f6b-4df7-94a8-2f4367b14fa9",
       "type": "reponse",
       "value": {
         "latex": "Pour montrer que $g$ est bijective deux méthodes sont possibles. Première méthode : montrer que $g$ est à la fois injective et surjective.\nEn effet soient $n,n'\\in \\Zz$ tels que $g(n)=g(n')$ alors $n+1=n'+1$ donc $n=n'$, alors $g$ est injective. Et $g$ est surjective car chaque $m\\in \\Zz$\nadmet un antécédent par $g$ : en posant $n=m-1 \\in \\Zz$ on trouve bien $g(n)=m$.\nDeuxième méthode : expliciter directement la bijection réciproque. Soit la fonction $g' : \\Zz \\to \\Zz$ définie par $g'(m)=m-1$\nalors $g' \\circ g(n) = n$ (pour tout $n\\in \\Zz$) et $g \\circ g'(m) = m$ (pour tout $m\\in \\Zz$). Alors $g'$ est la bijection réciproque de $g$\net donc $g$ est bijective.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "e05b1862-6591-4cae-9f19-214be4a4ede3",
+      "id": "992d28ff-496e-4dbb-b227-3bf824e0d080",
       "type": "question",
       "value": {
         "latex": "$h : {\\Rr^2} \\to {\\Rr^2}, {(x, y)}\\mapsto{ (x + y, x-y)}$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "458a9c50-045a-4a67-98b5-7ee7c0724543",
+      "id": "9b286ffa-8e39-4d02-85b9-83d26e67ef55",
       "type": "reponse",
       "value": {
         "latex": "Montrons que $h$ est injective. Soient $(x,y), (x',y') \\in \\Rr^2$ tels que $h(x,y)=h(x',y')$.\nAlors $(x + y, x-y)=(x' + y', x'-y')$ donc \n$$\\begin{cases}\n    x+y &= x'+y'\\\\\n    x-y &= x'-y'\\\\\n  \\end{cases}$$\nEn faisant la somme des lignes de ce système on trouve $2x=2x'$ donc $x=x'$ et avec la différence on obtient $y=y'$.\nDonc les couples $(x,y)$ et $(x',y')$ sont égaux. Donc $h$ est injective.\n\nMontrons que $h$ est surjective. Soit $(X,Y) \\in \\Rr^2$, cherchons lui un antécédent $(x,y)$ par $h$.\nUn tel antécédent vérifie $h(x,y)=(X,Y)$, donc $(x+y,x-y)=(X,Y)$ ou encore :\n$$\\begin{cases}\n    x+y &= X\\\\\n    x-y &= Y\\\\\n  \\end{cases}$$\nEncore une fois on faisant la somme des lignes on obtient $x=\\frac{X+Y}{2}$ et avec la différence $y = \\frac{X-Y}{2}$,\ndonc $(x,y) = (\\frac{X+Y}{2},\\frac{X-Y}{2})$. La partie ``analyse'' de notre raisonnement en finie passons à la ``synthèse'' :\nil suffit de juste de vérifier que le couple $(x,y)$ que l'on a obtenu est bien solution (on a tout fait pour !).\nBilan pour $(X,Y)$ donné, son antécédent par $h$ existe et est $(\\frac{X+Y}{2},\\frac{X-Y}{2})$. Donc $h$ est surjective.\n\nEn fait on pourrait montrer directement que $h$ est bijective en exhibant sa bijection réciproque $(X,Y) \\mapsto (\\frac{X+Y}{2},\\frac{X-Y}{2})$.\nMais vous devriez vous convaincre qu'il s'agit là d'une différence de rédaction, mais pas vraiment d'un raisonnement différent.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "b6595dae-e9e7-4692-b2b4-a4aa54dfb03b",
+      "id": "c96333c2-a7e0-4804-8d8d-1698e8d941cc",
       "type": "question",
       "value": {
         "latex": "$k : {\\Rr \\setminus \\left\\{ 1\\right\\}} \\to {\\Rr}, {x}\\mapsto{\\frac{x + 1}{x - 1}}$",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "d61a1dfe-e1c8-4876-9d90-8faee525fb52",
+      "id": "d3a74edd-d230-46c1-b1f2-675de32137e3",
       "type": "reponse",
       "value": {
         "latex": "Montrons d'abord que $k$ est injective : soient $x,x' \\in \\Rr\\setminus \\{1\\}$ tels que $k(x)=k(x')$ alors\n$\\frac{x + 1}{x - 1}=\\frac{x' + 1}{x' - 1}$ donc $(x+1)(x'-1)=(x-1)(x'+1)$. En développant nous obtenons\n$xx'+x'-x=xx'-x'+x$, soit $2x=2x'$ donc $x=x'$.\n\nAu brouillon essayons de montrer que $k$ est surjective : soit $y\\in \\Rr$ et cherchons $x\\in \\Rr\\setminus \\{1\\}$\ntel que $f(x)=y$. Si un tel $x$ existe alors il vérifie $\\frac{x + 1}{x - 1}=y$ donc\n$x+1=y(x-1)$, autrement dit $x(y-1)=y+1$. Si l'on veut exprimer $x$ en fonction de $y$ cela se fait par la formule\n$x = \\frac{y+1}{y-1}$. Mais attention, il y a un piège ! Pour $y=1$ on ne peut pas trouver d'antécédent $x$ \n(cela revient à diviser par $0$ dans la fraction précédente).\nDonc $k$ n'est pas surjective car $y=1$ n'a pas d'antécédent.\n\nPar contre on vient de montrer que s'il l'on considérait la restriction $k_| :  {\\Rr \\setminus \\left\\{ 1\\right\\}} \\to {\\Rr \\setminus \\left\\{ 1\\right\\}}$\nqui est définie aussi par $k_|(x) = {\\frac{x + 1}{x - 1}}$ (seul l'espace d'arrivée change par rapport à $k$) alors\ncette fonction $k_|$ est injective et surjective, donc bijective (en fait sa bijection réciproque est elle même).",
@@ -88,12 +88,13 @@
       }
     },
     {
-      "id": "013ac0b0-2e6a-4504-8483-2ac82fec98c2",
+      "id": "676b9cb3-06b8-4b91-b881-8f81d605768d",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n\\item $f$ est injective mais pas surjective.\n\\item $g$ est bijective. \n\\item $h$ aussi.\n\\item $k$ est injective mais par surjective.\n\\end{enumerate}",
         "html": "<ol>\n<li><p><span class=\"math inline\">\\(f\\)</span> est injective mais pas surjective.</p></li>\n<li><p><span class=\"math inline\">\\(g\\)</span> est bijective.</p></li>\n<li><p><span class=\"math inline\">\\(h\\)</span> aussi.</p></li>\n<li><p><span class=\"math inline\">\\(k\\)</span> est injective mais par surjective.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Les applications suivantes sont-elles injectives, surjectives, bijectives ?</p>\n"
 }

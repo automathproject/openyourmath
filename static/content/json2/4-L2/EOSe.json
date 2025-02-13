@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:12.903Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:01.864Z"
   },
   "contenu": [
     {
-      "id": "9d6c5edc-7cbd-428c-bd20-aeb7b180b4f0",
+      "id": "efcebb7f-1719-40f3-81e2-42aff3efd6d4",
       "type": "description",
       "value": {
         "latex": "Soit $u$ l'endomorphisme de $\\R^3$, dont la matrice dans la base canonique est\n$$A=\\begin{pmatrix}3&2&-2 \\\\  -1&0&1 \\\\ 1&1&0 \\\\ \\end{pmatrix}.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "24335a06-d519-4bc0-8a6e-3f6a4761c247",
+      "id": "babeac05-786f-44c8-aa37-1e8b656d7c75",
       "type": "question",
       "value": {
         "latex": "Calculer les valeurs propres de $A$. L'endomorphisme $u$ est-il diagonalisable ? (Justifier).",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "60ece3da-13fa-470f-b5bc-0cc80ed04701",
+      "id": "5433f530-968c-4706-8e6b-2dd3bc0b1de0",
       "type": "reponse",
       "value": {
         "latex": "{\\it Calculons les valeurs propres de $A$ et voyons si l'endomorphisme $u$ est diagonalisable.} \n\nEn opérant sur les colonnes et les lignes du déterminant, on obtient\n$$P_A(X)=\\begin{vmatrix}3-X&2&-2 \\\\  -1&-X&1 \\\\  1&1&-X\\end{vmatrix}=\\begin{vmatrix}3-X&0&-2 \\\\  -1&1-X&1 \\\\  1&1-X&-X\\end{vmatrix},$$ d'où\n$$P_A(X)=\\begin{vmatrix}3-X&0&-2 \\\\  -1&1-X&1 \\\\  2&0&-X-1\\end{vmatrix}$$\net, en développant par rapport à la deuxième colonne\n$$P_A(X)=(1-X)[(3-X)(-1-X)+4]=(1-X)(X^2-2X+1)=(1-X)^3.$$\nAinsi, la matrice $A$ admet $1$ comme valeur propre triple. Elle n'est donc pas diagonalisable, sinon elle serait égale à $I=I_3$, la matrice identité.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "a4c2d22d-1b43-468d-a72f-64515cb08c62",
+      "id": "3d95bf52-5d4f-4b9a-8486-68a6914ff6e7",
       "type": "question",
       "value": {
         "latex": "Calculer $(A-I)^2$. Démontrer que $A^n=nA+(1-n)I$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "c8944b97-3d51-4e87-b32b-1b73116cd7e0",
+      "id": "69aaa3c5-b6f9-4962-937d-758820aee7c8",
       "type": "reponse",
       "value": {
         "latex": "{\\it Calculons $(A-I)^2$ et démontrons que $A^n=nA+(1-n)I$.}\n \nOn calcule d'abord la matrice $A-I$,\n$$A-I=\\begin{pmatrix}2&2&-2 \\\\  -1&-1&1 \\\\ 1&1&-1 \\\\ \\end{pmatrix},$$\npuis la matrice $(A-I)^2$,\n$$(A-I)^2=\\begin{pmatrix}2&2&-2 \\\\  -1&-1&1 \\\\ 1&1&-1 \\\\ \\end{pmatrix}\n\\begin{pmatrix}2&2&-2 \\\\  -1&-1&1 \\\\ 1&1&-1 \\\\ \\end{pmatrix}=\n\\begin{pmatrix}0&0&0 \\\\  0&0&0 \\\\ 0&0&0 \\\\ \\end{pmatrix},$$ \nc'est donc la matrice nulle.\n\nNous allons donner deux méthodes pour démontrer que $A^n=nA+(1-n)I$.\n\n{\\it Première méthode} :  En utilisant le bin\\^ome de Newton. On écrit $A^n=(A-I+I)^n$, or, les matrices $A-I$ et $I$ commutent, on a donc\n$$(A-I+I)^n=\\sum_{k=0}^nC_n^k(A-I)^kI^{(n-k)}=C_n^0I+C_n^1(A-I)=I+n(A-I)=nA+(1-n)I.$$\n{\\it Deuxième méthode} : Par récurrence sur $n$. Le résultat est vrai pour $n=0$ et $n=1$. Fixons $n$ arbitrairement pour lequel on suppose que $A^n=nA+(1-n)I$, on a alors\n$$A^{n+1}=A(nA+(1-n)I)=nA^2+(1-n)A,$$\nsachant que $(A-I)^2=0$, on en déduit que $A^2=2A-I$ ainsi\n$$A^{n+1}=n(2A-I)+(1-n)A=(n+1)A-nI=(n+1)A+(1-(n+1))I.$$\nL'égalité est donc vraie pour tout $n\\in\\N$.",
         "html": "<p><span><em>Calculons <span class=\"math inline\">\\((A-I)^2\\)</span> et démontrons que <span class=\"math inline\">\\(A^n=nA+(1-n)I\\)</span>.</em></span></p>\n<p>On calcule d’abord la matrice <span class=\"math inline\">\\(A-I\\)</span>, <span class=\"math display\">\\[A-I=\\begin{pmatrix}2&amp;2&amp;-2 \\\\  -1&amp;-1&amp;1 \\\\ 1&amp;1&amp;-1 \\\\ \\end{pmatrix},\\]</span> puis la matrice <span class=\"math inline\">\\((A-I)^2\\)</span>, <span class=\"math display\">\\[(A-I)^2=\\begin{pmatrix}2&amp;2&amp;-2 \\\\  -1&amp;-1&amp;1 \\\\ 1&amp;1&amp;-1 \\\\ \\end{pmatrix}\n\\begin{pmatrix}2&amp;2&amp;-2 \\\\  -1&amp;-1&amp;1 \\\\ 1&amp;1&amp;-1 \\\\ \\end{pmatrix}=\n\\begin{pmatrix}0&amp;0&amp;0 \\\\  0&amp;0&amp;0 \\\\ 0&amp;0&amp;0 \\\\ \\end{pmatrix},\\]</span> c’est donc la matrice nulle.</p>\n<p>Nous allons donner deux méthodes pour démontrer que <span class=\"math inline\">\\(A^n=nA+(1-n)I\\)</span>.</p>\n<p><span><em>Première méthode</em></span> : En utilisant le binôme de Newton. On écrit <span class=\"math inline\">\\(A^n=(A-I+I)^n\\)</span>, or, les matrices <span class=\"math inline\">\\(A-I\\)</span> et <span class=\"math inline\">\\(I\\)</span> commutent, on a donc <span class=\"math display\">\\[(A-I+I)^n=\\sum_{k=0}^nC_n^k(A-I)^kI^{(n-k)}=C_n^0I+C_n^1(A-I)=I+n(A-I)=nA+(1-n)I.\\]</span> <span><em>Deuxième méthode</em></span> : Par récurrence sur <span class=\"math inline\">\\(n\\)</span>. Le résultat est vrai pour <span class=\"math inline\">\\(n=0\\)</span> et <span class=\"math inline\">\\(n=1\\)</span>. Fixons <span class=\"math inline\">\\(n\\)</span> arbitrairement pour lequel on suppose que <span class=\"math inline\">\\(A^n=nA+(1-n)I\\)</span>, on a alors <span class=\"math display\">\\[A^{n+1}=A(nA+(1-n)I)=nA^2+(1-n)A,\\]</span> sachant que <span class=\"math inline\">\\((A-I)^2=0\\)</span>, on en déduit que <span class=\"math inline\">\\(A^2=2A-I\\)</span> ainsi <span class=\"math display\">\\[A^{n+1}=n(2A-I)+(1-n)A=(n+1)A-nI=(n+1)A+(1-(n+1))I.\\]</span> L’égalité est donc vraie pour tout <span class=\"math inline\">\\(n\\in\\N\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(u\\)</span> l’endomorphisme de <span class=\"math inline\">\\(\\R^3\\)</span>, dont la matrice dans la base canonique es ..."
 }

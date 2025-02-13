@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série de Fourier",
     "sousChapitre": "Calcul de coefficients",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:41.744Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:34.614Z"
   },
   "contenu": [
     {
-      "id": "6223a3e3-65f9-4126-bcd3-ef7f8422bb88",
+      "id": "12c83acf-949a-4d9a-a8cc-5ad0594453ec",
       "type": "description",
       "value": {
         "latex": "(un développement en série de fonctions de $\\frac{\\pi}{\\sin(\\pi z)}$ et $\\mathrm{cotan}(\\pi z)$).\n\nSoit $\\alpha\\in\\Cc\\setminus\\Zz$. Soit $f$ l'application de $\\Rr$ dans $\\Cc$, $2\\pi$-périodique telles que $\\forall x\\in[-\\pi,\\pi]$, $f(x)=\\cos(\\alpha x)$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "d743f8a8-3322-4052-b953-14a8490de431",
+      "id": "e8a75dcd-f7b3-43cc-9525-e55d31c80436",
       "type": "question",
       "value": {
         "latex": "Développer la fonction $f$ en série de \\textsc{Fourier}.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "ee48e260-a42c-4205-aedc-0ef6af67a16e",
+      "id": "e67c5e13-edbf-409b-955b-80e9183ac8dc",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\alpha\\in\\Cc\\setminus\\Zz$. La fonction $f$ est $2\\pi$-périodique, continue sur $\\Rr$ et de classe $C^1$ par morceaux sur $\\Rr$. Donc la série de \\textsc{Fourier} de $f$ converge vers $f$ sur $\\Rr$ d'après le théorème de \\textsc{Dirichlet}.\n\nPuisque $f$ est paire, $\\forall n\\in\\Nn^*$, $b_n(f)=0$ puis pour $n\\in\\Nn$,\n\n$$\\begin{align*}\\ensuremath\na_n(f)&=\\frac{2}{\\pi}\\int_{0}^{\\pi}\\cos(\\alpha x)\\cos(nx)\\;dx=\\frac{1}{\\pi}\\int_{0}^{\\pi}\\left(\\cos((n+\\alpha)x)+\\cos((n-\\alpha)x)\\right)dx\\\\\n &=\\frac{1}{\\pi}\\left[\\frac{\\sin((\\alpha+n)x)}{\\alpha+n}+\\frac{\\sin((\\alpha-n)x)}{\\alpha-n}\\right]_0^\\pi\\;(\\text{car}\\;\\alpha\\notin\\Zz)\\\\\n &=\\frac{1}{\\pi}\\left(\\frac{\\sin((\\alpha+n)\\pi)}{\\alpha+n}+\\frac{\\sin((\\alpha-n)\\pi)}{\\alpha-n}\\right)=(-1)^n\\frac{2\\alpha\\sin(\\alpha\\pi)}{\\pi(\\alpha^2-n^2)}\n\\end{align*}$$\n\nFinalement,\n\n\\begin{center}\n\\shadowbox{\n$\\forall\\alpha\\in\\Cc\\setminus\\Zz$, $\\forall x\\in[-\\pi,\\pi]$, $\\cos(\\alpha x)=\\frac{\\sin(\\alpha\\pi)}{\\alpha\\pi}+\\frac{\\sin(\\alpha\\pi)}{\\pi}\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2\\alpha}{\\alpha^2-n^2}\\cos(nx)$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "00e9c4d9-c19d-4036-9fec-19f6399951d2",
+      "id": "d5908a8e-9527-48f0-9890-5ffc6b5257ab",
       "type": "question",
       "value": {
         "latex": "En déduire que pour tout $z\\in\\Cc\\setminus\\Zz$,\n\n\\begin{center}\n$\\frac{\\pi}{\\sin(\\pi z)}=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}$ et $\\pi\\mathrm{cotan}(\\pi z)=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}$.\n\\end{center}",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "9b50f8c6-4d70-48ca-b75a-e5dfea4b533d",
+      "id": "7b0b0344-2cfc-4836-b516-023f8298739f",
       "type": "reponse",
       "value": {
         "latex": "Soit $z\\in\\Cc\\setminus\\Zz$.\n\nOn prend $\\alpha=z$ et $x=0$ dans la formule précédente et on obtient $1=\\frac{\\sin(\\pi z)}{\\pi z}+\\frac{\\sin(\\pi z)}{\\pi}\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}$ $(*)$. Maintenant,\n\n\\begin{center}\n$\\sin(\\pi z)=0\\Leftrightarrow\\frac{1}{2i}(e^{i\\pi z}-e^{-i\\pi z})=0\\Leftrightarrow e^{i\\pi z}=e^{-i\\pi z}\\Leftrightarrow e^{2i\\pi z}=1\\Leftrightarrow 2i\\pi z\\in2i\\pi\\Zz\\Leftrightarrow z\\in\\Zz$.\n\\end{center}\n\nPuisque $z\\in\\Cc\\setminus\\Zz$, $\\sin(\\pi z)\\neq 0$ et l'égalité $(*)$ peut s'écrire $\\frac{\\pi}{\\sin(\\pi z)}=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}$.\n\nDe même, en prenant $\\alpha=z$ et $x=\\pi$, on obtient $\\cos(\\pi z)=\\frac{\\sin(\\pi z)}{\\pi z}+\\frac{\\sin(\\pi z)}{\\pi}\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}$ et donc $\\pi\\mathrm{cotan}(\\pi z)=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}$.\n\n\\begin{center}\n\\shadowbox{\n$\\frac{\\pi}{\\sin(\\pi z)}=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}$ et $\\pi\\mathrm{cotan}(\\pi z)=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}$.\n}\n\\end{center}",
         "html": "<p>Soit <span class=\"math inline\">\\(z\\in\\Cc\\setminus\\Zz\\)</span>.</p>\n<p>On prend <span class=\"math inline\">\\(\\alpha=z\\)</span> et <span class=\"math inline\">\\(x=0\\)</span> dans la formule précédente et on obtient <span class=\"math inline\">\\(1=\\frac{\\sin(\\pi z)}{\\pi z}+\\frac{\\sin(\\pi z)}{\\pi}\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}\\)</span> <span class=\"math inline\">\\((*)\\)</span>. Maintenant,</p>\n<p><span class=\"math inline\">\\(\\sin(\\pi z)=0\\Leftrightarrow\\frac{1}{2i}(e^{i\\pi z}-e^{-i\\pi z})=0\\Leftrightarrow e^{i\\pi z}=e^{-i\\pi z}\\Leftrightarrow e^{2i\\pi z}=1\\Leftrightarrow 2i\\pi z\\in2i\\pi\\Zz\\Leftrightarrow z\\in\\Zz\\)</span>.</p>\n<p>Puisque <span class=\"math inline\">\\(z\\in\\Cc\\setminus\\Zz\\)</span>, <span class=\"math inline\">\\(\\sin(\\pi z)\\neq 0\\)</span> et l’égalité <span class=\"math inline\">\\((*)\\)</span> peut s’écrire <span class=\"math inline\">\\(\\frac{\\pi}{\\sin(\\pi z)}=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}(-1)^n\\frac{2z}{z^2-n^2}\\)</span>.</p>\n<p>De même, en prenant <span class=\"math inline\">\\(\\alpha=z\\)</span> et <span class=\"math inline\">\\(x=\\pi\\)</span>, on obtient <span class=\"math inline\">\\(\\cos(\\pi z)=\\frac{\\sin(\\pi z)}{\\pi z}+\\frac{\\sin(\\pi z)}{\\pi}\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}\\)</span> et donc <span class=\"math inline\">\\(\\pi\\mathrm{cotan}(\\pi z)=\\frac{1}{z}+\\sum_{n=1}^{+\\infty}\\frac{2z}{z^2-n^2}\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>(un développement en série de fonctions de <span class=\"math inline\">\\(\\frac{\\pi}{\\sin(\\pi z)}\\)</span> et <span class=\"math inline\"> ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Arithmétique dans Z",
     "sousChapitre": "Nombres premiers, nombres premiers entre eux",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:29.527Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:46.236Z"
   },
   "contenu": [
     {
-      "id": "cc66c39d-896d-426e-ab26-0623a062df82",
+      "id": "3f542041-36c4-437e-91a4-610922b43b44",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c46264f7-86bc-47dd-875e-643a2e98f858",
+      "id": "ebb63fa4-5868-4e31-a3de-ec10694b44e0",
       "type": "question",
       "value": {
         "latex": "Montrer par r\\'ecurrence que $\\forall n\\in \\Nn ,\\forall k\\geqslant 1$ on a :\n$$2^{2^{n+k}}-1=\\left( 2^{2^n}-1 \\right) \\times \\prod_{i=0}^{k-1}(2^{2^{n+i}}+1).$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "433fd8d3-671c-490d-b4ac-ce51467dddd4",
+      "id": "3a062a77-25be-41df-b5a7-c5a1a817335d",
       "type": "reponse",
       "value": {
         "latex": "Fixons $n$ et montrons la r\\'ecurrence sur $k \\ge 1$.\nLa formule est vraie pour $k=1$.\nSupposons la formule vraie au rang $k$.\nAlors\n$$\\begin{align*}\n(2^{2^n}-1) \\times \\prod_{i=0}^{k}{(2^{2^{n+i}}+1)} \n&= (2^{2^n}-1) \\times \\prod_{i=0}^{k-1}{(2^{2^{n+i}}+1)} \\times (2^{2^{n+k}}+1) \\\\\n&= (2^{2^{n+k}}-1)\\times (2^{2^{n+k}}+1) = (2^{2^{n+k}})^2-1\n= 2^{2^{n+k+1}}-1.\\\\\n\\end{align*}$$\nNous avons utiliser l'hypoth\\`ese de r\\'ecurrence dans ces \\'egalit\\'es.\nNous avons ainsi montrer la formule au rang $k+1$. Et donc par\nle principe de r\\'ecurrence elle est vraie.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d1980785-bf36-43ae-8675-f7b2d3aa27c0",
+      "id": "b1447b59-482a-4e62-a63e-823f90c349b8",
       "type": "question",
       "value": {
         "latex": "On pose $F_n=2^{2^n}+1$. Montrer que pour $m\\not= n$,\n $F_n$ et $F_m$ sont premiers entre eux.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "803ea165-ab56-420c-82d8-ba83c93a808e",
+      "id": "8e14caf6-15cc-4153-bc6c-fb801f8a4f4e",
       "type": "reponse",
       "value": {
         "latex": "\\'Ecrivons $m=n+k$, alors l'\\'egalit\\'e pr\\'ec\\'edente devient:\n$$F_m+2 = (2^{2^n}-1) \\times \\prod_{i=n}^{m-1} {F_i}.$$\nSoit encore :\n$$F_n \\times (2^{2^n}-1) \\times \\prod_{i=n+1}^{m-1} {F_i} \\ \\ \\  - \\ \\ F_m = 2.$$\nSi $d$ est un diviseur de $F_n$ et $F_m$ alors $d$ divise $2$\n(ou alors on peut utiliser le th\\'eor\\`eme de B\\'ezout). En cons\\'equent $d=1$ ou $d=2$. Mais $F_n$ est impair donc $d=1$. Nous avons montrer\nque tous diviseurs de $F_n$ et $F_m$ est $1$, cela signifie que\n$F_n$ et $F_m$ sont premiers entre eux.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "eacb1264-18b2-44c5-a306-751650738e83",
+      "id": "ebf52d31-a175-46ae-849e-061e77e2623e",
       "type": "question",
       "value": {
         "latex": "En d\\'eduire qu'il y a une infinit\\'e de nombres premiers.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "d11d9f00-8d5e-4b21-bdb9-f27c29c5ddac",
+      "id": "e461d76f-afc6-4826-bcfb-67d2972a17a2",
       "type": "reponse",
       "value": {
         "latex": "Supposons qu'il y a un nombre fini de nombres premiers.\nNous les notons alors $\\{p_1,\\ldots,p_N\\}$. Prenons alors $N+1$\nnombres de la famille $F_i$, par exemple $\\{F_1,\\ldots,F_{N+1}\\}$.\nChaque $F_i$, $i=1,\\ldots,N+1$ est divisible par (au moins) un facteur \npremier $p_j$, $j=1,\\ldots,N$. Nous avons $N+1$ nombres $F_i$ et seulement $N$ facteurs premiers $p_j$. Donc par le principe des tiroirs\nil existe deux nombres distincts $F_k$ et $F_{k'}$ \n(avec $1 \\leq k,k' \\leq N+1$) qui ont un facteur premier en commun.\nEn cons\\'equent $F_k$ et $F_{k'}$ ne sont pas premiers entre eux. Ce qui contredit la question pr\\'ec\\'edente. Il existe donc une infinit\\'e de nombres premiers.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "54bf5a80-33ce-432a-83f9-d8508e971533",
+      "id": "81416ffd-0894-4b02-851b-6dc78dbb1dab",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item Il faut \\^etre tr\\`es soigneux : $n$ est fix\\'e une fois pour toute, la r\\'ecurrence se fait sur $k \\ge 1$.\n  \\item Utiliser la question pr\\'ec\\'edente avec $m=n+k$.\n  \\item Par l'absurde, supposer qu'il y a seulement $N$ nombres premiers, consid\\'erer\n$N+1$ nombres du type $F_i$. Appliquer le ``principe du tiroir'' : \\emph{si vous avez $N+1$ chaussettes rang\\'ees dans $N$ tiroirs alors il existe (au moins) un tiroir contenant (plus de) deux chaussettes.}\n\\end{enumerate}",
         "html": "<ol>\n<li><p>Il faut être très soigneux : <span class=\"math inline\">\\(n\\)</span> est fixé une fois pour toute, la récurrence se fait sur <span class=\"math inline\">\\(k \\ge 1\\)</span>.</p></li>\n<li><p>Utiliser la question précédente avec <span class=\"math inline\">\\(m=n+k\\)</span>.</p></li>\n<li><p>Par l’absurde, supposer qu’il y a seulement <span class=\"math inline\">\\(N\\)</span> nombres premiers, considérer <span class=\"math inline\">\\(N+1\\)</span> nombres du type <span class=\"math inline\">\\(F_i\\)</span>. Appliquer le “principe du tiroir” : <em>si vous avez <span class=\"math inline\">\\(N+1\\)</span> chaussettes rangées dans <span class=\"math inline\">\\(N\\)</span> tiroirs alors il existe (au moins) un tiroir contenant (plus de) deux chaussettes.</em></p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Montrer par récurrence que <span class=\"math inline\">\\(\\forall n\\in \\Nn ,\\forall k\\geqslant 1\\)</span> on a : <span class=\"math display\"> ..."
 }

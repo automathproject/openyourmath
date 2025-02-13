@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Dérivabilité des fonctions réelles",
     "sousChapitre": "Théorème de Rolle et accroissements finis",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:15.399Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:03.302Z"
   },
   "contenu": [
     {
-      "id": "05c7c346-5c9d-4d65-8b59-cd31407493b8",
+      "id": "e423539f-dfbb-4bcb-9996-c71633ae1d21",
       "type": "description",
       "value": {
         "latex": "Soient $a$ et $b$ deux réels tels que $a<b$ et $n$ un entier naturel. Soit $f$ une fonction élément de $C^n([a,b],\\Rr)\\cap D^{n+1}(]a,b[,\\Rr)$. Montrer qu'il existe $c\\in]a,b[$ tel que \n\n$$f(b)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(b-a)^k+\\frac{(b-a)^{n+1}f^{(n+1)}(c)}{(n+1)!}.$$\n\nIndication. Appliquer le théorème de \\textsc{Rolle} à la fonction $g(x)=f(b)-\\sum_{k=0}^{n}\\frac{f^{(k)}(x)}{k!}(b-x)^k-A\\frac{(b-x)^{n+1}}{(n+1)!}$ où $A$ est intelligemment choisi.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "41428651-8dd6-40ca-8c17-824c0e5fae7d",
+      "id": "e675cc48-34d7-4bc5-8524-6583cb31d2df",
       "type": "reponse",
       "value": {
         "latex": "On a déjà $g(b)=f(b)-f(b)=0$. Puisque $a\\neq b$, on peut choisir $A$ tel que $g(a)=0$ (à savoir $A=\\frac{(n+1)!}{(b-a)^{n+1}}(f(b)-\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(b-a)^k$).\n\nAvec les hypothèses faites sur $f$, $g$ est d'autre part continue sur $[a,b]$ et dérivable sur $]a,b[$. Le théorème de \\textsc{Rolle} permet alors d'affirmer qu'il existe $c\\in]a,b[$ tel que $g'(c)=0$.\n\nPour $x\\in]a,b[$, on a\n\n$$\\begin{align*}\\ensuremath\ng'(x)&=-\\sum_{k=0}^{n}\\frac{f^{(k+1)}(x)}{k!}(b-x)^k+\\sum_{k=1}^{n}\\frac{f^{(k)}(x)}{(k-1)!}(b-x)^{k-1}\n+A\\frac{(b-x)^n}{n!}\\\\\n &=-\\sum_{k=0}^{n}\\frac{f^{(k+1)}(x)}{k!}(b-x)^k+\\sum_{k=0}^{n-1}\\frac{f^{(k+1)}(x)}{k!}(b-x)^{k}\n+A\\frac{(b-x)^n}{n!}=-\\sum_{k=0}^{n}\\frac{f^{(n+1)}(x)}{n!}(b-x)^n+A\\frac{(b-x)^n}{n!}\\\\\n &=\\frac{(b-x)^n}{n!}(A-f^{(n+1)}(x)).\n\\end{align*}$$\n\nAinsi, il existe $c\\in]a,b[$ tel que $\\frac{(b-c)^n}{n!}(A-f^{(n+1)}(c))=0$, et donc, puisque $c\\neq b$, tel que $A=f^{(n+1)}(c)$.\n\nL'égalité $g(a)=0$ s'éxrit alors\n\n$$f(b)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(b-a)^k+\\frac{(b-a)^{n+1}f^{(n+1)}(c)}{(n+1)!},$$\n\npour un certain réel $c$ de $]a,b[$.",
         "html": "<p>On a déjà <span class=\"math inline\">\\(g(b)=f(b)-f(b)=0\\)</span>. Puisque <span class=\"math inline\">\\(a\\neq b\\)</span>, on peut choisir <span class=\"math inline\">\\(A\\)</span> tel que <span class=\"math inline\">\\(g(a)=0\\)</span> (à savoir <span class=\"math inline\">\\(A=\\frac{(n+1)!}{(b-a)^{n+1}}(f(b)-\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(b-a)^k\\)</span>).</p>\n<p>Avec les hypothèses faites sur <span class=\"math inline\">\\(f\\)</span>, <span class=\"math inline\">\\(g\\)</span> est d’autre part continue sur <span class=\"math inline\">\\([a,b]\\)</span> et dérivable sur <span class=\"math inline\">\\(]a,b[\\)</span>. Le théorème de <span class=\"smallcaps\">Rolle</span> permet alors d’affirmer qu’il existe <span class=\"math inline\">\\(c\\in]a,b[\\)</span> tel que <span class=\"math inline\">\\(g&#39;(c)=0\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(x\\in]a,b[\\)</span>, on a</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\ng&#39;(x)&amp;=-\\sum_{k=0}^{n}\\frac{f^{(k+1)}(x)}{k!}(b-x)^k+\\sum_{k=1}^{n}\\frac{f^{(k)}(x)}{(k-1)!}(b-x)^{k-1}\n+A\\frac{(b-x)^n}{n!}\\\\\n &amp;=-\\sum_{k=0}^{n}\\frac{f^{(k+1)}(x)}{k!}(b-x)^k+\\sum_{k=0}^{n-1}\\frac{f^{(k+1)}(x)}{k!}(b-x)^{k}\n+A\\frac{(b-x)^n}{n!}=-\\sum_{k=0}^{n}\\frac{f^{(n+1)}(x)}{n!}(b-x)^n+A\\frac{(b-x)^n}{n!}\\\\\n &amp;=\\frac{(b-x)^n}{n!}(A-f^{(n+1)}(x)).\n\\end{align*}\\]</span></p>\n<p>Ainsi, il existe <span class=\"math inline\">\\(c\\in]a,b[\\)</span> tel que <span class=\"math inline\">\\(\\frac{(b-c)^n}{n!}(A-f^{(n+1)}(c))=0\\)</span>, et donc, puisque <span class=\"math inline\">\\(c\\neq b\\)</span>, tel que <span class=\"math inline\">\\(A=f^{(n+1)}(c)\\)</span>.</p>\n<p>L’égalité <span class=\"math inline\">\\(g(a)=0\\)</span> s’éxrit alors</p>\n<p><span class=\"math display\">\\[f(b)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(b-a)^k+\\frac{(b-a)^{n+1}f^{(n+1)}(c)}{(n+1)!},\\]</span></p>\n<p>pour un certain réel <span class=\"math inline\">\\(c\\)</span> de <span class=\"math inline\">\\(]a,b[\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> deux réels tels que <span class=\"math inline\">\\(a&lt;b\\)</s ..."
 }

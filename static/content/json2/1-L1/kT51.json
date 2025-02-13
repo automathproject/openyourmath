@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Nombres complexes",
     "sousChapitre": "Trigonométrie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:13.615Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:28.971Z"
   },
   "contenu": [
     {
-      "id": "1c7b0e06-5771-411d-ad24-062cd0cc57d3",
+      "id": "d1c38f47-e90e-485a-af8e-2d51aa69fc34",
       "type": "description",
       "value": {
         "latex": "Soit $k$ un réel distinct de $-1$ et de $1$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e0476d74-dd55-42ec-8d37-6a4898149192",
+      "id": "133de2e7-95a2-4bf5-9c8e-746cc2da7fb6",
       "type": "question",
       "value": {
         "latex": "Etudier les variations de $f_k~:~x\\mapsto\\frac{\\sin x}{\\sqrt{1-2k\\cos x+k^2}}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "913768db-48c3-4d17-8864-4279d8e821af",
+      "id": "7e1035fd-12ef-4b6f-b9e2-11a3e013c91e",
       "type": "question",
       "value": {
         "latex": "Calculer $\\int_{0}^{\\pi}f_k(x)\\;dx$.",
@@ -40,12 +40,13 @@
       }
     },
     {
-      "id": "b751c0d2-8cbc-44f9-bd92-b7ebcdf8ad6b",
+      "id": "bc9a1078-b90e-4e9f-a8a1-a18c315c3708",
       "type": "reponse",
       "value": {
         "latex": "\\textbullet~Pour tout réel $x$, $1-2k\\cos x+k^2=(k-\\cos x)^2+\\sin^2x\\geq0$. De plus,\n\n$$1-2k\\cos x+k^2=0\\Rightarrow k-\\cos x=\\sin x=0\\Rightarrow x\\in\\pi\\Zz\\;\\mbox{et}\\;k=\\cos x\\Rightarrow k\\in\\{-1,1\\},$$\nce qui est exclu. Donc,\n\n$$\\forall k\\in\\Rr\\setminus\\{-1,1\\},\\;\\forall x\\in\\Rr,\\;1-2k\\cos x+k^2>0.$$\n\\textbullet$f_k$ est donc définie sur $\\Rr$, dérivable sur $\\Rr$ en vertu de théorèmes généraux, impaire et $2\\pi$-périodique. On\nl'étudie dorénavant sur $[0,\\pi]$. Pour $x\\in[0,\\pi]$, on a~:\n\n$$\\begin{align*}\nf'_k(x)&=\\cos x(1-2k\\cos x+k^2)^{-1/2}-\\frac{1}{2}\\sin x(2k\\sin x)(1-2k\\cos x+k^2)^{-3/2}\\\\\n &=(1-2k\\cos x+k^2)^{-3/2}(\\cos x(1-2k\\cos x+k^2)-k\\sin^2x)\\\\\n &=(1-2k\\cos x+k^2)^{-3/2}(-k\\cos^2x+(1+k^2)\\cos x-k)\\\\\n &=(1-2k\\cos x+k^2)^{-3/2}(k\\cos x-1)(k-\\cos x)\n\\end{align*}$$\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr,\\;f_k'(x)=\\frac{(k\\cos x-1)(k-\\cos x)}{(1-2k\\cos x+k^2)^{3/2}}.$\n}\n\\end{center}\n\n\\begin{itemize}\n[\\textbf{1er cas}~:~$|k|<1$ et $k\\neq0$.] (si $k=0$, $f_k(x)=\\sin x$) Pour tout réel $x$, $(1-2k\\cos x+k^2)^{-3/2}(k\\cos\nx-1)<0$ et $f_k'(x)$ est du signe de $\\cos x-k$.\n\n$$\\includegraphics{../images/img005079-1}$$\n\n(car $f_k(\\Arccos k)=\\frac{\\sqrt{1-k^2}}{\\sqrt{1-2k^2+k^2}}=1$).\n[\\textbf{2ème cas}~:~$k>1$.] Pour tout réel $x$, $(1-2k\\cos x+k^2)^{-3/2}(k-\\cos x)>0$ et $f_k'(x)$ est du signe de $k\\cos\nx-1$.\n\n$$\\includegraphics{../images/img005079-2}$$\n\n(car $f_k(\\Arccos\\frac{1}{k})=\\frac{\\sqrt{1-\\frac{1}{k^2}}}{\\sqrt{1-2+k^2}}=\\frac{1}{k}$).\n[\\textbf{3ème cas}~:~$k<-1$.] Pour tout réel $x$, $(1-2k\\cos x+k^2)^{-3/2}(k-\\cos x)<0$ et $f_k'(x)$ est du signe de\n$1-k\\cos x$.\n\n$$\\includegraphics{../images/img005079-3}$$\n\n\n\n(car $f_k(\\Arccos\\frac{1}{k})=\\frac{\\sqrt{1-\\frac{1}{k^2}}}{\\sqrt{1-2+k^2}}=-\\frac{1}{k}$).\n\n\\end{itemize}\nPour $k\\in\\Rr\\setminus\\{-1,1\\}$, posons $I_k=\\int_{0}^{\\pi}f_k(x)\\;dx$.\n\nSi $k=0$, $I_k=\\int_{0}^{\\pi}\\sin x\\;dx=2$. Sinon,\n\n$$\\begin{align*}\nI_k&=\\frac{1}{k}\\int_{0}^{\\pi}\\frac{2k\\sin x}{2\\sqrt{1-2k\\cos x+k^2}}\\;dx=\\frac{1}{k}\n\\left[\\sqrt{1-2k\\cos x+k^2}\\right]_0^\\pi\\\\\n &=\\frac{1}{k}(\\sqrt{1+2k+k^2}-\\sqrt{1-2k+k^2})=\\frac{1}{k}(|k+1|-|k-1|).\n\\end{align*}$$\nPlus précisément, si $k\\in]-1,1[\\setminus\\{0\\}$, $I_k=\\frac{1}{k}((1+k)-(1-k))=2$, ce qui reste vrai pour $k=0$. Si\n$k>1$, $I_k=\\frac{1}{k}((1+k)-(k-1))=\\frac{2}{k}$, et enfin, si $k<-1$, $I_k=\\frac{-2}{k}$. En résumé,\n\n\\begin{center}\n\\shadowbox{\n$\\mbox{Si}\\;k\\in]-1,1[,\\;I_k=2\\;\\mbox{et si}\\;k\\in]-\\infty,-1[\\cup]1,+\\infty[,\\;I_k=\\frac{2}{|k|}.$\n}\n\\end{center}",
         "html": "<p> Pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\(1-2k\\cos x+k^2=(k-\\cos x)^2+\\sin^2x\\geq0\\)</span>. De plus,</p>\n<p><span class=\"math display\">\\[1-2k\\cos x+k^2=0\\Rightarrow k-\\cos x=\\sin x=0\\Rightarrow x\\in\\pi\\Zz\\;\\mbox{et}\\;k=\\cos x\\Rightarrow k\\in\\{-1,1\\},\\]</span> ce qui est exclu. Donc,</p>\n<p><span class=\"math display\">\\[\\forall k\\in\\Rr\\setminus\\{-1,1\\},\\;\\forall x\\in\\Rr,\\;1-2k\\cos x+k^2&gt;0.\\]</span> <span class=\"math inline\">\\(f_k\\)</span> est donc définie sur <span class=\"math inline\">\\(\\Rr\\)</span>, dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span> en vertu de théorèmes généraux, impaire et <span class=\"math inline\">\\(2\\pi\\)</span>-périodique. On l’étudie dorénavant sur <span class=\"math inline\">\\([0,\\pi]\\)</span>. Pour <span class=\"math inline\">\\(x\\in[0,\\pi]\\)</span>, on a :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nf&#39;_k(x)&amp;=\\cos x(1-2k\\cos x+k^2)^{-1/2}-\\frac{1}{2}\\sin x(2k\\sin x)(1-2k\\cos x+k^2)^{-3/2}\\\\\n &amp;=(1-2k\\cos x+k^2)^{-3/2}(\\cos x(1-2k\\cos x+k^2)-k\\sin^2x)\\\\\n &amp;=(1-2k\\cos x+k^2)^{-3/2}(-k\\cos^2x+(1+k^2)\\cos x-k)\\\\\n &amp;=(1-2k\\cos x+k^2)^{-3/2}(k\\cos x-1)(k-\\cos x)\n\\end{align*}\\]</span></p>\n<p>(si <span class=\"math inline\">\\(k=0\\)</span>, <span class=\"math inline\">\\(f_k(x)=\\sin x\\)</span>) Pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\((1-2k\\cos x+k^2)^{-3/2}(k\\cos\nx-1)&lt;0\\)</span> et <span class=\"math inline\">\\(f_k&#39;(x)\\)</span> est du signe de <span class=\"math inline\">\\(\\cos x-k\\)</span>.</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005079-1}\\]</span></p>\n<p>(car <span class=\"math inline\">\\(f_k(\\Arccos k)=\\frac{\\sqrt{1-k^2}}{\\sqrt{1-2k^2+k^2}}=1\\)</span>). [<strong>2ème cas</strong> : <span class=\"math inline\">\\(k&gt;1\\)</span>.] Pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\((1-2k\\cos x+k^2)^{-3/2}(k-\\cos x)&gt;0\\)</span> et <span class=\"math inline\">\\(f_k&#39;(x)\\)</span> est du signe de <span class=\"math inline\">\\(k\\cos\nx-1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005079-2}\\]</span></p>\n<p>(car <span class=\"math inline\">\\(f_k(\\Arccos\\frac{1}{k})=\\frac{\\sqrt{1-\\frac{1}{k^2}}}{\\sqrt{1-2+k^2}}=\\frac{1}{k}\\)</span>). [<strong>3ème cas</strong> : <span class=\"math inline\">\\(k&lt;-1\\)</span>.] Pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\((1-2k\\cos x+k^2)^{-3/2}(k-\\cos x)&lt;0\\)</span> et <span class=\"math inline\">\\(f_k&#39;(x)\\)</span> est du signe de <span class=\"math inline\">\\(1-k\\cos x\\)</span>.</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005079-3}\\]</span></p>\n<p>(car <span class=\"math inline\">\\(f_k(\\Arccos\\frac{1}{k})=\\frac{\\sqrt{1-\\frac{1}{k^2}}}{\\sqrt{1-2+k^2}}=-\\frac{1}{k}\\)</span>).</p>\n<p>Pour <span class=\"math inline\">\\(k\\in\\Rr\\setminus\\{-1,1\\}\\)</span>, posons <span class=\"math inline\">\\(I_k=\\int_{0}^{\\pi}f_k(x)\\;dx\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(k=0\\)</span>, <span class=\"math inline\">\\(I_k=\\int_{0}^{\\pi}\\sin x\\;dx=2\\)</span>. Sinon,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nI_k&amp;=\\frac{1}{k}\\int_{0}^{\\pi}\\frac{2k\\sin x}{2\\sqrt{1-2k\\cos x+k^2}}\\;dx=\\frac{1}{k}\n\\left[\\sqrt{1-2k\\cos x+k^2}\\right]_0^\\pi\\\\\n &amp;=\\frac{1}{k}(\\sqrt{1+2k+k^2}-\\sqrt{1-2k+k^2})=\\frac{1}{k}(|k+1|-|k-1|).\n\\end{align*}\\]</span> Plus précisément, si <span class=\"math inline\">\\(k\\in]-1,1[\\setminus\\{0\\}\\)</span>, <span class=\"math inline\">\\(I_k=\\frac{1}{k}((1+k)-(1-k))=2\\)</span>, ce qui reste vrai pour <span class=\"math inline\">\\(k=0\\)</span>. Si <span class=\"math inline\">\\(k&gt;1\\)</span>, <span class=\"math inline\">\\(I_k=\\frac{1}{k}((1+k)-(k-1))=\\frac{2}{k}\\)</span>, et enfin, si <span class=\"math inline\">\\(k&lt;-1\\)</span>, <span class=\"math inline\">\\(I_k=\\frac{-2}{k}\\)</span>. En résumé,</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(k\\)</span> un réel distinct de <span class=\"math inline\">\\(-1\\)</span> et de <span class=\"math inline\">\\(1\\)</span ..."
 }

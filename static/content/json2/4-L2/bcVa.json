@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Réduction de Jordan",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:51.070Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:42.023Z"
   },
   "contenu": [
     {
-      "id": "04bb596f-8ad1-4b1c-9c03-ca7027c00b02",
+      "id": "661b4ff5-2495-4894-a2e7-efadb10c3326",
       "type": "description",
       "value": {
         "latex": "On consid\\`ere la matrice suivante\n$$A=\\begin{pmatrix}1&-1&0 \\\\  1&0&-1 \\\\  -1&0&2\\end{pmatrix}$$\net $f$ l'endomorphisme de $\\R^3$ associ\\'e.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "10ddc171-cb28-479d-bdea-7c7490602e09",
+      "id": "b67c987a-3ee3-44dc-b7f8-eeac1ba553b7",
       "type": "question",
       "value": {
         "latex": "Factoriser le polyn\\^ome caract\\'eristique de $A$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "a3f41079-4fb3-46ef-b85a-42d026ea933c",
+      "id": "f69b322f-2fc8-4acf-ac89-942516f87c4b",
       "type": "reponse",
       "value": {
         "latex": "{\\it Factorisons le polyn\\^ome caract\\'eristique de $A$.}\n\nOn a \n$$\\begin{align*}P_A(X)&=\\begin{vmatrix}1-X&-1&0 \\\\  1&-X&-1 \\\\  -1&0&2-X\\end{vmatrix} \\\\ \n&=(1-X)\\begin{vmatrix}-X&-1 \\\\  0&2-X\\end{vmatrix}+\\begin{vmatrix}1&-1 \\\\  -1&2-X\\end{vmatrix} \\\\ \n&=(1-X)(X^2-2X)+(1-X) \\\\ \n&=(1-X)(X^2-2X+1)=(1-X)^3.\n\\end{align*}$$\nLe polyn\\^ome caract\\'eristique de $A$ admet une valeur propre triple $\\lambda=1$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "105cb671-a235-46a8-8b7d-e87ac3ff7f19",
+      "id": "1656361b-db30-483f-9f3b-91b23422f5f3",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer les sous-espaces propres et caract\\'eristiques de $A$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "947eb2ab-a4f7-499d-8222-7ea16f99e15d",
+      "id": "bffca267-b9d3-42e1-8c61-469e1b3e4100",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'eterminons les sous-espaces propres et caract\\'eristiques de $A$.}\n\nLa matrice $A$ admet une unique valeur propre $\\lambda=1$ de multiplicit\\'e $3$, le sous-espace propre associ\\'e est l'espace $E_{1}=\\ker(A-I)$, et on a\n$$(x,y,z)\\in E_{1}\\iff\\left\\{$$\\begin{align*}x-y&=x \\\\  x-z&=y \\\\  -x+2z&=z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}y&=0 \\\\  x&=z\\end{align*}$$\\right.$$\nLe sous-espace $E_{1}$ est la droite vectorielle engendr\\'ee par le vecteur $(1,0,1)$.\n\nLe sous-espace caract\\'eristique de $A$, associ\\'e \\`a l'unique valeur propre $\\lambda=1$, est le sous-espace $N_{1}=\\ker(A-I)^3$, or, compte tenu du th\\'eor\\`eme de Hamilton-Cayley, on sait que $P_A(A)=0$, ainsi, la matrice $(A-I)^3$ est la matrice nulle, ce qui implique $N_{1}=\\R^3$, c'est donc l'espace tout entier.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "d4c07b12-86ee-43bc-9997-8d48bc1a988b",
+      "id": "2e50e6e1-3ae7-4b19-9b20-1f2de0082cb8",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer qu'il existe une base de $\\R^3$ dans laquelle la matrice de $f$ s'\\'ecrit\n$$B=\\begin{pmatrix}1&1&0 \\\\  0&1&1 \\\\  0&0&1\\end{pmatrix}.$$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "d0488c96-ade4-4c1d-bb47-fa26cda1c797",
+      "id": "71de632c-a87d-4669-a38f-9a5e753c3df9",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'emontrons qu'il existe une base de $\\R^3$ dans laquelle la matrice de $f$ s'\\'ecrit}\n$$B=\\begin{pmatrix}1&1&0 \\\\  0&1&1 \\\\  0&0&1\\end{pmatrix}.$$\n\nNous cherchons des vecteurs $e_1,e_2,e_3$ tels que $Ae_1=e_1$, $Ae_2=e_1+e_2$ et $Ae_3=e_2+e_3$.\nLe vecteur $e_1$ appartient \\`a $E_1=\\ker(A-I)$, et $\\ker(A-I)$ est la droite d'\\'equations :\n\n$\\{y=0,x=z\\}$. On d\\'etermine $e_2=(x,y,z)$ tel que\n$Ae_2=e_1+e_2$, on obtient le syst\\`eme \n$$\\begin{pmatrix}1 & -1 & 0 \\\\  1&0&-1 \\\\ -1&0&2\\end{pmatrix}\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=\\begin{pmatrix}1+x \\\\  1+y \\\\  z\\end{pmatrix}\\iff\n\\left\\{$$\\begin{align*}x-y&=1+x \\\\  x-z&=y \\\\  -x+2z&=1+z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}y&=-1 \\\\  x-z&=-1\\end{align*}$$\\right.$$\nAinsi, les vecteurs $e_1=(1,0,1)$ et $e_2=(-1,-1,0)$ conviennent. Il nous reste \\`a chercher un vecteur $e_3$ tel que $Ae_3=e_2+e_3$, c'est-\\`a-dire\n$$\\begin{pmatrix}1 & -1 & 0 \\\\  1&0&-1 \\\\ -1&0&2\\end{pmatrix}\\begin{pmatrix}x \\\\  y \\\\  z\\end{pmatrix}=\\begin{pmatrix}-1+x \\\\  -1+y \\\\  z\\end{pmatrix}\\iff\n\\left\\{$$\\begin{align*}x-y&=x-1 \\\\  x-z&=y-1 \\\\  -x+2z&=z\\end{align*}$$\\right.\n\\iff\\left\\{$$\\begin{align*}y&=1 \\\\  x&=z\\end{align*}$$\\right.$$\nLe vecteur $e_3=(0,1,0)$ convient. On obtient alors la matrice $P$ suivante qui est inversible et v\\'erifie $A=PBP^{-1}$,\n$$P=\\begin{pmatrix}1 & -1 & 0 \\\\  0&-1&1 \\\\ 1&0&0\\end{pmatrix}$$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "c8a6eb42-dfd8-4b85-ab5d-403a234ddb16",
+      "id": "f38d99d4-ca52-479c-9cce-39c0c3636bdf",
       "type": "question",
       "value": {
         "latex": "Ecrire la d\\'ecomposition de Dunford de $B$ (justifier).",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "0f671a47-e67d-4195-9556-aefd9dd9b4cf",
+      "id": "c40f0585-19e1-4a24-adb9-4ea46fe702e4",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'ecomposition de Dunford de $B$}\n\nOn a \n$$B=\\begin{pmatrix}1 & 1 & 0 \\\\  0&1&1 \\\\ 0&0&1\\end{pmatrix}=\n\\begin{pmatrix}1 & 0& 0 \\\\  0&1&0 \\\\ 0&0&1\\end{pmatrix}+\n\\begin{pmatrix}0& 1 & 0 \\\\  0&0&1 \\\\ 0&0&0\\end{pmatrix}$$\net il est clair que les deux matrices commutent car l'une est \\'egale \\`a $I$. \nOr, il existe un unique couple de matrices $D$ et $N$, $D$ diagonalisable\net $N$ nilpotente, telles que $B=D+N$ et $DN=ND$. Or si\n$$D=\\begin{pmatrix}1 & 0& 0 \\\\  0&1&0 \\\\ 0&0&1\\end{pmatrix}\\ \\ {\\hbox{et}}\\ \\ \nN=\\begin{pmatrix}0& 1 & 0 \\\\  0&0&1 \\\\ 0&0&0\\end{pmatrix},$$\nOn a \n$$N^2=\\begin{pmatrix}0& 1 & 0 \\\\  0&0&1 \\\\ 0&0&0\\end{pmatrix}\\begin{pmatrix}0& 1 & 0 \\\\  0&0&1 \\\\ 0&0&0\\end{pmatrix}=\\begin{pmatrix}0& 0 & 1 \\\\  0&0&0 \\\\ 0&0&0\\end{pmatrix}$$\net $N^3=0$. La d\\'ecomposition $B=D+N$ est donc bien la d\\'ecomposition de Dunford de la matrice $B$.",
         "html": "<p><span><em>Décomposition de Dunford de <span class=\"math inline\">\\(B\\)</span></em></span></p>\n<p>On a <span class=\"math display\">\\[B=\\begin{pmatrix}1 &amp; 1 &amp; 0 \\\\  0&amp;1&amp;1 \\\\ 0&amp;0&amp;1\\end{pmatrix}=\n\\begin{pmatrix}1 &amp; 0&amp; 0 \\\\  0&amp;1&amp;0 \\\\ 0&amp;0&amp;1\\end{pmatrix}+\n\\begin{pmatrix}0&amp; 1 &amp; 0 \\\\  0&amp;0&amp;1 \\\\ 0&amp;0&amp;0\\end{pmatrix}\\]</span> et il est clair que les deux matrices commutent car l’une est égale à <span class=\"math inline\">\\(I\\)</span>. Or, il existe un unique couple de matrices <span class=\"math inline\">\\(D\\)</span> et <span class=\"math inline\">\\(N\\)</span>, <span class=\"math inline\">\\(D\\)</span> diagonalisable et <span class=\"math inline\">\\(N\\)</span> nilpotente, telles que <span class=\"math inline\">\\(B=D+N\\)</span> et <span class=\"math inline\">\\(DN=ND\\)</span>. Or si <span class=\"math display\">\\[D=\\begin{pmatrix}1 &amp; 0&amp; 0 \\\\  0&amp;1&amp;0 \\\\ 0&amp;0&amp;1\\end{pmatrix}\\ \\ {\\hbox{et}}\\ \\ \nN=\\begin{pmatrix}0&amp; 1 &amp; 0 \\\\  0&amp;0&amp;1 \\\\ 0&amp;0&amp;0\\end{pmatrix},\\]</span> On a <span class=\"math display\">\\[N^2=\\begin{pmatrix}0&amp; 1 &amp; 0 \\\\  0&amp;0&amp;1 \\\\ 0&amp;0&amp;0\\end{pmatrix}\\begin{pmatrix}0&amp; 1 &amp; 0 \\\\  0&amp;0&amp;1 \\\\ 0&amp;0&amp;0\\end{pmatrix}=\\begin{pmatrix}0&amp; 0 &amp; 1 \\\\  0&amp;0&amp;0 \\\\ 0&amp;0&amp;0\\end{pmatrix}\\]</span> et <span class=\"math inline\">\\(N^3=0\\)</span>. La décomposition <span class=\"math inline\">\\(B=D+N\\)</span> est donc bien la décomposition de Dunford de la matrice <span class=\"math inline\">\\(B\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On considère la matrice suivante <span class=\"math display\">\\[A=\\begin{pmatrix}1&amp;-1&amp;0 \\\\  1&amp;0&amp;-1 \\\\  -1&amp;0&amp;2\\end{pmatrix}\\]< ..."
 }

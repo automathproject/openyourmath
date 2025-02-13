@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite",
     "sousChapitre": "Suites équivalentes, suites négligeables",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:20.725Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:06.371Z"
   },
   "contenu": [
     {
-      "id": "78295918-9114-48f1-b0f0-f628c1d6974a",
+      "id": "e0ba60a5-939c-4dc8-83f9-e450802eeaa7",
       "type": "description",
       "value": {
         "latex": "Soit $n \\geq 1$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e911c3f4-3cba-41ba-a15a-3fce79810ee6",
+      "id": "0010cb39-2c91-4988-a5d5-a2689577c24a",
       "type": "question",
       "value": {
         "latex": "Montrer que l'\\'equation $\\sum\\limits_{k = 1}^n{x^k} = 1$ admet une unique solution,\nnotée $a_n$, dans $[0, 1]$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "7c48018e-408a-4f89-a4e3-4dae08394d2d",
+      "id": "6ddb8a99-b0bf-45d3-bbfe-854da3de8679",
       "type": "reponse",
       "value": {
         "latex": "La fonction $f_n$ est continue\nsur $[0,1]$. De plus $f_n(0) = -1 < 0$ et $f_n(1) = n-1\\geqslant 0$.\nD'apr\\`es le th\\'eor\\`eme des valeurs interm\\'ediaires, $f_n$, admet un\nz\\'ero dans l'intervalle $[0,1]$. De plus elle strictement\ncroissante (calculez sa d\\'eriv\\'ee) sur $[0,1]$ donc ce z\\'ero est\nunique.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "79d11539-e77d-4834-bd46-d3a4f84510f3",
+      "id": "9cf9f000-688a-413c-bed8-052023c1bf5a",
       "type": "question",
       "value": {
         "latex": "Montrer que $ (a_n)_{n \\in \\Nn}$ est d\\'ecroissante minor\\'ee par $\\frac12$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "3740ccdf-4ca1-482b-9dec-e646c25ddb4f",
+      "id": "3b3bc3ca-dc0e-4f8d-83ab-004ad1bd5fe4",
       "type": "reponse",
       "value": {
         "latex": "Calculons $f_n(a_{n-1})$.\n$$\\begin{align*}\nf_n(a_{n-1}) &= \\sum_{k=1}^{n} a_{n-1}^k  - 1 \\\\\n     &= a_{n-1}^n + \\sum_{k=1}^{n-1} a_{n-1}^k  - 1 \\\\\n     &= a_{n-1}^n + f_{n-1}(a_{n-1})  \\\\\n     &= a_{n-1}^n \\text{\\ \\  (car $f_{n-1}(a_{n-1})=0$ par d\\'efinition de $a_{n-1}$).}\n\\end{align*}$$\n\nNous obtenons l'in\\'egalit\\'e\n$$ 0 = f_n(a_n) < f_n(a_{n-1}) = a_{n-1}^n.$$\nOr $f_n$ est strictement croissante, l'in\\'egalit\\'e ci-dessus\nimplique donc $ a_n < a_{n-1}$.\nNous venons de d\\'emontrer que la suite $(a_n)_n$ est d\\'ecroissante.\n\n\nRemarquons avant d'aller plus loin que $f_n(x)$ est la somme d'une\nsuite g\\'eom\\'etrique :\n$$f_n(x) = \\frac{1-x^{n+1}}{1-x}-2.$$\n\n\\'Evaluons maintenant $f_n(\\frac12)$, \\`a l'aide de l'expression\npr\\'ec\\'edente\n$$f_n(\\frac12) = \\frac{1-(\\frac12)^{n+1}}{1-{\\frac12}}-2 = -\\frac 1 {2^n} < 0.$$\nDonc $ f_n(\\frac12) < f_n(a_n)=0$ entra\\^{\\i}ne $\\frac12 < a_n$.\n\nPour r\\'esumer, nous avons montré que la suite $(a_n)_n$ est\nstrictement d\\'ecroissante et minor\\'ee par $\\frac12$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "fcb8f4b0-54ea-4ce1-bc27-62ab600593bb",
+      "id": "6455686d-7cca-4ab6-b8df-d85564d46fea",
       "type": "question",
       "value": {
         "latex": "Montrer que $ (a_n)$ converge vers $\\frac 12$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "a096c0ba-9aab-4124-ae05-b95c72a24ead",
+      "id": "85a15c3e-8eaa-4ed3-b08d-a647e468c6ac",
       "type": "reponse",
       "value": {
         "latex": "Comme $(a_n)_n$ est\nd\\'ecroissante et minor\\'ee par $\\frac12$ alors elle converge, nous\nnotons $\\ell$ sa limite :\n$$ \\frac 12 \\leqslant \\ell < a_n.$$\nAppliquons $f_n$ (qui est strictement croissante) \\`a cette\nin\\'egalit\\'e :\n $$ f_n\\left(\\frac 12\\right) \\leqslant f_n(\\ell) < f_n(a_n),$$\nqui s'\\'ecrit aussi :\n$$ -\\frac 1 {2^n} \\leqslant f_n(\\ell) < 0,$$\net ceci quelque soit $n\\geqslant 1$. La suite $(f_n(\\ell))_n$ converge\ndonc vers $0$ (th\\'eor\\`eme des  ``gendarmes''). Mais nous savons\naussi que\n$$f_n(\\ell) = \\frac{1-\\ell^{n+1}}{1-\\ell}-2 ;$$\ndonc $(f_n(\\ell))_n$ converge vers $\\frac{1}{1-\\ell}-2$ car\n$(\\ell^n)_n$ converge vers $0$. Donc\n$$\\frac{1}{1-\\ell}-2 = 0, \\text{ d'o\\`u } \\ell = \\frac12.$$",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "d00525fc-5b2e-4a1c-8b3d-629cf799516a",
+      "id": "0d469e03-a4c6-443f-b064-a73aa55309ad",
       "type": "indication",
       "value": {
         "latex": "On notera  $f_n : [0,1] \\longrightarrow \\Rr$ la fonction\nd\\'efinie par $ f_n(x) = \\sum_{k=1}^n x^k \\ \\ - 1.$\n\\begin{enumerate}\n    \\item C'est une \\'etude de la fonction $f_n$.\n    \\item On sait que $f_n(a_n)=0$. Montrer par un calcul que $f_n(a_{n-1}) > 0$,\nen d\\'eduire la d\\'ecroissance de $(a_n)$. En calculant $f_n(\\frac 12)$ montrer que \nla suite  $(a_n)$ est minor\\'ee par $\\frac 12$.\n    \\item Une fois \\'etablie la convergence de  $(a_n)$ vers une limite $\\ell$,\ncomposer l'in\\'egalit\\'e $ \\frac 12 \\leqslant \\ell < a_n$ par $f_n$. Conclure.\n\\end{enumerate}",
         "html": "<p>On notera <span class=\"math inline\">\\(f_n : [0,1] \\longrightarrow \\Rr\\)</span> la fonction définie par <span class=\"math inline\">\\(f_n(x) = \\sum_{k=1}^n x^k \\ \\ - 1.\\)</span></p>\n<ol>\n<li><p>C’est une étude de la fonction <span class=\"math inline\">\\(f_n\\)</span>.</p></li>\n<li><p>On sait que <span class=\"math inline\">\\(f_n(a_n)=0\\)</span>. Montrer par un calcul que <span class=\"math inline\">\\(f_n(a_{n-1}) &gt; 0\\)</span>, en déduire la décroissance de <span class=\"math inline\">\\((a_n)\\)</span>. En calculant <span class=\"math inline\">\\(f_n(\\frac 12)\\)</span> montrer que la suite <span class=\"math inline\">\\((a_n)\\)</span> est minorée par <span class=\"math inline\">\\(\\frac 12\\)</span>.</p></li>\n<li><p>Une fois établie la convergence de <span class=\"math inline\">\\((a_n)\\)</span> vers une limite <span class=\"math inline\">\\(\\ell\\)</span>, composer l’inégalité <span class=\"math inline\">\\(\\frac 12 \\leqslant \\ell &lt; a_n\\)</span> par <span class=\"math inline\">\\(f_n\\)</span>. Conclure.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(n \\geq 1\\)</span>.</p>\n"
 }

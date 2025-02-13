@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Valeur propre, vecteur propre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:07.231Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:56.112Z"
   },
   "contenu": [
     {
-      "id": "fc69130e-4e8c-4a7d-909d-d73be8cbf57a",
+      "id": "7e6a37a4-833d-43b7-93b7-f5e2c9f12bc4",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel de dimension $n$ et $u$ un endomorphisme\n  de $E$ ayant $n$ valeurs propres distinctes\n  $\\{\\lambda_{1},...,\\lambda_{n}\\}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "57769d3f-6d80-49d2-808b-8a6f656e0706",
+      "id": "9a9bebdf-b65d-467b-bb8a-3f3e4a00ac1b",
       "type": "question",
       "value": {
         "latex": "Montrer que l'ensemble $\\mathrm{Com}=\\{v\\in\\mathcal{L}(E,E)/ uv=vu\\}$ des\nendomorphismes de $E$ qui commutent avec $u$ est un espace vectoriel.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "ca394305-0f39-42fc-881f-8d0aebaf21da",
+      "id": "278120d4-b372-4f5a-8e0e-97878c231ce9",
       "type": "question",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "26b611fe-95cd-4186-be71-6a31776a279d",
+      "id": "28c880bc-cd0f-4763-b183-14ce8a6b4e06",
       "type": "question",
       "value": {
         "latex": "Soit $v$ un élément de $\\mathrm{Com}$. Montrer que $v$ préserve les espaces\n    propres de $u$ (c'est à dire que si $E_{\\lambda}$ est un espace\n    propre de $u$ associé à la valeur propre $\\lambda$, on a $\\forall\n    x\\in E_{\\lambda}, v(x)\\in E_{\\lambda}$).",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "0e5705cd-b109-46d9-951f-e5afeb85284b",
+      "id": "d82bf8e3-3e20-486e-876c-bb7354552d4f",
       "type": "question",
       "value": {
         "latex": "Donner la dimension des espaces propres de $u$ et montrer que si\n    $x$ est un vecteur propre de $u$ alors c'est aussi un vecteur propre\n    de $v$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "43ea27f8-e897-406d-bc0a-ee81a31fbbc3",
+      "id": "e1c6f94d-50d7-43b0-9eb5-433f6760d751",
       "type": "question",
       "value": {
         "latex": "A l'aide d'une base convenablement choisie, décrire tous les éléments\n    de $\\mathrm{Com}$, et montrer que $\\mathrm{Com}$ est de dimension $n$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "71dc8a09-339f-4122-b1a1-a3251721c4f0",
+      "id": "f13badc9-02d9-4ed7-8abd-da93c1c39ddf",
       "type": "reponse",
       "value": {
         "latex": "Soit $(v,w)\\in\\mathrm{Com}$, $(\\lambda,\\mu)\\in\\R^{2}$. $u(\\lambda v+\\mu\n    w)=\\lambda uv+\\mu uw=\\lambda vu+\\mu wu=(\\lambda v+\\mu w)u$. Donc\n    $\\mathrm{Com}$ est un sous espace vectoriel de $\\mathcal{L}(E,E)$.\nSoit $x\\in E_{\\lambda}$. $u(v(x))=uv(x)=vu(x)=v(\\lambda x)=\\lambda\n    v(x)$ donc $v(x)\\in E_{\\lambda}$.\nChaque valeur propre est de multiplicité 1 donc chaque espace propre\n    est de dimension 1. Ainsi, si $x\\in E_{\\lambda}\\setminus\\{0\\}$,\n    $E_{\\lambda}=\\R x$. Comme $v(x)\\in E_{\\lambda}$,\n    $\\exists\\alpha\\in\\R, v(x)=\\alpha x$. Donc $x$ est un vecteur propre\n    de $v$.\nSoit $(e_{1},...,e_{n})$ une base de vecteurs propres de $u$. C'est\n    aussi une base de vecteurs propres pour tout élément de $\\mathrm{Com}$. Tout\n    élément de $\\mathrm{Com}$ est donc représenté par une matrice diagonale dans\n    $(e_{1},...,e_{n})$. Réciproquement, tout endomorphisme représenté\n    dans cette base par une matrice diagonale commute avec $u$. Donc\n    $$\n    \\mathrm{Com}=\\{v\\in\\mathcal{L}(E,E), \\exists (\\alpha_{1},...,\\alpha_{n})\\in\\R^{n},\n    M_{v/(e_{1},...,e_{n})}=\n      \\begin{pmatrix}\n        \\alpha_{1}& & \\\\ &\\ddots& \\\\ & & \\alpha_{n}\n      \\end{pmatrix}\n      \\}$$\n    On en déduit que $\\mathrm{Com}$ est de dimension $n$.\n$u\\,u^{i}=u(u\\cdots u)=(u\\cdots u)u=u^{i}\\, u$. Donc $\\forall\n    i\\in\\{0,...,n-1\\}, u^{i}\\in\\mathrm{Com}$. Ainsi\n    $\\mathrm{Vect}(\\mathrm{id},u,...,u^{n-1})\\subset\\mathrm{Com}$.\nSoit $x_{k}\\in E_{\\lambda_{k}}\\setminus\\{0\\}$.\n    $u^{i}(x)=\\lambda_{k}^{i}\\,x$. Donc $(\\sum \\alpha_{i}u^{i})x\n    =\\sum\\alpha_{i}u^{i}(x) =(\\sum\\alpha_{i}\\lambda_{k}^{i})x=0$. Donc\n    $\\forall k\\in\\{1,...,n\\}, \\sum\\alpha_{i}\\lambda_{k}^{i}=0$.\nLe déterminent du système $(*)$ est non nul. Il s'agit donc d'un\n    système de Cramer~: il n'a qu'une solution,\n    $\\alpha_{0}=...=\\alpha_{n-1}=0$. La famille $(\\mathrm{id}, u, ..., u^{n-1})$\n    est donc libre.\nOn a $\\dim\\mathrm{Vect}(\\mathrm{id}, u, ..., u^{n-1})=n=\\dim\\mathrm{Com}$ et $\\mathrm{Vect}(\\mathrm{id}, u,\n    ..., u^{n-1})\\subset\\mathrm{Com}$ donc $\\mathrm{Vect}(\\mathrm{id}, u, ..., u^{n-1})=\\mathrm{Com}$",
         "html": "<p>Soit <span class=\"math inline\">\\((v,w)\\in\\mathrm{Com}\\)</span>, <span class=\"math inline\">\\((\\lambda,\\mu)\\in\\R^{2}\\)</span>. <span class=\"math inline\">\\(u(\\lambda v+\\mu\n    w)=\\lambda uv+\\mu uw=\\lambda vu+\\mu wu=(\\lambda v+\\mu w)u\\)</span>. Donc <span class=\"math inline\">\\(\\mathrm{Com}\\)</span> est un sous espace vectoriel de <span class=\"math inline\">\\(\\mathcal{L}(E,E)\\)</span>. Soit <span class=\"math inline\">\\(x\\in E_{\\lambda}\\)</span>. <span class=\"math inline\">\\(u(v(x))=uv(x)=vu(x)=v(\\lambda x)=\\lambda\n    v(x)\\)</span> donc <span class=\"math inline\">\\(v(x)\\in E_{\\lambda}\\)</span>. Chaque valeur propre est de multiplicité 1 donc chaque espace propre est de dimension 1. Ainsi, si <span class=\"math inline\">\\(x\\in E_{\\lambda}\\setminus\\{0\\}\\)</span>, <span class=\"math inline\">\\(E_{\\lambda}=\\R x\\)</span>. Comme <span class=\"math inline\">\\(v(x)\\in E_{\\lambda}\\)</span>, <span class=\"math inline\">\\(\\exists\\alpha\\in\\R, v(x)=\\alpha x\\)</span>. Donc <span class=\"math inline\">\\(x\\)</span> est un vecteur propre de <span class=\"math inline\">\\(v\\)</span>. Soit <span class=\"math inline\">\\((e_{1},...,e_{n})\\)</span> une base de vecteurs propres de <span class=\"math inline\">\\(u\\)</span>. C’est aussi une base de vecteurs propres pour tout élément de <span class=\"math inline\">\\(\\mathrm{Com}\\)</span>. Tout élément de <span class=\"math inline\">\\(\\mathrm{Com}\\)</span> est donc représenté par une matrice diagonale dans <span class=\"math inline\">\\((e_{1},...,e_{n})\\)</span>. Réciproquement, tout endomorphisme représenté dans cette base par une matrice diagonale commute avec <span class=\"math inline\">\\(u\\)</span>. Donc <span class=\"math display\">\\[\\mathrm{Com}=\\{v\\in\\mathcal{L}(E,E), \\exists (\\alpha_{1},...,\\alpha_{n})\\in\\R^{n},\n    M_{v/(e_{1},...,e_{n})}=\n      \\begin{pmatrix}\n        \\alpha_{1}&amp; &amp; \\\\ &amp;\\ddots&amp; \\\\ &amp; &amp; \\alpha_{n}\n      \\end{pmatrix}\n      \\}\\]</span> On en déduit que <span class=\"math inline\">\\(\\mathrm{Com}\\)</span> est de dimension <span class=\"math inline\">\\(n\\)</span>. <span class=\"math inline\">\\(u\\,u^{i}=u(u\\cdots u)=(u\\cdots u)u=u^{i}\\, u\\)</span>. Donc <span class=\"math inline\">\\(\\forall\n    i\\in\\{0,...,n-1\\}, u^{i}\\in\\mathrm{Com}\\)</span>. Ainsi <span class=\"math inline\">\\(\\mathrm{Vect}(\\mathrm{id},u,...,u^{n-1})\\subset\\mathrm{Com}\\)</span>. Soit <span class=\"math inline\">\\(x_{k}\\in E_{\\lambda_{k}}\\setminus\\{0\\}\\)</span>. <span class=\"math inline\">\\(u^{i}(x)=\\lambda_{k}^{i}\\,x\\)</span>. Donc <span class=\"math inline\">\\((\\sum \\alpha_{i}u^{i})x\n    =\\sum\\alpha_{i}u^{i}(x) =(\\sum\\alpha_{i}\\lambda_{k}^{i})x=0\\)</span>. Donc <span class=\"math inline\">\\(\\forall k\\in\\{1,...,n\\}, \\sum\\alpha_{i}\\lambda_{k}^{i}=0\\)</span>. Le déterminent du système <span class=\"math inline\">\\((*)\\)</span> est non nul. Il s’agit donc d’un système de Cramer : il n’a qu’une solution, <span class=\"math inline\">\\(\\alpha_{0}=...=\\alpha_{n-1}=0\\)</span>. La famille <span class=\"math inline\">\\((\\mathrm{id}, u, ..., u^{n-1})\\)</span> est donc libre. On a <span class=\"math inline\">\\(\\dim\\mathrm{Vect}(\\mathrm{id}, u, ..., u^{n-1})=n=\\dim\\mathrm{Com}\\)</span> et <span class=\"math inline\">\\(\\mathrm{Vect}(\\mathrm{id}, u,\n    ..., u^{n-1})\\subset\\mathrm{Com}\\)</span> donc <span class=\"math inline\">\\(\\mathrm{Vect}(\\mathrm{id}, u, ..., u^{n-1})=\\mathrm{Com}\\)</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel de dimension <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\"> ..."
 }

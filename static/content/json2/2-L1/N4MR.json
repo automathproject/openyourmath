@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Intégrale impropre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:50.318Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:37.579Z"
   },
   "contenu": [
     {
-      "id": "ae579015-744a-47a8-8969-aa4e18f40599",
+      "id": "f3db7492-77da-4f06-9135-5aa265cc2c44",
       "type": "description",
       "value": {
         "latex": "Soit $\\gamma$ la constante d'Euler. Montrer que~\\dots",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "60bed84f-5c74-4576-9be2-97366147862d",
+      "id": "66d9546a-2832-4e90-ad96-fee72fde63ca",
       "type": "question",
       "value": {
         "latex": "$ \\int_{t=0}^{+\\infty} e^{-t}\\ln t\\,d t = -\\gamma$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "29ec3aa5-1e67-4f9b-9612-b6fed09b219e",
+      "id": "fb0a990d-9feb-4a24-94ea-c7fdf434f9d6",
       "type": "reponse",
       "value": {
         "latex": "Intégrations par parties successives,\\par\n$$\\begin{align*}\n \\int_{t=0}^{+\\infty} e^{-t}\\ln t\\,d t\n&=  \\int_{t=0}^{+\\infty} e^{-t}\\frac{t^k}{k!}\\left(\\ln t - \\frac 11 - \\frac 12 - \\dots - \\frac 1k\\right)\\,d t\\cr\n&=  \\int_{t=0}^{+\\infty} e^{-t}\\frac{t^k}{k!}\\ln(t/k)\\,d t + \\left(\\ln k - \\frac 11 - \\frac 12 - \\dots - \\frac 1k\\right).\\cr\\end{align*}$$\n\nSoit $I_k =  \\int_{t=0}^{+\\infty} e^{-t}\\frac{t^k}{k!}\\ln(t/k)\\,d t$.\nOn pose $t=ku$~:\n$$\\begin{align*}I_k\n          &= \\frac{k^{k+1}}{k!} \\int_{u=0}^{+\\infty} (ue^{-u})^k\\ln u\\,d u\\cr\n          &= \\frac{k^{k+1}}{k!} \\int_{u=0}^{+\\infty}  d\\left(\\frac{(ue^{-u})^{k-1}}{k-1}\\right) \\frac{u^2e^{-u}\\ln u}{1-u}\\cr\n          &= -\\frac{k^{k+1}}{k!(k-1)} \\int_{u=0}^{+\\infty} (ue^{-u})^{k-1}  d\\left(\\frac{u^2e^{-u}\\ln u}{1-u}\\right).\\cr\\end{align*}$$\n\nComme $0\\le ue^{-u}\\le e^{-1}$, il reste $\\sqrt k$ au dénominateur multiplié par quelque chose de borné.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "630952d0-d443-4652-aa67-a17912e5bcfa",
+      "id": "343404f8-69e6-467b-a84a-54cff4668828",
       "type": "question",
       "value": {
         "latex": "$ \\int_{t=0}^1 \\frac{1-e^{-t}-e^{-1/t}}t\\,d t = \\gamma$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "ef2ada93-db76-48f5-8ebc-0b54d624a14b",
+      "id": "5f060274-5104-4215-9b7d-435ee894b912",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n \\int_{t=0}^1 \\frac{1-e^{-t}-e^{-1/t}}t\\,d t\n&=  \\int_{t=0}^1 \\frac{1-e^{-t}}t\\,d t -  \\int_{t=1}^{+\\infty}\\frac{e^{-t}}t\\,d t\\cr\n&= \\lim_{x\\to0^+}\\left(-\\ln x -  \\int_{t=x}^{+\\infty}\\frac{e^{-t}}t\\,d t\\right)\\cr\n&= \\lim_{x\\to0^+}\\left((e^{-x}-1)\\ln x -  \\int_{t=x}^{+\\infty}e^{-t}\\ln t\\,d t\\right)\\cr\n&= - \\int_{t=0}^{+\\infty} e^{-t}\\ln t\\,d t.\\cr\\end{align*}$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "cdc15693-7923-4cad-a0fc-0dbb14693cfc",
+      "id": "f2a2d6bb-fae5-492f-a838-6d655ef771d4",
       "type": "question",
       "value": {
         "latex": "$ \\int_{t=0}^1 \\left(\\frac 1t + \\frac 1{\\ln(1-t)}\\right)d t = \\gamma$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "76ec93e0-1e95-4225-a13b-462e81211633",
+      "id": "5901ebf7-ee1e-459f-8e68-76e9b0c6b5e8",
       "type": "reponse",
       "value": {
         "latex": "$ \\int_{t=x}^{+\\infty}\\frac{e^{-t}}t\\,d t = (t=-\\ln(1-u)) =\n \\int_{u=1-e^{-x}}^1 \\frac{-d u}{\\ln(1-u)}$.",
         "html": "<p><span class=\"math inline\">\\(\\int_{t=x}^{+\\infty}\\frac{e^{-t}}t\\,d t = (t=-\\ln(1-u)) =\n \\int_{u=1-e^{-x}}^1 \\frac{-d u}{\\ln(1-u)}\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\gamma\\)</span> la constante d’Euler. Montrer que …</p>\n"
 }

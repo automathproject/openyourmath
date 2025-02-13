@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Matrice et application linéaire",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:00.536Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:15.124Z"
   },
   "contenu": [
     {
-      "id": "5b762fd4-3202-423f-9edf-66c6e3d0e5ec",
+      "id": "dbf8cdd8-a175-47b3-a38e-1ce552e72cae",
       "type": "description",
       "value": {
         "latex": "Soit $\\R[X]$ l'ensemble de polynômes dans $\\R$ et soit $\\R_{n}[X]$ l'ensemble des polynômes de degré au plus $n$.\r\n\r\nOn considère l'application $\\Phi:\\R_{2}[X]\\longrightarrow\\R[X]$ définie par :\r\n\\begin{equation*}\r\n\\Phi(P)(X):=(2X+1)P(X)-(X^2-1)P'(X).\r\n\\end{equation*}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a6f6cbee-c553-4ca5-995c-13490f325d2a",
+      "id": "4b4221b5-f7bb-4119-9300-ec447c7a4def",
       "type": "question",
       "value": {
         "latex": "Montrer que l'application $\\Phi$ est un endomorphisme.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "c6a0920d-671d-4b4b-a11a-677ebab2691a",
+      "id": "8ea9ef36-ed25-4528-933d-491f61b3ae0d",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\lambda,\\,\\mu\\in\\R$ et $P,\\, Q\\in \\R[X]$. Comme la dérivation est une application linéaire on a bien :\r\n\\begin{equation*}\r\n\\Phi(\\lambda\\,P+\\mu\\,Q)=\\lambda\\Phi(P)+\\mu\\Phi(Q).\r\n\\end{equation*}\r\n$\\Phi$ est une application linéaire. Examinons l'image des vecteurs de base $(1,X,X^2)$ par $\\Phi$ :\r\n\\begin{equation*}\r\n\\Phi(1)(X)=2X+1,\\qquad \\Phi(X)(X)=X^2+X+1,\\qquad \\Phi(X^2)(X)=X^2+2X.\r\n\\end{equation*}\r\ndonc $\\Phi(X^{j})\\in\\R_{2}[X]$ pour $j\\in\\{0,1,2\\}$. C'est bien un endomorphisme.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "daa900c4-43bd-4d37-92f1-2bc27a73f0b0",
+      "id": "d8eadf30-cd75-482e-87f4-b2a230d619a9",
       "type": "question",
       "value": {
         "latex": "Montrer que la matrice $A$ de l'application $\\Phi$ dans la base $(1,X,X^2)$ s'écrit :\r\n\\begin{equation*}\r\nA=\\begin{pmatrix}\r\n1&1&0\\\\\r\n2&1&2\\\\\r\n0&1&1\r\n\\end{pmatrix}.\r\n\\end{equation*}",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "40ffd347-63a4-4463-94df-c1ddefd5ed4d",
+      "id": "8caae5d8-f6f2-4456-bcf7-ee0a2909398f",
       "type": "reponse",
       "value": {
         "latex": "En appliquant la question précédente, on a bien :\r\n\\begin{equation*}\r\n[\\Phi]_{\\mathcal{B}}^{\\mathcal{B}}=\\left[[\\Phi(1)]_{\\mathcal{B}}\\,|\\,[\\Phi(X)]_{\\mathcal{B}}\\,|\\,[\\Phi(X^2)]_{\\mathcal{B}}\\right]=A\r\n\\end{equation*}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "80e13732-8408-4a55-a5b3-f2dd72e24b1e",
+      "id": "4aa66b18-2d30-4dae-82ae-aff728d1043a",
       "type": "question",
       "value": {
         "latex": "Déterminer le rang de $\\Phi$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "6982fe9d-f45b-4d65-af30-807da91b3b67",
+      "id": "5625b365-79a5-45fe-b211-693303a740fe",
       "type": "reponse",
       "value": {
         "latex": "$rg(A)=rg(\\Phi)$. On applique une méthode de Gauss à la matrice $A$:\r\n\\begin{equation*}\r\nrg(A)=rg\\begin{pmatrix}\r\n1&1&0\\\\\r\n2&1&2\\\\\r\n0&1&1\r\n\\end{pmatrix}=rg\\begin{pmatrix}\r\n1&1&0\\\\\r\n0&-1&2\\\\\r\n0&1&1\r\n\\end{pmatrix}=rg\\begin{pmatrix}\r\n1&1&0\\\\\r\n0&-1&2\\\\\r\n0&0&3\r\n\\end{pmatrix}=3\r\n\\end{equation*}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "4acf1292-1275-4472-ae42-3d0a0348baeb",
+      "id": "fb39621a-007b-4d42-8e7a-91f5982b564c",
       "type": "question",
       "value": {
         "latex": "En déduire que $\\Phi$ est une application inversible.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "8c33c4c2-e198-40af-8504-8d910cdf7bba",
+      "id": "befb914a-b81e-4534-b32a-cfb9965b14e0",
       "type": "reponse",
       "value": {
         "latex": "Comme $rg\\,A=3=dim\\R_{2}[X]$, l'application $\\Phi$ est surjective. La matrice $A$ est carrée donc en appliquant le théorème du rang, elle est aussi injective donc bijective.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "b3fef7f8-51eb-45fc-a8c2-479157043d52",
+      "id": "4c3da358-6459-432a-bf19-ad53b4137aaa",
       "type": "question",
       "value": {
         "latex": "Déterminer une base du noyau de l'application $\\Phi-Id$, où $Id$ désigne l'application identité.",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "6d91cc9f-7d0b-42a0-ba0d-e0d0d62bb92c",
+      "id": "d5b3826f-a418-40ec-a7e8-0394aa380558",
       "type": "reponse",
       "value": {
         "latex": "Le noyau est donnée par :\r\n\r\n$$\\begin{align*}\r\nKer\\, (A-I_{3})&=\\left\\{(x,y,z)\\in\\R^3,\\ \\text{tels que}\\, (A-I_{3})^t(x,y,z)=0\\right\\}.\r\n\\end{align*}$$\r\n\\begin{equation*}\r\n(A-I_{3})^t(x,y,z)=0\\Leftrightarrow y=0,\\quad 2x=-2z.\r\n\\end{equation*}\r\nAinsi $Ker\\, (A-I_{3})=\\left\\{(x,0,-x),\\, x\\in\\R\\right\\}=vect\\left((1,0,-1)\\right)$. $(-1,0,1)$ est une base de $Ker\\, (A-I_{3})$. Une base de $Ker\\,(\\Phi-I_{d})$ est donc : $X^2-1$.",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "93be78ff-745c-4919-a0c7-4065b7b58e95",
+      "id": "736ab94f-25bd-45a8-a919-25a918410b3f",
       "type": "question",
       "value": {
         "latex": "Montrer que la dimension de l'image de $\\Phi-Id$ est de dimension $2$. Déterminer une base de l'image.",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "76062a21-9fd3-453b-a942-893f5b864295",
+      "id": "2f420dbb-dec1-42b5-ae1f-70cc1d534c95",
       "type": "reponse",
       "value": {
         "latex": "Par le théorème du rang : $dim\\ Im(\\Phi-Id)=dim \\R_{2}[X]-dim\\ Ker\\,(\\Phi-Id)=3-1=2$. Il reste à déterminer une base de l'image. \r\n$$\\begin{align*}\r\nIm(A-I_{3})&=\\left\\{(A-I_{3})^t(x,y,z),\\quad (x,y,z)\\in\\R^3\\right\\}=\\left\\{(y,2(x+z),y),\\quad (x,y,z)\\in\\R^3\\right\\}\\\\\r\n&=\\left\\{(y,x,y),\\quad (x,y)\\in\\R^2\\right\\}=\\left\\{y(1,0,1)+x(0,1,0),\\quad (x,y)\\in\\R^2\\right\\}\\\\\r\n&=vect\\left((1,0,1),\\, (0,1,0)\\right).\r\n\\end{align*}$$\r\nLa famille $((1,0,1),\\, (0,1,0))$ est une famille génératrice de l'image qui est de dimension $2$. C'est donc une base. On en déduit qu'une base de $Ker\\,(\\Phi-Id)$ est $((X^2+1),X)$.",
@@ -120,7 +120,7 @@
       }
     },
     {
-      "id": "f801b476-a7dc-4652-b74f-769c79aa0697",
+      "id": "784de51b-aa58-41b5-9959-45bd21885ad5",
       "type": "question",
       "value": {
         "latex": "Déterminer l'ensemble des polynômes de $\\R[X]$ vérifiant l'identité : $2X\\,P=(X^2-1)\\,P'$.",
@@ -128,12 +128,13 @@
       }
     },
     {
-      "id": "bfe7e32b-1fb0-4dbe-a8e2-18d67b8a4018",
+      "id": "ad749e00-d6da-4c72-a877-ab1143630d1f",
       "type": "reponse",
       "value": {
         "latex": "On a l'égalité ensembliste :\r\n$$\\begin{align*}\r\n\\left\\{P\\in\\R_{2}[X],\\, \\text{tels que}\\ 2X\\,P=(X^2-1)\\,P'\\right\\}&=\\left\\{P\\in\\R_{2}[X],\\ \\text{tels que}\\, (\\Phi-Id)P=0\\right\\}\\\\\r\n&=Ker\\,(\\Phi-Id).\r\n\\end{align*}$$\r\nOr une base de $Ker\\, (\\Phi-Id)$ est $X^2-1$. Ainsi on obtient :\r\n\\begin{equation*}\r\n\\left\\{P\\in\\R_{2}[X],\\, \\text{tels que}\\ 2X\\,P=(X^2-1)\\,P'\\right\\}=\\R(X^2-1).\r\n\\end{equation*}",
         "html": "<p>On a l’égalité ensembliste : <span class=\"math display\">\\[\\begin{align*}\n\\left\\{P\\in\\R_{2}[X],\\, \\text{tels que}\\ 2X\\,P=(X^2-1)\\,P&#39;\\right\\}&amp;=\\left\\{P\\in\\R_{2}[X],\\ \\text{tels que}\\, (\\Phi-Id)P=0\\right\\}\\\\\n&amp;=Ker\\,(\\Phi-Id).\n\\end{align*}\\]</span> Or une base de <span class=\"math inline\">\\(Ker\\, (\\Phi-Id)\\)</span> est <span class=\"math inline\">\\(X^2-1\\)</span>. Ainsi on obtient : <span class=\"math display\">\\[\\left\\{P\\in\\R_{2}[X],\\, \\text{tels que}\\ 2X\\,P=(X^2-1)\\,P&#39;\\right\\}=\\R(X^2-1).\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\R[X]\\)</span> l’ensemble de polynômes dans <span class=\"math inline\">\\(\\R\\)</span> et soit <span class=\"math inli ..."
 }

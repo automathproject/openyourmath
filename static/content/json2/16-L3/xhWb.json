@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Fonction holomorphe",
     "sousChapitre": "Fonction holomorphe",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:09.706Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:54.514Z"
   },
   "contenu": [
     {
-      "id": "404c1dfc-ca4f-4ea3-a47c-e6cee23dfd7f",
+      "id": "1f5f651b-efbf-4208-9f4d-38e8fa7d5fd6",
       "type": "description",
       "value": {
         "latex": "On considère la fonction $f : \\C\\to \\C, z\\mapsto \\sqrt{|xy|}$, où l'on a noté $z=x+iy$ la forme algébrique de $z$. Montrer qu'elle vérifie les conditions de Cauchy-Riemann en l'origine, mais qu'elle n'est pas $\\C$-dérivable en l'origine.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "d5f974bd-1447-473b-ba38-cc8b47771e58",
+      "id": "45e0f120-8f1c-4af6-8fa0-06f7bccc772b",
       "type": "reponse",
       "value": {
         "latex": "On a \\(\\frac{\\partial v}{\\partial x}\\equiv 0\\) et \\(\\frac{\\partial v}{\\partial y}\\equiv 0\\) sur \\(\\R^2\\).\r\nAu point \\((0,0)\\in \\R^2\\) on a \r\n\\[ \\lim_{x\\to 0}\\frac{u(x,0)-u(0,0)}{x}\\lim_{x\\to 0}\\frac{0-0}{x}=0 \\]\r\net\r\n\\[ \\lim_{y\\to 0}\\frac{u(0,y)-u(0,0)}{x}\\lim_{x\\to 0}\\frac{0-0}{x}=0. \\]\r\nDonc \\(u\\) est dérivable par rapport à la première et à la seconde variable en \\((0,0)\\) et de plus \\(\\frac{\\partial u}{\\partial x}(0,0)=0\\) et \\(\\frac{\\partial u}{\\partial y}(0,0)=0\\).\r\nEn particulier \\(f\\) vérifie les équations de Cauchy-Riemann.\nLa fonction \\(f\\) n'est pas \\(\\C\\)-dérivable en \\(0\\) car pour \\(h\\in \\R_+^*\\) on a \r\n\\[ \\frac{f(h)-f(0)}{h}=\\frac{0-0}{h}=0 \\]\r\net\r\n\\[ \\frac{f(h+ih)-f(0)}{h+ih}=\\frac{\\sqrt{|h^2|}}{h+ih}=\\frac{h}{h+ih}=\\frac{1}{1+i}.\\]\r\nLes deux quantités n'ont pas la même limite lorsque $h\\to 0$.\nCe n'est pas une contradiction avec le théorème de Cauchy-Riemann car la fonction \\(u\\) (et donc la fonction \\(f\\)) n'est pas différentiable en \\((0,0)\\). En effet si \\(u\\) était différentiable en \\((0,0)\\) on aurait \r\n$$\\begin{align*}\r\nu(s,t)\r\n& = u(0,0)+du_{(0,0)}(s,t)+o(\\|(s,t)\\|)\\\\\r\n& = \\frac{\\partial u}{\\partial x}(0,0)+t\\frac{\\partial u}{\\partial x}(0,0)+o(\\|(s,t)\\|) \\\\\r\n& = o(\\|(s,t)\\|).\r\n\\end{align*}$$\r\nOr \\(u(s,s)=|s|\\) qui n'est pas un \\(o(\\|(s,s)\\|)\\) d'où une contradiction.",
         "html": "<p>On a <span class=\"math inline\">\\(\\frac{\\partial v}{\\partial x}\\equiv 0\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial v}{\\partial y}\\equiv 0\\)</span> sur <span class=\"math inline\">\\(\\R^2\\)</span>. Au point <span class=\"math inline\">\\((0,0)\\in \\R^2\\)</span> on a <span class=\"math display\">\\[\\lim_{x\\to 0}\\frac{u(x,0)-u(0,0)}{x}\\lim_{x\\to 0}\\frac{0-0}{x}=0\\]</span> et <span class=\"math display\">\\[\\lim_{y\\to 0}\\frac{u(0,y)-u(0,0)}{x}\\lim_{x\\to 0}\\frac{0-0}{x}=0.\\]</span> Donc <span class=\"math inline\">\\(u\\)</span> est dérivable par rapport à la première et à la seconde variable en <span class=\"math inline\">\\((0,0)\\)</span> et de plus <span class=\"math inline\">\\(\\frac{\\partial u}{\\partial x}(0,0)=0\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial u}{\\partial y}(0,0)=0\\)</span>. En particulier <span class=\"math inline\">\\(f\\)</span> vérifie les équations de Cauchy-Riemann. La fonction <span class=\"math inline\">\\(f\\)</span> n’est pas <span class=\"math inline\">\\(\\C\\)</span>-dérivable en <span class=\"math inline\">\\(0\\)</span> car pour <span class=\"math inline\">\\(h\\in \\R_+^*\\)</span> on a <span class=\"math display\">\\[\\frac{f(h)-f(0)}{h}=\\frac{0-0}{h}=0\\]</span> et <span class=\"math display\">\\[\\frac{f(h+ih)-f(0)}{h+ih}=\\frac{\\sqrt{|h^2|}}{h+ih}=\\frac{h}{h+ih}=\\frac{1}{1+i}.\\]</span> Les deux quantités n’ont pas la même limite lorsque <span class=\"math inline\">\\(h\\to 0\\)</span>. Ce n’est pas une contradiction avec le théorème de Cauchy-Riemann car la fonction <span class=\"math inline\">\\(u\\)</span> (et donc la fonction <span class=\"math inline\">\\(f\\)</span>) n’est pas différentiable en <span class=\"math inline\">\\((0,0)\\)</span>. En effet si <span class=\"math inline\">\\(u\\)</span> était différentiable en <span class=\"math inline\">\\((0,0)\\)</span> on aurait <span class=\"math display\">\\[\\begin{align*}\nu(s,t)\n&amp; = u(0,0)+du_{(0,0)}(s,t)+o(\\|(s,t)\\|)\\\\\n&amp; = \\frac{\\partial u}{\\partial x}(0,0)+t\\frac{\\partial u}{\\partial x}(0,0)+o(\\|(s,t)\\|) \\\\\n&amp; = o(\\|(s,t)\\|).\n\\end{align*}\\]</span> Or <span class=\"math inline\">\\(u(s,s)=|s|\\)</span> qui n’est pas un <span class=\"math inline\">\\(o(\\|(s,s)\\|)\\)</span> d’où une contradiction.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On considère la fonction <span class=\"math inline\">\\(f : \\C\\to \\C, z\\mapsto \\sqrt{|xy|}\\)</span>, où l’on a noté <span class=\"math inline\"> ..."
 }

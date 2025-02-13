@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Application linéaire",
     "sousChapitre": "Image et noyau, théorème du rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:25.618Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:42.059Z"
   },
   "contenu": [
     {
-      "id": "c3179b0a-7ff7-4b22-aa50-c2022244a381",
+      "id": "ed49e2c2-c39f-4c37-8916-a06526edef1c",
       "type": "description",
       "value": {
         "latex": "Soient $E$ un espace vectoriel et $f$ un endomorphisme de $E$. Pour $k\\in\\Nn$, on pose $N_k= \\text{Ker}(f^k)$ et $I_k=\\text{Im}(f^k)$ puis $N=\\displaystyle\\bigcup_{k\\in\\Nn}N_k$ et $I=\\displaystyle\\bigcap_{k\\in\\Nn}I_k$. ($N$ est le nilespace de $f$ et $I$ le c\\oe ur de $f$)",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c0d90ca0-49a0-4a82-a15b-2729972bff31",
+      "id": "0f8ae023-9fd6-4312-80a9-44d7d20bc42e",
       "type": "question",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "dbaa053e-1ac2-4bdf-ab7e-5d12c3b30f81",
+      "id": "ae51abfc-6d6f-449e-afa9-be52b4ccdd22",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "ea0bd129-84c7-4801-b37d-6b77929f9b70",
+      "id": "229ed6ac-a4a0-43cb-8ba8-a041b3664780",
       "type": "question",
       "value": {
         "latex": "Montrer que les suites $(N_k)_{k\\in\\Nn}$ et $(I_k)_{k\\in\\Nn}$ sont respectivement croissante et décroissante pour l'inclusion.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "fa2d7913-682c-4384-9e1b-d2c38ebcd7bd",
+      "id": "5230f568-30f7-41de-80c1-3a7efb12a03a",
       "type": "reponse",
       "value": {
         "latex": "Soient $k\\in\\Nn$ et $x\\in E$. $x\\in N_k\\Rightarrow f^k(x)=0\\Rightarrow f(f^k(x)) = 0\\Rightarrow x\\in N_{k+1}$. \n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $N_k\\subset N_{k+1}$.\n}\n\\end{center}\n\nSoient $k\\in\\Nn$ et $y\\in I_{k+1}\\Rightarrow\\exists x\\in E/\\;y = f^{k+1}(x)\\Rightarrow\\exists x\\in E/\\;y = f^k(f(x))\\Rightarrow y\\in I_k$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $I_{k+1}\\subset I_{k}$.\n}\n\\end{center}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "4e2de451-dea0-463a-bcb9-277d7b019c46",
+      "id": "9dba9268-3089-4e52-aa0e-65b81bdd54f1",
       "type": "question",
       "value": {
         "latex": "Montrer que $N$ et $I$ sont stables par $f$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "2ca036cf-169a-4f76-ab63-0a3e10ed8511",
+      "id": "96708c5a-d632-4415-9187-35439238fa61",
       "type": "reponse",
       "value": {
         "latex": "Soit $x\\in N$. Il existe un entier $k$ tel que $x$ est dans $N_k$ ou encore tel que $f^k(x)=0$. Mais alors $f^k(f(x)) = f(f^k(x))=0$ et $f(x)$ est dans $N_k$ et donc dans $N$. Ainsi, $N$ est stable par $f$.\n\nSoit $y\\in I$. Alors, pour tout naturel $k$, il existe $x_k\\in E$ tel que $y=f^k(x_k)$. Mais alors, pour tout entier $k$, $f(y)=f(f^k(x_k))=f^k(f(x))$ est dans $I_k$, et donc $f(y)$ est dans $I$. $I$ est stable par $f$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "d2c41b0e-2762-4b19-a55a-eecc557e0267",
+      "id": "184d13cd-2531-4ea6-a4bd-9e96971866b9",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\forall k\\in\\Nn$, $(N_k =N_{k+1})\\Rightarrow(N_{k+1}=N_{k+2})$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "7a017e74-d4e1-457a-a0a8-76b4b4844b00",
+      "id": "9f13417b-b6da-4d50-8925-644ae1043088",
       "type": "reponse",
       "value": {
         "latex": "Si $N_k=N_{k+1}$, on a déjà $N_{k+1}\\subset N_{k+2}$. Montrons que $N_{k+2}\\subset N_{k+1}$.\n\nSoit $x\\in N_{k+2}$. Alors $f^{k+1}(f(x))=0$ et donc $f(x)\\in N_{k+1}= N_k$. Donc, $f^k(f(x))=0$ ou encore $x$ est dans $N_{k+1}$. On a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\forall k\\in\\Nn$, $[(N_k = N_{k+1})\\Rightarrow (N_{k+1}= N_{k+2})]$.\n}\n\\end{center}",
         "html": "<p>Si <span class=\"math inline\">\\(N_k=N_{k+1}\\)</span>, on a déjà <span class=\"math inline\">\\(N_{k+1}\\subset N_{k+2}\\)</span>. Montrons que <span class=\"math inline\">\\(N_{k+2}\\subset N_{k+1}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in N_{k+2}\\)</span>. Alors <span class=\"math inline\">\\(f^{k+1}(f(x))=0\\)</span> et donc <span class=\"math inline\">\\(f(x)\\in N_{k+1}= N_k\\)</span>. Donc, <span class=\"math inline\">\\(f^k(f(x))=0\\)</span> ou encore <span class=\"math inline\">\\(x\\)</span> est dans <span class=\"math inline\">\\(N_{k+1}\\)</span>. On a montré que</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(E\\)</span> un espace vectoriel et <span class=\"math inline\">\\(f\\)</span> un endomorphisme de <span class=\"math i ..."
 }

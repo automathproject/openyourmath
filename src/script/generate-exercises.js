@@ -1,7 +1,9 @@
+// src/script/generate-exercises.js
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { generatePreview } from './PreviewUtils.js';
 
 // Obtenir le chemin du répertoire courant
 const __filename = fileURLToPath(import.meta.url);
@@ -18,58 +20,7 @@ console.log('Project root:', PROJECT_ROOT);
 console.log('Input directory:', INPUT_DIR);
 console.log('Output file:', OUTPUT_FILE);
 
-function getPreview(content, maxLength = 150) {
-  if (!content) return '';
-  if (content.length <= maxLength) return content;
-  
-  const truncated = content.slice(0, maxLength);
-  const lastDoubleDollar = truncated.lastIndexOf('$$');
-  const lastSingleDollar = truncated.lastIndexOf('$');
-  const lastBracketOpen = truncated.lastIndexOf('\\[');
-  const lastParenOpen = truncated.lastIndexOf('\\(');
-  const lastBracketClose = truncated.lastIndexOf('\\]');
-  const lastParenClose = truncated.lastIndexOf('\\)');
-  
-  let safeEnd = maxLength;
-  
-  if (lastDoubleDollar !== -1) {
-    const doubleDollarMatches = truncated.match(/\$\$/g) || [];
-    if (doubleDollarMatches.length % 2 !== 0) {
-      safeEnd = Math.min(safeEnd, lastDoubleDollar);
-    }
-  }
-  
-  if (lastSingleDollar !== -1) {
-    const contentWithoutDoubleDollar = truncated.replace(/\$\$/g, '##');
-    const singleDollarCount = (contentWithoutDoubleDollar.match(/\$/g) || []).length;
-    if (singleDollarCount % 2 !== 0) {
-      safeEnd = Math.min(safeEnd, lastSingleDollar);
-    }
-  }
-  
-  if (lastBracketOpen !== -1 && (lastBracketClose === -1 || lastBracketClose < lastBracketOpen)) {
-    safeEnd = Math.min(safeEnd, lastBracketOpen);
-  }
-  
-  if (lastParenOpen !== -1 && (lastParenClose === -1 || lastParenClose < lastParenOpen)) {
-    safeEnd = Math.min(safeEnd, lastParenOpen);
-  }
-  
-  return content.slice(0, safeEnd) + ' ...';
-}
 
-function generatePreview(exercise) {
-  const firstContent = exercise.contenu.find(item => 
-    (item.type === 'description' || item.type === 'question') && 
-    item.value.html?.trim()
-  );
-  
-  if (firstContent) {
-    return getPreview(firstContent.value.html);
-  }
-  
-  return '';
-}
 
 async function getAllJsonFiles(dir) {
   try {

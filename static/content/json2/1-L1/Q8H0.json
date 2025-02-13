@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Application linéaire",
     "sousChapitre": "Image et noyau, théorème du rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:40.060Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:52.764Z"
   },
   "contenu": [
     {
-      "id": "990224a2-c06a-478c-831b-9795537e236c",
+      "id": "043b51c8-5f5d-4166-b2be-19dd1dcfb752",
       "type": "description",
       "value": {
         "latex": "Soit $E=\\Rr_n[X]$, le $\\Rr$-espace vectoriel des polynômes à coefficients réels de degré inférieur ou égal à $n$ ($n$\nentier naturel donné). Soit $\\varphi$ l'application définie par~:~$\\forall P\\in E,\\;\\varphi(P)=P(X+1)-P(X)$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "96eaab19-5471-4c59-9258-1b7926475f5d",
+      "id": "07376084-4998-4d5c-8591-f534edacd3eb",
       "type": "question",
       "value": {
         "latex": "Vérifier que $\\varphi$ est un endomorphisme de $E$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "b53f61ea-5fa2-416c-adea-c385972c23cf",
+      "id": "ef2781e6-e9d4-47be-b923-5edcb96c924e",
       "type": "reponse",
       "value": {
         "latex": "Si $P$ est un polynôme de degré inférieur ou égal à $n$, alors $P(X+1)-P(X)$ est encore un polynôme de degré\ninférieur ou égal à $n$. Par suite, $\\varphi$ est bien une application de $E$ dans lui-même.\nSoient alors $(P,Q)\\in E^2$ et $(\\lambda,\\mu)\\in\\Rr^2$.\n\n$$\\begin{align*}\n\\varphi(\\lambda P+\\mu Q)&=(\\lambda P+\\mu Q)(X+1)-(\\lambda P+\\mu\nQ)(X)=\\lambda(P(X+1)-P(X))+\\mu(Q(X+1)-Q(X))\\\\\n &=\\lambda\\varphi(P)+\\mu\\varphi(Q).\n\\end{align*}$$\n$\\varphi$ est linéaire de $E$ vers lui-même et donc un endomorphisme de $E$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "a30eb73b-0b01-4a76-8272-5fed64d2739e",
+      "id": "5bcd2c31-e7a1-43f4-a67c-78547a2058ed",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\mbox{Ker}\\varphi$ et $\\mbox{Im}\\varphi$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "bf7b7028-16ab-4726-b5ec-9e372dd8c345",
+      "id": "5abd16ed-0987-4692-be20-7604ae52572f",
       "type": "reponse",
       "value": {
         "latex": "Soit $P\\in E$.\n$P\\in\\mbox{Ker }\\varphi\\Leftrightarrow\\forall x\\in\\Rr,\\;P(x+1)=P(x)$. Montrons alors que $P$ est constant.\nSoit $Q=P-P(0)$. $Q$ est un polynôme de degré inférieur ou égal à $n$ s'annulant en les entiers naturels 0, 1, 2,...\n(car $P(0)=P(1)=P(2)=...$) et a ainsi une infinité de racines deux à deux distinctes. $Q$ est donc le polynôme nul ou\nencore $\\forall x\\in\\Rr,\\;P(x)=P(0)$. Par suite, $P$ est un polynôme constant.\nRéciproquement, les polynômes constants sont clairement dans $\\mbox{Ker }\\varphi$ et donc\n\n$$\\mbox{Ker }\\varphi=\\{\\mbox{polynômes constants}\\}=\\Rr_0[X].$$\nPour déterminer $\\mbox{Im }\\varphi$, on note tout d'abord que si $P$ est un polynôme de degré inférieur ou égal à $n$,\nalors $\\varphi(P)=P(X+1)-P(X)$ est un polynôme de degré inférieur ou égal à $n-1$. En effet, si\n$P=a_nX^n+\\sum_{k=0}^{n-1}a_kX^k$ (avec $a_n$ quelconque, éventuellement nul) alors\n\n$$\\begin{align*}\n\\varphi(P)&=a_n((X+1)^n-X^n)+\\mbox{termes de degré inférieur on égal à}\\;n-1\\\\\n &=a_n(X^n-X^n)+\\mbox{termes de degré\ninférieur on égal à}\\;n-1\\\\\n &=\\mbox{termes de degré inférieur on égal à}\\;n-1.\n\\end{align*}$$\nDonc, $\\mbox{Im }(\\varphi)\\subset\\Rr_{n-1}[X]$. Mais d'après le théorème du rang,\n\n$$\\mbox{dim }\\mbox{Im }(\\varphi)=\\mbox{dim }\\Rr_n[X]-\\mbox{dim }\\mbox{Ker }(\\varphi)=(n+1)-1=n=\\mbox{dim }\\Rr_{n-1}[X]\n<+\\infty,$$\net donc $\\mbox{Im }\\varphi=\\Rr_{n-1}[X]$. (On peut noter que le problème difficile~\\og~soit $Q\\in\\Rr_{n-1}[X]$.\nExiste-t-il $P\\in\\Rr_n[X]$ tel que $P(X+1)-P(X)=Q$~?~\\fg~a été résolu simplement par le théorème du rang.)",
         "html": "<p>Soit <span class=\"math inline\">\\(P\\in E\\)</span>. <span class=\"math inline\">\\(P\\in\\mbox{Ker }\\varphi\\Leftrightarrow\\forall x\\in\\Rr,\\;P(x+1)=P(x)\\)</span>. Montrons alors que <span class=\"math inline\">\\(P\\)</span> est constant. Soit <span class=\"math inline\">\\(Q=P-P(0)\\)</span>. <span class=\"math inline\">\\(Q\\)</span> est un polynôme de degré inférieur ou égal à <span class=\"math inline\">\\(n\\)</span> s’annulant en les entiers naturels 0, 1, 2,... (car <span class=\"math inline\">\\(P(0)=P(1)=P(2)=...\\)</span>) et a ainsi une infinité de racines deux à deux distinctes. <span class=\"math inline\">\\(Q\\)</span> est donc le polynôme nul ou encore <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;P(x)=P(0)\\)</span>. Par suite, <span class=\"math inline\">\\(P\\)</span> est un polynôme constant. Réciproquement, les polynômes constants sont clairement dans <span class=\"math inline\">\\(\\mbox{Ker }\\varphi\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\mbox{Ker }\\varphi=\\{\\mbox{polynômes constants}\\}=\\Rr_0[X].\\]</span> Pour déterminer <span class=\"math inline\">\\(\\mbox{Im }\\varphi\\)</span>, on note tout d’abord que si <span class=\"math inline\">\\(P\\)</span> est un polynôme de degré inférieur ou égal à <span class=\"math inline\">\\(n\\)</span>, alors <span class=\"math inline\">\\(\\varphi(P)=P(X+1)-P(X)\\)</span> est un polynôme de degré inférieur ou égal à <span class=\"math inline\">\\(n-1\\)</span>. En effet, si <span class=\"math inline\">\\(P=a_nX^n+\\sum_{k=0}^{n-1}a_kX^k\\)</span> (avec <span class=\"math inline\">\\(a_n\\)</span> quelconque, éventuellement nul) alors</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\varphi(P)&amp;=a_n((X+1)^n-X^n)+\\mbox{termes de degré inférieur on égal à}\\;n-1\\\\\n &amp;=a_n(X^n-X^n)+\\mbox{termes de degré\ninférieur on égal à}\\;n-1\\\\\n &amp;=\\mbox{termes de degré inférieur on égal à}\\;n-1.\n\\end{align*}\\]</span> Donc, <span class=\"math inline\">\\(\\mbox{Im }(\\varphi)\\subset\\Rr_{n-1}[X]\\)</span>. Mais d’après le théorème du rang,</p>\n<p><span class=\"math display\">\\[\\mbox{dim }\\mbox{Im }(\\varphi)=\\mbox{dim }\\Rr_n[X]-\\mbox{dim }\\mbox{Ker }(\\varphi)=(n+1)-1=n=\\mbox{dim }\\Rr_{n-1}[X]\n&lt;+\\infty,\\]</span> et donc <span class=\"math inline\">\\(\\mbox{Im }\\varphi=\\Rr_{n-1}[X]\\)</span>. (On peut noter que le problème difficile  soit <span class=\"math inline\">\\(Q\\in\\Rr_{n-1}[X]\\)</span>. Existe-t-il <span class=\"math inline\">\\(P\\in\\Rr_n[X]\\)</span> tel que <span class=\"math inline\">\\(P(X+1)-P(X)=Q\\)</span> ?  a été résolu simplement par le théorème du rang.)</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E=\\Rr_n[X]\\)</span>, le <span class=\"math inline\">\\(\\Rr\\)</span>-espace vectoriel des polynômes à coefficients rée ..."
 }

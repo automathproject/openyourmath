@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Equation différentielle",
     "sousChapitre": "Equations différentielles non linéaires",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:12.012Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:05.827Z"
   },
   "contenu": [
     {
-      "id": "b5eba9a0-98a6-417e-ac4b-69e372da272f",
+      "id": "40dfdf88-cc23-4bca-91b8-5f4c883f35c0",
       "type": "description",
       "value": {
         "latex": "On définit une suite de fonctions sur $[0,1]$ de la manière suivante~:\n$f_0$ est la fonction constante $1$ et pour tout $x\\in{[0,1]}$ et $n\\in\\N$,\n$f_{n+1}(x) = 1 +  \\int_{t=0}^x f_n(t-t^2)\\,d t$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c59bb2ac-65b7-4be4-a353-6c404e1c3d3d",
+      "id": "4b0e6dad-277a-40f8-8061-6a332954a7b4",
       "type": "question",
       "value": {
         "latex": "En étudiant $f_{n+1}-f_n$ montrer que la suite $(f_n)$ converge\n    uniformément sur~$[0,1]$. On note $f$ sa limite.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "33d34c4b-d036-49d5-9e0f-bb36d17cb322",
+      "id": "074e070b-480b-4491-8e00-5e7392442821",
       "type": "reponse",
       "value": {
         "latex": "$f_{n+1}(x) - f_n(x) =  \\int_{t=0}^x (f_n-f_{n-1})(t-t^2)\\,d t$\n    donc par récurrence $f_{n+1}-f_n \\ge 0$.\n\n    De plus $f_{n+1}(x) - f_n(x) \\le x\\|f_n-f_{n-1}\\|_\\infty$\n    d'où $f_{n+2}(x) - f_{n+1}(x) \\le \\|f_n-f_{n-1}\\|_\\infty \\int_{t=0}^x(t-t^2)\\,d t\n                                  \\le \\frac16\\|f_n-f_{n-1}\\|_\\infty$\n    et $\\|f_{n+2} - f_{n+1}\\|_\\infty \\le \\frac16\\|f_n-f_{n-1}\\|_\\infty$\n    ce qui prouve que la série télescopique $\\sum(f_{n+1}-f_n)$ est normalement\n    convergente.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "c4708b42-65ea-415e-9b67-c1aa392a4b39",
+      "id": "57bb9c98-ae0e-42c4-baa7-0d7d7a69d729",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est de classe $\\mathcal{C}^\\infty$ sur $[0,1]$.\n    Que valent $f'(0)$ et $f'(1)$~?",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "1d9f2596-f003-4862-888a-9cb101b7e72a",
+      "id": "873ce334-c687-4807-b913-e692b2b00e3e",
       "type": "reponse",
       "value": {
         "latex": "Par passage à la limite uniforme sous le signe intégral\n    on a $f(x) = 1 +  \\int_{t=0}^x f(t-t^2)\\,d t$ d'où $f$ est $\\mathcal{C}^1$\n    et $f'(x) = f(x-x^2)$ ce qui entraine le caractère $\\mathcal{C}^\\infty$ de $f$ par\n    récurrence.\n    $f'(0) = f'(1) = f(0) = 1$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "9d1c630c-f961-4526-b8c5-d7b5b1aec8f3",
+      "id": "be13549d-6739-45eb-bd44-0441c62d4a89",
       "type": "question",
       "value": {
         "latex": "\\'Etudier la concavité de~$f$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "606c3a43-c38e-4e61-864f-5178cb83a724",
+      "id": "b798d4c5-add2-41db-be3d-6d42ff1346c0",
       "type": "reponse",
       "value": {
         "latex": "$f'$ est positive d'après l'équation différentielle vérifiée par~$f$\n    et $f''(x) = (1-2x)f'(x-x^2)$ est du signe de $1-2x$, c'est-à-dire que $f$\n    est convexe sur $[0,\\frac12]$ et concave sur $[\\frac12,1]$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "8f0802b7-23cb-4983-9038-1ab17b161f47",
+      "id": "2fa6e27e-fc04-46df-942b-11b6fa9f9b10",
       "type": "question",
       "value": {
         "latex": "Montrer que pour tout $x\\in{[0,1]}$ on a $1+x \\le f(x)\\le \\exp(x)$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "9520d263-55bb-4aca-91ae-630252831101",
+      "id": "df7ca897-3d2b-4208-a3df-d4780b171b16",
       "type": "reponse",
       "value": {
         "latex": "$1+x = f_1(x) \\le f(x) = f_1(x) + \\sum_{k=1}^\\infty(f_{k+1}(x) - f_k(x))$.\n    De plus, $f'(x) = f(x-x^2) \\le f(x)$ d'où $x \\mapsto f(x)e^{-x}$ est décroissante\n    et vaut $1$ en $0$ ce qui prouve que $f(x) \\le e^x$.",
         "html": "<p><span class=\"math inline\">\\(1+x = f_1(x) \\le f(x) = f_1(x) + \\sum_{k=1}^\\infty(f_{k+1}(x) - f_k(x))\\)</span>. De plus, <span class=\"math inline\">\\(f&#39;(x) = f(x-x^2) \\le f(x)\\)</span> d’où <span class=\"math inline\">\\(x \\mapsto f(x)e^{-x}\\)</span> est décroissante et vaut <span class=\"math inline\">\\(1\\)</span> en <span class=\"math inline\">\\(0\\)</span> ce qui prouve que <span class=\"math inline\">\\(f(x) \\le e^x\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On définit une suite de fonctions sur <span class=\"math inline\">\\([0,1]\\)</span> de la manière suivante : <span class=\"math inline\">\\(f_0\\)</span>  ..."
 }

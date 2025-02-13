@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégrales multiples, théorème de Fubini",
     "sousChapitre": "Intégrales multiples, théorème de Fubini",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:01.742Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:42.282Z"
   },
   "contenu": [
     {
-      "id": "db87c9f9-af7b-45f2-b7d4-157b6086fd40",
+      "id": "d6563232-ecc3-4fbe-afd0-85d7c6d2fffb",
       "type": "description",
       "value": {
         "latex": "Soient $f, g\\in L^1(\\mu)$ o\\`u $\\mu$ est la mesure de Lebesgue sur\n$\\mathbb{R}^n$. On note $\\hat{f}$ la transform\\'ee de Fourier\nd\\'efinie par\n$$\n\\hat{f}(y) = \\int_{\\mathbb{R}^n} f(x)\\,e^{-2\\pi i (y, x)} \\,dx,\n$$\no\\`u $(\\cdot, \\cdot)$ d\\'esigne le produit scalaire de\n$\\mathbb{R}^n.$ Montrer que",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c2f4bd23-5103-45fe-9476-2f87ffac89a6",
+      "id": "5288dff3-3fe4-4c08-ba82-3c5828742c8d",
       "type": "question",
       "value": {
         "latex": "$\\quad \\int_{\\mathbb{R}^n} f(x)\\hat{g}(x)\\,dx =\n\\int_{\\mathbb{R}^n} \\hat{f}(x) g(x)\\,dx.$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "0e454976-100a-4b0b-a7f9-c29f5a4e4b04",
+      "id": "0e4a8ed6-e1ca-40e2-9617-e0cbac48f8d9",
       "type": "reponse",
       "value": {
         "latex": "On a $\\|\\hat{g}\\|_{\\infty} \\leq \\|g\\|_1$, ce qui\nimplique que $f\\, \\hat{g}$ est int\\'egrable. De m\\^eme\n$\\hat{f}\\,g$ est int\\'egrable. De plus $F(x, y) = f(x) g(y)\ne^{-2\\pi i (x, y)}$ appartient \\`a\n$L^1(\\mathbb{R}^n\\times\\mathbb{R}^n)$. D'apr\\`es le th\\'eor\\`eme\nde Fubini, \\begin{eqnarray*} \\int_{\\mathbb{R}^n}\nf(x)\\hat{g}(x)\\,dx &=& \\int_{\\mathbb{R}^n}\\,dx\\, f(x)\n\\int_{\\mathbb{R}^n} g(y) e^{-2\\pi i (x, y)} \\,dy \\\\ &=&\n\\int_{\\mathbb{R}^n}\\,dy \\,g(y) \\int_{\\mathbb{R}^n} f(x)e^{-2\\pi i\n(x, y)} \\,dx = \\int_{\\mathbb{R}^n} \\hat{f}(y) g(y)\\,dx.\n\\end{eqnarray*}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "9a39f9d7-a588-4a21-97e2-e7fbbe9fb9b7",
+      "id": "0b4b24f1-a077-4889-b77c-2d67785a6df6",
       "type": "question",
       "value": {
         "latex": "$\\quad\n\\widehat{f*g} = \\hat{f}\\,\\hat{g}.$",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "25164bba-09c7-4794-b577-cd681dd63890",
+      "id": "2460451b-fdf5-4ab9-ae14-13ecd1e4056e",
       "type": "reponse",
       "value": {
         "latex": "On a\n\\begin{eqnarray*}\n\\widehat{f*g}(x) &=& \\int_{\\mathbb{R}^n} f*g(y)\\,e^{-2\\pi i (x,\ny)}\\,dy = \\int_{\\mathbb{R}^n}\\,dy \\,e^{-2\\pi i (x,\ny)}\\int_{\\mathbb{R}^n}f(y-z)\\,g(z) \\,dz\\\\\n&=& \\int_{\\mathbb{R}^n} \\,dy \\int_{\\mathbb{R}^n}\\,e^{-2\\pi i\n(x, y-z)}e^{-2\\pi i (x,\nz)}f(y-z)\\,g(z)\\,dz \\\\\n& = & \\int_{\\mathbb{R}^n} \\,e^{-2\\pi i (x, u)} f(u)\\,du\n\\int_{\\mathbb{R}^n}e^{-2\\pi i (x, z)}\\,g(z) \\,dz\\\\\n& = & \\hat{f}(x) \\,\\hat{g}(x).\n\\end{eqnarray*}",
         "html": "<p>On a <span class=\"math display\">\\[\\begin{aligned}\n\\widehat{f*g}(x) &amp;=&amp; \\int_{\\mathbb{R}^n} f*g(y)\\,e^{-2\\pi i (x,\ny)}\\,dy = \\int_{\\mathbb{R}^n}\\,dy \\,e^{-2\\pi i (x,\ny)}\\int_{\\mathbb{R}^n}f(y-z)\\,g(z) \\,dz\\\\\n&amp;=&amp; \\int_{\\mathbb{R}^n} \\,dy \\int_{\\mathbb{R}^n}\\,e^{-2\\pi i\n(x, y-z)}e^{-2\\pi i (x,\nz)}f(y-z)\\,g(z)\\,dz \\\\\n&amp; = &amp; \\int_{\\mathbb{R}^n} \\,e^{-2\\pi i (x, u)} f(u)\\,du\n\\int_{\\mathbb{R}^n}e^{-2\\pi i (x, z)}\\,g(z) \\,dz\\\\\n&amp; = &amp; \\hat{f}(x) \\,\\hat{g}(x).\\end{aligned}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(f, g\\in L^1(\\mu)\\)</span> où <span class=\"math inline\">\\(\\mu\\)</span> est la mesure de Lebesgue sur <span class= ..."
 }

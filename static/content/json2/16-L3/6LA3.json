@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Théorème des résidus",
     "sousChapitre": "Théorème des résidus",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:35.207Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:17.724Z"
   },
   "contenu": [
     {
-      "id": "4e5e98cd-e531-4e54-b497-e0420d824ba5",
+      "id": "d321b8a8-7023-4325-8272-0709eeaeeffa",
       "type": "description",
       "value": {
         "latex": "D{\\'e}velopper la fonction\n$$f(x) = {1\\over 2-\\cos x} $$ \nen s{\\'e}rie de Fourier, en calculant les coefficients par\nla m{\\'e}thode des r{\\'e}sidus.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "567046ad-7b9a-4e53-b3a5-b1f937ba3d17",
+      "id": "60de6c6a-6810-4a44-8fcd-660ee10cf5ee",
       "type": "reponse",
       "value": {
         "latex": "\nLa fonction est paire, donc ses coefficients $b_n$ sont nuls et on calcule ici ses coefficients $a_n$.\n\nPour $n\\geq 1$, on a : \n\\[ a_n \n= \\frac{1}{\\pi} \\int_0^{2\\pi}f(t)\\cos(nt)dt\n= \\frac{1}{\\pi} \\int_0^{2\\pi}\\frac{\\cos(nt)}{2-\\cos(t)}dt\n\\]\n\nOn peut écrire \n$$\\begin{align*}\na_n &= \\Re \\frac{1}{\\pi} \\int_0^{2\\pi}f(t)e^{int}dt\\\\\n&= \\Re \\frac{1}{\\pi} \\int_{\\mathcal C}\\frac{z^n}{2-\\frac12 \\left(z+z^{-1}\\right)}\\frac{dz}{iz}\\\\\n&= \\Re \\frac{1}{i\\pi} \\int_{\\mathcal C}\\frac{2z^n}{4z-z^2-1}dz\\\\\n&= 4\\Re \\sum_\\alpha Res\\left(\\frac{z^n}{4z-z^2-1},\\alpha\\right)\n\\end{align*}$$\nComme $n\\geq 1$, il n'y a qu'un seul pôle dans le disque : le pôle simple $2-\\sqrt 3$. Le résidu en ce pôle vaut $\\frac{(2-\\sqrt 3)^n}{2\\sqrt 3}$ qui est  déjà un nombre réel.\\\\\n\nOn en déduit que \n\\[ a_n = \\frac{2}{\\sqrt 3}(2-\\sqrt 3)^n.\\]\n\nLe coefficient $a_0$ est obtenu de la même façon, mais il faut diviser par deux, vu la définition particulière lorsque $a=0$. On obtient donc $a_0 = \\frac{1}{\\sqrt 3}$.\n\nFinalement, on a donc :\n$$ f(x) = {1\\over\\sqrt 3}\\left[1+ 2\\sum_{n=0}^{+\\infty } \n(2-\\sqrt 3)^n \\cos nx\\right].$$",
         "html": "<p>La fonction est paire, donc ses coefficients <span class=\"math inline\">\\(b_n\\)</span> sont nuls et on calcule ici ses coefficients <span class=\"math inline\">\\(a_n\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(n\\geq 1\\)</span>, on a : <span class=\"math display\">\\[a_n \n= \\frac{1}{\\pi} \\int_0^{2\\pi}f(t)\\cos(nt)dt\n= \\frac{1}{\\pi} \\int_0^{2\\pi}\\frac{\\cos(nt)}{2-\\cos(t)}dt\\]</span></p>\n<p>On peut écrire <span class=\"math display\">\\[\\begin{align*}\na_n &amp;= \\Re \\frac{1}{\\pi} \\int_0^{2\\pi}f(t)e^{int}dt\\\\\n&amp;= \\Re \\frac{1}{\\pi} \\int_{\\mathcal C}\\frac{z^n}{2-\\frac12 \\left(z+z^{-1}\\right)}\\frac{dz}{iz}\\\\\n&amp;= \\Re \\frac{1}{i\\pi} \\int_{\\mathcal C}\\frac{2z^n}{4z-z^2-1}dz\\\\\n&amp;= 4\\Re \\sum_\\alpha Res\\left(\\frac{z^n}{4z-z^2-1},\\alpha\\right)\n\\end{align*}\\]</span> Comme <span class=\"math inline\">\\(n\\geq 1\\)</span>, il n’y a qu’un seul pôle dans le disque : le pôle simple <span class=\"math inline\">\\(2-\\sqrt 3\\)</span>. Le résidu en ce pôle vaut <span class=\"math inline\">\\(\\frac{(2-\\sqrt 3)^n}{2\\sqrt 3}\\)</span> qui est déjà un nombre réel.<br />\nOn en déduit que <span class=\"math display\">\\[a_n = \\frac{2}{\\sqrt 3}(2-\\sqrt 3)^n.\\]</span></p>\n<p>Le coefficient <span class=\"math inline\">\\(a_0\\)</span> est obtenu de la même façon, mais il faut diviser par deux, vu la définition particulière lorsque <span class=\"math inline\">\\(a=0\\)</span>. On obtient donc <span class=\"math inline\">\\(a_0 = \\frac{1}{\\sqrt 3}\\)</span>.</p>\n<p>Finalement, on a donc : <span class=\"math display\">\\[f(x) = {1\\over\\sqrt 3}\\left[1+ 2\\sum_{n=0}^{+\\infty } \n(2-\\sqrt 3)^n \\cos nx\\right].\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>D<span>é</span>velopper la fonction <span class=\"math display\">\\[f(x) = {1\\over 2-\\cos x}\\]</span> en s<span>é</span>rie de Fourier, en calculant l ..."
 }

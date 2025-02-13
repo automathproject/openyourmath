@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Projection, symétrie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:57.698Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:47.046Z"
   },
   "contenu": [
     {
-      "id": "02d34110-4c26-4e3f-8547-346f32452e7f",
+      "id": "f58c6bd2-98e1-49bb-b65e-929e707608e0",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel euclidien de dimension $p$ sur $\\Rr$ ($p\\geq2$).\nPour $(x_1,...,x_n)$ donné dans $E^n$, on pose $G(x_1,...,x_n)=(x_i|x_j)_{1\\leq i,j\\leq n}$ (matrice de \\textsc{Gram})\net $\\gamma(x_1,...,x_n)=\\mbox{det}(G(x_1 , ... , x_n))$ (déterminant de \\textsc{Gram}).",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "dda5da8f-97e6-4c0e-9d04-e83b88105e48",
+      "id": "2932b9b9-d435-4906-85a1-10dc57308e62",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\mbox{rg}(G(x_1,...,x_n))=\\mbox{rg}(x_1, ... ,x_n)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "b610dfb0-9243-4df1-ad15-1554b1dccc48",
+      "id": "f7718b7f-f922-4a52-8692-da8ea1774254",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\mathcal{B}$ une base orthonormée de $E$ et $M=\\mbox{Mat}_{\\mathcal{B}}(x_1,...,x_n)$ ($M$ est une matrice de format $(p,n)$).\nPuisque $\\mathcal{B}$ est orthonormée, le produit scalaire usuel des colonnes $C_i$ et $C_j$ est encore $x_i|x_j$.\nDonc, $\\forall(i,j)\\in\\llbracket1,n\\rrbracket^2,\\;{^t}C_iC_j=x_i|x_j$ ou encore \n\n\\begin{center}\n\\shadowbox{\n$G={^t}MM$.\n}\n\\end{center}\nIl s'agit alors de montrer que $\\mbox{rg}(M)=\\mbox{rg}({^t}MM)$. Ceci provient du fait que $M$ et ${^t}MM$ ont même noyau. En effet, pour $X\\in\\mathcal{M}_{n,1}(\\Rr)$, \n\n$$X\\in\\mbox{Ker}M\\Rightarrow MX=0\\Rightarrow{^t}M\\times MX=0\\Rightarrow({^t}MM)X=0\\Rightarrow X\\in\\mbox{Ker}({^t}MM)$$\net\n\n$$\\begin{align*}\\ensuremath\nX\\in\\mbox{Ker}({^t}MM)&\\Rightarrow{^t}MMX=0\\Rightarrow{^t}X{^t}MMX=0\\Rightarrow{^t}(MX)MX=0\\Rightarrow||MX||^2=0\\Rightarrow MX=0\\\\\n &\\Rightarrow X\\in\\mbox{Ker}M.\n\\end{align*}$$\nAinsi, $\\text{Ker}(M)=\\text{Ker}({^t}MM)=\\text{Ker}(G(x_1,\\ldots,x_n))$. Mais alors, d'après le théorème du rang, $\\text{rg}(x_1,\\ldots,x_n)=\\text{rg}(M)=\\text{rg}(G(x_1,\\ldots,x_n))$.\n\n\\begin{center}\n\\shadowbox{\n$\\text{rg}(G(x_1,\\ldots,x_n))=\\text{rg}(x_1,\\ldots,x_n)$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "20272384-2005-47c3-8163-757df90859f5",
+      "id": "b5f44fa4-8a90-4ce1-8ceb-12212fa14599",
       "type": "question",
       "value": {
         "latex": "Montrer que $(x_1,...,x_n)$ est liée si et seulement si $\\gamma(x_1,...,x_n)=0$ et que $(x_1,...,x_n)$ est libre si et seulement si $\\gamma(x_1,...,x_n)>0$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "9d413fa7-d908-4046-9cc2-583784b489c4",
+      "id": "4191a434-7a4c-4d5e-bcda-bea5bad80952",
       "type": "reponse",
       "value": {
         "latex": "Si la famille $(x_1,...,x_n)$ est liée, $\\mbox{rg}(G)=\\mbox{rg}(x_1,...,x_n)<n$, et donc, puisque $G$ est une matrice carrée de format $n$, $\\gamma(x_1,...,x_n)=\\mbox{det}(G)=0$.\nSi la famille $(x_1, ... ,x_n)$ est libre, $(x_1,...,x_n)$ engendre un espace $F$ de dimension $n$. Soient $\\mathcal{B}$ une base orthonormée de $F$ et $M$ la matrice de la famille $(x_1,...,x_n)$ dans $\\mathcal{B}$. D'après 1), on a $G={^t}MM$ et d'autre part, $M$ est une matrice carrée. Par suite,\n\n$$\\gamma(x_1,...,x_n)=\\mbox{det}({^t}MM)=\\mbox{det}({^t}M)\\mbox{det}(M)=(\\mbox{det}M)^2>0.$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "f5456c37-9db4-489e-b2ee-ebbd4be1ad61",
+      "id": "1e2a37b3-4189-43d7-bf38-9543384fed03",
       "type": "question",
       "value": {
         "latex": "On suppose que $(x_1,...,x_n)$ est libre dans $E$ (et donc $n\\leq p$). On pose $F=\\mbox{Vect}(x_1,...,x_n)$.\n\nPour $x\\in E$, on note $p_F(x)$ la projection orthogonale de $x$ sur $F$ puis $d_F(x)$ la distance de $x$ à $F$ (c'est-à-dire $d_F(x)=||x-p_F(x)||$). Montrer que $d_F(x)=\\sqrt{\\frac{\\gamma(x,x_1,...,x_n)}{\\gamma(x_1,...,x_n)}}$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "4c7e082f-c248-4071-b24c-1ed65d4c75a0",
+      "id": "60c7836a-d77f-4200-95a8-6f6c7ad847eb",
       "type": "reponse",
       "value": {
         "latex": "On écrit $x=x-p_F(x)+p_F(x)$. La première colonne de $\\gamma(x,x_1,...,x_n)$ s'écrit~:\n\n$$\\left(\n\\begin{array}{c}\n||x||^2\\\\\nx|x_1\\\\\nx|x_2\\\\\n\\vdots\\\\\nx|x_n\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n||x-p_F(x)+p_F(x)||^2\\\\\nx-p_F(x)+p_F(x)|x_1\\\\\nx-p_F(x)+p_F(x)|x_2\\\\\n\\vdots\\\\\nx-p_F(x)+p_F(x)|x_n\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n||x-p_F(x)||^2\\\\\n0|x_1\\\\\n0|x_2\\\\\n\\vdots\\\\\n0|x_n\n\\end{array}\n\\right)+\\left(\n\\begin{array}{c}\n||p_F(x)||^2\\\\\np_F(x)|x_1\\\\\np_F(x)|x_2\\\\\n\\vdots\\\\\np_F(x)|x_n\n\\end{array}\n\\right).$$  \n(en 1ère ligne, c'est le théorème de \\textsc{Pythagore} et dans les suivantes, $x-p_F(x)\\in F^\\bot$). Par linéarité par rapport à la première colonne, $\\gamma(x,x_1,...,x_n)$ est somme de deux déterminants. Le deuxième est  $\\gamma(p_F(x),x_1,...,x_n)$ et est nul car la famille $(p_F(x),x_1,...,x_n)$ est liée. On développe le premier suivant sa première colonne et on obtient~:\n\n$$\\gamma(x,x_1,...,x_n)=||x-p_F(x)||^2\\gamma(x_1,...,x_n),$$\nce qui fournit la formule désirée.\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in E,\\;d(x,F)=\\|x-p_F(x)\\|=\\sqrt{\\frac{\\gamma(x,x_1,\\ldots,x_n)}{\\gamma(x_1,\\ldots,x_n)}}$.\n}\n\\end{center}",
         "html": "<p>On écrit <span class=\"math inline\">\\(x=x-p_F(x)+p_F(x)\\)</span>. La première colonne de <span class=\"math inline\">\\(\\gamma(x,x_1,...,x_n)\\)</span> s’écrit :</p>\n<p><span class=\"math display\">\\[\\left(\n\\begin{array}{c}\n||x||^2\\\\\nx|x_1\\\\\nx|x_2\\\\\n\\vdots\\\\\nx|x_n\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n||x-p_F(x)+p_F(x)||^2\\\\\nx-p_F(x)+p_F(x)|x_1\\\\\nx-p_F(x)+p_F(x)|x_2\\\\\n\\vdots\\\\\nx-p_F(x)+p_F(x)|x_n\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n||x-p_F(x)||^2\\\\\n0|x_1\\\\\n0|x_2\\\\\n\\vdots\\\\\n0|x_n\n\\end{array}\n\\right)+\\left(\n\\begin{array}{c}\n||p_F(x)||^2\\\\\np_F(x)|x_1\\\\\np_F(x)|x_2\\\\\n\\vdots\\\\\np_F(x)|x_n\n\\end{array}\n\\right).\\]</span> (en 1ère ligne, c’est le théorème de <span class=\"smallcaps\">Pythagore</span> et dans les suivantes, <span class=\"math inline\">\\(x-p_F(x)\\in F^\\bot\\)</span>). Par linéarité par rapport à la première colonne, <span class=\"math inline\">\\(\\gamma(x,x_1,...,x_n)\\)</span> est somme de deux déterminants. Le deuxième est <span class=\"math inline\">\\(\\gamma(p_F(x),x_1,...,x_n)\\)</span> et est nul car la famille <span class=\"math inline\">\\((p_F(x),x_1,...,x_n)\\)</span> est liée. On développe le premier suivant sa première colonne et on obtient :</p>\n<p><span class=\"math display\">\\[\\gamma(x,x_1,...,x_n)=||x-p_F(x)||^2\\gamma(x_1,...,x_n),\\]</span> ce qui fournit la formule désirée.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel euclidien de dimension <span class=\"math inline\">\\(p\\)</span> sur <span class=\"math ..."
 }

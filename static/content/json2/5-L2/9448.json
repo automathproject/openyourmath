@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série entière",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:41.581Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:34.459Z"
   },
   "contenu": [
     {
-      "id": "ce21c4a3-9a43-42a9-949a-0a9e30faf267",
+      "id": "dad8e3ec-849b-4cc9-8653-02f7bcbdd7b2",
       "type": "description",
       "value": {
         "latex": "Soient $(a_n)_{n\\in\\Nn}$ et $(b_n)_{n\\in\\Nn}$ deux suites de réels strictement positifs telles que la suite $\\left(\\frac{a_n}{b_n}\\right)_{n\\in\\Nn}$ ait une limite réelle $k$. (En particulier $a_n\\underset{n\\rightarrow+\\infty}{=}o(b_n)$ si $k = 0$ et $a_n\\underset{n\\rightarrow+\\infty}{\\sim}b_n$ si $k = 1$).On suppose de plus que la série entière associée à la suite $(a_n)_{n\\in\\Nn}$ a un  rayon de convergence égal à $1$ et que la série de terme général $a_n$ diverge.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "5448cb08-fb7a-43ec-975a-69001e45633e",
+      "id": "8a784d27-d7e8-424b-a8ba-c880ff9cdd94",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\lim_{x \\rightarrow 1}\\frac{\\sum_{n=0}^{+\\infty}a_nx^n}{\\sum_{n=0}^{+\\infty}b_nx^n}= k$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "bba28baa-295b-4e51-867b-fc36902b159b",
+      "id": "f5b70a29-ed3b-4b51-9bd2-567588c920fb",
       "type": "reponse",
       "value": {
         "latex": "Soient $A$ et $B$ les sommes des séries entières associées aux suites $a$ et $b$ sur $]-1,1[$. La fonction $B$ est strictement positive sur $]0,1[$ et en particulier ne s'annule pas sur $]0,1[$.\n\n\\textbullet~La suite $a$ est positive donc la fonction $A$ est croissante sur $[0,1[$ et admet ainsi une limite réelle ou infinie quand $x$ tend vers $1$ par valeurs inférieures. De plus, pour $N$ entier naturel donné et $x\\in[0,1[$, on a $\\sum_{n=0}^{+\\infty}a_nx^n\\geqslant\\sum_{n=0}^{N}a_nx^n$ et donc\n\n\\begin{center}\n$\\forall N\\in\\Nn$, $\\displaystyle\\lim_{\\substack{x\\rightarrow1,\\;x<1}}A(x)\\geqslant\\displaystyle\\lim_{\\substack{x\\rightarrow1,\\;x<1}}\\sum_{n=0}^{N}a_nx^n =\\sum_{n=0}^{N}a_n$.\n\\end{center}\n\nPuisque la série de terme général positif $a_n$ diverge, quand $N$ tend tend vers $+\\infty$, on obtient $\\displaystyle\\lim_{\\substack{x\\rightarrow1,\\;x<1}}A(x)\\geqslant+\\infty$ et donc $\\displaystyle\\lim_{\\substack{x\\rightarrow1,\\;x<1}}A(x)=+\\infty$. Il en est de même pour $B$ car la série de terme général $b_n$ diverge quelque soit la valeur de $k$.\n\n\\textbullet~On veut alors montrer que $A-k B\\underset{x\\rightarrow1^-}{=}o(B)$.\n\nSoit $\\varepsilon> 0$. Par hypothèse, $a_n-kb_n\\underset{n\\rightarrow+\\infty}o(b_n)$ et donc il existe un entier naturel $N$ tel que pour $n\\geqslant N$, $|a_n-kb_n|\\leqslant\\frac{\\varepsilon}{2} b_n$.\n\nSoit $x\\in[0,1[$.\n\n\\begin{center}\n$|A(x)-kB(x)|\\leqslant \\sum_{n=0}^{+\\infty}|a_n-kb_n|x^n\\leqslant \\sum_{n=0}^{N}|a_n-kb_n|x^n+   \\frac{\\varepsilon}{2}\\sum_{n=N+1}^{+\\infty}b_nx^n\\leqslant\\sum_{n=0}^{N}|a_n-kb_n|+\\frac{\\varepsilon}{2}B(x)$.\n\\end{center}\n\nMaintenant, $B(x)$ tend vers $+\\infty$ quand $x$ tend vers $1$ par valeurs inférieures. Donc il existe $\\alpha\\in]0,1[$ tel que pour $x\\in]1-\\alpha,1[$,  $B(x) >\\frac{2}{\\varepsilon}\\sum_{n=0}^{N}|a_n-kb_n|$. Pour $x\\in]1-\\alpha,1[$, on a alors $|A(x)-kB(x)| <\\frac{\\varepsilon}{2}B(x)+\\frac{\\varepsilon}{2}B(x)=\\varepsilon B(x)$.\n\nOn a montré que $\\forall\\varepsilon>0$, $\\exists\\alpha\\in]0,1[/$ $\\forall x\\in]1-\\alpha,1[$, $|A(x)-kB(x)|<\\varepsilon B(x)$ et donc $\\lim_{x \\rightarrow 1^-}\\frac{A(x)}{B(x)}=k$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d4506cb5-42d6-4154-ad45-823e116f4634",
+      "id": "b471527d-26ee-4fa3-99df-869b2518a8b4",
       "type": "question",
       "value": {
         "latex": "\\textbf{Applications.} \n  \\begin{enumerate}",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "6f9d241d-3be2-4de1-a693-262fd74e52b4",
+      "id": "721aabee-600f-4aa2-86d8-a96b8b0f857e",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "f59b1b58-bb94-43a3-8fe5-ef8f21259bb3",
+      "id": "ad78de91-c717-42d4-9ac1-413d51747999",
       "type": "question",
       "value": {
         "latex": "Equivalent simple quand $x$ tend vers $1$ de $\\sum_{n=1}^{+\\infty}\\ln nx^n$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "17bba19a-9880-400b-84a2-4da9acd170c5",
+      "id": "1996c652-5356-4dc8-a908-1cc238c4e5d1",
       "type": "reponse",
       "value": {
         "latex": "La série entière proposée \\og vérifie \\fg les hypothèses du 1) et de plus , $\\ln n\\underset{n\\rightarrow+\\infty}{\\sim}1+\\frac{1}{2}+...+\\frac{1}{n}$. Donc \n\n\\begin{center}\n$f(x)\\underset{x\\rightarrow1^-}{\\sim}\\sum_{n=1}^{+\\infty}\\left(\\sum_{k=1}^{n}\\frac{1}{k}\\right)x^n=\\left(\\sum_{n=0}^{+\\infty}x^n\\right)\\left(\\sum_{n=1}^{+\\infty}\\frac{x^n}{n}\\right) =\\frac{\\ln(1-x)}{x-1}$.\n\\end{center}\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{n=1}^{+\\infty}(\\ln n) x^n\\underset{x\\rightarrow1^-}{\\sim}\\frac{\\ln(1-x)}{x-1}$.\n}\n\\end{center}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "09984902-08ae-4fdf-a454-a6e1d19a72c5",
+      "id": "cebe2349-485c-4eb9-aa8d-61caca239b39",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\lim_{x \\rightarrow 1}(1-x)^p\\sum_{n=0}^{+\\infty}n^{p-1}x^n$ où $p$ est un entier naturel non nul donné.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "46702a74-a407-49a7-8219-3111851c1206",
+      "id": "d1881c03-73f0-47dc-b2f7-bed8bbc20dbe",
       "type": "reponse",
       "value": {
         "latex": "Soit $p\\geqslant2$. $n^{p-1}\\underset{n\\rightarrow+\\infty}{\\sim}(n+1)(n+2)...(n+p-1)$. Comme les deux suites $(n^{p-1})$ et $((n+1)(n+2)...(n+p-1))$ vérifient les hypothèses du 1)\n\n\\begin{center}\n$\\sum_{n=0}^{+\\infty}n^{p-1}x^n\\underset{x\\rightarrow1^-}{\\sim}\\sum_{n=0}^{+\\infty}(n+p-1)...(n+1)x^n =\\left(\\sum_{n=0}^{+\\infty}x^n\\right)^{(p-1)}=\\left(\\frac{1}{1-x}\\right)^{(p-1)}=\\frac{(p-1)!}{(1-x)^p}$.\n\\end{center}\n\nPar suite,\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow 1^-}(1-x)^p\\sum_{n=1}^{+\\infty}n^{p-1}x^n=(p-1)!$.\n}\n\\end{center}",
         "html": "<p>Soit <span class=\"math inline\">\\(p\\geqslant2\\)</span>. <span class=\"math inline\">\\(n^{p-1}\\underset{n\\rightarrow+\\infty}{\\sim}(n+1)(n+2)...(n+p-1)\\)</span>. Comme les deux suites <span class=\"math inline\">\\((n^{p-1})\\)</span> et <span class=\"math inline\">\\(((n+1)(n+2)...(n+p-1))\\)</span> vérifient les hypothèses du 1)</p>\n<p><span class=\"math inline\">\\(\\sum_{n=0}^{+\\infty}n^{p-1}x^n\\underset{x\\rightarrow1^-}{\\sim}\\sum_{n=0}^{+\\infty}(n+p-1)...(n+1)x^n =\\left(\\sum_{n=0}^{+\\infty}x^n\\right)^{(p-1)}=\\left(\\frac{1}{1-x}\\right)^{(p-1)}=\\frac{(p-1)!}{(1-x)^p}\\)</span>.</p>\n<p>Par suite,</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\((a_n)_{n\\in\\Nn}\\)</span> et <span class=\"math inline\">\\((b_n)_{n\\in\\Nn}\\)</span> deux suites de réels strictemen ..."
 }

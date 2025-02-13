@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:14.242Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:59.375Z"
   },
   "contenu": [
     {
-      "id": "561bdb36-2938-4ef6-92a1-b5d3c01bacdf",
+      "id": "961d1658-7c21-48be-bdc7-f78ffec4e790",
       "type": "description",
       "value": {
         "latex": "Soit $n \\in \\Nn$ et on d\\'efinit les matrices suivantes dans $\\Rr^{n\\times n}$:\n\\begin{itemize}\n\\item $E_{ij}$ matrice avec un $1$ dans la position $(i,j)$ et $0$ partout ailleurs;\n\\item $V_{ij}(\\lambda )=I +  \\lambda E_{ij}$ , $\\lambda \\in\\Rr , i>j$;\n\\item $L(l_i) = I+l_ie_i^T$, $l_i\\in\\Rr^n$ tel que ses premi\\`eres $i$ composantes sont nulles.\n\\end{itemize}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "7093fd35-1daf-4053-93b4-ca5884193257",
+      "id": "45b57121-c687-4ae8-8fba-9e763f67aef7",
       "type": "question",
       "value": {
         "latex": "Quels sont les r\\'esultats des op\\'erations suivantes sur la matrice $A$:\n     $$B=V_{ij}(\\lambda )A  , C=AV_{ij}(\\lambda ) ?$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "c37f14cd-f40e-47f8-978b-903b50f19c7e",
+      "id": "0ff93ad0-3b85-4018-95cb-6b5134abfafa",
       "type": "question",
       "value": {
         "latex": "Quelle est la forme de la matrice \n$$V_{ij}(\\lambda )V_{kj}(\\lambda ') ,  k>i ?$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "fe0f741f-0cd2-4edb-9b6d-1901ea567663",
+      "id": "9896cdbb-855a-4fcf-bba8-0c9ddcb502ff",
       "type": "question",
       "value": {
         "latex": "Repr\\'esenter $L(l_i)$ et montrer que $L(l_i)^{-1}=L(-l_i)$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "4282d1b0-b38b-43b1-93cb-66af9561ff85",
+      "id": "96e2ecb4-6d69-48c4-8257-26e0c3939c90",
       "type": "question",
       "value": {
         "latex": "D\\'ecomposer $L(l_i)$ comme produit de matrices de la forme $V_{km}(\\lambda )$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "8ef86fa6-5624-4ae9-9da5-23b497ba9686",
+      "id": "589f0305-1867-478a-9020-68f90c9a031c",
       "type": "question",
       "value": {
         "latex": "Calculer $L=\\prod_{i=1}^{n-1}L(l_i)$ et son inverse $L^{-1}$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "b76184af-5972-4027-8bb9-ecb71d4ff955",
+      "id": "35ffe6a4-a5b9-4443-828d-981efa7548e3",
       "type": "question",
       "value": {
         "latex": "On suppose les $l_i$ stock\\'es dans un tableau bidimensionnel $Z$ et $b\\in\\Rr^n$ stock\\'e dans un tableau unidimensionnel $B$. Donner un algorithme permettant de calculer dans $B$ la solution de $Lx=b$:\n\\begin{enumerate}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "57d4bf00-c214-402f-9e30-0eb818359bd0",
+      "id": "7b462fc8-94c1-4e5e-bb3a-7dfcf6c91640",
       "type": "question",
       "value": {
         "latex": "en utilisant l'expression de $L^{-1}$;",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "b9d2e081-d011-42be-9c6a-70201c74dbe7",
+      "id": "fdb0abca-0333-4bc2-87ea-da538916459b",
       "type": "question",
       "value": {
         "latex": "en r\\'esolvant le syst\\`eme triangulaire.",
@@ -88,12 +88,13 @@
       }
     },
     {
-      "id": "cc8b4d15-7db7-40af-b1ee-2795bab02631",
+      "id": "8c8f4033-f4a8-44fe-a342-a82b2ee198e5",
       "type": "reponse",
       "value": {
         "latex": "$VA$ remplace la ligne $i$ par sa somme avec la ligne $j$ multipli\\'ee par $\\lambda$.\n\n$AV$ remplace la colonne $j$ par sa somme avec la colonne $i$ multipli\\'ee par $\\lambda$.\n$V_{ij}(\\lambda )V_{kj})=I+\\lambda E_{ij} + \\lambda ' E_{kj}$\nIl suffit de montrer que $(I+l_ie_i^T)(I-l_ie_i^T)=I$.\n$L(l_i)=V_{i+1,i}(l_{i+1,i}) \\cdots V_{n,i}(l_{n,i})$\n$L^{-1}=L(-l_{n-1}) L(-l_{n-2}) \\cdots L(-l_1)\\neq I-l_1e_1^T - \\cdots -l_{n-1}e_{n-1}^T$\n(a) algorithme en utilisant l'expression de $L^{-1}$\n\nPour $i=1$ \\`a $n-1$\n\n\\hspace{2cm} calcul de $L(-l_i)b$\n\n\\hspace{3cm} Pour $j=i+1$ \\`a $n$\n\n\\hspace{4cm} $b_j\\leftarrow b_j-l_{ji}b_i$\n\n\n(b) algorithme en r\\'esolvant le syst\\`eme triangulaire\n\n$x_1 =b_1$\n\nPour $i=2$ \\`a $n$ \n\n\\hspace{2cm}$x_i=b_i-\\sum_{j=1}^{i-1}l_{ij}x_j$\n\n\nconclusion: le nombre de calculs et l'espace m\\'emoire utilis\\'es sont les m\\^emes.",
         "html": "<p><span class=\"math inline\">\\(VA\\)</span> remplace la ligne <span class=\"math inline\">\\(i\\)</span> par sa somme avec la ligne <span class=\"math inline\">\\(j\\)</span> multipliée par <span class=\"math inline\">\\(\\lambda\\)</span>.</p>\n<p><span class=\"math inline\">\\(AV\\)</span> remplace la colonne <span class=\"math inline\">\\(j\\)</span> par sa somme avec la colonne <span class=\"math inline\">\\(i\\)</span> multipliée par <span class=\"math inline\">\\(\\lambda\\)</span>. <span class=\"math inline\">\\(V_{ij}(\\lambda )V_{kj})=I+\\lambda E_{ij} + \\lambda &#39; E_{kj}\\)</span> Il suffit de montrer que <span class=\"math inline\">\\((I+l_ie_i^T)(I-l_ie_i^T)=I\\)</span>. <span class=\"math inline\">\\(L(l_i)=V_{i+1,i}(l_{i+1,i}) \\cdots V_{n,i}(l_{n,i})\\)</span> <span class=\"math inline\">\\(L^{-1}=L(-l_{n-1}) L(-l_{n-2}) \\cdots L(-l_1)\\neq I-l_1e_1^T - \\cdots -l_{n-1}e_{n-1}^T\\)</span> (a) algorithme en utilisant l’expression de <span class=\"math inline\">\\(L^{-1}\\)</span></p>\n<p>Pour <span class=\"math inline\">\\(i=1\\)</span> à <span class=\"math inline\">\\(n-1\\)</span></p>\n<p>calcul de <span class=\"math inline\">\\(L(-l_i)b\\)</span></p>\n<p>Pour <span class=\"math inline\">\\(j=i+1\\)</span> à <span class=\"math inline\">\\(n\\)</span></p>\n<p><span class=\"math inline\">\\(b_j\\leftarrow b_j-l_{ji}b_i\\)</span></p>\n<p>(b) algorithme en résolvant le système triangulaire</p>\n<p><span class=\"math inline\">\\(x_1 =b_1\\)</span></p>\n<p>Pour <span class=\"math inline\">\\(i=2\\)</span> à <span class=\"math inline\">\\(n\\)</span></p>\n<p><span class=\"math inline\">\\(x_i=b_i-\\sum_{j=1}^{i-1}l_{ij}x_j\\)</span></p>\n<p>conclusion: le nombre de calculs et l’espace mémoire utilisés sont les mêmes.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(n \\in \\Nn\\)</span> et on définit les matrices suivantes dans <span class=\"math inline\">\\(\\Rr^{n\\times n}\\)</span>: ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Différentielle d'ordre supérieur, formule de Taylor",
     "sousChapitre": "Différentielle d'ordre supérieur, formule de Taylor",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:52.773Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:32.756Z"
   },
   "contenu": [
     {
-      "id": "c569c35b-5cd8-40a4-b1bd-3b91ff83cbfb",
+      "id": "867a8691-697a-4c9d-91f2-1b1ff55e666b",
       "type": "description",
       "value": {
         "latex": "Calculez $D^2f(x)$ dans les\ncas suivants:",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6351b918-1acd-4907-a132-4708a4c2f57e",
+      "id": "a4bc1a0d-ba4c-477b-825b-5accaa96dd56",
       "type": "question",
       "value": {
         "latex": "$f\\in L(E,G)$ continue",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "e7d74bb7-7b21-409f-8ee6-8de5b8035106",
+      "id": "e8130634-d509-41cd-a0fd-867711cbbf67",
       "type": "reponse",
       "value": {
         "latex": "Calculons l'accroissement:\n$$f(x+h)-f(x)=f(x)+f(h)-f(x)=f(h)+0.$$\nOr, par d\\'efinition $f(h)$ est lin\\'eaire en $h$, continue et\n$0=o(||h||)$. Par cons\\'equent $f$ est diff\\'erentiable et\n$$Df(x)=f, \\mbox{ ou encore } Df(x).h=f(h).$$\nOn remarque que $Df$ est l'application constante que à $x\\in E$\nassocie l'application lin\\'eaire $f$. Par cons\\'equent, $Df$ est\ndiff\\'erentiable et sa diff\\'erentielle est nulle: $$D^2f=0.$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "1c93ef4e-012a-41d7-8a93-ad256e042e59",
+      "id": "21dbe02d-969d-4783-80d5-e007e4a1da02",
       "type": "question",
       "value": {
         "latex": "$f: E \\times F \\rightarrow G$, bilinéaire continue.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "6126434f-427f-40d3-b66f-a49c7fb5018f",
+      "id": "be94991d-2f93-419b-aedf-d20f1ea302f6",
       "type": "reponse",
       "value": {
         "latex": "Calculons $$f((x,y)+(h,k))-f(x,y)=f(x+h,y+k)-f(x,y)=\nf(x,y+k)+f(h,y+k)-f(x,y)=$$\n$$f(x,y)+f(x,k)+f(h,y)+f(h,k)-f(x,y)=f(x,k)+f(h,y)+f(h,k).$$\nL'application qui \\`a $(x,y)$ associe l'application lin\\'eaire\n$Df(x,y)(h,k)=f(x,k)+f(h,y)$ est donc candidate pour être la\ndiff\\'erentielle de $f$. V\\'erifions qu'elle est bien continue et\nque $f(h,k)=o(||(h,k)||)$. Nous rappelons qu'une application\nbilin\\'eaire $f(x,y)$ est continue s'il existe $M>0$ tel que\n$$\\forall (x,y) \\in E^2; ||f(x,y)||\\leq M||x||||y||.$$\nOn a $$||Df(x,y)(h,k)||=||f(x,k)+f(h,y)|| \\leq\n||f(x,k)||+||f(h,y)||\\leq$$ $$M||x||.||k||+M||h||.||y|| \\leq M\n(||x||+||y||)\\max(||k||,||h||)\\leq M(||x||+||y||)||(h,k)||.$$ Par\ncons\\'equent, $Df(x,y)$ est continue et a une norme inf\\'erieure\n\\`a $M(||x||+||y||)$. De plus\n$$||f(h,k)||\\leq M||h||.||k|| \\leq ||(h,k)||.\\epsilon(h,k)$$ o\\`u\n$\\epsilon$ tend vers zero quand $(h,k)$ tend vers zero car\n$$\\epsilon(h,k)=\\frac{||h||.||k||}{\\sup(||h||,||k||)}$$ ce qui\nfini de montrer que $f$ est diff\\'erentiable et que sa\ndiff\\'erentielle est d\\'efinie par\n$$Df(x,y).(h,k)=f(x,k)+f(h,y).$$\nEn remarquant que $Df$ est lin\\'eaire par rapport \\`a $(x,y)$,\nd'apr\\`es la premi\\`ere question, on d\\'eduit que sa\ndiff\\'erentielle est $$D^2f(x,y)[(h,k),(u,v)]=f(u,k)+f(h,v).$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "43ff66ca-f63c-4b9b-ab2d-759a926acd6a",
+      "id": "b808844f-026b-486c-979c-6c21e9d5ae64",
       "type": "question",
       "value": {
         "latex": "$f:M_n(\\mathbb{R}) \\rightarrow M_n(\\mathbb{R})$, $f(A)=A^2$",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "82fef051-29c0-47de-856d-9fe1883b33f7",
+      "id": "c0d69b0d-4798-4e73-9996-2d183045827d",
       "type": "reponse",
       "value": {
         "latex": "$$f(A+h)-f(A)=(A+h)^2-A^2=Ah+hA+h^2$$ avec $Ah+hA$\nlin\\'eaire en $h$ (et en $A$) et $||h^2|| \\leq ||h||^2=o(||h||)$.\nPar cons\\'equent $f$ est diff\\'erentiable et sa diff\\'erentielle\nest $Df(A).h=Ah+hA$. Comme $Df(A)$ est lin\\'aire par rapport \\`a\n$A$, sa diff\\'erentielle en $A$ est l'application bilin\\'eaire\n$$D^2f(A)[H,K]=KH+HK.$$",
         "html": "<p><span class=\"math display\">\\[f(A+h)-f(A)=(A+h)^2-A^2=Ah+hA+h^2\\]</span> avec <span class=\"math inline\">\\(Ah+hA\\)</span> linéaire en <span class=\"math inline\">\\(h\\)</span> (et en <span class=\"math inline\">\\(A\\)</span>) et <span class=\"math inline\">\\(||h^2|| \\leq ||h||^2=o(||h||)\\)</span>. Par conséquent <span class=\"math inline\">\\(f\\)</span> est différentiable et sa différentielle est <span class=\"math inline\">\\(Df(A).h=Ah+hA\\)</span>. Comme <span class=\"math inline\">\\(Df(A)\\)</span> est lináire par rapport à <span class=\"math inline\">\\(A\\)</span>, sa différentielle en <span class=\"math inline\">\\(A\\)</span> est l’application bilinéaire <span class=\"math display\">\\[D^2f(A)[H,K]=KH+HK.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculez <span class=\"math inline\">\\(D^2f(x)\\)</span> dans les cas suivants:</p>\n"
 }

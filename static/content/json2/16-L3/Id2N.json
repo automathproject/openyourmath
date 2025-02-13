@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Théorème des résidus",
     "sousChapitre": "Théorème des résidus",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:45.391Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:28.497Z"
   },
   "contenu": [
     {
-      "id": "51820663-6619-4628-adb9-98deb4617175",
+      "id": "5e92c25c-fc28-441a-9ba1-f46a332fcc57",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "3f2f0675-e8ea-4db4-8903-41defc2810e3",
+      "id": "79513bb6-2ab8-43c5-bc94-1754bc839b79",
       "type": "question",
       "value": {
         "latex": "Soit $\\Omega$ l'ouvert habituel sur lequel est défini $\\mathrm{Log}\\,\nz$. Justifier pour tout $z\\in\\Omega$\n\\[ \\mathrm{Log}(z) = \\int_0^1 \\frac{z-1}{1+t(z-1)}dt\\;,\\]\net donner une formule intégrale explicite pour le reste\n$R_N(z)$ dans:\n\\[ \\mathrm{Log}(z) = (z-1) - \\frac{(z-1)^2}2 + \\frac{(z-1)^3}3 -\n\\dots + (-1)^{N-1}\\frac{(z-1)^{N}}N + R_N(z) \\;.\\]",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "deee22da-0cee-41a2-bd96-bb64b29fe340",
+      "id": "ef60d703-1b34-4fe5-a4f9-938a847bf258",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\phi (t,z) =\\frac{z-1}{1+t(z-1)}$ et notons $D=\\{ |z-1|<1\\}$. Pour tout $t\\in [0,1]$ et tout $z\\in D$ on a\n$$\\phi (t,z) = (z-1) \\sum_{k\\geq 0} (-1)^k t^k (z-1)^k .$$\nOr $|(-1)^k t^k (z-1)^k|\\leq |z-1|^k$. Si $0<r<1$, alors la s\\'erie pr\\'ec\\'edente converge normalement dans $D(1,r)$ ce qui permet d'avoir (cf. le polycopié 2005/2006 de J.-F.~Burnol, chapitre 15, théorème 29)\n$$\\int_0^1 \\phi (t,z) dt = \\sum_{k\\geq 0} (-1)^k (z-1)^{k+1} \\int _0^1 t^k dt =\\sum_{k\\geq0} (-1)^k \\frac{(z-1)^{k+1}}{k+1}.$$\nCette s\\'erie est la s\\'erie de Taylor de $\\mathrm{Log} (z)$ en $1$ qui coincide avec $\\mathrm{Log} (z)$ dans le disque $D$. Par cons\\'equent, $z\\mapsto \\int _0^1 \\phi (t,z)dt$ et $z\\mapsto \\mathrm{Log}(z)$ coincident dans $D$. On conclut par prolongement analytique et en remarquant que $z\\mapsto \\int_0^1 \\phi (t,z)dt$ est une fonction holomorphe dans $\\Omega$ (cf. le polycopié 2005/2006 de J.-F.~Burnol, chapitre 14, théorème 26).\nEn ce qui concerne le reste $R_N$ voici le calcul:\n\\begin{eqnarray*}\nR_N (z) &=&\\int_0^1 \\sum_{k\\geq N} (-1)^k (z-1)^{k+1} t^k dt\\\\\n&=& (-1)^N \\int_0^1 (z-1)^{N+1} t^N \\sum_{k\\geq 0} (-1)^k (z-1)^k t^k dt \\\\\n&=& (-1)^N (z-1)^{N+1} \\int _0^1 \\frac{t^N}{1+t(z-1)}dt.\n\\end{eqnarray*}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "076f0b65-eb69-4acb-babd-47cf65807552",
+      "id": "f3fd6269-d1d7-429a-89e7-00be4e746d42",
       "type": "question",
       "value": {
         "latex": "On suppose $\\Re(z)\\geq\\delta$ pour un certain\n$\\delta\\in]0,1[$. Prouver :\n\\[|R_N(z)|\\leq \\frac1\\delta\\frac{|z-1|^{N+1}}{N+1}\\]\nOn minorera $|1+t(z-1)|$ par $\\delta$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "db4b480a-09bc-47c6-a898-0b90d35e9dba",
+      "id": "31747656-2b6a-4fdc-b7bd-55c19228f1b4",
       "type": "reponse",
       "value": {
         "latex": "Si $\\Re(z) \\geq \\delta$, alors\n$$|1+t(z-1)| \\geq |\\Re (1+t(z-1))| = |1+t\\Re (z-1)|\\geq \\delta .$$\nPar cons\\'equent,\n$$|R_N (z) | \\leq |z-1|^{N+1} \\int_0^1 \\frac{t^N \\, dt}{|1+t(z-1)|} \\leq \\frac{1}{\\delta} \\frac{|z-1|^{N+1}}{N+1}.$$\nD'o\\`u la convergence uniforme.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "7df7c22f-b639-40c6-bbde-4f609111d653",
+      "id": "f426dfcd-2f9a-4e95-90eb-7750fca77f51",
       "type": "question",
       "value": {
         "latex": "En déduire que la série de Taylor de $\\mathrm{Log}$ au point $1$ est\nuniformément convergente sur le compact $\\{|z-1|\\leq1,\n\\delta\\leq\\Re(z)\\}$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "ff61a5ae-1fd4-415d-8ce3-4e48d7176c7c",
+      "id": "812d9c20-fe8c-4498-bd5b-2a69411a0e96",
       "type": "reponse",
       "value": {
         "latex": "Voir ci-dessus.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "6282c993-855e-43cf-b5e9-3926dafff5e6",
+      "id": "10aa3e2e-29ea-43fa-9555-baac3a92557e",
       "type": "question",
       "value": {
         "latex": "Pour $-\\pi<\\phi<+\\pi$ on pose $z = 1 +\ne^{i\\phi}$. Déterminer les coordonnées polaires $|z|$ et\n$\\mathrm{Arg}(z)$ de $z$ en fonction de $\\phi$. Déduire de ce qui\nprécède les identités suivantes, pour tout\n$\\phi\\in]-\\pi,+\\pi[$:\n$$\\begin{align*}\n\\log(2\\cos \\frac\\phi2) &= \\sum_{k=1}^\\infty (-1)^{k-1}\n\\frac{\\cos k\\phi}k \\\\\n\\frac\\phi2 &= \\sum_{k=1} (-1)^{k-1} \\frac{\\sin k\\phi}k\n\\end{align*}$$\net le fait que ces séries sont uniformément convergentes sur\ntout intervalle $[-\\pi+\\epsilon,+\\pi-\\epsilon]$ ($0<\\epsilon<\\pi$).",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "44bc1a36-b6d3-4aa6-a7ec-2e3713601f31",
+      "id": "b1ac4df0-806a-44d5-a886-7f0927ab25c8",
       "type": "reponse",
       "value": {
         "latex": "On a $z=1+e^{i\\phi} = (e^{i\\frac{\\phi}{2}}+e^{-i\\frac{\\phi}{2}})e^{i\\frac{\\phi}{2}}=2\\cos \\frac{\\phi}{2}e^{i\\frac{\\phi}{2}}$. D'o\\`u $\\mathrm{Arg} (z) = \\frac{\\phi}{2}$ et $r=|z|=2|\\cos \\frac{\\phi}{2} | =2\\cos \\frac{\\phi}{2}$.\nComme :\n\\begin{eqnarray*}\n\\log(2\\cos \\frac{\\phi}{2}) +i\\frac{\\phi}{2} &= & \\mathrm{Log} (z) = \\sum_{k\\geq 1} (-)^{k-1} \\frac{(z-1)^k}{k} =\\\\\n&=& \\sum_{k\\ge 1} \\frac{(-1)^{k-1}}{k} \\cos (k\\phi) + i\\sum_{k\\geq 1} \\frac{(-1)^{k-1}}{k}  \\sin (k\\phi)\n\\end{eqnarray*}\nil suffit d'identifier les parties r\\'eelles et imaginaires pour en d\\'eduire les \\'egalit\\'es demand\\'ees.\nLa convergence uniforme r\\'esulte de la question 3 puisque\n$$\\Re (z) = \\Re (1+e^{i\\phi }) =1+\\cos \\, \\phi \\geq 1+ \\cos (\\pi -\\epsilon ) = \\delta > 0.$$",
         "html": "<p>On a <span class=\"math inline\">\\(z=1+e^{i\\phi} = (e^{i\\frac{\\phi}{2}}+e^{-i\\frac{\\phi}{2}})e^{i\\frac{\\phi}{2}}=2\\cos \\frac{\\phi}{2}e^{i\\frac{\\phi}{2}}\\)</span>. D’où <span class=\"math inline\">\\(\\mathrm{Arg} (z) = \\frac{\\phi}{2}\\)</span> et <span class=\"math inline\">\\(r=|z|=2|\\cos \\frac{\\phi}{2} | =2\\cos \\frac{\\phi}{2}\\)</span>. Comme : <span class=\"math display\">\\[\\begin{aligned}\n\\log(2\\cos \\frac{\\phi}{2}) +i\\frac{\\phi}{2} &amp;= &amp; \\mathrm{Log} (z) = \\sum_{k\\geq 1} (-)^{k-1} \\frac{(z-1)^k}{k} =\\\\\n&amp;=&amp; \\sum_{k\\ge 1} \\frac{(-1)^{k-1}}{k} \\cos (k\\phi) + i\\sum_{k\\geq 1} \\frac{(-1)^{k-1}}{k}  \\sin (k\\phi)\\end{aligned}\\]</span> il suffit d’identifier les parties réelles et imaginaires pour en déduire les égalités demandées. La convergence uniforme résulte de la question 3 puisque <span class=\"math display\">\\[\\Re (z) = \\Re (1+e^{i\\phi }) =1+\\cos \\, \\phi \\geq 1+ \\cos (\\pi -\\epsilon ) = \\delta &gt; 0.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\Omega\\)</span> l’ouvert habituel sur lequel est défini <span class=\"math inline\">\\(\\mathrm{Log}\\,\nz\\)</span>. Jus ..."
 }

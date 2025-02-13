@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Topologie",
     "sousChapitre": "Topologie des espaces vectoriels normés",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:47.347Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:40.437Z"
   },
   "contenu": [
     {
-      "id": "762ef3c0-04a0-4d64-9c71-19a17ce6d40c",
+      "id": "25ab5bdc-ba0b-4158-9fe8-92a4126e0a69",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel complexe de dimension finie.\nOn consid{\\`e}re un endomorphisme $f$ de~$E$ et on note\n$\\rho(f) = \\sup\\{|\\lambda|\\text{ tq }\\lambda\\in\\mathrm{Sp}(f)\\}$\n(rayon spectral de~$f$).\nSoit $\\nu$ une norme sur $\\mathcal{L}(E)$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "40ba409f-b4ee-4ddc-9356-8b072ba59767",
+      "id": "57e1e273-14cb-4985-85ca-8febc8294edb",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\rho(f)\\le \\lim_{p\\to\\infty}(\\nu(f^p)^{1/p})$.\n    On pourra pour commencer supposer que $\\nu$ est la norme subordonn{\\'e}e\n    {\\`a} une norme sur~$E$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "ea09f336-21b4-41a2-bce9-5c3e83e14975",
+      "id": "fcbe9bd9-3025-4183-9db6-e298dee13f40",
       "type": "reponse",
       "value": {
         "latex": "Si $\\nu$ est subordonn{\\'e}e {\\`a} $\\|\\ \\|$~:\n    on a $|\\lambda| \\le \\nu(f^p)^{1/p}$ pour toute valeur propre $\\lambda$\n    et tout $p\\ge 1$, donc il suffit de prouver que la suite $(x_p = \\nu(f^p)^{1/p})$\n    est convergente. Soit $\\ell = \\inf\\{x_p,\\ p\\ge 1\\}$, $\\varepsilon > 0$\n    et $p\\ge 1$ tel que $x_p \\le \\ell+\\varepsilon$. Pour $n> p$ on note\n    $n-1=pq+r$ la division euclidienne de $n-1$ par $p$ et l'on a~:\n    $$\\nu(f^n) = \\nu((f^p)^q\\circ f^{r+1})\n               \\le \\nu(f^p)^q\\nu(f^{r+1})$$\n    d'o{\\`u}~:\n    $$\\ell \\le x_n \\le x_p^{pq/n}x_{r+1}^{(r+1)/n}\\le (\\ell+\\varepsilon)^{pq/n}\\max(x_1,\\dots,x_p)^{(r+1)/n}.$$\n    Le majorant tend vers $\\ell+\\varepsilon$ quand $n$ tend vers l'infini\n    donc pour $n$ assez grand on a $\\ell \\le x_n \\le \\ell+2\\varepsilon$\n    ce qui prouve la convergence demand{\\'e}e.\n    \n    Dans le cas o{\\`u} $\\nu$ est une norme quelconque sur $\\mathcal{L}(E)$, il existe\n    une norme subordonn{\\'e}e $\\mu$ et deux r{\\'e}els $a,b>0$ tels que $a\\mu \\le \\nu\\le b\\mu$\n    et donc les suites $(\\nu(f^p)^{1/p})$ et  $(\\mu(f^p)^{1/p})$ ont m{\\^e}me\n    limite par le th{\\'e}or{\\`e}me des gens d'armes.\n    Remarque~: il r{\\'e}sulte de ceci que $\\lim_{p\\to\\infty}(\\nu(f^p)^{1/p})$\n    est ind{\\'e}pendant de $\\nu$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "61e92fec-da0a-493b-83cf-5669df27612b",
+      "id": "30749885-00d6-4796-af7c-40e9295d3107",
       "type": "question",
       "value": {
         "latex": "Montrer que si $f$ est diagonalisable l'in{\\'e}galit{\\'e} pr{\\'e}c{\\'e}dente est une {\\'e}galit{\\'e}.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "7eba1b47-1154-4f49-8c39-02ab401b4a59",
+      "id": "bddbb2d6-8232-4c56-8883-4845b9ac4e0a",
       "type": "reponse",
       "value": {
         "latex": "Consid{\\'e}rer la matrice de $f^p$ dans une base propre pour~$f$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "f6197e3e-1ff3-48d0-afe8-aaceeee028de",
+      "id": "23ac9e02-547e-4b0f-b4ce-6323a294ac7c",
       "type": "question",
       "value": {
         "latex": "{\\'E}tudier le cas g{\\'e}n{\\'e}ral.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "0b094370-928a-4a43-9348-d7cd8d30ef1c",
+      "id": "a8b019fb-b7cf-4249-accd-ecfe67dbc6ce",
       "type": "reponse",
       "value": {
         "latex": "On sait que $f^p = \\sum_{\\lambda\\in\\mathrm{spec}(f)} \\lambda^pP_\\lambda(p)$\n    o{\\`u} $P_\\lambda$ est un polyn{\\^o}me. D'o{\\`u} $\\rho(f) \\le \\nu(f^p)^{1/p}\\le \\rho(f)+ o(1)$\n    et donc $\\nu(f^p)^{1/p}\\xrightarrow[p\\to\\infty]{} \\rho(f)$ (thm du rayon spectral).",
         "html": "<p>On sait que <span class=\"math inline\">\\(f^p = \\sum_{\\lambda\\in\\mathrm{spec}(f)} \\lambda^pP_\\lambda(p)\\)</span> o<span>ù</span> <span class=\"math inline\">\\(P_\\lambda\\)</span> est un polyn<span>ô</span>me. D’o<span>ù</span> <span class=\"math inline\">\\(\\rho(f) \\le \\nu(f^p)^{1/p}\\le \\rho(f)+ o(1)\\)</span> et donc <span class=\"math inline\">\\(\\nu(f^p)^{1/p}\\xrightarrow[p\\to\\infty]{} \\rho(f)\\)</span> (thm du rayon spectral).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel complexe de dimension finie. On consid<span>è</span>re un endomorphisme <span class ..."
 }

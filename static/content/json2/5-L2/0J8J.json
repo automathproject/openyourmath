@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Fonction de plusieurs variables",
     "sousChapitre": "Différentiabilité",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:31.227Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:23.572Z"
   },
   "contenu": [
     {
-      "id": "61ffe297-edfc-4aa4-ad56-6a793b900e25",
+      "id": "e24d9624-0657-4ea5-ab12-04455b0e6e5f",
       "type": "description",
       "value": {
         "latex": "Soit $f :  \\R^{2} \\rightarrow \\R$, d\\'efinie par  \n\\[\n\\begin{array}{lll}\n f(x, y)=x &\\mathrm{si}&\n\\left|x\\right|>\\left|y\\right|\\\\ \nf(x, y)=y &\\mathrm{ si }&\\left|x\\right|<\\left|y\\right|\\\\ \nf(x, y)= 0 &\\mathrm{ si }&\n\\left|x\\right| = \\left|y\\right|. \n\\end{array}\n\\]\n\\'Etudier la continuit\\'e de $f$, l'existence des d\\'eriv\\'ees partielles et leur continuit\\'e.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "2988481c-e432-41a6-8c5c-d666ab6a4d36",
+      "id": "7f5c42a2-816b-4168-9acc-f9a20c0b0fcc",
       "type": "indication",
       "value": {
         "latex": "Distinguer tout de suite la partie triviale et la partie non triviale\nde l'exercice.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "635c332d-c037-42f4-8126-98bd0b7f6c7f",
+      "id": "78c4816d-3e67-4e2b-a7ca-70300e855ab7",
       "type": "reponse",
       "value": {
         "latex": "Il est \\'evident que, en tout point tel que  $\\left|x\\right|<\\left|y\\right|$\nou   $\\left|x\\right|>\\left|y\\right|$,\nla fonction est continue et les d\\'eriv\\'ees\npartielles existent.\n\nSoit $x \\ne 0$. Alors $f$ n'est ni continue en $(x,x)$ ni en $(x,-x)$.\nCar\n$$\\begin{align*}\n\\mathrm{lim}_{\\begin{smallmatrix} (u,v) \\to (x,x)\\\\ |u|>|v| \\end{smallmatrix}}f(u,v)\n&= \\mathrm{lim}_{u \\to x}u = x \\ne 0,\n\\\\\n\\mathrm{lim}_{(u,u) \\to (x,x)} f(u,u) &=0,\n\\\\\n\\mathrm{lim}_{\\begin{smallmatrix} (u,v) \\to (x,-x)\\\\ |u|>|v| \\end{smallmatrix}}f(u,v)\n&= \\mathrm{lim}_{u \\to x}u = x \\ne 0,\n\\\\\n\\mathrm{lim}_{(u,-u) \\to (x,-x)} f(u,u) &=0.\n\\end{align*}$$\nPar contre, $f$ est continue en $(0,0)$. Car\n\\[\n\\mathrm{lim}_{(u,v) \\to (0,0)}f(u,v)=0\n\\]\npuisque\n\\[\n\\begin{array}{lll}\n f(u, v)=u &\\mathrm{si}&\n\\left|u\\right|>\\left|v\\right|,\\\\ \nf(u, v)=v &\\mathrm{ si }&\\left|u\\right|<\\left|v\\right|,\\\\ \nf(u, v)= 0 &\\mathrm{ si }&\n\\left|u\\right| = \\left|v\\right|, \n\\end{array}\n\\]\net puisque alors $\\mathrm{lim}_{u \\to 0}u=0$ et $\\mathrm{lim}_{v \\to 0}v=0$.\n\nSoit  $(x,y)$ un point o\\`u \n$\\left|x\\right| = \\left|y\\right|$.\nIl reste \\`a \\'etudier les d\\'eriv\\'ees partielles en un tel point $(x,y)$.\nSoit $x \\ne 0$.\nAlors la fonction $h$ de la variable $t$ d\\'efinie par\n\\[\nh(t)=f(x+t,y)=\\begin{cases} x+t,\\quad & |x+t|>|y|\\\\ y,\\quad & |x+t|<|y| \\end{cases}\n\\]\nn'est pas d\\'erivable en $t=0$ donc la d\\'eriv\\'ee partielle\n$\\frac{\\partial f}{\\partial x}(x,y)$ n'existe pas.\nDe m\\^eme,\nla fonction $k$ de la variable $t$ d\\'efinie par\n\\[\nk(t)=f(x,y+t)=\\begin{cases} x,\\quad & |x|>|y+t|,\\\\ y+t,\\quad & |x|<|y+t|, \\end{cases}\n\\]\nn'est pas d\\'erivable en $t=0$ donc la d\\'eriv\\'ee partielle\n$\\frac{\\partial f}{\\partial y}(x,y)$ n'existe pas.\nEnfin soit $x = 0$.\nAlors la fonction $h$ de la variable $t$ d\\'efinie par\n\\[\nh(t)=f(t,0)=t\n\\]\nest d\\'erivable en $t=0$ donc la d\\'eriv\\'ee partielle\n$\\frac{\\partial f}{\\partial x}(0,0)$ existe.\nDe m\\^eme,\nla fonction $k$ de la variable $t$ d\\'efinie par\n\\[\nk(t)=f(0,t)=t\n\\]\nest d\\'erivable en $t=0$ donc la d\\'eriv\\'ee partielle\n$\\frac{\\partial f}{\\partial y}(0,0)$ existe.",
         "html": "<p>Il est évident que, en tout point tel que <span class=\"math inline\">\\(\\left|x\\right|&lt;\\left|y\\right|\\)</span> ou <span class=\"math inline\">\\(\\left|x\\right|&gt;\\left|y\\right|\\)</span>, la fonction est continue et les dérivées partielles existent.</p>\n<p>Soit <span class=\"math inline\">\\(x \\ne 0\\)</span>. Alors <span class=\"math inline\">\\(f\\)</span> n’est ni continue en <span class=\"math inline\">\\((x,x)\\)</span> ni en <span class=\"math inline\">\\((x,-x)\\)</span>. Car <span class=\"math display\">\\[\\begin{align*}\n\\mathrm{lim}_{\\begin{smallmatrix} (u,v) \\to (x,x)\\\\ |u|&gt;|v| \\end{smallmatrix}}f(u,v)\n&amp;= \\mathrm{lim}_{u \\to x}u = x \\ne 0,\n\\\\\n\\mathrm{lim}_{(u,u) \\to (x,x)} f(u,u) &amp;=0,\n\\\\\n\\mathrm{lim}_{\\begin{smallmatrix} (u,v) \\to (x,-x)\\\\ |u|&gt;|v| \\end{smallmatrix}}f(u,v)\n&amp;= \\mathrm{lim}_{u \\to x}u = x \\ne 0,\n\\\\\n\\mathrm{lim}_{(u,-u) \\to (x,-x)} f(u,u) &amp;=0.\n\\end{align*}\\]</span> Par contre, <span class=\"math inline\">\\(f\\)</span> est continue en <span class=\"math inline\">\\((0,0)\\)</span>. Car <span class=\"math display\">\\[\\mathrm{lim}_{(u,v) \\to (0,0)}f(u,v)=0\\]</span> puisque <span class=\"math display\">\\[\\begin{array}{lll}\n f(u, v)=u &amp;\\mathrm{si}&amp;\n\\left|u\\right|&gt;\\left|v\\right|,\\\\ \nf(u, v)=v &amp;\\mathrm{ si }&amp;\\left|u\\right|&lt;\\left|v\\right|,\\\\ \nf(u, v)= 0 &amp;\\mathrm{ si }&amp;\n\\left|u\\right| = \\left|v\\right|, \n\\end{array}\\]</span> et puisque alors <span class=\"math inline\">\\(\\mathrm{lim}_{u \\to 0}u=0\\)</span> et <span class=\"math inline\">\\(\\mathrm{lim}_{v \\to 0}v=0\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\((x,y)\\)</span> un point où <span class=\"math inline\">\\(\\left|x\\right| = \\left|y\\right|\\)</span>. Il reste à étudier les dérivées partielles en un tel point <span class=\"math inline\">\\((x,y)\\)</span>. Soit <span class=\"math inline\">\\(x \\ne 0\\)</span>. Alors la fonction <span class=\"math inline\">\\(h\\)</span> de la variable <span class=\"math inline\">\\(t\\)</span> définie par <span class=\"math display\">\\[h(t)=f(x+t,y)=\\begin{cases} x+t,\\quad &amp; |x+t|&gt;|y|\\\\ y,\\quad &amp; |x+t|&lt;|y| \\end{cases}\\]</span> n’est pas dérivable en <span class=\"math inline\">\\(t=0\\)</span> donc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(x,y)\\)</span> n’existe pas. De même, la fonction <span class=\"math inline\">\\(k\\)</span> de la variable <span class=\"math inline\">\\(t\\)</span> définie par <span class=\"math display\">\\[k(t)=f(x,y+t)=\\begin{cases} x,\\quad &amp; |x|&gt;|y+t|,\\\\ y+t,\\quad &amp; |x|&lt;|y+t|, \\end{cases}\\]</span> n’est pas dérivable en <span class=\"math inline\">\\(t=0\\)</span> donc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(x,y)\\)</span> n’existe pas. Enfin soit <span class=\"math inline\">\\(x = 0\\)</span>. Alors la fonction <span class=\"math inline\">\\(h\\)</span> de la variable <span class=\"math inline\">\\(t\\)</span> définie par <span class=\"math display\">\\[h(t)=f(t,0)=t\\]</span> est dérivable en <span class=\"math inline\">\\(t=0\\)</span> donc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial x}(0,0)\\)</span> existe. De même, la fonction <span class=\"math inline\">\\(k\\)</span> de la variable <span class=\"math inline\">\\(t\\)</span> définie par <span class=\"math display\">\\[k(t)=f(0,t)=t\\]</span> est dérivable en <span class=\"math inline\">\\(t=0\\)</span> donc la dérivée partielle <span class=\"math inline\">\\(\\frac{\\partial f}{\\partial y}(0,0)\\)</span> existe.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f :  \\R^{2} \\rightarrow \\R\\)</span>, définie par <span class=\"math display\"> ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Analyse vectorielle",
     "sousChapitre": "Forme différentielle, champ de vecteurs, circulation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:46:20.109Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:46:16.242Z"
   },
   "contenu": [
     {
-      "id": "ddc46e24-9ec9-44ab-9bd9-76531d6d8672",
+      "id": "ac027d33-b8bf-4490-b51a-cbb3c2300d61",
       "type": "description",
       "value": {
         "latex": "Les formes différentielles suivantes sont elles exactes ? Si oui, intégrer et si non chercher un facteur intégrant.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6c057ecd-774b-4116-9d79-6bcb8af1f057",
+      "id": "ddce4e15-12f3-4cf1-b8e1-f0102609e0d5",
       "type": "question",
       "value": {
         "latex": "$\\omega= (2x+2y+e^{x+y})(dx+dy)$ sur $\\Rr^2$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "7c030646-3e60-484e-bbc7-da90f6bedd4c",
+      "id": "8b15dffd-653a-4cd7-ae21-378be3dc6fc8",
       "type": "reponse",
       "value": {
         "latex": "Pour $(x,y)\\in\\Rr^2$, on pose $P(x,y)=2x+2y+e^{x+y}=Q(x,y)$. Les fonctions $P$ et $Q$ sont de classe $C^1$ sur $\\Rr^2$ qui est un ouvert étoilé de $\\Rr^2$. Donc, d'après le théorème de \\textsc{Schwarz}, $\\omega$ est exacte sur $\\Rr^2$ si et seulement si $ \\frac{\\partial P}{\\partial y}= \\frac{\\partial Q}{\\partial x}$ et comme $ \\frac{\\partial P}{\\partial y}=2+e^{x+y}= \\frac{\\partial Q}{\\partial x}$, la forme différentielle $\\omega$ est une forme différentielle exacte sur $\\Rr^2$.\n\nSoit $f$ une fonction $f$ de classe $C^1$ sur $\\Rr^2$.\n\n$$\\begin{align*}\\ensuremath\ndf=\\omega&\\Leftrightarrow\\forall(x,y)\\in\\Rr^2,\\;\\left\\{\n\\begin{array}{l}\n \\frac{\\partial f}{\\partial x}(x,y)=2x+2y+e^{x+y}\\\\\n\\rule{0mm}{7mm} \\frac{\\partial f}{\\partial y}(x,y)=2x+2y+e^{x+y}\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists g\\in C^1(\\Rr,\\Rr)/\\;\\forall(x,y)\\in\\Rr^2,\\;\n\\left\\{\n\\begin{array}{l}\nf(x,y)=x^2+2xy+e^{x+y}+g(y)\\\\\n2x+e^{x+y}+g'(y)=2x+2y+e^{x+y}\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists\\lambda\\in\\Rr/\\;\\forall(x,y)\\in\\Rr^2,\\;\n\\left\\{\n\\begin{array}{l}\nf(x,y)=x^2+2xy+e^{x+y}+g(y)\\\\\ng(y)=y^2+\\lambda\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists\\lambda\\in\\Rr/\\;\\forall(x,y)\\in\\Rr^2/\\;f(x,y)=(x+y)^2+e^{x+y}+\\lambda.\n\\end{align*}$$\n\nLes primitives de $\\omega$ sur $\\Rr^2$ sont les fonctions de la forme $(x,y)\\mapsto(x+y)^2+e^{x+y}+\\lambda$, $\\lambda\\in\\Rr$.\n\n\\textbf{Remarque.} On pouvait aussi remarquer immédiatement que si $f(x,y)=(x+y)^2+e^{x+y}$ alors $df=\\omega$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "71ce6a30-bacd-42d7-b9ba-5a9df218d28b",
+      "id": "661955a2-0f9d-4df9-82c4-988293269cb8",
       "type": "question",
       "value": {
         "latex": "$\\omega= \\frac{xdy-ydx}{(x-y)^2}$ sur $\\Omega=\\{(x,y)\\in\\Rr^2/\\;y > x\\}$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "ad246e04-4d3c-416a-b560-85254fb4a1e5",
+      "id": "7c926150-3661-4ef9-8ed1-bdc68357b6fd",
       "type": "reponse",
       "value": {
         "latex": "La forme différentielle $\\omega$ est de classe $C^1$ sur $\\Omega=\\{(x,y)\\in\\Rr^2/\\;y > x\\}$ qui est un ouvert étoilé de $\\Rr^2$ car convexe. Donc, d'après le théorème de \\textsc{Schwarz}, $\\omega$ est exacte sur $\\Omega$ si et seulement si $\\omega$ est fermée sur $\\Omega$.\n\n$ \\frac{\\partial}{\\partial x}\\left( \\frac{x}{(x-y)^2}\\right)= \\frac{\\partial}{\\partial x}\\left( \\frac{1}{x-y}+y \\frac{1}{(x-y)^2}\\right)=- \\frac{1}{(x-y)^2}- \\frac{2y}{(x-y)^3}=- \\frac{x+y}{(x-y)^3}= \\frac{x+y}{(y-x)^3}$.\n\n$ \\frac{\\partial}{\\partial y}\\left(- \\frac{y}{(x-y)^2}\\right)= \\frac{\\partial}{\\partial y}\\left(- \\frac{1}{y-x}-x \\frac{1}{(y-x)^2}\\right)= \\frac{1}{(y-x)^2}+ \\frac{2x}{(y-x)^3}= \\frac{x+y}{(y-x)^3}= \\frac{\\partial}{\\partial x}\\left( \\frac{x}{(x-y)^2}\\right)$.\n\nDonc $\\omega$ est exacte sur l'ouvert $\\Omega$. Soit $f$ une fonction $f$ de classe $C^1$ sur $\\Rr^2$.\n\n$$\\begin{align*}\\ensuremath\ndf=\\omega&\\Leftrightarrow\\forall(x,y)\\in\\Omega,\\;\\left\\{\n\\begin{array}{l}\n \\frac{\\partial f}{\\partial x}(x,y)=- \\frac{y}{(x-y)^2}\\\\\n\\rule{0mm}{6mm} \\frac{\\partial f}{\\partial y}(x,y)= \\frac{x}{(x-y)^2}\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists g\\in C^1(\\Rr,\\Rr)/\\;\\forall(x,y)\\in\\Omega,\\;\n\\left\\{\n\\begin{array}{l}\nf(x,y)= \\frac{y}{x-y}+g(y)\\\\\n \\frac{x}{(x-y)^2}+g'(y)= \\frac{x}{(x-y)^2}\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists\\lambda\\in\\Rr/\\;\\forall(x,y)\\in\\Omega,\\;f(x,y)= \\frac{y}{x-y}+\\lambda.\n\\end{align*}$$\n\nLes primitives de $\\omega$ sur $\\Omega$ sont les fonctions de la forme $(x,y)\\mapsto \\frac{y}{x-y}+\\lambda$, $\\lambda\\in\\Rr$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "e0ae40b7-7eb3-418a-88ae-f029c3c0d894",
+      "id": "4e75bc3b-d1ab-4caf-8519-c78a16964ec5",
       "type": "question",
       "value": {
         "latex": "$\\omega= \\frac{xdx+ydy}{x^2+y^2}- ydy$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "84409cd5-5396-4f50-9c5c-b11f3c5aeac8",
+      "id": "38e8acad-ebc4-46aa-9eff-0c88446df5ee",
       "type": "reponse",
       "value": {
         "latex": "$\\omega$ est de classe $C^1$ sur $\\Rr^2\\setminus\\{(0,0)\\}$ qui est un ouvert de $\\Rr^2$ mais n'est pas étoilé. On se place dorénavant sur $\\Omega=\\Rr^2\\setminus\\{(x,0),\\;x\\in]-\\infty,0]\\}$ qui est un ouvert étoilé de $\\Rr^2$. Sur $\\Omega$, $\\omega$ est exacte si et seulement si $\\omega$ est fermée d'après le théorème de \\textsc{Schwarz}.\n\n$ \\frac{\\partial}{\\partial x}\\left( \\frac{y}{x^2+y^2}-y\\right)=- \\frac{2xy}{(x^2+y^2)^2}= \\frac{\\partial}{\\partial y}\\left( \\frac{x}{x^2+y^2}\\right)$. Donc $\\omega$ est exacte sur $\\Omega$. Soit $f$ une application de classe $C^1$ sur $\\Omega$.\n\n$$\\begin{align*}\\ensuremath\ndf=\\omega&\\Leftrightarrow\\forall(x,y)\\in\\Omega,\\;\\left\\{\n\\begin{array}{l}\n \\frac{\\partial f}{\\partial x}(x,y)= \\frac{x}{x^2+y^2}\\\\\n\\rule{0mm}{6mm} \\frac{\\partial f}{\\partial y}(x,y)= \\frac{y}{x^2+y^2}-y\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists g\\in C^1(\\Rr,\\Rr)/\\;\\forall(x,y)\\in\\Omega,\\;\\left\\{\n\\begin{array}{l}\n \\frac{\\partial f}{\\partial x}(x,y)= \\frac{1}{2}\\ln(x^2+y^2)+g(y)\\\\\n \\frac{y}{x^2+y^2}+g'(y)= \\frac{y}{x^2+y^2}-y\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\exists\\lambda\\in\\Rr/\\;\\forall(x,y)\\in\\Omega,\\;f(x,y)= \\frac{1}{2}(\\ln(x^2+y^2)-y^2)+\\lambda.\n\\end{align*}$$\n\nLes primitives de $\\omega$ sur $\\Omega$ sont les fonctions de la forme $(x,y)\\mapsto \\frac{1}{2}(\\ln(x^2+y^2)-y^2)+\\lambda$, $\\lambda\\in\\Rr$.\n\nLes fonctions précédentes sont encore des primitives de $\\omega$ sur $\\Rr^2\\setminus\\{(0,0)\\}$ et donc $\\omega$ est exacte sur $\\Rr^2\\setminus\\{(0,0)\\}$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "68a3274a-2325-4aad-a8da-9a843a006357",
+      "id": "43d348c8-9286-4226-b445-ef85e1c4ee38",
       "type": "question",
       "value": {
         "latex": "$\\omega= \\frac{1}{x^2y}dx - \\frac{1}{xy^2}dy$ sur $(]0,+\\infty[)^2$ (trouver un facteur intégrant non nul ne dépendant que de $x^2+y^2$).",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "03833201-f8da-42f7-a86c-621c6cac950c",
+      "id": "b4577271-2bc2-4e1d-a07f-ac420b479604",
       "type": "reponse",
       "value": {
         "latex": "$\\omega$ est de classe $C^1$ sur $]0,+\\infty[^2$ qui est un ouvert étoilé de $\\Rr^2$. Donc $\\omega$ est exacte sur $]0,+\\infty[^2$ si et seulement si $\\omega$ est fermée sur $]0,+\\infty[^2$ d'après le théorème de \\textsc{Schwarz}.\n\n$ \\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}\\right)= \\frac{1}{x^2y^2}$ et $ \\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}\\right)=- \\frac{1}{x^2y^2}$. Donc $ \\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}\\right)\\neq \\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}\\right)$ et $\\omega$ n'est pas exacte sur $]0,+\\infty[^2$.\n\nOn cherche un facteur intégrant de la forme $h~:~(x,y)\\mapsto g(x^2+y^2)$ où $g$ est une fonction non nulle de classe $C^1$ sur $]0,+\\infty[$.\n\n$ \\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}g(x^2+y^2)\\right)= \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{2}{y^2}g'(x^2+y^2)$ et $ \\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}g(x^2+y^2)\\right)=- \\frac{1}{x^2y^2}g(x^2+y^2)+ \\frac{2}{x^2}g'(x^2+y^2)$.\n\n$$\\begin{align*}\\ensuremath\nh\\omega\\;\\text{est exacte sur}\\;]0,+\\infty[^2&\\Leftrightarrow\\forall(x,y)\\in]0,+\\infty[^2,\\; \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{2}{y^2}g'(x^2+y^2)=- \\frac{1}{x^2y^2}g(x^2+y^2)+ \\frac{2}{x^2}g'(x^2+y^2)\\\\\n &\\Leftrightarrow\\forall(x,y)\\in]0,+\\infty[^2,\\; \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{x^2+y^2}{x^2y^2}g'(x^2+y^2)=0\\\\\n &\\Leftrightarrow\\forall t>0,\\;-tg'(t)+g(t)=0\\Leftrightarrow\\exists \\lambda\\in\\Rr/\\;\\forall t>0,\\;g(t)=\\lambda t.\n\\end{align*}$$\n\nLa forme différentielle $(x^2+y^2)\\omega$ est exacte sur $]0,+\\infty[^2$. De plus, \n\n\\begin{center}\n$d\\left( \\frac{x}{y}- \\frac{y}{x}\\right)=\\left( \\frac{1}{y}+ \\frac{y}{x^2}\\right)dx-\\left( \\frac{x}{y^2}+ \\frac{1}{x}\\right)dy=(x^2+y^2)\\omega$.\n\\end{center}",
         "html": "<p><span class=\"math inline\">\\(\\omega\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(]0,+\\infty[^2\\)</span> qui est un ouvert étoilé de <span class=\"math inline\">\\(\\Rr^2\\)</span>. Donc <span class=\"math inline\">\\(\\omega\\)</span> est exacte sur <span class=\"math inline\">\\(]0,+\\infty[^2\\)</span> si et seulement si <span class=\"math inline\">\\(\\omega\\)</span> est fermée sur <span class=\"math inline\">\\(]0,+\\infty[^2\\)</span> d’après le théorème de <span class=\"smallcaps\">Schwarz</span>.</p>\n<p><span class=\"math inline\">\\(\\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}\\right)= \\frac{1}{x^2y^2}\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}\\right)=- \\frac{1}{x^2y^2}\\)</span>. Donc <span class=\"math inline\">\\(\\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}\\right)\\neq \\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}\\right)\\)</span> et <span class=\"math inline\">\\(\\omega\\)</span> n’est pas exacte sur <span class=\"math inline\">\\(]0,+\\infty[^2\\)</span>.</p>\n<p>On cherche un facteur intégrant de la forme <span class=\"math inline\">\\(h~:~(x,y)\\mapsto g(x^2+y^2)\\)</span> où <span class=\"math inline\">\\(g\\)</span> est une fonction non nulle de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\frac{\\partial}{\\partial x}\\left(\n- \\frac{1}{xy^2}g(x^2+y^2)\\right)= \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{2}{y^2}g&#39;(x^2+y^2)\\)</span> et <span class=\"math inline\">\\(\\frac{\\partial}{\\partial y}\\left(\n \\frac{1}{x^2y}g(x^2+y^2)\\right)=- \\frac{1}{x^2y^2}g(x^2+y^2)+ \\frac{2}{x^2}g&#39;(x^2+y^2)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nh\\omega\\;\\text{est exacte sur}\\;]0,+\\infty[^2&amp;\\Leftrightarrow\\forall(x,y)\\in]0,+\\infty[^2,\\; \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{2}{y^2}g&#39;(x^2+y^2)=- \\frac{1}{x^2y^2}g(x^2+y^2)+ \\frac{2}{x^2}g&#39;(x^2+y^2)\\\\\n &amp;\\Leftrightarrow\\forall(x,y)\\in]0,+\\infty[^2,\\; \\frac{1}{x^2y^2}g(x^2+y^2)- \\frac{x^2+y^2}{x^2y^2}g&#39;(x^2+y^2)=0\\\\\n &amp;\\Leftrightarrow\\forall t&gt;0,\\;-tg&#39;(t)+g(t)=0\\Leftrightarrow\\exists \\lambda\\in\\Rr/\\;\\forall t&gt;0,\\;g(t)=\\lambda t.\n\\end{align*}\\]</span></p>\n<p>La forme différentielle <span class=\"math inline\">\\((x^2+y^2)\\omega\\)</span> est exacte sur <span class=\"math inline\">\\(]0,+\\infty[^2\\)</span>. De plus,</p>\n<p><span class=\"math inline\">\\(d\\left( \\frac{x}{y}- \\frac{y}{x}\\right)=\\left( \\frac{1}{y}+ \\frac{y}{x^2}\\right)dx-\\left( \\frac{x}{y^2}+ \\frac{1}{x}\\right)dy=(x^2+y^2)\\omega\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Les formes différentielles suivantes sont elles exactes ? Si oui, intégrer et si non chercher un facteur intégrant.</p>\n"
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Développement limité",
     "sousChapitre": "Equivalents",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:08.930Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:56.541Z"
   },
   "contenu": [
     {
-      "id": "41a95fa7-bfb5-490f-8a90-62b40b44c0af",
+      "id": "6681e1d2-4f0e-4300-a98d-3418da4447da",
       "type": "description",
       "value": {
         "latex": "Trouver $a,b\\in\\R$ tels que \n$$\\cos x - \\frac{1+ax^2}{1+bx^2}$$\nsoit un $o(x^n)$ en $0$ avec $n$ maximal.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6a876b5f-c806-4270-8bbb-0d9cb17a211c",
+      "id": "9203e0f9-163f-4417-9753-fe84c73fbdbb",
       "type": "indication",
       "value": {
         "latex": "Identifier les dl de $\\cos x$ et $\\frac{1+ax^2}{1+bx^2}$ en $x=0$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "118c209c-9ad5-4450-a4d1-aedf214a7c69",
+      "id": "79bea99e-526d-47e9-b92c-eac7757c70ce",
       "type": "reponse",
       "value": {
         "latex": "Le dl de $\\cos x$ en $0$ à l'ordre $6$ est :\n$$\\cos x = 1 - \\frac{1}{2!} x^2 + \\frac{1}{4!}x^4  - \\frac{1}{6!} x^6 + o(x^6).$$\n\nCalculons celui de $\\frac{1+ax^2}{1+bx^2}$ :\n\n$$\\begin{align*}\n\\frac{1+ax^2}{1+bx^2} \n  & = (1+ax^2) \\times \\frac{1}{1+bx^2} \\\\\n  & = (1+ax^2)\\times \\big(1-bx^2+b^2x^4-b^3x^6+o(x^6) \\big) \\quad \\text{ car } \\frac{1}{1+u} = 1-u+u^2 - u^3+o(u^3) \\\\\n  &= \\ \\ \\cdots  \\qquad \\text{ on développe } \\\\\n  &= 1 + (a-b) x^2 - b(a-b) x^4 + b^2(a-b) x^6 + o(x^6) \\\\\n\\end{align*}$$\n\nNotons $\\Delta(x) = \\cos x - \\frac{1+ax^2}{1+bx^2}$ alors \n$$\\Delta(x) = \\big(-\\frac12-(a-b)\\big)x^2 + \\big(\\frac{1}{24} + b(a-b)\\big) x^4 \n+ \\big(-\\frac{1}{720}-b^2(a-b)\\big) x^6 + o(x^6).$$\n\nPour que cette différence soit la plus petite possible (lorsque $x$ est proche de $0$)\nil faut annuler le plus possible de coefficients de bas degré.\nOn souhaite donc avoir \n$$-\\frac12-(a-b) = 0 \\qquad \\text{et} \\qquad \\frac{1}{24} + b(a-b)=0.$$\nEn substituant l'égalité de gauche dans celle de droite on trouve :\n$$a=-\\frac{5}{12}  \\qquad \\text{et} \\qquad b=\\frac{1}{12}.$$\n\nOn obtient alors \n$$\\Delta(x) =  \\big(-\\frac{1}{720}-b^2(a-b)\\big) x^6 + o(x^6) = \\frac{1}{480} x^6 + o(x^6).$$\n\n\\bigskip\n\nAvec notre choix de $a,b$ nous avons obtenu une très bonne approximation de $\\cos x$.\nPar exemple lorsque l'on évalue  $\\frac{1+ax^2}{1+bx^2}$ (avec $a=-\\frac{5}{12}$ et $b=\\frac{1}{12}$)\nen $x=0.1$ on trouve :\n$$0.9950041631\\ldots$$\nAlors que \n$$\\cos(0.1)=0.9950041652\\ldots$$\nEn l'on trouve ici $\\Delta(0.1) \\simeq 2\\times 10^{-9}$.",
         "html": "<p>Le dl de <span class=\"math inline\">\\(\\cos x\\)</span> en <span class=\"math inline\">\\(0\\)</span> à l’ordre <span class=\"math inline\">\\(6\\)</span> est : <span class=\"math display\">\\[\\cos x = 1 - \\frac{1}{2!} x^2 + \\frac{1}{4!}x^4  - \\frac{1}{6!} x^6 + o(x^6).\\]</span></p>\n<p>Calculons celui de <span class=\"math inline\">\\(\\frac{1+ax^2}{1+bx^2}\\)</span> :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\frac{1+ax^2}{1+bx^2} \n  &amp; = (1+ax^2) \\times \\frac{1}{1+bx^2} \\\\\n  &amp; = (1+ax^2)\\times \\big(1-bx^2+b^2x^4-b^3x^6+o(x^6) \\big) \\quad \\text{ car } \\frac{1}{1+u} = 1-u+u^2 - u^3+o(u^3) \\\\\n  &amp;= \\ \\ \\cdots  \\qquad \\text{ on développe } \\\\\n  &amp;= 1 + (a-b) x^2 - b(a-b) x^4 + b^2(a-b) x^6 + o(x^6) \\\\\n\\end{align*}\\]</span></p>\n<p>Notons <span class=\"math inline\">\\(\\Delta(x) = \\cos x - \\frac{1+ax^2}{1+bx^2}\\)</span> alors <span class=\"math display\">\\[\\Delta(x) = \\big(-\\frac12-(a-b)\\big)x^2 + \\big(\\frac{1}{24} + b(a-b)\\big) x^4 \n+ \\big(-\\frac{1}{720}-b^2(a-b)\\big) x^6 + o(x^6).\\]</span></p>\n<p>Pour que cette différence soit la plus petite possible (lorsque <span class=\"math inline\">\\(x\\)</span> est proche de <span class=\"math inline\">\\(0\\)</span>) il faut annuler le plus possible de coefficients de bas degré. On souhaite donc avoir <span class=\"math display\">\\[-\\frac12-(a-b) = 0 \\qquad \\text{et} \\qquad \\frac{1}{24} + b(a-b)=0.\\]</span> En substituant l’égalité de gauche dans celle de droite on trouve : <span class=\"math display\">\\[a=-\\frac{5}{12}  \\qquad \\text{et} \\qquad b=\\frac{1}{12}.\\]</span></p>\n<p>On obtient alors <span class=\"math display\">\\[\\Delta(x) =  \\big(-\\frac{1}{720}-b^2(a-b)\\big) x^6 + o(x^6) = \\frac{1}{480} x^6 + o(x^6).\\]</span></p>\n<p>Avec notre choix de <span class=\"math inline\">\\(a,b\\)</span> nous avons obtenu une très bonne approximation de <span class=\"math inline\">\\(\\cos x\\)</span>. Par exemple lorsque l’on évalue <span class=\"math inline\">\\(\\frac{1+ax^2}{1+bx^2}\\)</span> (avec <span class=\"math inline\">\\(a=-\\frac{5}{12}\\)</span> et <span class=\"math inline\">\\(b=\\frac{1}{12}\\)</span>) en <span class=\"math inline\">\\(x=0.1\\)</span> on trouve : <span class=\"math display\">\\[0.9950041631\\ldots\\]</span> Alors que <span class=\"math display\">\\[\\cos(0.1)=0.9950041652\\ldots\\]</span> En l’on trouve ici <span class=\"math inline\">\\(\\Delta(0.1) \\simeq 2\\times 10^{-9}\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Trouver <span class=\"math inline\">\\(a,b\\in\\R\\)</span> tels que <span class=\"math display\">\\[\\cos x - \\frac{1+ax^2}{1+bx^2}\\]</span> soit un <span c ..."
 }

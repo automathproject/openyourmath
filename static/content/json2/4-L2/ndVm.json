@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:09.916Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:01.494Z"
   },
   "contenu": [
     {
-      "id": "321d99d8-4df8-49b1-8e48-55b4ac5a6159",
+      "id": "645366ba-663c-4535-ab6b-05c1fc16e17e",
       "type": "description",
       "value": {
         "latex": "Soit $a\\in\\R$ et $A$ la matrice\n$$A=\\begin{pmatrix}0&1&0 \\\\  0&a&0 \\\\  0&a-2&2\\end{pmatrix}.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "13724915-65e5-428c-bb5c-0d4d7e6a2f28",
+      "id": "74c15d01-f7e5-43ef-8b27-2b52285dd43e",
       "type": "question",
       "value": {
         "latex": "Pour quelles valeurs de $a$ la matrice $A$ est-elle diagonalisable ? \n\nLorsque $A$ est diagonalisable, déterminer une base de vecteurs propres de $A$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "0e02c25a-0574-4d90-8e3d-0d1c887e8740",
+      "id": "baba49b6-5424-4f94-a973-102b1ea4cfc7",
       "type": "reponse",
       "value": {
         "latex": "{\\it Pour quelles valeurs de $a$ la matrice $A$ est-elle diagonalisable ?}\n\nDéterminons le polynôme caractéristique de la matrice $A$.\n$$P_A(X)=\\det (A-XI)=\\begin{vmatrix}-X&1&0 \\\\  0&a-X&0 \\\\ 0&a-2&2-X\\end{vmatrix}=-X(a-X)(2-X).$$\nCe polynôme admet trois racines $0,a$ et $2$. Ainsi, si $a\\notin\\{0,2\\}$ la matrice est diagonalisable. Examinons les cas $a=0$ et $a=2$.\n\nSi $a=0$, la valeur propre $0$ est valeur propre double, on a\n$$A=\\begin{pmatrix}0&1&0 \\\\  0&0&0 \\\\  0&-2&2\\end{pmatrix}.$$\nLe sous-espace propre associé à $0$ est égal à $\\ker A=\\{\\vec u=(x,y,z),\\ A\\vec u=\\vec 0\\}$,\n$$\\vec u\\in\\ker A\\iff\\left\\{$$\\begin{align*}y&=0 \\\\ -2y+2z&=0\\end{align*}$$\\right.\\iff y=z=0.$$\nLe sous-espace propre associé à la valeur propre double $0$ est une droite vectorielle, la droite engendrée par $(1,0,0)$, la matrice n'est donc pas diagonalisable.\n\nSi $a=2$, la valeur propre $2$ est double, on a\n$$A=\\begin{pmatrix}0&1&0 \\\\  0&2&0 \\\\  0&0&2\\end{pmatrix}.$$\nLe sous-espace propre associé à $2$ est égal à $E_2=\\{\\vec u=(x,y,z),\\ A\\vec u=2\\vec u\\}$,\n$$\\vec u\\in E_2\\iff\\left\\{$$\\begin{align*}y&=2x \\\\ 2y&=2y \\\\ 2z&=2z\\end{align*}$$\\right.\\iff y=2x.$$\nLe sous-espace propre associé à la valeur propre double $2$ est un plan vectoriel, le plan d'équation $y=2x$, la matrice est donc diagonalisable.\n\nAinsi la matrice $A$ est diagonalisable si et seulement si $a\\neq 0$.\n\n{\\it Lorsque $A$ est diagonalisable, déterminons une base de vecteurs propres de $A$.}\n\nOn a $a\\neq 0$ et on distingue les cas $a\\neq 2$ et $a=2$.\n\nSi $a\\neq 2$, les sous-espaces propres associés aux valeurs propres $0$ et $2$ sont lisibles sur la matrice, on a\n$$E_0=\\ker A=\\R.(1,0,0)\\quad{\\hbox{et}}\\quad E_2=\\R.(0,0,1),$$\nOn détermine $E_a=\\{\\vec u=(x,y,z),\\ A\\vec u=a\\vec u\\}$.\n$$\\vec u\\in E_a\\iff\\left\\{$$\\begin{align*}y&=ax \\\\  ay&=ay \\\\  (a-2)y+2z&=az\\end{align*}$$\\right.\\iff\\left\\{$$\\begin{align*}y&=ax \\\\  (a-2)y&=(a-2)z\\end{align*}$$\\right.\\iff\\left\\{$$\\begin{align*}y&=ax \\\\  y&=z\\end{align*}$$\\right.$$\nC'est la droite vectorielle engendrée par le vecteur $\\vec e=(1,a,a)$. Ainsi, une base de vecteurs propres est donnée par les vecteurs $(1,0,0), (0,0,1)$ et $(1,a,a)$.\n\nSi $a=2$, nous avons vu que le sous-espace propre associé à la valeur propre double $2$ est le plan d'équation $y=2x$. \nAinsi, une base de vecteurs propres est donnée par les vecteurs $(1,0,0), (0,0,1)$ et $(1,2,0)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "ce401f9f-9305-4aa0-bab9-cb677876269c",
+      "id": "e697cc51-c6d7-4686-924d-28b6ec82641b",
       "type": "question",
       "value": {
         "latex": "Soit $E$ l'espace vectoriel des solutions du système $x'=Ax$, où $x$ est une fonction de la variable réelle $t$ à valeur dans $\\R^3$.\n   \\begin{enumerate}",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "031c5380-1632-48dc-bed2-3e149b6ae670",
+      "id": "50b49924-675b-4ce7-ba8d-c46f7977680e",
       "type": "reponse",
       "value": {
         "latex": "{\\it Soit $E$ l'espace vectoriel des solutions du système $x'=Ax$, où $x$ est une fonction de la variable réelle $t$ à valeur dans $\\R^3$.}\n   \\begin{enumerate}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "e683350b-f698-40ca-84ee-a69e1cbd396c",
+      "id": "16301b44-fe0b-455d-b36e-0ea74adbccd5",
       "type": "question",
       "value": {
         "latex": "Lorsque $A$ est diagonalisable, donner une base de $E$ en fonction des vecteurs propres et des valeurs propres de $A$. Ecrire la solution générale du système.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "d65a9802-1a83-4530-9504-a4145ec1a612",
+      "id": "3bc653d3-25e4-40dd-8d8c-be33d8be2ab3",
       "type": "reponse",
       "value": {
         "latex": "{\\it Lorsque $A$ est diagonalisable, donnons une base de $E$ en fonction des vecteurs propres et des valeurs propres de $A$ et écrivons la solution générale du système.}\n\nSi $\\lambda_1, \\lambda_2, \\lambda_3$ sont les valeurs propres de $A$ et $\\vec e_1,\\vec e_2$ et $\\vec e_3$ les vecteurs propres associés, on sait qu'une base de l'espace des solutions du système différentiel $x'=Ax$ est donnée par \n$$e^{\\lambda_1 t}\\vec e_1,\\ e^{\\lambda_2 t}\\vec e_2,\\ e^{\\lambda_3 t}\\vec e_3.$$\nAinsi, si $a\\neq 2$ cette base est donnée par\n$$(1,0,0),\\ e^{2t}(0,0,1),\\ e^{at}(1,a,a)$$\net si $a=2$, elle est donnée par\n$$(1,0,0),\\ e^{2t}(0,0,1),\\ e^{2t}(1,2,0).$$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "d393082c-fbe6-415d-a835-d76282e3f230",
+      "id": "b7514fe3-3e54-4993-8cd1-baa4baee59be",
       "type": "question",
       "value": {
         "latex": "Lorsque $A$ n'est pas diagonalisable, intégrer directement le système $x'=Ax$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "55672fea-6281-4e74-a0f7-380dd24ce179",
+      "id": "d0a0acf5-59b1-4b3a-9222-4d8b9bdefbc2",
       "type": "reponse",
       "value": {
         "latex": "{\\it Lorsque $A$ n'est pas diagonalisable, intégrons directement le système $X'=AX$}.\n\nLorsque $A$ n'est pas diagonalisable, $a=0$ et \n$$A=\\begin{pmatrix}0&1&0 \\\\  0&0&0 \\\\  0&-2&2\\end{pmatrix}.$$\nLe système $X'=AX$ est équivalent à\n$$\\begin{pmatrix}x'(t) \\\\  y'(t) \\\\  z'(t)\\end{pmatrix}=\\begin{pmatrix}0&1&0 \\\\  0&0&0 \\\\  0&-2&2\\end{pmatrix}\n\\begin{pmatrix}x(t) \\\\  y(t) \\\\  z(t)\\end{pmatrix}\\iff\n\\left\\{$$\\begin{align*}x'&=y \\\\  y'&=0 \\\\  z'&=-2y+2z\\end{align*}$$\\right.$$\nSi $y'=0$, alors $y(t)=\\alpha$, $\\alpha\\in\\R$. Ainsi, si $x'=\\alpha$, $x(t)=\\alpha t+\\beta$, $\\beta\\in\\R$ et la troisième équation devient\n$$z'=2z-2\\alpha$$\net sa solution s'écrit $z(t)=\\gamma e^{2t}+\\alpha$, $\\gamma\\in\\R$. D'où la solution générale du système\n$$X(t)=\\begin{pmatrix}x(t) \\\\  y(t) \\\\  z(t)\\end{pmatrix}=\\begin{pmatrix}\\alpha t+\\beta \\\\  \\alpha \\\\  \\gamma e^{2t}+\\alpha\\end{pmatrix}=\\alpha\\begin{pmatrix}t \\\\ 1 \\\\ 1\\end{pmatrix}+\\beta\\begin{pmatrix}1 \\\\ 0 \\\\ 0\\end{pmatrix}+\\gamma\\begin{pmatrix}0 \\\\ 0 \\\\  e^{2t}\\end{pmatrix}$$\n$(\\alpha,\\beta,\\gamma)\\in\\R^3$.",
         "html": "<p><span><em>Lorsque <span class=\"math inline\">\\(A\\)</span> n’est pas diagonalisable, intégrons directement le système <span class=\"math inline\">\\(X&#39;=AX\\)</span></em></span>.</p>\n<p>Lorsque <span class=\"math inline\">\\(A\\)</span> n’est pas diagonalisable, <span class=\"math inline\">\\(a=0\\)</span> et <span class=\"math display\">\\[A=\\begin{pmatrix}0&amp;1&amp;0 \\\\  0&amp;0&amp;0 \\\\  0&amp;-2&amp;2\\end{pmatrix}.\\]</span> Le système <span class=\"math inline\">\\(X&#39;=AX\\)</span> est équivalent à <span class=\"math display\">\\[\\begin{pmatrix}x&#39;(t) \\\\  y&#39;(t) \\\\  z&#39;(t)\\end{pmatrix}=\\begin{pmatrix}0&amp;1&amp;0 \\\\  0&amp;0&amp;0 \\\\  0&amp;-2&amp;2\\end{pmatrix}\n\\begin{pmatrix}x(t) \\\\  y(t) \\\\  z(t)\\end{pmatrix}\\iff\n\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\nx&#39;&amp;=y \\\\  y&#39;&amp;=0 \\\\  z&#39;&amp;=-2y+2z\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\]</span> Si <span class=\"math inline\">\\(y&#39;=0\\)</span>, alors <span class=\"math inline\">\\(y(t)=\\alpha\\)</span>, <span class=\"math inline\">\\(\\alpha\\in\\R\\)</span>. Ainsi, si <span class=\"math inline\">\\(x&#39;=\\alpha\\)</span>, <span class=\"math inline\">\\(x(t)=\\alpha t+\\beta\\)</span>, <span class=\"math inline\">\\(\\beta\\in\\R\\)</span> et la troisième équation devient <span class=\"math display\">\\[z&#39;=2z-2\\alpha\\]</span> et sa solution s’écrit <span class=\"math inline\">\\(z(t)=\\gamma e^{2t}+\\alpha\\)</span>, <span class=\"math inline\">\\(\\gamma\\in\\R\\)</span>. D’où la solution générale du système <span class=\"math display\">\\[X(t)=\\begin{pmatrix}x(t) \\\\  y(t) \\\\  z(t)\\end{pmatrix}=\\begin{pmatrix}\\alpha t+\\beta \\\\  \\alpha \\\\  \\gamma e^{2t}+\\alpha\\end{pmatrix}=\\alpha\\begin{pmatrix}t \\\\ 1 \\\\ 1\\end{pmatrix}+\\beta\\begin{pmatrix}1 \\\\ 0 \\\\ 0\\end{pmatrix}+\\gamma\\begin{pmatrix}0 \\\\ 0 \\\\  e^{2t}\\end{pmatrix}\\]</span> <span class=\"math inline\">\\((\\alpha,\\beta,\\gamma)\\in\\R^3\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\in\\R\\)</span> et <span class=\"math inline\">\\(A\\)</span> la matrice <span class=\"math display\"> ..."
 }

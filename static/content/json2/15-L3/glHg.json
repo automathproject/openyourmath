@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Théorème de Stone-Weirstrass, théorème d'Ascoli",
     "sousChapitre": "Théorème de Stone-Weirstrass, théorème d'Ascoli",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:25.043Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:06.765Z"
   },
   "contenu": [
     {
-      "id": "0888c9b3-7c09-41fd-ac4d-a3de722a50f9",
+      "id": "c8bbba16-c35b-460c-84c4-42455f858f14",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b3cb8215-bdd0-4b3b-865f-a04581b90c17",
+      "id": "764acacb-fa03-45c6-a89b-ebe22897d016",
       "type": "question",
       "value": {
         "latex": "Soit $k>0$ et ${\\cal F}$ l'ensemble des fonctions diff\\'erentiables \n$f:[a,b]\\to \\Rr$ telles que $|f'(t)|\\leq k$\npour tout $t \\in ]a,b[$. Montrer que ${\\cal F}$ est une famille \\'equicontinue.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "7ddd272b-85b0-4b90-b134-acf5d5b1f073",
+      "id": "a5e4cdae-7cf6-4700-a3b5-eecd1b15389e",
       "type": "question",
       "value": {
         "latex": "Si $L>0$ et $f_n: \\Rr^n \\to \\Rr^n $ est une suite d'applications $L$-lipschitziennes\navec $\\|f_n(0)\\| = \\sqrt 2$, alors montrer que l'on peut extraire une sous-suite convergente\nde $(f_n)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "5d4a14b6-9207-4860-8c34-17ba56a7fd2f",
+      "id": "a1fd5e99-adf4-47d7-88f0-b6be39f3c266",
       "type": "reponse",
       "value": {
         "latex": "Pour $f\\in {\\cal F}$, par le théorème des accroissements finis, \npour tout $t_0,t\\in [a,b]$ il existe $c\\in]t_0,t[$ tel que\n$|f(t)-f(t_0)| = |f'(c)| |t-t_0|$. Donc $|f(t)-f(t_0)| \\le k |t-t_0|$. \nFixons $t_0\\in[a,b]$. Soit $\\epsilon >0$, soit $\\eta = \\frac \\epsilon k$ alors\n$$\\forall t\\in[a,b] \\qquad |t-t_0| \\le \\eta \\quad \\Rightarrow \\quad |f(t)-f(t_0)| \\le k |t-t_0| \\le \\epsilon.$$\nCe qui est exactement l'équicontinuité de $\\mathcal{F}$ en $t_0$.\nComme nous pouvons prendre pour $t_0$ n'importe quel point de $[a,b]$ alors\n$\\mathcal{F}$ est équicontinue.\n\\begin{enumerate}\nNotons $\\mathcal{H} = \\{ f_n \\mid n\\in \\Nn \\}$.\nPour $x_0,x \\in \\Rr^n$, $\\|f_n(x)-f_n(x_0)\\| \\le L\\|x-x_0\\|$.\nDonc en posant $\\eta = \\frac\\epsilon L$ comme ci-dessus on prouve l'équicontinuité de $\\mathcal{H}$ en $x_0$, puis partout.\nNotons $\\mathcal{H}(x) = \\{ f_n(x) \\mid n\\in \\Nn \\}$.\nAlors par hypothèse, \n $\\mathcal{H}(0) \\subset {\\bar B} (0,\\sqrt 2)$.\nDonc ${\\bar {\\cal H}}(0)$ est un fermé de ${\\bar B}(0,\\sqrt 2)$ qui est compact\n(nous somme dans $\\Rr^n$), donc $\\bar {\\cal H}(0)$ est aussi compact, d'o\\`u\n$\\mathcal{H}(0)$ relativement compact.\nMaintenant nous avons $\\| f_n(x)-f_n(0)\\| \\le L\\|x-0\\|$. Donc\n$\\|f_n(x)\\| \\le L \\| x \\| + \\sqrt 2$. Donc pour $x$ fixé, $f_n(x)\\in\n{\\bar B}(0, L \\| x \\| +\\sqrt 2)$ ce qui implique que \n$\\mathcal{H}(x)$ est relativement compact.\nComme $\\Rr^n$ n'est pas compact on ne peut pas appliquer directement le théorème d'Ascoli.\nSoit $B_R = \\bar B(0,R)$ qui est un compact de $\\Rr^n$. Notons $\\mathcal{H}_R =\n \\{ {f_n}_{|B_R} \\mid n\\in \\Nn \\}$ la restriction de $\\mathcal{H}$ à $B_R$.\nAlors par le théorème d'Ascoli, $\\mathcal{H}_R$ est relativement compact.\nDonc de la suite $({f_n}_{|B_R})_n$ on peut extraire une sous-suite convergente (sur $B_R$).\nPour $R=1$ nous extrayons de $(f_n)_n$ une sous-suite $(f_{\\phi_1(n)})_n$ qui converge sur $B_1$.\nPour $R=2$, nous extrayons de  $(f_{\\phi_1(n)})_n$ une sous-suite $(f_{\\phi_2(n)})_n$  qui converge sur $B_2$.\nPuis par récurrence pour $R=N$, nous extrayons de  $(f_{\\phi_{N-1}(n)})_n$ une sous-suite $(f_{\\phi_N(n)})_n$  \nqui converge sur $B_N$. \nAlors la suite $(f_{\\phi_n(n)})_n$ converge sur $\\Rr^n$. C'est le procédé diagonal de Cantor.\nEn effet soit $x\\in \\Rr^n$ et soit  $N \\ge \\|x\\|$. Alors\n$x \\in B_N$ donc  $(f_{\\phi_N(n)}(x))_n$ converge vers $f(x)$, mais \n$(f_{\\phi_n(n)})_{n\\ge N}$ est extraite de $(f_{\\phi_N(n)})_n$\ndonc  $(f_{\\phi_n(n)}(x))_{n}$ converge également vers $f(x)$.\nNous venons de montrer que  $(f_{\\phi_n(n)})_n$ converge simplement vers $f$\nsur tout $\\Rr^n$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "ebc48c28-109e-4d8c-a252-df6f85514bac",
+      "id": "c986e956-5853-42ee-b557-81c85890db5f",
       "type": "indication",
       "value": {
         "latex": "Pour la deuxième question :\n\\begin{enumerate}\n  \\item Montrer que $\\{ f_n \\mid n\\in \\Nn \\}$ est équicontinue.\n  \\item Montrer que $ \\{ f_n(x) \\mid n\\in \\Nn \\}$ est borné.\n  \\item Applique le théorème d'Acoli sur le compact $\\bar B(0,R)$.\n  \\item Utiliser le procédé diagonal de Cantor ($R=1,2,3,\\ldots$).\n\\end{enumerate}",
         "html": "<p>Pour la deuxième question :</p>\n<ol>\n<li><p>Montrer que <span class=\"math inline\">\\(\\{ f_n \\mid n\\in \\Nn \\}\\)</span> est équicontinue.</p></li>\n<li><p>Montrer que <span class=\"math inline\">\\(\\{ f_n(x) \\mid n\\in \\Nn \\}\\)</span> est borné.</p></li>\n<li><p>Applique le théorème d’Acoli sur le compact <span class=\"math inline\">\\(\\bar B(0,R)\\)</span>.</p></li>\n<li><p>Utiliser le procédé diagonal de Cantor (<span class=\"math inline\">\\(R=1,2,3,\\ldots\\)</span>).</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(k&gt;0\\)</span> et <span class=\"math inline\">\\({\\cal F}\\)</span> l’ensemble des fonctions différentiables <span cl ..."
 }

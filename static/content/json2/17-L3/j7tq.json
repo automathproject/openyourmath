@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:14.345Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:59.478Z"
   },
   "contenu": [
     {
-      "id": "badf9872-e746-4e65-984d-36c7ba6c86f7",
+      "id": "32c8e9ea-68cd-4ca4-9f04-2095e705d2b0",
       "type": "description",
       "value": {
         "latex": "Soit $A=I-E-E^*$ une matrice carr\\'ee d'ordre $N$ o\\`u $E$ est une matrice strictement triangulaire inf\\'erieure ($e_{ij}=0$ pour $i\\leq j$). Pour r\\'esoudre le syst\\`eme $Ax=b\n$, on propose la m\\'ethode it\\'erative d\\'efinie par\n$$\\left\\{ \\begin{array}{ccc}\n(I-E)x_{2k+1}&=& E^* x_{2k} + b\\\\\n(I-E^*)x_{2k+2}&=& E x_{2k+1} + b\n\\end{array}\\right.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a69437d8-0d52-4dec-8b01-0a9fdb7fd31d",
+      "id": "4268af60-9e4a-4fbc-923c-3dab0d8f51b9",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer $B$ et $c$ pour que l'on ait:\n$$x_{2k+2} =Bx_{2k} +c .$$\nV\\'erifier que $B=M^{-1}N $ et $A=M-N$ avec $M=(I-E)(I-E^*)$ , $N=EE^*$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "ba452104-d5e3-4d6e-82e8-ccb5d74afca5",
+      "id": "a43afd87-30d5-4024-8d6b-028323966716",
       "type": "reponse",
       "value": {
         "latex": "On a $x_{2k+1}=(I-E)^{-1}E^*x_{2k}+(I-E)^{-1}b$ et donc\n$$x_{2k+2}=(I-E^*)^{-1}E(I-E)^{-1}E^*x_{2k}+(I-E^*)^{-1}E(I-E)^{-1}b +\n(I-E^*)^{-1}b$$\nMais $E(I-E)^{-1}=(I-E)^{-1}E$ et alors\n$$x_{2k+2}=(I-E^*)^{-1}(I-E)^{-1}EE^*x_{2k}+\n(I-E^*)^{-1}(I-E)^{-1}(E+I-E)b=M^{-1}Nx_{2k}+M^{-1}b$$\navec\n$$M=(I-E)(I-E^*),\\quad N=EE^*,\\quad M-N=I-E-E^*=A$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "f04741e8-fa4d-4bdd-be0e-1b91af6fe530",
+      "id": "14dc517b-235e-43ef-93ef-a3cd3bf14182",
       "type": "question",
       "value": {
         "latex": "Montrer que $M^*+N$ est une matrice d\\'efinie positive. En d\\'eduire une condition n\\'ecessaire et suffisante pour la convergence de la m\\'ethode.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "9de41d83-bff4-4a34-ae23-9df9fd3d35bb",
+      "id": "a30a6b9d-c32b-4b69-8bc0-f1713d014f30",
       "type": "reponse",
       "value": {
         "latex": "$M^*+N=I-E-E^*+2EE^* $ et donc\n\n$v^*(M^*+N)v=\\|v\\|_2^2-v^*Ev-v^*E^*v+2v^*EE^*v=\\|E^*v\\|_2^2+(\\|v\\|_2^2+\\|E^*v\\|_2^2-2\\mbox{Re}(v,E^*v))$\nOn a l'in\\'egalit\\'e\n$$-2\\|v\\|\\|E^*v\\|\\leq -2|(v,E^*v)|\\leq -2|\\mbox{Re}(v,E^*v)|$$\net donc\n$$(\\|v\\|_2-\\|E^*v\\|_2)^2\\leq \\|v\\|_2^2\n+\\|E^*v\\|_2^2-2\\mbox{Re}(v,E^*v)\\Rightarrow$$\n$v^*(M^*+N)v\\geq \\|E^*v\\|_2^2 +(\\|v\\|-\\|E^*v\\|_2)^2$ implique que\n$$v^*(M^*+N)b=0\\Leftrightarrow \\|E^*v\\|_2=0 \\mbox{ et }\\|v\\|_2=\\|E^*v\\|_2\\Leftrightarrow\n\\|v\\|_2=0$$\nDonc $M^*+N$ est d\\'efinie positive et en appliquant un r\\'esultat d'un\nexercice pr\\'ec\\'edent on conclut que la m\\'ethode converge ssi $A$ est\nd\\'efinie positive.",
         "html": "<p><span class=\"math inline\">\\(M^*+N=I-E-E^*+2EE^*\\)</span> et donc</p>\n<p><span class=\"math inline\">\\(v^*(M^*+N)v=\\|v\\|_2^2-v^*Ev-v^*E^*v+2v^*EE^*v=\\|E^*v\\|_2^2+(\\|v\\|_2^2+\\|E^*v\\|_2^2-2\\mbox{Re}(v,E^*v))\\)</span> On a l’inégalité <span class=\"math display\">\\[-2\\|v\\|\\|E^*v\\|\\leq -2|(v,E^*v)|\\leq -2|\\mbox{Re}(v,E^*v)|\\]</span> et donc <span class=\"math display\">\\[(\\|v\\|_2-\\|E^*v\\|_2)^2\\leq \\|v\\|_2^2\n+\\|E^*v\\|_2^2-2\\mbox{Re}(v,E^*v)\\Rightarrow\\]</span> <span class=\"math inline\">\\(v^*(M^*+N)v\\geq \\|E^*v\\|_2^2 +(\\|v\\|-\\|E^*v\\|_2)^2\\)</span> implique que <span class=\"math display\">\\[v^*(M^*+N)b=0\\Leftrightarrow \\|E^*v\\|_2=0 \\mbox{ et }\\|v\\|_2=\\|E^*v\\|_2\\Leftrightarrow\n\\|v\\|_2=0\\]</span> Donc <span class=\"math inline\">\\(M^*+N\\)</span> est définie positive et en appliquant un résultat d’un exercice précédent on conclut que la méthode converge ssi <span class=\"math inline\">\\(A\\)</span> est définie positive.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A=I-E-E^*\\)</span> une matrice carrée d’ordre <span class=\"math inline\">\\(N\\)</span> où <span class=\"math inline\"> ..."
 }

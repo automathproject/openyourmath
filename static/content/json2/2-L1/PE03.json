@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série numérique",
     "sousChapitre": "Série à  termes positifs",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:52.521Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:39.802Z"
   },
   "contenu": [
     {
-      "id": "d947e534-811a-4ed0-8b84-cbb66d7a7fec",
+      "id": "4d28fb50-1cb7-42c5-a91f-248380285d08",
       "type": "description",
       "value": {
         "latex": "Calculer les sommes des séries suivantes, en montrant leur convergence :",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c4b33416-e9a9-418d-b057-dc1582462f3d",
+      "id": "39108f5c-b777-4e2e-b7b0-3ec7346dc44f",
       "type": "question",
       "value": {
         "latex": "$\\sum_{n \\ge 0} (n+1)3^{-n}$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "650bd499-6ec0-41fe-9089-090197c5f898",
+      "id": "4139eb82-a9c7-405c-a0e5-880aef00b743",
       "type": "reponse",
       "value": {
         "latex": "Posons $S_n = \\sum_{k=0}^{n} (k+1)3^{-k}$.\nL'idée est de calculer la somme de $(1-3^{-1})S_n$.\nOn a ainsi:\n\\begin{eqnarray*}\n(1-3^{-1})S_n & = & (1-3^{-1})\\sum_{k=0}^{n} (k+1)3^{-k} \\\\\n & = & \\sum_{k=0}^{n} (k+1)3^{-k}-\\sum_{k=0}^{n} (k+1)3^{-(k+1)} \\\\\n & = & \\sum_{k=0}^{n} k 3^{-k} + \\sum_{k=0}^{n} 3^{-k} - \\sum_{k=0}^{n} (k+1)3^{-(k+1)}\n{}\\end{eqnarray*}\nEn réindexant les sommes, on obtient: \n\\begin{eqnarray*}\n(1-3^{-1})S_n & = & \\sum_{k=1}^{n} k3^{-k} + \\sum_{k=0}^{n} \\left(\\frac{1}{3}\\right)^{k} - \\sum_{k=1}^{n} k3^{-k} - (n+1)3^{-(n+1)}\\\\\n & = & \\sum_{k=0}^{n} \\frac{1}{3^k} - \\frac{n+1}{3^{n+1}} \n = \\cfrac{1 - \\left(\\frac{1}{3}\\right)^{n+1}}{\\frac{2}{3}} \n - \\underbrace{\\frac{n+1}{3^{n+1}}}_{\\to 0}\n\\end{eqnarray*}\nsomme des termes d'une suite géométrique de raison $\\frac{1}{3} \\in ]-1,1[$. Et donc, \n\\[ \\lim_{n \\to +\\infty} \\left(1-\\frac{1}{3}\\right)S_n = \\cfrac{3}{2} \\]\nd'où \n\\[ \n\\sum_{k=0}^{+\\infty}(k+1)3^{-k} = \\frac{9}{4} \\, \\cdotp\n\\]\nRemarque: On reconnaît la série géométrique dérivée première de raison $\\frac{1}{3}$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "943cf9ac-4788-4813-8353-cf48259bd1fc",
+      "id": "a761d924-e1eb-4adc-aa0e-22af41efd64e",
       "type": "question",
       "value": {
         "latex": "$\\displaystyle \\sum_{n \\ge 0} \\frac{n}{n^4+n^2+1}$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "c4c2c78e-b850-42e9-bd68-bdb5caad421b",
+      "id": "92506c28-ede7-4cba-a278-b8e6e17881db",
       "type": "reponse",
       "value": {
         "latex": "Posons  $\\displaystyle u_n = \\frac{n}{n^4+n^2+1} $ et cherchons à la décomposer en éléments simples.\n\\begin{eqnarray*}\nn^4 + n^2 + 1 &=& (n^4 + 2n^2 + 1) - n^2 = (n^2 + 1)^2 - n^2 \n\\\\\n&=& (n^2 + n + 1)(n^2 - n + 1)\n{}\\end{eqnarray*}\nd'où $ u_n = \\frac{n}{ (n^2+n+1)(n^2-n+1) } $~. \nTrouvons maintenant $A$ et $B \\in \\mathbb{R}$ tel que $u_n = \\frac{A}{n^2+n+1} + \\frac{B}{n^2-n+1}$,\nsoit tels que $A(n^2-n+1) + B(n^2+n+1) = n$, ce qui équivaut à $(A+B)n^2 + (B-A)n + (A+B) = n$.\nPar identification, on a: \n\\[\n\\left\\{\n\\begin{array}{r c l}\nA+B = 0\\\\\nB-A = 1\\\\\nA+B = 0\n\\end{array}\n\\right.\n\\iff \\left\\{\n\\begin{array}{r c l}\nA & = & -\\frac{1}{2}\\\\\n& & \\\\\nB & = & \\frac{1}{2}\n\\end{array}\n\\right.\n\\]\nD'où:  \n\\[ \nu_n = \\frac{n}{n^4+n^2+1} = \\frac{1}{2} \\left( \\frac{1}{n^2-n+1} - \\frac{1}{n^2+n+1} \\right  ) \n\\]\n\\[  \n\\sum_{n=0}^{N} u_n = \\sum_{n = 0}^{N} \\frac{1}{2} \\left( \\frac{1}{n^2-n+1} - \\frac{1}{n^2+n+1} \\right) = \\frac{1}{2} \\left(\\sum_{n = 0}^{N} \\frac{1}{n^2-n+1} - \\sum_{n = 0}^{N} \\frac{1}{n^2+n+1} \\right) \n\\] \nOr $ n^2+n+1 = (n+1)^2 - (n+1) + 1 $. En réindexant la deuxième somme:\n\\begin{eqnarray*}\n\\sum_{n=0}^{N} u_n & = & \\frac{1}{2} \\left(\\sum_{n = 0}^{N} \\frac{1}{n^2-n+1} - \\sum_{n = 1}^{N+1} \\frac{1}{n^2-n+1} \\right) \\\\\n& = & \\frac{1}{2} \\left( 1 - \\frac{1}{(N+1)^2 - (N+1) + 1} \\right) \\quad \\text{par télescopage.}\n{}\\end{eqnarray*}\nLa série est donc convergente et la somme vaut\n\\[ \n\\sum_{n = 0}^{+\\infty} \\frac{n}{n^4+n^2+1} = \\frac{1}{2}  \\,.\n\\]",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "8c47c47f-78a2-4947-98a6-5aadfb51741c",
+      "id": "643538b5-78de-4b72-a254-582dd3be038f",
       "type": "question",
       "value": {
         "latex": "$\\displaystyle \\sum_{n \\ge 3} \\frac{2n-1}{n^3-4n}$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "8bbdd7ec-2a54-43a5-a9e6-003e8ac50f97",
+      "id": "e15cb934-5b02-45be-bf3f-1f1741c6952a",
       "type": "reponse",
       "value": {
         "latex": "Décomposons $\\displaystyle v_n=\\frac{2n-1}{n^3-4n}$ en éléments simples.\nComme \n\\[\nn^3-4n = n(n^2-4) = n (n-2) (n + 2),\n\\] \ncherchons $\\alpha$, $\\beta$ et $\\gamma \\in \\mathbb{R}$ tels que:\n\\[ \nv_n = \\frac{\\alpha}{n} + \\frac{\\beta}{n+2} + \\frac{\\gamma}{n-2} .\n\\]\nSoit\n\\begin{eqnarray*}\n 2n-1 & = & \\alpha(n-2)(n+2) + \\beta n(n-2) + \\gamma n(n+2)\\\\\n & = & (\\alpha+\\beta+\\gamma) n^2 + (2\\gamma-2\\beta)n - 4\\alpha\n{}\\end{eqnarray*}\nPar identification:\n\\[\n\\left\\{\n\\begin{array}{r c l}\n\\alpha + \\beta + \\gamma = 0\\\\\n2(\\gamma - \\beta) = 2\\\\\n-4 \\alpha = - 1\n\\end{array}\n\\right.\n\\Longleftrightarrow \\left\\{\n\\begin{array}{r c l}\n\\alpha & = & \\frac{1}{4}\\\\\n\\gamma & = & 1 + \\beta \\\\\n\\alpha + 2\\beta + 1 & = & 0\n\\end{array}\n\\right.\n\\Longleftrightarrow \\left\\{\n\\begin{array}{r c l}\n\\alpha & = & \\frac{1}{4}\\\\\n\\beta & = & - \\frac{5}{8}\\\\\n\\gamma & = & \\frac{3}{8}\n\\end{array}\n\\right.\n\\]\nD'où \n\\[\n\\frac{2n-1}{n^3-4n} = \\frac{1}{4n} - \\frac{5}{8(n+2)} + \\frac{3}{8(n-2)} \n\\]\net\n\\begin{eqnarray*}\n\\sum_{n = 3}^{N} v_n & = & \\sum_{n = 3}^{N} \\left(\\frac{1}{4n} - \\frac{5}{8(n+2)} + \\frac{3}{8(n-2)}\\right) \\\\\n& = & \\sum_{n = 3}^{N}\\frac{1}{4n} - \\sum_{n = 3}^{N} \\frac{5}{8(n+2)} + \\sum_{n = 3}^{N} \\frac{3}{8(n-2)} \\,.\n{}\\end{eqnarray*}\nSoit en réindexant les 2 dernières sommes:\n\\[ \n\\sum_{n = 3}^{N} v_n = \\frac{1}{8} \\left[2 \\sum_{n=3}^{N} \\frac{1}{n} - 5 \\sum_{n=5}^{N+2} \\frac{1}{n} + 3 \\sum_{n=1}^{N-2} \\frac{1}{n} \\right] \n\\]\nPuis,  par télescopage,\n\\[ \n\\sum_{n = 3}^{N} v_n = \\frac{1}{8} \\left(\\frac{89}{12}  - \\frac{3}{N-1} - \\frac{3}{N} - \\frac{5}{N+1} - \\frac{5}{N+2}\\right) \\xrightarrow[n \\to +\\infty]{} \\frac{89}{12}\n\\, . \n\\]\nDonc, la série converge et $\\displaystyle \\sum_{n = 3}^{+\\infty} \\frac{2n-1}{n^3-4n} = \\frac{89}{96}$.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "8438ceec-502a-422e-97b5-af33bfe5c1c7",
+      "id": "431946b0-7150-4678-8ece-20da5dc12df2",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n\\item Calculer $(1-3^{-1})\\sum_{n \\geq 0} (n+1)3^{-n}$.\n\\end{enumerate}",
         "html": "<ol>\n<li><p>Calculer <span class=\"math inline\">\\((1-3^{-1})\\sum_{n \\geq 0} (n+1)3^{-n}\\)</span>.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculer les sommes des séries suivantes, en montrant leur convergence :</p>\n"
 }

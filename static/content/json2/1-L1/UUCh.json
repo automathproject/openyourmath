@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Dénombrement",
     "sousChapitre": "Binôme de Newton et combinaison",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:47.185Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:00.755Z"
   },
   "contenu": [
     {
-      "id": "78c330c8-b243-46f6-a432-88cdc3014330",
+      "id": "199c7618-86f6-49e3-9930-638ee1739b81",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "d71c2a1f-d0dc-40f5-bb57-a21d34bfb1fc",
+      "id": "6a6091de-a0e9-48ee-a717-d316557da936",
       "type": "question",
       "value": {
         "latex": "(***) Trouver une démonstration combinatoire de l'identité $\\sum_{}^{}C_n^{2k}=\\sum_{}^{}C_n^{2k+1}$ ou encore démontrer directement qu'un ensemble à $n$ éléments contient autant de parties de cardinal pair que de parties de cardinal impair.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "caab231b-683c-430f-b008-d8805c11b2b8",
+      "id": "9cd4ca7b-abbc-4d9f-b28d-3502062d4a5f",
       "type": "reponse",
       "value": {
         "latex": "Soit $E$ un ensemble à $n$ éléments, $n\\geq 1$, et $a$ un élément fixé de $E$. Soit $\\begin{array}[t]{cccc}\nf~:&\\mathcal{P}(E)&\\rightarrow&\\mathcal{P}(E)\\\\\n &A&\\mapsto&\\left\\{\n \\begin{array}{l}\n A\\setminus\\{a\\}\\;\\mbox{si}\\;a\\in A\\\\\n A\\cup\\{a\\}\\;\\mbox{si}\\;a\\notin A\n \\end{array}\n \\right.\n\\end{array}$.\n\nMontrons que $f$ est involutive (et donc bijective). Soit $A$ un élément de $\\mathcal{P}(E)$.\n\nSi $a\\notin A$, $f(A)=A\\cup\\{a\\}$ et donc, puisque $a\\in A\\cup\\{a\\}$, $f(f(A))=(A\\cup\\{a\\})\\setminus\\{a\\}=A$.\n\nSi $a\\in A$, $f(A)=A\\setminus\\{a\\}$ et $f(f(A))=(A\\setminus\\{a\\})\\cup\\{a\\}=A$.\n\nAinsi, $\\forall A\\in\\mathcal{P}(E),\\;f\\circ f(A)=A$ ou encore, $f\\circ f=Id_{\\mathcal{P}(E)}$.\n\nMaintenant clairement, en notant $\\mathcal{P}_p(E)$ (resp. $\\mathcal{P}_i(E)$) l'ensemble des parties de $E$ de cardinal pair (resp. impair), $f(\\mathcal{P}_p(E))\\subset\\mathcal{P}_i(E)$ et $f(\\mathcal{P}_i(E))\\subset\\mathcal{P}_p(E)$. Donc, puisque $f$ est bijective \n$$\\mbox{card}(\\mathcal{P}_p(E))=\\mbox{card}(f(P_p(E))\\leq\\mbox{card}\\mathcal{P}_i(E)$$\n\net de même $\\mbox{card}(\\mathcal{P}_i(E))\\leq\\mbox{card}\\mathcal{P}_p(E)$. Finalement, $\\mbox{card}(\\mathcal{P}_i(E))=\\mbox{card}\\mathcal{P}_p(E)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "0743fdb1-b8e8-4cfc-9462-d70b3daf79cf",
+      "id": "c38742be-789d-42c0-8c65-4bdf62819487",
       "type": "question",
       "value": {
         "latex": "(****) Trouver une démonstration combinatoire de l'identité $kC_n^k=nC_{n-1}^{k-1}$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "3aa28e2a-511b-4637-b49a-4f2e377eb2a4",
+      "id": "26a74a13-9224-4118-8e60-d3f83760a4cf",
       "type": "reponse",
       "value": {
         "latex": "Soient $E=\\{a_1,...,a_n\\}$ un ensemble à $n$ éléments et $a$ un élément fixé de $E$. Soit $k\\in\\{1,...,n-1\\}$.\n\nIl y a  $C_{n-1}^{k-1}$ parties à $k$ éléments qui contiennent $a$. Donc, $nC_{n-1}^{k-1}(=C_{n-1}^{k-1}+...+C_{n-1}^{k-1})$ est donc la somme du nombre de parties à $k$ éléments qui contiennent $a_1$ et du nombre de parties à $k$ éléments qui contiennent $a_2$ ... et du nombre de parties à $k$ éléments qui contiennent $a_n$.\n\nDans cette dernière somme, chaque partie à $k$ éléments de $E$ a été comptée plusieurs fois et toutes les parties à $k$ éléments (en nombre égal à $C_n^k$) ont été comptés un même nombre de fois. Combien de fois a été comptée $\\{a_1,a_2...a_k\\}$~?~Cette partie a été comptée une fois en tant que partie contenant $a_1$, une fois en tant que partie contenant $a_2$... et une fois comme partie contenant $a_k$ et donc a été comptée $k$ fois.\n\nConclusion~:~$kC_n^k=nC_{n-1}^{k-1}$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "fcb831a2-1388-4369-88a2-041dde9021f8",
+      "id": "00f5826d-a15c-43e3-ad70-927aad781a75",
       "type": "question",
       "value": {
         "latex": "(****) Trouver une démonstration combinatoire de l'identité $C_{2n}^n=\\sum_{k=0}^{n}(C_{n}^k)^2$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "00f2f46e-4476-4a64-a529-174086d92119",
+      "id": "92eb2a90-ecf4-4159-a141-d6a0f1ffe275",
       "type": "reponse",
       "value": {
         "latex": "Soit $E=\\{a_1,...,a_n,b_1,...,b_n\\}$ un ensemble à $2n$ éléments. Il y a $C_{2n}^n$ parties à $n$ éléments de $E$. Une telle partie a $k$ éléments dans $\\{a_1,...,a_n\\}$ et $n-k$ dans $\\{b_1,...,b_n\\}$ pour un certain $k$ de $\\{0,...,n\\}$. Il y a $C_n^k$ choix possibles de $k$ éléments dans $\\{a_1,...,a_n\\}$ et $C_n^{n-k}$ choix possibles de $n-k$ éléments dans $\\{b_1,...,b_n\\}$ pour $k$ donné dans $\\{0,...,n\\}$ et quand $k$ varie de $0$ à $n$, on obtient~:\n\n$$C_{2n}^n=\\sum_{k=0}^{n}C_n^kC_n^{n-k}=\\sum_{k=0}^{n}(C_n^k)^2.$$",
         "html": "<p>Soit <span class=\"math inline\">\\(E=\\{a_1,...,a_n,b_1,...,b_n\\}\\)</span> un ensemble à <span class=\"math inline\">\\(2n\\)</span> éléments. Il y a <span class=\"math inline\">\\(C_{2n}^n\\)</span> parties à <span class=\"math inline\">\\(n\\)</span> éléments de <span class=\"math inline\">\\(E\\)</span>. Une telle partie a <span class=\"math inline\">\\(k\\)</span> éléments dans <span class=\"math inline\">\\(\\{a_1,...,a_n\\}\\)</span> et <span class=\"math inline\">\\(n-k\\)</span> dans <span class=\"math inline\">\\(\\{b_1,...,b_n\\}\\)</span> pour un certain <span class=\"math inline\">\\(k\\)</span> de <span class=\"math inline\">\\(\\{0,...,n\\}\\)</span>. Il y a <span class=\"math inline\">\\(C_n^k\\)</span> choix possibles de <span class=\"math inline\">\\(k\\)</span> éléments dans <span class=\"math inline\">\\(\\{a_1,...,a_n\\}\\)</span> et <span class=\"math inline\">\\(C_n^{n-k}\\)</span> choix possibles de <span class=\"math inline\">\\(n-k\\)</span> éléments dans <span class=\"math inline\">\\(\\{b_1,...,b_n\\}\\)</span> pour <span class=\"math inline\">\\(k\\)</span> donné dans <span class=\"math inline\">\\(\\{0,...,n\\}\\)</span> et quand <span class=\"math inline\">\\(k\\)</span> varie de <span class=\"math inline\">\\(0\\)</span> à <span class=\"math inline\">\\(n\\)</span>, on obtient :</p>\n<p><span class=\"math display\">\\[C_{2n}^n=\\sum_{k=0}^{n}C_n^kC_n^{n-k}=\\sum_{k=0}^{n}(C_n^k)^2.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>(***) Trouver une démonstration combinatoire de l’identité <span class=\"math inline\">\\(\\sum_{}^{}C_n^{2k}=\\sum_{}^{}C_n^{2k+1}\\)</span> ou encore d ..."
 }

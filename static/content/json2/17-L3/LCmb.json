@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:13.048Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:58.137Z"
   },
   "contenu": [
     {
-      "id": "63cfcb01-6930-47a6-8254-0777d158ce37",
+      "id": "1330dc8c-8c90-4305-ab81-0fc8e502d703",
       "type": "description",
       "value": {
         "latex": "Soit $A$ une matrice hermitienne inversible d\\'ecompos\\'ee en $A=M-N$ o\\`u $M$ est inversible. Soit $B=I-M^{-1}A$ la matrice de l'it\\'eration:\n$$x_{n+1}= Bx_n +c .$$\nSupposons que $M+M^* -A$ soit d\\'efinie positive.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a6c4e32d-649c-42d7-8e0d-a6b7129e4680",
+      "id": "2ef09373-a5b5-4973-9f6b-c1aa82e97b49",
       "type": "question",
       "value": {
         "latex": "Soit $x$ un vecteur quelconque et on pose $y=Bx$. Montrer l'identit\\'e:\n$$(x,Ax) - (y,Ay) = ((x-y), (M+M^*-A)(x-y)).$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "6cc75d20-af93-4535-aea7-f978ba319d05",
+      "id": "a69deecb-a486-49b5-9cc7-142f5ac6235e",
       "type": "reponse",
       "value": {
         "latex": "Pour le membre de gauche on obtient\n\n$$(x,Ax)-(y,Ay)=(x,AM^{-1}Mx)+(M^{-1}Ax,Ax) -(M^{-1}Ax,AM^{-1}Ax)$$\n\nPour le membre de droite on obtient\n$y=Bx=x-M^{-1}Ax\\Rightarrow x-y=M^{-1}Ax$ et donc\n$$(x-y,(M+M^*-A)(x-y))=(M^{-1}Ax,(M+M^*-A)M^{-1}Ax)=$$ \n$$(M^{-1}Ax, Ax)+(M^{-1}Ax,M^*M^{-1}Ax)-(M^{-1}Ax,AM^{-1}Ax)$$\nMais\n$$(M^{-1}Ax,M^*M^{-1}Ax)=(x,(M^{-1}A)^*M^*M^{-1}Ax)=(x,AM^{-1}Ax)$$\nce qui fini la d\\'emonstration.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "3f0ab2fa-f7e2-4558-a583-1377480fd4c1",
+      "id": "883f90c7-ed7b-4124-bc93-1cd9f179ff02",
       "type": "question",
       "value": {
         "latex": "Supposons que $A$ est d\\'efinie positive. Soit $x\\neq 0$ un vecteur propre de $B$ associ\\'e \\`a la valeur propre $\\lambda$, $y=Bx=\\lambda x$. Utiliser l'identit\\'e pr\\'ec\\'edente pour montrer que $|\\lambda|<1$. Que peut--on conclure sur la convergence de la m\\'ethode?",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "7fc80a86-29bf-42f6-b7e5-7d00a2d32d22",
+      "id": "06c49511-927f-48e3-a2e1-9c1fbc78ff5a",
       "type": "reponse",
       "value": {
         "latex": "$y=Bx=\\lambda x\\Rightarrow x-y=(1-\\lambda )x$. En utilisant l'\\'egalit\\'e pr\\'ec\\'edente\n\n$(x,Ax)-(y,Ay)=(x,Ax)-(\\lambda x,A(\\lambda x))=(1-|\\lambda|^2)(x,Ax)$\n\n$(x-y,(M+M^*-A)(x-y))=((1-\\lambda )x, (M+M^*-A)((1-\\lambda )x))=|1-\\lambda\n|^2(x,(M+M^*-A)x)$\n\net donc\n$$(1-|\\lambda|^2)(x,Ax)=|1-\\lambda|^2(x,(M+M^*-A)x)$$\n$\\lambda$ ne peut pas \\^etre $=1$ car sinon $y=Bx=x\\Leftrightarrow x-M^{-1}Ax=x\\Leftrightarrow\nM^{-1}Ax=0\\Leftrightarrow x=0$. Donc $\\lambda \\neq 1$, $M+M^*-A$ d\\'efinie positive,\n$|1-\\lambda|^2>0$, $A$ d\\'efinie positive impliquent que\n$1-|\\lambda|^2>0\\Leftrightarrow |\\lambda|<1$. Donc $\\rho (B)<1$ et la m\\'ethode\nit\\'erative converge.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "1bee9b86-f544-4f11-a443-509defcfed75",
+      "id": "0820b678-e993-4f3b-8761-74b49f7b0d3d",
       "type": "question",
       "value": {
         "latex": "Supposons maintenant que $\\rho (B)<1$. montrer que $A$ est d\\'efinie positive.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "55cca1ce-cae5-49e6-8e78-212b4e37a765",
+      "id": "18931f8c-5bc9-4664-adba-98f41827992b",
       "type": "reponse",
       "value": {
         "latex": "D\\'emonstration par absurde. Supposons que ce n'est pas vrai: $\\exists x_0\\neq 0\\quad\n  \\alpha_0=(x_0,Ax_0)\\leq 0$. Alors la suite $x_n=Bx_{n-1}=B^nx_0$ tend vers\n  $0$ et $\\lim \\alpha_n=\\lim (x_n,Ax_n)=0$\n\nOn utilise maintenant la relation de la question 1 avec $x=x_{n-1}$ et\n$y=Bx_{n-1}=x_n$ et on obtient\n$$\\alpha_{n-1}-\\alpha_n =(x_{n-1}-x_n, (M+M^*-A)(x_{n-1}-x_n)>0$$\nsi $x_{n-1}-x_n\\neq 0$ (ce qui est vrai car sinon $x_{n-1}=x_n=Bx_{n-1}$ et\n$B$ a une valeur propre $=1$)\n\nDonc $(\\alpha_{n-1}-\\alpha_n)$ est une suite strictement d\\'ecroissante\nconvergeant vers $0$ avec $\\alpha_0<0$. Ceci est impossible et donc $A$ est\nd\\'efinie positive",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "b00232b0-d7ab-4ad1-bf0d-27b5b65175bc",
+      "id": "01e4dce8-8651-47d0-bef7-29ec2f316967",
       "type": "question",
       "value": {
         "latex": "Supposons $A$ d\\'ecompos\\'ee par points ou par blocs sous la forme\n$$A=D-E-F \\mbox{ avec } D \\mbox{ d\\'efinie positive} .$$\nMontrer que la m\\'ethode de relaxation par points ou par blocs pour $0<w<2$ converge si et seulement si $A$ est d\\'efinie positive.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "1c457ad8-3554-4b16-b45e-990060dc785a",
+      "id": "762bae2c-48f5-4b5a-ac14-de81ffd97f69",
       "type": "reponse",
       "value": {
         "latex": "Soit $A=D-E-F$ la d\\'ecomposition usuelle de $A$. Comme $A$ est\n  hermitienne, $D=D^*$ et $F=E^*$. Pour la m\\'ethode de relaxation on a\n  $M=D/w-E$ et donc\n$$M^*+M-A=D/w-F+D/w-E-D+E+F=\\frac{2-w}{w}D$$\nqui est hermitienne. Pour $0<w<2$, $M^*+M-A$ est d\\'efinie positive, alors des\ndeux questions pr\\'ec\\'edentes on conclut que la m\\'ethode converge ssi $A$\nest d\\'efinie positive.",
         "html": "<p>Soit <span class=\"math inline\">\\(A=D-E-F\\)</span> la décomposition usuelle de <span class=\"math inline\">\\(A\\)</span>. Comme <span class=\"math inline\">\\(A\\)</span> est hermitienne, <span class=\"math inline\">\\(D=D^*\\)</span> et <span class=\"math inline\">\\(F=E^*\\)</span>. Pour la méthode de relaxation on a <span class=\"math inline\">\\(M=D/w-E\\)</span> et donc <span class=\"math display\">\\[M^*+M-A=D/w-F+D/w-E-D+E+F=\\frac{2-w}{w}D\\]</span> qui est hermitienne. Pour <span class=\"math inline\">\\(0&lt;w&lt;2\\)</span>, <span class=\"math inline\">\\(M^*+M-A\\)</span> est définie positive, alors des deux questions précédentes on conclut que la méthode converge ssi <span class=\"math inline\">\\(A\\)</span> est définie positive.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A\\)</span> une matrice hermitienne inversible décomposée en <span class=\"math inline\">\\(A=M-N\\)</span> où <span cl ..."
 }

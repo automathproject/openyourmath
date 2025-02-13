@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Fonction de plusieurs variables",
     "sousChapitre": "Dérivée partielle",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:42.614Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:37.727Z"
   },
   "contenu": [
     {
-      "id": "91a2ac22-8d06-4103-b04d-6a35d76f35ef",
+      "id": "2248cf01-f55d-4699-bd7a-b82cfc79aed8",
       "type": "description",
       "value": {
         "latex": "Soit $\\Omega$ un ouvert borné de $\\R^2$ et ${u} : {\\overline{\\Omega}} \\to {\\R}$ continue sur \n$\\overline{\\Omega}$ et $\\mathcal{C}^2$ sur $\\Omega$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "09a0c6d2-901e-4818-90e4-268f40d3478e",
+      "id": "d447a507-f30c-403e-9d34-f88fc3645612",
       "type": "question",
       "value": {
         "latex": "On suppose que $\\Delta u>0$. Montrer que $\\max\\limits_{(x,y)\\in \\overline{\\Omega}}u(x,y)=\n    \\max\\limits_{(x,y)\\in \\overline{\\Omega}\\setminus \\Omega}u(x,y)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "8e68e012-c1b6-4db8-b9fe-fe6d93285f4b",
+      "id": "de12f3f9-5fd9-4da0-879a-c21c65cc0dc2",
       "type": "reponse",
       "value": {
         "latex": "Si $u$ atteint son maximum en $(x,y)\\in\\Omega$ alors $d^2u(x,y)$ est\n    négative, contradiction avec $\\Delta u(x,y)>0$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "bc8cfa9b-4913-4a97-970f-ef513c82a3e0",
+      "id": "26406d84-be8d-42fa-b0da-6772409ca242",
       "type": "question",
       "value": {
         "latex": "Même question en supposant seulement $\\Delta u \\ge 0$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "298c61a8-8f67-4307-8a11-854735c587de",
+      "id": "35f4cbf0-a644-4065-b2e9-c794fe555ee8",
       "type": "reponse",
       "value": {
         "latex": "Soit $u_p(x,y) = u(x,y) + (x^2+y^2)/p$~: $\\Delta u_p = \\Delta u + 2/p >0$\n    donc $u_p$ relève du cas précédent.\n\n    \\def\\maxl{\\max\\limits}\n    On a $\\maxl_\\Omega u  + \\frac Mp \\ge \\maxl_\\Omega u_p = \\maxl_{\\overline\\Omega\\setminus\\Omega} u_p\n    \\ge \\maxl_{\\overline\\Omega\\setminus\\Omega} u$ et on passe à la limite.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "85eb8800-40c3-474d-b542-82d6e72ba01a",
+      "id": "819dcf8e-9269-400a-9c09-4cea1fe4de15",
       "type": "question",
       "value": {
         "latex": "Soit $0<r_1<r_2$, $A=\\{(x,y)\\in \\R^2 \\,|\\, r_1^2<x^2+y^2<r_2^2\\}$. On suppose que $u$ est  \n    continue sur $\\overline{A}$, $\\mathcal{C}^2$ sur $A$ et que $\\Delta u \\ge 0$ sur $A$. On pose pose\n    $M(r)=\\max\\limits_{x^2+y^2=r^2} (u(x,y))$.\n\n    Montrer que, pour tout $r_1\\le r\\le r_2$, \n    $M(r)\\le \\frac{M(r_1)\\ln(r_2/r)+M(r_2)\\ln (r/r_1)}{\\ln (r_2/r_1)}\\cdotp$\n\n    Indication~: la fonction $v$ : $(x,y) \\mapsto\\ln(x^2+y^2)$ vérifie $\\Delta v = 0$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "18d93a4a-d541-4ea6-ab06-2d60c3b786e2",
+      "id": "4cbf68f0-8480-41c5-806d-4888f267a99d",
       "type": "reponse",
       "value": {
         "latex": "Soit $u_1(x,y) = u(x,y) + \\alpha\\ln(x^2+y^2)$ où $\\alpha$ est\n    tel que $M_1(r_1) = M_1(r_2)$, avec\n    $M_1(r) = \\max\\limits_{x^2+y^2=r^2} (u(x,y))$.\n    On a $\\Delta u_1\\ge 0$ d'où $M_1(r) \\le M_1(r_1) = M_1(r_2)$ c'est-à-dire~:\n    $$M(r) \\le M(r_1) + \\alpha\\ln(r_1/r) = M(r_2)-\\alpha\\ln(r/r_2)\n    = \\frac{M(r_1)\\ln(r_2/r)+M(r_2)\\ln (r/r_1)}{\\ln (r_2/r_1)}.$$",
         "html": "<p>Soit <span class=\"math inline\">\\(u_1(x,y) = u(x,y) + \\alpha\\ln(x^2+y^2)\\)</span> où <span class=\"math inline\">\\(\\alpha\\)</span> est tel que <span class=\"math inline\">\\(M_1(r_1) = M_1(r_2)\\)</span>, avec <span class=\"math inline\">\\(M_1(r) = \\max\\limits_{x^2+y^2=r^2} (u(x,y))\\)</span>. On a <span class=\"math inline\">\\(\\Delta u_1\\ge 0\\)</span> d’où <span class=\"math inline\">\\(M_1(r) \\le M_1(r_1) = M_1(r_2)\\)</span> c’est-à-dire : <span class=\"math display\">\\[M(r) \\le M(r_1) + \\alpha\\ln(r_1/r) = M(r_2)-\\alpha\\ln(r/r_2)\n    = \\frac{M(r_1)\\ln(r_2/r)+M(r_2)\\ln (r/r_1)}{\\ln (r_2/r_1)}.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\Omega\\)</span> un ouvert borné de <span class=\"math inline\">\\(\\R^2\\)</span> et <span class=\"math inline\"> ..."
 }

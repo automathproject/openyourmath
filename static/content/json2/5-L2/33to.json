@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série entière",
     "sousChapitre": "Développement en série entière",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:34.789Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:27.311Z"
   },
   "contenu": [
     {
-      "id": "9159eac5-22db-46d9-9d81-1b6f87e2a6c4",
+      "id": "a2ff7a60-a7ee-49ce-9a06-9d3a38d842f9",
       "type": "description",
       "value": {
         "latex": "Soit $(a_n)$ une suite complexe donnée, on construit dans cet exercice\nune fonction $f:\\R \\to \\R$ de classe $\\mathcal{C}^\\infty$ telle que pour tout\nentier~$n$ on ait $f^{(n)}(0) = n!\\,a_n$.\n\nSoit $\\varphi : \\R \\to \\R$ une fonction de classe $\\mathcal{C}^\\infty$\nvérifiant~: $\\forall\\ x\\in{[-1,1]},\\ \\varphi(x)=1$ et\n$\\forall\\ x\\notin{[-2,2]},\\ \\varphi(x)=0$\n(l'existence de $\\varphi$ fait l'objet de la question {2.}).\nOn pose $\\varphi_n(x) = x^n\\varphi(x)$,\n$M_n = \\max(\\|\\varphi_n'\\|_\\infty,\\dots,\\|\\varphi_n^{(n)}\\|_\\infty)$\net $f(x) = \\sum_{n=0}^\\infty a_nx^n\\varphi(\\lambda_nx)$\noù $(\\lambda_n)$ est une suite de réels strictement\npositifs, tendant vers $+\\infty$ et telle que $\\sum |a_n|M_n/\\lambda_n$\nconverge.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "06a4f4e1-6ffe-4912-bc55-7f6f31f22b95",
+      "id": "8bf7ff88-31bc-4281-b5e9-7c5939105643",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est bien définie, est\n    de classe $\\mathcal{C}^\\infty$ sur $\\R$ et vérifie $f^{(n)}(0) = n!\\,a_n$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "9c1469f0-0bd8-482a-9c6b-f5c619062d4a",
+      "id": "eec8461c-64b2-4614-a7fa-bdf76e690f26",
       "type": "reponse",
       "value": {
         "latex": "Pour $x\\ne 0$ la série comporte un nombre fini de termes non nuls\n    au voisinage de~$x$, donc est $\\mathcal{C}^\\infty$ au voisinage de~$x$.\n    On a $|f^{(k)}(x)| = \\Bigl|\\sum_{n=0}^\\infty a_n\\lambda_n^{k-n}\\varphi_n^{(k)}(\\lambda_nx)\\Bigr|\n                    \\le\\sum_{n=0}^\\infty |a_n|\\lambda_n^{k-n}M_n\n                    \\le \\text{cste}(k) + \\sum_{n=k+1}^\\infty|a_n|M_n/\\lambda_n$\n    en supposant $\\lambda_n\\ge 1$ pour $n\\ge k$, donc $f^{(k)}$ est bornée\n    sur~$\\R$. Ceci implique que $f$ est $\\mathcal{C}^\\infty$ en $0$ et on a le\n    développemment limité~: $f(x) = \\sum_{n=0}^k a_nx^n +  o(x^k)$ car\n    $\\phi \\equiv 1$ au voisinage de~$0$ donc $f^{(k)}(0) = k!\\,a_k$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "ae04bd73-8d49-4222-953c-1d2a17afdc99",
+      "id": "bad37e2f-2fe8-4c55-95d5-5cd32837081a",
       "type": "question",
       "value": {
         "latex": "Construction de~$\\varphi$~: à l'aide de fonctions\n    du type $x \\mapsto\\exp(-1/x)$ construire une fonction~$\\psi$\n    de classe $\\mathcal{C}^\\infty$ sur~$[0,+\\infty[$ nulle sur\n    $[0,1]\\cup[2,+\\infty[$ et strictement positive sur~$]1,2[$.\n\n    Vérifier alors que $\\varphi(x) =  \\int_{t=|x|}^{+\\infty}\\psi(t)\\,d t\\Bigm/ \\int_{t=0}^{+\\infty}\\psi(t)\\,d t$\n    convient.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "c0841476-c15d-4835-88cc-388b613a443b",
+      "id": "114a6841-9eb1-40c8-87aa-a6980b838382",
       "type": "reponse",
       "value": {
         "latex": "$\\psi(x) = \\exp\\Bigl(\\frac1{(1-x)(x-2)}\\Bigr)$ sur $]1,2[$, $\\psi(x) = 0$ ailleurs.",
         "html": "<p><span class=\"math inline\">\\(\\psi(x) = \\exp\\Bigl(\\frac1{(1-x)(x-2)}\\Bigr)\\)</span> sur <span class=\"math inline\">\\(]1,2[\\)</span>, <span class=\"math inline\">\\(\\psi(x) = 0\\)</span> ailleurs.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\((a_n)\\)</span> une suite complexe donnée, on construit dans cet exercice une fonction <span class=\"math inline\"> ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Polynôme, fraction rationnelle",
     "sousChapitre": "Racine, décomposition en facteurs irréductibles",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:19.320Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:30.117Z"
   },
   "contenu": [
     {
-      "id": "2408cd0f-3754-442a-b9fb-84c7401698d2",
+      "id": "d42cd2da-fa35-433f-ab49-9836f4c2a908",
       "type": "description",
       "value": {
         "latex": "Soit $P$ un polynôme à coefficients réels tel que $\\forall x\\in\\Rr,\\;P(x)\\geq0$. Montrer qu'il existe deux polynômes $R$ et $S$ à coefficients réels tels que $P=R^2+S^2$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "97ac41d8-efb4-41da-afc1-e390e51c2363",
+      "id": "53674152-6889-490c-b189-dced677b746e",
       "type": "reponse",
       "value": {
         "latex": "Soit $P$ un polynôme non nul à coefficients réels.\n\nPour tout réel $x$, on peut écrire \n\n$$P(x)=\\lambda\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i}\\prod_{j=1}^{l}((x-z_j)(x-\\overline{z_j}))^{\\beta_j},$$\n\noù $\\lambda$ est un réel non nul, $k$ et $l$ sont des entiers naturels, les $a_i$ sont des réels deux à deux distincts, les $\\alpha_i$ et les $\\beta_i$ des entiers naturels et les $(x-z_j)(x-\\overline{z_j})$ des polynômes deux à deux premiers entre eux à racines non réelles.\n\nTout d'abord, pour tout réel $x$, $\\prod_{j=1}^{l}((x-z_j)(x-\\overline{z_j}))^{\\beta_j}>0$ (tous les trinomes du second degré considérés étant unitaires sans racines réelles.)\n\nDonc, $(\\forall x\\in\\Rr,\\;P(x)\\geq0)\\Leftrightarrow(\\forall x\\in\\Rr,\\;\\lambda\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i}\\geq0)$.\n\nEnsuite, si $\\forall x\\in\\Rr,\\;P(x)\\geq0$, alors $\\lim_{x\\rightarrow +\\infty}P(x)\\geq0$ ce qui impose $\\lambda>0$. Puis, si un exposant $\\alpha_i$ est impair, $P$ change de signe en $a_i$,  ce qui contredit l'hypothèse faite sur $P$. Donc, $\\lambda>0$ et tous les $\\alpha_i$ sont pairs. Réciproquement, si $\\lambda>0$ et si tous les $\\alpha_i$ sont pairs, alors bien sûr, $\\forall x\\in\\Rr,\\;P(x)\\geq0$.\n\nPosons $A=\\sqrt{\\lambda}\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i/2}$. $A$ est un élément de $\\Rr[X]$ car $\\lambda>0$ et car les $\\alpha_i$ sont des entiers pairs. Posons ensuite $Q_1=\\prod_{j=1}^{l}(x-z_j)^{\\beta_j}$ et $Q_2=\\prod_{j=1}^{l}(x-\\overline{z_j})^{\\beta_j}$. $Q_1$ admet après développement une écriture de la forme $Q_1=B+iC$ où $B$ et $C$ sont des polynômes à coefficients réels. Mais alors, $Q_2=B-iC$. Ainsi, $$P=A^2Q_1Q_2=A^2(B+iC)(B-iC)=A^2(B^2+C^2)=(AB)^2+(AC)^2=R^2+S^2,$$\n\noù $R$ et $S$ sont des polynômes à coefficients réels.",
         "html": "<p>Soit <span class=\"math inline\">\\(P\\)</span> un polynôme non nul à coefficients réels.</p>\n<p>Pour tout réel <span class=\"math inline\">\\(x\\)</span>, on peut écrire</p>\n<p><span class=\"math display\">\\[P(x)=\\lambda\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i}\\prod_{j=1}^{l}((x-z_j)(x-\\overline{z_j}))^{\\beta_j},\\]</span></p>\n<p>où <span class=\"math inline\">\\(\\lambda\\)</span> est un réel non nul, <span class=\"math inline\">\\(k\\)</span> et <span class=\"math inline\">\\(l\\)</span> sont des entiers naturels, les <span class=\"math inline\">\\(a_i\\)</span> sont des réels deux à deux distincts, les <span class=\"math inline\">\\(\\alpha_i\\)</span> et les <span class=\"math inline\">\\(\\beta_i\\)</span> des entiers naturels et les <span class=\"math inline\">\\((x-z_j)(x-\\overline{z_j})\\)</span> des polynômes deux à deux premiers entre eux à racines non réelles.</p>\n<p>Tout d’abord, pour tout réel <span class=\"math inline\">\\(x\\)</span>, <span class=\"math inline\">\\(\\prod_{j=1}^{l}((x-z_j)(x-\\overline{z_j}))^{\\beta_j}&gt;0\\)</span> (tous les trinomes du second degré considérés étant unitaires sans racines réelles.)</p>\n<p>Donc, <span class=\"math inline\">\\((\\forall x\\in\\Rr,\\;P(x)\\geq0)\\Leftrightarrow(\\forall x\\in\\Rr,\\;\\lambda\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i}\\geq0)\\)</span>.</p>\n<p>Ensuite, si <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;P(x)\\geq0\\)</span>, alors <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}P(x)\\geq0\\)</span> ce qui impose <span class=\"math inline\">\\(\\lambda&gt;0\\)</span>. Puis, si un exposant <span class=\"math inline\">\\(\\alpha_i\\)</span> est impair, <span class=\"math inline\">\\(P\\)</span> change de signe en <span class=\"math inline\">\\(a_i\\)</span>, ce qui contredit l’hypothèse faite sur <span class=\"math inline\">\\(P\\)</span>. Donc, <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> et tous les <span class=\"math inline\">\\(\\alpha_i\\)</span> sont pairs. Réciproquement, si <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> et si tous les <span class=\"math inline\">\\(\\alpha_i\\)</span> sont pairs, alors bien sûr, <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;P(x)\\geq0\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(A=\\sqrt{\\lambda}\\prod_{i=1}^{k}(x-a_i)^{\\alpha_i/2}\\)</span>. <span class=\"math inline\">\\(A\\)</span> est un élément de <span class=\"math inline\">\\(\\Rr[X]\\)</span> car <span class=\"math inline\">\\(\\lambda&gt;0\\)</span> et car les <span class=\"math inline\">\\(\\alpha_i\\)</span> sont des entiers pairs. Posons ensuite <span class=\"math inline\">\\(Q_1=\\prod_{j=1}^{l}(x-z_j)^{\\beta_j}\\)</span> et <span class=\"math inline\">\\(Q_2=\\prod_{j=1}^{l}(x-\\overline{z_j})^{\\beta_j}\\)</span>. <span class=\"math inline\">\\(Q_1\\)</span> admet après développement une écriture de la forme <span class=\"math inline\">\\(Q_1=B+iC\\)</span> où <span class=\"math inline\">\\(B\\)</span> et <span class=\"math inline\">\\(C\\)</span> sont des polynômes à coefficients réels. Mais alors, <span class=\"math inline\">\\(Q_2=B-iC\\)</span>. Ainsi, <span class=\"math display\">\\[P=A^2Q_1Q_2=A^2(B+iC)(B-iC)=A^2(B^2+C^2)=(AB)^2+(AC)^2=R^2+S^2,\\]</span></p>\n<p>où <span class=\"math inline\">\\(R\\)</span> et <span class=\"math inline\">\\(S\\)</span> sont des polynômes à coefficients réels.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(P\\)</span> un polynôme à coefficients réels tel que <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;P(x)\\geq0\\)</spa ..."
 }

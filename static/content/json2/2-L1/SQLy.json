@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Développement limité",
     "sousChapitre": "Formule de Taylor",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:57.696Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:45.371Z"
   },
   "contenu": [
     {
-      "id": "ef645212-3ffc-4dc6-a80a-083e5ecb1f84",
+      "id": "324abbf7-84f8-4db6-8a09-8f64e51bd2ec",
       "type": "description",
       "value": {
         "latex": "Partie principale quand $n$ tend vers $+\\infty$ de $u_n=\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "27acf0fd-69b0-4fbf-8bb0-c5365bc377f6",
+      "id": "d8da2b81-6266-4a74-a2ac-99ccc27b731a",
       "type": "reponse",
       "value": {
         "latex": "Soit $x\\in[0,1]\\subset[0,\\frac{\\pi}{2}]$. \n\nD'après la formule de \\textsc{Taylor}-\\textsc{Laplace} à l'ordre 1 fournit\n \n$$\\sin x=x-\\int_{0}^{x}(x-t)\\sin t\\;dt\\leq x,$$\n\ncar pour $t\\in[0,x]$, $(x-t)\\geq0$ et pour $t\\in[0,x]\\subset[0,\\frac{\\pi}{2}]$, $\\sin t\\geq0$. \n\nDe même, la formule de \\textsc{Taylor}-\\textsc{Laplace} à l'ordre 3 fournit\n \n$$\\sin x=x-\\frac{x^3}{6}+\\int_{0}^{x}\\frac{(x-t)^3}{6}\\sin t\\;dt\\geq x-\\frac{x^3}{6}.$$\n\nDonc, $\\forall x\\in[0,1],\\;x-\\frac{x^3}{6}\\leq\\sin x\\leq x$.\n\nSoient alors $n\\geq1$ et $k\\in\\{1,...,n\\}$. On a $0\\leq\\frac{1}{(n+k)^2}\\leq1$ et donc \n\n$$\\frac{1}{(n+k)^2}-\\frac{1}{6(n+k)^6}\\leq\\sin\\frac{1}{(n+k)^2}\\leq\\frac{1}{(n+k)^2},$$\n\npuis en sommant \n\n$$\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}-\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}\\leq\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}\\leq\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}.$$\n\nMaintenant, quand $n$ tend vers $+\\infty$,\n\n$$\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}=\\frac{1}{n}.\\frac{1}{n}\\sum_{k=1}^{n}\\frac{1}{(1+\\frac{k}{n})^2}\n=\\frac{1}{n}\\left(\\int_{0}^{1}\\frac{1}{(1+x)^2}\\;dx+o(1)\\right)=\\frac{1}{2n}+o(\\frac{1}{n}).$$\n\nD'autre part,\n\n$$0\\leq\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}\\leq n.\\frac{1}{6n^6}=\\frac{1}{6n^5},$$\n\net donc, $\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}=o(\\frac{1}{n})$.\n\nOn en déduit que $2n(\\frac{1}{(n+k)^2}-\\frac{1}{6(n+k)^6})=2n(\\frac{1}{2n}+o(\\frac{1}{n}))=1+o(1)$ et que $2n\\frac{1}{(n+k)^2}=1+o(1)$. Mais alors, d'après le théorème des gendarmes, $2n\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}$ tend vers $1$ quand $n$ tend vers $+\\infty$, ou encore\n\n$$\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}\\underset{n\\rightarrow+\\infty}{\\sim}\\frac{1}{2n}.$$",
         "html": "<p>Soit <span class=\"math inline\">\\(x\\in[0,1]\\subset[0,\\frac{\\pi}{2}]\\)</span>.</p>\n<p>D’après la formule de <span class=\"smallcaps\">Taylor</span>-<span class=\"smallcaps\">Laplace</span> à l’ordre 1 fournit</p>\n<p><span class=\"math display\">\\[\\sin x=x-\\int_{0}^{x}(x-t)\\sin t\\;dt\\leq x,\\]</span></p>\n<p>car pour <span class=\"math inline\">\\(t\\in[0,x]\\)</span>, <span class=\"math inline\">\\((x-t)\\geq0\\)</span> et pour <span class=\"math inline\">\\(t\\in[0,x]\\subset[0,\\frac{\\pi}{2}]\\)</span>, <span class=\"math inline\">\\(\\sin t\\geq0\\)</span>.</p>\n<p>De même, la formule de <span class=\"smallcaps\">Taylor</span>-<span class=\"smallcaps\">Laplace</span> à l’ordre 3 fournit</p>\n<p><span class=\"math display\">\\[\\sin x=x-\\frac{x^3}{6}+\\int_{0}^{x}\\frac{(x-t)^3}{6}\\sin t\\;dt\\geq x-\\frac{x^3}{6}.\\]</span></p>\n<p>Donc, <span class=\"math inline\">\\(\\forall x\\in[0,1],\\;x-\\frac{x^3}{6}\\leq\\sin x\\leq x\\)</span>.</p>\n<p>Soient alors <span class=\"math inline\">\\(n\\geq1\\)</span> et <span class=\"math inline\">\\(k\\in\\{1,...,n\\}\\)</span>. On a <span class=\"math inline\">\\(0\\leq\\frac{1}{(n+k)^2}\\leq1\\)</span> et donc</p>\n<p><span class=\"math display\">\\[\\frac{1}{(n+k)^2}-\\frac{1}{6(n+k)^6}\\leq\\sin\\frac{1}{(n+k)^2}\\leq\\frac{1}{(n+k)^2},\\]</span></p>\n<p>puis en sommant</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}-\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}\\leq\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}\\leq\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}.\\]</span></p>\n<p>Maintenant, quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>,</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n}\\frac{1}{(n+k)^2}=\\frac{1}{n}.\\frac{1}{n}\\sum_{k=1}^{n}\\frac{1}{(1+\\frac{k}{n})^2}\n=\\frac{1}{n}\\left(\\int_{0}^{1}\\frac{1}{(1+x)^2}\\;dx+o(1)\\right)=\\frac{1}{2n}+o(\\frac{1}{n}).\\]</span></p>\n<p>D’autre part,</p>\n<p><span class=\"math display\">\\[0\\leq\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}\\leq n.\\frac{1}{6n^6}=\\frac{1}{6n^5},\\]</span></p>\n<p>et donc, <span class=\"math inline\">\\(\\sum_{k=1}^{n}\\frac{1}{6(n+k)^6}=o(\\frac{1}{n})\\)</span>.</p>\n<p>On en déduit que <span class=\"math inline\">\\(2n(\\frac{1}{(n+k)^2}-\\frac{1}{6(n+k)^6})=2n(\\frac{1}{2n}+o(\\frac{1}{n}))=1+o(1)\\)</span> et que <span class=\"math inline\">\\(2n\\frac{1}{(n+k)^2}=1+o(1)\\)</span>. Mais alors, d’après le théorème des gendarmes, <span class=\"math inline\">\\(2n\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}\\)</span> tend vers <span class=\"math inline\">\\(1\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, ou encore</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n}\\sin\\frac{1}{(n+k)^2}\\underset{n\\rightarrow+\\infty}{\\sim}\\frac{1}{2n}.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Partie principale quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> de <span class=\"math inline\"> ..."
 }

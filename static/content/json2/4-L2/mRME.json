@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Arithmétique",
     "sousChapitre": "Arithmétique de Z",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:07.516Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:58.896Z"
   },
   "contenu": [
     {
-      "id": "5e9c4f55-9d37-4dcf-95b9-155c0346e430",
+      "id": "e65e776e-666e-44e4-a6e0-15e067eb84fa",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "ba511758-6c4e-40f0-bb5c-9421b4902951",
+      "id": "3e057333-53cd-44a0-a84e-9ea656b20f2b",
       "type": "question",
       "value": {
         "latex": "(Formule de \\textsc{Legendre}) Soit $n$ un entier naturel supérieur ou égal à $2$ et $p$ un nombre premier. Etablir que l'exposant de $p$ dans la décomposition de $n!$ en facteurs premiers est\n\n$$E(\\frac{n}{p})+E(\\frac{n}{p^2})+E(\\frac{n}{p^3})+...$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "09eadf0e-a1f2-42ce-86af-e650dbf512a3",
+      "id": "b765e323-7edc-4798-bda2-32000e5e80d5",
       "type": "reponse",
       "value": {
         "latex": "(Formule de \\textsc{Legendre}) Soit $n$ un entier naturel supérieur ou égal à $2$.\n\nSi $p$ est un nombre premier qui divise $n!=1.2...n$, alors $p$ est un facteur premier de l'un des entiers $2$,..., $n$ et en particulier, $p\\leq n$. Réciproquement, il est clair que si $p$ est un nombre premier tel que $p\\leq n$, $p$ divise $n!$. Les facteurs premiers de $n!$ sont donc les nombres premiers inférieurs ou égaux à $n$.\n\nSoit donc $p$ un nombre premier tel que $p\\leq n$. Pour trouver l'exposant de $p$ dans la décomposition primaire de $n!$, on compte $1$ pour chaque multiple de $p$ inférieur ou égal à $n$, on rajoute $1$ pour chaque multiple de $p^2$ inférieur ou égal à $n$, on rajoute encore $1$ pour chaque multiple de $p^3$ inférieur ou égal à $n$... et on s'arrête quand l'exposant $k$ vérifie $p^k>n$.\n\n$$n\\geq p^k\\Leftrightarrow\\ln n\\geq k\\ln p\\Leftrightarrow k\\leq\\frac{\\ln n}{\\ln p},$$\n\n(car $\\ln p>0$). Donc, si $k\\geq E(\\frac{\\ln n}{\\ln p})+1$, alors $p^k>n$.\n\nDit autrement, l'exposant de $p$ est la somme du nombre de multiples de $p$ inférieurs ou égaux à $n$, du nombre de multiples de $p^2$ inférieurs ou égaux à $n$, du nombre de multiple de $p^3$ inférieurs ou égaux à $n$... et du nombre de multiples de $p^{E(\\ln n/\\ln p)}$.\n\nSoit $k$ un entier tel que $1\\leq k\\leq E(\\frac{\\ln n}{\\ln p})$ et $K$ un entier naturel.\n\n$$1\\leq K.p^k\\leq n\\Leftrightarrow \\frac{1}{p^k}\\leq K\\leq\\frac{n}{p^k}\\Leftrightarrow 1\\leq K\\leq E(\\frac{n}{p^k}).$$\n\nIl y a donc $E(\\frac{n}{p^k})$ multiples de $p^k$ compris au sens large entre $1$ et $n$. On a montré que l'exposant de $p$ dans la décomposition de $n!$ en facteurs premiers est\n\n$$E(\\frac{n}{p})+E(\\frac{n}{p^2})+E(\\frac{n}{p^3})+...$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "a4d02929-09e8-4e23-999d-037001b7ca4b",
+      "id": "124f28af-6269-4680-80f5-70080a60c687",
       "type": "question",
       "value": {
         "latex": "Par combien de $0$ se termine l'écriture en base $10$ de $1000!$~?",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "ba3d831d-df62-4053-aa07-fe130993da09",
+      "id": "dce8eff7-7109-4cf5-8717-2ed9f2cc2822",
       "type": "reponse",
       "value": {
         "latex": "L'exposant de $5$ dans la décomposition primaire de $1000!$ est\n\n$$E(\\frac{1000}{5})+E(\\frac{1000}{5^2})+E(\\frac{1000}{5^3})+E(\\frac{1000}{5^4})=200+40+8+1=249.$$\n\nL'exposant de $2$ est évidemment supérieur (il y a déjà au moins $500$ nombres pairs entre $1$ et $1000$). Donc, la plus grande puissance de $10$ divisant $1000!$ est encore la plus grande puissance de $5$ divisant $1000!$, à savoir $249$. L'écriture en base $10$ de $1000!$ se termine par $249$ zéros.",
         "html": "<p>L’exposant de <span class=\"math inline\">\\(5\\)</span> dans la décomposition primaire de <span class=\"math inline\">\\(1000!\\)</span> est</p>\n<p><span class=\"math display\">\\[E(\\frac{1000}{5})+E(\\frac{1000}{5^2})+E(\\frac{1000}{5^3})+E(\\frac{1000}{5^4})=200+40+8+1=249.\\]</span></p>\n<p>L’exposant de <span class=\"math inline\">\\(2\\)</span> est évidemment supérieur (il y a déjà au moins <span class=\"math inline\">\\(500\\)</span> nombres pairs entre <span class=\"math inline\">\\(1\\)</span> et <span class=\"math inline\">\\(1000\\)</span>). Donc, la plus grande puissance de <span class=\"math inline\">\\(10\\)</span> divisant <span class=\"math inline\">\\(1000!\\)</span> est encore la plus grande puissance de <span class=\"math inline\">\\(5\\)</span> divisant <span class=\"math inline\">\\(1000!\\)</span>, à savoir <span class=\"math inline\">\\(249\\)</span>. L’écriture en base <span class=\"math inline\">\\(10\\)</span> de <span class=\"math inline\">\\(1000!\\)</span> se termine par <span class=\"math inline\">\\(249\\)</span> zéros.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>(Formule de <span class=\"smallcaps\">Legendre</span>) Soit <span class=\"math inline\">\\(n\\)</span> un entier naturel supérieur ou égal à <span class= ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Théorie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:26.244Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:12.099Z"
   },
   "contenu": [
     {
-      "id": "76fe3db5-cd7e-4ac8-bb72-76233a7a6cdb",
+      "id": "ac137900-22ee-448f-9894-07df9e31ee1e",
       "type": "description",
       "value": {
         "latex": "Soient les fonctions définies sur $\\R$,\n$$f(x)=x \\text{ , } g(x)=x^2 \\text{ et  } h(x)=e^x,$$\nJustifier qu'elles sont intégrables sur tout intervalle fermé borné de $\\R$. En utilisant les\nsommes de Riemann, calculer les intégrales $\\int_0^1f(x)d x$, $\\int_1^2 g(x)\nd x$ et $\\int_0^x h(t) d t$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "527df7ec-6f22-4b15-a6b5-de63bc890491",
+      "id": "568ec54d-51b2-4aa0-8c91-209be6d4e3d7",
       "type": "indication",
       "value": {
         "latex": "Les fonctions continues ne seraient-elles pas intégrables ?\n\n\\medskip\n\nIl faut se souvenir de ce que vaut la somme des $n$ premiers entiers, la somme des carrés des $n$ premiers entiers \net la somme d'une suite géométrique.\nLa formule générale pour les sommes de Riemann est que $\\int_a^bf(x)d x$\nest la limite (quand $n \\to +\\infty$) de \n$$S_n = \\frac {b-a}n \\sum_{k=0}^{n-1} f\\left(a+k\\frac {b-a}n\\right).$$",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "1cdcde16-8b7a-4d30-ac30-ac33cb31ba6a",
+      "id": "a6679738-9943-450f-8e6b-41f29846e969",
       "type": "reponse",
       "value": {
         "latex": "En utilisant les sommes de Riemann, on sait que $\\int_0^1f(x)d x$\nest la limite (quand $n \\to +\\infty$) de $\\frac 1n\\sum_{k=0}^{n-1}  f(\\frac kn)$.\nNotons $S_n = \\frac 1n \\sum_{k=0}^{n-1}  f(\\frac kn)$.\nAlors $S_n = \\frac 1n\\sum_{k=0}^{n-1}\\frac k{n}=\\frac 1{n^2} \\sum_{k=0}^{n-1} k = \\frac 1{n^2} \\frac{n(n-1)}{2}$. On a utilisé que la somme des entiers de $0$ à $n-1$ vaut $\\frac{n(n-1)}{2}$. Donc $S_n$ tend vers $\\frac 12$. Donc $\\int_0^1f(x)d x = \\frac 12$.\nMême travail : $\\int_1^2 g(x)\nd x$ est la limite de $S'_n = \\frac {2-1} n\\sum_{k=0}^{n-1}  g(1+ k\\frac {2-1}n) = \\frac 1 n \\sum_{k=0}^{n-1}  (1+ \\frac kn)^2 =  \\frac 1 n \\sum_{k=0}^{n-1}  (1+ 2\\frac k n + \\frac {k^2}{n^2})$.\nEn séparant la somme en trois nous obtenons : $S'_n = \\frac 1n (n+\\frac 2 n\\sum_{k=0}^{n-1} k + \\frac 1 {n^2} \\sum_{k=0}^{n-1} k^2)= 1+\\frac 2 {n^2} \\frac{n(n-1)}{2}+ \\frac 1 {n^3} \\frac{(n-1)n(2n-1)}{6}$. Donc à la limite on trouve\n$S'_n \\to 1+1 + \\frac 13 = \\frac 73$. Donc $\\int_1^2 g(x)\nd x = 7/3$. Remarque : on a utilisé que la somme des carrés des entiers de $0$ à $n-1$ est $\\frac{(n-1)n(2n-1)}{6}$.\nMême chose pour $\\int_0^x h(t) d t$ qui est la limite de \n$S''_n = \\frac {x} n\\sum_{k=0}^{n-1}  g(\\frac {kx}n) = \\frac {x} n\\sum_{k=0}^{n-1}  e^{\\frac {kx}n} = \\frac {x} n\\sum_{k=0}^{n-1}  (e^{\\frac {x}n})^k$. Cette dernière somme est la somme d'une suite géométrique (si $x\\neq 0$), donc \n$S''_n = \\frac {x} n \\frac{1-(e^\\frac xn)^n}{1-e^\\frac xn}=  \\frac {x} n \\frac{1-e^x}{1-e^\\frac xn}=(1-e^x) \\frac{\\frac xn}{1-e^\\frac xn}$ \nqui tend vers $e^x-1$. \nPour obtenir cette dernière limite on remarque qu'en posant \n$u=\\frac xn$ on a $\\frac{\\frac xn}{1-e^\\frac xn}= -1/ \\frac{e^u-1}{u}$ qui tend vers $-1$\nlorsque $u\\to 0$ (ce qui est équivalent à $n\\to +\\infty$).",
         "html": "<p>En utilisant les sommes de Riemann, on sait que <span class=\"math inline\">\\(\\int_0^1f(x)d x\\)</span> est la limite (quand <span class=\"math inline\">\\(n \\to +\\infty\\)</span>) de <span class=\"math inline\">\\(\\frac 1n\\sum_{k=0}^{n-1}  f(\\frac kn)\\)</span>. Notons <span class=\"math inline\">\\(S_n = \\frac 1n \\sum_{k=0}^{n-1}  f(\\frac kn)\\)</span>. Alors <span class=\"math inline\">\\(S_n = \\frac 1n\\sum_{k=0}^{n-1}\\frac k{n}=\\frac 1{n^2} \\sum_{k=0}^{n-1} k = \\frac 1{n^2} \\frac{n(n-1)}{2}\\)</span>. On a utilisé que la somme des entiers de <span class=\"math inline\">\\(0\\)</span> à <span class=\"math inline\">\\(n-1\\)</span> vaut <span class=\"math inline\">\\(\\frac{n(n-1)}{2}\\)</span>. Donc <span class=\"math inline\">\\(S_n\\)</span> tend vers <span class=\"math inline\">\\(\\frac 12\\)</span>. Donc <span class=\"math inline\">\\(\\int_0^1f(x)d x = \\frac 12\\)</span>. Même travail : <span class=\"math inline\">\\(\\int_1^2 g(x)\nd x\\)</span> est la limite de <span class=\"math inline\">\\(S&#39;_n = \\frac {2-1} n\\sum_{k=0}^{n-1}  g(1+ k\\frac {2-1}n) = \\frac 1 n \\sum_{k=0}^{n-1}  (1+ \\frac kn)^2 =  \\frac 1 n \\sum_{k=0}^{n-1}  (1+ 2\\frac k n + \\frac {k^2}{n^2})\\)</span>. En séparant la somme en trois nous obtenons : <span class=\"math inline\">\\(S&#39;_n = \\frac 1n (n+\\frac 2 n\\sum_{k=0}^{n-1} k + \\frac 1 {n^2} \\sum_{k=0}^{n-1} k^2)= 1+\\frac 2 {n^2} \\frac{n(n-1)}{2}+ \\frac 1 {n^3} \\frac{(n-1)n(2n-1)}{6}\\)</span>. Donc à la limite on trouve <span class=\"math inline\">\\(S&#39;_n \\to 1+1 + \\frac 13 = \\frac 73\\)</span>. Donc <span class=\"math inline\">\\(\\int_1^2 g(x)\nd x = 7/3\\)</span>. Remarque : on a utilisé que la somme des carrés des entiers de <span class=\"math inline\">\\(0\\)</span> à <span class=\"math inline\">\\(n-1\\)</span> est <span class=\"math inline\">\\(\\frac{(n-1)n(2n-1)}{6}\\)</span>. Même chose pour <span class=\"math inline\">\\(\\int_0^x h(t) d t\\)</span> qui est la limite de <span class=\"math inline\">\\(S&#39;&#39;_n = \\frac {x} n\\sum_{k=0}^{n-1}  g(\\frac {kx}n) = \\frac {x} n\\sum_{k=0}^{n-1}  e^{\\frac {kx}n} = \\frac {x} n\\sum_{k=0}^{n-1}  (e^{\\frac {x}n})^k\\)</span>. Cette dernière somme est la somme d’une suite géométrique (si <span class=\"math inline\">\\(x\\neq 0\\)</span>), donc <span class=\"math inline\">\\(S&#39;&#39;_n = \\frac {x} n \\frac{1-(e^\\frac xn)^n}{1-e^\\frac xn}=  \\frac {x} n \\frac{1-e^x}{1-e^\\frac xn}=(1-e^x) \\frac{\\frac xn}{1-e^\\frac xn}\\)</span> qui tend vers <span class=\"math inline\">\\(e^x-1\\)</span>. Pour obtenir cette dernière limite on remarque qu’en posant <span class=\"math inline\">\\(u=\\frac xn\\)</span> on a <span class=\"math inline\">\\(\\frac{\\frac xn}{1-e^\\frac xn}= -1/ \\frac{e^u-1}{u}\\)</span> qui tend vers <span class=\"math inline\">\\(-1\\)</span> lorsque <span class=\"math inline\">\\(u\\to 0\\)</span> (ce qui est équivalent à <span class=\"math inline\">\\(n\\to +\\infty\\)</span>).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient les fonctions définies sur <span class=\"math inline\">\\(\\R\\)</span>, <span class=\"math display\"> ..."
 }

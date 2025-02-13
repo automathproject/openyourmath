@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Dérivabilité des fonctions réelles",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:41.192Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:27.986Z"
   },
   "contenu": [
     {
-      "id": "84c95393-1ca7-48b1-bbb6-348efc7d46aa",
+      "id": "e865fd98-9b8b-4a56-ad9c-cad457024f9b",
       "type": "description",
       "value": {
         "latex": "Soit $f$ de classe $C^1$ sur $\\Rr$ vérifiant $\\lim_{x\\rightarrow +\\infty}(f(x)+f'(x))=0$. Montrer que $\\lim_{x\\rightarrow +\\infty}f(x)=\\lim_{x\\rightarrow +\\infty}f'(x)=0$. (Indication. Considérer $g(x)=e^xf(x)$).",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "a9e39dc4-80c5-4b0a-b3d8-952268c02222",
+      "id": "ef607f5c-00f4-4183-a646-de6aec2317ae",
       "type": "reponse",
       "value": {
         "latex": "Montrons que $\\lim_{x\\rightarrow +\\infty}f(x)=0$.\n\nPour $x$ réel, posons $g(x)=e^xf(x)$. $g$ est dérivable sur $R$ et $\\forall x\\in\\Rr,\\;g'(x)=e^x(f(x)+f'(x))$. Il s'agit donc maintenant de montrer que si $\\lim_{x\\rightarrow +\\infty}e^{-x}g'(x)=0$ alors $\\lim_{x\\rightarrow +\\infty}e^{-x}g(x)=0$.\n\nSoit $\\varepsilon$ un réel strictement positif.\n\n$$\\exists A>0/\\;\\forall x\\in\\Rr,\\;(x\\geq A\\Rightarrow-\\frac{\\varepsilon}{2}<e^{-x}g'(x)<\\frac{\\varepsilon}{2}\\Rightarrow-\\frac{\\varepsilon}{2}e^x\\leq g'(x)\\leq \\frac{\\varepsilon}{2}e^x).$$\n \nPour $x$ réel donné supérieur ou égal à $A$, on obtient en intégrant sur $[A,x]$~:\n\n$$-\\frac{\\varepsilon}{2}(e^x-e^A)=\\int_{A}^{x}-\\frac{\\varepsilon}{2}e^t\\;dt\\leq\\int_{A}^{x}g'(t)\\;dt=g(x)-g(A)\\leq\n\\frac{\\varepsilon}{2}(e^x-e^A),$$\n\net donc \n\n$$\\forall x\\geq A,\\;g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})\\leq e^{-x}g(x)\\leq g(A)e^{-x}+\\frac{\\varepsilon}{2}(1-e^{A-x}).$$\n\nMaintenant, $g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})$ et $g(A)e^{-x}+\\frac{\\varepsilon}{2}(1-e^{A-x})$ tendent respectivement vers $-\\frac{\\varepsilon}{2}$ et $\\frac{\\varepsilon}{2}$ quand $x$ tend vers $+\\infty$. Donc,\n\n$$\\exists B\\geq A/\\;\\forall x\\in\\Rr,\\;(x\\geq B\\Rightarrow g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})>-\\varepsilon\\;\\mbox{et}\\;<g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})\n<\\varepsilon.$$\n\nPour $x\\geq B$, on a donc $-\\varepsilon<e^{-x}g(x)<\\varepsilon$.\n\nOn a montré que $\\forall\\varepsilon>0,\\;\\exists B>0/\\;\\forall x\\in\\Rr,\\;(x\\geq B\\Rightarrow|e-xg(x)|<\\varepsilon)$ et donc $\\lim_{x\\rightarrow +\\infty}e^{-x}g(x)=0$ ce qu'il fallait démontrer.",
         "html": "<p>Montrons que <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}f(x)=0\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(x\\)</span> réel, posons <span class=\"math inline\">\\(g(x)=e^xf(x)\\)</span>. <span class=\"math inline\">\\(g\\)</span> est dérivable sur <span class=\"math inline\">\\(R\\)</span> et <span class=\"math inline\">\\(\\forall x\\in\\Rr,\\;g&#39;(x)=e^x(f(x)+f&#39;(x))\\)</span>. Il s’agit donc maintenant de montrer que si <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}e^{-x}g&#39;(x)=0\\)</span> alors <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}e^{-x}g(x)=0\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(\\varepsilon\\)</span> un réel strictement positif.</p>\n<p><span class=\"math display\">\\[\\exists A&gt;0/\\;\\forall x\\in\\Rr,\\;(x\\geq A\\Rightarrow-\\frac{\\varepsilon}{2}&lt;e^{-x}g&#39;(x)&lt;\\frac{\\varepsilon}{2}\\Rightarrow-\\frac{\\varepsilon}{2}e^x\\leq g&#39;(x)\\leq \\frac{\\varepsilon}{2}e^x).\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(x\\)</span> réel donné supérieur ou égal à <span class=\"math inline\">\\(A\\)</span>, on obtient en intégrant sur <span class=\"math inline\">\\([A,x]\\)</span> :</p>\n<p><span class=\"math display\">\\[-\\frac{\\varepsilon}{2}(e^x-e^A)=\\int_{A}^{x}-\\frac{\\varepsilon}{2}e^t\\;dt\\leq\\int_{A}^{x}g&#39;(t)\\;dt=g(x)-g(A)\\leq\n\\frac{\\varepsilon}{2}(e^x-e^A),\\]</span></p>\n<p>et donc</p>\n<p><span class=\"math display\">\\[\\forall x\\geq A,\\;g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})\\leq e^{-x}g(x)\\leq g(A)e^{-x}+\\frac{\\varepsilon}{2}(1-e^{A-x}).\\]</span></p>\n<p>Maintenant, <span class=\"math inline\">\\(g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})\\)</span> et <span class=\"math inline\">\\(g(A)e^{-x}+\\frac{\\varepsilon}{2}(1-e^{A-x})\\)</span> tendent respectivement vers <span class=\"math inline\">\\(-\\frac{\\varepsilon}{2}\\)</span> et <span class=\"math inline\">\\(\\frac{\\varepsilon}{2}\\)</span> quand <span class=\"math inline\">\\(x\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Donc,</p>\n<p><span class=\"math display\">\\[\\exists B\\geq A/\\;\\forall x\\in\\Rr,\\;(x\\geq B\\Rightarrow g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})&gt;-\\varepsilon\\;\\mbox{et}\\;&lt;g(A)e^{-x}-\\frac{\\varepsilon}{2}(1-e^{A-x})\n&lt;\\varepsilon.\\]</span></p>\n<p>Pour <span class=\"math inline\">\\(x\\geq B\\)</span>, on a donc <span class=\"math inline\">\\(-\\varepsilon&lt;e^{-x}g(x)&lt;\\varepsilon\\)</span>.</p>\n<p>On a montré que <span class=\"math inline\">\\(\\forall\\varepsilon&gt;0,\\;\\exists B&gt;0/\\;\\forall x\\in\\Rr,\\;(x\\geq B\\Rightarrow|e-xg(x)|&lt;\\varepsilon)\\)</span> et donc <span class=\"math inline\">\\(\\lim_{x\\rightarrow +\\infty}e^{-x}g(x)=0\\)</span> ce qu’il fallait démontrer.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\(\\Rr\\)</span> vérifia ..."
 }

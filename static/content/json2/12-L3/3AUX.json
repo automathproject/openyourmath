@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Différentiabilité, calcul de différentielles",
     "sousChapitre": "Différentiabilité, calcul de différentielles",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:45.874Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:25.265Z"
   },
   "contenu": [
     {
-      "id": "e70f8f62-ad1d-40fa-9e99-e8ff6efb2156",
+      "id": "43f4392d-8688-4009-b7bc-3a1c65cbf342",
       "type": "description",
       "value": {
         "latex": "Soit $f:{\\Rr^2}\\to{\\Rr^2}$ d\\'efinie par\n$f(x,y)=(x^2-y,x^2+y^2)$ et $g=f\\circ f$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "2ffa1316-7c3b-42c0-be86-8375675531f8",
+      "id": "f8a162c2-14d5-47f3-b8ab-a5839ab7611c",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ et $g$ sont de classe $C^1$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "b6985f32-c661-4df0-9d18-47ae16b2e390",
+      "id": "69ced68b-11f9-44c6-9f0c-b1dcab262841",
       "type": "reponse",
       "value": {
         "latex": "$f$ est de classe $C^\\infty$ car ses coordonn\\'ees le sont\n(polynômes). $g$ l'est car c'est la compos\\'ee de deux fonctions\n$C^\\infty$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "8a63ebf0-ae1b-4663-a83a-992f4acaadd4",
+      "id": "6dd92e82-4b9b-4f38-a09e-95d307f4d700",
       "type": "question",
       "value": {
         "latex": "Calculer en tout point $(x,y)\\in{\\Rr^2}$ la matrice\njacobienne de $f$ not\\'ee $Df{(x,y)}$; calculer la matrice\njacobienne de $g$ au point $(0,0)$ not\\'ee $Dg{(0,0)}$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "e732afa6-5850-483f-9794-f88e0722b83c",
+      "id": "085adbec-9ed4-4fdd-99cd-c7e9eac5ba1a",
       "type": "reponse",
       "value": {
         "latex": "La matrice jacobienne de $f$ est:\n$$Df(x,y)=\\left(\\begin{array}{cc}\n2x & -1 \\\\ 2x & 2y\n\\end{array}\\right)\n$$ D'ap\\`es la formule de diff\\'erentielle d'une compos\\'ee, on a\n$$Dg(x,y)=Df(f(x,y))\\circ Df(x,y).$$\nOr $f(0,0)=0$ et $$Df(0,0)=\\left(\\begin{array}{cc}0& -1 \\\\0& 0\n\\end{array}\\right)$$\net donc $$Dg(0,0)= \\left(\\begin{array}{cc}0& -1 \\\\0& 0\n\\end{array}.\\right)\\left(\\begin{array}{cc}0& -1 \\\\0& 0\n\\end{array}\\right)=0.$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "18685bba-b061-40d4-bca6-9325db98646c",
+      "id": "cbe19c99-1740-472e-9dc0-1a3e44683860",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $\\rho>0$ tel que pour tout $(x,y)\\in\n\\overline{B_\\rho((0,0))}$ (la boule ferm\\'ee de centre $(0,0)$ et\nde rayon $\\rho$) on a $||Dg{(x,y)}||\\leq {\\frac 1 2}$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "25d3119b-c964-457a-a3e5-5af7fb0217d5",
+      "id": "b703bec3-9414-43bb-b23b-235ca3054e77",
       "type": "reponse",
       "value": {
         "latex": "Par continuit\\'e de $Dg(x,y)$ \\`a l'origine et en prenant\n$\\epsilon=1/2$ on a:\n$$\\exists \\rho> 0, ||(x,y)-(0,0)||\\leq \\rho \\Rightarrow\n||Dg(x,y)-Dg(0,0)|| \\leq 1/2$$ d'o\\`u le r\\'esultat demand\\'e.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "faa7cba3-0635-4419-ba0d-19ddeaaaf5a2",
+      "id": "3a55b24b-3c48-4f2f-8ba0-6619c4cd891a",
       "type": "question",
       "value": {
         "latex": "Montrer que la fonction $g$ admet un unique point fixe dans\n$\\overline{B_\\rho((0,0))}$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "75e1df73-4abb-4f4f-84a3-3e8fe34faf23",
+      "id": "5b41fad3-671a-4c44-b795-789b4df4993b",
       "type": "reponse",
       "value": {
         "latex": "D'apr\\`es les accroissements finis, pour tous $X,Y \\in\n\\mathbb{R}^2$, on a\n$$||g(X)-g(Y)|| \\leq \\sup_{Z \\in \\overline B_\\rho((0,0))}||Dg(Z)||.||X-Y|| \\leq 1/2||X-Y||$$\net donc $g$ est contractante. Le Boule $\\overline B_\\rho((0,0))$\nla boule $\\overline B_\\rho((0,0))$ \\'etant compacte et compl\\`ete,\nle th\\'eor\\`eme du point fixe permet de conclure.",
         "html": "<p>D’après les accroissements finis, pour tous <span class=\"math inline\">\\(X,Y \\in\n\\mathbb{R}^2\\)</span>, on a <span class=\"math display\">\\[||g(X)-g(Y)|| \\leq \\sup_{Z \\in \\overline B_\\rho((0,0))}||Dg(Z)||.||X-Y|| \\leq 1/2||X-Y||\\]</span> et donc <span class=\"math inline\">\\(g\\)</span> est contractante. Le Boule <span class=\"math inline\">\\(\\overline B_\\rho((0,0))\\)</span> la boule <span class=\"math inline\">\\(\\overline B_\\rho((0,0))\\)</span> étant compacte et complète, le théorème du point fixe permet de conclure.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f:{\\Rr^2}\\to{\\Rr^2}\\)</span> définie par <span class=\"math inline\">\\(f(x,y)=(x^2-y,x^2+y^2)\\)</span> et <span clas ..."
 }

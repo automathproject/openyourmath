@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:02.745Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:52.126Z"
   },
   "contenu": [
     {
-      "id": "0659407e-4452-4698-ba39-ee6784e6d4a2",
+      "id": "836b6ec6-6a7b-4ca1-84a5-d9df10914651",
       "type": "description",
       "value": {
         "latex": "Soit $A$ une matrice $2\\times 2$ \\`a coefficients r\\'eels.\n$$A=\\begin{pmatrix}a&b \\\\  c&d\\end{pmatrix}$$\nOn suppose $a+c=b+d=1$ et $a-b\\neq 1$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f871dfbf-7f56-495f-8bc4-8e66578dca0a",
+      "id": "670ce12b-b0b4-4956-80e6-a48e834cf49a",
       "type": "question",
       "value": {
         "latex": "Soient $(x_1,x_2)$, $(y_1,y_2)$ deux vecteurs de $\\R^2$, tels que  \n$$A\\begin{pmatrix}x_1 \\\\  x_2\\end{pmatrix}=\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix}$$ \nmontrer qu'alors \n$$y_1+y_2=x_1+x_2.$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "8870a8f1-fa50-45e4-b644-70b2acee48c2",
+      "id": "a510daa4-59a9-4f9e-9371-1795728ab039",
       "type": "reponse",
       "value": {
         "latex": "Soient $(x_1,x_2)$, $(y_1,y_2)$ deux vecteurs de $\\R^2$, tels que  \n$$A\\begin{pmatrix}x_1 \\\\  x_2\\end{pmatrix}=\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix}$$ \n{\\it On montre que $y_1+y_2=x_1+x_2.$}\n\n On a\n$$A\\begin{pmatrix}x_1 \\\\  x_2\\end{pmatrix}=\\begin{pmatrix}a&b \\\\  c&d\\end{pmatrix}\\begin{pmatrix}x_1 \\\\  x_2\\end{pmatrix}=\\begin{pmatrix}ax_1+bx_2 \\\\  cx_1+dx_2\\end{pmatrix}=\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix},$$\nd'où $y_1+y_2=ax_1+bx_2+cx_1+dx_2=(a+c)x_1+(b+d)x_2=x_1+x_2.$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "47e43aec-dae9-40f2-92b9-27d28ae0be54",
+      "id": "30b49322-f419-491c-bd15-62008be498e5",
       "type": "question",
       "value": {
         "latex": "Soit le vecteur $\\vec x=(1,-1)$, vérifier que $\\vec x$ est un vecteur propre de $A$, et déterminer sa valeur propre.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "7e5358af-54f4-4704-93ee-703905e2db99",
+      "id": "6c27bd4c-affd-4004-929d-667e22c677fd",
       "type": "reponse",
       "value": {
         "latex": "{\\it Soit le vecteur $\\vec x=(1,-1)$, vérifions que $\\vec x$ est un vecteur propre de $A$, et déterminons sa valeur propre.}\n$$A.\\vec x=\\begin{pmatrix}a&b \\\\  c&d\\end{pmatrix}\\begin{pmatrix}1 \\\\  -1\\end{pmatrix}=\\begin{pmatrix}a-b \\\\  c-d\\end{pmatrix},$$\nor $c-d=(1-a)-(1-b)=-(a-b)$, car $a+b=c+d=1$. Ainsi,\n$$\\begin{pmatrix}a&b \\\\  c&d\\end{pmatrix}\\begin{pmatrix}1 \\\\  -1\\end{pmatrix}=\n\\begin{pmatrix}a-b \\\\  -(a-b)\\end{pmatrix}=(a-b)\\begin{pmatrix}1 \\\\  -1\\end{pmatrix}.$$\nAinsi, le vecteur $\\vec x$ est un vecteur propre de $A$ pour la valeur propre $a-b$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "1998f990-825b-472c-aaca-fd49a32b01f9",
+      "id": "7aea9ad8-82fe-44c0-a5f0-36cb3831a94e",
       "type": "question",
       "value": {
         "latex": "Déterminer le polynôme caractéristique de $A$ et calculer ses racines.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "da493632-160e-41be-a951-ec44f5d11b17",
+      "id": "4ac7f4be-371d-40ef-91c8-1e8757b7bc0d",
       "type": "reponse",
       "value": {
         "latex": "{\\it Déterminons le polynôme caractéristique de $A$ et calculons ses racines.}\n\nTout d'abord, compte tenu de l'hypothèse\n$a+b=c+d=1$, nous écrirons\n$$A=\\begin{pmatrix}a&b \\\\  1-a&1-b\\end{pmatrix}.$$\nD'où \n$$P_A(X)=\\begin{vmatrix}a-X&b \\\\  1-a&1-b-X\\end{vmatrix}=(a-X)(1-b-X)-b(1-a)=X^2-(a-b+1)X+(a-b).$$\nOn sait, d'après la question précédente que $a-b$ est racine de ce polyn\\^ome, or, le produit des racines est égal à $a-b$ et la somme à $a-b+1$, ainsi la seconde racine est égale é $1$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "1b82ba10-3e0e-4996-9588-547b7d5b5b97",
+      "id": "7a223c82-1618-421f-becf-af0039bb05d5",
       "type": "question",
       "value": {
         "latex": "Déterminer un vecteur propre, $\\vec y$, de $A$ non colinéaire à $\\vec x$ et exprimer la matrice de l'endomorphisme défini par $A$ dans la base $(\\vec x,\\vec y)$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "796213d0-db01-4dec-9c81-0a42d02ac82d",
+      "id": "d2bf7dfb-6be3-411a-93af-c34b5098ac6c",
       "type": "reponse",
       "value": {
         "latex": "{\\it Déterminons un vecteur propre, $\\vec y$, de $A$ non colinéaire à $\\vec x$ et exprimons la matrice de l'endomorphisme défini par $A$ dans la base $(\\vec x,\\vec y)$.}\n\nUn vecteur propre non colinéaire à $\\vec x$ est vecteur propre pour la valeur propre $1$. Ainsi, si on note $\\vec y=(y_1,y_2)$, on a\n$$A\\vec y=\\vec y\\iff\\begin{pmatrix}a&b \\\\  1-a&1-b\\end{pmatrix}\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix}=\n\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix},$$\nce qui équivaut à\n$$\\left\\{$$\\begin{align*}ay_1+by_2&=y_1 \\\\  (1-a)y_1+(1-b)y_2&=y_2\\end{align*}$$\\right.\\iff (a-1)y_1+by_2=0.$$\nLe vecteur $\\vec y=(b,1-a)$ est un vecteur propre de $A$ pour la valeur propre $1$.",
         "html": "<p><span><em>Déterminons un vecteur propre, <span class=\"math inline\">\\(\\vec y\\)</span>, de <span class=\"math inline\">\\(A\\)</span> non colinéaire à <span class=\"math inline\">\\(\\vec x\\)</span> et exprimons la matrice de l’endomorphisme défini par <span class=\"math inline\">\\(A\\)</span> dans la base <span class=\"math inline\">\\((\\vec x,\\vec y)\\)</span>.</em></span></p>\n<p>Un vecteur propre non colinéaire à <span class=\"math inline\">\\(\\vec x\\)</span> est vecteur propre pour la valeur propre <span class=\"math inline\">\\(1\\)</span>. Ainsi, si on note <span class=\"math inline\">\\(\\vec y=(y_1,y_2)\\)</span>, on a <span class=\"math display\">\\[A\\vec y=\\vec y\\iff\\begin{pmatrix}a&amp;b \\\\  1-a&amp;1-b\\end{pmatrix}\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix}=\n\\begin{pmatrix}y_1 \\\\  y_2\\end{pmatrix},\\]</span> ce qui équivaut à <span class=\"math display\">\\[\\left\\{\\]</span><span class=\"math display\">\\[\\begin{aligned}\nay_1+by_2&amp;=y_1 \\\\  (1-a)y_1+(1-b)y_2&amp;=y_2\\end{aligned}\\]</span><span class=\"math display\">\\[\\right.\\iff (a-1)y_1+by_2=0.\\]</span> Le vecteur <span class=\"math inline\">\\(\\vec y=(b,1-a)\\)</span> est un vecteur propre de <span class=\"math inline\">\\(A\\)</span> pour la valeur propre <span class=\"math inline\">\\(1\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A\\)</span> une matrice <span class=\"math inline\">\\(2\\times 2\\)</span> à coefficients réels. <span class=\"math disp ..."
 }

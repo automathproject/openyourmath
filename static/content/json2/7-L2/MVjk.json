@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Probabilité discrète",
     "sousChapitre": "Probabilité conditionnelle",
-    "organisation": "",
-    "updatedAt": "2025-02-10T14:43:14.398Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:47:01.361Z"
   },
   "contenu": [
     {
-      "id": "90447876-5ddb-4ec8-8017-88bf9cdef40e",
+      "id": "e07b373d-c4a1-4738-9e32-965b95241a00",
       "type": "description",
       "value": {
         "latex": "Un fumeur, après avoir lu une série de statistiques\neffrayantes sur les risques de cancer, problèmes cardio-vasculaires \nliés au tabac, décide d'arrêter de fumer; toujours d'après des\nstatistiques, on estime les probabilités suivantes : si cette personne\nn'a pas fumé un jour $J_{n}$, alors la probabilité\npour qu'elle ne fume pas le jour suivant $J_{n+1}$ est $0.3$; \nmais si elle a fumé un jour $J_{n}$, alors la probabilité \npour qu'elle ne fume pas le jour suivant $J_{n+1}$ est $0.9$; \nquelle est la probabilité $P_{n+1}$ pour qu'elle\nfume le jour $J_{n+1}$ en fonction de la probabilité \n$P_{n}$ pour qu'elle fume le jour $J_{n}$ ? Quelle est la\nlimite de $P_{n}$ ? Va-t-il finir par s'arrêter?",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "3bb83885-d1a9-4a3e-8b60-047ef2570a1d",
+      "id": "9bde88e7-58dd-4772-8d88-d690c11c3fc9",
       "type": "reponse",
       "value": {
         "latex": "Fumeurs\n\nDéfinissons les événements: $F_{n}$ <<Fumer le $n$\\up{ème} jour>>, et $\\overline{F_{n}}$ \nl'événement complémentaire.\nAlors $\\{\\overline{F_{n}},F_{n}\\}$ constitue un système complet d'événements, \n$P_{n}=$ $P(F_{n})$; on peut donc écrire :\n$P(\\overline{F_{n+1}})=P(\\overline{F_{n+1}}/F_{n})P(F_{n})\n+P(\\overline{F_{n+1}}/\\overline{F_{n}})P(\\overline{F_{n}})$.\n\nComme $P(\\overline{F_{n+1}}/F_{n})=0.9$ et $P(\\overline{F_{n+1}}/\\overline{F_{n}})=0.3$\n$1-P_{n+1}=0.9P_{n}+0.3(1-P_{n})$, soit $P_{n+1}=-0.6P_{n}+0.7$. Notons (R)\ncette relation.\n\nPour connaître le comportement à long terme, il faut étudier cette\nsuite récurrente; il y a des techniques mathématiques pour ça,\nc'est le moment de s'en servir.\n\nCherchons la solution de l'équation <<$\\ell=-0.6\\ell+0.7$>>, \nla limite éventuelle satisfait nécessairement cette équation : faire un passage à la limite dans la\nrelation (R), ou utiliser le théorème du point fixe.\n\nOn trouve $\\ell=\\frac{7}{16};$ alors, la suite $Q_{n}=(P_{n}- \\ell)$ vérifie : \n$Q_{n+1}= - 0.6Q_{n}$, ce qui permet de \nconclure : $Q_{n+1}=(-0.6)^{n}Q_{1}$\net comme $((-0.6)^{n})$ est une suite qui tend vers $0$, on peut dire que la\nsuite $(Q_{n})$ tend vers $0$ et donc que la suite $(P_n)$ tend vers $\\ell=\\frac{7}{16}.$\n\nConclusion : la probabilité $P_{n}$ pour qu'elle fume le jour $J_{n}$\ntend vers $\\frac{7}{16} \\simeq 0.4375$.",
         "html": "<p>Fumeurs</p>\n<p>Définissons les événements: <span class=\"math inline\">\\(F_{n}\\)</span> &lt;&lt;Fumer le <span class=\"math inline\">\\(n\\)</span> jour&gt;&gt;, et <span class=\"math inline\">\\(\\overline{F_{n}}\\)</span> l’événement complémentaire. Alors <span class=\"math inline\">\\(\\{\\overline{F_{n}},F_{n}\\}\\)</span> constitue un système complet d’événements, <span class=\"math inline\">\\(P_{n}=\\)</span> <span class=\"math inline\">\\(P(F_{n})\\)</span>; on peut donc écrire : <span class=\"math inline\">\\(P(\\overline{F_{n+1}})=P(\\overline{F_{n+1}}/F_{n})P(F_{n})\n+P(\\overline{F_{n+1}}/\\overline{F_{n}})P(\\overline{F_{n}})\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(P(\\overline{F_{n+1}}/F_{n})=0.9\\)</span> et <span class=\"math inline\">\\(P(\\overline{F_{n+1}}/\\overline{F_{n}})=0.3\\)</span> <span class=\"math inline\">\\(1-P_{n+1}=0.9P_{n}+0.3(1-P_{n})\\)</span>, soit <span class=\"math inline\">\\(P_{n+1}=-0.6P_{n}+0.7\\)</span>. Notons (R) cette relation.</p>\n<p>Pour connaître le comportement à long terme, il faut étudier cette suite récurrente; il y a des techniques mathématiques pour ça, c’est le moment de s’en servir.</p>\n<p>Cherchons la solution de l’équation &lt;&lt;<span class=\"math inline\">\\(\\ell=-0.6\\ell+0.7\\)</span>&gt;&gt;, la limite éventuelle satisfait nécessairement cette équation : faire un passage à la limite dans la relation (R), ou utiliser le théorème du point fixe.</p>\n<p>On trouve <span class=\"math inline\">\\(\\ell=\\frac{7}{16};\\)</span> alors, la suite <span class=\"math inline\">\\(Q_{n}=(P_{n}- \\ell)\\)</span> vérifie : <span class=\"math inline\">\\(Q_{n+1}= - 0.6Q_{n}\\)</span>, ce qui permet de conclure : <span class=\"math inline\">\\(Q_{n+1}=(-0.6)^{n}Q_{1}\\)</span> et comme <span class=\"math inline\">\\(((-0.6)^{n})\\)</span> est une suite qui tend vers <span class=\"math inline\">\\(0\\)</span>, on peut dire que la suite <span class=\"math inline\">\\((Q_{n})\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> et donc que la suite <span class=\"math inline\">\\((P_n)\\)</span> tend vers <span class=\"math inline\">\\(\\ell=\\frac{7}{16}.\\)</span></p>\n<p>Conclusion : la probabilité <span class=\"math inline\">\\(P_{n}\\)</span> pour qu’elle fume le jour <span class=\"math inline\">\\(J_{n}\\)</span> tend vers <span class=\"math inline\">\\(\\frac{7}{16} \\simeq 0.4375\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Un fumeur, après avoir lu une série de statistiques effrayantes sur les risques de cancer, problèmes cardio-vasculaires liés au tabac, décide d’arr ..."
 }

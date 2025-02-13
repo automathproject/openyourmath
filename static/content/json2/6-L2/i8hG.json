@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Courbes planes",
     "sousChapitre": "Courbes paramétrées",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:46:37.426Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:46:34.008Z"
   },
   "contenu": [
     {
-      "id": "4b80d896-7299-492f-b700-bc6bec02bdd3",
+      "id": "2e961be2-be67-435e-9191-a06ffd24a306",
       "type": "description",
       "value": {
         "latex": "Montrer que la courbe paramétrée \n$$\\left\\{\\begin{array}{l}x(t)=\\frac{4t-3}{t^2+1}\\\\ \\ \\\\ y(t)=\\frac{2t-1}{t^2+2}\\end{array}\\right.$$\nadmet un unique point singulier, et tracer l'allure de la courbe au voisinage de ce point.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c2a87caa-e587-4dfb-8f67-070ae9add6a4",
+      "id": "f4d8e9f3-5ec7-4a8a-8b38-e24004f7ddbe",
       "type": "indication",
       "value": {
         "latex": "Un point $M(t)$ est singulier si $x'(t)=0$ et $y'(t)=0$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "38d258b9-96d1-4f53-bffc-fbf6b95ab29a",
+      "id": "fdb9b162-3552-4fa3-ac8f-addfb0f93c18",
       "type": "reponse",
       "value": {
-        "latex": "Les fonctions $x$ et $y$ sont de classe $\\mathcal{C}^1$ sur $\\R$. \nUn point $M(t)$ de la courbe est singulier si $x'(t)=y'(t)=0$, or\n$$\\left\\{\\begin{array}{l}\nx'(t)=\\frac{4(t^2+1)-2t(4t-3)}{(t^2+1)^2}=\\frac{-2(2t^2-3t-2)}{(t^2+1)^2}\\\\\n\\ \\\\\ny'(t)=\\frac{2(t^2+2)-2t(2t-1)}{(t^2+2)^2}=\\frac{-2(t^2-t-2)}{(t^2+2)^2}\n\\end{array}\\right.$$\nAinsi $M(t)$ est singulier si et seulement si \n$\\left\\{\\begin{array}{l}2t^2-3t-2=0\\\\t^2-t-2=0\\end{array}\\right.$. \nCe système admet une unique solution $t=2$, correspondant au point $M(2)$ de coordonnées $(1,\\frac{1}{2})$.\n\nLe vecteur dérivé est nul au point $M(2)$ ; \npour obtenir l'allure de la courbe au voisinage de ce point,\nil faut donc effectuer un développement limité à un \nordre assez grand pour trouver deux termes non constants non nuls. \nIci l'ordre 3 suffira, on pose $t=2+h$ pour simplifier \n(ainsi ``$t$ proche de 2'' devient ``$h$ proche de 0''):\n\\begin{eqnarray*}\nx(2+h)&=&\\frac{4(2+h)-3}{(2+h)^2+1}=\\frac{5+4h}{5+4h+h^2}=1-\\frac{1}{5}h^2\\cdot\\frac{1}{1+\\frac{4h+h^2}{5}}\\\\\n &=&1-\\frac{1}{5}h^2\\cdot\\left(1-\\left(\\frac{4h+h^2}{5}\\right)+o\\left(\\frac{4h+h^2}{5}\\right)\\right)\\\\\n &=&1-\\frac{1}{5}h^2\\cdot\\left(1-\\frac{4}{5}h+o(h)\\right)\\\\\n &=&1-\\frac{1}{5}h^2+\\frac{4}{25}h^3+o(h^3)\n\\end{eqnarray*}\n\\begin{eqnarray*}\ny(2+h)&=&\\frac{2(2+h)-1}{(2+h)^2+2}=\\frac{3+2h}{6+4h+h^2}=\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\frac{1}{1+\\frac{4h+h^2}{6}}\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\left(1-\\left(\\frac{4h+h^2}{6}\\right)+o\\left(\\frac{4h+h^2}{6}\\right)\\right)\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\left(1-\\frac{2}{3}h+o(h)\\right)\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2+\\frac{1}{18}h^3+o(h^3)\n\\end{eqnarray*}\nOn a donc le développement limité vectoriel suivant:\n$$M(2+h)=\\begin{pmatrix}1\\\\ \\frac{1}{2}\\end{pmatrix}\n+\\begin{pmatrix}-\\frac{1}{5}\\\\-\\frac{1}{12}\\end{pmatrix}\\cdot h^2+\n\\begin{pmatrix}\\frac{4}{25}\\\\  \\frac{1}{18}\\end{pmatrix}\\cdot h^3+o(h^3)$$\nOn vérifie que le terme constant du développement limité correspond bien à \n$\\begin{pmatrix}x(2)\\\\ y(2)\\end{pmatrix}$ et que le terme linéaire, \nqui vaut $\\begin{pmatrix}x'(2)\\\\ y'(2)\\end{pmatrix}\\cdot h$, est nul. \nLes coefficients de $h^2$ et $h^3$ sont des vecteurs non nuls, $M(2)$ \nest donc un point de rebroussement de première espèce ($p=2$, $q=3$).\nLa tangente est dirigée par le premier vecteur \nnon nul, coefficient de $h^k$ (avec $k\\ge1$), donc ici\nle coefficient de $h^2$ ; ainsi la tangente en $M(2)$ est dirigée par \n$\\left(\\begin{smallmatrix}-\\frac{1}{5}\\\\ -\\frac{1}{12}\\end{smallmatrix}\\right)$.\n\n\n\\begin{center}\n__TIKZ_f1c64851-42df-4464-bc8f-73c7b64ec174__  \n\\end{center}",
+        "latex": "Les fonctions $x$ et $y$ sont de classe $\\mathcal{C}^1$ sur $\\R$. \nUn point $M(t)$ de la courbe est singulier si $x'(t)=y'(t)=0$, or\n$$\\left\\{\\begin{array}{l}\nx'(t)=\\frac{4(t^2+1)-2t(4t-3)}{(t^2+1)^2}=\\frac{-2(2t^2-3t-2)}{(t^2+1)^2}\\\\\n\\ \\\\\ny'(t)=\\frac{2(t^2+2)-2t(2t-1)}{(t^2+2)^2}=\\frac{-2(t^2-t-2)}{(t^2+2)^2}\n\\end{array}\\right.$$\nAinsi $M(t)$ est singulier si et seulement si \n$\\left\\{\\begin{array}{l}2t^2-3t-2=0\\\\t^2-t-2=0\\end{array}\\right.$. \nCe système admet une unique solution $t=2$, correspondant au point $M(2)$ de coordonnées $(1,\\frac{1}{2})$.\n\nLe vecteur dérivé est nul au point $M(2)$ ; \npour obtenir l'allure de la courbe au voisinage de ce point,\nil faut donc effectuer un développement limité à un \nordre assez grand pour trouver deux termes non constants non nuls. \nIci l'ordre 3 suffira, on pose $t=2+h$ pour simplifier \n(ainsi ``$t$ proche de 2'' devient ``$h$ proche de 0''):\n\\begin{eqnarray*}\nx(2+h)&=&\\frac{4(2+h)-3}{(2+h)^2+1}=\\frac{5+4h}{5+4h+h^2}=1-\\frac{1}{5}h^2\\cdot\\frac{1}{1+\\frac{4h+h^2}{5}}\\\\\n &=&1-\\frac{1}{5}h^2\\cdot\\left(1-\\left(\\frac{4h+h^2}{5}\\right)+o\\left(\\frac{4h+h^2}{5}\\right)\\right)\\\\\n &=&1-\\frac{1}{5}h^2\\cdot\\left(1-\\frac{4}{5}h+o(h)\\right)\\\\\n &=&1-\\frac{1}{5}h^2+\\frac{4}{25}h^3+o(h^3)\n\\end{eqnarray*}\n\\begin{eqnarray*}\ny(2+h)&=&\\frac{2(2+h)-1}{(2+h)^2+2}=\\frac{3+2h}{6+4h+h^2}=\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\frac{1}{1+\\frac{4h+h^2}{6}}\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\left(1-\\left(\\frac{4h+h^2}{6}\\right)+o\\left(\\frac{4h+h^2}{6}\\right)\\right)\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2\\cdot\\left(1-\\frac{2}{3}h+o(h)\\right)\\\\\n &=&\\frac{1}{2}-\\frac{1}{12}h^2+\\frac{1}{18}h^3+o(h^3)\n\\end{eqnarray*}\nOn a donc le développement limité vectoriel suivant:\n$$M(2+h)=\\begin{pmatrix}1\\\\ \\frac{1}{2}\\end{pmatrix}\n+\\begin{pmatrix}-\\frac{1}{5}\\\\-\\frac{1}{12}\\end{pmatrix}\\cdot h^2+\n\\begin{pmatrix}\\frac{4}{25}\\\\  \\frac{1}{18}\\end{pmatrix}\\cdot h^3+o(h^3)$$\nOn vérifie que le terme constant du développement limité correspond bien à \n$\\begin{pmatrix}x(2)\\\\ y(2)\\end{pmatrix}$ et que le terme linéaire, \nqui vaut $\\begin{pmatrix}x'(2)\\\\ y'(2)\\end{pmatrix}\\cdot h$, est nul. \nLes coefficients de $h^2$ et $h^3$ sont des vecteurs non nuls, $M(2)$ \nest donc un point de rebroussement de première espèce ($p=2$, $q=3$).\nLa tangente est dirigée par le premier vecteur \nnon nul, coefficient de $h^k$ (avec $k\\ge1$), donc ici\nle coefficient de $h^2$ ; ainsi la tangente en $M(2)$ est dirigée par \n$\\left(\\begin{smallmatrix}-\\frac{1}{5}\\\\ -\\frac{1}{12}\\end{smallmatrix}\\right)$.\n\n\n\\begin{center}\n__TIKZ_163649e9-d282-4d23-a854-b02d27b01f0e__  \n\\end{center}",
         "html": ""
       }
     }
-  ]
+  ],
+  "preview": "<p>Montrer que la courbe paramétrée <span class=\"math display\"> ..."
 }

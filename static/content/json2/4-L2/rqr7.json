@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Groupe, anneau, corps",
     "sousChapitre": "Groupe de permutation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:16.676Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:08.527Z"
   },
   "contenu": [
     {
-      "id": "2ccbea9c-676e-4016-972b-eb06859086e8",
+      "id": "4b4805f8-b3ae-41d9-8f64-260608a01ae3",
       "type": "description",
       "value": {
         "latex": "Démontrer que $S_n$ est engendré par $\\tau_{1,2}$ et le cycle $(2\\;3\\;...\\;n\\;1)$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "a9b24dd1-a3b0-4bff-b28f-86ef971a6fb8",
+      "id": "053933d0-adb8-4aea-8676-3aebb15d772c",
       "type": "reponse",
       "value": {
         "latex": "D'après l'exercice \\ref{exo:suprou2ter}, il suffit de montrer que pour $2\\leq i\\leq n$, $\\tau_{1,i}$ peut s'écrire en utilisant uniquement $\\tau=\\tau_{1,2}$ et $c=(2\\;3\\;...\\;n\\;1)$. On note que $c^n=Id$.\n\nTout d'abord, pour $1\\leq i\\leq n-1$, étudions $\\sigma=c^{i-1}\\circ\\tau\\circ c^{n-i+1}$.\n\nSoit $k\\in\\{1,...,n\\}$. \n\n$$\\begin{align*}\\ensuremath\n\\tau\\circ c^{n-i+1}(k)\\neq c^{n-i+1}(k)&\\leq c^{n-i+1}(k)\\in\\{1,2\\}\\Leftrightarrow k\\in\\{c^{-n+i-1}(1),c^{-n+i-1}(2)\\}\\Leftrightarrow k\\in\\{c^{i-1}(1),c^{i-1}(2)\\}\\\\\n &\\Leftrightarrow k\\in\\{i,i+1\\}.\n\\end{align*}$$\n\nDonc, si $k\\notin\\{i,i+1\\}$, \n\n$$\\sigma(k)=c^{i-1}(k)(\\tau\\circ c^{n-i+1}(k))=c^{i-1}(c^{n-i+1}(k))=c^n(k)=k,$$\n\net la restriction de $\\sigma$ à $\\{1,...,n\\}\\setminus\\{i,i+1\\}$ est l'identité de cet ensemble. Comme $\\sigma$ n'est pas l'identité puisque $\\sigma(i)\\neq i$, $\\sigma$ est donc nécessairement la transposition $\\tau_{i,i+1}$.\n\nOn a montré que $\\forall i\\in\\{1,...,n-1\\},\\;c^{i-1}\\circ\\tau \\circ c^{n-i+1}=\\tau_{i,i+1}$.\n\nVérifions maintenant que les $\\tau_{1,i}$ s'écrivent à l'aide des $\\tau_{j,j+1}$. D'après l'exercice \\ref{exo:suprou2ter}, $\\tau_{i,j}=\\tau_{1,i}\\circ\\tau_{1,j}\\circ\\tau_{1,i}$, et donc bien sûr, plus généralement, $\\tau_{i,j}=\\tau_{k,i}\\circ\\tau_{k,j}\\circ\\tau_{k,i}$.\n\nPar suite, $\\tau_{1,i}=\\tau_{1,2}\\circ\\tau_{2,i}\\circ\\tau_{1,2}$ puis, $\\tau_{2,i}=\\tau_{2,3}\\circ\\tau_{3,i}\\circ\\tau_{2,3}$, puis, $\\tau_{3,i}=\\tau_{3,4}\\circ\\tau_{4,i}\\circ\\tau_{3,4}$ ... et $\\tau_{i-2,i}=\\tau_{i-2,i-1}\\circ\\tau_{i-1,i}\\circ\\tau_{i-2,i-1}$. Finalement,\n\n$$\\tau_{1,i}=\\tau_{1,2}\\circ\\tau_{2,3}\\circ...\\circ\\tau_{i-2,i-1}\\tau_{i-1,i}\\circ\\tau_{i-2,i-1}\\circ...\\circ\\tau_{2,3}\\circ\\tau_{1,2},$$\n\nce qui achève la démonstration.",
         "html": "<p>D’après l’exercice <a href=\"#exo:suprou2ter\" data-reference-type=\"ref\" data-reference=\"exo:suprou2ter\">[exo:suprou2ter]</a>, il suffit de montrer que pour <span class=\"math inline\">\\(2\\leq i\\leq n\\)</span>, <span class=\"math inline\">\\(\\tau_{1,i}\\)</span> peut s’écrire en utilisant uniquement <span class=\"math inline\">\\(\\tau=\\tau_{1,2}\\)</span> et <span class=\"math inline\">\\(c=(2\\;3\\;...\\;n\\;1)\\)</span>. On note que <span class=\"math inline\">\\(c^n=Id\\)</span>.</p>\n<p>Tout d’abord, pour <span class=\"math inline\">\\(1\\leq i\\leq n-1\\)</span>, étudions <span class=\"math inline\">\\(\\sigma=c^{i-1}\\circ\\tau\\circ c^{n-i+1}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(k\\in\\{1,...,n\\}\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\tau\\circ c^{n-i+1}(k)\\neq c^{n-i+1}(k)&amp;\\leq c^{n-i+1}(k)\\in\\{1,2\\}\\Leftrightarrow k\\in\\{c^{-n+i-1}(1),c^{-n+i-1}(2)\\}\\Leftrightarrow k\\in\\{c^{i-1}(1),c^{i-1}(2)\\}\\\\\n &amp;\\Leftrightarrow k\\in\\{i,i+1\\}.\n\\end{align*}\\]</span></p>\n<p>Donc, si <span class=\"math inline\">\\(k\\notin\\{i,i+1\\}\\)</span>,</p>\n<p><span class=\"math display\">\\[\\sigma(k)=c^{i-1}(k)(\\tau\\circ c^{n-i+1}(k))=c^{i-1}(c^{n-i+1}(k))=c^n(k)=k,\\]</span></p>\n<p>et la restriction de <span class=\"math inline\">\\(\\sigma\\)</span> à <span class=\"math inline\">\\(\\{1,...,n\\}\\setminus\\{i,i+1\\}\\)</span> est l’identité de cet ensemble. Comme <span class=\"math inline\">\\(\\sigma\\)</span> n’est pas l’identité puisque <span class=\"math inline\">\\(\\sigma(i)\\neq i\\)</span>, <span class=\"math inline\">\\(\\sigma\\)</span> est donc nécessairement la transposition <span class=\"math inline\">\\(\\tau_{i,i+1}\\)</span>.</p>\n<p>On a montré que <span class=\"math inline\">\\(\\forall i\\in\\{1,...,n-1\\},\\;c^{i-1}\\circ\\tau \\circ c^{n-i+1}=\\tau_{i,i+1}\\)</span>.</p>\n<p>Vérifions maintenant que les <span class=\"math inline\">\\(\\tau_{1,i}\\)</span> s’écrivent à l’aide des <span class=\"math inline\">\\(\\tau_{j,j+1}\\)</span>. D’après l’exercice <a href=\"#exo:suprou2ter\" data-reference-type=\"ref\" data-reference=\"exo:suprou2ter\">[exo:suprou2ter]</a>, <span class=\"math inline\">\\(\\tau_{i,j}=\\tau_{1,i}\\circ\\tau_{1,j}\\circ\\tau_{1,i}\\)</span>, et donc bien sûr, plus généralement, <span class=\"math inline\">\\(\\tau_{i,j}=\\tau_{k,i}\\circ\\tau_{k,j}\\circ\\tau_{k,i}\\)</span>.</p>\n<p>Par suite, <span class=\"math inline\">\\(\\tau_{1,i}=\\tau_{1,2}\\circ\\tau_{2,i}\\circ\\tau_{1,2}\\)</span> puis, <span class=\"math inline\">\\(\\tau_{2,i}=\\tau_{2,3}\\circ\\tau_{3,i}\\circ\\tau_{2,3}\\)</span>, puis, <span class=\"math inline\">\\(\\tau_{3,i}=\\tau_{3,4}\\circ\\tau_{4,i}\\circ\\tau_{3,4}\\)</span> ... et <span class=\"math inline\">\\(\\tau_{i-2,i}=\\tau_{i-2,i-1}\\circ\\tau_{i-1,i}\\circ\\tau_{i-2,i-1}\\)</span>. Finalement,</p>\n<p><span class=\"math display\">\\[\\tau_{1,i}=\\tau_{1,2}\\circ\\tau_{2,3}\\circ...\\circ\\tau_{i-2,i-1}\\tau_{i-1,i}\\circ\\tau_{i-2,i-1}\\circ...\\circ\\tau_{2,3}\\circ\\tau_{1,2},\\]</span></p>\n<p>ce qui achève la démonstration.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Démontrer que <span class=\"math inline\">\\(S_n\\)</span> est engendré par <span class=\"math inline\">\\(\\tau_{1,2}\\)</span> et le cycle <span class=\"ma ..."
 }

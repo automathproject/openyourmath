@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Continuité, limite et étude de fonctions réelles",
     "sousChapitre": "Limite de fonctions",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:55.560Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:42.954Z"
   },
   "contenu": [
     {
-      "id": "b4bb97d5-058f-419d-9c44-692e07acc08d",
+      "id": "e8c9c070-3409-46ab-9649-3c516ee46ce9",
       "type": "description",
       "value": {
         "latex": "Trouver pour $(a,b)\\in (\\Rr^{+*})^{2}$ :\n$$\\lim\\limits_{x\\rightarrow 0^{+}}\\left(\\frac{a^{x}+b^{x}}{2}\\right)^{\\frac{1}{x}}.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6a77186a-cd19-4382-8a70-6e49257e3d5f",
+      "id": "5e2c7927-daaf-4738-a2dd-2a74c365cb98",
       "type": "indication",
       "value": {
         "latex": "R\\'{e}ponse: $\\sqrt{ab}$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "78b728c6-b9d0-4106-9ab4-d1dbad71df9f",
+      "id": "b9bea3a4-20bd-48e9-b8e5-2e5e52adcf38",
       "type": "reponse",
       "value": {
         "latex": "Soit \n$$\n f(x) = \\left(\\frac{a^{x}+b^{x}}{2}\\right)^{\\frac{1}{x}}\n     = \\exp\\left( \\frac 1x \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right) \\right) \n$$\n\n$a^x \\to 1$, $b^x \\to 1$ donc $\\frac{a^{x}+b^{x}}{2} \\to 1$ lorsque $x \\to 0$\net nous sommes face à une forme indéterminée.\nNous savons que $\\lim_{t \\to 0} \\frac{\\ln(1+t)}{t} = 1$.\nAutrement dit il existe un fonction $\\mu$ telle que $\\ln(1+t) = t \\cdot \\mu(t)$ avec\n$\\mu(t) \\to 1$ lorsque $t\\to 0$.\n\nAppliquons cela à $g(x) = \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right)$.\nAlors \n$$g(x) = \\ln \\left(1+ \\left(\\frac{a^{x}+b^{x}}{2}-1\\right)\\right) =  \\left(\\frac{a^{x}+b^{x}}{2}-1\\right) \\cdot \\mu(x)$$\no\\` u $\\mu(x) \\to 1$ lorsque $x\\to 0$. (Nous écrivons pour simplifier $\\mu(x)$ au lieu\nde $\\mu(\\frac{a^{x}+b^{x}}{2}-1)$.)\n\n\n\n\\bigskip\n\nNous savons aussi que $\\lim_{t \\to 0} \\frac{e^t - 1}{t} = 1$.\nAutrement dit il existe un fonction $\\nu$ telle que $e^t - 1 = t \\cdot \\nu(t)$ avec\n$\\nu(t) \\to 1$ lorsque $t\\to 0$.\n\nAppliquons ceci :\n\n$$\\begin{align*}\n \\frac{a^{x}+b^{x}}{2}-1 \n     &= \\frac 12 (e^{x \\ln a} + e^{x\\ln b})-1 \\\\\n     &= \\frac12 (e^{x \\ln a}-1 + e^{x\\ln b}-1) \\\\\n     &= \\frac12( x \\ln a \\cdot \\nu(x \\ln a) + x \\ln b \\cdot \\nu(x \\ln b)) \\\\\n     &= \\frac12 x\\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\\\\n\\end{align*}$$\n\n\\bigskip\n\nReste à rassembler tous les éléments du puzzle :\n$$\\begin{align*}\n f(x) &= \\left(\\frac{a^{x}+b^{x}}{2}\\right)^{\\frac{1}{x}} \\\\\n      &= \\exp\\left( \\frac 1x \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right) \\right) \\\\\n      &= \\exp\\left( \\frac 1x g(x) \\right) \\\\\n      &= \\exp\\left( \\frac 1x  \\left(\\frac{a^{x}+b^{x}}{2}-1\\right) \\cdot \\mu(x) \\right) \\\\\n      &= \\exp\\left( \\frac 1x  \\cdot \\frac12  \\cdot x\\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\cdot \\mu(x) \\right) \\\\\n      &= \\exp\\left( \\frac12 \\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\cdot \\mu(x) \\right) \\\\\n\\end{align*}$$\n\nOr $\\mu(x) \\to 1$, $\\nu(x \\ln a) \\to 1$, $\\nu(x \\ln b) \\to 1$ lorsque $x \\to 0$.\nDonc \n$$\\lim_{x\\to 0} f(x) = \\exp\\left( \\frac12 \\left(\\ln a + \\ln b \\right) \\right) = \\exp\\left( \\frac12 \\ln (ab) \\right) = \\sqrt{ab}.$$",
         "html": "<p>Soit <span class=\"math display\">\\[f(x) = \\left(\\frac{a^{x}+b^{x}}{2}\\right)^{\\frac{1}{x}}\n     = \\exp\\left( \\frac 1x \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right) \\right)\\]</span></p>\n<p><span class=\"math inline\">\\(a^x \\to 1\\)</span>, <span class=\"math inline\">\\(b^x \\to 1\\)</span> donc <span class=\"math inline\">\\(\\frac{a^{x}+b^{x}}{2} \\to 1\\)</span> lorsque <span class=\"math inline\">\\(x \\to 0\\)</span> et nous sommes face à une forme indéterminée. Nous savons que <span class=\"math inline\">\\(\\lim_{t \\to 0} \\frac{\\ln(1+t)}{t} = 1\\)</span>. Autrement dit il existe un fonction <span class=\"math inline\">\\(\\mu\\)</span> telle que <span class=\"math inline\">\\(\\ln(1+t) = t \\cdot \\mu(t)\\)</span> avec <span class=\"math inline\">\\(\\mu(t) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(t\\to 0\\)</span>.</p>\n<p>Appliquons cela à <span class=\"math inline\">\\(g(x) = \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right)\\)</span>. Alors <span class=\"math display\">\\[g(x) = \\ln \\left(1+ \\left(\\frac{a^{x}+b^{x}}{2}-1\\right)\\right) =  \\left(\\frac{a^{x}+b^{x}}{2}-1\\right) \\cdot \\mu(x)\\]</span> où <span class=\"math inline\">\\(\\mu(x) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(x\\to 0\\)</span>. (Nous écrivons pour simplifier <span class=\"math inline\">\\(\\mu(x)\\)</span> au lieu de <span class=\"math inline\">\\(\\mu(\\frac{a^{x}+b^{x}}{2}-1)\\)</span>.)</p>\n<p>Nous savons aussi que <span class=\"math inline\">\\(\\lim_{t \\to 0} \\frac{e^t - 1}{t} = 1\\)</span>. Autrement dit il existe un fonction <span class=\"math inline\">\\(\\nu\\)</span> telle que <span class=\"math inline\">\\(e^t - 1 = t \\cdot \\nu(t)\\)</span> avec <span class=\"math inline\">\\(\\nu(t) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(t\\to 0\\)</span>.</p>\n<p>Appliquons ceci :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n \\frac{a^{x}+b^{x}}{2}-1 \n     &amp;= \\frac 12 (e^{x \\ln a} + e^{x\\ln b})-1 \\\\\n     &amp;= \\frac12 (e^{x \\ln a}-1 + e^{x\\ln b}-1) \\\\\n     &amp;= \\frac12( x \\ln a \\cdot \\nu(x \\ln a) + x \\ln b \\cdot \\nu(x \\ln b)) \\\\\n     &amp;= \\frac12 x\\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\\\\n\\end{align*}\\]</span></p>\n<p>Reste à rassembler tous les éléments du puzzle : <span class=\"math display\">\\[\\begin{align*}\n f(x) &amp;= \\left(\\frac{a^{x}+b^{x}}{2}\\right)^{\\frac{1}{x}} \\\\\n      &amp;= \\exp\\left( \\frac 1x \\ln \\left(\\frac{a^{x}+b^{x}}{2}\\right) \\right) \\\\\n      &amp;= \\exp\\left( \\frac 1x g(x) \\right) \\\\\n      &amp;= \\exp\\left( \\frac 1x  \\left(\\frac{a^{x}+b^{x}}{2}-1\\right) \\cdot \\mu(x) \\right) \\\\\n      &amp;= \\exp\\left( \\frac 1x  \\cdot \\frac12  \\cdot x\\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\cdot \\mu(x) \\right) \\\\\n      &amp;= \\exp\\left( \\frac12 \\left(\\ln a \\cdot \\nu(x \\ln a) +  \\ln b \\cdot \\nu(x \\ln b) \\right) \\cdot \\mu(x) \\right) \\\\\n\\end{align*}\\]</span></p>\n<p>Or <span class=\"math inline\">\\(\\mu(x) \\to 1\\)</span>, <span class=\"math inline\">\\(\\nu(x \\ln a) \\to 1\\)</span>, <span class=\"math inline\">\\(\\nu(x \\ln b) \\to 1\\)</span> lorsque <span class=\"math inline\">\\(x \\to 0\\)</span>. Donc <span class=\"math display\">\\[\\lim_{x\\to 0} f(x) = \\exp\\left( \\frac12 \\left(\\ln a + \\ln b \\right) \\right) = \\exp\\left( \\frac12 \\ln (ab) \\right) = \\sqrt{ab}.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Trouver pour <span class=\"math inline\">\\((a,b)\\in (\\Rr^{+*})^{2}\\)</span> : <span class=\"math display\"> ..."
 }

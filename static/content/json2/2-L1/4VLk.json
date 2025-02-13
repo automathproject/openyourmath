@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Primitives diverses",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:24.445Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:10.212Z"
   },
   "contenu": [
     {
-      "id": "97cfe396-7934-4b72-b788-c934cc10ee07",
+      "id": "71254899-f7b4-4ada-9dc9-b0abb91d55af",
       "type": "description",
       "value": {
         "latex": "Pour $x$ réel, on pose $f(x)=e^{-x^2}\\int_{0}^{x}e^{t^2}\\;dt$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "8f6a0251-70cf-4d79-9b4a-b41a6ea6d647",
+      "id": "252f78c7-233c-499e-87c3-b3c6fb8a21bf",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est impaire et de classe $C^\\infty$ sur $\\Rr$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "aa1ef7d7-e788-4f2b-9599-618742872bfb",
+      "id": "54cfa840-4ce4-4b32-9333-916dc33b0a55",
       "type": "reponse",
       "value": {
         "latex": "La fonction $t\\mapsto e^{t^2}$ est de classe $C^\\infty$ sur $\\Rr$. Donc, la fonction $x\\mapsto\\int_{0}^{x}e^{t^2}\\;dt$ est de classe $C^\\infty$ sur $\\Rr$ et il en est de même de $f$.\n\nLa fonction $t\\mapsto e^{t^2}$ est paire et donc la fonction $x\\mapsto\\int_{0}^{x}e^{t^2}\\;dt$ est impaire. Comme la fonction $x\\mapsto e^{-x^2}$ est paire, $f$ est impaire.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d072f2a9-aa91-4ac4-9b7a-10e1ed3e2438",
+      "id": "dd95d5a0-5d7c-468c-bad3-a334f3964fcc",
       "type": "question",
       "value": {
         "latex": "Montrer que $f$ est solution de l'équation différentielle $y'+2xy=1$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "2e1d0c1c-2eb6-4d14-9157-4709384fcb26",
+      "id": "21626c15-4109-4d6c-9d08-faa528e81f22",
       "type": "reponse",
       "value": {
         "latex": "Pour $x$ réel, $f'(x)=-2xe^{-x^2}\\int_{0}^{x}e^{t^2}\\;dt+e^{-x^2}e^{x^2}=-2xf(x)+1$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b94c3f34-4c59-48e4-b649-73c7add10da9",
+      "id": "19deb659-ebb4-46ef-8154-9ca82f5882ad",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\lim_{x\\rightarrow +\\infty}2xf(x)=1$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "6c57fc11-a941-4cf2-bd19-744dd104fc55",
+      "id": "a381d3eb-2305-4d61-bd8f-bfe3f78827a7",
       "type": "reponse",
       "value": {
         "latex": "Pour $x\\geq1$, une intégration par parties fournit~:\n\n$$\\int_{1}^{x}e^{t^2}\\;dt=\\int_{1}^{x}\\frac{1}{2t}.2te^{t^2}\\;dt=\\left[\\frac{1}{2t}e^{t^2}\\right]_{1}^{x}+\\frac{1}{2}\\int_{1}^{x}\\frac{e^{t^2}}{t^2}\\;dt=\\frac{e^{x^2}}{2x}-\\frac{e}{2}+\\frac{1}{2}\\int_{1}^{x}\\frac{e^{t^2}}{t^2}\\;dt,$$\n\net donc,\n \n$$\\begin{align*}\\ensuremath\n|1-2xf(x)|&=\\left|1-2xe^{-x^2}\\int_{1}^{x}e^{t^2}\\;dt-2xe^{-x^2}\\int_{0}^{1}e^{t^2}\\;dt\\right|\\\\\n &\\leq xe^{-x^2}\\int_{1}^{x}\\frac{e^{t^2}}{t^2}\\;dt+exe^{-x^2}+2xe^{-x^2}\\int_{0}^{1}e^{t^2}\\;dt.\n\\end{align*}$$\n\nLes deux derniers termes tendent vers $0$ quand $x$ tend vers $+\\infty$. Il reste le premier.\n\nPour $x\\geq2$, \n\n$$\\begin{align*}\\ensuremath\n0\\leq xe^{-x^2}\\int_{1}^{x}\\frac{e^{t^2}}{t^2}\\;dt&=xe^{-x^2}\\int_{1}^{x-1}\\frac{e^{t^2}}{t^2}\\;dt+\nxe^{-x^2}\\int_{x-1}^{x}\\frac{e^{t^2}}{t^2}\\;dt\\\\\n &\\leq x(x-1)e^{-x^2}\\frac{e^{(x-1)^2}}{1^2}+xe^{-x^2}e^{x^2}\\int_{x-1}^{x}\\frac{1}{t^2}\\;dt\\\\\n &=x(x-1)e^{-2x+1}+x\\left(\\frac{1}{x-1}-\\frac{1}{x}\\right)=x(x-1)e^{-2x+1}+\\frac{1}{x-1}.\n\\end{align*}$$\n\nCette dernière expression tend vers $0$ quand $x$ tend vers $+\\infty$. On en déduit que $xe^{-x^2}\\int_{1}^{x}\\frac{e^{t^2}}{t^2}\\;dt$ tend vers $0$ quand $x$ tend vers $+\\infty$. Finalement, $1-2xf(x)$ tend vers $0$ quand $x$ tend vers $+\\infty$, ou encore, $f(x)\\sim\\frac{1}{2x}$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "8de33b5c-1458-4100-a9e6-c1f6eddcbe49",
+      "id": "770c924b-9390-49ff-a0dc-3ced3e3c6cce",
       "type": "question",
       "value": {
         "latex": "Soit $g(x)=\\frac{e^{x^2}}{2x}f'(x)$. Montrer que $g$ est strictement décroissante sur $]0,+\\infty[$ et que $g$ admet sur $]0,+\\infty[$ un unique zéro noté $x_0$ vérifiant de plus $0<x_0<1$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "4959fc5e-19ae-47d2-add9-2527febafacf",
+      "id": "ca20a504-e4c8-4cff-92b2-1745dcdd4d06",
       "type": "reponse",
       "value": {
         "latex": "Pour $x>0$, $g(x)=\\frac{e^{x^2}}{2x}(1-2xf(x))=\\frac{e^{x^2}}{2x}-\\int_{0}^{x}e^{t^2}\\;dt$ puis,\n\n$$g'(x)=e^{x^2}-\\frac{e^{x^2}}{2x^2}-e^{x^2}=-\\frac{e^{x^2}}{2x^2}<0.$$\n\n$g$ est donc strictement décroissante sur $]0,+\\infty[$ et donc, $g$ s'annule au plus une fois sur $]0,+\\infty[$. Ensuite, $f'(1)=1-2f(1)=1-2e^{-1}\\int_{0}^{1}e^{t^2}\\;dt$. Or, la méthode des rectangles fournit $\\int_{0}^{1}e^{t^2}\\;dt =1,44... >1,35...=\\frac{e}{2}$, et donc $f'(1)<0$ puis $g(1)<0$. Enfin, comme en $0^+$, $g(x)\\sim\\frac{1}{2x}f'(0)=\\frac{1}{2x}$, $g(0^+)=+\\infty$.\n\nDonc, $g$ s'annule exactement une fois sur $]0,+\\infty[$ en un certain réel $x_0$ de $]0,1[$.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "a5caee9f-5850-4ea9-ad0d-f279d3853759",
+      "id": "d99e90cc-561f-4776-8e9c-6ebcc37612bc",
       "type": "question",
       "value": {
         "latex": "Dresser le tableau de variations de $f$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "282fbe2b-c392-438f-9812-59ca58ea9b2d",
+      "id": "1f1b9fdd-ca4d-424f-b611-1d6aa6768a17",
       "type": "reponse",
       "value": {
         "latex": "$g$ est strictement positive sur $]0,x_0[$ et strictement négative sur $]x_0,+\\infty[$. Il en de même de $f'$. $f$ est ainsi strictement croissante sur $[0,x_0]$ et strictement décroissante sur $[x_0,+\\infty[$.",
         "html": "<p><span class=\"math inline\">\\(g\\)</span> est strictement positive sur <span class=\"math inline\">\\(]0,x_0[\\)</span> et strictement négative sur <span class=\"math inline\">\\(]x_0,+\\infty[\\)</span>. Il en de même de <span class=\"math inline\">\\(f&#39;\\)</span>. <span class=\"math inline\">\\(f\\)</span> est ainsi strictement croissante sur <span class=\"math inline\">\\([0,x_0]\\)</span> et strictement décroissante sur <span class=\"math inline\">\\([x_0,+\\infty[\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(x\\)</span> réel, on pose <span class=\"math inline\">\\(f(x)=e^{-x^2}\\int_{0}^{x}e^{t^2}\\;dt\\)</span>.</p>\n"
 }

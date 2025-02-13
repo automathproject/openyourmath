@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Propriétés élémentaires, généralités",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:42.520Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:55.255Z"
   },
   "contenu": [
     {
-      "id": "31ec36e3-1446-41de-a311-2b757a9be6c5",
+      "id": "0d981768-e69b-4f1d-a146-191ff9c87745",
       "type": "description",
       "value": {
         "latex": "Soit $A(\\theta) = \\begin{pmatrix} \\cos \\theta & -\\sin \\theta \\\\ \\sin \\theta\n& \\cos \\theta \\end{pmatrix}$ pour $\\theta \\in \\Rr$. Calculer $A(\\theta) \\times A(\\theta')$ et $\\big(A(\\theta)\\big)^n$ pour\n$n \\ge 1$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e98d3c35-e5ca-4469-beed-9af0599527c1",
+      "id": "56f39cbe-4618-4c0a-bd13-279fedaad1a9",
       "type": "indication",
       "value": {
         "latex": "Il faut connaître les formules de $\\cos(\\theta+\\theta')$ et $\\sin(\\theta+\\theta')$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "0a7954b1-2712-4c31-8f75-9ccc62ca7058",
+      "id": "527bf3a2-30df-4928-babc-c0fc8900037c",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\nA(\\theta)\\times A(\\theta')  \n  & =  \\begin{pmatrix} \\cos \\theta & -\\sin \\theta \\\\ \\sin \\theta\n& \\cos \\theta \\end{pmatrix} \\times \\begin{pmatrix} \\cos \\theta' & -\\sin \\theta' \\\\ \\sin \\theta'\n& \\cos \\theta' \\end{pmatrix} \\\\\n  & = \\begin{pmatrix} \n\\cos \\theta\\cos \\theta' -\\sin \\theta \\sin\\theta' & - \\cos \\theta \\sin \\theta' - \\sin \\theta \\cos \\theta' \\\\\n \\sin \\theta \\cos \\theta'+\\cos \\theta \\sin \\theta'   & -\\sin \\theta \\sin\\theta'+\\cos \\theta\\cos \\theta'  \\\\\n \\end{pmatrix} \\\\\n  & =\n\\begin{pmatrix} \\cos (\\theta+\\theta') & -\\sin (\\theta+\\theta')  \\\\ \\sin  (\\theta+\\theta')\n& \\cos  (\\theta+\\theta') \\end{pmatrix} \\\\\n  & = A(\\theta+\\theta') \\\\\n\\end{align*}$$\n\nBilan : $A(\\theta)\\times A(\\theta') = A(\\theta+\\theta')$.\n\n\\bigskip\n\nNous allons montrer par récurrence sur $n\\ge 1$ que $\\big(A(\\theta)\\big)^n = A(n\\theta)$.\n\n\\begin{itemize}\n  \\item C'est bien sûr vrai pour $n=1$.\n  \\item Fixons $n\\ge 1$ et supposons que $\\big(A(\\theta)\\big)^n = A(n\\theta)$ alors\n$$\\big(A(\\theta)\\big)^{n+1} = \\big(A(\\theta)\\big)^n \\times A(\\theta) = A(n\\theta) \\times A(\\theta) = A(n\\theta+\\theta) = A((n+1)\\theta)$$\n  \\item C'est donc vrai pour tout $n\\ge 1$.\n\\end{itemize}\n\n\nRemarques :\n\\begin{itemize}\n  \\item On aurait aussi la formule $A(\\theta')\\times A(\\theta) = A(\\theta+\\theta') = A(\\theta)\\times A(\\theta')$.\nLes matrices $A(\\theta)$ et $A(\\theta')$ commutent.\n\n  \\item En fait il n'est pas plus difficile de montrer que $\\big(A(\\theta)\\big)^{-1}=A(-\\theta)$.\nOn sait aussi que par définition $\\big(A(\\theta)\\big)^{0}=I$. Et on en déduit que pour $n\\in \\Zz$ on a \n$\\big(A(\\theta)\\big)^n = A(n\\theta)$.\n\n  \\item En terme géométrique $A(\\theta)$ est la matrice de la rotation d'angle $\\theta$ (centrée à l'origine).\nOn vient de montrer que si l'on compose un rotation d'angle $\\theta$ avec un rotation d'angle $\\theta'$\nalors on obtient une rotation d'angle $\\theta+\\theta'$.\n\\end{itemize}",
         "html": "<p><span class=\"math display\">\\[\\begin{align*}\nA(\\theta)\\times A(\\theta&#39;)  \n  &amp; =  \\begin{pmatrix} \\cos \\theta &amp; -\\sin \\theta \\\\ \\sin \\theta\n&amp; \\cos \\theta \\end{pmatrix} \\times \\begin{pmatrix} \\cos \\theta&#39; &amp; -\\sin \\theta&#39; \\\\ \\sin \\theta&#39;\n&amp; \\cos \\theta&#39; \\end{pmatrix} \\\\\n  &amp; = \\begin{pmatrix} \n\\cos \\theta\\cos \\theta&#39; -\\sin \\theta \\sin\\theta&#39; &amp; - \\cos \\theta \\sin \\theta&#39; - \\sin \\theta \\cos \\theta&#39; \\\\\n \\sin \\theta \\cos \\theta&#39;+\\cos \\theta \\sin \\theta&#39;   &amp; -\\sin \\theta \\sin\\theta&#39;+\\cos \\theta\\cos \\theta&#39;  \\\\\n \\end{pmatrix} \\\\\n  &amp; =\n\\begin{pmatrix} \\cos (\\theta+\\theta&#39;) &amp; -\\sin (\\theta+\\theta&#39;)  \\\\ \\sin  (\\theta+\\theta&#39;)\n&amp; \\cos  (\\theta+\\theta&#39;) \\end{pmatrix} \\\\\n  &amp; = A(\\theta+\\theta&#39;) \\\\\n\\end{align*}\\]</span></p>\n<p>Bilan : <span class=\"math inline\">\\(A(\\theta)\\times A(\\theta&#39;) = A(\\theta+\\theta&#39;)\\)</span>.</p>\n<p>Nous allons montrer par récurrence sur <span class=\"math inline\">\\(n\\ge 1\\)</span> que <span class=\"math inline\">\\(\\big(A(\\theta)\\big)^n = A(n\\theta)\\)</span>.</p>\n<ul>\n<li><p>C’est bien sûr vrai pour <span class=\"math inline\">\\(n=1\\)</span>.</p></li>\n<li><p>Fixons <span class=\"math inline\">\\(n\\ge 1\\)</span> et supposons que <span class=\"math inline\">\\(\\big(A(\\theta)\\big)^n = A(n\\theta)\\)</span> alors <span class=\"math display\">\\[\\big(A(\\theta)\\big)^{n+1} = \\big(A(\\theta)\\big)^n \\times A(\\theta) = A(n\\theta) \\times A(\\theta) = A(n\\theta+\\theta) = A((n+1)\\theta)\\]</span></p></li>\n<li><p>C’est donc vrai pour tout <span class=\"math inline\">\\(n\\ge 1\\)</span>.</p></li>\n</ul>\n<p>Remarques :</p>\n<ul>\n<li><p>On aurait aussi la formule <span class=\"math inline\">\\(A(\\theta&#39;)\\times A(\\theta) = A(\\theta+\\theta&#39;) = A(\\theta)\\times A(\\theta&#39;)\\)</span>. Les matrices <span class=\"math inline\">\\(A(\\theta)\\)</span> et <span class=\"math inline\">\\(A(\\theta&#39;)\\)</span> commutent.</p></li>\n<li><p>En fait il n’est pas plus difficile de montrer que <span class=\"math inline\">\\(\\big(A(\\theta)\\big)^{-1}=A(-\\theta)\\)</span>. On sait aussi que par définition <span class=\"math inline\">\\(\\big(A(\\theta)\\big)^{0}=I\\)</span>. Et on en déduit que pour <span class=\"math inline\">\\(n\\in \\Zz\\)</span> on a <span class=\"math inline\">\\(\\big(A(\\theta)\\big)^n = A(n\\theta)\\)</span>.</p></li>\n<li><p>En terme géométrique <span class=\"math inline\">\\(A(\\theta)\\)</span> est la matrice de la rotation d’angle <span class=\"math inline\">\\(\\theta\\)</span> (centrée à l’origine). On vient de montrer que si l’on compose un rotation d’angle <span class=\"math inline\">\\(\\theta\\)</span> avec un rotation d’angle <span class=\"math inline\">\\(\\theta&#39;\\)</span> alors on obtient une rotation d’angle <span class=\"math inline\">\\(\\theta+\\theta&#39;\\)</span>.</p></li>\n</ul>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A(\\theta) = \\begin{pmatrix} \\cos \\theta &amp; -\\sin \\theta \\\\ \\sin \\theta\n&amp; \\cos \\theta \\end{pmatrix}\\)</span> ..."
 }

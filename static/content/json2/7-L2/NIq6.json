@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Probabilité continue",
     "sousChapitre": "Loi normale",
-    "organisation": "",
-    "updatedAt": "2025-02-10T14:43:14.578Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:47:01.623Z"
   },
   "contenu": [
     {
-      "id": "ade90f84-bea9-4584-8f65-437bd428c732",
+      "id": "f5f9297f-a23e-4f0f-8b4f-f95611cdd0c3",
       "type": "description",
       "value": {
         "latex": "Une machine est conçue pour confectionner \ndes paquets d'un poids de 500g, mais ils n'ont pas exactement tous le même poids. \nOn a constaté que la distribution des poids autour de la valeur moyenne de 500g avait un écart-type de 25g.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "2273205f-0894-4a3d-b589-f36a14e6a83c",
+      "id": "4313a193-e11d-4ebd-a28f-b0e84d7000fa",
       "type": "question",
       "value": {
         "latex": "Par quelle loi est-il raisonnable de modéliser le poids des paquets ?",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "a2f7822a-8524-4cda-9321-06fbe458eddf",
+      "id": "cd9ba714-5bd5-4053-9214-7ceb6e6e7ca2",
       "type": "reponse",
       "value": {
         "latex": "L'énoncé suggère que le poids en grammes des paquets est une variable aléatoire \nqui suit une loi normale d'espérance 500 et d'écart-type 25. Soit $X$ la variable aléatoire correspondante, et $Y=(X-500)/25$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "1a224deb-a4eb-4c4b-9f9e-bb6cf9318ff7",
+      "id": "0bd83176-4e59-4b76-8cfa-db3b35ce7244",
       "type": "question",
       "value": {
         "latex": "Sur 1000 paquets, quel est le nombre moyen de paquets pesant entre 480g et 520g ? \n(\\textit{utiliser la table  de $\\mathcal{N}(0,1)$})",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "9af5c5cb-257a-42a1-8c47-775c20d2bee4",
+      "id": "21444cc0-d245-45e1-82aa-b622e52321a7",
       "type": "reponse",
       "value": {
         "latex": "$P(480\\leq X\\leq 520)=P(|Y|\\leq  0,8)=0,576.$\nOn s'attend donc à ce que, sur 1000 paquets, il y en ait 576 dont le poids est compris entre 480g et 520g.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "80224c63-d21e-4832-bed8-db0a494dbc14",
+      "id": "575cc95c-21c8-43f6-a996-7896578bc30d",
       "type": "question",
       "value": {
         "latex": "Combien de paquets pèsent entre 480g et 490g ?",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "c8506ea5-d47b-4dac-8f3f-bf15687ddf66",
+      "id": "b1be8f61-253f-481a-97fa-57db94fb9722",
       "type": "reponse",
       "value": {
         "latex": "\\begin{eqnarray*}\nP(480\\leq X\\leq 490)&=&P(-0,8\\leq Y\\leq -0,4)\\\\\n&=&P(0,4\\leq Y\\leq 0,8)\\\\\n&=&p(Y\\leq 0,8)-p(Y\\leq 0,4)=0,1327.\n\\end{eqnarray*}\nOn s'attend donc à ce que, sur 1000 paquets, il y en ait 132 dont le poids est compris entre 480g et 490g.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "96f4ea3b-073d-47ae-9707-d32af0ea7487",
+      "id": "cb8ab8db-72c4-4144-91ab-c16c4c6637a9",
       "type": "question",
       "value": {
         "latex": "Sur 1000 paquets, quel est le nombre moyen de paquets pesant plus de 450g ?",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "d833584c-0243-471a-b09b-5356ee8622eb",
+      "id": "b240b490-c378-4244-9a8a-46c2c7865531",
       "type": "reponse",
       "value": {
         "latex": "$P(450\\leq X)=0,5+P(0\\le Y\\leq 2)=0,5+\\frac 12 P(-2\\le Y\\leq 2)=0,5+0,4772=0,9772.$\nOn s'attend donc à ce que, sur 1000 paquets, il y en ait 977 dont le poids est supérieur à 450g.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "a3a963e0-ae89-4da5-a962-6ab5b7d76929",
+      "id": "010ad80d-f8e3-41a3-a70e-8dbbcb1e2c0a",
       "type": "question",
       "value": {
         "latex": "Trouver $a$ tel que les 9/10 de cette production aient un poids compris\nentre $500-a$ et $500+a$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "5e3fa2ef-2b66-4ef6-8e77-3e687c9aa521",
+      "id": "ab4987e5-93b6-4953-85a1-0384925b6de9",
       "type": "reponse",
       "value": {
         "latex": "Il faut trouver $t$ tel que $p(|Y|<t)=0,9$. La table donne $t=1,645$, \npuis $a=25t=41$. Par conséquent, environ 90\\% de la production a un poids \ncompris entre $500-41=459$g et $500+41=541$g.",
         "html": "<p>Il faut trouver <span class=\"math inline\">\\(t\\)</span> tel que <span class=\"math inline\">\\(p(|Y|&lt;t)=0,9\\)</span>. La table donne <span class=\"math inline\">\\(t=1,645\\)</span>, puis <span class=\"math inline\">\\(a=25t=41\\)</span>. Par conséquent, environ 90% de la production a un poids compris entre <span class=\"math inline\">\\(500-41=459\\)</span>g et <span class=\"math inline\">\\(500+41=541\\)</span>g.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Une machine est conçue pour confectionner des paquets d’un poids de 500g, mais ils n’ont pas exactement tous le même poids. On a constaté que la di ..."
 }

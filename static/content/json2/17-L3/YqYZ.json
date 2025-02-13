@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:13.628Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:58.743Z"
   },
   "contenu": [
     {
-      "id": "2ec0f9b6-d1b4-4027-b3c5-9c1b9a23991c",
+      "id": "28dfc008-65a9-41cd-8b3e-766d68945c91",
       "type": "description",
       "value": {
         "latex": "Etant donn\\'es $n$ vecteurs lin\\'eairement ind\\'ependants de $\\Rr^m$, $\\{a_1, \\cdots , a_n\\}$, on veut calculer une base orthonormale pour span$\\{a_1, \\cdots , a_n\\}$.\n\n On pose $A=[ a_1, a_2, \\cdots , a_n] \\in \\Rr^{m\\times n}$ et on consid\\`ere la factorisation QR de $A$,\n$$ A=QR,\\ \\ \\ Q=[q_1, \\cdots , q_n] ,\\ \\ r_i^T, i=1, \\cdots , n \\mbox{ les lignes de }R$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "7c204486-5069-485e-9794-5c5cae5ac8f7",
+      "id": "41e8ff1f-e1bf-412c-9220-4e0a458265a9",
       "type": "question",
       "value": {
         "latex": "Montrer que \n$$\\mbox{Im} A= \\mbox{span} \\{q_1, \\cdots , q_n\\} .$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "52c5ae4a-07d9-4cf2-a88b-93c45b10ad8d",
+      "id": "8aedd617-0797-47e7-86f8-3608f3183fdd",
       "type": "reponse",
       "value": {
         "latex": "Pour $k=1,\\cdots ,n\\quad a_k=\\sum_{i=1}^kr_{ik}q_i$ avec $r_{ik}=q_i^Ta_k$ par orthonormalit\\'e des $q_i$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "e3282f67-fc16-4984-a621-c7ddfcf85ef4",
+      "id": "9e5d9eb9-0eb5-4885-a16f-1634240f0609",
       "type": "question",
       "value": {
         "latex": "Montrer que\n$$q_k=\\frac{1}{r_{kk}} \\left( a_k -\\sum_{i=1}^{k-1}r_{ik}q_i\\right) \\ \\ \\ k=1, \\cdots , n$$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "1661ac0b-33a2-40f9-b2be-d8a28a91890c",
+      "id": "11b3985c-d312-4c8b-863e-bb07c03c9e3b",
       "type": "reponse",
       "value": {
         "latex": "D\\'ecoule imm\\'ediatement de la question pr\\'ec\\'edente.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "589d5204-63a4-4d8a-a0b8-2544b0b52e55",
+      "id": "357f876c-6397-4fd6-8210-05d2696a331b",
       "type": "question",
       "value": {
         "latex": "En d\\'eduire un algorithme pour le calcul r\\'ecursif des $q_i$ (algorithme de Gram--Schmidt).",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "d3fca2d4-5c24-46d5-bb5d-04d0c24d64a2",
+      "id": "68c94c5e-18db-4dfd-ae72-0c69bf14ae0a",
       "type": "reponse",
       "value": {
         "latex": "Algorithme de Gram-Schmidt:\n\nPour $k=1, \\cdots , n$ faire\n\n\\hspace{1cm} $r_{ik}=q_i^Ta_k\\quad $ pour $i=1, \\cdots , k-1$\n\n\\hspace{1cm} $z_k=a_k-\\sum_{i=1}^{k-1} r_{ik}q_i$\n\n\\hspace{1cm} $r_{kk}=(z_k^Tz_k)^{1/2}$\n\n\\hspace{1cm}$q_k=z_k/r_{kk}$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "2969ed45-7dd9-4dd3-bea1-ebd8d27f4e5a",
+      "id": "b4b52c03-98f4-435b-a2e7-e696562b30f9",
       "type": "question",
       "value": {
         "latex": "Algorithme de Gram--Schmidt modifi\\'e\n\nL'algorithme pr\\'ec\\'edent est instable num\\'eriquement d\\^u \\`a la perte d'orthogonalit\\'e dans le calcul des $q_i$. On va reformuler l'algorithme pour le rendre stable.\n\nPour $k=1, \\cdots , n-1$, on d\\'efinit $A^{(k)}\\in\\Rr^{m\\times (n-k+1)}$ de la fa\\c con suivante:\n$$[0 , A^{(k)}] =A-\\sum_{i=1}^{k-1} q_ir_i^T = \\sum_{i=k}^n q_ir_i^T$$\net on va d\\'ecrire l'\\'etape $k$ de l'algorithme.\n\\begin{enumerate}",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "87de4bc7-dcb2-45be-ab87-d5513491afbc",
+      "id": "14ae5a46-f2f1-45c0-888f-94d49cb0ebb1",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "9c24fa78-fde6-4612-a573-02638b16dd2a",
+      "id": "714fde0a-e396-41ef-9f08-d3807931dba6",
       "type": "question",
       "value": {
         "latex": "Montrer que si on pose\n$$ A^{(k)} =[z,B] ,\\ \\ \\ z\\in\\Rr^m , \\ \\ \\ B\\in\\Rr^{m\\times (n-k)}$$\nalors\n$$r_{kk}=\\|z\\|_2, \\ \\ \\ q_k=z/r_{kk}.$$",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "e5084035-e173-4f63-9291-6d11c1e4d424",
+      "id": "dd61bcc3-4a96-406d-81c4-5f7b2199afba",
       "type": "reponse",
       "value": {
         "latex": "$$\\sum_{i=k}^nq_ir_i^T =[q_k \\cdots q_n]\\left(\\begin{array}{c}r_k^T\\\\ \\vdots \\\\ r_n^T\\end{array}\\right) = q_k \\cdots q_n]\\left(\\begin{array}{ccccccc} \n0&\\cdots &0 &r_{kk} & \\cdots &\\cdots & r_{kn}\\\\\n0&\\cdots &0 & 0 & r_{k+1,k+1}&\\cdots & r_{k+1,n}\\\\\n\\vdots & \\vdots &\\vdots &\\vdots &\\vdots &\\vdots &\\vdots \\\\\n0&\\cdots & \\cdots&&&0&r_{nn}\\end{array}\\right)$$\n$$A^{(k)}e_k = z= [q_k \\cdots q_n]\\left(\\begin{array}{c}r_{kk}\\\\ 0\\\\ \\vdots \\\\ 0\\end{array}\\right)=r_{kk}q_k \\Rightarrow r_{kk}=\\|z\\|_2, q_k=z/r_{kk}$$",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "97f8e1c2-929a-4327-9c4f-309b77d5db3a",
+      "id": "5c1ce6fb-d995-428c-a720-d32172993e29",
       "type": "question",
       "value": {
         "latex": "Comment peut--on calculer la ligne $k$ de $R$  \\`a partir de $A^{(k)}$?",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "a492e968-92ea-48cf-ad97-eb7806ad5fc4",
+      "id": "071ce09c-526e-4f99-915f-79bb645b8039",
       "type": "reponse",
       "value": {
         "latex": "$$q_k^TA^{(k)} =[q_k^Tz, q_k^TB]=[1 , 0, \\cdots , 0]\\left(\\begin{array}{c}r_k^T\\\\ \\vdots \\\\r_n^T\\end{array}\\right)=r_k^T$$\net donc\n$$[r_{k,k+1}, \\cdots , r_{kn}]=q_k^TB$$",
@@ -120,7 +120,7 @@
       }
     },
     {
-      "id": "c09aecad-01f2-4c43-960a-f9734524bd1e",
+      "id": "ccebd8ee-8202-4685-af56-9cbac324abb2",
       "type": "question",
       "value": {
         "latex": "Calculer $A^{(k+1)}$.",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "c8119c99-e678-4751-94b1-70465d79077f",
+      "id": "0b49545d-d785-4370-b154-8170ea8a9da5",
       "type": "reponse",
       "value": {
         "latex": "$$[0,\\cdots , 0, A^{(k+1)}] = \\sum_{i=k+1}^n q_ir_i^T= [0,\\cdots , 0, A^{(k)}] - q_kr_k^T= [0,\\cdots , 0,A^{(k)} - q_k(r_{kk}, \\cdots , r_{kn})]$$\n$$[ 0,\\cdots , 0, z-q_kr_{kk}, B-q_k(r_{k,k+1}, \\cdots , r_{kn})] \\Rightarrow A^{(k+1)}=B-q_k (r_{k,k+1}, \\cdots , r_{kn})$$",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "1a1d6416-8935-4673-8bf7-50dfbae5366c",
+      "id": "40f9dbb8-4bcf-4a43-9591-2f02dc3aa0d3",
       "type": "question",
       "value": {
         "latex": "A partir des questions pr\\'ec\\'edentes, d\\'ecrire l'algorithme qui permet le calcul de la factorisation $A=Q_1R_1$, $Q_1\\in\\Rr^{m \\times n}$ orthonormale, $R_1\\in\\Rr^{n\\times n}$ triangulaire sup\\'erieure (Gram--Schmidt modifi\\'e). Le calcul de $Q_1$ doit se faire sur place.",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "2750a96a-ffb5-4504-b71c-a4b42f31b100",
+      "id": "aa33e6d7-a7f1-47f8-a1e9-13753dfbf659",
       "type": "reponse",
       "value": {
         "latex": "Donn\\'ees: $A\\in\\Rr^{m\\times n}, $ rank$(A)=n$\n\nOn calcule la factorisation $A=Q_1R_1$, $Q_1\\in\\Rr^{m\\times n}$ orthonormale, $R_1\\in\\Rr^{n\\times n}$ triangulaire sup\\'erieure. Le calcul de $Q_1$ se fait sur place.\n\nPour $k=1, \\cdots , n$\n\n\\hspace{1cm} $r_{kk}=\\left(\\sum_{i=1}^m a_{ik}^2\\right)^{1/2} $\n\n\\hspace{1cm}pour $i=1, \\cdots  ,m$\n\n\\hspace{1.5cm}$a_{ik}\\leftarrow a_{ik}/r_{kk}$\n\n\\hspace{1cm} pour $j=k+1, \\cdots , n$\n\n\\hspace{1.5cm}$r_{kj}\\leftarrow\\sum_{i=1}^m a_{ik}a_{ij}$\n\n\\hspace{1.5cm} pour $i=1, \\cdots , m$\n\n\\hspace{2cm}  $a_{ij}\\leftarrow a_{ij}-a_{ik}r_{kj}$",
@@ -152,7 +152,7 @@
       }
     },
     {
-      "id": "a97da34d-c165-49ab-87c2-5de4b2920878",
+      "id": "4de72672-00f6-41a6-8a5c-d67ba078aa36",
       "type": "question",
       "value": {
         "latex": "Quelle est la complexit\\'e de l'algorithme pr\\'ec\\'edent?",
@@ -160,12 +160,13 @@
       }
     },
     {
-      "id": "4e7b6e7a-2ddc-48da-b872-afd4cb395ab9",
+      "id": "2aa580d9-1387-4919-abb6-5b3be447246e",
       "type": "reponse",
       "value": {
         "latex": "complexit\\'e: $mn^2$ flops.",
         "html": "<p>complexité: <span class=\"math inline\">\\(mn^2\\)</span> flops.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Etant donnés <span class=\"math inline\">\\(n\\)</span> vecteurs linéairement indépendants de <span class=\"math inline\">\\(\\Rr^m\\)</span>, <span class=\" ..."
 }

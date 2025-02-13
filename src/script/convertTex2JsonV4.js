@@ -19,6 +19,8 @@
    extractAndConvertTikzBlocks,
    checkDependencies
  } from './Tikz2SvgUtils.js';
+
+ import { generatePreview } from './PreviewUtils.js';
  
  const fsPromises = fs.promises;
  const execPromise = util.promisify(exec);
@@ -226,34 +228,36 @@
   * @returns {Promise<boolean>} - true si le fichier est ignoré (déjà à jour en mode --update)
   */
  async function processFile(inputFilePath, outputDir, commandsToExtract, options = { update: false }) {
-   try {
-     const outputFileName = path.basename(inputFilePath, path.extname(inputFilePath)) + '.json';
-     const outputFilePath = path.join(outputDir, outputFileName);
- 
-     // Si le mode update est activé et le fichier de sortie existe déjà, on vérifie les dates de modification.
-     if (options.update && fs.existsSync(outputFilePath)) {
-       const inputStats = fs.statSync(inputFilePath);
-       const outputStats = fs.statSync(outputFilePath);
-       if (outputStats.mtime >= inputStats.mtime) {
-         return true;
-       }
-     }
- 
-     const latexContentRaw = await fsPromises.readFile(inputFilePath, 'utf8');
-     // On transmet inputFilePath comme nom de fichier pour la gestion des erreurs dans l'extraction
-     const extractedData = await extractLaTeXCommands(latexContentRaw, commandsToExtract, inputFilePath);
- 
-     if (!extractedData.uuid) {
-       extractedData.uuid = generateUniqueId();
-     }
- 
-     await fsPromises.writeFile(outputFilePath, JSON.stringify(extractedData, null, 2), 'utf8');
-     console.log(`Conversion réussie : ${inputFilePath} -> ${outputFilePath}`);
-   } catch (error) {
-     console.error(`Erreur lors du traitement du fichier ${inputFilePath} :`, error.message);
-   }
-   return false;
- }
+    try {
+      const outputFileName = path.basename(inputFilePath, path.extname(inputFilePath)) + '.json';
+      const outputFilePath = path.join(outputDir, outputFileName);
+  
+      // Vérification du mode update (code existant)
+      if (options.update && fs.existsSync(outputFilePath)) {
+        const inputStats = fs.statSync(inputFilePath);
+        const outputStats = fs.statSync(outputFilePath);
+        if (outputStats.mtime >= inputStats.mtime) {
+          return true;
+        }
+      }
+  
+      const latexContentRaw = await fsPromises.readFile(inputFilePath, 'utf8');
+      const extractedData = await extractLaTeXCommands(latexContentRaw, commandsToExtract, inputFilePath);
+  
+      if (!extractedData.uuid) {
+        extractedData.uuid = generateUniqueId();
+      }
+  
+      // Générer la preview en utilisant PreviewUtils avec sa gestion native de la limite
+      extractedData.preview = generatePreview(extractedData);
+  
+      await fsPromises.writeFile(outputFilePath, JSON.stringify(extractedData, null, 2), 'utf8');
+      console.log(`Conversion réussie : ${inputFilePath} -> ${outputFilePath}`);
+    } catch (error) {
+      console.error(`Erreur lors du traitement du fichier ${inputFilePath} :`, error.message);
+    }
+    return false;
+  }
  
  /**
   * Fonction récursive pour parcourir un répertoire et ses sous-répertoires.

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Matrice et application linéaire",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:17.798Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:33.592Z"
   },
   "contenu": [
     {
-      "id": "774fb45b-585b-4b6f-b1cd-d511e4b7a2ad",
+      "id": "da7098f6-c69d-4645-acc7-2eac2cfd9f84",
       "type": "description",
       "value": {
         "latex": "Soit $A=(a_{ij})_{1\\leq i,j\\leq n}$ une matrice carr\\'ee $n\\times n$. On veut d\\'emontrer le\n r\\'esultat suivant d\\^u \\`a Hadamard : Supposons que pour tout $i\\in\\{1,\\cdots,n\\}$, on ait\n$$|a_{ii}|>\\sum_{j=1,j\\neq i}^{n}|a_{ij}| $$\nalors $A$ est inversible.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "76c465a4-9ffa-4542-8dfc-da9a600d6cc5",
+      "id": "16f4c5e0-09af-47b6-bddb-6c62aaababc5",
       "type": "question",
       "value": {
         "latex": "Montrer le r\\'esultat pour $n=2$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "46426afc-254a-4b11-8088-9057c6eb9177",
+      "id": "9f5728f8-6567-4cae-b3ca-493ccabf0008",
       "type": "reponse",
       "value": {
         "latex": "{\\it Montrons le r\\'esultat pour $n=2$.}\n\nDans ce cas, la matrice $A$ s'\\'ecrit \n$$A=\\begin{pmatrix}a_{11}&a_{12} \\\\  a_{21}&a_{22}\\end{pmatrix}$$ et les hypoth\\`eses deviennent\n$$|a_{11}|>|a_{12}|\\ {\\hbox{et}}\\ |a_{22}|>|a_{21}|.$$\nLa matrice $A$ est inversible si et seulement si son d\\'eterminant est non nul, or \n$$\\det A=a_{11}a_{22}-a_{12}a_{21},$$\n et, compte tenu des hypoth\\`eses,\n$$|a_{11}a_{22}|=|a_{11}||a_{22}|>|a_{12}||a_{21}|=|a_{12}a_{21}|,$$\nainsi$|a_{11}a_{22}|>|a_{12}a_{21}|$ donc $a_{12}a_{21}\\neq a_{12}a_{21}$ et le d\\'eterminant est non nul.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "22642ad7-cb88-4a15-8b29-c04e8c2189ad",
+      "id": "94d6ed6a-4e0d-4531-a670-944d2d2fa5be",
       "type": "question",
       "value": {
         "latex": "Soit $B$, la matrice obtenue en rempla\\c cant, pour $j\\geq 2$, chaque colonne $c_j$ de $A$ par la colonne\n$$ c_j-{\\frac{a_{1j}}{a_{11}}}c_1 ,$$ Calculer les $b_{ij}$ en fonction des $a_{ij}$. Montrer que si les\ncoefficients de $A$ satisfont les in\\'egalit\\'es ci-dessus, alors pour $i\\geq 2$, on a\n$$|b_{ii}|>\\sum_{j=2,j\\neq i}^{n}|b_{ij}| .$$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "cfd77376-d8f4-4e9b-9a94-b1d43387588e",
+      "id": "c1f1ce65-077d-493b-90b2-6a31b304984b",
       "type": "reponse",
       "value": {
         "latex": "Soit $B$, la matrice obtenue en rempla\\c cant, pour $j\\geq 2$, chaque colonne $c_j$ de $A$ par la colonne\n$$ c_j-{\\frac{a_{1j}}{a_{11}}}c_1 ,$$ {\\it Calculons les $b_{ij}$ en fonction des $a_{ij}$. Montrons que si les\ncoefficients de $A$ satisfont les in\\'egalit\\'es ci-dessus, alors pour $i\\geq 2$, on a\n$$|b_{ii}|>\\sum_{j=2,j\\neq i}^{n}|b_{ij}| .$$}\n\nOn a $$b_{ij}=a_{ij}-\\frac{{a_{1j}}{a_{11}}}a_{i1}\\ \\ {\\hbox{si}}\\ \\ j\\geq2\\ \\ {\\hbox{et}}\\ \\ b_{i1}=a_{i1}.$$\n par l'in\\'egalit\\'e triangulaire, on a\n $$\\begin{align*}\\sum_{j=2,j\\neq i}|b_{ij}|&=\\sum_{j=2,j\\neq i}|a_{ij}-{\\frac{a_{1j}}{a_{11}}}a_{i1}| \\\\ \n&\\leq \\sum_{j=2,j\\neq i}|a_{ij}|+\\frac{|{a_{1j}|}{|a_{11}|}}|a_{i1}| \\\\ \n&= \\sum_{j=2,j\\neq i}|a_{ij}|+\\frac{|{a_{i1}|}{|a_{11}|}} \\sum_{j=2,j\\neq i}|a_{1j}|. \n\\end{align*}$$\nMais, par hypoth\\`ese, pour $i=1$, on a\n$$\\sum_{j=2}^{n}|a_{1j}|<|a_{11}|,$$\ndonc\n$$\\sum_{j=2,j\\neq i}^{n}|a_{1j}|<|a_{11}|-|a_{1i}|.$$\nD'o\\`u, en rempla\\c cant dans l'in\\'egalit\\'e pr\\'ec\\'edente\n$$\\begin{align*}\\sum_{j=2,j\\neq i}|b_{ij}|\n&< \\sum_{j=2,j\\neq i}|a_{ij}|+ |a_{i1}|-\\frac{{|a_{i1}|}{|a_{11}|}}|a_{1i}| \\\\ \n&= \\sum_{j=1,j\\neq i}|a_{ij}|-\\frac{{|a_{i1}|}{|a_{11}|}}|a_{1i}| \\\\ \n&<|a_{ii}|-\\frac{{|a_{i1}|}{|a_{11}|}}|a_{1i}| \\\\ \n&\\leq \\left|a_{ii}-\\frac{{a_{i1}}{a_{11}}}a_{1i}\\right|=|b_{ii}|.\n\\end{align*}$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "314faae3-ed62-453c-8260-6c486c1fa925",
+      "id": "93f67ba0-1e9f-4da6-a1cc-51a6d32de763",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer le r\\'esultat de Hadamard pour $n$ quelconque.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "df64cede-8135-4c48-9d39-4c234bd1191b",
+      "id": "1741d8bd-1bb0-4c64-8ad4-bd93be6665bd",
       "type": "reponse",
       "value": {
         "latex": "{\\it  D\\'emontrons le r\\'esultat de Hadamard pour $n$ quelconque.}\n\nSoit $A=(a_{ij})_{1\\leq i,j\\leq n}$ une matrice carr\\'ee $n\\times n$, v\\'erifiant pour tout $i\\in\\{1,\\cdots,n\\}$, \n$$|a_{ii}|>\\sum_{j=1,j\\neq i}^{n}|a_{ij}| $$\nOn veut d\\'emontrer que $A$ est inversible.\n\nLe r\\'esultat est vrai pour $n=2$, d'apr\\`es la question $1)$. Soit $n$ arbitrairement fix\\'e, supposons le r\\'esultat vrai pour\n$n-1$ et d\\'emontrons le pour $n$.\n\nOn a $\\det A=\\det B$ o\\`u $B$ est la matrice construite dans la question $2)$\n$$B=\\begin{pmatrix}a_{11}&0&\\cdots&0 \\\\ \n\\vdots& &({b_{ij}}_{(2\\leq i,j\\leq n)}) \\\\ \na_{n1}\\end{pmatrix}$$\nOr, la matrice $({b_{ij}}_{(2\\leq i,j\\leq n)})$ est une matrice carr\\'ee d'ordre $n-1$ qui v\\'erifie les hypoth\\`eses de\nHadamard, d'apr\\`es la question $2)$. Elle est donc inversible par hypoth\\`ese de r\\'ecurrence. Et, par cons\\'equent, la \nmatrice $A$ est inversible car $a_{11}\\neq 0$.",
         "html": "<p><span><em>Démontrons le résultat de Hadamard pour <span class=\"math inline\">\\(n\\)</span> quelconque.</em></span></p>\n<p>Soit <span class=\"math inline\">\\(A=(a_{ij})_{1\\leq i,j\\leq n}\\)</span> une matrice carrée <span class=\"math inline\">\\(n\\times n\\)</span>, vérifiant pour tout <span class=\"math inline\">\\(i\\in\\{1,\\cdots,n\\}\\)</span>, <span class=\"math display\">\\[|a_{ii}|&gt;\\sum_{j=1,j\\neq i}^{n}|a_{ij}|\\]</span> On veut démontrer que <span class=\"math inline\">\\(A\\)</span> est inversible.</p>\n<p>Le résultat est vrai pour <span class=\"math inline\">\\(n=2\\)</span>, d’après la question <span class=\"math inline\">\\(1)\\)</span>. Soit <span class=\"math inline\">\\(n\\)</span> arbitrairement fixé, supposons le résultat vrai pour <span class=\"math inline\">\\(n-1\\)</span> et démontrons le pour <span class=\"math inline\">\\(n\\)</span>.</p>\n<p>On a <span class=\"math inline\">\\(\\det A=\\det B\\)</span> où <span class=\"math inline\">\\(B\\)</span> est la matrice construite dans la question <span class=\"math inline\">\\(2)\\)</span> <span class=\"math display\">\\[B=\\begin{pmatrix}a_{11}&amp;0&amp;\\cdots&amp;0 \\\\ \n\\vdots&amp; &amp;({b_{ij}}_{(2\\leq i,j\\leq n)}) \\\\ \na_{n1}\\end{pmatrix}\\]</span> Or, la matrice <span class=\"math inline\">\\(({b_{ij}}_{(2\\leq i,j\\leq n)})\\)</span> est une matrice carrée d’ordre <span class=\"math inline\">\\(n-1\\)</span> qui vérifie les hypothèses de Hadamard, d’après la question <span class=\"math inline\">\\(2)\\)</span>. Elle est donc inversible par hypothèse de récurrence. Et, par conséquent, la matrice <span class=\"math inline\">\\(A\\)</span> est inversible car <span class=\"math inline\">\\(a_{11}\\neq 0\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A=(a_{ij})_{1\\leq i,j\\leq n}\\)</span> une matrice carrée <span class=\"math inline\">\\(n\\times n\\)</span>. On veut d ..."
 }

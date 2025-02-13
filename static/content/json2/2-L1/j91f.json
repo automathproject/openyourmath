@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite",
     "sousChapitre": "Suites équivalentes, suites négligeables",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:20.897Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:08.850Z"
   },
   "contenu": [
     {
-      "id": "32d86034-552e-494a-8477-9fa9d22baffb",
+      "id": "828d3074-210b-4713-8076-934022fcb6a8",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "1aad24db-785a-42c6-b7af-1976715e7ab6",
+      "id": "7ac37610-3b33-483c-bf37-3bdebe5066ec",
       "type": "question",
       "value": {
         "latex": "Soient $u$ et $v$ deux suites réelles strictement positives. Pour $n\\in\\Nn$, on pose $U_n=\\sum_{k=0}^{n}u_k$ et $V_n=\\sum_{k=0}^{n}v_k$. Montrer que si $u_n\\sim v_n$ et si $\\lim_{n\\rightarrow +\\infty}V_n=+\\infty$, alors $U_n\\sim V_n$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "268e0e4c-212e-4adc-b5d2-a2f0fb3b3c0c",
+      "id": "756186df-b693-4d9d-bfd3-1232924b5c2e",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\varepsilon>0$.\n\nLes suites $u$ et $v$ sont équivalentes et la suite $v$ est strictement positive. Donc, il existe un rang $n_0$ tel que, pour $n\\geq n_0$, $|u_n-v_n|<\\frac{\\varepsilon}{2}v_n$. Soit $n>n_0$.\n\n$$\\begin{align*}\\ensuremath\n\\left|\\frac{U_n}{V_n}-1\\right|&=\\frac{|U_n-V_n|}{V_n}\\leq\\frac{1}{V_n}\\sum_{k=0}^{n}|u_k-v_k|\\\\\n &\\leq \\frac{1}{V_n}(\\sum_{k=0}^{n_0}|u_k-v_k|+\\frac{\\varepsilon}{2}\\sum_{k=n_0+1}^{n}v_k)\\\\\n &\\leq\\frac{1}{V_n}(\\sum_{k=0}^{n_0}|u_k-v_k|+\\frac{\\varepsilon}{2}V_n)=\\frac{1}{V_n}\\sum_{k=0}^{n_0}|u_k-v_k|+\\frac{\\varepsilon}{2}\n\\end{align*}$$\n\nMaintenant, l'expression $\\sum_{k=0}^{n_0}|u_k-v_k|$ est constante quand $n$ varie, et d'autre part, $V_n$ tend vers $+\\infty$ quand $n$ tend vers $+\\infty$. On en déduit que $\\frac{1}{V_n}\\sum_{k=0}^{n_0}|u_k-v_k|$ tend vers $0$ quand $n$ tend vers $+\\infty$. Par suite, il existe un rang $n_1>n_0$ tel que, pour $n\\geq n_1$, $\\frac{1}{V_n}\\sum_{k=0}^{n_0}|u_k-v_k|<\\frac{\\varepsilon}{2}$.\n\nPour $n\\geq n_1$, on a alors $\\left|\\frac{U_n}{V_n}-1\\right|<\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon$.\n\nOn a montré que\n\n$$\\forall\\varepsilon>0,\\;\\exists n_1\\in\\Nn/\\;\\forall n\\in\\Nn,\\;(n\\geq n_1\\Rightarrow\\left|\\frac{U_n}{V_n}-1\\right|<\\varepsilon.$$\n\nAinsi, la suite $\\frac{U_n}{V_n}$ tend vers $1$ quand $n$ tend vers $+\\infty$ et donc $U_n\\sim V_n$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "afc537dc-0a92-443e-a66c-e59382053ff9",
+      "id": "9e99b48e-7e7e-4c95-9dfe-9003e57788d6",
       "type": "question",
       "value": {
         "latex": "Application. Trouver un équivalent de $\\sum_{k=1}^{n}\\frac{1}{\\sqrt{k}}$ et $\\sum_{k=1}^{n}\\ln(k)$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "b0054a7f-c127-4f5f-9459-7bec1f96fc81",
+      "id": "6cb94fe0-1cf7-41ab-8ed9-53282e8128e9",
       "type": "reponse",
       "value": {
         "latex": "$$2(\\sqrt{n+1}-\\sqrt{n})=\\frac{2}{\\sqrt{n+1}+\\sqrt{n}}\\sim\\frac{2}{2\\sqrt{n}}=\\frac{1}{\\sqrt{n}}.$$\n\nDe plus, \n\n$$\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})=2\\sqrt{n+1}-2\\sqrt{1}.$$\n\nCette dernière expression tend vers $+\\infty$ quand $n$ tend vers $+\\infty$.\n\nEn résumé, pour $n\\geq1$, $\\frac{1}{\\sqrt{n}}>0$, $2(\\sqrt{n+1}-\\sqrt{n})>0$, de plus quand $n$ tend vers $+\\infty$, \n$\\frac{1}{\\sqrt{n}}\\sim2(\\sqrt{n+1}-\\sqrt{n})$ et enfin, $\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})$ tend vers $+\\infty$ quand $n$ tend vers $+\\infty$. D'après 1),\n\n$$\\sum_{k=1}^{n}\\frac{1}{\\sqrt{k}}\\sim\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})=2\\sqrt{n+1}-2\\sqrt{1}\\sim2\\sqrt{n}.$$\n\n$$(n+1)\\ln(n+1)-n\\ln n=(n+1-n)\\ln n+(n+1)\\ln(1+\\frac{1}{n})=\\ln n+1+o(1)\\sim\\ln n.$$\n\nComme $\\sum_{k=1}^{n}((k+1)\\ln(k+1)-k\\ln k)=(n+1)\\ln(n+1)$ tend vers $+\\infty$ et que les suites considéres sont positives, on en déduit que \n\n$$\\ln(n!)=\\sum_{k=1}^{n}\\ln k\\sim\\sum_{k=1}^{n}((k+1)\\ln(k+1)-k\\ln k)=(n+1)\\ln(n+1)\\sim n\\ln n.$$",
         "html": "<p><span class=\"math display\">\\[2(\\sqrt{n+1}-\\sqrt{n})=\\frac{2}{\\sqrt{n+1}+\\sqrt{n}}\\sim\\frac{2}{2\\sqrt{n}}=\\frac{1}{\\sqrt{n}}.\\]</span></p>\n<p>De plus,</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})=2\\sqrt{n+1}-2\\sqrt{1}.\\]</span></p>\n<p>Cette dernière expression tend vers <span class=\"math inline\">\\(+\\infty\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>.</p>\n<p>En résumé, pour <span class=\"math inline\">\\(n\\geq1\\)</span>, <span class=\"math inline\">\\(\\frac{1}{\\sqrt{n}}&gt;0\\)</span>, <span class=\"math inline\">\\(2(\\sqrt{n+1}-\\sqrt{n})&gt;0\\)</span>, de plus quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, <span class=\"math inline\">\\(\\frac{1}{\\sqrt{n}}\\sim2(\\sqrt{n+1}-\\sqrt{n})\\)</span> et enfin, <span class=\"math inline\">\\(\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. D’après 1),</p>\n<p><span class=\"math display\">\\[\\sum_{k=1}^{n}\\frac{1}{\\sqrt{k}}\\sim\\sum_{k=1}^{n}2(\\sqrt{k+1}-\\sqrt{k})=2\\sqrt{n+1}-2\\sqrt{1}\\sim2\\sqrt{n}.\\]</span></p>\n<p><span class=\"math display\">\\[(n+1)\\ln(n+1)-n\\ln n=(n+1-n)\\ln n+(n+1)\\ln(1+\\frac{1}{n})=\\ln n+1+o(1)\\sim\\ln n.\\]</span></p>\n<p>Comme <span class=\"math inline\">\\(\\sum_{k=1}^{n}((k+1)\\ln(k+1)-k\\ln k)=(n+1)\\ln(n+1)\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> et que les suites considéres sont positives, on en déduit que</p>\n<p><span class=\"math display\">\\[\\ln(n!)=\\sum_{k=1}^{n}\\ln k\\sim\\sum_{k=1}^{n}((k+1)\\ln(k+1)-k\\ln k)=(n+1)\\ln(n+1)\\sim n\\ln n.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(u\\)</span> et <span class=\"math inline\">\\(v\\)</span> deux suites réelles strictement positives. Pour <span class ..."
 }

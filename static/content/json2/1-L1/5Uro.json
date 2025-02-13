@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Changement de base, matrice de passage",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:06.218Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:15.964Z"
   },
   "contenu": [
     {
-      "id": "ef86f9df-4318-4352-afa2-180956bf6e1d",
+      "id": "79c3e2f4-be6f-4862-8f6f-f2b18f2a1ea7",
       "type": "description",
       "value": {
         "latex": "Soit $u$ l'endomorphisme de $\\Rr^3$ dont la matrice dans la base canonique $(i,j,k)$ de $\\Rr^3$ est~:\n\n$$M=\\left(\n\\begin{array}{ccc}\n0&1&0\\\\\n0&0&1\\\\\n1&-3&3\n\\end{array}\n\\right)\n.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c9aef6e5-2959-4988-9052-84b641021615",
+      "id": "c7dfbfee-38f4-4520-a318-7259e2c63a21",
       "type": "question",
       "value": {
         "latex": "Montrer que $u$ est un automorphisme de $\\Rr^3$ et déterminer $u^{-1}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "fd0ae4c2-3ecc-4c3a-aee6-c180baef45f9",
+      "id": "f780a66f-73c1-48d9-b95e-24dbbb78d28d",
       "type": "reponse",
       "value": {
         "latex": "$\\mbox{rg}u=\\mbox{rg}(u(i),u(j),u(k))=rg(u(j),u(k),u(i))$. La matrice de cette dernière famille dans la base $(i,j,k)$ est $\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n0&1&0\\\\\n-3&3&1\n\\end{array}\n\\right)$. Cette dernière famille est de rang $3$. Donc, $\\mbox{rg}u=3$ et $u$ est bien un automorphisme de $\\Rr^3$. Posons $e_1=u(i)$, $e_2=u(j)$ et $e_3=u(k)$.\n\n$$\\left\\{\n\\begin{array}{l}\ne_1=k\\\\\ne_2=i-3k\\\\\ne_3=j+3k\n\\end{array}\\right.\n\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nk=e_1\\\\\ni=3e_1+e_2\\\\\nj=-3e_1+e_3\n\\end{array}\\right.\n\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nu^{-1}(k)=i\\\\\nu^{-1}(i)=3i+j\\\\\nu^{-1}(j)=-3i+k\n\\end{array}\\right.\n$$\n\net \n\n$$A^{-1}=\\mbox{Mat}_{\\mathcal{B}}(u^{-1})=\\left(\n\\begin{array}{ccc}\n3&-3&1\\\\\n1&0&0\\\\\n0&1&0\n\\end{array}\n\\right).$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "7bb3138f-0089-4f5c-a799-eef6591e26a7",
+      "id": "4e54d531-d94b-4c28-9e4b-0151c07327f5",
       "type": "question",
       "value": {
         "latex": "Déterminer une base $(e_1,e_2,e_3)$ de $\\Rr^3$ telle que $u(e_1)=e_1$, $u(e_2)=e_1+e_2$ et $u(e_3)=e_2+e_3$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "a20389fd-64ab-4360-b857-a55b9b9def49",
+      "id": "002adf82-f8c3-4dfb-ae5a-d55d2dab74b0",
       "type": "reponse",
       "value": {
         "latex": "(Questions 2) et 3)). Posons $e_1=xi+yj+zk$ ($e_1$, $e_2$ et $e_3$ désignent d'autres vecteurs que ceux du 1)).\n\n$$u(e_1)=e_1\\Leftrightarrow(u-Id)(e_1)=0\\Leftrightarrow\\left(\n\\begin{array}{ccc}\n-1&1&0\\\\\n0&-1&1\\\\\n1&-3&2\n\\end{array}\n\\right)\\left(\n\\begin{array}{c}\nx\\\\\ny\\\\\nz\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n0\\\\\n0\\\\\n0\n\\end{array}\n\\right)\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\n-x+y=0\\\\\n-y+z=0\\\\\nx-3y+2z=0\n\\end{array}\n\\right.\\Leftrightarrow x=y=z.$$\n\nOn prend $e_1=i+j+k$.\n\nPosons $e_2=xi+yj+zk$.\n\n$$u(e_2)=e_1+e_2\\Leftrightarrow(u-Id)(e_2)=e_1\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\n-x+y=1\\\\\n-y+z=1\\\\\nx-3y+2z=1\n\\end{array}\n\\right.\\Leftrightarrow y=x+1\\;\\mbox{et}\\;z=x+2.$$\n\nOn prend $e_2=j+2k$.\n\nPosons $e_3=xi+yj+zk$.\n\n$$u(e_3)=e_2+e_3\\Leftrightarrow(u-Id)(e_3)=e_2\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\n-x+y=0\\\\\n-y+z=1\\\\\nx-3y+2z=2\n\\end{array}\n\\right.\\Leftrightarrow y=x\\;\\mbox{et}\\;z=x+1.$$\n\nOn prend $e_3=k$.\n\nLa matrice de la famille $(e_1,e_2,e_3)$ dans la base $(i,j,k)$ est $P=\n\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n1&1&0\\\\\n1&2&1\n\\end{array}\n\\right)$. Cette matrice est de rang $3$ et est donc inversible. Par suite $(e_1,e_2,e_3)$ est une base de $\\Rr^3$. Enfin,\n\n$$\\left\\{\n\\begin{array}{l}\ne_1=i+j+k\\\\\ne_2=j+2k\\\\\ne_3=k\n\\end{array}\n\\right.\n\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nk=e_3\\\\\nj=e_2-2e_3\\\\\ni=e_1-e_2+e_3\n\\end{array}\n\\right.\n,$$\n\net \n\n$$P^{-1}=\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n-1&1&0\\\\\n1&-2&1\n\\end{array}\n\\right).$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "043889f6-efce-4747-a9b3-65655688e5b0",
+      "id": "98e22353-8f2b-4a4b-9404-ef69cc54e46f",
       "type": "question",
       "value": {
         "latex": "Déterminer $P$ la matrice de passage de $(i,j,k)$ à $(e_1,e_2,e_3)$ ainsi que $P^{-1}$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "bfdaf2a6-69c8-4d36-839d-b514586fce99",
+      "id": "6447e526-022c-4324-83e9-e719c053d32c",
       "type": "reponse",
       "value": {
         "latex": "Voir question précédente.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "728ff794-69cd-4ea5-a382-4c28032fb6bd",
+      "id": "7cc8a61e-8af4-4973-8b07-50decc697b94",
       "type": "question",
       "value": {
         "latex": "En déduire $u^n(i)$, $u^n(j)$ et $u^n(k)$ pour $n$ entier relatif.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "63327245-7e52-4c55-865f-c738e14ad8b0",
+      "id": "5476c402-8010-4d04-b27f-33b480809dbb",
       "type": "reponse",
       "value": {
         "latex": "Soit $T$ est la matrice de $u$ dans la base $(e_1,e_2,e_3)$. $T=\n\\left(\n\\begin{array}{ccc}\n1&1&0\\\\\n0&1&1\\\\\n0&0&1\n\\end{array}\n\\right)$. Les formules de changement de bases s'écrivent $T=P^{-1}AP$ ou encore $A=PTP^{-1}$. Par suite, pour tout relatif $n$, $A^n=PT^nP^{-1}$.\n\nPosons $N=\\left(\n\\begin{array}{ccc}\n0&1&0\\\\\n0&0&1\\\\\n0&0&0\n\\end{array}\n\\right)\n$. On a $N^2=\\left(\n\\begin{array}{ccc}\n0&0&1\\\\\n0&0&0\\\\\n0&0&0\n\\end{array}\n\\right)$  puis $N^3=0$.\n\nDonc, pour $n$  entier naturel supérieur ou égal à $2$ donné, puisque $I$ et $N$ commutent, la formule du binôme de \\textsc{Newton} fournit \n\n$$T^n=(I+N)^n=I+nN+\\frac{n(n-1)}{2}N^2=\\left(\n\\begin{array}{ccc}\n1&n&n(n-1)/2\\\\\n0&1&n\\\\\n0&0&1\n\\end{array}\n\\right).$$\n\nCette formule reste claire pour $n=0$ et $n=1$.\nPour $n=-1$, $(I+N)(I-N+N^2)=I+N^3=I$ et donc\n\n$$T^{-1}=(I+N)^{-1}=I-N+N^2=\\left(\n\\begin{array}{ccc}\n1&-1&1\\\\\n0&1&-1\\\\\n0&0&1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n1&-1&\\frac{(-1)(-1-1)}{2}\\\\\n0&1&-1\\\\\n0&0&1\n\\end{array}\n\\right),$$\n\net la formule reste vraie pour $n=-1$. Enfin, pour $n$ entier naturel non nul donné, $T^{-n}=(I+nN+\\frac{n(n-1)}{2}N^2)^{-1}$ mais $(I+nN+\\frac{n(n-1)}{2}N^2)(I-nN+\\frac{-n(-n-1)}{2}N^2)=I$ et donc\n$T^{-n}=I-nN+\\frac{-n(-n-1)}{2}N^2$. Finalement, \n\n$$\\forall n\\in\\Zz,\\;T^n=I+nN+\\frac{n(n-1)}{2}N^2=\\left(\n\\begin{array}{ccc}\n1&n&n(n-1)/2\\\\\n0&1&n\\\\\n0&0&1\n\\end{array}\n\\right).$$\n\nPuis \n\n$$\\begin{align*}\\ensuremath\nA^n&=PT^nP^{-1}=\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n1&1&0\\\\\n1&2&1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&n&n(n-1)/2\\\\\n0&1&n\\\\\n0&0&1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n-1&1&0\\\\\n1&-2&1\n\\end{array}\n\\right)\\\\\n &=\\left(\n\\begin{array}{ccc}\n1&n&n(n-1)/2\\\\\n1&n+1&n(n+1)/2\\\\\n1&n+2&(n+1)(n+2)/2\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&0&0\\\\\n-1&1&0\\\\\n1&-2&1\n\\end{array}\n\\right)\n\\\\\n &=\\left(\n\\begin{array}{ccc}\n(n-1)(n-2)/2&-n(n-2)&n(n-1)/2\\\\\nn(n-1)/2&-(n-1)(n+1)&n(n+1)/2\\\\\nn(n+1)/2&-n(n+2)&(n+1)(n+2)/2\n\\end{array}\n\\right)\n\\end{align*}$$\n\nce qui fournit $u^n(i)$, $u^n(j)$ et $u^n(k)$.",
         "html": "<p>Soit <span class=\"math inline\">\\(T\\)</span> est la matrice de <span class=\"math inline\">\\(u\\)</span> dans la base <span class=\"math inline\">\\((e_1,e_2,e_3)\\)</span>. <span class=\"math inline\">\\(T=\n\\left(\n\\begin{array}{ccc}\n1&amp;1&amp;0\\\\\n0&amp;1&amp;1\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right)\\)</span>. Les formules de changement de bases s’écrivent <span class=\"math inline\">\\(T=P^{-1}AP\\)</span> ou encore <span class=\"math inline\">\\(A=PTP^{-1}\\)</span>. Par suite, pour tout relatif <span class=\"math inline\">\\(n\\)</span>, <span class=\"math inline\">\\(A^n=PT^nP^{-1}\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(N=\\left(\n\\begin{array}{ccc}\n0&amp;1&amp;0\\\\\n0&amp;0&amp;1\\\\\n0&amp;0&amp;0\n\\end{array}\n\\right)\\)</span>. On a <span class=\"math inline\">\\(N^2=\\left(\n\\begin{array}{ccc}\n0&amp;0&amp;1\\\\\n0&amp;0&amp;0\\\\\n0&amp;0&amp;0\n\\end{array}\n\\right)\\)</span> puis <span class=\"math inline\">\\(N^3=0\\)</span>.</p>\n<p>Donc, pour <span class=\"math inline\">\\(n\\)</span> entier naturel supérieur ou égal à <span class=\"math inline\">\\(2\\)</span> donné, puisque <span class=\"math inline\">\\(I\\)</span> et <span class=\"math inline\">\\(N\\)</span> commutent, la formule du binôme de <span class=\"smallcaps\">Newton</span> fournit</p>\n<p><span class=\"math display\">\\[T^n=(I+N)^n=I+nN+\\frac{n(n-1)}{2}N^2=\\left(\n\\begin{array}{ccc}\n1&amp;n&amp;n(n-1)/2\\\\\n0&amp;1&amp;n\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right).\\]</span></p>\n<p>Cette formule reste claire pour <span class=\"math inline\">\\(n=0\\)</span> et <span class=\"math inline\">\\(n=1\\)</span>. Pour <span class=\"math inline\">\\(n=-1\\)</span>, <span class=\"math inline\">\\((I+N)(I-N+N^2)=I+N^3=I\\)</span> et donc</p>\n<p><span class=\"math display\">\\[T^{-1}=(I+N)^{-1}=I-N+N^2=\\left(\n\\begin{array}{ccc}\n1&amp;-1&amp;1\\\\\n0&amp;1&amp;-1\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right)=\\left(\n\\begin{array}{ccc}\n1&amp;-1&amp;\\frac{(-1)(-1-1)}{2}\\\\\n0&amp;1&amp;-1\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right),\\]</span></p>\n<p>et la formule reste vraie pour <span class=\"math inline\">\\(n=-1\\)</span>. Enfin, pour <span class=\"math inline\">\\(n\\)</span> entier naturel non nul donné, <span class=\"math inline\">\\(T^{-n}=(I+nN+\\frac{n(n-1)}{2}N^2)^{-1}\\)</span> mais <span class=\"math inline\">\\((I+nN+\\frac{n(n-1)}{2}N^2)(I-nN+\\frac{-n(-n-1)}{2}N^2)=I\\)</span> et donc <span class=\"math inline\">\\(T^{-n}=I-nN+\\frac{-n(-n-1)}{2}N^2\\)</span>. Finalement,</p>\n<p><span class=\"math display\">\\[\\forall n\\in\\Zz,\\;T^n=I+nN+\\frac{n(n-1)}{2}N^2=\\left(\n\\begin{array}{ccc}\n1&amp;n&amp;n(n-1)/2\\\\\n0&amp;1&amp;n\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right).\\]</span></p>\n<p>Puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nA^n&amp;=PT^nP^{-1}=\\left(\n\\begin{array}{ccc}\n1&amp;0&amp;0\\\\\n1&amp;1&amp;0\\\\\n1&amp;2&amp;1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&amp;n&amp;n(n-1)/2\\\\\n0&amp;1&amp;n\\\\\n0&amp;0&amp;1\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&amp;0&amp;0\\\\\n-1&amp;1&amp;0\\\\\n1&amp;-2&amp;1\n\\end{array}\n\\right)\\\\\n &amp;=\\left(\n\\begin{array}{ccc}\n1&amp;n&amp;n(n-1)/2\\\\\n1&amp;n+1&amp;n(n+1)/2\\\\\n1&amp;n+2&amp;(n+1)(n+2)/2\n\\end{array}\n\\right)\\left(\n\\begin{array}{ccc}\n1&amp;0&amp;0\\\\\n-1&amp;1&amp;0\\\\\n1&amp;-2&amp;1\n\\end{array}\n\\right)\n\\\\\n &amp;=\\left(\n\\begin{array}{ccc}\n(n-1)(n-2)/2&amp;-n(n-2)&amp;n(n-1)/2\\\\\nn(n-1)/2&amp;-(n-1)(n+1)&amp;n(n+1)/2\\\\\nn(n+1)/2&amp;-n(n+2)&amp;(n+1)(n+2)/2\n\\end{array}\n\\right)\n\\end{align*}\\]</span></p>\n<p>ce qui fournit <span class=\"math inline\">\\(u^n(i)\\)</span>, <span class=\"math inline\">\\(u^n(j)\\)</span> et <span class=\"math inline\">\\(u^n(k)\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(u\\)</span> l’endomorphisme de <span class=\"math inline\">\\(\\Rr^3\\)</span> dont la matrice dans la base canonique <s ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:35.902Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:48.308Z"
   },
   "contenu": [
     {
-      "id": "8cb1953c-cfb6-44a8-8d11-9f87ce3a442e",
+      "id": "885e241c-5f5d-4b69-89ad-02fc36eee069",
       "type": "description",
       "value": {
         "latex": "\\label{exo2475}\nTrouver toutes les matrices de $\\mathcal{M}_3(\\Rr)$ qui vérifient",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f7b2e4e7-13a8-4fd9-95c9-074aec836edd",
+      "id": "26d685e9-5376-46ab-92d2-9ce2e7d18d6b",
       "type": "question",
       "value": {
         "latex": "$M^2 = 0$ ;",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "67732cf3-fb35-4d0e-8727-33c2e2f14e38",
+      "id": "9bd40c0e-c390-4faf-86cd-097f18640ba2",
       "type": "question",
       "value": {
         "latex": "$M^2 = M$ ;",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "90e47712-4d2a-4a0c-afcc-0f2ca6c984bc",
+      "id": "81b09863-47b6-4a16-8c01-96f94af975c9",
       "type": "question",
       "value": {
         "latex": "$M^2 = I$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "3c4e3d5d-bf32-4821-b0b1-5673071fa7e0",
+      "id": "ddecf215-4bf7-4d75-9665-9edff87e167f",
       "type": "reponse",
       "value": {
         "latex": "Soit $M$ une matrice telle que $M^2=0$ et soit $f$ l'application linéaire associée à $M$.\nComme $M^2=0$ alors $f\\circ f = 0$. Cela entraîne $\\Im f \\subset \\Ker f$. Discutons suivant la dimension\ndu noyau :\n   \\begin{enumerate}\nSi $\\dim \\Ker f=3$ alors $f=0$ donc $M=0$ (la matrice nulle).\nSi $\\dim \\Ker f=2$ alors prenons une base de $\\Rr^3$ formée de deux vecteurs du noyau et d'un troisième vecteur.\nDans cette base la matrice de $f$ est\n$M'=\\begin{pmatrix}0&0&a\\\\0& 0 & b\\\\0&0&c\\end{pmatrix}$ mais comme $f\\circ f=0$ alors $M'^2=0$ ;\nun petit calcul implique $c=0$. Donc $M$ et $M'$ sont les matrices de la même application linéaire $f$ mais exprimées dans des bases différentes,\ndonc $M$ et $M'$ sont semblables.\nSi $\\dim \\Ker f=1$ alors comme $\\Im f \\subset \\Ker f$ on a $\\dim \\Im f \\le 1$ mais alors cela contredit le théorème\ndu rang : $\\dim \\Ker f + \\dim \\Im f = \\dim \\Rr^3$. Ce cas n'est pas possible.\nConclusion : $M$ est une matrice qui vérifie $M^2=0$ si et seulement si \nil existe une matrice inversible $P$ et des réels $a,b$ tels que \n$$M=P^{-1} \\begin{pmatrix}0&0&a\\\\0& 0 & b\\\\0&0&0\\end{pmatrix}P$$",
@@ -56,12 +56,13 @@
       }
     },
     {
-      "id": "085c68ef-ab64-4704-9efd-1828fa51e1c7",
+      "id": "31087467-e241-4bc8-a2cc-54fa04b5fa09",
       "type": "indication",
       "value": {
         "latex": "Il faut trouver les propriétés de l'application linéaire $f$ associée à chacune de ces matrices.\nLes résultats s'expriment en explicitant une (ou plusieurs) matrice $M'$ qui est la matrice de $f$ dans une base bien choisie\net ensuite en montrant que toutes les autres matrices sont de la forme\n$M=P^{-1}M'P$.\n\nPlus en détails pour chacun des cas :\n\\begin{enumerate}\n  \\item $\\Im f \\subset \\Ker f$ et discuter suivant la dimension du noyau.\n  \\item Utiliser l'exercice \\ref{exo1093} : $\\Ker f \\oplus \\Im f$ et il existe une base telle que \n$f(e_i)=0$ ou $f(e_i)=e_i$.\n  \\item Poser $N= \\frac{I+M}{2}$ (et donc $M=\\cdots$) chercher à quelle condition $M^2=I$.\n\\end{enumerate}",
         "html": "<p>Il faut trouver les propriétés de l’application linéaire <span class=\"math inline\">\\(f\\)</span> associée à chacune de ces matrices. Les résultats s’expriment en explicitant une (ou plusieurs) matrice <span class=\"math inline\">\\(M&#39;\\)</span> qui est la matrice de <span class=\"math inline\">\\(f\\)</span> dans une base bien choisie et ensuite en montrant que toutes les autres matrices sont de la forme <span class=\"math inline\">\\(M=P^{-1}M&#39;P\\)</span>.</p>\n<p>Plus en détails pour chacun des cas :</p>\n<ol>\n<li><p><span class=\"math inline\">\\(\\Im f \\subset \\Ker f\\)</span> et discuter suivant la dimension du noyau.</p></li>\n<li><p>Utiliser l’exercice <a href=\"#exo1093\" data-reference-type=\"ref\" data-reference=\"exo1093\">[exo1093]</a> : <span class=\"math inline\">\\(\\Ker f \\oplus \\Im f\\)</span> et il existe une base telle que <span class=\"math inline\">\\(f(e_i)=0\\)</span> ou <span class=\"math inline\">\\(f(e_i)=e_i\\)</span>.</p></li>\n<li><p>Poser <span class=\"math inline\">\\(N= \\frac{I+M}{2}\\)</span> (et donc <span class=\"math inline\">\\(M=\\cdots\\)</span>) chercher à quelle condition <span class=\"math inline\">\\(M^2=I\\)</span>.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p><span id=\"exo2475\" label=\"exo2475\">[exo2475]</span> Trouver toutes les matrices de <span class=\"math inline\">\\(\\mathcal{M}_3(\\Rr)\\)</span> qui véri ..."
 }

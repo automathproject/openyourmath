@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Calcul de déterminants",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:51.211Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:40.483Z"
   },
   "contenu": [
     {
-      "id": "8acfc419-5798-4fd5-90f1-cff0386ee49c",
+      "id": "e1dddd55-fa2b-4795-ac89-9550dde9cffc",
       "type": "description",
       "value": {
         "latex": "Soit $a$ un réel.\nOn note $\\Delta_n$ le déterminant suivant : \n$$\n\\Delta_n = \n\\left\\vert\n\\begin{matrix}\n       a   &    0   & \\cdots & 0      & n-1 \\\\\n       0   &    a   & \\ddots & \\vdots & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots & 0      & 2 \\\\\n       0   & \\cdots &   0    & a      & 1 \\\\\n      n-1  & \\cdots &   2    & 1      & a\n\\end{matrix}\n\\right\\vert\n$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "13aa465b-75b6-44a6-b387-15ee132bf867",
+      "id": "df9e8a18-ee17-45c9-9b77-d9184a8b3d30",
       "type": "question",
       "value": {
         "latex": "Calculer $\\Delta_n$ en fonction de $\\Delta_{n-1}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "e715ea2e-9424-43ee-8520-8e52679d0fd8",
+      "id": "4ca754fe-0c2f-4584-9c89-26bfef1ade2b",
       "type": "question",
       "value": {
         "latex": "Démontrer que : $\\displaystyle \\forall n\\geq2\\quad\n\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "4e371590-3f15-482e-a545-3b4724bbcf67",
+      "id": "153d49ea-4159-47b4-a2b8-145ec1d30819",
       "type": "reponse",
       "value": {
         "latex": "En développant par rapport à la première colonne on trouve la relation suivante :\n\n$$\\Delta_n = a \\Delta_{n-1} + (-1)^{n-1}(n-1) \n\\left\\vert\n\\begin{matrix}\n       0   &    0   & \\cdots & 0      & n-1 \\\\\n       a   &    0   & \\ddots & \\vdots & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots & 0      & 3 \\\\\n       0   & \\cdots &   a    & 0      & 2 \\\\\n       0  & \\cdots &   0    & a      & 1\n\\end{matrix}\n\\right\\vert\n$$\nNotons $\\delta$ ce dernier déterminant (dont la matrice est de taille $n-1\\times n-1$). \nOn le calcule en développant par rapport à la première ligne \n$$\\delta  = (-1)^{n-2}(n-1)\n\\left\\vert\n\\begin{matrix}\n       a   &    0   & \\cdots      & 0 \\\\\n       0   &    a   & \\ddots      & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots      & 0  \\\\\n       0   & \\cdots &   0         & a\n\\end{matrix}\\right\\vert\n= (-1)^{n-2}(n-1) a^{n-2}.\n$$\nDonc \n$$\\Delta_n = a \\Delta_{n-1} - a^{n-2}(n-1)^2.$$\nProuvons la formule \n$$\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}$$\npar récurrence sur $n\\ge 2$.\n\n\\begin{itemize}\n\\textbf{Initialisation.} Pour $n=2$,\n$\\Delta_2=\\begin{vmatrix}a&1\\\\1&a\\end{vmatrix}=a^2-1$\ndonc la formule est vraie.\n\\textbf{Hérédité.} Supposons la formule vraie vraie au rang $n-1$,\nc'est-à-dire $\\Delta_{n-1}=a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2}$.\nCalculons $\\Delta_n$ :\n$$\\begin{align*}\n\\Delta_n \n  & = a \\Delta_{n-1} - a^{n-2}(n-1)^2  \\quad \\text{ par la première question } \\\\\n  & = a\\Big(a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2} \\Big) - a^{n-2}(n-1)^2 \\quad \\text{ par l'hypothèse de récurrence} \\\\\n  & = a^n -  a^{n-2}\\sum_{i=1}^{n-2}{i^2} - a^{n-2}(n-1)^2 \\\\\n  & = a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\n\\end{align*}$$\nLa formule est donc vraie au rang $n$.\n\\textbf{Conclusion.} Par le principe de récurrence la formule est vraie\npour tout entier $n\\ge 2$.\n\\end{itemize}",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "94be5ddd-b253-4b06-8487-9871f2d7919c",
+      "id": "bf4765bf-5656-4005-ae9c-ab21c0faf4bb",
       "type": "indication",
       "value": {
         "latex": "Développer par rapport à la première colonne\npour obtenir $\\Delta_{n-1}$ et un autre déterminant facile à calculer\nen développant par rapport à sa première ligne.",
         "html": "<p>Développer par rapport à la première colonne pour obtenir <span class=\"math inline\">\\(\\Delta_{n-1}\\)</span> et un autre déterminant facile à calculer en développant par rapport à sa première ligne.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel. On note <span class=\"math inline\">\\(\\Delta_n\\)</span> le déterminant suivant : <span class=\"ma ..."
 }

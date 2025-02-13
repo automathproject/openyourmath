@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Calcul de déterminants",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:29.743Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:19.228Z"
   },
   "contenu": [
     {
-      "id": "abb5b13d-3524-49a0-a044-d05d668e7ae5",
+      "id": "b9a6b7da-fb24-48a3-b1ca-c1482623c8b4",
       "type": "description",
       "value": {
         "latex": "Soit $A=(a_{i,j})_{1\\leq i,j\\leq n}$ où, pour tout $i$ et tout $j$, $a_{i,j}\\in\\{-1,1\\}$. Montrer que $\\mbox{det}\\;A$ est un entier divisible par $2^{n-1}$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "372f882e-1b35-47b0-9959-c04c6235f06f",
+      "id": "82f89f07-a905-4368-a72e-f184c80da583",
       "type": "reponse",
       "value": {
         "latex": "On procède par récurrence sur $n\\geq1$.\n\\textbullet~Pour $n=1$, c'est clair.\n\\textbullet~Soit $n\\geq1$. Supposons que tout déterminant $\\Delta_n$ de format $n$ et du type de l'énoncé soit divisible par $2^{n-1}$. Soit $\\Delta_{n+1}$ un déterminant de format $n+1$, du type de l'énoncé.\nSi tous les coefficients $a_{i,j}$ de $\\Delta_{n+1}$ sont égaux à $1$, puisque $n+1\\geq2$, $\\Delta_{n+1}$ a deux colonnes égales et est donc nul. Dans ce cas, $\\Delta_{n+1}$ est bien divisible par $2^n$.\nSinon, on va changer petit à petit tous les $-1$ en $1$.\nSoit $(i,j)$ un couple d'indices tel que $a_{i,j}=-1$ et $\\Delta_{n+1}'$ le déterminant dont tous les coefficients sont égaux à ceux de $\\Delta_{n+1}$ sauf le coefficient ligne $i$ et colonne $j$ qui est égal à $1$.\n\n$$\\Delta_{n+1}-\\Delta_{n+1}'=\\mbox{det}(C_1,...,C_j,...,C_n)-\\mbox{det}(C_1,...,C_j',...,C_n)=\\mbox{det}(C_1,...,C_j-C_j',...,C_n),$$ \n\noù  $C_j-C_j'=\\left(\n\\begin{array}{c}\n0\\\\\n\\vdots\\\\\n0\\\\\n-2\\\\\n0\\\\\n\\vdots\\\\\n0\n\\end{array}\n\\right)$ ($-2$ en ligne $i$). En développant ce dernier déterminant suivant sa $j$-ème colonne, on obtient~:\n\n$$\\Delta_{n+1}-\\Delta_{n+1}'=-2\\Delta_n,$$ \noù $\\Delta_n$ est un déterminant de format $n$ et du type de l'énoncé. Par hypothèse de récurrence, $\\Delta_n$ est divisible par $2^{n-1}$ et donc $\\Delta_{n+1}-\\Delta_{n+1}'$ est divisible par $2^n$. Ainsi, en changeant les $-1$ en $1$ les uns après les autres, on obtient\n\n\\begin{center}\n$\\Delta_{n+1}\\equiv\\left|\n\\begin{array}{ccc}\n1&\\ldots&1\\\\\n\\vdots& &\\vdots\\\\\n1&\\ldots&1\n\\end{array}\\right|\\;(\\text{mod}\\;2^n)$.\n\\end{center}\nCe dernier déterminant étant nul, le résultat est démontré par récurrence.",
         "html": "<p>On procède par récurrence sur <span class=\"math inline\">\\(n\\geq1\\)</span>.  Pour <span class=\"math inline\">\\(n=1\\)</span>, c’est clair.  Soit <span class=\"math inline\">\\(n\\geq1\\)</span>. Supposons que tout déterminant <span class=\"math inline\">\\(\\Delta_n\\)</span> de format <span class=\"math inline\">\\(n\\)</span> et du type de l’énoncé soit divisible par <span class=\"math inline\">\\(2^{n-1}\\)</span>. Soit <span class=\"math inline\">\\(\\Delta_{n+1}\\)</span> un déterminant de format <span class=\"math inline\">\\(n+1\\)</span>, du type de l’énoncé. Si tous les coefficients <span class=\"math inline\">\\(a_{i,j}\\)</span> de <span class=\"math inline\">\\(\\Delta_{n+1}\\)</span> sont égaux à <span class=\"math inline\">\\(1\\)</span>, puisque <span class=\"math inline\">\\(n+1\\geq2\\)</span>, <span class=\"math inline\">\\(\\Delta_{n+1}\\)</span> a deux colonnes égales et est donc nul. Dans ce cas, <span class=\"math inline\">\\(\\Delta_{n+1}\\)</span> est bien divisible par <span class=\"math inline\">\\(2^n\\)</span>. Sinon, on va changer petit à petit tous les <span class=\"math inline\">\\(-1\\)</span> en <span class=\"math inline\">\\(1\\)</span>. Soit <span class=\"math inline\">\\((i,j)\\)</span> un couple d’indices tel que <span class=\"math inline\">\\(a_{i,j}=-1\\)</span> et <span class=\"math inline\">\\(\\Delta_{n+1}&#39;\\)</span> le déterminant dont tous les coefficients sont égaux à ceux de <span class=\"math inline\">\\(\\Delta_{n+1}\\)</span> sauf le coefficient ligne <span class=\"math inline\">\\(i\\)</span> et colonne <span class=\"math inline\">\\(j\\)</span> qui est égal à <span class=\"math inline\">\\(1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\Delta_{n+1}-\\Delta_{n+1}&#39;=\\mbox{det}(C_1,...,C_j,...,C_n)-\\mbox{det}(C_1,...,C_j&#39;,...,C_n)=\\mbox{det}(C_1,...,C_j-C_j&#39;,...,C_n),\\]</span></p>\n<p>où <span class=\"math inline\">\\(C_j-C_j&#39;=\\left(\n\\begin{array}{c}\n0\\\\\n\\vdots\\\\\n0\\\\\n-2\\\\\n0\\\\\n\\vdots\\\\\n0\n\\end{array}\n\\right)\\)</span> (<span class=\"math inline\">\\(-2\\)</span> en ligne <span class=\"math inline\">\\(i\\)</span>). En développant ce dernier déterminant suivant sa <span class=\"math inline\">\\(j\\)</span>-ème colonne, on obtient :</p>\n<p><span class=\"math display\">\\[\\Delta_{n+1}-\\Delta_{n+1}&#39;=-2\\Delta_n,\\]</span> où <span class=\"math inline\">\\(\\Delta_n\\)</span> est un déterminant de format <span class=\"math inline\">\\(n\\)</span> et du type de l’énoncé. Par hypothèse de récurrence, <span class=\"math inline\">\\(\\Delta_n\\)</span> est divisible par <span class=\"math inline\">\\(2^{n-1}\\)</span> et donc <span class=\"math inline\">\\(\\Delta_{n+1}-\\Delta_{n+1}&#39;\\)</span> est divisible par <span class=\"math inline\">\\(2^n\\)</span>. Ainsi, en changeant les <span class=\"math inline\">\\(-1\\)</span> en <span class=\"math inline\">\\(1\\)</span> les uns après les autres, on obtient</p>\n<p><span class=\"math inline\">\\(\\Delta_{n+1}\\equiv\\left|\n\\begin{array}{ccc}\n1&amp;\\ldots&amp;1\\\\\n\\vdots&amp; &amp;\\vdots\\\\\n1&amp;\\ldots&amp;1\n\\end{array}\\right|\\;(\\text{mod}\\;2^n)\\)</span>.</p>\n<p>Ce dernier déterminant étant nul, le résultat est démontré par récurrence.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A=(a_{i,j})_{1\\leq i,j\\leq n}\\)</span> où, pour tout <span class=\"math inline\">\\(i\\)</span> et tout <span class=\"m ..."
 }

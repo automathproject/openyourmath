@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Topologie",
     "sousChapitre": "Application linéaire continue, norme matricielle",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:54.040Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:47.639Z"
   },
   "contenu": [
     {
-      "id": "37087546-dc5a-4518-a47e-77a3e9c915e7",
+      "id": "595072ea-746c-4aef-9a19-733c1a3e6fb8",
       "type": "description",
       "value": {
         "latex": "On munit $E=C^0([0,1],\\Rr)$ de la norme $1$ définie par $\\forall f\\in E$, $\\|f\\|_1=\\int_{0}^{1}|f(t)|\\;dt$.\n\nOn pose $\\begin{array}[t]{cccl}\nT~:&E&\\rightarrow&\\rule{1.5mm}{0mm}E\\\\\n &f&\\mapsto&\\begin{array}[t]{cccc}Tf~:&[0,1]&\\rightarrow&\\Rr\\\\\n  &x&\\mapsto&\\int_{0}^{x}f(t)\\;dt\n  \\end{array}\n \\end{array}$ et on admet que $T$ est un endomorphisme de $E$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e938cb60-ae6d-4be2-95a2-783246dfd12b",
+      "id": "0307d647-2f64-4b1a-af41-1a584fcc9edf",
       "type": "question",
       "value": {
         "latex": "Démontrer que $T$ est continu sur $(E,\\|\\;\\|_1)$ et déterminer $|||T|||$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f26dc784-f666-4069-a635-bce67b2547af",
+      "id": "3499ee47-203d-4151-a699-2b7b6a380376",
       "type": "reponse",
       "value": {
         "latex": "Soit $f\\in E$.\n\n$$\\begin{align*}\\ensuremath\n\\|Tf\\|_1&=\\int_{0}^{1}|Tf(x)|\\;dx=\\int_{0}^{1}\\left|\\int_{0}^{x}f(t)\\;dt\\right|dx\\\\\n &\\leqslant\\int_{0}^{1}\\left(\\int_{0}^{x}|f(t)|\\;dt\\right)dx\\\\\n &\\leqslant\\int_{0}^{1}\\left(\\int_{0}^{1}|f(t)|\\;dt\\right)dx=\\int_{0}^{1}\\|f\\|_1\\;dx=\\|f\\|_1.\n\\end{align*}$$\n\nCeci montre que $\\forall f\\in E\\setminus\\{0\\}$, $ \\frac{\\|Tf\\|_1}{\\|f\\|_1}\\leqslant1$. Ceci montre que $T$ est continu sur $(E,\\|\\;\\|_1)$ et que $|||T|||\\leqslant1$.\n\nPour $n\\in\\Nn$ et $x\\in[0,1]$, posons $f_n(x)=(1-x)^n$. Pour $n\\in\\Nn$,\n\n\\begin{center}\n$\\|f_n\\|_1=\\int_{0}^{1}(1-x)^n\\;dx=\\left[- \\frac{(1-x)^{n+1}}{n+1}\\right]_0^1= \\frac{1}{n+1}$,\n\\end{center}\n\npuis pour $x\\in[0,1]$, $Tf_n(x)=\\int_{0}^{x}(1-t)^n\\;dt= \\frac{1}{n+1}(1-(1-x)^{n+1})$ et donc\n\n\\begin{center}\n$\\|Tf_n\\|_1=\\int_{0}^{1}|Tf_n(x)|\\;dx= \\frac{1}{n+1}\\int_{0}^{1}(1-(1-x)^{n+1})\\;dx= \\frac{1}{n+1}\\left(1- \\frac{1}{n+2}\\right)= \\frac{1}{n+2}$.\n\\end{center}\n\nOn en déduit que $\\forall n\\in\\Nn$, $|||T|||\\geqslant \\frac{\\|Tf_n\\|_1}{\\|f_n\\|_1}= \\frac{n+1}{n+2}$.\n\nEn résumé, $\\forall n\\in\\Nn$, $ \\frac{n+1}{n+2}\\leqslant|||T|||\\leqslant 1$ et donc $|||T|||=1$.\n\n\\begin{center}\n\\shadowbox{\n$T$ est continu sur $(E,\\|\\;\\|_1)$ et $|||T|||=1$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "03e0c6d9-d0cd-4222-a3da-8b3f1e66603b",
+      "id": "65fc57eb-761d-4e27-b6fe-db7233f2915d",
       "type": "question",
       "value": {
         "latex": "Vérifier que la borne supérieure n'est pas atteinte.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "d0f6c8c5-6165-4216-a3c2-20f57bc20098",
+      "id": "5fc1975d-3af6-4c24-96df-1396ed8d63bd",
       "type": "reponse",
       "value": {
         "latex": "Supposons qu'il existe $f\\in E\\setminus\\{0\\}$ tel que $\\|Tf\\|_1=\\|f\\|_1$. On en déduit que chaque inégalité écrite au début de la question 1) est une égalité et en particulier $\\int_{0}^{1}\\left(\\int_{0}^{x}|f(t)|\\;dt\\right)dx=\\int_{0}^{1}\\left(\\int_{0}^{1}|f(t)|\\;dt\\right)dx$ ou encore $\\int_{0}^{1}\\left(\\int_{0}^{1}|f(t)|\\;dt-\\int_{0}^{x}|f(t)|\\;dt\\right)dx=0$. Par suite, $\\forall x\\in[0,1]$, $\\int_{0}^{1}|f(t)|\\;dt-\\int_{0}^{x}|f(t)|\\;dt=0$ (fonction continue, positive, d'intégrale nulle) puis en dérivant la dernière inégalité, $\\forall x\\in[0,1]$, $|f(x)|=0$ et finalement $f=0$. Ceci est une contradiction et donc $|||T|||$ n'est pas atteinte.",
         "html": "<p>Supposons qu’il existe <span class=\"math inline\">\\(f\\in E\\setminus\\{0\\}\\)</span> tel que <span class=\"math inline\">\\(\\|Tf\\|_1=\\|f\\|_1\\)</span>. On en déduit que chaque inégalité écrite au début de la question 1) est une égalité et en particulier <span class=\"math inline\">\\(\\int_{0}^{1}\\left(\\int_{0}^{x}|f(t)|\\;dt\\right)dx=\\int_{0}^{1}\\left(\\int_{0}^{1}|f(t)|\\;dt\\right)dx\\)</span> ou encore <span class=\"math inline\">\\(\\int_{0}^{1}\\left(\\int_{0}^{1}|f(t)|\\;dt-\\int_{0}^{x}|f(t)|\\;dt\\right)dx=0\\)</span>. Par suite, <span class=\"math inline\">\\(\\forall x\\in[0,1]\\)</span>, <span class=\"math inline\">\\(\\int_{0}^{1}|f(t)|\\;dt-\\int_{0}^{x}|f(t)|\\;dt=0\\)</span> (fonction continue, positive, d’intégrale nulle) puis en dérivant la dernière inégalité, <span class=\"math inline\">\\(\\forall x\\in[0,1]\\)</span>, <span class=\"math inline\">\\(|f(x)|=0\\)</span> et finalement <span class=\"math inline\">\\(f=0\\)</span>. Ceci est une contradiction et donc <span class=\"math inline\">\\(|||T|||\\)</span> n’est pas atteinte.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On munit <span class=\"math inline\">\\(E=C^0([0,1],\\Rr)\\)</span> de la norme <span class=\"math inline\">\\(1\\)</span> définie par <span class=\"math inl ..."
 }

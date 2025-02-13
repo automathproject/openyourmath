@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Application linéaire",
     "sousChapitre": "Image et noyau, théorème du rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:28.294Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:39.955Z"
   },
   "contenu": [
     {
-      "id": "6f0f8701-44e9-4fa9-b751-dfb85fdd1be6",
+      "id": "4b507c9f-bf28-4053-bc8b-2b3fe01b72de",
       "type": "description",
       "value": {
         "latex": "Soit $E=\\Kk_n[X]$. $u$ est l'endomorphisme de $E$ défini par : $\\forall P\\in E,\\; u(P)=P(X+1)-P$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "52d97356-551f-4e2a-b673-0ec228d08e35",
+      "id": "deb6074b-93cb-4ff2-97d5-ad72abfac283",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\text{Ker}u$  et $\\text{Im}u$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "1bcee2cd-de43-4390-86e6-082f24056b3b",
+      "id": "db4bbc1e-f746-4143-a9ef-e1d165619399",
       "type": "reponse",
       "value": {
         "latex": "$u$ est dans L(E) car $u$ est linéaire et si $P$ est un polynôme de degré au plus $n$ alors $u(P)$ est un polynôme de degré au plus $n$.\n\n\\textbullet~Les polynômes constants sont dans $\\text{Ker}u$. Réciproquement , soit $P$un élément de $\\text{Ker}u$ puis $Q = P - P(0)$.\n\nPar hypothèse, $P(0) = P(1) = P(2) = ...$ et donc $0$, $1$, $2$, ... sont des racines de $Q$. Puisque le polynôme $Q$ admet une infinité de racines, $Q$ est nul et donc $P = P(0)$ et $P\\in\\Kk_0[X]$. Ainsi, $\\text{Ker}u =\\Kk_0[X]$. \n\n\\textbullet~Mais alors, d'après le théorème du rang, $\\text{rg}u =(n+1)-1 = n$.\nD'autre part, si $P$ est dans $\\Kk_n[X]$, $P(X+1)-P$ est dans $\\Kk_{n-1}[X]$ (si on pose $P=a_nX^n+\\ldots$, le coefficient de $X^n$ dans $u(P)$ est $a_n-a_n=0$).\n\nEn résumé, $\\text{Im}u\\subset\\Kk_{n-1}[X]$ et $\\text{dim}\\text{Im}u=\\text{dim}\\Kk_{n-1}[X]<+\\infty$ et donc $\\text{Im}u=\\Rr_{n-1}[X]$.\n\n\\begin{center}\n\\shadowbox{\n$\\text{Ker}u=\\Kk_0[X]$ et $\\text{Im}u=\\Kk_{n-1}[X]$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "a94e231a-490a-45b6-b109-320935755f12",
+      "id": "ef2d004b-b324-4b81-8557-cd64dc2df4a3",
       "type": "question",
       "value": {
         "latex": "Déterminer explicitement une base dans laquelle la matrice de $u$ est  $\\left(\n\\begin{array}{ccccc}\n0&1&0&\\ldots&0\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n & & &\\ddots&0\\\\\n\\vdots& & &\\ddots&1\\\\\n0&\\ldots& &\\ldots&0\n\\end{array}\n\\right)$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "ba79110b-58a4-40b8-8f99-f957372d301c",
+      "id": "53102207-f97f-4469-97c8-1bcb1bdd33db",
       "type": "reponse",
       "value": {
         "latex": "On part de $P_0 = 1$ et aussi de $P_1 = X$ qui vérifient bien $u(P_0) = 0$ et $u(P_1) = P_0$.\n\nTrouvons $P_2=aX^2 + bX$ tel que $u(P_2) = P_1$ (il est clair que si $\\text{deg}(P)\\geqslant1$, $\\text{deg}(u(P))=\\text{deg}(P)-1$ et d'autre part, les constantes sont inutiles car $\\text{Ker}u=\\Kk_0[X]$).\n\n\\begin{center}\n$u(P_2) =P_1\\Leftrightarrow a(X+1)^2 +b(X+1) - aX^2 - bX =X\\Leftrightarrow (2a-1)X +a+b =0\\Leftrightarrow a =\\frac{1}{2}\\;\\text{et}\\;b = -a$.\n\\end{center}\n\nOn prend $P_2=\\frac{1}{2}(X^2-X)=\\frac{1}{2}X(X-1)$.\n\nTrouvons $P_3=aX^3 + bX^2+cX$ tel que $u(P_3) = P_2$.\n\n$$\\begin{align*}\\ensuremath\nu(P_3) =P_2&\\Leftrightarrow a(X+1)^3 +b(X+1)^2+c(X+1) - aX^3 - bX^2-cX =\\frac{1}{2}X^2-\\frac{1}{2}X\\\\\n &\\Leftrightarrow \\left(3a-\\frac{1}{2}\\right)X^2+\\left(3a+2b-\\frac{1}{2}\\right)X+a+b+c=0\\\\\n &\\Leftrightarrow a =\\frac{1}{6}\\;\\text{et}\\;b =-\\frac{1}{2}\\;\\text{et}\\;c=\\frac{1}{3}.\n\\end{align*}$$\n\nOn prend $P_3=\\frac{1}{6}(X^3-3X^2+2X)=\\frac{1}{6}X(X-1)(X-2)$.\n\nEssayons, pour $1\\leqslant k\\leqslant n$, $P_k=\\frac{1}{k!}\\prod_{i=0}^{k-1}(X-i)$. Pour $1\\leqslant k\\leqslant n-1$,\n\n$$\\begin{align*}\\ensuremath\nu(P_{k+1})&=\\frac{1}{(k+1)!}\\prod_{i=0}^{k}(X+1-i)-\\frac{1}{(k+1)!}\\prod_{i=0}^{k}(X-i)=\\frac{1}{(k+1)!}((X+1)-(X-k))\\prod_{i=0}^{k-1}(X-i)\\\\\n &=\\frac{1}{k!}\\prod_{i=0}^{k-1}(X-i)=P_k.\n\\end{align*}$$\n\nEnfin, les $P_k$, $0\\leqslant k\\leqslant n$, constituent une famille de $n+1=\\text{dim}\\Kk_n[X]$ polynômes de degrés échelonnés de $\\Kk_n[X]$ et donc la famille $(P_k)_{0\\leqslant k\\leqslant n}$ est une base de $\\Kk_n[X]$. Dans cette base, la matrice de $u$ a la forme désirée.",
         "html": "<p>On part de <span class=\"math inline\">\\(P_0 = 1\\)</span> et aussi de <span class=\"math inline\">\\(P_1 = X\\)</span> qui vérifient bien <span class=\"math inline\">\\(u(P_0) = 0\\)</span> et <span class=\"math inline\">\\(u(P_1) = P_0\\)</span>.</p>\n<p>Trouvons <span class=\"math inline\">\\(P_2=aX^2 + bX\\)</span> tel que <span class=\"math inline\">\\(u(P_2) = P_1\\)</span> (il est clair que si <span class=\"math inline\">\\(\\text{deg}(P)\\geqslant1\\)</span>, <span class=\"math inline\">\\(\\text{deg}(u(P))=\\text{deg}(P)-1\\)</span> et d’autre part, les constantes sont inutiles car <span class=\"math inline\">\\(\\text{Ker}u=\\Kk_0[X]\\)</span>).</p>\n<p><span class=\"math inline\">\\(u(P_2) =P_1\\Leftrightarrow a(X+1)^2 +b(X+1) - aX^2 - bX =X\\Leftrightarrow (2a-1)X +a+b =0\\Leftrightarrow a =\\frac{1}{2}\\;\\text{et}\\;b = -a\\)</span>.</p>\n<p>On prend <span class=\"math inline\">\\(P_2=\\frac{1}{2}(X^2-X)=\\frac{1}{2}X(X-1)\\)</span>.</p>\n<p>Trouvons <span class=\"math inline\">\\(P_3=aX^3 + bX^2+cX\\)</span> tel que <span class=\"math inline\">\\(u(P_3) = P_2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nu(P_3) =P_2&amp;\\Leftrightarrow a(X+1)^3 +b(X+1)^2+c(X+1) - aX^3 - bX^2-cX =\\frac{1}{2}X^2-\\frac{1}{2}X\\\\\n &amp;\\Leftrightarrow \\left(3a-\\frac{1}{2}\\right)X^2+\\left(3a+2b-\\frac{1}{2}\\right)X+a+b+c=0\\\\\n &amp;\\Leftrightarrow a =\\frac{1}{6}\\;\\text{et}\\;b =-\\frac{1}{2}\\;\\text{et}\\;c=\\frac{1}{3}.\n\\end{align*}\\]</span></p>\n<p>On prend <span class=\"math inline\">\\(P_3=\\frac{1}{6}(X^3-3X^2+2X)=\\frac{1}{6}X(X-1)(X-2)\\)</span>.</p>\n<p>Essayons, pour <span class=\"math inline\">\\(1\\leqslant k\\leqslant n\\)</span>, <span class=\"math inline\">\\(P_k=\\frac{1}{k!}\\prod_{i=0}^{k-1}(X-i)\\)</span>. Pour <span class=\"math inline\">\\(1\\leqslant k\\leqslant n-1\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nu(P_{k+1})&amp;=\\frac{1}{(k+1)!}\\prod_{i=0}^{k}(X+1-i)-\\frac{1}{(k+1)!}\\prod_{i=0}^{k}(X-i)=\\frac{1}{(k+1)!}((X+1)-(X-k))\\prod_{i=0}^{k-1}(X-i)\\\\\n &amp;=\\frac{1}{k!}\\prod_{i=0}^{k-1}(X-i)=P_k.\n\\end{align*}\\]</span></p>\n<p>Enfin, les <span class=\"math inline\">\\(P_k\\)</span>, <span class=\"math inline\">\\(0\\leqslant k\\leqslant n\\)</span>, constituent une famille de <span class=\"math inline\">\\(n+1=\\text{dim}\\Kk_n[X]\\)</span> polynômes de degrés échelonnés de <span class=\"math inline\">\\(\\Kk_n[X]\\)</span> et donc la famille <span class=\"math inline\">\\((P_k)_{0\\leqslant k\\leqslant n}\\)</span> est une base de <span class=\"math inline\">\\(\\Kk_n[X]\\)</span>. Dans cette base, la matrice de <span class=\"math inline\">\\(u\\)</span> a la forme désirée.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E=\\Kk_n[X]\\)</span>. <span class=\"math inline\">\\(u\\)</span> est l’endomorphisme de <span class=\"math inline\">\\(E\\) ..."
 }

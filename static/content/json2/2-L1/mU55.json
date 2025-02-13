@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Primitives diverses",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:25.456Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:13.727Z"
   },
   "contenu": [
     {
-      "id": "8b7a0c26-bed9-41e2-9234-0f0877644c9c",
+      "id": "a4b94983-3645-4319-9f32-2b7a06c1936d",
       "type": "description",
       "value": {
         "latex": "Calculer les primitives suivantes, en précisant si nécessaire les\nintervalles de validité des calculs :",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "ed6fe3af-2d2c-464e-883f-ec5c5102d087",
+      "id": "f661a572-b55f-4192-9e13-860d6b1f3939",
       "type": "question",
       "value": {
         "latex": "$\\int \\frac{x+2}{x^2-3x-4}\\,dx$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "be6e4d0f-8bf2-4055-bee1-f34a106af646",
+      "id": "c6050cc7-d524-4705-9c83-4fe13a58e200",
       "type": "reponse",
       "value": {
         "latex": "$\\int \\frac{x+2}{x^2-3x-4}\\,dx$\n\nPour calculer cette intégrale on décompose la fraction $\\frac{x+2}{x^2-3x-4}$ en éléments simples, \nle dénominateur n'étant pas irréductible.\nOn sait que cette fraction rationnelle se décompose avec des dénominateurs de degré $1$ et des constantes aux numérateurs :\n$$\\frac{x+2}{x^2-3x-4} = \\frac{x+2}{(x+1)(x-4)} = \\frac{\\alpha}{x+1} + \\frac{\\beta}{x-4}$$\nIl ne reste plus qu'à calculer $\\alpha$ et $\\beta$ à l'aide de votre méthode favorite :\n$$\\frac{x+2}{x^2-3x-4}  = \\frac{-\\frac15}{x+1} + \\frac{\\frac65}{x-4}$$\n\nChacune de ces fractions est du type $\\frac 1u$ qui s'intègre en $\\ln |u|$, d'où :\n$$\\int \\frac{x+2}{x^2-3x-4}\\,dx = -\\frac15\\int \\frac{1}{x+1}\\,dx + \\frac65\\int \\frac{1}{x-4}\\,dx\n= -\\frac15 \\ln |x+1| + \\frac65 \\ln |x-4| + c$$\n\nCette primitive est définie sur $\\Rr\\setminus\\left\\{-1,4\\right\\} $",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "6a74a2b7-6da8-4c4b-bdaa-6579216c6839",
+      "id": "de1f2e61-d3f9-4e86-9249-fca65ab6755b",
       "type": "question",
       "value": {
         "latex": "$\\int \\frac{x-1}{x^2+x+1}\\,dx$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "97958008-20e1-4900-a8f6-515acd5af56f",
+      "id": "4d5fc655-fa00-4591-8f9e-cf8e7f710841",
       "type": "reponse",
       "value": {
         "latex": "$\\int \\frac{x-1}{x^2+x+1}\\,dx$\n\nLe dénominateur $u=x^2+x+1$ est irréductible, la fraction est donc déjà décomposée en éléments simples.\nOn fait apparaître artificiellement une fraction du type $\\frac {u'}{u}$\nqui s'intégrera à l'aide du logarithme :\n\n$$\\frac{x-1}{x^2+x+1} =  \\frac 12 \\frac{2x+1}{x^2+x+1} - \\frac 32 \\frac{1}{x^2+x+1}$$\nChacune de ces fractions s’intègre, la première est du type $\\frac {u'}{u}$ dont une primitive sera $\\ln |u|$, la deuxième sera \ndu type $\\frac{1}{1+v^2}$ dont une primitive est $\\arctan v$.\n\nEn détails cela donne :\n$$\\begin{align*}\n\\int \\frac{x-1}{x^2+x+1}\\,dx \n  &= \\int  \\frac 12 \\frac{2x+1}{x^2+x+1} \\, dx  - \\frac 32\\int \\frac{1}{x^2+x+1} \\, dx \\\\\n  &= \\frac 12 \\big[ \\ln |x^2+x+1| \\big] -  \\frac 32\\int \\frac{1}{\\frac 34} \\frac{1}{1+ \\left( \\frac{2}{\\sqrt3}\\left(x+\\frac 12\\right) \\right)^2} \\, dx \\\\\n  &= \\frac 12 \\big[ \\ln|x^2+x+1| \\big] - 2 \\int \\frac{1}{1+v^2} \\, \\frac{\\sqrt3}{2} dv \\quad \\text{en posant } v=\\frac{2}{\\sqrt3}\\left(x+\\frac 12\\right) \\\\\n  &= \\frac 12 \\big[ \\ln|x^2+x+1| \\big] - \\sqrt3 \\big[\\arctan v\\big] \\\\\n  &= \\frac 12 \\ln|x^2+x+1| - \\sqrt3 \\arctan \\left( \\frac{2}{\\sqrt3}\\left(x+\\frac 12\\right) \\right) + c \\\\\n\\end{align*}$$\n\nCette primitive est définie sur $\\Rr$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b0374f0d-2c7c-4ffe-8058-8dd573d4c2e0",
+      "id": "4063a17a-d230-442d-ad14-24180cc523fc",
       "type": "question",
       "value": {
         "latex": "$\\int \\sin ^8x\\cos ^3x \\, dx$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "39328a6b-063d-421e-8ab9-8ce8723a41e0",
+      "id": "78792e5d-e4ff-4b71-930e-0d35fb908830",
       "type": "reponse",
       "value": {
         "latex": "$\\int \\sin ^8x\\cos ^3x \\, dx$\n\nLorsque l'on a une fonction qui s'exprime comme un polynôme (ou une fraction rationnelle),\non peut tester un des changements de variable $u=\\cos x$, $u= \\sin x$ ou $u= \\tan x$.\nSoit vous essayez les trois, soit vous appliquez les règles de Bioche. Ici,\nsi l'on change $x$ en $\\pi-x$ alors $\\sin ^8x\\cos ^3x \\, dx$\ndevient $\\sin ^8(\\pi-x)\\cos ^3 (\\pi-x) \\, d(\\pi -x)= \\sin^8 x (-\\cos^3 x) (-dx) = \\sin ^8x\\cos ^3x \\, dx$.\nDonc le changement de variable adéquat est $u=\\sin x$.\n\n\nPosons $u=\\sin x$, $du = \\cos x \\, dx$.\n$$\\begin{align*}\n\\int \\sin ^8x\\cos ^3 x \\, dx  \n  &= \\int \\sin^8 x \\cos^2 x (\\cos x \\, dx) = \\int \\sin^8 x (1-\\sin^2 x) (\\cos x \\, dx) \\\\ \n  &= \\int u^8 (1-u^2) du  = \\int u^8 \\, du - \\int u^{10} \\, du \\\\\n  &= \\big[\\frac19 u^9 \\big] - \\big[ \\frac1{11} u^{11}\\big] = \\frac19\\sin^9 x-\\frac1{11}\\sin^{11} x + c \\\\\n\\end{align*}$$\n\n\nCette primitive est définie sur $\\Rr$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "7aad7989-fb34-4ad8-860c-5bd4e07dae16",
+      "id": "79efaadc-dc03-4eb4-abba-6f94028f1ffc",
       "type": "question",
       "value": {
         "latex": "$\\int \\frac 1{\\sin x} \\, dx$",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "8c9b56a0-37ba-4618-a6fb-d1635a8e6abe",
+      "id": "b3a07e4c-c4ac-45b2-bcbd-a288a7585376",
       "type": "reponse",
       "value": {
         "latex": "$\\int \\frac 1{\\sin x} \\, dx$\n\nComme $\\frac 1{\\sin (-x)} \\, (-dx) = \\frac 1{\\sin x} \\, dx$ la règle de Bioche nous indique le changement de variable \n$u=\\cos x$. Donc $du = -\\sin x \\, dx$.\n\nDonc\n$$\\begin{align*}\n\\int \\frac 1{\\sin x} \\, dx \n  &= \\int \\frac{-1}{\\sin^2 x} (  -\\sin x \\, dx) \\\\\n  &= \\int \\frac{-1}{1-\\cos^2 x} (  -\\sin x \\, dx) \\\\\n  &= -\\int \\frac{1}{1-u^2} \\, du \\\\\n\\end{align*}$$\n\nOn décompose cette fraction en éléments simples : $\\frac{1}{1-u^2}= \\frac 12 \\frac{1}{1+u} + \\frac 12 \\frac{1}{1-u}$.\nDonc\n$$\\begin{align*}\n\\int \\frac 1{\\sin x} \\, dx \n  &= - \\frac 12 \\int \\frac{1}{1+u}\\, du - \\frac 12 \\int \\frac{1}{1-u}\\, du \\\\\n  &= - \\frac 12 \\big[ \\ln |1+u| \\big]- \\frac 12 \\big[ \\ln |1-u| \\big] \\\\\n  &= - \\frac 12 \\ln |1+\\cos x| - \\frac 12 \\ln |1-\\cos x| + c  \\\\\n\\end{align*}$$\n\nCette primitive est définie sur tout intervalle du type $\\left] k\\pi ,\\left(\nk+1\\right) \\pi \\right[ $, $k \\in \\Zz$.\nElle peut se réécrire sous différentes formes :\n$$\\int \\frac 1{\\sin x} \\, dx = \\frac 12 \\ln \\frac{1-\\cos x}{1+\\cos x} +c= \\ln \\left| \\tan \\frac x2\\right| +c$$\n\nUn autre changement de variable possible aurait été $t=\\tan \\frac x2$.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "501a0668-f371-462e-85a5-04f56b51cd74",
+      "id": "c30d83f1-0e0f-4596-9dcc-63b7b0a0c28f",
       "type": "question",
       "value": {
         "latex": "$\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx$",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "6cb1b718-2861-4e3d-8ab2-97aa30a1511c",
+      "id": "b7d3de91-e6a2-4de1-b53b-4199f1e244a2",
       "type": "reponse",
       "value": {
         "latex": "$\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx$\n\nLa règle de Bioche nous indique le changement de variable $u =\\sin x$, $du = \\cos x \\, dx$.\n\n$$\\begin{align*}\n\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx  \n  &= \\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\frac{1}{\\cos x}(\\cos x \\,dx) \\\\\n  &= \\int \\frac{3-\\sin x}{2\\cos^2 x+3\\sin x}(\\cos x \\,dx) \\\\\n  &= \\int \\frac{3-\\sin x}{2-2\\sin^2 x+3\\sin x}(\\cos x \\,dx) \\\\\n  &= \\int \\frac{3-u}{2-2u^2 +3u} du \\\\ \n\\end{align*}$$\n\nOccupons nous de la fraction que l'on réduit en éléments simples :\n$$\\frac{3-u}{2-2u^2 +3u} = \\frac{u-3}{(u-2)(2u+1)} = \\frac{\\alpha}{u-2}+\\frac{\\beta}{2u+1}$$\nOn trouve $\\alpha = -\\frac 15$ et $\\beta = \\frac 75$.\n\nAinsi \n$$\\begin{align*}\n\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx  \n  &=  \\int \\frac{\\alpha \\, du}{u-2}+\\int\\frac{\\beta\\, du}{2u+1}  \\\\ \n  &= \\alpha \\ln |u-2| + \\beta \\ln |2u+1| + c \\\\\n  &= -\\frac 15\\ln |2-\\sin x| + \\frac 75 \\ln |1+2\\sin x| + c \\\\\n\\end{align*}$$\n\nCette primitive est définie pour les $x$ vérifiant $1+2\\sin x >0$ donc sur tout intervalle du type $\\left] -\\frac\\pi6 + 2k\\pi , \\frac{7\\pi}{6} + 2k\\pi\\right[ $, $k \\in \\Zz$.",
@@ -104,12 +104,13 @@
       }
     },
     {
-      "id": "8fc7cbcd-b179-43db-9e18-7e24524aaa70",
+      "id": "04cdb458-99e1-4f1a-b19e-1881aa93c46b",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item $\\int \\frac{x+2}{x^2-3x-4}\\,dx=-\\frac 15\\ln \\left| x+1\\right| +\\frac 65\\ln\n\\left| x-4\\right| +c$ (décomposition en éléments simples)\n\n  \\item $\\int \\frac{x-1}{x^2+x+1}\\,dx= \\frac 12 \\ln|x^2+x+1| - \n\\sqrt3 \\arctan \\left( \\frac{2}{\\sqrt3}\\left(x+\\frac 12\\right) \\right) + c$\n\n  \\item $\\int \\sin ^8x\\cos ^3x \\, dx=\\frac 19\\sin ^9x-\\frac 1{11}\\sin ^{11}x+c$\n\n  \\item $\\int \\frac 1{\\sin x} \\, dx=\\frac 12\\ln \\left| \\frac{1-\\cos x}{1+\\cos x}\n\\right| +c=\\ln \\left| \\tan \\frac x2\\right| +c$ (changement de variable $u=\\cos x$ ou $u=\\tan \\frac\nx2$)\n\n  \\item $\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx=-\\frac 15\\ln |2-\\sin x| + \\frac 75 \\ln |1+2\\sin x| + c$  \n(changement de variable $u=\\sin x$)\n\\end{enumerate}",
         "html": "<ol>\n<li><p><span class=\"math inline\">\\(\\int \\frac{x+2}{x^2-3x-4}\\,dx=-\\frac 15\\ln \\left| x+1\\right| +\\frac 65\\ln\n\\left| x-4\\right| +c\\)</span> (décomposition en éléments simples)</p></li>\n<li><p><span class=\"math inline\">\\(\\int \\frac{x-1}{x^2+x+1}\\,dx= \\frac 12 \\ln|x^2+x+1| - \n\\sqrt3 \\arctan \\left( \\frac{2}{\\sqrt3}\\left(x+\\frac 12\\right) \\right) + c\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int \\sin ^8x\\cos ^3x \\, dx=\\frac 19\\sin ^9x-\\frac 1{11}\\sin ^{11}x+c\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int \\frac 1{\\sin x} \\, dx=\\frac 12\\ln \\left| \\frac{1-\\cos x}{1+\\cos x}\n\\right| +c=\\ln \\left| \\tan \\frac x2\\right| +c\\)</span> (changement de variable <span class=\"math inline\">\\(u=\\cos x\\)</span> ou <span class=\"math inline\">\\(u=\\tan \\frac\nx2\\)</span>)</p></li>\n<li><p><span class=\"math inline\">\\(\\int \\frac{3-\\sin x}{2\\cos x+3\\tan x}\\,dx=-\\frac 15\\ln |2-\\sin x| + \\frac 75 \\ln |1+2\\sin x| + c\\)</span> (changement de variable <span class=\"math inline\">\\(u=\\sin x\\)</span>)</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculer les primitives suivantes, en précisant si nécessaire les intervalles de validité des calculs :</p>\n"
 }

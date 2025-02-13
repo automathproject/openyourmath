@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:24.256Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:12.568Z"
   },
   "contenu": [
     {
-      "id": "8da49f5f-cdc1-42c8-85a3-58e72ff5ff7a",
+      "id": "12d543b3-a73a-433f-82fe-cef77a106350",
       "type": "description",
       "value": {
         "latex": "Soient $(u_n)_{n\\in\\Nn}$ une suite réelle et $(v_n)_{n\\in\\Nn}$ la suite définie par~:~$\\forall n\\in\\Nn,\\;v_n=\\frac{u_0+u_1+...+u_n}{n+1}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f30b9f77-1d3b-4864-bb67-52a779067a10",
+      "id": "512bff40-1fb9-4fb8-955b-150fdbdd0a64",
       "type": "question",
       "value": {
         "latex": "Montrer que si la suite $(u_n)_{n\\in\\Nn}$ vers un réel $\\ell$, la suite $(v_n)_{n\\in\\Nn}$ converge et a pour limite $\\ell$. Réciproque~?",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "eef9dcd6-828e-4265-8de0-403857238269",
+      "id": "719a984a-193c-4073-b378-c4d38bb26246",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\varepsilon>0$. Il existe un rang $n_0$ tel que, si $n\\geq n_0$ alors $|u_n-\\ell|<\\frac{\\varepsilon}{2}$. Soit $n$ un entier naturel strictement supérieur à $n_0$.\n\n$$\\begin{align*}\n|v_n-\\ell|&=\\left|\\frac{1}{n+1}\\sum_{k=0}^{n}u_k-\\ell\\right|=\\left|\\frac{1}{n+1}\\sum_{k=0}^{n}(u_k-\\ell)\\right|\\\\\n &\\leq\\frac{1}{n+1}\\sum_{k=0}^{n}|u_k-\\ell|=\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|+\\frac{1}{n+1}\\sum_{k=n_0+1}^{n}|u_k-\\ell|\\\\\n &\\leq\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|+\\frac{1}{n+1}\\sum_{k=n_0+1}^{n}\\frac{\\varepsilon}{2}\\leq\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|+\\frac{1}{n+1}\\sum_{k=0}^{n}\\frac{\\varepsilon}{2}\\\\\n &=\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|+\\frac{\\varepsilon}{2}\n\\end{align*}$$\nMaintenant, $\\sum_{k=0}^{n_0}|u_k-\\ell|$ est une expression constante quand $n$ varie et donc, $\\lim_{n\\rightarrow +\\infty}\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|=0$. Par suite, il existe un entier $n_1\\geq n_0$ tel que pour $n\\geq n_1$, $\\frac{1}{n+1}\\sum_{k=0}^{n_0}|u_k-\\ell|<\\frac{\\varepsilon}{2}$.\nPour $n\\geq n_1$, on a alors $|v_n-\\ell|<\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon$.\nOn a montré que $\\forall\\varepsilon>0,\\;\\exists n_1\\in\\Nn/\\;(\\forall n\\in\\Nn)(n\\geq n_1\\Rightarrow|v_n-\\ell|<\\varepsilon)$. La suite $(v_n)$ est donc convergente et $\\lim_{n\\rightarrow +\\infty}v_n=\\ell$.\n\n\\begin{center}\n\\shadowbox{\nSi la suite $u$ converge vers $\\ell$ alors la suite $v$ converge vers $\\ell$.\n}\n\\end{center}\nLa réciproque est fausse. Pour $n$ dans $\\Nn$, posons $u_n=(-1)^n$. La suite $(u_n)$ est divergente. D'autre part, pour $n$ dans $\\Nn$, $\\sum_{k=0}^{n}(-1)^k$ vaut $0$ ou $1$ suivant la parité de $n$ et donc, dans tous les cas, $|v_n|\\leq\\frac{1}{n+1}$. Par suite, la suite $(v_n)$ converge et $\\lim_{n\\rightarrow +\\infty}v_n=0$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "e0796686-e196-475c-a71f-31a463c28615",
+      "id": "dfc0bfee-f285-400b-84dd-46148fbe3082",
       "type": "question",
       "value": {
         "latex": "Montrer que si la suite $(u_n)_{n\\in\\Nn}$ est bornée, la suite $(v_n)_{n\\in\\Nn}$ est bornée. Réciproque~?",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "c4e8f033-2904-45a8-9df7-40e8685c927b",
+      "id": "389b65c2-85a2-4ceb-8f10-86bc1b6ee558",
       "type": "reponse",
       "value": {
         "latex": "Si $u$ est bornée, il existe un réel $M$ tel que, pour tout naturel $n$, $|u_n|\\leq M$.\nPour $n$ entier naturel donné, on a alors\n\n$$|v_n|\\leq\\frac{1}{n+1}\\sum_{k=0}^{n}|u_k|\\leq\\frac{1}{n+1}\\sum_{k=0}^{n}M=\\frac{1}{n+1}(n+1)M=M.$$\nLa suite $v$ est donc bornée.\n\n\\begin{center}\n\\shadowbox{\nSi la suite $u$ est bornée alors la suite $v$ est bornée.\n}\n\\end{center}\nLa réciproque est fausse. Soit $u$ la suite définie par~:~$\\forall n\\in\\Nn,\\;u_n=(-1)^nE\\left(\\frac{n}{2}\\right)=\n\\left\\{\n\\begin{array}{l}\np\\;\\mbox{si}\\;n=2p,\\;p\\in\\Nn\\\\\n-p\\;\\mbox{si}\\;n=2p+1,\\;p\\in\\Nn\n\\end{array}\n\\right.$.\n$u$ n'est pas bornée car la suite extraite $(u_{2p})$ tend vers $+\\infty$ quand $p$ tend vers $+\\infty$. \nMais, si $n$ est impair, $v_n=0$, et si $n$ est pair, $v_n=\\frac{1}{n+1}\\times u_n=\\frac{n}{2(n+1)}$, et dans tous les cas $|v_n|\\leq\\frac{1}{n+1}\\frac{n}{2}\\leq\\frac{1}{n+1}\\frac{n+1}{2}=\\frac{1}{2}$ et la suite $v$ est bornée.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "c337efea-7f7e-49aa-a607-88a957b726d6",
+      "id": "a4f0f5eb-122f-4b96-a783-119546053532",
       "type": "question",
       "value": {
         "latex": "Montrer que si la suite $(u_n)_{n\\in\\Nn}$ est croissante alors la suite $(v_n)_{n\\in\\Nn}$ l'est aussi.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "d880215c-4ab5-46fb-bb48-c979ceb06e4a",
+      "id": "d5768bae-75b1-4524-b230-4d1dfc4554b1",
       "type": "reponse",
       "value": {
         "latex": "Si $u$ est croissante, pour $n$ entier naturel donné on a~:\n\n$$\\begin{align*}\nv_{n+1}-v_n&=\\frac{1}{n+2}\\sum_{k=0}^{n+1}u_k-\\frac{1}{n+1}\\sum_{k=0}^{n}u_k=\\frac{1}{(n+1)(n+2)}\\left((n+1)\\sum_{k=0}^{n+1}u_k-(n+2)\\sum_{k=0}^{n}u_k\\right)\\\\\n &=\\frac{1}{(n+1)(n+2)}\\left((n+1)u_{n+1}-\\sum_{k=0}^{n}u_k\\right)=\\frac{1}{(n+1)(n+2)}\\sum_{k=0}^{n}(u_{n+1}-u_k)\\geq0.\n\\end{align*}$$\nLa suite $v$ est donc croissante.\n\n\\begin{center}\n\\shadowbox{\nSi la suite $u$ est croissante alors la suite $v$ est croissante.\n}\n\\end{center}",
         "html": "<p>Si <span class=\"math inline\">\\(u\\)</span> est croissante, pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné on a :</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nv_{n+1}-v_n&amp;=\\frac{1}{n+2}\\sum_{k=0}^{n+1}u_k-\\frac{1}{n+1}\\sum_{k=0}^{n}u_k=\\frac{1}{(n+1)(n+2)}\\left((n+1)\\sum_{k=0}^{n+1}u_k-(n+2)\\sum_{k=0}^{n}u_k\\right)\\\\\n &amp;=\\frac{1}{(n+1)(n+2)}\\left((n+1)u_{n+1}-\\sum_{k=0}^{n}u_k\\right)=\\frac{1}{(n+1)(n+2)}\\sum_{k=0}^{n}(u_{n+1}-u_k)\\geq0.\n\\end{align*}\\]</span> La suite <span class=\"math inline\">\\(v\\)</span> est donc croissante.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\((u_n)_{n\\in\\Nn}\\)</span> une suite réelle et <span class=\"math inline\">\\((v_n)_{n\\in\\Nn}\\)</span> la suite défin ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Nombres complexes",
     "sousChapitre": "Trigonométrie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:01.726Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:11.104Z"
   },
   "contenu": [
     {
-      "id": "7e89a374-588e-45bc-8854-1e8a0ba7b6d5",
+      "id": "3dbe58f2-7b57-430d-9797-57b037c07a4c",
       "type": "description",
       "value": {
         "latex": "Calculer les sommes suivantes~:",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b0e50fe6-4bfe-4806-95e9-90980decc118",
+      "id": "1cbe3e7f-5cae-441a-92a9-30f1b83e2c96",
       "type": "question",
       "value": {
         "latex": "$\\sum_{k=0}^{n}\\cos(kx)$ et $\\sum_{k=0}^{n}\\sin(kx)$, ($x\\in\\Rr$ et $n\\in\\Nn$ donnés).",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "ba03e392-656b-48f3-92ad-3faf1c91b2bc",
+      "id": "e831c333-bab6-43cf-8e6e-05fbda412da7",
       "type": "question",
       "value": {
         "latex": "$\\sum_{k=0}^{n}\\cos^2(kx)$ et $\\sum_{k=0}^{n}\\sin^2(kx)$, ($x\\in\\Rr$ et $n\\in\\Nn$ donnés).",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "60f11d55-84fd-4b6b-a57e-fedd909fe221",
+      "id": "f4ee317c-7a71-40b2-a49a-e48afbb1c4bf",
       "type": "question",
       "value": {
         "latex": "$\\sum_{k=0}^{n}\\dbinom{n}{k}\\cos(kx)$ et $\\sum_{k=0}^{n}\\dbinom{n}{k}\\sin(kx)$, ($x\\in\\Rr$ et $n\\in\\Nn$\ndonnés).",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "732e1026-e05e-4771-91f2-b9e01c03b68f",
+      "id": "38309d05-78a7-4fd9-a115-0a85dc248a45",
       "type": "reponse",
       "value": {
         "latex": "Soient $n\\in\\Nn$ et $x\\in\\Rr$. Posons $S_n=\\sum_{k=0}^{n}\\cos(kx)$ et $S_n'=\\sum_{k=0}^{n}\\sin(kx)$.\n\\begin{itemize}\n[\\textbf{1ère solution.}]\n\n$$S_n+iS_n'=\\sum_{k=0}^{n}(\\cos(kx)+i\\sin(kx))=\\sum_{k=0}^{n}e^{ikx}=\\sum_{k=0}^{n}(e^{ix})^k.$$\nMaintenant, $e^{ix}=1\\Leftrightarrow x\\in2\\pi\\Zz$. Donc,\n\n\\begin{itemize}\n[\\textbf{1er cas.}] Si $x\\in2\\pi\\Zz$, on a immédiatement $S_n=n+1$ et $S_n'=0$.\n[\\textbf{2ème cas.}] Si x$\\notin2\\pi\\Zz$,\n\n$$\\begin{align*}\nS_n+iS_n'&=\\frac{1-e^{i(n+1)x}}{1-e^{ix}}=\\frac{e^{i(n+1)x/2}}{e^{ix/2}}\\frac{e^{-i(n+1)x/2}-e^{i(n+1)x/2}}\n{e^{-i(n+1)x/2}+e^{i(n+1)x/2}}=e^{inx/2}\\frac{-2i\\sin\\frac{(n+1)x}{2}}{-2i\\sin\\frac{x}{2}}\\\\\n &=e^{inx/2}\\frac{\\sin\\frac{(n+1)x}{2}}{\\sin\\frac{x}{2}}\n\\end{align*}$$\nPar identification des parties réelles et imaginaires, on obtient\n\n\\begin{center}\n\\shadowbox{\n$\n\\sum_{k=0}^{n}\\cos(kx)=\n\\left\\{\n\\begin{array}{l}\n\\frac{\\cos\\frac{nx}{2}\\sin\\frac{(n+1)x}{2}}{\\sin\\frac{x}{2}}\\;\\mbox{si}\\;x\\notin2\\pi\\Zz\\\\\nn+1\\;\\mbox{si}\\;x\\in2\\pi\\Zz\n\\end{array}\n\\right.\n\\;\\mbox{et}\\;\\sum_{k=0}^{n}\\sin(kx)=\n\\left\\{\n\\begin{array}{l}\n\\frac{\\sin\\frac{nx}{2}\\sin\\frac{(n+1)x}{2}}{\\sin\\frac{x}{2}}\\;\\mbox{si}\\;x\\notin2\\pi\\Zz\\\\\n0\\;\\mbox{si}\\;x\\in2\\pi\\Zz\n\\end{array}\n\\right.\n$\n}\n\\end{center}\n\n\\end{itemize}\n[\\textbf{2ème solution.}]\n$$\\begin{align*}\n2\\sin\\frac{x}{2}\\sum_{k=0}^{n}\\cos(kx)&=\\sum_{k=0}^{n}2\\sin\\frac{x}{2}\\cos(kx)=\\sum_{k=0}^{n}(\\sin(k+\\frac{1}{2})x-\\sin(\nk-\\frac{1}{2})x)\\\\\n &=\\left(\\sin\\frac{x}{2}-\\sin\\frac{-x}{2}\\right)+\\left(\\sin\\frac{3x}{2}-\\sin\\frac{x}{2}\\right)+\\ldots+\\left(\\sin\\frac{(2n-1)x}{2}-\\sin\\frac{(2n-3)x}{2}\\right)\\\\\n  &+\\left(\\sin\\frac{(2n+1)x}{2}-\\sin\\frac{(2n-1)x}{2}\\right)\\\\\n &=\\sin\\frac{(2n+1)x}{2}+\\sin\\frac{x}{2}=2\\sin\\frac{(n+1)x}{2}\\cos\\frac{nx}{2}\n\\end{align*}$$\net donc, si $x\\notin2\\pi\\Zz$,...\n\n\\end{itemize}\nSoient $n\\in\\Nn$ et $x\\in\\Rr$. Posons $S_n=\\sum_{k=0}^{n}\\cos^2(kx)$ et $S_n'=\\sum_{k=0}^{n}\\sin^2(kx)$. On\na~:\n\n$$S_n+S_n'=\\sum_{k=0}^{n}(\\cos^2(kx)+\\sin^2(kx))=\\sum_{k=0}^{n}1=n+1,$$\n\net\n\n$$S_n-S_n'=\\sum_{k=0}^{n}(\\cos^2(kx)-\\sin^2(kx))=\\sum_{k=0}^{n}\\cos(2kx).$$\n\nD'après 1), si $x\\in\\pi\\Zz$, on trouve immédiatement,\n\n$$\\sum_{k=0}^{n}\\cos^2(kx)=n+1\\;\\mbox{et}\\;\\sum_{k=0}^{n}\\sin^2(kx)=0,$$\n\net si $x\\notin\\pi\\Zz$,\n\n$$S_n+S_n'=n+1\\;\\mbox{et}\\;S_n-S_n'=\\frac{\\cos(nx)\\sin(n+1)x}{\\sin x},$$\n\nde sorte que\n\n$$S_n=\\frac{1}{2}\\left(n+1+\\frac{\\cos(nx)\\sin(n+1)x}{\\sin\nx}\\right)\\;\\mbox{et}\\;S_n'=\\frac{1}{2}\\left(n+1-\\frac{\\cos(nx)\\sin(n+1)x}{\\sin x}\\right).$$\nSoient $n\\in\\Nn$ et $x\\in\\Rr$.\n\n$$\\begin{align*}\n\\left(\\sum_{k=0}^{n}C_n^k\\cos(kx)\\right)+i\\left(\\sum_{k=0}^{n}C_n^k\\sin(kx)\\right)&=\\sum_{k=0}^{n}C_n^ke^{ikx}\n=\\sum_{k=0}^{n}C_n^k(e^{ix})^k1^{n-k}\\\\\n &=(1+e^{ix})^n=(e^{ix/2}+e^{-ix/2})^ne^{inx/2}=2^n\\cos^n\\left(\\frac{x}{2}\\right)\\left(\\cos\\frac{nx}{2}+i\\sin\\frac{nx}{2}\\right).\n\\end{align*}$$\nPar identification des parties réelles et imaginaires, on obtient alors\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{k=0}^{n}C_n^k\\cos(kx)=2^n\\cos^n\\left(\\frac{x}{2}\\right)\\cos\\left(\\frac{nx}{2}\\right)\\;\\mbox{et}\\;\\sum_{k=0}^{n}C_n^k\\sin(kx)=\n2^n\\cos^n\\left(\\frac{x}{2}\\right)\\sin\\left(\\frac{nx}{2}\\right).$\n}\n\\end{center}",
         "html": "<p>Soient <span class=\"math inline\">\\(n\\in\\Nn\\)</span> et <span class=\"math inline\">\\(x\\in\\Rr\\)</span>. Posons <span class=\"math inline\">\\(S_n=\\sum_{k=0}^{n}\\cos(kx)\\)</span> et <span class=\"math inline\">\\(S_n&#39;=\\sum_{k=0}^{n}\\sin(kx)\\)</span>.</p>\n<p><span class=\"math display\">\\[S_n+iS_n&#39;=\\sum_{k=0}^{n}(\\cos(kx)+i\\sin(kx))=\\sum_{k=0}^{n}e^{ikx}=\\sum_{k=0}^{n}(e^{ix})^k.\\]</span> Maintenant, <span class=\"math inline\">\\(e^{ix}=1\\Leftrightarrow x\\in2\\pi\\Zz\\)</span>. Donc,</p>\n<p>Si <span class=\"math inline\">\\(x\\in2\\pi\\Zz\\)</span>, on a immédiatement <span class=\"math inline\">\\(S_n=n+1\\)</span> et <span class=\"math inline\">\\(S_n&#39;=0\\)</span>. [<strong>2ème cas.</strong>] Si x<span class=\"math inline\">\\(\\notin2\\pi\\Zz\\)</span>,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\nS_n+iS_n&#39;&amp;=\\frac{1-e^{i(n+1)x}}{1-e^{ix}}=\\frac{e^{i(n+1)x/2}}{e^{ix/2}}\\frac{e^{-i(n+1)x/2}-e^{i(n+1)x/2}}\n{e^{-i(n+1)x/2}+e^{i(n+1)x/2}}=e^{inx/2}\\frac{-2i\\sin\\frac{(n+1)x}{2}}{-2i\\sin\\frac{x}{2}}\\\\\n &amp;=e^{inx/2}\\frac{\\sin\\frac{(n+1)x}{2}}{\\sin\\frac{x}{2}}\n\\end{align*}\\]</span> Par identification des parties réelles et imaginaires, on obtient</p>\n<p>[<strong>2ème solution.</strong>] <span class=\"math display\">\\[\\begin{align*}\n2\\sin\\frac{x}{2}\\sum_{k=0}^{n}\\cos(kx)&amp;=\\sum_{k=0}^{n}2\\sin\\frac{x}{2}\\cos(kx)=\\sum_{k=0}^{n}(\\sin(k+\\frac{1}{2})x-\\sin(\nk-\\frac{1}{2})x)\\\\\n &amp;=\\left(\\sin\\frac{x}{2}-\\sin\\frac{-x}{2}\\right)+\\left(\\sin\\frac{3x}{2}-\\sin\\frac{x}{2}\\right)+\\ldots+\\left(\\sin\\frac{(2n-1)x}{2}-\\sin\\frac{(2n-3)x}{2}\\right)\\\\\n  &amp;+\\left(\\sin\\frac{(2n+1)x}{2}-\\sin\\frac{(2n-1)x}{2}\\right)\\\\\n &amp;=\\sin\\frac{(2n+1)x}{2}+\\sin\\frac{x}{2}=2\\sin\\frac{(n+1)x}{2}\\cos\\frac{nx}{2}\n\\end{align*}\\]</span> et donc, si <span class=\"math inline\">\\(x\\notin2\\pi\\Zz\\)</span>,...</p>\n<p>Soient <span class=\"math inline\">\\(n\\in\\Nn\\)</span> et <span class=\"math inline\">\\(x\\in\\Rr\\)</span>. Posons <span class=\"math inline\">\\(S_n=\\sum_{k=0}^{n}\\cos^2(kx)\\)</span> et <span class=\"math inline\">\\(S_n&#39;=\\sum_{k=0}^{n}\\sin^2(kx)\\)</span>. On a :</p>\n<p><span class=\"math display\">\\[S_n+S_n&#39;=\\sum_{k=0}^{n}(\\cos^2(kx)+\\sin^2(kx))=\\sum_{k=0}^{n}1=n+1,\\]</span></p>\n<p>et</p>\n<p><span class=\"math display\">\\[S_n-S_n&#39;=\\sum_{k=0}^{n}(\\cos^2(kx)-\\sin^2(kx))=\\sum_{k=0}^{n}\\cos(2kx).\\]</span></p>\n<p>D’après 1), si <span class=\"math inline\">\\(x\\in\\pi\\Zz\\)</span>, on trouve immédiatement,</p>\n<p><span class=\"math display\">\\[\\sum_{k=0}^{n}\\cos^2(kx)=n+1\\;\\mbox{et}\\;\\sum_{k=0}^{n}\\sin^2(kx)=0,\\]</span></p>\n<p>et si <span class=\"math inline\">\\(x\\notin\\pi\\Zz\\)</span>,</p>\n<p><span class=\"math display\">\\[S_n+S_n&#39;=n+1\\;\\mbox{et}\\;S_n-S_n&#39;=\\frac{\\cos(nx)\\sin(n+1)x}{\\sin x},\\]</span></p>\n<p>de sorte que</p>\n<p><span class=\"math display\">\\[S_n=\\frac{1}{2}\\left(n+1+\\frac{\\cos(nx)\\sin(n+1)x}{\\sin\nx}\\right)\\;\\mbox{et}\\;S_n&#39;=\\frac{1}{2}\\left(n+1-\\frac{\\cos(nx)\\sin(n+1)x}{\\sin x}\\right).\\]</span> Soient <span class=\"math inline\">\\(n\\in\\Nn\\)</span> et <span class=\"math inline\">\\(x\\in\\Rr\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\n\\left(\\sum_{k=0}^{n}C_n^k\\cos(kx)\\right)+i\\left(\\sum_{k=0}^{n}C_n^k\\sin(kx)\\right)&amp;=\\sum_{k=0}^{n}C_n^ke^{ikx}\n=\\sum_{k=0}^{n}C_n^k(e^{ix})^k1^{n-k}\\\\\n &amp;=(1+e^{ix})^n=(e^{ix/2}+e^{-ix/2})^ne^{inx/2}=2^n\\cos^n\\left(\\frac{x}{2}\\right)\\left(\\cos\\frac{nx}{2}+i\\sin\\frac{nx}{2}\\right).\n\\end{align*}\\]</span> Par identification des parties réelles et imaginaires, on obtient alors</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculer les sommes suivantes :</p>\n"
 }

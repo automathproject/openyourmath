@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Développement limité",
     "sousChapitre": "Applications",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:30.746Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:19.446Z"
   },
   "contenu": [
     {
-      "id": "4a541336-9687-4d3f-876f-2c095290bc70",
+      "id": "645deffd-199e-4650-8031-8f60ecb043d7",
       "type": "description",
       "value": {
         "latex": "\\'Etudier la position du graphe de l'application $x\\mapsto \\ln(1+x+x^2)$ par rapport \nà sa tangente en $0$ et $1$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b94dfafb-8202-4aa3-ac1d-044a0c41d6a8",
+      "id": "be54d826-96a9-490a-8d61-6392f3c81f33",
       "type": "indication",
       "value": {
         "latex": "Faire un dl en $x=0$ à l'ordre $2$ cela donne $f(0)$, $f'(0)$ et la position par rapport à la tangente\ndonc tout ce qu'il faut pour répondre aux questions. Idem en $x=1$.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "b027bc58-daf1-45a9-a1b0-ca5d3f36462f",
+      "id": "d5d87888-2d3e-44b7-b77c-37ee58110a7d",
       "type": "reponse",
       "value": {
         "latex": "Commençons en $x=0$, le dl de $f(x)=\\ln(1+x+x^2)$ à l'ordre $2$\nest \n$$\\ln(1+x+x^2)\n=(x+x^2)-\\frac{(x+x^2)^2}{2} + o(x^2)\n= x + \\frac12 x^2 + o(x^2)$$\nPar identification avec\n$f(x)= f(0)+f'(0)x+f''(0)\\frac{x^2}{2!}+o(x^2)$\ncela entraîne donc $f(0)=0$, $f'(0)=1$ (et $f''(0)=1$).\nL'équation de la tangente est donc\n$y=f'(0)(x-0)+f(0)$ donc $y=x$.\n\nLa position par rapport à la tangente correspond à l'étude du signe de \n$f(x)-y(x)$ où $y(x)$ est l'équation de la tangente.\n$$f(x)-y(x)=x + \\frac12 x^2 + o(x^2) \\  - \\  x = \\frac12 x^2 + o(x^2).$$\n\nAinsi pour $x$ suffisamment proche de $0$, $f(x)-y(x)$ est du signe de $\\frac12 x^2$\net est donc positif. Ainsi dans un voisinage de $0$ la courbe de $f$ est au-dessus de la tangente\nen $0$.\n\n\\bigskip\n\nMême étude en $x=1$.\n\nIl s'agit donc de faire le dl de $f(x)$ en $x=1$.\nOn pose $x=1+h$ (de sorte que $h=x-1$ est proche de $0$) :\n$$\\begin{align*}\nf(x)=\\ln(1+x+x^2) \n  & = \\ln \\big(1+ (1+h)+(1+h)^2\\big)  \\\\\n  & = \\ln \\big(3 + 3h + h^2 \\big)  \\\\\n  & = \\ln \\left(3 \\big(1 + h + \\frac{h^2}{3} \\big)\\right) \\\\\n  & = \\ln 3 + \\ln \\big(1 + h + \\frac{h^2}{3} \\big) \\\\\n  & = \\ln 3 +  \\big( h + \\frac{h^2}{3} \\big) - \\frac{\\big( h + \\frac{h^2}{3} \\big)^2}{2} + o\\big((h + \\frac{h^2}{3})^2 \\big) \\\\ \n  & = \\ln 3 + h  + \\frac{h^2}{3} -\\frac{h^2}{2}  + o(h^2) \\\\\n  & = \\ln 3 + h -\\frac16 h^2 + o(h^2) \\\\\n  & = \\ln 3 + (x-1) - \\frac16 (x-1)^2 + o((x-1)^2) \\\\\n\\end{align*}$$\n\nLa tangente en $x=1$ est d'équation $y=f'(1)(x-1)+f(1)$ et est donc donnée par le dl à l'ordre $1$ : c'est  $y = (x-1) + \\ln 3$.\nEt la différence \n$f(x)-\\big(\\ln 3 + (x-1)\\big) = - \\frac16 (x-1)^2 + o((x-1)^2)$ est négative pour $x$ proche de $1$.\nDonc, dans un voisinage de $1$, le graphe de $f$ est en-dessous de la tangente en $x=1$.",
         "html": "<p>Commençons en <span class=\"math inline\">\\(x=0\\)</span>, le dl de <span class=\"math inline\">\\(f(x)=\\ln(1+x+x^2)\\)</span> à l’ordre <span class=\"math inline\">\\(2\\)</span> est <span class=\"math display\">\\[\\ln(1+x+x^2)\n=(x+x^2)-\\frac{(x+x^2)^2}{2} + o(x^2)\n= x + \\frac12 x^2 + o(x^2)\\]</span> Par identification avec <span class=\"math inline\">\\(f(x)= f(0)+f&#39;(0)x+f&#39;&#39;(0)\\frac{x^2}{2!}+o(x^2)\\)</span> cela entraîne donc <span class=\"math inline\">\\(f(0)=0\\)</span>, <span class=\"math inline\">\\(f&#39;(0)=1\\)</span> (et <span class=\"math inline\">\\(f&#39;&#39;(0)=1\\)</span>). L’équation de la tangente est donc <span class=\"math inline\">\\(y=f&#39;(0)(x-0)+f(0)\\)</span> donc <span class=\"math inline\">\\(y=x\\)</span>.</p>\n<p>La position par rapport à la tangente correspond à l’étude du signe de <span class=\"math inline\">\\(f(x)-y(x)\\)</span> où <span class=\"math inline\">\\(y(x)\\)</span> est l’équation de la tangente. <span class=\"math display\">\\[f(x)-y(x)=x + \\frac12 x^2 + o(x^2) \\  - \\  x = \\frac12 x^2 + o(x^2).\\]</span></p>\n<p>Ainsi pour <span class=\"math inline\">\\(x\\)</span> suffisamment proche de <span class=\"math inline\">\\(0\\)</span>, <span class=\"math inline\">\\(f(x)-y(x)\\)</span> est du signe de <span class=\"math inline\">\\(\\frac12 x^2\\)</span> et est donc positif. Ainsi dans un voisinage de <span class=\"math inline\">\\(0\\)</span> la courbe de <span class=\"math inline\">\\(f\\)</span> est au-dessus de la tangente en <span class=\"math inline\">\\(0\\)</span>.</p>\n<p>Même étude en <span class=\"math inline\">\\(x=1\\)</span>.</p>\n<p>Il s’agit donc de faire le dl de <span class=\"math inline\">\\(f(x)\\)</span> en <span class=\"math inline\">\\(x=1\\)</span>. On pose <span class=\"math inline\">\\(x=1+h\\)</span> (de sorte que <span class=\"math inline\">\\(h=x-1\\)</span> est proche de <span class=\"math inline\">\\(0\\)</span>) : <span class=\"math display\">\\[\\begin{align*}\nf(x)=\\ln(1+x+x^2) \n  &amp; = \\ln \\big(1+ (1+h)+(1+h)^2\\big)  \\\\\n  &amp; = \\ln \\big(3 + 3h + h^2 \\big)  \\\\\n  &amp; = \\ln \\left(3 \\big(1 + h + \\frac{h^2}{3} \\big)\\right) \\\\\n  &amp; = \\ln 3 + \\ln \\big(1 + h + \\frac{h^2}{3} \\big) \\\\\n  &amp; = \\ln 3 +  \\big( h + \\frac{h^2}{3} \\big) - \\frac{\\big( h + \\frac{h^2}{3} \\big)^2}{2} + o\\big((h + \\frac{h^2}{3})^2 \\big) \\\\ \n  &amp; = \\ln 3 + h  + \\frac{h^2}{3} -\\frac{h^2}{2}  + o(h^2) \\\\\n  &amp; = \\ln 3 + h -\\frac16 h^2 + o(h^2) \\\\\n  &amp; = \\ln 3 + (x-1) - \\frac16 (x-1)^2 + o((x-1)^2) \\\\\n\\end{align*}\\]</span></p>\n<p>La tangente en <span class=\"math inline\">\\(x=1\\)</span> est d’équation <span class=\"math inline\">\\(y=f&#39;(1)(x-1)+f(1)\\)</span> et est donc donnée par le dl à l’ordre <span class=\"math inline\">\\(1\\)</span> : c’est <span class=\"math inline\">\\(y = (x-1) + \\ln 3\\)</span>. Et la différence <span class=\"math inline\">\\(f(x)-\\big(\\ln 3 + (x-1)\\big) = - \\frac16 (x-1)^2 + o((x-1)^2)\\)</span> est négative pour <span class=\"math inline\">\\(x\\)</span> proche de <span class=\"math inline\">\\(1\\)</span>. Donc, dans un voisinage de <span class=\"math inline\">\\(1\\)</span>, le graphe de <span class=\"math inline\">\\(f\\)</span> est en-dessous de la tangente en <span class=\"math inline\">\\(x=1\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Étudier la position du graphe de l’application <span class=\"math inline\">\\(x\\mapsto \\ln(1+x+x^2)\\)</span> par rapport à sa tangente en <span class= ..."
 }

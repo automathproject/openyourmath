@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Problèmes matriciels",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:01.641Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:51.042Z"
   },
   "contenu": [
     {
-      "id": "f0fc7679-9728-440d-addc-40332e594b4c",
+      "id": "41887a52-a839-43b7-9e28-c42f0f80a6d5",
       "type": "description",
       "value": {
         "latex": "Soit $A$ une matrice carrée réelle symétrique positive de format $n$.\nMontrer que $1 +\\sqrt[n]{\\text{det}(A)}\\leqslant\\sqrt[n]{\\text{det}(I_n+A)}$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "c0cb3664-c1e1-4ced-8c55-7740799fd0f0",
+      "id": "1913e099-0266-4ff2-b5f5-aad0d1f0733c",
       "type": "reponse",
       "value": {
         "latex": "La matrice $A$ est symétrique réelle positive. Donc ses valeurs propres $\\lambda_1$,..., $\\lambda_n$ sont des réels positifs. De plus,\n\n\\begin{center}\n$\\text{det}A =\\lambda_1...\\lambda_n$ et $\\text{det}(I_n+A) =\\chi_A(-1) =(1+\\lambda_1)...(1+\\lambda_n)$.\n\\end{center}\n\nL'inégalité à démontrer équivaut donc à :\n\n\\begin{center}\n$\\forall(\\lambda_1,...,\\lambda_n)\\in(\\Rr^+)^n$, $1+\\sqrt[n]{\\prod_{k=1}^{n}\\lambda_k}\\leqslant\\sqrt[n]{\\prod_{k=1}^{n}(1+\\lambda_k)}$.\n\\end{center}\n\nSoit donc $(\\lambda_1,...,\\lambda_n)\\in(\\Rr^+)^n$. Si l'un des $\\lambda_k$ est nul, l'inégalité est immédiate.\n\nSupposons dorénavant tous les $\\lambda_k$ strictement positifs. L'inégalité à démontrer s'écrit\n\n\\begin{center}\n$\\ln\\left(1+\\text{exp}\\left(\\frac{1}{n}\\left(\\ln(\\lambda_1)+...+\\ln(\\lambda_n)\\right)\\right)\\right)\\leqslant\\frac{1}{n}\\left(\\ln(1+\\text{exp}(\\ln(\\lambda_1)))+ ... +\\ln(1+\\text{exp}(\\ln(\\lambda_n)))\\right)$\\quad$(*)$\n\\end{center}\n\nou encore $f\\left(\\frac{1}{n}(x_1+...+x_n)\\right)\\leqslant\\frac{1}{n}(f(x_1)+...+f(x_n))$ où $\\forall x\\in\\Rr$, $f(x) =\\ln(1+e^x)$ et $\\forall k\\in\\llbracket1,n\\rrbracket$, $x_k =\\ln(\\lambda_k)$.\n\nL'inégalité à démontrer est une inégalité de convexité. La fonction $f$ est deux fois dérivable sur $\\Rr$ et pour tout réel $x$,\n\n\\begin{center}\n$f'(x)=\\frac{e^x}{e^x+1}=1-\\frac{1}{e^x+1}$ puis $f''(x) =\\frac{e^x}{(e^x+1)^2}\\geqslant0$.\n\\end{center}\n\nLa fonction $f$ est donc convexe sur $\\Rr$ ce qui démontre l'inégalité $(*)$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall A\\in\\mathcal{S}_n^+(\\Rr)$, $1 +\\sqrt[n]{\\text{det}(A)}\\leqslant\\sqrt[n]{\\text{det}(I_n+A)}$.\n}\n\\end{center}",
         "html": "<p>La matrice <span class=\"math inline\">\\(A\\)</span> est symétrique réelle positive. Donc ses valeurs propres <span class=\"math inline\">\\(\\lambda_1\\)</span>,..., <span class=\"math inline\">\\(\\lambda_n\\)</span> sont des réels positifs. De plus,</p>\n<p><span class=\"math inline\">\\(\\text{det}A =\\lambda_1...\\lambda_n\\)</span> et <span class=\"math inline\">\\(\\text{det}(I_n+A) =\\chi_A(-1) =(1+\\lambda_1)...(1+\\lambda_n)\\)</span>.</p>\n<p>L’inégalité à démontrer équivaut donc à :</p>\n<p><span class=\"math inline\">\\(\\forall(\\lambda_1,...,\\lambda_n)\\in(\\Rr^+)^n\\)</span>, <span class=\"math inline\">\\(1+\\sqrt[n]{\\prod_{k=1}^{n}\\lambda_k}\\leqslant\\sqrt[n]{\\prod_{k=1}^{n}(1+\\lambda_k)}\\)</span>.</p>\n<p>Soit donc <span class=\"math inline\">\\((\\lambda_1,...,\\lambda_n)\\in(\\Rr^+)^n\\)</span>. Si l’un des <span class=\"math inline\">\\(\\lambda_k\\)</span> est nul, l’inégalité est immédiate.</p>\n<p>Supposons dorénavant tous les <span class=\"math inline\">\\(\\lambda_k\\)</span> strictement positifs. L’inégalité à démontrer s’écrit</p>\n<p><span class=\"math inline\">\\(\\ln\\left(1+\\text{exp}\\left(\\frac{1}{n}\\left(\\ln(\\lambda_1)+...+\\ln(\\lambda_n)\\right)\\right)\\right)\\leqslant\\frac{1}{n}\\left(\\ln(1+\\text{exp}(\\ln(\\lambda_1)))+ ... +\\ln(1+\\text{exp}(\\ln(\\lambda_n)))\\right)\\)</span><span class=\"math inline\">\\((*)\\)</span></p>\n<p>ou encore <span class=\"math inline\">\\(f\\left(\\frac{1}{n}(x_1+...+x_n)\\right)\\leqslant\\frac{1}{n}(f(x_1)+...+f(x_n))\\)</span> où <span class=\"math inline\">\\(\\forall x\\in\\Rr\\)</span>, <span class=\"math inline\">\\(f(x) =\\ln(1+e^x)\\)</span> et <span class=\"math inline\">\\(\\forall k\\in\\llbracket1,n\\rrbracket\\)</span>, <span class=\"math inline\">\\(x_k =\\ln(\\lambda_k)\\)</span>.</p>\n<p>L’inégalité à démontrer est une inégalité de convexité. La fonction <span class=\"math inline\">\\(f\\)</span> est deux fois dérivable sur <span class=\"math inline\">\\(\\Rr\\)</span> et pour tout réel <span class=\"math inline\">\\(x\\)</span>,</p>\n<p><span class=\"math inline\">\\(f&#39;(x)=\\frac{e^x}{e^x+1}=1-\\frac{1}{e^x+1}\\)</span> puis <span class=\"math inline\">\\(f&#39;&#39;(x) =\\frac{e^x}{(e^x+1)^2}\\geqslant0\\)</span>.</p>\n<p>La fonction <span class=\"math inline\">\\(f\\)</span> est donc convexe sur <span class=\"math inline\">\\(\\Rr\\)</span> ce qui démontre l’inégalité <span class=\"math inline\">\\((*)\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A\\)</span> une matrice carrée réelle symétrique positive de format <span class=\"math inline\">\\(n\\)</span>. Montrer ..."
 }

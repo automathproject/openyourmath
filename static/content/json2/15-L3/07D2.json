@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace métrique complet, espace de Banach",
     "sousChapitre": "Espace métrique complet, espace de Banach",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:06.983Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:47.584Z"
   },
   "contenu": [
     {
-      "id": "9e97b1cc-3800-4f71-bcd9-2aa06b095b6c",
+      "id": "6938d139-da52-4cc6-b81c-b03f5903a16c",
       "type": "description",
       "value": {
         "latex": "L'espace $(\\Rr , d)$ est-il complet si $d$ est l'une des\nm\\'etriques suivantes?",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "637d3d97-625a-4040-9669-9a9746806c2a",
+      "id": "8167bbe4-d703-454f-affc-7e5971473fbb",
       "type": "question",
       "value": {
         "latex": "$d(x,y) = |x^3-y^3|$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "2d15c12f-ea1d-4278-b30c-7644ee17e9b3",
+      "id": "b389939c-2bce-414b-afab-79f5d83bf9bf",
       "type": "reponse",
       "value": {
         "latex": "Soit $(u_n)$ une suite de Cauchy pour $d$.\nDonc\n$$\\forall \\epsilon >0 \\quad \\exists N\\in \\Nn \\quad \\forall p,q \\ge N \\quad\nd(u_p,u_q) = |u_p^3-u_q^3| \\le \\epsilon.$$\nDonc la suite $(u_n^3)$ est une suite de Cauchy pour la distance usuelle $|.|$.\nComme  $(\\Rr,|.|)$ est complet alors $(u_n^3)$ converge pour la valeur absolue, notons $v$ la limite,\n nous avons $|u_n^3-v|$ qui tend vers $0$. Donc pour $u=v^{\\frac13}$\nnous avons $d(u_n,u)=|u_n^3-u^3|=|u_n^3-v|$ qui tend vers $0$, donc\n$u_n$ converge vers $u$ pour la distance $d$.\nDonc $\\Rr$ est complet pour $d$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "c7aa050d-f83d-4bb4-b31e-89107e163077",
+      "id": "a2c440ea-aace-40af-88a6-b8be23d83f06",
       "type": "question",
       "value": {
         "latex": "$d(x,y) = |\\exp (x) -\\exp (y)|$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "e27c1712-eeef-4560-83a4-3e347e30be1c",
+      "id": "dd972c90-1f4a-4a41-9519-64b0687222c1",
       "type": "reponse",
       "value": {
         "latex": "Montrons que $d$ ne définit pas une distance complète.\nSoit $(u_n)$ la suite définie par $u_n=-n$, $n\\in \\Nn$.\nAlors $d(u_p,u_q) = |e^{-p}-e^{-q}|$.\nDonc pour $\\epsilon>0$ fixé, soit $N$ tel que $e^{-N}<\\frac\\epsilon 2$,\nalors pour $p,q\\ge N$ on a $d(u_p,u_q) = |e^{-p}-e^{-q}| \\le e^{-p}+\n e^{-q} \\le 2e^{-N} \\le \\epsilon$. Donc $(u_n)$ est de Cauchy.\nSupposons que $(u_n)$ converge, notons $u\\in \\Rr$ sa limite.\nAlors $d(u_n,u)=|e^{-n}-e^u|$ tend vers $0$ d'une part\net vers $e^u$ d'autre part. Donc $e^u=0$ ce qui est absurde pour\n$u\\in \\Rr$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "99de0703-067b-41ff-931c-96ea5399c0ca",
+      "id": "c02d56ae-a57b-4d3e-8cfc-34bfcf454c4c",
       "type": "question",
       "value": {
         "latex": "$d(x,y) = \\log (1+ |x-y|)$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "2b096cc0-1566-49c6-ae9e-0729ecaa7777",
+      "id": "a5dfcece-15cb-48bd-91b7-64349d21f051",
       "type": "reponse",
       "value": {
         "latex": "La fonction $\\ln(1+u)$ est continue et ne s'annule qu'en $u=0$. \nDonc pour $\\ln(1+u)$ suffisamment petit nous avons $u$ suffisamment petit et donc\n(par la relation $\\ln(1+u) = u +o(u)$) nous avons \n$$\\frac12 u \\le \\ln(1+u) \\le 2u.$$\nDonc pour $(u_n)$ une suite de Cauchy pour $d$, la première inégalité prouve \nque $(u_n)$ est une suite de Cauchy pour $|.|$. Donc elle converge pour $|.|$\nLa deuxième inégalité montre que $(u_n)$ converge pour \n$d$. Donc $d$ définit une distance complète.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "1fecb361-ecb6-4b25-a49a-670333c6934a",
+      "id": "165f906b-8a76-4889-b2c9-4c816418ce3c",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item C'est une suite de Cauchy. Essayer de se ramener à une suite de Cauchy de $(\\Rr,|.|)$.\n\n  \\item Regarder la suite définie par $u_n=-n$.\n\n  \\item Comme la première question.\n\\end{enumerate}",
         "html": "<ol>\n<li><p>C’est une suite de Cauchy. Essayer de se ramener à une suite de Cauchy de <span class=\"math inline\">\\((\\Rr,|.|)\\)</span>.</p></li>\n<li><p>Regarder la suite définie par <span class=\"math inline\">\\(u_n=-n\\)</span>.</p></li>\n<li><p>Comme la première question.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>L’espace <span class=\"math inline\">\\((\\Rr , d)\\)</span> est-il complet si <span class=\"math inline\">\\(d\\)</span> est l’une des métriques suivantes? ..."
 }

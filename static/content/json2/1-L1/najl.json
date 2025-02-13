@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace vectoriel",
     "sousChapitre": "Système de vecteurs",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:18.667Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:34.675Z"
   },
   "contenu": [
     {
-      "id": "ab2bb331-24f1-4367-825a-2df06acddb43",
+      "id": "370fd7b5-8631-4854-bfac-869da61d5b29",
       "type": "description",
       "value": {
         "latex": "Soit $\\alpha \\in \\Rr$ et $f_\\alpha : \\Rr \\to \\Rr$, $x\\mapsto e^{\\alpha x}$.\nMontrer que la famille $(f_\\alpha)_{\\alpha \\in \\Rr}$  est libre.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "9e3e8280-2d2c-4472-ae26-8ca5dbf9ab28",
+      "id": "0080dd6a-6642-4db2-b26f-ee0824f43543",
       "type": "indication",
       "value": {
         "latex": "Supposer qu'il existe des r\\'eels $\\lambda_1,\\ldots, \\lambda_n$\net des indices  $\\alpha_1 > \\alpha_2 > \\cdots > \\alpha_n$ (tout cela en nombre fini !)\ntels que \n$$\\lambda_1f_{\\alpha_1}+\\cdots+\\lambda_nf_{\\alpha_n} = 0.$$\nIci le $0$ est la fonction constante \\'egale \\`a $0$. \nRegarder quel terme est dominant et factoriser.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "8a7e2f49-c342-4c4b-bb57-a2ef5f9793ff",
+      "id": "6df44530-59d8-4e49-a6a9-11b1e65d3182",
       "type": "reponse",
       "value": {
         "latex": "\\`A partir de la famille $(f_\\alpha)_{\\alpha\\in \\Rr}$ nous\n  consid\\'erons une combinaison lin\\'eaire (qui ne correspond qu'\\`a un\n  nombre \\emph{fini} de termes).\n\n  \n  Soient $\\alpha_1 > \\alpha_2 > \\ldots > \\alpha_n$ des r\\'eels distincts que nous avons ordonnés, consid\\'erons la\n  famille (finie) : $(f_{\\alpha_i})_{i=1,\\ldots,n}$. Supposons qu'il\n  existe des r\\'eels $\\lambda_1,\\ldots, \\lambda_n$ tels que\n  $\\sum_{i=1}^n \\lambda_i f_{\\alpha_i}=0$. Cela signifie que, quelque\n  soit $x \\in \\Rr$, alors $\\sum_{i=1}^n \\lambda_i f_{\\alpha_i}(x) = 0$,\nautrement dit pour tout $x\\in \\Rr$ :\n$$\\lambda_1 e^{\\alpha_1 x} + \\lambda_2 e^{\\alpha_2 x} + \\cdots + \\lambda_n e^{\\alpha_n x}=0.$$\nLe terme qui domine est $e^{\\alpha_1 x}$ (car $\\alpha_1>\\alpha_2>\\cdots$).\nFactorisons par $e^{\\alpha_1 x}$ :\n$$e^{\\alpha_1 x} \\Big( \\lambda_1  + \\lambda_2 e^{(\\alpha_2-\\alpha_1) x} + \\cdots \n+ \\lambda_n e^{(\\alpha_n-\\alpha_1) x} \\Big) =0.$$\n\nMais $e^{\\alpha_1 x}\\neq 0$ donc :\n$$\\lambda_1  + \\lambda_2 e^{(\\alpha_2-\\alpha_1) x} + \\cdots \n+ \\lambda_n e^{(\\alpha_n-\\alpha_1) x} =0.$$\nLorsque $x\\to +\\infty$ alors $e^{(\\alpha_i-\\alpha_1) x} \\to 0$ \n(pour tout $i\\ge 2$, car $\\alpha_i-\\alpha_1<0$).\nDonc pour $i\\ge 2$, $\\lambda_i e^{(\\alpha_i-\\alpha_1) x} \\to 0$ et\nen passant à la limite dans l'égalité ci-dessus on trouve :\n$$\\lambda_1=0.$$\n\nLe premier coefficients est donc nul. On repart de la combinaison linéaire qui est maintenant\n$\\lambda_2 f_2+\\cdots + \\lambda_n f_n=0$ et en appliquant le raisonnement ci-dessus \non prouve par récurrence $\\lambda_1=\\lambda_2=\\cdots=\\lambda_n=0$.\n Donc la famille $(f_\\alpha)_{\\alpha\\in\\Rr}$ est une famille libre.",
         "html": "<p>À partir de la famille <span class=\"math inline\">\\((f_\\alpha)_{\\alpha\\in \\Rr}\\)</span> nous considérons une combinaison linéaire (qui ne correspond qu’à un nombre <em>fini</em> de termes).</p>\n<p>Soient <span class=\"math inline\">\\(\\alpha_1 &gt; \\alpha_2 &gt; \\ldots &gt; \\alpha_n\\)</span> des réels distincts que nous avons ordonnés, considérons la famille (finie) : <span class=\"math inline\">\\((f_{\\alpha_i})_{i=1,\\ldots,n}\\)</span>. Supposons qu’il existe des réels <span class=\"math inline\">\\(\\lambda_1,\\ldots, \\lambda_n\\)</span> tels que <span class=\"math inline\">\\(\\sum_{i=1}^n \\lambda_i f_{\\alpha_i}=0\\)</span>. Cela signifie que, quelque soit <span class=\"math inline\">\\(x \\in \\Rr\\)</span>, alors <span class=\"math inline\">\\(\\sum_{i=1}^n \\lambda_i f_{\\alpha_i}(x) = 0\\)</span>, autrement dit pour tout <span class=\"math inline\">\\(x\\in \\Rr\\)</span> : <span class=\"math display\">\\[\\lambda_1 e^{\\alpha_1 x} + \\lambda_2 e^{\\alpha_2 x} + \\cdots + \\lambda_n e^{\\alpha_n x}=0.\\]</span> Le terme qui domine est <span class=\"math inline\">\\(e^{\\alpha_1 x}\\)</span> (car <span class=\"math inline\">\\(\\alpha_1&gt;\\alpha_2&gt;\\cdots\\)</span>). Factorisons par <span class=\"math inline\">\\(e^{\\alpha_1 x}\\)</span> : <span class=\"math display\">\\[e^{\\alpha_1 x} \\Big( \\lambda_1  + \\lambda_2 e^{(\\alpha_2-\\alpha_1) x} + \\cdots \n+ \\lambda_n e^{(\\alpha_n-\\alpha_1) x} \\Big) =0.\\]</span></p>\n<p>Mais <span class=\"math inline\">\\(e^{\\alpha_1 x}\\neq 0\\)</span> donc : <span class=\"math display\">\\[\\lambda_1  + \\lambda_2 e^{(\\alpha_2-\\alpha_1) x} + \\cdots \n+ \\lambda_n e^{(\\alpha_n-\\alpha_1) x} =0.\\]</span> Lorsque <span class=\"math inline\">\\(x\\to +\\infty\\)</span> alors <span class=\"math inline\">\\(e^{(\\alpha_i-\\alpha_1) x} \\to 0\\)</span> (pour tout <span class=\"math inline\">\\(i\\ge 2\\)</span>, car <span class=\"math inline\">\\(\\alpha_i-\\alpha_1&lt;0\\)</span>). Donc pour <span class=\"math inline\">\\(i\\ge 2\\)</span>, <span class=\"math inline\">\\(\\lambda_i e^{(\\alpha_i-\\alpha_1) x} \\to 0\\)</span> et en passant à la limite dans l’égalité ci-dessus on trouve : <span class=\"math display\">\\[\\lambda_1=0.\\]</span></p>\n<p>Le premier coefficients est donc nul. On repart de la combinaison linéaire qui est maintenant <span class=\"math inline\">\\(\\lambda_2 f_2+\\cdots + \\lambda_n f_n=0\\)</span> et en appliquant le raisonnement ci-dessus on prouve par récurrence <span class=\"math inline\">\\(\\lambda_1=\\lambda_2=\\cdots=\\lambda_n=0\\)</span>. Donc la famille <span class=\"math inline\">\\((f_\\alpha)_{\\alpha\\in\\Rr}\\)</span> est une famille libre.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\alpha \\in \\Rr\\)</span> et <span class=\"math inline\">\\(f_\\alpha : \\Rr \\to \\Rr\\)</span>, <span class=\"math inline\"> ..."
 }

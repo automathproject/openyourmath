@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace vectoriel",
     "sousChapitre": "Base",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:20.009Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:30.923Z"
   },
   "contenu": [
     {
-      "id": "2be0cd7c-0c8d-4f23-8fd0-591ad77ce572",
+      "id": "bdd9801c-0d1e-49c6-9b42-df53687b861d",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "513fb754-0c30-4f1d-b695-c59977069c8a",
+      "id": "b14d7b07-9533-48e3-a14b-b01835ff9362",
       "type": "question",
       "value": {
         "latex": "Soit $E=\\Rr_n[X]$ l'espace vectoriel des polynômes de degré inférieur ou égal à $n$.\nMontrer que toute famille de polyn\\^omes $\\{P_0,P_1,\\ldots,P_n\\}$ avec $\\deg P_i = i$ \n(pour $i=0,1,\\ldots,n$) forme une base de $E$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "782986b1-e2c8-46cf-9af4-454a28fed68d",
+      "id": "35124431-baa3-4001-ad46-45fac3f89e4a",
       "type": "reponse",
       "value": {
         "latex": "Tout d'abord la famille $\\{P_0,P_1,P_2,\\ldots,P_n\\}$ contient $n+1$ vecteurs \ndans l'espace $E=\\Rr_n[X]$ de dimension $n+1$. Ici un vecteur est un polynôme :\n$P_0$ est un polynôme constant non nul, $P_1$ est un polynôme de degré exactement $1$,...\nRappelons que lorsque le nombre de vecteurs égal la dimension de l'espace  nous avons les équivalences, entre \n\\emph{être une famille libre} et \\emph{être une famille génératrice} et donc aussi \\emph{être une base}.\n\n\\medskip\n\nNous allons donc montrer que $\\{P_0,P_1,\\ldots,P_n\\}$ est une famille libre.\nSoit une combinaison linéaire nulle :\n$$\\lambda_0 P_0+\\lambda_1 P_1 + \\cdots + \\lambda_n P_n = 0.$$\n\nIntroduisons l'hypothèse concernant les degrés :\n$\\deg P_0 = 0$, $\\deg P_1=1$, \\ldots, $\\deg P_n=n$.\nDéfinissons le polynôme $P(X) = \\lambda_0 P_0+\\lambda_1 P_1 + \\cdots + \\lambda_n P_n$.\n\n\\medskip\n\nNous allons montrer successivement $\\lambda_n=0$ puis $\\lambda_{n-1}=0$,\\ldots, $\\lambda_0=0$.\n\nPar l'absurde supposons $\\lambda_n \\neq 0$ et écrivons \n$P_n(X) = a_n X^n + a_{n-1}X^{n-1}+\\cdots+a_1X+a_0$, comme\n$\\deg P_n(X)=n$ alors $a_n\\neq0$.\nMaintenant \n$P(X)$ est aussi un polynôme de degré exactement $n$ qui s'écrit\n$$P(X) = \\lambda_n \\cdot a_n \\cdot X^n + \\text{termes de plus bas degré}$$\nLa combinaison linéaire nulle implique que $P(X)=0$ (le polynôme nul).\nDonc en identifiant les coefficients devant $X^n$ on obtient $\\lambda_n\\cdot a_n=0$\nOn obtient  $a_n=0$ ou $\\lambda_n=0$. Ce qui est une contradiction.\nConclusion $\\lambda_n=0$.\n\n\\medskip\n\nMaintenant la combinaison linéaire nulle s'écrit $\\lambda_0 P_0+\\lambda_1 P_1 + \\cdots + \\lambda_{n-1} P_{n-1}=0$.\nPar récurrence descendante on trouve $\\lambda_{n-1}=0$, \\ldots, jusqu'à $\\lambda_0=0$.\n\nBilan : $\\lambda_0=0$, \\ldots, $\\lambda_n=0$ donc la famille $\\{P_0,P_1,\\ldots,P_n\\}$ est libre,\nelle donc aussi génératrice ; ainsi $\\{P_0,P_1,\\ldots,P_n\\}$ est une base de $E=\\Rr_n[X]$.\n\n\\medskip\n\nUn point que nous avons utilisé et qu'il est peut-être utile de détailler est le suivant : \nsi un polynôme égal le polynôme nul alors tous ces coefficients sont nul.\n\nVoici une justification : écrivons $a_nX^n+ a_{n-1}X^{n-1}+\\cdots+a_1X+a_0=0$\net divisons par $X^n$ :\n$$a_n + \\frac {a_{n-1}}{X} + \\frac{a_{n-2}}{X^2} + \\cdots + \\frac{a_1}{X^{n-1}} + \\frac{a_0}{X^n} = 0$$\nLorsque l'on fait tendre $X$ vers $+\\infty$ alors le terme de gauche tend vers $a_n$ et celui de droite vaut $0$ donc \npar unicité de la limite $a_n=0$.\nOn fait ensuite une récurrence descendante pour prouver $a_{n-1}=0$,\\ldots, $a_0=0$.\n\nUne conséquence est que si deux polynômes sont égaux alors leurs coefficients sont égaux.\nEt une autre formulation est de dire que $\\{1,X,X^2,\\ldots,X^n\\}$ est une base de $\\Rr_n[X]$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "bc810309-81e4-4277-8810-f3c238c47901",
+      "id": "61be9810-34ee-48d3-b87a-ad1c80416935",
       "type": "question",
       "value": {
         "latex": "\\'Ecrire le polyn\\^ome $F=3X-X^2+8X^3$ sous la forme $F=a+b(1-X)+c(X-X^2)+d(X^2-X^3)$\n($a,b,c,d \\in \\Rr$) puis sous la forme\n$F=\\alpha+\\beta(1+X)+\\gamma(1+X+X^2)+\\delta(1+X+X^2+X^3)$\n($\\alpha,\\beta,\\gamma,\\delta \\in \\Rr$).",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "2aa42715-4fbe-4171-a958-b6b18a952d7c",
+      "id": "05d2eabe-a6ec-4a10-976d-c6420d26e48f",
       "type": "reponse",
       "value": {
         "latex": "On trouve $a=10, b= -10, c = -7, d= -8$.\nPuis $\\alpha=-3,\\beta=4,\\gamma=-9,\\delta=8$.",
@@ -56,12 +56,13 @@
       }
     },
     {
-      "id": "4d33b3bf-5a9f-4b92-8967-ee53f01e2ec6",
+      "id": "e9872379-4669-48f4-a0f1-d787ef21f903",
       "type": "indication",
       "value": {
         "latex": "Il suffit de montrer que la famille est libre (pourquoi ?). \nPrendre ensuite une combinaison linéaire nulle et regarder le terme de plus haut degré.",
         "html": "<p>Il suffit de montrer que la famille est libre (pourquoi ?). Prendre ensuite une combinaison linéaire nulle et regarder le terme de plus haut degré.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E=\\Rr_n[X]\\)</span> l’espace vectoriel des polynômes de degré inférieur ou égal à <span class=\"math inline\">\\(n\\)< ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite et série de fonctions",
     "sousChapitre": "Suite et série de matrices",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:39.406Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:34.192Z"
   },
   "contenu": [
     {
-      "id": "4a610241-df6e-402f-899d-f19feb2390ad",
+      "id": "c20e5813-ce3a-4f6b-8930-a6267e9b2b46",
       "type": "description",
       "value": {
         "latex": "Pour $A\\in\\mathcal{M}_n(\\Cc)$, calculer $\\lim_{p \\rightarrow +\\infty}\\left(I_n+ \\frac{A}{p}\\right)^p$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "67703b5b-dc5a-479a-b406-94a2300d1a85",
+      "id": "aaaf189e-e910-455d-ba1e-d0ed90ed752a",
       "type": "reponse",
       "value": {
         "latex": "On munit $\\mathcal{M}_n(\\Cc)$ d'une norme sous-multiplicative notée $\\|\\;\\|$. Soit $A\\in\\mathcal{M}_n(\\Cc)$. Soit $p\\in\\Nn^*$.\n\n\\begin{center}\n$\\left\\|\\sum_{k=0}^{p} \\frac{A^k}{k!}-\\left(I+ \\frac{A}{p}\\right)^p\\right\\| =\\left\\|\\sum_{k=0}^{p}\\left( \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right)A^k\\right\\|\\leqslant\\sum_{k=0}^{p}\\left| \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right|\\|A\\|^k $.\n\\end{center}\n\nMaintenant, $\\forall k\\in\\llbracket1,p\\rrbracket$, $ \\frac{1}{k!}- \\frac{C_p^k}{p^k}= \\frac{1}{k!}\\left(1-  \\frac{\\overbrace{p\\times(p-1)\\times\\ldots\\times(p-k+1)}^{k}}{\\underbrace{p\\times p\\times\\ldots\\times p}_{k}}\\right)\\geqslant 0$. Donc,\n\n\\begin{center}\n$\\sum_{k=0}^{p}\\left| \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right|\\|A\\|^k=\\sum_{k=0}^{p} \\frac{\\|A\\|^k}{k!}-\\left(1+ \\frac{\\|A\\|^p}{p}\\right)^p\\underset{n\\rightarrow+\\infty}{\\rightarrow}e^{\\|A\\|}-e^{\\|A\\|}= 0$.\n\\end{center}\n\nOn en déduit que $\\sum_{k=0}^{p} \\frac{A^k}{k!}-\\left(I+ \\frac{A}{p}\\right)^p$ tend vers $0$ quand $p$ tend vers $+\\infty$ et puisque $\\sum_{k=0}^{p} \\frac{A^k}{k!}$ tend vers $\\text{exp}(A)$ quand $p$ tend vers $+\\infty$, il en est de même de $\\left(I+ \\frac{A}{p}\\right)^p$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall A\\in\\mathcal{M}_n(\\Cc)$, $\\text{exp}(A)=\\lim_{p \\rightarrow +\\infty}\\left(I_n+ \\frac{A}{p}\\right)^p$.\n}\n\\end{center}",
         "html": "<p>On munit <span class=\"math inline\">\\(\\mathcal{M}_n(\\Cc)\\)</span> d’une norme sous-multiplicative notée <span class=\"math inline\">\\(\\|\\;\\|\\)</span>. Soit <span class=\"math inline\">\\(A\\in\\mathcal{M}_n(\\Cc)\\)</span>. Soit <span class=\"math inline\">\\(p\\in\\Nn^*\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\left\\|\\sum_{k=0}^{p} \\frac{A^k}{k!}-\\left(I+ \\frac{A}{p}\\right)^p\\right\\| =\\left\\|\\sum_{k=0}^{p}\\left( \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right)A^k\\right\\|\\leqslant\\sum_{k=0}^{p}\\left| \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right|\\|A\\|^k\\)</span>.</p>\n<p>Maintenant, <span class=\"math inline\">\\(\\forall k\\in\\llbracket1,p\\rrbracket\\)</span>, <span class=\"math inline\">\\(\\frac{1}{k!}- \\frac{C_p^k}{p^k}= \\frac{1}{k!}\\left(1-  \\frac{\\overbrace{p\\times(p-1)\\times\\ldots\\times(p-k+1)}^{k}}{\\underbrace{p\\times p\\times\\ldots\\times p}_{k}}\\right)\\geqslant 0\\)</span>. Donc,</p>\n<p><span class=\"math inline\">\\(\\sum_{k=0}^{p}\\left| \\frac{1}{k!}- \\frac{C_p^k}{p^k}\\right|\\|A\\|^k=\\sum_{k=0}^{p} \\frac{\\|A\\|^k}{k!}-\\left(1+ \\frac{\\|A\\|^p}{p}\\right)^p\\underset{n\\rightarrow+\\infty}{\\rightarrow}e^{\\|A\\|}-e^{\\|A\\|}= 0\\)</span>.</p>\n<p>On en déduit que <span class=\"math inline\">\\(\\sum_{k=0}^{p} \\frac{A^k}{k!}-\\left(I+ \\frac{A}{p}\\right)^p\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> quand <span class=\"math inline\">\\(p\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> et puisque <span class=\"math inline\">\\(\\sum_{k=0}^{p} \\frac{A^k}{k!}\\)</span> tend vers <span class=\"math inline\">\\(\\text{exp}(A)\\)</span> quand <span class=\"math inline\">\\(p\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>, il en est de même de <span class=\"math inline\">\\(\\left(I+ \\frac{A}{p}\\right)^p\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(A\\in\\mathcal{M}_n(\\Cc)\\)</span>, calculer <span class=\"math inline\"> ..."
 }

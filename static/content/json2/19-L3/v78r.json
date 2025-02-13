@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Loi, indépendance, loi conditionnelle",
     "sousChapitre": "Loi, indépendance, loi conditionnelle",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:16.593Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:01.827Z"
   },
   "contenu": [
     {
-      "id": "9070a297-2d6e-40b5-a095-8c1104b7e81d",
+      "id": "1a48c27e-b845-45c7-adc9-2af34a825e43",
       "type": "description",
       "value": {
         "latex": "Soit $(X_n)_{n\\geq 1}$ une suite de variables aléatoires indépendantes de même loi de\nBernoulli de paramètre $p$. On définit la variable aléatoire $T_1$ à valeurs dans\n$\\Nn\\cup\\{+\\infty\\}$ par $T_1=\\inf\\{k>0 \\mid X_k=1\\}$, avec la\nconvention $\\inf(\\emptyset)=+\\infty$.\\\\ \\textit{(si on joue à pile $=0$ ou\n face $=1$,\n$T_1$ est le temps nécessaire pour obtenir face une première fois)}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a2e08e34-bc42-4447-883b-9566457fbbad",
+      "id": "914e53ce-2258-4256-b56e-9e94c01ee7a9",
       "type": "question",
       "value": {
         "latex": "Montrer que $T_1$ est fini presque sûrement.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "bd0cfc7c-3199-4d0a-b3f3-bd21ce50e76a",
+      "id": "f7732479-6f7d-4ccf-9af3-cd078f4c8800",
       "type": "reponse",
       "value": {
         "latex": "$\\{\\omega\\mid T_1(\\omega)=+\\infty\\}=\\{\\omega\\mid X_n(\\omega) =0\n\\mbox{ pour tout } n\\geq 1\\}\\subset \\{\\omega\\mid X_n(\\omega) =0 \\mbox{ pour }\n1\\leq n\\leq N\\}$. Donc\n$\\displaystyle\nP(T_1=+\\infty)\\leq P(X_n=0\\mbox{ pour } 1\\leq n\\leq N)=\\prod_{n=1}^N P(X_n=0)\n\\ \\mbox{ par indépendance}\n$\nd'où $P(T_1=+\\infty)\\leq (1-p)^N$. Or $1-p\\in ]0,1[$ et $N$\nest arbitrairement grand, donc $P(T_1=+\\infty)=0$, autrement dit $T_1$\nest fini presque sûrement.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "541d9927-e83d-4f9c-a26b-14eea08a2df5",
+      "id": "edc6ea93-452c-4d04-b75d-ccd796c33ff0",
       "type": "question",
       "value": {
         "latex": "Déterminer la loi et l'espérance de $T_1$ \\textit{(cette loi est appelée loi géométrique, $E(T_1)$ est le nombre\nmoyen de lancers qu'il faut effectuer pour obtenir face une première fois)}.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "7311778c-5d1c-48eb-b65b-60b61343ab94",
+      "id": "601e7b29-ac83-4f88-b6ef-06a792eba904",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $k\\in\\Nn^*$, $\\{T_1=k\\}=\\{X_1=0, X_2=0,\\ldots, X_{k-1}=0, X_k=1\\}$ donc\npar indépendance $P(T_1=k)=p(1-p)^{k-1}$.\n\n$\\displaystyle\nE(T_1)=\\sum_{k\\geq 1} k P(T_1=k)=p\\sum_{k\\geq 1} k(1-p)^{k-1}$.\nOn reconnaît une série dérivée. Si on introduit la série\n$\\displaystyle f(x)=\\sum_{k\\geq 0} x^k$ (bien définie si $|x|<1$), alors \n$E(T_1)=p f'(1-p)$. Or\n$f(x)=\\frac{1}{1-x}$, donc $f'(x)=\\frac{1}{(1-x)^2}$. D'où\n$E(T_1)=p f'(1-p)=\\frac{1}{p}$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "4d4d9022-0f08-4a95-8601-949f15f11445",
+      "id": "762b22ed-0fc2-45c5-8142-4571576e7a0d",
       "type": "question",
       "value": {
         "latex": "Pour tout $n\\geq 2$, on définit par récurrence\n$T_n=\\inf\\{k>T_{n-1}\\mid X_k=1\\}$.\\\\\n\\textit{(si on joue à pile  ou face, $T_n$\nest le temps nécessaire pour obtenir exactement $n$ fois face)}\\\\\nMontrer que les variables aléatoires $T_1,\\ (T_2-T_1), \\ldots,\\ (T_n-T_{n-1}),\\ldots$\nsont indépendantes et de même loi.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "3be917e6-8c0b-42ed-87ac-6f2e0e6d1635",
+      "id": "e46f5dd9-591f-48e4-91e1-4b392f4a4335",
       "type": "reponse",
       "value": {
         "latex": "Montrons par récurrence que $T_n$ est finie presque sûrement\n(hypothèse vérifiée par $T_1$ par a) et que les variables aléatoires\n$T_1, (T_2-T_1),\\ldots (T_n-T_{n-1}),\\ldots$\nont la même loi que $T_1$ (hypothèse évidemment vérifiée par $T_1$).\n\nSupposons que $T_{n-1}$ est finie presque sûrement et montrons que $T_n-T_{n-1}$\na la même loi que $T_1$ et que $T_n$ est finie\npresque sûrement\nSi $T_{n-1}=j$ alors $\\{T_n=j+k\\}=\\{X_{j+1}=0,\\ldots,X_{j+k-1}=0,\nX_{j+k}=1\\}$. Comme $T_{n-1}$ est finie presque sûrement, la formule des \nprobabilités conditionnelles s'applique et donne :\n\\begin{eqnarray*}\nP(T_n-T_{n-1}=k)&=&\\sum_{j\\in\\Nn}P(T_n-T_{n-1}=k\\mid T_{n-1}=j)\nP(T_{n-1}=j)\\\\\n&=&\\sum_{j\\in\\Nn}P(X_{j+1}=0,\\ldots,X_{j+k-1}=0,\nX_{j+k}=1)P(T_{n-1}=j)\\\\\n&=&\\sum_{j\\in\\Nn}p(1-p)^{k-1}P(T_{n-1}=j)\\ \\mbox{ par indépendance}\\\\\n&=&p(1-p)^{k-1} \\sum_{j\\in\\Nn}P(T_{n-1}=j)\n\\end{eqnarray*}\nOr \n$\\displaystyle\\quad \\sum_{j\\in\\Nn}P(T_{n-1}=j)=P(T_{n-1}<+\\infty)=1 \\quad\\mbox{(hypothèse\nde récurrence pour $n-1$)},$ \\\\\ndonc\n$P(T_n-T_{n-1}=k)=(1-p)^{k-1}p$. On vérifie que\n$\\displaystyle\\quad \\sum_{k\\in\\Nn}P(T_n-T_{n-1}=k)=1,$ \ndonc $T_n-T_{n-1}<+\\infty$\npresque sûrement, et par conséquent $T_n<+\\infty$ presque sûrement\n(on peut aussi calculer directement $P(T_n-T_{n-1}=+\\infty)=0$, comme\npour $T_1$). On vient de montrer que $T_n-T_{n-1}$ a la même loi que $T_1$.\nCeci termine la récurrence.\n\n\\medskip\nPour montrer l'indépendance, on regarde $\\{T_1=k_1, T_2-T_1=k_2,\\ldots, \nT_n-T_{n-1}=k_n\\}$, ce qui décrit exactement les valeurs de $X_i$ pour\n$0\\leq i\\leq k_1+k_2+\\cdots+k_n $. C'est un peu lourd à écrire :\n\n$$\n\\{T_1=k_1, T_2-T_1=k_2,\\ldots, T_n-T_{n-1}=k_n\\}=\n\\{\\begin{array}[t]{l}\nX_0=\\cdots=X_{k_1-1}=0, X_{k_1}=1,\\\\ \nX_{k_1+1}=\\cdots=X_{k_1+k_2-1}=0, X_{k_1+k_2}=1,\\\\\n\\cdots\\\\ \nX_{k_1+\\cdots+k_{n-1}+1}=\\cdots=X_{k_1+\\cdots+k_n-1}=0,\nX_{k_1+\\cdots+k_n}=1\\ \\}\\end{array}$$\n\n\\medskip\nD'où par indépendance des $X_i$ :\n\\begin{eqnarray*}\nP(T_1=k_1, T_2-T_1=k_2,\\ldots, T_n-T_{n-1}=k_n)\n&=&p^n(1-p)^{(k_1-1)+\\cdots+(k_n-1)}\\\\\n&=&P(T_1=k_1)P(T_2-T_1=k_2)\\cdots P(T_n-T_{n-1}=k_n)\n\\end{eqnarray*}\nConclusion : les variables aléatoires $T_1, T_2-T_1,\\ldots, T_n-T_{n-1}$ sont indépendantes.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "c48df5ea-8354-4d8f-8775-4b4ecb3e3ff3",
+      "id": "c92f0af0-8155-49cb-a10f-e1a172af3b46",
       "type": "question",
       "value": {
         "latex": "Quelle est la loi de $T_n$ ?",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "ffb12949-6598-4143-acc0-784c998f3098",
+      "id": "62b4fd01-cd29-47d1-81d4-d388d429162f",
       "type": "reponse",
       "value": {
         "latex": "Ce qui précède permet de voir que, pour avoir\n$T_n=k$, d'une part il faut que $X_k=1$, et d'autre part parmi les\n$(X_i)_{1\\leq i\\leq k-1}$ il faut que $n-1$ soient égaux à $1$ et les autres\nsoient égaux à $0$. Il y a $C^{n-1}_{k-1}$ façons de choisir les $1$ (à \ncondition bien sûr que $k\\leq n$), et chaque\ncombinaison a la même probabilité, qui est $p^n(1-p)^{k-n}$. \nOn peut en déduire que la loi de\n$T_n$ est $P(T_n=k)=C^{n-1}_{k-1} p^n(1-p)^{k-n}$ si $k\\geq n$ et\n$P(T_n=k)=0$ si $k<n$.",
         "html": "<p>Ce qui précède permet de voir que, pour avoir <span class=\"math inline\">\\(T_n=k\\)</span>, d’une part il faut que <span class=\"math inline\">\\(X_k=1\\)</span>, et d’autre part parmi les <span class=\"math inline\">\\((X_i)_{1\\leq i\\leq k-1}\\)</span> il faut que <span class=\"math inline\">\\(n-1\\)</span> soient égaux à <span class=\"math inline\">\\(1\\)</span> et les autres soient égaux à <span class=\"math inline\">\\(0\\)</span>. Il y a <span class=\"math inline\">\\(C^{n-1}_{k-1}\\)</span> façons de choisir les <span class=\"math inline\">\\(1\\)</span> (à condition bien sûr que <span class=\"math inline\">\\(k\\leq n\\)</span>), et chaque combinaison a la même probabilité, qui est <span class=\"math inline\">\\(p^n(1-p)^{k-n}\\)</span>. On peut en déduire que la loi de <span class=\"math inline\">\\(T_n\\)</span> est <span class=\"math inline\">\\(P(T_n=k)=C^{n-1}_{k-1} p^n(1-p)^{k-n}\\)</span> si <span class=\"math inline\">\\(k\\geq n\\)</span> et <span class=\"math inline\">\\(P(T_n=k)=0\\)</span> si <span class=\"math inline\">\\(k&lt;n\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\((X_n)_{n\\geq 1}\\)</span> une suite de variables aléatoires indépendantes de même loi de Bernoulli de paramètre <sp ..."
 }

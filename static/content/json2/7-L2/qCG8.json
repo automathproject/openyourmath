@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Probabilité discrète",
     "sousChapitre": "Variable aléatoire discrète",
-    "organisation": "",
-    "updatedAt": "2025-02-10T14:43:18.612Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:47:05.664Z"
   },
   "contenu": [
     {
-      "id": "26800885-8711-465f-8d3c-e0251119e770",
+      "id": "0dcdd308-6a8e-48aa-a7a5-0af2562d788a",
       "type": "description",
       "value": {
         "latex": "Dans une poste d'un petit village, on remarque qu'entre 10 heures\net 11 heures, la probabilité pour que deux personnes entrent durant \nla même minute est considérée comme nulle et que l'arrivée des\npersonnes est indépendante de la minute considérée. \nOn a observé que la probabilité pour qu'une personne se présente entre la\nminute $n$ et la minute $n+1$ est: $p = 0.1$. On veut calculer la probabilité \npour que : 3,4,5,6,7,8... personnes se présentent au guichet entre 10h et 11h.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "3727bae4-9626-4b09-b14b-a9bfa64d8aef",
+      "id": "b146b5c8-6cb9-4021-83c1-767b64fe76c9",
       "type": "question",
       "value": {
         "latex": "Définir une variable aléatoire adaptée, puis répondre au problème considéré.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "95e5c2ac-ff98-4ff3-a4ac-f406c1ab0309",
+      "id": "e024199f-1ef4-4a62-9c93-cc80ba46b5f7",
       "type": "question",
       "value": {
         "latex": "Quelle est la probabilité pour que au moins 10 personnes\nse présentent au guichet entre 10h et 11h?",
@@ -40,12 +40,13 @@
       }
     },
     {
-      "id": "7a34a1e0-7159-47ea-900f-c6e947ac7558",
+      "id": "ba2300ec-b734-4599-add2-ff757aedeb1a",
       "type": "reponse",
       "value": {
         "latex": "Une variable aléatoire adaptée à ce problème est le nombre $X$ de personnes \nse présentant au guichet entre 10h et 11h. Compte tenu\ndes hypothèses, on partage l'heure en $60$ minutes. Alors $X$ suit une\nloi binomiale de paramètres $n=60$ et $p=0.1$. On est dans le cas de\nprocessus poissonnien : on peut approcher la loi de $X$ par la loi de\nPoisson de paramètre $\\lambda =60\\times 0.1=6$.\nL'espérance de $X$ est donc $E(X)=6$;\n\nOn peut alors calculer les probabilités demandées:\n$P[X=k]=\\frac{6^{k}e^{-6}}{k!}$. Valeurs lues dans une table ou calculées :\n$P[X=3]\\simeq 0.9\\%;$ $P[X=4]\\simeq 13.4\\%;$ $P[X=5]=P[X=6]\\simeq\n\\,16.1\\%;$\n$P[X=7]\\,\\simeq 13.8\\%;P[X=8]\\simeq 10.3\\,\\%.$\n\nRemarque : de façon générale si le paramètre \n$\\lambda$ d'une loi de Poisson est un entier $K$, on a:\n$P[X=K-1]=\\frac{K^{K-1}e^{-K}}{(K-1)!}=\\frac{K^{K}e^{-K}}{K!}=P[X=K]\\,.$\n\nCalculons maintenant la probabilité pour que au moins $10$\npersonnes se présentent au guichet entre $10$h et $11$h: C'est $P[X\\geq\n10]=1-\\sum_{k=0}^{9}\\frac{6^{k}e^{-6}}{k!}\\simeq 8.392\\times\n10^{-2}.$",
         "html": "<p>Une variable aléatoire adaptée à ce problème est le nombre <span class=\"math inline\">\\(X\\)</span> de personnes se présentant au guichet entre 10h et 11h. Compte tenu des hypothèses, on partage l’heure en <span class=\"math inline\">\\(60\\)</span> minutes. Alors <span class=\"math inline\">\\(X\\)</span> suit une loi binomiale de paramètres <span class=\"math inline\">\\(n=60\\)</span> et <span class=\"math inline\">\\(p=0.1\\)</span>. On est dans le cas de processus poissonnien : on peut approcher la loi de <span class=\"math inline\">\\(X\\)</span> par la loi de Poisson de paramètre <span class=\"math inline\">\\(\\lambda =60\\times 0.1=6\\)</span>. L’espérance de <span class=\"math inline\">\\(X\\)</span> est donc <span class=\"math inline\">\\(E(X)=6\\)</span>;</p>\n<p>On peut alors calculer les probabilités demandées: <span class=\"math inline\">\\(P[X=k]=\\frac{6^{k}e^{-6}}{k!}\\)</span>. Valeurs lues dans une table ou calculées : <span class=\"math inline\">\\(P[X=3]\\simeq 0.9\\%;\\)</span> <span class=\"math inline\">\\(P[X=4]\\simeq 13.4\\%;\\)</span> <span class=\"math inline\">\\(P[X=5]=P[X=6]\\simeq\n\\,16.1\\%;\\)</span> <span class=\"math inline\">\\(P[X=7]\\,\\simeq 13.8\\%;P[X=8]\\simeq 10.3\\,\\%.\\)</span></p>\n<p>Remarque : de façon générale si le paramètre <span class=\"math inline\">\\(\\lambda\\)</span> d’une loi de Poisson est un entier <span class=\"math inline\">\\(K\\)</span>, on a: <span class=\"math inline\">\\(P[X=K-1]=\\frac{K^{K-1}e^{-K}}{(K-1)!}=\\frac{K^{K}e^{-K}}{K!}=P[X=K]\\,.\\)</span></p>\n<p>Calculons maintenant la probabilité pour que au moins <span class=\"math inline\">\\(10\\)</span> personnes se présentent au guichet entre <span class=\"math inline\">\\(10\\)</span>h et <span class=\"math inline\">\\(11\\)</span>h: C’est <span class=\"math inline\">\\(P[X\\geq\n10]=1-\\sum_{k=0}^{9}\\frac{6^{k}e^{-6}}{k!}\\simeq 8.392\\times\n10^{-2}.\\)</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Dans une poste d’un petit village, on remarque qu’entre 10 heures et 11 heures, la probabilité pour que deux personnes entrent durant la même minut ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Equation différentielle",
     "sousChapitre": "Equations différentielles non linéaires",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:13.918Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:08.007Z"
   },
   "contenu": [
     {
-      "id": "3ae7f11d-21fe-4ab4-9ead-0e3fdce00c36",
+      "id": "74e2e15a-6551-47ce-b3dd-fe5f28bf84b2",
       "type": "description",
       "value": {
         "latex": "On considère le système différentiel : $$(V) \\Leftrightarrow\\left\\{\\begin{array}{l} x' = x(1-y) \\\\ y' = y(x-1).\\\\ \\end{array}\\right.$$\ndont on cherche les solutions $(x, y)$ définies sur $\\R$ à valeurs dans $(\\R^{+*})^{2}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "07ea2b5f-91dd-4f89-aa13-d043ce16cd63",
+      "id": "3da4ae3d-df58-4343-9aca-3425d85ece3d",
       "type": "question",
       "value": {
         "latex": "Trouver une fonction $f \\in \\mathcal{C}^{2}((\\R^{+*})^{2}, \\R)$ telle que pour toute solution\n$(x, y)$ de $V$, $f(x, y)$ soit constante.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "80d83bb2-49b3-482c-acc6-976ca3854d0f",
+      "id": "735edbd5-a002-49b4-96a0-fd8a69c1d432",
       "type": "reponse",
       "value": {
         "latex": "$\\frac{d}{d t}f(x,y) = x'\\frac{\\partial f}{\\partial x} + y'\\frac{\\partial f}{\\partial y}$ donc $f$ convient\nsi $\\frac{\\partial f}{\\partial x} = y(x-1)$ et $\\frac{\\partial f}{\\partial y} = x(y-1)$ (condition suffisante).\nIl n'existe pas de telle fonction (thm. de Schwarz), mais on peut accepter\n$f$ telle que $\\frac{\\partial f}{\\partial x} = \\lambda(x,y)y(x-1)$ et $\\frac{\\partial f}{\\partial y} = \\lambda(x,y)x(y-1)$\noù $\\lambda$ est une fonction bien choisie (appelée {\\it facteur intégrant}).\nOn voit immédiatement que $\\lambda(x,y)=\\frac1{xy}$ convient,\nd'où $f(x,y) = x+y-\\ln(xy)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "eea97478-c92c-487d-a309-fbeae65eb02f",
+      "id": "e19198c4-9120-4834-9e13-93749cd0ac8a",
       "type": "question",
       "value": {
         "latex": "Montrer que les solutions de $(V)$ sont périodiques.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "566d15c0-cf24-449b-aa50-5cf620e5595b",
+      "id": "bd4bbd52-58c7-45b8-9e22-6e6474db0a3e",
       "type": "reponse",
       "value": {
         "latex": "D'après le théorème d'unicité de Cauchy-Lipschitz,\ns'il existe $t_0$ tel que $x(t_0)=0$ alors $x(t)=0$ pour\ntout~$t$, et de même pour~$y$. Ainsi, si on fixe une\ncondition initiale $x(0)>0$, $y(0)>0$ alors $x(t)>0$ et\n${y(t)>0}$ pour tout~$t$. \nDe plus, par le même raisonnement,\nsi $(x(0),y(0))\\ne(1,1)$ alors $(x(t),y(t))\\ne(1,1)$ pour\ntout~$t$. Désormais on suppose ces conditions satisfaites.\nSoit $k=f(x(0),y(0))=x(0)+y(0)-\\ln(x(0)y(0))$.\nPar étude de fonction, on voit que $k\\ne 2$ et\nla courbe $C_k$ d'équation $f(x,y)=k$ est une courbe fermée de classe\n$\\mathcal{C}^1$ entourant le point $(1,1)$. Le point $M_t=(x(t),y(t))$\nse déplace sur $C_k$ avec une vitesse numérique\n${d s/d t = \\sqrt{x^2(1-y)^2 + y^2(x-1)^2}\\ge\\alpha_k>0}$\noù $\\alpha_k$ ne dépend que de~$k$. On en déduit qu'une\nabscisse curviligne de~$M_t$ décrit~$\\R$ quand $t$ décrit~$\\R$.\nEn particulier il existe $t_0>0$ tel que $s(t_0)-s(0)=\\mathrm{longueur}(C_k)$\nce qui implique $M_{t_0}=M_0$ et le mouvement est $t_0$-périodique.",
         "html": "<p>D’après le théorème d’unicité de Cauchy-Lipschitz, s’il existe <span class=\"math inline\">\\(t_0\\)</span> tel que <span class=\"math inline\">\\(x(t_0)=0\\)</span> alors <span class=\"math inline\">\\(x(t)=0\\)</span> pour tout <span class=\"math inline\">\\(t\\)</span>, et de même pour <span class=\"math inline\">\\(y\\)</span>. Ainsi, si on fixe une condition initiale <span class=\"math inline\">\\(x(0)&gt;0\\)</span>, <span class=\"math inline\">\\(y(0)&gt;0\\)</span> alors <span class=\"math inline\">\\(x(t)&gt;0\\)</span> et <span class=\"math inline\">\\({y(t)&gt;0}\\)</span> pour tout <span class=\"math inline\">\\(t\\)</span>. De plus, par le même raisonnement, si <span class=\"math inline\">\\((x(0),y(0))\\ne(1,1)\\)</span> alors <span class=\"math inline\">\\((x(t),y(t))\\ne(1,1)\\)</span> pour tout <span class=\"math inline\">\\(t\\)</span>. Désormais on suppose ces conditions satisfaites. Soit <span class=\"math inline\">\\(k=f(x(0),y(0))=x(0)+y(0)-\\ln(x(0)y(0))\\)</span>. Par étude de fonction, on voit que <span class=\"math inline\">\\(k\\ne 2\\)</span> et la courbe <span class=\"math inline\">\\(C_k\\)</span> d’équation <span class=\"math inline\">\\(f(x,y)=k\\)</span> est une courbe fermée de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> entourant le point <span class=\"math inline\">\\((1,1)\\)</span>. Le point <span class=\"math inline\">\\(M_t=(x(t),y(t))\\)</span> se déplace sur <span class=\"math inline\">\\(C_k\\)</span> avec une vitesse numérique <span class=\"math inline\">\\({d s/d t = \\sqrt{x^2(1-y)^2 + y^2(x-1)^2}\\ge\\alpha_k&gt;0}\\)</span> où <span class=\"math inline\">\\(\\alpha_k\\)</span> ne dépend que de <span class=\"math inline\">\\(k\\)</span>. On en déduit qu’une abscisse curviligne de <span class=\"math inline\">\\(M_t\\)</span> décrit <span class=\"math inline\">\\(\\R\\)</span> quand <span class=\"math inline\">\\(t\\)</span> décrit <span class=\"math inline\">\\(\\R\\)</span>. En particulier il existe <span class=\"math inline\">\\(t_0&gt;0\\)</span> tel que <span class=\"math inline\">\\(s(t_0)-s(0)=\\mathrm{longueur}(C_k)\\)</span> ce qui implique <span class=\"math inline\">\\(M_{t_0}=M_0\\)</span> et le mouvement est <span class=\"math inline\">\\(t_0\\)</span>-périodique.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On considère le système différentiel : <span class=\"math display\"> ..."
 }

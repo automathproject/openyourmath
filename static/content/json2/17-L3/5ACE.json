@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:11.640Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:40:56.606Z"
   },
   "contenu": [
     {
-      "id": "fd89f1e4-09a4-418a-8e97-0803a3c7fb50",
+      "id": "a26b227e-b703-4cd4-8bb6-82149838f5cc",
       "type": "description",
       "value": {
         "latex": "Soit $A\\in\\Rr^{m\\times n}$. On veut construire une matrice $M\\in \\Rr^{m\\times m}$ telle que\n\\begin{itemize}\n\\item $MA=S$ triangulaire sup\\'erieure;\n\\item $MM^T=D=$diag$(d_1,\\cdots , d_m)$ , $d_i>0$\n\\end{itemize}\net appliquer cette factorisation de $A$ dans la r\\'esolution de syst\\`emes au sens des moindres carr\\'es.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "6ddf3553-8734-46df-aaac-7eee82596e68",
+      "id": "0894aad1-2aea-4c7f-9773-ad3e1e9c5141",
       "type": "question",
       "value": {
         "latex": "Donner la factorisation $QR$ de $A$ en termes de $M, D$ et $S$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "b82182b1-1391-43d9-bf85-4486fc224898",
+      "id": "4efa25b9-6bf1-4861-a8ff-2f198b94aae4",
       "type": "question",
       "value": {
         "latex": "On consid\\`ere maintenant $m=2$. Soient $x=(x_1, x_2)^T$ et $D=$diag$(d_1,d_2)$ ($d_i>0$) donn\\'es.\n\\begin{enumerate}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "c54770e6-d1b8-433d-98e0-4e796b8667fe",
+      "id": "5df1ffcf-be2a-4a10-8ce3-9acd05f8d937",
       "type": "question",
       "value": {
         "latex": "On d\\'efinit\n$$M_1=\\left(\\begin{array}{cc}\n\\beta_1 & 1\\\\ 1&\\alpha_1\\end{array}\\right).$$\nSupposons $x_2\\neq 0$. Calculer $M_1x$ et $M_1DM_1^T$.\n\nComment choisir $\\alpha_1$ et $\\beta_1$ de fa\\c con \\`a ce que la deuxi\\`eme composante de $M_1x$ soit nulle et que $M_1DM_1^T$ soit diagonale?\n\nPour le choix pr\\'ec\\'edent d\\'eterminer $\\gamma_1$ tel que\n$$M_1x=\\left(\\begin{array}{c}\nx_2(1+\\gamma_1)\\\\0\\end{array}\\right) \\mbox{ et } M_1DM_1^T=\\left(\\begin{array}{cc}\nd_2(1+\\gamma_1)&0\\\\0 & d_1(1+\\gamma_1)\\end{array}\\right)$$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "200e989c-75af-4ada-9d84-4b362334d387",
+      "id": "6a27d152-5b49-4c16-8788-94e1aceddb74",
       "type": "question",
       "value": {
         "latex": "Supposons $x_1\\neq 0$. On d\\'efinit\n$$M_2=\\left(\\begin{array}{cc}\n1&\\alpha_2\\\\ \\beta_2 &1\\end{array}\\right).$$\nChoisir $\\alpha_2$ et $\\beta_2$ de fa\\c con \\`a ce que\n$$M_2x=\\left(\\begin{array}{c}\nx_1(1+\\gamma_2)\\\\0\\end{array}\\right) \\mbox{ et } M_2DM_2^T=\\left(\\begin{array}{cc}\nd_1(1+\\gamma_2)&0\\\\0 & d_2(1+\\gamma_2)\\end{array}\\right)$$\net d\\'eterminer $\\gamma_2$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "5e924db1-4ab2-421a-a776-6dbe360f137e",
+      "id": "03865140-48b9-467f-a90e-23ab2e30067a",
       "type": "question",
       "value": {
         "latex": "Montrer que l'on peut toujours choisir $M_i$ ($i=1,2$) de fa\\c con \\`a ce que le ``facteur de croissance'' $(1+\\gamma_i)$ soit inf\\'erieur \\`a 2.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "d431aa95-90a9-4126-9f51-b2d94ce401aa",
+      "id": "2ecf522a-d0ab-46be-ab69-859fc45a2a4c",
       "type": "reponse",
       "value": {
         "latex": "$MM^T=$diag$(d_1, \\cdots , d_m)=\\Delta^2$ avec $\\Delta=$diag$ (\\sqrt{d_1}, \\cdots, \\sqrt{d_m})$\n\n$\\Delta^{-1}MM^T\\Delta^{-1}=(\\Delta^{-1}M)(\\Delta^{-1}M)^T=I\\Rightarrow \\Delta^{-1}M$ est une matrice orthogonale\n\n $A=M^{-1}S=(M^{-1}Delta \\Delta^{-1} S=(\\Delta^{-1}M)^{-1} (\\Delta^{-1}S)=(\\Delta^{-1}M)^{T} (\\Delta^{-1}S)=(M^T\\Delta^{-1})(\\Delta^{-1}S)$\n\nComme $\\Delta^{-1}S$ est triangulaire sup\\'erieure ona $ A=QR$ avec $Q=M^T\\Delta^{-1}, R=\\Delta^{-1}S$\n\\begin{enumerate}\n$$M_1x=\\left(\\begin{array}{c}\\beta_1x_1 +x_2\\\\x_1+\\alpha_1x_2\\end{array}\\right)  ,\\quad M_1DM_1^T=\\left(\\begin{array}{cc}d_2+\\beta_1^2 d_1 & d_1\\beta_1 +d_2\\alpha_1\\\\ d_1\\beta_1 +d_2\\alpha_1 & d_1+\\alpha_1^2d_2\\end{array}\\right)$$\nAlors\n\\begin{itemize}\n$x_1+\\alpha_1x_2=0\\Leftrightarrow \\alpha_1=-x_1/x_2$\n$d_1\\beta_1 +d_2 (-x_1/x_2)=0\\Leftrightarrow \\beta_1=-\\alpha_1 d_2/d_1=x_1d_2/(x_2d_1)$\n\\end{itemize}\n Pour le choix pr\\'ec\\'edent on veut d\\'eterminer $\\gamma_1$ tel que\n\n$x_2(1+\\gamma_1)=\\beta_1x_1 +x_2 =x_2(\\beta_1x_1/x_2 +1) \\Rightarrow \\gamma_1= (d_2/d_1)(x_1/x_2)^2$ c'est-\\`a-dire\n$$\\gamma_1=-\\alpha_1\\beta_1$$\npour cette valeur on a\n\n$d_2+\\beta_1^2d_1 =d_2(1+\\alpha_1^2d_2/d_1) = d_2(1+\\gamma_1)$\n$d_1+\\alpha_1^2d_2 =d_1(1+\\alpha_1^2d_2/d_1) = d_2(1+\\gamma_1)$\nle m\\^eme type de calcul nous donne\n$$\\beta_2=-x_2/x_1, \\quad \\alpha_2=-(d_1/d_2)\\beta_2,\\quad \\gamma_2=-\\alpha_2\\beta_2 = (d_1/d_2)(x_2/x_1)^2$$\non remarque que $\\gamma_1 \\gamma_2=1$ et donc soit $\\gamma_1\\leq 1$ , soit $\\gamma_2\\leq 1$",
         "html": ""
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(A\\in\\Rr^{m\\times n}\\)</span>. On veut construire une matrice <span class=\"math inline\">\\(M\\in \\Rr^{m\\times m}\\)</s ..."
 }

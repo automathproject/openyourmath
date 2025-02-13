@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Théorie",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:42:31.527Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:20.196Z"
   },
   "contenu": [
     {
-      "id": "07f0cfb6-364d-469b-b346-96f6c781e474",
+      "id": "84d39a7f-f05b-4bc1-8e26-0b51532c1b9c",
       "type": "description",
       "value": {
         "latex": "Calculer l'int\\'egrale de $f:[a,b]\\rightarrow \\R$ comme\nlimite de sommes de Riemann-Darboux dans les cas suivants:",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "3fb9cd79-d388-42ae-8799-0c3a48b53cef",
+      "id": "0de725e3-5aa5-4372-8be7-54394d06fe24",
       "type": "question",
       "value": {
         "latex": "$f(x)=\\sin x$ et $f(x)=\\cos x$ sur $[0,\\frac \\pi 2]$ et $x_k=\\frac{k\\pi }{2n}$, $k=0,1,...,n$,",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f84b6af4-b472-4f62-9787-2e481982e5b8",
+      "id": "cd4af7f6-aa9d-445e-b79e-87f5a1f5e86d",
       "type": "reponse",
       "value": {
         "latex": "On calcul d'abord  $\\int_0^{\\frac \\pi 2}  e^{it}\\, dt$. Par le th\\'eor\\`eme de  Riemann-Darboux\nc'est la limite de \n$$S_n = \\sum_{k=0}^{n-1} (x_{k+1}-x_k) \\cdot f(x_k).$$\nPour $x_k = \\frac{k\\pi }{2n}$ (on obtient en fait un somme de Riemann) :\n$$S_n = \\frac{\\pi}{2n}\\sum_{k=0}^{n-1}e^{\\frac{ik\\pi}{2n}}= \\frac{\\pi}{2n}\\sum_{k=0}^{n-1}(e^{\\frac{i\\pi}{2n}})^k.$$\nCe qui est une somme g\\'eom\\'etrique de somme $S_n = (1-i) \\frac{\\frac {\\pi}{2n}}{1-e^{i\\frac {\\pi}{2n}}}$. La limite de ce taux d'accroissement est $1+i$ (en posant $u=\\frac {\\pi}{2n}$ et en remarquant que $\\frac{e^{iu}-1}{u} \\to i$ quand $u\\to 0$).\nDonc $\\int_0^{\\frac \\pi 2}  e^{it}\\, dt=1+i$. Mais $e^{it} = \\cos t+ i \\sin t$ donc \n$\\int_0^{\\frac \\pi 2} \\cos t \\, dt + \\int_0^{\\frac \\pi 2}\\sin t \\, dt = 1+i$.\nPar identification des parties r\\'eelles et imaginaires on trouve : \n$\\int_0^{\\frac \\pi 2} \\cos t \\, dt = 1$ et $\\int_0^{\\frac \\pi 2}\\sin t \\, dt = 1$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "3b240f79-522a-4089-aa92-095aab0cb94a",
+      "id": "4254ef12-9913-46f4-bd8e-5f705345d27f",
       "type": "question",
       "value": {
         "latex": "$g(x)=\\frac 1x$ sur $\\left[ a,b\\right] \\subset \\R_{+}^{*}$ et $\nx_k=aq^k$ , $k=0,1,...,n$ ($q$ \\'etant \\`a d\\'eterminer),",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "47a6c864-3fab-41d5-b0cc-633f3c2b836f",
+      "id": "8f8d1e01-e76d-4b98-898a-c1b671e46f04",
       "type": "reponse",
       "value": {
         "latex": "On veut $x_k = aq^k$ ce qui donne bien $x_0=a$, mais il faut aussi $x_n = b$ donc\n$aq^n=b$, donc $q^n = \\frac ba$ soit $q = (\\frac ba)^{\\frac 1 n}$.\nNous cherchons la limite de $S'_n =  \\sum_{k=0}^{n-1} (x_{k+1}-x_k) \\cdot g(x_k).$\nIl est n'est pas trop dur de montrer que $S'_n = n(q-1)$.\nPour trouver la limite quand $n\\to +\\infty$ c'est plus d\\'elicat car $q$ d\\'epend de $n$ :\n$S'_n= n(q-1)= n((\\frac ba)^{\\frac 1 n}-1) = n(e^{\\frac1n \\ln\\frac ba}-1)$.\nEn posant $u = \\frac 1n$ et en remarquant que l'on obtient un taux d'accroissement on calcule :\n$S'_n = \\frac 1 u(e^{ u \\ln\\frac ba}-1) \\to  \\ln \\frac ba = \\ln b - \\ln a$.\nDonc $\\int_a^b \\frac {dt}{t} = \\ln b - \\ln a$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "4e03e56b-2a78-40b4-86dd-af3149384f81",
+      "id": "f53cc29e-cc54-46bf-bd53-ecae7f9e83a7",
       "type": "question",
       "value": {
         "latex": "$h(x)=\\alpha ^x$ sur $[a,b]$ , $\\alpha >0$, et $x_k=a+(b-a).\\frac kn$, $\nk=0,1,...,n$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "323abc88-737c-4dae-b5b4-545ded5a8945",
+      "id": "c1fa7d82-b421-49bf-905c-dadc4bbdf989",
       "type": "reponse",
       "value": {
         "latex": "\\`A l'aide des sommes g\\'eom\\'etrique est des taux d'accroissement on trouve \n$$\\int_a^b \\alpha^t \\, dt = \\frac{e^{\\alpha b}- e^{\\alpha a}}{\\alpha}.$$",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "c0d6c91e-9d0f-4c87-9d06-238cb8f73c52",
+      "id": "5de95446-cea3-4f6e-a611-c2c534a0da3b",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item On pourra penser que le cosinus et le sinus sont les parties r\\'eelles et imaginaires de la fonction $t \\mapsto e^{it}$. On chercha donc d'abord \\`a calculer $\\int_0^{\\frac \\pi 2}  e^{it}\\, dt$.\n  \\item On choisira $q$ tel que $q^n = \\frac ba$.\n  \\end{enumerate}",
         "html": "<ol>\n<li><p>On pourra penser que le cosinus et le sinus sont les parties réelles et imaginaires de la fonction <span class=\"math inline\">\\(t \\mapsto e^{it}\\)</span>. On chercha donc d’abord à calculer <span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}  e^{it}\\, dt\\)</span>.</p></li>\n<li><p>On choisira <span class=\"math inline\">\\(q\\)</span> tel que <span class=\"math inline\">\\(q^n = \\frac ba\\)</span>.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculer l’intégrale de <span class=\"math inline\">\\(f:[a,b]\\rightarrow \\R\\)</span> comme limite de sommes de Riemann-Darboux dans les cas suivants: ..."
 }

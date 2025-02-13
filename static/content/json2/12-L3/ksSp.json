@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Différentiabilité, calcul de différentielles",
     "sousChapitre": "Différentiabilité, calcul de différentielles",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:52.429Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:32.394Z"
   },
   "contenu": [
     {
-      "id": "715adde5-cb70-4db8-88e0-142e21b6e20d",
+      "id": "65c43040-0214-4ea0-94c0-f959b33ace3b",
       "type": "description",
       "value": {
         "latex": "Calculez la norme des op\\'erateurs suivants:",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c003f1ca-ab5c-464d-bfcf-2b905e6e656a",
+      "id": "872d2d90-d2e0-4e5b-90cb-5733f11ebcc0",
       "type": "question",
       "value": {
         "latex": "Le shift sur $l^\\infty$ d\\'efini par $S(x)_{n+1}=x_n,\nS(x)_0=0$ (sur $l^\\infty$ on d\\'efinit $||(x_n)||_\\infty=\\sup_{n\n\\in \\mathbb{N}}|x_n|)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "04b09bd3-792e-4dca-a0df-fe753dff359f",
+      "id": "77974e33-4ef1-4b7a-835c-a0e5518cc452",
       "type": "reponse",
       "value": {
         "latex": "Soit $x$ une suite, on a\n$$||S(x)||_\\infty=Max(\\sup_{n \\in \\mathbb{N}}|x_{n-1}|,0)=\\sup_{n \\in\n\\mathbb{N}}|x_{n}|=1.||x||_\\infty.$$ Donc $||S||=1.$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "16cb95cf-af22-4af5-ad16-b84b418686f2",
+      "id": "f5057c65-2137-4817-8138-6fccd348662d",
       "type": "question",
       "value": {
         "latex": "$X={\\mathcal C}([0,1])$ avec la\nnorme sup et l'op\\'erateur $Tf(x)=f(x)g(x)$ o\\`u $g \\in X$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "573a44db-e77d-4704-9ab1-7996447a2117",
+      "id": "171c99a6-3aab-4b65-95d5-f324810fcf9a",
       "type": "reponse",
       "value": {
         "latex": "Soit $f\n\\in {\\mathcal C}([0,1])$\n$$||Tf||_\\infty=\\sup_{x \\in [0,1]}f(x)g(x)\\leq\n||f||_\\infty||g||_\\infty.$$ Donc $$||T||\\leq ||g||_\\infty.$$ Or\n$$||T1||_\\infty=||g||_\\infty=||1||_\\infty||g||_\\infty.$$\nDonc $$||T|| \\geq ||g||_\\infty$$ et finalement on a bien\n$$||T||=||g||_\\infty.$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "44cb917c-37c0-4076-bc98-fbfe404df52a",
+      "id": "d70f9671-c540-4e6e-a147-3df12fa2eaa5",
       "type": "question",
       "value": {
         "latex": "$X={\\mathcal C}([0,1])$ muni de la norme sup et\n$u(f)=\\int_0^1f(x)g(x)dx$ o\\`u $g \\in X$ est une fonction qui\ns'annule qu'en $x=1/2$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "1c3915a3-7677-4633-8a06-52ac439bca2c",
+      "id": "c5f20aa7-d0bc-4695-a811-d1f343243e72",
       "type": "reponse",
       "value": {
         "latex": "Soit $f \\in {\\mathcal C}([0,1])$, on a\n$$||u(f)||=|\\int_0^1f(x)g(x)dx| \\leq \\int_0^1|f(x)||g(x)|dx \\leq\n\\sup_{x \\in [0,1]}|g(x)| \\int_0^1 |f(x)|dx \\leq\n||g||_\\infty.||f||.$$ On a donc $$||u|| \\leq ||g||_\\infty.$$ Comme\n$g$ ne s'annule qu'au point $x=1/2$, elle ne change de signe\nqu'une seule fois. Soit\n$$f_0=g/|g|,$$ cette fonction n'est pas continue (ni d\\'efinie) en\n$x=1/2$ mais v\\'erifie $f_0g=|g|$. Prenons $f_n=g/|g|$ si\n$|x-1/2|> 1/n$, pour $|x-1/2|\\leq 1/n$, on relie les deux segments\ndu graphe par une ligne. Alors $1-1/(2n)\\leq ||f_n|| \\leq 1$ et\n$$||u(f_n)||=|\\int_{|x-1/2|>1/n}f_n(x)g(x)dx+\\int_{|x-1/2| \\leq\n1/n}f_n(x)g(x)dx| \\geq$$\n$$|(|\\int_{|x-1/2|>1/n}f_n(x)g(x)dx|-|\\int_{|x-1/2| \\geq\n1/n}f_n(x)g(x)dx|)|$$\n$$\\geq ||g||_\\infty \\int_{|x-1/2|>1/n}|f_n(x)|dx-2/n ||g||_\\infty\\geq ||g||_\\infty(||f_n|| -2/n).$$\n Ainsi $$\\lim_{n\\rightarrow\n\\infty}||u(\\frac{f_n}{||f_n||})||\\geq ||g||_\\infty\n(1-\\frac{1}{2n||f_n||} \\geq ||g||_\\infty (1-\\frac{1}{2n(1-1/2n))}\n\\geq ||g||_\\infty (1-\\frac{1}{2n-1})\n$$ et donc pour tout $n \\in \\mathbb{N}^*$:\n$$||u|| \\geq ||g||_\\infty (1-\\frac{1}{2n-1}),$$ en faisant tend $n$\nvers l'infini $$||u|| \\geq ||g||_\\infty$$ ce qui montre la\ndeuxi\\`eme in\\'egalit\\'e et on obtient $||u||=||g||_\\infty$.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "5e3e8f15-ef04-4f12-8071-511b194796ec",
+      "id": "63d03072-230e-464d-8105-61744f4144c8",
       "type": "question",
       "value": {
         "latex": "$X=l^2$ et $u(x)=\\sum a_nx_n$ o\\`u $(a_n)$ est dans $X$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "0acc2c89-4584-437e-8b2a-9f57499957a5",
+      "id": "9fcff36e-0066-48fb-8751-314292c2e8c3",
       "type": "reponse",
       "value": {
         "latex": "si on prend $(x_n)=(a_n)$ on obtient $$u((a_n))=\\sum a_n^2=\n||(a_n)||_2^2=||(a_n)||_2.||(a_n)||_2$$ et donc $$||u|| \\geq\n||(a_n)||_2.$$\n\nOr D'apr\\`es Cauchy-Schwartz, on a $$||u(a_n)||=|u(a_n)|=|\\sum a_n\nx_n| \\leq ||(a_n)||_2||(x_n)||_2$$ et donc $||u|| \\leq\n||(a_n)||_2$ d'o\\`u l'\\'egalit\\'e $$||u||=||(a_n)||_2.$$",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "8754e2de-889c-4605-8523-5c5e9cf5134d",
+      "id": "6fa7e957-82d8-4ae4-9fd2-06cf8cfdaead",
       "type": "question",
       "value": {
         "latex": "$X$ l'espace des suites convergentes\nmuni de la norme sup et $u: X \\rightarrow \\mathbb{R}$\nl'application $u(x)=\\lim_{j \\rightarrow \\infty} x_j$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "d56fdb42-f467-4f24-80d9-539469d1212d",
+      "id": "d2dedc08-f87f-435b-82f2-84a6903b5efb",
       "type": "reponse",
       "value": {
         "latex": "Pour tout $j \\in \\mathbb{N}$ on a $|x_j| \\leq ||(x_n)||_\\infty$ et\npar cons\\'equent $$|u((x_n))|=|\\lim_{j \\rightarrow \\infty} x_j|\n\\leq ||(x_n)||_\\infty$$ et donc $$||u|| \\leq 1.$$ Prenons la suite\n$(x^0)$ d\\'efinie par $x_n^0=1$ pour tout $n \\in \\mathbb{N}$ alors\n$$|u(x^0)|=|\\lim_{j \\rightarrow \\infty} 1|=1=||x^0||_\\infty$$ et\ndonc $$||u|| \\geq 1$$ d'o\\`u l'\\'egalit\\'e $||u||=1$.",
         "html": "<p>Pour tout <span class=\"math inline\">\\(j \\in \\mathbb{N}\\)</span> on a <span class=\"math inline\">\\(|x_j| \\leq ||(x_n)||_\\infty\\)</span> et par conséquent <span class=\"math display\">\\[|u((x_n))|=|\\lim_{j \\rightarrow \\infty} x_j|\n\\leq ||(x_n)||_\\infty\\]</span> et donc <span class=\"math display\">\\[||u|| \\leq 1.\\]</span> Prenons la suite <span class=\"math inline\">\\((x^0)\\)</span> définie par <span class=\"math inline\">\\(x_n^0=1\\)</span> pour tout <span class=\"math inline\">\\(n \\in \\mathbb{N}\\)</span> alors <span class=\"math display\">\\[|u(x^0)|=|\\lim_{j \\rightarrow \\infty} 1|=1=||x^0||_\\infty\\]</span> et donc <span class=\"math display\">\\[||u|| \\geq 1\\]</span> d’où l’égalité <span class=\"math inline\">\\(||u||=1\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculez la norme des opérateurs suivants:</p>\n"
 }

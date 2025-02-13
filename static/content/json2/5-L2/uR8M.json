@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite et série de fonctions",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:37.816Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:32.630Z"
   },
   "contenu": [
     {
-      "id": "4ce7cbd6-c80e-4b0e-a835-2b55eb480124",
+      "id": "deaa7072-921d-482d-ba95-922a195055f3",
       "type": "description",
       "value": {
         "latex": "Pour $x>0$, on pose $f(x) =\\sum_{n=0}^{+\\infty}e^{-x\\sqrt{n}}$. Trouver un équivalent simple de $f$ en $0$ à droite.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "3273981d-677b-4206-9411-bc940c997b51",
+      "id": "a62d046f-e764-48b3-abda-b7c888ec740e",
       "type": "reponse",
       "value": {
         "latex": "Soit $x>0$. Pour $n\\in\\Nn^*$, $n^2e^{-x\\sqrt{n}}=e^{-x\\sqrt{n}+2\\ln n}\\underset{n\\rightarrow+\\infty}{=}o(1)$ d'après un théorème de croissances comparées. On en déduit que $e^{-x\\sqrt{n}}\\underset{n\\rightarrow+\\infty}{=}o\\left(\\frac{1}{n^2}\\right)$ et donc que la série de terme général $e^{-x\\sqrt{n}}$ converge. Ainsi, $f$ est bien définie sur $]0,+\\infty[$.\n\nSoit $x\\in]0,+\\infty[$. La fonction $t\\mapsto e^{-x\\sqrt{t}}$ est décroissante sur $[0,+\\infty[$. Donc, $\\forall k\\in\\Nn$, $\\int_{k}^{k+1}e^{-x\\sqrt{t}}\\;dt\\leqslant e^{-x\\sqrt{k}}$ et $\\forall k\\in\\Nn^*$, $e^{-x\\sqrt{k}}\\leqslant\\int_{k-1}^{k}e^{-x\\sqrt{t}}\\;dt$. En sommant ces inégalités, on obtient\n\n\\begin{center}\n$\\forall x\\in]0,+\\infty[$, $\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt\\leqslant f(x)\\leqslant1+\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt$\\quad$(*)$.\n\\end{center}\n\nSoit $x\\in]0,+\\infty[$. En posant $u=x\\sqrt{t}$ et donc $t=\\frac{u^2}{x^2}$ puis $dt=\\frac{2u}{x^2}\\;du$, on obtient\n\n\\begin{center}\n$\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt=\\frac{2}{x^2}\\int_{0}^{+\\infty}ue^{-u}\\;du=\\frac{2}{x^2}\\times\\Gamma(2)=\\frac{2}{x^2}$.\n\\end{center}\n\nL'encadrement $(*)$ s'écrit alors\n\n\\begin{center}\n$\\forall x\\in]0,+\\infty[$, $\\frac{2}{x^2}\\leqslant f(x)\\leqslant1+\\frac{2}{x^2}$.\n\\end{center}\n\nComme $\\displaystyle\\lim_{\\substack{x\\rightarrow0\\\\\nx>0}}\\frac{2}{x^2}=+\\infty$, on a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\sum_{n=0}^{+\\infty}e^{-x\\sqrt{n}}\\underset{x\\rightarrow0,\\;x>0}{\\sim}\\frac{2}{x^2}$.\n}\n\\end{center}",
         "html": "<p>Soit <span class=\"math inline\">\\(x&gt;0\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(n^2e^{-x\\sqrt{n}}=e^{-x\\sqrt{n}+2\\ln n}\\underset{n\\rightarrow+\\infty}{=}o(1)\\)</span> d’après un théorème de croissances comparées. On en déduit que <span class=\"math inline\">\\(e^{-x\\sqrt{n}}\\underset{n\\rightarrow+\\infty}{=}o\\left(\\frac{1}{n^2}\\right)\\)</span> et donc que la série de terme général <span class=\"math inline\">\\(e^{-x\\sqrt{n}}\\)</span> converge. Ainsi, <span class=\"math inline\">\\(f\\)</span> est bien définie sur <span class=\"math inline\">\\(]0,+\\infty[\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in]0,+\\infty[\\)</span>. La fonction <span class=\"math inline\">\\(t\\mapsto e^{-x\\sqrt{t}}\\)</span> est décroissante sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>. Donc, <span class=\"math inline\">\\(\\forall k\\in\\Nn\\)</span>, <span class=\"math inline\">\\(\\int_{k}^{k+1}e^{-x\\sqrt{t}}\\;dt\\leqslant e^{-x\\sqrt{k}}\\)</span> et <span class=\"math inline\">\\(\\forall k\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(e^{-x\\sqrt{k}}\\leqslant\\int_{k-1}^{k}e^{-x\\sqrt{t}}\\;dt\\)</span>. En sommant ces inégalités, on obtient</p>\n<p><span class=\"math inline\">\\(\\forall x\\in]0,+\\infty[\\)</span>, <span class=\"math inline\">\\(\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt\\leqslant f(x)\\leqslant1+\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt\\)</span><span class=\"math inline\">\\((*)\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in]0,+\\infty[\\)</span>. En posant <span class=\"math inline\">\\(u=x\\sqrt{t}\\)</span> et donc <span class=\"math inline\">\\(t=\\frac{u^2}{x^2}\\)</span> puis <span class=\"math inline\">\\(dt=\\frac{2u}{x^2}\\;du\\)</span>, on obtient</p>\n<p><span class=\"math inline\">\\(\\int_{0}^{+\\infty}e^{-x\\sqrt{t}}\\;dt=\\frac{2}{x^2}\\int_{0}^{+\\infty}ue^{-u}\\;du=\\frac{2}{x^2}\\times\\Gamma(2)=\\frac{2}{x^2}\\)</span>.</p>\n<p>L’encadrement <span class=\"math inline\">\\((*)\\)</span> s’écrit alors</p>\n<p><span class=\"math inline\">\\(\\forall x\\in]0,+\\infty[\\)</span>, <span class=\"math inline\">\\(\\frac{2}{x^2}\\leqslant f(x)\\leqslant1+\\frac{2}{x^2}\\)</span>.</p>\n<p>Comme <span class=\"math inline\">\\(\\displaystyle\\lim_{\\substack{x\\rightarrow0\\\\\nx&gt;0}}\\frac{2}{x^2}=+\\infty\\)</span>, on a montré que</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(x&gt;0\\)</span>, on pose <span class=\"math inline\">\\(f(x) =\\sum_{n=0}^{+\\infty}e^{-x\\sqrt{n}}\\)</span>. Trouver un ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Calcul de déterminants",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:12.221Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:01.222Z"
   },
   "contenu": [
     {
-      "id": "d81cce7f-6561-4659-82cb-13eea56327bb",
+      "id": "4978f551-5c1f-4349-a9a3-d36bf68aaf2e",
       "type": "description",
       "value": {
         "latex": "Calculer",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "ba2e4efe-ddd2-4918-b59c-918f954be7f3",
+      "id": "4a16e71f-8f4e-4773-b31b-a48dc1ad4db7",
       "type": "question",
       "value": {
         "latex": "$\\left|\\begin{array}{ccccc}\n0&1&\\ldots& &1\\\\\n1&0&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&0&1\\\\\n1&\\ldots&\\ldots&1&0\n\\end{array}\n\\right|$ et $\\left|\\begin{array}{ccccc}\n1&1&\\ldots& &1\\\\\n1&0&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&0&1\\\\\n1&\\ldots&\\ldots&1&0\n\\end{array}\n\\right|$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "d6b524b2-8890-40c7-81d0-70adbd88b92b",
+      "id": "e4084dbf-4fe4-45b1-8d65-f535e2e6fa2e",
       "type": "reponse",
       "value": {
         "latex": "Pour le premier déterminant, on retranche la première colonne à chacune des autres et on obtient un déterminant triangulaire inférieur dont la valeur est $(-1)^{n-1}$. Pour le deuxième, on ajoute à la première colonne la somme de toutes les autres, puis on met $(n-1)$ en facteurs de la première colonne et on tombe sur le premier déterminant. Le deuxième déterminant vaut donc $(-1)^{n-1}(n-1)$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d74e4e0d-0b2d-408a-bdb6-217ad2369028",
+      "id": "bb34e93e-dca9-4c9a-a332-a9f09d86a5b0",
       "type": "question",
       "value": {
         "latex": "$\\mbox{det}((i+j-1)^2)$",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "1338b9f1-ef08-4869-8a64-0052f0bb15bf",
+      "id": "14863062-cd62-4e08-af48-bfde7aa71de8",
       "type": "reponse",
       "value": {
         "latex": "Pour $(i,j)$ élément de $\\llbracket1,n\\rrbracket^2$, $(i+j-1)^2=j^2+2(i-1)j+(i-1)^2$. Donc, \n\n$$\\forall j\\in\\{1,...,n\\},\\;C_j=j^2(1)_{1\\leq i\\leq n}+2j(i-1)_{1\\leq i\\leq n}+((i-1)^2)_{1\\leq i\\leq n}.$$\nLes colonnes de la matrice sont donc éléments de $\\mbox{Vect}((1)_{1\\leq i\\leq n},(i-1)_{1\\leq i\\leq n},((i-1)2)_{1\\leq i\\leq n})$ qui est de dimension inférieure ou égale à $3$ et la matrice proposée est de rang infèrieur ou égal à $3$. Donc, si $n\\geq4$, $\\Delta_n=0$. Il reste ensuite à calculer $\\Delta_1=1$ puis $\\Delta_2=\\left|\n\\begin{array}{cc}\n1&4\\\\\n4&9\n\\end{array}\n\\right|=-7$ puis $\\Delta_3=\\left|\n\\begin{array}{ccc}\n1&4&9\\\\\n4&9&16\\\\\n9&16&25\n\\end{array}\n\\right|=(225-256)-4(100-144)+9(64-81)=-31+176-153=-8$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b053f720-0f8d-42dc-a4bc-9b840e332c5f",
+      "id": "a6e4049b-e8e7-4a6d-93a7-8b425f0dd0e8",
       "type": "question",
       "value": {
         "latex": "$\\left|\\begin{array}{ccccc}\na&b&\\ldots& &b\\\\\nb&a&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&a&b\\\\\nb&\\ldots&\\ldots&b&a\n\\end{array}\n\\right|$",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "9e174300-25f0-4ab4-ba19-d5baee58d8d9",
+      "id": "bae6c020-2448-456a-afd8-bab180625c67",
       "type": "reponse",
       "value": {
         "latex": "$$\\Delta_n=\\mbox{det}(C_1,...,C_n)=\\mbox{det}(C_1+...+C_n,C_2,...,C_n)=(a+(n-1)b)\n\\left|\n\\begin{array}{ccccc}\n1&b&\\ldots&\\ldots&b\\\\\n1&a&\\ddots& &\\vdots\\\\\n\\vdots&b&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\vdots&\\ddots&\\ddots&b\\\\\n1&b&\\ldots&b&a\n\\end{array}\n\\right|,$$\npar linéarité par rapport à la première colonne. Puis, aux lignes numéros $2$,..., $n$, on retranche la première ligne pour obtenir~:\n\n$$\\Delta_n=(a+(n-1)b)\\left|\n\\begin{array}{ccccc}\n1&b&\\ldots&\\ldots&b\\\\\n0&a-b&0&\\ldots&0\\\\\n\\vdots&0&\\ddots&\\ddots&\\vdots\\\\\n\\vdots&\\vdots&\\ddots&\\ddots&0\\\\\n0&0&\\ldots&0&a-b\n\\end{array}\n\\right|=(a+(n-1)b)(a-b)^{n-1}.$$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "09588d50-4e67-423d-8f10-b2f8d9a325bd",
+      "id": "5445573d-0d10-4c3d-b2ee-4f17fedc47a1",
       "type": "question",
       "value": {
         "latex": "$\\left|\\begin{array}{ccccc}\na_1+x&c+x&\\ldots&\\ldots&c+x\\\\\nb+x&a_2+x&\\ddots& &\\vdots\\\\\n\\vdots&\\ddots&\\ddots&\\ddots&\\vdots\\\\\n\\vdots& &\\ddots&a_{n-1}+x&c+x\\\\\nb+x&\\ldots&\\ldots&b+x&a_n+x\n\\end{array}\n\\right|$$b$, $c$ complexes distincts",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "da7c1980-d8e0-4812-bda2-469e603db09a",
+      "id": "719b5a87-2cac-4472-8367-ba4e54e55a3b",
       "type": "reponse",
       "value": {
         "latex": "Par $n$ linéarité, $D_n$ est somme de $2^n$ déterminants. Mais dans cette somme, un déterminant est nul dès qu'il contient au moins deux colonnes de $x$. Ainsi, en posant $\\Delta_n=\\mbox{det}(C_1+xC,...,C_n+xC)$ où $C_k=\\left(\n\\begin{array}{c}\na_1\\\\\n\\vdots\\\\\na_{k-1}\\\\\nb\\\\\na_{k+1}\\\\\n\\vdots\\\\\na_n\n\\end{array}\n\\right)$ et $C=(1)_{1\\leq i\\leq n}$,\non obtient~:\n\n$$\\Delta_n=\\mbox{det}(C_1,...,C_n)+\\sum_{k=1}^{n}\\mbox{det}(C_1,...,C_{k-1},xC,C_{k+1},...,C_n),$$\nce qui montre que $\\Delta_n$ est un polynôme de degré infèrieur ou égal à $1$. Posons $\\Delta_n=AX+B$ et $P=\\prod_{k=1}^{n}(a_k-X)$. Quand $x=-b$ ou $x=-c$, le déterminant proposé est triangulaire et se calcule donc immédiatement. Donc~:\n\\textbf{1er cas.} Si $b\\neq c$. $\\Delta_n(-b)=P(b)$ et $\\Delta_n(-c)=P(c)$ fournit le système $\\left\\{\n\\begin{array}{l}\n-bA+B=P(b)\\\\\n-cA+B=P(c)\n\\end{array}\n\\right.$ et donc $A=-\\frac{P(c)-P(b)}{c-b}$ et $B=\\frac{cP(b)-bP(c)}{c-b}$. Ainsi,\n\n\\begin{center}\n\\shadowbox{\nsi $b\\neq c$, $\\Delta_n=-\\frac{P(c)-P(b)}{c-b}x+\\frac{cP(b)-bP(c)}{c-b}\\;\\mbox{où}\\;P=\\prod_{k=1}^{n}(a_k-X).$\n}\n\\end{center}\n\\textbf{2ème cas.} Si $b=c$, l'expression obtenue en fixant $x$ et $b$ est clairement une fonction continue de $c$ car polynômiale en $c$. On obtient donc la valeur de $\\Delta_n$ quand $b=c$ en faisant tendre $c$ vers $b$ dans l'expression déjà connue de $\\Delta_n$ pour $b\\neq c$. Maintenant, quand $b$ tend vers $c$, $-\\frac{P(c)-P(b)}{c-b}$ tend vers $-P'(b)$ et \n$$\\frac{cP(b)-bP(c)}{c-b}=\\frac{c(P(b)-P(c))+(c-b)P(c)}{c-b},$$\n\ntend vers $-bP'(b)+P(b)$.\n\n\\begin{center}\n\\shadowbox{\nsi $b=c$, $\\Delta_n=-xP'(b)+P(b)-bP'(b)\\;\\mbox{où}\\;P=\\prod_{k=1}^{n}(a_k-X).$\n}\n\\end{center}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "34737659-5328-47f4-a347-0f37e7493f21",
+      "id": "16b94104-dd0a-4e4b-848f-2b30af56281c",
       "type": "question",
       "value": {
         "latex": "$\\left|\\begin{array}{ccccc}\n2&1&0&\\ldots&0\\\\\n1&2&\\ddots&\\ddots&\\vdots\\\\\n0&\\ddots&\\ddots&\\ddots&0\\\\\n\\vdots&\\ddots&\\ddots&2&1\\\\\n1&\\ldots&0&1&2\n\\end{array}\n\\right|$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "02610e84-9078-4813-8ac2-e958a0c3d1b3",
+      "id": "3e5c3d5f-583c-4959-b598-e0e9f8ea0402",
       "type": "reponse",
       "value": {
         "latex": "$\\Delta_2=3$ et $\\Delta_3=\\left|\n\\begin{array}{ccc}\n2&1&0\\\\\n1&2&1\\\\\n0&1&2\n\\end{array}\n\\right|=2\\times3-2=4$. Puis, pour $n\\geq4$, on obtient en développant suivant la première colonne~:\n\n$$\\Delta_n=2\\Delta_{n-1}-\\Delta_{n-2}.$$\nD'où, pour $n\\geq4$, $\\Delta_n-\\Delta_{n-1}=\\Delta_{n-1}-\\Delta_{n-2}$ et la suite $(\\Delta_n-\\Delta_{n-1})_{n\\geq3}$ est constante. Par suite, pour $n\\geq3$, $\\Delta_n-\\Delta_{n-1}=\\Delta_3-\\Delta_2=1$ et donc la suite $(\\Delta_n)_{n\\geq2}$ est arithmétique de raison $1$. On en déduit que, pour $n\\geq2$, $\\Delta_n=\\Delta_2+(n-2)\\times1=n+1$ (on pouvait aussi résoudre l'équation caractéristique de la récurrence double).\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\geq2,\\;\\Delta_n=n+1.$\n}\n\\end{center}",
         "html": "<p><span class=\"math inline\">\\(\\Delta_2=3\\)</span> et <span class=\"math inline\">\\(\\Delta_3=\\left|\n\\begin{array}{ccc}\n2&amp;1&amp;0\\\\\n1&amp;2&amp;1\\\\\n0&amp;1&amp;2\n\\end{array}\n\\right|=2\\times3-2=4\\)</span>. Puis, pour <span class=\"math inline\">\\(n\\geq4\\)</span>, on obtient en développant suivant la première colonne :</p>\n<p><span class=\"math display\">\\[\\Delta_n=2\\Delta_{n-1}-\\Delta_{n-2}.\\]</span> D’où, pour <span class=\"math inline\">\\(n\\geq4\\)</span>, <span class=\"math inline\">\\(\\Delta_n-\\Delta_{n-1}=\\Delta_{n-1}-\\Delta_{n-2}\\)</span> et la suite <span class=\"math inline\">\\((\\Delta_n-\\Delta_{n-1})_{n\\geq3}\\)</span> est constante. Par suite, pour <span class=\"math inline\">\\(n\\geq3\\)</span>, <span class=\"math inline\">\\(\\Delta_n-\\Delta_{n-1}=\\Delta_3-\\Delta_2=1\\)</span> et donc la suite <span class=\"math inline\">\\((\\Delta_n)_{n\\geq2}\\)</span> est arithmétique de raison <span class=\"math inline\">\\(1\\)</span>. On en déduit que, pour <span class=\"math inline\">\\(n\\geq2\\)</span>, <span class=\"math inline\">\\(\\Delta_n=\\Delta_2+(n-2)\\times1=n+1\\)</span> (on pouvait aussi résoudre l’équation caractéristique de la récurrence double).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Calculer</p>\n"
 }

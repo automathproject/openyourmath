@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Système linéaire, rang",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:50.055Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:40.957Z"
   },
   "contenu": [
     {
-      "id": "938f7b3a-eaf2-41e9-952a-357e968c7b10",
+      "id": "e4d198e4-7fc6-4cc7-a7b5-0edc393bba88",
       "type": "description",
       "value": {
         "latex": "Soient $a_1$,..., $a_n$, $b_1$,..., $b_n$ $2n$ nombres complexes deux à deux distincts tels que les sommes $a_i+b_j$ soient toutes non nulles. Résoudre le système $\\sum_{j=1}^{n}\\frac{x_j}{a_i+b_j}=1$, pour tout $i=1,...,n$ (en utilisant la décomposition en éléments simples de $R=\\sum_{j=1}^{n}\\frac{x_j}{X+b_j}$).",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "de8ea560-9613-4f84-b074-b9e2f1fbb80f",
+      "id": "d4bef3bf-8869-4897-8875-2312d5292c07",
       "type": "reponse",
       "value": {
         "latex": "Soit $(x_1,...,x_n)\\in\\Rr^n$ et $F=\\sum_{k=1}^{n}\\frac{x_k}{X+b_k}$.\n\nLa fraction rationnelle $F$ s'écrit, après réduction au même dénominateur~:\n\n$$F=\\frac{P}{Q}\\;\\mbox{où}\\;Q=\\prod_{k=1}^{n}(X+b_k)\\;\\mbox{et}\\;P\\mbox{est un polynôme de degré infèrieur ou égal à}\\;n-1.$$\n\nMaintenant,\n\n$$(x_1,...,x_n)\\;\\mbox{solution de}\\;(S)\\Leftrightarrow\\forall k\\in\\{1,...,n\\},\\;F(a_k)=1\\Leftrightarrow\\forall k\\in\\{1,...,n\\},\\;(Q-P)(a_k)=0.$$\n\nPar suite, puisque les $a_k$ sont deux à deux distincts, $Q-P$ est divisible par $\\prod_{k=1}^{n}(X-a_k)$. Mais, $Q$ est unitaire de degré $n$ et $P$ est de degré infèrieur ou égal à $n-1$, et donc $Q-P$ est unitaire de degré $n$ ce qui montre que $Q-P=\\prod_{k=1}^{n}(X-a_k)$ ou encore que \n\n$$P=\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k).$$\n\nRéciproquement, si $F=\\frac{\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k)}{\\prod_{k=1}^{n}(X+b_k)}$, alors $\\forall k\\in\\{1,...,n\\},\\;F(a_k)=1$.\n\nEn résumé, \n\n$$\\begin{align*}\\ensuremath\n(x_1,...,x_n)\\;\\mbox{solution de}\\;(S)&\\Leftrightarrow\\sum_{k=1}^{n}\\frac{x_k}{X+b_k}=  \\frac{\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k)}{\\prod_{k=1}^{n}(X+b_k)}\\\\\n &\\Leftrightarrow\\forall i\\in\\{1,...,n\\},\\;x_i=\\lim_{x\\rightarrow -b_i}(x+b_i)\\frac{\\prod_{k=1}^{n}(x+b_k)-\\prod_{k=1}^{n}(x-a_k)}{\\prod_{k=1}^{n}(x+b_k)}\\\\&\\Leftrightarrow\\forall i\\in\\{1,...,n\\},\\;x_i=\\frac{\\prod_{k=1}^{n}(b_i+a_k)}{\\prod_{k=1}^{n}(b_k-b_i)}\n\\end{align*}$$",
         "html": "<p>Soit <span class=\"math inline\">\\((x_1,...,x_n)\\in\\Rr^n\\)</span> et <span class=\"math inline\">\\(F=\\sum_{k=1}^{n}\\frac{x_k}{X+b_k}\\)</span>.</p>\n<p>La fraction rationnelle <span class=\"math inline\">\\(F\\)</span> s’écrit, après réduction au même dénominateur :</p>\n<p><span class=\"math display\">\\[F=\\frac{P}{Q}\\;\\mbox{où}\\;Q=\\prod_{k=1}^{n}(X+b_k)\\;\\mbox{et}\\;P\\mbox{est un polynôme de degré infèrieur ou égal à}\\;n-1.\\]</span></p>\n<p>Maintenant,</p>\n<p><span class=\"math display\">\\[(x_1,...,x_n)\\;\\mbox{solution de}\\;(S)\\Leftrightarrow\\forall k\\in\\{1,...,n\\},\\;F(a_k)=1\\Leftrightarrow\\forall k\\in\\{1,...,n\\},\\;(Q-P)(a_k)=0.\\]</span></p>\n<p>Par suite, puisque les <span class=\"math inline\">\\(a_k\\)</span> sont deux à deux distincts, <span class=\"math inline\">\\(Q-P\\)</span> est divisible par <span class=\"math inline\">\\(\\prod_{k=1}^{n}(X-a_k)\\)</span>. Mais, <span class=\"math inline\">\\(Q\\)</span> est unitaire de degré <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\">\\(P\\)</span> est de degré infèrieur ou égal à <span class=\"math inline\">\\(n-1\\)</span>, et donc <span class=\"math inline\">\\(Q-P\\)</span> est unitaire de degré <span class=\"math inline\">\\(n\\)</span> ce qui montre que <span class=\"math inline\">\\(Q-P=\\prod_{k=1}^{n}(X-a_k)\\)</span> ou encore que</p>\n<p><span class=\"math display\">\\[P=\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k).\\]</span></p>\n<p>Réciproquement, si <span class=\"math inline\">\\(F=\\frac{\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k)}{\\prod_{k=1}^{n}(X+b_k)}\\)</span>, alors <span class=\"math inline\">\\(\\forall k\\in\\{1,...,n\\},\\;F(a_k)=1\\)</span>.</p>\n<p>En résumé,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n(x_1,...,x_n)\\;\\mbox{solution de}\\;(S)&amp;\\Leftrightarrow\\sum_{k=1}^{n}\\frac{x_k}{X+b_k}=  \\frac{\\prod_{k=1}^{n}(X+b_k)-\\prod_{k=1}^{n}(X-a_k)}{\\prod_{k=1}^{n}(X+b_k)}\\\\\n &amp;\\Leftrightarrow\\forall i\\in\\{1,...,n\\},\\;x_i=\\lim_{x\\rightarrow -b_i}(x+b_i)\\frac{\\prod_{k=1}^{n}(x+b_k)-\\prod_{k=1}^{n}(x-a_k)}{\\prod_{k=1}^{n}(x+b_k)}\\\\&amp;\\Leftrightarrow\\forall i\\in\\{1,...,n\\},\\;x_i=\\frac{\\prod_{k=1}^{n}(b_i+a_k)}{\\prod_{k=1}^{n}(b_k-b_i)}\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(a_1\\)</span>,..., <span class=\"math inline\">\\(a_n\\)</span>, <span class=\"math inline\">\\(b_1\\)</span>,..., <span  ..."
 }

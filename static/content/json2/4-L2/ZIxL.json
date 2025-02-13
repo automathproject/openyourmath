@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Orthonormalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:47.110Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:37.968Z"
   },
   "contenu": [
     {
-      "id": "039e8084-7c60-4e70-8b81-6dce568af8e3",
+      "id": "b4bed8cc-957b-4d0c-9d51-295338c8036f",
       "type": "description",
       "value": {
         "latex": "Sur $E =\\Rr^2$ ou $\\Rr^3$ muni de sa structure euclidienne usuelle, réduire en base orthonormée les formes quadratiques suivantes :",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f78412e8-6eb5-4a43-bf06-043fa56b0e0a",
+      "id": "dbf76f71-62b1-48d7-ab0d-b383420f055c",
       "type": "question",
       "value": {
         "latex": "$Q((x,y)) = x^2+10xy+y^2$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "3c8e4d4b-2ff4-4211-b764-63dc1a1e9b8d",
+      "id": "a49ff697-a805-4d23-a4e0-3e702ad43e32",
       "type": "reponse",
       "value": {
         "latex": "(Quand $x^2$ et $y^2$ ont les mêmes coefficients, penser à faire une rotation d'angle $\\frac{\\pi}{4}$) En posant $x=\\frac{1}{\\sqrt{2}}(X+Y)$ et $y =\\frac{1}{\\sqrt{2}}(X-Y)$, on obtient\n\n\\begin{center}\n$x^2+10xy+y^2=\\frac{1}{2}(X+Y)^2+5(X+Y)(X-Y)+\\frac{1}{2}(X-Y)^2=6X^2-4Y^2$.\n\\end{center}\n\nAinsi, si on note $(i,j)$ la base canonique de $\\Rr^2$ puis $e_1=\\frac{1}{\\sqrt{2}}(i+j)$ et $e_2=\\frac{1}{\\sqrt{2}}(i-j)$, on a\n\n\\begin{center}\n$x^2+10xy+y^2=Q(xi+yj)=Q(Xe_1+Ye_2)=6X^2-4Y^2$.\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "2f0ebb5c-9504-49b9-b88e-982fe5ffa996",
+      "id": "79d428fe-8136-4497-b0ad-b3eef54cf57e",
       "type": "question",
       "value": {
         "latex": "$Q((x,y)) = 6x2+4xy+9y2$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "09e623bc-1a08-4b93-8082-d2755a6bc632",
+      "id": "82e076bd-6c48-4bbc-acda-73f4b49b472b",
       "type": "reponse",
       "value": {
         "latex": "La matrice de $Q$ dans la base canonique $(i,j)$ de $\\Rr^2$ est $A=\\left(\n\\begin{array}{cc}\n6&2\\\\\n2&9\n\\end{array}\n\\right)$. Les deux nombres $5$ et $10$ ont une somme égale à $15 =\\text{Tr}(A)$ et un produit égal à $50=\\text{det}(A)$ et sont donc les valeurs propres de $A$. On sait alors que dans une base orthonormée $(e_1,e_2)$ de vecteurs propres de $A$ associée à la famille de valeurs propres $(5,10)$, on a $Q(Xe_1+Ye_2)=5X^2+10Y^2$. Déterminons une telle base.\n\n$(A-5I_2)\\left(\n\\begin{array}{c}\nx\\\\\ny\n\\end{array}\n\\right)=\\left(\n\\begin{array}{c}\n0\\\\\n0\n\\end{array}\n\\right)\\Leftrightarrow x+2y = 0$ et donc $\\text{Ker}(A-5I_2) =\\text{Vect}(e_1)$ où $e_1=\\frac{1}{\\sqrt{5}}(2,-1)$  puis $\\text{Ker}(A-10I_2) =(\\text{Ker}(A-5I_2))^\\bot=\\text{Vect}(e_2)$ où $e_2=\\frac{1}{\\sqrt{5}}(1,2)$.\n\nDonc, si $e_1=\\frac{1}{\\sqrt{5}}(2,-1)$, $e_2=\\frac{1}{\\sqrt{5}}(1,2)$ et $u=xi+yj=Xe_1+Ye_2$, alors $q(u)=6x2+4xy+9y2= 5X^2 + 10Y^2$. De plus, $x=\\frac{1}{\\sqrt{5}}(2X+Y)$ et $y=\\frac{1}{\\sqrt{5}}(-X+2Y)$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "1d9bbb6f-0589-4905-849b-6112cdefe94f",
+      "id": "10c9646e-eb3c-4b7a-a100-474b69c4ed98",
       "type": "question",
       "value": {
         "latex": "$Q((x,y,z)) = 4x^2+9y^2-z^2+2\\sqrt{6}xy +10\\sqrt{2}xz+2\\sqrt{3}yz$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "a818c039-b7a0-4a01-9237-b0c3b18a912e",
+      "id": "6e523351-15e7-464c-8845-a6aae365bd55",
       "type": "reponse",
       "value": {
         "latex": "La matrice de $Q$ dans la base canonique est $A=\\left(\n\\begin{array}{ccc}\n4&\\sqrt{6}&5\\sqrt{2}\\\\\n\\sqrt{6}&9&\\sqrt{3}\\\\\n5\\sqrt{2}&\\sqrt{3}&-1\n\\end{array}\n\\right)$.\n\n$$\\begin{align*}\\ensuremath\n\\chi_A&=\\left|\n\\begin{array}{ccc}\n4-X&\\sqrt{6}&5\\sqrt{2}\\\\\n\\sqrt{6}&9-X&\\sqrt{3}\\\\\n5\\sqrt{2}&\\sqrt{3}&-1-X\n\\end{array}\n\\right|= (4-X)(X^2-8X-12)-\\sqrt{6}(-\\sqrt{6}X-6\\sqrt{6})+5\\sqrt{2}(5\\sqrt{2}X-42\\sqrt{2})\\\\\n &= -X^3+12X^2+36X-432 =-(X-6)(X+6)(X-12).\n\\end{align*}$$\n\nEnsuite,\n\n$$\\begin{align*}\\ensuremath\n\\left(\n\\begin{array}{c}\nx\\\\\ny\\\\\nz\n\\end{array}\n\\right)\\in\\text{Ker}(A-6I_3)&\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n-2x+\\sqrt{6}y+5\\sqrt{2}z=0\\\\\n\\sqrt{6}x+3y+\\sqrt{3}z=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y-7z=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\n-2x+\\sqrt{6}y+5\\sqrt{2}(-\\sqrt{2}x-\\sqrt{3}y)=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y-7(-\\sqrt{2}x-\\sqrt{3}y)=0\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\n-12x-4\\sqrt{6}y=0\\\\\n12\\sqrt{2}x+8\\sqrt{3}y=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=-\\sqrt{\\frac{3}{2}}x\\\\\nz=-\\sqrt{2}x-\\sqrt{3}(-\\sqrt{\\frac{3}{2}}x)\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=-\\sqrt{\\frac{3}{2}}x\\\\\nz=\\frac{\\sqrt{2}}{2}x\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nx=\\sqrt{2}z\\\\\ny=-\\sqrt{3}{z}\n\\end{array}\n\\right.\n\\end{align*}$$\n\net $\\text{Ker}(A-6I_3) =\\text{Vect}(e_1)$ où $e_1=\\frac{1}{\\sqrt{6}}(\\sqrt{2},-\\sqrt{3},1)$. De même,\n\n   \n$$\\begin{align*}\\ensuremath\n\\left(\n\\begin{array}{c}\nx\\\\\ny\\\\\nz\n\\end{array}\n\\right)\\in\\text{Ker}(A+6I_3)&\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n10x+\\sqrt{6}y+5\\sqrt{2}z=0\\\\\n\\sqrt{6}x+15y+\\sqrt{3}z=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y+5z=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-5\\sqrt{3}y\\\\\n10x+\\sqrt{6}y+5\\sqrt{2}(-\\sqrt{2}x-5\\sqrt{3}y)=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y+5(-\\sqrt{2}x-5\\sqrt{3}y)=0\n\\end{array}\n\\right.\\\\\n &\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\ny=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=0\\\\\nz=-\\sqrt{2}x\n\\end{array}\n\\right.\n\\end{align*}$$\n\n \net $\\text{Ker}(A+6I_3) =\\text{Vect}(e_2)$ où $e_2=\\frac{1}{\\sqrt{3}}(1,0,-\\sqrt{2})$.\n\nEnfin $\\text{Ker}(A-12I_3) =\\text{Vect}(e_3)$ où \n\n\\begin{center}\n$e_3 =e_1\\wedge e_2=\\frac{1}{3\\sqrt{2}}\\left(\n\\begin{array}{c}\n\\sqrt{2}\\\\\n-\\sqrt{3}\\\\\n1\n\\end{array}\n\\right)\\wedge\\left(\n\\begin{array}{c}\n1\\\\\n0\\\\\n-\\sqrt{2}\n\\end{array}\n\\right)=\\frac{1}{3\\sqrt{2}}\\left(\n\\begin{array}{c}\n\\sqrt{6}\\\\\n3\\\\\n\\sqrt{3}\n\\end{array}\n\\right)$.\n\\end{center}\n\nAinsi, si on pose $P=\\left(\n\\begin{array}{ccc}\n\\frac{1}{\\sqrt{3}}&\\frac{1}{\\sqrt{3}}&\\frac{1}{\\sqrt{3}}\\\\\n-\\frac{1}{\\sqrt{2}}&0&\\frac{1}{\\sqrt{2}}\\\\\n\\frac{1}{\\sqrt{6}}&-\\frac{2}{\\sqrt{6}}&\\frac{1}{\\sqrt{6}}\n\\end{array}\\right)$ alors $PA{^t}P=\\text{diag}(6,-6,12)$ ou encore\n\n\\begin{center}\n$Q(Xe_1+Ye_2+Ze_3) =6X^2-6Y^2+12Z^2$ où $\\text{Mat}_{(i,j,k)}(e_1,e_2,e_3)=\\left(\n\\begin{array}{ccc}\n\\frac{1}{\\sqrt{3}}&\\frac{1}{\\sqrt{3}}&\\frac{1}{\\sqrt{3}}\\\\\n-\\frac{1}{\\sqrt{2}}&0&\\frac{1}{\\sqrt{2}}\\\\\n\\frac{1}{\\sqrt{6}}&-\\frac{2}{\\sqrt{6}}&\\frac{1}{\\sqrt{6}}\n\\end{array}\\right)$.\n\\end{center}",
         "html": "<p>La matrice de <span class=\"math inline\">\\(Q\\)</span> dans la base canonique est <span class=\"math inline\">\\(A=\\left(\n\\begin{array}{ccc}\n4&amp;\\sqrt{6}&amp;5\\sqrt{2}\\\\\n\\sqrt{6}&amp;9&amp;\\sqrt{3}\\\\\n5\\sqrt{2}&amp;\\sqrt{3}&amp;-1\n\\end{array}\n\\right)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\chi_A&amp;=\\left|\n\\begin{array}{ccc}\n4-X&amp;\\sqrt{6}&amp;5\\sqrt{2}\\\\\n\\sqrt{6}&amp;9-X&amp;\\sqrt{3}\\\\\n5\\sqrt{2}&amp;\\sqrt{3}&amp;-1-X\n\\end{array}\n\\right|= (4-X)(X^2-8X-12)-\\sqrt{6}(-\\sqrt{6}X-6\\sqrt{6})+5\\sqrt{2}(5\\sqrt{2}X-42\\sqrt{2})\\\\\n &amp;= -X^3+12X^2+36X-432 =-(X-6)(X+6)(X-12).\n\\end{align*}\\]</span></p>\n<p>Ensuite,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\left(\n\\begin{array}{c}\nx\\\\\ny\\\\\nz\n\\end{array}\n\\right)\\in\\text{Ker}(A-6I_3)&amp;\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n-2x+\\sqrt{6}y+5\\sqrt{2}z=0\\\\\n\\sqrt{6}x+3y+\\sqrt{3}z=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y-7z=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\n-2x+\\sqrt{6}y+5\\sqrt{2}(-\\sqrt{2}x-\\sqrt{3}y)=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y-7(-\\sqrt{2}x-\\sqrt{3}y)=0\n\\end{array}\n\\right.\\\\\n &amp;\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\n-12x-4\\sqrt{6}y=0\\\\\n12\\sqrt{2}x+8\\sqrt{3}y=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=-\\sqrt{\\frac{3}{2}}x\\\\\nz=-\\sqrt{2}x-\\sqrt{3}(-\\sqrt{\\frac{3}{2}}x)\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=-\\sqrt{\\frac{3}{2}}x\\\\\nz=\\frac{\\sqrt{2}}{2}x\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nx=\\sqrt{2}z\\\\\ny=-\\sqrt{3}{z}\n\\end{array}\n\\right.\n\\end{align*}\\]</span></p>\n<p>et <span class=\"math inline\">\\(\\text{Ker}(A-6I_3) =\\text{Vect}(e_1)\\)</span> où <span class=\"math inline\">\\(e_1=\\frac{1}{\\sqrt{6}}(\\sqrt{2},-\\sqrt{3},1)\\)</span>. De même,</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\left(\n\\begin{array}{c}\nx\\\\\ny\\\\\nz\n\\end{array}\n\\right)\\in\\text{Ker}(A+6I_3)&amp;\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n10x+\\sqrt{6}y+5\\sqrt{2}z=0\\\\\n\\sqrt{6}x+15y+\\sqrt{3}z=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y+5z=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-5\\sqrt{3}y\\\\\n10x+\\sqrt{6}y+5\\sqrt{2}(-\\sqrt{2}x-5\\sqrt{3}y)=0\\\\\n5\\sqrt{2}x+\\sqrt{3}y+5(-\\sqrt{2}x-5\\sqrt{3}y)=0\n\\end{array}\n\\right.\\\\\n &amp;\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nz=-\\sqrt{2}x-\\sqrt{3}y\\\\\ny=0\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\ny=0\\\\\nz=-\\sqrt{2}x\n\\end{array}\n\\right.\n\\end{align*}\\]</span></p>\n<p>et <span class=\"math inline\">\\(\\text{Ker}(A+6I_3) =\\text{Vect}(e_2)\\)</span> où <span class=\"math inline\">\\(e_2=\\frac{1}{\\sqrt{3}}(1,0,-\\sqrt{2})\\)</span>.</p>\n<p>Enfin <span class=\"math inline\">\\(\\text{Ker}(A-12I_3) =\\text{Vect}(e_3)\\)</span> où</p>\n<p><span class=\"math inline\">\\(e_3 =e_1\\wedge e_2=\\frac{1}{3\\sqrt{2}}\\left(\n\\begin{array}{c}\n\\sqrt{2}\\\\\n-\\sqrt{3}\\\\\n1\n\\end{array}\n\\right)\\wedge\\left(\n\\begin{array}{c}\n1\\\\\n0\\\\\n-\\sqrt{2}\n\\end{array}\n\\right)=\\frac{1}{3\\sqrt{2}}\\left(\n\\begin{array}{c}\n\\sqrt{6}\\\\\n3\\\\\n\\sqrt{3}\n\\end{array}\n\\right)\\)</span>.</p>\n<p>Ainsi, si on pose <span class=\"math inline\">\\(P=\\left(\n\\begin{array}{ccc}\n\\frac{1}{\\sqrt{3}}&amp;\\frac{1}{\\sqrt{3}}&amp;\\frac{1}{\\sqrt{3}}\\\\\n-\\frac{1}{\\sqrt{2}}&amp;0&amp;\\frac{1}{\\sqrt{2}}\\\\\n\\frac{1}{\\sqrt{6}}&amp;-\\frac{2}{\\sqrt{6}}&amp;\\frac{1}{\\sqrt{6}}\n\\end{array}\\right)\\)</span> alors <span class=\"math inline\">\\(PA{^t}P=\\text{diag}(6,-6,12)\\)</span> ou encore</p>\n<p><span class=\"math inline\">\\(Q(Xe_1+Ye_2+Ze_3) =6X^2-6Y^2+12Z^2\\)</span> où <span class=\"math inline\">\\(\\text{Mat}_{(i,j,k)}(e_1,e_2,e_3)=\\left(\n\\begin{array}{ccc}\n\\frac{1}{\\sqrt{3}}&amp;\\frac{1}{\\sqrt{3}}&amp;\\frac{1}{\\sqrt{3}}\\\\\n-\\frac{1}{\\sqrt{2}}&amp;0&amp;\\frac{1}{\\sqrt{2}}\\\\\n\\frac{1}{\\sqrt{6}}&amp;-\\frac{2}{\\sqrt{6}}&amp;\\frac{1}{\\sqrt{6}}\n\\end{array}\\right)\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Sur <span class=\"math inline\">\\(E =\\Rr^2\\)</span> ou <span class=\"math inline\">\\(\\Rr^3\\)</span> muni de sa structure euclidienne usuelle, réduire e ..."
 }

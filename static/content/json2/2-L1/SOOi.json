@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Intégrale impropre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:57.593Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:45.250Z"
   },
   "contenu": [
     {
-      "id": "2f8b7f72-3b63-472d-bb9a-481df16755a7",
+      "id": "54909545-e3d0-4a8d-b9f6-dbbaa9743ab1",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f98b3022-9251-4b97-b273-e6619e0d42cf",
+      "id": "6e2dc45d-004b-4226-9d83-6145ee71c339",
       "type": "question",
       "value": {
         "latex": "\\emph{Le but de cette question est de montrer que\n$\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt$ n'est pas absolument\nconvergente.} Pour $n\\in\\mathbb{N}$, on pose~:\n\\begin{eqnarray*}\nu_{n} = \\int_{n\\pi}^{(n+1)\\pi} \\frac{|\\sin t|}{t} \\, dt.\n\\end{eqnarray*}\nMontrer que pour $n\\geq 0$, $\\frac{2}{(n+1)\\pi} \\leq u_{n}$. En\nd\\'eduire que $\\int_{0}^{+\\infty} \\frac{|\\sin t|}{t}\\, dt$ est\ndivergente.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "10d0762a-cbe6-45a9-a55f-49956372aeff",
+      "id": "fa5f5145-125d-452d-8030-d82caf902756",
       "type": "reponse",
       "value": {
         "latex": "Pour $n\\in\\mathbb{N}$, on pose~:\n\\begin{eqnarray*}\nu_{n} = \\int_{n\\pi}^{(n+1)\\pi} \\frac{|\\sin t|}{t} \\, dt.\n\\end{eqnarray*}\nPour $n\\geq 0$, on a $\\frac{1}{(n+1)\\pi}\\leq \\frac{1}{t}$, donc\n$$\n\\frac{1}{(n+1)\\pi} \\,\\int_{n\\pi}^{(n+1)\\pi}|\\sin t|\\,dt\n\\,\\,\\leq\\,\\, \\int_{n\\pi}^{(n+1)\\pi} \\frac{|\\sin t|}{t}\\,dt.\n$$\nOr $|\\sin t| = (-1)^n \\sin t$ sur $[n\\pi, (n+1)\\pi]$. Ainsi\n$$\\int_{n\\pi}^{(n+1)\\pi} |\\sin t| \\,dt = (-1)^{n} \\left[-\\cos t\n\\right]_{n\\pi}^{(n+1)\\pi} = 2.$$\nIl en d\\'ecoule que $\n\\frac{2}{(n+1)\\pi} \\leq u_{n}$ et $$\\int_{0}^{+\\infty} \\frac{|\\sin\nt|}{t}\\, dt =  \\sum_{n=0}^{+\\infty} u_{n} \\geq \\frac{2}{\\pi}\n\\sum_{n=0}^{+\\infty} \\frac{1}{n+1}$$ est divergente.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "e43dfe42-67c4-4e1c-b3bf-0fc39030780b",
+      "id": "bf3f9044-fdd4-4934-adaf-d4e523ce8f25",
       "type": "question",
       "value": {
         "latex": "\\emph{Deuxi\\`eme formule de la moyenne.}\n Soient $f$ et $g$ deux fonctions Riemann-int\\'egrables sur $[a, b]$,\n admettant des primitives not\\'ees $F$ et $G$ respectivement. Supposons\n que $F$ est positive et d\\'ecroissante. Montrer qu'il existe\n $y\\in [a,b]$ tel que~:\n \\begin{equation*}\n\\int_{a}^{b}F(x)g(x)\\,dx = F(a)\\int_{a}^{y}g(x)\\,dx.\n \\end{equation*}",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "8aba2bd9-4d0e-4dad-a469-3c298727d48f",
+      "id": "c594a72b-8ac8-46f7-b697-43df0a2c70ac",
       "type": "reponse",
       "value": {
         "latex": "\\emph{Deuxi\\`eme formule de la moyenne.}\n D'apr\\`es l'\\'enonc\\'e, $F$ est une primitive de $f$ et est positive et d\\'ecroissante.\n Puisque la fonction $g$ admet des primitives,\n la fonction $G(y) := \\int_{a}^{y} g(x)\\,dx$ est la primitive de\n$g$ s'annulant en $a$.\n D'apr\\`es le th\\'eor\\`eme des valeurs interm\\'ediaires, pour montrer qu'il existe\n $y\\in [a,b]$ tel que~:\n \\begin{equation*}\n\\int_{a}^{b}F(x)g(x)\\,dx = F(a)\\int_{a}^{y}g(x)\\,dx,\n \\end{equation*}\nil suffit de montrer que\n$$\nF(a) \\,\\min_{y\\in [a, b]}G(y) \\,\\leq\\,\n\\int_{a}^{b}F(x)g(x)\\,dx\\,\\leq\\, F(a) \\max_{y\\in[a,b]} G(y).\n$$\nPar int\\'egration par parties, on obtient~:\n$$\n\\int_{a}^{b}F(x)g(x)\\,dx = F(b)G(b)-F(a)G(a) - \\int_{a}^{b} f(x) G(x)\\,dx.\n$$\navec $F(a)G(a)=0$.\nComme $f$ est n\\'egative sur $[a, b]$, on a~:\n\\begin{eqnarray*}\n\\min_{y\\in[a,b]} G(y)\\,\\int_{a}^{b} -f(x)\\,dx \\,\\leq\\, -\n\\int_{a}^{b} f(x) G(x)\\,dx \\,\\leq\\, \\max_{y\\in[a,b]} G(y)\n\\int_{a}^{b} -f(x)\\,dx,\\\\ \\Leftrightarrow \\,\\min_{y\\in[a,b]} G(y)\n\\left(F(a)- F(b)\\right)\\,\\leq\\, - \\int_{a}^{b} f(x) G(x)\\,dx\n\\,\\leq\\, \\max_{y\\in[a,b]} G(y) \\left(F(a) - F(b)\\right).\n\\end{eqnarray*}\nOn en d\\'eduit l'encadrement suivant~:\n\\begin{eqnarray*}\nF(b)\\left(G(b) - \\min_{y\\in[a,b]} G(y)\\right) +\nF(a)\\min_{y\\in[a,b]} G(y)\\,\\leq\\,  \\int_{a}^{b}F(x)g(x)\\,dx\\\\\n\\leq\\, F(b)\\left(G(b) - \\max_{y\\in[a,b]} G(y))\\right) +\nF(a)\\max_{y\\in[a,b]} G(y).\n\\end{eqnarray*}\nLes in\\'egalit\\'es $G(b) - \\min_{y\\in[a,b]} G(y)\\,\\geq \\,0$ et\n$G(b) - \\max_{y\\in[a,b]} G(y)\\,\\leq\\,0$ et la positivit\\'e de $F$\npermettent de conclure.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "76810583-64d8-4b52-b36d-71d5f24abdbc",
+      "id": "1fbc5971-8477-494f-941f-0f6b3edab07c",
       "type": "question",
       "value": {
         "latex": "En d\\'eduire que $\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt$\nest convergente.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "bd8067a2-17c0-4231-9a3e-bebd6f9bf528",
+      "id": "b52157cf-c597-46b0-9f5f-851b4d0a3416",
       "type": "reponse",
       "value": {
         "latex": "D'apr\\`es le crit\\`ere de Cauchy (voir la proposition des rappels), pour\nmontrer que $\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt$ est\nconvergente, il suffit de montrer que $\\int_{x}^{x'} \\frac{\\sin\nt}{t}\\,dt$ tend vers $0$ lorsque $x$ et  $x'$ tendent vers\n$+\\infty$. D'apr\\`es la formule de la moyenne appliqu\\'ee \\`a\n$F(t) = \\frac{1}{t}$ et $g(t) = \\sin t$, il vient~:\n\\begin{equation*}\n\\int_{x}^{x'} \\frac{\\sin t}{t}\\,dt = \\frac{1}{x} \\int_{x}^{y} \\sin\nt \\,dt\n\\end{equation*}\npour un certain $y \\in [x, x']$. On en d\\'eduit que\n\\begin{equation*}\n\\left|\\int_{x}^{x'} \\frac{\\sin t}{t}\\,dt \\right| = \\frac{1}{x}\n|\\cos y - \\cos x| \\leq \\frac{2}{x}.\n\\end{equation*}\nAinsi $\\lim_{x, x'\\rightarrow +\\infty}\\int_{x}^{x'} \\frac{\\sin\nt}{t}\\,dt = 0$ et $\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt$ est\nconvergente.",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "a69c6711-b9e0-4382-bf10-f8607b722617",
+      "id": "908bf7d1-d42b-4edd-9a59-675d4926a24a",
       "type": "question",
       "value": {
         "latex": "\\emph{Le but de cette question est de\ncalculer la valeur de cette int\\'egrale.} Pour tout nombre r\\'eel\n$\\lambda\\geq 0$, on pose~:\n\\begin{equation*}\n\\left\\{\n\\begin{array}{lll}\nf(t, \\lambda) &=& e^{-\\lambda t}\\,\\frac{\\sin t}{t}\\quad\\quad\n\\text{pour}\\quad t> 0\\\\\nf(0, \\lambda) &=& 1.\n\\end{array}\\right.\n\\end{equation*}\n\n  \\begin{enumerate}",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "1363fa16-9384-43f0-bfe4-b716087a6da2",
+      "id": "71022525-71fb-4627-8b8a-c57835cc6f87",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "cc8bdcd5-728c-42ae-b9a0-b39890b446de",
+      "id": "1593193a-c0a9-4b04-a555-1765ca4b47f6",
       "type": "question",
       "value": {
         "latex": "Pour $0< x \\leq y$, d\\'emontrer que l'on a~:\n\\begin{equation*}\n\\left|\\int_{x}^{y} f(t, \\lambda)\\, dt\\right| \\leq \\frac{2}{x}\ne^{-\\lambda x}.\n\\end{equation*}",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "id": "4b648a89-52c8-4259-a76c-53a1cf4a35c0",
+      "id": "9be90961-e7f6-4d6e-8414-bf80fb8e0e56",
       "type": "reponse",
       "value": {
         "latex": "Posons pour $t > 0$, $U(t) = \\frac{e^{-\\lambda t}}{t}$.\nOn a $u(t) = U'(t) = -\\frac{e^{-\\lambda t}}{t^2}\\left(\\lambda t +\n1 \\right)< 0$. Ainsi $U$ est positive et d\\'ecroissante sur $]0,\n+\\infty[$. D'apr\\`es la deuxi\\`eme formule de la moyenne, pour $0<\nx\\leq y$, il vient~:\n\\begin{equation*}\n\\left|\\int_{x}^{y} f(t, \\lambda)\\, dt \\right| = \\left|\\int_{x}^{y}\nU(t) \\sin t\\, dt  \\right| = \\left| \\frac{e^{-\\lambda x}}{x}\n\\int_{x}^{y'} \\sin t \\, dt \\right|,\n\\end{equation*}\npour un certain $y'\\in [x, y]$. On en d\\'eduit que\n\\begin{equation*}\n\\left|\\int_{x}^{y} f(t, \\lambda) \\,dt \\right| \\,\\leq\\, \\frac{2\ne^{-\\lambda x}}{x}.\n\\end{equation*}",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "9143238f-bd90-4a39-93f2-38b0da2f15a8",
+      "id": "d15ba0d8-ec7f-48f8-8c1c-c61e3dbf2a5f",
       "type": "question",
       "value": {
         "latex": "En d\\'eduire que les int\\'egrales g\\'en\\'eralis\\'ees\n$\\,\\int_{0}^{+\\infty} f(t, \\lambda)\\, dt\\,$ sont convergentes,\nuniform\\'ement pour $\\lambda\\geq0$. On pose, pour $\\lambda \\geq\n0$,\n\\begin{equation*}\nF(\\lambda) = \\int_{0}^{+\\infty} e^{-\\lambda t}\\,\\frac{\\sin\nt}{t}\\,dt.\n\\end{equation*}\nD\\'emontrer que la fonction $F$ est continue pour $\\lambda \\geq\n0$.",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "b7536d39-6a24-417e-81e1-b6ba1517d65c",
+      "id": "94abb0d5-3ccf-4a39-9687-b50a2766e9fe",
       "type": "reponse",
       "value": {
         "latex": "On remarque que, pour tout $x>0$, la fonction $t \\mapsto f(t,\n\\lambda)$ est continue sur $[0, x]$, donc Riemann-int\\'egrable sur\ncet intervalle. D'apr\\`es le crit\\`ere de Cauchy et la question\n$4.a)$, les int\\'egrales g\\'en\\'eralis\\'ees $\\int_{0}^{+\\infty}\nf(t, \\lambda)\\,dt$ sont convergentes. Soit $F(\\lambda) =\n\\int_{0}^{+\\infty} f(t, \\lambda)\\,dt$. Pour montrer que les\nint\\'egrales g\\'en\\'eralis\\'ees $\\int_{0}^{+\\infty} f(t,\n\\lambda)\\,dt$ convergent uniform\\'ement en $\\lambda\\geq 0$, il\nfaut montrer que pour tout $\\varepsilon> 0$, il existe $x_{0}>0$\ntel que pour tout $x> x_{0}$ et pour tout $\\lambda\\geq 0$,\n\\begin{equation*}\n\\left|F(\\lambda) - \\int_{0}^{x} f(t, \\lambda)\\,dt \\right| \\,\\leq\\,\n\\varepsilon.\n\\end{equation*}\nOr, d'apr\\`es la question $4.a)$,\n\\begin{equation*}\n\\left|F(\\lambda) - \\int_{0}^{x} f(t, \\lambda)\\,dt \\right| \\,\\leq\\,\n\\frac{2 e^{-\\lambda x}}{x} \\,\\leq\\, \\frac{2 e^{-\\lambda\nx_{0}}}{x_{0}} \\,\\leq\\, \\frac{2}{x_{0}}.\n\\end{equation*}\nAinsi pour $x_{0} > \\frac{2}{\\varepsilon}$, on a l'in\\'egalit\\'e\nd\\'esir\\'ee, et ce ind\\'ependamment de la valeur de $\\lambda$.\nPosons $F_{n}(\\lambda) = \\int_{0}^{n}f(t, \\lambda) \\,dt$.\nD'apr\\`es ce qui pr\\'ec\\`ede,\n$$\n\\sup_{\\lambda\\in [0,+\\infty[} |F(\\lambda) - F_{n}(\\lambda)| \\leq\n\\frac{2}{n},\n$$\ni.e. $F_{n}$ converge uniform\\'ement vers $F$ sur $[0, +\\infty[$.\nComme les fonction $F_{n}$ sont continues, il en d\\'ecoule que $F$\nest continue. On peut aussi revenir \\`a la d\\'efinition de\ncontinuit\\'e~:\n pour montrer que la fonction $\\lambda \\mapsto F(\\lambda)$\nest continue en un point $\\lambda_{0} \\in [0, +\\infty[$, il faut\nmontrer que pour tout $\\varepsilon>0$, il existe un voisinage de\n${\\lambda}_{0}$ tel que $|F(\\lambda) - F({\\lambda}_{0})| <\n\\varepsilon$ pour tout $\\lambda $ dans ce voisinage. Soit\n$\\varepsilon>0$ fix\\'e, et posons $x_{\\varepsilon} =\n\\frac{6}{\\varepsilon}$. On a~:\n\\begin{eqnarray*}\n|F(\\lambda) - F({\\lambda}_{0})| &=&\n\\left|\\int_{0}^{x_{\\varepsilon}} \\left(f(t, \\lambda) - f(t,\n{\\lambda}_{0}\\right)\\,dt + \\int_{x_{\\varepsilon}}^{+\\infty} f(t,\n\\lambda)\\, dt - \\int_{x_{\\varepsilon}}^{+\\infty} f(t,\n{\\lambda}_{0})\\,dt\n\\right|\\\\\n&\\leq & \\left|\\int_{0}^{x_{\\varepsilon}} \\left(f(t, \\lambda) -\nf(t, {\\lambda}_{0}\\right)\\,dt\\right| + \\left|\n\\int_{x_{\\varepsilon}}^{+\\infty} f(t, \\lambda)\\, dt \\right| +\n\\left| \\int_{x_{\\varepsilon}}^{+\\infty} f(t,\n{\\lambda}_{0})\\,dt \\right|\\\\\n& \\leq & \\left|\\int_{0}^{x_{\\varepsilon}} \\left(f(t, \\lambda) -\nf(t, {\\lambda}_{0}\\right)\\,dt \\right|+ \\frac{2}{3}\\varepsilon.\n\\end{eqnarray*}\nPour conclure, il suffit de trouver un voisinage de ${\\lambda}_0$\ntel que  $\\left|\\int_{0}^{x_{\\varepsilon}} \\left(f(t, \\lambda) -\nf(t, {\\lambda}_{0}\\right)\\,dt\\right| < \\frac{\\varepsilon}{3}$ pour\ntout $\\lambda $ dans ce voisinage. L'existence d'un tel voisinage\nest garantie par la continuit\\'e de la fonction $\\lambda \\mapsto\n\\int_{0}^{x_{\\varepsilon}}f(t, \\lambda)\\,dt$ donn\\'ee par le\nth\\'eor\\`eme de continuit\\'e d'une int\\'egrale d\\'ependant d'un param\\`etre (voir les rappels).\nOn peut \\'egalement d\\'eterminer\nl'existence de ce voisinage \\`a la main de la fa\\c{c}on suivante~:\n\\begin{eqnarray*}\n\\left|\\int_{0}^{x_{\\varepsilon}} \\left(f(t, \\lambda) - f(t,\n{\\lambda}_{0})\\right)\\,dt\\right| &\\,\\leq\\,&\n\\int_{0}^{x_{\\varepsilon}}\n\\left|\\left(f(t, \\lambda) - f(t, {\\lambda}_{0}\\right)\\right|\\,dt\\\\\n&\\,\\leq \\,& \\sup_{t\\in [0, x_{\\varepsilon}]} \\left| e^{-\\lambda t}\n- e^{-{\\lambda}_0 t}\\right| \\int_{0}^{x_{\\varepsilon}} \\left|\n\\frac{\\sin t}{t}\n\\right|\\,dt,\\\\\n& \\leq & x_{\\varepsilon} \\sup_{t\\in [0, x_{\\varepsilon}]} \\left|\ne^{-\\lambda t} - e^{-{\\lambda}_0 t}\\right|,\n\\end{eqnarray*}\no\\`u l'on a utiliser l'in\\'egalit\\'e $|\\sin t| \\leq |t|$. On a~:\n\\begin{eqnarray*}\n\\left| e^{-\\lambda t} - e^{-{\\lambda}_0 t}\\right|& =&\n\\left|e^{-\\frac{(\\lambda + {\\lambda}_0)t}{2}}\n\\left(e^{-\\frac{({\\lambda}_{0} - \\lambda)t}{2}} -\ne^{\\frac{({\\lambda}_{0} - \\lambda)t}{2}}\\right) \\right| \\\\\n&\\leq\\,& 2 \\sinh\\left(\\frac{|\\lambda -\n{\\lambda}_0|t}{2}\\right)\\,\\leq\\, 2 \\sinh\\left(\\frac{|\\lambda -\n{\\lambda}_0|x_{\\varepsilon}}{2}\\right),\n\\end{eqnarray*}\ncar la fonction $\\sinh$ est croissante.  Ainsi le voisinage de\n${\\lambda}_0$ d\\'etermin\\'e par $|\\lambda-{\\lambda_0}| <\n\\frac{\\varepsilon}{3}\\text{argsinh}\\left(\\frac{\\varepsilon^2}{36}\\right)\n$ convient.",
@@ -120,7 +120,7 @@
       }
     },
     {
-      "id": "aa3859b0-cdfe-417e-9dec-6e55b527bb6b",
+      "id": "d28a3c6b-0f59-4079-a2f7-ff76b157582b",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer que la fonction $F$ est d\\'erivable pour\n$\\lambda\n> 0$ et que sa d\\'eriv\\'ee est \\'egale \\`a l'int\\'egrale\ng\\'en\\'eralis\\'ee convergente\n\\begin{equation*}\nF'(\\lambda) = - \\int_{0}^{+\\infty} e^{-\\lambda t}\\sin t \\,dt.\n\\end{equation*}",
@@ -128,7 +128,7 @@
       }
     },
     {
-      "id": "1ce59b1d-4826-4f66-b0f4-68c9b215378b",
+      "id": "9ad9cf31-35fa-416d-ad68-b563a22b9ee3",
       "type": "reponse",
       "value": {
         "latex": "Pour $x \\in [0, +\\infty[$ et $\\lambda \\in ]0, +\\infty[$,\nposons\n$$\n\\tilde{F}(x, \\lambda) = \\int_{0}^{x} f(t, \\lambda) \\,dt.\n$$\nD'apr\\`es le th\\'eor\\`eme de d\\'erivabilit\\'e d'une int\\'egrale d\\'ependant d'un\nparam\\`etre (voir les rappels), la fonction $\\tilde{F}$ est\nd\\'erivable par rapport \\`a la deuxi\\`eme variable et sa\nd\\'eriv\\'ee partielle vaut~:\n$$\n\\frac{\\partial \\tilde{F}}{\\partial \\lambda}(x, \\lambda) =\n\\int_{0}^{x} \\frac{\\partial f}{\\partial \\lambda}(t, \\lambda) \\,dt.\n$$\nLorsque $x\\rightarrow +\\infty$, $\\tilde{F}(x, \\lambda)$ tend vers\n$F(\\lambda)$. D'apr\\`es la question $4.b)$ cette convergence est\nuniforme pour $\\lambda \\geq 0$. D'autre part, lorsque $x$ tend\nvers $+\\infty$, $ \\frac{\\partial \\tilde{F}}{\\partial \\lambda}(x,\n\\lambda)$ tend vers $F'(\\lambda):= -\\int_{0}^{+\\infty} e^{-\\lambda\nt} \\sin t \\,dt$. On peut montrer comme dans la question $4.b)$ que\ncette convergence est uniforme pour $\\lambda > 0$ (attention il\nfaut exclure $\\lambda = 0$ ici). Il en d\\'ecoule que\n$\\lim_{h\\rightarrow 0}\\frac{F(\\lambda + h) - F(\\lambda)}{h} =\nF'(\\lambda)$ (\\'ecrivez l'argument! On pourra soit utiliser le\ndernier th\\'eor\\`eme des rappels, soit le montrer \\`a la main...).",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "369ddd24-f63c-4e15-88df-c6d13a23e821",
+      "id": "0c899611-ac73-498a-a5cc-a12e0c591bbb",
       "type": "question",
       "value": {
         "latex": "Calculer cette derni\\`ere int\\'egrale g\\'en\\'eralis\\'ee, par\nexemple en int\\'egrant par parties sur $[0, x]$ et en calculant la\nlimite\nquand $x\\rightarrow +\\infty$.",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "8500904b-00d4-49e0-987d-9ee452809b6c",
+      "id": "c0b6b36f-95a7-4379-b9e8-283af8ab3397",
       "type": "reponse",
       "value": {
         "latex": "Soit $x > 0$. On a~:\n\\begin{eqnarray*}\n- \\int_{0}^{x} e^{-\\lambda t} \\sin t\\,dt &=& \\left[\n\\frac{e^{-\\lambda t}}{\\lambda} \\sin t\\right]_{0}^{x} -\n\\int_{0}^{x} \\frac{e^{-\\lambda t}}{\\lambda} \\cos t \\,dt\\\\ & =&\n\\frac{e^{-\\lambda x}}{\\lambda} \\sin x + \\left[ \\frac{e^{-\\lambda\nt}}{\\lambda^2} \\cos t\\right]_{0}^{x} + \\int_{0}^{x}\n\\frac{e^{-\\lambda t}}{\\lambda^2} \\sin t\\,dt \\\\ &=&\n\\frac{e^{-\\lambda x}}{\\lambda} \\sin x + \\frac{e^{-\\lambda\nx}}{\\lambda^2} \\cos x - \\frac{1}{\\lambda^2} + \\int_{0}^{x}\n\\frac{e^{-\\lambda t}}{\\lambda^2} \\sin t\\,dt.\n\\end{eqnarray*}\nAinsi $$-\\left(1 + \\frac{1}{\\lambda^2}\\right)\\int_{0}^{x}\ne^{-\\lambda t} \\sin t\\,dt = \\frac{e^{-\\lambda x}}{\\lambda} \\sin x\n+ \\frac{e^{-\\lambda x}}{\\lambda^2} \\cos x - \\frac{1}{\\lambda^2}.$$\nOn en d\\'eduit que\n$$\nF'(\\lambda) = \\lim_{x\\rightarrow +\\infty} -\\int_{0}^{x}\ne^{-\\lambda t} \\sin t\\,dt  = \\frac{-1}{1 + \\lambda^2}.\n$$",
@@ -152,7 +152,7 @@
       }
     },
     {
-      "id": "cf2bdc91-7ca9-46a2-a652-4e772d65538b",
+      "id": "a27713bf-4c02-4462-86a1-907568e765ed",
       "type": "question",
       "value": {
         "latex": "En d\\'eduire la valeur de $F(\\lambda)$ pour $\\lambda\\geq0$\n\\`a une constante additive pr\\`es. D\\'emontrer que\n$F(\\lambda)\\rightarrow 0$ quand $\\lambda \\rightarrow +\\infty$. En\nd\\'eduire la valeur de la constante additive, puis la valeur de\nl'int\\'egrale $\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt$.",
@@ -160,12 +160,13 @@
       }
     },
     {
-      "id": "76d68ffd-22b6-4609-b426-dd7529202909",
+      "id": "1cb9917c-3494-490f-82d9-2a075b6cceed",
       "type": "reponse",
       "value": {
         "latex": "De la question pr\\'ec\\'edente, il d\\'ecoule que\n$$\nF(\\lambda ) = - \\arctan \\lambda + C,\n$$\no\\`u $C$ est une constante r\\'eelle. Montrons que $F(\\lambda)$\ntend vers $0$ lorsque $\\lambda$ tend vers $+\\infty$. Soit\n$\\varepsilon > 0$ et $x> \\frac{4}{\\varepsilon}$. On a~:\n\\begin{eqnarray*}\n|F(\\lambda)| & =  &\\left| \\int_{0}^{x} e^{-\\lambda t} \\frac{ \\sin\nt }{t}\\, dt + \\int_{x}^{+\\infty} e^{-\\lambda t} \\frac{ \\sin t\n}{t}\\, dt \\right|\\\\\n& \\leq &  \\int_{0}^{x} e^{-\\lambda t} \\frac{| \\sin t| }{t}\\, dt +\n\\left| \\int_{x}^{+\\infty} e^{-\\lambda t} \\frac{ \\sin t\n}{t}\\, dt \\right|\\\\\n& \\leq &  \\int_{0}^{x} e^{-\\lambda t} \\,dt +\n\\frac{\\varepsilon}{2},\n\\end{eqnarray*}\no\\`u on a utiliser que $|\\sin t| \\leq t$ et la question $4. b)$.\nAinsi\n\\begin{eqnarray*}\n|F(\\lambda)| \\,\\leq \\, \\frac{1 - e^{-\\lambda x_{0}}}{\\lambda} +\n\\frac{\\varepsilon}{2}.\n\\end{eqnarray*}\nComme $\\lim_{\\lambda \\rightarrow +\\infty}\\frac{1 - e^{-\\lambda\nx_{0}}}{\\lambda} = 0$, il existe ${\\lambda}_{0} > 0$ tel que pour\ntout $\\lambda > {\\lambda}_{0}$, $\\frac{1 - e^{-\\lambda\nx_{0}}}{\\lambda} < \\frac{\\varepsilon}{2}$. On en d\\'eduit que pour\n$\\lambda > {\\lambda}_{0}$, $|F(\\lambda)| < \\varepsilon$,\nc'est-\\`a-dire $\\lim_{\\lambda \\rightarrow +\\infty}F(\\lambda) = 0$.\nAlors $C = \\lim_{\\lambda \\rightarrow +\\infty} \\arctan \\lambda =\n\\frac{\\pi}{2}$. Ainsi\n$$\nF(\\lambda) = -\\arctan \\lambda + \\frac{\\pi}{2} \\quad \\text{et}\\quad\n\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\,dt = F(0) = \\frac{\\pi}{2}.\n$$",
         "html": "<p>De la question précédente, il découle que <span class=\"math display\">\\[F(\\lambda ) = - \\arctan \\lambda + C,\\]</span> où <span class=\"math inline\">\\(C\\)</span> est une constante réelle. Montrons que <span class=\"math inline\">\\(F(\\lambda)\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span> lorsque <span class=\"math inline\">\\(\\lambda\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span>. Soit <span class=\"math inline\">\\(\\varepsilon &gt; 0\\)</span> et <span class=\"math inline\">\\(x&gt; \\frac{4}{\\varepsilon}\\)</span>. On a : <span class=\"math display\">\\[\\begin{aligned}\n|F(\\lambda)| &amp; =  &amp;\\left| \\int_{0}^{x} e^{-\\lambda t} \\frac{ \\sin\nt }{t}\\, dt + \\int_{x}^{+\\infty} e^{-\\lambda t} \\frac{ \\sin t\n}{t}\\, dt \\right|\\\\\n&amp; \\leq &amp;  \\int_{0}^{x} e^{-\\lambda t} \\frac{| \\sin t| }{t}\\, dt +\n\\left| \\int_{x}^{+\\infty} e^{-\\lambda t} \\frac{ \\sin t\n}{t}\\, dt \\right|\\\\\n&amp; \\leq &amp;  \\int_{0}^{x} e^{-\\lambda t} \\,dt +\n\\frac{\\varepsilon}{2},\\end{aligned}\\]</span> où on a utiliser que <span class=\"math inline\">\\(|\\sin t| \\leq t\\)</span> et la question <span class=\"math inline\">\\(4. b)\\)</span>. Ainsi <span class=\"math display\">\\[\\begin{aligned}\n|F(\\lambda)| \\,\\leq \\, \\frac{1 - e^{-\\lambda x_{0}}}{\\lambda} +\n\\frac{\\varepsilon}{2}.\\end{aligned}\\]</span> Comme <span class=\"math inline\">\\(\\lim_{\\lambda \\rightarrow +\\infty}\\frac{1 - e^{-\\lambda\nx_{0}}}{\\lambda} = 0\\)</span>, il existe <span class=\"math inline\">\\({\\lambda}_{0} &gt; 0\\)</span> tel que pour tout <span class=\"math inline\">\\(\\lambda &gt; {\\lambda}_{0}\\)</span>, <span class=\"math inline\">\\(\\frac{1 - e^{-\\lambda\nx_{0}}}{\\lambda} &lt; \\frac{\\varepsilon}{2}\\)</span>. On en déduit que pour <span class=\"math inline\">\\(\\lambda &gt; {\\lambda}_{0}\\)</span>, <span class=\"math inline\">\\(|F(\\lambda)| &lt; \\varepsilon\\)</span>, c’est-à-dire <span class=\"math inline\">\\(\\lim_{\\lambda \\rightarrow +\\infty}F(\\lambda) = 0\\)</span>. Alors <span class=\"math inline\">\\(C = \\lim_{\\lambda \\rightarrow +\\infty} \\arctan \\lambda =\n\\frac{\\pi}{2}\\)</span>. Ainsi <span class=\"math display\">\\[F(\\lambda) = -\\arctan \\lambda + \\frac{\\pi}{2} \\quad \\text{et}\\quad\n\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\,dt = F(0) = \\frac{\\pi}{2}.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p><em>Le but de cette question est de montrer que <span class=\"math inline\">\\(\\int_{0}^{+\\infty} \\frac{\\sin t}{t}\\, dt\\)</span> n’est pas absolument  ..."
 }

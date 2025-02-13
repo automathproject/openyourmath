@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Problèmes matriciels",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:10.034Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:58.906Z"
   },
   "contenu": [
     {
-      "id": "ab83f9b7-4870-4837-b909-70238e115cdd",
+      "id": "be62a297-7dfe-4df2-b472-32dc17d95e51",
       "type": "description",
       "value": {
         "latex": "\\label{ex:rou2}",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "bb02492e-90bb-457f-a525-dc8a84dce7c8",
+      "id": "6aa69b5b-9160-414c-a975-683451869d81",
       "type": "question",
       "value": {
         "latex": "Soit $A$ une matrice carrée réelle de format $n$ et $S ={^t}AA$. Montrer que $S\\in\\mathcal{S}_n^+(\\Rr)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "08ea0bfe-56cb-4d35-a9b1-0a6521a02bc7",
+      "id": "4af8f96d-65de-4ae3-b0d7-5b572d50f7bf",
       "type": "reponse",
       "value": {
         "latex": "${^t}S={^t}({^t}AA)={^t}A{^t}({^t}A) ={^t}AA = S$. Donc $S\\in\\mathcal{S}_n(\\Rr)$.\n\nSoit $X\\in\\mathcal{M}_{n,1}(\\Rr)$, ${^t}XSX ={^t}X{^t}AAX ={^t}(AX)AX =\\|AX\\|_2^2\\geqslant0$. Donc $S\\in\\mathcal{S}_n^+(\\Rr)$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall A\\in\\mathcal{M}_n(\\Rr)$, ${^t}AA\\in\\mathcal{S}_n^+(\\Rr)$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "8b7d36a3-4c41-4a2a-91f0-9eb6e2de3a8e",
+      "id": "dbb62651-645b-4001-bb61-87860f5d4943",
       "type": "question",
       "value": {
         "latex": "Réciproquement, montrer que pour toute matrice $S$ symétrique positive, il existe une matrice $A$ carrée réelle de format $n$ telle que $S ={^t}AA$. A-t-on l'unicité de $A$ ?",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "a87bf1aa-3ce7-4004-93fe-2bd0c01be1de",
+      "id": "b388449a-1c15-4775-9398-1484deb53e6b",
       "type": "reponse",
       "value": {
         "latex": "Soit $S\\in\\mathcal{S}_n^+(\\Rr)$. D'après le théorème spectral, il existe $P$ dans $O_n(\\Rr)$ et $D$ dans $\\mathcal{D}_n(\\Rr)$ telles que $S = PD{^t}P$.\n\nPosons $D =\\text{diag}(\\lambda_1,...,\\lambda_n)$. Puisque $S$ est dans $\\mathcal{S}_n^+(\\Rr)$, $D$ est dans $\\mathcal{D}_n^+(\\Rr)$ et on peut poser $D'=\\text{diag}(\\sqrt{\\lambda_1},...,\\sqrt{\\lambda_n})$ de sorte que $D'^2 = D$.\nOn peut alors écrire\n\n\\begin{center}\n$S = PD{^t}P =PD'D'{^t}P ={^t}(D{^t}P) D'{^t}P$,\n\\end{center}\n\net la matrice $A = D'{t}P$ convient.\n\n\\begin{center}\n\\shadowbox{\n$\\forall S\\in\\mathcal{S}_n^+(\\Rr)$, $\\exists A\\in\\mathcal{M}_n(\\Rr)/$ $S={^t}AA$.\n}\n\\end{center}\n\nOn a aussi ${^t}(-A)(-A) = S$ et comme en général  $-A\\neq A$, on n'a pas l'unicité de la matrice $A$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "40a72f55-92a1-4b4e-8ffc-390b81c3a64b",
+      "id": "dd9aaaa7-6e71-4c17-b934-1076fd869654",
       "type": "question",
       "value": {
         "latex": "Montrer que $S$ est définie positive si et seulement si $A$ est inversible.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "3e71c924-cada-45a6-9d8f-e211c478eaf0",
+      "id": "2189f58b-df52-4b11-8127-4a09c911ea56",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\\ensuremath\nS\\;\\text{définie positive}&\\Leftrightarrow \\forall X\\in\\mathcal{M}_{n,1}(\\Rr)\\setminus\\{0\\},\\;{^t}XSX> 0\\Leftrightarrow \\forall X\\in\\mathcal{M}_{n,1}(\\Rr)\\setminus\\{0\\},\\;\\|AX\\|_2^2 > 0\\\\\n &\\Leftrightarrow \\forall X\\in\\mathcal{M}_{n,1}(\\Rr)\\setminus\\{0\\},\\;AX\\neq0\n\\Leftrightarrow\\text{Ker} A =\\{0\\}\\Leftrightarrow A\\in\\mathcal{GL}_n(\\Rr).\n\\end{align*}$$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "f7ecccaf-d4ff-4ef7-99bb-37d1e3056d86",
+      "id": "4d3b6176-07f0-41a9-ae83-40145b14b4b5",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\text{rg}(A) =\\text{rg}(S)$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "344eab41-8a75-4818-ba3a-6d9aa51bfa0f",
+      "id": "9b4b80d1-33ef-40e6-b284-df7b2c555094",
       "type": "reponse",
       "value": {
         "latex": "Montrons que les matrices $A$ et $S$ ont même noyau. Soit $X\\in\\mathcal{M}_{n,1}(\\Rr)$. \n\n\\begin{center}\n$X\\in\\text{Ker}A\\Rightarrow AX = 0\\Rightarrow{^t}AAX = 0\\Rightarrow SX = 0\\Rightarrow X\\in\\text{Ker}S$,\n\\end{center}\n\net\n\n\\begin{center}\n$X\\in\\text{Ker}S\\Rightarrow{^t}AAX = 0\\Rightarrow{^t}X{^t}AAX = 0\\Rightarrow{^t}(AX)AX = 0\\Rightarrow\\|AX\\|_2^2 = 0\\Rightarrow AX = 0\\Rightarrow X\\in\\text{Ker}A$.\n\\end{center}\n\nAinsi, $\\text{Ker}({^t}AA)=\\text{Ker}(A)$ et en particulier, grâce au théorème du rang, on a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\forall A\\in\\mathcal{M}_n(\\Rr)$, $\\text{rg}({^t}AA)=\\text{rg}(A)$.\n}\n\\end{center}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "eee0cc33-87fd-4bad-8bbf-5c114b19df41",
+      "id": "af359577-8bd4-4e55-a6b2-f4107db8338b",
       "type": "question",
       "value": {
         "latex": "(Racine carrée d'une matrice symétrique positive) Soit $S$ une matrice symétrique positive.\n\nMontrer qu'il existe une et une seule matrice $R$ symétrique positive telle que $R^2 = S$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "48b5c5ba-6ac3-4cae-8d2e-8aa609251bf0",
+      "id": "6905b60b-ea38-4ac8-9d4a-77f2672ee89d",
       "type": "reponse",
       "value": {
         "latex": "Soit $S\\in\\mathcal{S}_n^+(\\Rr)$.\n\n\\textbf{Existence.} D'après le théorème spectral, il existe $P_0\\in O_n(\\Rr)$ et $D_0\\in\\mathcal{D}_n^+(\\Rr)$ telles que $S = P_0D_0{^t}P_0$.\n\nPosons $D_0 =\\text{diag}(\\lambda_1,...,\\lambda_n)$ où les $\\lambda_i$, $1\\leqslant i\\leqslant n$, sont des réels positifs puis $\\Delta_0 =\\text{diag}(\\sqrt{\\lambda_1},...,\\sqrt{\\lambda_n})$ et enfin \n$R =P_0\\Delta_0{^t}P_0$. La matrice $R$ est orthogonalement semblable à une matrice de $\\mathcal{D}_n^+(\\Rr)$ et est donc un élément de $\\mathcal{S}_n^+(\\Rr)$. Puis\n\n\\begin{center}\n$R^2 = P_0\\Delta_0^2{^t}P_0 = P_0D_0{^t}P_0 = S$.\n\\end{center}\n\n\\textbf{Unicité.} Soit $M$ un élément de $\\mathcal{S}_n^+(\\Rr)$ telle que $M^2 = S$.\n\n$M$ est diagonalisable d'après le théorème spectral et donc $\\mathcal{M}_{n,1}(\\Rr)=\\underset{\\lambda\\in\\text{Sp}(M)}{\\oplus}E_M(\\lambda)$. Mais si $\\lambda$ est une valeur propre de $M$, $\\text{Ker}(M-\\lambda I_n)\\subset\\text{Ker}(M^2-\\lambda^2I_n)=\\text{Ker}(S-\\lambda^2I_n)$. De plus, les valeurs propres de $M$ étant positive, les $\\lambda^2$, $\\lambda\\in\\text{Sp}(M)$, sont deux à deux distincts ou encore les $\\text{Ker}(S-\\lambda^2I_n)$, $\\lambda\\in\\text{Sp}(M)$, sont deux à deux distincts.\n\nCeci montre que pour chaque $\\lambda\\in\\text{Sp}(M)$, $\\text{Ker}(M-\\lambda I_n)=\\text{Ker}(S-\\lambda^2I_n)$ et que les $\\lambda^2$, $\\lambda\\in\\text{Sp}(M)$, sont toutes les valeurs propres de $S$.\n\nAinsi, nécessairement la matrice ${^t}P_0MP_0$ est une matrice diagonale $D$. L'égalité $M^2=S$ fournit $D^2=D_0$ puis $D=\\Delta_0$ (car $D\\in\\mathcal{D}_n^+(\\Rr)$) et finalement $M = R$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall S\\in\\mathcal{S}_n^+(\\Rr)$, $\\exists!R\\in\\mathcal{S}_n^+(\\Rr)/\\;R^2=S$.\n}\n\\end{center}",
         "html": "<p>Soit <span class=\"math inline\">\\(S\\in\\mathcal{S}_n^+(\\Rr)\\)</span>.</p>\n<p><strong>Existence.</strong> D’après le théorème spectral, il existe <span class=\"math inline\">\\(P_0\\in O_n(\\Rr)\\)</span> et <span class=\"math inline\">\\(D_0\\in\\mathcal{D}_n^+(\\Rr)\\)</span> telles que <span class=\"math inline\">\\(S = P_0D_0{^t}P_0\\)</span>.</p>\n<p>Posons <span class=\"math inline\">\\(D_0 =\\text{diag}(\\lambda_1,...,\\lambda_n)\\)</span> où les <span class=\"math inline\">\\(\\lambda_i\\)</span>, <span class=\"math inline\">\\(1\\leqslant i\\leqslant n\\)</span>, sont des réels positifs puis <span class=\"math inline\">\\(\\Delta_0 =\\text{diag}(\\sqrt{\\lambda_1},...,\\sqrt{\\lambda_n})\\)</span> et enfin <span class=\"math inline\">\\(R =P_0\\Delta_0{^t}P_0\\)</span>. La matrice <span class=\"math inline\">\\(R\\)</span> est orthogonalement semblable à une matrice de <span class=\"math inline\">\\(\\mathcal{D}_n^+(\\Rr)\\)</span> et est donc un élément de <span class=\"math inline\">\\(\\mathcal{S}_n^+(\\Rr)\\)</span>. Puis</p>\n<p><span class=\"math inline\">\\(R^2 = P_0\\Delta_0^2{^t}P_0 = P_0D_0{^t}P_0 = S\\)</span>.</p>\n<p><strong>Unicité.</strong> Soit <span class=\"math inline\">\\(M\\)</span> un élément de <span class=\"math inline\">\\(\\mathcal{S}_n^+(\\Rr)\\)</span> telle que <span class=\"math inline\">\\(M^2 = S\\)</span>.</p>\n<p><span class=\"math inline\">\\(M\\)</span> est diagonalisable d’après le théorème spectral et donc <span class=\"math inline\">\\(\\mathcal{M}_{n,1}(\\Rr)=\\underset{\\lambda\\in\\text{Sp}(M)}{\\oplus}E_M(\\lambda)\\)</span>. Mais si <span class=\"math inline\">\\(\\lambda\\)</span> est une valeur propre de <span class=\"math inline\">\\(M\\)</span>, <span class=\"math inline\">\\(\\text{Ker}(M-\\lambda I_n)\\subset\\text{Ker}(M^2-\\lambda^2I_n)=\\text{Ker}(S-\\lambda^2I_n)\\)</span>. De plus, les valeurs propres de <span class=\"math inline\">\\(M\\)</span> étant positive, les <span class=\"math inline\">\\(\\lambda^2\\)</span>, <span class=\"math inline\">\\(\\lambda\\in\\text{Sp}(M)\\)</span>, sont deux à deux distincts ou encore les <span class=\"math inline\">\\(\\text{Ker}(S-\\lambda^2I_n)\\)</span>, <span class=\"math inline\">\\(\\lambda\\in\\text{Sp}(M)\\)</span>, sont deux à deux distincts.</p>\n<p>Ceci montre que pour chaque <span class=\"math inline\">\\(\\lambda\\in\\text{Sp}(M)\\)</span>, <span class=\"math inline\">\\(\\text{Ker}(M-\\lambda I_n)=\\text{Ker}(S-\\lambda^2I_n)\\)</span> et que les <span class=\"math inline\">\\(\\lambda^2\\)</span>, <span class=\"math inline\">\\(\\lambda\\in\\text{Sp}(M)\\)</span>, sont toutes les valeurs propres de <span class=\"math inline\">\\(S\\)</span>.</p>\n<p>Ainsi, nécessairement la matrice <span class=\"math inline\">\\({^t}P_0MP_0\\)</span> est une matrice diagonale <span class=\"math inline\">\\(D\\)</span>. L’égalité <span class=\"math inline\">\\(M^2=S\\)</span> fournit <span class=\"math inline\">\\(D^2=D_0\\)</span> puis <span class=\"math inline\">\\(D=\\Delta_0\\)</span> (car <span class=\"math inline\">\\(D\\in\\mathcal{D}_n^+(\\Rr)\\)</span>) et finalement <span class=\"math inline\">\\(M = R\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p><span id=\"ex:rou2\" label=\"ex:rou2\">[ex:rou2]</span></p>\n"
 }

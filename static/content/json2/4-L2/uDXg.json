@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Forme quadratique",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:20.461Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:12.325Z"
   },
   "contenu": [
     {
-      "id": "cdf183bc-0145-4d7f-be89-1d7193740e4b",
+      "id": "5960c7d0-5d81-4b87-aa29-2a1e0411aa61",
       "type": "description",
       "value": {
         "latex": "Soit $E$ un espace vectoriel réel de dimension quelconque, $(x_{1},\\ldots,x_{n})$ et $(y_{1},\\ldots,y_{n})$ deux familles\nde vecteurs de $E$ et $\\phi$ une forme bilinéaire symétrique positive.\n\nMontrer que $(\\det [\\phi(x_{i}, y_{j})])^{2}\\le \\det [\\phi(x_{i}, x_{j})]\\times \\det [\\phi(y_{i}, y_{j})]$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "ebf71eaa-f321-4c5a-95c2-8190e79d8620",
+      "id": "c41be177-8c61-43c0-81f3-b468341e7c82",
       "type": "reponse",
       "value": {
         "latex": "Quitte à remplacer $E$ par $\\mathrm{vect}(x_1,\\dots,y_n)$, on peut supposer $E$\nde dimension finie $p$. Soit $\\cal B$ une base de $E$, et $X,Y$ et $F$\nles matrices de $(x_1,\\dots,x_n)$, $(y_1,\\dots,y_n)$ et $\\phi$ dans $\\cal B$.\nOn doit prouver $\\det({}^tXFY)^2 \\le \\det({}^tXFX)\\det({}^tYFY)$.\nComme $F$ est symétrique positive, elle est de la forme $F={}^tMM$ pour une\ncertaine matrice carrée $M$, donc en rempla\\c cant $X$ et $Y$ par\n$MX$ et $MY$, il suffit de prouver $\\det({}^tXY)^2 \\le \\det({}^tXX)\\det({}^tYY)$\npour toutes matrices $X,Y$ réelles rectangulaires de même taille.\n\nEn projetant chaque colonne de $Y$ sur le sous-espace vectoriel engendré par les colonnes de $X$,\non peut décomposer $Y = XA + B$ où $A$ est une matrice carrée et $B$ une matrice\nrectangulaire de même taille que $X$ telle que ${}^tXB = 0$. Il reste à prouver:\n$\\det({}^tXXA)^2 \\le \\det({}^tXX)\\det({}^tA{}^tXXA+{}^tBB)$, soit:\n$\\det({}^tA{}^tXXA) \\le \\det({}^tA{}^tXXA+{}^tBB)$.\n\nOn pose $U={}^tA{}^tXXA$ et $V = {}^tBB$: $U$ et $V$ sont des matrices réelles\nsymétriques positives de même taille, à priori quelquonques.\nSi $U$ est inversible, on écrit $U={}^tPP$ avec $P$ inversible\net on est rammené à prouver que $1\\le\\det(I+{}^tP^{-1}VP^{-1}) = \\det(I+W)$,\navec $W$ symétrique positive, ce qui résulte du fait que toutes les valeurs\npropres de $I+W$ sont supérieures ou égales à $1$.\nSi $U$ n'est pas inversible, on remplace $U$ par $U+\\varepsilon I$ avec\n$\\varepsilon >0$, puis on fait tendre $\\varepsilon$ vers $0^+$.\n\nRemarque: il y a peut-être plus simple?",
         "html": "<p>Quitte à remplacer <span class=\"math inline\">\\(E\\)</span> par <span class=\"math inline\">\\(\\mathrm{vect}(x_1,\\dots,y_n)\\)</span>, on peut supposer <span class=\"math inline\">\\(E\\)</span> de dimension finie <span class=\"math inline\">\\(p\\)</span>. Soit <span class=\"math inline\">\\(\\cal B\\)</span> une base de <span class=\"math inline\">\\(E\\)</span>, et <span class=\"math inline\">\\(X,Y\\)</span> et <span class=\"math inline\">\\(F\\)</span> les matrices de <span class=\"math inline\">\\((x_1,\\dots,x_n)\\)</span>, <span class=\"math inline\">\\((y_1,\\dots,y_n)\\)</span> et <span class=\"math inline\">\\(\\phi\\)</span> dans <span class=\"math inline\">\\(\\cal B\\)</span>. On doit prouver <span class=\"math inline\">\\(\\det({}^tXFY)^2 \\le \\det({}^tXFX)\\det({}^tYFY)\\)</span>. Comme <span class=\"math inline\">\\(F\\)</span> est symétrique positive, elle est de la forme <span class=\"math inline\">\\(F={}^tMM\\)</span> pour une certaine matrice carrée <span class=\"math inline\">\\(M\\)</span>, donc en remplaçant <span class=\"math inline\">\\(X\\)</span> et <span class=\"math inline\">\\(Y\\)</span> par <span class=\"math inline\">\\(MX\\)</span> et <span class=\"math inline\">\\(MY\\)</span>, il suffit de prouver <span class=\"math inline\">\\(\\det({}^tXY)^2 \\le \\det({}^tXX)\\det({}^tYY)\\)</span> pour toutes matrices <span class=\"math inline\">\\(X,Y\\)</span> réelles rectangulaires de même taille.</p>\n<p>En projetant chaque colonne de <span class=\"math inline\">\\(Y\\)</span> sur le sous-espace vectoriel engendré par les colonnes de <span class=\"math inline\">\\(X\\)</span>, on peut décomposer <span class=\"math inline\">\\(Y = XA + B\\)</span> où <span class=\"math inline\">\\(A\\)</span> est une matrice carrée et <span class=\"math inline\">\\(B\\)</span> une matrice rectangulaire de même taille que <span class=\"math inline\">\\(X\\)</span> telle que <span class=\"math inline\">\\({}^tXB = 0\\)</span>. Il reste à prouver: <span class=\"math inline\">\\(\\det({}^tXXA)^2 \\le \\det({}^tXX)\\det({}^tA{}^tXXA+{}^tBB)\\)</span>, soit: <span class=\"math inline\">\\(\\det({}^tA{}^tXXA) \\le \\det({}^tA{}^tXXA+{}^tBB)\\)</span>.</p>\n<p>On pose <span class=\"math inline\">\\(U={}^tA{}^tXXA\\)</span> et <span class=\"math inline\">\\(V = {}^tBB\\)</span>: <span class=\"math inline\">\\(U\\)</span> et <span class=\"math inline\">\\(V\\)</span> sont des matrices réelles symétriques positives de même taille, à priori quelquonques. Si <span class=\"math inline\">\\(U\\)</span> est inversible, on écrit <span class=\"math inline\">\\(U={}^tPP\\)</span> avec <span class=\"math inline\">\\(P\\)</span> inversible et on est rammené à prouver que <span class=\"math inline\">\\(1\\le\\det(I+{}^tP^{-1}VP^{-1}) = \\det(I+W)\\)</span>, avec <span class=\"math inline\">\\(W\\)</span> symétrique positive, ce qui résulte du fait que toutes les valeurs propres de <span class=\"math inline\">\\(I+W\\)</span> sont supérieures ou égales à <span class=\"math inline\">\\(1\\)</span>. Si <span class=\"math inline\">\\(U\\)</span> n’est pas inversible, on remplace <span class=\"math inline\">\\(U\\)</span> par <span class=\"math inline\">\\(U+\\varepsilon I\\)</span> avec <span class=\"math inline\">\\(\\varepsilon &gt;0\\)</span>, puis on fait tendre <span class=\"math inline\">\\(\\varepsilon\\)</span> vers <span class=\"math inline\">\\(0^+\\)</span>.</p>\n<p>Remarque: il y a peut-être plus simple?</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E\\)</span> un espace vectoriel réel de dimension quelconque, <span class=\"math inline\">\\((x_{1},\\ldots,x_{n})\\)</s ..."
 }

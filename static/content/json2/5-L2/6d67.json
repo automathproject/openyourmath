@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Suite et série de fonctions",
     "sousChapitre": "Continuité, dérivabilité",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:38.669Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:31.510Z"
   },
   "contenu": [
     {
-      "id": "395cbfcd-e248-427d-90bd-cda16cc07f4e",
+      "id": "9d2b6e62-8504-44e6-b470-4fd8088f6b89",
       "type": "description",
       "value": {
         "latex": "Pour $n\\in\\Nn^*$, soit $f_n(t) = (-1)^n\\ln\\left(1+\\frac{t^2}{n(1+t^2)}\\right)$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e8cd5320-4a8d-4854-8cff-765db4ac994b",
+      "id": "fa68ecfc-b837-49b5-89c4-96ed6c1587f3",
       "type": "question",
       "value": {
         "latex": "Etudier la convergence simple et uniforme de la série de terme général $f_n$ puis la continuité de la somme $f$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "d7ff1179-7010-4f6b-aa20-e378c3e7a2f4",
+      "id": "33b411d5-152c-4c9c-8ba9-b8c5f2c70762",
       "type": "reponse",
       "value": {
         "latex": "\\textbf{Convergence simple.} Soit $t\\in\\Rr$. Pour tout entier naturel non nul $n$, $1+\\frac{t^2}{n(1+t^2)}\\geqslant1>0$ et donc $f_n(t)$ existe. Ensuite, $\\ln\\left(1+\\frac{t^2}{n(1+t^2)}\\right)>0$ et donc la suite numérique $(f_n(t))_{n\\in\\Nn^*}$ est alternée en signe. De plus, $|f_n(t)|=\\ln\\left(1+\\frac{t^2}{n(1+t^2)}\\right)$ et la suite $(|f_n(t)|)_{n\\in\\Nn^*}$ tend vers $0$ en décroissant.\n\nOn en déduit que la série de terme général $f_n(t)$, $n\\geqslant1$, converge en vertu du critère spécial aux séries alternées.\n\n\\begin{center}\n\\shadowbox{\nLa série de fonctions de terme général $f_n$, $n\\geqslant1$, converge simplement sur $\\Rr$.\n}\n\\end{center}\n\nOn pose alors $f=\\sum_{n=1}^{+\\infty}f_n$.\n\n\\textbf{Convergence uniforme.} Soit $n\\in\\Nn^*$. D'après une majoration classique du reste à l'ordre $n$ d'une série alternée, pour tout réel $t$ on a\n\n$$\\begin{align*}\\ensuremath\n|R_n(t)|&=\\left|\\sum_{k=n+1}^{+\\infty}f_k(t)\\right|\\leqslant|f_{n+1}(t)|=\\ln\\left(1+\\frac{t^2}{(n+1)(1+t^2)}\\right)=\\ln\\left(1+\\frac{t^2+1-1}{(n+1)(1+t^2)}\\right)=\\ln\\left(1+\\frac{1}{n+1}-\\frac{1}{(n+1)(1+t^2)}\\right)\\\\\n &\\leqslant\\ln\\left(1+\\frac{1}{n+1}\\right),\n\\end{align*}$$\n\net donc, $\\forall n\\in\\Nn^*$, $\\underset{t\\in\\Rr}{\\text{sup}}|R_n(t)|\\leqslant\\ln\\left(1+\\frac{1}{n+1}\\right)$. Comme $\\lim_{n \\rightarrow +\\infty}\\ln\\left(1+\\frac{1}{n+1}\\right)=0$, on a encore $\\lim_{n \\rightarrow +\\infty}\\underset{t\\in\\Rr}{\\text{sup}}|R_n(t)|=0$ et on a montré que\n\n\\begin{center}\n\\shadowbox{\nLa série de fonctions de terme général $f_n$, $n\\geqslant1$, converge uniformément vers $f$ sur $\\Rr$.\n}\n\\end{center}\n\n\\textbf{Continuité.} Puisque chaque fonction $f_n$, $n\\geqslant1$, est continue sur $\\Rr$, la fonction $f$ est continue sur $\\Rr$ en tant que limite uniforme sur $\\Rr$ d'une suite de fonctions continues sur $\\Rr$.\n\n\\begin{center}\n\\shadowbox{\n$f$ est continue sur $\\Rr$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "be4568b9-c8c6-46cf-9539-25b207988d0d",
+      "id": "e76021df-e908-41c8-a77b-47fb3a0bc678",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\lim_{t \\rightarrow +\\infty}f(t) =\\ln\\left(\\frac{2}{\\pi}\\right)$ à l'aide de la formule de \\textsc{Stirling}.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "3cd0f45b-4c44-4d3d-9367-be1dec361d5d",
+      "id": "c89e611c-74dd-47b8-ad95-526451a43869",
       "type": "reponse",
       "value": {
         "latex": "D'après le théorème d'interversion des limites, $f$ a une limite réelle en $+\\infty$ et\n\n\\begin{center}\n$\\lim_{t \\rightarrow +\\infty}f(t)=\\sum_{n=1}^{+\\infty}\\lim_{t \\rightarrow +\\infty}f_n(t)=\\sum_{n=1}^{+\\infty}(-1)^n\\ln\\left(1+\\frac{1}{n}\\right)=\\ln\\left(\\frac{2}{\\pi}\\right)$ (voir l'exercice \\ref{ex:rou4}, 5)).\n\\end{center}\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{t \\rightarrow +\\infty}f_n(t)=\\ln\\left(\\frac{2}{\\pi}\\right)$.\n}\n\\end{center}",
         "html": "<p>D’après le théorème d’interversion des limites, <span class=\"math inline\">\\(f\\)</span> a une limite réelle en <span class=\"math inline\">\\(+\\infty\\)</span> et</p>\n<p><span class=\"math inline\">\\(\\lim_{t \\rightarrow +\\infty}f(t)=\\sum_{n=1}^{+\\infty}\\lim_{t \\rightarrow +\\infty}f_n(t)=\\sum_{n=1}^{+\\infty}(-1)^n\\ln\\left(1+\\frac{1}{n}\\right)=\\ln\\left(\\frac{2}{\\pi}\\right)\\)</span> (voir l’exercice <a href=\"#ex:rou4\" data-reference-type=\"ref\" data-reference=\"ex:rou4\">[ex:rou4]</a>, 5)).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, soit <span class=\"math inline\">\\(f_n(t) = (-1)^n\\ln\\left(1+\\frac{t^2}{n(1+t^2)}\\right)\\)</span ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Problèmes matriciels",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:07.437Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:42:56.265Z"
   },
   "contenu": [
     {
-      "id": "5cafbf86-6b27-4b49-9aca-8052461067be",
+      "id": "eb04e6ff-aac7-4ecb-a78f-d6c44ef2c45b",
       "type": "description",
       "value": {
         "latex": "Soient $n \\in \\N^*$, $S_n(\\R)$ l'espace des matrices $n\\times n$ symétriques\nà coefficients réels,\n$S_n^{+}(\\R)$ le sous-ensemble des matrices positives,\n$S_n^{++}(\\R)$ le sous-ensemble des matrices définies positives\net $\\phi \\in \\mathcal{L}({S_n(\\R)})$.\nOn suppose que $\\phi (S_n^{++}(\\R))=S_n^{++}(\\R)$.\n\\smallskip",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e75fb401-4e32-4282-9f4f-24aa1e9861f9",
+      "id": "7565b3c9-b0a4-4bfe-95c2-f68fa8c0c0a5",
       "type": "question",
       "value": {
         "latex": "Montrer que : $\\forall\\ M \\in S_n(\\R),\\ \\exists\\ A \\in \\R^+ \\text{ tq }\n    \\forall\\ \\lambda > A,\\ M + \\lambda I_n \\in S_n^{++}(\\R)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "04dbe5fb-89a4-491b-94d8-9a4bcd3970a1",
+      "id": "c3f5d4ea-505d-4fd7-bf4d-63f728eef2fc",
       "type": "reponse",
       "value": {
         "latex": "Prendre $A$ supérieur ou égal à la plus petite des valeurs propres\n     de~$-M$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d092466c-4c7f-404e-a755-8ac5cf22c4ad",
+      "id": "efd41cc2-4fdc-445e-b3f8-423f3a1ecf97",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\phi \\in GL(S_n(\\R))$ et que $\\phi (S_n^+(\\R))=S_n^+(\\R)$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "b98a30e8-707d-4ce3-829c-45163c4bdbbe",
+      "id": "34e22378-1430-426f-bab6-ac17fd93a261",
       "type": "reponse",
       "value": {
         "latex": "Surjectivité de~$\\phi$~: $\\Im\\Phi$ est un sous-espace vectoriel de~$S_n(\\R)$ contenant\n    $S_n^{++}(\\R)$ donc contenant $\\mathrm{vect}(S_n^{++}(\\R)) = S_n(\\R)$\n    d'après la question précédente. On en déduit que $\\phi$ est un isomorphisme\n    grâce au théorème du rang.\n    \n    Si $M\\in S_n^+(\\R)$ alors $M = \\lim_{p\\to\\infty}(M+I_n/p)$ donc\n    $M\\in\\overline{S_n^{++}(\\R)}$. Réciproquement, si $M\\in\\overline{S_n^{++}(\\R)}$\n    alors $M = \\lim_{p\\to\\infty}(M_p)$ avec $M_p$ définie positive, donc pour\n    tout $x\\in\\R^n$ on a ${}^txMx = \\lim_{p\\to\\infty}({}^txM_px)\\ge 0$, c'est-à-dire\n    $M\\in S_n^+(\\R)$.\n    Ainsi~: $\\overline{S_n^{++}(\\R)} = S_n^{+}(\\R)$. Comme $\\phi$ est continue\n    (car linéaire en dimension finie) on en déduit $\\phi(S_n^{+}(\\R))\\subset S_n^{+}(\\R)$.\n    De plus, $\\phi(S_n^{++}(\\R)) = S_n^{++}(\\R) \\Rightarrow S_n^{++}(\\R) = \\phi^{-1}(S_n^{++}(\\R))$\n    donc par continuité de $\\phi^{-1}$~: $\\phi^{-1}(S_n^{+}(\\R))\\subset S_n^{+}(\\R)$,\n    d'où $S_n^{+}(\\R)\\subset \\phi(S_n^{+}(\\R))$.\\smallskip",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "588d7ef7-9e6c-4b55-9b6c-07a0065db24b",
+      "id": "284428fa-4ab2-4150-8698-82e69818b608",
       "type": "question",
       "value": {
         "latex": "On suppose $n = 2$ et $\\phi (I_2) = I_2$. \n    Montrer que : $\\forall\\ M \\in S_2(\\R),\\ \\chi_{\\phi (M)}=\\chi_M$.\n    Montrer que $\\det(\\varphi (M))=\\det(M)$ (i.e. $\\phi$ conserve le déterminant).",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "df52e5c0-98ad-4b4e-9f07-81cd265dc487",
+      "id": "d14aef13-79f4-42a7-93f1-193e0f5ca8ff",
       "type": "reponse",
       "value": {
         "latex": "Soit $M\\in S_2(\\R)$ de valeurs propres $a,b$ avec $a\\le b$,\n    et soient $a'\\le b'$ les valeurs propres de~$\\phi(M)$.\n    Pour tout $\\lambda>b$ on a $M+\\lambda I_2\\in S_2^{++}(\\R)$ donc\n    $\\phi(M)+\\lambda I_2\\in S_2^{++}(\\R)$ c'est-à-dire $\\lambda > b'$.\n    Ceci prouve que $b'\\le b$ et on montre l'égalité en considérant~$\\phi^{-1}$.\n    De même, en considérant $-M$ on montre que $a'=a$. Finalement\n    $\\chi_M = (X-a)(X-b) = \\chi_{\\phi(M)}$. De plus, $\\det(M) = ab = \\det(\\phi(M))$.\n    \n    Remarque~: soient $A = \\left(\\begin{smallmatrix}1&0\\cr0&0\\cr\\end{smallmatrix}\\right)$,\n                      $B = \\left(\\begin{smallmatrix}0&0\\cr0&1\\cr\\end{smallmatrix}\\right)$,\n                      $C = \\left(\\begin{smallmatrix}0&1\\cr1&0\\cr\\end{smallmatrix}\\right)$,\n    et $A'=\\phi(A)$, $B'=\\phi(B)$, $C'=\\phi(C)$. On sait que $A'$ est\n    orthodiagonalisable avec pour valeurs propres $0$ et $1$, donc il existe\n    $P\\in O(2)$ telle que $A' = {}^tPAP$. $A'+B'=\\phi(I_2)=I_2$ d'où\n    $B' = I_2-A' = {}^tPBP$. Posons $C' = {}^tP\\left(\\begin{smallmatrix}u&v\\cr v&w\\cr\\end{smallmatrix}\\right)P$.\n    $0=\\mathrm{tr}(C) = \\mathrm{tr}(C') = u+w$ et $-1=\\det(C) = \\det(C') = uw-v^2$\n    donc $w=-u$ et $u^2+v^2=1$. De plus,\n    $-1=\\det(A+C) = -u-u^2-v^2$ d'où $u=0$ et $v=\\pm 1$.\n    \n    Si $v=1$ alors $C' = {}^tPCP$ et par linéarité, $\\phi(M)={}^tPMP$\n    pour toute $M\\in S_2(\\R)$.\n    Si $v=-1$ on trouve de même $\\phi(M) = {}^tQMQ$ avec $Q=P\\left(\\begin{smallmatrix}1&0\\cr0&-1\\cr\\end{smallmatrix}\\right)\\in O(2)$.\n    Réciproquement, toute aplication de la forme $M  \\mapsto{}^tPMP$ avec $P\\in O(2)$\n    vérifie les hypothèses de la question. Les fonctions $\\phi$\n    linéaires vérifiant la seule condition $\\phi(S_2^{++}(\\R)) = S_2^{++}(\\R)$\n    sont les fonctions de la forme $M \\mapsto{}^tPMP$ avec $P\\in GL_2(\\R)$\n    (écrire $\\phi(I_2) = {}^tTT$ puis considérer $M \\mapsto{}^tT^{-1}\\phi(M)T^{-1}$).\n    \n    Généralisation en dimension quelconque~?",
         "html": "<p>Soit <span class=\"math inline\">\\(M\\in S_2(\\R)\\)</span> de valeurs propres <span class=\"math inline\">\\(a,b\\)</span> avec <span class=\"math inline\">\\(a\\le b\\)</span>, et soient <span class=\"math inline\">\\(a&#39;\\le b&#39;\\)</span> les valeurs propres de <span class=\"math inline\">\\(\\phi(M)\\)</span>. Pour tout <span class=\"math inline\">\\(\\lambda&gt;b\\)</span> on a <span class=\"math inline\">\\(M+\\lambda I_2\\in S_2^{++}(\\R)\\)</span> donc <span class=\"math inline\">\\(\\phi(M)+\\lambda I_2\\in S_2^{++}(\\R)\\)</span> c’est-à-dire <span class=\"math inline\">\\(\\lambda &gt; b&#39;\\)</span>. Ceci prouve que <span class=\"math inline\">\\(b&#39;\\le b\\)</span> et on montre l’égalité en considérant <span class=\"math inline\">\\(\\phi^{-1}\\)</span>. De même, en considérant <span class=\"math inline\">\\(-M\\)</span> on montre que <span class=\"math inline\">\\(a&#39;=a\\)</span>. Finalement <span class=\"math inline\">\\(\\chi_M = (X-a)(X-b) = \\chi_{\\phi(M)}\\)</span>. De plus, <span class=\"math inline\">\\(\\det(M) = ab = \\det(\\phi(M))\\)</span>.</p>\n<p>Remarque : soient <span class=\"math inline\">\\(A = \\left(\\begin{smallmatrix}1&amp;0\\cr0&amp;0\\cr\\end{smallmatrix}\\right)\\)</span>, <span class=\"math inline\">\\(B = \\left(\\begin{smallmatrix}0&amp;0\\cr0&amp;1\\cr\\end{smallmatrix}\\right)\\)</span>, <span class=\"math inline\">\\(C = \\left(\\begin{smallmatrix}0&amp;1\\cr1&amp;0\\cr\\end{smallmatrix}\\right)\\)</span>, et <span class=\"math inline\">\\(A&#39;=\\phi(A)\\)</span>, <span class=\"math inline\">\\(B&#39;=\\phi(B)\\)</span>, <span class=\"math inline\">\\(C&#39;=\\phi(C)\\)</span>. On sait que <span class=\"math inline\">\\(A&#39;\\)</span> est orthodiagonalisable avec pour valeurs propres <span class=\"math inline\">\\(0\\)</span> et <span class=\"math inline\">\\(1\\)</span>, donc il existe <span class=\"math inline\">\\(P\\in O(2)\\)</span> telle que <span class=\"math inline\">\\(A&#39; = {}^tPAP\\)</span>. <span class=\"math inline\">\\(A&#39;+B&#39;=\\phi(I_2)=I_2\\)</span> d’où <span class=\"math inline\">\\(B&#39; = I_2-A&#39; = {}^tPBP\\)</span>. Posons <span class=\"math inline\">\\(C&#39; = {}^tP\\left(\\begin{smallmatrix}u&amp;v\\cr v&amp;w\\cr\\end{smallmatrix}\\right)P\\)</span>. <span class=\"math inline\">\\(0=\\mathrm{tr}(C) = \\mathrm{tr}(C&#39;) = u+w\\)</span> et <span class=\"math inline\">\\(-1=\\det(C) = \\det(C&#39;) = uw-v^2\\)</span> donc <span class=\"math inline\">\\(w=-u\\)</span> et <span class=\"math inline\">\\(u^2+v^2=1\\)</span>. De plus, <span class=\"math inline\">\\(-1=\\det(A+C) = -u-u^2-v^2\\)</span> d’où <span class=\"math inline\">\\(u=0\\)</span> et <span class=\"math inline\">\\(v=\\pm 1\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(v=1\\)</span> alors <span class=\"math inline\">\\(C&#39; = {}^tPCP\\)</span> et par linéarité, <span class=\"math inline\">\\(\\phi(M)={}^tPMP\\)</span> pour toute <span class=\"math inline\">\\(M\\in S_2(\\R)\\)</span>. Si <span class=\"math inline\">\\(v=-1\\)</span> on trouve de même <span class=\"math inline\">\\(\\phi(M) = {}^tQMQ\\)</span> avec <span class=\"math inline\">\\(Q=P\\left(\\begin{smallmatrix}1&amp;0\\cr0&amp;-1\\cr\\end{smallmatrix}\\right)\\in O(2)\\)</span>. Réciproquement, toute aplication de la forme <span class=\"math inline\">\\(M  \\mapsto{}^tPMP\\)</span> avec <span class=\"math inline\">\\(P\\in O(2)\\)</span> vérifie les hypothèses de la question. Les fonctions <span class=\"math inline\">\\(\\phi\\)</span> linéaires vérifiant la seule condition <span class=\"math inline\">\\(\\phi(S_2^{++}(\\R)) = S_2^{++}(\\R)\\)</span> sont les fonctions de la forme <span class=\"math inline\">\\(M \\mapsto{}^tPMP\\)</span> avec <span class=\"math inline\">\\(P\\in GL_2(\\R)\\)</span> (écrire <span class=\"math inline\">\\(\\phi(I_2) = {}^tTT\\)</span> puis considérer <span class=\"math inline\">\\(M \\mapsto{}^tT^{-1}\\phi(M)T^{-1}\\)</span>).</p>\n<p>Généralisation en dimension quelconque ?</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, <span class=\"math inline\">\\(S_n(\\R)\\)</span> l’espace des matrices <span class=\"math inline ..."
 }

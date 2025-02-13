@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Dénombrement",
     "sousChapitre": "Cardinal",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:32.370Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:44.302Z"
   },
   "contenu": [
     {
-      "id": "331916c7-216e-462a-a1c0-dda07c87ae28",
+      "id": "899ad78b-395d-461f-9b8d-967f87af1b5b",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "4b62384d-f827-4346-b34f-aab1d8e5f904",
+      "id": "4b8af480-64d8-4d21-a380-955a26b75ffa",
       "type": "question",
       "value": {
         "latex": "On donne $n$ droites du plan. On suppose qu'il n'en existe pas deux qui soient parallèles, ni trois qui soient concourantes. Déterminer le nombre $P(n)$ de régions délimitées par ces droites.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "6146a41e-6035-4038-95c5-6ca7e6cbdf52",
+      "id": "0b8d80dd-56e9-43fb-8326-cd45829ea218",
       "type": "reponse",
       "value": {
         "latex": "On a bien sûr $P(1)=2$. Soit $n\\geq1$. On trace $n$ droites vérifiant les conditions de l'énoncé. Elles partagent le plan en $P(n)$ régions. On trace ensuite $D_{n+1}$, une $(n+1)$ème droite. Par hypothèse, elle coupe chacune des $n$ premières droites en $n$ points deux à deux distincts. Ces $n$ points définissent $(n+1)$ intervalles sur la droite $D_{n+1}$. Chacun de ces $(n+1)$ intervalles partage une des $P(n)$ régions déjà existantes en deux régions et rajoute donc une nouvelle région. Ainsi, $P(n+1)=P(n)+(n+1)$.\n\nSoit $n\\geq2$.\n\n$$\\begin{align*}\\ensuremath\nP(n)&=P(1)+\\sum_{k=1}^{n-1}(P(k+1)-P(k))=2+\\sum_{k=1}^{n-1}(k+1)=1+\\sum_{k=1}^{n}k=1+\\frac{n(n+1)}{2}\\\\\n &=\\frac{n^2+n+2}{2}\n\\end{align*}$$\n\nce qui reste vrai pour $n=1$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "f1b28e44-ecb2-4340-a817-0e32b16cf23e",
+      "id": "12dfcfe9-10b9-4416-bfd0-5e6636841cfc",
       "type": "question",
       "value": {
         "latex": "On donne $n$ plans de l'espace. On suppose qu'il n'en existe pas deux qui soient parallèles, ni trois qui soient concourants en une droite, ni quatre qui soient concourants en un point. Déterminer le nombre $Q(n)$ de régions délimitées par ces plans.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "7995c0f8-2fa3-4eff-8fa2-a74a1f2be8c5",
+      "id": "9fbef0ca-8ec2-4155-a851-6dcefaad9b75",
       "type": "reponse",
       "value": {
         "latex": "On a bien sûr $Q(1)=2$.Soit $n\\geq1$. On trace $n$ plans vérifiant les conditions de l'énoncé. Ils partagent l'espace en $Q(n)$ régions. On trace ensuite $P_{n+1}$, un $(n+1)$ème plan. Par hypothèse, il recoupe chacun des $n$ premiers plans en $n$ droites vérifiant les conditions du 1). Ces $n$ droites délimitent $P(n)=1+\\frac{n(n+1)}{2}$ régions sur le plan $P_{n+1}$. Chacune de ces régions partage une des $Q(n)$ régions déjà existantes en deux régions et rajoute donc une nouvelle région. Ainsi, $Q(n+1)=Q(n)+P(n)=Q(n)+\\frac{n^2+n+2}{2}$.\n\nSoit $n\\geq2$.\n\n$$\\begin{align*}\\ensuremath\nQ(n)&=P(1)+\\sum_{k=1}^{n-1}(Q(k+1)-Q(k))=2+\\sum_{k=1}^{n-1}\\frac{k^2+k+2}{2})=2+(n-1)+\\frac{1}{2}\\sum_{k=1}^{n-1}k^2+\\frac{1}{2}\\sum_{k=1}^{n-1}k\\\\\n &=(n+1)+\\frac{(n-1)n(2n-1)}{12}+\\frac{n(n-1)}{4}=\\frac{n^3+5n+6}{6}\n\\end{align*}$$",
         "html": "<p>On a bien sûr <span class=\"math inline\">\\(Q(1)=2\\)</span>.Soit <span class=\"math inline\">\\(n\\geq1\\)</span>. On trace <span class=\"math inline\">\\(n\\)</span> plans vérifiant les conditions de l’énoncé. Ils partagent l’espace en <span class=\"math inline\">\\(Q(n)\\)</span> régions. On trace ensuite <span class=\"math inline\">\\(P_{n+1}\\)</span>, un <span class=\"math inline\">\\((n+1)\\)</span>ème plan. Par hypothèse, il recoupe chacun des <span class=\"math inline\">\\(n\\)</span> premiers plans en <span class=\"math inline\">\\(n\\)</span> droites vérifiant les conditions du 1). Ces <span class=\"math inline\">\\(n\\)</span> droites délimitent <span class=\"math inline\">\\(P(n)=1+\\frac{n(n+1)}{2}\\)</span> régions sur le plan <span class=\"math inline\">\\(P_{n+1}\\)</span>. Chacune de ces régions partage une des <span class=\"math inline\">\\(Q(n)\\)</span> régions déjà existantes en deux régions et rajoute donc une nouvelle région. Ainsi, <span class=\"math inline\">\\(Q(n+1)=Q(n)+P(n)=Q(n)+\\frac{n^2+n+2}{2}\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\geq2\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nQ(n)&amp;=P(1)+\\sum_{k=1}^{n-1}(Q(k+1)-Q(k))=2+\\sum_{k=1}^{n-1}\\frac{k^2+k+2}{2})=2+(n-1)+\\frac{1}{2}\\sum_{k=1}^{n-1}k^2+\\frac{1}{2}\\sum_{k=1}^{n-1}k\\\\\n &amp;=(n+1)+\\frac{(n-1)n(2n-1)}{12}+\\frac{n(n-1)}{4}=\\frac{n^3+5n+6}{6}\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>On donne <span class=\"math inline\">\\(n\\)</span> droites du plan. On suppose qu’il n’en existe pas deux qui soient parallèles, ni trois qui soient c ..."
 }

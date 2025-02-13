@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Développement limité",
     "sousChapitre": "Calculs",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:28.501Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:14.412Z"
   },
   "contenu": [
     {
-      "id": "a5bc6cca-ce96-4f2b-a3c2-f4f4a8ed7511",
+      "id": "b818c340-c046-4b63-a9cf-72a4c831c3a2",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "91abc6de-da77-4d22-abfc-458988bdcdab",
+      "id": "d00e30c2-47cf-4b1e-9785-8cbac705e460",
       "type": "question",
       "value": {
         "latex": "Montrer que l'équation $\\tan x=x$ a une unique solution dans l'intervalle $[n\\pi,(n+1)\\pi]$ pour $n$ entier naturel donné. On note $x_n$ cette solution.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f9b78729-f05f-45ef-9770-d1ab0c52ae7a",
+      "id": "2b8948ed-594e-4a2c-97fb-1cf2ac8b20c5",
       "type": "question",
       "value": {
         "latex": "Trouver un développement asymptotique de $x_n$ à la précision $\\frac{1}{n^2}$.",
@@ -40,12 +40,13 @@
       }
     },
     {
-      "id": "2180a7fe-9009-4e88-b7df-0346e03f44aa",
+      "id": "35607e3d-cf7c-42e1-88e2-0faf56cc94dd",
       "type": "reponse",
       "value": {
         "latex": "Pour $n$ entier naturel donné, posons $I_n=\\left]-\\frac{\\pi}{2}+n\\pi,\\frac{\\pi}{2}+n\\pi\\right[$.\n\\textbullet~Soit $n\\in\\Nn$. Pour $x\\in I_n$, posons $f(x)=\\tan x-x$. $f$ est dérivable sur $I_n$ et pour $x$ dans $I_n$, $f'(x)=\\tan^2x$. Ainsi, $f$ est dérivable sur $I_n$ et $f'$ est strictement positive sur $I_n\\setminus\\{n\\pi\\}$. Donc $f$ est strictement croissante sur $I_n$.\n\n\\textbullet~Soit $n\\in\\Nn$. $f$ est continue et strictement croissante sur $I_n$ et réalise donc une bijection de $I_n$ sur $f(I_n)=\\Rr$. En particulier, $\\forall n\\in\\Nn,\\;\\exists!x_n\\in I_n/\\;f(x_n)=0$ (ou encore tel que $\\tan x_n=x_n$.\n\\textbullet~On a $x_0=0$ puis pour $n\\in\\Nn^*$, $f(n\\pi)=-n\\pi<0$ et donc, $\\forall n\\in\\Nn^*,\\;x_n\\in]n\\pi,\\frac{\\pi}{2}+n\\pi[$. En particulier,\n\n\\begin{center}\n\\shadowbox{\n$x_n\\underset{n\\rightarrow+\\infty}{=}n\\pi+O(1)$.\n}\n\\end{center}\n\\textbullet~Posons alors $y_n=x_n-n\\pi$. $\\forall n\\in\\Nn^*,\\;y_n\\in\\left]0,\\frac{\\pi}{2}\\right[$. De plus, $\\tan(y_n)=\\tan(x_n)=n\\pi+y_n$ et donc, puisque $y_n\\in\\left]0,\\frac{\\pi}{2}\\right[$,\n\n$$\\frac{\\pi}{2}>y_n=\\Arctan(y_n+n\\pi)\\geq\\Arctan(n\\pi).$$ \nPuisque $\\Arctan(n\\pi)$ tend vers $\\frac{\\pi}{2}$, on a $y_n=\\frac{\\pi}{2}+o(1)$ ou encore\n\n\\begin{center}\n\\shadowbox{\n$x_n\\underset{n\\rightarrow+\\infty}{=}n\\pi+\\frac{\\pi}{2}+o(1)$.\n}\n\\end{center}\n\\textbullet~Posons maintenant $z_n=y_n-\\frac{\\pi}{2}=x_n-n\\pi-\\frac{\\pi}{2}$.\nD'après ce qui précède, $\\forall n\\in\\Nn^*,\\;z_n\\in\\left]-\\frac{\\pi}{2},0\\right[$ et d'autre part $z_n\\underset{n\\rightarrow+\\infty}{=}o(1)$.\nEnsuite, $\\tan\\left(z_n+\\frac{\\pi}{2}\\right)=n\\pi+\\frac{\\pi}{2}+z_n$ et donc $-\\cotan(z_n)=n\\pi+\\frac{\\pi}{2}+z_n\\underset{n\\rightarrow+\\infty}{\\sim}n\\pi$. Puisque $z_n$ tend vers $0$, on en déduit que\n\n\\begin{center}\n$-\\frac{1}{z_n}\\underset{n\\rightarrow+\\infty}{\\sim}-\\cotan(z_n)\\underset{n\\rightarrow+\\infty}{\\sim}n\\pi$,\n\\end{center}\nou encore $z_n\\underset{n\\rightarrow+\\infty}{=}-\\frac{1}{n\\pi}+o\\left(\\frac{1}{n}\\right)$. Ainsi,\n\n\\begin{center}\n\\shadowbox{$x_n\\underset{n\\rightarrow+\\infty}{=}n\\pi+\\frac{\\pi}{2}-\\frac{1}{n\\pi}+o\\left(\\frac{1}{n}\\right).$}\n\\end{center}\n\\textbullet~Posons enfin $t_n=z_n+\\frac{1}{n\\pi}=x_n-n\\pi-\\frac{\\pi}{2}+\\frac{1}{n\\pi}$. On sait que $t_n=o\\left(\\frac{1}{n}\\right)$ et que \n\n\\begin{center}\n$-\\cotan\\left(t_n-\\frac{1}{n\\pi}\\right)=-\\cotan(z_n)=n\\pi+\\frac{\\pi}{2}+z_n=n\\pi+\\frac{\\pi}{2}-\\frac{1}{n\\pi}+o(\\frac{1}{n})$.\n\\end{center} Par suite,\n \n$$-\\tan\\left(t_n-\\frac{1}{n\\pi}\\right)=\\frac{1}{n\\pi}\\left(1+\\frac{1}{2n}+o(\\frac{1}{n})\\right)^{-1}=\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right),$$\npuis,\n\n$$\\frac{1}{n\\pi}-t_n=\\Arctan\\left(\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o(\\frac{1}{n^2})\\right)=\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right),$$ \net donc $t_n=\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right)$. Finalement, \n\n\\begin{center}\n\\shadowbox{\n$x_n\\underset{n\\rightarrow+\\infty}{=}n\\pi+\\frac{\\pi}{2}-\\frac{1}{n\\pi}+\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right).$\n}\n\\end{center}",
         "html": "<p>Pour <span class=\"math inline\">\\(n\\)</span> entier naturel donné, posons <span class=\"math inline\">\\(I_n=\\left]-\\frac{\\pi}{2}+n\\pi,\\frac{\\pi}{2}+n\\pi\\right[\\)</span>.  Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. Pour <span class=\"math inline\">\\(x\\in I_n\\)</span>, posons <span class=\"math inline\">\\(f(x)=\\tan x-x\\)</span>. <span class=\"math inline\">\\(f\\)</span> est dérivable sur <span class=\"math inline\">\\(I_n\\)</span> et pour <span class=\"math inline\">\\(x\\)</span> dans <span class=\"math inline\">\\(I_n\\)</span>, <span class=\"math inline\">\\(f&#39;(x)=\\tan^2x\\)</span>. Ainsi, <span class=\"math inline\">\\(f\\)</span> est dérivable sur <span class=\"math inline\">\\(I_n\\)</span> et <span class=\"math inline\">\\(f&#39;\\)</span> est strictement positive sur <span class=\"math inline\">\\(I_n\\setminus\\{n\\pi\\}\\)</span>. Donc <span class=\"math inline\">\\(f\\)</span> est strictement croissante sur <span class=\"math inline\">\\(I_n\\)</span>.</p>\n<p> Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. <span class=\"math inline\">\\(f\\)</span> est continue et strictement croissante sur <span class=\"math inline\">\\(I_n\\)</span> et réalise donc une bijection de <span class=\"math inline\">\\(I_n\\)</span> sur <span class=\"math inline\">\\(f(I_n)=\\Rr\\)</span>. En particulier, <span class=\"math inline\">\\(\\forall n\\in\\Nn,\\;\\exists!x_n\\in I_n/\\;f(x_n)=0\\)</span> (ou encore tel que <span class=\"math inline\">\\(\\tan x_n=x_n\\)</span>.  On a <span class=\"math inline\">\\(x_0=0\\)</span> puis pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span>, <span class=\"math inline\">\\(f(n\\pi)=-n\\pi&lt;0\\)</span> et donc, <span class=\"math inline\">\\(\\forall n\\in\\Nn^*,\\;x_n\\in]n\\pi,\\frac{\\pi}{2}+n\\pi[\\)</span>. En particulier,</p>\n<p> Posons alors <span class=\"math inline\">\\(y_n=x_n-n\\pi\\)</span>. <span class=\"math inline\">\\(\\forall n\\in\\Nn^*,\\;y_n\\in\\left]0,\\frac{\\pi}{2}\\right[\\)</span>. De plus, <span class=\"math inline\">\\(\\tan(y_n)=\\tan(x_n)=n\\pi+y_n\\)</span> et donc, puisque <span class=\"math inline\">\\(y_n\\in\\left]0,\\frac{\\pi}{2}\\right[\\)</span>,</p>\n<p><span class=\"math display\">\\[\\frac{\\pi}{2}&gt;y_n=\\Arctan(y_n+n\\pi)\\geq\\Arctan(n\\pi).\\]</span> Puisque <span class=\"math inline\">\\(\\Arctan(n\\pi)\\)</span> tend vers <span class=\"math inline\">\\(\\frac{\\pi}{2}\\)</span>, on a <span class=\"math inline\">\\(y_n=\\frac{\\pi}{2}+o(1)\\)</span> ou encore</p>\n<p> Posons maintenant <span class=\"math inline\">\\(z_n=y_n-\\frac{\\pi}{2}=x_n-n\\pi-\\frac{\\pi}{2}\\)</span>. D’après ce qui précède, <span class=\"math inline\">\\(\\forall n\\in\\Nn^*,\\;z_n\\in\\left]-\\frac{\\pi}{2},0\\right[\\)</span> et d’autre part <span class=\"math inline\">\\(z_n\\underset{n\\rightarrow+\\infty}{=}o(1)\\)</span>. Ensuite, <span class=\"math inline\">\\(\\tan\\left(z_n+\\frac{\\pi}{2}\\right)=n\\pi+\\frac{\\pi}{2}+z_n\\)</span> et donc <span class=\"math inline\">\\(-\\cotan(z_n)=n\\pi+\\frac{\\pi}{2}+z_n\\underset{n\\rightarrow+\\infty}{\\sim}n\\pi\\)</span>. Puisque <span class=\"math inline\">\\(z_n\\)</span> tend vers <span class=\"math inline\">\\(0\\)</span>, on en déduit que</p>\n<p><span class=\"math inline\">\\(-\\frac{1}{z_n}\\underset{n\\rightarrow+\\infty}{\\sim}-\\cotan(z_n)\\underset{n\\rightarrow+\\infty}{\\sim}n\\pi\\)</span>,</p>\n<p>ou encore <span class=\"math inline\">\\(z_n\\underset{n\\rightarrow+\\infty}{=}-\\frac{1}{n\\pi}+o\\left(\\frac{1}{n}\\right)\\)</span>. Ainsi,</p>\n<p> Posons enfin <span class=\"math inline\">\\(t_n=z_n+\\frac{1}{n\\pi}=x_n-n\\pi-\\frac{\\pi}{2}+\\frac{1}{n\\pi}\\)</span>. On sait que <span class=\"math inline\">\\(t_n=o\\left(\\frac{1}{n}\\right)\\)</span> et que</p>\n<p><span class=\"math inline\">\\(-\\cotan\\left(t_n-\\frac{1}{n\\pi}\\right)=-\\cotan(z_n)=n\\pi+\\frac{\\pi}{2}+z_n=n\\pi+\\frac{\\pi}{2}-\\frac{1}{n\\pi}+o(\\frac{1}{n})\\)</span>.</p>\n<p>Par suite,</p>\n<p><span class=\"math display\">\\[-\\tan\\left(t_n-\\frac{1}{n\\pi}\\right)=\\frac{1}{n\\pi}\\left(1+\\frac{1}{2n}+o(\\frac{1}{n})\\right)^{-1}=\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right),\\]</span> puis,</p>\n<p><span class=\"math display\">\\[\\frac{1}{n\\pi}-t_n=\\Arctan\\left(\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o(\\frac{1}{n^2})\\right)=\\frac{1}{n\\pi}-\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right),\\]</span> et donc <span class=\"math inline\">\\(t_n=\\frac{1}{2n^2\\pi}+o\\left(\\frac{1}{n^2}\\right)\\)</span>. Finalement,</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Montrer que l’équation <span class=\"math inline\">\\(\\tan x=x\\)</span> a une unique solution dans l’intervalle <span class=\"math inline\"> ..."
 }

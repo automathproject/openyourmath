@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:07.348Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:01.049Z"
   },
   "contenu": [
     {
-      "id": "16bbd243-1d04-434b-9e7a-3e09f587417a",
+      "id": "58f66485-bbd3-42eb-8f32-3ac1f4fdfcc7",
       "type": "description",
       "value": {
         "latex": "Pour $x\\in\\Rr$, on pose $F(x)=\\int_{-\\pi}^{\\pi}\\ln(1-2x\\cos\\theta+x^2)\\;d\\theta$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c81a20a1-94ab-457d-9297-3c6f404adfd3",
+      "id": "64b5b82f-8596-48d3-bc7e-016b40555788",
       "type": "question",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "17ac495a-0115-4859-a3b2-8fd1e7a94c54",
+      "id": "48c18b29-04c0-4ea6-a144-409dca491e7b",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "a0e57936-ba9a-4d5a-a7a2-93bb1aa03a69",
+      "id": "2427d180-90e6-4173-a846-3f172e7de4c9",
       "type": "question",
       "value": {
         "latex": "Montrer que $F$ est paire, définie et continue sur $\\Rr$, dérivable sur $\\Rr\\setminus\\{-1,1\\}$.\nPréciser une expression de $F'(x)$ sous forme intégrale.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "f94647c0-9edb-4199-9060-66769f5621ca",
+      "id": "a198f170-c351-4e63-bce7-e3b072658ec6",
       "type": "reponse",
       "value": {
         "latex": "\\textbf{Parité de $F$.} Soit $x$ un réel du domaine de définition de $F$. En posant $t=\\theta+\\pi$, on obtient\n\n$$\\begin{align*}\\ensuremath\nF(x)&=\\int_{-\\pi}^{\\pi}\\ln(x^2-2x\\cos\\theta+1)\\;d\\theta=\\int_{0}^{2\\pi}\\ln(x^2+2x\\cos t+1)\\;dt\\\\\n &=\\int_{-\\pi}^{\\pi}\\ln(x^2+2x\\cos t+1)\\;dt\\;(\\text{par}\\;2\\pi\\text{-périodicité})\\\\\n &=\\int_{-\\pi}^{\\pi}\\ln((-x)^2-2(-x)\\cos t+1)\\;dt=F(-x).\n\\end{align*}$$\n\nAinsi, pour tout réel $x$, $F(x)$ existe si et seulement si $F(-x)$ existe et de plus $F(x)=F(-x)$.\n\n\\begin{center}\n\\shadowbox{\n$F$ est paire.\n}\n\\end{center}\n\n\\textbf{Définition de $F$.} Soit $x\\in[0,+\\infty[$. Pour tout réel $\\theta\\in[-\\pi,\\pi]$,\n\n\\begin{center}\n$x^2-2x\\cos\\theta+1=(x-\\cos\\theta)^2+(\\sin\\theta)^2=\\left|x-e^{i\\theta}\\right|^2\\geqslant0$.\n\\end{center}\n\nDe plus, $\\left|x-e^{i\\theta}\\right|=0\\Leftrightarrow e^{i\\theta}=x\\Leftrightarrow x=1\\;\\text{et}\\;\\theta=0$. Par suite,\n\n\\textbullet~si $x\\neq1$, la fonction $\\theta\\mapsto x^2-2x\\cos\\theta+1$ est continue sur le segment $[0,\\pi]$ et donc intégrable sur ce segment.\n\n\\textbullet~si $x=1$, pour tout réel $\\theta\\in[-\\pi,\\pi]$ on a $x^2-2x\\cos\\theta+1=2-2\\cos\\theta=4\\sin^2\\frac{\\theta}{2}$. La fonction $\\theta\\mapsto\\ln\\left(4\\sin^2\\frac{\\theta}{2}\\right)$ \n\nest continue sur $[-\\pi,0[\\cup]0,\\pi]$ et quand $\\theta$ tend vers $0$\n\n\\begin{center}\n$\\ln\\left(4\\sin^2\\frac{\\theta}{2}\\right)=2\\ln2+2\\ln\\left|\\sin\\frac{\\theta}{2}\\right|\\sim2\\ln\\left|\\frac{\\theta}{2}\\right|\\sim2\\ln|\\theta|=o\\left(\\frac{1}{\\sqrt{|\\theta|}}\\right)$.\n\\end{center}\n\nOn en déduit que la fonction $\\theta\\mapsto\\ln\\left(4\\sin^2\\frac{\\theta}{2}\\right)$ est intégrable sur $[-\\pi,\\pi]$ et donc que $F(1)$ existe.\n\nFinalement, $F$ est définie sur $[0,+\\infty[$ et par parité\n\n\\begin{center}\n\\shadowbox{\n$F$ est définie sur $\\Rr$.\n}\n\\end{center}\n\n\\text{Remarque.} Par parité de la fonction $\\theta\\mapsto\\ln(x^2-2x\\cos\\theta+1)$, pour tout réel $x$, on a encore $F(x)=2\\int_{0}^{\\pi}\\ln(x^2-2x\\cos\\theta+1)\\;d\\theta$.\n\n\\textbf{Continuité de $F$.} Soit $A>1$. Soit $\\begin{array}[t]{cccc}\n\\Phi~:&[0,A]\\times]0,\\pi]&\\rightarrow&\\Rr\\\\\n &(x,\\theta)&\\mapsto&\\ln(x^2-2x\\cos\\theta+1)\n\\end{array}$.\n\n\\textbullet~Pour chaque $x\\in[0,A]$, la fonction $\\theta\\mapsto\\Phi(x,\\theta)$ est continue par morceaux sur $]0,\\pi]$.\n\n\\textbullet~Pour chaque $\\theta\\in]0,\\pi]$, la fonction $x\\mapsto\\Phi(x,\\theta)$ est continue par morceaux sur $[0,A]$.\n\n\\textbullet~Pour chaque $(x,\\theta)\\in\\Rr^+\\times]0,\\pi]$, puisque $x^2-2x\\cos\\theta+1=(x-\\cos\\theta)^2+(\\sin\\theta)^2$,\n\n$$\\begin{align*}\\ensuremath\n|\\Phi(x,\\theta)|&\\leqslant\\text{Max}\\{\\left|\\ln(0^2-0\\cos\\theta+1)\\right|,\\left|\\ln(\\cos^2\\theta-2\\cos\\theta\\cos\\theta+1)\\right|,\\left|\\ln(A^2-2A\\cos\\theta+1)\\right|\\}\\\\\n &=\\text{Max}\\{2\\left|\\ln(|\\sin\\theta|)\\right|,\\left|\\ln(A^2-2A\\cos\\theta+1)\\right|\\}=\\varphi(\\theta).\n\\end{align*}$$\n\nOn a vu que la fonction $f_1~:~\\theta\\mapsto2\\left|\\ln(|\\sin\\theta|)\\right|$ est intégrable sur $]0,\\pi]$ et d'autre part, la fonction $f_2~:~\\theta\\left|\\ln(A^2-2A\\cos\\theta+1)\\right|$ est intégrable sur $[0,\\pi]$ et donc sur $]0,\\pi]$ car continue sur $[0,\\pi]$. Puisque $\\varphi=\\frac{1}{2}(f_1+f_2+|f_1-f_2|)$, on en déduit que la fonction $\\varphi$ est continue par morceaux et intégrable sur $]0,\\pi]$.\n\nD'après le théorème de continuité des intégrales à paramètres, la fonction $F$ est continue sur $[0,A]$ et ceci pour tout $A>1$. Par suite, la fonction $F$ est continue sur $\\Rr^+$ puis par parité,\n\n\\begin{center}\n\\shadowbox{\nla fonction $F$ est continue sur $\\Rr$.\n}\n\\end{center}\n \n\n\\textbf{Dérivabilité de $F$.} Soient $A\\in]0,1[$ puis  $\\begin{array}[t]{cccc}\n\\Phi~:&[-A,A]\\times[0,\\pi]&\\rightarrow&\\Rr\\\\\n &(x,\\theta)&\\mapsto&\\ln(x^2-2x\\cos\\theta+1)\n\\end{array}$.\n\n\\textbullet~Pour chaque $x\\in[-A,A]$, la fonction $\\theta\\mapsto \\Phi(x,\\theta)$ est continue sur le segment $[0,\\pi]$ et donc intégrable sur ce segment.\n\n\\textbullet~La fonction $\\Phi$ admet sur $[-A,A]\\times[0,\\pi]$ une dérivée partielle par rapport à sa première variable $x$ définie par\n\n\\begin{center}\n$\\forall(x,\\theta)\\in[-A,A]\\times[0,\\pi]$, $\\frac{\\partial \\Phi}{\\partial x}(x,\\theta)=\\frac{2x-2\\cos\\theta}{x^2-2x\\cos\\theta+1}$.\n\\end{center}\n\nDe plus,\n\n- pour chaque $x\\in[-A,A]$, la fonction $\\theta\\mapsto\\frac{\\partial \\Phi}{\\partial x}(x,\\theta)$ est continue par morceaux sur $[0,\\pi]$,\n\n- pour chaque $\\theta\\in[0,\\pi]$, la fonction $x\\mapsto\\frac{\\partial \\Phi}{\\partial x}(x,\\theta)$ est continue sur $[-A,A]$,\n\n- pour chaque $(x,\\theta)\\in[-A,A]\\times[0,\\pi]$,\n\n\\begin{center}\n$\\left|\\frac{\\partial \\Phi}{\\partial x}(x,\\theta)\\right|=\\frac{2|x-\\cos\\theta|}{|x-e^{i\\theta}|^2}\\leqslant\\frac{4}{|A-1|^2}=\\varphi(\\theta)$.\n\\end{center}\n\nLa dernière inégalité écrite est claire géométriquement :\n\n\n$$\\includegraphics{../images/img005766-1}$$\n\n\nDe plus, la fonction constante $\\varphi$ est intégrable sur le segment $[0,\\pi]$.\n\nD'après le théorème de dérivation des intégrales à paramètres, la fonction $F$ est de classe $C^1$ sur $[-A,A]$ et sa dérivée s'obtient par dérivation sous le signe somme. Ceci étant vrai pour tout $A\\in]0,1[$, $F$ est de classe $C^1$ sur $]-1,1[$ et $\\forall x\\in]-1,1[$, \\rule[-4mm]{0mm}{0mm}$F'(x)=4\\int_{0}^{\\pi}\\frac{x-\\cos\\theta}{x^2-2x\\cos\\theta+1}\\;d\\theta$. La démarche est analogue sur $]-\\infty,-1[$ et sur $]1,+\\infty[$ et finalement $F$ est de classe $C^1$ sur $\\Rr\\setminus\\{-1,1\\}$ et\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr\\setminus\\{-1,1\\}$, $F'(x)=4\\int_{0}^{\\pi}\\frac{x-\\cos\\theta}{x^2-2x\\cos\\theta+1}\\;d\\theta$.\n}\n\\end{center}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "bc064f19-8695-4e27-b2d0-b102ee259c39",
+      "id": "387e6e58-ddd4-4f9a-9a46-6b2c6bb30a8d",
       "type": "question",
       "value": {
         "latex": "Calculer $F'(x)$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "e3bcf37b-9c9b-4591-aa78-47063080f50a",
+      "id": "7c320861-9dc1-4fb0-8bbe-0f123f859a52",
       "type": "reponse",
       "value": {
         "latex": "\\textbf{Calcul de $F'(x)$.} Soit $x\\in\\Rr\\setminus\\{-1,1\\}$. On pose $t=\\tan\\left(\\frac{\\theta}{2}\\right)$. On a donc $\\cos\\theta=\\frac{1-t^2}{1+t^2}$ et $d\\theta=\\frac{2dt}{1+t^2}$. On obtient\n\n$$\\begin{align*}\\ensuremath\nF'(x)&=4\\int_{0}^{\\pi}\\frac{x-\\cos\\theta}{x^2-2x\\cos\\theta+1}\\;d\\theta=8\\int_{0}^{+\\infty}\\frac{x-\\frac{1-t^2}{1+t^2}}{x^2-2x\\frac{1-t^2}{1+t^2}+1}\\frac{dt}{1+t^2}\\\\\n &=8\\int_{0}^{+\\infty}\\frac{(1+t^2)x-(1-t^2)}{((1+t^2)x^2-2x(1-t^2)+(1+t^2))(1+t^2)}\\;dt\\\\\n &=8\\int_{0}^{+\\infty}\\frac{(x+1)t^2+(x-1)}{((x+1)^2t^2+(x-1)^2)(1+t^2)}\\;dt\n\\end{align*}$$\n\nPour tout réel $t$,\n\n\\begin{center}\n$\\left(t^2+\\left(\\frac{x-1}{x+1}\\right)^2\\right)(t^2+1)=\\left(t-i\\frac{x-1}{x+1}\\right)\\left(t+i\\frac{x-1}{x+1}\\right)(t-i)(t+i)$.\n\\end{center}\n\nDe plus, $\\pm\\frac{x-1}{x+1}=\\pm1\\Leftrightarrow\\frac{x-1}{x+1}=-1\\Leftrightarrow x=0$.\n\n\\textbullet~$F'(0)=4\\int_{0}^{\\pi}(-\\cos\\theta)\\;d\\theta=0$.\n\n\\textbullet~Si $x\\neq0$, les pôles de la fraction rationnelle $\\frac{(x+1)t^2+(x-1)}{((x+1)^2t^2+(x-1)^2)(1+t^2)}$ sont simples et par parité, la décomposition en éléments simples de cette fraction s'écrit\n\n\\begin{center}\n$\\frac{(x+1)t^2+(x-1)}{((x+1)^2t^2+(x-1)^2)(1+t^2)}=\\frac{a}{t-i\\frac{x-1}{x+1}}-\\frac{a}{t+i\\frac{x-1}{x+1}}+\\frac{b}{t-i}-\\frac{b}{t+i}$,\n\\end{center}\n\navec\n\n$$\\begin{align*}\\ensuremath\na&=\\frac{-(x+1)\\left(\\frac{x-1}{x+1}\\right)^2+(x-1)}{(x+1)^2\\left(2i\\frac{x-1}{x+1}\\right)\\left(1-\\left(\\frac{x-1}{x+1}\\right)^2\\right)}=\\frac{-(x+1)(x-1)^2+(x-1)(x+1)^2}{2i(x+1)(x-1)((x+1)^2-(x-1)^2)}\\\\\n &=\\frac{2(x^2-1)}{2i(x^2-1)(4x)}=\\frac{1}{4ix},\n\\end{align*}$$\n\net\n\n\\begin{center}\n$b=\\frac{-(x+1)+(x-1)}{2i(-(x+1)^2+(x-1)^2)}=\\frac{1}{4ix}$.\n\\end{center}\n\nDonc\n\n$$\\begin{align*}\\ensuremath\n8\\frac{(x+1)t^2+(x-1)}{((x+1)^2t^2+(x-1)^2)(1+t^2)}&=\\frac{2}{ix}\\left(\\frac{1}{t-i\\frac{x-1}{x+1}}-\\frac{1}{t+i\\frac{x-1}{x+1}}+\\frac{1}{t-i}-\\frac{1}{t+i}\\right)\\\\\n &=\\frac{2}{ix}\\left(\\frac{2i\\frac{x-1}{x+1}}{t^2+\\left(\\frac{x-1}{x+1}\\right)^2}+\\frac{2i}{t^2+1}\\right)=\\frac{4}{x}\\left(\\frac{x^2-1}{(x+1)^2t^2+(x-1)^2}+\\frac{1}{t^2+1}\\right)\n\\end{align*}$$\n\nEnsuite, en notant $\\varepsilon$ le signe de $\\frac{x-1}{x+1}$\n\n$$\\begin{align*}\\ensuremath\nF'(x)&=\\frac{4}{x}\\int_{0}^{+\\infty}\\left(\\frac{x^2-1}{(x+1)^2t^2+(x-1)^2}+\\frac{1}{t^2+1}\\right)\\;dt\\\\\n &=\\frac{4}{x}\\left[\\frac{x^2-1}{(x+1)^2}\\frac{1}{\\frac{x-1}{x+1}}\\Arctan\\left(\\frac{t}{\\frac{x-1}{x+1}}\\right)\\right]_0^{+\\infty}=\\frac{4}{x}\\left(\\varepsilon+1\\right)\\frac{\\pi}{2}\n\\end{align*}$$\n\nPar suite, si $x\\in]-1,1[$, $F'(x)=0$ et si $x\\in]-\\infty,-1[\\cup]1,+\\infty[$, $F'(x)=\\frac{4\\pi}{x}$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr\\setminus\\{-1,1\\}$, $F'(x)=\\left\\{\n\\begin{array}{l}\n\\rule[-2mm]{0mm}{0mm}0\\;\\text{si}\\;x\\in]-1,1[\\\\\n\\frac{4\\pi}{x}\\;\\text{si}\\;x\\in]-\\infty,-1[\\cup]1,+\\infty[\n\\end{array}\n\\right.$.\n}\n\\end{center}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "0a5d3e09-b920-400e-a88e-712780bc3205",
+      "id": "03c77410-ef15-4f7e-9f11-da5228e61bd2",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\lim_{x \\rightarrow +\\infty}(F(x)-4\\pi\\ln x)$.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "id": "e6404033-3fea-4472-b051-99a3f7384cc6",
+      "id": "1efbcb68-2186-41f8-8de3-b024c9fd3a2c",
       "type": "reponse",
       "value": {
         "latex": "Soit $x>1$.\n\n\\begin{center}\n$F(x)-4\\pi\\ln(x)=\\int_{-\\pi}^{\\pi}\\ln(x^2-2x\\cos\\theta+1)\\;d\\theta-\\int_{-\\pi}^{\\pi}\\ln(x^2)\\;d\\theta=\\int_{-\\pi}^{\\pi}\\ln\\left(1-\\frac{2}{x}\\cos\\theta+\\frac{1}{x^2}\\right)\\;d\\theta=F\\left(\\frac{1}{x}\\right)$.\n\\end{center}\n\nPar suite, $\\lim_{x \\rightarrow +\\infty}(F(x)-4\\pi\\ln(x))=\\lim_{x \\rightarrow +\\infty}F\\left(\\frac{1}{x}\\right)=\\lim_{y \\rightarrow 0}F(y)=F(0)=0$ par continuité de $F$ en $0$.\n\n\\begin{center}\n\\shadowbox{\n$\\lim_{x \\rightarrow +\\infty}(F(x)-4\\pi\\ln(x))=0$.\n}\n\\end{center}",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "740afd8d-5fe2-4a99-81ab-3b90badfcedc",
+      "id": "7760396d-5623-4c44-8a79-792bd6d72ddf",
       "type": "question",
       "value": {
         "latex": "En déduire $F(x)$ pour tout réel $x$.",
@@ -96,12 +96,13 @@
       }
     },
     {
-      "id": "1f034be1-33c8-4cf4-b358-044e4a57f007",
+      "id": "3abc7c3e-f244-448b-b06a-a5975dbf9c2b",
       "type": "reponse",
       "value": {
         "latex": "\\textbullet~$F$ est continue sur $[-1,1]$, dérivable sur $]-1,1[$ de dérivée nulle sur $]-1,1[$. Donc la fonction $F$ est constante sur l'intervalle $[-1,1]$. Par suite, pour tout réel $x\\in[-1,1]$, $F(x)=F(0)=0$.\n\n\\textbullet~$F$ est dérivable sur $]1,+\\infty[$ et $\\forall x>1$, $F'(x)=\\frac{4\\pi}{x}$. Donc il existe $C\\in\\Rr$ tel que $\\forall x>1$, $F(x)=4\\pi\\ln x+C$ avec $C=\\lim_{x \\rightarrow +\\infty}(F(x)-4\\pi\\ln x)=0$. Donc $\\forall x>1$, $F(x)=4\\pi\\ln x$.\n\n\\textbullet~Si $x<-1$, $F(x)=F(-x)=4\\pi\\ln(-x)=4\\pi\\ln|x|$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall x\\in\\Rr$, $\\int_{-\\pi}^{\\pi}\\ln(x^2-2x\\cos\\theta+1)\\;d\\theta=\\left\\{\n\\begin{array}{l}\n0\\;\\text{si}\\;x\\in[-1,1]\\\\\n4\\pi\\ln(|x|)\\;\\text{si}\\;x\\in]-\\infty,-1[\\cup]1,+\\infty[\n\\end{array}\n\\right.$.\n}\n\\end{center}",
         "html": "<p> <span class=\"math inline\">\\(F\\)</span> est continue sur <span class=\"math inline\">\\([-1,1]\\)</span>, dérivable sur <span class=\"math inline\">\\(]-1,1[\\)</span> de dérivée nulle sur <span class=\"math inline\">\\(]-1,1[\\)</span>. Donc la fonction <span class=\"math inline\">\\(F\\)</span> est constante sur l’intervalle <span class=\"math inline\">\\([-1,1]\\)</span>. Par suite, pour tout réel <span class=\"math inline\">\\(x\\in[-1,1]\\)</span>, <span class=\"math inline\">\\(F(x)=F(0)=0\\)</span>.</p>\n<p> <span class=\"math inline\">\\(F\\)</span> est dérivable sur <span class=\"math inline\">\\(]1,+\\infty[\\)</span> et <span class=\"math inline\">\\(\\forall x&gt;1\\)</span>, <span class=\"math inline\">\\(F&#39;(x)=\\frac{4\\pi}{x}\\)</span>. Donc il existe <span class=\"math inline\">\\(C\\in\\Rr\\)</span> tel que <span class=\"math inline\">\\(\\forall x&gt;1\\)</span>, <span class=\"math inline\">\\(F(x)=4\\pi\\ln x+C\\)</span> avec <span class=\"math inline\">\\(C=\\lim_{x \\rightarrow +\\infty}(F(x)-4\\pi\\ln x)=0\\)</span>. Donc <span class=\"math inline\">\\(\\forall x&gt;1\\)</span>, <span class=\"math inline\">\\(F(x)=4\\pi\\ln x\\)</span>.</p>\n<p> Si <span class=\"math inline\">\\(x&lt;-1\\)</span>, <span class=\"math inline\">\\(F(x)=F(-x)=4\\pi\\ln(-x)=4\\pi\\ln|x|\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(x\\in\\Rr\\)</span>, on pose <span class=\"math inline\">\\(F(x)=\\int_{-\\pi}^{\\pi}\\ln(1-2x\\cos\\theta+x^2)\\;d\\theta\\)</sp ..."
 }

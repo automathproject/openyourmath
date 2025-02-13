@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Calcul de déterminants",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:03.918Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:55.160Z"
   },
   "contenu": [
     {
-      "id": "fa880041-513f-4f34-8d5b-2fa1f1ee82bf",
+      "id": "4acf9285-a5b7-4232-a994-82d1bf9e4096",
       "type": "description",
       "value": {
         "latex": "Soit $(a_{0},...,a_{n-1})\\in\\C^{n}$, $x\\in\\C$. Calculer\n $$\n \\Delta_{n}=\n \\left|\n   \\begin{matrix}\n   x &  0    &        & a_{0}   \\\\\n    -1 &\\ddots &\\ddots  &\\vdots  \\\\\n      &\\ddots &x      & a_{n-2} \\\\\n    0 &       & -1      & x+a_{n-1}\n   \\end{matrix}\n\\right|\n $$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f3b6569e-8941-4d22-86f5-33c285a3bbcf",
+      "id": "883694f7-7516-4884-a006-06641047012b",
       "type": "indication",
       "value": {
         "latex": "Développer par rapport à la dernière colonne.",
@@ -32,12 +32,13 @@
       }
     },
     {
-      "id": "2ef06ff3-dc10-4eae-afa5-7e3bd393266f",
+      "id": "1f3c24b8-35be-41e5-b0eb-ac9e0bce7620",
       "type": "reponse",
       "value": {
         "latex": "Commençons par un travail préparatoire : le calcul du déterminant de taille $(n-1)\\times (n-1)$ :\n{\\footnotesize$$\\Gamma_k = \n\\begin{array}{|cccc|cccc|} \nx  &        &        &   &&&&\\\\\n-1 & x      &        &   &&&&\\\\\n   & \\ddots & \\ddots &   &&&&\\\\\n   &        & -1     & x &&&&\\\\ \n   \\hline\n&&&&  -1 & x      &       &   \\\\\n&&&&     &\\ddots & \\ddots      &   \\\\\n&&&&     & &\\ddots & x  \\\\\n&&&&     &       &     & -1 \\\\\n\\end{array}\n$$}\noù le bloc en haut à gauche est de taille $k\\times k$.\n\nOn développe, en commençant par la première ligne, puis encore une fois par la première ligne,...\npour trouver que \n$$\\Gamma_k = x^k\\times (-1)^{n-1-k}$$\n\nAutre méthode : on retrouve le même résultat en utilisant les déterminant par blocs :\n$$\\begin{array}{|c|c|} \nA & B \\\\\n\\hline\n(0) & C \\\\ \n\\end{array}\n= \\det A \\times \\det C$$\n\n\\bigskip\n\n\nRevenons à l'exercice !\n\nContrairement à l'habitude on développe par rapport à la colonne qui a le moins de $0$.\nEn développant par rapport à la dernière colonne on obtient :\n{\\footnotesize\n$$\\begin{align*}\n \\Delta_{n}\n& =\n   \\begin{vmatrix}\n   x &  0    &        & a_{0}   \\\\\n    -1 &\\ddots &\\ddots  &\\vdots  \\\\\n      &\\ddots &x      & a_{n-2} \\\\\n    0 &       & -1      & x+a_{n-1}\n   \\end{vmatrix} \\\\\n & = (-1)^{n-1} a_0 \n   \\begin{vmatrix}\n   -1 &  x    &        &    \\\\\n     & -1 & x  &  \\\\\n      & & \\ddots & \\ddots       \\\\\n     &       &       & -1\n   \\end{vmatrix}\n+ (-1)^{n} a_1   \n\\begin{vmatrix}\n   x & &&&\\\\\n   & -1 &  x    &        &    \\\\\n   &  & -1 & x  &  \\\\\n    &  & & \\ddots & \\ddots       \\\\\n    & &       &       & -1\n   \\end{vmatrix} \n\\\\\n& \\quad + \\cdots +\n(-1)^{2n-3} a_{n-2}   \n\\begin{vmatrix}\n  x &      &    & &      \\\\\n    -1 &\\ddots &  & & \\\\\n     &\\ddots &\\ddots & &  \\\\\n      && -1 & x    &   \\\\\n    &&&& -1 \\\\\n   \\end{vmatrix}\n+ (-1)^{2n-2}(x+a_{n-1})\n\\begin{vmatrix}\n  x &      &    &       \\\\\n    -1 &\\ddots &  &  \\\\\n     &\\ddots &\\ddots &   \\\\\n    &  & -1 & x       \\\\\n   \\end{vmatrix} \\\\\n & = \\sum_{k=0}^{n-2} (-1)^{n-1+k} a_ k \\times \\Gamma_k \\quad  + \\quad (-1)^{2n-2}(x+a_{n-1})\\Gamma_{n-1} \\\\\n & = \\sum_{k=0}^{n-2} (-1)^{n-1+k} a_ k \\times x^k\\times (-1)^{n-1-k} \\quad + \\quad (x+a_{n-1})x^{n-1}\\\\\n & = a_0+a_1x+a_2x^2+\\cdots + a_{n-1}x^{n-1} + x^n\\\\\n\\end{align*}$$\n}",
         "html": "<p>Commençons par un travail préparatoire : le calcul du déterminant de taille <span class=\"math inline\">\\((n-1)\\times (n-1)\\)</span> : <span><span class=\"math display\">\\[\\Gamma_k = \n\\begin{array}{|cccc|cccc|} \nx  &amp;        &amp;        &amp;   &amp;&amp;&amp;&amp;\\\\\n-1 &amp; x      &amp;        &amp;   &amp;&amp;&amp;&amp;\\\\\n   &amp; \\ddots &amp; \\ddots &amp;   &amp;&amp;&amp;&amp;\\\\\n   &amp;        &amp; -1     &amp; x &amp;&amp;&amp;&amp;\\\\ \n   \\hline\n&amp;&amp;&amp;&amp;  -1 &amp; x      &amp;       &amp;   \\\\\n&amp;&amp;&amp;&amp;     &amp;\\ddots &amp; \\ddots      &amp;   \\\\\n&amp;&amp;&amp;&amp;     &amp; &amp;\\ddots &amp; x  \\\\\n&amp;&amp;&amp;&amp;     &amp;       &amp;     &amp; -1 \\\\\n\\end{array}\\]</span></span> où le bloc en haut à gauche est de taille <span class=\"math inline\">\\(k\\times k\\)</span>.</p>\n<p>On développe, en commençant par la première ligne, puis encore une fois par la première ligne,... pour trouver que <span class=\"math display\">\\[\\Gamma_k = x^k\\times (-1)^{n-1-k}\\]</span></p>\n<p>Autre méthode : on retrouve le même résultat en utilisant les déterminant par blocs : <span class=\"math display\">\\[\\begin{array}{|c|c|} \nA &amp; B \\\\\n\\hline\n(0) &amp; C \\\\ \n\\end{array}\n= \\det A \\times \\det C\\]</span></p>\n<p>Revenons à l’exercice !</p>\n<p>Contrairement à l’habitude on développe par rapport à la colonne qui a le moins de <span class=\"math inline\">\\(0\\)</span>. En développant par rapport à la dernière colonne on obtient : <span> <span class=\"math display\">\\[\\begin{align*}\n \\Delta_{n}\n&amp; =\n   \\begin{vmatrix}\n   x &amp;  0    &amp;        &amp; a_{0}   \\\\\n    -1 &amp;\\ddots &amp;\\ddots  &amp;\\vdots  \\\\\n      &amp;\\ddots &amp;x      &amp; a_{n-2} \\\\\n    0 &amp;       &amp; -1      &amp; x+a_{n-1}\n   \\end{vmatrix} \\\\\n &amp; = (-1)^{n-1} a_0 \n   \\begin{vmatrix}\n   -1 &amp;  x    &amp;        &amp;    \\\\\n     &amp; -1 &amp; x  &amp;  \\\\\n      &amp; &amp; \\ddots &amp; \\ddots       \\\\\n     &amp;       &amp;       &amp; -1\n   \\end{vmatrix}\n+ (-1)^{n} a_1   \n\\begin{vmatrix}\n   x &amp; &amp;&amp;&amp;\\\\\n   &amp; -1 &amp;  x    &amp;        &amp;    \\\\\n   &amp;  &amp; -1 &amp; x  &amp;  \\\\\n    &amp;  &amp; &amp; \\ddots &amp; \\ddots       \\\\\n    &amp; &amp;       &amp;       &amp; -1\n   \\end{vmatrix} \n\\\\\n&amp; \\quad + \\cdots +\n(-1)^{2n-3} a_{n-2}   \n\\begin{vmatrix}\n  x &amp;      &amp;    &amp; &amp;      \\\\\n    -1 &amp;\\ddots &amp;  &amp; &amp; \\\\\n     &amp;\\ddots &amp;\\ddots &amp; &amp;  \\\\\n      &amp;&amp; -1 &amp; x    &amp;   \\\\\n    &amp;&amp;&amp;&amp; -1 \\\\\n   \\end{vmatrix}\n+ (-1)^{2n-2}(x+a_{n-1})\n\\begin{vmatrix}\n  x &amp;      &amp;    &amp;       \\\\\n    -1 &amp;\\ddots &amp;  &amp;  \\\\\n     &amp;\\ddots &amp;\\ddots &amp;   \\\\\n    &amp;  &amp; -1 &amp; x       \\\\\n   \\end{vmatrix} \\\\\n &amp; = \\sum_{k=0}^{n-2} (-1)^{n-1+k} a_ k \\times \\Gamma_k \\quad  + \\quad (-1)^{2n-2}(x+a_{n-1})\\Gamma_{n-1} \\\\\n &amp; = \\sum_{k=0}^{n-2} (-1)^{n-1+k} a_ k \\times x^k\\times (-1)^{n-1-k} \\quad + \\quad (x+a_{n-1})x^{n-1}\\\\\n &amp; = a_0+a_1x+a_2x^2+\\cdots + a_{n-1}x^{n-1} + x^n\\\\\n\\end{align*}\\]</span> </span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\((a_{0},...,a_{n-1})\\in\\C^{n}\\)</span>, <span class=\"math inline\">\\(x\\in\\C\\)</span>. Calculer <span class=\"math dis ..."
 }

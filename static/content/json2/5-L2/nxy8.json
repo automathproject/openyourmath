@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:29.835Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:24.389Z"
   },
   "contenu": [
     {
-      "id": "00cab60a-757a-4400-8996-b1ffba7a491e",
+      "id": "e9aeee1b-8393-4838-8825-bfb9c8fee1a1",
       "type": "description",
       "value": {
         "latex": "Etude de $f(x)=\\int_{-1}^{1}\\frac{\\sin x}{1-2t\\cos x+t^2}\\;dt$.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "d57f6114-7758-48a4-8928-9a812002948d",
+      "id": "c961dbdd-c0e8-4db1-8286-65c4b50ffbe0",
       "type": "reponse",
       "value": {
         "latex": "Notons $D$ le domaine de définition de $f$.\n\nSi $x\\in D$, $-x\\in D$ et $f(-x)=-f(x)$. $f$ est donc impaire.\n\nSi $x\\in D$, $x+2\\pi\\in D$ et $f(x+2\\pi)=f(x)$. $f$ est donc $2\\pi$-périodique.\n\nOn étudiera donc $f$ sur $[0,\\pi]$.\n\nSoient $x\\in[0,\\pi]$ et $t\\in[-1,1]$. $t^2-2t\\cos x+1=(t-\\cos x)^2+\\sin^x\\geq0$ avec égalité si et seulement si $\\sin x=0$ et $t-\\cos x=0$.\n\nAinsi, si $x\\in]0,\\pi[$, $\\forall t\\in]-1,1[,\\;t^2-2t\\cos x+1\\neq0$. On en déduit que la fraction rationnelle $t\\mapsto\n\\frac{\\sin t}{1-2t\\cos x+t^2}$ est continue sur $[-1,1]$, et donc que $f(x)$ existe.\n\nSi $x=0$, $\\forall t\\in[-1,1[$, $\\frac{\\sin x}{t^2-2t\\cos x+1}=\\frac{0}{(t-1)^2}=0$. On prut prolonger cette fonction par continuité en $1$ et consisérer que $f(0)=\\int_{-1}^{1}0\\;dt=0$. De même, on peut considérer que $f(\\pi)=0$.\n\nAinsi, $f$ est définie sur $[0,\\pi]$ et donc, par parité et $2\\pi$-périodicité, sur $\\Rr$.\n\nSoit $x\\in]0,\\pi[$.Calculons $f(x)$.\n\n$$\\begin{align*}\\ensuremath\nf(x)&=\\int_{-1}^{1}\\frac{\\sin x}{(t-\\cos x)^2+\\sin^2x}\\;dt=\\left[\\Arctan\\frac{t-\\cos x}{\\sin x}\\right]_{-1}^{1}\n=\\Arctan\\frac{1-\\cos x}{\\sin x}+\\Arctan\\frac{1+\\cos x}{\\sin x}\\\\\n &=\\Arctan\\frac{2\\sin^2(x/2)}{2\\sin(x/2)\\cos(x/2)}+\\Arctan\\frac{2\\cos^2(x/2)}{2\\sin(x/2)\\cos(x/2)}\n=\\Arctan(\\tan(x/2))+\\Arctan(\\frac{1}{\\tan(x/2)})\\\\\n &=\\frac{\\pi}{2}\\;(\\mbox{car}\\;\\tan(x/2)>0\\;\\mbox{pour}\\;x\\in]0,\\pi[).\n\\end{align*}$$\n\nCe calcul achève l'étude de $f$. En voici le graphe~:\n\n$$\\includegraphics{../images/img005472-1}$$",
         "html": "<p>Notons <span class=\"math inline\">\\(D\\)</span> le domaine de définition de <span class=\"math inline\">\\(f\\)</span>.</p>\n<p>Si <span class=\"math inline\">\\(x\\in D\\)</span>, <span class=\"math inline\">\\(-x\\in D\\)</span> et <span class=\"math inline\">\\(f(-x)=-f(x)\\)</span>. <span class=\"math inline\">\\(f\\)</span> est donc impaire.</p>\n<p>Si <span class=\"math inline\">\\(x\\in D\\)</span>, <span class=\"math inline\">\\(x+2\\pi\\in D\\)</span> et <span class=\"math inline\">\\(f(x+2\\pi)=f(x)\\)</span>. <span class=\"math inline\">\\(f\\)</span> est donc <span class=\"math inline\">\\(2\\pi\\)</span>-périodique.</p>\n<p>On étudiera donc <span class=\"math inline\">\\(f\\)</span> sur <span class=\"math inline\">\\([0,\\pi]\\)</span>.</p>\n<p>Soient <span class=\"math inline\">\\(x\\in[0,\\pi]\\)</span> et <span class=\"math inline\">\\(t\\in[-1,1]\\)</span>. <span class=\"math inline\">\\(t^2-2t\\cos x+1=(t-\\cos x)^2+\\sin^x\\geq0\\)</span> avec égalité si et seulement si <span class=\"math inline\">\\(\\sin x=0\\)</span> et <span class=\"math inline\">\\(t-\\cos x=0\\)</span>.</p>\n<p>Ainsi, si <span class=\"math inline\">\\(x\\in]0,\\pi[\\)</span>, <span class=\"math inline\">\\(\\forall t\\in]-1,1[,\\;t^2-2t\\cos x+1\\neq0\\)</span>. On en déduit que la fraction rationnelle <span class=\"math inline\">\\(t\\mapsto\n\\frac{\\sin t}{1-2t\\cos x+t^2}\\)</span> est continue sur <span class=\"math inline\">\\([-1,1]\\)</span>, et donc que <span class=\"math inline\">\\(f(x)\\)</span> existe.</p>\n<p>Si <span class=\"math inline\">\\(x=0\\)</span>, <span class=\"math inline\">\\(\\forall t\\in[-1,1[\\)</span>, <span class=\"math inline\">\\(\\frac{\\sin x}{t^2-2t\\cos x+1}=\\frac{0}{(t-1)^2}=0\\)</span>. On prut prolonger cette fonction par continuité en <span class=\"math inline\">\\(1\\)</span> et consisérer que <span class=\"math inline\">\\(f(0)=\\int_{-1}^{1}0\\;dt=0\\)</span>. De même, on peut considérer que <span class=\"math inline\">\\(f(\\pi)=0\\)</span>.</p>\n<p>Ainsi, <span class=\"math inline\">\\(f\\)</span> est définie sur <span class=\"math inline\">\\([0,\\pi]\\)</span> et donc, par parité et <span class=\"math inline\">\\(2\\pi\\)</span>-périodicité, sur <span class=\"math inline\">\\(\\Rr\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(x\\in]0,\\pi[\\)</span>.Calculons <span class=\"math inline\">\\(f(x)\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\nf(x)&amp;=\\int_{-1}^{1}\\frac{\\sin x}{(t-\\cos x)^2+\\sin^2x}\\;dt=\\left[\\Arctan\\frac{t-\\cos x}{\\sin x}\\right]_{-1}^{1}\n=\\Arctan\\frac{1-\\cos x}{\\sin x}+\\Arctan\\frac{1+\\cos x}{\\sin x}\\\\\n &amp;=\\Arctan\\frac{2\\sin^2(x/2)}{2\\sin(x/2)\\cos(x/2)}+\\Arctan\\frac{2\\cos^2(x/2)}{2\\sin(x/2)\\cos(x/2)}\n=\\Arctan(\\tan(x/2))+\\Arctan(\\frac{1}{\\tan(x/2)})\\\\\n &amp;=\\frac{\\pi}{2}\\;(\\mbox{car}\\;\\tan(x/2)&gt;0\\;\\mbox{pour}\\;x\\in]0,\\pi[).\n\\end{align*}\\]</span></p>\n<p>Ce calcul achève l’étude de <span class=\"math inline\">\\(f\\)</span>. En voici le graphe :</p>\n<p><span class=\"math display\">\\[\\includegraphics{../images/img005472-1}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Etude de <span class=\"math inline\">\\(f(x)=\\int_{-1}^{1}\\frac{\\sin x}{1-2t\\cos x+t^2}\\;dt\\)</span>.</p>\n"
 }

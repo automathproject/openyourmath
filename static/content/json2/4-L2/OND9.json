@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Diagonalisation",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:28.733Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:18.176Z"
   },
   "contenu": [
     {
-      "id": "b06b21be-eaa0-4f62-a91c-fe9ad0ace73b",
+      "id": "9dadc5a7-983d-4421-83f4-cdc8e2714a90",
       "type": "description",
       "value": {
         "latex": "Soit $u$ l'endomorphisme de $\\R^3$ dont la matrice dans la base canonique est  \n$$A=\\begin{pmatrix}-4&-2&-2 \\\\  2&0&2 \\\\  3&3&1\\end{pmatrix}.$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "de02db0f-7ee8-43d8-a92b-0f9a0dbcd33e",
+      "id": "2744583f-96a7-472f-8719-c5b1e372884f",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer et factoriser le polyn\\^ome caract\\'eristique de $A$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "dcd382af-26c3-46c1-89c4-b0d87f7d7ae3",
+      "id": "b7d56a4d-2177-491e-94c2-6c6aecd860de",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'eterminons et factorisons le polyn\\^ome caract\\'eristique de $A$.}\n\nPar opérations sur les colonnes puis les lignes, on a\n$$P_A(X)=\\begin{vmatrix}-4-X&-2&-2 \\\\  2&-X&2 \\\\  3&3&1-X\\end{vmatrix}=\\begin{vmatrix}-4-X&0&-2 \\\\  2&-X-2&2 \\\\  3&2+X&1-X\\end{vmatrix},$$ d'où\n$$P_A(X)=\\begin{vmatrix}-4-X&0&-2 \\\\  2&-X-2&2 \\\\  5&0&3-X\\end{vmatrix}$$\net, en développant par rapport à la deuxième colonne\n$$P_A(X)=-(X+2)[(-4-X)(3-X)+10]=-(X+2)(X^2+X-2)=-(X+2)^2(X-1).$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "94e1e9b0-0a1c-419b-9a3b-f8b4509fd49e",
+      "id": "330b7ed5-6d62-46ed-b651-da23807122d6",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer que les valeurs propres de $A$ sont $1$ et $-2$. D\\'eterminer les sous-espaces propres associ\\'es.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "2be124b7-71a1-4590-8b5d-713c92bb594e",
+      "id": "15c3f57d-5a4c-4631-80de-d4fcb999f5e1",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'emontrons que les valeurs propres de $A$ sont $1$ et $-2$ et d\\'eterminons les sous-espaces propres associ\\'es}.\n\nLes valeurs propres de $A$ sont les racines du polyn\\^ome caracteristique, c'est-à-dire, $1$, valeur propre simple et, $-2$, valeur propre double.\n\nNotons $E_1$ le sous-espace propre associé à la valeur propre $1$, \n$$E_1=\\{\\vec u=(x,y,z),\\ A.\\vec u=\\vec u\\}.$$\nAinsi\n$$\\vec u=(x,y,z)\\in E_1\\iff\\left\\{$$\\begin{align*}-&5x-2y-2z=0 \\\\ &2x-y+2z=0 \\\\ &3x+3y=0\\end{align*}$$\\right.\\iff\n\\left\\{$$\\begin{align*}&y=-x \\\\ &3x+2z=0\\end{align*}$$\\right.$$\nLe sous-espace propre $E_1$ est donc une droite vectorielle dont un vecteur directeur est donné, par exemple, par $\\vec e_1=(-2,2,3)$.\n\nNotons $E_{-2}$ le sous-espace propre associé à la valeur propre $-2$, \n$$E_{-2}=\\{\\vec u=(x,y,z),\\ A.\\vec u=-2\\vec u\\}.$$\nAinsi\n$$\\vec u=(x,y,z)\\in E_{-2}\\iff$$\\begin{align*}-&2x-2y-2z=0 \\\\ &2x+2y+2z=0 \\\\ &3x+3y+3z=0\\end{align*}$$\\iff\nx+y+z=0$$\nLe sous-espace propre $E_{-2}$ est donc le plan vectoriel d'équation $x+y+z=0$, dont une base est donnée, par exemple, par $\\vec e_2=(1,-1,0)$ et $\\vec e_3=(1,0,-1)$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "6e599833-4af5-49e7-a24b-109798efa4a6",
+      "id": "8327e748-6a6f-4093-adec-2dcec07f017e",
       "type": "question",
       "value": {
         "latex": "D\\'emontrer que $A$ est diagonalisable et donner une base de $\\R^3$ dans laquelle la matrice de $u$ est diagonale.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "dc308005-0bdb-4098-bac3-9816a5c10196",
+      "id": "5d43325c-b111-4167-94bf-e44922b2346e",
       "type": "reponse",
       "value": {
         "latex": "{\\it D\\'emontrons que $A$ est diagonalisable et donnons une base de $\\R^3$ dans laquelle la matrice de $u$ est diagonale.}\n\nLes sous-espaces propres associés aux valeurs propres sont de dimension la multiplicité de la valeur propre correspondante, ce qui prouve que la matrice $A$ est diagonalisable. Dans la base $(\\vec e_1,\\vec e_2,\\vec e_3)$la matrice de l'endomorphisme associé à $A$ est diagonale, elle s'écrit\n$$D=\\begin{pmatrix}1&0&0 \\\\  0&-2&0 \\\\  0&0&-2\\end{pmatrix}.$$",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "f60bab6a-b2c6-44ee-a8cb-97fcd09a31a1",
+      "id": "d5044dec-9ca6-4713-9035-7367fa927318",
       "type": "question",
       "value": {
         "latex": "Trouver une matrice $P$ telle que $P^{-1}AP$ soit diagonale.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "2d92daf9-2181-4912-989d-1e64f76e109a",
+      "id": "63d7d99f-f43a-4759-8b28-dec94138a913",
       "type": "reponse",
       "value": {
         "latex": "{\\it Trouvons une matrice $P$ telle que $P^{-1}AP$ soit diagonale.}\n\nLa matrice de changement de base qui exprime la base $(\\vec e_1,\\vec e_2,\\vec e_3)$ des vecteurs propres, trouvés ci-dessus, dans la base canonique est la matrice $P$ cherchée\n$$P=\\begin{pmatrix}-2&1&1 \\\\  2&-1&0 \\\\  3&0&-1\\end{pmatrix}\\ \\ {\\hbox{et}}\\ \\ P^{-1}={\\frac{1}{3}}\\begin{pmatrix}1&1&1 \\\\  2&-1&2 \\\\  3&3&0\\end{pmatrix},$$\nelle est inversible et on a $P^{-1}AP=D$. (Le calcul de $P^{-1}$ n'était pas demandé, ni nécessaire).",
         "html": "<p><span><em>Trouvons une matrice <span class=\"math inline\">\\(P\\)</span> telle que <span class=\"math inline\">\\(P^{-1}AP\\)</span> soit diagonale.</em></span></p>\n<p>La matrice de changement de base qui exprime la base <span class=\"math inline\">\\((\\vec e_1,\\vec e_2,\\vec e_3)\\)</span> des vecteurs propres, trouvés ci-dessus, dans la base canonique est la matrice <span class=\"math inline\">\\(P\\)</span> cherchée <span class=\"math display\">\\[P=\\begin{pmatrix}-2&amp;1&amp;1 \\\\  2&amp;-1&amp;0 \\\\  3&amp;0&amp;-1\\end{pmatrix}\\ \\ {\\hbox{et}}\\ \\ P^{-1}={\\frac{1}{3}}\\begin{pmatrix}1&amp;1&amp;1 \\\\  2&amp;-1&amp;2 \\\\  3&amp;3&amp;0\\end{pmatrix},\\]</span> elle est inversible et on a <span class=\"math inline\">\\(P^{-1}AP=D\\)</span>. (Le calcul de <span class=\"math inline\">\\(P^{-1}\\)</span> n’était pas demandé, ni nécessaire).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(u\\)</span> l’endomorphisme de <span class=\"math inline\">\\(\\R^3\\)</span> dont la matrice dans la base canonique est ..."
 }

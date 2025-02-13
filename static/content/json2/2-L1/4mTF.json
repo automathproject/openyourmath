@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série numérique",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:41:24.884Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:41:10.662Z"
   },
   "contenu": [
     {
-      "id": "169da863-26a9-42db-a491-7a706eb9693f",
+      "id": "e64eeaa2-26f5-47e6-be9b-682038ddf8da",
       "type": "description",
       "value": {
         "latex": "Soit $P(n)=\\max\\{p \\text{ premier},\\, p\\mid n\\}$. Montrer que $\\sum_{n}\\frac{1}{nP(n)}$ converge.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "0711fd6c-3c20-4053-9e23-bc656fc20f97",
+      "id": "b381bba8-3369-4279-949f-995b3d147e38",
       "type": "reponse",
       "value": {
         "latex": "Soit $(p_0,p_1,\\dots)$ la suite croissante des nombres premiers\net $S_k = \\sum_{P(n)\\le k}\\frac1n$.\nOn a $S_k = S_{k-1}\\sum_{i=0}^\\infty \\frac1{p_k^i} = \\frac{p_k}{p_k-1}S_{k-1}$,\nce qui prouve que $S_k$ est fini. La série demandée est\n$\\frac{S_0}{p_0}+ \\sum_{k=1}^\\infty \\frac{S_k-S_{k-1}}{p_k} =\n\\frac{S_0}{p_0}+ \\sum_{k=1}^\\infty\\frac{S_k}{p_k^2}$.\n\nMontrons que $S_k\\le2\\sqrt{p_k}$, ceci prouvera la convergence. C'est vrai pour $k=0$ et $k=1$, et si\nc'est vrai pour $k-1$ avec $k\\ge 2$ alors on obtient $S_k\\le 2\\sqrt{p_k}\\sqrt{\\frac{p_kp_{k-1}}{(p_k-1)^2}}\n\\le 2\\sqrt{p_k}\\sqrt{\\frac{p_k(p_k-2)}{(p_k-1)^2}} \\le 2\\sqrt{p_k}$.\n\nRemarque~: on a en réalité $S_k\\sim e^\\gamma\\ln(p_k)$ où $\\gamma$ est la constante\nd'Euler (formule de Mertens).",
         "html": "<p>Soit <span class=\"math inline\">\\((p_0,p_1,\\dots)\\)</span> la suite croissante des nombres premiers et <span class=\"math inline\">\\(S_k = \\sum_{P(n)\\le k}\\frac1n\\)</span>. On a <span class=\"math inline\">\\(S_k = S_{k-1}\\sum_{i=0}^\\infty \\frac1{p_k^i} = \\frac{p_k}{p_k-1}S_{k-1}\\)</span>, ce qui prouve que <span class=\"math inline\">\\(S_k\\)</span> est fini. La série demandée est <span class=\"math inline\">\\(\\frac{S_0}{p_0}+ \\sum_{k=1}^\\infty \\frac{S_k-S_{k-1}}{p_k} =\n\\frac{S_0}{p_0}+ \\sum_{k=1}^\\infty\\frac{S_k}{p_k^2}\\)</span>.</p>\n<p>Montrons que <span class=\"math inline\">\\(S_k\\le2\\sqrt{p_k}\\)</span>, ceci prouvera la convergence. C’est vrai pour <span class=\"math inline\">\\(k=0\\)</span> et <span class=\"math inline\">\\(k=1\\)</span>, et si c’est vrai pour <span class=\"math inline\">\\(k-1\\)</span> avec <span class=\"math inline\">\\(k\\ge 2\\)</span> alors on obtient <span class=\"math inline\">\\(S_k\\le 2\\sqrt{p_k}\\sqrt{\\frac{p_kp_{k-1}}{(p_k-1)^2}}\n\\le 2\\sqrt{p_k}\\sqrt{\\frac{p_k(p_k-2)}{(p_k-1)^2}} \\le 2\\sqrt{p_k}\\)</span>.</p>\n<p>Remarque : on a en réalité <span class=\"math inline\">\\(S_k\\sim e^\\gamma\\ln(p_k)\\)</span> où <span class=\"math inline\">\\(\\gamma\\)</span> est la constante d’Euler (formule de Mertens).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(P(n)=\\max\\{p \\text{ premier},\\, p\\mid n\\}\\)</span>. Montrer que <span class=\"math inline\"> ..."
 }

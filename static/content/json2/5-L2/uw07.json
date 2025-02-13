@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Topologie",
     "sousChapitre": "Ouvert, fermé, intérieur, adhérence",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:38.563Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:33.434Z"
   },
   "contenu": [
     {
-      "id": "5a5a9c79-e283-43ea-973e-2cf5397133a9",
+      "id": "6762654f-490f-424e-8c77-cf21d8823e05",
       "type": "description",
       "value": {
         "latex": "Soit $u$ une suite bornée d'un espace vectoriel normé de dimension finie ayant une unique valeur d'adhérence. Montrer que la suite $u$ converge.",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "62faeaa3-6bf9-45fe-95d4-362d5694d9cf",
+      "id": "041ac4fe-996f-4e94-bd3a-8a3efb9ea124",
       "type": "reponse",
       "value": {
         "latex": "Soit $u = (u_n)_{n\\in\\Nn}$ une suite bornée de l'espace normé $(E,\\|\\;\\|)$ ayant une unique valeur d'adhérence que l'on note $\\ell$. Montrons que la suite $u$ converge vers $\\ell$.\n\nSupposons par l'absurde que la suite $u$ ne converge pas vers $\\ell$. Donc\n\n\\begin{center}\n$\\exists\\varepsilon>0/\\;\\forall n_0\\in\\Nn,\\;\\exists n\\geqslant n_0/\\;\\|u_n-\\ell\\|\\geqslant\\varepsilon$\\quad$(*)$.\n\\end{center}\n\n$\\varepsilon$ est ainsi dorénavant fixé.\n\nEn appliquant $(*)$ à $n_0 = 0$, il existe un rang $\\varphi(0)\\geqslant n_0 = 0$ tel que $\\|u_{\\varphi(0)}-\\ell\\|\\geqslant\\varepsilon$.\n\nPuis en prenant $n_0=\\varphi(0)+1$, il existe un rang $\\varphi(1)>\\varphi(0)$ tel que $\\|u_{\\varphi(1)}-\\ell\\|\\geqslant\\varepsilon$ ... et on construit ainsi par récurrence une suite extraite $(u_{\\varphi(n)})_{n\\in\\Nn}$ telle que $\\forall n\\in\\Nn$, $\\|u_{\\varphi(n)}-\\ell\\|\\geqslant\\varepsilon$.\n\nMaintenant, la suite $u$ est bornée et il en est de même de la suite $(u_{\\varphi(n)})$. Puisque $E$ est de dimension finie, le théorème de \\textsc{Bolzano}-\\textsc{Weierstrass} permet d'affirmer qu'il existe une suite $(u_{\\psi(n)})_{n\\in\\Nn}$ extraite de $(u_{\\varphi(n)})$ et donc de $u$ convergeant vers un certain $\\ell'\\in E$. $\\ell'$ est donc une valeur d'adhérence de la suite $u$. Mais quand $n$ tend vers $+\\infty$ dans l'inégalité $\\|u_{\\psi(n)}-\\ell\\|\\geqslant\\varepsilon$, on obtient $\\|\\ell'-\\ell\\|\\geqslant\\varepsilon$ et donc $\\ell\\neq\\ell'$. Ceci constitue une contradiction et donc $u$ converge vers $\\ell$.",
         "html": "<p>Soit <span class=\"math inline\">\\(u = (u_n)_{n\\in\\Nn}\\)</span> une suite bornée de l’espace normé <span class=\"math inline\">\\((E,\\|\\;\\|)\\)</span> ayant une unique valeur d’adhérence que l’on note <span class=\"math inline\">\\(\\ell\\)</span>. Montrons que la suite <span class=\"math inline\">\\(u\\)</span> converge vers <span class=\"math inline\">\\(\\ell\\)</span>.</p>\n<p>Supposons par l’absurde que la suite <span class=\"math inline\">\\(u\\)</span> ne converge pas vers <span class=\"math inline\">\\(\\ell\\)</span>. Donc</p>\n<p><span class=\"math inline\">\\(\\exists\\varepsilon&gt;0/\\;\\forall n_0\\in\\Nn,\\;\\exists n\\geqslant n_0/\\;\\|u_n-\\ell\\|\\geqslant\\varepsilon\\)</span><span class=\"math inline\">\\((*)\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\varepsilon\\)</span> est ainsi dorénavant fixé.</p>\n<p>En appliquant <span class=\"math inline\">\\((*)\\)</span> à <span class=\"math inline\">\\(n_0 = 0\\)</span>, il existe un rang <span class=\"math inline\">\\(\\varphi(0)\\geqslant n_0 = 0\\)</span> tel que <span class=\"math inline\">\\(\\|u_{\\varphi(0)}-\\ell\\|\\geqslant\\varepsilon\\)</span>.</p>\n<p>Puis en prenant <span class=\"math inline\">\\(n_0=\\varphi(0)+1\\)</span>, il existe un rang <span class=\"math inline\">\\(\\varphi(1)&gt;\\varphi(0)\\)</span> tel que <span class=\"math inline\">\\(\\|u_{\\varphi(1)}-\\ell\\|\\geqslant\\varepsilon\\)</span> ... et on construit ainsi par récurrence une suite extraite <span class=\"math inline\">\\((u_{\\varphi(n)})_{n\\in\\Nn}\\)</span> telle que <span class=\"math inline\">\\(\\forall n\\in\\Nn\\)</span>, <span class=\"math inline\">\\(\\|u_{\\varphi(n)}-\\ell\\|\\geqslant\\varepsilon\\)</span>.</p>\n<p>Maintenant, la suite <span class=\"math inline\">\\(u\\)</span> est bornée et il en est de même de la suite <span class=\"math inline\">\\((u_{\\varphi(n)})\\)</span>. Puisque <span class=\"math inline\">\\(E\\)</span> est de dimension finie, le théorème de <span class=\"smallcaps\">Bolzano</span>-<span class=\"smallcaps\">Weierstrass</span> permet d’affirmer qu’il existe une suite <span class=\"math inline\">\\((u_{\\psi(n)})_{n\\in\\Nn}\\)</span> extraite de <span class=\"math inline\">\\((u_{\\varphi(n)})\\)</span> et donc de <span class=\"math inline\">\\(u\\)</span> convergeant vers un certain <span class=\"math inline\">\\(\\ell&#39;\\in E\\)</span>. <span class=\"math inline\">\\(\\ell&#39;\\)</span> est donc une valeur d’adhérence de la suite <span class=\"math inline\">\\(u\\)</span>. Mais quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> dans l’inégalité <span class=\"math inline\">\\(\\|u_{\\psi(n)}-\\ell\\|\\geqslant\\varepsilon\\)</span>, on obtient <span class=\"math inline\">\\(\\|\\ell&#39;-\\ell\\|\\geqslant\\varepsilon\\)</span> et donc <span class=\"math inline\">\\(\\ell\\neq\\ell&#39;\\)</span>. Ceci constitue une contradiction et donc <span class=\"math inline\">\\(u\\)</span> converge vers <span class=\"math inline\">\\(\\ell\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(u\\)</span> une suite bornée d’un espace vectoriel normé de dimension finie ayant une unique valeur d’adhérence. Mo ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Intégration",
     "sousChapitre": "Intégrale de Riemann dépendant d'un paramètre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:05.890Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:59.495Z"
   },
   "contenu": [
     {
-      "id": "9a56922a-0c90-4c6b-8b0c-5f06ae9ca7e6",
+      "id": "3ece2ee0-b1d9-4ff6-b035-29ef040a30f6",
       "type": "description",
       "value": {
         "latex": "Pour $n\\in\\Nn^*$ et $x\\in]0,+\\infty[$, on pose $I_n(x)=\\int_{0}^{+\\infty}\\frac{1}{(t^2+x^2)^n}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "e58ce964-bac6-405d-975f-94b401a4b107",
+      "id": "ce7a2313-cd35-4caf-8f08-9d5decfa1fd3",
       "type": "question",
       "value": {
         "latex": "Calculer la dérivée de la fonction $I_n$ sur $]0,+\\infty[$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "cca6a13a-9328-4952-abde-04e440d86300",
+      "id": "5ff4bff7-74c8-430e-8581-9e1046a5e1bf",
       "type": "reponse",
       "value": {
         "latex": "Soit $n\\in\\Nn^*$. Soient $a$ et $A$ deux réels tels que $0<a<A$. On considère $\\begin{array}[t]{cccc}\nF_n~:&[a,A]\\times\\Rr&\\rightarrow&\\Rr\\\\\n &(x,t)&\\mapsto&\\frac{1}{(t^2+x^2)^n}\n\\end{array}$.\n\n\\textbullet~Pour chaque $x$ de $[a,A]$, la fonction $t\\mapsto F_n(x,t)$ est continue par morceaux et intégrable sur $[0,+\\infty[$ car $F_n(x,t)\\underset{t\\rightarrow+\\infty}{\\sim}\\frac{1}{t^{2n}}>0$ avec $2n>1$.\n\n\\textbullet~La fonction $F_n$ est admet sur $[a,A]\\times[0,+\\infty[$ une dérivée partielle par rapport à sa première variable $x$ définie par :\n\n\\begin{center}\n$\\forall(x,t)\\in[a,A]\\times[0,+\\infty[$, $\\frac{\\partial F_n}{\\partial x}(x,t)=\\frac{-2nx}{(t^2+x^2)^{n+1}}$.\n\\end{center}\n\nDe plus,\n\n- pour chaque $x\\in[a,A]$, la fonction $t\\mapsto\\frac{\\partial F_n}{\\partial x}(x,t)$ est continue par morceaux sur $[0,+\\infty[$,\\rule[-4mm]{0mm}{0mm}\n\n-pour chaque $t\\in[0,+\\infty[$, la fonction $x\\mapsto\\frac{\\partial F_n}{\\partial x}(x,t)$ est continue sur $[a,A]$,\n\n-pour chaque $(x,t)\\in[a,A]\\times[0,+\\infty[$,\n\n\\begin{center}\n$\\left|\\frac{\\partial F_n}{\\partial x}(x,t)\\right|=\\frac{2nx}{(t^2+x^2)^{n+1}}\\leqslant\\frac{2nA}{(t^2+a^2)^{n+1}}=\\varphi(t)$,\n\\end{center}\n\noù la fonction $\\varphi$ est continue par morceaux et intégrable sur $[0,+\\infty[$ car négligeable devant $\\frac{1}{t^2}$ quand $t$ tend vers $+\\infty$.\n\nD'après le théorème de dérivation des intégrales à paramètres (théorème de \\textsc{Leibniz}), la fonction $I_n$ est de classe $C^1$ sur $[a,A]$ et sa dérivée s'obtient par dérivation sous le signe somme. Ceci étant vrai pour tous réels $a$ et $A$ tels que $0<a<A$, on a montré que la fonction $I_n$ est de classe $C^1$ sur $]0,+\\infty[$ et que\n\n\\begin{center}\n$\\forall x>0$, $I_n'(x)=-2nx\\int_{0}^{+\\infty}\\frac{1}{(t^2+x^2)^{n+1}}\\;dt=-2nxI_{n+1}(x)$.\n\\end{center}\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn^*$, $I_n'(x)=-2nxI_{n+1}(x)$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "8af7a6fb-331a-4497-b3aa-92e100d3ad4d",
+      "id": "176a63fa-11ba-4073-882b-fa114c9399b9",
       "type": "question",
       "value": {
         "latex": "En déduire la valeur de $\\int_{0}^{+\\infty}\\frac{1}{(t^2+1)^3}\\;dt$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "d34f5aee-c068-4f18-b965-7597d90cb1ab",
+      "id": "2f61890d-8b05-46f1-8718-204224595c67",
       "type": "reponse",
       "value": {
         "latex": "Pour $x>0$, on a $I_1(x)=\\left[\\frac{1}{x}\\Arctan\\left(\\frac{t}{x}\\right)\\right]_0^{+\\infty}=\\frac{\\pi}{2x}$. Ensuite, $I_2(x)=-\\frac{1}{2x}I_1'(x)=\\frac{\\pi}{4x^3}$ puis $I_3(x)=-\\frac{1}{4x}I_2'(x)=\\frac{3\\pi}{16x^5}$ et donc $I_3(1)=\\frac{3\\pi}{16}$.\n\n\\begin{center}\n\\shadowbox{\n$\\int_{0}^{+\\infty}\\frac{1}{(t^2+1)^3}\\;dt=\\frac{3\\pi}{16}$.\n}\n\\end{center}",
         "html": "<p>Pour <span class=\"math inline\">\\(x&gt;0\\)</span>, on a <span class=\"math inline\">\\(I_1(x)=\\left[\\frac{1}{x}\\Arctan\\left(\\frac{t}{x}\\right)\\right]_0^{+\\infty}=\\frac{\\pi}{2x}\\)</span>. Ensuite, <span class=\"math inline\">\\(I_2(x)=-\\frac{1}{2x}I_1&#39;(x)=\\frac{\\pi}{4x^3}\\)</span> puis <span class=\"math inline\">\\(I_3(x)=-\\frac{1}{4x}I_2&#39;(x)=\\frac{3\\pi}{16x^5}\\)</span> et donc <span class=\"math inline\">\\(I_3(1)=\\frac{3\\pi}{16}\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span> et <span class=\"math inline\">\\(x\\in]0,+\\infty[\\)</span>, on pose <span class=\"math inline\"> ..."
 }

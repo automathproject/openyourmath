@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace vectoriel",
     "sousChapitre": "Définition, sous-espace",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:08.819Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:23.964Z"
   },
   "contenu": [
     {
-      "id": "8631bd09-683a-49fc-b1cb-7d59823d9034",
+      "id": "d4b3227f-0a9e-4db1-910f-b2cc131fcb13",
       "type": "description",
       "value": {
         "latex": "Dans $E=\\Rr^4$, on considère $V=\\{(x,y,z,t)\\in E/\\;x-2y=0\\;\\mbox{et}\\;y-2z=0\\}$ et $W=\\{(x,y,z,t)\\in E/\\;x+z=y+t\\}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "f960b0a1-46b2-478d-a16b-20b5b665be0a",
+      "id": "e165822c-a223-4324-8ffb-8f035c38f9a4",
       "type": "question",
       "value": {
         "latex": "Montrer que $V$ et $W$ sont des sous espaces vectoriels de $E$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "8b486047-e717-4a2f-8ec5-962195c484cf",
+      "id": "80f9ab6d-be85-4969-b27a-f9c0579754dd",
       "type": "reponse",
       "value": {
         "latex": "Pour $(x,y,z,t)\\in\\Rr^4$, on pose $f((x,y,z,t))=x-2y$, $g((x,y,z,t))=y-2z$ et $h((x,y,z,t))=x-y+z-t$. $f$,\n$g$ et $h$ sont des formes linéaires sur $\\Rr^4$. Donc, $V=\\mbox{Ker}f\\cap\\mbox{Ker}g$ est un sous-espace vectoriel de\n$\\Rr^4$ en tant qu'intersection de sous-espaces vectoriels de $\\Rr^4$ et $W=\\mbox{Ker}h$ est un sous-espace vectoriel\nde $\\Rr^4$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "0b54dd89-041a-4467-8cb4-c4cb5f7bc87c",
+      "id": "82883fcc-6082-4ade-a46c-bca5813c1c72",
       "type": "question",
       "value": {
         "latex": "Donner une base de $V$, $W$ et $V\\cap W$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "28fcc3eb-22df-4bd4-8dd9-335c4c71d0a2",
+      "id": "27ddca2d-b509-474a-94db-cabf711d46b3",
       "type": "reponse",
       "value": {
         "latex": "Soit $(x,y,z,t)\\in\\Rr^4$.\n\n$$\\begin{align*}\n(x,y,z,t)\\in V\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nx=2y\\\\\ny=2z\n\\end{array}\n\\right.\\Leftrightarrow\n\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nx=4z\\\\\ny=2z\n\\end{array}\n\\right.\n.\n\\end{align*}$$\n\nDonc, $V=\\{(4z,2z,z,t),\\;(z,t)\\in\\Rr^2\\}=\\mbox{Vect}(e_1,e_2)$ où $e_1=(4,2,1,0)$ et $e_2=(0,0,0,1)$. Montrons alors\nque $(e_1,e_2)$ est libre. Soit $(z,t)\\in\\Rr^2$.\n\n$$ze_1+te_2=0\\Rightarrow(4z,2z,z,t)=(0,0,0,0)\\Rightarrow z=t=0.$$\n\nDonc, $(e_1,e_2)$ est une base de $V$.\n\nPour $(x,y,z,t)\\in\\Rr^4$, $(x,y,z,t)\\in W\\Leftrightarrow t=x-y+z$. Donc,\n$W=\\{(x,y,z,x-y+z),\\;(x,y,z)\\in\\Rr^3\\}=\\mbox{Vect}(e_1',e_2',e_3')$ où $e_1'=(1,0,0,1)$, $e_2'=(0,1,0,-1)$ et\n$e_3'=(0,0,1,1)$.\n\nMontrons alors que $(e_1',e_2',e_3')$ est libre. Soit $(x,y,z)\\in\\Rr^3$.\n\n$$xe_1'+ye_2'+ze_3'=0\\Rightarrow(x,y,z,x-y+z)=(0,0,0,0)\\Rightarrow x=y=z=0.$$\n\nDonc, $(e_1',e_2',e_3')$ est une base de $W$.\nSoit $(x,y,z,t)\\in\\Rr^4$.\n\n$$(x,y,z,t)\\in V\\cap W\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nx=2y\\\\\ny=2z\\\\\nx-y+z-t=0\n\\end{array}\n\\right.\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\nx=4z\\\\\ny=2z\\\\\nt=3z\n\\end{array}\n\\right..$$\n\nDonc, $V\\cap W=\\{(4z,2z,z,3z),\\;z\\in\\Rr\\}=\\mbox{Vect}(e)$ où $e=(4,2,1,3)$. De plus, $e$ étant non nul, la famille\n$(e)$ est libre et est donc une base de $V\\cap W$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "807018c5-0adb-4fbe-8cf1-2fdc7f6a28c2",
+      "id": "7ad949ba-1e8a-481a-96a8-294316f48755",
       "type": "question",
       "value": {
         "latex": "Montrer que $E=V+W$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "8d258cb1-0460-4e11-9ac3-f9b9fea8861e",
+      "id": "f4633bca-17d6-466d-9425-9a5a972bbdd4",
       "type": "reponse",
       "value": {
         "latex": "Soit $u=(x,y,z,t)$ un vecteur de $\\Rr^4$.\n\nOn cherche $v=(4\\alpha,2\\alpha,\\alpha,\\beta)\\in V$ et $w=(a,b,c,a-b+c)\\in W$ tels que $u=v+w$.\n\n$$u=v+w\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n4\\alpha+a=x\\\\\n2\\alpha+b=y\\\\\n\\alpha+c=z\\\\\n\\beta+a-b+c=t\n\\end{array}\n\\right.\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\na=x-4\\alpha\\\\\nb=y-2\\alpha\\\\\nc=z-\\alpha\\\\\n\\beta=-x+y-z+t-3\\alpha\n\\end{array}\n\\right..$$\n\net $\\alpha=0$, $\\beta=-x+y-z+t$, $a=x$, $b=y$ et $c=z$ conviennent. Donc, $\\forall u\\in\\Rr^4,\\;\\exists(v,w)\\in\nV\\times W/\\;u=v+w$. On a montré que $\\Rr^4=V+W$.",
         "html": "<p>Soit <span class=\"math inline\">\\(u=(x,y,z,t)\\)</span> un vecteur de <span class=\"math inline\">\\(\\Rr^4\\)</span>.</p>\n<p>On cherche <span class=\"math inline\">\\(v=(4\\alpha,2\\alpha,\\alpha,\\beta)\\in V\\)</span> et <span class=\"math inline\">\\(w=(a,b,c,a-b+c)\\in W\\)</span> tels que <span class=\"math inline\">\\(u=v+w\\)</span>.</p>\n<p><span class=\"math display\">\\[u=v+w\\Leftrightarrow\\left\\{\n\\begin{array}{l}\n4\\alpha+a=x\\\\\n2\\alpha+b=y\\\\\n\\alpha+c=z\\\\\n\\beta+a-b+c=t\n\\end{array}\n\\right.\\Leftrightarrow\n\\left\\{\n\\begin{array}{l}\na=x-4\\alpha\\\\\nb=y-2\\alpha\\\\\nc=z-\\alpha\\\\\n\\beta=-x+y-z+t-3\\alpha\n\\end{array}\n\\right..\\]</span></p>\n<p>et <span class=\"math inline\">\\(\\alpha=0\\)</span>, <span class=\"math inline\">\\(\\beta=-x+y-z+t\\)</span>, <span class=\"math inline\">\\(a=x\\)</span>, <span class=\"math inline\">\\(b=y\\)</span> et <span class=\"math inline\">\\(c=z\\)</span> conviennent. Donc, <span class=\"math inline\">\\(\\forall u\\in\\Rr^4,\\;\\exists(v,w)\\in\nV\\times W/\\;u=v+w\\)</span>. On a montré que <span class=\"math inline\">\\(\\Rr^4=V+W\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Dans <span class=\"math inline\">\\(E=\\Rr^4\\)</span>, on considère <span class=\"math inline\">\\(V=\\{(x,y,z,t)\\in E/\\;x-2y=0\\;\\mbox{et}\\;y-2z=0\\}\\)</spa ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Espace métrique complet, espace de Banach",
     "sousChapitre": "Espace métrique complet, espace de Banach",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:12.492Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:53.382Z"
   },
   "contenu": [
     {
-      "id": "3d2daf59-20b7-4f41-b969-cb643bf410a7",
+      "id": "be42910f-08d5-42a2-8a82-1f98c401da22",
       "type": "description",
       "value": {
         "latex": "Soit $X$ l'espace des suites r\\'eelles nulles \\`a partir d'un certain rang, et soit\n$$\\rho (x,y) =\\sum _{k=1}^\\infty 2^{-k}\n\\frac{|x_k-y_k|}{1+|x_k-y_k|}\\quad  \\text{pour} \\; x,y\\in X\\; .$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "1c2ffc1f-aedd-451c-a64f-363591267acb",
+      "id": "eca9911d-e1cd-4f52-8b2c-b9e2e845d453",
       "type": "question",
       "value": {
         "latex": "Montrer que $X$ n'est pas complet pour la m\\'etrique $\\rho $.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "e4067041-d99c-4848-852a-0a1c3489b70c",
+      "id": "4052f4fe-afdd-4ed7-a0d5-5b0a9a9ce933",
       "type": "question",
       "value": {
         "latex": "Trouver un espace de suites $Y$ tel que $(Y, \\rho )$ soit complet et\ntel que $X$ soit dense dans $Y$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "19dfc289-28ba-4c7c-84d1-32d8bdea3011",
+      "id": "4921ebf6-81c9-4147-9ec4-85204f7a02e6",
       "type": "question",
       "value": {
         "latex": "Que donne l'exercice si on remplace $\\rho$ par la norme uniforme?",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "f5c38998-8b12-44eb-b882-716f7c06d8d9",
+      "id": "633bb4c2-fdcc-4e46-aae4-7de11bcc2e44",
       "type": "reponse",
       "value": {
         "latex": "Notons $x^p$ la suite \n$$x^p = (1,1,\\ldots,1,1,0,0,0,\\ldots).$$\n(des $0$ à partir de la $p+1$-ième place et de $1$ avant.\nSi $Y$ est l'espace de toute les suite, notons \n$$x^\\infty = (1,1,1,1,\\ldots).$$\nLa suite $x^\\infty$ n'est pas dans $X$.\nPar contre $x^p \\rightarrow x^\\infty$ pour la distance $\\rho$.\nEn effet\n$$\\rho(x^p,x) = \\sum_{k=p+1}^{+\\infty} \\frac{1}{2^k} \\frac12 = \\frac 1 {2^{p+1}} \\rightarrow 0.$$\nLa suite $(x^p)$ est de Cauchy, mais ne converge pas dans $X$, donc $X$ n'est pas complet.\n\\begin{enumerate}\nSoit $Y$ l'espace de toutes les suites. Alors $X$ est dense dans\ndans $Y$ (pour la topologie définie par $\\rho$), car toute suite $y = (y_1,y_2,\\ldots)$ de $Y$ \ns'approche par une suite de suite $(x^p)$ obtenue en tronquant la suite $y$ : $x^1 = (y(1),0,0,\\ldots)$, $x^2 = (y(1),y(2),0,0,\\ldots)$,... \nEn effet \n$$\\rho(x^p,y)= \\sum _{k=p+1}^\\infty 2^{-k}\n\\frac{|x_k-y_k|}{1+|x_k-y_k|} \\le \\sum _{k=p+1}^\\infty 2^{-k} = \\frac{1}{2^p}$$\nqui tend vers $0$ lorsque $p$ tend vers $+\\infty$.\nSoit $(x^n)_n$ une suite de Cauchy de $Y$.\nMontrons que pour $k$ fixé alors $(x^n_k)_n$ est une suite de Cauchy de $\\Rr$.\nPrenons $\\epsilon >0$, alors il existe $N$ tel que pour $p,q\\ge N$ on ait\n$\\rho(x^p,x^q) \\le \\epsilon$.\n$$\\frac {1}{2^k}\\frac{|x^p_k-x^q_k|}{1+|x^p_k-x^q_k|} \\le \\rho(x^p,x^q) \\le \\epsilon.$$\nPosons la fonction $f(\\alpha)=\\frac{\\alpha}{1+\\alpha}$, $f$ est inversible pour $\\alpha\\ge 0$,\nd'inverse $f^{-1}(\\beta)= \\frac{\\beta}{1-\\beta}$. Une étude de $f$ et de son inverse\nmontre que si $f(\\alpha)\\le \\epsilon'\\le 1$ alors $\\alpha \\le 2\\epsilon'$.\nComme $k$ est fixé, posons $\\epsilon = \\frac{\\epsilon'}{2^k}$ et $\\alpha =|x^p_k-x^q_k|$  on a montrer :\n$f(\\alpha) \\le \\epsilon'$. Donc $\\alpha \\le 2\\epsilon'$.\nRécapitulons :\n$$\\forall \\epsilon' >0 \\quad \\exists N \\in \\Nn \\quad \\forall p,q \\ge N \\quad\n|x^p_k-x^q_k| < 2\\epsilon',$$\ndonc la suite $(x^n_k)_n$ est de Cauchy dans $\\Rr$, donc converge, nous notons $x^\\infty_k$ sa limite.\nNous avons construit une suite $x^\\infty=(x^\\infty_1,x^\\infty_2,\\ldots)$. Comme $(x^n)$ est de Cauchy alors\n$$\\forall \\epsilon >0 \\quad \\exists N \\in \\Nn \\quad \\forall p,q \\ge N \\quad\n\\rho(x^p,x^q) < \\epsilon,$$\nLorsque l'on fixe $p$ et que l'on fait tendre $q$ vers $+\\infty$ on a\n$$\\forall \\epsilon >0 \\quad \\exists N \\in \\Nn \\quad \\forall p \\ge N \\quad\n\\rho(x^p,x^\\infty) < \\epsilon,$$\ndonc $(x^n)$ converge vers $x^\\infty$ pour la distance $\\rho$.\nBien évidemment $x^\\infty \\in Y$ donc\n$(x^n)$ converge vers $x^\\infty \\in Y$ pour $\\rho$. Donc\n$(Y,\\rho)$ est un espace complet.",
@@ -56,12 +56,13 @@
       }
     },
     {
-      "id": "b0f98862-19b1-4b75-8237-c4d37a69ee8d",
+      "id": "0c0fe97d-5f8c-46b8-9845-365d00439da0",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item Prendre la suite $(x^p)$ définie par $x^p= (1,1,\\ldots,1,1,0,0,0,\\ldots).$\n($(x^p)_{p\\in\\Nn}$ est donc une suite de suite).\n\n  \\item Prendre $Y$ l'espace de toutes les suites.\n\n  \\item Considérer $x^p= (1,\\frac 12,\\ldots,\\frac1p,0,0,\\ldots)$.\n\\end{enumerate}",
         "html": "<ol>\n<li><p>Prendre la suite <span class=\"math inline\">\\((x^p)\\)</span> définie par <span class=\"math inline\">\\(x^p= (1,1,\\ldots,1,1,0,0,0,\\ldots).\\)</span> (<span class=\"math inline\">\\((x^p)_{p\\in\\Nn}\\)</span> est donc une suite de suite).</p></li>\n<li><p>Prendre <span class=\"math inline\">\\(Y\\)</span> l’espace de toutes les suites.</p></li>\n<li><p>Considérer <span class=\"math inline\">\\(x^p= (1,\\frac 12,\\ldots,\\frac1p,0,0,\\ldots)\\)</span>.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(X\\)</span> l’espace des suites réelles nulles à partir d’un certain rang, et soit <span class=\"math display\"> ..."
 }

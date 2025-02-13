@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Connexité",
     "sousChapitre": "Connexité",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:10.417Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:51.067Z"
   },
   "contenu": [
     {
-      "id": "272103a4-7a39-4d24-884f-371f88e1e405",
+      "id": "8bc9ec66-5a27-4311-8d18-65d6e626ffe1",
       "type": "description",
       "value": {
         "latex": "Dans $\\Rr^2$ on consid\\`ere l'ensemble $A= \\{ (x, \\sin(\n\\frac{1}{x}))\\; ; \\; x >0 \\}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "0209291d-a28a-4ebb-b1e8-df8e66d917e3",
+      "id": "e437aff8-0d49-4efa-a12e-91409ec9668e",
       "type": "question",
       "value": {
         "latex": "Montrer que $A$ est une partie connexe et connexe par arcs\nde $\\Rr^2$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "3ec599b1-fb7b-4a2f-a753-c07fc191171c",
+      "id": "d8319e3e-77da-4fd9-a63e-cb352c7deb12",
       "type": "reponse",
       "value": {
         "latex": "Si $(x_1, \\sin \\frac{1}{x_1})$ et $(x_2, \\sin \\frac{1}{x_2})$\nsont deux points  de $A$ alors le graphe au dessus de $[x_1,x_2]$ définie un chemin reliant ces deux points. Plus précisément le chemin est l'application\n$\\gamma : [x_1,x_2] \\longrightarrow \\Rr^2$ définie par $\\gamma(t) = (t,\\sin \\frac 1t)$. Donc $A$ est connexe par arcs donc connexe.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "c151ee15-1f61-4382-84ff-0ed0e9f05bd5",
+      "id": "ca57419c-e9ab-44bc-8fad-c7f1b2ea6ab1",
       "type": "question",
       "value": {
         "latex": "D\\'eterminer $\\overline{A}$ et justifier que\n$\\overline{A}$ est connexe.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "3c1024e1-d393-4a81-b4a4-94ba72bbf9f1",
+      "id": "87f1bd2a-4135-4880-83d7-8d7060172599",
       "type": "reponse",
       "value": {
         "latex": "$\\bar A = A \\cup (\\{0\\}\\times [-1,1])$. On peut utiliser l'exercice \\ref{exocon} pour montrer que $\\bar A$ est connexe. Ici nous allons le montrer directement.\nSupposons, par l'absurde, que $\\bar A \\subset U\\cup V$ avec $U$ et $V$ des ouverts de $\\Rr^2$ disjoints, d'intersection non vide avec $A$.\nComme $\\{0\\}\\times [-1,1]$ est connexe il est entièrement inclus dans un des ouverts, supposons qu'il soit inclus dans $U$. Comme $A$ est connexe alors il est inclus dans un des ouverts, donc il est inclus dans $V$ (car s'il était inclus dans $U$, tout $\\bar A$ serait contenu dans $U$). \nTrouvons une contradiction en prouvant qu'en fait $U\\cap A \\neq \\varnothing$.\nEn effet $U$ est un ouvert et $(0,0) \\in U$, soit $B((0,0),\\epsilon)$ une boule contenue dans $U$. Pour $n$ suffisamment grand on a $x_n = \\frac{1}{2\\pi n} < \\epsilon$ avec $\\sin \\frac 1 {x_n} = \\sin {2\\pi n} =0$ donc\n$(x_n,\\sin \\frac 1{x_n})= (x_n,0)$ est un élément de $A$ et de $U$.\nComme $V$ contient $A$ alors $U\\cap V \\neq \\varnothing$. Ce qui fournit la contradiction.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "5556827e-efef-438a-86c3-d0ce7c3f1e35",
+      "id": "40598094-78c1-41de-ad61-a2a4a7adef1b",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\overline{A} $ n'est pas connexe par arcs.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "53cd2a63-cbd1-4be3-a627-23738cb34145",
+      "id": "8393fac9-625b-4ff0-9a1b-501c778cb5e5",
       "type": "reponse",
       "value": {
         "latex": "Montrons que $\\bar A$ n'est pas connexe par arcs. Soit $O = (0,0)$ et $P = (\\frac{1}{2\\pi},0)$ deux points de $\\bar A$, par l'absurde supposons qu'il existe un chemin $\\gamma : [0,1]  \\longrightarrow \\bar A$ tel que $\\gamma(0)=O$ et $\\gamma(1)=P$. On décompose en coordonnées $\\gamma(t) = (\\gamma_1(t),\\gamma_2(t)) \\in \\Rr^2$. $\\gamma_1^{-1}(\\{0\\})$ est un fermé car $\\gamma_1$ est continue et de plus il est non vide car $\\gamma_1(0)=0$.\nSoit $t_0 = \\sup \\gamma_1^{-1}(\\{0\\})$, comme l'ensemble est fermé alors $\\gamma_1(t_0)=0$ et de plus $t_0 < 1$ car $\\gamma_1(1) = \\frac 1 {2\\pi}$.\n\nOn regarde ce qui se passe au temps $t_0$, c'est l'instant ou notre chemin ``quitte'' l'ensemble $\\{0\\}\\times [-1,1]$. Notons $y_0 = \\gamma_2(t_0)$.\nComme $\\gamma_2$ est continue en $y_0$ et pour $\\epsilon = \\frac 12$ il existe $\\eta>0$ tel que $(|t-t_0|<\\eta \\Rightarrow |\\gamma_2(t)-y_0|<\\frac12)$.\nChoisissons $t_1\\in ]t_0,t_0+\\eta[$. Alors $t_1>t_0$ donc\n$\\gamma_1(t_1) > 0$. Donc le point $\\gamma(t_1)=(\\gamma_1(t_1),\\gamma_2(t_1))$ est dans $A$ (et plus seulement dans $\\bar A$).\n\nSupposons par exemple $y_0 \\le 0$, alors \nquand $x$ parcourt $]\\gamma_1(t_0),\\gamma_1(t_1)[$, $\\sin \\frac 1x$ atteint\nla valeur $1$ une infinité de fois. Donc il existe $t_2 \\in ]t_0,t_1[$ tel que\n$\\gamma_2(t_2)=1$. Donc $\\gamma(t_2) = (\\gamma_1(t_2),1)$.\nMais comme $|t_2-t_0|< \\eta$ alors $|\\gamma_2(t_2)-y_0|=|1-y_0| > \\frac 12$.\nCe qui contredit la continuité de $\\gamma_2$. Nous avons obtenu une contradiction donc $\\bar A$ n'est pas connexe par arcs.",
@@ -72,12 +72,13 @@
       }
     },
     {
-      "id": "fb2a03c0-9181-4c32-ad25-cb8a34209b67",
+      "id": "f31514ef-7add-44ec-a108-711ae770110a",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item Faire un dessin !!\n\n  \\item Voir l'exercice \\ref{exocon}.\n\n  \\item Raisonner par l'absurde. Prendre un chemin qui relie le point $(0,0)$ \nau point $(\\frac{1}{2\\pi},0)$ (par exemple). Ce chemin va quitter à un instant $t_0$ le segment \n$\\{0\\}\\times [-1,1]$. Chercher une contradiction à ce moment l\\`a.\n\n\\end{enumerate}",
         "html": "<ol>\n<li><p>Faire un dessin !!</p></li>\n<li><p>Voir l’exercice <a href=\"#exocon\" data-reference-type=\"ref\" data-reference=\"exocon\">[exocon]</a>.</p></li>\n<li><p>Raisonner par l’absurde. Prendre un chemin qui relie le point <span class=\"math inline\">\\((0,0)\\)</span> au point <span class=\"math inline\">\\((\\frac{1}{2\\pi},0)\\)</span> (par exemple). Ce chemin va quitter à un instant <span class=\"math inline\">\\(t_0\\)</span> le segment <span class=\"math inline\">\\(\\{0\\}\\times [-1,1]\\)</span>. Chercher une contradiction à ce moment là.</p></li>\n</ol>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Dans <span class=\"math inline\">\\(\\Rr^2\\)</span> on considère l’ensemble <span class=\"math inline\"> ..."
 }

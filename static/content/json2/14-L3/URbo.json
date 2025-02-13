@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Autre",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:03.242Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:43.814Z"
   },
   "contenu": [
     {
-      "id": "d7d2b48b-e898-4bfe-b1ef-42b2d78ebd6d",
+      "id": "5a04dbf3-d888-4c40-918f-e0a7a9554d97",
       "type": "description",
       "value": {
         "latex": "Soit $g$ une fonction sur $\\mathbb{R}^+$ et\n$f~:\\mathbb{R}^3\\rightarrow \\mathbb{R}$ telle que $f(x) = g(|x|)$,\no\\`u $|x|$ d\\'esigne la norme de $x$ dans $\\mathbb{R}^3$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "25c04812-8684-4814-9fe1-272b47e7e7f1",
+      "id": "b296039c-725c-4989-8748-72b23162ecbe",
       "type": "question",
       "value": {
         "latex": "Montrer que pour $r = |x|$, on a\n$$\n\\int_{\\mathbb{R}^3} \\frac{f(y)}{|x - y|}\\,dy = 4\\pi\n\\frac{1}{r}\\int_{0}^{r} g(s) s^2\\,ds + 4\\pi\\int_{r}^{+\\infty} g(s)\ns\\,ds.\n$$",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f70a1064-b793-4d01-8417-2ae0cdb88bab",
+      "id": "068c3399-408a-4e31-bf36-85aa37977659",
       "type": "reponse",
       "value": {
         "latex": "Posons\n$$\nI = \\int_{\\mathbb{R}^3} \\frac{g(|y|)}{|x - y|}\\,dy,\n$$\net $r = |x|$, $s = |y|$. Alors $|x - y| = \\sqrt{r^2 + s^2 -2 rs\n\\cos\\theta}$ o\\`u $\\theta$ est l'angle entre l'axe $(Ox)$ et l'axe\n$(Oy)$. On consid\\'ere les coordonn\\'ees sph\\'eriques de centre\n$O$ et d'axe $(Ox)$ suivantes~:\n$$\n\\begin{array}{lcl}\ny_1 &=& s \\cos\\theta\\\\\ny_2 & = & s \\sin\\theta \\cos\\varphi\\\\\ny_3 & = & s\\sin\\theta \\sin\\varphi\n\\end{array}\n$$\nOn a~\n$$\nI =\n\\int_{s=0}^{+\\infty}\\int_{\\theta=0}^{\\pi}\\int_{\\varphi=0}^{2\\pi}\n\\frac{g(s)}{\\sqrt{r^2 + s^2 - 2rs\\cos\\theta}} s^2 \\sin\\theta\\,ds\nd\\theta d\\varphi.\n$$\nOn note que\n$$\n\\frac{\\sin\\theta}{\\sqrt{r^2 + s^2 - 2rs\\cos\\theta}} =\n\\frac{d}{d\\theta}\\frac{1}{rs} \\sqrt{r^2 + s^2 - 2rs\\cos\\theta}.\n$$\nAinsi~:\n$$\n\\begin{array}{lcl}\nI &=& 2\\pi \\int_{s=0}^{+\\infty}\\left[\\frac{1}{rs} \\sqrt{r^2 + s^2\n-\n2rs\\cos\\theta} \\right]_{\\theta = 0}^{\\pi} g(s)s^2 \\,ds\\\\\n& = & 2\\pi \\int_{s=0}^{+\\infty} \\frac{1}{rs} \\left(\\sqrt{(r+s)^2}\n- \\sqrt{(r-s)^2} \\right) g(s) s^2 \\,ds.\n\\end{array}\n$$\nLorsque $s\\leq r$, on a $$\\sqrt{(r+s)^2} - \\sqrt{(r-s)^2} =\n(r+s)-(r-s) = 2s,$$ et lorsque $s>r$, il vient $$\\sqrt{(r+s)^2} -\n\\sqrt{(r-s)^2} = (r+s)-(s-r) = 2r.$$ On en d\\'eduit alors~:\n$$\nI = \\frac{4\\pi}{r}\\int_{0}^{r} g(s) s^2\\,ds +\n4\\pi\\int_{r}^{+\\infty} g(s) s\\,ds.\n$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "769e4f03-b51c-480e-9a77-97147e5d94ea",
+      "id": "915b5fb1-ecfb-474b-bff5-adcd7833daa0",
       "type": "question",
       "value": {
         "latex": "Que peut-on en d\\'eduire pour une distribution de masse\n$f(x) = g(|x|)$ lorsque $g$ est \\`a support dans $[0, R]$ ?",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "34fec1f7-ad0e-4e84-a012-f241afc74d76",
+      "id": "4b085fc4-7dc5-47f2-929b-a5a4387f9322",
       "type": "reponse",
       "value": {
         "latex": "Lorsque $g$ est \\`a\nsupport dans $[0, R]$, le potentiel newtonien cr\\'e\\'e  par la\ndistribution de masse $f(y) = g(|y|)$ en un point\n$x\\in\\mathbb{R}^3$ tel que $|x|>R$, est identique au potentiel\ncr\\'e\\'e par une masse totale \\'egale concentr\\'ee \\`a l'origine.",
         "html": "<p>Lorsque <span class=\"math inline\">\\(g\\)</span> est à support dans <span class=\"math inline\">\\([0, R]\\)</span>, le potentiel newtonien créé par la distribution de masse <span class=\"math inline\">\\(f(y) = g(|y|)\\)</span> en un point <span class=\"math inline\">\\(x\\in\\mathbb{R}^3\\)</span> tel que <span class=\"math inline\">\\(|x|&gt;R\\)</span>, est identique au potentiel créé par une masse totale égale concentrée à l’origine.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(g\\)</span> une fonction sur <span class=\"math inline\">\\(\\mathbb{R}^+\\)</span> et <span class=\"math inline\"> ..."
 }

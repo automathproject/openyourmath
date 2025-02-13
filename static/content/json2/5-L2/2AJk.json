@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Fonction de plusieurs variables",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:44:33.620Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:44:25.968Z"
   },
   "contenu": [
     {
-      "id": "196edc91-9244-4262-80e1-fd4e5a355db3",
+      "id": "aa2d5349-b2ce-4602-b814-6b674bc9fc2b",
       "type": "description",
       "value": {
         "latex": "Trouver toutes les applications $f$ de $\\Rr^2$ dans $\\Rr$ vérifiant",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "d238ce44-9b6a-4090-a864-b8f437c867db",
+      "id": "c66b0d77-cdde-4b07-b5c8-3b4db3997d9d",
       "type": "question",
       "value": {
         "latex": "$2\\frac{\\partial f}{\\partial x}-\\frac{\\partial f}{\\partial y}=0$   (en utilisant le changement de variables $u=x+y$ et $v=x+2y$)",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "bfd4c3d5-0cca-44c6-b0d6-6bb873450da3",
+      "id": "5b92f169-a459-488c-872d-a4353bbe933c",
       "type": "reponse",
       "value": {
         "latex": "$\\left\\{\n\\begin{array}{l}\nu=x+y\\\\\nv=x+2y\n\\end{array}\n\\right.\\Leftrightarrow\\left\\{\n\\begin{array}{l}\nx=2u-v\\\\\ny=-u+v\n\\end{array}\n\\right.$. L'application $(x,y)\\mapsto(u,v)$ est un $C^1$-difféomorphisme de $\\Rr^2$ sur lui-même.\nPour $(u,v)\\in\\Rr^2$, posons alors $g(u,v)=f(2u-v,u+v)=f(x,y)$ de sorte que $\\forall(x,y)\\in\\Rr^2$, $f(x,y)=g(x+y,x+2y)=g(u,v)$. $f$ est de classe $C^1$ sur $\\Rr^2$ si et seulement si $g$ est de classe $C^1$ sur $\\Rr^2$ et\n\n$$\\begin{align*}\\ensuremath\n 2\\frac{\\partial f}{\\partial x}(x,y)-\\frac{\\partial f}{\\partial y}(x,y)&=2\\frac{\\partial}{\\partial x}\\left(g(x+y,x+2y)\\right)-\\frac{\\partial}{\\partial y}\\left(g(x+y,x+2y)\\right)\\\\\n  &=2\\left(\\frac{\\partial u}{\\partial x}\\times\\frac{\\partial g}{\\partial u}(u,v)+\\frac{\\partial v}{\\partial x}\\times\\frac{\\partial g}{\\partial v}(u,v)\\right)-\\left(\\frac{\\partial u}{\\partial y}\\times\\frac{\\partial g}{\\partial u}(u,v)+\\frac{\\partial v}{\\partial y}\\times\\frac{\\partial g}{\\partial v}(u,v)\\right)\\\\\n  &=2\\left(\\frac{\\partial g}{\\partial u}(u,v)+\\frac{\\partial g}{\\partial v}(u,v)\\right)-\\left(\\frac{\\partial g}{\\partial u}(u,v)+2\\frac{\\partial g}{\\partial v}(u,v)\\right)=\\frac{\\partial g}{\\partial u}(u,v).\n \\end{align*}$$\n \n \n Par suite,\n \n $$\\begin{align*}\\ensuremath\n \\forall(x,y)\\in\\Rr^2,\\;2\\frac{\\partial f}{\\partial x}(x,y)-\\frac{\\partial f}{\\partial y}(x,y)=0&\\Leftrightarrow\\forall(u,v)\\in\\Rr^2,\\;\\frac{\\partial g}{\\partial u}(u,v)=0\\\\\n  &\\Leftrightarrow\\exists F~:~\\Rr\\rightarrow\\Rr\\;\\text{de classe}\\;C^1\\;\\text{telle que}\\;\\forall (u,v)\\in\\Rr^2,\\;g(u,v)=F(v)\\\\\n  &\\Leftrightarrow\\exists F~:~\\Rr\\rightarrow\\Rr\\;\\text{de classe}\\;C^1\\;\\text{telle que}\\;\\forall (x,y)\\in\\Rr^2,\\;f(x,y)=F(x+2y).\n \\end{align*}$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "27e5d096-9e9c-4f25-9817-e968d8cae271",
+      "id": "f1c66892-52fe-4ff7-b4a5-3fb8b1ba0d48",
       "type": "question",
       "value": {
         "latex": "$x\\frac{\\partial f}{\\partial x}+ y\\frac{\\partial f}{\\partial y}=\\sqrt{x^2+y^2}$ sur $D=\\{(x,y)\\in\\Rr^2/\\;x>0\\}$ (en passant en polaires).",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "50543cb3-66f5-46d6-8bb0-85bebd5dc984",
+      "id": "7a8bb6e6-9bd2-4d7e-bb3a-7178cdfd2dec",
       "type": "reponse",
       "value": {
         "latex": "On pose $r=\\sqrt{x^2+y^2}$ et $\\theta=\\Arctan\\left(\\frac{y}{x}\\right)$ de sorte que $x=r\\cos\\theta$ et $y=r\\sin\\theta$. On pose $f(x,y)=f(r\\cos\\theta,r\\sin\\theta)=g(r,\\theta)$. On sait que $\\frac{\\partial r}{\\partial x}=\\cos\\theta$, $\\frac{\\partial r}{\\partial y}=\\sin\\theta$, $\\frac{\\partial \\theta}{\\partial x}=-\\frac{\\sin\\theta}{r}$, $\\frac{\\partial \\theta}{\\partial y}=\\frac{\\cos\\theta}{r}$\n$$\\begin{align*}\\ensuremath\nx\\frac{\\partial f}{\\partial x}+ y\\frac{\\partial f}{\\partial y}=r\\cos\\theta\\left(\\cos\\theta\\frac{\\partial g}{\\partial r}-\\frac{\\sin\\theta}{r}\\frac{\\partial g}{\\partial \\theta}\\right)+r\\sin\\theta\\left(\\sin\\theta\\frac{\\partial g}{\\partial r}+\\frac{\\cos\\theta}{r}\\frac{\\partial g}{\\partial \\theta}\\right)=r\\frac{\\partial g}{\\partial r},\n\\end{align*}$$\npuis\n\n$$\\begin{align*}\\ensuremath\n\\forall(x,y)\\in D,\\;x\\frac{\\partial f}{\\partial x}(x,y)&+ y\\frac{\\partial f}{\\partial y}(x,y)=\\sqrt{x^2+y^2}\\Leftrightarrow\\forall r>0,\\;r\\frac{\\partial g}{\\partial r}(r,\\theta)=r\\Leftrightarrow\\forall r>0,\\;\\frac{\\partial g}{\\partial r}(r,\\theta)=1\\\\\n &\\Leftrightarrow\\exists \\varphi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[/\\;\\forall(r,\\theta)\\in]0,+\\infty[\\times\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[,\\;g(r,\\theta)=r+\\varphi(\\theta)\\\\\n &\\Leftrightarrow\\exists \\varphi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[/\\;\\forall(x,y)\\in D,\\;f(x,y)=\\sqrt{x^2+y^2}+\\varphi\\left(\\Arctan\\frac{y}{x}\\right)\\\\\n  &\\Leftrightarrow\\exists \\psi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\Rr/\\;\\forall(x,y)\\in D,\\;f(x,y)=\\sqrt{x^2+y^2}+\\psi\\left(\\frac{y}{x}\\right).\n\\end{align*}$$",
         "html": "<p>On pose <span class=\"math inline\">\\(r=\\sqrt{x^2+y^2}\\)</span> et <span class=\"math inline\">\\(\\theta=\\Arctan\\left(\\frac{y}{x}\\right)\\)</span> de sorte que <span class=\"math inline\">\\(x=r\\cos\\theta\\)</span> et <span class=\"math inline\">\\(y=r\\sin\\theta\\)</span>. On pose <span class=\"math inline\">\\(f(x,y)=f(r\\cos\\theta,r\\sin\\theta)=g(r,\\theta)\\)</span>. On sait que <span class=\"math inline\">\\(\\frac{\\partial r}{\\partial x}=\\cos\\theta\\)</span>, <span class=\"math inline\">\\(\\frac{\\partial r}{\\partial y}=\\sin\\theta\\)</span>, <span class=\"math inline\">\\(\\frac{\\partial \\theta}{\\partial x}=-\\frac{\\sin\\theta}{r}\\)</span>, <span class=\"math inline\">\\(\\frac{\\partial \\theta}{\\partial y}=\\frac{\\cos\\theta}{r}\\)</span> <span class=\"math display\">\\[\\begin{align*}\\ensuremath\nx\\frac{\\partial f}{\\partial x}+ y\\frac{\\partial f}{\\partial y}=r\\cos\\theta\\left(\\cos\\theta\\frac{\\partial g}{\\partial r}-\\frac{\\sin\\theta}{r}\\frac{\\partial g}{\\partial \\theta}\\right)+r\\sin\\theta\\left(\\sin\\theta\\frac{\\partial g}{\\partial r}+\\frac{\\cos\\theta}{r}\\frac{\\partial g}{\\partial \\theta}\\right)=r\\frac{\\partial g}{\\partial r},\n\\end{align*}\\]</span> puis</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\forall(x,y)\\in D,\\;x\\frac{\\partial f}{\\partial x}(x,y)&amp;+ y\\frac{\\partial f}{\\partial y}(x,y)=\\sqrt{x^2+y^2}\\Leftrightarrow\\forall r&gt;0,\\;r\\frac{\\partial g}{\\partial r}(r,\\theta)=r\\Leftrightarrow\\forall r&gt;0,\\;\\frac{\\partial g}{\\partial r}(r,\\theta)=1\\\\\n &amp;\\Leftrightarrow\\exists \\varphi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[/\\;\\forall(r,\\theta)\\in]0,+\\infty[\\times\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[,\\;g(r,\\theta)=r+\\varphi(\\theta)\\\\\n &amp;\\Leftrightarrow\\exists \\varphi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\left]-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right[/\\;\\forall(x,y)\\in D,\\;f(x,y)=\\sqrt{x^2+y^2}+\\varphi\\left(\\Arctan\\frac{y}{x}\\right)\\\\\n  &amp;\\Leftrightarrow\\exists \\psi\\;\\text{de classe}\\;C^1\\;\\text{sur}\\;\\Rr/\\;\\forall(x,y)\\in D,\\;f(x,y)=\\sqrt{x^2+y^2}+\\psi\\left(\\frac{y}{x}\\right).\n\\end{align*}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Trouver toutes les applications <span class=\"math inline\">\\(f\\)</span> de <span class=\"math inline\">\\(\\Rr^2\\)</span> dans <span class=\"math inline\" ..."
 }

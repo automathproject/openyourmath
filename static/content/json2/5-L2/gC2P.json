@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Equation différentielle",
     "sousChapitre": "Equations différentielles linéaires",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:20.431Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:14.594Z"
   },
   "contenu": [
     {
-      "id": "7c65eed4-b547-4163-9dc8-9e159592c863",
+      "id": "90f26d38-83e4-494e-8b92-d6d19315dfa5",
       "type": "description",
       "value": {
         "latex": "Soit $f$ continue et intégrable sur~$\\R$. On considère l'équation\ndifférentielle $(E)$ : $y' - y + f = 0$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "c280e6b7-a53d-4850-b5b9-19ffb96dfb8d",
+      "id": "b64d6449-2dea-4831-a5d5-8d22f8acec1d",
       "type": "question",
       "value": {
         "latex": "Montrer que $(E)$ admet une unique solution $F$ bornée sur~$\\R$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "f94a9b52-840c-4fd1-bde2-ca85a2b74d83",
+      "id": "dd7f479e-23be-4587-9a1a-d54b73e0dea2",
       "type": "reponse",
       "value": {
         "latex": "Formule de Duhamel : $y(t) = - \\int_{x=0}^t e^{t-x}f(x)\\,d x + \\lambda e^t$.\n\n    Par convergence dominée, l'intégrale tend vers $0$ quand $t$ tend vers $-\\infty$\n    donc toutes les solutions de~$(E)$ sont bornées au voisinage de $-\\infty$.\n\n    Pour $t\\ge 0$ on a $y(t) = e^t\\Bigl(\\lambda- \\int_{x=0}^t e^{-x}f(x)\\,d x\\Bigr)$\n    donc il y a au plus une valeur de $\\lambda$ telle que $y$ soit éventuellement\n    bornée au voisinage de $+\\infty$, c'est $\\lambda =  \\int_{x=0}^{+\\infty} e^{-x}f(x)\\,d x$.\n\n    Pour ce choix on a~:\n    $|y(t)| = \\Bigl| \\int_{x=t}^{+\\infty}e^{t-x}f(x)\\,d x\\Bigr|\n    \\le \\int_{x=t}^{+\\infty}|f(x)|\\,d x \\to 0$ lorsque $t\\to+\\infty$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "d2fcb42f-e878-4595-ba84-40d8d32c053b",
+      "id": "a259328d-70f5-401d-bb78-fdef33032eec",
       "type": "question",
       "value": {
         "latex": "Montrer que $F$ est intégrable sur $\\R$ et comparer $ \\int_{-\\infty}^{+\\infty} F$ et  $ \\int_{-\\infty}^{+\\infty} f$.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "ff4610d1-aee9-4ced-882f-24e3e3262464",
+      "id": "469d52b2-4d9b-4e05-b536-4da99e3b6d9a",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*} \\int_{t=a}^b|F(t)|\\,d t\n    &\\le  \\int_{t=a}^b \\int_{x=t}^{+\\infty}e^{t-x}|f(x)|\\,d xd t\\\\\n    &\\le  \\int_{x=a}^b \\int_{t=a}^xe^{t-x}|f(x)|\\,d td x\n       +  \\int_{x=b}^{+\\infty} \\int_{t=a}^be^{t-x}|f(x)|\\,d td x\\\\\n    &\\le  \\int_{x=a}^b(1-e^{a-x})|f(x)|\\,d x\n       +  \\int_{x=b}^{+\\infty}(e^{b-x}-e^{a-x})|f(x)|\\,d td x\\\\\n    &\\le  \\int_{x=-\\infty}^{+\\infty}|f(x)|\\,d x\\\\ \\end{align*}$$\n    donc $F$ est intégrable. $F' = F-f$ est aussi intégrable et\n    $ \\int_{t=-\\infty}^{+\\infty}F'(t)\\,d t = \\Bigl[F(t)\\Bigr]_{t=-\\infty}^{+\\infty} = 0$\n    d'où $ \\int_{-\\infty}^{+\\infty} F = \\int_{-\\infty}^{+\\infty} f$.",
         "html": "<p><span class=\"math display\">\\[\\begin{align*} \\int_{t=a}^b|F(t)|\\,d t\n    &amp;\\le  \\int_{t=a}^b \\int_{x=t}^{+\\infty}e^{t-x}|f(x)|\\,d xd t\\\\\n    &amp;\\le  \\int_{x=a}^b \\int_{t=a}^xe^{t-x}|f(x)|\\,d td x\n       +  \\int_{x=b}^{+\\infty} \\int_{t=a}^be^{t-x}|f(x)|\\,d td x\\\\\n    &amp;\\le  \\int_{x=a}^b(1-e^{a-x})|f(x)|\\,d x\n       +  \\int_{x=b}^{+\\infty}(e^{b-x}-e^{a-x})|f(x)|\\,d td x\\\\\n    &amp;\\le  \\int_{x=-\\infty}^{+\\infty}|f(x)|\\,d x\\\\ \\end{align*}\\]</span> donc <span class=\"math inline\">\\(F\\)</span> est intégrable. <span class=\"math inline\">\\(F&#39; = F-f\\)</span> est aussi intégrable et <span class=\"math inline\">\\(\\int_{t=-\\infty}^{+\\infty}F&#39;(t)\\,d t = \\Bigl[F(t)\\Bigr]_{t=-\\infty}^{+\\infty} = 0\\)</span> d’où <span class=\"math inline\">\\(\\int_{-\\infty}^{+\\infty} F = \\int_{-\\infty}^{+\\infty} f\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> continue et intégrable sur <span class=\"math inline\">\\(\\R\\)</span>. On considère l’équation différentie ..."
 }

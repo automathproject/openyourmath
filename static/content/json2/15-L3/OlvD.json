@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Théorème du point fixe",
     "sousChapitre": "Théorème du point fixe",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:18.542Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:59.824Z"
   },
   "contenu": [
     {
-      "id": "81d27342-9473-425e-bd21-52c03c9c3185",
+      "id": "e6281cd5-8f04-428f-97ec-5383cbdbcac3",
       "type": "description",
       "value": {
         "latex": "Soient $y\\in {\\cal C}([a,b])$ et $k\\in {\\cal C}([a,b]\\times\n[a,b])$ des fonctions continues. On se propose de r\\'esoudre\nl'\\'equation (int\\'egrale de Fredholm) suivante:\n\\begin{equation}\\label{eq 11}\n x(s) -\\int _a^b\nk(s,t) x(t) \\, dt =y(s) \\quad \\text{pour} \\; s\\in [a,b] \\;\n\\end{equation}\n d'inconnue $x\\in{\\cal C}([a,b])$. Pour ce faire on\nsuppose que le \"noyau\" $k$ satisfait l'hypoth\\`ese suivante:\n$$ \\lambda := \\max _{a\\leq s\\leq b} \\int _a^b |k(s,t)|\\, dt <1 \\quad \\left( \\mbox{ou\nm\\^eme} \\quad \\max_{a\\leq s,t\\leq b} |k(s,t)| <\\frac{1}{b-a}\n\\;\\right) .$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "5625a4e9-4ee2-49e9-a804-6fe2f5437306",
+      "id": "a85a500c-3666-4f27-9737-a766097f72e0",
       "type": "question",
       "value": {
         "latex": "Rappeler que $({\\cal C}([a,b]),\\| .\\| _\\infty)$ est\nun espace complet.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "a2ec8f7a-174c-44e2-a762-1d48e648dcda",
+      "id": "f1b48a08-8556-42b7-bb30-2dee05e5cdf7",
       "type": "reponse",
       "value": {
         "latex": "! !",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "7ce604f8-216a-49ac-a223-b7e1bc7dcffb",
+      "id": "276da011-9ad3-4cd6-87a8-9deb5bce523e",
       "type": "question",
       "value": {
         "latex": "Soit $x\\in {\\cal C}([a,b]) \\mapsto Ax \\in {\\cal C}([a,b])$ l'application\ndonn\\'ee par\n$$(Ax)(s) :=\\int _a^b k(s,t) x(t) \\, dt +y(s)  \\; .$$\nNoter que (\\ref{eq 11}) \\'equivaut \\`a $Ax=x$ et qu'on cherche donc\nun point fixe de $x \\mapsto Ax$. D\\'eduire des hypoth\\`eses faites\nsur $k$ qu'un tel point fixe $x\\in {\\cal C}([a,b])$ existe et que\ntoute suite $A^n x_0$, $x_0\\in{\\cal C}([a,b])$, converge\nuniform\\'ement vers ce point fixe $x$.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "67486a84-69f7-48ce-a143-d86a6b2dee15",
+      "id": "014eafdb-1c83-487f-a066-9727bc557892",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\\| Ax_1 - Ax_2\\|_\\infty \n  & = \\| \\int_a^b k(s,t)(x_1(t)-x_2(t))dt\\|_\\infty \\\\\n  & \\le  \\int_a^b \\|k(s,t)\\|_\\infty \\|x_1(t)-x_2(t)\\|_\\infty dt \\\\\n  & \\le \\|x_1(t)-x_2(t)\\|_\\infty \\times \\lambda \\\\\n  & < \\|x_1(t)-x_2(t)\\|_\\infty.\\\\\n\\end{align*}$$\n\nDonc $A$ est contractante et l'espace ambiant ${\\cal C}([a,b])$ est complet, par le\nthéorème du point fixe, $A$ admet un unique point fixe, $x$.\nDe plus, pour tout fonction $x_0 \\in{\\cal C}([a,b])$, la suite\n$(A^nx_0)$ converge vers $x$, mais ici la norme est la norme uniforme donc\n$\\|A^nx_0-x\\|_\\infty$ tend vers $0$. Donc $(A^nx_0)$ converge uniformément vers $x$.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "853162a3-640c-49bd-9751-c3f6f76ce72a",
+      "id": "44e1dad7-436c-454c-93fa-135978cb63c2",
       "type": "question",
       "value": {
         "latex": "{\\it D\\'ependance continue de la solution $x =\nx(y)$}.\n\nSoient $y_1,y_2\\in{\\cal C}([a,b])$ deux fonctions et $x_1,\nx_2\\in{\\cal C}([a,b])$ les deux solutions associ\\'ees de (\\ref{eq\n11}) ou, de fa\\c{c}on \\'equivalente, les points fixes des\napplications associ\\'ees $x\\mapsto A_i x$. Montrer que\n$$ \\| x_1 - x_2\\|_\\infty = \\| A_1 x_1 -A_2\nx_2\\|_\\infty\\leq \\|y_1 -y_2\\|_\\infty+ \\lambda \\|x_1 -x_2 \\|_\\infty \\;\n.$$ En d\\'eduire que\n$$\\|x_1 -x_2\\|_\\infty    \\leq \\frac{1}{1-\\lambda}\\| y_1\n-y_2\\|_\\infty$$ et donc que la solution $x$ de (\\ref{eq 11})\nd\\'epend continuement de la fonction $y$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "7eae5282-6fdb-45e8-9c49-b2b70733a226",
+      "id": "23e598ae-0166-43ae-97cc-94513b906d6f",
       "type": "reponse",
       "value": {
         "latex": "$$\\begin{align*}\n\\|x_1-x_2\\|_\\infty & = \\| A_1x_1-A_2x_2\\|_\\infty \\quad \\text{ car } A_ix_i=x_1, \\\\\n                   &= \\| \\int_a^b k_1(s,t) x_1(t)  dt +y_1(s)+ \\int _a^b k_2(s,t) x_2(t) \\, dt + y_2(s)  \\|_\\infty \\\\\n                    &\\le \\| \\int_a^b k(s,t)(x_1(t)-x_2(t))dt\\|_\\infty + \\|y_1-y_2\\|_\\infty \\\\\n  &\\le \\lambda\\|x_1-x_2\\|_\\infty+\\|y_1-y_2\\|_\\infty \\\\   \n\\end{align*}$$\nDonc \n$$\\|x_1 -x_2\\|_\\infty    \\leq \\frac{1}{1-\\lambda}\\| y_1\n-y_2\\|_\\infty,$$\nce qui exprime la dépendance continue de la solution par rapport à la fonction $y$.",
         "html": "<p><span class=\"math display\">\\[\\begin{align*}\n\\|x_1-x_2\\|_\\infty &amp; = \\| A_1x_1-A_2x_2\\|_\\infty \\quad \\text{ car } A_ix_i=x_1, \\\\\n                   &amp;= \\| \\int_a^b k_1(s,t) x_1(t)  dt +y_1(s)+ \\int _a^b k_2(s,t) x_2(t) \\, dt + y_2(s)  \\|_\\infty \\\\\n                    &amp;\\le \\| \\int_a^b k(s,t)(x_1(t)-x_2(t))dt\\|_\\infty + \\|y_1-y_2\\|_\\infty \\\\\n  &amp;\\le \\lambda\\|x_1-x_2\\|_\\infty+\\|y_1-y_2\\|_\\infty \\\\   \n\\end{align*}\\]</span> Donc <span class=\"math display\">\\[\\|x_1 -x_2\\|_\\infty    \\leq \\frac{1}{1-\\lambda}\\| y_1\n-y_2\\|_\\infty,\\]</span> ce qui exprime la dépendance continue de la solution par rapport à la fonction <span class=\"math inline\">\\(y\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soient <span class=\"math inline\">\\(y\\in {\\cal C}([a,b])\\)</span> et <span class=\"math inline\">\\(k\\in {\\cal C}([a,b]\\times\n[a,b])\\)</span> des fonct ..."
 }

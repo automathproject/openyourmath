@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Autre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:36.778Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:49.277Z"
   },
   "contenu": [
     {
-      "id": "e2d3181f-4001-4b7d-b812-b18ccb0e3c56",
+      "id": "d59ae399-e728-42a9-a347-767495239639",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "d3086048-767e-4975-a37c-c6f373764612",
+      "id": "2200159d-01de-4c6d-bcba-35e82cf3282a",
       "type": "question",
       "value": {
         "latex": "Montrer qu'une matrice triangulaire supérieure est inversible si et seulement si ses coefficients diagonaux sont tous non nuls.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "52764d1e-68ce-4b1e-912e-794014d98037",
+      "id": "e6c2b466-8f33-41ce-83b5-eb03c8b14f18",
       "type": "reponse",
       "value": {
         "latex": "La démonstration la plus simple apparaîtra dans le chapitre suivant~:~le déterminant d'une matrice triangulaire est le produit de ses coefficients diagonaux. Cette matrice est inversible si et seulement si son déterminant est non nul ou encore si et seulement si aucun des coefficients diagonaux n'est nul.\n\nPour l'instant, le plus simple est d'utiliser le rang d'une matrice. Si aucun des coefficients diagonaux n'est nul, on sait que le rang de la matrice est son format et donc que cette matrice est inversible.\n\nRéciproquement, notons $(e_1,...,e_n)$ la base canonique de $\\mathcal{M}_{n,1}(\\Kk)$. Supposons que $A$ soit une matrice triangulaire inférieure dont le coefficient ligne $i$, colonne $i$, est nul. Si $i=n$, la dernière colonne de $A$ est nulle et $A$ n'est pas de rang $n$ et donc n'est pas inversible. Si $i<n$, alors les $n-i+1$ dernières colonnes sont dans $\\mbox{Vect}(e_{i+1},...,e_n)$ qui est de dimension au plus $n-i(<n-i+1)$, et encore une fois, la famille des colonnes de $A$ est liée.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "60287b15-a2c0-448f-af78-7b67948c0b68",
+      "id": "dfa375af-f70c-422a-9193-6a0e0d9bda50",
       "type": "question",
       "value": {
         "latex": "Montrer que toute matrice triangulaire supérieure est semblable à une matirce triangulaire inférieure.",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "ed4d2b42-3a83-4414-97c0-45bc030e72d6",
+      "id": "5e96a89f-d4ae-42f6-b4dd-83b4b2b16392",
       "type": "reponse",
       "value": {
         "latex": "Soit $A=(a_{i,j})_{1\\leq i,j\\leq n}$ une matrice triangulaire supérieure et $f$ l'endomorphisme de $\\Kk^n$ de matrice $A$ dans la base canonique $\\mathcal{B}=(e_1,...,e_n)$ de $\\Kk^n$. Soit $\\mathcal{B'}=(e_n,...,e_1)$. $\\mathcal{B'}$ est encore une base de $\\Kk^n$. Soit alors $P$ la matrice de passage de $\\mathcal{B}$ à $\\mathcal{B}'$ puis $A'$ la matrice de $f$ dans la base $\\mathcal{B}'$. Les formules de changement de bases permettent d'affirmer que $A'=P^{-1}AP$ et donc que $A$ et $A'$ sont semblables.\n\nVérifions alors que $A'$ est une matrice triangulaire inférieure. Pour $i\\in\\{1,...,n\\}$, posons $e_i'=e_{n+1-i}$. $A$ est triangulaire supérieure. Donc, pour tout $i$, $f(e_i)\\in\\mbox{Vect}(e_1,...,e_i)$. Mais alors, pour tout $i\\in\\{1,...,n\\}$, $f(e_{n+1-i}')\\in\\mbox{Vect}(e_n',...,e_{n+1-i}')$ ou encore, pour tout $i\\in\\{1,...,n\\}$, $f(e_{i}')\\in\\mbox{Vect}(e_n',...,e_{i}')$. Ceci montre que $A'$ est une matrice triangulaire inférieure.",
         "html": "<p>Soit <span class=\"math inline\">\\(A=(a_{i,j})_{1\\leq i,j\\leq n}\\)</span> une matrice triangulaire supérieure et <span class=\"math inline\">\\(f\\)</span> l’endomorphisme de <span class=\"math inline\">\\(\\Kk^n\\)</span> de matrice <span class=\"math inline\">\\(A\\)</span> dans la base canonique <span class=\"math inline\">\\(\\mathcal{B}=(e_1,...,e_n)\\)</span> de <span class=\"math inline\">\\(\\Kk^n\\)</span>. Soit <span class=\"math inline\">\\(\\mathcal{B&#39;}=(e_n,...,e_1)\\)</span>. <span class=\"math inline\">\\(\\mathcal{B&#39;}\\)</span> est encore une base de <span class=\"math inline\">\\(\\Kk^n\\)</span>. Soit alors <span class=\"math inline\">\\(P\\)</span> la matrice de passage de <span class=\"math inline\">\\(\\mathcal{B}\\)</span> à <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span> puis <span class=\"math inline\">\\(A&#39;\\)</span> la matrice de <span class=\"math inline\">\\(f\\)</span> dans la base <span class=\"math inline\">\\(\\mathcal{B}&#39;\\)</span>. Les formules de changement de bases permettent d’affirmer que <span class=\"math inline\">\\(A&#39;=P^{-1}AP\\)</span> et donc que <span class=\"math inline\">\\(A\\)</span> et <span class=\"math inline\">\\(A&#39;\\)</span> sont semblables.</p>\n<p>Vérifions alors que <span class=\"math inline\">\\(A&#39;\\)</span> est une matrice triangulaire inférieure. Pour <span class=\"math inline\">\\(i\\in\\{1,...,n\\}\\)</span>, posons <span class=\"math inline\">\\(e_i&#39;=e_{n+1-i}\\)</span>. <span class=\"math inline\">\\(A\\)</span> est triangulaire supérieure. Donc, pour tout <span class=\"math inline\">\\(i\\)</span>, <span class=\"math inline\">\\(f(e_i)\\in\\mbox{Vect}(e_1,...,e_i)\\)</span>. Mais alors, pour tout <span class=\"math inline\">\\(i\\in\\{1,...,n\\}\\)</span>, <span class=\"math inline\">\\(f(e_{n+1-i}&#39;)\\in\\mbox{Vect}(e_n&#39;,...,e_{n+1-i}&#39;)\\)</span> ou encore, pour tout <span class=\"math inline\">\\(i\\in\\{1,...,n\\}\\)</span>, <span class=\"math inline\">\\(f(e_{i}&#39;)\\in\\mbox{Vect}(e_n&#39;,...,e_{i}&#39;)\\)</span>. Ceci montre que <span class=\"math inline\">\\(A&#39;\\)</span> est une matrice triangulaire inférieure.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Montrer qu’une matrice triangulaire supérieure est inversible si et seulement si ses coefficients diagonaux sont tous non nuls.</p>\n"
 }

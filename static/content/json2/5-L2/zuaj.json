@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Topologie",
     "sousChapitre": "Topologie des espaces vectoriels normés",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:44.730Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:39.873Z"
   },
   "contenu": [
     {
-      "id": "d08cbc66-ce71-44a7-8fe2-c427aa9978a5",
+      "id": "3de0de92-7005-434a-9824-923866456787",
       "type": "description",
       "value": {
         "latex": "Soit~$E=\\C_d[X]$ norm{\\'e} par $\\|P\\| = \\sum|a_i|$,\n$P\\in E$ de degr{\\'e}~$d$ {\\`a} racines simples et $P_n$ une suite de polyn{\\^o}mes de~$E$ convergeant vers~$P$.\n\nSoit~$z\\in\\C$ tel que $P(z) = 0$ et $\\delta>0$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "7abda6e0-22b3-4f56-a9c8-bb4b85129df8",
+      "id": "d6bc3dc9-0b06-426c-bef8-268248a7a060",
       "type": "question",
       "value": {
         "latex": "Montrer que pour~$n$ assez grand, $P_n$ a au moins un z{\\'e}ro dans $\\overline{B(z,\\delta)}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "5253c3a5-a945-43c2-a491-37566a640e80",
+      "id": "096c5cac-ac1a-46e3-8c71-1019f9123f25",
       "type": "reponse",
       "value": {
         "latex": "Pour simplifier, on suppose $z=0$ (sinon, se placer dans la base $(1,X-z,\\dots,(X-z)^d)$\n    et invoquer l'{\\'e}quivalence des normes en dimension finie).\n\n    Soit $P_n(x) = a_{n,0} + a_{n,1}x + \\dots + a_{n,d}x^d$. La suite $(P_n)$ {\\'e}tant convergente\n    est born{\\'e}e donc il existe $M\\in\\R$ tel que $|a_{n,k}|\\le M$ pour\n    tous $n,k$. De plus, $a_{n,0}\\xrightarrow[n\\to\\infty]{} a_0=0$ et\n    $a_{n,1}\\xrightarrow[n\\to\\infty]{}a_1\\ne 0$.\n\n    Posons alors $Q_n(x) = -\\frac{\\strut a_{n,0} + a_{n,2}x^2 + \\dots + a_{n,d}x^d}{a_{n,1}}$\n    (bien d{\\'e}fini si $n$ est assez grand).\n    On va montrer que $Q_n$ v{\\'e}rifie les hypoth{\\`e}ses du th{\\'e}or{\\`e}me du point fixe sur\n    $\\overline{B(0,\\delta)}$ pour tout~$n$ assez grand si $\\delta$ est choisi assez petit,\n    ce qui implique l'existence et l'unicit{\\'e} d'une racine pour $P_n$ dans $\\overline{B(0,\\delta)}$.\n    \n    $Q_n(\\overline{B(0,\\delta)})\\subset\\overline{B(0,\\delta)}$~?\n    Soit $x\\in\\overline{B(0,\\delta)}$~: on a $$|Q_n(x)| \\le \\frac{|a_{n,0}| + M(\\delta^2+\\dots+\\delta^d)}{|a_{n,1}|}\n    \\xrightarrow[n\\to\\infty]{}\\frac{M(\\delta^2+\\dots+\\delta^d)}{|a_1|}.$$\n    On choisit $\\delta>0$ tel que $\\frac{M(\\delta+\\dots+\\delta^{d-1})}{|a_1}\\le\\frac12$.\n    Il existe alors $N_1\\in\\N$ tel que $\\frac{|a_{n,0}| + M(\\delta^2+\\dots+\\delta^d)}{|a_{n,1}|}\\le\\delta$\n    pour tout~$n\\ge N_1$.\n    \n    $Q_n$ est contractante sur $\\overline{B(0,\\delta)}$~?\n    Soient $x,y\\in\\overline{B(0,\\delta)}$. On a~:\n    $$\\begin{aligned}|Q_n(x)-Q_n(y)|\n    &\\le\\frac{|a_{n,2}||x^2-y^2|+\\dots+|a_{n,d}||x^d-y^d|}{|a_n,1|}\\cr\n    &\\le|x-y|\\frac{|a_{n,2}||x+y|+\\dots+|a_{n,d}||x^{d-1}+\\dots+y^{d-1}|}{|a_{n,1}|}\\cr\n    &\\le|x-y|\\frac{M(2\\delta+\\dots+d\\delta^{d-1})}{|a_{n,1}|}.\\cr\\end{aligned}$$\n    Quitte {\\`a} diminuer $\\delta$ on peut imposer $\\frac{M(2\\delta+\\dots+d\\delta^{d-1})}{|a_1|}\\le\\frac12$\n    et donc $\\frac{M(2\\delta+\\dots+d\\delta^{d-1})}{|a_{n,1}|}\\le \\frac23$ pour tout~$n\\ge N_2$\n    et $Q_n$ est $\\frac23$-lipschitzienne.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "70438ed9-84ee-497c-b13d-cf30551f906f",
+      "id": "8994d086-c59a-4e7a-a754-9c7d1fba55ba",
       "type": "question",
       "value": {
         "latex": "Montrer qu'il existe $\\delta_0>0$ tel que pour tout $\\delta\\in{]0,\\delta_0]}$\n    $P_n$ a exactement une racine dans $\\overline{B(z,\\delta)}$ si $n$ est assez grand.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "6318f27d-bad6-4df4-9049-8cc8daa2eaa7",
+      "id": "af01da59-fc5a-4664-8719-f942946018fe",
       "type": "reponse",
       "value": {
         "latex": "Voir r{\\'e}ponse pr{\\'e}c{\\'e}dente. Y a-t-il une r{\\'e}ponse plus simple pour~{1)}~?",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "f747a8fa-390c-4d79-94ea-9c7029a7b4ba",
+      "id": "106f077c-9b21-4988-9f1a-663a8f8f994b",
       "type": "question",
       "value": {
         "latex": "Que peut-on dire si les z{\\'e}ros de~$P$ ne sont plus suppos{\\'e}s simples~?",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "407294dd-17a9-453d-98d1-bdaa0d26e397",
+      "id": "11a47fd6-1094-4daf-87d6-79bdfd4f3ab0",
       "type": "reponse",
       "value": {
         "latex": "Si $z$ est z{\\'e}ro d'ordre~$k$ de~$P$ alors il existe $\\delta>0$ tel\n    que pour tout~$n$ assez grand, $P_n$ a exactement $k$ racines compt{\\'e}es avec leur ordre de\n    multiplicit{\\'e} dans~$\\overline{B(0,\\delta)}$. Ceci est une cons{\\'e}quence du {\\it th{\\'e}or{\\`e}me des\n    r{\\'e}sidus\\/} largement hors programme\\dots",
         "html": "<p>Si <span class=\"math inline\">\\(z\\)</span> est z<span>é</span>ro d’ordre <span class=\"math inline\">\\(k\\)</span> de <span class=\"math inline\">\\(P\\)</span> alors il existe <span class=\"math inline\">\\(\\delta&gt;0\\)</span> tel que pour tout <span class=\"math inline\">\\(n\\)</span> assez grand, <span class=\"math inline\">\\(P_n\\)</span> a exactement <span class=\"math inline\">\\(k\\)</span> racines compt<span>é</span>es avec leur ordre de multiplicit<span>é</span> dans <span class=\"math inline\">\\(\\overline{B(0,\\delta)}\\)</span>. Ceci est une cons<span>é</span>quence du <span><em>th<span>é</span>or<span>è</span>me des r<span>é</span>sidus</em></span> largement hors programme…</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(E=\\C_d[X]\\)</span> norm<span>é</span> par <span class=\"math inline\">\\(\\|P\\| = \\sum|a_i|\\)</span>, <span class=\"mat ..."
 }

@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Tribu, fonction mesurable",
     "sousChapitre": "Tribu, fonction mesurable",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:40:00.343Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:39:40.811Z"
   },
   "contenu": [
     {
-      "id": "afb006ef-a425-45c2-9d38-1cb90ab229c1",
+      "id": "54b3d4d8-82fe-44e9-92ff-0959ba9c624f",
       "type": "description",
       "value": {
         "latex": "Soit $\\Omega = \\mathbb{N}$, $\\Sigma = \\mathcal{P}(\\mathbb{N})$ et\n$\\mu$ la mesure de comptage sur $\\mathbb{N}$ d\\'efinie par~:\n$$\n\\mu(E) = \\sharp E = \\sum_{k \\in E} 1,\n$$\no\\`u $E\\in \\Sigma$. Soit $f~:\\mathbb{N} \\rightarrow \\mathbb{R}$\nune fonction positive ou nulle. Montrer que $f$ est\n($\\Sigma$-$\\mathcal{B}(\\mathbb{R})$)-mesurable et que~:\n$$\n\\int_{\\Omega} f d\\mu = \\sum_{n=1}^{\\infty} f(n).\n$$",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "77001c9b-74a8-46e0-9471-ebce535fffe9",
+      "id": "2d7bb211-5406-40af-b23a-418ef9ffaa2e",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\Omega = \\mathbb{N}$, $\\Sigma = \\mathcal{P}(\\mathbb{N})$ et\n$\\mu$ la mesure de comptage sur $\\mathbb{N}$ d\\'efinie par~:\n$$\n\\mu(E) = \\sharp E = \\sum_{k \\in E} 1,\n$$\no\\`u $E\\in \\Sigma$. Soit $f~:\\mathbb{N} \\rightarrow \\mathbb{R}$\nune fonction positive ou nulle. Pour tout bor\\'elien $E$,\n$f^{-1}(E)$ appartient \\`a $\\mathcal{P}(\\mathbb{N})$, donc $f$ est\n($\\Sigma$-$\\mathcal{B}(\\mathbb{R})$)-mesurable. Par d\\'efinition\nde l'int\\'egrale,\n$$\n\\int_{\\Omega} f d\\mu = \\int_{0}^{\\infty}\n\\mu\\left(S_{f}(t)\\right)\\,dt,\n$$\no\\`u $S_{f}(t) = \\{n\\in\\Sigma, \\,f(n)>t\\}$. Pour tout\n$y\\in[0,+\\infty[$, posons $A_{y} := \\{n\\in\\mathbb{N},\\, f(n) =\ny\\}$. Alors $$S_{f}(t) = \\cup_{y\n> t}A_{y}$$ o\\`u l'union est disjointe et o\\`u $A_y$ est vide sauf\npour un ensemble d\\'enombrable $\\{y_{i}\\}_{i\\in\\mathbb{N}}$ de\nvaleurs de $y$. Par $\\sigma$-additivit\\'e de la mesure $\\mu$,\n$$\n\\mu\\left(S_{f}(t)\\right) = \\mu\\left(\\cup_{y_i > t} A_{y_{i}}\n\\right) = \\sum_{y_i\n> t} \\mu\\left(A_{y_{i}}\\right) = \\sum_{y_i > t}\\mu\\left(\\{f = y_i\n\\}\\right).\n$$\nAinsi~: \n\\begin{eqnarray*} \\int_{\\Omega} f d\\mu & =&\n\\int_{0}^{\\infty}\\sum_{y_i\n> t} \\mu\\left(\\{f = y_i \\}\\right)\\,dt = \\sum_{i=0}^{\\infty}\n\\int_{0\\leq t<y_{i}}\\mu\\left(\\{f = y_i \\}\\right)\\,dt \\\\&=&\n\\sum_{i=0}^{\\infty} y_i \\cdot \\mu\\left(\\{f = y_i \\}\\right) =\n\\sum_{i=0}^{\\infty} y_{i}\\cdot\\sharp\\{n\\in\\mathbb{N}, f(n) =\ny_{i}\\} = \\sum_{n=0}^{\\infty} f(n).\n\\end{eqnarray*}",
         "html": "<p>Soit <span class=\"math inline\">\\(\\Omega = \\mathbb{N}\\)</span>, <span class=\"math inline\">\\(\\Sigma = \\mathcal{P}(\\mathbb{N})\\)</span> et <span class=\"math inline\">\\(\\mu\\)</span> la mesure de comptage sur <span class=\"math inline\">\\(\\mathbb{N}\\)</span> définie par : <span class=\"math display\">\\[\\mu(E) = \\sharp E = \\sum_{k \\in E} 1,\\]</span> où <span class=\"math inline\">\\(E\\in \\Sigma\\)</span>. Soit <span class=\"math inline\">\\(f~:\\mathbb{N} \\rightarrow \\mathbb{R}\\)</span> une fonction positive ou nulle. Pour tout borélien <span class=\"math inline\">\\(E\\)</span>, <span class=\"math inline\">\\(f^{-1}(E)\\)</span> appartient à <span class=\"math inline\">\\(\\mathcal{P}(\\mathbb{N})\\)</span>, donc <span class=\"math inline\">\\(f\\)</span> est (<span class=\"math inline\">\\(\\Sigma\\)</span>-<span class=\"math inline\">\\(\\mathcal{B}(\\mathbb{R})\\)</span>)-mesurable. Par définition de l’intégrale, <span class=\"math display\">\\[\\int_{\\Omega} f d\\mu = \\int_{0}^{\\infty}\n\\mu\\left(S_{f}(t)\\right)\\,dt,\\]</span> où <span class=\"math inline\">\\(S_{f}(t) = \\{n\\in\\Sigma, \\,f(n)&gt;t\\}\\)</span>. Pour tout <span class=\"math inline\">\\(y\\in[0,+\\infty[\\)</span>, posons <span class=\"math inline\">\\(A_{y} := \\{n\\in\\mathbb{N},\\, f(n) =\ny\\}\\)</span>. Alors <span class=\"math display\">\\[S_{f}(t) = \\cup_{y\n&gt; t}A_{y}\\]</span> où l’union est disjointe et où <span class=\"math inline\">\\(A_y\\)</span> est vide sauf pour un ensemble dénombrable <span class=\"math inline\">\\(\\{y_{i}\\}_{i\\in\\mathbb{N}}\\)</span> de valeurs de <span class=\"math inline\">\\(y\\)</span>. Par <span class=\"math inline\">\\(\\sigma\\)</span>-additivité de la mesure <span class=\"math inline\">\\(\\mu\\)</span>, <span class=\"math display\">\\[\\mu\\left(S_{f}(t)\\right) = \\mu\\left(\\cup_{y_i &gt; t} A_{y_{i}}\n\\right) = \\sum_{y_i\n&gt; t} \\mu\\left(A_{y_{i}}\\right) = \\sum_{y_i &gt; t}\\mu\\left(\\{f = y_i\n\\}\\right).\\]</span> Ainsi : <span class=\"math display\">\\[\\begin{aligned}\n \\int_{\\Omega} f d\\mu &amp; =&amp;\n\\int_{0}^{\\infty}\\sum_{y_i\n&gt; t} \\mu\\left(\\{f = y_i \\}\\right)\\,dt = \\sum_{i=0}^{\\infty}\n\\int_{0\\leq t&lt;y_{i}}\\mu\\left(\\{f = y_i \\}\\right)\\,dt \\\\&amp;=&amp;\n\\sum_{i=0}^{\\infty} y_i \\cdot \\mu\\left(\\{f = y_i \\}\\right) =\n\\sum_{i=0}^{\\infty} y_{i}\\cdot\\sharp\\{n\\in\\mathbb{N}, f(n) =\ny_{i}\\} = \\sum_{n=0}^{\\infty} f(n).\\end{aligned}\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(\\Omega = \\mathbb{N}\\)</span>, <span class=\"math inline\">\\(\\Sigma = \\mathcal{P}(\\mathbb{N})\\)</span> et <span class ..."
 }

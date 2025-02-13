@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Matrice et application linéaire",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:39:34.162Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:38:51.304Z"
   },
   "contenu": [
     {
-      "id": "212154f3-c24e-4a56-bd75-d73d892e4b27",
+      "id": "15564b2e-f3b2-4241-924a-6a33cc1217b1",
       "type": "description",
       "value": {
         "latex": "Pour toute matrice carrée $A$ de dimension $n$, \non appelle trace de $A$, et l'on note $\\textrm{tr}\\, A$, la\nsomme des éléments diagonaux de $A$\\,:\n$$\\textrm{tr}\\, A = \\sum_{i = 1}^n a_{i,i}$$",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "dc07c07d-63c5-4b39-b726-de2a178a7800",
+      "id": "b606b46e-e58f-438b-b5c3-dcfdce605718",
       "type": "question",
       "value": {
         "latex": "Montrer que si $A, B$ sont deux matrices carrées\nd'ordre $n$, alors $\\textrm{tr}(AB)=\\textrm{tr} (BA)$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "355045e9-6f5a-426e-8d14-0658fe4e8e51",
+      "id": "e9dcfef8-316e-4ee8-b5d7-1d89cbf6ee89",
       "type": "reponse",
       "value": {
         "latex": "Notons $C=AB$ et $D=BA$.\nAlors par la définition du produit de matrice :\n$$c_{ij}=\\sum_{1\\le k \\le n} a_{ik}b_{kj} \\quad \\text{ donc } c_{ii}=\\sum_{1\\le k \\le n} a_{ik}b_{ki}$$\nAinsi \n$$\\textrm{tr}(AB) = \\textrm{tr}\\, C = \\sum_{1\\le i \\le n} c_{ii} = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} a_{ik}b_{ki}$$\n\nDe même $$\\textrm{tr}(BA) = \\textrm{tr}\\, D = \\sum_{1\\le i \\le n} \\sum_{1\\le k \\le n} b_{ik}a_{ki}$$\nSi dans cette dernière formule on renomme l'indice $i$ en $k$ et l'indice $k$ en $i$ (ce sont des variables muettes \ndonc on leur donne le nom qu'on veut) alors on obtient :\n$$\\textrm{tr}(BA) =\\sum_{1\\le k \\le n} \\sum_{1\\le i \\le n} b_{ki}a_{ik} =  \\sum_{1\\le i \\le n}\\sum_{1\\le k \\le n} a_{ik}b_{ki} =\\textrm{tr}(AB)$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "3ce94d0c-2cb5-49ae-9611-3cb1290fbfff",
+      "id": "4286e331-d7ee-40a3-9c46-b23d569439d1",
       "type": "question",
       "value": {
         "latex": "Montrer que si $f$ est un endomorphisme d'un espace\nvectoriel $E$ de dimension $n$, $M$ sa matrice par rapport à\nune base $e$, $M'$ sa matrice par rapport à une base $e'$,\nalors $\\textrm{tr}\\, M = \\textrm{tr}\\, M'$. \nOn note $\\textrm{tr}\\, f$ la valeur commune de ces quantités.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "688aa629-81b4-4bd0-a9d0-64b9333015b9",
+      "id": "17358ae0-ffd4-420c-b88a-a7fa2cf8cb77",
       "type": "reponse",
       "value": {
         "latex": "$M$ et $M'$ sont semblables donc il existe une matrice de passage $P$ telle que $M'=P^{-1}MP$ donc\n$$\\textrm{tr}\\, M' = \\textrm{tr}\\big( P^{-1}(MP) \\big) = \\textrm{tr}\\big( (MP)P^{-1} \\big) = \\textrm{tr} ( M I ) = \\textrm{tr}\\, M$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "1f4635de-da14-4607-9bff-7859c195f877",
+      "id": "b217e950-dc75-4def-8c5f-4355b471b2a5",
       "type": "question",
       "value": {
         "latex": "Montrer que si $g$ est un autre endomorphisme de $E$,\n$\\textrm{tr}(f\\circ g - g\\circ f) = 0$.",
@@ -64,12 +64,13 @@
       }
     },
     {
-      "id": "c89e8e1c-ebf8-4d11-88c2-956f9ac9c2e3",
+      "id": "9031cd71-54f2-41d9-a946-4c165fd6c3b5",
       "type": "reponse",
       "value": {
         "latex": "La trace a aussi la propriété évidente que \n$$\\textrm{tr}(A+B)=\\textrm{tr}\\,A+\\textrm{tr}\\,B.$$\n\nFixons une base de $E$. Notons $A$ la matrice de $f$ dans cette base et $B$ la matrice de $g$ dans cette même base.\nAlors $AB$ est la matrice de $f\\circ g$ et $BA$ est la matrice de $g\\circ f$.\nAinsi la matrice de $f\\circ g - g\\circ f$ est $AB-BA$\nDonc\n$$\\textrm{tr}(f\\circ g - g\\circ f)= \\textrm{tr}(AB-BA) = \\textrm{tr}(AB)-\\textrm{tr}(BA)=0.$$",
         "html": "<p>La trace a aussi la propriété évidente que <span class=\"math display\">\\[\\textrm{tr}(A+B)=\\textrm{tr}\\,A+\\textrm{tr}\\,B.\\]</span></p>\n<p>Fixons une base de <span class=\"math inline\">\\(E\\)</span>. Notons <span class=\"math inline\">\\(A\\)</span> la matrice de <span class=\"math inline\">\\(f\\)</span> dans cette base et <span class=\"math inline\">\\(B\\)</span> la matrice de <span class=\"math inline\">\\(g\\)</span> dans cette même base. Alors <span class=\"math inline\">\\(AB\\)</span> est la matrice de <span class=\"math inline\">\\(f\\circ g\\)</span> et <span class=\"math inline\">\\(BA\\)</span> est la matrice de <span class=\"math inline\">\\(g\\circ f\\)</span>. Ainsi la matrice de <span class=\"math inline\">\\(f\\circ g - g\\circ f\\)</span> est <span class=\"math inline\">\\(AB-BA\\)</span> Donc <span class=\"math display\">\\[\\textrm{tr}(f\\circ g - g\\circ f)= \\textrm{tr}(AB-BA) = \\textrm{tr}(AB)-\\textrm{tr}(BA)=0.\\]</span></p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour toute matrice carrée <span class=\"math inline\">\\(A\\)</span> de dimension <span class=\"math inline\">\\(n\\)</span>, on appelle trace de <span cla ..."
 }

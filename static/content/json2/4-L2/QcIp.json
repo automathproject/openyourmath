@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Réduction d'endomorphisme, polynôme annulateur",
     "sousChapitre": "Applications",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:43:33.046Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:43:22.708Z"
   },
   "contenu": [
     {
-      "id": "b831b68f-f52f-4772-92ef-e274df7fa16f",
+      "id": "9daf9c49-d4de-4883-a6ac-89d195b537f1",
       "type": "description",
       "value": {
         "latex": "Pour $\\sigma\\in S_n$, $n\\geqslant 2$, on définit la matrice $P_\\sigma$ par $P_\\sigma=(\\delta_{i,\\sigma(j)})_{1\\leqslant i,j\\leqslant n}$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "770704f2-9993-436c-bede-0096d27e575f",
+      "id": "03aa0b12-f9b6-4d0d-adb9-3043bf46cefb",
       "type": "question",
       "value": {
         "latex": "Calculer $\\text{det}(P_\\sigma)$ pour tout $\\sigma\\in S_n$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "761fed26-24e4-43c0-90cd-cf88359f31de",
+      "id": "8281becc-f587-4f58-a0e0-67163b5cd38f",
       "type": "reponse",
       "value": {
         "latex": "Soit $\\sigma\\in S_n$.\n\n\\begin{center}\n$\\text{det}(P_\\sigma)=\\sum_{\\sigma'\\in S_n}^{}\\varepsilon(\\sigma')p_{\\sigma'(1),1}\\ldots p_{\\sigma'(n),n}=\\sum_{\\sigma'\\in S_n}^{}\\varepsilon(\\sigma')\\delta_{\\sigma'(1),\\sigma(1)}\\ldots \\delta_{\\sigma'(n),\\sigma(n)}=\\varepsilon(\\sigma)$,\n\\end{center}\n\ncar $\\delta_{\\sigma'(1),\\sigma(1)}\\ldots \\delta_{\\sigma'(n),\\sigma(n)}\\neq0\\Leftrightarrow\\forall i\\in\\llbracket1,n\\rrbracket,\\;\\sigma'(i)=\\sigma(i)\\Leftrightarrow \\sigma'=\\sigma$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall\\sigma\\in S_n$, $\\text{det}(P_\\sigma)=\\varepsilon(\\sigma)$.\n}\n\\end{center}",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "2d2122d2-87f7-465b-adbd-534d23c1b74f",
+      "id": "494d4548-39b5-44eb-96c5-c1d8ad8f104a",
       "type": "question",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "a3a7eca2-aae3-4c54-8a01-0355ae6c5046",
+      "id": "b99a67b8-83aa-4065-b843-b00998324f1f",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "dace3857-e1dd-4948-abc9-1ec296e5cb99",
+      "id": "ee506143-be7e-4c2b-a192-bcf1ab39acec",
       "type": "question",
       "value": {
         "latex": "Montrer que $\\forall(\\sigma,\\sigma')\\in S_n^2$, $P_\\sigma\\times P_{\\sigma'}=P_{\\sigma\\circ\\sigma'}$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "6e9545a5-9631-44af-9d80-784fd218e440",
+      "id": "86890452-a865-4de6-bd53-6da67987ffbc",
       "type": "reponse",
       "value": {
         "latex": "Soit $(\\sigma,\\sigma')\\in S_n^2$. Soit $(i,j)\\in\\llbracket1,n\\rrbracket^2$. Le coefficient ligne $i$, colonne $j$, de la matrice $P_\\sigma\\times P_{\\sigma'}$ vaut\n\n\\begin{center}\n$\\sum_{k=1}^{n}\\delta_{i,\\sigma(k)}\\delta_{k,\\sigma'(j)}$.\n\\end{center}\n\nDans cette somme, si $k\\neq\\sigma'(j)$, le terme correspondant est nul et quand $k=\\sigma'(j)$, le terme correspondant vaut $\\delta_{i,\\sigma(\\sigma'(j))}$. Finalement, le coefficient ligne $i$, colonne $j$, de la matrice $P_\\sigma\\times P_{\\sigma'}$ vaut $\\delta_{i,\\sigma(\\sigma'(j))}$ qui est encore le coefficient ligne $i$, colonne $j$, de la matrice $P_{\\sigma\\circ\\sigma'}$.\n\n\\begin{center}\n\\shadowbox{\n$\\forall(\\sigma,\\sigma')\\in S_n^2$, $P_\\sigma\\times P_{\\sigma'}=P_{\\sigma\\circ\\sigma'}$.\n}\n\\end{center}",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "836371a9-d86d-4ae3-b1cb-47d4e7ce8440",
+      "id": "b06581d9-2f13-48dd-beb3-2f96bf48c918",
       "type": "question",
       "value": {
         "latex": "On pose $G=\\{P_\\sigma,\\;\\sigma\\in S_n\\}$. Montrer que $(G,\\times)$ est un groupe isomorphe à $S_n$.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "029c868b-26cd-48a6-bb22-f7158f241aed",
+      "id": "8d3bb257-e872-4b50-b2a0-dce5a07e4fee",
       "type": "reponse",
       "value": {
         "latex": "Montrons que $G$ est un sous-groupe du groupe $(GL_n(\\Rr),\\times)$. $G$ contient $I_n=P_{Id}$ et d'autre part, $G$ est contenu dans $GL_n(\\Rr)$ d'après 1).\n\n\\begin{center}\n\\shadowbox{\n$(G,\\times)$ est un sous-groupe de $(GL_n(\\Rr),\\times)$.\n}\n\\end{center}",
         "html": "<p>Montrons que <span class=\"math inline\">\\(G\\)</span> est un sous-groupe du groupe <span class=\"math inline\">\\((GL_n(\\Rr),\\times)\\)</span>. <span class=\"math inline\">\\(G\\)</span> contient <span class=\"math inline\">\\(I_n=P_{Id}\\)</span> et d’autre part, <span class=\"math inline\">\\(G\\)</span> est contenu dans <span class=\"math inline\">\\(GL_n(\\Rr)\\)</span> d’après 1).</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Pour <span class=\"math inline\">\\(\\sigma\\in S_n\\)</span>, <span class=\"math inline\">\\(n\\geqslant 2\\)</span>, on définit la matrice <span class=\"math ..."
 }

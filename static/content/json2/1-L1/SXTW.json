@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Matrice",
     "sousChapitre": "Propriétés élémentaires, généralités",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:38:43.956Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:37:57.032Z"
   },
   "contenu": [
     {
-      "id": "a5e86254-a44f-4eca-93e9-939e8b5b54df",
+      "id": "b67dd7da-0d0c-4910-917d-5d24e14ebf0f",
       "type": "description",
       "value": {
         "latex": "Soit $a $ et $b$ deux réels et $A$ la matrice\n$$\nA = \\left(\n\\begin{array}{cccc}\na & 2 & -1 & b\\\\\n3 & 0 & 1 & -4\\\\ \n5 & 4 & -1 & 2\n\\end{array}\n\\right)\n$$\nMontrer que $\\textrm{rg}(A) \\geq 2$. \nPour quelles valeurs de $a$ et $b$ a-t-on $\\textrm{rg}(A) = 2$~?",
@@ -24,12 +24,13 @@
       }
     },
     {
-      "id": "859baa56-415d-4762-b54a-86083be2a08d",
+      "id": "fef56f00-daf3-4a63-8cd9-fdfdd8049dce",
       "type": "reponse",
       "value": {
         "latex": "Montrons de différentes façons que $\\textrm{rg}(A)\\ge 2$.\n  \\begin{itemize}\n\\textbf{Première méthode : sous-déterminant non nul.}\nOn trouve une sous-matrice $2\\times 2$ dont le déterminant est non nul.\nPar exemple la sous-matrice extraite du coin en bas à gauche vérifie\n$\\begin{vmatrix}3 & 0\\\\ 5 & 4\\end{vmatrix}= 12 \\neq 0$ donc $\\textrm{rg}(A)\\ge 2$.\n\\textbf{Deuxième méthode : espace vectoriel engendré par les colonnes.}\nOn sait que l'image de l'application linéaire associée à la matrice $A$\nest engendrée par les vecteurs colonnes. Et le rang est la dimension de cette image.\nOn trouve facilement deux colonnes linéairement indépendantes : \nla deuxième $\\begin{pmatrix}2\\\\0\\\\4\\end{pmatrix}$\net la troisième $\\begin{pmatrix}-1\\\\1\\\\-1\\end{pmatrix}$ colonne.\nDonc $\\textrm{rg}(A)\\ge 2$.\n\\textbf{Troisième méthode : espaces vectoriel engendré par les lignes.}\nIl se trouve que la dimension de l'espace vectoriel engendré par les lignes\négal la dimension de l'espace vectoriel engendré par les colonnes (car $\\textrm{rg}(A)=\\textrm{rg}({}^tA)$).\nComme les deuxième et troisième lignes sont linéairement indépendantes alors\n$\\textrm{rg}(A)\\ge 2$. \n\nAttention : les dimensions des espaces vectoriels engendrés sont égales mais les espaces sont différents !\n  \\end{itemize}\nEn utilisant la dernière méthode : le rang est exactement $2$ si la première ligne est dans le sous-espace engendré\npar les deux autres.\nDonc \n$$\\begin{align*}\n\\textrm{rg}(A) = 2\n & \\iff (a,2,-1,b) \\in \\textrm{Vect} \\big\\{ (3,0,1,-4), (5,4,-1,2) \\big\\} \\\\\n & \\iff \\exists \\lambda,\\mu \\in \\Rr \\quad (a,2,-1,b) = \\lambda (3,0,1,-4) + \\mu(5,4,-1,2) \\\\\n & \\iff \\exists \\lambda,\\mu \\in \\Rr \\quad \n\\left\\{\n\\begin{array}{rcl}\n3\\lambda+5\\mu &=& a \\\\\n4\\mu &=& 2 \\\\\n\\lambda-\\mu &=& -1 \\\\\n-4\\lambda+2\\mu &=& b \\\\\n\\end{array}\n\\right. \n \\iff  \\left\\{\n\\begin{array}{rcl}\n\\lambda &=& -\\frac12 \\\\\n\\mu &=& \\frac12 \\\\\na &=& 1 \\\\\nb &=& 3 \\\\\n\\end{array} \n\\right.\\\\  \n\\end{align*}$$\nConclusion la rang de $A$ est $2$ si $(a,b)=(1,3)$. Sinon le rang de $A$ est $3$.",
         "html": "<p>Montrons de différentes façons que <span class=\"math inline\">\\(\\textrm{rg}(A)\\ge 2\\)</span>.</p>\n<p><strong>Première méthode : sous-déterminant non nul.</strong> On trouve une sous-matrice <span class=\"math inline\">\\(2\\times 2\\)</span> dont le déterminant est non nul. Par exemple la sous-matrice extraite du coin en bas à gauche vérifie <span class=\"math inline\">\\(\\begin{vmatrix}3 &amp; 0\\\\ 5 &amp; 4\\end{vmatrix}= 12 \\neq 0\\)</span> donc <span class=\"math inline\">\\(\\textrm{rg}(A)\\ge 2\\)</span>. <strong>Deuxième méthode : espace vectoriel engendré par les colonnes.</strong> On sait que l’image de l’application linéaire associée à la matrice <span class=\"math inline\">\\(A\\)</span> est engendrée par les vecteurs colonnes. Et le rang est la dimension de cette image. On trouve facilement deux colonnes linéairement indépendantes : la deuxième <span class=\"math inline\">\\(\\begin{pmatrix}2\\\\0\\\\4\\end{pmatrix}\\)</span> et la troisième <span class=\"math inline\">\\(\\begin{pmatrix}-1\\\\1\\\\-1\\end{pmatrix}\\)</span> colonne. Donc <span class=\"math inline\">\\(\\textrm{rg}(A)\\ge 2\\)</span>. <strong>Troisième méthode : espaces vectoriel engendré par les lignes.</strong> Il se trouve que la dimension de l’espace vectoriel engendré par les lignes égal la dimension de l’espace vectoriel engendré par les colonnes (car <span class=\"math inline\">\\(\\textrm{rg}(A)=\\textrm{rg}({}^tA)\\)</span>). Comme les deuxième et troisième lignes sont linéairement indépendantes alors <span class=\"math inline\">\\(\\textrm{rg}(A)\\ge 2\\)</span>.</p>\n<p>Attention : les dimensions des espaces vectoriels engendrés sont égales mais les espaces sont différents !</p>\n<p>En utilisant la dernière méthode : le rang est exactement <span class=\"math inline\">\\(2\\)</span> si la première ligne est dans le sous-espace engendré par les deux autres. Donc <span class=\"math display\">\\[\\begin{align*}\n\\textrm{rg}(A) = 2\n &amp; \\iff (a,2,-1,b) \\in \\textrm{Vect} \\big\\{ (3,0,1,-4), (5,4,-1,2) \\big\\} \\\\\n &amp; \\iff \\exists \\lambda,\\mu \\in \\Rr \\quad (a,2,-1,b) = \\lambda (3,0,1,-4) + \\mu(5,4,-1,2) \\\\\n &amp; \\iff \\exists \\lambda,\\mu \\in \\Rr \\quad \n\\left\\{\n\\begin{array}{rcl}\n3\\lambda+5\\mu &amp;=&amp; a \\\\\n4\\mu &amp;=&amp; 2 \\\\\n\\lambda-\\mu &amp;=&amp; -1 \\\\\n-4\\lambda+2\\mu &amp;=&amp; b \\\\\n\\end{array}\n\\right. \n \\iff  \\left\\{\n\\begin{array}{rcl}\n\\lambda &amp;=&amp; -\\frac12 \\\\\n\\mu &amp;=&amp; \\frac12 \\\\\na &amp;=&amp; 1 \\\\\nb &amp;=&amp; 3 \\\\\n\\end{array} \n\\right.\\\\  \n\\end{align*}\\]</span> Conclusion la rang de <span class=\"math inline\">\\(A\\)</span> est <span class=\"math inline\">\\(2\\)</span> si <span class=\"math inline\">\\((a,b)=(1,3)\\)</span>. Sinon le rang de <span class=\"math inline\">\\(A\\)</span> est <span class=\"math inline\">\\(3\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> et <span class=\"math inline\">\\(b\\)</span> deux réels et <span class=\"math inline\">\\(A\\)</span> la matri ..."
 }

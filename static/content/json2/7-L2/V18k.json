@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Probabilité discrète",
     "sousChapitre": "Probabilité conditionnelle",
-    "organisation": "",
-    "updatedAt": "2025-02-10T14:43:15.761Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:47:02.889Z"
   },
   "contenu": [
     {
-      "id": "4291abee-e70a-4ddb-a7cd-ceec96c48e42",
+      "id": "0ef22b88-0d79-4feb-8f3f-9752ef454f4c",
       "type": "description",
       "value": {
         "latex": "Un débutant à un jeu effectue plusieurs parties successives. Pour la\npremière partie, les probabilités de gagner ou perdre sont les mêmes; puis, on suppose que:\n\\begin{itemize}\n  \\item Si une partie est gagnée, la probabilité de gagner la suivante est $0.6$.\n\n  \\item Si une partie est perdue, la probabilité de perdre la suivante est $0.7$.\n\\end{itemize}\nSoit $G_n$ l'événement <<Gagner la partie $n$>>, et $u_n=P(G_n)$.\nOn note $v_n = P(\\overline{G_n})$.",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "debd06c9-0faa-48bb-9839-cead30f5f6a3",
+      "id": "93a2b693-6b8c-45be-b495-413d7664c9e1",
       "type": "question",
       "value": {
         "latex": "Ecrire 2 relations entre $u_n$, $u_{n+1}$, $v_n$, $v_{n+1}$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "32bb57e0-dad6-45ef-8468-683337a82152",
+      "id": "b761d32b-a700-48fa-ae8b-d8f94835b3a5",
       "type": "question",
       "value": {
         "latex": "A l'aide de la matrice mise en évidence en déduire $u_n$ et $v_n$.\nFaire un calcul direct à l'aide de $u_n+v_n$.",
@@ -40,12 +40,13 @@
       }
     },
     {
-      "id": "9d12b0d5-bb91-4157-8a49-135641e34424",
+      "id": "e9ad61b3-5dd1-480e-8175-6fb904341cf3",
       "type": "reponse",
       "value": {
         "latex": "$u_{n+1}=P(G_{n+1})=P(G_{n+1}/Gn)P(Gn)+P(G_{n+1}/\\overline{G_n})P(\\overline{G_n})\n=0.6u_{n}+0.3v_{n}$.  \n\n$v_{n+1}=0.4u_{n}+0.7v_{n}$.\n\nDonc $\\left( \n\\begin{array}{c}\nu_{n+1} \\\\ \nv_{n+1}\\end{array}\\right) =\\left( \n\\begin{array}{cc}\n0.6 & 0.3 \\\\ \n0.4 & 0.7\\end{array}\\right) \\left( \n\\begin{array}{c}\nu_{n} \\\\ \nv_{n}\\end{array}\\right)$\n\nComme $u_{n}+v_{n}=1$, $u_{n+1}=0.6u_{n}+0.3(1-u_{n})=0.3+0.3u_{n}$.\nLa suite $(u_{n}-\\ell)$ est géométrique, où $\\ell$ est solution\nde $0.3+0.3\\ell=\\ell$, donc $\\ell=\\frac{3}{7}$.\nDonc $u_{n}=\\frac{3}{7}+u_{1}(0.3)^{n-1}=\\frac{3}{7}+0.5 (0.3)^{n-1}$.",
         "html": "<p><span class=\"math inline\">\\(u_{n+1}=P(G_{n+1})=P(G_{n+1}/Gn)P(Gn)+P(G_{n+1}/\\overline{G_n})P(\\overline{G_n})\n=0.6u_{n}+0.3v_{n}\\)</span>.</p>\n<p><span class=\"math inline\">\\(v_{n+1}=0.4u_{n}+0.7v_{n}\\)</span>.</p>\n<p>Donc <span class=\"math inline\">\\(\\left( \n\\begin{array}{c}\nu_{n+1} \\\\ \nv_{n+1}\\end{array}\\right) =\\left( \n\\begin{array}{cc}\n0.6 &amp; 0.3 \\\\ \n0.4 &amp; 0.7\\end{array}\\right) \\left( \n\\begin{array}{c}\nu_{n} \\\\ \nv_{n}\\end{array}\\right)\\)</span></p>\n<p>Comme <span class=\"math inline\">\\(u_{n}+v_{n}=1\\)</span>, <span class=\"math inline\">\\(u_{n+1}=0.6u_{n}+0.3(1-u_{n})=0.3+0.3u_{n}\\)</span>. La suite <span class=\"math inline\">\\((u_{n}-\\ell)\\)</span> est géométrique, où <span class=\"math inline\">\\(\\ell\\)</span> est solution de <span class=\"math inline\">\\(0.3+0.3\\ell=\\ell\\)</span>, donc <span class=\"math inline\">\\(\\ell=\\frac{3}{7}\\)</span>. Donc <span class=\"math inline\">\\(u_{n}=\\frac{3}{7}+u_{1}(0.3)^{n-1}=\\frac{3}{7}+0.5 (0.3)^{n-1}\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Un débutant à un jeu effectue plusieurs parties successives. Pour la première partie, les probabilités de gagner ou perdre sont les mêmes; puis, on ..."
 }

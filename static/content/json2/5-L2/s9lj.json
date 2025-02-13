@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Série de Fourier",
     "sousChapitre": "Calcul de coefficients",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:35.646Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:30.400Z"
   },
   "contenu": [
     {
-      "id": "256b02a0-c67b-4eed-9def-f8f639707045",
+      "id": "7110a3bd-c4b9-43a6-900a-7ba6ac2188c7",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "38d66fa1-1cbf-46b0-aa8a-659dfad6f62c",
+      "id": "61fdfc1c-5fde-482e-925e-22c28eff0e77",
       "type": "question",
       "value": {
         "latex": "Soit~$a\\in\\R$. Développer en série de Fourier la fonction $2\\pi$-périodique\n    valant~$e^{ax}$ sur~$]0,2\\pi]$.\n\nSoit~$a\\in\\R$. On pose~$I(a) =  \\int_{u=0}^{+\\infty}\\frac{e^{-u}}{1-e^{-u}}\\sin(au)\\,d u$.",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "9291e259-21f8-4f17-8d99-b8be5936a988",
+      "id": "aa64c4f2-97b8-40c9-8a21-9d6ba230383e",
       "type": "reponse",
       "value": {
         "latex": "Si $a\\ne 0$~: $S_f(x) = \\sum_{n=-\\infty}^{+\\infty} \\frac{e^{2\\pi a}-1}{\\strut2\\pi(a-in)}e^{inx}\n    = \\frac{e^{2\\pi a}-1}{2\\pi a} + \\sum_{n=1}^{+\\infty}\\frac{e^{2\\pi a}-1}{\\pi(a^2+n^2)}(a\\cos(nx) - n\\sin(nx))$.",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "4f91015d-e180-41d0-8464-bd288f6277b1",
+      "id": "f4bc77cc-e317-4316-8e04-e565fc6436a3",
       "type": "question",
       "value": {
         "latex": "Exprimer $I(a)$ sous forme d'une série sans intégrale.",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "7446fd62-6982-453c-bc12-01b18d61899c",
+      "id": "44d9b259-410f-4b73-8811-482bed8ed69f",
       "type": "reponse",
       "value": {
         "latex": "On peut supposer $a > 0$ car $I(-a) = -I(a)$ et $I(0) = 0$.\n    On envisage d'intégrer terme à terme la\n    relation~: $$\\frac{e^{-u}}{1-e^{-u}}\\sin(au) = \\sum_{n=1}^{\\infty}e^{-nu}\\sin(au).$$\n    On coupe l'intégrale $\\int_0^{+\\infty}$ en $\\int_0^{\\pi/a}+\\int_{\\pi/a}^{+\\infty}$~:\n    sur~$[0,\\pi/a]$ le sinus est positif et le théorème de convergence monotone\n    s'applique. Sur~$[\\pi/a,+\\infty[$ le théorème d'intégration terme\n    à terme s'applique (série des normes~$1$ convergente) car\n    $\\int_{\\pi/a}^{+\\infty}|e^{-nu}\\sin(au)|\\,d u \\le \\int_{\\pi/a}^{+\\infty}e^{-nu}\\,d u \n    = e^{-n\\pi/a}/n$. Ainsi,\n    $$I(a) = \\sum_{n=1}^\\infty  \\int_{u=0}^{+\\infty}e^{-nu}\\sin(au)\\,d u\n           = \\sum_{n=1}^\\infty  \\frac{a}{n^2+a^2}.$$",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": "b94e31d7-3aa8-458e-b2c5-4dee14c04f7b",
+      "id": "2d8ca442-056d-4bf2-ba53-99bdf5e1f635",
       "type": "question",
       "value": {
         "latex": "Calculer $ \\int_{u=0}^{+\\infty}e^{-u}\\sin(au)\\,d u$.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "9bf59752-0fd3-4ad8-b2af-541f24b58710",
+      "id": "6e690448-a08a-41c6-acf8-30e598f535a0",
       "type": "reponse",
       "value": {
         "latex": "Déjà fait, $ \\int_{u=0}^{+\\infty}e^{-u}\\sin(au)\\,d u =  \\frac{a}{a^2+1}$.\n    Il doit y avoir une autre méthode pour la question précédente ?!",
@@ -72,7 +72,7 @@
       }
     },
     {
-      "id": "7cdf143c-b7e1-4e21-b30f-ed40f5869e88",
+      "id": "1021c6ac-e008-4f2e-98a3-90fa2862df15",
       "type": "question",
       "value": {
         "latex": "Conclure.",
@@ -80,12 +80,13 @@
       }
     },
     {
-      "id": "56c5cad3-4da9-4335-b8ad-dccae6193824",
+      "id": "04692737-1c89-47a3-8dee-d98e681420c3",
       "type": "reponse",
       "value": {
         "latex": "En comparant avec~{\\bf 1)} pour~$x=0$ on obtient~:\n    $I(a) = \\frac\\pi{\\strut2}\\frac{e^{2a\\pi}+1}{e^{2a\\pi}-1}-\\frac1{\\strut2a}$ pour $a>0$.",
         "html": "<p>En comparant avec <span><strong>1)</strong></span> pour <span class=\"math inline\">\\(x=0\\)</span> on obtient : <span class=\"math inline\">\\(I(a) = \\frac\\pi{\\strut2}\\frac{e^{2a\\pi}+1}{e^{2a\\pi}-1}-\\frac1{\\strut2a}\\)</span> pour <span class=\"math inline\">\\(a&gt;0\\)</span>.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\in\\R\\)</span>. Développer en série de Fourier la fonction <span class=\"math inline\">\\(2\\pi\\)</span>-périodique v ..."
 }

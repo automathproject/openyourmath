@@ -11,12 +11,12 @@
     "hasCorrection": "true",
     "chapitre": "Equation différentielle",
     "sousChapitre": "Résolution d'équation différentielle du deuxième ordre",
-    "organisation": "",
-    "updatedAt": "2025-02-10T15:45:25.400Z"
+    "organisation": "exo7",
+    "updatedAt": "2025-02-13T07:45:19.567Z"
   },
   "contenu": [
     {
-      "id": "adee817e-ad5e-4463-b09a-4b3578e6f380",
+      "id": "cb709831-1986-45ce-84e6-71c0af4cecf4",
       "type": "description",
       "value": {
         "latex": "\\",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "8d4dcad7-43c2-4312-b827-be941eba6b74",
+      "id": "bca014ab-c054-42e3-b943-8d36c311ed03",
       "type": "question",
       "value": {
         "latex": "Résoudre sur $]0;+\\infty[$ l'équation différentielle $x^2y''+y=0$ (utiliser le changement de variable $x=e^t$).",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "2cd97c89-247c-40cc-b0b9-1a339101e181",
+      "id": "33713bc7-b152-4fed-a4ee-02625511913d",
       "type": "reponse",
       "value": {
         "latex": "En faisant le changement de variable $x=e^t$ (donc $t = \\ln x$) et en posant \n$z(t)=y(e^t)$ (donc $y(x) = z(\\ln x)$, l'équation $x^2y''+y=0$ devient $z''-z'+z=0$, \ndont les solutions sont les \n$z(t)=e^{t/2}\\cdot\\left( \\lambda\\cos(\\frac{\\sqrt{3}}{2}t)+\\mu\\sin(\\frac{\\sqrt{3}}{2}t) \\right)$,\n$\\lambda,\\mu\\in\\Rr$. \nAutrement dit, \n$$y(x)=\\sqrt{x}\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)$$",
@@ -40,7 +40,7 @@
       }
     },
     {
-      "id": "353b2472-6688-47ac-8397-67ecd27d1ec0",
+      "id": "d3f88769-0baf-48f0-adfa-02f9c7538915",
       "type": "question",
       "value": {
         "latex": "Trouver toutes les fonctions de classe $\\mathcal{C}^1$ sur $\\R$ vérifiant\n$$\\forall x\\not=0,\\ f'(x)=f\\left(\\frac{1}{x}\\right)$$",
@@ -48,12 +48,13 @@
       }
     },
     {
-      "id": "902a750c-e97d-4f54-8951-388831f320b9",
+      "id": "f4e37ed9-44ca-42b9-a5fe-e036b2f80ac8",
       "type": "reponse",
       "value": {
         "latex": "Supposons que $f$ convienne: par hypothèse, $f$ est de classe $\\mathcal{C}^1$, \ndonc $x\\mapsto f(\\frac{1}{x})$ est de classe $\\mathcal{C}^1$ sur $\\R^*$ et \npar conséquent $f'$ aussi. Ainsi $f$ est nécessairement de classe \n$\\mathcal{C}^2$ sur $\\R^*$ (en fait, en itérant le raisonnement, on montrerait \nfacilement que $f$ est $\\mathcal{C}^\\infty$ sur $\\R^*$). \n\n\nEn dérivant l'équation $f'(x)=f\\left(\\frac{1}{x}\\right)$, \non obtient \n$$f''(x)=-\\frac{1}{x^2}f'\\left(\\frac{1}{x}\\right)$$\net en réutilisant l'équation :\n$$f''(x)=-\\frac{1}{x^2}f'\\left(\\frac{1}{x}\\right)= -\\frac{1}{x^2} f(x).$$\nAinsi on obtient que $f$ est solution de $x^2y''+y=0$ sur $\\R^*$. \nNécessairement, il existe $\\lambda,\\mu\\in\\Rr$ tels que \n$$\\forall x>0,\\ f(x)=\\sqrt{x}\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)\n+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)$$\n\n\nPar hypothèse, $f$ est de classe $\\mathcal{C}^1$ sur $\\R$, en particulier \nelle se prolonge en $0$ de façon $\\mathcal{C}^1$. Cherchons à quelle condition \nsur $\\lambda,\\mu$ cela est possible. Déjà, \n$f(x)=\\sqrt{x}\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)\n\\xrightarrow[x\\to 0^+]{}0$ pour tous $\\lambda,\\mu$ ; donc $f(0)=0$. Mais\n$$\\frac{f(x)-f(0)}{x-0}= \\frac1{\\sqrt{x}}\n\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)$$ \nn'a pas de limite en $0$ si $\\lambda\\neq0$ ou $\\mu\\neq0$. En effet, pour \n$x_n=e^{\\frac{2}{\\sqrt{3}}(-2n\\pi)}$, on a $x_n\\to 0$ \nmais $\\frac{f(x_n)-f(0)}{x_n-0}=\\frac{\\lambda}{\\sqrt{x_n}}$ qui admet une limite finie seulement si $\\lambda = 0$.\nDe même avec $x_n'=e^{\\frac{2}{\\sqrt{3}}(-2n\\pi+\\frac\\pi2)}$ qui donne\n$\\frac{f(x_n')-f(0)}{x_n'-0}=\\frac{\\mu}{\\sqrt{x_n'}}$ et implique donc $\\mu=0$.\n\n\nPar conséquent, la seule possibilité est $\\lambda=\\mu=0$. Ainsi $f$ est la fonction nulle, sur $[0,+\\infty[$.\nLe même raisonnement s'applique sur $]-\\infty,0]$. La fonction est donc nécessairement nulle sur $\\Rr$.\nRéciproquement, la fonction constante nulle est bien solution du problème initial.",
         "html": "<p>Supposons que <span class=\"math inline\">\\(f\\)</span> convienne: par hypothèse, <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span>, donc <span class=\"math inline\">\\(x\\mapsto f(\\frac{1}{x})\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> sur <span class=\"math inline\">\\(\\R^*\\)</span> et par conséquent <span class=\"math inline\">\\(f&#39;\\)</span> aussi. Ainsi <span class=\"math inline\">\\(f\\)</span> est nécessairement de classe <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> sur <span class=\"math inline\">\\(\\R^*\\)</span> (en fait, en itérant le raisonnement, on montrerait facilement que <span class=\"math inline\">\\(f\\)</span> est <span class=\"math inline\">\\(\\mathcal{C}^\\infty\\)</span> sur <span class=\"math inline\">\\(\\R^*\\)</span>).</p>\n<p>En dérivant l’équation <span class=\"math inline\">\\(f&#39;(x)=f\\left(\\frac{1}{x}\\right)\\)</span>, on obtient <span class=\"math display\">\\[f&#39;&#39;(x)=-\\frac{1}{x^2}f&#39;\\left(\\frac{1}{x}\\right)\\]</span> et en réutilisant l’équation : <span class=\"math display\">\\[f&#39;&#39;(x)=-\\frac{1}{x^2}f&#39;\\left(\\frac{1}{x}\\right)= -\\frac{1}{x^2} f(x).\\]</span> Ainsi on obtient que <span class=\"math inline\">\\(f\\)</span> est solution de <span class=\"math inline\">\\(x^2y&#39;&#39;+y=0\\)</span> sur <span class=\"math inline\">\\(\\R^*\\)</span>. Nécessairement, il existe <span class=\"math inline\">\\(\\lambda,\\mu\\in\\Rr\\)</span> tels que <span class=\"math display\">\\[\\forall x&gt;0,\\ f(x)=\\sqrt{x}\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)\n+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)\\]</span></p>\n<p>Par hypothèse, <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> sur <span class=\"math inline\">\\(\\R\\)</span>, en particulier elle se prolonge en <span class=\"math inline\">\\(0\\)</span> de façon <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span>. Cherchons à quelle condition sur <span class=\"math inline\">\\(\\lambda,\\mu\\)</span> cela est possible. Déjà, <span class=\"math inline\">\\(f(x)=\\sqrt{x}\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)\n\\xrightarrow[x\\to 0^+]{}0\\)</span> pour tous <span class=\"math inline\">\\(\\lambda,\\mu\\)</span> ; donc <span class=\"math inline\">\\(f(0)=0\\)</span>. Mais <span class=\"math display\">\\[\\frac{f(x)-f(0)}{x-0}= \\frac1{\\sqrt{x}}\n\\left(\\lambda\\cos(\\frac{\\sqrt{3}}{2}\\ln x)+\\mu\\sin(\\frac{\\sqrt{3}}{2}\\ln x)\\right)\\]</span> n’a pas de limite en <span class=\"math inline\">\\(0\\)</span> si <span class=\"math inline\">\\(\\lambda\\neq0\\)</span> ou <span class=\"math inline\">\\(\\mu\\neq0\\)</span>. En effet, pour <span class=\"math inline\">\\(x_n=e^{\\frac{2}{\\sqrt{3}}(-2n\\pi)}\\)</span>, on a <span class=\"math inline\">\\(x_n\\to 0\\)</span> mais <span class=\"math inline\">\\(\\frac{f(x_n)-f(0)}{x_n-0}=\\frac{\\lambda}{\\sqrt{x_n}}\\)</span> qui admet une limite finie seulement si <span class=\"math inline\">\\(\\lambda = 0\\)</span>. De même avec <span class=\"math inline\">\\(x_n&#39;=e^{\\frac{2}{\\sqrt{3}}(-2n\\pi+\\frac\\pi2)}\\)</span> qui donne <span class=\"math inline\">\\(\\frac{f(x_n&#39;)-f(0)}{x_n&#39;-0}=\\frac{\\mu}{\\sqrt{x_n&#39;}}\\)</span> et implique donc <span class=\"math inline\">\\(\\mu=0\\)</span>.</p>\n<p>Par conséquent, la seule possibilité est <span class=\"math inline\">\\(\\lambda=\\mu=0\\)</span>. Ainsi <span class=\"math inline\">\\(f\\)</span> est la fonction nulle, sur <span class=\"math inline\">\\([0,+\\infty[\\)</span>. Le même raisonnement s’applique sur <span class=\"math inline\">\\(]-\\infty,0]\\)</span>. La fonction est donc nécessairement nulle sur <span class=\"math inline\">\\(\\Rr\\)</span>. Réciproquement, la fonction constante nulle est bien solution du problème initial.</p>\n"
       }
     }
-  ]
+  ],
+  "preview": "<p> </p>\n"
 }
