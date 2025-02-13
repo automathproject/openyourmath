@@ -1,26 +1,51 @@
-// src/routes/exercice/list/+server.ts
+// src/routes/exercice/+server.ts
 import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 import type { RequestHandler } from './$types';
 
-export const GET: RequestHandler = async () => {
-  try {
-    const jsonDir = path.resolve('static/content/json2');
-    const files = await readdir(jsonDir);
-    const exercises = [];
+async function readExercisesRecursively(dir: string): Promise<any[]> {
+  const exercises: any[] = [];
+  const items = await readdir(dir, { withFileTypes: true });
 
-    for (const file of files) {
-      if (file.endsWith('.json')) {
-        const uuid = path.basename(file, '.json');
-        const filePath = path.join(jsonDir, file);
-        const data = await readFile(filePath, 'utf-8');
+  for (const item of items) {
+    const fullPath = path.join(dir, item.name);
+    
+    if (item.isDirectory()) {
+      // Récursion pour les sous-répertoires
+      const subExercises = await readExercisesRecursively(fullPath);
+      exercises.push(...subExercises);
+    } else if (item.isFile() && item.name.endsWith('.json')) {
+      try {
+        const uuid = path.basename(item.name, '.json');
+        const data = await readFile(fullPath, 'utf-8');
         const json = JSON.parse(data);
         const title = json.titre || 'Sans titre';
         const theme = json.theme || 'Sans thème';
-        exercises.push({ uuid, titre: title, theme: theme });
+        const chapitre = json.metadata?.chapitre || 'Sans chapitre';
+        const sousChapitre = json.metadata?.sousChapitre || 'Sans sous-chapitre';
+        exercises.push({ 
+          uuid, 
+          titre: title, 
+          theme: theme, 
+          metadata: {
+            chapitre,
+            sousChapitre
+          }
+        });
+      } catch (error) {
+        console.error(`Erreur lors de la lecture de ${fullPath}:`, error);
       }
     }
+  }
 
+  return exercises;
+}
+
+export const GET: RequestHandler = async () => {
+  try {
+    const jsonDir = path.resolve('static/content/json2');
+    const exercises = await readExercisesRecursively(jsonDir);
+    
     return new Response(JSON.stringify(exercises), {
       headers: { 'Content-Type': 'application/json' }
     });

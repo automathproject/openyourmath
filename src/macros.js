@@ -9,6 +9,7 @@ export const macros = {
   "\\Q": "\\mathbb{Q}",
   "\\Cp": "\\mathbb{C}",
   "\\CC": "\\mathbb{C}",
+  "\\Cc": "\\mathbb{C}",
   "\\RRe": "\\mathrm{Re}",
   "\\IIm": "\\mathrm{Im}",
   "\\C": "\\mathbb{C}",

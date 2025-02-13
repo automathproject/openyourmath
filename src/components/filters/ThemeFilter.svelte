@@ -1,5 +1,4 @@
 <!-- src/components/filters/ThemeFilter.svelte -->
-<!-- src/components/ThemeFilter.svelte -->
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
     import { ChevronDown, ChevronUp } from 'lucide-svelte';

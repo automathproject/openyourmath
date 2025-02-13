@@ -4,6 +4,7 @@
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import Recherche from '../Recherche.svelte';
+  import RechercheModules from '../RechercheModules.svelte';
   import { tick } from 'svelte';
   import { get } from 'svelte/store';
   import ExerciceRenderer from '../../components/ExerciceRenderer.svelte';
@@ -135,8 +136,16 @@
   <div class="row position-relative">
     {#if showList}
       <div class="col-md-4 liste-container">
-        <h4>Recherche par thème</h4>
-        <Recherche onSelect={handleSelect} />
+        <div class="search-sections">
+          <div class="search-section">
+            <h4>Recherche par thèmes</h4>
+            <Recherche onSelect={handleSelect} />
+          </div>
+          <div class="search-section">
+            <h4>Recherche par modules</h4>
+            <RechercheModules onSelect={handleSelect} />
+          </div>
+        </div>
       </div>
     {/if}
     <div class={`${showList ? "col-md-8" : "col-md-12"} position-relative`}>
@@ -205,6 +214,25 @@
     align-items: center;
     gap: 0.5rem;
     width: 100%;
+  }
+
+  .search-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .search-section {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+  }
+
+  .search-section:last-child {
+    border-bottom: none;
+  }
+
+  .search-section h4 {
+    margin-bottom: 1rem;
   }
 
   .fixed-width-input {
