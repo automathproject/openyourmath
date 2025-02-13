@@ -100,7 +100,11 @@
             <div class="titre-container">
               <div class="titre">
                 {#key contentKey}
-                  <MathRenderer content={ExerciceData.titre} />
+                {#if ExerciceData.titre}
+                <MathRenderer content={ExerciceData.titre} />
+              {:else}
+                Exo7 : {ExerciceData.metadata.exo7id}
+              {/if}
                 {/key}
               </div>
               <button 

@@ -19,7 +19,8 @@ async function readExercisesRecursively(dir: string): Promise<any[]> {
         const uuid = path.basename(item.name, '.json');
         const data = await readFile(fullPath, 'utf-8');
         const json = JSON.parse(data);
-        const title = json.titre || 'Sans titre';
+        const preview = json.preview || '';
+        const title = json.titre || preview || 'Sans titre';
         const theme = json.theme || 'Sans thème';
         const chapitre = json.metadata?.chapitre || 'Sans chapitre';
         const sousChapitre = json.metadata?.sousChapitre || 'Sans sous-chapitre';

@@ -21,6 +21,7 @@
   let showList = true;
   $: arrowClass = showList ? 'rotate-180' : '';
   let key = 0;
+  let searchMode: 'themes' | 'modules' = 'themes'; 
 
   import { browser } from '$app/environment';
 
@@ -137,13 +138,33 @@
     {#if showList}
       <div class="col-md-4 liste-container">
         <div class="search-sections">
-          <div class="search-section">
-            <h4>Recherche par thèmes</h4>
-            <Recherche onSelect={handleSelect} />
+          <div class="search-selector">
+            <div class="selector-container">
+              <button 
+                class="selector-button {searchMode === 'themes' ? 'active' : ''}"
+                on:click={() => searchMode = 'themes'}
+              >
+                Par thèmes
+              </button>
+              <button 
+                class="selector-button {searchMode === 'modules' ? 'active' : ''}"
+                on:click={() => searchMode = 'modules'}
+              >
+                Par modules
+              </button>
+              <div 
+                class="selector-highlight" 
+                style="transform: translateX({searchMode === 'themes' ? '0' : '100%'})"
+              ></div>
+            </div>
           </div>
-          <div class="search-section">
-            <h4>Recherche par modules</h4>
-            <RechercheModules onSelect={handleSelect} />
+          
+          <div class="search-content" style="min-height: 300px">
+            {#if searchMode === 'themes'}
+              <Recherche onSelect={handleSelect} />
+            {:else}
+              <RechercheModules onSelect={handleSelect} />
+            {/if}
           </div>
         </div>
       </div>
@@ -199,74 +220,121 @@
 </section>
   
 <style>
-  .input-container {
-    margin-bottom: 1rem;
-  }
+ /* Styles à mettre dans la balise <style> */
+.input-container {
+  margin-bottom: 1rem;
+}
 
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-selector {
+  margin-bottom: 1rem;
+}
+
+.selector-container {
+  display: flex;
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 0.25rem;
+  border-radius: 8px;
+  gap: 0.25rem;
+}
+
+.selector-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.selector-button.active {
+  color: #fff;
+}
+
+.selector-highlight {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: calc(50% - 0.25rem);
+  height: calc(100% - 0.5rem);
+  background-color: #007bff;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.search-content {
+  transition: opacity 0.3s ease;
+}
+
+.fixed-width-input {
+  width: 80px !important;
+  min-width: 80px !important;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.btn-icon {
+  padding: 0.375rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
   .input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .search-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     width: 100%;
   }
 
-  .search-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .search-section {
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 1rem;
-  }
-
-  .search-section:last-child {
-    border-bottom: none;
-  }
-
-  .search-section h4 {
-    margin-bottom: 1rem;
-  }
-
-  .fixed-width-input {
-    width: 80px !important;
-    min-width: 80px !important;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-
-  .btn-icon {
-    padding: 0.375rem 0.75rem;
-    display: flex;
-    align-items: center;
+  .search-group {
+    flex-direction: row;
     justify-content: center;
   }
 
-  @media (max-width: 768px) {
-    .input-group {
-      width: 100%;
-    }
-
-    .search-group {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .fixed-width-input {
-      width: 100px !important;
-      min-width: 100px !important;
-    }
-
-    .btn-icon {
-      padding: 0.375rem;
-    }
+  .fixed-width-input {
+    width: 100px !important;
+    min-width: 100px !important;
   }
+
+  .btn-icon {
+    padding: 0.375rem;
+  }
+
+  .search-sections {
+    padding: 0.5rem;
+  }
+    
+  .selector-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
 </style>
