@@ -43,7 +43,6 @@
     let loading: boolean = true;
     let selectedExerciseId: string | null = null;
     let isSelecting = false;
-    let moduleChapitreMap = new Map<string, string>();
 
     // Pagination
     let exercisesPerPage = 10;
@@ -66,8 +65,6 @@
             const currentLimit = getExerciceLimit(code);
             expandedExerciseLimits.set(code, currentLimit + exercisesPerPage);
             expandedExerciseLimits = expandedExerciseLimits;
-            
-            // Petit délai pour une meilleure UX
             await new Promise(resolve => setTimeout(resolve, 300));
         } finally {
             loadingMoreExercises.delete(code);
@@ -95,15 +92,6 @@
   
             exercises = await exercicesResponse.json();
             modules = await modulesResponse.json();
-            
-            // Créer une map des chapitres pour faciliter la correspondance
-            modules.forEach(module => {
-                module.chapitres.forEach(chapitre => {
-                    chapitre.sousChapitres.forEach(sousChapitre => {
-                        moduleChapitreMap.set(sousChapitre.description, sousChapitre.code);
-                    });
-                });
-            });
         } catch (err: any) {
             error = `Échec du chargement : ${err.message}`;
             console.error('Erreur détaillée:', err);
@@ -146,35 +134,76 @@
     }
   
     function getExercicesForSousChapitre(code: string): any[] {
+        if (!exercises?.length || !modules?.length) return [];
+
         let sousChapitreTrouve = null;
         let chapitreTrouve = null;
+        let moduleTrouve = null;
   
-        // Recherche dans les modules
-        for (const module of modules) {
+        // Recherche du sous-chapitre et mémorisation de son contexte complet
+        moduleLoop: for (const module of modules) {
             for (const chapitre of module.chapitres) {
                 const sousChapitre = chapitre.sousChapitres.find(sc => sc.code === code);
                 if (sousChapitre) {
                     sousChapitreTrouve = sousChapitre;
                     chapitreTrouve = chapitre;
-                    break;
+                    moduleTrouve = module;
+                    break moduleLoop;
                 }
             }
-            if (chapitreTrouve) break;
         }
   
-        if (!sousChapitreTrouve || !chapitreTrouve) {
+        if (!sousChapitreTrouve || !chapitreTrouve || !moduleTrouve) {
             return [];
         }
-  
+
+        // On vérifie dans quel module se trouve le chapitre "Autre"
+        const moduleIndex = modules.indexOf(moduleTrouve);
+        
         return exercises.filter(ex => {
-            if (!ex.metadata?.chapitre || !ex.metadata?.sousChapitre) {
-                return false;
+            // Pour les chapitres "Autre", on vérifie si c'est le bon module
+            if (chapitreTrouve.description === "Autre") {
+                // On ne garde que les exercices qui correspondent au module actuel
+                const exerciseModuleIndex = modules.findIndex(m => 
+                    m.chapitres.some(c => c.description === ex.metadata?.chapitre?.trim())
+                );
+                
+                // Si on trouve le module et que ce n'est pas le bon, on ignore cet exercice
+                if (exerciseModuleIndex !== -1 && exerciseModuleIndex !== moduleIndex) {
+                    return false;
+                }
             }
-            return (
-                ex.metadata.chapitre === chapitreTrouve.description && 
-                ex.metadata.sousChapitre === sousChapitreTrouve.description
-            );
+            
+            return ex.metadata?.chapitre?.trim() === chapitreTrouve.description.trim() && 
+                   ex.metadata?.sousChapitre?.trim() === sousChapitreTrouve.description.trim();
         });
+    }
+
+
+    function hasExercises(sousChapitre: SousChapitreType): boolean {
+        return getExercicesForSousChapitre(sousChapitre.code).length > 0;
+    }
+
+    function getExercisesCountForChapitre(chapitre: ChapitreType): number {
+        return chapitre.sousChapitres.reduce((total, sousChapitre) => {
+            const exercices = getExercicesForSousChapitre(sousChapitre.code);
+            return total + exercices.length;
+        }, 0);
+    }
+
+    function getExercisesCountForModule(module: ModuleType): number {
+        return module.chapitres.reduce((total, chapitre) => {
+            const count = getExercisesCountForChapitre(chapitre);
+            return total + count;
+        }, 0);
+    }
+
+    function hasExercisesInChapitre(chapitre: ChapitreType): boolean {
+        return getExercisesCountForChapitre(chapitre) > 0;
+    }
+
+    function hasExercisesInModule(module: ModuleType): boolean {
+        return getExercisesCountForModule(module) > 0;
     }
 
     function getDisplayedExercices(code: string): any[] {
@@ -216,100 +245,108 @@
         <div class="themes-tree">
             <div class="themes-list">
                 {#each modules as module}
-                    <div class="module-group">
-                        <button 
-                            class="theme-button module-button" 
-                            on:click={() => toggleModule(module.id)}
-                        >
-                            <span class="module-name">{module.niveau} - {module.description}</span>
-                            <div class="icon-wrapper chevron" class:rotated={expandedModules.has(module.id)}>
-                                <svg class="icon-small" viewBox="0 0 24 24">
-                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                                </svg>
-                            </div>
-                        </button>
+                    {#if hasExercisesInModule(module)}
+                        <div class="module-group">
+                            <button 
+                                class="theme-button module-button" 
+                                on:click={() => toggleModule(module.id)}
+                            >
+                                <span class="module-name">{module.niveau} - {module.description}</span>
+                                <div class="theme-right">
+                                    <span class="badge">{getExercisesCountForModule(module)}</span>
+                                    <div class="icon-wrapper chevron" class:rotated={expandedModules.has(module.id)}>
+                                        <svg class="icon-small" viewBox="0 0 24 24">
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
   
-                        {#if expandedModules.has(module.id)}
-                            <div class="chapitres" transition:slide|local>
-                                {#each module.chapitres as chapitre}
-                                    <div class="chapitre-group">
-                                        <button 
-                                            class="theme-button chapitre-button" 
-                                            on:click={() => toggleChapitre(chapitre.id)}
-                                        >
-                                            <span class="chapitre-name">{chapitre.description}</span>
-                                            <div class="theme-right">
-                                                <span class="badge">{chapitre.sousChapitres.length}</span>
-                                                <div class="icon-wrapper chevron" class:rotated={expandedChapitres.has(chapitre.id)}>
-                                                    <svg class="icon-small" viewBox="0 0 24 24">
-                                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </button>
+                            {#if expandedModules.has(module.id)}
+                                <div class="chapitres" transition:slide|local>
+                                    {#each module.chapitres as chapitre}
+                                        {#if hasExercisesInChapitre(chapitre)}
+                                            <div class="chapitre-group">
+                                                <button 
+                                                    class="theme-button chapitre-button" 
+                                                    on:click={() => toggleChapitre(chapitre.id)}
+                                                >
+                                                    <span class="chapitre-name">{chapitre.description}</span>
+                                                    <div class="theme-right">
+                                                        <span class="badge">{getExercisesCountForChapitre(chapitre)}</span>
+                                                        <div class="icon-wrapper chevron" class:rotated={expandedChapitres.has(chapitre.id)}>
+                                                            <svg class="icon-small" viewBox="0 0 24 24">
+                                                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </button>
   
-                                        {#if expandedChapitres.has(chapitre.id)}
-                                            <div class="sous-chapitres" transition:slide|local>
-                                                {#each chapitre.sousChapitres as sousChapitre}
-                                                    <div class="sous-chapitre-group">
-                                                        <button 
-                                                            class="theme-button sous-chapitre-button" 
-                                                            on:click={() => toggleSousChapitre(sousChapitre.code)}
-                                                        >
-                                                            <span class="sous-chapitre-name">{sousChapitre.description}</span>
-                                                            <div class="theme-right">
-                                                                <span class="badge">
-                                                                    {getExercicesForSousChapitre(sousChapitre.code).length}
-                                                                </span>
-                                                                <div class="icon-wrapper chevron" class:rotated={expandedSousChapitres.has(sousChapitre.code)}>
-                                                                    <svg class="icon-small" viewBox="0 0 24 24">
-                                                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                                                                    </svg>
-                                                                </div>
-                                                            </div>
-                                                        </button>
-  
-                                                        {#if expandedSousChapitres.has(sousChapitre.code)}
-                                                            <div class="exercises-list" transition:slide|local>
-                                                                {#each getDisplayedExercices(sousChapitre.code) as exercise}
-                                                                    <button
-                                                                        class="exercise-item"
-                                                                        class:selected={selectedExerciseId === exercise.uuid}
-                                                                        class:selecting={isSelecting && selectedExerciseId === exercise.uuid}
-                                                                        disabled={isSelecting}
-                                                                        on:click={() => handleClick(exercise.uuid)}
+                                                {#if expandedChapitres.has(chapitre.id)}
+                                                    <div class="sous-chapitres" transition:slide|local>
+                                                        {#each chapitre.sousChapitres as sousChapitre}
+                                                            {@const exercicesCount = getExercicesForSousChapitre(sousChapitre.code).length}
+                                                            {#if exercicesCount > 0}
+                                                                <div class="sous-chapitre-group">
+                                                                    <button 
+                                                                        class="theme-button sous-chapitre-button" 
+                                                                        on:click={() => toggleSousChapitre(sousChapitre.code)}
                                                                     >
-                                                                        <div class="exercise-title">
-                                                                            <MathRenderer content={exercise.titre} />
+                                                                        <span class="sous-chapitre-name">{sousChapitre.description}</span>
+                                                                        <div class="theme-right">
+                                                                            <span class="badge">{exercicesCount}</span>
+                                                                            <div class="icon-wrapper chevron" class:rotated={expandedSousChapitres.has(sousChapitre.code)}>
+                                                                                <svg class="icon-small" viewBox="0 0 24 24">
+                                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                                                                </svg>
+                                                                            </div>
                                                                         </div>
                                                                     </button>
-                                                                {/each}
+  
+                                                                    {#if expandedSousChapitres.has(sousChapitre.code)}
+                                                                        <div class="exercises-list" transition:slide|local>
+                                                                            {#each getDisplayedExercices(sousChapitre.code) as exercise}
+                                                                                <button
+                                                                                    class="exercise-item"
+                                                                                    class:selected={selectedExerciseId === exercise.uuid}
+                                                                                    class:selecting={isSelecting && selectedExerciseId === exercise.uuid}
+                                                                                    disabled={isSelecting}
+                                                                                    on:click={() => handleClick(exercise.uuid)}
+                                                                                >
+                                                                                    <div class="exercise-title">
+                                                                                        <MathRenderer content={exercise.titre} />
+                                                                                    </div>
+                                                                                </button>
+                                                                            {/each}
 
-                                                                {#if hasMoreExercises(sousChapitre.code)}
-                                                                    <button 
-                                                                        class="load-more-button"
-                                                                        on:click={() => loadMoreExercises(sousChapitre.code)}
-                                                                        disabled={loadingMoreExercises.get(sousChapitre.code)}
-                                                                    >
-                                                                        {#if loadingMoreExercises.get(sousChapitre.code)}
-                                                                            <div class="loading-spinner"></div>
-                                                                        {:else}
-                                                                            Voir plus d'exercices 
-                                                                            ({getExercicesForSousChapitre(sousChapitre.code).length - getExerciceLimit(sousChapitre.code)} restants)
-                                                                        {/if}
-                                                                    </button>
-                                                                {/if}
-                                                            </div>
-                                                        {/if}
+                                                                            {#if hasMoreExercises(sousChapitre.code)}
+                                                                                <button 
+                                                                                    class="load-more-button"
+                                                                                    on:click={() => loadMoreExercises(sousChapitre.code)}
+                                                                                    disabled={loadingMoreExercises.get(sousChapitre.code)}
+                                                                                >
+                                                                                    {#if loadingMoreExercises.get(sousChapitre.code)}
+                                                                                        <div class="loading-spinner"></div>
+                                                                                    {:else}
+                                                                                        Voir plus d'exercices 
+                                                                                        ({getExercicesForSousChapitre(sousChapitre.code).length - getExerciceLimit(sousChapitre.code)} restants)
+                                                                                    {/if}
+                                                                                </button>
+                                                                            {/if}
+                                                                        </div>
+                                                                    {/if}
+                                                                </div>
+                                                            {/if}
+                                                        {/each}
                                                     </div>
-                                                {/each}
+                                                {/if}
                                             </div>
                                         {/if}
-                                    </div>
-                                {/each}
-                            </div>
-                        {/if}
-                    </div>
+                                    {/each}
+                                </div>
+                            {/if}
+                        </div>
+                    {/if}
                 {/each}
             </div>
         </div>
