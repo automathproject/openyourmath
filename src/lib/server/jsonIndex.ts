@@ -4,8 +4,9 @@ import path from 'path';
 
 // Création d'une instance unique pour l'application
 const jsonIndex = new JsonFileIndex([
-  'exercices_multi.json',  // Ajoutez ici les noms de fichiers multi-exercices
-  'collection_exercices.json'
+  'exercices_multi.json',
+  'collection_exercices.json',
+  'amscc.json'           // Ajout du fichier de bundle AMSCC
 ]);
 
 /**

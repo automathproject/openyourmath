@@ -90,20 +90,44 @@ export class JsonFileIndex {
       const content = await readFile(filePath, 'utf-8');
       const exercises = JSON.parse(content);
       
-      // Si le contenu est un objet avec une propriété exercices (format { exercices: [...] })
-      if (exercises.exercices && Array.isArray(exercises.exercices)) {
-        exercises.exercices.forEach((exercise: any, index: number) => {
-          if (exercise.uuid) {
-            this.index.set(exercise.uuid, {
-              filePath,
-              isMulti: true,
-              index
-            });
-          }
-        });
+      // Format AMSCC: objet avec les UUIDs comme clés: { "Ab12": {...}, "Cd34": {...} }
+      if (!Array.isArray(exercises) && typeof exercises === 'object') {
+        // Vérifier si c'est un format objet avec UUIDs comme clés
+        const hasUuidKeys = Object.keys(exercises).some(key => 
+          typeof exercises[key] === 'object' && exercises[key].uuid
+        );
+        
+        if (hasUuidKeys) {
+          Object.keys(exercises).forEach(key => {
+            const exercise = exercises[key];
+            if (exercise.uuid) {
+              this.index.set(exercise.uuid, {
+                filePath,
+                isMulti: true,
+                key: key // Stocker la clé au lieu de l'index
+              });
+            }
+          });
+          return;
+        }
+        
+        // Format { exercices: [...] }
+        if (exercises.exercices && Array.isArray(exercises.exercices)) {
+          exercises.exercices.forEach((exercise: any, index: number) => {
+            if (exercise.uuid) {
+              this.index.set(exercise.uuid, {
+                filePath,
+                isMulti: true,
+                index
+              });
+            }
+          });
+          return;
+        }
       } 
-      // Si le contenu est directement un tableau d'exercices
-      else if (Array.isArray(exercises)) {
+      
+      // Format tableau d'exercices
+      if (Array.isArray(exercises)) {
         exercises.forEach((exercise: any, index: number) => {
           if (exercise.uuid) {
             this.index.set(exercise.uuid, {

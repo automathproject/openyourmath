@@ -25,8 +25,12 @@ export const GET: RequestHandler = async ({ params }) => {
     if (exerciseLocation.isMulti) {
       const data = JSON.parse(fileContent);
       
+      // Format AMSCC: { "Ab12": {...}, "Cd34": {...} }
+      if (exerciseLocation.key && !Array.isArray(data) && typeof data === 'object') {
+        exercise = data[exerciseLocation.key];
+      }
       // Format: { exercices: [...] }
-      if (data.exercices && Array.isArray(data.exercices)) {
+      else if (data.exercices && Array.isArray(data.exercices)) {
         exercise = data.exercices[exerciseLocation.index as number];
       } 
       // Format: [...] (tableau direct)
