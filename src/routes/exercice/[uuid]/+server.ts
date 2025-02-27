@@ -1,5 +1,6 @@
 // src/routes/exercice/[uuid]/+server.ts
 import { readFile } from 'fs/promises';
+import path from 'path'; 
 import type { RequestHandler } from './$types';
 import { staticJsonIndex } from '$lib/server/staticJsonIndex';
 
@@ -17,8 +18,9 @@ export const GET: RequestHandler = async ({ params }) => {
       });
     }
     
+    const absolutePath = path.resolve(process.cwd(), exerciseLocation.filePath);
     // Lire le fichier
-    const fileContent = await readFile(exerciseLocation.filePath, 'utf-8');
+    const fileContent = await readFile(absolutePath, 'utf-8');
     let exercise;
     
     // Extraire l'exercice selon qu'il s'agit d'un fichier individuel ou multi

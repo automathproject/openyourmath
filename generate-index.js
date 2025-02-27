@@ -31,8 +31,12 @@ function isMultiExerciseFile(filename) {
 // Indexe un fichier individuel
 async function indexSingleFile(filePath) {
   const uuid = path.basename(filePath, '.json');
+  
+  // Stocker le chemin relatif au lieu du chemin absolu
+  const relativePath = path.relative(process.cwd(), filePath);
+  
   const location = {
-    filePath,
+    filePath: relativePath, // Chemin relatif
     isMulti: false
   };
   
