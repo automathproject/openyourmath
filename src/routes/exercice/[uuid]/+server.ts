@@ -1,14 +1,14 @@
 // src/routes/exercice/[uuid]/+server.ts
 import { readFile } from 'fs/promises';
 import type { RequestHandler } from './$types';
-import { jsonIndex } from '$lib/server/jsonIndex';
+import { staticJsonIndex } from '$lib/server/staticJsonIndex';
 
 export const GET: RequestHandler = async ({ params }) => {
   try {
     const { uuid } = params;
     
-    // Utiliser l'index pour trouver l'information sur l'exercice
-    const exerciseLocation = jsonIndex.findExerciseLocation(uuid);
+    // Utiliser l'index statique pour trouver l'information sur l'exercice
+    const exerciseLocation = staticJsonIndex.findExerciseLocation(uuid);
     
     if (!exerciseLocation) {
       return new Response(JSON.stringify({ error: 'Exercice non trouvé' }), {

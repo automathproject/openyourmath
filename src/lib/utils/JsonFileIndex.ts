@@ -186,4 +186,12 @@ export class JsonFileIndex {
       this.watcher = null;
     }
   }
+  /**
+ * Récupère tous les UUIDs des exercices indexés
+ * @returns Ensemble des UUIDs
+ */
+  getAllExerciseIds(): Set<string> {
+  return new Set(this.index.keys());
 }
+}
+
