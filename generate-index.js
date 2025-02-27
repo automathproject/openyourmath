@@ -72,6 +72,9 @@ async function indexMultiFile(filePath) {
     const data = JSON.parse(content);
     const results = [];
     
+    // Convertir en chemin relatif (ajoutez ces lignes)
+    const relativePath = path.relative(process.cwd(), filePath);
+    
     // Format AMSCC: { "Ab12": {...}, "Cd34": {...} }
     if (!Array.isArray(data) && typeof data === 'object') {
       const hasUuidKeys = Object.keys(data).some(key => 
@@ -83,7 +86,7 @@ async function indexMultiFile(filePath) {
           const exercise = data[key];
           if (exercise.uuid) {
             const location = {
-              filePath,
+              filePath: relativePath, // Utilisez le chemin relatif ici
               isMulti: true,
               key
             };
@@ -114,7 +117,7 @@ async function indexMultiFile(filePath) {
       data.exercices.forEach((exercise, index) => {
         if (exercise.uuid) {
           const location = {
-            filePath,
+            filePath: relativePath, // Utilisez le chemin relatif ici
             isMulti: true,
             index
           };
@@ -144,7 +147,7 @@ async function indexMultiFile(filePath) {
       data.forEach((exercise, index) => {
         if (exercise.uuid) {
           const location = {
-            filePath,
+            filePath: relativePath, // Utilisez le chemin relatif ici
             isMulti: true,
             index
           };
