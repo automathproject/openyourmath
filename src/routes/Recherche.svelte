@@ -153,19 +153,20 @@
 </div>
 
 <style>
-  .theme-explorer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: calc(100vh - 200px);
-  }
+.theme-explorer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px); /* Hauteur fixe pour le conteneur global */
+  overflow-y: auto;           /* Activation du scroll global */
+}
 
-  .themes-tree {
-    background: #f8f9fa;
-    border-radius: 6px;
-    border: 1px solid #dee2e6;
-    overflow: hidden;
-  }
+.themes-tree {
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  /* Vous pouvez retirer overflow hidden si présent */
+}
+
 
   .themes-list {
     max-height: 100%;
@@ -259,10 +260,9 @@
   }
 
   .exercises-list {
-    display: flex;
-    flex-direction: column;
-    padding-left: 3rem;
-  }
+  max-height: 300px; /* Ajustez cette valeur selon vos besoins */
+  overflow-y: auto;
+}
 
   .exercise-item {
     text-align: left;
