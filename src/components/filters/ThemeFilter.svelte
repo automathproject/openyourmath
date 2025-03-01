@@ -30,7 +30,6 @@
         on:click={() => isExpanded = !isExpanded}
     >
         <div class="d-flex align-items-center gap-2">
-            <h5 class="card-title mb-0">Filtre par thèmes</h5>
             <span class="filter-count">({availableFiltersCount})</span>
         </div>
         <button 

@@ -9,6 +9,10 @@
     import MathRenderer from '../../components/MathRenderer.svelte';
     import AddButton from '../../components/AddButton.svelte';
     import FiltersPanel from '../../components/filters/FiltersPanel.svelte';
+    // Assurez-vous d'avoir Bootstrap Icons installé dans votre projet
+    // npm install bootstrap-icons
+    // Et importé dans votre fichier app.html ou layout.svelte
+    // <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     
     export let data;
     
@@ -21,11 +25,17 @@
     let selectedTags: Set<string> = new Set();
     let allTags: Map<string, number> = new Map();
     let dynamicTagCounts: Map<string, number> = new Map();
+    
+    // Filtre de correction
+    let correctionFilter: 'all' | 'with' | 'without' = 'all';
 
     // Pagination
     const ITEMS_PER_PAGE = 10;
     let currentPage = 1;
     let hasMoreItems = false;
+
+    // Statut de chargement - initialisé à true
+    let isLoading = true;
 
     function normalizeThemes(theme: string | string[]): string[] {
         if (Array.isArray(theme)) return theme;
@@ -90,10 +100,19 @@
             }));
         }
 
+        // Applique le filtre par tags
         if (selectedTags.size > 0) {
             filteredResults = filteredResults.filter(result => {
                 const exerciseTags = new Set(normalizeThemes(result.exercise.theme));
                 return Array.from(selectedTags).every(tag => exerciseTags.has(tag));
+            });
+        }
+        
+        // Applique le filtre par correction
+        if (correctionFilter !== 'all') {
+            filteredResults = filteredResults.filter(result => {
+                const hasCorrection = result.exercise.metadata?.hasCorrection === "true";
+                return correctionFilter === 'with' ? hasCorrection : !hasCorrection;
             });
         }
 
@@ -104,39 +123,40 @@
         updateDynamicCounts(filteredResults);
     }
 
-    let isLoading = true;
-
     onMount(() => {
         if (data?.exercises) {
-            searchEngine = new ExerciceSearchEngine();
-            searchEngine.initialize(data.exercises);
-            
-            data.exercises.forEach(exercise => {
-                const themes = normalizeThemes(exercise.theme);
-                themes.forEach(theme => {
-                    allTags.set(theme, (allTags.get(theme) || 0) + 1);
+            // Initialisation des données
+            setTimeout(() => {
+                searchEngine = new ExerciceSearchEngine();
+                searchEngine.initialize(data.exercises);
+                
+                data.exercises.forEach(exercise => {
+                    const themes = normalizeThemes(exercise.theme);
+                    themes.forEach(theme => {
+                        allTags.set(theme, (allTags.get(theme) || 0) + 1);
+                    });
                 });
-            });
-            allTags = new Map(allTags);
-            
-            updateResults();
-            isLoading = false;
+                allTags = new Map(allTags);
+                
+                updateResults();
+                isLoading = false;
+            }, 0); // Exécution asynchrone pour permettre au header de s'afficher
         }
     });
 
     async function handleExerciseClick(exercise: Exercice) {
-    try {
-        const response = await fetch(`/exercice/${exercise.uuid}`);
-        if (!response.ok) {
-            throw new Error('Erreur lors du chargement de l\'exercice');
+        try {
+            const response = await fetch(`/exercice/${exercise.uuid}`);
+            if (!response.ok) {
+                throw new Error('Erreur lors du chargement de l\'exercice');
+            }
+            selectedExercise = await response.json();
+            showModal = true;
+        } catch (error) {
+            console.error('Erreur lors du chargement de l\'exercice:', error);
+            // Optionnel : ajouter une notification d'erreur pour l'utilisateur
         }
-        selectedExercise = await response.json();
-        showModal = true;
-    } catch (error) {
-        console.error('Erreur lors du chargement de l\'exercice:', error);
-        // Optionnel : ajouter une notification d'erreur pour l'utilisateur
     }
-}
 
     function handleModalClose() {
         showModal = false;
@@ -153,44 +173,67 @@
         updateResults();
     }
 
-    // Réagir aux changements de la recherche
+    // Réagir aux changements de la recherche et des filtres
     $: query, updateResults();
-
+    $: correctionFilter, updateResults();
 </script>
 
 <div class="container-fluid">
-    {#if isLoading}
-    <div class="loading-container">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Chargement...</span>
-        </div>
-        <div class="mt-2">Chargement des exercices...</div>
-    </div>
-    {:else}
-    <div class="row">
-        <div class="row">
-            <div class="card mb-4">
-                <div class="card-body">
+    <!-- Header - toujours affiché immédiatement -->
+    <div class="row mb-4">
+        <div class="col-12 d-flex flex-column align-items-center">
+            <div class="search-brand mb-4 mt-5">
+                <h1 class="search-title">Exercices<span class="search-highlight">Search</span></h1>
+            </div>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="search-icon bi bi-search"></i>
                     <input
                         type="text"
                         bind:value={query}
                         placeholder="Rechercher un exercice..."
-                        class="form-control"
+                        class="search-input"
+                        disabled={isLoading}
                     />
+                    {#if query.length > 0}
+                        <button class="search-clear-btn" on:click={() => query = ''}>
+                            <i class="bi bi-x"></i>
+                        </button>
+                    {/if}
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Contenu principal - affiché avec état de chargement -->
+    <div class="row">
+        {#if isLoading}
+            <div class="col-12">
+                <div class="loading-container">
+                    <div class="search-loader">
+                        <div class="search-loader-dot" style="--delay: 0s"></div>
+                        <div class="search-loader-dot" style="--delay: 0.1s"></div>
+                        <div class="search-loader-dot" style="--delay: 0.2s"></div>
+                        <div class="search-loader-dot" style="--delay: 0.3s"></div>
+                    </div>
+                    <div class="mt-3 search-loader-text">Chargement des exercices...</div>
+                </div>
+            </div>
+        {:else}
             <!-- Colonne de gauche : Filtres -->
             <div class="col-12 col-md-4 col-lg-3">
                 <FiltersPanel
                     {selectedTags}
                     {allTags}
                     {dynamicTagCounts}
+                    bind:correctionFilter
                     on:toggleTag={({ detail }) => toggleTag(detail.tag)}
                     on:resetTags={() => {
                         selectedTags.clear();
                         selectedTags = selectedTags;
                         updateResults();
                     }}
+                    on:filterChange={() => updateResults()}
                 />
             </div>
     
@@ -199,11 +242,18 @@
                 <div class="alert alert-info">
                     <div class="d-flex justify-content-between align-items-center">
                         <strong>{allResults.length} exercice(s) trouvé(s)</strong>
-                        {#if selectedTags.size > 0}
-                            <small class="text-muted">
-                                Filtres : {Array.from(selectedTags).join(', ')}
-                            </small>
-                        {/if}
+                        <div class="d-flex flex-wrap gap-2 justify-content-end">
+                            {#if selectedTags.size > 0}
+                                <small class="badge bg-secondary">
+                                    Thèmes : {Array.from(selectedTags).join(', ')}
+                                </small>
+                            {/if}
+                            {#if correctionFilter !== 'all'}
+                                <small class="badge bg-secondary">
+                                    {correctionFilter === 'with' ? 'Avec correction' : 'Sans correction'}
+                                </small>
+                            {/if}
+                        </div>
                     </div>
                 </div>
             
@@ -212,7 +262,7 @@
                         <div class="card hover-card">
                             <div class="card-body position-relative">
                                 <div class="add-button-wrapper">
-                                <AddButton uuid={result.exercise.uuid} />
+                                    <AddButton uuid={result.exercise.uuid} />
                                 </div>
                                 <!-- Exercise content (clickable) -->
                                 <div 
@@ -237,12 +287,12 @@
                                     {/if}
                                     
                                     {#if result.exercise.preview}
-                                    <p class="card-text text-muted mb-2">
-                                        <span class="preview-html">
-                                            <MathRenderer content={result.exercise.preview}/>
-                                        </span>
-                                    </p>
-                                {/if}
+                                        <p class="card-text text-muted mb-2">
+                                            <span class="preview-html">
+                                                <MathRenderer content={result.exercise.preview}/>
+                                            </span>
+                                        </p>
+                                    {/if}
                                 </div>
                                 <small class="text-muted position-absolute bottom-0 end-0 p-2">{result.exercise.uuid}</small>
                             </div>
@@ -258,17 +308,18 @@
                     </div>
                 {/if}
             </div>
+            
             <!-- Custom List Column -->
             <div class="d-none d-md-block col-md-3 col-lg-3">
                 <CustomList showMobileButton={false} />
             </div>
+            
             <!-- Mobile Custom List Modal -->
-             <div class="d-block d-md-none">
+            <div class="d-block d-md-none">
                 <CustomList showMobileButton={true} />
-            </div>  
-        </div>
+            </div>
+        {/if}
     </div>
-    {/if}
 </div>
 
 <Modal 
@@ -281,6 +332,82 @@
 </Modal>
 
 <style>
+    /* Styles du moteur de recherche */
+    .search-brand {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .search-title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: #333;
+        margin: 0;
+    }
+    
+    .search-highlight {
+        color: #4285F4;
+        font-weight: 700;
+    }
+    
+    .search-container {
+        width: 100%;
+        max-width: 640px;
+        margin-bottom: 2rem;
+    }
+    
+    .search-input-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        border-radius: 24px;
+        transition: box-shadow 0.3s;
+    }
+    
+    .search-input-wrapper:hover, 
+    .search-input-wrapper:focus-within {
+        box-shadow: 0 1px 10px rgba(32, 33, 36, 0.45);
+    }
+    
+    .search-icon {
+        position: absolute;
+        left: 16px;
+        color: #9AA0A6;
+        font-size: 1.2rem;
+    }
+    
+    .search-input {
+        height: 48px;
+        border: none;
+        border-radius: 24px;
+        padding: 0 48px 0 48px;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+    }
+    
+    .search-clear-btn {
+        position: absolute;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #9AA0A6;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-clear-btn:hover {
+        color: #4285F4;
+    }
+    
+    /* Styles existants */
     .tags {
         display: flex;
         flex-wrap: wrap;
@@ -378,25 +505,57 @@
         margin: 0;
     }
 
-
-
     .exercise-content {
         padding-right: 3rem;
     }
 
     .add-button-wrapper {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    z-index: 2;
-}
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 2;
+    }
 
-.loading-container {
+    .loading-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 50vh;
+        min-height: 300px;
         color: #666;
+    }
+    
+    .search-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .search-loader-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        animation: loader-bounce 1.4s ease infinite;
+        animation-delay: var(--delay);
+    }
+    
+    .search-loader-dot:nth-child(1) { background-color: #4285F4; }
+    .search-loader-dot:nth-child(2) { background-color: #EA4335; }
+    .search-loader-dot:nth-child(3) { background-color: #FBBC05; }
+    .search-loader-dot:nth-child(4) { background-color: #34A853; }
+    
+    .search-loader-text {
+        color: #5f6368;
+        font-size: 0.95rem;
+    }
+    
+    @keyframes loader-bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
     }
 </style>
