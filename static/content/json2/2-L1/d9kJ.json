@@ -12,19 +12,19 @@
     "chapitre": "Développement limité",
     "sousChapitre": "Formule de Taylor",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:41:59.582Z"
+    "updatedAt": "2025-03-04T15:13:16.777Z"
   },
   "contenu": [
     {
-      "id": "a4a5f043-305b-4641-8737-9e2fda565cbb",
+      "id": "6a3eb696-51ff-4e22-b735-763bf4ae8156",
       "type": "description",
       "value": {
         "latex": "Soit $f$ l'application de $\\Rr$ dans $\\Rr$ définie par\n$f(x)=\\displaystyle{\\frac{x^3}{1+x^6}}.$ Calculer $f^{(n)}(0)$ pour tout $n \\in \\Nn.$",
-        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> l’application de <span class=\"math inline\">\\(\\Rr\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span> définie par <span class=\"math inline\">\\(f(x)=\\displaystyle{\\frac{x^3}{1+x^6}}.\\)</span> Calculer <span class=\"math inline\">\\(f^{(n)}(0)\\)</span> pour tout <span class=\"math inline\">\\(n \\in \\Nn.\\)</span></p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> l’application de <span\nclass=\"math inline\">\\(\\Rr\\)</span> dans <span\nclass=\"math inline\">\\(\\Rr\\)</span> définie par <span\nclass=\"math inline\">\\(f(x)=\\displaystyle{\\frac{x^3}{1+x^6}}.\\)</span>\nCalculer <span class=\"math inline\">\\(f^{(n)}(0)\\)</span> pour tout <span\nclass=\"math inline\">\\(n \\in \\Nn.\\)</span></p>\n"
       }
     },
     {
-      "id": "4e3a23c1-df67-4c4c-9f8d-0049104b3ea8",
+      "id": "557bbd5e-5373-4d3c-ac6f-97f3f200addd",
       "type": "indication",
       "value": {
         "latex": "Calculer d'abord le dl puis utiliser une formule de Taylor.",
@@ -32,13 +32,13 @@
       }
     },
     {
-      "id": "04c99601-07c0-46b7-967b-1f9dfd2035ec",
+      "id": "b9a1038c-166a-47df-a84d-30b22fcd2400",
       "type": "reponse",
       "value": {
         "latex": "Habituellement on trouve le développement limité d'une fonction \nà partir des dérivées successives. Ici on va faire l'inverse.\n\nCalcul du dl (à un certain ordre) :\n$$\\begin{align*}\nf(x) & = \\frac{x^3}{1+x^6} = x^3 \\frac{1}{1+x^6}\\\\\n     & =  x^3 \\left( 1-x^6 + x^{12} - \\cdots \\pm x^{6\\ell} \\cdots \\right) \\\\\n     &= x^3 - x^9 + x^{15} -\\cdots \\pm x^{3+6\\ell} \\cdots \\\\\n     &= \\sum_{\\ell \\ge 0} (-1)^\\ell x^{3+6\\ell} \\\\\n\\end{align*}$$\n\nIl s'agit d'identifier ce développement avec la formule de Taylor :\n$$f(x)=f(0)+f'(0)x+\\frac{f''(0)}{2!}x^2 + \\cdots + \\frac{f^{(n)}(0)}{n!} x^n + \\cdots$$\n\n\nPar unicité des DL, en identifiant les coefficients devant $x^n$ on trouve :\n$$\\begin{cases}\n\\frac{f^{(n)}(0)}{n!} = (-1)^\\ell & \\text{ si } n = 3+6\\ell \\\\\n\\frac{f^{(n)}(0)}{n!} = 0         & \\text{ sinon.} \\\\    \n\\end{cases}$$\n\nSi $n=3+6\\ell$ (avec $\\ell\\in \\Nn$) alors on peut écrire $\\ell = \\frac{n-3}{6}$\net donc on peut conclure :\n$$\\begin{cases}\nf^{(n)}(0) = (-1)^{\\frac{n-3}{6}} \\cdot n! & \\text{ si } n \\equiv 3 \\pmod{6} \\\\\nf^{(n)}(0) = 0         & \\text{ sinon.} \\\\    \n\\end{cases}$$",
-        "html": "<p>Habituellement on trouve le développement limité d’une fonction à partir des dérivées successives. Ici on va faire l’inverse.</p>\n<p>Calcul du dl (à un certain ordre) : <span class=\"math display\">\\[\\begin{align*}\nf(x) &amp; = \\frac{x^3}{1+x^6} = x^3 \\frac{1}{1+x^6}\\\\\n     &amp; =  x^3 \\left( 1-x^6 + x^{12} - \\cdots \\pm x^{6\\ell} \\cdots \\right) \\\\\n     &amp;= x^3 - x^9 + x^{15} -\\cdots \\pm x^{3+6\\ell} \\cdots \\\\\n     &amp;= \\sum_{\\ell \\ge 0} (-1)^\\ell x^{3+6\\ell} \\\\\n\\end{align*}\\]</span></p>\n<p>Il s’agit d’identifier ce développement avec la formule de Taylor : <span class=\"math display\">\\[f(x)=f(0)+f&#39;(0)x+\\frac{f&#39;&#39;(0)}{2!}x^2 + \\cdots + \\frac{f^{(n)}(0)}{n!} x^n + \\cdots\\]</span></p>\n<p>Par unicité des DL, en identifiant les coefficients devant <span class=\"math inline\">\\(x^n\\)</span> on trouve : <span class=\"math display\">\\[\\begin{cases}\n\\frac{f^{(n)}(0)}{n!} = (-1)^\\ell &amp; \\text{ si } n = 3+6\\ell \\\\\n\\frac{f^{(n)}(0)}{n!} = 0         &amp; \\text{ sinon.} \\\\    \n\\end{cases}\\]</span></p>\n<p>Si <span class=\"math inline\">\\(n=3+6\\ell\\)</span> (avec <span class=\"math inline\">\\(\\ell\\in \\Nn\\)</span>) alors on peut écrire <span class=\"math inline\">\\(\\ell = \\frac{n-3}{6}\\)</span> et donc on peut conclure : <span class=\"math display\">\\[\\begin{cases}\nf^{(n)}(0) = (-1)^{\\frac{n-3}{6}} \\cdot n! &amp; \\text{ si } n \\equiv 3 \\pmod{6} \\\\\nf^{(n)}(0) = 0         &amp; \\text{ sinon.} \\\\    \n\\end{cases}\\]</span></p>\n"
+        "html": "<p>Habituellement on trouve le développement limité d’une fonction à\npartir des dérivées successives. Ici on va faire l’inverse.</p>\n<p>Calcul du dl (à un certain ordre) : <span\nclass=\"math display\">\\[\\begin{align*}\nf(x) &amp; = \\frac{x^3}{1+x^6} = x^3 \\frac{1}{1+x^6}\\\\\n     &amp; =  x^3 \\left( 1-x^6 + x^{12} - \\cdots \\pm x^{6\\ell} \\cdots\n\\right) \\\\\n     &amp;= x^3 - x^9 + x^{15} -\\cdots \\pm x^{3+6\\ell} \\cdots \\\\\n     &amp;= \\sum_{\\ell \\ge 0} (-1)^\\ell x^{3+6\\ell} \\\\\n\\end{align*}\\]</span></p>\n<p>Il s’agit d’identifier ce développement avec la formule de Taylor :\n<span\nclass=\"math display\">\\[f(x)=f(0)+f&#39;(0)x+\\frac{f&#39;&#39;(0)}{2!}x^2\n+ \\cdots + \\frac{f^{(n)}(0)}{n!} x^n + \\cdots\\]</span></p>\n<p>Par unicité des DL, en identifiant les coefficients devant <span\nclass=\"math inline\">\\(x^n\\)</span> on trouve : <span\nclass=\"math display\">\\[\\begin{cases}\n\\frac{f^{(n)}(0)}{n!} = (-1)^\\ell &amp; \\text{ si } n = 3+6\\ell \\\\\n\\frac{f^{(n)}(0)}{n!} = 0         &amp; \\text{ sinon.} \\\\    \n\\end{cases}\\]</span></p>\n<p>Si <span class=\"math inline\">\\(n=3+6\\ell\\)</span> (avec <span\nclass=\"math inline\">\\(\\ell\\in \\Nn\\)</span>) alors on peut écrire <span\nclass=\"math inline\">\\(\\ell = \\frac{n-3}{6}\\)</span> et donc on peut\nconclure : <span class=\"math display\">\\[\\begin{cases}\nf^{(n)}(0) = (-1)^{\\frac{n-3}{6}} \\cdot n! &amp; \\text{ si } n \\equiv 3\n\\pmod{6} \\\\\nf^{(n)}(0) = 0         &amp; \\text{ sinon.} \\\\    \n\\end{cases}\\]</span></p>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> l’application de <span class=\"math inline\">\\(\\Rr\\)</span> dans <span class=\"math inline\">\\(\\Rr\\)</span> ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> l’application de <span\nclass=\"math inline\">\\(\\Rr\\)</span> dans <span\nclass=\"math inline\">\\(\\Rr\\)</span> ..."
 }

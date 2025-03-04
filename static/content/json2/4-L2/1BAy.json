@@ -12,49 +12,49 @@
     "chapitre": "Déterminant, système linéaire",
     "sousChapitre": "Calcul de déterminants",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:42:40.483Z"
+    "updatedAt": "2025-03-04T15:14:23.762Z"
   },
   "contenu": [
     {
-      "id": "e1dddd55-fa2b-4795-ac89-9550dde9cffc",
+      "id": "85069b68-5c5d-4a6e-9000-f48d49b8fd52",
       "type": "description",
       "value": {
         "latex": "Soit $a$ un réel.\nOn note $\\Delta_n$ le déterminant suivant : \n$$\n\\Delta_n = \n\\left\\vert\n\\begin{matrix}\n       a   &    0   & \\cdots & 0      & n-1 \\\\\n       0   &    a   & \\ddots & \\vdots & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots & 0      & 2 \\\\\n       0   & \\cdots &   0    & a      & 1 \\\\\n      n-1  & \\cdots &   2    & 1      & a\n\\end{matrix}\n\\right\\vert\n$$",
-        "html": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel. On note <span class=\"math inline\">\\(\\Delta_n\\)</span> le déterminant suivant : <span class=\"math display\">\\[\\Delta_n = \n\\left\\vert\n\\begin{matrix}\n       a   &amp;    0   &amp; \\cdots &amp; 0      &amp; n-1 \\\\\n       0   &amp;    a   &amp; \\ddots &amp; \\vdots &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots &amp; 0      &amp; 2 \\\\\n       0   &amp; \\cdots &amp;   0    &amp; a      &amp; 1 \\\\\n      n-1  &amp; \\cdots &amp;   2    &amp; 1      &amp; a\n\\end{matrix}\n\\right\\vert\\]</span></p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel. On note <span\nclass=\"math inline\">\\(\\Delta_n\\)</span> le déterminant suivant : <span\nclass=\"math display\">\\[\\Delta_n =\n\\left\\vert\n\\begin{matrix}\n       a   &amp;    0   &amp; \\cdots &amp; 0      &amp; n-1 \\\\\n       0   &amp;    a   &amp; \\ddots &amp; \\vdots &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots &amp; 0      &amp; 2 \\\\\n       0   &amp; \\cdots &amp;   0    &amp; a      &amp; 1 \\\\\n      n-1  &amp; \\cdots &amp;   2    &amp; 1      &amp; a\n\\end{matrix}\n\\right\\vert\\]</span></p>\n"
       }
     },
     {
-      "id": "df9e8a18-ee17-45c9-9b77-d9184a8b3d30",
+      "id": "416a31ec-f3e3-435d-a273-915e23016fa7",
       "type": "question",
       "value": {
         "latex": "Calculer $\\Delta_n$ en fonction de $\\Delta_{n-1}$.",
-        "html": "<p>Calculer <span class=\"math inline\">\\(\\Delta_n\\)</span> en fonction de <span class=\"math inline\">\\(\\Delta_{n-1}\\)</span>.</p>\n"
+        "html": "<p>Calculer <span class=\"math inline\">\\(\\Delta_n\\)</span> en fonction de\n<span class=\"math inline\">\\(\\Delta_{n-1}\\)</span>.</p>\n"
       }
     },
     {
-      "id": "4ca754fe-0c2f-4584-9c89-26bfef1ade2b",
+      "id": "a1b17dd5-48ed-495c-bde7-c8907df71f6b",
       "type": "question",
       "value": {
         "latex": "Démontrer que : $\\displaystyle \\forall n\\geq2\\quad\n\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}$.",
-        "html": "<p>Démontrer que : <span class=\"math inline\">\\(\\displaystyle \\forall n\\geq2\\quad\n\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\\)</span>.</p>\n"
+        "html": "<p>Démontrer que : <span class=\"math inline\">\\(\\displaystyle \\forall\nn\\geq2\\quad\n\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\\)</span>.</p>\n"
       }
     },
     {
-      "id": "153d49ea-4159-47b4-a2b8-145ec1d30819",
+      "id": "beb41773-006a-4783-b625-c77f18081300",
       "type": "reponse",
       "value": {
         "latex": "En développant par rapport à la première colonne on trouve la relation suivante :\n\n$$\\Delta_n = a \\Delta_{n-1} + (-1)^{n-1}(n-1) \n\\left\\vert\n\\begin{matrix}\n       0   &    0   & \\cdots & 0      & n-1 \\\\\n       a   &    0   & \\ddots & \\vdots & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots & 0      & 3 \\\\\n       0   & \\cdots &   a    & 0      & 2 \\\\\n       0  & \\cdots &   0    & a      & 1\n\\end{matrix}\n\\right\\vert\n$$\nNotons $\\delta$ ce dernier déterminant (dont la matrice est de taille $n-1\\times n-1$). \nOn le calcule en développant par rapport à la première ligne \n$$\\delta  = (-1)^{n-2}(n-1)\n\\left\\vert\n\\begin{matrix}\n       a   &    0   & \\cdots      & 0 \\\\\n       0   &    a   & \\ddots      & \\vdots \\\\\n    \\vdots & \\ddots & \\ddots      & 0  \\\\\n       0   & \\cdots &   0         & a\n\\end{matrix}\\right\\vert\n= (-1)^{n-2}(n-1) a^{n-2}.\n$$\nDonc \n$$\\Delta_n = a \\Delta_{n-1} - a^{n-2}(n-1)^2.$$\nProuvons la formule \n$$\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}$$\npar récurrence sur $n\\ge 2$.\n\n\\begin{itemize}\n\\textbf{Initialisation.} Pour $n=2$,\n$\\Delta_2=\\begin{vmatrix}a&1\\\\1&a\\end{vmatrix}=a^2-1$\ndonc la formule est vraie.\n\\textbf{Hérédité.} Supposons la formule vraie vraie au rang $n-1$,\nc'est-à-dire $\\Delta_{n-1}=a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2}$.\nCalculons $\\Delta_n$ :\n$$\\begin{align*}\n\\Delta_n \n  & = a \\Delta_{n-1} - a^{n-2}(n-1)^2  \\quad \\text{ par la première question } \\\\\n  & = a\\Big(a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2} \\Big) - a^{n-2}(n-1)^2 \\quad \\text{ par l'hypothèse de récurrence} \\\\\n  & = a^n -  a^{n-2}\\sum_{i=1}^{n-2}{i^2} - a^{n-2}(n-1)^2 \\\\\n  & = a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\n\\end{align*}$$\nLa formule est donc vraie au rang $n$.\n\\textbf{Conclusion.} Par le principe de récurrence la formule est vraie\npour tout entier $n\\ge 2$.\n\\end{itemize}",
-        "html": "<p>En développant par rapport à la première colonne on trouve la relation suivante :</p>\n<p><span class=\"math display\">\\[\\Delta_n = a \\Delta_{n-1} + (-1)^{n-1}(n-1) \n\\left\\vert\n\\begin{matrix}\n       0   &amp;    0   &amp; \\cdots &amp; 0      &amp; n-1 \\\\\n       a   &amp;    0   &amp; \\ddots &amp; \\vdots &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots &amp; 0      &amp; 3 \\\\\n       0   &amp; \\cdots &amp;   a    &amp; 0      &amp; 2 \\\\\n       0  &amp; \\cdots &amp;   0    &amp; a      &amp; 1\n\\end{matrix}\n\\right\\vert\\]</span> Notons <span class=\"math inline\">\\(\\delta\\)</span> ce dernier déterminant (dont la matrice est de taille <span class=\"math inline\">\\(n-1\\times n-1\\)</span>). On le calcule en développant par rapport à la première ligne <span class=\"math display\">\\[\\delta  = (-1)^{n-2}(n-1)\n\\left\\vert\n\\begin{matrix}\n       a   &amp;    0   &amp; \\cdots      &amp; 0 \\\\\n       0   &amp;    a   &amp; \\ddots      &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots      &amp; 0  \\\\\n       0   &amp; \\cdots &amp;   0         &amp; a\n\\end{matrix}\\right\\vert\n= (-1)^{n-2}(n-1) a^{n-2}.\\]</span> Donc <span class=\"math display\">\\[\\Delta_n = a \\Delta_{n-1} - a^{n-2}(n-1)^2.\\]</span> Prouvons la formule <span class=\"math display\">\\[\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\\]</span> par récurrence sur <span class=\"math inline\">\\(n\\ge 2\\)</span>.</p>\n<p><strong>Initialisation.</strong> Pour <span class=\"math inline\">\\(n=2\\)</span>, <span class=\"math inline\">\\(\\Delta_2=\\begin{vmatrix}a&amp;1\\\\1&amp;a\\end{vmatrix}=a^2-1\\)</span> donc la formule est vraie. <strong>Hérédité.</strong> Supposons la formule vraie vraie au rang <span class=\"math inline\">\\(n-1\\)</span>, c’est-à-dire <span class=\"math inline\">\\(\\Delta_{n-1}=a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2}\\)</span>. Calculons <span class=\"math inline\">\\(\\Delta_n\\)</span> : <span class=\"math display\">\\[\\begin{align*}\n\\Delta_n \n  &amp; = a \\Delta_{n-1} - a^{n-2}(n-1)^2  \\quad \\text{ par la première question } \\\\\n  &amp; = a\\Big(a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2} \\Big) - a^{n-2}(n-1)^2 \\quad \\text{ par l&#39;hypothèse de récurrence} \\\\\n  &amp; = a^n -  a^{n-2}\\sum_{i=1}^{n-2}{i^2} - a^{n-2}(n-1)^2 \\\\\n  &amp; = a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\n\\end{align*}\\]</span> La formule est donc vraie au rang <span class=\"math inline\">\\(n\\)</span>. <strong>Conclusion.</strong> Par le principe de récurrence la formule est vraie pour tout entier <span class=\"math inline\">\\(n\\ge 2\\)</span>.</p>\n"
+        "html": "<p>En développant par rapport à la première colonne on trouve la\nrelation suivante :</p>\n<p><span class=\"math display\">\\[\\Delta_n = a \\Delta_{n-1} +\n(-1)^{n-1}(n-1)\n\\left\\vert\n\\begin{matrix}\n       0   &amp;    0   &amp; \\cdots &amp; 0      &amp; n-1 \\\\\n       a   &amp;    0   &amp; \\ddots &amp; \\vdots &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots &amp; 0      &amp; 3 \\\\\n       0   &amp; \\cdots &amp;   a    &amp; 0      &amp; 2 \\\\\n       0  &amp; \\cdots &amp;   0    &amp; a      &amp; 1\n\\end{matrix}\n\\right\\vert\\]</span> Notons <span class=\"math inline\">\\(\\delta\\)</span>\nce dernier déterminant (dont la matrice est de taille <span\nclass=\"math inline\">\\(n-1\\times n-1\\)</span>). On le calcule en\ndéveloppant par rapport à la première ligne <span\nclass=\"math display\">\\[\\delta  = (-1)^{n-2}(n-1)\n\\left\\vert\n\\begin{matrix}\n       a   &amp;    0   &amp; \\cdots      &amp; 0 \\\\\n       0   &amp;    a   &amp; \\ddots      &amp; \\vdots \\\\\n    \\vdots &amp; \\ddots &amp; \\ddots      &amp; 0  \\\\\n       0   &amp; \\cdots &amp;   0         &amp; a\n\\end{matrix}\\right\\vert\n= (-1)^{n-2}(n-1) a^{n-2}.\\]</span> Donc <span\nclass=\"math display\">\\[\\Delta_n = a \\Delta_{n-1} -\na^{n-2}(n-1)^2.\\]</span> Prouvons la formule <span\nclass=\"math display\">\\[\\Delta_n=a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\\]</span>\npar récurrence sur <span class=\"math inline\">\\(n\\ge 2\\)</span>.</p>\n<div class=\"itemize\">\n<p><strong>Initialisation.</strong> Pour <span\nclass=\"math inline\">\\(n=2\\)</span>, <span\nclass=\"math inline\">\\(\\Delta_2=\\begin{vmatrix}a&amp;1\\\\1&amp;a\\end{vmatrix}=a^2-1\\)</span>\ndonc la formule est vraie. <strong>Hérédité.</strong> Supposons la\nformule vraie vraie au rang <span class=\"math inline\">\\(n-1\\)</span>,\nc’est-à-dire <span\nclass=\"math inline\">\\(\\Delta_{n-1}=a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2}\\)</span>.\nCalculons <span class=\"math inline\">\\(\\Delta_n\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*}\n\\Delta_n\n  &amp; = a \\Delta_{n-1} - a^{n-2}(n-1)^2  \\quad \\text{ par la première\nquestion } \\\\\n  &amp; = a\\Big(a^{n-1}-a^{n-3}\\sum_{i=1}^{n-2}{i^2} \\Big) -\na^{n-2}(n-1)^2 \\quad \\text{ par l&#39;hypothèse de récurrence} \\\\\n  &amp; = a^n -  a^{n-2}\\sum_{i=1}^{n-2}{i^2} - a^{n-2}(n-1)^2 \\\\\n  &amp; = a^n-a^{n-2}\\sum_{i=1}^{n-1}{i^2}\n\\end{align*}\\]</span> La formule est donc vraie au rang <span\nclass=\"math inline\">\\(n\\)</span>. <strong>Conclusion.</strong> Par le\nprincipe de récurrence la formule est vraie pour tout entier <span\nclass=\"math inline\">\\(n\\ge 2\\)</span>.</p>\n</div>\n"
       }
     },
     {
-      "id": "bf4765bf-5656-4005-ae9c-ab21c0faf4bb",
+      "id": "075cd956-d6fd-43d2-8231-98d75408a69f",
       "type": "indication",
       "value": {
         "latex": "Développer par rapport à la première colonne\npour obtenir $\\Delta_{n-1}$ et un autre déterminant facile à calculer\nen développant par rapport à sa première ligne.",
-        "html": "<p>Développer par rapport à la première colonne pour obtenir <span class=\"math inline\">\\(\\Delta_{n-1}\\)</span> et un autre déterminant facile à calculer en développant par rapport à sa première ligne.</p>\n"
+        "html": "<p>Développer par rapport à la première colonne pour obtenir <span\nclass=\"math inline\">\\(\\Delta_{n-1}\\)</span> et un autre déterminant\nfacile à calculer en développant par rapport à sa première ligne.</p>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel. On note <span class=\"math inline\">\\(\\Delta_n\\)</span> le déterminant suivant : <span class=\"ma ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel. On note <span\nclass=\"math inline\">\\(\\Delta_n\\)</span> le déterminant suivant : <span\nclass=\"ma ..."
 }

@@ -12,73 +12,73 @@
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Théorie",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:42:26.584Z"
+    "updatedAt": "2025-03-04T15:14:02.305Z"
   },
   "contenu": [
     {
-      "id": "3df95420-33a9-4b45-89ec-1f1364a69a05",
+      "id": "0b64d1c1-973b-4933-b90e-88d40b81b016",
       "type": "description",
       "value": {
         "latex": "Soit $f:[a,b]\\rightarrow \\R$ une fonction continue sur $[a,b]$ ($a<b$).",
-        "html": "<p>Soit <span class=\"math inline\">\\(f:[a,b]\\rightarrow \\R\\)</span> une fonction continue sur <span class=\"math inline\">\\([a,b]\\)</span> (<span class=\"math inline\">\\(a&lt;b\\)</span>).</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(f:[a,b]\\rightarrow \\R\\)</span> une\nfonction continue sur <span class=\"math inline\">\\([a,b]\\)</span> (<span\nclass=\"math inline\">\\(a&lt;b\\)</span>).</p>\n"
       }
     },
     {
-      "id": "aabc8358-7ec5-4923-b2cf-21555b0af1e7",
+      "id": "db4fc2fc-c17e-4f1d-bb2f-e6285e3d786b",
       "type": "question",
       "value": {
         "latex": "On suppose que $f(x) \\ge 0$ pour tout $x\\in [a,b]$, et que $f(x_0)>0$ en un point $x_0\\in [a,b]$. \nMontrer que $\\int_a^b f(x) d x>0$. En déduire que : <<si $f$ est une fonction continue\npositive sur $[a,b]$ telle que $\\int_a^b f(x) d x=0$ alors $f$ est\nidentiquement nulle>>.",
-        "html": "<p>On suppose que <span class=\"math inline\">\\(f(x) \\ge 0\\)</span> pour tout <span class=\"math inline\">\\(x\\in [a,b]\\)</span>, et que <span class=\"math inline\">\\(f(x_0)&gt;0\\)</span> en un point <span class=\"math inline\">\\(x_0\\in [a,b]\\)</span>. Montrer que <span class=\"math inline\">\\(\\int_a^b f(x) d x&gt;0\\)</span>. En déduire que : &lt;&lt;si <span class=\"math inline\">\\(f\\)</span> est une fonction continue positive sur <span class=\"math inline\">\\([a,b]\\)</span> telle que <span class=\"math inline\">\\(\\int_a^b f(x) d x=0\\)</span> alors <span class=\"math inline\">\\(f\\)</span> est identiquement nulle&gt;&gt;.</p>\n"
+        "html": "<p>On suppose que <span class=\"math inline\">\\(f(x) \\ge 0\\)</span> pour\ntout <span class=\"math inline\">\\(x\\in [a,b]\\)</span>, et que <span\nclass=\"math inline\">\\(f(x_0)&gt;0\\)</span> en un point <span\nclass=\"math inline\">\\(x_0\\in [a,b]\\)</span>. Montrer que <span\nclass=\"math inline\">\\(\\int_a^b f(x) d x&gt;0\\)</span>. En déduire que :\n&lt;&lt;si <span class=\"math inline\">\\(f\\)</span> est une fonction\ncontinue positive sur <span class=\"math inline\">\\([a,b]\\)</span> telle\nque <span class=\"math inline\">\\(\\int_a^b f(x) d x=0\\)</span> alors <span\nclass=\"math inline\">\\(f\\)</span> est identiquement nulle&gt;&gt;.</p>\n"
       }
     },
     {
-      "id": "5a5f2316-8457-4d34-817e-0c0e3218b0d1",
+      "id": "6c49d46d-efa1-490f-9508-e181aeb49420",
       "type": "reponse",
       "value": {
         "latex": "\\'Ecrivons la continuité de $f$ en $x_0$ avec $\\epsilon = \\frac {f(x_0)}{2} > 0$ :\nil existe $\\delta >0$ tel que pour tout $x\\in [x_0-\\delta, x_0+\\delta]$ on ait $|f(x)-f(x_0)| \\leqslant \\epsilon$.\nAvec notre choix de $\\epsilon$ cela donne pour $x\\in [x_0-\\delta, x_0+\\delta]$ que $f(x) \\geqslant \\frac {f(x_0)}{2}$.\nPour évaluer $\\int_a^b f(x) \\, dx$ nous la coupons en trois morceaux par linéarité de l'intégrale :\n$$\\int_a^b f(x) \\, dx = \\int_a^{x_0-\\delta} f(x) dx +  \\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx +  \\int_{x_0+\\delta}^b f(x) dx.$$\nComme $f$ est positive alors par positivité de l'intégrale $\\int_a^{x_0-\\delta} f(x) dx \\geqslant 0$ et\n$\\int_{x_0+\\delta}^b f(x) dx \\geqslant 0$. Pour le terme du milieu on a $f(x) \\geqslant \\frac {f(x_0)}{2}$ donc\n$\\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx \\geqslant \\int_{x_0-\\delta}^{x_0+\\delta} \\frac {f(x_0)}{2} dx =\n2\\delta\\frac {f(x_0)}{2}$ (pour la dernière équation on calcule juste l'intégrale d'une fonction constante !).\nLe bilan de tout cela est que $\\int_a^b f(x) \\, dx \\geqslant 2\\delta\\frac {f(x_0)}{2} >0$.\n\nDonc pour une fonction continue et positive $f$, si elle est strictement positive en un point alors  $\\int_a^b f(x) \\, dx >0$.\nPar contraposition pour une fonction continue et positive si $\\int_a^b f(x) \\, dx =0$ alors\n$f$ est identiquement nulle.",
-        "html": "<p>Écrivons la continuité de <span class=\"math inline\">\\(f\\)</span> en <span class=\"math inline\">\\(x_0\\)</span> avec <span class=\"math inline\">\\(\\epsilon = \\frac {f(x_0)}{2} &gt; 0\\)</span> : il existe <span class=\"math inline\">\\(\\delta &gt;0\\)</span> tel que pour tout <span class=\"math inline\">\\(x\\in [x_0-\\delta, x_0+\\delta]\\)</span> on ait <span class=\"math inline\">\\(|f(x)-f(x_0)| \\leqslant \\epsilon\\)</span>. Avec notre choix de <span class=\"math inline\">\\(\\epsilon\\)</span> cela donne pour <span class=\"math inline\">\\(x\\in [x_0-\\delta, x_0+\\delta]\\)</span> que <span class=\"math inline\">\\(f(x) \\geqslant \\frac {f(x_0)}{2}\\)</span>. Pour évaluer <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx\\)</span> nous la coupons en trois morceaux par linéarité de l’intégrale : <span class=\"math display\">\\[\\int_a^b f(x) \\, dx = \\int_a^{x_0-\\delta} f(x) dx +  \\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx +  \\int_{x_0+\\delta}^b f(x) dx.\\]</span> Comme <span class=\"math inline\">\\(f\\)</span> est positive alors par positivité de l’intégrale <span class=\"math inline\">\\(\\int_a^{x_0-\\delta} f(x) dx \\geqslant 0\\)</span> et <span class=\"math inline\">\\(\\int_{x_0+\\delta}^b f(x) dx \\geqslant 0\\)</span>. Pour le terme du milieu on a <span class=\"math inline\">\\(f(x) \\geqslant \\frac {f(x_0)}{2}\\)</span> donc <span class=\"math inline\">\\(\\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx \\geqslant \\int_{x_0-\\delta}^{x_0+\\delta} \\frac {f(x_0)}{2} dx =\n2\\delta\\frac {f(x_0)}{2}\\)</span> (pour la dernière équation on calcule juste l’intégrale d’une fonction constante !). Le bilan de tout cela est que <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx \\geqslant 2\\delta\\frac {f(x_0)}{2} &gt;0\\)</span>.</p>\n<p>Donc pour une fonction continue et positive <span class=\"math inline\">\\(f\\)</span>, si elle est strictement positive en un point alors <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx &gt;0\\)</span>. Par contraposition pour une fonction continue et positive si <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx =0\\)</span> alors <span class=\"math inline\">\\(f\\)</span> est identiquement nulle.</p>\n"
+        "html": "<p>Écrivons la continuité de <span class=\"math inline\">\\(f\\)</span> en\n<span class=\"math inline\">\\(x_0\\)</span> avec <span\nclass=\"math inline\">\\(\\epsilon = \\frac {f(x_0)}{2} &gt; 0\\)</span> : il\nexiste <span class=\"math inline\">\\(\\delta &gt;0\\)</span> tel que pour\ntout <span class=\"math inline\">\\(x\\in [x_0-\\delta, x_0+\\delta]\\)</span>\non ait <span class=\"math inline\">\\(|f(x)-f(x_0)| \\leqslant\n\\epsilon\\)</span>. Avec notre choix de <span\nclass=\"math inline\">\\(\\epsilon\\)</span> cela donne pour <span\nclass=\"math inline\">\\(x\\in [x_0-\\delta, x_0+\\delta]\\)</span> que <span\nclass=\"math inline\">\\(f(x) \\geqslant \\frac {f(x_0)}{2}\\)</span>. Pour\névaluer <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx\\)</span> nous la\ncoupons en trois morceaux par linéarité de l’intégrale : <span\nclass=\"math display\">\\[\\int_a^b f(x) \\, dx = \\int_a^{x_0-\\delta} f(x) dx\n+  \\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx +  \\int_{x_0+\\delta}^b f(x)\ndx.\\]</span> Comme <span class=\"math inline\">\\(f\\)</span> est positive\nalors par positivité de l’intégrale <span\nclass=\"math inline\">\\(\\int_a^{x_0-\\delta} f(x) dx \\geqslant 0\\)</span>\net <span class=\"math inline\">\\(\\int_{x_0+\\delta}^b f(x) dx \\geqslant\n0\\)</span>. Pour le terme du milieu on a <span\nclass=\"math inline\">\\(f(x) \\geqslant \\frac {f(x_0)}{2}\\)</span> donc\n<span class=\"math inline\">\\(\\int_{x_0-\\delta}^{x_0+\\delta} f(x) dx\n\\geqslant \\int_{x_0-\\delta}^{x_0+\\delta} \\frac {f(x_0)}{2} dx =\n2\\delta\\frac {f(x_0)}{2}\\)</span> (pour la dernière équation on calcule\njuste l’intégrale d’une fonction constante !). Le bilan de tout cela est\nque <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx \\geqslant\n2\\delta\\frac {f(x_0)}{2} &gt;0\\)</span>.</p>\n<p>Donc pour une fonction continue et positive <span\nclass=\"math inline\">\\(f\\)</span>, si elle est strictement positive en un\npoint alors <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx\n&gt;0\\)</span>. Par contraposition pour une fonction continue et\npositive si <span class=\"math inline\">\\(\\int_a^b f(x) \\, dx =0\\)</span>\nalors <span class=\"math inline\">\\(f\\)</span> est identiquement\nnulle.</p>\n"
       }
     },
     {
-      "id": "a3637211-bb4b-4172-92ba-a7a90262c1ea",
+      "id": "3c0f6f5b-b7de-433c-92bf-9354030c2c9e",
       "type": "question",
       "value": {
         "latex": "On suppose que $\\int_a^b f(x) d x=0$. Montrer qu'il existe $c\\in [a,b]$ tel que $f(c)=0$.",
-        "html": "<p>On suppose que <span class=\"math inline\">\\(\\int_a^b f(x) d x=0\\)</span>. Montrer qu’il existe <span class=\"math inline\">\\(c\\in [a,b]\\)</span> tel que <span class=\"math inline\">\\(f(c)=0\\)</span>.</p>\n"
+        "html": "<p>On suppose que <span class=\"math inline\">\\(\\int_a^b f(x) d\nx=0\\)</span>. Montrer qu’il existe <span class=\"math inline\">\\(c\\in\n[a,b]\\)</span> tel que <span class=\"math inline\">\\(f(c)=0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "a9230984-a491-49f9-a3ea-d2eeaaeffe3b",
+      "id": "62358f39-4451-4c9c-bf29-82e6f0fe67e0",
       "type": "reponse",
       "value": {
         "latex": "Soit $f$ est tout le temps positive, soit elle tout le temps négative, soit elle change \n(au moins un fois) de signe. Dans le premier cas $f$ est identiquement nulle par la première question, \ndans le second cas c'est pareil (en appliquant la première question à $-f$). Pour le troisième cas \nle théorème des valeurs intermédiaires affirme qu'il existe $c$ tel que $f(c)=0$.",
-        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> est tout le temps positive, soit elle tout le temps négative, soit elle change (au moins un fois) de signe. Dans le premier cas <span class=\"math inline\">\\(f\\)</span> est identiquement nulle par la première question, dans le second cas c’est pareil (en appliquant la première question à <span class=\"math inline\">\\(-f\\)</span>). Pour le troisième cas le théorème des valeurs intermédiaires affirme qu’il existe <span class=\"math inline\">\\(c\\)</span> tel que <span class=\"math inline\">\\(f(c)=0\\)</span>.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> est tout le temps\npositive, soit elle tout le temps négative, soit elle change (au moins\nun fois) de signe. Dans le premier cas <span\nclass=\"math inline\">\\(f\\)</span> est identiquement nulle par la première\nquestion, dans le second cas c’est pareil (en appliquant la première\nquestion à <span class=\"math inline\">\\(-f\\)</span>). Pour le troisième\ncas le théorème des valeurs intermédiaires affirme qu’il existe <span\nclass=\"math inline\">\\(c\\)</span> tel que <span\nclass=\"math inline\">\\(f(c)=0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "72ae8a48-9e1c-40e7-ace6-3d02a05a021c",
+      "id": "a886c337-ee50-4c8a-a2c1-349233178d94",
       "type": "question",
       "value": {
         "latex": "Application: on suppose\nque $f$ est une fonction continue sur $[0,1]$ telle que $\\int_0^1 f(x) dx=\\frac 12$. \nMontrer qu'il existe $d\\in [0,1]$ tel que $f(d)=d$.",
-        "html": "<p>Application: on suppose que <span class=\"math inline\">\\(f\\)</span> est une fonction continue sur <span class=\"math inline\">\\([0,1]\\)</span> telle que <span class=\"math inline\">\\(\\int_0^1 f(x) dx=\\frac 12\\)</span>. Montrer qu’il existe <span class=\"math inline\">\\(d\\in [0,1]\\)</span> tel que <span class=\"math inline\">\\(f(d)=d\\)</span>.</p>\n"
+        "html": "<p>Application: on suppose que <span class=\"math inline\">\\(f\\)</span>\nest une fonction continue sur <span class=\"math inline\">\\([0,1]\\)</span>\ntelle que <span class=\"math inline\">\\(\\int_0^1 f(x) dx=\\frac\n12\\)</span>. Montrer qu’il existe <span class=\"math inline\">\\(d\\in\n[0,1]\\)</span> tel que <span class=\"math inline\">\\(f(d)=d\\)</span>.</p>\n"
       }
     },
     {
-      "id": "827e558e-ff06-40e4-afc3-329541b40659",
+      "id": "173e1702-18fc-41be-8292-6ed8cc610116",
       "type": "reponse",
       "value": {
         "latex": "Posons $g(x) = f(x)-x$. Alors $\\int_0^1 g(x) dx = \\int_0^1 \\big( f(x) - x \\big)  dx= \\int_0^1 f(x) dx - \\frac 12 = 0$.\nDonc par la question précédente, $g$ étant continue, il existe $d \\in [0,1]$ tel que $g(d)=0$, ce qui est équivalent à $f(d)=d$.",
-        "html": "<p>Posons <span class=\"math inline\">\\(g(x) = f(x)-x\\)</span>. Alors <span class=\"math inline\">\\(\\int_0^1 g(x) dx = \\int_0^1 \\big( f(x) - x \\big)  dx= \\int_0^1 f(x) dx - \\frac 12 = 0\\)</span>. Donc par la question précédente, <span class=\"math inline\">\\(g\\)</span> étant continue, il existe <span class=\"math inline\">\\(d \\in [0,1]\\)</span> tel que <span class=\"math inline\">\\(g(d)=0\\)</span>, ce qui est équivalent à <span class=\"math inline\">\\(f(d)=d\\)</span>.</p>\n"
+        "html": "<p>Posons <span class=\"math inline\">\\(g(x) = f(x)-x\\)</span>. Alors\n<span class=\"math inline\">\\(\\int_0^1 g(x) dx = \\int_0^1 \\big( f(x) - x\n\\big)  dx= \\int_0^1 f(x) dx - \\frac 12 = 0\\)</span>. Donc par la\nquestion précédente, <span class=\"math inline\">\\(g\\)</span> étant\ncontinue, il existe <span class=\"math inline\">\\(d \\in [0,1]\\)</span> tel\nque <span class=\"math inline\">\\(g(d)=0\\)</span>, ce qui est équivalent à\n<span class=\"math inline\">\\(f(d)=d\\)</span>.</p>\n"
       }
     },
     {
-      "id": "b471407a-2cfd-4f20-a381-125bef690654",
+      "id": "18153679-54f1-411e-9cef-00cc3741d8ed",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n  \\item Revenir à la définition de la continuité en $x_0$ en prenant $\\epsilon = \\frac {f(x_0)}{2}$ par exemple.\n  \\item Soit $f$ est tout le temps de même signe (et alors utiliser la première question), soit ce n'est pas le cas (et alors utiliser un théorème classique...).\n  \\item On remarquera que $\\int_0^1 f(x) \\, dx - \\frac 12 = \\int_0^1 (f(x) - x) dx$.\n  \\end{enumerate}",
-        "html": "<ol>\n<li><p>Revenir à la définition de la continuité en <span class=\"math inline\">\\(x_0\\)</span> en prenant <span class=\"math inline\">\\(\\epsilon = \\frac {f(x_0)}{2}\\)</span> par exemple.</p></li>\n<li><p>Soit <span class=\"math inline\">\\(f\\)</span> est tout le temps de même signe (et alors utiliser la première question), soit ce n’est pas le cas (et alors utiliser un théorème classique...).</p></li>\n<li><p>On remarquera que <span class=\"math inline\">\\(\\int_0^1 f(x) \\, dx - \\frac 12 = \\int_0^1 (f(x) - x) dx\\)</span>.</p></li>\n</ol>\n"
+        "html": "<ol>\n<li><p>Revenir à la définition de la continuité en <span\nclass=\"math inline\">\\(x_0\\)</span> en prenant <span\nclass=\"math inline\">\\(\\epsilon = \\frac {f(x_0)}{2}\\)</span> par\nexemple.</p></li>\n<li><p>Soit <span class=\"math inline\">\\(f\\)</span> est tout le temps de\nmême signe (et alors utiliser la première question), soit ce n’est pas\nle cas (et alors utiliser un théorème classique...).</p></li>\n<li><p>On remarquera que <span class=\"math inline\">\\(\\int_0^1 f(x) \\, dx\n- \\frac 12 = \\int_0^1 (f(x) - x) dx\\)</span>.</p></li>\n</ol>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(f:[a,b]\\rightarrow \\R\\)</span> une fonction continue sur <span class=\"math inline\">\\([a,b]\\)</span> (<span class=\" ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(f:[a,b]\\rightarrow \\R\\)</span> une\nfonction continue sur <span class=\"math inline\">\\([a,b]\\)</span> (<span\nclass=\" ..."
 }

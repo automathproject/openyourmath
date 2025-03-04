@@ -12,11 +12,11 @@
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Autre",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:41:31.720Z"
+    "updatedAt": "2025-03-04T15:12:35.202Z"
   },
   "contenu": [
     {
-      "id": "75d44a85-fa3a-46ca-a6c3-46bfe05abd93",
+      "id": "21bcc51a-dd6c-4052-a03a-49a31c76cef2",
       "type": "description",
       "value": {
         "latex": "",
@@ -24,37 +24,37 @@
       }
     },
     {
-      "id": "6116e3df-60bf-4b5a-811c-8fb29cfd68a2",
+      "id": "5f11f136-85c0-4713-8035-75a3bf6d6a85",
       "type": "question",
       "value": {
         "latex": "Soit $f$ une application de classe $C^1$ sur $[0,1]$ telle que $f(1)\\neq0$.\n\nPour $n\\in\\Nn$, on pose $u_n=\\int_{0}^{1}t^nf(t)\\;dt$. Montrer que $\\lim_{n\\rightarrow +\\infty}u_n=0$ puis déterminer un équivalent simple de $u_n$ quand $n$ tend vers $+\\infty$ (étudier $\\lim_{n\\rightarrow +\\infty}nu_n$).",
-        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span> telle que <span class=\"math inline\">\\(f(1)\\neq0\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, on pose <span class=\"math inline\">\\(u_n=\\int_{0}^{1}t^nf(t)\\;dt\\)</span>. Montrer que <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}u_n=0\\)</span> puis déterminer un équivalent simple de <span class=\"math inline\">\\(u_n\\)</span> quand <span class=\"math inline\">\\(n\\)</span> tend vers <span class=\"math inline\">\\(+\\infty\\)</span> (étudier <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}nu_n\\)</span>).</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de classe\n<span class=\"math inline\">\\(C^1\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span> telle que <span\nclass=\"math inline\">\\(f(1)\\neq0\\)</span>.</p>\n<p>Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, on pose <span\nclass=\"math inline\">\\(u_n=\\int_{0}^{1}t^nf(t)\\;dt\\)</span>. Montrer que\n<span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}u_n=0\\)</span>\npuis déterminer un équivalent simple de <span\nclass=\"math inline\">\\(u_n\\)</span> quand <span\nclass=\"math inline\">\\(n\\)</span> tend vers <span\nclass=\"math inline\">\\(+\\infty\\)</span> (étudier <span\nclass=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}nu_n\\)</span>).</p>\n"
       }
     },
     {
-      "id": "e83aeb0d-10db-42d3-bc5c-7f06d3a5f219",
+      "id": "066041e6-a828-4c7b-85a4-072053a72d9b",
       "type": "reponse",
       "value": {
         "latex": "$f$ est continue sur le segment $[0,1]$ et est donc bornée sur ce segment. Soit $M$ un majorant de $|f|$ sur $[0,1]$. Pour $n\\in\\Nn$,\n\n$$|u_n|\\leq\\int_{0}^{1}t^n|f(t)|\\;dt\\leq M\\int_{0}^{1}t^n\\;dt=\\frac{M}{n+1},$$\n\net comme $\\lim_{n\\rightarrow +\\infty}\\frac{M}{n+1}=0$, on a montré que $\\lim_{n\\rightarrow +\\infty}u_n=0$.\n\nSoit $n\\in\\Nn$. Puisque $f$ est de classe $C^1$ sur $[0,1]$, on peut effectuer une intégration par parties qui fournit\n\n$$u_n=\\left[\\frac{t^{n+1}}{n+1}f(t)\\right]_{0}^{1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f'(t)\\;dt=\\frac{f(1)}{n+1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f'(t)\\;dt.$$\n\nPuisque $f'$ est continue sur $[0,1]$, $\\lim_{n\\rightarrow +\\infty}\\int_{0}^{1}t^{n+1}f'(t)\\;dt=0$ ou encore $-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f'(t)\\;dt=o(\\frac{1}{n})$. D'autre part, puisque $f(1)\\neq0$, $\\frac{f(1)}{n+1}\\sim\\frac{f(1)}{n}$ ou encore $\\frac{f(1)}{n+1}=\\frac{f(1)}{n}+o(\\frac{1}{n})$. Finalement, $u_n=\\frac{f(1)}{n}+o(\\frac{1}{n})$, ou encore\n\n$$u_n\\sim\\frac{f(1)}{n}.$$",
-        "html": "<p><span class=\"math inline\">\\(f\\)</span> est continue sur le segment <span class=\"math inline\">\\([0,1]\\)</span> et est donc bornée sur ce segment. Soit <span class=\"math inline\">\\(M\\)</span> un majorant de <span class=\"math inline\">\\(|f|\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>,</p>\n<p><span class=\"math display\">\\[|u_n|\\leq\\int_{0}^{1}t^n|f(t)|\\;dt\\leq M\\int_{0}^{1}t^n\\;dt=\\frac{M}{n+1},\\]</span></p>\n<p>et comme <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}\\frac{M}{n+1}=0\\)</span>, on a montré que <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}u_n=0\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. Puisque <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span>, on peut effectuer une intégration par parties qui fournit</p>\n<p><span class=\"math display\">\\[u_n=\\left[\\frac{t^{n+1}}{n+1}f(t)\\right]_{0}^{1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=\\frac{f(1)}{n+1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt.\\]</span></p>\n<p>Puisque <span class=\"math inline\">\\(f&#39;\\)</span> est continue sur <span class=\"math inline\">\\([0,1]\\)</span>, <span class=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=0\\)</span> ou encore <span class=\"math inline\">\\(-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=o(\\frac{1}{n})\\)</span>. D’autre part, puisque <span class=\"math inline\">\\(f(1)\\neq0\\)</span>, <span class=\"math inline\">\\(\\frac{f(1)}{n+1}\\sim\\frac{f(1)}{n}\\)</span> ou encore <span class=\"math inline\">\\(\\frac{f(1)}{n+1}=\\frac{f(1)}{n}+o(\\frac{1}{n})\\)</span>. Finalement, <span class=\"math inline\">\\(u_n=\\frac{f(1)}{n}+o(\\frac{1}{n})\\)</span>, ou encore</p>\n<p><span class=\"math display\">\\[u_n\\sim\\frac{f(1)}{n}.\\]</span></p>\n"
+        "html": "<p><span class=\"math inline\">\\(f\\)</span> est continue sur le segment\n<span class=\"math inline\">\\([0,1]\\)</span> et est donc bornée sur ce\nsegment. Soit <span class=\"math inline\">\\(M\\)</span> un majorant de\n<span class=\"math inline\">\\(|f|\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span>. Pour <span\nclass=\"math inline\">\\(n\\in\\Nn\\)</span>,</p>\n<p><span class=\"math display\">\\[|u_n|\\leq\\int_{0}^{1}t^n|f(t)|\\;dt\\leq\nM\\int_{0}^{1}t^n\\;dt=\\frac{M}{n+1},\\]</span></p>\n<p>et comme <span class=\"math inline\">\\(\\lim_{n\\rightarrow\n+\\infty}\\frac{M}{n+1}=0\\)</span>, on a montré que <span\nclass=\"math inline\">\\(\\lim_{n\\rightarrow +\\infty}u_n=0\\)</span>.</p>\n<p>Soit <span class=\"math inline\">\\(n\\in\\Nn\\)</span>. Puisque <span\nclass=\"math inline\">\\(f\\)</span> est de classe <span\nclass=\"math inline\">\\(C^1\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span>, on peut effectuer une intégration\npar parties qui fournit</p>\n<p><span\nclass=\"math display\">\\[u_n=\\left[\\frac{t^{n+1}}{n+1}f(t)\\right]_{0}^{1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=\\frac{f(1)}{n+1}-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt.\\]</span></p>\n<p>Puisque <span class=\"math inline\">\\(f&#39;\\)</span> est continue sur\n<span class=\"math inline\">\\([0,1]\\)</span>, <span\nclass=\"math inline\">\\(\\lim_{n\\rightarrow\n+\\infty}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=0\\)</span> ou encore <span\nclass=\"math inline\">\\(-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt=o(\\frac{1}{n})\\)</span>.\nD’autre part, puisque <span class=\"math inline\">\\(f(1)\\neq0\\)</span>,\n<span class=\"math inline\">\\(\\frac{f(1)}{n+1}\\sim\\frac{f(1)}{n}\\)</span>\nou encore <span\nclass=\"math inline\">\\(\\frac{f(1)}{n+1}=\\frac{f(1)}{n}+o(\\frac{1}{n})\\)</span>.\nFinalement, <span\nclass=\"math inline\">\\(u_n=\\frac{f(1)}{n}+o(\\frac{1}{n})\\)</span>, ou\nencore</p>\n<p><span class=\"math display\">\\[u_n\\sim\\frac{f(1)}{n}.\\]</span></p>\n"
       }
     },
     {
-      "id": "6e81983e-ac1c-4d19-8157-165776c8f7a7",
+      "id": "ec1c3e94-7a2f-47d0-bb95-c53ff205b341",
       "type": "question",
       "value": {
         "latex": "Mêmes questions en supposant que $f$ est de classe $C^2$ sur $[0,1]$ et que $f(1)=0$ et $f'(1)\\neq0$.",
-        "html": "<p>Mêmes questions en supposant que <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^2\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span> et que <span class=\"math inline\">\\(f(1)=0\\)</span> et <span class=\"math inline\">\\(f&#39;(1)\\neq0\\)</span>.</p>\n"
+        "html": "<p>Mêmes questions en supposant que <span\nclass=\"math inline\">\\(f\\)</span> est de classe <span\nclass=\"math inline\">\\(C^2\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span> et que <span\nclass=\"math inline\">\\(f(1)=0\\)</span> et <span\nclass=\"math inline\">\\(f&#39;(1)\\neq0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "299faf76-42d4-4d58-9cb7-88bdb5dd3862",
+      "id": "266344fc-4271-494d-a958-ec839b4a44b2",
       "type": "reponse",
       "value": {
         "latex": "Puisque $f$ est de classe $C^1$ sur $[0,1]$ et que $f(1)=0$, une intégration par parties fournit\n\n$u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f'(t)\\;dt$. Puisque $f'$ est de classe $C^1$ sur $[0,1]$ et que $f'(1)\\neq0$, le 1) appliqué à $f'$ fournit\n\n$$u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f'(t)\\;dt\\sim-\\frac{1}{n}\\frac{f'(1)}{n}=-\\frac{f'(1)}{n^2}.$$\n\nPar exemple, $\\int_{0}^{1}t^n\\sin\\frac{\\pi t}{2}\\;dt\\sim\\frac{1}{n}$ et $\\int_{0}^{1}t^n\\cos\\frac{\\pi t}{2}\\;dt\\sim\\frac{\\pi}{2n^2}$",
-        "html": "<p>Puisque <span class=\"math inline\">\\(f\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span> et que <span class=\"math inline\">\\(f(1)=0\\)</span>, une intégration par parties fournit</p>\n<p><span class=\"math inline\">\\(u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt\\)</span>. Puisque <span class=\"math inline\">\\(f&#39;\\)</span> est de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\">\\([0,1]\\)</span> et que <span class=\"math inline\">\\(f&#39;(1)\\neq0\\)</span>, le 1) appliqué à <span class=\"math inline\">\\(f&#39;\\)</span> fournit</p>\n<p><span class=\"math display\">\\[u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt\\sim-\\frac{1}{n}\\frac{f&#39;(1)}{n}=-\\frac{f&#39;(1)}{n^2}.\\]</span></p>\n<p>Par exemple, <span class=\"math inline\">\\(\\int_{0}^{1}t^n\\sin\\frac{\\pi t}{2}\\;dt\\sim\\frac{1}{n}\\)</span> et <span class=\"math inline\">\\(\\int_{0}^{1}t^n\\cos\\frac{\\pi t}{2}\\;dt\\sim\\frac{\\pi}{2n^2}\\)</span></p>\n"
+        "html": "<p>Puisque <span class=\"math inline\">\\(f\\)</span> est de classe <span\nclass=\"math inline\">\\(C^1\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span> et que <span\nclass=\"math inline\">\\(f(1)=0\\)</span>, une intégration par parties\nfournit</p>\n<p><span\nclass=\"math inline\">\\(u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt\\)</span>.\nPuisque <span class=\"math inline\">\\(f&#39;\\)</span> est de classe <span\nclass=\"math inline\">\\(C^1\\)</span> sur <span\nclass=\"math inline\">\\([0,1]\\)</span> et que <span\nclass=\"math inline\">\\(f&#39;(1)\\neq0\\)</span>, le 1) appliqué à <span\nclass=\"math inline\">\\(f&#39;\\)</span> fournit</p>\n<p><span\nclass=\"math display\">\\[u_n=-\\frac{1}{n+1}\\int_{0}^{1}t^{n+1}f&#39;(t)\\;dt\\sim-\\frac{1}{n}\\frac{f&#39;(1)}{n}=-\\frac{f&#39;(1)}{n^2}.\\]</span></p>\n<p>Par exemple, <span class=\"math inline\">\\(\\int_{0}^{1}t^n\\sin\\frac{\\pi\nt}{2}\\;dt\\sim\\frac{1}{n}\\)</span> et <span\nclass=\"math inline\">\\(\\int_{0}^{1}t^n\\cos\\frac{\\pi\nt}{2}\\;dt\\sim\\frac{\\pi}{2n^2}\\)</span></p>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de classe <span class=\"math inline\">\\(C^1\\)</span> sur <span class=\"math inline\"> ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(f\\)</span> une application de classe\n<span class=\"math inline\">\\(C^1\\)</span> sur <span\nclass=\"math inline\"> ..."
 }

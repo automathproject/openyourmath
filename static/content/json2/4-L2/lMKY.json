@@ -12,19 +12,19 @@
     "chapitre": "Espace euclidien, espace normé",
     "sousChapitre": "Orthonormalisation",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:43:57.353Z"
+    "updatedAt": "2025-03-04T15:16:21.921Z"
   },
   "contenu": [
     {
-      "id": "59acb980-799f-46a6-b522-46afc5b5b369",
+      "id": "d2e0fdeb-a7d9-44fb-9158-5e0a3904f169",
       "type": "description",
       "value": {
         "latex": "Soit $E =\\Rr[X]$. On munit $E$ du produit scalaire $P|Q =\\int_{-1}^{1}P(t)Q(t)\\;dt$.",
-        "html": "<p>Soit <span class=\"math inline\">\\(E =\\Rr[X]\\)</span>. On munit <span class=\"math inline\">\\(E\\)</span> du produit scalaire <span class=\"math inline\">\\(P|Q =\\int_{-1}^{1}P(t)Q(t)\\;dt\\)</span>.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(E =\\Rr[X]\\)</span>. On munit <span\nclass=\"math inline\">\\(E\\)</span> du produit scalaire <span\nclass=\"math inline\">\\(P|Q =\\int_{-1}^{1}P(t)Q(t)\\;dt\\)</span>.</p>\n"
       }
     },
     {
-      "id": "b7a234fb-04b6-4b28-b8c9-a551571ee8f4",
+      "id": "b4880d42-efa9-4b8f-bc5d-1572dea9735c",
       "type": "question",
       "value": {
         "latex": "Pour $n\\in\\Nn$, on pose $L_n=\\left((X^2-1)^n\\right)^{(n)}$.\n   \\begin{enumerate}",
@@ -32,7 +32,7 @@
       }
     },
     {
-      "id": "642d6911-ff2f-4127-b46b-db85d37c57dc",
+      "id": "a6980e36-9b0d-41e2-8307-0d522cb97e39",
       "type": "reponse",
       "value": {
         "latex": "\\begin{enumerate}",
@@ -40,37 +40,37 @@
       }
     },
     {
-      "id": "cc1cd083-9507-4df1-b92e-071182584d42",
+      "id": "9d2d6398-d5f6-41f0-b32b-dd1fef303344",
       "type": "question",
       "value": {
         "latex": "Montrer que la famille $(L_n)_{n\\in\\Nn}$ est une base orthogonale de l'espace préhilbertien $(E,\\;|\\;)$.",
-        "html": "<p>Montrer que la famille <span class=\"math inline\">\\((L_n)_{n\\in\\Nn}\\)</span> est une base orthogonale de l’espace préhilbertien <span class=\"math inline\">\\((E,\\;|\\;)\\)</span>.</p>\n"
+        "html": "<p>Montrer que la famille <span\nclass=\"math inline\">\\((L_n)_{n\\in\\Nn}\\)</span> est une base orthogonale\nde l’espace préhilbertien <span\nclass=\"math inline\">\\((E,\\;|\\;)\\)</span>.</p>\n"
       }
     },
     {
-      "id": "2cdcb113-784b-4456-9597-3f9eaa11f6f4",
+      "id": "f315c230-67c5-455e-908b-66f0281d3ed0",
       "type": "reponse",
       "value": {
         "latex": "Soient $n\\in\\Nn^*$ et $P\\in E$. Une intégration par parties fournit\n\n\\begin{center}\n$\\left(L_n|P\\right)=\\int_{-1}^{1}L_n(x)P(x)\\;dx =\\int_{-1}^{1}(\\ell_n)^{(n)}(x) P(x)\\;dx =\\left[(\\ell_n)^{(n-1)}(x) P(x)\\right]_{-1}^1-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x) P'(x)\\;dx$.\n\\end{center}\n\nMaintenant, $-1$ et $1$ sont racines d'ordre $n$ du polynôme $\\ell_n$ et donc, pour tout $k\\in\\llbracket0,n\\rrbracket$, $-1$ et $1$ sont racines d'ordre $n-k$ de $\\ell_n^{(k)}$ et en particulier racines de $(\\ell_n)^{(k}$ pour $k\\in\\llbracket0,n-1\\rrbracket$. Donc\n\n\\begin{center}\n$\\left(L_n|P\\right)=-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x) P'(x)\\;dx$.\n\\end{center}\n\nPlus généralement, si pour un entier $k\\in\\llbracket0,n-1\\rrbracket$, $\\left(L_n|P\\right)= (-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x) P^{(k)}(x)\\;dx$ alors\n\n$$\\begin{align*}\\ensuremath\n\\left(L_n|P\\right)&= (-1)^{k}\\left(\\left[(\\ell_n^{n-k-1}(x)P^{(k)}(x)\\right]_{-1}^{1}-\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x)P^{(k+1)}(x)\\;dx\\right)\\\\\n &=(-1)^{k+1}\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x) P^{(k+1)}(x)\\;dx.\n\\end{align*}$$\n\nOn a montré par récurrence que pour tout entier $k\\in\\llbracket0,n\\rrbracket$, \n$\\left(L_n|P\\right)=(-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x) P^{(k)}(x)\\;dx$. En particulier \n\n\\begin{center}\n$\\left(L_n|P\\right)=(-1)^{n}\\int_{-1}^{1}\\ell_n(x)P^{(n)}(x)\\;dx=\\int_{-1}^{1}(1-x^2)^nP^{(n)}(x)\\;dx$/quad$(*)$.\n\\end{center}\n\nCette dernière égalité reste vraie pour $n=0$ et on a montré que\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn$, $\\forall P\\in\\Rr[X]$, $\\left(L_n|P\\right)=\\int_{-1}^{1}\\left(1-x^2\\right)^nP^{(n)}(x)\\;dx$.\n}\n\\end{center}\n\nSoient alors $n$ et $p$ deux entiers naturels tels que $0\\leqslant p<n$. Puisque $\\text{deg}(L_p)=p<n$, on a $\\left(L_n|L_p\\right)=0$. On a montré que\n\n\\begin{center}\n\\shadowbox{\nLa famille $(L_k)_{0\\leqslant k\\leqslant n}$ est une base orthogonale de l'espace $(\\Rr[X],\\;|\\;)$.\n}\n\\end{center}",
-        "html": "<p>Soient <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span> et <span class=\"math inline\">\\(P\\in E\\)</span>. Une intégration par parties fournit</p>\n<p><span class=\"math inline\">\\(\\left(L_n|P\\right)=\\int_{-1}^{1}L_n(x)P(x)\\;dx =\\int_{-1}^{1}(\\ell_n)^{(n)}(x) P(x)\\;dx =\\left[(\\ell_n)^{(n-1)}(x) P(x)\\right]_{-1}^1-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x) P&#39;(x)\\;dx\\)</span>.</p>\n<p>Maintenant, <span class=\"math inline\">\\(-1\\)</span> et <span class=\"math inline\">\\(1\\)</span> sont racines d’ordre <span class=\"math inline\">\\(n\\)</span> du polynôme <span class=\"math inline\">\\(\\ell_n\\)</span> et donc, pour tout <span class=\"math inline\">\\(k\\in\\llbracket0,n\\rrbracket\\)</span>, <span class=\"math inline\">\\(-1\\)</span> et <span class=\"math inline\">\\(1\\)</span> sont racines d’ordre <span class=\"math inline\">\\(n-k\\)</span> de <span class=\"math inline\">\\(\\ell_n^{(k)}\\)</span> et en particulier racines de <span class=\"math inline\">\\((\\ell_n)^{(k}\\)</span> pour <span class=\"math inline\">\\(k\\in\\llbracket0,n-1\\rrbracket\\)</span>. Donc</p>\n<p><span class=\"math inline\">\\(\\left(L_n|P\\right)=-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x) P&#39;(x)\\;dx\\)</span>.</p>\n<p>Plus généralement, si pour un entier <span class=\"math inline\">\\(k\\in\\llbracket0,n-1\\rrbracket\\)</span>, <span class=\"math inline\">\\(\\left(L_n|P\\right)= (-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x) P^{(k)}(x)\\;dx\\)</span> alors</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\left(L_n|P\\right)&amp;= (-1)^{k}\\left(\\left[(\\ell_n^{n-k-1}(x)P^{(k)}(x)\\right]_{-1}^{1}-\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x)P^{(k+1)}(x)\\;dx\\right)\\\\\n &amp;=(-1)^{k+1}\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x) P^{(k+1)}(x)\\;dx.\n\\end{align*}\\]</span></p>\n<p>On a montré par récurrence que pour tout entier <span class=\"math inline\">\\(k\\in\\llbracket0,n\\rrbracket\\)</span>, <span class=\"math inline\">\\(\\left(L_n|P\\right)=(-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x) P^{(k)}(x)\\;dx\\)</span>. En particulier</p>\n<p><span class=\"math inline\">\\(\\left(L_n|P\\right)=(-1)^{n}\\int_{-1}^{1}\\ell_n(x)P^{(n)}(x)\\;dx=\\int_{-1}^{1}(1-x^2)^nP^{(n)}(x)\\;dx\\)</span>/quad<span class=\"math inline\">\\((*)\\)</span>.</p>\n<p>Cette dernière égalité reste vraie pour <span class=\"math inline\">\\(n=0\\)</span> et on a montré que</p>\n<p>Soient alors <span class=\"math inline\">\\(n\\)</span> et <span class=\"math inline\">\\(p\\)</span> deux entiers naturels tels que <span class=\"math inline\">\\(0\\leqslant p&lt;n\\)</span>. Puisque <span class=\"math inline\">\\(\\text{deg}(L_p)=p&lt;n\\)</span>, on a <span class=\"math inline\">\\(\\left(L_n|L_p\\right)=0\\)</span>. On a montré que</p>\n"
+        "html": "<p>Soient <span class=\"math inline\">\\(n\\in\\Nn^*\\)</span> et <span\nclass=\"math inline\">\\(P\\in E\\)</span>. Une intégration par parties\nfournit</p>\n<div class=\"center\">\n<p><span\nclass=\"math inline\">\\(\\left(L_n|P\\right)=\\int_{-1}^{1}L_n(x)P(x)\\;dx\n=\\int_{-1}^{1}(\\ell_n)^{(n)}(x) P(x)\\;dx =\\left[(\\ell_n)^{(n-1)}(x)\nP(x)\\right]_{-1}^1-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x)\nP&#39;(x)\\;dx\\)</span>.</p>\n</div>\n<p>Maintenant, <span class=\"math inline\">\\(-1\\)</span> et <span\nclass=\"math inline\">\\(1\\)</span> sont racines d’ordre <span\nclass=\"math inline\">\\(n\\)</span> du polynôme <span\nclass=\"math inline\">\\(\\ell_n\\)</span> et donc, pour tout <span\nclass=\"math inline\">\\(k\\in\\llbracket0,n\\rrbracket\\)</span>, <span\nclass=\"math inline\">\\(-1\\)</span> et <span\nclass=\"math inline\">\\(1\\)</span> sont racines d’ordre <span\nclass=\"math inline\">\\(n-k\\)</span> de <span\nclass=\"math inline\">\\(\\ell_n^{(k)}\\)</span> et en particulier racines de\n<span class=\"math inline\">\\((\\ell_n)^{(k}\\)</span> pour <span\nclass=\"math inline\">\\(k\\in\\llbracket0,n-1\\rrbracket\\)</span>. Donc</p>\n<div class=\"center\">\n<p><span\nclass=\"math inline\">\\(\\left(L_n|P\\right)=-\\int_{-1}^{1}(\\ell_n)^{(n-1)}(x)\nP&#39;(x)\\;dx\\)</span>.</p>\n</div>\n<p>Plus généralement, si pour un entier <span\nclass=\"math inline\">\\(k\\in\\llbracket0,n-1\\rrbracket\\)</span>, <span\nclass=\"math inline\">\\(\\left(L_n|P\\right)=\n(-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x) P^{(k)}(x)\\;dx\\)</span>\nalors</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\left(L_n|P\\right)&amp;=\n(-1)^{k}\\left(\\left[(\\ell_n^{n-k-1}(x)P^{(k)}(x)\\right]_{-1}^{1}-\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x)P^{(k+1)}(x)\\;dx\\right)\\\\\n&amp;=(-1)^{k+1}\\int_{-1}^{1}(\\ell_n)^{(n-k-1)}(x) P^{(k+1)}(x)\\;dx.\n\\end{align*}\\]</span></p>\n<p>On a montré par récurrence que pour tout entier <span\nclass=\"math inline\">\\(k\\in\\llbracket0,n\\rrbracket\\)</span>, <span\nclass=\"math inline\">\\(\\left(L_n|P\\right)=(-1)^{k}\\int_{-1}^{1}(\\ell_n)^{(n-k)}(x)\nP^{(k)}(x)\\;dx\\)</span>. En particulier</p>\n<div class=\"center\">\n<p><span\nclass=\"math inline\">\\(\\left(L_n|P\\right)=(-1)^{n}\\int_{-1}^{1}\\ell_n(x)P^{(n)}(x)\\;dx=\\int_{-1}^{1}(1-x^2)^nP^{(n)}(x)\\;dx\\)</span>/quad<span\nclass=\"math inline\">\\((*)\\)</span>.</p>\n</div>\n<p>Cette dernière égalité reste vraie pour <span\nclass=\"math inline\">\\(n=0\\)</span> et on a montré que</p>\n<div class=\"center\">\n\n</div>\n<p>Soient alors <span class=\"math inline\">\\(n\\)</span> et <span\nclass=\"math inline\">\\(p\\)</span> deux entiers naturels tels que <span\nclass=\"math inline\">\\(0\\leqslant p&lt;n\\)</span>. Puisque <span\nclass=\"math inline\">\\(\\text{deg}(L_p)=p&lt;n\\)</span>, on a <span\nclass=\"math inline\">\\(\\left(L_n|L_p\\right)=0\\)</span>. On a montré\nque</p>\n<div class=\"center\">\n\n</div>\n"
       }
     },
     {
-      "id": "2168108e-270b-48f3-8d3a-32a0b603c07f",
+      "id": "fd4aae54-0b0a-4ab9-856e-e3a63027b947",
       "type": "question",
       "value": {
         "latex": "Déterminer $\\|L_n\\|$ pour $n\\in\\Nn$.",
-        "html": "<p>Déterminer <span class=\"math inline\">\\(\\|L_n\\|\\)</span> pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>.</p>\n"
+        "html": "<p>Déterminer <span class=\"math inline\">\\(\\|L_n\\|\\)</span> pour <span\nclass=\"math inline\">\\(n\\in\\Nn\\)</span>.</p>\n"
       }
     },
     {
-      "id": "04f07064-6303-49dc-b24a-7184d5a36fa8",
+      "id": "de2c7872-e761-4a42-8235-b4d548a21902",
       "type": "reponse",
       "value": {
         "latex": "On applique maintenant la formule $(*)$ dans le cas particulier $P =L_n$. On obtient \n\n$$\\begin{align*}\\ensuremath\n\\|L_n\\|^2&=\\int_{-1}^{1}\\left(1-x^2\\right)^nL_n^{(n)}(x)\\;dx=2\\times(2n)!\\int_{0}^{1}(1-x^2)^n\\;dx=2\\times(2n)!\\int_{\\pi/2}^{0}(1-\\cos^2t)^n(-\\sin t)\\;dt\\\\\n &=2\\times(2n)!\\int_{0}^{\\pi/2}\\sin^{2n+1}t\\;dt=2\\times(2n)!W_{2n+1}\\;(\\text{intégrales de \\textsc{Wallis}}).\n\\end{align*}$$\n\nOn \\og sait \\fg que  $\\forall n\\in\\Nn$, $W_{2n+1}=\\frac{2n}{2n+1}W_{2n-1}=\\frac{(2n)\\times(2n-2)\\times\\ldots\\times2}{(2n+1)\\times(2n-1)\\times\\ldots\\times3}W_1 =\\frac{2^{2n}n!^2}{(2n+1)!}$. On obtient alors \n\n\\begin{center}\n$\\|L_n\\|^2=\\frac{2^{2n}n!^2}{(2n+1)!}\\times2\\times(2n)!=\\frac{2^{2n+1}n!^2}{2n+1}$,\n\\end{center}\n\n\\begin{center}\n\\shadowbox{\n$\\forall n\\in\\Nn$, $\\|L_n\\|=\\sqrt{\\frac{2}{2n+1}}\\frac{2^nn!}{2n+1}$.\n}\n\\end{center}\n\nOn en déduit que la famille $\\left(\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}L_n\\right)_{n\\in\\Nn}$ est une base orthonormale de $(\\Rr[X],\\;|\\;)$. Pour $n\\in\\Nn$, on pose $P_n=\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}\\left((X^2-1)^n\\right)^{(n)}$.",
-        "html": "<p>On applique maintenant la formule <span class=\"math inline\">\\((*)\\)</span> dans le cas particulier <span class=\"math inline\">\\(P =L_n\\)</span>. On obtient</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\|L_n\\|^2&amp;=\\int_{-1}^{1}\\left(1-x^2\\right)^nL_n^{(n)}(x)\\;dx=2\\times(2n)!\\int_{0}^{1}(1-x^2)^n\\;dx=2\\times(2n)!\\int_{\\pi/2}^{0}(1-\\cos^2t)^n(-\\sin t)\\;dt\\\\\n &amp;=2\\times(2n)!\\int_{0}^{\\pi/2}\\sin^{2n+1}t\\;dt=2\\times(2n)!W_{2n+1}\\;(\\text{intégrales de \\textsc{Wallis}}).\n\\end{align*}\\]</span></p>\n<p>On sait que <span class=\"math inline\">\\(\\forall n\\in\\Nn\\)</span>, <span class=\"math inline\">\\(W_{2n+1}=\\frac{2n}{2n+1}W_{2n-1}=\\frac{(2n)\\times(2n-2)\\times\\ldots\\times2}{(2n+1)\\times(2n-1)\\times\\ldots\\times3}W_1 =\\frac{2^{2n}n!^2}{(2n+1)!}\\)</span>. On obtient alors</p>\n<p><span class=\"math inline\">\\(\\|L_n\\|^2=\\frac{2^{2n}n!^2}{(2n+1)!}\\times2\\times(2n)!=\\frac{2^{2n+1}n!^2}{2n+1}\\)</span>,</p>\n<p>On en déduit que la famille <span class=\"math inline\">\\(\\left(\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}L_n\\right)_{n\\in\\Nn}\\)</span> est une base orthonormale de <span class=\"math inline\">\\((\\Rr[X],\\;|\\;)\\)</span>. Pour <span class=\"math inline\">\\(n\\in\\Nn\\)</span>, on pose <span class=\"math inline\">\\(P_n=\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}\\left((X^2-1)^n\\right)^{(n)}\\)</span>.</p>\n"
+        "html": "<p>On applique maintenant la formule <span\nclass=\"math inline\">\\((*)\\)</span> dans le cas particulier <span\nclass=\"math inline\">\\(P =L_n\\)</span>. On obtient</p>\n<p><span class=\"math display\">\\[\\begin{align*}\\ensuremath\n\\|L_n\\|^2&amp;=\\int_{-1}^{1}\\left(1-x^2\\right)^nL_n^{(n)}(x)\\;dx=2\\times(2n)!\\int_{0}^{1}(1-x^2)^n\\;dx=2\\times(2n)!\\int_{\\pi/2}^{0}(1-\\cos^2t)^n(-\\sin\nt)\\;dt\\\\\n&amp;=2\\times(2n)!\\int_{0}^{\\pi/2}\\sin^{2n+1}t\\;dt=2\\times(2n)!W_{2n+1}\\;(\\text{intégrales\nde \\textsc{Wallis}}).\n\\end{align*}\\]</span></p>\n<p>On sait que <span class=\"math inline\">\\(\\forall n\\in\\Nn\\)</span>,\n<span\nclass=\"math inline\">\\(W_{2n+1}=\\frac{2n}{2n+1}W_{2n-1}=\\frac{(2n)\\times(2n-2)\\times\\ldots\\times2}{(2n+1)\\times(2n-1)\\times\\ldots\\times3}W_1\n=\\frac{2^{2n}n!^2}{(2n+1)!}\\)</span>. On obtient alors</p>\n<div class=\"center\">\n<p><span\nclass=\"math inline\">\\(\\|L_n\\|^2=\\frac{2^{2n}n!^2}{(2n+1)!}\\times2\\times(2n)!=\\frac{2^{2n+1}n!^2}{2n+1}\\)</span>,</p>\n</div>\n<div class=\"center\">\n\n</div>\n<p>On en déduit que la famille <span\nclass=\"math inline\">\\(\\left(\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}L_n\\right)_{n\\in\\Nn}\\)</span>\nest une base orthonormale de <span\nclass=\"math inline\">\\((\\Rr[X],\\;|\\;)\\)</span>. Pour <span\nclass=\"math inline\">\\(n\\in\\Nn\\)</span>, on pose <span\nclass=\"math inline\">\\(P_n=\\sqrt{\\frac{2n+1}{2}}\\frac{1}{2^nn!}\\left((X^2-1)^n\\right)^{(n)}\\)</span>.</p>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(E =\\Rr[X]\\)</span>. On munit <span class=\"math inline\">\\(E\\)</span> du produit scalaire <span class=\"math inline\"> ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(E =\\Rr[X]\\)</span>. On munit <span\nclass=\"math inline\">\\(E\\)</span> du produit scalaire <span\nclass=\"math inline\"> ..."
 }

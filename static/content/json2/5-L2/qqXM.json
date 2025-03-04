@@ -12,49 +12,49 @@
     "chapitre": "Série de Fourier",
     "sousChapitre": "Formule de Parseval",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:45:28.696Z"
+    "updatedAt": "2025-03-04T15:19:20.902Z"
   },
   "contenu": [
     {
-      "id": "840a32fc-b687-4c94-8fe0-d5c3fc309257",
+      "id": "ff938159-d0ec-4690-8c41-a8f0a1dddc7d",
       "type": "description",
       "value": {
         "latex": "Soit $f: {[0,1]} \\to \\R$ de classe $\\mathcal{C}^2$ telle que $f(0)=f(1)=0$.",
-        "html": "<p>Soit <span class=\"math inline\">\\(f: {[0,1]} \\to \\R\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> telle que <span class=\"math inline\">\\(f(0)=f(1)=0\\)</span>.</p>\n"
+        "html": "<p>Soit <span class=\"math inline\">\\(f: {[0,1]} \\to \\R\\)</span> de classe\n<span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> telle que <span\nclass=\"math inline\">\\(f(0)=f(1)=0\\)</span>.</p>\n"
       }
     },
     {
-      "id": "0a7d6028-751b-4412-988b-e834139307a7",
+      "id": "29bf7fe6-3330-4b8f-93e5-e061a2040577",
       "type": "question",
       "value": {
         "latex": "Montrer que l'on peut prolonger $f$ en une fonction impaire et $2$-périodique.",
-        "html": "<p>Montrer que l’on peut prolonger <span class=\"math inline\">\\(f\\)</span> en une fonction impaire et <span class=\"math inline\">\\(2\\)</span>-périodique.</p>\n"
+        "html": "<p>Montrer que l’on peut prolonger <span\nclass=\"math inline\">\\(f\\)</span> en une fonction impaire et <span\nclass=\"math inline\">\\(2\\)</span>-périodique.</p>\n"
       }
     },
     {
-      "id": "adfbe395-327d-46b9-9ebd-6b05faebe41c",
+      "id": "e4453100-1fde-4f7b-8ddd-ac915105e427",
       "type": "reponse",
       "value": {
         "latex": "Immédiat. La fonction prolongée est $\\mathcal{C}^1$ sur~$\\R$ et $\\mathcal{C}^2$ par morceaux.",
-        "html": "<p>Immédiat. La fonction prolongée est <span class=\"math inline\">\\(\\mathcal{C}^1\\)</span> sur <span class=\"math inline\">\\(\\R\\)</span> et <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> par morceaux.</p>\n"
+        "html": "<p>Immédiat. La fonction prolongée est <span\nclass=\"math inline\">\\(\\mathcal{C}^1\\)</span> sur <span\nclass=\"math inline\">\\(\\R\\)</span> et <span\nclass=\"math inline\">\\(\\mathcal{C}^2\\)</span> par morceaux.</p>\n"
       }
     },
     {
-      "id": "b09e952d-8193-45de-b356-c0f89cb8e75f",
+      "id": "26edb054-5eff-4e8f-8bd8-ec3807a54510",
       "type": "question",
       "value": {
         "latex": "En déduire l'existence de $c>0$ indépendant de $f$ tel que $\\|f\\|_{\\infty}\\le c\\|f''\\|_2$.",
-        "html": "<p>En déduire l’existence de <span class=\"math inline\">\\(c&gt;0\\)</span> indépendant de <span class=\"math inline\">\\(f\\)</span> tel que <span class=\"math inline\">\\(\\|f\\|_{\\infty}\\le c\\|f&#39;&#39;\\|_2\\)</span>.</p>\n"
+        "html": "<p>En déduire l’existence de <span class=\"math inline\">\\(c&gt;0\\)</span>\nindépendant de <span class=\"math inline\">\\(f\\)</span> tel que <span\nclass=\"math inline\">\\(\\|f\\|_{\\infty}\\le c\\|f&#39;&#39;\\|_2\\)</span>.</p>\n"
       }
     },
     {
-      "id": "a13531a4-cf27-4ea6-9c57-106d48f5e47a",
+      "id": "aee844e1-98fa-4578-935f-398efb192f8a",
       "type": "reponse",
       "value": {
         "latex": "On décompose $f$ en série de Fourier~:\n    $f(x) = - \\sum_{n=1}^\\infty \\frac{c_n}{n^2\\pi^2}\\sin(n\\pi x)$ avec\n    $c_n = 2 \\int_{u=0}^1 f''(u)\\sin(n\\pi u)\\,d u$.\n    En appliquant l'inégalité de Cauchy-Schwarz on obtient~:\n    $\\|f\\|_\\infty^2\\le\\Bigl(\\sum_{n=1}^\\infty\\frac1{n^4\\pi^4}\\Bigr)\\Bigr(\\sum_{n=1}^\\infty c_n^2\\Bigr)\n    = \\frac{2\\zeta(4)}{\\pi^4}\\|f''\\|_2^2 = \\frac{\\|f''\\|_2^2}{45}$.\n    \n    Autre démonstration sans utiliser les séries de Fourier~: pour $x\\in{[0,1]}$\n    on a\n    $$\\begin{align*}\n    f(x) &{}=  \\int_{t=0}^x f'(t)\\,d t = xf'(x) - \\int_{t=0}^xtf'(t)\\,d t\\cr\n    f(x) &{}=  \\int_{t=1}^x f'(t)\\,d t = (x-1)f'(x) - \\int_{t=1}^x(t-1)f'(t)\\,d t\\cr\n    f(x) &= (1-x)f(x) + xf(x) =  \\int_{t=0}^x t(x-1)f''(t)\\,d t +  \\int_{t=x}^1 x(t-1)f''(t)\\,d t\\cr\n         &=  \\int_{t=0}^1\\varphi(x,t)f''(t)\\,d t.\\text{ avec }\n          \\varphi(x,t) = xt - \\min(x,t).\\cr\\end{align*}$$\n    On en déduit $|f(x)|^2\\le \\|f''\\|_2^2 \\int_{t=0}^1\\varphi(x,t)^2\\,d t\n    = \\frac{x^2(x-1)^2}3\\|f''\\|_2^2\\le \\frac{\\|f''\\|_2^2}{48}$.",
-        "html": "<p>On décompose <span class=\"math inline\">\\(f\\)</span> en série de Fourier : <span class=\"math inline\">\\(f(x) = - \\sum_{n=1}^\\infty \\frac{c_n}{n^2\\pi^2}\\sin(n\\pi x)\\)</span> avec <span class=\"math inline\">\\(c_n = 2 \\int_{u=0}^1 f&#39;&#39;(u)\\sin(n\\pi u)\\,d u\\)</span>. En appliquant l’inégalité de Cauchy-Schwarz on obtient : <span class=\"math inline\">\\(\\|f\\|_\\infty^2\\le\\Bigl(\\sum_{n=1}^\\infty\\frac1{n^4\\pi^4}\\Bigr)\\Bigr(\\sum_{n=1}^\\infty c_n^2\\Bigr)\n    = \\frac{2\\zeta(4)}{\\pi^4}\\|f&#39;&#39;\\|_2^2 = \\frac{\\|f&#39;&#39;\\|_2^2}{45}\\)</span>.</p>\n<p>Autre démonstration sans utiliser les séries de Fourier : pour <span class=\"math inline\">\\(x\\in{[0,1]}\\)</span> on a <span class=\"math display\">\\[\\begin{align*}\n    f(x) &amp;{}=  \\int_{t=0}^x f&#39;(t)\\,d t = xf&#39;(x) - \\int_{t=0}^xtf&#39;(t)\\,d t\\cr\n    f(x) &amp;{}=  \\int_{t=1}^x f&#39;(t)\\,d t = (x-1)f&#39;(x) - \\int_{t=1}^x(t-1)f&#39;(t)\\,d t\\cr\n    f(x) &amp;= (1-x)f(x) + xf(x) =  \\int_{t=0}^x t(x-1)f&#39;&#39;(t)\\,d t +  \\int_{t=x}^1 x(t-1)f&#39;&#39;(t)\\,d t\\cr\n         &amp;=  \\int_{t=0}^1\\varphi(x,t)f&#39;&#39;(t)\\,d t.\\text{ avec }\n          \\varphi(x,t) = xt - \\min(x,t).\\cr\\end{align*}\\]</span> On en déduit <span class=\"math inline\">\\(|f(x)|^2\\le \\|f&#39;&#39;\\|_2^2 \\int_{t=0}^1\\varphi(x,t)^2\\,d t\n    = \\frac{x^2(x-1)^2}3\\|f&#39;&#39;\\|_2^2\\le \\frac{\\|f&#39;&#39;\\|_2^2}{48}\\)</span>.</p>\n"
+        "html": "<p>On décompose <span class=\"math inline\">\\(f\\)</span> en série de\nFourier : <span class=\"math inline\">\\(f(x) = - \\sum_{n=1}^\\infty\n\\frac{c_n}{n^2\\pi^2}\\sin(n\\pi x)\\)</span> avec <span\nclass=\"math inline\">\\(c_n = 2 \\int_{u=0}^1 f&#39;&#39;(u)\\sin(n\\pi u)\\,d\nu\\)</span>. En appliquant l’inégalité de Cauchy-Schwarz on obtient :\n<span\nclass=\"math inline\">\\(\\|f\\|_\\infty^2\\le\\Bigl(\\sum_{n=1}^\\infty\\frac1{n^4\\pi^4}\\Bigr)\\Bigr(\\sum_{n=1}^\\infty\nc_n^2\\Bigr)\n    = \\frac{2\\zeta(4)}{\\pi^4}\\|f&#39;&#39;\\|_2^2 =\n\\frac{\\|f&#39;&#39;\\|_2^2}{45}\\)</span>.</p>\n<p>Autre démonstration sans utiliser les séries de Fourier : pour <span\nclass=\"math inline\">\\(x\\in{[0,1]}\\)</span> on a <span\nclass=\"math display\">\\[\\begin{align*}\n    f(x) &amp;{}=  \\int_{t=0}^x f&#39;(t)\\,d t = xf&#39;(x) -\n\\int_{t=0}^xtf&#39;(t)\\,d t\\cr\n    f(x) &amp;{}=  \\int_{t=1}^x f&#39;(t)\\,d t = (x-1)f&#39;(x) -\n\\int_{t=1}^x(t-1)f&#39;(t)\\,d t\\cr\n    f(x) &amp;= (1-x)f(x) + xf(x) =  \\int_{t=0}^x\nt(x-1)f&#39;&#39;(t)\\,d t +  \\int_{t=x}^1 x(t-1)f&#39;&#39;(t)\\,d t\\cr\n         &amp;=  \\int_{t=0}^1\\varphi(x,t)f&#39;&#39;(t)\\,d t.\\text{ avec\n}\n          \\varphi(x,t) = xt - \\min(x,t).\\cr\\end{align*}\\]</span> On en\ndéduit <span class=\"math inline\">\\(|f(x)|^2\\le \\|f&#39;&#39;\\|_2^2\n\\int_{t=0}^1\\varphi(x,t)^2\\,d t\n    = \\frac{x^2(x-1)^2}3\\|f&#39;&#39;\\|_2^2\\le\n\\frac{\\|f&#39;&#39;\\|_2^2}{48}\\)</span>.</p>\n"
       }
     }
   ],
-  "preview": "<p>Soit <span class=\"math inline\">\\(f: {[0,1]} \\to \\R\\)</span> de classe <span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> telle que <span class=\"mat ..."
+  "preview": "<p>Soit <span class=\"math inline\">\\(f: {[0,1]} \\to \\R\\)</span> de classe\n<span class=\"math inline\">\\(\\mathcal{C}^2\\)</span> telle que <span\nclass=\"mat ..."
 }

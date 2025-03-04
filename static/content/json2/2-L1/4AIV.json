@@ -12,33 +12,33 @@
     "chapitre": "Calcul d'intégrales",
     "sousChapitre": "Fraction rationnelle en sin, cos ou en sh, ch",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:41:08.489Z"
+    "updatedAt": "2025-03-04T15:11:58.716Z"
   },
   "contenu": [
     {
-      "id": "7ce13d30-18dd-4997-9563-6329f148f50f",
+      "id": "512722a6-08ac-47c3-96a7-5c6dbcb55203",
       "type": "description",
       "value": {
         "latex": "Calculer les intégrales suivantes :\n$$\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x}d x \\quad \\mbox{ et } \\quad \\int_0^{\\frac \\pi 2}\\frac{\\sin\nx}{1+\\sin x}d x.$$",
-        "html": "<p>Calculer les intégrales suivantes : <span class=\"math display\">\\[\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x}d x \\quad \\mbox{ et } \\quad \\int_0^{\\frac \\pi 2}\\frac{\\sin\nx}{1+\\sin x}d x.\\]</span></p>\n"
+        "html": "<p>Calculer les intégrales suivantes : <span\nclass=\"math display\">\\[\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x}d x \\quad\n\\mbox{ et } \\quad \\int_0^{\\frac \\pi 2}\\frac{\\sin\nx}{1+\\sin x}d x.\\]</span></p>\n"
       }
     },
     {
-      "id": "4712aa15-4230-4991-90f9-61c93017c38f",
+      "id": "ccbdf4c4-cf1a-418d-a416-9a75ec62701d",
       "type": "indication",
       "value": {
         "latex": "$\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x}dx=1$ (changement de variables $t=\\tan \\frac x2$).\n\n$\\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x}dx=\\frac \\pi 2-1$ (utiliser la précédente).",
-        "html": "<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x}dx=1\\)</span> (changement de variables <span class=\"math inline\">\\(t=\\tan \\frac x2\\)</span>).</p>\n<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x}dx=\\frac \\pi 2-1\\)</span> (utiliser la précédente).</p>\n"
+        "html": "<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin\nx}dx=1\\)</span> (changement de variables <span\nclass=\"math inline\">\\(t=\\tan \\frac x2\\)</span>).</p>\n<p><span class=\"math inline\">\\(\\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin\nx}dx=\\frac \\pi 2-1\\)</span> (utiliser la précédente).</p>\n"
       }
     },
     {
-      "id": "695e82c7-8599-4821-9edb-7afc8ca8db37",
+      "id": "67f94451-2fed-4b05-91d1-0de74a8d3509",
       "type": "reponse",
       "value": {
         "latex": "Notons $I = \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx$.\nLe changement de variable $t = \\tan \\frac x2$ transforme toute fraction rationnelle \nde sinus et cosinus en une fraction rationnelle en $t$ (que l'on sait résoudre !).\n\nEn posant $t=\\tan \\frac{x}{2}$ on a $x=\\arctan \\frac t2$ ainsi que les formules suivantes : \n$$\\cos x = \\frac {1-t^2}{1+t^2}, \\quad \\sin x = \\frac{2t}{1+t^2}, \n\\quad \\tan x = \\frac{2t}{1-t^2}, \\quad dx=\\dfrac{2dt}{1+t^2}.$$\n\nIci, on a seulement à remplacer $\\sin x$.\nComme $x$ varie de $x=0$ à $x=\\frac\\pi 2$ alors $t=\\tan \\frac{x}{2}$ varie de $t=0$ à $t=1$.\n\n$$\\begin{align*}  \n  I &= \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx \n     = \\int_0^1  \\frac 1 {1+ \\frac{2t}{1+t^2}}  \\dfrac{2dt}{1+t^2} \\\\ \n    &= \\int_0^1 \\frac{2}{1+t^2 + 2t} dt \n    = \\int_0^1 \\frac{2}{(1+t)^2} dt \\\\\n    &= \\left[ \\frac{-2}{1+t} \\right]_0^1 \n    = 1\n\\end{align*}$$\nNotons $J = \\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx$.\nAlors \n$$I+J =  \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx + \\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx\n= \\int_0^{\\frac \\pi 2} \\frac{1+\\sin x}{1+\\sin x} dx = \\int_0^{\\frac \\pi 2} 1 \\, dx = \\big[ x \\big]_0^{\\frac \\pi 2} = \\frac \\pi 2.$$\nDonc $J = \\frac \\pi 2 - I= \\frac \\pi 2 - 1$.",
-        "html": "<p>Notons <span class=\"math inline\">\\(I = \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx\\)</span>. Le changement de variable <span class=\"math inline\">\\(t = \\tan \\frac x2\\)</span> transforme toute fraction rationnelle de sinus et cosinus en une fraction rationnelle en <span class=\"math inline\">\\(t\\)</span> (que l’on sait résoudre !).</p>\n<p>En posant <span class=\"math inline\">\\(t=\\tan \\frac{x}{2}\\)</span> on a <span class=\"math inline\">\\(x=\\arctan \\frac t2\\)</span> ainsi que les formules suivantes : <span class=\"math display\">\\[\\cos x = \\frac {1-t^2}{1+t^2}, \\quad \\sin x = \\frac{2t}{1+t^2}, \n\\quad \\tan x = \\frac{2t}{1-t^2}, \\quad dx=\\dfrac{2dt}{1+t^2}.\\]</span></p>\n<p>Ici, on a seulement à remplacer <span class=\"math inline\">\\(\\sin x\\)</span>. Comme <span class=\"math inline\">\\(x\\)</span> varie de <span class=\"math inline\">\\(x=0\\)</span> à <span class=\"math inline\">\\(x=\\frac\\pi 2\\)</span> alors <span class=\"math inline\">\\(t=\\tan \\frac{x}{2}\\)</span> varie de <span class=\"math inline\">\\(t=0\\)</span> à <span class=\"math inline\">\\(t=1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}  \n  I &amp;= \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx \n     = \\int_0^1  \\frac 1 {1+ \\frac{2t}{1+t^2}}  \\dfrac{2dt}{1+t^2} \\\\ \n    &amp;= \\int_0^1 \\frac{2}{1+t^2 + 2t} dt \n    = \\int_0^1 \\frac{2}{(1+t)^2} dt \\\\\n    &amp;= \\left[ \\frac{-2}{1+t} \\right]_0^1 \n    = 1\n\\end{align*}\\]</span> Notons <span class=\"math inline\">\\(J = \\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx\\)</span>. Alors <span class=\"math display\">\\[I+J =  \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx + \\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx\n= \\int_0^{\\frac \\pi 2} \\frac{1+\\sin x}{1+\\sin x} dx = \\int_0^{\\frac \\pi 2} 1 \\, dx = \\big[ x \\big]_0^{\\frac \\pi 2} = \\frac \\pi 2.\\]</span> Donc <span class=\"math inline\">\\(J = \\frac \\pi 2 - I= \\frac \\pi 2 - 1\\)</span>.</p>\n"
+        "html": "<p>Notons <span class=\"math inline\">\\(I = \\int_0^{\\frac \\pi 2}\\frac\n1{1+\\sin x} dx\\)</span>. Le changement de variable <span\nclass=\"math inline\">\\(t = \\tan \\frac x2\\)</span> transforme toute\nfraction rationnelle de sinus et cosinus en une fraction rationnelle en\n<span class=\"math inline\">\\(t\\)</span> (que l’on sait résoudre !).</p>\n<p>En posant <span class=\"math inline\">\\(t=\\tan \\frac{x}{2}\\)</span> on\na <span class=\"math inline\">\\(x=\\arctan \\frac t2\\)</span> ainsi que les\nformules suivantes : <span class=\"math display\">\\[\\cos x = \\frac\n{1-t^2}{1+t^2}, \\quad \\sin x = \\frac{2t}{1+t^2},\n\\quad \\tan x = \\frac{2t}{1-t^2}, \\quad\ndx=\\dfrac{2dt}{1+t^2}.\\]</span></p>\n<p>Ici, on a seulement à remplacer <span class=\"math inline\">\\(\\sin\nx\\)</span>. Comme <span class=\"math inline\">\\(x\\)</span> varie de <span\nclass=\"math inline\">\\(x=0\\)</span> à <span\nclass=\"math inline\">\\(x=\\frac\\pi 2\\)</span> alors <span\nclass=\"math inline\">\\(t=\\tan \\frac{x}{2}\\)</span> varie de <span\nclass=\"math inline\">\\(t=0\\)</span> à <span\nclass=\"math inline\">\\(t=1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\begin{align*}  \n  I &amp;= \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx\n     = \\int_0^1  \\frac 1 {1+ \\frac{2t}{1+t^2}}  \\dfrac{2dt}{1+t^2} \\\\\n    &amp;= \\int_0^1 \\frac{2}{1+t^2 + 2t} dt\n    = \\int_0^1 \\frac{2}{(1+t)^2} dt \\\\\n    &amp;= \\left[ \\frac{-2}{1+t} \\right]_0^1\n    = 1\n\\end{align*}\\]</span> Notons <span class=\"math inline\">\\(J =\n\\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx\\)</span>. Alors <span\nclass=\"math display\">\\[I+J =  \\int_0^{\\frac \\pi 2}\\frac 1{1+\\sin x} dx +\n\\int_0^{\\frac \\pi 2}\\frac{\\sin x}{1+\\sin x} dx\n= \\int_0^{\\frac \\pi 2} \\frac{1+\\sin x}{1+\\sin x} dx = \\int_0^{\\frac \\pi\n2} 1 \\, dx = \\big[ x \\big]_0^{\\frac \\pi 2} = \\frac \\pi 2.\\]</span> Donc\n<span class=\"math inline\">\\(J = \\frac \\pi 2 - I= \\frac \\pi 2 -\n1\\)</span>.</p>\n"
       }
     }
   ],
-  "preview": "<p>Calculer les intégrales suivantes : <span class=\"math display\"> ..."
+  "preview": "<p>Calculer les intégrales suivantes : <span\nclass=\"math display\"> ..."
 }

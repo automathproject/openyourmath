@@ -12,43 +12,43 @@
     "chapitre": "Espace vectoriel",
     "sousChapitre": "Somme directe",
     "organisation": "exo7",
-    "updatedAt": "2025-02-13T07:37:27.583Z"
+    "updatedAt": "2025-03-04T15:09:32.361Z"
   },
   "contenu": [
     {
-      "id": "20bc04d0-203c-4388-b25f-d13b3acbb9e1",
+      "id": "bf94c4af-ce83-4490-aceb-e73a60a851a5",
       "type": "description",
       "value": {
         "latex": "On consid\\`ere les vecteurs\n$v_1=(1,0,0,1)$, $v_2=(0,0,1,0)$, $v_3=(0,1,0,0)$, $v_4=(0,0,0,1)$,\n$v_5=(0,1,0,1)$ dans $\\mathbb{R}^4$.",
-        "html": "<p>On considère les vecteurs <span class=\"math inline\">\\(v_1=(1,0,0,1)\\)</span>, <span class=\"math inline\">\\(v_2=(0,0,1,0)\\)</span>, <span class=\"math inline\">\\(v_3=(0,1,0,0)\\)</span>, <span class=\"math inline\">\\(v_4=(0,0,0,1)\\)</span>, <span class=\"math inline\">\\(v_5=(0,1,0,1)\\)</span> dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span>.</p>\n"
+        "html": "<p>On considère les vecteurs <span\nclass=\"math inline\">\\(v_1=(1,0,0,1)\\)</span>, <span\nclass=\"math inline\">\\(v_2=(0,0,1,0)\\)</span>, <span\nclass=\"math inline\">\\(v_3=(0,1,0,0)\\)</span>, <span\nclass=\"math inline\">\\(v_4=(0,0,0,1)\\)</span>, <span\nclass=\"math inline\">\\(v_5=(0,1,0,1)\\)</span> dans <span\nclass=\"math inline\">\\(\\mathbb{R}^4\\)</span>.</p>\n"
       }
     },
     {
-      "id": "8c015f58-0877-4d6c-bf84-8e902520a969",
+      "id": "62ce2991-4434-47dd-8994-f2238458a67b",
       "type": "question",
       "value": {
         "latex": "$\\mbox{Vect}\\{v_1,v_2\\}$ et $\\mbox{Vect}\\{v_3\\}$ sont-ils\n  suppl\\'ementaires dans $\\mathbb{R}^4$ ?",
-        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_2\\}\\)</span> et <span class=\"math inline\">\\(\\mbox{Vect}\\{v_3\\}\\)</span> sont-ils supplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span> ?</p>\n"
+        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_2\\}\\)</span> et <span\nclass=\"math inline\">\\(\\mbox{Vect}\\{v_3\\}\\)</span> sont-ils\nsupplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span>\n?</p>\n"
       }
     },
     {
-      "id": "a39740ae-0da3-473b-9db5-65b4c92c382f",
+      "id": "b38bfefa-8f6a-4412-ae52-0264c870030a",
       "type": "reponse",
       "value": {
         "latex": "Non. \nTout d'abord par définition\n$\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\} = \\text{Vect}\\{v_1,v_2,v_3\\}$,\nNous allons trouver un vecteur de $\\Rr^4$ qui n'est pas dans \n$\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\}$.\nIl faut tâtonner un peu pour le choix, par exemple faisons le calcul avec $u=(0,0,0,1)$.\n\n$u \\in \\text{Vect}\\{v_1,v_2,v_3\\}$ si et seulement si \nil existe des réels $\\alpha,\\beta,\\gamma$ tels que $u=\\alpha v_1 + \\beta v_2 + \\gamma v_3$.\nSi l'on écrit les vecteurs verticalement, on cherche donc $\\alpha,\\beta,\\gamma$ tels que :\n$$\\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}= \\alpha \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix}+\\gamma\\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\\\0\\end{pmatrix}$$\nCe qui est équivalent à trouver $\\alpha,\\beta,\\gamma$ vérifiant le système linéaire :\n$$\\begin{cases}\n0 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 0 + \\gamma \\cdot 1   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 1 + \\gamma \\cdot 0   \\\\\n1 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n\\end{cases}\n\\text{ qui équivaut à } \n\\begin{cases}\n0 = \\alpha \\\\\n0 = \\gamma \\\\\n0 = \\beta  \\\\\n1 = \\alpha \\\\\n\\end{cases}\n$$\nIl n'y a clairement aucune solution à ce système (les trois premières lignes impliquent $\\alpha=\\beta=\\gamma=0$\net cela rentre alors en contradiction avec la quatrième).\n\n\\bigskip\n\n\nUn autre type de raisonnement, beaucoup plus rapide, \nest de dire que ces deux espaces ne peuvent engendr\\'es tout $\\Rr^4$ \ncar il n'y pas assez de vecteurs en effet $3$ vecteurs ne peuvent engendrer \nl'espace $\\Rr^4$ de dimension $4$.",
-        "html": "<p>Non. Tout d’abord par définition <span class=\"math inline\">\\(\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\} = \\text{Vect}\\{v_1,v_2,v_3\\}\\)</span>, Nous allons trouver un vecteur de <span class=\"math inline\">\\(\\Rr^4\\)</span> qui n’est pas dans <span class=\"math inline\">\\(\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\}\\)</span>. Il faut tâtonner un peu pour le choix, par exemple faisons le calcul avec <span class=\"math inline\">\\(u=(0,0,0,1)\\)</span>.</p>\n<p><span class=\"math inline\">\\(u \\in \\text{Vect}\\{v_1,v_2,v_3\\}\\)</span> si et seulement si il existe des réels <span class=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> tels que <span class=\"math inline\">\\(u=\\alpha v_1 + \\beta v_2 + \\gamma v_3\\)</span>. Si l’on écrit les vecteurs verticalement, on cherche donc <span class=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> tels que : <span class=\"math display\">\\[\\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}= \\alpha \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix}+\\gamma\\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\\\0\\end{pmatrix}\\]</span> Ce qui est équivalent à trouver <span class=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> vérifiant le système linéaire : <span class=\"math display\">\\[\\begin{cases}\n0 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 0 + \\gamma \\cdot 1   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 1 + \\gamma \\cdot 0   \\\\\n1 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n\\end{cases}\n\\text{ qui équivaut à } \n\\begin{cases}\n0 = \\alpha \\\\\n0 = \\gamma \\\\\n0 = \\beta  \\\\\n1 = \\alpha \\\\\n\\end{cases}\\]</span> Il n’y a clairement aucune solution à ce système (les trois premières lignes impliquent <span class=\"math inline\">\\(\\alpha=\\beta=\\gamma=0\\)</span> et cela rentre alors en contradiction avec la quatrième).</p>\n<p>Un autre type de raisonnement, beaucoup plus rapide, est de dire que ces deux espaces ne peuvent engendrés tout <span class=\"math inline\">\\(\\Rr^4\\)</span> car il n’y pas assez de vecteurs en effet <span class=\"math inline\">\\(3\\)</span> vecteurs ne peuvent engendrer l’espace <span class=\"math inline\">\\(\\Rr^4\\)</span> de dimension <span class=\"math inline\">\\(4\\)</span>.</p>\n"
+        "html": "<p>Non. Tout d’abord par définition <span\nclass=\"math inline\">\\(\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\} =\n\\text{Vect}\\{v_1,v_2,v_3\\}\\)</span>, Nous allons trouver un vecteur de\n<span class=\"math inline\">\\(\\Rr^4\\)</span> qui n’est pas dans <span\nclass=\"math inline\">\\(\\text{Vect}\\{v_1,v_2\\}+\\text{Vect}\\{v_3\\}\\)</span>.\nIl faut tâtonner un peu pour le choix, par exemple faisons le calcul\navec <span class=\"math inline\">\\(u=(0,0,0,1)\\)</span>.</p>\n<p><span class=\"math inline\">\\(u \\in \\text{Vect}\\{v_1,v_2,v_3\\}\\)</span>\nsi et seulement si il existe des réels <span\nclass=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> tels que <span\nclass=\"math inline\">\\(u=\\alpha v_1 + \\beta v_2 + \\gamma v_3\\)</span>. Si\nl’on écrit les vecteurs verticalement, on cherche donc <span\nclass=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> tels que : <span\nclass=\"math display\">\\[\\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}=\n\\alpha \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0\n\\end{pmatrix}+\\gamma\\begin{pmatrix} 0 \\\\ 1 \\\\ 0\n\\\\0\\end{pmatrix}\\]</span> Ce qui est équivalent à trouver <span\nclass=\"math inline\">\\(\\alpha,\\beta,\\gamma\\)</span> vérifiant le système\nlinéaire : <span class=\"math display\">\\[\\begin{cases}\n0 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 0 + \\gamma \\cdot 1   \\\\\n0 = \\alpha \\cdot 0 + \\beta \\cdot 1 + \\gamma \\cdot 0   \\\\\n1 = \\alpha \\cdot 1 + \\beta \\cdot 0 + \\gamma \\cdot 0   \\\\\n\\end{cases}\n\\text{ qui équivaut à }\n\\begin{cases}\n0 = \\alpha \\\\\n0 = \\gamma \\\\\n0 = \\beta  \\\\\n1 = \\alpha \\\\\n\\end{cases}\\]</span> Il n’y a clairement aucune solution à ce système\n(les trois premières lignes impliquent <span\nclass=\"math inline\">\\(\\alpha=\\beta=\\gamma=0\\)</span> et cela rentre\nalors en contradiction avec la quatrième).</p>\n<p>Un autre type de raisonnement, beaucoup plus rapide, est de dire que\nces deux espaces ne peuvent engendrés tout <span\nclass=\"math inline\">\\(\\Rr^4\\)</span> car il n’y pas assez de vecteurs en\neffet <span class=\"math inline\">\\(3\\)</span> vecteurs ne peuvent\nengendrer l’espace <span class=\"math inline\">\\(\\Rr^4\\)</span> de\ndimension <span class=\"math inline\">\\(4\\)</span>.</p>\n"
       }
     },
     {
-      "id": "509571b3-c371-4479-9481-ac1c6c5a09e1",
+      "id": "5847497d-bfc7-4082-8e4f-b1736e84fdcc",
       "type": "question",
       "value": {
         "latex": "$\\mbox{Vect}\\{v_1,v_2\\}$ et $\\mbox{Vect}\\{v_4, v_5\\}$ sont-ils\n  suppl\\'ementaires dans $\\mathbb{R}^4$ ?",
-        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_2\\}\\)</span> et <span class=\"math inline\">\\(\\mbox{Vect}\\{v_4, v_5\\}\\)</span> sont-ils supplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span> ?</p>\n"
+        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_2\\}\\)</span> et <span\nclass=\"math inline\">\\(\\mbox{Vect}\\{v_4, v_5\\}\\)</span> sont-ils\nsupplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span>\n?</p>\n"
       }
     },
     {
-      "id": "1fcdfbf6-71e3-41d1-9371-776964194e25",
+      "id": "5fbd6852-4125-468f-a278-f9ff64d8de93",
       "type": "reponse",
       "value": {
         "latex": "Oui. Notons $F=\\mbox{Vect}\\{v_1,v_2\\}$ et $G=\\mbox{Vect}\\{v_4, v_5\\}$.\nPour montrer $F \\oplus G = \\Rr^4$ il faut montrer $F\\cap G =\\{ (0,0,0,0) \\}$ et\n$F+G=\\Rr^4$.\n\n  \\begin{enumerate}",
@@ -56,39 +56,39 @@
       }
     },
     {
-      "id": "941b594a-0765-4367-8ea0-28441f833c9a",
+      "id": "cf9693eb-a52f-4fe2-b52a-d77ad4e96e1e",
       "type": "question",
       "value": {
         "latex": "$\\mbox{Vect}\\{v_1,v_3,v_4\\}$ et  $\\mbox{Vect}\\{v_2,v_5\\}$ sont-ils\n  suppl\\'ementaires dans $\\mathbb{R}^4$ ?",
-        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_3,v_4\\}\\)</span> et <span class=\"math inline\">\\(\\mbox{Vect}\\{v_2,v_5\\}\\)</span> sont-ils supplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span> ?</p>\n"
+        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_3,v_4\\}\\)</span> et\n<span class=\"math inline\">\\(\\mbox{Vect}\\{v_2,v_5\\}\\)</span> sont-ils\nsupplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span>\n?</p>\n"
       }
     },
     {
-      "id": "ac217319-3943-48f3-91ad-0b1f32cad670",
+      "id": "adfd6952-67cb-40e6-adce-594adde538ae",
       "type": "reponse",
       "value": {
         "latex": "Montrons $F\\cap G =\\{ (0,0,0,0 \\}$. Soit $u \\in F\\cap G$,\nd'une part $u \\in F = \\mbox{Vect}\\{v_1,v_2\\}$ donc il existe $\\alpha,\\beta \\in \\Rr$ tels que\n$u = \\alpha v_1+\\beta v_2$. D'autre part $u \\in G = \\mbox{Vect}\\{v_4, v_5\\}$ donc il existe\n$\\gamma,\\delta \\in \\Rr$ tels que $u=\\gamma v_4 + \\delta v_5$. On a écrit $u$ de deux façons donc on a l'égalité\n$\\alpha v_1+\\beta v_2 = \\gamma v_4 + \\delta v_5$. En écrivant les vecteurs comme des vecteurs colonnes cela donne\n$$\\alpha \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix} \n= \\gamma \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix} + \\delta \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\\\1\\end{pmatrix}$$\nDonc $(\\alpha,\\beta,\\gamma,\\delta)$ est solution du système linéaire suivant :\n$$\\begin{cases}\n\\alpha = 0   \\\\\n0 = \\delta \\\\\n\\beta = 0 \\\\\n\\alpha =  \\gamma + \\delta \\\\\n\\end{cases}\n$$\nCela implique $\\alpha=\\beta=\\gamma=\\delta=0$ et donc $u = (0,0,0,0)$.\nAinsi le seul vecteur de $F\\cap G$ est le vecteur nul.",
-        "html": "<p>Montrons <span class=\"math inline\">\\(F\\cap G =\\{ (0,0,0,0 \\}\\)</span>. Soit <span class=\"math inline\">\\(u \\in F\\cap G\\)</span>, d’une part <span class=\"math inline\">\\(u \\in F = \\mbox{Vect}\\{v_1,v_2\\}\\)</span> donc il existe <span class=\"math inline\">\\(\\alpha,\\beta \\in \\Rr\\)</span> tels que <span class=\"math inline\">\\(u = \\alpha v_1+\\beta v_2\\)</span>. D’autre part <span class=\"math inline\">\\(u \\in G = \\mbox{Vect}\\{v_4, v_5\\}\\)</span> donc il existe <span class=\"math inline\">\\(\\gamma,\\delta \\in \\Rr\\)</span> tels que <span class=\"math inline\">\\(u=\\gamma v_4 + \\delta v_5\\)</span>. On a écrit <span class=\"math inline\">\\(u\\)</span> de deux façons donc on a l’égalité <span class=\"math inline\">\\(\\alpha v_1+\\beta v_2 = \\gamma v_4 + \\delta v_5\\)</span>. En écrivant les vecteurs comme des vecteurs colonnes cela donne <span class=\"math display\">\\[\\alpha \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix} \n= \\gamma \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix} + \\delta \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\\\1\\end{pmatrix}\\]</span> Donc <span class=\"math inline\">\\((\\alpha,\\beta,\\gamma,\\delta)\\)</span> est solution du système linéaire suivant : <span class=\"math display\">\\[\\begin{cases}\n\\alpha = 0   \\\\\n0 = \\delta \\\\\n\\beta = 0 \\\\\n\\alpha =  \\gamma + \\delta \\\\\n\\end{cases}\\]</span> Cela implique <span class=\"math inline\">\\(\\alpha=\\beta=\\gamma=\\delta=0\\)</span> et donc <span class=\"math inline\">\\(u = (0,0,0,0)\\)</span>. Ainsi le seul vecteur de <span class=\"math inline\">\\(F\\cap G\\)</span> est le vecteur nul.</p>\n"
+        "html": "<p>Montrons <span class=\"math inline\">\\(F\\cap G =\\{ (0,0,0,0\n\\}\\)</span>. Soit <span class=\"math inline\">\\(u \\in F\\cap G\\)</span>,\nd’une part <span class=\"math inline\">\\(u \\in F =\n\\mbox{Vect}\\{v_1,v_2\\}\\)</span> donc il existe <span\nclass=\"math inline\">\\(\\alpha,\\beta \\in \\Rr\\)</span> tels que <span\nclass=\"math inline\">\\(u = \\alpha v_1+\\beta v_2\\)</span>. D’autre part\n<span class=\"math inline\">\\(u \\in G = \\mbox{Vect}\\{v_4, v_5\\}\\)</span>\ndonc il existe <span class=\"math inline\">\\(\\gamma,\\delta \\in\n\\Rr\\)</span> tels que <span class=\"math inline\">\\(u=\\gamma v_4 + \\delta\nv_5\\)</span>. On a écrit <span class=\"math inline\">\\(u\\)</span> de deux\nfaçons donc on a l’égalité <span class=\"math inline\">\\(\\alpha v_1+\\beta\nv_2 = \\gamma v_4 + \\delta v_5\\)</span>. En écrivant les vecteurs comme\ndes vecteurs colonnes cela donne <span class=\"math display\">\\[\\alpha\n\\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix}\n+ \\beta \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix}\n= \\gamma \\begin{pmatrix} 0 \\\\ 0 \\\\ 0 \\\\1\\end{pmatrix} + \\delta\n\\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\\\1\\end{pmatrix}\\]</span> Donc <span\nclass=\"math inline\">\\((\\alpha,\\beta,\\gamma,\\delta)\\)</span> est solution\ndu système linéaire suivant : <span class=\"math display\">\\[\\begin{cases}\n\\alpha = 0   \\\\\n0 = \\delta \\\\\n\\beta = 0 \\\\\n\\alpha =  \\gamma + \\delta \\\\\n\\end{cases}\\]</span> Cela implique <span\nclass=\"math inline\">\\(\\alpha=\\beta=\\gamma=\\delta=0\\)</span> et donc\n<span class=\"math inline\">\\(u = (0,0,0,0)\\)</span>. Ainsi le seul\nvecteur de <span class=\"math inline\">\\(F\\cap G\\)</span> est le vecteur\nnul.</p>\n"
       }
     },
     {
-      "id": "1fec1689-0cd4-4437-b60e-5199b93afe20",
+      "id": "06b60d80-42a8-48ec-998b-67e2dffc8b1e",
       "type": "question",
       "value": {
         "latex": "$\\mbox{Vect}\\{v_1,v_4\\}$ et $\\mbox{Vect}\\{v_3, v_5\\}$ sont-ils\n  suppl\\'ementaires dans $\\mathbb{R}^4$ ?",
-        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_4\\}\\)</span> et <span class=\"math inline\">\\(\\mbox{Vect}\\{v_3, v_5\\}\\)</span> sont-ils supplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span> ?</p>\n"
+        "html": "<p><span class=\"math inline\">\\(\\mbox{Vect}\\{v_1,v_4\\}\\)</span> et <span\nclass=\"math inline\">\\(\\mbox{Vect}\\{v_3, v_5\\}\\)</span> sont-ils\nsupplémentaires dans <span class=\"math inline\">\\(\\mathbb{R}^4\\)</span>\n?</p>\n"
       }
     },
     {
-      "id": "8571bcd3-161a-4e0d-8b7f-2049788a8b99",
+      "id": "48ed3b73-c660-413d-980b-646da91d23ab",
       "type": "reponse",
       "value": {
         "latex": "Montrons $F+G=\\Rr^4$.\n$F+G = \\mbox{Vect}\\{v_1,v_2\\}+\\mbox{Vect}\\{v_4, v_5\\}= \\mbox{Vect}\\{v_1,v_2,v_4, v_5\\}$.\nIl faut donc montrer que n'importe quel vecteur $u = (x_0,y_0,z_0,t_0)$ de $\\Rr^4$ s'écrit comme une combinaison linéaire\nde $v_1,v_2,v_4,v_5$. Fixons $u$ et cherchons $\\alpha,\\beta,\\gamma,\\delta \\in \\Rr$ tels que \n$\\alpha v_1+\\beta v_2 + \\gamma v_4 + \\delta v_5=u$.\nAprès avoir considéré les vecteurs comme des vecteurs colonnes cela revient à résoudre le système linéaire :\n$$\\begin{cases}\n\\alpha = x_0 \\\\\n\\delta = y_0 \\\\\n\\beta = z_0 \\\\\n\\alpha + \\gamma + \\delta = t_0 \\\\    \n  \\end{cases}$$\nNous étant donné un vecteur $u = (x_0,y_0,z_0,t_0)$ on a calculé qu'en choisissant \n$\\alpha = x_0$, $\\beta=z_0$, $\\gamma= t_0 -x_0-y_0$, $\\delta=y_0$ on obtient bien\n$\\alpha v_1+\\beta v_2 + \\gamma v_4 + \\delta v_5=u$.\nAinsi tout vecteur est engendré par $F+G$.",
-        "html": "<p>Montrons <span class=\"math inline\">\\(F+G=\\Rr^4\\)</span>. <span class=\"math inline\">\\(F+G = \\mbox{Vect}\\{v_1,v_2\\}+\\mbox{Vect}\\{v_4, v_5\\}= \\mbox{Vect}\\{v_1,v_2,v_4, v_5\\}\\)</span>. Il faut donc montrer que n’importe quel vecteur <span class=\"math inline\">\\(u = (x_0,y_0,z_0,t_0)\\)</span> de <span class=\"math inline\">\\(\\Rr^4\\)</span> s’écrit comme une combinaison linéaire de <span class=\"math inline\">\\(v_1,v_2,v_4,v_5\\)</span>. Fixons <span class=\"math inline\">\\(u\\)</span> et cherchons <span class=\"math inline\">\\(\\alpha,\\beta,\\gamma,\\delta \\in \\Rr\\)</span> tels que <span class=\"math inline\">\\(\\alpha v_1+\\beta v_2 + \\gamma v_4 + \\delta v_5=u\\)</span>. Après avoir considéré les vecteurs comme des vecteurs colonnes cela revient à résoudre le système linéaire : <span class=\"math display\">\\[\\begin{cases}\n\\alpha = x_0 \\\\\n\\delta = y_0 \\\\\n\\beta = z_0 \\\\\n\\alpha + \\gamma + \\delta = t_0 \\\\    \n  \\end{cases}\\]</span> Nous étant donné un vecteur <span class=\"math inline\">\\(u = (x_0,y_0,z_0,t_0)\\)</span> on a calculé qu’en choisissant <span class=\"math inline\">\\(\\alpha = x_0\\)</span>, <span class=\"math inline\">\\(\\beta=z_0\\)</span>, <span class=\"math inline\">\\(\\gamma= t_0 -x_0-y_0\\)</span>, <span class=\"math inline\">\\(\\delta=y_0\\)</span> on obtient bien <span class=\"math inline\">\\(\\alpha v_1+\\beta v_2 + \\gamma v_4 + \\delta v_5=u\\)</span>. Ainsi tout vecteur est engendré par <span class=\"math inline\">\\(F+G\\)</span>.</p>\n"
+        "html": "<p>Montrons <span class=\"math inline\">\\(F+G=\\Rr^4\\)</span>. <span\nclass=\"math inline\">\\(F+G = \\mbox{Vect}\\{v_1,v_2\\}+\\mbox{Vect}\\{v_4,\nv_5\\}= \\mbox{Vect}\\{v_1,v_2,v_4, v_5\\}\\)</span>. Il faut donc montrer\nque n’importe quel vecteur <span class=\"math inline\">\\(u =\n(x_0,y_0,z_0,t_0)\\)</span> de <span class=\"math inline\">\\(\\Rr^4\\)</span>\ns’écrit comme une combinaison linéaire de <span\nclass=\"math inline\">\\(v_1,v_2,v_4,v_5\\)</span>. Fixons <span\nclass=\"math inline\">\\(u\\)</span> et cherchons <span\nclass=\"math inline\">\\(\\alpha,\\beta,\\gamma,\\delta \\in \\Rr\\)</span> tels\nque <span class=\"math inline\">\\(\\alpha v_1+\\beta v_2 + \\gamma v_4 +\n\\delta v_5=u\\)</span>. Après avoir considéré les vecteurs comme des\nvecteurs colonnes cela revient à résoudre le système linéaire : <span\nclass=\"math display\">\\[\\begin{cases}\n\\alpha = x_0 \\\\\n\\delta = y_0 \\\\\n\\beta = z_0 \\\\\n\\alpha + \\gamma + \\delta = t_0 \\\\    \n  \\end{cases}\\]</span> Nous étant donné un vecteur <span\nclass=\"math inline\">\\(u = (x_0,y_0,z_0,t_0)\\)</span> on a calculé qu’en\nchoisissant <span class=\"math inline\">\\(\\alpha = x_0\\)</span>, <span\nclass=\"math inline\">\\(\\beta=z_0\\)</span>, <span\nclass=\"math inline\">\\(\\gamma= t_0 -x_0-y_0\\)</span>, <span\nclass=\"math inline\">\\(\\delta=y_0\\)</span> on obtient bien <span\nclass=\"math inline\">\\(\\alpha v_1+\\beta v_2 + \\gamma v_4 + \\delta\nv_5=u\\)</span>. Ainsi tout vecteur est engendré par <span\nclass=\"math inline\">\\(F+G\\)</span>.</p>\n"
       }
     },
     {
-      "id": "2560f494-4eb8-449a-915f-83d7ba03a702",
+      "id": "5c1d243f-9080-48d7-94bf-6e834625cc74",
       "type": "indication",
       "value": {
         "latex": "\\begin{enumerate}\n\\item Non.\n\\item Oui.\n\\item Non.\n\\item Non. \n\\end{enumerate}",
@@ -96,5 +96,5 @@
       }
     }
   ],
-  "preview": "<p>On considère les vecteurs <span class=\"math inline\">\\(v_1=(1,0,0,1)\\)</span>, <span class=\"math inline\">\\(v_2=(0,0,1,0)\\)</span>, <span class=\"math ..."
+  "preview": "<p>On considère les vecteurs <span\nclass=\"math inline\">\\(v_1=(1,0,0,1)\\)</span>, <span\nclass=\"math inline\">\\(v_2=(0,0,1,0)\\)</span>, <span\nclass=\"math ..."
 }
