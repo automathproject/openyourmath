@@ -18,10 +18,9 @@ https://github.com/smaxx73/Exercices
 Ils sont formatés de manière à être utilisés automatiquement par l'application.
 
 To do :
-- [x] Un bouton pour afficher / masquer les solutions
-- [x] Gérer une liste d'exercices
 - [x] Faire un moteur de recherche
-- [x] Améliorer l'ergonomie du moteur de recherche
 - [x] Gérer automatiquement les images depuis le LaTeX
 - [ ] Gérer l'export d'une fiche en LaTeX et en PDF
-- [ ] Importer la base d'exercices d'exo7
+- [x] Importer la base d'exercices d'exo7
+- [ ] Améliorer les listes d'exercices
+- [ ] Affiner les possibilités d'affichage de question et réponses
