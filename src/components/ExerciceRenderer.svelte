@@ -8,6 +8,8 @@
   import HintsToggleButton from "./buttons/HintsToggleButton.svelte";
   import FullscreenToggleButton from "./buttons/FullscreenToggleButton.svelte";
   import FontSizeToggleButton from "./buttons/FontSizeToggleButton.svelte";
+  import YouTubeToggleButton from "./buttons/YouTubeToggleButton.svelte";
+  import YouTubeOverlay from "./YouTubeOverlay.svelte";
 
   export let ExerciceData;
   const latexTypes = ["description", "question", "reponse", "indication"];
@@ -19,6 +21,8 @@
   let isFullscreen = false;
   let showMetadata = true;
   let contentKey = 0;
+  let showYoutubeOverlay = false;
+  let currentYoutubeId = "";
 
   function resetState() {
     showReponses = false;
@@ -54,6 +58,19 @@
 
   function toggleFontSize() {
     isLargeFont = !isLargeFont;
+  }
+  
+  function openYoutubeOverlay(event) {
+    currentYoutubeId = event.detail.youtubeId;
+    showYoutubeOverlay = true;
+    document.body.style.overflow = "hidden";
+  }
+  
+  function closeYoutubeOverlay() {
+    showYoutubeOverlay = false;
+    if (!isFullscreen) {
+      document.body.style.overflow = "auto";
+    }
   }
 
   $: if (ExerciceData) {
@@ -128,7 +145,7 @@
             </div>
           </div>
 
-          <!-- Section droite avec le lien .tex et bouton plein écran -->
+          <!-- Section droite avec les boutons plein écran et taille de police -->
           <div class="right-section">
             {#if isFullscreen}
               <FontSizeToggleButton
@@ -140,7 +157,6 @@
               isFullscreen={isFullscreen}
               onToggle={toggleFullscreen}
             />
-
           </div>
         </div>
 
@@ -151,6 +167,10 @@
             <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme} uuid={ExerciceData.uuid}/>
           </div>
           <div class="control-buttons">
+            <YouTubeToggleButton 
+              youtubeId={ExerciceData.metadata?.youtube}
+              on:openVideo={openYoutubeOverlay}
+            />
             <HintsToggleButton
               showHints={showHints}
               onToggle={toggleHints}
@@ -206,6 +226,10 @@
   </div>
 </div>
 
+{#if showYoutubeOverlay && currentYoutubeId}
+  <YouTubeOverlay youtubeId={currentYoutubeId} onClose={closeYoutubeOverlay} />
+{/if}
+
 <style>
   .exercice-wrapper {
     position: relative;
@@ -235,12 +259,12 @@
   }
 
   .exercice.fullscreen {
-  max-width: 750px;
-  margin: 0 auto;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  border-radius: 16px;
-}
+    max-width: 750px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-radius: 16px;
+  }
 
   .header {
     display: flex;
@@ -296,13 +320,14 @@
   /* Responsive styles */
   @media screen and (max-width: 640px) {
     .exercice.fullscreen {
-    max-width: 100%;
-    margin: 0;
-    padding: 1rem;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
+      max-width: 100%;
+      margin: 0;
+      padding: 1rem;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    
     .metadata-section {
       flex-direction: column;
       align-items: flex-start;
@@ -311,14 +336,15 @@
 
     .control-buttons {
       margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .right-section {
       flex-wrap: wrap;
     }
   }
-
-  /* Rest of the styles remain the same... */
   
   .metadata-toggle {
     background: transparent;
@@ -345,13 +371,6 @@
 
   .metadata-toggle svg.rotated {
     transform: rotate(-180deg);
-  }
-
-  .tex-link {
-    text-decoration: none;
-    font-size: 0.9rem;
-    color: #007bff;
-    padding: 0.25rem 0;
   }
 
   .content {
