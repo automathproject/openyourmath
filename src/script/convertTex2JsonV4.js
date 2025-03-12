@@ -320,6 +320,7 @@
      // Configuration de l'exercice
      { name: 'isIndication', jsonKey: 'metadata.hasIndication', isContent: false, isVerbatim: false },
      { name: 'isCorrection', jsonKey: 'metadata.hasCorrection', isContent: false, isVerbatim: false },
+     { name: 'video', jsonKey: 'metadata.youtube', isContent: false, isVerbatim: false },
      
      // Structure et organisation
      { name: 'chapitre', jsonKey: 'metadata.chapitre', isContent: false, isVerbatim: false },

@@ -22,6 +22,7 @@ export type Metadata = {
   exo7id?: string;
   hasIndication?: boolean;
   hasCorrection?: boolean;
+  youtube?: string;
   chapitre?: string;
   sousChapitre?: string;
 };

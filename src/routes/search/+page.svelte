@@ -183,7 +183,7 @@
     <div class="row mb-4">
         <div class="col-12 d-flex flex-column align-items-center">
             <div class="search-brand mb-4 mt-5">
-                <h1 class="search-title">Exercices<span class="search-highlight">Search</span></h1>
+                <h1 class="search-title"><span class="search-highlight">Search</span>yourMath</h1>
             </div>
             <div class="search-container">
                 <div class="search-input-wrapper">
