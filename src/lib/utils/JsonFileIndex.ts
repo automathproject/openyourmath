@@ -7,20 +7,21 @@ import type { FSWatcher } from 'fs';
 interface ExerciseLocation {
   filePath: string;
   isMulti: boolean;  // true if it's in a multi-exercise file
-  index?: number;     // index in the multi-exercise array (if applicable)
+  index?: number;    // index in the multi-exercise array (if applicable)
+  key?: string;      // key in the object-based bundles
 }
 
 export class JsonFileIndex {
   private index: Map<string, ExerciseLocation>;
   private watcher: FSWatcher | null;
   private baseDir: string;
-  private multiFilesPattern: string[];  // Patterns to identify multi-exercise files
+  private bundlePatterns: string[];  // Patterns to identify bundle files
 
-  constructor(multiFilesPattern: string[] = ['exercices_multi.json', 'collection_exercices.json']) {
+  constructor(bundlePatterns: string[] = ['exercices_multi.json', 'collection_exercices.json', 'amscc.json']) {
     this.index = new Map();
     this.watcher = null;
     this.baseDir = '';
-    this.multiFilesPattern = multiFilesPattern;
+    this.bundlePatterns = bundlePatterns;
   }
 
   /**
@@ -41,6 +42,8 @@ export class JsonFileIndex {
     console.log('Construction de l\'index...');
     
     const queue: string[] = [this.baseDir];
+    let individualFiles = 0;
+    let bundledExercises = 0;
     
     while (queue.length > 0) {
       const currentDir = queue.shift()!;
@@ -55,15 +58,17 @@ export class JsonFileIndex {
             queue.push(fullPath);
           } else if (entry.isFile() && entry.name.endsWith('.json')) {
             // Traiter les fichiers individuels (un exercice par fichier)
-            if (!this.isMultiExerciseFile(entry.name)) {
+            if (!this.isBundleFile(entry.name)) {
               const uuid = path.basename(entry.name, '.json');
               this.index.set(uuid, {
                 filePath: fullPath,
                 isMulti: false
               });
+              individualFiles++;
             } else {
-              // Traiter les fichiers multi-exercices
-              await this.indexMultiExerciseFile(fullPath);
+              // Traiter les fichiers bundle
+              const exercisesInBundle = await this.indexBundleFile(fullPath);
+              bundledExercises += exercisesInBundle;
             }
           }
         }
@@ -72,44 +77,56 @@ export class JsonFileIndex {
       }
     }
     
-    console.log(`Index construit avec ${this.index.size} exercices`);
+    console.log(`Index construit avec ${this.index.size} exercices au total:`);
+    console.log(`- ${individualFiles} exercices dans des fichiers individuels`);
+    console.log(`- ${bundledExercises} exercices dans des bundles`);
   }
 
   /**
-   * Vérifie si le fichier est un fichier multi-exercices
+   * Vérifie si le fichier est un bundle
+   * @param filename - Nom du fichier à vérifier
+   * @returns true si le fichier est un bundle, false sinon
    */
-  private isMultiExerciseFile(filename: string): boolean {
-    return this.multiFilesPattern.some(pattern => filename.includes(pattern));
+  isBundleFile(filename: string): boolean {
+    return this.bundlePatterns.some(pattern => filename.includes(pattern)) || 
+           filename.includes('bundle');  // Détection des bundles par convention de nommage
   }
 
   /**
    * Indexe un fichier contenant plusieurs exercices
+   * @param filePath - Chemin du fichier bundle à indexer
+   * @returns Le nombre d'exercices indexés dans ce bundle
    */
-  private async indexMultiExerciseFile(filePath: string): Promise<void> {
+  private async indexBundleFile(filePath: string): Promise<number> {
+    let exercisesIndexed = 0;
+    
     try {
       const content = await readFile(filePath, 'utf-8');
       const exercises = JSON.parse(content);
       
-      // Format AMSCC: objet avec les UUIDs comme clés: { "Ab12": {...}, "Cd34": {...} }
+      // Format bundle type AMSCC: objet avec les UUIDs comme clés
       if (!Array.isArray(exercises) && typeof exercises === 'object') {
         // Vérifier si c'est un format objet avec UUIDs comme clés
-        const hasUuidKeys = Object.keys(exercises).some(key => 
-          typeof exercises[key] === 'object' && exercises[key].uuid
-        );
-        
-        if (hasUuidKeys) {
-          Object.keys(exercises).forEach(key => {
-            const exercise = exercises[key];
-            if (exercise.uuid) {
-              this.index.set(exercise.uuid, {
-                filePath,
-                isMulti: true,
-                key: key // Stocker la clé au lieu de l'index
-              });
-            }
-          });
-          return;
-        }
+        Object.keys(exercises).forEach(key => {
+          const exercise = exercises[key];
+          // Si l'exercice a un UUID défini, on l'utilise
+          if (exercise.uuid) {
+            this.index.set(exercise.uuid, {
+              filePath,
+              isMulti: true,
+              key
+            });
+            exercisesIndexed++;
+          } else {
+            // Sinon, on utilise la clé comme UUID
+            this.index.set(key, {
+              filePath,
+              isMulti: true,
+              key
+            });
+            exercisesIndexed++;
+          }
+        });
         
         // Format { exercices: [...] }
         if (exercises.exercices && Array.isArray(exercises.exercices)) {
@@ -120,14 +137,14 @@ export class JsonFileIndex {
                 isMulti: true,
                 index
               });
+              exercisesIndexed++;
             }
           });
-          return;
         }
       } 
       
       // Format tableau d'exercices
-      if (Array.isArray(exercises)) {
+      else if (Array.isArray(exercises)) {
         exercises.forEach((exercise: any, index: number) => {
           if (exercise.uuid) {
             this.index.set(exercise.uuid, {
@@ -135,12 +152,16 @@ export class JsonFileIndex {
               isMulti: true,
               index
             });
+            exercisesIndexed++;
           }
         });
       }
+      
     } catch (error) {
-      console.error(`Erreur lors de l'indexation du fichier multi-exercices ${filePath}:`, error);
+      console.error(`Erreur lors de l'indexation du fichier bundle ${filePath}:`, error);
     }
+    
+    return exercisesIndexed;
   }
 
   /**
@@ -186,12 +207,44 @@ export class JsonFileIndex {
       this.watcher = null;
     }
   }
+
   /**
- * Récupère tous les UUIDs des exercices indexés
- * @returns Ensemble des UUIDs
- */
+   * Récupère tous les UUIDs des exercices indexés
+   * @returns Ensemble des UUIDs
+   */
   getAllExerciseIds(): Set<string> {
-  return new Set(this.index.keys());
-}
+    return new Set(this.index.keys());
+  }
+
+  /**
+   * Récupère les statistiques sur l'index
+   * @returns Objet contenant des statistiques sur l'index
+   */
+  getStats(): {total: number, bundles: {[key: string]: number}} {
+    const stats = {
+      total: this.index.size,
+      bundles: {} as {[key: string]: number}
+    };
+    
+    // Compter le nombre d'exercices par bundle
+    for (const location of this.index.values()) {
+      if (location.isMulti) {
+        const bundleName = path.basename(location.filePath);
+        stats.bundles[bundleName] = (stats.bundles[bundleName] || 0) + 1;
+      }
+    }
+    
+    return stats;
+  }
+
+  /**
+   * Ajoute un nouveau pattern de bundle à surveiller
+   * @param pattern - Pattern de nom de fichier pour identifier les bundles
+   */
+  addBundlePattern(pattern: string): void {
+    if (!this.bundlePatterns.includes(pattern)) {
+      this.bundlePatterns.push(pattern);
+    }
+  }
 }
 
