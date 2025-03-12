@@ -1,3 +1,4 @@
+// Usage: node src/script/create-bundle.js [directoryPath] [outputPath]
 import fs from 'fs';
 import path from 'path';
 

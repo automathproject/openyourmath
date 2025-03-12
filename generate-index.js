@@ -1,7 +1,7 @@
-// src/scripts/generate-index.js
+// generate-index.js
 /**
  * Script pour générer un fichier d'index statique pour les exercices
- * Usage: node src/scripts/generate-index.js
+ * Usage: node generate-index.js
  */
 import fs from 'fs';
 import path from 'path';

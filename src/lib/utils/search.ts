@@ -1,11 +1,11 @@
-import Fuse from 'fuse.js';
+import Fuse, { type IFuseOptions } from 'fuse.js';
 import type { Exercice } from '../types/types';
 
 export class ExerciceSearchEngine {
   private fuse: Fuse<Exercice>;
 
   constructor() {
-    const options: Fuse.IFuseOptions<Exercice> = {
+    const options: IFuseOptions<Exercice> = {
       keys: [
         { name: 'titre', weight: 0.1 },
         { name: 'theme', weight: 0.3 },
