@@ -2,9 +2,13 @@
 <script lang="ts">
   import { slide } from 'svelte/transition';
   import { quadOut } from 'svelte/easing';
+  import { onMount } from 'svelte';
+  
   export let metadata;
   export let themes;
   export let uuid;
+  let texFileUrl: string = '';
+  
   function formatDate(dateString: string): string {
     const date = new Date(dateString);
     return date.toLocaleDateString("fr-FR", {
@@ -13,7 +17,33 @@
       day: "numeric",
     });
   }
+  
+  // Fonction qui détermine l'URL du fichier .tex
+  onMount(async () => {
+    try {
+      // Essayer de récupérer index.json via une requête fetch
+      const response = await fetch('/content/latex/index.json');
+      if (response.ok) {
+        const texUrls = await response.json();
+        // Si l'UUID existe dans l'index, utiliser l'URL correspondante
+        if (texUrls[uuid]) {
+          texFileUrl = texUrls[uuid];
+        } else {
+          // Fallback: utiliser le format d'URL alternatif
+          texFileUrl = `https://github.com/automathproject/exobase/blob/main/src/amscc/${uuid}.tex`;
+        }
+      } else {
+        // En cas d'erreur lors du chargement du JSON, utiliser le format d'URL alternatif
+        texFileUrl = `https://github.com/automathproject/exobase/blob/main/src/amscc/${uuid}.tex`;
+      }
+    } catch (error) {
+      console.error("Erreur lors du chargement de l'index des fichiers LaTeX:", error);
+      // Fallback en cas d'erreur
+      texFileUrl = `https://github.com/automathproject/exobase/blob/main/src/amscc/${uuid}.tex`;
+    }
+  });
   </script>
+  
   <div class="metadata" transition:slide={{ duration: 100, easing: quadOut }}>
     <!-- Ligne des thèmes -->
     <div class="themes-row">
@@ -23,7 +53,7 @@
         {/each}
       </div>
     </div>
-    
+  
     <!-- Chapitre et sous-chapitre (si présents) -->
     {#if metadata.chapitre || metadata.sousChapitre}
       <div class="chapter-info">
@@ -42,7 +72,7 @@
     <!-- Autres métadonnées -->
     <div class="metadata-group">
       <a
-        href={`https://github.com/automathproject/openyourmath/blob/main/static/content/latex/${uuid}.tex`}
+        href={texFileUrl || `https://github.com/automathproject/exobase/blob/main/src/amscc/${uuid}.tex`}
         target="_blank"
         class="tex-link"
       >
@@ -57,6 +87,7 @@
       <span class="metadata-item">{formatDate(metadata.createdAt)}</span>
     </div>
   </div>
+  
   <style>
   .metadata {
     font-size: 0.9rem;
