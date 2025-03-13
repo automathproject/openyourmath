@@ -194,7 +194,7 @@
         >
           <div class="exercise-info">
             <div class="exercise-title">
-              {index + 1}. <MathRenderer content={exercise.titre} />
+              {index + 1}. <MathRenderer content={`${exercise.titre} - ${exercise.uuid}`} />
             </div>
             <div class="exercise-theme">
               <small>{exercise.theme}</small>
