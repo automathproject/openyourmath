@@ -28,7 +28,8 @@ function isBundleFile(filename) {
     'collection_exercices.json', 
     'amscc.json',
     'bundle.json',
-    '-bundle.json'
+    '-bundle.json',
+    'bundle-part'
   ];
   
   return BUNDLE_PATTERNS.some(pattern => filename.includes(pattern));

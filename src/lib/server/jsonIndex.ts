@@ -13,26 +13,50 @@ const bundlePatterns = [
 async function detectAdditionalBundles(jsonDir: string): Promise<string[]> {
   try {
     const additionalPatterns: string[] = [];
+    // Maintenir une map pour regrouper les parties d'un même bundle
+    const bundleParts = new Map<string, string[]>();
     
     // Fonction récursive pour explorer les répertoires
     const scanDirectory = async (dir: string) => {
       const entries = await fs.readdir(dir, { withFileTypes: true });
-      
       for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
-        
         if (entry.isDirectory()) {
           await scanDirectory(fullPath);
         } else if (entry.isFile() && entry.name.endsWith('.json')) {
+          // Ignorer les fichiers -full.json (ce sont des backups)
+          if (entry.name.endsWith('-full.json')) {
+            continue;
+          }
+          
           // Détecter les fichiers qui contiennent "bundle" dans leur nom
           if (entry.name.toLowerCase().includes('bundle')) {
-            additionalPatterns.push(entry.name);
+            // Vérifier si c'est une partie d'un bundle divisé (ex: nom-bundle-part1.json)
+            const partMatch = entry.name.match(/(.*bundle.*)-part(\d+)\.json$/i);
+            if (partMatch) {
+              // C'est une partie d'un bundle divisé
+              const baseName = partMatch[1];
+              const partNumber = partMatch[2];
+              if (!bundleParts.has(baseName)) {
+                bundleParts.set(baseName, []);
+              }
+              bundleParts.get(baseName)?.push(entry.name);
+            } else {
+              // C'est un bundle standard
+              additionalPatterns.push(entry.name);
+            }
           }
         }
       }
     };
     
     await scanDirectory(jsonDir);
+    
+    // Ajouter toutes les parties de bundle détectées
+    for (const [_, parts] of bundleParts) {
+      additionalPatterns.push(...parts);
+    }
+    
     return [...new Set(additionalPatterns)]; // Éliminer les doublons
   } catch (error) {
     console.error("Erreur lors de la détection des bundles:", error);

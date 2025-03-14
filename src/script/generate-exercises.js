@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { generatePreview } from './PreviewUtils.js';
+import { generatePreview } from './utils/PreviewUtils.js';
 
 // Obtenir le chemin du répertoire courant
 const __filename = fileURLToPath(import.meta.url);

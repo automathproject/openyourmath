@@ -13,12 +13,12 @@ import {
   wrapAlignWithDollar,
   isCommandCommented,
   convertLaTeXToHTML
-} from './Tex2HtmlUtils.js';
+} from './utils/Tex2HtmlUtils.js';
 
 import {
   extractAndConvertTikzBlocks,
   checkDependencies
-} from './Tikz2SvgUtils.js';
+} from './utils/Tikz2SvgUtils.js';
 
 const fsPromises = fs.promises;
 const execPromise = util.promisify(exec);
