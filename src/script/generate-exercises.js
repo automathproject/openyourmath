@@ -36,7 +36,7 @@ async function getAllBundleFiles(dir) {
       if (file.isDirectory()) {
         const subDirFiles = await getAllBundleFiles(fullPath);
         bundleFiles.push(...subDirFiles);
-      } else if (file.isFile() && file.name.endsWith('-bundle.json')) {
+      } else if (file.isFile() && file.name.endsWith('.json') && file.name.includes('-bundle-part') ) {
         bundleFiles.push(fullPath);
       }
     }
