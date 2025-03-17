@@ -55,7 +55,10 @@ export class StaticJsonIndex {
    * Initialise l'index à partir des fichiers pré-générés
    */
   async initialize(): Promise<void> {
-    if (this.initialized) return;
+    if (this.initialized) {
+        console.log("Index déjà initialisé, on ne fait rien.");
+        return;
+    }
     
     const indexFile = path.resolve('static/cache/exercises-index.json');
     const metadataFile = path.resolve('static/cache/exercises-metadata.json');
@@ -83,6 +86,10 @@ export class StaticJsonIndex {
       throw error;
     }
   }
+
+    isInitialized(): boolean {
+        return this.initialized;
+    }
   
   /**
    * Trouve l'emplacement d'un exercice par son UUID
@@ -92,7 +99,9 @@ export class StaticJsonIndex {
       console.warn('L\'index n\'est pas encore initialisé');
       return null;
     }
-    return this.index[uuid] || null;
+      const location = this.index[uuid] || null;
+      console.log(`findExerciseLocation(${uuid}) retourne:`, location);
+      return location;
   }
   
   /**

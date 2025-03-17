@@ -5,13 +5,19 @@ import fs from 'fs';
 import path from 'path';
 import { fsPromises, ensureDirectoryExists } from './FileUtils.js';
 
+interface SplitBundleResult {
+  success: boolean;
+  count: number;
+  error: string | null;
+}
+
 /**
  * Divise un bundle en plusieurs sous-bundles de taille limitée
- * @param {string} bundlePath - Chemin du fichier bundle original
- * @param {number} maxEntriesPerBundle - Nombre maximum d'entrées par sous-bundle
- * @returns {Promise<{success: boolean, count: number, error: string|null}>} - Résultat de l'opération
+ * @param bundlePath - Chemin du fichier bundle original
+ * @param maxEntriesPerBundle - Nombre maximum d'entrées par sous-bundle
+ * @returns Résultat de l'opération
  */
-async function splitBundle(bundlePath, maxEntriesPerBundle = 400) {
+async function splitBundle(bundlePath: string, maxEntriesPerBundle: number = 400): Promise<SplitBundleResult> {
   try {
     // Vérifier si le bundle existe
     if (!fs.existsSync(bundlePath)) {
@@ -23,9 +29,9 @@ async function splitBundle(bundlePath, maxEntriesPerBundle = 400) {
     }
 
     // Charger le bundle
-    const content = await fsPromises.readFile(bundlePath, 'utf8');
-    const bundle = JSON.parse(content);
-    const entries = Object.entries(bundle);
+    const content: string = await fsPromises.readFile(bundlePath, 'utf8');
+    const bundle: Record<string, any> = JSON.parse(content);
+    const entries: [string, any][] = Object.entries(bundle);
     const totalEntries = entries.length;
 
     // Si le bundle est déjà assez petit, ne rien faire
@@ -49,17 +55,17 @@ async function splitBundle(bundlePath, maxEntriesPerBundle = 400) {
       const subEntries = entries.slice(start, end);
       
       // Créer un objet pour le sous-bundle
-      const subBundle = {};
+      const subBundle: Record<string, any> = {};
       for (const [uuid, data] of subEntries) {
         subBundle[uuid] = data;
       }
       
       // Écrire le sous-bundle
-      const subBundlePath = path.join(bundleDir, `${bundleBaseName}-part${i+1}.json`);
+      const subBundlePath = path.join(bundleDir, `${bundleBaseName}-part${i + 1}.json`);
       await fsPromises.writeFile(subBundlePath, JSON.stringify(subBundle, null, 2), 'utf8');
     }
 
-    // Si la division est réussie, renommer l'original
+    // Renommer le fichier original
     const originalBackupPath = path.join(bundleDir, `${bundleBaseName}-full.json`);
     await fsPromises.rename(bundlePath, originalBackupPath);
 
@@ -69,10 +75,11 @@ async function splitBundle(bundlePath, maxEntriesPerBundle = 400) {
       error: null
     };
   } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return {
       success: false,
       count: 0,
-      error: `Erreur lors de la division du bundle: ${error.message}`
+      error: `Erreur lors de la division du bundle: ${errorMessage}`
     };
   }
 }
