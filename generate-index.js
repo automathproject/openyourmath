@@ -29,7 +29,7 @@ function isBundleFile(filename) {
     'amscc.json',
     'bundle.json',
     '-bundle.json',
-    'bundle-part'
+    'bundle-part',
   ];
   
   return BUNDLE_PATTERNS.some(pattern => filename.includes(pattern));

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Script pour convertir les fichiers LaTeX en bundles JSON par sous-répertoire
- * Usage: node convertTex2JsonV5.js <répertoire_racine> [répertoire_de_sortie] [--update] [--max-entries=<nombre>] [--no-split]
+ * Usage: node convertTex2JsonV5.js <répertoire_racine> [répertoire_de_sortie] [--update] [--max-entries=<nombre>] [--no-split] [--cleanup]
  * 
  * Exemple de structure:
  * src/
@@ -18,13 +18,56 @@ import { getPathInfo, ensureDirectoryExists } from './utils/FileUtils.js';
 import { processSubDirectories, processStructureGenerically } from './utils/BundleUtils.js';
 
 /**
+ * Nettoie les fichiers de bundle redondants dans le répertoire spécifié
+ * @param {string} outputDir - Répertoire contenant les bundles à nettoyer
+ */
+async function cleanupRedundantBundles(outputDir) {
+  console.log("Mode nettoyage : suppression des fichiers de bundle redondants...");
+  
+  // S'assurer que le répertoire existe
+  if (!fs.existsSync(outputDir)) {
+    console.error(`Le répertoire spécifié n'existe pas : ${outputDir}`);
+    return;
+  }
+  
+  // Parcourir le répertoire de sortie
+  const files = fs.readdirSync(outputDir);
+  
+  // Rechercher les motifs de noms redondants
+  const redundantFiles = files.filter(file => 
+    file.endsWith('.json') && (
+        file.includes('-full-part') || 
+        file.includes('-full-full') ||
+        file.includes('-part1-part') || 
+        file.includes('-part2-part') ||
+        // Compter le nombre de "-part" dans le nom de fichier
+        (file.match(/-part/g) || []).length > 1
+      )
+  );
+  
+  if (redundantFiles.length > 0) {
+    console.log(`${redundantFiles.length} fichiers redondants trouvés.`);
+    
+    for (const file of redundantFiles) {
+      const filePath = path.join(outputDir, file);
+      fs.unlinkSync(filePath);
+      console.log(`Supprimé: ${file}`);
+    }
+    
+    console.log("Nettoyage terminé.");
+  } else {
+    console.log("Aucun fichier redondant trouvé.");
+  }
+}
+
+/**
  * Fonction principale
  */
 async function main() {
   const args = process.argv.slice(2);
 
   if (args.length < 1) {
-    console.error("Usage : node convertTex2JsonV5.js <répertoire_racine> [répertoire_de_sortie] [--update] [--max-entries=<nombre>]");
+    console.error("Usage : node convertTex2JsonV5.js <répertoire_racine> [répertoire_de_sortie] [--update] [--max-entries=<nombre>] [--no-split] [--cleanup]");
     process.exit(1);
   }
 
@@ -33,12 +76,15 @@ async function main() {
   let updateMode = false;
   let maxEntriesPerBundle = 400; // Valeur par défaut
   let splitBundles = true; // Par défaut, les bundles sont divisés
+  let cleanupMode = false; // Mode nettoyage
 
   for (let i = 1; i < args.length; i++) {
     if (args[i] === '--update') {
       updateMode = true;
     } else if (args[i] === '--no-split') {
       splitBundles = false;
+    } else if (args[i] === '--cleanup') {
+      cleanupMode = true;
     } else if (args[i].startsWith('--max-entries=')) {
       const value = args[i].split('=')[1];
       maxEntriesPerBundle = parseInt(value, 10);
@@ -54,6 +100,12 @@ async function main() {
   // Si aucun répertoire de sortie n'est spécifié, utiliser un répertoire 'bundles' dans le répertoire parent
   if (!outputDir) {
     outputDir = path.resolve(path.dirname(inputPath), 'bundles');
+  }
+
+  // Exécuter le nettoyage si demandé, puis quitter
+  if (cleanupMode) {
+    await cleanupRedundantBundles(outputDir);
+    process.exit(0);
   }
 
   const commandsToExtract = [
@@ -133,7 +185,7 @@ async function main() {
 
   // Afficher le résumé final
   console.log(`\nOpération terminée !`);
-  console.log(`Bundles créés : ${result.bundleCount}`);
+  console.log(`Bundles modifiés/créés : ${result.bundleCount}`);
   console.log(`Fichiers convertis : ${result.processed}`);
   
   if (updateMode) {
