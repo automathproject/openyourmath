@@ -111,7 +111,9 @@
         // Applique le filtre par correction
         if (correctionFilter !== 'all') {
             filteredResults = filteredResults.filter(result => {
-                const hasCorrection = result.exercise.metadata?.hasCorrection === "true";
+                const hasCorrection = 
+        result.exercise.metadata?.hasCorrection === true || 
+        result.exercise.metadata?.hasCorrection === "true";
                 return correctionFilter === 'with' ? hasCorrection : !hasCorrection;
             });
         }
