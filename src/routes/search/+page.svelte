@@ -443,45 +443,6 @@
         padding: 3px 8px;
     }
 
-    .tag-count {
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        padding: 2px 6px;
-        margin-left: 6px;
-        font-size: 12px;
-        min-width: 24px;
-        text-align: center;
-    }
-
-    .tag-count.selected {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .remove-tag {
-        background: none;
-        border: none;
-        color: inherit;
-        margin-left: 4px;
-        padding: 0 4px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        opacity: 0.7;
-        transition: opacity 0.2s ease;
-    }
-
-    .remove-tag:hover {
-        opacity: 1;
-    }
-
-    .selected-tags {
-        padding-bottom: 1rem;
-        border-bottom: 1px solid #eee;
-    }
-
-    .available-tags {
-        padding-top: 0.5rem;
-    }
 
     .cursor-pointer {
         cursor: pointer;
