@@ -102,7 +102,7 @@
         <div class="row text-center g-4">
             <div class="col-md-3">
                 <div class="p-3">
-                    <div class="display-4 text-primary fw-bold mb-2">400+</div>
+                    <div class="display-4 text-primary fw-bold mb-2">8000+</div>
                     <div class="text-muted">Exercices libres</div>
                 </div>
             </div>
