@@ -112,7 +112,7 @@ function moveDown(index: number) {
                                 ✓
                             {:else}
                                 📋
-                            {/if}
+                            {/if} 
                         </button>
                     </div>
                     {#if $customList.length > 0}
@@ -137,9 +137,16 @@ function moveDown(index: number) {
                                     duration: 300,
                                     delay: 0
                                 }}>
-                                <div class="exercise-content">
+                                <div class="exercise-info">
+                                <div class="exercise-title">
                                     <MathRenderer content={exercise.titre}/>
                                 </div>
+                                <p class="card-text text-muted mb-2">
+                                    <span class="preview-html">
+                                     <MathRenderer content={exercise.preview}/>
+                                    </span>
+                                </p>
+                            </div>
                                 <div class="item-controls">
                                     <div class="move-buttons">
                                         {#if index > 0}
@@ -230,6 +237,11 @@ function moveDown(index: number) {
                                     <div class="exercise-title">
                                         <MathRenderer content={exercise.titre}/>
                                     </div>
+                                    <p class="card-text text-muted mb-2">
+                                        <span class="preview-html">
+                                        <MathRenderer content={exercise.preview}/>
+                                        </span>
+                                    </p>
                                     <div class="exercise-uuid">
                                         {exercise.uuid}
                                     </div>
@@ -497,5 +509,10 @@ function moveDown(index: number) {
         position: sticky;
         top: 0;
         background: white;
+    }
+
+    .preview-html {
+        font-size: 0.7rem;
+        color: #6c757d;
     }
 </style>

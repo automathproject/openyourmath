@@ -240,7 +240,7 @@
             </div>
     
             <!-- Colonne de droite : Résultats -->
-            <div class="col-12 col-md-5 col-lg-6">
+            <div class="col-12 col-md-5 col-lg-5">
                 <div class="alert alert-info">
                     <div class="d-flex justify-content-between align-items-center">
                         <strong>{allResults.length} exercice(s) trouvé(s)</strong>
@@ -312,7 +312,7 @@
             </div>
             
             <!-- Custom List Column -->
-            <div class="d-none d-md-block col-md-3 col-lg-3">
+            <div class="d-none d-md-block col-md-3 col-lg-4">
                 <CustomList showMobileButton={false} />
             </div>
             
