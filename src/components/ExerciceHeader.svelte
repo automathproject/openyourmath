@@ -21,8 +21,8 @@
   // Fonction qui détermine l'URL du fichier .tex
   onMount(async () => {
     try {
-      // Essayer de récupérer index.json via une requête fetch
-      const response = await fetch('/content/latex/index.json');
+      // Essayer de récupérer index-tex.json via une requête fetch
+      const response = await fetch('/content/json2/index-tex.json');
       if (response.ok) {
         const texUrls = await response.json();
         // Si l'UUID existe dans l'index, utiliser l'URL correspondante
