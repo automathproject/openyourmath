@@ -41,17 +41,4 @@
     </label>
   </div>
   
-  <div class="form-check form-switch">
-    <input 
-      class="form-check-input" 
-      type="checkbox" 
-      role="switch" 
-      id="switchWithoutCorrection" 
-      checked={withoutCorrection}
-      on:change={() => handleFilterChange('without')}
-    />
-    <label class="form-check-label" for="switchWithoutCorrection">
-      Sans solution
-    </label>
-  </div>
 </div>
