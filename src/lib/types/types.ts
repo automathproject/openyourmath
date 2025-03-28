@@ -10,7 +10,6 @@ export type Exercice = {
 };
 
 export type Metadata = {
-  // Champs originaux
   auteur?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -25,6 +24,12 @@ export type Metadata = {
   youtube?: string;
   chapitre?: string;
   sousChapitre?: string;
+
+  difficulty?: number; // 1-5
+  competences?: string[]; // Liste de compétences
+  prerequisits?: string[]; // Liste de prérequis
+  concepts?: string[]; // Liste de concepts
+  type_exercice?: string; // Type d'exercice (QCM, vrai/faux, application directe etc.)
 };
 
 export type ContenuElement = {
