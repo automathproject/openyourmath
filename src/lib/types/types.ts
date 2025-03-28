@@ -25,11 +25,15 @@ export type Metadata = {
   chapitre?: string;
   sousChapitre?: string;
 
-  difficulty?: number; // 1-5
-  competences?: string[]; // Liste de compétences
-  prerequisits?: string[]; // Liste de prérequis
-  concepts?: string[]; // Liste de concepts
-  type_exercice?: string; // Type d'exercice (QCM, vrai/faux, application directe etc.)
+  // Champs enrichis
+  resume?: string;
+  competences?: string[];
+  concepts_fondamentaux?: string[];
+  prerequis?: string[];
+  type_exercice?: string;  // QCM, Vrai ou faux, exercice d'application, etc.
+  niveau_difficulte?: string;
+  mots_cles?: string[];
+  temps_estime?: string;
 };
 
 export type ContenuElement = {
