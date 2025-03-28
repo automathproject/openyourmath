@@ -164,7 +164,7 @@
         {#if showMetadata}
         <div class="metadata-section">
           <div class="metadata-content">
-            <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.theme} uuid={ExerciceData.uuid}/>
+            <ExerciceHeader metadata={ExerciceData.metadata} themes={ExerciceData.metadata.mots_cles} uuid={ExerciceData.uuid}/>
           </div>
           <div class="control-buttons">
             <YouTubeToggleButton 
