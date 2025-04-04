@@ -1,3 +1,4 @@
+<!-- src/routes/+layout.svelte -->
 <script>
 	import Header from './Header.svelte';
 	import 'katex/dist/katex.min.css';

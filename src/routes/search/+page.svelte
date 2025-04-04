@@ -36,6 +36,8 @@
 
     // Statut de chargement - initialisé à true
     let isLoading = true;
+    // Ajout d'une variable pour indiquer si l'interface est prête
+    let isUIReady = true;
 
     function normalizeThemes(theme: string | string[]): string[] {
         if (Array.isArray(theme)) return theme;
@@ -125,25 +127,34 @@
         updateDynamicCounts(filteredResults);
     }
 
-    onMount(() => {
+    function initializeSearchEngine() {
         if (data?.exercises) {
-            // Initialisation des données
-            setTimeout(() => {
-                searchEngine = new ExerciceSearchEngine();
-                searchEngine.initialize(data.exercises);
-                
-                data.exercises.forEach(exercise => {
-                    const themes = normalizeThemes(exercise.theme);
-                    themes.forEach(theme => {
-                        allTags.set(theme, (allTags.get(theme) || 0) + 1);
-                    });
+            console.log("Initialisation du moteur de recherche...");
+            searchEngine = new ExerciceSearchEngine();
+            searchEngine.initialize(data.exercises);
+            
+            // Construction de la collection des tags
+            data.exercises.forEach(exercise => {
+                const themes = normalizeThemes(exercise.theme);
+                themes.forEach(theme => {
+                    allTags.set(theme, (allTags.get(theme) || 0) + 1);
                 });
-                allTags = new Map(allTags);
-                
-                updateResults();
-                isLoading = false;
-            }, 0); // Exécution asynchrone pour permettre au header de s'afficher
+            });
+            allTags = new Map(allTags);
+            
+            updateResults();
+            isLoading = false;
+            console.log("Moteur de recherche initialisé!");
         }
+    }
+
+    onMount(() => {
+        // Montrer immédiatement l'UI
+        isUIReady = true;
+        
+        // Initialiser le moteur de recherche de manière asynchrone
+        // pour libérer le thread principal et permettre au header de s'afficher
+        setTimeout(initializeSearchEngine, 10);
     });
 
     async function handleExerciseClick(exercise: Exercice) {
@@ -176,8 +187,8 @@
     }
 
     // Réagir aux changements de la recherche et des filtres
-    $: query, updateResults();
-    $: correctionFilter, updateResults();
+    $: query, searchEngine && updateResults();
+    $: correctionFilter, searchEngine && updateResults();
 </script>
 
 <div class="container-fluid">
@@ -444,10 +455,6 @@
         font-size: 12px;
         padding: 3px 8px;
     }
-
-
-
-
 
     .cursor-pointer {
         cursor: pointer;
