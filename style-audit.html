@@ -1,0 +1,2945 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit des styles - Projet SvelteKit</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1, h2, h3 { margin-top: 2em; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin: 2em 0; }
+    .stat-card { background: #f5f5f5; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .file-list { margin: 2em 0; }
+    .file-card { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; overflow: hidden; }
+    .file-header { background: #eee; padding: 10px 15px; cursor: pointer; display: flex; justify-content: space-between; }
+    .file-content { height: 0; overflow: hidden; transition: height 0.3s ease-out; }
+    .file-content pre { margin: 0; padding: 15px; background: #f8f8f8; overflow-x: auto; }
+    .file-content.open { height: auto; max-height: 500px; overflow-y: auto; }
+    .toggle-all { margin: 1em 0; padding: 10px 15px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .path { font-family: monospace; word-break: break-all; }
+    .count { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Audit des styles - Projet SvelteKit</h1>
+  
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Fichiers avec styles</h3>
+      <div class="count">30</div>
+    </div>
+    <div class="stat-card">
+      <h3>Règles CSS estimées</h3>
+      <div class="count">60</div>
+    </div>
+    
+      <div class="stat-card">
+        <h3>Fichiers .css</h3>
+        <div class="count">1</div>
+        <div>22 règles</div>
+      </div>
+    
+      <div class="stat-card">
+        <h3>Fichiers .svelte</h3>
+        <div class="count">29</div>
+        <div>38 règles</div>
+      </div>
+    
+  </div>
+  
+  <h2>Liste des fichiers (30)</h2>
+  <button class="toggle-all" id="toggleAll">Afficher/Masquer tous les styles</button>
+  
+  <div class="file-list">
+    
+      <div class="file-card">
+        <div class="file-header" data-index="0">
+          <div class="path">src/app.css</div>
+          <div>22 règles</div>
+        </div>
+        <div class="file-content" id="content-0">
+          <pre>@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+
+/* @import '@fontsource/fira-mono'; */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+	--font-primary: 'Source Sans Pro', sans-serif;
+	--font-heading: 'Nunito', sans-serif;
+	--color-bg-0: rgb(211, 211, 211);
+	--color-bg-1: hsl(0, 0%, 87%);
+	--color-bg-2: hsl(224, 12%, 68%);
+	--color-theme-1: #ff3e00;
+	--color-theme-2: #910000;
+	--color-text: rgba(0, 0, 0, 0.7);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
+    --bs-primary: #49B2B2;
+}
+
+
+
+
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: var(--color-bg-1);
+	background-size: 100vw 100vh;
+	background-image: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(255, 255, 255, 0.75) 0%,
+			rgba(2, 39, 28, 0) 100%
+		),
+		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+}
+
+body {
+	font-family: var(--font-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+  }
+
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--color-text);
+}
+
+.text-column {
+	display: flex;
+	max-width: 48rem;
+	flex: 0.6;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+	
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag {
+    background-color: #e0e0e0; /* Couleur de fond du tag */
+    color: #333; /* Couleur du description du tag */
+    padding: 5px 10px; /* Espacement autour du description */
+    border-radius: 15px; /* Coins arrondis pour un effet de badge */
+    font-size: 14px; /* Taille de la police */
+    font-weight: 500; /* Épaisseur du description */
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tag:hover {
+    background-color: #333; /* Couleur de fond au survol */
+    color: #fff; /* Couleur du description au survol */
+  }
+  .btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+
+
+.btn-primary:hover {
+    background-color: darken(var(--bs-primary), 10%) !important;
+    border-color: darken(var(--bs-primary), 10%) !important;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(145, 0, 0, 0.5) !important;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary) !important; /* Texte */
+    border-color: var(--bs-primary) !important; /* Bordure */
+    background-color: transparent !important; /* Fond transparent */
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #fff !important; /* Texte blanc au survol */
+    background-color: var(--bs-primary) !important; /* Fond couleur principale */
+    border-color: var(--bs-primary) !important; /* Bordure couleur principale */
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(145, 0, 0, 0.5) !important; /* Ombre couleur principale */
+}
+
+.btn-outline-primary:disabled,
+.btn-outline-primary.disabled {
+    color: rgba(145, 0, 0, 0.5) !important; /* Texte désactivé */
+    border-color: rgba(145, 0, 0, 0.5) !important; /* Bordure désactivée */
+    background-color: transparent !important; /* Fond transparent */
+}
+
+.text-primary {
+    color: var(--bs-primary) !important; /* Utilise votre couleur principale */
+}
+
+
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="1">
+          <div class="path">src/components/AddButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-1">
+          <pre>
+    .btn-add {
+        position: relative;
+        margin-left: 0.5rem;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        border: none;
+        color: #333;
+        font-size: 20px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        z-index: 1;
+    }
+    
+    .btn-add:hover {
+        background-color: #d0d0d0;
+        transform: scale(1.1);
+    }
+    
+    .btn-add.added {
+        background-color: #333;
+        color: #fff;
+    }
+    </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="2">
+          <div class="path">src/components/buttons/FontSizeToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-2">
+          <pre>
+/* Style pour le bouton de taille de police */
+.control-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 40px;
+    width: 40px;
+  }
+.font-size-button {
+  background: #4a5568;
+  color: white;
+  border-color: #4a5568;
+}
+
+.font-size-button:hover {
+  background: #2d3748;
+  border-color: #2d3748;
+}
+
+.font-size-button.active {
+  background: #2d3748;
+  border-color: #2d3748;
+}
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="3">
+          <div class="path">src/components/buttons/FullscreenToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-3">
+          <pre>
+    .control-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 40px;
+    width: 40px;
+  }
+
+  .control-button:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .control-button:active {
+    transform: translateY(0);
+  }
+
+  .control-button.active {
+    background: #4a5568;
+    color: white;
+    border-color: #4a5568;
+  }
+
+  .fullscreen-button {
+    background: #2d3748;
+    color: white;
+    border-color: #2d3748;
+  }
+
+  .fullscreen-button:hover {
+    background: #1a202c;
+    border-color: #1a202c;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="4">
+          <div class="path">src/components/buttons/HideColumnsButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-4">
+          <pre>
+    .toggle-button-container {
+      position: absolute;
+      left: -12px;
+      top: 0;  /* Modifié pour s'adapter au nouveau contexte */
+      z-index: 10;
+    }
+  
+    .toggle-button {
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bs-primary);
+      border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .toggle-button:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    }
+  
+    .toggle-button i {
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+  
+    .toggle-button:hover i {
+      transform: translateX(2px);
+    }
+  
+    @media (max-width: 768px) {
+      .toggle-button-container {
+        position: static;
+        margin-bottom: 1rem;
+      }
+    }
+  </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="5">
+          <div class="path">src/components/buttons/HintsToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-5">
+          <pre>
+    .control-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+      color: #4a5568;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      height: 40px;
+      width: 40px;
+    }
+    
+    .control-button:hover {
+      background: #f7fafc;
+      border-color: #cbd5e0;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .control-button:active {
+      transform: translateY(0);
+    }
+    
+    .control-button.active {
+      background: #4a5568;
+      color: white;
+      border-color: #4a5568;
+    }
+    
+    .hint-button {
+      background: #f1ed156e;
+      color: black;
+      border-color: #f1ed1573;
+    }
+    
+    .hint-button:hover {
+      background: #e6e310;
+      border-color: #e6e310;
+    }
+    
+    .hint-button.active {
+      background: #e6e310;
+      border-color: #e6e310;
+    }
+    </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="6">
+          <div class="path">src/components/buttons/ListViewButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-6">
+          <pre>
+    .btn-visualize {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: #212529;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+        aspect-ratio: 1;
+    }
+
+    .sm {
+        padding: 0.5rem;
+        width: 2.5rem;
+    }
+
+    .md {
+        padding: 0.625rem;
+        width: 3rem;
+    }
+
+    .lg {
+        padding: 0.75rem;
+        width: 3.5rem;
+    }
+
+    .btn-visualize:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: translateY(-1px);
+    }
+
+    .btn-visualize:active {
+        transform: translateY(0);
+    }
+
+    .list-icon {
+        flex-shrink: 0;
+    }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="7">
+          <div class="path">src/components/buttons/MetadataToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-7">
+          <pre>
+  .metadata-toggle {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .metadata-toggle:hover {
+    background-color: #e0e0e0;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="8">
+          <div class="path">src/components/buttons/ReponsesToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-8">
+          <pre>
+  .control-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 40px;
+    width: 40px;
+  }
+
+  .control-button:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .control-button:active {
+    transform: translateY(0);
+  }
+
+  .control-button.active {
+    background: #4a5568;
+    color: white;
+    border-color: #4a5568;
+  }
+
+
+
+  .answer-button {
+    background: #81b87a;
+    color: white;
+    border-color: #81b87a;
+  }
+
+  .answer-button:hover {
+    background: #17c700;
+    border-color: #17c700;
+  }
+
+  .answer-button.active {
+    background: #17c700;
+    border-color: #17c700;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="9">
+          <div class="path">src/components/buttons/YouTubeToggleButton.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-9">
+          <pre>
+  .youtube-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: #282828;
+    border: 1px solid #d3d3d3;
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .youtube-button:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .youtube-button svg {
+    width: 18px;
+    height: 18px;
+    color: #ff0000;
+  }
+
+  .youtube-button span {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .youtube-button span {
+      display: none;
+    }
+
+    .youtube-button {
+      padding: 0.5rem;
+    }
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="10">
+          <div class="path">src/components/CustomList.svelte</div>
+          <div>2 règles</div>
+        </div>
+        <div class="file-content" id="content-10">
+          <pre>
+    /* Layout de base */
+    .custom-list-container {
+        position: relative;
+        height: 100%;
+    }
+
+    .custom-list-content {
+        max-height: calc(100vh - 240px);
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    .custom-list-sticky {
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        z-index: 1040;
+    }
+
+    /* Items de la liste */
+    .custom-list-item {
+        padding: 0.5rem;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        transform-origin: center;
+        position: relative;
+    }
+
+    .custom-list-item:hover {
+        background-color: #e9ecef;
+    }
+
+    .exercise-content,
+    .exercise-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .exercise-title {
+        margin-bottom: 0.25rem;
+    }
+
+    .exercise-uuid {
+        font-size: 0.75rem;
+        color: #6c757d;
+        font-family: monospace;
+    }
+
+    /* Contrôles et boutons */
+    .item-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .move-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .move-buttons.mobile {
+        flex-direction: row;
+    }
+
+    .btn-move {
+        background: none;
+        border: none;
+        color: #6c757d;
+        padding: 0.25rem;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .btn-move:hover {
+        background-color: #e9ecef;
+        color: #0d6efd;
+        transform: scale(1.1);
+    }
+
+    .btn-remove {
+        background: none;
+        border: none;
+        color: #dc3545;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 6px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-remove:hover {
+        opacity: 1;
+    }
+
+    /* UUID container */
+    .uuid-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .uuids-list {
+        flex: 1;
+        font-size: 0.75rem;
+        color: #6c757d;
+        word-wrap: break-word;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .btn-copy {
+        background: none;
+        border: none;
+        color: #6c757d;
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .btn-copy:hover {
+        background-color: #a3bad1;
+        color: #212529;
+    }
+
+    /* Version mobile */
+    .floating-list-button {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: #0d6efd;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1030;
+    }
+
+    .list-count {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .list-label {
+        font-size: 0.8rem;
+    }
+
+    /* Modal mobile */
+    .custom-list-modal {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 2001;
+    }
+
+    .custom-list-item.mobile {
+        padding: 0.75rem;
+        background-color: white;
+        border: 1px solid #dee2e6;
+        margin: 0 -1rem;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .swipe-indicator {
+        width: 40px;
+        height: 4px;
+        background-color: #e0e0e0;
+        border-radius: 2px;
+        margin: 0.5rem auto;
+    }
+
+    .custom-list-modal-content {
+        padding-top: 0.5rem;
+        background-color: #f8f9fa;
+    }
+
+    .custom-list-modal-body {
+        max-height: calc(80vh - 100px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 1rem;
+        background-color: white;
+    }
+
+    .custom-list-modal-header {
+        padding: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: white;
+    }
+
+    .preview-html {
+        font-size: 0.7rem;
+        color: #6c757d;
+    }
+
+
+/* --- Styles inline --- */
+
+/* Style inline trouvé */
+.inline-style {
+  transform: translateY({modalTranslateY}px);
+  
+}</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="11">
+          <div class="path">src/components/ExerciceHeader.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-11">
+          <pre>
+  .metadata {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .metadata-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .metadata-item {
+    font-weight: bold;
+  }
+  .metadata-separator {
+    color: #aaa;
+  }
+  .tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+  }
+  .themes-row {
+    display: flex;
+    flex-wrap: wrap; /* Permet de gérer plusieurs thèmes sur une même ligne */
+    gap: 0.5rem; /* Espacement entre les tags */
+  }
+  .chapter-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .chapter-item {
+    font-weight: 500;
+    font-style: italic;
+  }
+  </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="12">
+          <div class="path">src/components/ExerciceRenderer.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-12">
+          <pre>
+  .exercice-wrapper {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .exercice-wrapper.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: clamp(1rem, 5vw, 3rem);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .exercice {
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .exercice.fullscreen {
+    max-width: 750px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-radius: 16px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 2rem;
+  }
+
+  .metadata-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+  }
+
+  .metadata-content {
+    flex: 1;
+  }
+
+  .control-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .left-section {
+    flex: 1;
+  }
+
+  .right-section {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .titre-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .titre {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 640px) {
+    .exercice.fullscreen {
+      max-width: 100%;
+      margin: 0;
+      padding: 1rem;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    
+    .metadata-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .control-buttons {
+      margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .right-section {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .metadata-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: #6b7280;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-top: 0.25rem;
+  }
+
+  .metadata-toggle:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+  }
+
+  .metadata-toggle svg {
+    transition: transform 0.3s ease;
+  }
+
+  .metadata-toggle svg.rotated {
+    transform: rotate(-180deg);
+  }
+
+  .content {
+    transform-origin: center top;
+  }
+
+  .description,
+  .question,
+  .indication,
+  .reponse {
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .reponse {
+    background-color: #d0ecc9;
+    padding: 0.5rem;
+    border-left: 4px solid #1eff00;
+  }
+
+  .indication {
+    background-color: #f1ed153b;
+    padding: 0.5rem;
+    border-left: 4px solid #f1ee15;
+  }
+
+  .large-font {
+    font-size: 150%;
+  }
+
+  .large-font :global(.titre) {
+    font-size: 2.25rem;
+  }
+
+  .large-font :global(.metadata-group) {
+    font-size: 1.3rem;
+  }
+
+  .large-font :global(.tag) {
+    font-size: 1.3rem;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="13">
+          <div class="path">src/components/filters/FiltersPanel.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-13">
+          <pre>
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+    
+    .filters-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .filter-section {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .filter-section:last-child {
+        border-bottom: none;
+    }
+    
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .filter-header:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .filter-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .filter-toggle {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #6c757d;
+    }
+    
+    .filter-content {
+        padding: 0;
+    }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="14">
+          <div class="path">src/components/filters/ThemeFilter.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-14">
+          <pre>
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .filter-count {
+        font-size: 0.9rem;
+        color: #6c757d;
+        font-weight: normal;
+    }
+
+    .collapse-btn {
+        color: #6c757d;
+        text-decoration: none;
+    }
+
+    .collapse-btn:hover {
+        color: #343a40;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .tag {
+        background-color: #e0e0e0;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+
+    .tag:hover {
+        background-color: #d0d0d0;
+    }
+
+    .tag.selected {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .tag-count {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 2px 6px;
+        margin-left: 6px;
+        font-size: 12px;
+        min-width: 24px;
+        text-align: center;
+    }
+
+    .tag-count.selected {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .remove-tag {
+        background: none;
+        border: none;
+        color: inherit;
+        margin-left: 4px;
+        padding: 0 4px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+    }
+
+    .remove-tag:hover {
+        opacity: 1;
+    }
+
+    .selected-tags {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .available-tags {
+        padding-top: 0.5rem;
+    }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="15">
+          <div class="path">src/components/MathRenderer.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-15">
+          <pre>
+    /* Styles pour les tableaux LaTeX */
+    :global(.katex-display) {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1em 0;
+}
+
+/* Ajoutez ces nouvelles règles */
+  :global(.katex) {
+    font-size: 1.1em !important; /* Ajustez cette valeur selon vos besoins */
+  }
+
+:global(.katex-display &gt; .katex) {
+  font-size: 1.1em !important; /* Pour les formules en mode display ($$...$$) */
+}
+
+    :global(table) {
+        border-collapse: collapse;
+        margin: 1em 0;
+        min-width: 100%;
+    }
+
+    :global(td), :global(th) {
+        border: 1px solid #ddd;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    :global(.array) {
+        border: 1px solid #ddd !important;
+    }
+
+    :global(.array td), :global(.array th) {
+        border: 1px solid #ddd !important;
+        padding: 0.3em 0.6em !important;
+    }
+
+    /* Style spécifique pour les matrices */
+    :global(.matrix) {
+        border: none !important;
+    }
+
+    :global(.matrix td) {
+        padding: 0.2em 0.5em !important;
+    }
+
+    /* Style pour les bordures verticales des tableaux */
+    :global(.vline) {
+        border-left: 1px solid #ddd !important;
+    }
+
+    /* Style pour les bordures horizontales des tableaux */
+    :global(.hline) {
+        border-top: 1px solid #ddd !important;
+    }
+
+    
+  </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="16">
+          <div class="path">src/components/Modal.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-16">
+          <pre>
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 0;
+  border-radius: 8px;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 640px) {
+  .modal-content {
+    padding: 2rem;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .close-button {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-body {
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .modal-body {
+    margin-top: 1rem;
+  }
+}
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="17">
+          <div class="path">src/components/YouTubeOverlay.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-17">
+          <pre>
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(8px);
+  }
+
+  .overlay-content {
+    width: 90%;
+    max-width: 900px;
+    background-color: #0f0f0f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    background-color: #0f0f0f;
+  }
+
+  .close-button {
+    background: transparent;
+    border: none;
+    color: #aaaaaa;
+    cursor: pointer;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+
+  .close-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* Animation plus fluide pour l'overlay */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="18">
+          <div class="path">src/routes/+layout.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-18">
+          <pre>
+	 :global(:root) {
+	   --header-height: 3.5rem;
+	   --header-height-mobile: 3rem;
+	 }
+
+
+   
+	 .app {
+	   display: flex;
+	   flex-direction: column;
+	   min-height: 100vh;
+	 }
+   
+	 .main-content {
+	   flex: 1;
+	   display: flex;
+	   flex-direction: column;
+	   padding: 1rem;
+	   width: 100%;
+	   max-width: 64rem;
+	   margin: 0 auto;
+	   box-sizing: border-box;
+	   margin-top: var(--header-height); /* Ajoute une marge égale à la hauteur du header */
+	 }
+   
+	 footer {
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   align-items: center;
+	   padding: 12px;
+	 }
+   
+	 @media (max-width: 992px) {
+	   .main-content {
+		 margin-top: var(--header-height-mobile); /* Ajuste la marge pour mobile */
+	   }
+	 }
+   
+	 @media (min-width: 480px) {
+	   footer {
+		 padding: 12px 0;
+	   }
+	 }
+   </pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="19">
+          <div class="path">src/routes/+page.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-19">
+          <pre>
+
+    .bg-gradient {
+        background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    }
+
+    .logo {
+        transition: transform 0.2s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.1);
+    }
+
+    .feature-card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid rgba(0,0,0,0.125);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    }
+
+    .feature-card.active-feature {
+        border-color: var(--bs-primary);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: var(--bs-primary);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="20">
+          <div class="path">src/routes/Counter.svelte</div>
+          <div>2 règles</div>
+        </div>
+        <div class="file-content" id="content-20">
+          <pre>
+	.counter {
+		display: flex;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin: 1rem 0;
+	}
+
+	.counter button {
+		width: 2em;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 0;
+		background-color: transparent;
+		touch-action: manipulation;
+		font-size: 2rem;
+	}
+
+	.counter button:hover {
+		background-color: var(--color-bg-1);
+	}
+
+	svg {
+		width: 25%;
+		height: 25%;
+	}
+
+	path {
+		vector-effect: non-scaling-stroke;
+		stroke-width: 2px;
+		stroke: #444;
+	}
+
+	.counter-viewport {
+		width: 8em;
+		height: 4em;
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+	}
+
+	.counter-viewport strong {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		font-weight: 400;
+		color: var(--color-theme-1);
+		font-size: 4rem;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.counter-digits {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hidden {
+		top: -100%;
+		user-select: none;
+	}
+
+
+/* --- Styles inline --- */
+
+/* Style inline trouvé */
+.inline-style {
+  transform: translate(0, {100 * offset}%)
+}</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="21">
+          <div class="path">src/routes/exercice/+page.svelte</div>
+          <div>3 règles</div>
+        </div>
+        <div class="file-content" id="content-21">
+          <pre>
+ /* Styles à mettre dans la balise &lt;style&gt; */
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-selector {
+  margin-bottom: 1rem;
+}
+
+.selector-container {
+  display: flex;
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 0.25rem;
+  border-radius: 8px;
+  gap: 0.25rem;
+}
+
+.selector-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.selector-button.active {
+  color: #fff;
+}
+
+.selector-highlight {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: calc(50% - 0.25rem);
+  height: calc(100% - 0.5rem);
+  background-color: #007bff;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.search-content {
+  transition: opacity 0.3s ease;
+}
+
+.fixed-width-input {
+  width: 80px !important;
+  min-width: 80px !important;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.btn-icon {
+  padding: 0.375rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    width: 100%;
+  }
+
+  .search-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .fixed-width-input {
+    width: 100px !important;
+    min-width: 100px !important;
+  }
+
+  .btn-icon {
+    padding: 0.375rem;
+  }
+
+  .search-sections {
+    padding: 0.5rem;
+  }
+    
+  .selector-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+
+/* --- Styles inline --- */
+
+/* Style inline trouvé */
+.inline-style {
+  transform: translateX({searchMode === 
+}
+
+/* Style inline trouvé */
+.inline-style {
+  min-height: 300px
+}</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="22">
+          <div class="path">src/routes/exercice/liste/+page.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-22">
+          <pre>
+  .liste-container {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+  .container {
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    .input-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .input-container button {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="23">
+          <div class="path">src/routes/Header.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-23">
+          <pre>
+	/* Utilisation des mêmes variables CSS que dans le layout principal */
+	:global(:root) {
+		--header-height: 3.5rem;
+		--header-height-mobile: 3rem;
+	}
+
+	header {
+		height: var(--header-height);
+		min-height: var(--header-height);
+		backdrop-filter: blur(8px);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+	}
+
+	.logo-img {
+		width: 2rem;
+		height: 2rem;
+		transition: transform 0.2s ease;
+	}
+
+	.logo-img:hover {
+		transform: scale(1.1);
+	}
+
+	.github-img {
+		width: 2rem;
+		height: 2rem;
+		opacity: 0.7;
+		transition: opacity 0.2s ease;
+	}
+
+	.github-img:hover {
+		opacity: 1;
+	}
+
+	.nav-link {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: #4a5568;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		transition: color 0.2s ease;
+	}
+
+	.nav-link:hover {
+		color: #2b6cb0;
+	}
+
+	.nav-link.active {
+		color: #2b6cb0;
+	}
+
+	.active-indicator {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #2b6cb0;
+	}
+
+	@media (max-width: 992px) {
+		header {
+			height: var(--header-height-mobile);
+			min-height: var(--header-height-mobile);
+		}
+
+		.navbar-collapse {
+			position: absolute;
+			top: var(--header-height-mobile);
+			left: 0;
+			right: 0;
+			background: white;
+			padding: 0.5rem;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.nav-item {
+			margin: 0.25rem 0;
+		}
+
+		.active-indicator {
+			height: 100%;
+			width: 3px;
+			left: 0;
+			top: 0;
+		}
+
+		.nav-link {
+			padding: 0.5rem 1rem;
+		}
+	}
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="24">
+          <div class="path">src/routes/Liste.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-24">
+          <pre>
+  .list-group-item {
+    cursor: pointer;
+  }
+
+  .list-group-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .list-group-item.active {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: inherit;
+  }
+  
+  .list-group-item.active:hover {
+    background-color: #dde1e5;
+  }
+
+  .exercise-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.875rem;
+  }
+
+  .exercise-title {
+    font-weight: bold;
+  }
+
+  .exercise-theme {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .btn {
+    align-self: flex-start;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="25">
+          <div class="path">src/routes/Recherche.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-25">
+          <pre>
+.theme-explorer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px); /* Hauteur fixe pour le conteneur global */
+  overflow-y: auto;           /* Activation du scroll global */
+}
+
+.themes-tree {
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  /* Vous pouvez retirer overflow hidden si présent */
+}
+
+
+  .themes-list {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .theme-button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #495057;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+
+.theme-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-name {
+  font-weight: 500;
+}
+
+.theme-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+  .theme-button:hover {
+    background-color: #e9ecef;
+  }
+
+  .category-button {
+    font-weight: 500;
+  }
+
+  .subtheme-button {
+    padding-left: 2rem;
+  }
+
+  .category-name, .theme-name {
+  font-weight: 600; /* Remplacer par 600 pour plus de gras ou 700 pour du bold */
+}
+
+  .chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .chevron.rotated {
+    transform: rotate(90deg);
+  }
+
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+  }
+
+  .icon-small {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  .theme-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .badge {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .exercises-list {
+  max-height: 300px; /* Ajustez cette valeur selon vos besoins */
+  overflow-y: auto;
+}
+
+  .exercise-item {
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: #495057;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .exercise-item:hover {
+    background-color: #e9ecef;
+  }
+
+  .exercise-item.selected {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+  }
+
+  .exercise-item.selecting {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  .exercise-item:disabled {
+    cursor: wait;
+  }
+
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .themes-list::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .themes-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .themes-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+  }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="26">
+          <div class="path">src/routes/RechercheModules.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-26">
+          <pre>
+    .theme-explorer {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .loading-spinner {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .themes-tree {
+        margin-top: 1rem;
+    }
+
+    .theme-button {
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s;
+    }
+
+    .theme-button:hover {
+        background-color: #f3f4f6;
+    }
+
+    .module-button {
+        font-weight: 600;
+        color: #1a365d;
+    }
+
+    .chapitre-button {
+        padding-left: 1.5rem;
+        color: #2d3748;
+    }
+
+    .sous-chapitre-button {
+        padding-left: 3rem;
+        color: #4a5568;
+    }
+
+    .theme-right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .badge {
+        background-color: #e2e8f0;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        color: #4a5568;
+    }
+
+    .icon-wrapper {
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s;
+    }
+
+    .icon-wrapper.rotated {
+        transform: rotate(90deg);
+    }
+
+    .icon-small {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+    }
+
+    .exercises-list {
+        max-height: 70vh;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        margin-left: 3rem;
+    }
+
+    .exercises-list::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .exercises-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .exercises-list::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    .exercises-list::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .exercise-item {
+        width: 100%;
+        text-align: left;
+        padding: 0.5rem;
+        margin: 0.25rem 0;
+        background: none;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .exercise-item:hover {
+        background-color: #f3f4f6;
+        border-color: #d1d5db;
+    }
+
+    .exercise-item.selected {
+        background-color: #e6f0fd;
+        border-color: #3b82f6;
+    }
+
+    .exercise-item:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .exercise-title {
+        font-size: 0.875rem;
+        color: #374151;
+    }
+
+    .load-more-button {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        background-color: #f3f4f6;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        color: #374151;
+        font-size: 0.875rem;
+        text-align: center;
+        transition: background-color 0.2s;
+        cursor: pointer;
+    }
+
+    .load-more-button:hover:not(:disabled) {
+        background-color: #e5e7eb;
+    }
+
+    .load-more-button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .load-more-button .loading-spinner {
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid #e5e7eb;
+        border-top-color: #374151;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .chapitres, .sous-chapitres {
+        margin-left: 0.5rem;
+        border-left: 1px solid #e5e7eb;
+    }
+</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="27">
+          <div class="path">src/routes/search/+page.svelte</div>
+          <div>5 règles</div>
+        </div>
+        <div class="file-content" id="content-27">
+          <pre>
+    /* Styles du moteur de recherche */
+    .search-brand {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .search-title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: #333;
+        margin: 0;
+    }
+    
+    .search-highlight {
+        color: #4285F4;
+        font-weight: 700;
+    }
+    
+    .search-container {
+        width: 100%;
+        max-width: 640px;
+        margin-bottom: 2rem;
+    }
+    
+    .search-input-wrapper {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        border-radius: 24px;
+        transition: box-shadow 0.3s;
+    }
+    
+    .search-input-wrapper:hover, 
+    .search-input-wrapper:focus-within {
+        box-shadow: 0 1px 10px rgba(32, 33, 36, 0.45);
+    }
+    
+    .search-icon {
+        position: absolute;
+        left: 16px;
+        color: #9AA0A6;
+        font-size: 1.2rem;
+    }
+    
+    .search-input {
+        height: 48px;
+        border: none;
+        border-radius: 24px;
+        padding: 0 48px 0 48px;
+        font-size: 1rem;
+        width: 100%;
+        outline: none;
+    }
+    
+    .search-clear-btn {
+        position: absolute;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #9AA0A6;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-clear-btn:hover {
+        color: #4285F4;
+    }
+    
+    /* Styles existants */
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .tag {
+        background-color: #e0e0e0;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        user-select: none;
+    }
+
+    .tag:hover {
+        background-color: #d0d0d0;
+    }
+
+    .tag.selected {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .tag.result-tag {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .hover-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hover-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-html {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    
+    .preview-html :global(p) {
+        margin: 0;
+    }
+
+    .exercise-content {
+        padding-right: 3rem;
+    }
+
+    .add-button-wrapper {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 2;
+    }
+
+    .loading-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        color: #666;
+    }
+    
+    .search-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .search-loader-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        animation: loader-bounce 1.4s ease infinite;
+        animation-delay: var(--delay);
+    }
+    
+    .search-loader-dot:nth-child(1) { background-color: #4285F4; }
+    .search-loader-dot:nth-child(2) { background-color: #EA4335; }
+    .search-loader-dot:nth-child(3) { background-color: #FBBC05; }
+    .search-loader-dot:nth-child(4) { background-color: #34A853; }
+    
+    .search-loader-text {
+        color: #5f6368;
+        font-size: 0.95rem;
+    }
+    
+    @keyframes loader-bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+/* --- Styles inline --- */
+
+/* Style inline trouvé */
+.inline-style {
+  --delay: 0s
+}
+
+/* Style inline trouvé */
+.inline-style {
+  --delay: 0.1s
+}
+
+/* Style inline trouvé */
+.inline-style {
+  --delay: 0.2s
+}
+
+/* Style inline trouvé */
+.inline-style {
+  --delay: 0.3s
+}</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="28">
+          <div class="path">src/routes/sverdle/+page.svelte</div>
+          <div>2 règles</div>
+        </div>
+        <div class="file-content" id="content-28">
+          <pre>
+	form {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		flex: 1;
+	}
+
+	.how-to-play {
+		color: var(--color-text);
+	}
+
+	.how-to-play::before {
+		content: 'i';
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: 900;
+		width: 1em;
+		height: 1em;
+		padding: 0.2em;
+		line-height: 1;
+		border: 1.5px solid var(--color-text);
+		border-radius: 50%;
+		text-align: center;
+		margin: 0 0.5em 0 0;
+		position: relative;
+		top: -0.05em;
+	}
+
+	.grid {
+		--width: min(100vw, 40vh, 380px);
+		max-width: var(--width);
+		align-self: center;
+		justify-self: center;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.grid .row {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 0.2rem;
+		margin: 0 0 0.2rem 0;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.grid.bad-guess .row.current {
+			animation: wiggle 0.5s;
+		}
+	}
+
+	.grid.playing .row.current {
+		filter: drop-shadow(3px 3px 10px var(--color-bg-0));
+	}
+
+	.letter {
+		aspect-ratio: 1;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		box-sizing: border-box;
+		text-transform: lowercase;
+		border: none;
+		font-size: calc(0.08 * var(--width));
+		border-radius: 2px;
+		background: white;
+		margin: 0;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.letter.missing {
+		background: rgba(255, 255, 255, 0.5);
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.letter.exact {
+		background: var(--color-theme-2);
+		color: white;
+	}
+
+	.letter.close {
+		border: 2px solid var(--color-theme-2);
+	}
+
+	.selected {
+		outline: 2px solid var(--color-theme-1);
+	}
+
+	.controls {
+		text-align: center;
+		justify-content: center;
+		height: min(18vh, 10rem);
+	}
+
+	.keyboard {
+		--gap: 0.2rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap);
+		height: 100%;
+	}
+
+	.keyboard .row {
+		display: flex;
+		justify-content: center;
+		gap: 0.2rem;
+		flex: 1;
+	}
+
+	.keyboard button,
+	.keyboard button:disabled {
+		--size: min(8vw, 4vh, 40px);
+		background-color: white;
+		color: black;
+		width: var(--size);
+		border: none;
+		border-radius: 2px;
+		font-size: calc(var(--size) * 0.5);
+		margin: 0;
+	}
+
+	.keyboard button.exact {
+		background: var(--color-theme-2);
+		color: white;
+	}
+
+	.keyboard button.missing {
+		opacity: 0.5;
+	}
+
+	.keyboard button.close {
+		border: 2px solid var(--color-theme-2);
+	}
+
+	.keyboard button:focus {
+		background: var(--color-theme-1);
+		color: white;
+		outline: none;
+	}
+
+	.keyboard button[data-key='enter'],
+	.keyboard button[data-key='backspace'] {
+		position: absolute;
+		bottom: 0;
+		width: calc(1.5 * var(--size));
+		height: calc(1 / 3 * (100% - 2 * var(--gap)));
+		text-transform: uppercase;
+		font-size: calc(0.3 * var(--size));
+		padding-top: calc(0.15 * var(--size));
+	}
+
+	.keyboard button[data-key='enter'] {
+		right: calc(50% + 3.5 * var(--size) + 0.8rem);
+	}
+
+	.keyboard button[data-key='backspace'] {
+		left: calc(50% + 3.5 * var(--size) + 0.8rem);
+	}
+
+	.keyboard button[data-key='enter']:disabled {
+		opacity: 0.5;
+	}
+
+	.restart {
+		width: 100%;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.5);
+		border-radius: 2px;
+		border: none;
+	}
+
+	.restart:focus,
+	.restart:hover {
+		background: var(--color-theme-1);
+		color: white;
+		outline: none;
+	}
+
+	@keyframes wiggle {
+		0% {
+			transform: translateX(0);
+		}
+		10% {
+			transform: translateX(-2px);
+		}
+		30% {
+			transform: translateX(4px);
+		}
+		50% {
+			transform: translateX(-6px);
+		}
+		70% {
+			transform: translateX(+4px);
+		}
+		90% {
+			transform: translateX(-2px);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+
+/* --- Styles inline --- */
+
+/* Style inline trouvé */
+.inline-style {
+  position: absolute;
+   left: 50%;
+   top: 30%
+}</pre>
+        </div>
+      </div>
+    
+      <div class="file-card">
+        <div class="file-header" data-index="29">
+          <div class="path">src/routes/sverdle/how-to-play/+page.svelte</div>
+          <div>1 règles</div>
+        </div>
+        <div class="file-content" id="content-29">
+          <pre>
+	span {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.8em;
+		width: 2.4em;
+		height: 2.4em;
+		background-color: white;
+		box-sizing: border-box;
+		border-radius: 2px;
+		border-width: 2px;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.missing {
+		background: rgba(255, 255, 255, 0.5);
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	.close {
+		border-style: solid;
+		border-color: var(--color-theme-2);
+	}
+
+	.exact {
+		background: var(--color-theme-2);
+		color: white;
+	}
+
+	.example {
+		display: flex;
+		justify-content: flex-start;
+		margin: 1rem 0;
+		gap: 0.2rem;
+	}
+
+	.example span {
+		font-size: 1.4rem;
+	}
+
+	p span {
+		position: relative;
+		border-width: 1px;
+		border-radius: 1px;
+		font-size: 0.4em;
+		transform: scale(2) translate(0, -10%);
+		margin: 0 1em;
+	}
+</pre>
+        </div>
+      </div>
+    
+  </div>
+  
+  <script>
+    document.querySelectorAll('.file-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const index = header.getAttribute('data-index');
+        const content = document.getElementById('content-' + index);
+        content.classList.toggle('open');
+      });
+    });
+    
+    document.getElementById('toggleAll').addEventListener('click', () => {
+      const allContents = document.querySelectorAll('.file-content');
+      const shouldOpen = !allContents[0].classList.contains('open');
+      
+      allContents.forEach(content => {
+        if (shouldOpen) {
+          content.classList.add('open');
+        } else {
+          content.classList.remove('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+  
