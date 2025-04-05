@@ -18,6 +18,10 @@
 	font-family: var(--font-body);
 	color: var(--color-text);
     --bs-primary: #49B2B2;
+
+	/* Variables moved from src/routes/+layout.svelte */
+	--header-height: 3.5rem;
+	--header-height-mobile: 3rem;	
 }
 
 
@@ -99,24 +103,209 @@ button:focus:not(:focus-visible) {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-  }
-  .tag {
-    background-color: #e0e0e0; /* Couleur de fond du tag */
-    color: #333; /* Couleur du description du tag */
-    padding: 5px 10px; /* Espacement autour du description */
-    border-radius: 15px; /* Coins arrondis pour un effet de badge */
-    font-size: 14px; /* Taille de la police */
-    font-weight: 500; /* Épaisseur du description */
-    display: inline-block;
+    margin-top: 0.5rem; /* From search page */
+}
+.tag {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex; /* From search page */
+    align-items: center; /* From search page */
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .tag:hover {
-    background-color: #333; /* Couleur de fond au survol */
-    color: #fff; /* Couleur du description au survol */
-  }
-  .btn-primary {
+    transition: all 0.2s ease; /* From search page */
+    user-select: none; /* From search page */
+}
+
+.tag:hover {
+    background-color: #d0d0d0; /* Hover from search page */
+    /* color: #fff; */ /* Original hover color, overridden */
+}
+
+/* New states/modifiers for tags (from search/+page.svelte) */
+.tag.selected {
+    background-color: #333;
+    color: #fff;
+}
+
+.tag.result-tag { /* Modifier for tags specifically in results */
+    font-size: 12px;
+    padding: 3px 8px;
+}
+
+/* === Styles moved from src/routes/search/+page.svelte === */
+
+/* --- Search Bar Styles --- */
+.search-brand {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.search-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #333;
+    margin: 0;
+}
+
+.search-highlight {
+    /* Consider using var(--bs-primary) or another theme color */
+    color: #4285F4;
+    font-weight: 700;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 640px; /* Note: Max width might be specific */
+    margin-bottom: 2rem; /* Spacing below search */
+    /* Center the container if not already centered by parent */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Added for better contrast/visibility */
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 24px;
+    transition: box-shadow 0.3s;
+}
+
+.search-input-wrapper:hover,
+.search-input-wrapper:focus-within {
+    box-shadow: 0 1px 10px rgba(32, 33, 36, 0.45);
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    color: #9AA0A6;
+    font-size: 1.2rem;
+    pointer-events: none; /* Prevent icon interfering with input focus */
+}
+
+.search-input {
+    height: 48px;
+    border: none;
+    background: transparent; /* Input bg comes from wrapper */
+    border-radius: 24px;
+    padding: 0 48px 0 48px; /* Space for icons */
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+/* Optional: Style placeholder text */
+/* .search-input::placeholder {
+    color: #9AA0A6;
+    opacity: 1;
+} */
+
+
+.search-clear-btn {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #9AA0A6;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure button aligns vertically if needed */
+}
+
+.search-clear-btn:hover {
+    /* Consider using a theme color */
+    color: #4285F4;
+}
+
+
+/* --- Utility Class --- */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* --- Card Hover Effect --- */
+.hover-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Preview Styling --- */
+.preview-html {
+    font-size: 0.9rem;
+    color: #6c757d; /* Bootstrap's text-muted color */
+    /* Optional: Add some spacing if needed */
+    /* margin-top: 0.5rem; */
+}
+
+/* Style paragraphs within the preview */
+.preview-html p {
+    margin: 0; /* Removed margin from paragraphs inside preview */
+}
+
+
+/* --- Loading Indicator --- */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Ensure space is occupied */
+    color: #666; /* Text color */
+}
+
+.search-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; /* Space between dots */
+}
+
+.search-loader-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: loader-bounce 1.4s ease infinite;
+    /* --delay is set via inline style in the component */
+    animation-delay: var(--delay);
+}
+
+/* Specific colors for loader dots */
+.search-loader-dot:nth-child(1) { background-color: #4285F4; }
+.search-loader-dot:nth-child(2) { background-color: #EA4335; }
+.search-loader-dot:nth-child(3) { background-color: #FBBC05; }
+.search-loader-dot:nth-child(4) { background-color: #34A853; }
+
+.search-loader-text {
+    color: #5f6368;
+    font-size: 0.95rem;
+    margin-top: 1rem; /* Space between dots and text */
+}
+
+/* Keyframes for the loader animation */
+@keyframes loader-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Bounce height */
+    }
+}
+
+.btn-primary {
     background-color: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
 }
@@ -162,4 +351,109 @@ button:focus:not(:focus-visible) {
     color: var(--bs-primary) !important; /* Utilise votre couleur principale */
 }
 
+/* Styles moved from src/routes/+layout.svelte */
 
+/* Core application layout styles */
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+  }
+  
+  /* Main content area styling */
+  .main-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	width: 100%;
+	max-width: 64rem; /* Central content column */
+	margin: 0 auto;
+	box-sizing: border-box;
+	margin-top: var(--header-height); /* Space for the fixed header */
+  }
+  
+  /* Footer styling */
+  footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	/* Consider adding some background/text color if needed */
+	/* background-color: var(--color-bg-2); */
+	/* color: var(--color-text); */
+	font-size: 0.9rem; /* Example: slightly smaller text */
+  }
+  
+  /* Responsive adjustments for layout */
+  @media (max-width: 992px) {
+	.main-content {
+	  margin-top: var(--header-height-mobile); /* Adjust space for mobile header */
+	  max-width: 100%; /* Allow content to use full width on smaller screens */
+	}
+  }
+  
+  @media (min-width: 480px) {
+	footer {
+	  padding: 12px 0; /* Adjust padding on slightly larger screens */
+	}
+  }
+
+  /* Styles moved from src/routes/+page.svelte */
+.bg-gradient {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.logo {
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.125); /* Default Bootstrap card border */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); /* Default Bootstrap card shadow on hover */
+}
+
+/* Uses --bs-primary defined in :root */
+.feature-card.active-feature {
+    border-color: var(--bs-primary);
+}
+
+/* Uses --bs-primary defined in :root */
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--bs-primary);
+}
+
+/* Combine or adjust H1 media queries as needed */
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem; /* Existing rule */
+	}
+}
+
+@media (max-width: 768px) { /* Rule moved from +page.svelte */
+    h1 {
+        font-size: 2.5rem; /* This overrides the base H1 size on smaller screens */
+                           /* Consider if this size is appropriate, maybe adjust base size */
+    }
+}
+
+/* Consider consolidating the H1 media queries if appropriate. */
+/* For example, you could define the base size, then override */
+/* for specific ranges */
+
+/* Example consolidation (adjust sizes as needed): */
+/* h1 { font-size: 2.2rem; } /* Base size for mobile-first */
+/* @media (min-width: 768px) { h1 { font-size: 2.4rem; } } */
+/* @media (min-width: 992px) { h1 { font-size: 2.8rem; } } /* Example for larger screens */
