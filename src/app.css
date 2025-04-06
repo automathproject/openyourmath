@@ -22,6 +22,17 @@
 	/* Variables moved from src/routes/+layout.svelte */
 	--header-height: 3.5rem;
 	--header-height-mobile: 3rem;	
+	--border-color: #e2e8f0;
+	--card-bg: white;
+	--reponse-bg: #e6f4ea;
+	--reponse-border: #66bb6a;
+	--reponse-text: #1b5e20;
+	--indication-bg: #fffde7;
+	--indication-border: #ffee58;
+	--indication-text: #827717;
+	--color-text-muted: #6b7280;
+	--color-bg-hover: #f3f4f6;
+	--color-heading-text: #333;
 }
 
 
@@ -457,3 +468,138 @@ button:focus:not(:focus-visible) {
 /* h1 { font-size: 2.2rem; } /* Base size for mobile-first */
 /* @media (min-width: 768px) { h1 { font-size: 2.4rem; } } */
 /* @media (min-width: 992px) { h1 { font-size: 2.8rem; } } /* Example for larger screens */
+
+/* === Styles moved from src/routes/exercice/+page.svelte === */
+
+/* Utility for icon-only buttons (adjusts padding) */
+.btn-icon {
+	padding: 0.375rem 0.75rem; /* Default Bootstrap btn padding */
+	display: flex; /* Ensure icon is centered */
+	align-items: center;
+	justify-content: center;
+	line-height: 1; /* Prevent extra height from line height */
+  }
+  
+  /* Responsive adjustment for icon-only buttons */
+  @media (max-width: 768px) {
+	.btn-icon {
+	  padding: 0.375rem; /* Tighter padding on small screens */
+	}
+  }
+
+  /* === Styles moved from src/components/ExerciceRenderer.svelte === */
+
+/* --- Exercice Renderer Wrapper & Fullscreen --- */
+.exercice-wrapper {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exercice-wrapper.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Consider dvh for dynamic viewport height */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px); /* Slightly less blur */
+    z-index: 1050; /* Ensure above most elements, check Bootstrap modal z-index if used */
+    overflow-y: auto;
+    padding: clamp(1rem, 4vw, 2rem); /* Adjusted padding */
+}
+
+/* --- Exercice Content Card --- */
+.exercice {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color, #e2e8f0); /* Use variable */
+    border-radius: 12px;
+    background: var(--card-bg, white); /* Use variable */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 1rem; /* Add space below */
+}
+
+/* --- Exercice Card in Fullscreen --- */
+.exercice.fullscreen {
+    max-width: 800px; /* Slightly wider max-width */
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-radius: 16px;
+}
+
+/* --- Base styling for Content Blocks --- */
+.description,
+.question,
+.indication,
+.reponse {
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Add bottom margin */
+    line-height: 1.6;
+}
+/* Add some top margin to the first block */
+.exercice > .content > :is(.description, .question, .indication, .reponse):first-child {
+    margin-top: 0;
+}
+
+/* --- Specific Styling for Reponse Blocks --- */
+.reponse {
+    background-color: var(--reponse-bg, #e6f4ea); /* Use variable, softer green */
+    padding: 0.75rem 1rem;
+    border-left: 4px solid var(--reponse-border, #66bb6a); /* Use variable */
+    border-radius: 4px;
+}
+/* Add contrast to Math elements inside */
+.reponse .katex {
+	color: var(--reponse-text, #1b5e20); /* Darker green text */
+}
+
+
+/* --- Specific Styling for Indication Blocks --- */
+.indication {
+    background-color: var(--indication-bg, #fffde7); /* Use variable, softer yellow */
+    padding: 0.75rem 1rem;
+    border-left: 4px solid var(--indication-border, #ffee58); /* Use variable */
+    border-radius: 4px;
+}
+/* Add contrast to Math elements inside */
+.indication .katex {
+	color: var(--indication-text, #827717); /* Darker yellow/brown text */
+}
+
+
+/* --- Large Font Modifier --- */
+.large-font {
+    font-size: 1.4em; /* Use em for scalability */
+}
+
+/* Target global classes when .large-font is active */
+.large-font .metadata-group { /* Assuming .metadata-group is global */
+    font-size: 1.2em; /* Relative sizing */
+}
+
+.large-font .tag {
+    font-size: 1em; /* Adjust relative to parent's 1.4em */
+    padding: 0.5em 1em; /* Relative padding */
+    border-radius: 1.5em; /* Relative radius */
+}
+
+/* --- Responsive Fullscreen Card --- */
+@media screen and (max-width: 640px) {
+    .exercice-wrapper.fullscreen {
+        padding: 0.5rem; /* Minimal padding on mobile */
+        backdrop-filter: none; /* Remove blur on mobile? Perf */
+        background: var(--card-bg, white); /* Opaque background */
+    }
+
+    .exercice.fullscreen {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 1rem; /* Consistent padding inside */
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        /* Ensure scroll within the card, not the wrapper */
+        overflow-y: auto;
+    }
+}
