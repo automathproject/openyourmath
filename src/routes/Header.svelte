@@ -1,7 +1,14 @@
+<!-- src/routes/Header.svelte -->
 <script>
 	import { page } from '$app/stores';
+	import { customList } from '$lib/stores/customList'; // <-- 1. Importer le store
 	import logo from '$lib/images/logo-coopmaths-carré-final.png';
 	import github from '$lib/images/github.svg';
+
+    // 2. Calculer l'URL dynamiquement
+    $: maListeUrl = $customList.length > 0
+        ? `/exercice/liste?list=${$customList.map(ex => ex.uuid).join(',')}`
+        : '/exercice/liste'; // Lien de base si la liste est vide
 </script>
 
 <header class="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90">
@@ -12,13 +19,13 @@
 			</a>
 		</div>
 
-		<button 
-			class="navbar-toggler" 
-			type="button" 
-			data-bs-toggle="collapse" 
-			data-bs-target="#navbarNav" 
-			aria-controls="navbarNav" 
-			aria-expanded="false" 
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNav"
+			aria-controls="navbarNav"
+			aria-expanded="false"
 			aria-label="Toggle navigation"
 		>
 			<span class="navbar-toggler-icon"></span>
@@ -53,22 +60,23 @@
 				<li class="nav-item position-relative">
 					<a
 						href="/exercice"
-						class="nav-link px-3 {$page.url.pathname === '/exercice' ? 'active' : ''}"
-						aria-current={$page.url.pathname === '/exercice' ? 'page' : undefined}
+						class="nav-link px-3 {$page.url.pathname.startsWith('/exercice') && !$page.url.pathname.startsWith('/exercice/liste') ? 'active' : ''}"
+						aria-current={$page.url.pathname.startsWith('/exercice') && !$page.url.pathname.startsWith('/exercice/liste') ? 'page' : undefined}
 					>
 						Exercices
 					</a>
-					{#if $page.url.pathname === '/exercice'}
+                    <!-- Modification de la condition active -->
+					{#if $page.url.pathname.startsWith('/exercice') && !$page.url.pathname.startsWith('/exercice/liste')}
 						<div class="active-indicator" />
 					{/if}
 				</li>
 				<li class="nav-item position-relative">
 					<a
-						href="/exercice/liste"
+						href={maListeUrl}  
 						class="nav-link px-3 {$page.url.pathname === '/exercice/liste' ? 'active' : ''}"
 						aria-current={$page.url.pathname === '/exercice/liste' ? 'page' : undefined}
 					>
-						Ma Liste
+						Ma Liste {#if $customList.length > 0}({$customList.length}){/if} <!-- Optionnel: afficher le nombre -->
 					</a>
 					{#if $page.url.pathname === '/exercice/liste'}
 						<div class="active-indicator" />
@@ -141,6 +149,7 @@
 
 	.nav-link.active {
 		color: #2b6cb0;
+		font-weight: 600; /* Rendre un peu plus visible l'état actif */
 	}
 
 	.active-indicator {
