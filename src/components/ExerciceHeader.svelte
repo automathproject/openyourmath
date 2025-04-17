@@ -37,8 +37,8 @@
 			if (response.ok) {
 				const texUrls = await response.json();
 				if (texUrls && texUrls[uuid]) {
-					// Construct relative URL correctly
-					texFileUrl = `/content/latex/${texUrls[uuid]}`;
+					// Construct absolute URL correctly
+					texFileUrl = `${texUrls[uuid]}`;
 				} else {
 					// Fallback if UUID not found or index is malformed
 					texFileUrl = `https://github.com/automathproject/exobase/blob/main/src/amscc/${uuid}.tex`;
