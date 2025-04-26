@@ -9,6 +9,7 @@
 	export let uuid;
 	let texFileUrl: string = '';
 	let isLoadingUrl = true; // Track loading state
+	let showExtraMetadata = false; // Control expanded view
 
 	function formatDate(dateString: string): string {
 		if (!dateString) return ''; // Handle undefined/null date
@@ -56,6 +57,15 @@
 			isLoadingUrl = false;
 		}
 	});
+
+	// Check if additional metadata is available
+	$: hasAdditionalMetadata = !!(
+		(metadata?.competences && metadata.competences.length > 0) ||
+		(metadata?.concepts_fondamentaux && metadata.concepts_fondamentaux.length > 0) ||
+		(metadata?.prerequis && metadata.prerequis.length > 0) ||
+		metadata?.type_exercice ||
+		metadata?.niveau_difficulte
+	);
 </script>
 
 {#if metadata}
@@ -90,6 +100,24 @@
 			</div>
 		{/if}
 
+		<!-- Niveau et Type d'exercice sur la même ligne -->
+		{#if metadata.niveau_difficulte || metadata.type_exercice}
+			<div class="metadata-row">
+				{#if metadata.niveau_difficulte}
+					<div class="metadata-chip difficulty">
+						<span class="metadata-label">Niveau :</span>
+						<span class="metadata-value">{metadata.niveau_difficulte}</span>
+					</div>
+				{/if}
+				
+				{#if metadata.type_exercice}
+					<div class="metadata-chip exercise-type">
+						<span class="metadata-value">{metadata.type_exercice}</span>
+					</div>
+				{/if}
+			</div>
+		{/if}
+
 		<!-- Autres métadonnées -->
 		<div class="metadata-group">
 			{#if !isLoadingUrl && texFileUrl}
@@ -119,7 +147,51 @@
 			{#if metadata.createdAt}
 				<span class="metadata-item">{formatDate(metadata.createdAt)}</span>
 			{/if}
+
+			{#if hasAdditionalMetadata}
+				<button class="toggle-metadata" on:click={() => showExtraMetadata = !showExtraMetadata}>
+					{showExtraMetadata ? 'Moins de détails' : 'Plus de détails'}
+				</button>
+			{/if}
 		</div>
+
+		<!-- Section de métadonnées supplémentaires - s'affiche uniquement lorsqu'elle est développée -->
+		{#if hasAdditionalMetadata && showExtraMetadata}
+			<div class="extra-metadata" transition:slide|local={{ duration: 150, easing: quadOut }}>
+				{#if metadata.competences && metadata.competences.length > 0}
+					<div class="extra-metadata-section">
+						<h4 class="section-title">Compétences</h4>
+						<div class="tags">
+							{#each metadata.competences as competence}
+								<span class="tag competence-tag">{competence}</span>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				{#if metadata.concepts_fondamentaux && metadata.concepts_fondamentaux.length > 0}
+					<div class="extra-metadata-section">
+						<h4 class="section-title">Concepts fondamentaux</h4>
+						<div class="tags">
+							{#each metadata.concepts_fondamentaux as concept}
+								<span class="tag concept-tag">{concept}</span>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
+				{#if metadata.prerequis && metadata.prerequis.length > 0}
+					<div class="extra-metadata-section">
+						<h4 class="section-title">Prérequis</h4>
+						<div class="tags">
+							{#each metadata.prerequis as prerequis}
+								<span class="tag prerequis-tag">{prerequis}</span>
+							{/each}
+						</div>
+					</div>
+				{/if}
+			</div>
+		{/if}
 	</div>
 {/if}
 
@@ -196,4 +268,93 @@
         cursor: default;
     }
 
+	/* Nouveaux styles pour les métadonnées améliorées */
+	.metadata-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.metadata-chip {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.15rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.8rem;
+		white-space: nowrap;
+		background: var(--color-bg-chip, #f0f0f0);
+		border: 1px solid var(--color-border-chip, #e0e0e0);
+	}
+
+	.difficulty {
+		background-color: var(--color-bg-difficulty, #f8f4ff);
+		border-color: var(--color-border-difficulty, #e6d8ff);
+	}
+
+	.exercise-type {
+		background-color: var(--color-bg-exercise-type, #f0f8ff);
+		border-color: var(--color-border-exercise-type, #d0e8ff);
+	}
+
+	.metadata-label {
+		font-weight: 600;
+		margin-right: 0.25rem;
+		color: var(--color-text-label, #666);
+	}
+
+	.metadata-value {
+		color: var(--color-text-value, #444);
+	}
+
+	.toggle-metadata {
+		background: none;
+		border: none;
+		padding: 0.1rem 0.3rem;
+		font-size: 0.8rem;
+		color: var(--bs-primary, #49B2B2);
+		cursor: pointer;
+		text-decoration: underline;
+		margin-left: 0.5rem;
+	}
+
+	.toggle-metadata:hover {
+		color: var(--bs-primary-dark, #3a8f8f);
+	}
+
+	.extra-metadata {
+		margin-top: 0.75rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid var(--color-border-light, #eee);
+	}
+
+	.extra-metadata-section {
+		margin-bottom: 0.75rem;
+	}
+
+	.extra-metadata-section:last-child {
+		margin-bottom: 0;
+	}
+
+	.section-title {
+		font-size: 0.8rem;
+		font-weight: 600;
+		margin: 0 0 0.3rem 0;
+		color: var(--color-text-section-title, #555);
+	}
+
+	.competence-tag {
+		background-color: var(--color-bg-competence, #edf9f0);
+		border-color: var(--color-border-competence, #c5e8ce);
+	}
+
+	.concept-tag {
+		background-color: var(--color-bg-concept, #fff4e6);
+		border-color: var(--color-border-concept, #ffe0b2);
+	}
+
+	.prerequis-tag {
+		background-color: var(--color-bg-prerequis, #f9f2f4);
+		border-color: var(--color-border-prerequis, #e9d8de);
+	}
 </style>
