@@ -59,12 +59,13 @@
 	});
 
 	// Check if additional metadata is available
+	// MODIFIED: Added themes check here
 	$: hasAdditionalMetadata = !!(
+		(themes && themes.length > 0) || // <-- ADDED THIS LINE
 		(metadata?.competences && metadata.competences.length > 0) ||
 		(metadata?.concepts_fondamentaux && metadata.concepts_fondamentaux.length > 0) ||
-		(metadata?.prerequis && metadata.prerequis.length > 0) ||
-		metadata?.type_exercice ||
-		metadata?.niveau_difficulte
+		(metadata?.prerequis && metadata.prerequis.length > 0)
+		// Note: Removed type_exercice and niveau_difficulte from this check as they are always displayed if present
 	);
 </script>
 
@@ -72,18 +73,7 @@
 	<!-- Use UUID as key for transition reactivity -->
 	<div class="metadata" key={uuid} transition:slide|local={{ duration: 200, easing: quadOut }}>
 
-		<!-- Ligne des thèmes -->
-		{#if themes && themes.length > 0}
-			<div class="themes-row">
-				<!-- The global .tags class provides flex/gap -->
-				<div class="tags">
-					{#each themes as theme}
-						<!-- This now uses the GLOBAL .tag style from app.css -->
-						<span class="tag">{theme}</span>
-					{/each}
-				</div>
-			</div>
-		{/if}
+		<!-- REMOVED: Themes section was here -->
 
 		<!-- Chapitre et sous-chapitre (si présents) -->
 		{#if metadata.chapitre || metadata.sousChapitre}
@@ -109,7 +99,7 @@
 						<span class="metadata-value">{metadata.niveau_difficulte}</span>
 					</div>
 				{/if}
-				
+
 				{#if metadata.type_exercice}
 					<div class="metadata-chip exercise-type">
 						<span class="metadata-value">{metadata.type_exercice}</span>
@@ -118,7 +108,7 @@
 			</div>
 		{/if}
 
-		<!-- Autres métadonnées -->
+		<!-- Autres métadonnées (toujours visibles) -->
 		<div class="metadata-group">
 			{#if !isLoadingUrl && texFileUrl}
 				<a href={texFileUrl} target="_blank" class="tex-link" rel="noopener noreferrer">
@@ -158,6 +148,20 @@
 		<!-- Section de métadonnées supplémentaires - s'affiche uniquement lorsqu'elle est développée -->
 		{#if hasAdditionalMetadata && showExtraMetadata}
 			<div class="extra-metadata" transition:slide|local={{ duration: 150, easing: quadOut }}>
+
+				<!-- MOVED: Themes section is now here -->
+				{#if themes && themes.length > 0}
+					<div class="extra-metadata-section">
+						<h4 class="section-title">Thèmes</h4>
+						<div class="tags">
+							{#each themes as theme}
+								<!-- This uses the GLOBAL .tag style -->
+								<span class="tag">{theme}</span>
+							{/each}
+						</div>
+					</div>
+				{/if}
+
 				{#if metadata.competences && metadata.competences.length > 0}
 					<div class="extra-metadata-section">
 						<h4 class="section-title">Compétences</h4>
@@ -190,6 +194,7 @@
 						</div>
 					</div>
 				{/if}
+
 			</div>
 		{/if}
 	</div>
@@ -219,9 +224,6 @@
         user-select: none; /* Not selectable */
 	}
 
-	/* Removed the scoped .tag style override */
-	/* Tags will now use the global style from app.css */
-
     /* Ensure global .tags class styles (flex, gap) apply if needed */
     .tags {
         display: flex;
@@ -229,9 +231,7 @@
         gap: 0.35rem; /* Adjust gap if needed */
     }
 
-	.themes-row {
-		margin-bottom: 0.5rem; /* Space below the tags row */
-	}
+	/* REMOVED .themes-row as it's no longer needed at the top level */
 
 	.chapter-info {
 		display: flex;
@@ -268,7 +268,6 @@
         cursor: default;
     }
 
-	/* Nouveaux styles pour les métadonnées améliorées */
 	.metadata-row {
 		display: flex;
 		flex-wrap: wrap;
@@ -342,6 +341,9 @@
 		margin: 0 0 0.3rem 0;
 		color: var(--color-text-section-title, #555);
 	}
+
+	/* Note: Themes will use the default global .tag style */
+	/* You could add a specific .theme-tag style if needed */
 
 	.competence-tag {
 		background-color: var(--color-bg-competence, #edf9f0);
