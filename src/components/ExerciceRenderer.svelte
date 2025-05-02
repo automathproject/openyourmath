@@ -23,10 +23,14 @@
   let contentKey = 0;
   let showYoutubeOverlay = false;
   let currentYoutubeId = "";
+  
+  // État pour les boutons individuels
+  let questionStates = new Map<string, { showReponse: boolean; showIndication: boolean }>();
 
   function resetState() {
     showReponses = false;
     showHints = false;
+    questionStates.clear();
     contentKey++;
   }
 
@@ -73,15 +77,64 @@
     }
   }
 
+  function toggleQuestionReponse(questionNumber: number) {
+    const key = `q${questionNumber}`;
+    const current = questionStates.get(key) || { showReponse: false, showIndication: false };
+    questionStates.set(key, { ...current, showReponse: !current.showReponse });
+    questionStates = new Map(questionStates);
+  }
+
+  function toggleQuestionIndication(questionNumber: number) {
+    const key = `q${questionNumber}`;
+    const current = questionStates.get(key) || { showReponse: false, showIndication: false };
+    questionStates.set(key, { ...current, showIndication: !current.showIndication });
+    questionStates = new Map(questionStates);
+  }
+
+  function isAlreadyDisplayedWithQuestion(item, contents) {
+    // Cherche si cet élément est déjà associé à une question
+    for (let i = 0; i < contents.length; i++) {
+      const content = contents[i];
+      if (content.type === "question") {
+        if (content.reponse?.key === item.key || content.indication?.key === item.key) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   $: if (ExerciceData) {
     let counter = 0;
     processedContenu = ExerciceData.contenu.map((item, index) => {
       if (item.type === "question") {
         counter += 1;
+        
+        // Chercher la réponse et l'indication associées
+        let nextIndex = index + 1;
+        let nextReponse = null;
+        let nextIndication = null;
+        
+        while (nextIndex < ExerciceData.contenu.length) {
+          const nextItem = ExerciceData.contenu[nextIndex];
+          if (nextItem.type === "question") {
+            break; // On a atteint une nouvelle question
+          }
+          if (nextItem.type === "reponse" && !nextReponse) {
+            nextReponse = { ...nextItem, key: `${ExerciceData.uuid}-${nextIndex}-${contentKey}` };
+          }
+          if (nextItem.type === "indication" && !nextIndication) {
+            nextIndication = { ...nextItem, key: `${ExerciceData.uuid}-${nextIndex}-${contentKey}` };
+          }
+          nextIndex++;
+        }
+        
         return {
           ...item,
           number: counter,
           key: `${ExerciceData.uuid}-${index}-${contentKey}`,
+          reponse: nextReponse,
+          indication: nextIndication
         };
       }
       return {
@@ -187,36 +240,85 @@
         {#each processedContenu as item (item.key)}
           {#if latexTypes.includes(item.type)}
             {#if item.type === "question"}
-              <div class={item.type}>
-                <strong>Question {item.number} : </strong>
-                {#key item.key}
-                  <MathRenderer content={item.value.html} />
-                {/key}
-              </div>
-            {:else if item.type === "reponse"}
-              {#if showReponses}
-                <div
-                  class={item.type}
-                  transition:slide={{ duration: 300, easing: quadOut }}
-                >
-                  {#key item.key}
-                    <MathRenderer content={item.value.html} />
-                  {/key}
+              <div class="question-wrapper">
+                <div class="question">
+                  <div class="question-content">
+                    <strong>Question {item.number} : </strong>
+                    {#key item.key}
+                      <MathRenderer content={item.value.html} />
+                    {/key}
+                  </div>
+                  
+                  <div class="question-buttons">
+                    {#if item.reponse}
+                      <button 
+                        class="toggle-btn" 
+                        class:active={questionStates.get(`q${item.number}`)?.showReponse}
+                        on:click={() => toggleQuestionReponse(item.number)}
+                      >
+                        {questionStates.get(`q${item.number}`)?.showReponse ? "Masquer" : "Afficher"} réponse
+                      </button>
+                    {/if}
+                    
+                    {#if item.indication}
+                      <button 
+                        class="toggle-btn indication-btn" 
+                        class:active={questionStates.get(`q${item.number}`)?.showIndication}
+                        on:click={() => toggleQuestionIndication(item.number)}
+                      >
+                        {questionStates.get(`q${item.number}`)?.showIndication ? "Masquer" : "Afficher"} indication
+                      </button>
+                    {/if}
+                  </div>
                 </div>
-              {/if}
+
+                {#if item.reponse && (showReponses || questionStates.get(`q${item.number}`)?.showReponse)}
+                  <div
+                    class="reponse"
+                    transition:slide={{ duration: 300, easing: quadOut }}
+                  >
+                    {#key item.reponse.key}
+                      <MathRenderer content={item.reponse.value.html} />
+                    {/key}
+                  </div>
+                {/if}
+
+                {#if item.indication && (showHints || questionStates.get(`q${item.number}`)?.showIndication)}
+                  <div
+                    class="indication"
+                    transition:slide={{ duration: 300, easing: quadOut }}
+                  >
+                    {#key item.indication.key}
+                      <MathRenderer content={item.indication.value.html} />
+                    {/key}
+                  </div>
+                {/if}
+              </div>
             {:else if item.type === "description"}
               <div class={item.type}>
                 {#key item.key}
                   <MathRenderer content={item.value.html} />
                 {/key}
               </div>
-            {:else if item.type === "indication"}
-              {#if showHints}
-              <div class={item.type} transition:slide={{ duration: 300, easing: quadOut}} >
-                {#key item.key}
-                  <MathRenderer content={item.value.html} />
-                {/key}
-              </div>
+            {:else}
+              {#if (item.type === "reponse" || item.type === "indication") && !isAlreadyDisplayedWithQuestion(item, processedContenu)}
+                {#if item.type === "reponse" && showReponses}
+                  <div
+                    class={item.type}
+                    transition:slide={{ duration: 300, easing: quadOut }}
+                  >
+                    {#key item.key}
+                      <MathRenderer content={item.value.html} />
+                    {/key}
+                  </div>
+                {/if}
+                {#if item.type === "indication" && showHints}
+                  <div class={item.type} transition:slide={{ duration: 300, easing: quadOut}} >
+                    {#key item.key}
+                      <MathRenderer content={item.value.html} />
+                    {/key}
+                  </div>
+                {/if}
               {/if}
             {/if}
           {/if}
@@ -378,23 +480,73 @@
   }
 
   .description,
-  .question,
+  .question-wrapper,
   .indication,
   .reponse {
     margin-top: 1rem;
     line-height: 1.6;
   }
 
+  .question-wrapper {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .question-content {
+    flex: 1;
+  }
+
+  .question-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .toggle-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn:hover {
+    background: #f3f4f6;
+  }
+
+  .toggle-btn.active {
+    background: #d0ecc9;
+    border-color: #1eff00;
+  }
+
+  .toggle-btn.indication-btn.active {
+    background: #f1ed153b;
+    border-color: #f1ee15;
+  }
+
   .reponse {
     background-color: #d0ecc9;
     padding: 0.5rem;
     border-left: 4px solid #1eff00;
+    margin-top: 0.5rem;
   }
 
   .indication {
     background-color: #f1ed153b;
     padding: 0.5rem;
     border-left: 4px solid #f1ee15;
+    margin-top: 0.5rem;
   }
 
   .large-font {
@@ -411,5 +563,18 @@
 
   .large-font :global(.tag) {
     font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    .question {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .question-buttons {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
   }
 </style>
