@@ -152,7 +152,7 @@
 				<!-- MOVED: Themes section is now here -->
 				{#if themes && themes.length > 0}
 					<div class="extra-metadata-section">
-						<h4 class="section-title">Thèmes</h4>
+						<h4 class="section-title">Mots clés</h4>
 						<div class="tags">
 							{#each themes as theme}
 								<!-- This uses the GLOBAL .tag style -->

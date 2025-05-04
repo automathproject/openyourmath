@@ -240,74 +240,67 @@
         {#each processedContenu as item (item.key)}
           {#if latexTypes.includes(item.type)}
             {#if item.type === "question"}
-              <div class="question-container">
-                <div class="question-header">
-                  <div class="question-number">
-                    Question {item.number}
+              <div class="question-section">
+                <div class="question-line">
+                  <div class="question-header">
+                    <strong>Q{item.number}</strong>
                   </div>
-                  <div class="question-buttons">
-                    {#if item.reponse}
-                      <button 
-                        class="action-btn solution-btn" 
-                        class:active={questionStates.get(`q${item.number}`)?.showReponse}
-                        on:click={() => toggleQuestionReponse(item.number)}
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M9 12l2 2 4-4"/>
-                          <circle cx="12" cy="12" r="9"/>
-                        </svg>
-                        Solution
-                      </button>
-                    {/if}
-                    
+                  <div class="question-content">
+                    {#key item.key}
+                      <MathRenderer content={item.value.html} />
+                    {/key}
+                  </div>
+                  <div class="question-actions">
                     {#if item.indication}
                       <button 
-                        class="action-btn hint-btn" 
+                        class="mini-btn hint-btn" 
                         class:active={questionStates.get(`q${item.number}`)?.showIndication}
                         on:click={() => toggleQuestionIndication(item.number)}
+                        title="Indice"
                       >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <circle cx="12" cy="12" r="10"/>
                           <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
                           <circle cx="12" cy="17" r="1" fill="currentColor"/>
                         </svg>
-                        Indice
+                      </button>
+                    {/if}
+                    
+                    {#if item.reponse}
+                      <button 
+                        class="mini-btn solution-btn" 
+                        class:active={questionStates.get(`q${item.number}`)?.showReponse}
+                        on:click={() => toggleQuestionReponse(item.number)}
+                        title="Solution"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M9 12l2 2 4-4"/>
+                          <circle cx="12" cy="12" r="9"/>
+                        </svg>
                       </button>
                     {/if}
                   </div>
                 </div>
-                
-                <div class="question-content">
-                  {#key item.key}
-                    <MathRenderer content={item.value.html} />
-                  {/key}
-                </div>
 
                 {#if item.reponse && (showReponses || questionStates.get(`q${item.number}`)?.showReponse)}
                   <div
-                    class="response-panel"
+                    class="reponse"
                     transition:slide={{ duration: 300, easing: quadOut }}
                   >
-                    <div class="response-label">Solution</div>
-                    <div class="response-content">
-                      {#key item.reponse.key}
-                        <MathRenderer content={item.reponse.value.html} />
-                      {/key}
-                    </div>
+                    {#key item.reponse.key}
+                      <MathRenderer content={item.reponse.value.html} />
+                    {/key}
                   </div>
                 {/if}
 
                 {#if item.indication && (showHints || questionStates.get(`q${item.number}`)?.showIndication)}
                   <div
-                    class="hint-panel"
+                    class="indication"
                     transition:slide={{ duration: 300, easing: quadOut }}
                   >
-                    <div class="hint-label">Indice</div>
-                    <div class="hint-content">
-                      {#key item.indication.key}
-                        <MathRenderer content={item.indication.value.html} />
-                      {/key}
-                    </div>
+                    {#key item.indication.key}
+                      <MathRenderer content={item.indication.value.html} />
+                    {/key}
                   </div>
                 {/if}
               </div>
@@ -501,150 +494,89 @@
     line-height: 1.6;
   }
 
-  /* Nouveau design pour les questions */
-  .question-container {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+  /* Design pour les questions */
+  .question-section {
     margin-top: 1.5rem;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
+  }
+
+  .question-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .question-header {
+    flex-shrink: 0;
+    color: #1e40af;
+  }
+
+  .question-content {
+    flex: 1;
+    line-height: 1.6;
+  }
+
+  .question-actions {
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
+    gap: 0.25rem;
+    flex-shrink: 0;
   }
 
-  .question-number {
-    background: linear-gradient(135deg, #4f46e5, #6366f1);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: 600;
-    min-width: 100px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
-  }
-
-  .question-buttons {
-    display: flex;
-    gap: 0.75rem;
-  }
-
-  .action-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+  .mini-btn {
+    padding: 0.25rem;
+    border-radius: 4px;
     border: 1px solid transparent;
-    background: white;
+    background: transparent;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .action-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  .mini-btn:hover {
+    background: #f3f4f6;
   }
 
   .solution-btn {
-    border-color: #4ade80;
-    color: #166534;
+    color: #15803d;
   }
 
   .solution-btn:hover {
-    background: #f0fdf4;
+    background: #dcfce7;
   }
 
   .solution-btn.active {
-    background: #4ade80;
-    color: white;
-    border-color: #4ade80;
+    background: #dcfce7;
+    border-color: #22c55e;
   }
 
   .hint-btn {
-    border-color: #facc15;
     color: #a16207;
   }
 
   .hint-btn:hover {
-    background: #fefce8;
+    background: #fef3c7;
   }
 
   .hint-btn.active {
-    background: #facc15;
-    color: #713f12;
-    border-color: #facc15;
-  }
-
-  .question-content {
-    line-height: 1.6;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .response-panel,
-  .hint-panel {
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .response-panel {
-    border: 1px solid #4ade80;
-  }
-
-  .hint-panel {
-    border: 1px solid #facc15;
-  }
-
-  .response-label,
-  .hint-label {
-    font-weight: 600;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .response-label {
-    background: #4ade80;
-    color: white;
-  }
-
-  .hint-label {
-    background: #facc15;
-    color: #713f12;
-  }
-
-  .response-content,
-  .hint-content {
-    padding: 1rem;
-    background: white;
-    line-height: 1.6;
+    background: #fef3c7;
+    border-color: #eab308;
   }
 
   .reponse {
     background-color: #d0ecc9;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border-left: 4px solid #1eff00;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    line-height: 1.6;
   }
 
   .indication {
     background-color: #f1ed153b;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border-left: 4px solid #f1ee15;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    line-height: 1.6;
   }
 
   .large-font {
@@ -664,24 +596,14 @@
   }
 
   @media screen and (max-width: 640px) {
-    .question-header {
-      flex-direction: column;
-      gap: 1rem;
-      align-items: stretch;
+    .question-line {
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
     
-    .question-number {
-      min-width: auto;
-    }
-    
-    .question-buttons {
+    .question-actions {
       width: 100%;
-      justify-content: stretch;
-    }
-    
-    .action-btn {
-      flex: 1;
-      justify-content: center;
+      justify-content: flex-end;
     }
   }
 </style>
