@@ -1339,6 +1339,117 @@
     ],
     "preview": "<p>Une étude des glaciers a montré que la température T à l’instant t\n(mesuré en jours) à la profondeur <span class=\"math inline\">\\(x\\)</span>\n(mesuré ..."
   },
+  "1vFG": {
+    "uuid": "1vFG",
+    "titre": "Durée de vie de capteurs",
+    "theme": [
+      ""
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Grégoire Menet",
+      "createdAt": "2025-05-05",
+      "hasIndication": true,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:46:57.364Z"
+    },
+    "contenu": [
+      {
+        "id": "0f87d9a5-63f2-4f20-9e96-5ff018b3a7cb",
+        "type": "description",
+        "value": {
+          "latex": "Une usine fabrique des capteurs de température et d'humidité destinés à des stations météorologiques. Chaque capteur est composé de deux modules indépendants :\n\t\t\\begin{itemize}\n\t\t\t\\item un module T (température) dont la durée de vie X (en années) suit une loi exponentielle de paramètre $\\lambda_T = 0,2$,\n\t\t\t\\item un module H (humidité) dont la durée de vie Y (en années) suit une loi exponentielle de paramètre $\\lambda_H = 0,1$.\n\t\t\\end{itemize}\n\t\tLes deux modules sont montés ensemble dans chaque capteur et fonctionnent tant que les deux modules sont opérationnels. On note $Z = \\min(X, Y)$ la durée de vie du capteur complet.",
+          "html": "<p>Une usine fabrique des capteurs de température et d’humidité destinés\nà des stations météorologiques. Chaque capteur est composé de deux\nmodules indépendants :</p>\n<ul>\n<li><p>un module T (température) dont la durée de vie X (en années) suit\nune loi exponentielle de paramètre <span class=\"math inline\">\\(\\lambda_T\n= 0,2\\)</span>,</p></li>\n<li><p>un module H (humidité) dont la durée de vie Y (en années) suit\nune loi exponentielle de paramètre <span class=\"math inline\">\\(\\lambda_H\n= 0,1\\)</span>.</p></li>\n</ul>\n<p>Les deux modules sont montés ensemble dans chaque capteur et\nfonctionnent tant que les deux modules sont opérationnels. On note <span\nclass=\"math inline\">\\(Z = \\min(X, Y)\\)</span> la durée de vie du capteur\ncomplet.</p>\n"
+        }
+      },
+      {
+        "id": "fd07670a-0646-4f4a-995e-f0f8d2f29fc0",
+        "type": "question",
+        "value": {
+          "latex": "Déterminer la fonction de répartition de $Z$.",
+          "html": "<p>Déterminer la fonction de répartition de <span\nclass=\"math inline\">\\(Z\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "83808b00-ed80-4935-9ed6-6448fc2010d1",
+        "type": "indication",
+        "value": {
+          "latex": "Utiliser $F_Z(z) = \\prob(Z \\le z) = 1 - \\prob(Z > z)$. Noter que l'événement $\\{Z > z\\}$ est équivalent à $\\{\\min(X, Y) > z\\}$, ce qui signifie $\\{X > z \\text{ et } Y > z\\}$. Utiliser l'indépendance de X et Y.",
+          "html": "<p>Utiliser <span class=\"math inline\">\\(F_Z(z) = \\prob(Z \\le z) = 1 -\n\\prob(Z &gt; z)\\)</span>. Noter que l’événement <span\nclass=\"math inline\">\\(\\{Z &gt; z\\}\\)</span> est équivalent à <span\nclass=\"math inline\">\\(\\{\\min(X, Y) &gt; z\\}\\)</span>, ce qui signifie\n<span class=\"math inline\">\\(\\{X &gt; z \\text{ et } Y &gt; z\\}\\)</span>.\nUtiliser l’indépendance de X et Y.</p>\n"
+        }
+      },
+      {
+        "id": "625f1329-b7e3-4d45-8237-a0ecef8fc6a4",
+        "type": "reponse",
+        "value": {
+          "latex": "Pour $z < 0$, il est impossible que la durée de vie soit négative, donc $F_Z(z) = \\prob(Z \\le z) = 0$.\n\t\t\tPour $z \\ge 0$ :\n\t\t\t$$\\begin{align*} F_Z(z) &= \\prob(Z \\le z) \\\\ &= 1 - \\prob(Z > z) \\\\ &= 1 - \\prob(\\min(X, Y) > z) \\\\ &= 1 - \\prob(X > z \\text{ et } Y > z) \\end{align*}$$\n\t\t\tComme X et Y sont indépendantes :\n\t\t\t$$\\begin{align*} \\prob(X > z \\text{ et } Y > z) &= \\prob(X > z) \\prob(Y > z) \\end{align*}$$\n\t\t\tPour une loi exponentielle de paramètre $\\lambda$, la fonction de survie est $\\prob(V > z) = e^{-\\lambda z}$.\n\t\t\tDonc, $\\prob(X > z) = e^{-\\lambda_T z} = e^{-0.2z}$ et $\\prob(Y > z) = e^{-\\lambda_H z} = e^{-0.1z}$.\n\t\t\tAinsi,\n\t\t\t$$\\begin{align*} \\prob(Z > z) &= e^{-0.2z} e^{-0.1z} \\\\  &= e^{-0.3z} \\end{align*}$$\n\t\t\tFinalement, la fonction de répartition de Z est :\n\t\t\t$$\\begin{align*} F_Z(z) &= 1 - e^{-0.3z} \\quad \\text{pour } z \\ge 0 \\end{align*}$$\n\t\t\tSoit :\n\t\t\t$F_Z(z) = \\begin{cases} 0 & \\text{si } z < 0 \\\\ 1 - e^{-0.3z} & \\text{si } z \\ge 0 \\end{cases}$",
+          "html": "<p>Pour <span class=\"math inline\">\\(z &lt; 0\\)</span>, il est impossible\nque la durée de vie soit négative, donc <span\nclass=\"math inline\">\\(F_Z(z) = \\prob(Z \\le z) = 0\\)</span>. Pour <span\nclass=\"math inline\">\\(z \\ge 0\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*} F_Z(z) &amp;= \\prob(Z \\le z) \\\\\n&amp;= 1 - \\prob(Z &gt; z) \\\\ &amp;= 1 - \\prob(\\min(X, Y) &gt; z) \\\\\n&amp;= 1 - \\prob(X &gt; z \\text{ et } Y &gt; z) \\end{align*}\\]</span>\nComme X et Y sont indépendantes : <span\nclass=\"math display\">\\[\\begin{align*} \\prob(X &gt; z \\text{ et } Y &gt;\nz) &amp;= \\prob(X &gt; z) \\prob(Y &gt; z) \\end{align*}\\]</span> Pour une\nloi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda\\)</span>, la fonction de survie est <span\nclass=\"math inline\">\\(\\prob(V &gt; z) = e^{-\\lambda z}\\)</span>. Donc,\n<span class=\"math inline\">\\(\\prob(X &gt; z) = e^{-\\lambda_T z} =\ne^{-0.2z}\\)</span> et <span class=\"math inline\">\\(\\prob(Y &gt; z) =\ne^{-\\lambda_H z} = e^{-0.1z}\\)</span>. Ainsi, <span\nclass=\"math display\">\\[\\begin{align*} \\prob(Z &gt; z) &amp;= e^{-0.2z}\ne^{-0.1z} \\\\  &amp;= e^{-0.3z} \\end{align*}\\]</span> Finalement, la\nfonction de répartition de Z est : <span\nclass=\"math display\">\\[\\begin{align*} F_Z(z) &amp;= 1 - e^{-0.3z} \\quad\n\\text{pour } z \\ge 0 \\end{align*}\\]</span> Soit : <span\nclass=\"math inline\">\\(F_Z(z) = \\begin{cases} 0 &amp; \\text{si } z &lt; 0\n\\\\ 1 - e^{-0.3z} &amp; \\text{si } z \\ge 0 \\end{cases}\\)</span></p>\n"
+        }
+      },
+      {
+        "id": "f6aeb051-8fb0-49f9-ba38-9bcc35482a73",
+        "type": "question",
+        "value": {
+          "latex": "En déduire la loi de $Z$.",
+          "html": "<p>En déduire la loi de <span class=\"math inline\">\\(Z\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "75e1aa4a-bdeb-4032-aefb-c68ffed7c1fe",
+        "type": "indication",
+        "value": {
+          "latex": "Comparer la fonction de répartition $F_Z(z)$ trouvée à la forme générale de la fonction de répartition d'une loi connue.",
+          "html": "<p>Comparer la fonction de répartition <span\nclass=\"math inline\">\\(F_Z(z)\\)</span> trouvée à la forme générale de la\nfonction de répartition d’une loi connue.</p>\n"
+        }
+      },
+      {
+        "id": "e33511f6-7e72-465a-a75f-ee3529330ec1",
+        "type": "reponse",
+        "value": {
+          "latex": "La fonction de répartition $F_Z(z) = 1 - e^{-0.3z}$ pour $z \\ge 0$ est caractéristique d'une loi exponentielle de paramètre $\\lambda = 0.3$.\n\t\t\tDonc, Z suit une loi exponentielle de paramètre $\\lambda = \\lambda_T + \\lambda_H = 0.2 + 0.1 = 0.3$.\n\t\t\tOn note $Z \\sim \\mathcal{E}(0.3)$.",
+          "html": "<p>La fonction de répartition <span class=\"math inline\">\\(F_Z(z) = 1 -\ne^{-0.3z}\\)</span> pour <span class=\"math inline\">\\(z \\ge 0\\)</span> est\ncaractéristique d’une loi exponentielle de paramètre <span\nclass=\"math inline\">\\(\\lambda = 0.3\\)</span>. Donc, Z suit une loi\nexponentielle de paramètre <span class=\"math inline\">\\(\\lambda =\n\\lambda_T + \\lambda_H = 0.2 + 0.1 = 0.3\\)</span>. On note <span\nclass=\"math inline\">\\(Z \\sim \\mathcal{E}(0.3)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "05ea3757-ac3e-4080-8f2c-05852a5b6818",
+        "type": "description",
+        "value": {
+          "latex": "Le service après-vente propose, pour les capteurs tombés en panne :\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item un remplacement gratuit si la panne survient avant 3 ans ($Z < 3$),\n\t\t\t\t\\item sinon ($Z \\ge 3$), il propose :\n\t\t\t\t\\begin{itemize}\n\t\t\t\t\t\\item un tarif réduit à 50 euros si c'est le module T qui est tombé en panne en premier (c'est-à-dire $X < Y$),\n\t\t\t\t\t\\item un tarif complet à 200 euros si c'est le module H qui est tombé en panne en premier (c'est-à-dire $Y < X$).\n\t\t\t\t\\end{itemize}\n\t\t\t\\end{itemize}\n\t\t\tOn note $W$ la variable aléatoire qui donne le coût de réparation du capteur.",
+          "html": "<p>Le service après-vente propose, pour les capteurs tombés en panne\n:</p>\n<ul>\n<li><p>un remplacement gratuit si la panne survient avant 3 ans (<span\nclass=\"math inline\">\\(Z &lt; 3\\)</span>),</p></li>\n<li><p>sinon (<span class=\"math inline\">\\(Z \\ge 3\\)</span>), il propose\n:</p>\n<ul>\n<li><p>un tarif réduit à 50 euros si c’est le module T qui est tombé en\npanne en premier (c’est-à-dire <span class=\"math inline\">\\(X &lt;\nY\\)</span>),</p></li>\n<li><p>un tarif complet à 200 euros si c’est le module H qui est tombé\nen panne en premier (c’est-à-dire <span class=\"math inline\">\\(Y &lt;\nX\\)</span>).</p></li>\n</ul></li>\n</ul>\n<p>On note <span class=\"math inline\">\\(W\\)</span> la variable aléatoire\nqui donne le coût de réparation du capteur.</p>\n"
+        }
+      },
+      {
+        "id": "bbe05898-26cd-45b2-bf44-42f9ab1b5638",
+        "type": "question",
+        "value": {
+          "latex": "Déterminer la loi de la variable aléatoire $W$.",
+          "html": "<p>Déterminer la loi de la variable aléatoire <span\nclass=\"math inline\">\\(W\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "61a004ef-d3ca-46d4-8693-b24763fec3af",
+        "type": "indication",
+        "value": {
+          "latex": "Identifier les valeurs possibles pour W (0, 50, 200) et calculer les probabilités associées : $\\prob(W=0) = \\prob(Z < 3)$, $\\prob(W=50) = \\prob(Z \\ge 3 \\text{ et } X < Y)$, et $\\prob(W=200) = \\prob(Z \\ge 3 \\text{ et } Y < X)$. On peut utiliser l'intégration double sur les domaines appropriés ou utiliser la propriété connue que $\\prob(X < Y) = \\frac{\\lambda_T}{\\lambda_T + \\lambda_H}$ et le fait que l'événement $\\{X<Y\\}$ est indépendant de l'événement $\\{Z \\ge 3\\}$. Alternativement, calculer $\\prob(W=0)$ et $\\prob(W=50)$ puis utiliser $\\prob(W=200) = 1 - \\prob(W=0) - \\prob(W=50)$.",
+          "html": "<p>Identifier les valeurs possibles pour W (0, 50, 200) et calculer les\nprobabilités associées : <span class=\"math inline\">\\(\\prob(W=0) =\n\\prob(Z &lt; 3)\\)</span>, <span class=\"math inline\">\\(\\prob(W=50) =\n\\prob(Z \\ge 3 \\text{ et } X &lt; Y)\\)</span>, et <span\nclass=\"math inline\">\\(\\prob(W=200) = \\prob(Z \\ge 3 \\text{ et } Y &lt;\nX)\\)</span>. On peut utiliser l’intégration double sur les domaines\nappropriés ou utiliser la propriété connue que <span\nclass=\"math inline\">\\(\\prob(X &lt; Y) = \\frac{\\lambda_T}{\\lambda_T +\n\\lambda_H}\\)</span> et le fait que l’événement <span\nclass=\"math inline\">\\(\\{X&lt;Y\\}\\)</span> est indépendant de l’événement\n<span class=\"math inline\">\\(\\{Z \\ge 3\\}\\)</span>. Alternativement,\ncalculer <span class=\"math inline\">\\(\\prob(W=0)\\)</span> et <span\nclass=\"math inline\">\\(\\prob(W=50)\\)</span> puis utiliser <span\nclass=\"math inline\">\\(\\prob(W=200) = 1 - \\prob(W=0) -\n\\prob(W=50)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "87267a52-4494-4457-a6dc-860dcb5d6146",
+        "type": "reponse",
+        "value": {
+          "latex": "La variable aléatoire W peut prendre les valeurs 0, 50, ou 200. Nous devons calculer $\\prob(W=0)$, $\\prob(W=50)$, et $\\prob(W=200)$.\n\t\t\t\n\t\t\t1. Calcul de $\\prob(W=0)$:\n\t\t\t$$\\begin{align*} \\prob(W=0) &= \\prob(Z < 3) \\\\ &= F_Z(3) \\\\ &= 1 - e^{-0.9} \\end{align*}$$\n\t\t\t\n\t\t\t2. Calcul de $\\prob(W=50)$:\n\n\t\t\t$$\\begin{align*} \\prob(W=50) &= \\prob(Z \\ge 3 \\text{ et } X < Y) \\\\ &= \\int_3^\\infty \\int_x^\\infty f_X(u) f_Y(v) dv du \\\\ \n\t\t\t\t&= \\int_3^\\infty \\int_x^\\infty (0.2 e^{-0.2 u}) (0.1 e^{-0.1 v}) dv du \\\\\n\t\t\t\t&= \\int_3^\\infty 0.2 e^{-0.2 u} \\left[ -e^{-0.1 v} \\right]_x^\\infty du \\\\\n\t\t\t\t&= 0.2 \\left[ \\frac{e^{-0.3 u}}{-0.3} \\right]_3^\\infty \\\\\n\t\t\t\t&= \\frac{2}{3} e^{-0.9} \n\t\t\t\\end{align*}$$\n\t\t\t\n\t\t\t3. Calcul de $\\prob(W=200)$:\n\t\t\tPuisque les événements $\\{W=0\\}$, $\\{W=50\\}$ et $\\{W=200\\}$ forment une partition de l'univers, la somme de leurs probabilités vaut 1.\n\t\t\t$$\\begin{align*} \\prob(W=200) &= 1 - \\prob(W=0) - \\prob(W=50) \\\\ \n\t\t\t\t&= \\frac{1}{3} e^{-0.9} \n\t\t\t\t\\end{align*}$$",
+          "html": "<p>La variable aléatoire W peut prendre les valeurs 0, 50, ou 200. Nous\ndevons calculer <span class=\"math inline\">\\(\\prob(W=0)\\)</span>, <span\nclass=\"math inline\">\\(\\prob(W=50)\\)</span>, et <span\nclass=\"math inline\">\\(\\prob(W=200)\\)</span>.</p>\n<p>1. Calcul de <span class=\"math inline\">\\(\\prob(W=0)\\)</span>: <span\nclass=\"math display\">\\[\\begin{align*} \\prob(W=0) &amp;= \\prob(Z &lt; 3)\n\\\\ &amp;= F_Z(3) \\\\ &amp;= 1 - e^{-0.9} \\end{align*}\\]</span></p>\n<p>2. Calcul de <span class=\"math inline\">\\(\\prob(W=50)\\)</span>:</p>\n<p><span class=\"math display\">\\[\\begin{align*} \\prob(W=50) &amp;=\n\\prob(Z \\ge 3 \\text{ et } X &lt; Y) \\\\ &amp;= \\int_3^\\infty\n\\int_x^\\infty f_X(u) f_Y(v) dv du \\\\\n                &amp;= \\int_3^\\infty \\int_x^\\infty (0.2 e^{-0.2 u}) (0.1\ne^{-0.1 v}) dv du \\\\\n                &amp;= \\int_3^\\infty 0.2 e^{-0.2 u} \\left[ -e^{-0.1 v}\n\\right]_x^\\infty du \\\\\n                &amp;= 0.2 \\left[ \\frac{e^{-0.3 u}}{-0.3}\n\\right]_3^\\infty \\\\\n                &amp;= \\frac{2}{3} e^{-0.9}\n            \\end{align*}\\]</span></p>\n<p>3. Calcul de <span class=\"math inline\">\\(\\prob(W=200)\\)</span>:\nPuisque les événements <span class=\"math inline\">\\(\\{W=0\\}\\)</span>,\n<span class=\"math inline\">\\(\\{W=50\\}\\)</span> et <span\nclass=\"math inline\">\\(\\{W=200\\}\\)</span> forment une partition de\nl’univers, la somme de leurs probabilités vaut 1. <span\nclass=\"math display\">\\[\\begin{align*} \\prob(W=200) &amp;= 1 - \\prob(W=0)\n- \\prob(W=50) \\\\\n                &amp;= \\frac{1}{3} e^{-0.9}\n                \\end{align*}\\]</span></p>\n"
+        }
+      }
+    ],
+    "preview": "<p>Une usine fabrique des capteurs de température et d’humidité destinés\nà des stations météorologiques. Chaque capteur est composé de deux\nmodules in ..."
+  },
   "2Aui": {
     "uuid": "2Aui",
     "titre": "Urne et trois couleurs",
@@ -5326,7 +5437,7 @@
   },
   "6YTv": {
     "uuid": "6YTv",
-    "titre": "Calcul d'une somme de série entière",
+    "titre": "Développement d'une fonction usuelle en série entière",
     "theme": [
       "séries entières"
     ],
@@ -5339,9 +5450,9 @@
       "hasCorrection": true,
       "youtube": "",
       "chapitre": "Série entière",
-      "sousChapitre": "Calcul de la somme d'une série entière",
+      "sousChapitre": "Développement en série entière",
       "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:01:44.173Z",
+      "updatedAt": "2025-05-17T20:46:57.431Z",
       "resume": "L'exercice porte sur la détermination du développement en série entière au voisinage de 0 de trois fonctions ($f(x) = \\frac{1}{2+3x}$, $g(x) = \\ln(\\frac{1+x}{1-x})$, $h(x) = \\frac{1}{\\sqrt{1-x^2}}$) à partir de développements connus. Il évalue la capacité à manipuler les séries géométriques et les développements de $\\ln(1+x)$ et $(1+x)^\\alpha$, ainsi qu'à déterminer le rayon de convergence de la série obtenue.",
       "competences": [
         "Développer une fonction en série entière",
@@ -5378,15 +5489,15 @@
     },
     "contenu": [
       {
-        "id": "420518ca-6998-44c1-a767-75e02c486c54",
+        "id": "a17a08b5-873a-4bc7-8dd7-42711e5fbacc",
         "type": "question",
         "value": {
-          "latex": "À l'aide des développements en séries entières des fonctions usuelles, calculer les développements en séries entières en $0$ des fonctions réelles suivantes:\n\\[ f(x)=\\frac{1}{ 2+3x}, \\qquad g(x)=\\ln \\Big(\\frac{1+x}{1-x}\\Big), \\qquad h(x)=\\frac{1}{\\sqrt{1-x^2}},\\]\net déterminer le rayon de convergence de ces développements.",
-          "html": "<p>À l’aide des développements en séries entières des fonctions\nusuelles, calculer les développements en séries entières en <span\nclass=\"math inline\">\\(0\\)</span> des fonctions réelles suivantes: <span\nclass=\"math display\">\\[f(x)=\\frac{1}{ 2+3x}, \\qquad g(x)=\\ln\n\\Big(\\frac{1+x}{1-x}\\Big), \\qquad h(x)=\\frac{1}{\\sqrt{1-x^2}},\\]</span>\net déterminer le rayon de convergence de ces développements.</p>\n"
+          "latex": "À l'aide des développements en séries entières des fonctions usuelles, calculer les développements en séries entières en $0$ des fonctions réelles suivantes:\n$$ f(x)=\\frac{1}{ 2+3x}, \\qquad g(x)=\\ln \\Big(\\frac{1+x}{1-x}\\Big), \\qquad h(x)=\\frac{1}{\\sqrt{1-x^2}}$$\net déterminer le rayon de convergence de ces développements.",
+          "html": "<p>À l’aide des développements en séries entières des fonctions\nusuelles, calculer les développements en séries entières en <span\nclass=\"math inline\">\\(0\\)</span> des fonctions réelles suivantes: <span\nclass=\"math display\">\\[f(x)=\\frac{1}{ 2+3x}, \\qquad g(x)=\\ln\n\\Big(\\frac{1+x}{1-x}\\Big), \\qquad h(x)=\\frac{1}{\\sqrt{1-x^2}}\\]</span>\net déterminer le rayon de convergence de ces développements.</p>\n"
         }
       },
       {
-        "id": "eaaa287a-29ea-4a79-afca-baaa92b63460",
+        "id": "332fed6a-26ae-4a07-8325-965d2bd2b385",
         "type": "reponse",
         "value": {
           "latex": "On écrit les développements sur l'intervalle $]-R;R[$ où $R$ est le rayon de convergence :\n\t\\begin{itemize}\n\t\t\\item $\\displaystyle\\forall x \\in \\left]\\frac{-2}{3};\\frac{2}{3}\\right[, \\qquad f(x)=\\frac{1}{2}\\frac{1}{1-\\left(-\\frac{3}{2}x\\right)} = \\frac{1}{2}\\sum_{n=0}^{+\\infty} (-1)^n\\left( \\frac{3}{2}x\\right)^n$\n\t\t\\item $\\displaystyle\\forall x \\in ]-1;1[, \\qquad g(x)=\\ln(1+x) - \\ln(1-x) = \\sum_{n=1}^{+\\infty} \\frac{(-1)^{n+1}}{n}x^n + \\sum_{n=1}^{+\\infty} \\frac{x^n}{n} = \\sum_{n=1}^{+\\infty} \\frac{(-1)^{n+1}+1}{n}x^n = \\sum_{n=1}^{+\\infty} \\frac{2}{2n-1}x^{2n-1}$ \n\t\t\\item $\\displaystyle\\forall x \\in ]-1;1[, \\qquad h(x)=\\sum_{n=0}^{+\\infty} \\frac{1}{n!}\\left(\\frac{1}{2}\\times \\frac{3}{2}\\times \\cdots \\times \\left(\\frac{1}{2}+n-1\\right) \\right) x^{2n}$\n\t\\end{itemize}",
@@ -6570,6 +6681,214 @@
       }
     ],
     "preview": "<p>Lors d’un référendum, un sondage aléatoire simple avec remise\npratiqué sur <span class=\"math inline\">\\(1000\\)</span> personnes a donné\n<span class= ..."
+  },
+  "7rMC": {
+    "uuid": "7rMC",
+    "titre": "À la découverte des Coefficients de Fourier",
+    "theme": [
+      "Séries de Fourier",
+      "Analyse Mathématique"
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Maxime Nguyen",
+      "createdAt": "2025-05-09",
+      "hasIndication": true,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:46:57.845Z"
+    },
+    "contenu": [
+      {
+        "id": "2455c2e6-6df2-4bfb-97f5-70a6d69f1c5c",
+        "type": "description",
+        "value": {
+          "latex": "\\textit{Objectif : Comprendre comment décomposer une fonction périodique en une somme de fonctions sinusoïdales plus simples, et comment calculer les \"poids\" de chaque composante.}\n\t\t\n\t\t\\vspace{0.5cm}\n\t\t\\textbf{Partie 1 : L'idée de base et les coefficients réels}\n\t\t\\vspace{0.3cm}\n\t\t\n\t\tImaginons une fonction $f(x)$ qui est périodique, de période $T=2\\pi$. On suppose qu'on peut l'écrire comme une somme (potentiellement infinie) de cosinus et de sinus :\n\t\t$$ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left( a_n \\cos(nx) + b_n \\sin(nx) \\right) $$\n\t\tLes nombres $a_0, a_n, b_n$ sont appelés les \\textbf{coefficients de Fourier réels} de $f$. Notre but est de trouver comment les calculer si on connaît $f(x)$.",
+          "html": "<p><em>Objectif : Comprendre comment décomposer une fonction périodique\nen une somme de fonctions sinusoïdales plus simples, et comment calculer\nles \"poids\" de chaque composante.</em></p>\n<p><strong>Partie 1 : L’idée de base et les coefficients\nréels</strong></p>\n<p>Imaginons une fonction <span class=\"math inline\">\\(f(x)\\)</span> qui\nest périodique, de période <span class=\"math inline\">\\(T=2\\pi\\)</span>.\nOn suppose qu’on peut l’écrire comme une somme (potentiellement infinie)\nde cosinus et de sinus : <span class=\"math display\">\\[f(x) =\n\\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left( a_n \\cos(nx) + b_n \\sin(nx)\n\\right)\\]</span> Les nombres <span class=\"math inline\">\\(a_0, a_n,\nb_n\\)</span> sont appelés les <strong>coefficients de Fourier\nréels</strong> de <span class=\"math inline\">\\(f\\)</span>. Notre but est\nde trouver comment les calculer si on connaît <span\nclass=\"math inline\">\\(f(x)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "55cc4962-5a09-4656-ae54-de6456e748d4",
+        "type": "question",
+        "value": {
+          "latex": "Intégrer $f(x)$ entre $-\\pi$ et $\\pi$ et en déduire une formule pour calculer terme constant $\\frac{a_0}{2}$.",
+          "html": "<p>Intégrer <span class=\"math inline\">\\(f(x)\\)</span> entre <span\nclass=\"math inline\">\\(-\\pi\\)</span> et <span\nclass=\"math inline\">\\(\\pi\\)</span> et en déduire une formule pour\ncalculer terme constant <span\nclass=\"math inline\">\\(\\frac{a_0}{2}\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ad27a752-ae5f-4772-9dec-bb9fe7c04ef8",
+        "type": "reponse",
+        "value": {
+          "latex": "Si on intègre $f(x)$ sur une période $[-\\pi, \\pi]$ :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\dx = \\int_{-\\pi}^{\\pi} \\frac{a_0}{2} \\dx + \\sum_{n=1}^{\\infty} \\left( a_n \\int_{-\\pi}^{\\pi} \\cos(nx) \\dx + b_n \\int_{-\\pi}^{\\pi} \\sin(nx) \\dx \\right) $$\n\t\t\tEn utilisant les propriétés rappelées :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\dx = \\frac{a_0}{2} \\int_{-\\pi}^{\\pi} \\dx + \\sum_{n=1}^{\\infty} (a_n \\cdot 0 + b_n \\cdot 0) = \\frac{a_0}{2} [x]_{-\\pi}^{\\pi} = \\frac{a_0}{2} (2\\pi) = a_0 \\pi $$\n\t\t\tDonc,\n\t\t\t$$ \\boxed{a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx} $$\n\t\t\t(C'est pour cela qu'on met un $\\frac{1}{2}$ devant $a_0$ dans la série, pour simplifier cette formule !)",
+          "html": "<p>Si on intègre <span class=\"math inline\">\\(f(x)\\)</span> sur une\npériode <span class=\"math inline\">\\([-\\pi, \\pi]\\)</span> : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\dx = \\int_{-\\pi}^{\\pi}\n\\frac{a_0}{2} \\dx + \\sum_{n=1}^{\\infty} \\left( a_n \\int_{-\\pi}^{\\pi}\n\\cos(nx) \\dx + b_n \\int_{-\\pi}^{\\pi} \\sin(nx) \\dx \\right)\\]</span> En\nutilisant les propriétés rappelées : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\dx = \\frac{a_0}{2}\n\\int_{-\\pi}^{\\pi} \\dx + \\sum_{n=1}^{\\infty} (a_n \\cdot 0 + b_n \\cdot 0)\n= \\frac{a_0}{2} [x]_{-\\pi}^{\\pi} = \\frac{a_0}{2} (2\\pi) = a_0\n\\pi\\]</span> Donc, <span class=\"math display\">\\[\\boxed{a_0 =\n\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx}\\]</span> (C’est pour cela\nqu’on met un <span class=\"math inline\">\\(\\frac{1}{2}\\)</span> devant\n<span class=\"math inline\">\\(a_0\\)</span> dans la série, pour simplifier\ncette formule !)</p>\n"
+        }
+      },
+      {
+        "id": "242b13ee-8845-4ec3-a702-af8760818935",
+        "type": "question",
+        "value": {
+          "latex": "Orthogonalité des fonctions trigonométriques : Pour isoler $a_k$ (où $k \\ge 1$ est un entier fixé), l'idée est de multiplier $f(x)$ par $\\cos(kx)$ puis d'intégrer. Pour que cela fonctionne, nous avons besoin de connaître les valeurs des intégrales suivantes (où $n, k \\in \\N^*$) :\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item[(a)] $\\int_{-\\pi}^{\\pi} \\cos(nx) \\cos(kx) \\dx$\n\t\t\t\t\\item[(b)] $\\int_{-\\pi}^{\\pi} \\sin(nx) \\cos(kx) \\dx$\n\t\t\t\t\\item[(c)] $\\int_{-\\pi}^{\\pi} \\sin(nx) \\sin(kx) \\dx$ (utile pour $b_k$)\n\t\t\t\\end{itemize}\n\t\t\tQue valent ces intégrales si $n \\neq k$ ? Et si $n=k$ ?",
+          "html": "<p>Orthogonalité des fonctions trigonométriques : Pour isoler <span\nclass=\"math inline\">\\(a_k\\)</span> (où <span class=\"math inline\">\\(k \\ge\n1\\)</span> est un entier fixé), l’idée est de multiplier <span\nclass=\"math inline\">\\(f(x)\\)</span> par <span\nclass=\"math inline\">\\(\\cos(kx)\\)</span> puis d’intégrer. Pour que cela\nfonctionne, nous avons besoin de connaître les valeurs des intégrales\nsuivantes (où <span class=\"math inline\">\\(n, k \\in \\N^*\\)</span>) :</p>\n<ul>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\cos(nx) \\cos(kx)\n\\dx\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\sin(nx) \\cos(kx)\n\\dx\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\sin(nx) \\sin(kx)\n\\dx\\)</span> (utile pour <span\nclass=\"math inline\">\\(b_k\\)</span>)</p></li>\n</ul>\n<p>Que valent ces intégrales si <span class=\"math inline\">\\(n \\neq\nk\\)</span> ? Et si <span class=\"math inline\">\\(n=k\\)</span> ?</p>\n"
+        }
+      },
+      {
+        "id": "06cb9428-21ec-472b-ae79-de8ff443669e",
+        "type": "indication",
+        "value": {
+          "latex": "Utilisez les formules de trigonométrie $\\cos A \\cos B = \\frac{1}{2}(\\cos(A-B) + \\cos(A+B))$, $\\sin A \\cos B = \\frac{1}{2}(\\sin(A+B) + \\sin(A-B))$, $\\sin A \\sin B = \\frac{1}{2}(\\cos(A-B) - \\cos(A+B))$.",
+          "html": "<p>Utilisez les formules de trigonométrie <span\nclass=\"math inline\">\\(\\cos A \\cos B = \\frac{1}{2}(\\cos(A-B) +\n\\cos(A+B))\\)</span>, <span class=\"math inline\">\\(\\sin A \\cos B =\n\\frac{1}{2}(\\sin(A+B) + \\sin(A-B))\\)</span>, <span\nclass=\"math inline\">\\(\\sin A \\sin B = \\frac{1}{2}(\\cos(A-B) -\n\\cos(A+B))\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "311a548f-22a1-46ce-bfd0-941f758c73e0",
+        "type": "reponse",
+        "value": {
+          "latex": "Ces relations sont appelées \\textbf{relations d'orthogonalité}.\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item[(a)] $\\int_{-\\pi}^{\\pi} \\cos(nx) \\cos(kx) \\dx = \\begin{cases} 0 & \\text{si } n \\neq k \\\\ \\pi & \\text{si } n = k \\neq 0 \\end{cases}$\n\t\t\t\t\\item[(b)] $\\int_{-\\pi}^{\\pi} \\sin(nx) \\cos(kx) \\dx = 0 \\quad \\text{pour tous } n, k \\ge 1$\n\t\t\t\t\\item[(c)] $\\int_{-\\pi}^{\\pi} \\sin(nx) \\sin(kx) \\dx = \\begin{cases} 0 & \\text{si } n \\neq k \\\\ \\pi & \\text{si } n = k \\neq 0 \\end{cases}$\n\t\t\t\\end{itemize}",
+          "html": "<p>Ces relations sont appelées <strong>relations\nd’orthogonalité</strong>.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\cos(nx) \\cos(kx)\n\\dx = \\begin{cases} 0 &amp; \\text{si } n \\neq k \\\\ \\pi &amp; \\text{si }\nn = k \\neq 0 \\end{cases}\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\sin(nx) \\cos(kx)\n\\dx = 0 \\quad \\text{pour tous } n, k \\ge 1\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\sin(nx) \\sin(kx)\n\\dx = \\begin{cases} 0 &amp; \\text{si } n \\neq k \\\\ \\pi &amp; \\text{si }\nn = k \\neq 0 \\end{cases}\\)</span></p></li>\n</ul>\n"
+        }
+      },
+      {
+        "id": "3b507c9f-1517-46ee-8850-9362e6efc690",
+        "type": "question",
+        "value": {
+          "latex": "Le coefficient $a_k$ ($k \\ge 1$) : En utilisant les résultats de la Q2, comment exprimer $a_k$ à l'aide d'une intégrale ? Multipliez la série de Fourier par $\\cos(kx)$ et intégrez de $-\\pi$ à $\\pi$.",
+          "html": "<p>Le coefficient <span class=\"math inline\">\\(a_k\\)</span> (<span\nclass=\"math inline\">\\(k \\ge 1\\)</span>) : En utilisant les résultats de\nla Q2, comment exprimer <span class=\"math inline\">\\(a_k\\)</span> à\nl’aide d’une intégrale ? Multipliez la série de Fourier par <span\nclass=\"math inline\">\\(\\cos(kx)\\)</span> et intégrez de <span\nclass=\"math inline\">\\(-\\pi\\)</span> à <span\nclass=\"math inline\">\\(\\pi\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "f29eba41-1f05-4cb9-93cc-bbfcc7854f8e",
+        "type": "reponse",
+        "value": {
+          "latex": "$$ \\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx = \\int_{-\\pi}^{\\pi} \\left( \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos(nx) + b_n \\sin(nx)) \\right) \\cos(kx) \\dx $$\n\t\t\tOn distribue l'intégrale et le $\\cos(kx)$ :\n\t\t\t$$ = \\frac{a_0}{2} \\underbrace{\\int_{-\\pi}^{\\pi} \\cos(kx) \\dx}_{=0 \\text{ car } k \\ge 1} + \\sum_{n=1}^{\\infty} \\left( a_n \\int_{-\\pi}^{\\pi} \\cos(nx)\\cos(kx) \\dx + b_n \\underbrace{\\int_{-\\pi}^{\\pi} \\sin(nx)\\cos(kx) \\dx}_{=0 \\text{ (Q2b)}} \\right) $$\n\t\t\tD'après Q2a, l'intégrale $\\int_{-\\pi}^{\\pi} \\cos(nx)\\cos(kx) \\dx$ est nulle sauf si $n=k$, où elle vaut $\\pi$. Donc, dans toute la somme, seul le terme où $n=k$ survit :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx = a_k \\cdot \\pi $$\n\t\t\tAinsi, pour $k \\ge 1$ :\n\t\t\t$$ \\boxed{a_k = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx} $$",
+          "html": "<p><span class=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx =\n\\int_{-\\pi}^{\\pi} \\left( \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n\n\\cos(nx) + b_n \\sin(nx)) \\right) \\cos(kx) \\dx\\]</span> On distribue\nl’intégrale et le <span class=\"math inline\">\\(\\cos(kx)\\)</span> : <span\nclass=\"math display\">\\[= \\frac{a_0}{2} \\underbrace{\\int_{-\\pi}^{\\pi}\n\\cos(kx) \\dx}_{=0 \\text{ car } k \\ge 1} + \\sum_{n=1}^{\\infty} \\left( a_n\n\\int_{-\\pi}^{\\pi} \\cos(nx)\\cos(kx) \\dx + b_n\n\\underbrace{\\int_{-\\pi}^{\\pi} \\sin(nx)\\cos(kx) \\dx}_{=0 \\text{ (Q2b)}}\n\\right)\\]</span> D’après Q2a, l’intégrale <span\nclass=\"math inline\">\\(\\int_{-\\pi}^{\\pi} \\cos(nx)\\cos(kx) \\dx\\)</span>\nest nulle sauf si <span class=\"math inline\">\\(n=k\\)</span>, où elle vaut\n<span class=\"math inline\">\\(\\pi\\)</span>. Donc, dans toute la somme,\nseul le terme où <span class=\"math inline\">\\(n=k\\)</span> survit : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx = a_k \\cdot\n\\pi\\]</span> Ainsi, pour <span class=\"math inline\">\\(k \\ge 1\\)</span> :\n<span class=\"math display\">\\[\\boxed{a_k = \\frac{1}{\\pi}\n\\int_{-\\pi}^{\\pi} f(x) \\cos(kx) \\dx}\\]</span></p>\n"
+        }
+      },
+      {
+        "id": "ef851242-5fd0-45e6-908f-93f3a79d7cad",
+        "type": "question",
+        "value": {
+          "latex": "Le coefficient $b_k$ ($k \\ge 1$) : Sur le même principe, comment exprimer $b_k$ à l'aide d'une intégrale ?",
+          "html": "<p>Le coefficient <span class=\"math inline\">\\(b_k\\)</span> (<span\nclass=\"math inline\">\\(k \\ge 1\\)</span>) : Sur le même principe, comment\nexprimer <span class=\"math inline\">\\(b_k\\)</span> à l’aide d’une\nintégrale ?</p>\n"
+        }
+      },
+      {
+        "id": "d55f8903-aa58-4f92-8b3e-e34cde356869",
+        "type": "reponse",
+        "value": {
+          "latex": "On multiplie $f(x)$ par $\\sin(kx)$ et on intègre :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx = \\int_{-\\pi}^{\\pi} \\left( \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos(nx) + b_n \\sin(nx)) \\right) \\sin(kx) \\dx $$\n\t\t\t$$ = \\frac{a_0}{2} \\underbrace{\\int_{-\\pi}^{\\pi} \\sin(kx) \\dx}_{=0 \\text{ car } k \\ge 1} + \\sum_{n=1}^{\\infty} \\left( a_n \\underbrace{\\int_{-\\pi}^{\\pi} \\cos(nx)\\sin(kx) \\dx}_{=0 \\text{ (Q2b)}} + b_n \\int_{-\\pi}^{\\pi} \\sin(nx)\\sin(kx) \\dx \\right) $$\n\t\t\tD'après Q2c, l'intégrale $\\int_{-\\pi}^{\\pi} \\sin(nx)\\sin(kx) \\dx$ est nulle sauf si $n=k$, où elle vaut $\\pi$. Donc, seul le terme où $n=k$ survit :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx = b_k \\cdot \\pi $$\n\t\t\tAinsi, pour $k \\ge 1$ :\n\t\t\t$$ \\boxed{b_k = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx} $$",
+          "html": "<p>On multiplie <span class=\"math inline\">\\(f(x)\\)</span> par <span\nclass=\"math inline\">\\(\\sin(kx)\\)</span> et on intègre : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx =\n\\int_{-\\pi}^{\\pi} \\left( \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n\n\\cos(nx) + b_n \\sin(nx)) \\right) \\sin(kx) \\dx\\]</span> <span\nclass=\"math display\">\\[= \\frac{a_0}{2} \\underbrace{\\int_{-\\pi}^{\\pi}\n\\sin(kx) \\dx}_{=0 \\text{ car } k \\ge 1} + \\sum_{n=1}^{\\infty} \\left( a_n\n\\underbrace{\\int_{-\\pi}^{\\pi} \\cos(nx)\\sin(kx) \\dx}_{=0 \\text{ (Q2b)}} +\nb_n \\int_{-\\pi}^{\\pi} \\sin(nx)\\sin(kx) \\dx \\right)\\]</span> D’après Q2c,\nl’intégrale <span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi}\n\\sin(nx)\\sin(kx) \\dx\\)</span> est nulle sauf si <span\nclass=\"math inline\">\\(n=k\\)</span>, où elle vaut <span\nclass=\"math inline\">\\(\\pi\\)</span>. Donc, seul le terme où <span\nclass=\"math inline\">\\(n=k\\)</span> survit : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx = b_k \\cdot\n\\pi\\]</span> Ainsi, pour <span class=\"math inline\">\\(k \\ge 1\\)</span> :\n<span class=\"math display\">\\[\\boxed{b_k = \\frac{1}{\\pi}\n\\int_{-\\pi}^{\\pi} f(x) \\sin(kx) \\dx}\\]</span></p>\n"
+        }
+      },
+      {
+        "id": "4fd347f2-c291-4f97-b6f5-22bb59357b63",
+        "type": "description",
+        "value": {
+          "latex": "\\vspace{0.5cm}\n\t\t\\textbf{Partie 2 : Vers les coefficients complexes}\n\t\t\\vspace{0.3cm}\n\t\t\n\t\tLa formule d'Euler $\\mathrm{e}^{\\im \\theta} = \\cos(\\theta) + \\im \\sin(\\theta)$ est un outil puissant. Elle permet d'exprimer $\\cos(\\theta)$ et $\\sin(\\theta)$ :\n\t\t$$ \\cos(\\theta) = \\frac{\\mathrm{e}^{\\im \\theta} + \\mathrm{e}^{-\\im \\theta}}{2} \\quad \\text{et} \\quad \\sin(\\theta) = \\frac{\\mathrm{e}^{\\im \\theta} - \\mathrm{e}^{-\\im \\theta}}{2\\im} $$",
+          "html": "<p><strong>Partie 2 : Vers les coefficients complexes</strong></p>\n<p>La formule d’Euler <span class=\"math inline\">\\(\\mathrm{e}^{\\im\n\\theta} = \\cos(\\theta) + \\im \\sin(\\theta)\\)</span> est un outil\npuissant. Elle permet d’exprimer <span\nclass=\"math inline\">\\(\\cos(\\theta)\\)</span> et <span\nclass=\"math inline\">\\(\\sin(\\theta)\\)</span> : <span\nclass=\"math display\">\\[\\cos(\\theta) = \\frac{\\mathrm{e}^{\\im \\theta} +\n\\mathrm{e}^{-\\im \\theta}}{2} \\quad \\text{et} \\quad \\sin(\\theta) =\n\\frac{\\mathrm{e}^{\\im \\theta} - \\mathrm{e}^{-\\im\n\\theta}}{2\\im}\\]</span></p>\n"
+        }
+      },
+      {
+        "id": "7fe157d5-4469-4375-a963-8734ae9f419d",
+        "type": "question",
+        "value": {
+          "latex": "Réécriture de la série de Fourier : Remplacez $\\cos(nx)$ et $\\sin(nx)$ dans la série de Fourier réelle (de la Partie 1) par leurs expressions en exponentielles complexes.\n\t\t\t$$ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left( a_n \\frac{\\mathrm{e}^{\\im nx} + \\mathrm{e}^{-\\im nx}}{2} + b_n \\frac{\\mathrm{e}^{\\im nx} - \\mathrm{e}^{-\\im nx}}{2\\im} \\right) $$\n\t\t\tRegroupez les termes en $\\mathrm{e}^{\\im nx}$ et $\\mathrm{e}^{-\\im nx}$.",
+          "html": "<p>Réécriture de la série de Fourier : Remplacez <span\nclass=\"math inline\">\\(\\cos(nx)\\)</span> et <span\nclass=\"math inline\">\\(\\sin(nx)\\)</span> dans la série de Fourier réelle\n(de la Partie 1) par leurs expressions en exponentielles complexes.\n<span class=\"math display\">\\[f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty}\n\\left( a_n \\frac{\\mathrm{e}^{\\im nx} + \\mathrm{e}^{-\\im nx}}{2} + b_n\n\\frac{\\mathrm{e}^{\\im nx} - \\mathrm{e}^{-\\im nx}}{2\\im} \\right)\\]</span>\nRegroupez les termes en <span class=\"math inline\">\\(\\mathrm{e}^{\\im\nnx}\\)</span> et <span class=\"math inline\">\\(\\mathrm{e}^{-\\im\nnx}\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "282cb80f-08e9-481f-b214-f86c9bcc01b6",
+        "type": "indication",
+        "value": {
+          "latex": "N'oubliez pas que $1/\\im = -\\im$.",
+          "html": "<p>N’oubliez pas que <span class=\"math inline\">\\(1/\\im =\n-\\im\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "4482f8df-bb45-4517-83a9-21f8e9aec22d",
+        "type": "reponse",
+        "value": {
+          "latex": "$$ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left( \\left(\\frac{a_n}{2} + \\frac{b_n}{2\\im}\\right) \\mathrm{e}^{\\im nx} + \\left(\\frac{a_n}{2} - \\frac{b_n}{2\\im}\\right) \\mathrm{e}^{-\\im nx} \\right) $$\n\t\t\tEn utilisant $1/\\im = -\\im$ :\n\t\t\t$$ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left( \\frac{a_n - \\im b_n}{2} \\mathrm{e}^{\\im nx} + \\frac{a_n + \\im b_n}{2} \\mathrm{e}^{-\\im nx} \\right) $$",
+          "html": "<p><span class=\"math display\">\\[f(x) = \\frac{a_0}{2} +\n\\sum_{n=1}^{\\infty} \\left( \\left(\\frac{a_n}{2} + \\frac{b_n}{2\\im}\\right)\n\\mathrm{e}^{\\im nx} + \\left(\\frac{a_n}{2} - \\frac{b_n}{2\\im}\\right)\n\\mathrm{e}^{-\\im nx} \\right)\\]</span> En utilisant <span\nclass=\"math inline\">\\(1/\\im = -\\im\\)</span> : <span\nclass=\"math display\">\\[f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left(\n\\frac{a_n - \\im b_n}{2} \\mathrm{e}^{\\im nx} + \\frac{a_n + \\im b_n}{2}\n\\mathrm{e}^{-\\im nx} \\right)\\]</span></p>\n"
+        }
+      },
+      {
+        "id": "4bb10f35-f5a7-49c8-b1ca-a0f4e4271acf",
+        "type": "question",
+        "value": {
+          "latex": "Définition des coefficients complexes $c_k$ : On souhaite écrire la série sous la forme compacte :\n\t\t\t$$ f(x) = \\sum_{k=-\\infty}^{\\infty} c_k \\mathrm{e}^{\\im kx} $$\n\t\t\tEn comparant avec l'expression de la Q5, identifiez $c_n$ pour $n > 0$, $c_k$ pour $k < 0$ (en posant $k = -n$ avec $n>0$), et $c_0$.",
+          "html": "<p>Définition des coefficients complexes <span\nclass=\"math inline\">\\(c_k\\)</span> : On souhaite écrire la série sous la\nforme compacte : <span class=\"math display\">\\[f(x) =\n\\sum_{k=-\\infty}^{\\infty} c_k \\mathrm{e}^{\\im kx}\\]</span> En comparant\navec l’expression de la Q5, identifiez <span\nclass=\"math inline\">\\(c_n\\)</span> pour <span class=\"math inline\">\\(n\n&gt; 0\\)</span>, <span class=\"math inline\">\\(c_k\\)</span> pour <span\nclass=\"math inline\">\\(k &lt; 0\\)</span> (en posant <span\nclass=\"math inline\">\\(k = -n\\)</span> avec <span\nclass=\"math inline\">\\(n&gt;0\\)</span>), et <span\nclass=\"math inline\">\\(c_0\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ad70af5b-5c66-4641-a0d2-3f1b7bd68225",
+        "type": "reponse",
+        "value": {
+          "latex": "\\begin{itemize}\n\t\t\t\t\\item Pour $n > 0$, le coefficient de $\\mathrm{e}^{\\im nx}$ est $c_n$. En comparant avec Q5 :\n\t\t\t\t$$ \\boxed{c_n = \\frac{a_n - \\im b_n}{2} \\quad (n > 0)} $$\n\t\t\t\t\\item Pour les termes en $\\mathrm{e}^{-\\im nx}$ dans Q5, cela correspond aux $c_k$ avec $k < 0$. Posons $k = -n$ (donc $n>0$). Le coefficient de $\\mathrm{e}^{-\\im nx}$ est $c_{-n}$. En comparant avec Q5 :\n\t\t\t\t$$ \\boxed{c_{-n} = \\frac{a_n + \\im b_n}{2} \\quad (n > 0)} $$\n\t\t\t\t\\item Pour $k=0$, $\\mathrm{e}^{\\im 0 x} = 1$. Le terme constant dans la série complexe est $c_0$. Dans la série réelle, c'est $\\frac{a_0}{2}$. Donc :\n\t\t\t\t$$ \\boxed{c_0 = \\frac{a_0}{2}} $$\n\t\t\t\\end{itemize}",
+          "html": "<ul>\n<li><p>Pour <span class=\"math inline\">\\(n &gt; 0\\)</span>, le\ncoefficient de <span class=\"math inline\">\\(\\mathrm{e}^{\\im nx}\\)</span>\nest <span class=\"math inline\">\\(c_n\\)</span>. En comparant avec Q5 :\n<span class=\"math display\">\\[\\boxed{c_n = \\frac{a_n - \\im b_n}{2} \\quad\n(n &gt; 0)}\\]</span></p></li>\n<li><p>Pour les termes en <span class=\"math inline\">\\(\\mathrm{e}^{-\\im\nnx}\\)</span> dans Q5, cela correspond aux <span\nclass=\"math inline\">\\(c_k\\)</span> avec <span class=\"math inline\">\\(k\n&lt; 0\\)</span>. Posons <span class=\"math inline\">\\(k = -n\\)</span>\n(donc <span class=\"math inline\">\\(n&gt;0\\)</span>). Le coefficient de\n<span class=\"math inline\">\\(\\mathrm{e}^{-\\im nx}\\)</span> est <span\nclass=\"math inline\">\\(c_{-n}\\)</span>. En comparant avec Q5 : <span\nclass=\"math display\">\\[\\boxed{c_{-n} = \\frac{a_n + \\im b_n}{2} \\quad (n\n&gt; 0)}\\]</span></p></li>\n<li><p>Pour <span class=\"math inline\">\\(k=0\\)</span>, <span\nclass=\"math inline\">\\(\\mathrm{e}^{\\im 0 x} = 1\\)</span>. Le terme\nconstant dans la série complexe est <span\nclass=\"math inline\">\\(c_0\\)</span>. Dans la série réelle, c’est <span\nclass=\"math inline\">\\(\\frac{a_0}{2}\\)</span>. Donc : <span\nclass=\"math display\">\\[\\boxed{c_0 = \\frac{a_0}{2}}\\]</span></p></li>\n</ul>\n"
+        }
+      },
+      {
+        "id": "a1e3f28a-fcca-4173-b57b-384a7ea0fe4e",
+        "type": "question",
+        "value": {
+          "latex": "Formule intégrale directe pour $c_k$ : De la même manière que pour $a_n, b_n$, on peut trouver $c_k$ en multipliant $f(x)$ par $\\mathrm{e}^{-\\im kx}$ et en intégrant sur $[-\\pi, \\pi]$.\n\t\t\tOn a besoin de l'orthogonalité des exponentielles complexes :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im nx} \\mathrm{e}^{-\\im kx} \\dx = \\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im (n-k)x} \\dx = \\begin{cases} 0 & \\text{si } n \\neq k \\\\ 2\\pi & \\text{si } n = k \\end{cases} $$\n\t\t\tUtilisez cela pour trouver la formule de $c_k$ (pour $k \\in \\Z$).",
+          "html": "<p>Formule intégrale directe pour <span\nclass=\"math inline\">\\(c_k\\)</span> : De la même manière que pour <span\nclass=\"math inline\">\\(a_n, b_n\\)</span>, on peut trouver <span\nclass=\"math inline\">\\(c_k\\)</span> en multipliant <span\nclass=\"math inline\">\\(f(x)\\)</span> par <span\nclass=\"math inline\">\\(\\mathrm{e}^{-\\im kx}\\)</span> et en intégrant sur\n<span class=\"math inline\">\\([-\\pi, \\pi]\\)</span>. On a besoin de\nl’orthogonalité des exponentielles complexes : <span\nclass=\"math display\">\\[\\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im nx}\n\\mathrm{e}^{-\\im kx} \\dx = \\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im (n-k)x} \\dx\n= \\begin{cases} 0 &amp; \\text{si } n \\neq k \\\\ 2\\pi &amp; \\text{si } n =\nk \\end{cases}\\]</span> Utilisez cela pour trouver la formule de <span\nclass=\"math inline\">\\(c_k\\)</span> (pour <span class=\"math inline\">\\(k\n\\in \\Z\\)</span>).</p>\n"
+        }
+      },
+      {
+        "id": "32e64592-7aa6-4804-b4f5-9a18223f6ef8",
+        "type": "reponse",
+        "value": {
+          "latex": "On part de $f(x) = \\sum_{n=-\\infty}^{\\infty} c_n \\mathrm{e}^{\\im nx}$. On multiplie par $\\mathrm{e}^{-\\im kx}$ et on intègre :\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im kx} \\dx = \\int_{-\\pi}^{\\pi} \\left( \\sum_{n=-\\infty}^{\\infty} c_n \\mathrm{e}^{\\im nx} \\right) \\mathrm{e}^{-\\im kx} \\dx $$\n\t\t\t$$ = \\sum_{n=-\\infty}^{\\infty} c_n \\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im nx} \\mathrm{e}^{-\\im kx} \\dx $$\n\t\t\tGrâce à l'orthogonalité, seule l'intégrale où $n=k$ est non nulle et vaut $2\\pi$. Tous les autres termes s'annulent.\n\t\t\t$$ \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im kx} \\dx = c_k \\cdot 2\\pi $$\n\t\t\tDonc, pour tout $k \\in \\Z$ (entier relatif) :\n\t\t\t$$ \\boxed{c_k = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im kx} \\dx} $$\n\t\t\tC'est la formule générale du \\textbf{coefficient de Fourier complexe}.",
+          "html": "<p>On part de <span class=\"math inline\">\\(f(x) =\n\\sum_{n=-\\infty}^{\\infty} c_n \\mathrm{e}^{\\im nx}\\)</span>. On multiplie\npar <span class=\"math inline\">\\(\\mathrm{e}^{-\\im kx}\\)</span> et on\nintègre : <span class=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x)\n\\mathrm{e}^{-\\im kx} \\dx = \\int_{-\\pi}^{\\pi} \\left(\n\\sum_{n=-\\infty}^{\\infty} c_n \\mathrm{e}^{\\im nx} \\right)\n\\mathrm{e}^{-\\im kx} \\dx\\]</span> <span class=\"math display\">\\[=\n\\sum_{n=-\\infty}^{\\infty} c_n \\int_{-\\pi}^{\\pi} \\mathrm{e}^{\\im nx}\n\\mathrm{e}^{-\\im kx} \\dx\\]</span> Grâce à l’orthogonalité, seule\nl’intégrale où <span class=\"math inline\">\\(n=k\\)</span> est non nulle et\nvaut <span class=\"math inline\">\\(2\\pi\\)</span>. Tous les autres termes\ns’annulent. <span class=\"math display\">\\[\\int_{-\\pi}^{\\pi} f(x)\n\\mathrm{e}^{-\\im kx} \\dx = c_k \\cdot 2\\pi\\]</span> Donc, pour tout <span\nclass=\"math inline\">\\(k \\in \\Z\\)</span> (entier relatif) : <span\nclass=\"math display\">\\[\\boxed{c_k = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi}\nf(x) \\mathrm{e}^{-\\im kx} \\dx}\\]</span> C’est la formule générale du\n<strong>coefficient de Fourier complexe</strong>.</p>\n"
+        }
+      },
+      {
+        "id": "b6d038f8-f4fb-42e2-8762-32d2ff702a9f",
+        "type": "question",
+        "value": {
+          "latex": "Vérification du lien : Vérifions que cette formule intégrale pour $c_k$ est cohérente avec les expressions de $c_n, c_{-n}, c_0$ trouvées en Q6 en fonction de $a_n, b_n, a_0$.\n\t\t\tPar exemple, pour $n>0$, calculez $c_n = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im nx} \\dx$ en utilisant $\\mathrm{e}^{-\\im nx} = \\cos(nx) - \\im \\sin(nx)$ et les formules intégrales de $a_n, b_n$ de la Partie 1.",
+          "html": "<p>Vérification du lien : Vérifions que cette formule intégrale pour\n<span class=\"math inline\">\\(c_k\\)</span> est cohérente avec les\nexpressions de <span class=\"math inline\">\\(c_n, c_{-n}, c_0\\)</span>\ntrouvées en Q6 en fonction de <span class=\"math inline\">\\(a_n, b_n,\na_0\\)</span>. Par exemple, pour <span\nclass=\"math inline\">\\(n&gt;0\\)</span>, calculez <span\nclass=\"math inline\">\\(c_n = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x)\n\\mathrm{e}^{-\\im nx} \\dx\\)</span> en utilisant <span\nclass=\"math inline\">\\(\\mathrm{e}^{-\\im nx} = \\cos(nx) - \\im\n\\sin(nx)\\)</span> et les formules intégrales de <span\nclass=\"math inline\">\\(a_n, b_n\\)</span> de la Partie 1.</p>\n"
+        }
+      },
+      {
+        "id": "963bdf01-0d11-4b44-8e13-22b0db77aa9c",
+        "type": "indication",
+        "value": {
+          "latex": "Faites de même pour $c_{-n}$ (avec $n>0$) et pour $c_0$.",
+          "html": "<p>Faites de même pour <span class=\"math inline\">\\(c_{-n}\\)</span> (avec\n<span class=\"math inline\">\\(n&gt;0\\)</span>) et pour <span\nclass=\"math inline\">\\(c_0\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "0b213d96-cd09-48be-9a6b-6fe0ee5275ee",
+        "type": "reponse",
+        "value": {
+          "latex": "Pour $n > 0$ :\n\t\t\t$$\\begin{align*} c_n &= \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im nx} \\dx \\\\ &= \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) (\\cos(nx) - \\im \\sin(nx)) \\dx \\\\ &= \\frac{1}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) \\dx \\right) - \\frac{\\im}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\sin(nx) \\dx \\right) \\\\ &= \\frac{1}{2} a_n - \\frac{\\im}{2} b_n = \\frac{a_n - \\im b_n}{2} \\end{align*}$$\n\t\t\tCeci correspond bien à ce que nous avions trouvé en Q6 pour $c_n$ ($n>0$).\n\t\t\tDe même pour $c_{-n}$ ($n>0$) :\n\t\t\t$$\\begin{align*} c_{-n} &= \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-(-\\im nx)} \\dx = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{\\im nx} \\dx \\\\ &= \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) (\\cos(nx) + \\im \\sin(nx)) \\dx \\\\ &= \\frac{1}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) \\dx \\right) + \\frac{\\im}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\sin(nx) \\dx \\right) \\\\ &= \\frac{1}{2} a_n + \\frac{\\im}{2} b_n = \\frac{a_n + \\im b_n}{2} \\end{align*}$$\n\t\t\tCeci correspond bien à Q6 pour $c_{-n}$ ($n>0$).\n\t\t\tEt pour $c_0$ :\n\t\t\t$$ c_0 = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{\\im 0 x} \\dx = \\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx = \\frac{1}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx \\right) = \\frac{a_0}{2} $$\n\t\t\tCeci correspond bien à Q6 pour $c_0$. Les formules sont cohérentes !",
+          "html": "<p>Pour <span class=\"math inline\">\\(n &gt; 0\\)</span> : <span\nclass=\"math display\">\\[\\begin{align*} c_n &amp;= \\frac{1}{2\\pi}\n\\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-\\im nx} \\dx \\\\ &amp;= \\frac{1}{2\\pi}\n\\int_{-\\pi}^{\\pi} f(x) (\\cos(nx) - \\im \\sin(nx)) \\dx \\\\ &amp;=\n\\frac{1}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) \\dx\n\\right) - \\frac{\\im}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x)\n\\sin(nx) \\dx \\right) \\\\ &amp;= \\frac{1}{2} a_n - \\frac{\\im}{2} b_n =\n\\frac{a_n - \\im b_n}{2} \\end{align*}\\]</span> Ceci correspond bien à ce\nque nous avions trouvé en Q6 pour <span\nclass=\"math inline\">\\(c_n\\)</span> (<span\nclass=\"math inline\">\\(n&gt;0\\)</span>). De même pour <span\nclass=\"math inline\">\\(c_{-n}\\)</span> (<span\nclass=\"math inline\">\\(n&gt;0\\)</span>) : <span\nclass=\"math display\">\\[\\begin{align*} c_{-n} &amp;= \\frac{1}{2\\pi}\n\\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{-(-\\im nx)} \\dx = \\frac{1}{2\\pi}\n\\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{\\im nx} \\dx \\\\ &amp;= \\frac{1}{2\\pi}\n\\int_{-\\pi}^{\\pi} f(x) (\\cos(nx) + \\im \\sin(nx)) \\dx \\\\ &amp;=\n\\frac{1}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\cos(nx) \\dx\n\\right) + \\frac{\\im}{2} \\left( \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x)\n\\sin(nx) \\dx \\right) \\\\ &amp;= \\frac{1}{2} a_n + \\frac{\\im}{2} b_n =\n\\frac{a_n + \\im b_n}{2} \\end{align*}\\]</span> Ceci correspond bien à Q6\npour <span class=\"math inline\">\\(c_{-n}\\)</span> (<span\nclass=\"math inline\">\\(n&gt;0\\)</span>). Et pour <span\nclass=\"math inline\">\\(c_0\\)</span> : <span class=\"math display\">\\[c_0 =\n\\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\mathrm{e}^{\\im 0 x} \\dx =\n\\frac{1}{2\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx = \\frac{1}{2} \\left(\n\\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} f(x) \\dx \\right) =\n\\frac{a_0}{2}\\]</span> Ceci correspond bien à Q6 pour <span\nclass=\"math inline\">\\(c_0\\)</span>. Les formules sont cohérentes !</p>\n"
+        }
+      },
+      {
+        "id": "e7a2ecb0-7665-47e9-bab9-ae254a2a7ad1",
+        "type": "question",
+        "value": {
+          "latex": "Relation entre $c_n$ et $c_{-n}$ : Si $f(x)$ est une fonction à valeurs réelles, quelle relation existe-t-il entre $a_n$ et $b_n$ (qui sont réels par définition si $f$ est réelle) et les coefficients $c_n$ et $c_{-n}$ ? En particulier, que pouvez-vous dire de $c_{-n}$ par rapport à $c_n^*$ (le conjugué complexe de $c_n$) ?",
+          "html": "<p>Relation entre <span class=\"math inline\">\\(c_n\\)</span> et <span\nclass=\"math inline\">\\(c_{-n}\\)</span> : Si <span\nclass=\"math inline\">\\(f(x)\\)</span> est une fonction à valeurs réelles,\nquelle relation existe-t-il entre <span\nclass=\"math inline\">\\(a_n\\)</span> et <span\nclass=\"math inline\">\\(b_n\\)</span> (qui sont réels par définition si\n<span class=\"math inline\">\\(f\\)</span> est réelle) et les coefficients\n<span class=\"math inline\">\\(c_n\\)</span> et <span\nclass=\"math inline\">\\(c_{-n}\\)</span> ? En particulier, que pouvez-vous\ndire de <span class=\"math inline\">\\(c_{-n}\\)</span> par rapport à <span\nclass=\"math inline\">\\(c_n^*\\)</span> (le conjugué complexe de <span\nclass=\"math inline\">\\(c_n\\)</span>) ?</p>\n"
+        }
+      },
+      {
+        "id": "b38bf94a-cbda-4665-9810-2313616ed3d0",
+        "type": "reponse",
+        "value": {
+          "latex": "Si $f(x)$ est réelle, alors $a_n$ et $b_n$ sont des nombres réels.\n\t\t\tOn a $c_n = \\frac{a_n - \\im b_n}{2}$ (pour $n>0$).\n\t\t\tLe conjugué complexe de $c_n$ est $c_n^* = \\left(\\frac{a_n - \\im b_n}{2}\\right)^* = \\frac{a_n^* - (-\\im b_n)^*}{2} = \\frac{a_n + \\im b_n}{2}$ (car $a_n, b_n$ sont réels).\n\t\t\tOr, nous avons vu que $c_{-n} = \\frac{a_n + \\im b_n}{2}$ (pour $n>0$).\n\t\t\tDonc, pour une fonction $f(x)$ réelle, on a la relation importante pour $n \\neq 0$ :\n\t\t\t$$ \\boxed{c_{-n} = c_n^*} $$\n\t\t\tCela signifie que pour les fonctions réelles, les coefficients pour les fréquences négatives sont les conjugués des coefficients pour les fréquences positives.\n\t\t\tNote : $c_0 = a_0/2$. Si $f(x)$ est réelle, $a_0$ est réel, donc $c_0$ est réel. Ainsi $c_0^* = c_0$, ce qui est cohérent avec la formule $c_{-n}=c_n^*$ si on l'applique à $n=0$ (où $c_{-0} = c_0$).",
+          "html": "<p>Si <span class=\"math inline\">\\(f(x)\\)</span> est réelle, alors <span\nclass=\"math inline\">\\(a_n\\)</span> et <span\nclass=\"math inline\">\\(b_n\\)</span> sont des nombres réels. On a <span\nclass=\"math inline\">\\(c_n = \\frac{a_n - \\im b_n}{2}\\)</span> (pour <span\nclass=\"math inline\">\\(n&gt;0\\)</span>). Le conjugué complexe de <span\nclass=\"math inline\">\\(c_n\\)</span> est <span class=\"math inline\">\\(c_n^*\n= \\left(\\frac{a_n - \\im b_n}{2}\\right)^* = \\frac{a_n^* - (-\\im\nb_n)^*}{2} = \\frac{a_n + \\im b_n}{2}\\)</span> (car <span\nclass=\"math inline\">\\(a_n, b_n\\)</span> sont réels). Or, nous avons vu\nque <span class=\"math inline\">\\(c_{-n} = \\frac{a_n + \\im\nb_n}{2}\\)</span> (pour <span class=\"math inline\">\\(n&gt;0\\)</span>).\nDonc, pour une fonction <span class=\"math inline\">\\(f(x)\\)</span>\nréelle, on a la relation importante pour <span class=\"math inline\">\\(n\n\\neq 0\\)</span> : <span class=\"math display\">\\[\\boxed{c_{-n} =\nc_n^*}\\]</span> Cela signifie que pour les fonctions réelles, les\ncoefficients pour les fréquences négatives sont les conjugués des\ncoefficients pour les fréquences positives. Note : <span\nclass=\"math inline\">\\(c_0 = a_0/2\\)</span>. Si <span\nclass=\"math inline\">\\(f(x)\\)</span> est réelle, <span\nclass=\"math inline\">\\(a_0\\)</span> est réel, donc <span\nclass=\"math inline\">\\(c_0\\)</span> est réel. Ainsi <span\nclass=\"math inline\">\\(c_0^* = c_0\\)</span>, ce qui est cohérent avec la\nformule <span class=\"math inline\">\\(c_{-n}=c_n^*\\)</span> si on\nl’applique à <span class=\"math inline\">\\(n=0\\)</span> (où <span\nclass=\"math inline\">\\(c_{-0} = c_0\\)</span>).</p>\n"
+        }
+      }
+    ],
+    "preview": "<p><em>Objectif : Comprendre comment décomposer une fonction périodique\nen une somme de fonctions sinusoïdales plus simples, et comment calculer\nles \" ..."
   },
   "800X": {
     "uuid": "800X",
@@ -15263,6 +15582,142 @@
     ],
     "preview": "<p>Soit <span class=\"math inline\">\\(Z\\)</span> une variable aléatoire\nsuivant une loi normale centrée réduite <span\nclass=\"math inline\"> ..."
   },
+  "IwCg": {
+    "uuid": "IwCg",
+    "titre": "Une fonction \"créneau\" simple et sa parité",
+    "theme": [
+      "Séries de Fourier",
+      "Coefficients de Fourier"
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Maxime Nguyen",
+      "createdAt": "2025-05-09",
+      "hasIndication": true,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:46:59.071Z"
+    },
+    "contenu": [
+      {
+        "id": "fbb77c63-294c-4704-be9b-68b340b694c3",
+        "type": "description",
+        "value": {
+          "latex": "Soit la fonction $g(x)$ définie sur $\\mathbb{R}$, $2\\pi$-périodique, telle que pour $x \\in [-\\pi, \\pi]$ :\n\t\t$$ g(x) = \\begin{cases} 1 & \\text{si } x \\in [-\\pi/2, \\pi/2] \\\\ 0 & \\text{si } x \\in ]-\\pi, -\\pi/2[ \\cup ]\\pi/2, \\pi[ \\end{cases} $$\n\t\tL'objectif de cet exercice est de calculer les coefficients de Fourier pour cette fonction paire simple et d'interpréter le coefficient $a_0$.",
+          "html": "<p>Soit la fonction <span class=\"math inline\">\\(g(x)\\)</span> définie\nsur <span class=\"math inline\">\\(\\mathbb{R}\\)</span>, <span\nclass=\"math inline\">\\(2\\pi\\)</span>-périodique, telle que pour <span\nclass=\"math inline\">\\(x \\in [-\\pi, \\pi]\\)</span> : <span\nclass=\"math display\">\\[g(x) = \\begin{cases} 1 &amp; \\text{si } x \\in\n[-\\pi/2, \\pi/2] \\\\ 0 &amp; \\text{si } x \\in ]-\\pi, -\\pi/2[ \\cup ]\\pi/2,\n\\pi[ \\end{cases}\\]</span> L’objectif de cet exercice est de calculer les\ncoefficients de Fourier pour cette fonction paire simple et\nd’interpréter le coefficient <span\nclass=\"math inline\">\\(a_0\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "cdf1f194-0dc3-40ff-b360-34f6aa97874e",
+        "type": "question",
+        "value": {
+          "latex": "Tracer le graphe de $g(x)$ sur l'intervalle $[-2\\pi, 2\\pi]$.",
+          "html": "<p>Tracer le graphe de <span class=\"math inline\">\\(g(x)\\)</span> sur\nl’intervalle <span class=\"math inline\">\\([-2\\pi, 2\\pi]\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "d2cd2a2a-a770-4251-8d45-822e6b7840a2",
+        "type": "indication",
+        "value": {
+          "latex": "Commencez par tracer la fonction sur $[-\\pi, \\pi]$ puis utilisez la $2\\pi$-périodicité pour l'étendre.",
+          "html": "<p>Commencez par tracer la fonction sur <span\nclass=\"math inline\">\\([-\\pi, \\pi]\\)</span> puis utilisez la <span\nclass=\"math inline\">\\(2\\pi\\)</span>-périodicité pour l’étendre.</p>\n"
+        }
+      },
+      {
+        "id": "e5e0c85e-4b14-4060-add4-15485b2a496e",
+        "type": "reponse",
+        "value": {
+          "latex": "La fonction $g(x)$ vaut $1$ sur l'intervalle $[-\\pi/2, \\pi/2]$. Elle vaut $0$ sur les intervalles $]-\\pi, -\\pi/2[$ et $]\\pi/2, \\pi[$.\n\t\t\tPar $2\\pi$-périodicité ($g(x+2k\\pi)=g(x)$ pour $k \\in \\mathbb{Z}$):\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Sur $[-2\\pi, -3\\pi/2]$: $x \\in [-2\\pi, -3\\pi/2] \\implies x+2\\pi \\in [0, \\pi/2]$. Sur cet intervalle, $g(x+2\\pi)=1$, donc $g(x)=1$.\n\t\t\t\t\\item Sur $]-3\\pi/2, -\\pi/2[$: $x \\in ]-3\\pi/2, -\\pi] \\implies x+2\\pi \\in ]\\pi/2, \\pi]$. Sur cet intervalle, $g(x+2\\pi)=0$. Et pour $x \\in ]-\\pi, -\\pi/2[$, $g(x)=0$ par définition. Donc $g(x)=0$ sur $]-3\\pi/2, -\\pi/2[$.\n\t\t\t\t\\item Sur $[-\\pi/2, \\pi/2]$: $g(x)=1$ par définition.\n\t\t\t\t\\item Sur $]\\pi/2, 3\\pi/2[$: $x \\in ]\\pi/2, \\pi] \\implies g(x)=0$ par définition. Et pour $x \\in ]\\pi, 3\\pi/2[ \\implies x-2\\pi \\in ]-\\pi, -\\pi/2[$. Sur cet intervalle, $g(x-2\\pi)=0$. Donc $g(x)=0$ sur $]\\pi/2, 3\\pi/2[$.\n\t\t\t\t\\item Sur $[3\\pi/2, 2\\pi]$: $x \\in [3\\pi/2, 2\\pi] \\implies x-2\\pi \\in [-\\pi/2, 0]$. Sur cet intervalle, $g(x-2\\pi)=1$, donc $g(x)=1$.\n\t\t\t\\end{itemize}\n\t\t\tLe graphe est le suivant :\n\t\t\t\\begin{center}\n\n\t\t\t\\end{center}",
+          "html": "<p>La fonction <span class=\"math inline\">\\(g(x)\\)</span> vaut <span\nclass=\"math inline\">\\(1\\)</span> sur l’intervalle <span\nclass=\"math inline\">\\([-\\pi/2, \\pi/2]\\)</span>. Elle vaut <span\nclass=\"math inline\">\\(0\\)</span> sur les intervalles <span\nclass=\"math inline\">\\(]-\\pi, -\\pi/2[\\)</span> et <span\nclass=\"math inline\">\\(]\\pi/2, \\pi[\\)</span>. Par <span\nclass=\"math inline\">\\(2\\pi\\)</span>-périodicité (<span\nclass=\"math inline\">\\(g(x+2k\\pi)=g(x)\\)</span> pour <span\nclass=\"math inline\">\\(k \\in \\mathbb{Z}\\)</span>):</p>\n<ul>\n<li><p>Sur <span class=\"math inline\">\\([-2\\pi, -3\\pi/2]\\)</span>: <span\nclass=\"math inline\">\\(x \\in [-2\\pi, -3\\pi/2] \\implies x+2\\pi \\in [0,\n\\pi/2]\\)</span>. Sur cet intervalle, <span\nclass=\"math inline\">\\(g(x+2\\pi)=1\\)</span>, donc <span\nclass=\"math inline\">\\(g(x)=1\\)</span>.</p></li>\n<li><p>Sur <span class=\"math inline\">\\(]-3\\pi/2, -\\pi/2[\\)</span>: <span\nclass=\"math inline\">\\(x \\in ]-3\\pi/2, -\\pi] \\implies x+2\\pi \\in ]\\pi/2,\n\\pi]\\)</span>. Sur cet intervalle, <span\nclass=\"math inline\">\\(g(x+2\\pi)=0\\)</span>. Et pour <span\nclass=\"math inline\">\\(x \\in ]-\\pi, -\\pi/2[\\)</span>, <span\nclass=\"math inline\">\\(g(x)=0\\)</span> par définition. Donc <span\nclass=\"math inline\">\\(g(x)=0\\)</span> sur <span\nclass=\"math inline\">\\(]-3\\pi/2, -\\pi/2[\\)</span>.</p></li>\n<li><p>Sur <span class=\"math inline\">\\([-\\pi/2, \\pi/2]\\)</span>: <span\nclass=\"math inline\">\\(g(x)=1\\)</span> par définition.</p></li>\n<li><p>Sur <span class=\"math inline\">\\(]\\pi/2, 3\\pi/2[\\)</span>: <span\nclass=\"math inline\">\\(x \\in ]\\pi/2, \\pi] \\implies g(x)=0\\)</span> par\ndéfinition. Et pour <span class=\"math inline\">\\(x \\in ]\\pi, 3\\pi/2[\n\\implies x-2\\pi \\in ]-\\pi, -\\pi/2[\\)</span>. Sur cet intervalle, <span\nclass=\"math inline\">\\(g(x-2\\pi)=0\\)</span>. Donc <span\nclass=\"math inline\">\\(g(x)=0\\)</span> sur <span\nclass=\"math inline\">\\(]\\pi/2, 3\\pi/2[\\)</span>.</p></li>\n<li><p>Sur <span class=\"math inline\">\\([3\\pi/2, 2\\pi]\\)</span>: <span\nclass=\"math inline\">\\(x \\in [3\\pi/2, 2\\pi] \\implies x-2\\pi \\in [-\\pi/2,\n0]\\)</span>. Sur cet intervalle, <span\nclass=\"math inline\">\\(g(x-2\\pi)=1\\)</span>, donc <span\nclass=\"math inline\">\\(g(x)=1\\)</span>.</p></li>\n</ul>\n<p>Le graphe est le suivant :</p>\n<div class=\"center\">\n\n</div>\n"
+        }
+      },
+      {
+        "id": "395d2c7a-0209-467f-9cdf-058d18ecd246",
+        "type": "question",
+        "value": {
+          "latex": "La fonction $g(x)$ est-elle paire ? Impaire ? Ni l'une ni l'autre ? Justifier.",
+          "html": "<p>La fonction <span class=\"math inline\">\\(g(x)\\)</span> est-elle paire\n? Impaire ? Ni l’une ni l’autre ? Justifier.</p>\n"
+        }
+      },
+      {
+        "id": "36530bad-4fcf-4146-94e9-2037b11c7282",
+        "type": "reponse",
+        "value": {
+          "latex": "Considérons $x \\in [-\\pi, \\pi]$.\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Si $x \\in [-\\pi/2, \\pi/2]$, alors $g(x)=1$. Dans ce cas, $-x \\in [-\\pi/2, \\pi/2]$ également. Donc $g(-x)=1$. Ainsi $g(-x)=g(x)$.\n\t\t\t\t\\item Si $x \\in ]-\\pi, -\\pi/2[$, alors $g(x)=0$. Dans ce cas, $-x \\in ]\\pi/2, \\pi[$. Donc $g(-x)=0$. Ainsi $g(-x)=g(x)$.\n\t\t\t\t\\item Si $x \\in ]\\pi/2, \\pi[$, alors $g(x)=0$. Dans ce cas, $-x \\in ]-\\pi, -\\pi/2[$. Donc $g(-x)=0$. Ainsi $g(-x)=g(x)$.\n\t\t\t\\end{itemize}\n\t\t\tPour les points frontières $\\pi$ et $-\\pi$: $g(\\pi) = g(-\\pi)$ par périodicité ($g(\\pi)=g(-\\pi + 2\\pi)=g(-\\pi)$). De plus $g(\\pi) = 0$ (car $\\pi \\in ]\\pi/2, \\pi]$ en considérant la définition sur $[-\\pi, \\pi[$ ou en prenant la limite pour $x \\to \\pi^-$). Donc $g(-\\pi)=0$. Vérifions $g(-(-\\pi))=g(\\pi)=0$.\n\t\t\tLa fonction $g(x)$ est paire car $g(-x)=g(x)$ pour tout $x \\in \\mathbb{R}$.",
+          "html": "<p>Considérons <span class=\"math inline\">\\(x \\in [-\\pi,\n\\pi]\\)</span>.</p>\n<ul>\n<li><p>Si <span class=\"math inline\">\\(x \\in [-\\pi/2, \\pi/2]\\)</span>,\nalors <span class=\"math inline\">\\(g(x)=1\\)</span>. Dans ce cas, <span\nclass=\"math inline\">\\(-x \\in [-\\pi/2, \\pi/2]\\)</span> également. Donc\n<span class=\"math inline\">\\(g(-x)=1\\)</span>. Ainsi <span\nclass=\"math inline\">\\(g(-x)=g(x)\\)</span>.</p></li>\n<li><p>Si <span class=\"math inline\">\\(x \\in ]-\\pi, -\\pi/2[\\)</span>,\nalors <span class=\"math inline\">\\(g(x)=0\\)</span>. Dans ce cas, <span\nclass=\"math inline\">\\(-x \\in ]\\pi/2, \\pi[\\)</span>. Donc <span\nclass=\"math inline\">\\(g(-x)=0\\)</span>. Ainsi <span\nclass=\"math inline\">\\(g(-x)=g(x)\\)</span>.</p></li>\n<li><p>Si <span class=\"math inline\">\\(x \\in ]\\pi/2, \\pi[\\)</span>, alors\n<span class=\"math inline\">\\(g(x)=0\\)</span>. Dans ce cas, <span\nclass=\"math inline\">\\(-x \\in ]-\\pi, -\\pi/2[\\)</span>. Donc <span\nclass=\"math inline\">\\(g(-x)=0\\)</span>. Ainsi <span\nclass=\"math inline\">\\(g(-x)=g(x)\\)</span>.</p></li>\n</ul>\n<p>Pour les points frontières <span class=\"math inline\">\\(\\pi\\)</span>\net <span class=\"math inline\">\\(-\\pi\\)</span>: <span\nclass=\"math inline\">\\(g(\\pi) = g(-\\pi)\\)</span> par périodicité (<span\nclass=\"math inline\">\\(g(\\pi)=g(-\\pi + 2\\pi)=g(-\\pi)\\)</span>). De plus\n<span class=\"math inline\">\\(g(\\pi) = 0\\)</span> (car <span\nclass=\"math inline\">\\(\\pi \\in ]\\pi/2, \\pi]\\)</span> en considérant la\ndéfinition sur <span class=\"math inline\">\\([-\\pi, \\pi[\\)</span> ou en\nprenant la limite pour <span class=\"math inline\">\\(x \\to\n\\pi^-\\)</span>). Donc <span class=\"math inline\">\\(g(-\\pi)=0\\)</span>.\nVérifions <span class=\"math inline\">\\(g(-(-\\pi))=g(\\pi)=0\\)</span>. La\nfonction <span class=\"math inline\">\\(g(x)\\)</span> est paire car <span\nclass=\"math inline\">\\(g(-x)=g(x)\\)</span> pour tout <span\nclass=\"math inline\">\\(x \\in \\mathbb{R}\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "c7fc0537-5741-447a-a3f7-84054f8c18b1",
+        "type": "question",
+        "value": {
+          "latex": "Quelle conséquence la parité de $g(x)$ a-t-elle sur ses coefficients de Fourier $b_n$ ?",
+          "html": "<p>Quelle conséquence la parité de <span\nclass=\"math inline\">\\(g(x)\\)</span> a-t-elle sur ses coefficients de\nFourier <span class=\"math inline\">\\(b_n\\)</span> ?</p>\n"
+        }
+      },
+      {
+        "id": "e5c5f370-a0bd-46ff-ad6f-76e1c4af836d",
+        "type": "reponse",
+        "value": {
+          "latex": "Si une fonction $f$ est $2\\pi$-périodique et paire, alors ses coefficients de Fourier $b_n$ sont tous nuls. En effet, $b_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x)\\sin(nx) \\, dx$. L'intégrande $g(x)\\sin(nx)$ est le produit d'une fonction paire ($g(x)$) et d'une fonction impaire ($\\sin(nx)$), ce qui donne une fonction impaire. L'intégrale d'une fonction impaire sur un intervalle symétrique par rapport à l'origine ($[-\\pi, \\pi]$) est nulle.\n\t\t\tDonc, $b_n = 0$ pour tout $n \\ge 1$.",
+          "html": "<p>Si une fonction <span class=\"math inline\">\\(f\\)</span> est <span\nclass=\"math inline\">\\(2\\pi\\)</span>-périodique et paire, alors ses\ncoefficients de Fourier <span class=\"math inline\">\\(b_n\\)</span> sont\ntous nuls. En effet, <span class=\"math inline\">\\(b_n = \\frac{1}{\\pi}\n\\int_{-\\pi}^{\\pi} g(x)\\sin(nx) \\, dx\\)</span>. L’intégrande <span\nclass=\"math inline\">\\(g(x)\\sin(nx)\\)</span> est le produit d’une\nfonction paire (<span class=\"math inline\">\\(g(x)\\)</span>) et d’une\nfonction impaire (<span class=\"math inline\">\\(\\sin(nx)\\)</span>), ce qui\ndonne une fonction impaire. L’intégrale d’une fonction impaire sur un\nintervalle symétrique par rapport à l’origine (<span\nclass=\"math inline\">\\([-\\pi, \\pi]\\)</span>) est nulle. Donc, <span\nclass=\"math inline\">\\(b_n = 0\\)</span> pour tout <span\nclass=\"math inline\">\\(n \\ge 1\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "21ec084d-8c60-4e4f-8b82-62ab2ddac4b1",
+        "type": "question",
+        "value": {
+          "latex": "Calculer le coefficient $a_0$. Quelle est son interprétation graphique ?\n\t\t\tOn rappelle que $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x) \\, dx$.",
+          "html": "<p>Calculer le coefficient <span class=\"math inline\">\\(a_0\\)</span>.\nQuelle est son interprétation graphique ? On rappelle que <span\nclass=\"math inline\">\\(a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x) \\,\ndx\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "25186b51-a834-479e-8c36-37e84243fbb9",
+        "type": "reponse",
+        "value": {
+          "latex": "$a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x) \\, dx$.\n\t\t\tComme $g(x)$ est paire, $\\int_{-\\pi}^{\\pi} g(x) \\, dx = 2 \\int_{0}^{\\pi} g(x) \\, dx$.\n\t\t\t$a_0 = \\frac{2}{\\pi} \\int_{0}^{\\pi} g(x) \\, dx$.\n\t\t\tSur $[0, \\pi]$, $g(x)=1$ pour $x \\in [0, \\pi/2]$ et $g(x)=0$ pour $x \\in ]\\pi/2, \\pi]$.\n\t\t\tDonc, $a_0 = \\frac{2}{\\pi} \\left( \\int_{0}^{\\pi/2} 1 \\, dx + \\int_{\\pi/2}^{\\pi} 0 \\, dx \\right) = \\frac{2}{\\pi} \\left( [x]_{0}^{\\pi/2} + 0 \\right) = \\frac{2}{\\pi} \\left( \\frac{\\pi}{2} - 0 \\right) = 1$.\n\t\t\tDonc $a_0 = 1$.\n\t\t\tInterprétation graphique : $a_0/2$ est la valeur moyenne de la fonction $g(x)$ sur une période. Ici, $a_0/2 = 1/2$.\n\t\t\tL'aire sous la courbe de $g(x)$ sur une période, par exemple $[-\\pi, \\pi]$, est $\\int_{-\\pi/2}^{\\pi/2} 1 \\, dx = \\pi/2 - (-\\pi/2) = \\pi$. La longueur de la période est $2\\pi$. La valeur moyenne est donc $\\frac{\\text{Aire}}{\\text{Longueur période}} = \\frac{\\pi}{2\\pi} = \\frac{1}{2}$.",
+          "html": "<p><span class=\"math inline\">\\(a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi}\ng(x) \\, dx\\)</span>. Comme <span class=\"math inline\">\\(g(x)\\)</span> est\npaire, <span class=\"math inline\">\\(\\int_{-\\pi}^{\\pi} g(x) \\, dx = 2\n\\int_{0}^{\\pi} g(x) \\, dx\\)</span>. <span class=\"math inline\">\\(a_0 =\n\\frac{2}{\\pi} \\int_{0}^{\\pi} g(x) \\, dx\\)</span>. Sur <span\nclass=\"math inline\">\\([0, \\pi]\\)</span>, <span\nclass=\"math inline\">\\(g(x)=1\\)</span> pour <span class=\"math inline\">\\(x\n\\in [0, \\pi/2]\\)</span> et <span class=\"math inline\">\\(g(x)=0\\)</span>\npour <span class=\"math inline\">\\(x \\in ]\\pi/2, \\pi]\\)</span>. Donc,\n<span class=\"math inline\">\\(a_0 = \\frac{2}{\\pi} \\left( \\int_{0}^{\\pi/2}\n1 \\, dx + \\int_{\\pi/2}^{\\pi} 0 \\, dx \\right) = \\frac{2}{\\pi} \\left(\n[x]_{0}^{\\pi/2} + 0 \\right) = \\frac{2}{\\pi} \\left( \\frac{\\pi}{2} - 0\n\\right) = 1\\)</span>. Donc <span class=\"math inline\">\\(a_0 = 1\\)</span>.\nInterprétation graphique : <span class=\"math inline\">\\(a_0/2\\)</span>\nest la valeur moyenne de la fonction <span\nclass=\"math inline\">\\(g(x)\\)</span> sur une période. Ici, <span\nclass=\"math inline\">\\(a_0/2 = 1/2\\)</span>. L’aire sous la courbe de\n<span class=\"math inline\">\\(g(x)\\)</span> sur une période, par exemple\n<span class=\"math inline\">\\([-\\pi, \\pi]\\)</span>, est <span\nclass=\"math inline\">\\(\\int_{-\\pi/2}^{\\pi/2} 1 \\, dx = \\pi/2 - (-\\pi/2) =\n\\pi\\)</span>. La longueur de la période est <span\nclass=\"math inline\">\\(2\\pi\\)</span>. La valeur moyenne est donc <span\nclass=\"math inline\">\\(\\frac{\\text{Aire}}{\\text{Longueur période}} =\n\\frac{\\pi}{2\\pi} = \\frac{1}{2}\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "2f6b9875-134a-4a66-a518-2b2619ca203e",
+        "type": "question",
+        "value": {
+          "latex": "Calculer les coefficients $a_n$ pour $n \\ge 1$.\n\t\t\tOn rappelle que $a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x)\\cos(nx) \\, dx$. Discuter la valeur de $a_n$ selon la parité de $n$ (si $n$ est pair ou impair, en distinguant le cas $n=0$ déjà traité).",
+          "html": "<p>Calculer les coefficients <span class=\"math inline\">\\(a_n\\)</span>\npour <span class=\"math inline\">\\(n \\ge 1\\)</span>. On rappelle que <span\nclass=\"math inline\">\\(a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x)\\cos(nx)\n\\, dx\\)</span>. Discuter la valeur de <span\nclass=\"math inline\">\\(a_n\\)</span> selon la parité de <span\nclass=\"math inline\">\\(n\\)</span> (si <span\nclass=\"math inline\">\\(n\\)</span> est pair ou impair, en distinguant le\ncas <span class=\"math inline\">\\(n=0\\)</span> déjà traité).</p>\n"
+        }
+      },
+      {
+        "id": "2e8d88b7-0d9b-4894-80bf-ea273caa9231",
+        "type": "reponse",
+        "value": {
+          "latex": "Pour $n \\ge 1$, $a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x)\\cos(nx) \\, dx$.\n\t\t\tComme $g(x)$ est paire et $\\cos(nx)$ est paire, leur produit $g(x)\\cos(nx)$ est une fonction paire.\n\t\t\tDonc, $a_n = \\frac{2}{\\pi} \\int_{0}^{\\pi} g(x)\\cos(nx) \\, dx$.\n\t\t\tSur $[0, \\pi]$, $g(x)=1$ pour $x \\in [0, \\pi/2]$ et $g(x)=0$ pour $x \\in ]\\pi/2, \\pi]$.\n\t\t\t$a_n = \\frac{2}{\\pi} \\left( \\int_{0}^{\\pi/2} 1 \\cdot \\cos(nx) \\, dx + \\int_{\\pi/2}^{\\pi} 0 \\cdot \\cos(nx) \\, dx \\right) = \\frac{2}{\\pi} \\int_{0}^{\\pi/2} \\cos(nx) \\, dx$.\n\t\t\t$a_n = \\frac{2}{\\pi} \\left[ \\frac{\\sin(nx)}{n} \\right]_{0}^{\\pi/2} = \\frac{2}{\\pi n} \\left( \\sin\\left(\\frac{n\\pi}{2}\\right) - \\sin(0) \\right) = \\frac{2}{\\pi n} \\sin\\left(\\frac{n\\pi}{2}\\right)$.\n\t\t\t\n\t\t\tDiscussion de la valeur de $a_n$ :\n\t\t\t\\begin{itemize}\n\t\t\t\t\\item Si $n$ est pair, $n=2k$ pour $k \\in \\mathbb{N}^*$.\n\t\t\t\tAlors $\\sin\\left(\\frac{2k\\pi}{2}\\right) = \\sin(k\\pi) = 0$.\n\t\t\t\tDonc $a_{2k} = 0$ pour $k \\ge 1$.\n\t\t\t\t\\item Si $n$ est impair, $n=2k+1$ pour $k \\in \\mathbb{N}$.\n\t\t\t\tAlors $\\sin\\left(\\frac{(2k+1)\\pi}{2}\\right)$ vaut $1$ si $k$ est pair (e.g., $n=1, 5, 9, \\dots$) et $-1$ si $k$ est impair (e.g., $n=3, 7, 11, \\dots$).\n\t\t\t\tCeci peut s'écrire $\\sin\\left(\\frac{(2k+1)\\pi}{2}\\right) = (-1)^k$.\n\t\t\t\tDonc $a_{2k+1} = \\frac{2(-1)^k}{\\pi (2k+1)}$ pour $k \\ge 0$.\n\t\t\t\\end{itemize}\n\t\t\tEn résumé, pour $n \\ge 1$:\n\t\t\t$a_n = \\begin{cases} 0 & \\text{si } n \\text{ est pair} \\\\ \\frac{2(-1)^{(n-1)/2}}{\\pi n} & \\text{si } n \\text{ est impair} \\end{cases}$\n\t\t\tPar exemple : $a_1 = \\frac{2}{\\pi}$, $a_2=0$, $a_3 = -\\frac{2}{3\\pi}$, $a_4=0$, $a_5 = \\frac{2}{5\\pi}$.",
+          "html": "<p>Pour <span class=\"math inline\">\\(n \\ge 1\\)</span>, <span\nclass=\"math inline\">\\(a_n = \\frac{1}{\\pi} \\int_{-\\pi}^{\\pi} g(x)\\cos(nx)\n\\, dx\\)</span>. Comme <span class=\"math inline\">\\(g(x)\\)</span> est\npaire et <span class=\"math inline\">\\(\\cos(nx)\\)</span> est paire, leur\nproduit <span class=\"math inline\">\\(g(x)\\cos(nx)\\)</span> est une\nfonction paire. Donc, <span class=\"math inline\">\\(a_n = \\frac{2}{\\pi}\n\\int_{0}^{\\pi} g(x)\\cos(nx) \\, dx\\)</span>. Sur <span\nclass=\"math inline\">\\([0, \\pi]\\)</span>, <span\nclass=\"math inline\">\\(g(x)=1\\)</span> pour <span class=\"math inline\">\\(x\n\\in [0, \\pi/2]\\)</span> et <span class=\"math inline\">\\(g(x)=0\\)</span>\npour <span class=\"math inline\">\\(x \\in ]\\pi/2, \\pi]\\)</span>. <span\nclass=\"math inline\">\\(a_n = \\frac{2}{\\pi} \\left( \\int_{0}^{\\pi/2} 1\n\\cdot \\cos(nx) \\, dx + \\int_{\\pi/2}^{\\pi} 0 \\cdot \\cos(nx) \\, dx \\right)\n= \\frac{2}{\\pi} \\int_{0}^{\\pi/2} \\cos(nx) \\, dx\\)</span>. <span\nclass=\"math inline\">\\(a_n = \\frac{2}{\\pi} \\left[ \\frac{\\sin(nx)}{n}\n\\right]_{0}^{\\pi/2} = \\frac{2}{\\pi n} \\left(\n\\sin\\left(\\frac{n\\pi}{2}\\right) - \\sin(0) \\right) = \\frac{2}{\\pi n}\n\\sin\\left(\\frac{n\\pi}{2}\\right)\\)</span>.</p>\n<p>Discussion de la valeur de <span class=\"math inline\">\\(a_n\\)</span>\n:</p>\n<ul>\n<li><p>Si <span class=\"math inline\">\\(n\\)</span> est pair, <span\nclass=\"math inline\">\\(n=2k\\)</span> pour <span class=\"math inline\">\\(k\n\\in \\mathbb{N}^*\\)</span>. Alors <span\nclass=\"math inline\">\\(\\sin\\left(\\frac{2k\\pi}{2}\\right) = \\sin(k\\pi) =\n0\\)</span>. Donc <span class=\"math inline\">\\(a_{2k} = 0\\)</span> pour\n<span class=\"math inline\">\\(k \\ge 1\\)</span>.</p></li>\n<li><p>Si <span class=\"math inline\">\\(n\\)</span> est impair, <span\nclass=\"math inline\">\\(n=2k+1\\)</span> pour <span class=\"math inline\">\\(k\n\\in \\mathbb{N}\\)</span>. Alors <span\nclass=\"math inline\">\\(\\sin\\left(\\frac{(2k+1)\\pi}{2}\\right)\\)</span> vaut\n<span class=\"math inline\">\\(1\\)</span> si <span\nclass=\"math inline\">\\(k\\)</span> est pair (e.g., <span\nclass=\"math inline\">\\(n=1, 5, 9, \\dots\\)</span>) et <span\nclass=\"math inline\">\\(-1\\)</span> si <span\nclass=\"math inline\">\\(k\\)</span> est impair (e.g., <span\nclass=\"math inline\">\\(n=3, 7, 11, \\dots\\)</span>). Ceci peut s’écrire\n<span class=\"math inline\">\\(\\sin\\left(\\frac{(2k+1)\\pi}{2}\\right) =\n(-1)^k\\)</span>. Donc <span class=\"math inline\">\\(a_{2k+1} =\n\\frac{2(-1)^k}{\\pi (2k+1)}\\)</span> pour <span class=\"math inline\">\\(k\n\\ge 0\\)</span>.</p></li>\n</ul>\n<p>En résumé, pour <span class=\"math inline\">\\(n \\ge 1\\)</span>: <span\nclass=\"math inline\">\\(a_n = \\begin{cases} 0 &amp; \\text{si } n \\text{\nest pair} \\\\ \\frac{2(-1)^{(n-1)/2}}{\\pi n} &amp; \\text{si } n \\text{ est\nimpair} \\end{cases}\\)</span> Par exemple : <span\nclass=\"math inline\">\\(a_1 = \\frac{2}{\\pi}\\)</span>, <span\nclass=\"math inline\">\\(a_2=0\\)</span>, <span class=\"math inline\">\\(a_3 =\n-\\frac{2}{3\\pi}\\)</span>, <span class=\"math inline\">\\(a_4=0\\)</span>,\n<span class=\"math inline\">\\(a_5 = \\frac{2}{5\\pi}\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ca0136ae-f96b-4f30-993a-4cf3296141b9",
+        "type": "question",
+        "value": {
+          "latex": "Écrire les premiers termes non nuls de la série de Fourier de $g(x)$.",
+          "html": "<p>Écrire les premiers termes non nuls de la série de Fourier de <span\nclass=\"math inline\">\\(g(x)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ffaa5297-c419-4527-8e01-b878a95b7eb3",
+        "type": "reponse",
+        "value": {
+          "latex": "La série de Fourier de $g(x)$ est donnée par $S_g(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} (a_n \\cos(nx) + b_n \\sin(nx))$.\n\t\t\tAvec $a_0=1$, $b_n=0$ pour tout $n$, et les $a_n$ calculés :\n\t\t\t$S_g(x) = \\frac{1}{2} + a_1 \\cos(x) + a_3 \\cos(3x) + a_5 \\cos(5x) + \\dots$\n\t\t\t$S_g(x) = \\frac{1}{2} + \\frac{2}{\\pi}\\cos(x) - \\frac{2}{3\\pi}\\cos(3x) + \\frac{2}{5\\pi}\\cos(5x) - \\dots$\n\t\t\tOn peut écrire la série sous forme compacte :\n\t\t\t$S_g(x) = \\frac{1}{2} + \\sum_{k=0}^{\\infty} a_{2k+1} \\cos((2k+1)x) = \\frac{1}{2} + \\sum_{k=0}^{\\infty} \\frac{2(-1)^k}{\\pi(2k+1)} \\cos((2k+1)x)$.\n\t\t\t$S_g(x) = \\frac{1}{2} + \\frac{2}{\\pi} \\left( \\cos(x) - \\frac{1}{3}\\cos(3x) + \\frac{1}{5}\\cos(5x) - \\frac{1}{7}\\cos(7x) + \\dots \\right)$.",
+          "html": "<p>La série de Fourier de <span class=\"math inline\">\\(g(x)\\)</span> est\ndonnée par <span class=\"math inline\">\\(S_g(x) = \\frac{a_0}{2} +\n\\sum_{n=1}^{\\infty} (a_n \\cos(nx) + b_n \\sin(nx))\\)</span>. Avec <span\nclass=\"math inline\">\\(a_0=1\\)</span>, <span\nclass=\"math inline\">\\(b_n=0\\)</span> pour tout <span\nclass=\"math inline\">\\(n\\)</span>, et les <span\nclass=\"math inline\">\\(a_n\\)</span> calculés : <span\nclass=\"math inline\">\\(S_g(x) = \\frac{1}{2} + a_1 \\cos(x) + a_3 \\cos(3x)\n+ a_5 \\cos(5x) + \\dots\\)</span> <span class=\"math inline\">\\(S_g(x) =\n\\frac{1}{2} + \\frac{2}{\\pi}\\cos(x) - \\frac{2}{3\\pi}\\cos(3x) +\n\\frac{2}{5\\pi}\\cos(5x) - \\dots\\)</span> On peut écrire la série sous\nforme compacte : <span class=\"math inline\">\\(S_g(x) = \\frac{1}{2} +\n\\sum_{k=0}^{\\infty} a_{2k+1} \\cos((2k+1)x) = \\frac{1}{2} +\n\\sum_{k=0}^{\\infty} \\frac{2(-1)^k}{\\pi(2k+1)} \\cos((2k+1)x)\\)</span>.\n<span class=\"math inline\">\\(S_g(x) = \\frac{1}{2} + \\frac{2}{\\pi} \\left(\n\\cos(x) - \\frac{1}{3}\\cos(3x) + \\frac{1}{5}\\cos(5x) -\n\\frac{1}{7}\\cos(7x) + \\dots \\right)\\)</span>.</p>\n"
+        }
+      }
+    ],
+    "preview": "<p>Soit la fonction <span class=\"math inline\">\\(g(x)\\)</span> définie\nsur <span class=\"math inline\">\\(\\mathbb{R}\\)</span>, <span\nclass=\"math inline\">\\ ..."
+  },
   "J4Ag": {
     "uuid": "J4Ag",
     "titre": "Fonction caractéristique d'une loi de Poisson",
@@ -20404,6 +20859,159 @@
     ],
     "preview": "<p>Soit <span class=\"math inline\">\\(f \\colon \\R^2 \\to \\R\\)</span>, <span\nclass=\"math display\"> ..."
   },
+  "PtXD": {
+    "uuid": "PtXD",
+    "titre": "Étude d'une suite récurrente et de son équivalent",
+    "theme": [
+      "Suites numériques",
+      "Séries numériques",
+      "Équivalents"
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Adapté de Quercia/Exo7",
+      "createdAt": "2023-10-27",
+      "hasIndication": true,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:46:59.363Z"
+    },
+    "contenu": [
+      {
+        "id": "f8151e5b-cf8c-499d-8260-314abbc47c14",
+        "type": "description",
+        "value": {
+          "latex": "Soit $a$ un réel strictement positif et $u_1$ un réel strictement positif.\n\t\tOn définit la suite $(u_n)_{n \\ge 1}$ par la relation de récurrence :\n\t\t$$u_{n+1} = u_n + \\frac{1}{n^a u_n}$$\n\nOn admet que $u_n$ existe et que $u_n>0$ pour tout $n \\in \\N^*$.",
+          "html": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel strictement\npositif et <span class=\"math inline\">\\(u_1\\)</span> un réel strictement\npositif. On définit la suite <span class=\"math inline\">\\((u_n)_{n \\ge\n1}\\)</span> par la relation de récurrence : <span\nclass=\"math display\">\\[u_{n+1} = u_n + \\frac{1}{n^a u_n}\\]</span></p>\n<p>On admet que <span class=\"math inline\">\\(u_n\\)</span> existe et que\n<span class=\"math inline\">\\(u_n&gt;0\\)</span> pour tout <span\nclass=\"math inline\">\\(n \\in \\N^*\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "5179c11d-040a-4d02-bbae-e19bdc652376",
+        "type": "question",
+        "value": {
+          "latex": "Étudier la monotonie de la suite $(u_n)$.",
+          "html": "<p>Étudier la monotonie de la suite <span\nclass=\"math inline\">\\((u_n)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "3017bbce-75f3-4b46-a2b2-3fc5e099a5e7",
+        "type": "indication",
+        "value": {
+          "latex": "Calculer la différence $u_{n+1} - u_n$.",
+          "html": "<p>Calculer la différence <span class=\"math inline\">\\(u_{n+1} -\nu_n\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "b8eabaa8-24de-441d-8e11-3b2095a0e099",
+        "type": "reponse",
+        "value": {
+          "latex": "Pour tout $n \\ge 1$, $u_{n+1} - u_n = \\frac{1}{n^a u_n}$. Comme $n \\ge 1$, $a > 0$ et $u_n > 0$ (d'après Q1), on a $\\frac{1}{n^a u_n} > 0$. Donc $u_{n+1} - u_n > 0$, ce qui signifie que la suite $(u_n)$ est strictement croissante.",
+          "html": "<p>Pour tout <span class=\"math inline\">\\(n \\ge 1\\)</span>, <span\nclass=\"math inline\">\\(u_{n+1} - u_n = \\frac{1}{n^a u_n}\\)</span>. Comme\n<span class=\"math inline\">\\(n \\ge 1\\)</span>, <span\nclass=\"math inline\">\\(a &gt; 0\\)</span> et <span\nclass=\"math inline\">\\(u_n &gt; 0\\)</span> (d’après Q1), on a <span\nclass=\"math inline\">\\(\\frac{1}{n^a u_n} &gt; 0\\)</span>. Donc <span\nclass=\"math inline\">\\(u_{n+1} - u_n &gt; 0\\)</span>, ce qui signifie que\nla suite <span class=\"math inline\">\\((u_n)\\)</span> est strictement\ncroissante.</p>\n"
+        }
+      },
+      {
+        "id": "24fb9ea1-5a5d-40ba-9469-d37ada731863",
+        "type": "question",
+        "value": {
+          "latex": "Montrer que si la suite $(u_n)$ est majorée, il existe $\\ell >0$ tel que $\\lim\\limits_{n \\to +\\infty} u_n = \\ell$. \n\t\t\t\n\t\t\tSi la suite  $(u_n)$ n'est pas majorée, on admet qu'alors $\\lim\\limits_{n \\to +\\infty} u_n = +\\infty$.",
+          "html": "<p>Montrer que si la suite <span class=\"math inline\">\\((u_n)\\)</span>\nest majorée, il existe <span class=\"math inline\">\\(\\ell &gt;0\\)</span>\ntel que <span class=\"math inline\">\\(\\lim\\limits_{n \\to +\\infty} u_n =\n\\ell\\)</span>.</p>\n<p>Si la suite <span class=\"math inline\">\\((u_n)\\)</span> n’est pas\nmajorée, on admet qu’alors <span class=\"math inline\">\\(\\lim\\limits_{n\n\\to +\\infty} u_n = +\\infty\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "4bb669c5-e9f4-492e-99a6-6aa905347b6b",
+        "type": "reponse",
+        "value": {
+          "latex": "La suite $(u_n)$ est croissante (d'après Q2). Si la suite $(u_n)$ est majorée alors par théorème elle converge. Sinon, $\\lim_{n \\to \\infty} = +\\infty$.",
+          "html": "<p>La suite <span class=\"math inline\">\\((u_n)\\)</span> est croissante\n(d’après Q2). Si la suite <span class=\"math inline\">\\((u_n)\\)</span> est\nmajorée alors par théorème elle converge. Sinon, <span\nclass=\"math inline\">\\(\\lim_{n \\to \\infty} = +\\infty\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "f14a40df-bcc4-45a1-a842-a28d34b24449",
+        "type": "question",
+        "value": {
+          "latex": "On considère la série $\\displaystyle\\sum_{k \\geq 1} (u_{k+1} - u_k)$. Pour tout $N \\in \\N^*$, simplifier sa somme partielle : $$S_N = \\sum_{k=1}^{N}  (u_{k+1} - u_k).$$",
+          "html": "<p>On considère la série <span\nclass=\"math inline\">\\(\\displaystyle\\sum_{k \\geq 1} (u_{k+1} -\nu_k)\\)</span>. Pour tout <span class=\"math inline\">\\(N \\in\n\\N^*\\)</span>, simplifier sa somme partielle : <span\nclass=\"math display\">\\[S_N = \\sum_{k=1}^{N}  (u_{k+1} -\nu_k).\\]</span></p>\n"
+        }
+      },
+      {
+        "id": "1115edc1-71d7-4213-9dfc-e4a8f2ba9e62",
+        "type": "indication",
+        "value": {
+          "latex": "Il s'agit d'une série télescopique.",
+          "html": "<p>Il s’agit d’une série télescopique.</p>\n"
+        }
+      },
+      {
+        "id": "cc76114d-0547-4580-b4b2-554f0022a07c",
+        "type": "reponse",
+        "value": {
+          "latex": "Considérons la somme partielle de la série : $S_N = \\sum_{k=1}^{N} (u_{k+1} - u_k)$. Par télescopage, $S_N = (u_2 - u_1) + (u_3 - u_2) + \\dots + (u_{N+1} - u_N) = u_{N+1} - u_1$.",
+          "html": "<p>Considérons la somme partielle de la série : <span\nclass=\"math inline\">\\(S_N = \\sum_{k=1}^{N} (u_{k+1} - u_k)\\)</span>. Par\ntélescopage, <span class=\"math inline\">\\(S_N = (u_2 - u_1) + (u_3 - u_2)\n+ \\dots + (u_{N+1} - u_N) = u_{N+1} - u_1\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "7a1af029-85f2-45a0-bdca-9a2699d18c65",
+        "type": "question",
+        "value": {
+          "latex": "En déduire que la suite $(u_n)$ converge vers une limite finie $\\ell$ si et seulement si la série $\\displaystyle \\sum_{k \\geq 1} (u_{k+1} - u_k)$ converge.",
+          "html": "<p>En déduire que la suite <span class=\"math inline\">\\((u_n)\\)</span>\nconverge vers une limite finie <span class=\"math inline\">\\(\\ell\\)</span>\nsi et seulement si la série <span class=\"math inline\">\\(\\displaystyle\n\\sum_{k \\geq 1} (u_{k+1} - u_k)\\)</span> converge.</p>\n"
+        }
+      },
+      {
+        "id": "33dc5811-64e0-4e27-88ce-84f1a2a580db",
+        "type": "indication",
+        "value": {
+          "latex": "Exprimer la somme partielle de la série $\\sum (u_{k+1} - u_k)$ en utilisant la définition de $u_{n+1}$. Il s'agit d'une série télescopique.",
+          "html": "<p>Exprimer la somme partielle de la série <span\nclass=\"math inline\">\\(\\sum (u_{k+1} - u_k)\\)</span> en utilisant la\ndéfinition de <span class=\"math inline\">\\(u_{n+1}\\)</span>. Il s’agit\nd’une série télescopique.</p>\n"
+        }
+      },
+      {
+        "id": "8193bb09-63c9-47ca-9a88-f9546689d11f",
+        "type": "reponse",
+        "value": {
+          "latex": "La série $\\sum (u_{n+1} - u_n)$ converge si et seulement si la suite de ses sommes partielles $(S_N)$ converge. Or, $\\lim_{N \\to \\infty} S_N = \\lim_{N \\to \\infty} (u_{N+1} - u_1)$. Cette limite existe et est finie si et seulement si $\\lim_{N \\to \\infty} u_{N+1}$ existe et est finie. Donc, la série converge si et seulement si la suite $(u_n)$ converge vers une limite finie $\\ell$.",
+          "html": "<p>La série <span class=\"math inline\">\\(\\sum (u_{n+1} - u_n)\\)</span>\nconverge si et seulement si la suite de ses sommes partielles <span\nclass=\"math inline\">\\((S_N)\\)</span> converge. Or, <span\nclass=\"math inline\">\\(\\lim_{N \\to \\infty} S_N = \\lim_{N \\to \\infty}\n(u_{N+1} - u_1)\\)</span>. Cette limite existe et est finie si et\nseulement si <span class=\"math inline\">\\(\\lim_{N \\to \\infty}\nu_{N+1}\\)</span> existe et est finie. Donc, la série converge si et\nseulement si la suite <span class=\"math inline\">\\((u_n)\\)</span>\nconverge vers une limite finie <span\nclass=\"math inline\">\\(\\ell\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ae556ef0-8824-4373-8abd-387e955dcf9c",
+        "type": "description",
+        "value": {
+          "latex": "On suppose que $(u_n)$ converge vers une limite finie $\\ell > 0$.",
+          "html": "<p>On suppose que <span class=\"math inline\">\\((u_n)\\)</span> converge\nvers une limite finie <span class=\"math inline\">\\(\\ell &gt;\n0\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ef43ff56-74cd-4199-9ec4-e9b3ca2ad196",
+        "type": "question",
+        "value": {
+          "latex": "Déterminer un équivalent de $u_{n+1} - u_n$ lorsque $n \\to +\\infty$. En déduire les valeurs possibles de $a$ pour lesquelles la série $\\sum (u_{n+1} - u_n)$ convergente.",
+          "html": "<p>Déterminer un équivalent de <span class=\"math inline\">\\(u_{n+1} -\nu_n\\)</span> lorsque <span class=\"math inline\">\\(n \\to +\\infty\\)</span>.\nEn déduire les valeurs possibles de <span\nclass=\"math inline\">\\(a\\)</span> pour lesquelles la série <span\nclass=\"math inline\">\\(\\sum (u_{n+1} - u_n)\\)</span> convergente.</p>\n"
+        }
+      },
+      {
+        "id": "279cc66f-7a10-462b-bc75-b76a1ef83947",
+        "type": "indication",
+        "value": {
+          "latex": "Si $u_n \\to \\ell$ finie, utiliser cet équivalent dans l'expression $u_{n+1} - u_n = \\frac{1}{n^a u_n}$. Comparer à une série de Riemann.",
+          "html": "<p>Si <span class=\"math inline\">\\(u_n \\to \\ell\\)</span> finie, utiliser\ncet équivalent dans l’expression <span class=\"math inline\">\\(u_{n+1} -\nu_n = \\frac{1}{n^a u_n}\\)</span>. Comparer à une série de Riemann.</p>\n"
+        }
+      },
+      {
+        "id": "13f97a43-34bc-4318-931a-6c7621ae613a",
+        "type": "reponse",
+        "value": {
+          "latex": "Si $u_n \\to \\ell$ avec $\\ell \\in ]0, +\\infty[$, alors $u_n \\sim \\ell$ lorsque $n \\to +\\infty$. Par conséquent, $u_{n+1} - u_n = \\frac{1}{n^a u_n} \\sim \\frac{1}{n^a \\ell} = \\frac{1}{\\ell} \\frac{1}{n^a}$.\n\t\t\tLa série $\\sum (u_{n+1} - u_n)$ a la même nature que la série $\\sum \\frac{1}{\\ell n^a}$. Comme $\\ell > 0$, cette série a la même nature que la série de Riemann $\\sum \\frac{1}{n^a}$.\n\t\t\tD'après le critère de Riemann, $\\sum \\frac{1}{n^a}$ converge si et seulement si $a > 1$.\n\t\t\tDonc, si $(u_n)$ converge vers $\\ell$ finie, alors la série $\\sum (u_{n+1} - u_n)$ converge, ce qui implique $a > 1$.",
+          "html": "<p>Si <span class=\"math inline\">\\(u_n \\to \\ell\\)</span> avec <span\nclass=\"math inline\">\\(\\ell \\in ]0, +\\infty[\\)</span>, alors <span\nclass=\"math inline\">\\(u_n \\sim \\ell\\)</span> lorsque <span\nclass=\"math inline\">\\(n \\to +\\infty\\)</span>. Par conséquent, <span\nclass=\"math inline\">\\(u_{n+1} - u_n = \\frac{1}{n^a u_n} \\sim\n\\frac{1}{n^a \\ell} = \\frac{1}{\\ell} \\frac{1}{n^a}\\)</span>. La série\n<span class=\"math inline\">\\(\\sum (u_{n+1} - u_n)\\)</span> a la même\nnature que la série <span class=\"math inline\">\\(\\sum \\frac{1}{\\ell\nn^a}\\)</span>. Comme <span class=\"math inline\">\\(\\ell &gt; 0\\)</span>,\ncette série a la même nature que la série de Riemann <span\nclass=\"math inline\">\\(\\sum \\frac{1}{n^a}\\)</span>. D’après le critère de\nRiemann, <span class=\"math inline\">\\(\\sum \\frac{1}{n^a}\\)</span>\nconverge si et seulement si <span class=\"math inline\">\\(a &gt;\n1\\)</span>. Donc, si <span class=\"math inline\">\\((u_n)\\)</span> converge\nvers <span class=\"math inline\">\\(\\ell\\)</span> finie, alors la série\n<span class=\"math inline\">\\(\\sum (u_{n+1} - u_n)\\)</span> converge, ce\nqui implique <span class=\"math inline\">\\(a &gt; 1\\)</span>.</p>\n"
+        }
+      }
+    ],
+    "preview": "<p>Soit <span class=\"math inline\">\\(a\\)</span> un réel strictement\npositif et <span class=\"math inline\">\\(u_1\\)</span> un réel strictement\npositif. On ..."
+  },
   "PwkL": {
     "uuid": "PwkL",
     "titre": "Estimation des paramètres d'une loi normale",
@@ -22956,6 +23564,77 @@
       }
     ],
     "preview": "<p>Soit la matrice <span class=\"math inline\"> ..."
+  },
+  "T3aW": {
+    "uuid": "T3aW",
+    "titre": "Séries : vrai ou faux",
+    "theme": [
+      "séries"
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Quentin Liard",
+      "createdAt": "2025-05-05",
+      "hasIndication": false,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:46:59.488Z"
+    },
+    "contenu": [
+      {
+        "id": "abd77d34-7bc7-4916-943c-f5dd62561a99",
+        "type": "description",
+        "value": {
+          "latex": "Vrai ou Faux ? Justifier.",
+          "html": "<p>Vrai ou Faux ? Justifier.</p>\n"
+        }
+      },
+      {
+        "id": "e701ba7f-5d1d-48db-b6f0-f113c5ec6526",
+        "type": "question",
+        "value": {
+          "latex": "Si pour tout $n \\in \\N^*$, $u_n = \\frac{4}{5^n}$ alors la série $\\displaystyle \\sum_{n \\geq 1} u_n$ converge et sa somme vaut $\\displaystyle \\sum_{n = 1}^{+\\infty} u_n = 5$.",
+          "html": "<p>Si pour tout <span class=\"math inline\">\\(n \\in \\N^*\\)</span>, <span\nclass=\"math inline\">\\(u_n = \\frac{4}{5^n}\\)</span> alors la série <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} u_n\\)</span>\nconverge et sa somme vaut <span class=\"math inline\">\\(\\displaystyle\n\\sum_{n = 1}^{+\\infty} u_n = 5\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "ad0c638d-c8ca-4439-b596-c2a5ce7ee61b",
+        "type": "reponse",
+        "value": {
+          "latex": "FAUX. Il s'agit d'une série géométrique de raison $q=\\frac{1}{5}$ convergente, en revanche sa somme vaut $\\displaystyle \\sum_{n = 1}^{+\\infty} u_n = \\sum_{n = 0}^{+\\infty} u_n - u_0 = 5 - 4 = 1$.",
+          "html": "<p>FAUX. Il s’agit d’une série géométrique de raison <span\nclass=\"math inline\">\\(q=\\frac{1}{5}\\)</span> convergente, en revanche sa\nsomme vaut <span class=\"math inline\">\\(\\displaystyle \\sum_{n =\n1}^{+\\infty} u_n = \\sum_{n = 0}^{+\\infty} u_n - u_0 = 5 - 4 =\n1\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "b4dfa43a-2645-4f91-a486-380040df461c",
+        "type": "question",
+        "value": {
+          "latex": "Soit $(u_n)$ une suite strictement positive telle que $u_n = \\frac{1}{n} + \\underset{+\\infty}{o}\\left(\\frac{1}{n}\\right)$ alors la série $\\displaystyle \\sum_{n \\geq 1} u_n$ diverge.",
+          "html": "<p>Soit <span class=\"math inline\">\\((u_n)\\)</span> une suite strictement\npositive telle que <span class=\"math inline\">\\(u_n = \\frac{1}{n} +\n\\underset{+\\infty}{o}\\left(\\frac{1}{n}\\right)\\)</span> alors la série\n<span class=\"math inline\">\\(\\displaystyle \\sum_{n \\geq 1} u_n\\)</span>\ndiverge.</p>\n"
+        }
+      },
+      {
+        "id": "7d0d2229-fcb8-401a-9201-1eefaa6f8745",
+        "type": "indication",
+        "value": {
+          "latex": "",
+          "html": "\n"
+        }
+      },
+      {
+        "id": "3e569385-caad-4ee1-b7ad-d51cf9fe3ee3",
+        "type": "reponse",
+        "value": {
+          "latex": "VRAI. Le terme général $u_n$ est positif et équivalent $\\frac{1}{n}$ quand $n \\to +\\infty$. Par comparaison à une série de Riemann divergente, la série $\\sum u_n$ diverge.",
+          "html": "<p>VRAI. Le terme général <span class=\"math inline\">\\(u_n\\)</span> est\npositif et équivalent <span class=\"math inline\">\\(\\frac{1}{n}\\)</span>\nquand <span class=\"math inline\">\\(n \\to +\\infty\\)</span>. Par\ncomparaison à une série de Riemann divergente, la série <span\nclass=\"math inline\">\\(\\sum u_n\\)</span> diverge.</p>\n"
+        }
+      }
+    ],
+    "preview": "<p>Vrai ou Faux ? Justifier.</p>\n"
   },
   "T4fh": {
     "uuid": "T4fh",
@@ -26918,6 +27597,111 @@
       }
     ],
     "preview": "<p>Une chaîne de montage d’ordinateurs utilise un lot de composants\nélectroniques contenant <span class=\"math inline\">\\(2\\)</span>%\nd’éléments défectu ..."
+  },
+  "YouX": {
+    "uuid": "YouX",
+    "titre": "Taille dans une population et probabilités",
+    "theme": [
+      "Loi normale",
+      "Variable aléatoire continue",
+      "Probabilités conditionnelles; Formule de Bayes"
+    ],
+    "niveau": "",
+    "metadata": {
+      "exo7id": "",
+      "auteur": "Grégoire Menet",
+      "createdAt": "2025-05-07",
+      "hasIndication": true,
+      "hasCorrection": true,
+      "youtube": "",
+      "chapitre": "",
+      "sousChapitre": "",
+      "organisation": "AMSCC",
+      "updatedAt": "2025-05-17T20:47:00.749Z"
+    },
+    "contenu": [
+      {
+        "id": "fb9797ab-5357-4c88-a3e3-7ce3169ddcb6",
+        "type": "description",
+        "value": {
+          "latex": "Dans un pays, la taille en centimètres des femmes de 18 à 65 ans peut être modélisée par une variable aléatoire \\(X_1\\) suivant la loi normale d'espérance \\(\\mu_1 = 165\\)\\,cm et d'écart-type \\(\\sigma_1 = 6\\)\\,cm, et celle des hommes de 18 à 65 ans par une variable aléatoire \\(X_2\\) suivant la loi normale d'espérance \\(\\mu_2 = 175\\)\\,cm et d'écart-type \\(\\sigma_2 = 11\\)\\,cm.\n\t\t\n\t\tDans cet exercice, tous les résultats seront arrondis à \\(10^{-3}\\) près.",
+          "html": "<p>Dans un pays, la taille en centimètres des femmes de 18 à 65 ans peut\nêtre modélisée par une variable aléatoire <span\nclass=\"math inline\">\\(X_1\\)</span> suivant la loi normale d’espérance\n<span class=\"math inline\">\\(\\mu_1 = 165\\)</span> cm et d’écart-type\n<span class=\"math inline\">\\(\\sigma_1 = 6\\)</span> cm, et celle des\nhommes de 18 à 65 ans par une variable aléatoire <span\nclass=\"math inline\">\\(X_2\\)</span> suivant la loi normale d’espérance\n<span class=\"math inline\">\\(\\mu_2 = 175\\)</span> cm et d’écart-type\n<span class=\"math inline\">\\(\\sigma_2 = 11\\)</span> cm.</p>\n<p>Dans cet exercice, tous les résultats seront arrondis à <span\nclass=\"math inline\">\\(10^{-3}\\)</span> près.</p>\n"
+        }
+      },
+      {
+        "id": "16e8e866-b7b0-4d7c-801d-036705f65125",
+        "type": "question",
+        "value": {
+          "latex": "Quelle est la probabilité qu'une femme choisie au hasard dans ce pays mesure entre $1{,}53$ m et $1{,}77$ m ?",
+          "html": "<p>Quelle est la probabilité qu’une femme choisie au hasard dans ce pays\nmesure entre <span class=\"math inline\">\\(1{,}53\\)</span> m et <span\nclass=\"math inline\">\\(1{,}77\\)</span> m ?</p>\n"
+        }
+      },
+      {
+        "id": "2041ab0f-626f-4243-bdde-90dc8f47eb8e",
+        "type": "indication",
+        "value": {
+          "latex": "Convertir les mesures en centimètres. Centrer et réduire la variable aléatoire $X_1$ pour utiliser la table de la loi normale standard ou les propriétés de la fonction de répartition.",
+          "html": "<p>Convertir les mesures en centimètres. Centrer et réduire la variable\naléatoire <span class=\"math inline\">\\(X_1\\)</span> pour utiliser la\ntable de la loi normale standard ou les propriétés de la fonction de\nrépartition.</p>\n"
+        }
+      },
+      {
+        "id": "98a63fac-8a91-4dee-8018-4ec39de3c9bf",
+        "type": "reponse",
+        "value": {
+          "latex": "La taille d'une femme est modélisée par la v.a. $X_1$, qui suit la loi normale d'espérance $\\mu_1 = 165$ cm et d'écart-type $\\sigma_1 = 6$ cm.\\\\\n\t\t\tOn convertit en cm : $1,53\\,$m $= 153\\,$cm et $1,77\\,$m $= 177\\,$cm. On cherche alors $P(153 \\leq X_1 \\leq 177)$.\\\\\n\t\t\tOn a : $P(153 \\leq X_1 \\leq 177)= P\\left(\\frac{153-165}{6} \\leq \\frac{X_1-165}{6} \\leq \\frac{177-165}{6}\\right)=P\\left(-2 \\leq \\frac{X_1-165}{6} \\leq 2\\right)$.\\\\\n\t\t\tSi $Z = \\frac{X_1-165}{6}$, alors $Z$ suit la loi normale centrée réduite.\n\t\t\t$P(-2 \\leq Z \\leq 2) = P(Z \\leq 2) - P(Z < -2) = \\Phi(2) - \\Phi(-2)$.\n\t\t\tComme $\\Phi(-2) = 1 - \\Phi(2)$, on a $P(-2 \\leq Z \\leq 2) = \\Phi(2) - (1-\\Phi(2)) = 2\\Phi(2)-1$.\n\t\t\tEt grâce aux tables, on trouve : $P(153 \\leq X_1 \\leq 177)\\simeq 0{,}954$.\\\\",
+          "html": "<p>La taille d’une femme est modélisée par la v.a. <span\nclass=\"math inline\">\\(X_1\\)</span>, qui suit la loi normale d’espérance\n<span class=\"math inline\">\\(\\mu_1 = 165\\)</span> cm et d’écart-type\n<span class=\"math inline\">\\(\\sigma_1 = 6\\)</span> cm.<br />\nOn convertit en cm : <span class=\"math inline\">\\(1,53\\,\\)</span>m <span\nclass=\"math inline\">\\(= 153\\,\\)</span>cm et <span\nclass=\"math inline\">\\(1,77\\,\\)</span>m <span class=\"math inline\">\\(=\n177\\,\\)</span>cm. On cherche alors <span class=\"math inline\">\\(P(153\n\\leq X_1 \\leq 177)\\)</span>.<br />\nOn a : <span class=\"math inline\">\\(P(153 \\leq X_1 \\leq 177)=\nP\\left(\\frac{153-165}{6} \\leq \\frac{X_1-165}{6} \\leq\n\\frac{177-165}{6}\\right)=P\\left(-2 \\leq \\frac{X_1-165}{6} \\leq\n2\\right)\\)</span>.<br />\nSi <span class=\"math inline\">\\(Z = \\frac{X_1-165}{6}\\)</span>, alors\n<span class=\"math inline\">\\(Z\\)</span> suit la loi normale centrée\nréduite. <span class=\"math inline\">\\(P(-2 \\leq Z \\leq 2) = P(Z \\leq 2) -\nP(Z &lt; -2) = \\Phi(2) - \\Phi(-2)\\)</span>. Comme <span\nclass=\"math inline\">\\(\\Phi(-2) = 1 - \\Phi(2)\\)</span>, on a <span\nclass=\"math inline\">\\(P(-2 \\leq Z \\leq 2) = \\Phi(2) - (1-\\Phi(2)) =\n2\\Phi(2)-1\\)</span>. Et grâce aux tables, on trouve : <span\nclass=\"math inline\">\\(P(153 \\leq X_1 \\leq 177)\\simeq\n0{,}954\\)</span>.<br />\n</p>\n"
+        }
+      },
+      {
+        "id": "e56b6ad2-8f66-4b4f-9268-ef02618fca1c",
+        "type": "question",
+        "value": {
+          "latex": "Calculer la probabilité qu'un homme choisi au hasard dans ce pays mesure plus de $1{,}70$ m.",
+          "html": "<p>Calculer la probabilité qu’un homme choisi au hasard dans ce pays\nmesure plus de <span class=\"math inline\">\\(1{,}70\\)</span> m.</p>\n"
+        }
+      },
+      {
+        "id": "385f125c-61c0-4957-9e83-1ea1c104fbb8",
+        "type": "indication",
+        "value": {
+          "latex": "Centrer et réduire la variable aléatoire $X_2$. Exprimer la probabilité $P(X_2 \\geq 170)$ en utilisant la fonction de répartition $\\Phi$ de la loi normale centrée réduite.",
+          "html": "<p>Centrer et réduire la variable aléatoire <span\nclass=\"math inline\">\\(X_2\\)</span>. Exprimer la probabilité <span\nclass=\"math inline\">\\(P(X_2 \\geq 170)\\)</span> en utilisant la fonction\nde répartition <span class=\"math inline\">\\(\\Phi\\)</span> de la loi\nnormale centrée réduite.</p>\n"
+        }
+      },
+      {
+        "id": "01c7d617-74a6-416f-8724-a6ef1afb5a6d",
+        "type": "reponse",
+        "value": {
+          "latex": "La taille d'un homme est modélisée par la v.a. $X_2$, qui suit la loi normale d'espérance $\\mu_2 = 175$ cm et d'écart-type $\\sigma_2 = 11$ cm.\\\\\n\t\t\tOn cherche ici $P(X_2 \\geq 170)$ (on applique un raisonnement similaire à la question 1 pour centrer et réduire $X_2$).\\\\\n\t\t\t$P(X_2 \\geq 170) = P\\left(\\frac{X_2-\\mu_2}{\\sigma_2} \\geq \\frac{170-175}{11}\\right) = P\\left(Z \\geq \\frac{-5}{11}\\right)$ où $Z$ suit la loi normale centrée réduite.\\\\\n\t\t\t$P(Z \\geq -5/11) = P(Z \\leq 5/11) = \\Phi(5/11)$.\n\t\t\tOn trouve grâce aux tables (ou à la calculatrice) : $P(X_2 \\geq 170) \\simeq 0{,}675$.",
+          "html": "<p>La taille d’un homme est modélisée par la v.a. <span\nclass=\"math inline\">\\(X_2\\)</span>, qui suit la loi normale d’espérance\n<span class=\"math inline\">\\(\\mu_2 = 175\\)</span> cm et d’écart-type\n<span class=\"math inline\">\\(\\sigma_2 = 11\\)</span> cm.<br />\nOn cherche ici <span class=\"math inline\">\\(P(X_2 \\geq 170)\\)</span> (on\napplique un raisonnement similaire à la question 1 pour centrer et\nréduire <span class=\"math inline\">\\(X_2\\)</span>).<br />\n<span class=\"math inline\">\\(P(X_2 \\geq 170) =\nP\\left(\\frac{X_2-\\mu_2}{\\sigma_2} \\geq \\frac{170-175}{11}\\right) =\nP\\left(Z \\geq \\frac{-5}{11}\\right)\\)</span> où <span\nclass=\"math inline\">\\(Z\\)</span> suit la loi normale centrée\nréduite.<br />\n<span class=\"math inline\">\\(P(Z \\geq -5/11) = P(Z \\leq 5/11) =\n\\Phi(5/11)\\)</span>. On trouve grâce aux tables (ou à la calculatrice) :\n<span class=\"math inline\">\\(P(X_2 \\geq 170) \\simeq 0{,}675\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "58b60033-df33-4543-bc74-93a79f76df1b",
+        "type": "question",
+        "value": {
+          "latex": "On sait que dans ce pays les femmes représentent \\(52\\%\\) de la population des personnes dont l'âge est compris entre 18 et 65 ans. On choisit au hasard une personne qui a entre 18 et 65 ans. Elle mesure plus de $1{,}70$ m. Quelle est la probabilité que cette personne soit une femme ?",
+          "html": "<p>On sait que dans ce pays les femmes représentent <span\nclass=\"math inline\">\\(52\\%\\)</span> de la population des personnes dont\nl’âge est compris entre 18 et 65 ans. On choisit au hasard une personne\nqui a entre 18 et 65 ans. Elle mesure plus de <span\nclass=\"math inline\">\\(1{,}70\\)</span> m. Quelle est la probabilité que\ncette personne soit une femme ?</p>\n"
+        }
+      },
+      {
+        "id": "4b972b83-a3ef-4cad-91c9-eb592a2fee37",
+        "type": "indication",
+        "value": {
+          "latex": "Définir les événements $F$ (être une femme), $H$ (être un homme), et $C$ (mesurer plus de $1,70$ m). Calculer les probabilités conditionnelles $P(C|F)$ et $P(C|H)$ en utilisant la loi normale pour $X_1$ et $X_2$. Utiliser la formule des probabilités totales pour $P(C)$, puis la formule de Bayes pour trouver $P(F|C)$.",
+          "html": "<p>Définir les événements <span class=\"math inline\">\\(F\\)</span> (être\nune femme), <span class=\"math inline\">\\(H\\)</span> (être un homme), et\n<span class=\"math inline\">\\(C\\)</span> (mesurer plus de <span\nclass=\"math inline\">\\(1,70\\)</span> m). Calculer les probabilités\nconditionnelles <span class=\"math inline\">\\(P(C|F)\\)</span> et <span\nclass=\"math inline\">\\(P(C|H)\\)</span> en utilisant la loi normale pour\n<span class=\"math inline\">\\(X_1\\)</span> et <span\nclass=\"math inline\">\\(X_2\\)</span>. Utiliser la formule des probabilités\ntotales pour <span class=\"math inline\">\\(P(C)\\)</span>, puis la formule\nde Bayes pour trouver <span class=\"math inline\">\\(P(F|C)\\)</span>.</p>\n"
+        }
+      },
+      {
+        "id": "05a059a6-1f39-4b32-b856-2a86f7f52bd2",
+        "type": "reponse",
+        "value": {
+          "latex": "Il s'agit d'un problème de probabilités conditionnelles.\\\\\n\t\t\tSoit $F$ l'événement : « La personne choisie est une femme ».\\\\\n\t\t\tSoit $H$ l'événement : « La personne choisie est un homme » (donc $H = \\bar{F}$).\\\\\n\t\t\tSoit $C$ l'événement : « La personne choisie mesure plus de 1{,}70 m ».\\\\\n\t\t\tOn sait que $P(F) = 0,52$, donc $P(H) = 1 - P(F) = 1 - 0{,}52 = 0{,}48$.\\\\\n\t\t\tOn cherche la probabilité $P(F|C)$. D'après la formule de Bayes, $P(F|C) = \\frac{P(C|F)P(F)}{P(C)}$.\\\\\n\t\t\t\n\t\t\tCalculons $P(C|F)$ : c'est la probabilité qu'une femme mesure plus de $1,70$ m, soit $P(X_1 \\geq 170)$.\\\\\n\t\t\t$P(X_1 \\geq 170) = P\\left(\\frac{X_1-165}{6} \\geq \\frac{170-165}{6}\\right) = P(Z \\geq 5/6)$.\\\\\n\t\t\tOn trouve à la calculatrice (ou table) : $P(X_1 \\geq 170) \\simeq 0{,}202$. Donc $P(C|F) \\simeq 0{,}202$.\\\\\n\t\t\t\n\t\t\tCalculons $P(C|H)$ : c'est la probabilité qu'un homme mesure plus de $1{,}70$ m, soit $P(X_2 \\geq 170)$.\\\\\n\t\t\tCette probabilité a été calculée dans la question 2 : $P(X_2 \\geq 170) \\simeq 0{,}675$. Donc $P(C|H) \\simeq 0{,}675$.\\\\\n\t\t\t\n\t\t\tOn peut représenter ces informations sur un arbre de probabilités :\n\t\t\t\\begin{center}\n__TIKZ_7f4a820e-0bea-4e99-bdae-c33c13e27b36__\n\t\t\t\\end{center}\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\tD'après la formule des probabilités totales :\n\t\t\t$P(C) = P(C|F)P(F) + P(C|H)P(H)$\n\t\t\t$P(C) \\simeq 0{,}202 \\times 0{,}52 + 0{,}675 \\times 0{,}48$\n\t\t\t$P(C) \\simeq 0{,}10504 + 0{,}324 = 0{,}42904$.\\\\\n\t\t\t\n\t\t\tCalculons $P(F \\cap C) = P(C|F)P(F)$.\n\t\t\t$P(F \\cap C) \\simeq 0{,}202 \\times 0{,}52 = 0{,}10504$.\\\\\n\t\t\t\n\t\t\tAlors, la probabilité recherchée $P(F|C)$ est :\n\t\t\t$P(F|C) = \\frac{P(F \\cap C)}{P(C)} \\simeq \\frac{0{,}10504}{0{,}42904} \\simeq 0{,}2448...$\n\t\t\tEn arrondissant à $10^{-3}$ : $P(F|C) \\simeq 0{,}245$.\\\\\n\t\t\t\n\t\t\tAinsi, la probabilité qu'une personne mesurant plus de $1{,}70$ m soit une femme est d'environ $0{,}245$.\n\t\t)",
+          "html": "<p>Il s’agit d’un problème de probabilités conditionnelles.<br />\nSoit <span class=\"math inline\">\\(F\\)</span> l’événement : « La personne\nchoisie est une femme ».<br />\nSoit <span class=\"math inline\">\\(H\\)</span> l’événement : « La personne\nchoisie est un homme » (donc <span class=\"math inline\">\\(H =\n\\bar{F}\\)</span>).<br />\nSoit <span class=\"math inline\">\\(C\\)</span> l’événement : « La personne\nchoisie mesure plus de 1<span>,</span>70 m ».<br />\nOn sait que <span class=\"math inline\">\\(P(F) = 0,52\\)</span>, donc <span\nclass=\"math inline\">\\(P(H) = 1 - P(F) = 1 - 0{,}52 =\n0{,}48\\)</span>.<br />\nOn cherche la probabilité <span class=\"math inline\">\\(P(F|C)\\)</span>.\nD’après la formule de Bayes, <span class=\"math inline\">\\(P(F|C) =\n\\frac{P(C|F)P(F)}{P(C)}\\)</span>.<br />\nCalculons <span class=\"math inline\">\\(P(C|F)\\)</span> : c’est la\nprobabilité qu’une femme mesure plus de <span\nclass=\"math inline\">\\(1,70\\)</span> m, soit <span\nclass=\"math inline\">\\(P(X_1 \\geq 170)\\)</span>.<br />\n<span class=\"math inline\">\\(P(X_1 \\geq 170) = P\\left(\\frac{X_1-165}{6}\n\\geq \\frac{170-165}{6}\\right) = P(Z \\geq 5/6)\\)</span>.<br />\nOn trouve à la calculatrice (ou table) : <span\nclass=\"math inline\">\\(P(X_1 \\geq 170) \\simeq 0{,}202\\)</span>. Donc\n<span class=\"math inline\">\\(P(C|F) \\simeq 0{,}202\\)</span>.<br />\nCalculons <span class=\"math inline\">\\(P(C|H)\\)</span> : c’est la\nprobabilité qu’un homme mesure plus de <span\nclass=\"math inline\">\\(1{,}70\\)</span> m, soit <span\nclass=\"math inline\">\\(P(X_2 \\geq 170)\\)</span>.<br />\nCette probabilité a été calculée dans la question 2 : <span\nclass=\"math inline\">\\(P(X_2 \\geq 170) \\simeq 0{,}675\\)</span>. Donc\n<span class=\"math inline\">\\(P(C|H) \\simeq 0{,}675\\)</span>.<br />\nOn peut représenter ces informations sur un arbre de probabilités :</p>\n<div class=\"center\">\n<p><svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='152.052pt' height='133.627pt' viewBox='0 0 152.052 133.627'><defs><font id='IEAUVU-CMR8' horiz-adv-x='0'><font-face font-family='IEAUVU-CMR8' units-per-em='1000' ascent='750' descent='250'/><glyph unicode=',' horiz-adv-x='295' vert-adv-y='295' glyph-name='comma' d='M187 15C187-15 187-97 111-168C108-171 105-173 105-179C105-188 114-194 119-194C132-194 215-116 215 4C215 59 195 111 147 111C114 111 92 85 92 56C92 26 113 0 148 0C170 0 184 12 187 15Z'/><glyph unicode='0' horiz-adv-x='531' vert-adv-y='531' glyph-name='zero' d='M489 319C489 426 478 491 445 555C401 643 320 665 265 665C139 665 93 571 79 543C43 470 41 371 41 319C41 253 44 152 92 72C138-2 212-21 265-21C313-21 399-6 449 93C486 165 489 254 489 319ZM265 7C231 7 162 23 141 128C130 185 130 279 130 331C130 400 130 470 141 525C162 627 240 637 265 637C299 637 368 620 388 529C400 474 400 399 400 331C400 272 400 182 388 126C367 21 298 7 265 7Z'/><glyph unicode='2' horiz-adv-x='531' vert-adv-y='531' glyph-name='two' d='M282 204C298 219 340 252 356 266C418 323 477 378 477 469C477 588 377 665 252 665C132 665 53 574 53 485C53 436 92 429 106 429C127 429 158 444 158 482C158 534 108 534 96 534C125 607 192 632 241 632C334 632 382 553 382 469C382 365 309 289 191 168L65 38C53 27 53 25 53 0H448L477 179H446C443 159 435 109 423 90C417 82 341 82 325 82H147L282 204Z'/><glyph unicode='3' horiz-adv-x='531' vert-adv-y='531' glyph-name='three' d='M253 334C332 334 382 276 382 171C382 46 311 9 258 9C203 9 128 29 93 82C129 82 154 105 154 138C154 170 131 193 99 193C72 193 44 176 44 136C44 41 146-21 260-21C393-21 486 71 486 171C486 254 420 330 318 352C397 380 456 448 456 528S366 665 262 665C155 665 74 607 74 531C74 494 99 478 125 478C156 478 176 500 176 529C176 566 144 580 122 581C164 636 241 639 259 639C285 639 361 631 361 528C361 458 332 416 318 400C288 369 265 367 204 363C185 362 177 361 177 348C177 334 186 334 203 334H253Z'/><glyph unicode='4' horiz-adv-x='531' vert-adv-y='531' glyph-name='four' d='M394 647C394 667 394 675 373 675C360 675 359 674 349 660L30 197V164H312V81C312 44 309 33 232 33H209V0C294 3 296 3 353 3S412 3 497 0V33H474C397 33 394 44 394 81V164H500V197H394V647ZM319 566V197H65L319 566Z'/><glyph unicode='5' horiz-adv-x='531' vert-adv-y='531' glyph-name='five' d='M140 562C153 558 193 548 235 548C360 548 436 636 436 651C436 662 429 665 424 665C422 665 420 665 411 660C372 645 326 633 272 633C213 633 164 648 133 660C123 665 121 665 120 665C107 665 107 654 107 636V343C107 325 107 313 123 313C131 313 134 317 139 325C151 340 189 391 274 391C330 391 357 345 366 326C383 290 385 244 385 205C385 168 384 114 356 70C337 40 297 9 244 9C179 9 115 50 92 115C95 114 101 114 102 114C130 114 152 132 152 163C152 200 123 213 103 213C85 213 53 203 53 160C53 70 131-21 246-21C371-21 477 76 477 200C477 316 393 419 275 419C225 419 178 403 140 369V562Z'/><glyph unicode='6' horiz-adv-x='531' vert-adv-y='531' glyph-name='six' d='M138 331C138 414 145 487 181 548C211 598 262 639 325 639C345 639 391 636 414 601C369 599 365 565 365 554C365 524 388 507 412 507C430 507 459 518 459 556C459 616 414 665 324 665C185 665 44 533 44 317C44 46 170-21 267-21C315-21 367-8 412 35C452 74 486 116 486 203C486 334 387 426 276 426C204 426 161 380 138 331ZM267 9C214 9 181 46 166 74C143 119 141 187 141 225C141 324 195 398 272 398C322 398 352 372 371 337C392 300 392 255 392 204S392 109 372 73C346 27 311 9 267 9Z'/><glyph unicode='7' horiz-adv-x='531' vert-adv-y='531' glyph-name='seven' d='M506 609C515 620 515 622 515 644H261C236 644 205 645 180 647C128 651 127 660 124 676H93L59 465H90C92 480 103 549 117 557C128 562 203 562 218 562H430L327 424C213 272 189 114 189 35C189 25 189-21 236-21S283 24 283 36V84C283 228 307 346 356 411L506 609Z'/><glyph unicode='8' horiz-adv-x='531' vert-adv-y='531' glyph-name='eight' d='M332 361C388 388 456 438 456 516C456 611 359 665 266 665C160 665 74 592 74 498C74 461 87 427 112 398C129 377 133 375 195 336C71 281 44 208 44 152C44 42 155-21 264-21C387-21 486 62 486 168C486 231 452 273 436 290C419 306 418 307 332 361ZM177 455C148 472 124 501 124 536C124 599 193 639 264 639C342 639 406 586 406 516C406 458 361 409 302 380L177 455ZM226 318C230 316 344 246 361 235C377 226 429 194 429 134C429 57 348 9 266 9C177 9 101 70 101 152C101 227 157 286 226 318Z'/><glyph unicode='9' horiz-adv-x='531' vert-adv-y='531' glyph-name='nine' d='M392 295C392 51 276 9 218 9C197 9 145 12 118 43C162 47 165 80 165 90C165 120 142 137 118 137C100 137 71 126 71 88C71 20 127-21 219-21C356-21 486 115 486 329C486 589 371 665 268 665C150 665 44 573 44 442C44 313 141 219 254 219C325 219 368 264 392 315V295ZM258 247C212 247 183 268 161 305C138 342 138 390 138 441C138 500 138 542 165 583C190 619 222 639 269 639C336 639 365 573 368 568C389 519 390 441 390 421C390 342 347 247 258 247Z'/></font><font id='JBZABA-CMMI10' horiz-adv-x='0'><font-face font-family='JBZABA-CMMI10' units-per-em='1000' ascent='750' descent='250'/><glyph unicode='C' horiz-adv-x='714' vert-adv-y='714' glyph-name='C' d='M760 695C760 698 758 705 749 705C746 705 745 704 734 693L664 616C655 630 609 705 498 705C275 705 50 484 50 252C50 87 168-22 321-22C408-22 484 18 537 64C630 146 647 237 647 240C647 250 637 250 635 250C629 250 624 248 622 240C613 211 590 140 521 82C452 26 389 9 337 9C247 9 141 61 141 217C141 274 162 436 262 553C323 624 417 674 506 674C608 674 667 597 667 481C667 441 664 440 664 430S675 420 679 420C692 420 692 422 697 440L760 695Z'/></font><font id='UJHDQK-CMR10' horiz-adv-x='0'><font-face font-family='UJHDQK-CMR10' units-per-em='1000' ascent='750' descent='250'/><glyph unicode='¯' horiz-adv-x='500' vert-adv-y='500' glyph-name='macron' d='M430 559V590H69V559H430Z'/><glyph unicode='C' horiz-adv-x='722' vert-adv-y='722' glyph-name='C' d='M56 342C56 135 218-22 404-22C567-22 665 117 665 233C665 243 665 250 652 250C641 250 641 244 640 234C632 91 525 9 416 9C355 9 159 43 159 341C159 640 354 674 415 674C524 674 613 583 633 437C635 423 635 420 649 420C665 420 665 423 665 444V681C665 698 665 705 654 705C650 705 646 705 638 693L588 619C551 655 500 705 404 705C217 705 56 546 56 342Z'/><glyph unicode='F' horiz-adv-x='652' vert-adv-y='652' glyph-name='F' d='M582 680H33V649H57C134 649 136 638 136 602V78C136 42 134 31 57 31H33V0C68 3 146 3 185 3C226 3 317 3 353 0V31H320C225 31 225 44 225 79V325H311C407 325 417 293 417 208H442V473H417C417 389 407 356 311 356H225V609C225 642 227 649 274 649H394C544 649 569 593 585 455H610L582 680Z'/><glyph unicode='H' horiz-adv-x='750' vert-adv-y='750' glyph-name='H' d='M613 605C613 641 615 652 692 652H716V683C681 680 607 680 569 680S456 680 421 683V652H445C522 652 524 641 524 605V371H225V605C225 641 227 652 304 652H328V683C293 680 219 680 181 680S68 680 33 683V652H57C134 652 136 641 136 605V78C136 42 134 31 57 31H33V0C68 3 142 3 180 3S293 3 328 0V31H304C227 31 225 42 225 78V340H524V78C524 42 522 31 445 31H421V0C456 3 530 3 568 3S681 3 716 0V31H692C615 31 613 42 613 78V605Z'/></font></defs><style type='text/css'><![CDATA[text.f0 {font-family:UJHDQK-CMR10;font-size:9.96px} text.f1 {font-family:JBZABA-CMMI10;font-size:9.96px} text.f2 {font-family:IEAUVU-CMR8;font-size:7.97px} ]]></style><g id='page1'><path d='M80.98738 32.797919C80.98738 27.318429 76.5455 22.876549 71.066 22.876549C65.58651 22.876549 61.14463 27.318429 61.14463 32.797919S65.58651 42.719299 71.066 42.719299C76.5455 42.719299 80.98738 38.277409 80.98738 32.797919Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='67.796302' y='-97.399574' transform='matrix(.999739 0 0 .999739 -.000008 133.627)'>F</text><path d='M80.98738 100.830079C80.98738 95.350589 76.5455 90.908699 71.066 90.908699C65.58651 90.908699 61.14463 95.350589 61.14463 100.830079S65.58651 110.751449 71.066 110.751449C76.5455 110.751449 80.98738 106.309569 80.98738 100.830079Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='67.311429' y='-29.386329' transform='matrix(.999739 0 0 .999739 -.000008 133.627)'>H</text><path d='M151.85441 10.120379C151.85441 4.640889 147.41253 .199009 141.93304 .199009S132.01167 4.640889 132.01167 10.120379S136.45355 20.041769 141.93304 20.041769S151.85441 15.599869 151.85441 10.120379Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='138.297898' y='-120.070656' transform='matrix(.999739 0 0 .999739 0 133.62699)'>C</text><path d='M151.85441 55.475449C151.85441 49.995959 147.41253 45.554079 141.93304 45.554079S132.01167 49.995959 132.01167 55.475449C132.01167 60.954949 136.45355 65.396839 141.93304 65.396839S151.85441 60.954949 151.85441 55.475449Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='140.234393' y='-76.563014' transform='matrix(.999739 0 0 .999739 0 133.627)'>¯</text><text class='f1' x='137.978981' y='-74.044671' transform='matrix(.999739 0 0 .999739 0 133.627)'>C</text><path d='M151.85441 78.152549C151.85441 72.673049 147.41253 68.231159 141.93304 68.231159S132.01167 72.673049 132.01167 78.152549C132.01167 83.632039 136.45355 88.073919 141.93304 88.073919S151.85441 83.632039 151.85441 78.152549Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='138.297898' y='-52.057411' transform='matrix(.999739 0 0 .999739 0 133.62699)'>C</text><path d='M151.85441 123.507619C151.85441 118.028129 147.41253 113.586229 141.93304 113.586229S132.01167 118.028129 132.01167 123.507619S136.45355 133.428989 141.93304 133.428989S151.85441 128.987109 151.85441 123.507619Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f0' x='140.234393' y='-8.548768' transform='matrix(.999739 0 0 .999739 0 133.627)'>¯</text><text class='f1' x='137.978981' y='-6.031426' transform='matrix(.999739 0 0 .999739 0 133.627)'>C</text><path d='M.199 66.813999L61.94255 37.177199' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='17.137785' y='-77.435028' transform='matrix(.901459 -.432705 .432705 .901459 35.19593 133.41301)'>0,52</text><path d='M.199 66.813999L61.94255 96.450799' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='19.082761' y='-60.241244' transform='matrix(.901459 .432705 -.432705 .901459 -24.187069 119.433948)'>0,48</text><path d='M80.70466 29.713539L132.2944 13.204779' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='96.323791' y='-112.315591' transform='matrix(.952368 -.304756 .304756 .952368 38.816728 157.63448)'>0,202</text><path d='M80.70466 35.882309L132.2944 52.391069' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='98.300767' y='-95.517802' transform='matrix(.952368 .304756 -.304756 .952368 -24.429238 99.11986)'>0,798</text><path d='M80.70466 97.745689L132.2944 81.236929' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='96.323791' y='-44.285444' transform='matrix(.952368 -.304756 .304756 .952368 18.083603 160.87412)'>0,675</text><path d='M80.70466 103.914459L132.2944 120.423219' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/><text class='f2' x='98.300767' y='-27.486655' transform='matrix(.952368 .304756 -.304756 .952368 -3.695801 102.35955)'>0,325</text></g></svg></p>\n</div>\n<p>D’après la formule des probabilités totales : <span\nclass=\"math inline\">\\(P(C) = P(C|F)P(F) + P(C|H)P(H)\\)</span> <span\nclass=\"math inline\">\\(P(C) \\simeq 0{,}202 \\times 0{,}52 + 0{,}675 \\times\n0{,}48\\)</span> <span class=\"math inline\">\\(P(C) \\simeq 0{,}10504 +\n0{,}324 = 0{,}42904\\)</span>.<br />\nCalculons <span class=\"math inline\">\\(P(F \\cap C) = P(C|F)P(F)\\)</span>.\n<span class=\"math inline\">\\(P(F \\cap C) \\simeq 0{,}202 \\times 0{,}52 =\n0{,}10504\\)</span>.<br />\nAlors, la probabilité recherchée <span\nclass=\"math inline\">\\(P(F|C)\\)</span> est : <span\nclass=\"math inline\">\\(P(F|C) = \\frac{P(F \\cap C)}{P(C)} \\simeq\n\\frac{0{,}10504}{0{,}42904} \\simeq 0{,}2448...\\)</span> En arrondissant\nà <span class=\"math inline\">\\(10^{-3}\\)</span> : <span\nclass=\"math inline\">\\(P(F|C) \\simeq 0{,}245\\)</span>.<br />\nAinsi, la probabilité qu’une personne mesurant plus de <span\nclass=\"math inline\">\\(1{,}70\\)</span> m soit une femme est d’environ\n<span class=\"math inline\">\\(0{,}245\\)</span>. )</p>\n"
+        }
+      }
+    ],
+    "preview": "<p>Dans un pays, la taille en centimètres des femmes de 18 à 65 ans peut\nêtre modélisée par une variable aléatoire <span\nclass=\"math inline\">\\(X_1\\)</ ..."
   },
   "YuII": {
     "uuid": "YuII",
@@ -32403,614 +33187,5 @@
       }
     ],
     "preview": "<p>L’ensemble des nombres complexes est défini par <span\nclass=\"math inline\">\\(\\mathbb{C}=\\{a+i b / a \\in \\mathbb{R}, b \\in\n\\mathbb{R}\\}\\)</span> avec ..."
-  },
-  "d4sm": {
-    "uuid": "d4sm",
-    "titre": "Loi de Pareto",
-    "theme": [
-      "variables aléatoires à densité"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "",
-      "createdAt": "2023-11-29",
-      "hasIndication": false,
-      "hasCorrection": true,
-      "youtube": "",
-      "chapitre": "Probabilité continue",
-      "sousChapitre": "Densité de probabilité",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:54.539Z",
-      "resume": "L'exercice porte sur la loi de Pareto. Les compétences évaluées sont:\n\n*   Vérification qu'une fonction est une densité de probabilité en calculant l'intégrale $\\int_{-\\infty}^{+\\infty} f(x) dx = 1$.\n*   Détermination de la fonction de répartition $F_X(t) = P(X \\leq t) = \\int_{-\\infty}^{t} f(x) dx$ à partir de la densité.\n*   Étude de l'existence de l'espérance $E(X) = \\int_{-\\infty}^{+\\infty} xf(x) dx$ en fonction du paramètre $\\alpha$.\n*   Détermination de la loi de $Y = rX + s$ où $X$ suit une loi de Pareto, en passant par le calcul de la fonction de répartition $F_Y(t) = P(Y \\leq t)$ et en déduire sa densité par dérivation.",
-      "competences": [
-        "Calculer une intégrale impropre",
-        "Calculer / Déterminer une fonction de répartition (à partir d'une densité, de l'indépendance, etc.)",
-        "Calculer l'espérance (mathématique) d'une variable aléatoire (ou fonction de VA)",
-        "appliquer une transformation de variable aléatoire",
-        "vérifier qu'une fonction est une densité de probabilité"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "loi de Pareto",
-        "densité de probabilité",
-        "fonction de répartition",
-        "espérance",
-        "variable aléatoire continue",
-        "transformation de variable",
-        "intégrale impropre",
-        "probabilité"
-      ],
-      "concepts_fondamentaux": [
-        "densité de probabilité",
-        "fonction de répartition",
-        "espérance d'une variable aléatoire",
-        "intégrales impropres",
-        "transformation de variables aléatoires"
-      ],
-      "prerequis": [
-        "calcul intégral",
-        "notion de variable aléatoire",
-        "définition d'une densité de probabilité",
-        "définition d'une fonction de répartition",
-        "calcul de limites"
-      ],
-      "type_exercice": "Problème à étapes",
-      "temps_estime": "60 minutes"
-    },
-    "contenu": [
-      {
-        "id": "cd1bd4e1-52d4-407c-828a-c3037fb60570",
-        "type": "question",
-        "value": {
-          "latex": "Vérifier que la fonction $f$ définit bien une densité de probabilité.",
-          "html": "<p>Vérifier que la fonction <span class=\"math inline\">\\(f\\)</span>\ndéfinit bien une densité de probabilité.</p>\n"
-        }
-      },
-      {
-        "id": "f66846c5-d8ef-4379-aa64-9e0d8e2ff293",
-        "type": "reponse",
-        "value": {
-          "latex": "Pour que $ f $ soit une densité, l'intégrale de $ f $ doit être égale à 1. On a : \n        $$\\begin{align*}\n            \\int_1^{+\\infty} \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx &= \\alpha \\int_1^{+\\infty} x^{-(\\alpha+1)} dx \\\\\n            &= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^{+\\infty} \\\\\n            &= \\frac{\\alpha}{\\alpha} = 1\n        \\end{align*}$$\n        Donc $f$ est positive et $\\int f = 1$.",
-          "html": "<p>Pour que <span class=\"math inline\">\\(f\\)</span> soit une densité,\nl’intégrale de <span class=\"math inline\">\\(f\\)</span> doit être égale à\n1. On a : <span class=\"math display\">\\[\\begin{align*}\n            \\int_1^{+\\infty} \\alpha \\left( \\frac{1}{x}\n\\right)^{\\alpha+1} dx &amp;= \\alpha \\int_1^{+\\infty} x^{-(\\alpha+1)} dx\n\\\\\n            &amp;= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha}\n\\right]_1^{+\\infty} \\\\\n            &amp;= \\frac{\\alpha}{\\alpha} = 1\n        \\end{align*}\\]</span> Donc <span\nclass=\"math inline\">\\(f\\)</span> est positive et <span\nclass=\"math inline\">\\(\\int f = 1\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "a18ce156-d13a-4c5e-9058-df12219c6c5b",
-        "type": "question",
-        "value": {
-          "latex": "Déterminer la fonction de répartition de $ X $.",
-          "html": "<p>Déterminer la fonction de répartition de <span\nclass=\"math inline\">\\(X\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "14f07e1e-90a6-427f-b8bc-421a22902e2a",
-        "type": "reponse",
-        "value": {
-          "latex": "Soit $t \\in \\R$. Si $t \\leq 1$, alors $F_X(t) = 0$. Si $t > 1$, alors :\n            $$\\begin{align*}\n                F_X(t) &= \\int_1^t \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx \\\\\n                &= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha} \\right]_1^t \\\\\n                &= 1 - \\frac{1}{t^\\alpha}\n            \\end{align*}$$",
-          "html": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span\nclass=\"math inline\">\\(t \\leq 1\\)</span>, alors <span\nclass=\"math inline\">\\(F_X(t) = 0\\)</span>. Si <span\nclass=\"math inline\">\\(t &gt; 1\\)</span>, alors : <span\nclass=\"math display\">\\[\\begin{align*}\n                F_X(t) &amp;= \\int_1^t \\alpha \\left( \\frac{1}{x}\n\\right)^{\\alpha+1} dx \\\\\n                &amp;= \\alpha \\left[ \\frac{x^{-\\alpha}}{-\\alpha}\n\\right]_1^t \\\\\n                &amp;= 1 - \\frac{1}{t^\\alpha}\n            \\end{align*}\\]</span></p>\n"
-        }
-      },
-      {
-        "id": "cc5fc2f1-afe8-4aa9-8b96-abf7b748e196",
-        "type": "question",
-        "value": {
-          "latex": "Étudier l'existence de $ \\E(X)$ en fonction de la valeur du paramètre $\\alpha$.",
-          "html": "<p>Étudier l’existence de <span class=\"math inline\">\\(\\E(X)\\)</span> en\nfonction de la valeur du paramètre <span\nclass=\"math inline\">\\(\\alpha\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "95fa2b19-3aa0-4904-b580-9a72786dad0c",
-        "type": "reponse",
-        "value": {
-          "latex": "Si elle existe, l'espérance de $ X $ est $ \\int_1^{+\\infty} x \\alpha \\left( \\frac{1}{x} \\right)^{\\alpha+1} dx$. Or cette intégrale existe si et seulement si $ \\alpha > 1 $.",
-          "html": "<p>Si elle existe, l’espérance de <span class=\"math inline\">\\(X\\)</span>\nest <span class=\"math inline\">\\(\\int_1^{+\\infty} x \\alpha \\left(\n\\frac{1}{x} \\right)^{\\alpha+1} dx\\)</span>. Or cette intégrale existe si\net seulement si <span class=\"math inline\">\\(\\alpha &gt; 1\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "8cb34045-6a32-43d8-a658-97314fcea63b",
-        "type": "question",
-        "value": {
-          "latex": "Déterminer la loi de la variable aléatoire $Y$.",
-          "html": "<p>Déterminer la loi de la variable aléatoire <span\nclass=\"math inline\">\\(Y\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "79c861f0-fb6d-444d-b9e7-e273a444e5f3",
-        "type": "reponse",
-        "value": {
-          "latex": "Soit $ t \\in \\R $. Si $ t \\leq s+1 $, alors $ F_Y(t) = 0 $. Si $ t > s+1 $, alors :\n            $$\\begin{align*}\n                F_Y(t) &= \\prob(Y \\leq t) \\\\\n                &= \\prob(rX + s \\leq t) \\\\\n                &= \\prob(X \\leq \\frac{t-s}{r}) \\\\\n                &= F_X\\left( \\frac{t-s}{r} \\right) \\\\\n                &= 1 - \\frac{1}{\\left( \\frac{t-s}{r} \\right)^\\alpha} \\\\\n                &= 1 - \\left( \\frac{r}{t-s} \\right)^\\alpha\n            \\end{align*}$$\n            Par dérivation, on trouve que $Y$ est une variable aléatoire absolument continue et que la densité de $Y$ est $ f_Y(x) = \\mathbf{1}_{]s+1;+\\infty[}(x) \\frac{\\alpha}{r} \\left( \\frac{r}{x-s} \\right)^{\\alpha+1} $. On trouve une loi de Pareto de paramètre $(\\alpha, r, s+1)$.",
-          "html": "<p>Soit <span class=\"math inline\">\\(t \\in \\R\\)</span>. Si <span\nclass=\"math inline\">\\(t \\leq s+1\\)</span>, alors <span\nclass=\"math inline\">\\(F_Y(t) = 0\\)</span>. Si <span\nclass=\"math inline\">\\(t &gt; s+1\\)</span>, alors : <span\nclass=\"math display\">\\[\\begin{align*}\n                F_Y(t) &amp;= \\prob(Y \\leq t) \\\\\n                &amp;= \\prob(rX + s \\leq t) \\\\\n                &amp;= \\prob(X \\leq \\frac{t-s}{r}) \\\\\n                &amp;= F_X\\left( \\frac{t-s}{r} \\right) \\\\\n                &amp;= 1 - \\frac{1}{\\left( \\frac{t-s}{r} \\right)^\\alpha}\n\\\\\n                &amp;= 1 - \\left( \\frac{r}{t-s} \\right)^\\alpha\n            \\end{align*}\\]</span> Par dérivation, on trouve que <span\nclass=\"math inline\">\\(Y\\)</span> est une variable aléatoire absolument\ncontinue et que la densité de <span class=\"math inline\">\\(Y\\)</span> est\n<span class=\"math inline\">\\(f_Y(x) = \\mathbf{1}_{]s+1;+\\infty[}(x)\n\\frac{\\alpha}{r} \\left( \\frac{r}{x-s} \\right)^{\\alpha+1}\\)</span>. On\ntrouve une loi de Pareto de paramètre <span\nclass=\"math inline\">\\((\\alpha, r, s+1)\\)</span>.</p>\n"
-        }
-      }
-    ],
-    "preview": "<p>Vérifier que la fonction <span class=\"math inline\">\\(f\\)</span>\ndéfinit bien une densité de probabilité.</p>\n"
-  },
-  "dC7P": {
-    "uuid": "dC7P",
-    "titre": "Calcul d'une somme de série entière",
-    "theme": [
-      "séries entières"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "",
-      "createdAt": "2023-06-01",
-      "hasIndication": false,
-      "hasCorrection": true,
-      "youtube": "",
-      "chapitre": "Série entière",
-      "sousChapitre": "Calcul de la somme d'une série entière",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:54.640Z",
-      "resume": "Cet exercice porte sur les séries entières. Il évalue la capacité à:\n1. Déterminer le domaine de convergence d'une série entière complexe de la forme $\\sum_{n\\geq 0} a_n z^n$ où $a_n = \\frac{(n+2)2^n}{(n+1)!}$.\n2. Utiliser le développement en série de l'exponentielle, $\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!} = e^z$, pour calculer d'autres sommes de séries, notamment $\\sum_{n=0}^{+\\infty} \\frac{z^n}{(n+1)!}$ et $\\sum_{n=0}^{+\\infty} \\frac{(n+2)2^n}{(n+1)!}z^n$.",
-      "competences": [
-        "calculer la somme d'une série entière",
-        "Déterminer / Calculer le rayon de convergence d'une série entière",
-        "identifier le domaine de convergence d'une série entière",
-        "appliquer des opérations algébriques sur des séries",
-        "manipuler la fonction exponentielle"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "série entière",
-        "rayon de convergence",
-        "domaine de convergence",
-        "somme de série",
-        "fonction exponentielle",
-        "variable complexe",
-        "factorielle",
-        "calcul de somme"
-      ],
-      "concepts_fondamentaux": [
-        "série entière",
-        "rayon et domaine de convergence",
-        "fonction exponentielle",
-        "développement en série"
-      ],
-      "prerequis": [
-        "connaissance des séries numériques",
-        "définition et propriétés de la fonction exponentielle",
-        "calcul de limites",
-        "notion de convergence d'une série"
-      ],
-      "type_exercice": "Problème à étapes",
-      "temps_estime": "30 minutes"
-    },
-    "contenu": [
-      {
-        "id": "54e28f35-d385-4153-8611-7019ad5b5b30",
-        "type": "question",
-        "value": {
-          "latex": "Déterminer le domaine de convergence de la série entière $\\displaystyle \\sum_{n\\geq 0} \\frac{(n+2)2^n}{(n+1)!} z^n$ à variable complexe.",
-          "html": "<p>Déterminer le domaine de convergence de la série entière <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n\\geq 0}\n\\frac{(n+2)2^n}{(n+1)!} z^n\\)</span> à variable complexe.</p>\n"
-        }
-      },
-      {
-        "id": "91c2f4aa-9059-47d8-88f9-ea81665dcc5a",
-        "type": "reponse",
-        "value": {
-          "latex": "$R=+\\infty$ et $D=\\mathbb{C}$.",
-          "html": "<p><span class=\"math inline\">\\(R=+\\infty\\)</span> et <span\nclass=\"math inline\">\\(D=\\mathbb{C}\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "f2e10e63-f28e-4a45-99d6-5f77c706e9ea",
-        "type": "question",
-        "value": {
-          "latex": "Rappeler ce que vaut $\\displaystyle \\sum_{n=0}^{+\\infty} \\frac{z^n}{n!}$. En déduire $\\displaystyle \\sum_{n=0}^{+\\infty} \\frac{z^n}{(n+1)!}$, puis $\\displaystyle \\sum_{n=0}^{+\\infty} \\frac{(n+2)2^n}{(n+1)!}z^n$.",
-          "html": "<p>Rappeler ce que vaut <span class=\"math inline\">\\(\\displaystyle\n\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!}\\)</span>. En déduire <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n=0}^{+\\infty}\n\\frac{z^n}{(n+1)!}\\)</span>, puis <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n=0}^{+\\infty}\n\\frac{(n+2)2^n}{(n+1)!}z^n\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "f7b25f92-470b-47bf-a3ea-29163bc27766",
-        "type": "reponse",
-        "value": {
-          "latex": "$$\\forall z \\in \\R, \\quad \\sum_{n=0}^{+\\infty} \\frac{z^n}{n!}=e^z.$$\n\t\tPour la première somme:\n\t\t$$ \\forall z \\in \\R, \\qquad \\sum_{n=0}^{+\\infty} \\frac{z^n}{(n+1)!}\n\t\t= \\begin{cases} \\frac{e^z-1}{z} & \\text{ si } z \\neq 0 \\\\\n\t\t0 & \\text{ sinon }\n\t\t\\end{cases}\n\t\t$$\n\t\tPour la deuxième somme:\n\t\t$$ \\forall z \\in \\R, \\qquad \\sum_{n=0}^{+\\infty} \\frac{(n+2)2^n}{(n+1)!}z^n\n\t\t= \\begin{cases} \\frac{e^{2z}-1}{2z}+e^{2z} & \\text{ si } z \\neq 0 \\\\\n\t\t0 & \\text{ sinon }\n\t\t\\end{cases}\n\t\t$$",
-          "html": "<p><span class=\"math display\">\\[\\forall z \\in \\R, \\quad\n\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!}=e^z.\\]</span> Pour la première\nsomme: <span class=\"math display\">\\[\\forall z \\in \\R, \\qquad\n\\sum_{n=0}^{+\\infty} \\frac{z^n}{(n+1)!}\n        = \\begin{cases} \\frac{e^z-1}{z} &amp; \\text{ si } z \\neq 0 \\\\\n        0 &amp; \\text{ sinon }\n        \\end{cases}\\]</span> Pour la deuxième somme: <span\nclass=\"math display\">\\[\\forall z \\in \\R, \\qquad \\sum_{n=0}^{+\\infty}\n\\frac{(n+2)2^n}{(n+1)!}z^n\n        = \\begin{cases} \\frac{e^{2z}-1}{2z}+e^{2z} &amp; \\text{ si } z\n\\neq 0 \\\\\n        0 &amp; \\text{ sinon }\n        \\end{cases}\\]</span></p>\n"
-        }
-      }
-    ],
-    "preview": "<p>Déterminer le domaine de convergence de la série entière <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{n\\geq 0}\n\\frac{(n+2)2^n}{(n+1)!} z^n\\)</sp ..."
-  },
-  "dCHn": {
-    "uuid": "dCHn",
-    "titre": "Fonctionnement d'une machine",
-    "theme": [
-      "probabilités conditionnelles"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "",
-      "createdAt": "2023-09-04",
-      "hasIndication": false,
-      "hasCorrection": true,
-      "youtube": "",
-      "chapitre": "Probabilité discrète",
-      "sousChapitre": "Probabilité conditionnelle",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:54.863Z",
-      "resume": "L'exercice porte sur les probabilités conditionnelles et l'utilisation des événements contraires. Il évalue la capacité à:\n\n*   Calculer la probabilité de l'intersection de deux événements, notamment en utilisant la formule $\\prob(A\\cap B) = \\prob(A)\\prob(B|A)$.\n*   Déterminer la probabilité de l'union de deux événements en utilisant la formule  $\\prob(A\\cup B) = \\prob(A) + \\prob(B) - \\prob(A\\cap B)$ ou en passant par l'événement contraire $\\prob(A\\cup B) = 1 - \\prob(\\overline{A}\\cap\\overline{B})$.\n*   Calculer la probabilité qu'un seul événement se produise parmi plusieurs, nécessitant l'identification correcte des événements et l'utilisation des opérations ensemblistes (intersection, union, complémentaire).\n*   Calculer la probabilité de l'événement complémentaire de l'union de deux événements: $\\prob(\\overline{A\\cup B}) = 1 - \\prob(A\\cup B)$.\n*   Appliquer le concept d'un système complet d'événements pour simplifier les calculs de probabilité.",
-      "competences": [
-        "Calculer des probabilités conditionnelles",
-        "Appliquer la formule de Bayes / des probabilités totales",
-        "calculer la probabilité d'une intersection d'événements",
-        "calculer la probabilité d'une union d'événements",
-        "interpréter des événements et leurs probabilités"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "probabilité conditionnelle",
-        "probabilité",
-        "événement",
-        "indépendance",
-        "machine",
-        "panne",
-        "intersection",
-        "union"
-      ],
-      "concepts_fondamentaux": [
-        "probabilité conditionnelle",
-        "formule de Bayes",
-        "événements indépendants",
-        "probabilité d'événements",
-        "algèbre des événements"
-      ],
-      "prerequis": [
-        "théorie des ensembles",
-        "calcul de probabilités simples",
-        "notion d'événement"
-      ],
-      "type_exercice": "Problème à étapes",
-      "temps_estime": "30 minutes"
-    },
-    "contenu": [
-      {
-        "id": "76989960-3c6e-45f6-ae50-c36cec42dce6",
-        "type": "description",
-        "value": {
-          "latex": "Une usine a besoin de deux machines $m_1$ et $m_2$. La probabilité que $m_1$ tombe en panne est $0{,}005$ et la probabilité que $m_2$ tombe en panne est $0{,}007$. La probabilité que $m_2$ tombe en panne sachant que $m_1$ est en panne est $0{,}5$.",
-          "html": "<p>Une usine a besoin de deux machines <span\nclass=\"math inline\">\\(m_1\\)</span> et <span\nclass=\"math inline\">\\(m_2\\)</span>. La probabilité que <span\nclass=\"math inline\">\\(m_1\\)</span> tombe en panne est <span\nclass=\"math inline\">\\(0{,}005\\)</span> et la probabilité que <span\nclass=\"math inline\">\\(m_2\\)</span> tombe en panne est <span\nclass=\"math inline\">\\(0{,}007\\)</span>. La probabilité que <span\nclass=\"math inline\">\\(m_2\\)</span> tombe en panne sachant que <span\nclass=\"math inline\">\\(m_1\\)</span> est en panne est <span\nclass=\"math inline\">\\(0{,}5\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "e50a37b8-cc4a-4bb9-90e8-f2590a554e62",
-        "type": "reponse",
-        "value": {
-          "latex": "Soit $M_1$ (respectivement $M_2$) l'événement ``la machine $m_1$ (respectivement $m_2$) fonctionne''. On a ainsi:\n\t$\\prob(\\overline{M}_1)=0{,}005$, $\\prob(\\overline{M}_2)=0{,}007$, $\\prob(\\overline{M_2}|\\overline{M}_1)=0{,}5$.",
-          "html": "<p>Soit <span class=\"math inline\">\\(M_1\\)</span> (respectivement <span\nclass=\"math inline\">\\(M_2\\)</span>) l’événement “la machine <span\nclass=\"math inline\">\\(m_1\\)</span> (respectivement <span\nclass=\"math inline\">\\(m_2\\)</span>) fonctionne”. On a ainsi: <span\nclass=\"math inline\">\\(\\prob(\\overline{M}_1)=0{,}005\\)</span>, <span\nclass=\"math inline\">\\(\\prob(\\overline{M}_2)=0{,}007\\)</span>, <span\nclass=\"math inline\">\\(\\prob(\\overline{M_2}|\\overline{M}_1)=0{,}5\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "56ef0a41-b134-493b-9d56-955be928c74a",
-        "type": "question",
-        "value": {
-          "latex": "Quelle est la probabilité que $m_1$ et $m_2$ soient simultanément en panne ?",
-          "html": "<p>Quelle est la probabilité que <span\nclass=\"math inline\">\\(m_1\\)</span> et <span\nclass=\"math inline\">\\(m_2\\)</span> soient simultanément en panne ?</p>\n"
-        }
-      },
-      {
-        "id": "35dfa637-0e60-4955-92f1-3605caf64641",
-        "type": "reponse",
-        "value": {
-          "latex": "$\\prob(\\overline{M}_1\\cap \\overline{M}_2)=\\prob(\\overline{M}_1)\\prob(\\overline{M}_2|\\overline{M}_1)=0{,}5\\times 0{,}005=0{,}0025$.",
-          "html": "<p><span class=\"math inline\">\\(\\prob(\\overline{M}_1\\cap\n\\overline{M}_2)=\\prob(\\overline{M}_1)\\prob(\\overline{M}_2|\\overline{M}_1)=0{,}5\\times\n0{,}005=0{,}0025\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "41618f1d-23ba-43fb-88f1-fc41f2c6a555",
-        "type": "question",
-        "value": {
-          "latex": "En déduire la probabilité qu'une machine au moins fonctionne.",
-          "html": "<p>En déduire la probabilité qu’une machine au moins fonctionne.</p>\n"
-        }
-      },
-      {
-        "id": "07fbc21c-7c97-4478-a8a3-194f975992f6",
-        "type": "reponse",
-        "value": {
-          "latex": "$\\prob(M_1\\cup M_2)=\\prob(\\overline{\\overline{M}_1\\cap \\overline{M}_2})=1-\\prob(\\overline{M}_1\\cap \\overline{M}_2)=1-0{,}0025=0{,}9975$",
-          "html": "<p><span class=\"math inline\">\\(\\prob(M_1\\cup\nM_2)=\\prob(\\overline{\\overline{M}_1\\cap\n\\overline{M}_2})=1-\\prob(\\overline{M}_1\\cap\n\\overline{M}_2)=1-0{,}0025=0{,}9975\\)</span></p>\n"
-        }
-      },
-      {
-        "id": "0475deec-0834-4d30-9276-c08fe87bc829",
-        "type": "question",
-        "value": {
-          "latex": "Quelle est la probabilité que $m_1$ (respectivement $m_2$) soit seule en panne ?",
-          "html": "<p>Quelle est la probabilité que <span\nclass=\"math inline\">\\(m_1\\)</span> (respectivement <span\nclass=\"math inline\">\\(m_2\\)</span>) soit seule en panne ?</p>\n"
-        }
-      },
-      {
-        "id": "41a87f9f-613b-4fcd-87c2-a7fecb7725e2",
-        "type": "reponse",
-        "value": {
-          "latex": "Probabilité que $m_1$ soit seule en panne :\n\t\t\t$$ \\prob(\\overline{M}_1\\cap M_2)=\\prob(M_2| \\overline{M}_1)\\,  \\prob(\\overline{M}_1)=0{,}005\\times 0{,}5=0{,}0025.$$\n\t\t\tOn peut aussi voir que $\\overline{M}_1\\cap M_2 = \\overline{M}_1 \\setminus \\overline{M}_1\\cap \\overline{M}_2$, ce qui donne $\\prob(\\overline{M}_1\\cap M_2) = 0{,}005-0{,}0025 = 0{,}0025$. \n\n\t\t\tProbabilité que $m_2$ soit seule en panne :\n\t\t\t\\begin{eqnarray*}\n\t\t\t\t\\prob(\\overline{M}_2\\cap M_1) = 1-\\prob(\\overline{M_1}\\cup M_2) &=& 1-(\\prob(\\overline{M}_1)+\\prob(M_2)-\\prob(\\overline{M}_1\\cap M_2))\\\\\n\t\t\t\t&=& 1- (0{,}005+0{,}993-0{,}0025) = 0{,}0045\n\t\t\t\\end{eqnarray*}\n\t\t\tOn peut aussi voir comme ci-dessus que $\\overline{M}_2\\cap M_1 = \\overline{M}_2 \\setminus \\overline{M}_2\\cap \\overline{M}_1$, ce qui donne également que $\\prob(\\overline{M}_2\\cap M_1) = 0{,}007-0{,}0025 = 0{,}0045$.",
-          "html": "<p>Probabilité que <span class=\"math inline\">\\(m_1\\)</span> soit seule\nen panne : <span class=\"math display\">\\[\\prob(\\overline{M}_1\\cap\nM_2)=\\prob(M_2| \\overline{M}_1)\\,  \\prob(\\overline{M}_1)=0{,}005\\times\n0{,}5=0{,}0025.\\]</span> On peut aussi voir que <span\nclass=\"math inline\">\\(\\overline{M}_1\\cap M_2 = \\overline{M}_1 \\setminus\n\\overline{M}_1\\cap \\overline{M}_2\\)</span>, ce qui donne <span\nclass=\"math inline\">\\(\\prob(\\overline{M}_1\\cap M_2) = 0{,}005-0{,}0025 =\n0{,}0025\\)</span>.</p>\n<p>Probabilité que <span class=\"math inline\">\\(m_2\\)</span> soit seule\nen panne : <span class=\"math display\">\\[\\begin{aligned}\n                \\prob(\\overline{M}_2\\cap M_1) =\n1-\\prob(\\overline{M_1}\\cup M_2) &amp;=&amp;\n1-(\\prob(\\overline{M}_1)+\\prob(M_2)-\\prob(\\overline{M}_1\\cap M_2))\\\\\n                &amp;=&amp; 1- (0{,}005+0{,}993-0{,}0025) = 0{,}0045\n            \n\\end{aligned}\\]</span> On peut aussi voir comme ci-dessus que <span\nclass=\"math inline\">\\(\\overline{M}_2\\cap M_1 = \\overline{M}_2 \\setminus\n\\overline{M}_2\\cap \\overline{M}_1\\)</span>, ce qui donne également que\n<span class=\"math inline\">\\(\\prob(\\overline{M}_2\\cap M_1) =\n0{,}007-0{,}0025 = 0{,}0045\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "df4ce292-9bb0-47cf-b411-f7502f4c9d9d",
-        "type": "question",
-        "value": {
-          "latex": "En déduire la probabilité d'avoir une seule machine en panne.",
-          "html": "<p>En déduire la probabilité d’avoir une seule machine en panne.</p>\n"
-        }
-      },
-      {
-        "id": "7003fa24-53e5-4e00-ab6f-ff8ed41366a9",
-        "type": "reponse",
-        "value": {
-          "latex": "Soit $A$ l'événement : ``une seule machine est en panne''. Alors \n\t\t\t\\[ \\prob(A)=\\prob(M_1\\cap \\overline{M}_2)+\\prob(M_2\\cap \\overline{M}_1)=0{,}025+0{,}0045=0{,}007\\]",
-          "html": "<p>Soit <span class=\"math inline\">\\(A\\)</span> l’événement : “une seule\nmachine est en panne”. Alors <span\nclass=\"math display\">\\[\\prob(A)=\\prob(M_1\\cap\n\\overline{M}_2)+\\prob(M_2\\cap\n\\overline{M}_1)=0{,}025+0{,}0045=0{,}007\\]</span></p>\n"
-        }
-      },
-      {
-        "id": "f3aae560-fc49-4495-a1d8-a020471484fd",
-        "type": "question",
-        "value": {
-          "latex": "Quelle est la probabilité de n'avoir aucune machine en panne ?",
-          "html": "<p>Quelle est la probabilité de n’avoir aucune machine en panne ?</p>\n"
-        }
-      },
-      {
-        "id": "34910088-bd96-4f50-ad24-bb23f736a823",
-        "type": "reponse",
-        "value": {
-          "latex": "L'événement qui nous intéresse est $M_1\\cap M_2$. Or on a\n\t\t\t\\begin{eqnarray*}\n\t\t\t\t\\prob(M_1\\cap M_2) = 1- \\prob(\\overline{M}_1\\cup \\overline{M}_2)\n\t\t\t\t&=& 1- (\\prob(\\overline{M}_1)+\\prob(\\overline{M}_2)-\\prob(\\overline{M}_1\\cap \\overline{M}_2))\\\\\n\t\t\t\t&=& 1-(0{,}005+0{,}007-0{,}0025) = 0{,}9905.\n\t\t\t\\end{eqnarray*}\n\t\t\tIl y a donc $99{,}05$\\% de chances que les deux machines fonctionnent.\n\t\t\t\n\t\t\tOn peut aussi voir que $A$, $\\overline{M}_1\\cap \\overline{M}_2$ et $M_1\\cap M_2$ forme un système complet d'événements : soit 0 machine fonctionne, soit une seule fonctionne, soit les deux fonctionnent. Ainsi, on retrouve \n\t\t\t$$\\prob(M_1 \\cap M_2)=1-\\prob(A)-\\prob(\\overline{M}_1\\cap\\overline{M}_2)=1-0{,}007-0{,}0025=0{,}9905.$$",
-          "html": "<p>L’événement qui nous intéresse est <span\nclass=\"math inline\">\\(M_1\\cap M_2\\)</span>. Or on a <span\nclass=\"math display\">\\[\\begin{aligned}\n                \\prob(M_1\\cap M_2) = 1- \\prob(\\overline{M}_1\\cup\n\\overline{M}_2)\n                &amp;=&amp; 1-\n(\\prob(\\overline{M}_1)+\\prob(\\overline{M}_2)-\\prob(\\overline{M}_1\\cap\n\\overline{M}_2))\\\\\n                &amp;=&amp; 1-(0{,}005+0{,}007-0{,}0025) = 0{,}9905.\n            \n\\end{aligned}\\]</span> Il y a donc <span\nclass=\"math inline\">\\(99{,}05\\)</span>% de chances que les deux machines\nfonctionnent.</p>\n<p>On peut aussi voir que <span class=\"math inline\">\\(A\\)</span>, <span\nclass=\"math inline\">\\(\\overline{M}_1\\cap \\overline{M}_2\\)</span> et\n<span class=\"math inline\">\\(M_1\\cap M_2\\)</span> forme un système\ncomplet d’événements : soit 0 machine fonctionne, soit une seule\nfonctionne, soit les deux fonctionnent. Ainsi, on retrouve <span\nclass=\"math display\">\\[\\prob(M_1 \\cap\nM_2)=1-\\prob(A)-\\prob(\\overline{M}_1\\cap\\overline{M}_2)=1-0{,}007-0{,}0025=0{,}9905.\\]</span></p>\n"
-        }
-      }
-    ],
-    "preview": "<p>Une usine a besoin de deux machines <span\nclass=\"math inline\">\\(m_1\\)</span> et <span\nclass=\"math inline\">\\(m_2\\)</span>. La probabilité que <span\n ..."
-  },
-  "dHzJ": {
-    "uuid": "dHzJ",
-    "titre": "Application du théorème central limite",
-    "theme": [
-      "loi normale",
-      "théorème central limite"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "",
-      "createdAt": "2022-08-25",
-      "hasIndication": false,
-      "hasCorrection": true,
-      "youtube": "",
-      "chapitre": "Probabilité continue",
-      "sousChapitre": "Théorème central limite",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:54.940Z",
-      "resume": "L'exercice porte sur l'application du théorème central limite. Il s'agit de calculer la probabilité qu'une somme de variables aléatoires indépendantes, représentant l'épaisseur de feuilles cartonnées, appartienne à un intervalle donné. Les compétences mises en œuvre sont : l'identification des paramètres d'une variable aléatoire, l'application du théorème central limite pour approximer la distribution de la somme par une loi normale, le calcul de l'espérance et de la variance de la somme, et la standardisation de la variable pour calculer la probabilité à l'aide de la loi normale centrée réduite. La formule $\\PP(490 < S < 510)$ est calculée via la standardisation et l'utilisation de la loi normale centrée réduite.",
-      "competences": [
-        "Appliquer le Théorème Central Limite (TCL) (y compris pour approximation de lois)",
-        "calculer une probabilité avec une loi normale",
-        "calculer l'espérance et la variance d'une somme de variables aléatoires indépendantes",
-        "interpréter un énoncé en termes de variables aléatoires",
-        "Standardiser (centrer-réduire) une variable aléatoire (normale)"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "théorème central limite",
-        "loi normale",
-        "probabilité",
-        "variable aléatoire",
-        "espérance",
-        "variance",
-        "standardisation",
-        "approximation normale"
-      ],
-      "concepts_fondamentaux": [
-        "théorème central limite",
-        "loi normale",
-        "espérance mathématique",
-        "variance",
-        "indépendance de variables aléatoires"
-      ],
-      "prerequis": [
-        "connaissance de la loi normale",
-        "maîtrise des concepts d'espérance et de variance",
-        "notion de variables aléatoires indépendantes",
-        "formule de standardisation d'une variable normale"
-      ],
-      "type_exercice": "Exercice d'application directe",
-      "temps_estime": "20 minutes"
-    },
-    "contenu": [
-      {
-        "id": "f65fb201-eb3f-4678-b61b-91d13fe66869",
-        "type": "description",
-        "value": {
-          "latex": "On considère une production de feuilles cartonnées dont l'épaisseur est modélisée par une variable aléatoire qui a pour espérance $5$~mm et pour écart type $0{,}4$~mm.",
-          "html": "<p>On considère une production de feuilles cartonnées dont l’épaisseur\nest modélisée par une variable aléatoire qui a pour espérance <span\nclass=\"math inline\">\\(5\\)</span> mm et pour écart type <span\nclass=\"math inline\">\\(0{,}4\\)</span> mm.</p>\n"
-        }
-      },
-      {
-        "id": "577c61d1-29ea-4eba-9850-487ba6990d2b",
-        "type": "question",
-        "value": {
-          "latex": "Considérant un paquet de 100 feuilles choisies au hasard de manière indépendante, comment calculer la probabilité que ce paquet ait une épaisseur comprise entre 49 et 51 cm ?",
-          "html": "<p>Considérant un paquet de 100 feuilles choisies au hasard de manière\nindépendante, comment calculer la probabilité que ce paquet ait une\népaisseur comprise entre 49 et 51 cm ?</p>\n"
-        }
-      },
-      {
-        "id": "6909199f-1f4f-4bb6-aa56-0bc93e55b4b4",
-        "type": "reponse",
-        "value": {
-          "latex": "Soit $X_1,...,X_{100}$ un échantillon où $X_i$ représente l'épaisseur d'une feuille, $\\mathbb{E}(X_i) = 5$ et $V(X_i) = 0{,}16$.  Par indépendance, d'après le théorème central limite, la variable $S = \\sum_{i=1}^{100} X_i$ suit approximativement une loi normale de moyenne $\\mu = 100 \\times 5 = 500$ et  de variance $\\sigma^2 = 100 \\times 0{,}16 = 16$. Dit autrement, la variable $\\frac{S-500}{\\sqrt{16}}$ suit approximativement une loi normale centrée réduite.\n\t\n\tOn souhaite calculer $$\\PP(490 < S < 510) = \\PP\\left( \\frac{490-500}{\\sqrt{16}} <    \\frac{S-500}{\\sqrt{16}} <  \\frac{510-500}{\\sqrt{16}} \\right) = \\PP\\left( -2.5 <    \\frac{S-500}{4} <  2.5 \\right) = \\fbox{0{,}9876}$$.",
-          "html": "<p>Soit <span class=\"math inline\">\\(X_1,...,X_{100}\\)</span> un\néchantillon où <span class=\"math inline\">\\(X_i\\)</span> représente\nl’épaisseur d’une feuille, <span class=\"math inline\">\\(\\mathbb{E}(X_i) =\n5\\)</span> et <span class=\"math inline\">\\(V(X_i) = 0{,}16\\)</span>. Par\nindépendance, d’après le théorème central limite, la variable <span\nclass=\"math inline\">\\(S = \\sum_{i=1}^{100} X_i\\)</span> suit\napproximativement une loi normale de moyenne <span\nclass=\"math inline\">\\(\\mu = 100 \\times 5 = 500\\)</span> et de variance\n<span class=\"math inline\">\\(\\sigma^2 = 100 \\times 0{,}16 = 16\\)</span>.\nDit autrement, la variable <span\nclass=\"math inline\">\\(\\frac{S-500}{\\sqrt{16}}\\)</span> suit\napproximativement une loi normale centrée réduite.</p>\n<p>On souhaite calculer <span class=\"math display\">\\[\\PP(490 &lt; S &lt;\n510) = \\PP\\left( \\frac{490-500}{\\sqrt{16}}\n&lt;    \\frac{S-500}{\\sqrt{16}} &lt;  \\frac{510-500}{\\sqrt{16}} \\right)\n= \\PP\\left( -2.5 &lt;    \\frac{S-500}{4} &lt;  2.5 \\right) =\n\\fbox{0{,}9876}\\]</span>.</p>\n"
-        }
-      }
-    ],
-    "preview": "<p>On considère une production de feuilles cartonnées dont l’épaisseur\nest modélisée par une variable aléatoire qui a pour espérance <span\nclass=\"math ..."
-  },
-  "dRbq": {
-    "uuid": "dRbq",
-    "titre": "Lois usuelles",
-    "theme": [
-      "variables aléatoires discrètes",
-      "loi géométrique"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "",
-      "createdAt": "2023-02-07",
-      "hasIndication": false,
-      "hasCorrection": false,
-      "youtube": "",
-      "chapitre": "Probabilité discrète",
-      "sousChapitre": "Lois de distributions",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:55.035Z",
-      "resume": "L'exercice porte sur la loi géométrique. Il s'agit de déterminer la loi de probabilité d'une variable aléatoire $X$ représentant le nombre de tentatives nécessaires pour un succès, connaissant la probabilité de succès $p=0.4$ lors d'une tentative. Ensuite, il faut calculer l'espérance mathématique de $X$, c'est-à-dire $E(X) = \\frac{1}{p}$, et la probabilité que $X < 3$, soit $P(X<3) = P(X=1) + P(X=2)$. Cette dernière probabilité correspond à la fonction de répartition de la loi géométrique évaluée en 2. On utilise le fait que $P(X=k) = (1-p)^{k-1}p$.",
-      "competences": [
-        "Appliquer / Calculer avec la loi géométrique",
-        "calculer l'espérance d'une variable aléatoire géométrique",
-        "calculer des probabilités à partir d'une loi géométrique",
-        "identifier une variable aléatoire suivant une loi géométrique",
-        "interpréter un énoncé probabiliste"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "probabilité discrète",
-        "loi géométrique",
-        "variable aléatoire",
-        "espérance",
-        "standard téléphonique",
-        "nombre d'essais",
-        "probabilité"
-      ],
-      "concepts_fondamentaux": [
-        "variable aléatoire discrète",
-        "loi de probabilité",
-        "loi géométrique",
-        "espérance mathématique"
-      ],
-      "prerequis": [
-        "notion de variable aléatoire",
-        "calcul de probabilités",
-        "compréhension des lois de probabilité discrètes (de base)"
-      ],
-      "type_exercice": "Exercice d'application directe",
-      "temps_estime": "20 minutes"
-    },
-    "contenu": [
-      {
-        "id": "c0658838-97be-4dcd-9989-de27a766fc79",
-        "type": "description",
-        "value": {
-          "latex": "Un standard téléphonique est, en moyenne, occupé 6 fois sur 10. Soit $X$ le nombre de tentatives nécessaires pour obtenir le standard.",
-          "html": "<p>Un standard téléphonique est, en moyenne, occupé 6 fois sur 10. Soit\n<span class=\"math inline\">\\(X\\)</span> le nombre de tentatives\nnécessaires pour obtenir le standard.</p>\n"
-        }
-      },
-      {
-        "id": "955902e2-f3d7-4291-8864-1cd24d519fd1",
-        "type": "question",
-        "value": {
-          "latex": "Déterminer la loi de $X$.",
-          "html": "<p>Déterminer la loi de <span class=\"math inline\">\\(X\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "82a40271-5040-4557-99cf-52c98fde8d4f",
-        "type": "question",
-        "value": {
-          "latex": "Combien d'essais sont nécessaires en moyenne pour obtenir le standard ?",
-          "html": "<p>Combien d’essais sont nécessaires en moyenne pour obtenir le standard\n?</p>\n"
-        }
-      },
-      {
-        "id": "d605323c-061e-40f0-989e-33a5e309d013",
-        "type": "question",
-        "value": {
-          "latex": "Quelle est la probabilité d'obtenir le standard en moins de 3 essais ?",
-          "html": "<p>Quelle est la probabilité d’obtenir le standard en moins de 3 essais\n?</p>\n"
-        }
-      }
-    ],
-    "preview": "<p>Un standard téléphonique est, en moyenne, occupé 6 fois sur 10. Soit\n<span class=\"math inline\">\\(X\\)</span> le nombre de tentatives\nnécessaires pou ..."
-  },
-  "dXNn": {
-    "uuid": "dXNn",
-    "titre": "Estimation du paramètre d'une loi",
-    "theme": [
-      "estimateurs"
-    ],
-    "niveau": "",
-    "metadata": {
-      "exo7id": "",
-      "auteur": "Maxime NGUYEN",
-      "createdAt": "2022-10-04",
-      "hasIndication": false,
-      "hasCorrection": true,
-      "youtube": "",
-      "chapitre": "Statistique",
-      "sousChapitre": "Estimation",
-      "organisation": "AMSCC",
-      "updatedAt": "2025-04-04T19:02:55.113Z",
-      "resume": "L'exercice porte sur l'estimation du paramètre $a$ d'une loi de probabilité discrète définie sur $\\mathbb{N}$ par $\\PP(X=k)=\\frac{a^k}{(1+a)^{k+1}}$. Il s'agit d'appliquer la méthode du maximum de vraisemblance pour déterminer un estimateur de $a$, puis de calculer le biais de cet estimateur. La fonction de vraisemblance est $L(x_1,...,x_n,a) = \\prod_{k=1}^n \\frac{a^{x_k}}{(1+a)^{x_k+1}} = \\frac{a^{\\sum x_k}}{(1+a)^{n+\\sum x_k}}$. La résolution de $\\frac{\\partial L}{\\partial a} = 0$ conduit à l'estimateur $T = \\frac{1}{n} \\sum_{k=0}^n X_k$. Le calcul de l'espérance montre que $\\mathbb{E}(X_i) = a$, et donc $B(T) = \\mathbb{E}(T-a) = 0$, ce qui signifie que l'estimateur est sans biais.",
-      "competences": [
-        "Calculer l'espérance (mathématique) d'une variable aléatoire (ou fonction de VA)",
-        "Appliquer la méthode / Calculer l'estimateur du maximum de vraisemblance",
-        "dériver une fonction de vraisemblance",
-        "calculer le biais d'un estimateur",
-        "manipuler des sommes et des produits"
-      ],
-      "niveau_difficulte": "intermédiaire",
-      "mots_cles": [
-        "estimation",
-        "maximum de vraisemblance",
-        "estimateur",
-        "biais",
-        "variable aléatoire",
-        "loi de probabilité",
-        "statistique"
-      ],
-      "concepts_fondamentaux": [
-        "méthode du maximum de vraisemblance",
-        "biais d'un estimateur",
-        "espérance mathématique",
-        "fonction de vraisemblance"
-      ],
-      "prerequis": [
-        "calcul différentiel (dérivation)",
-        "probabilités de base (variables aléatoires, lois de probabilité)",
-        "notions d'estimateurs et de biais"
-      ],
-      "type_exercice": "Exercice d'application directe",
-      "temps_estime": "45 minutes"
-    },
-    "contenu": [
-      {
-        "id": "d57ce1c9-61c8-4e2b-8082-071b3083f108",
-        "type": "description",
-        "value": {
-          "latex": "On fixe un réel $a>0$ et on définit une variable aléatoire $X$ sur $\\mathbb{N}$ dont la loi de probabilité est définie par \n$$\\PP(X=k)=\\frac{a^k}{(1+a)^{k+1}}$$\npour tout $k \\in \\mathbb{N}$.",
-          "html": "<p>On fixe un réel <span class=\"math inline\">\\(a&gt;0\\)</span> et on\ndéfinit une variable aléatoire <span class=\"math inline\">\\(X\\)</span>\nsur <span class=\"math inline\">\\(\\mathbb{N}\\)</span> dont la loi de\nprobabilité est définie par <span\nclass=\"math display\">\\[\\PP(X=k)=\\frac{a^k}{(1+a)^{k+1}}\\]</span> pour\ntout <span class=\"math inline\">\\(k \\in \\mathbb{N}\\)</span>.</p>\n"
-        }
-      },
-      {
-        "id": "2232609f-8ba3-45e2-a4af-1abfccc6da66",
-        "type": "question",
-        "value": {
-          "latex": "A l'aide de la méthode du maximum de vraisemblance, définir un estimateur de $a$ et déterminer son biais.",
-          "html": "<p>A l’aide de la méthode du maximum de vraisemblance, définir un\nestimateur de <span class=\"math inline\">\\(a\\)</span> et déterminer son\nbiais.</p>\n"
-        }
-      },
-      {
-        "id": "552e657c-f54f-4645-ba5b-80cc5eb13e21",
-        "type": "reponse",
-        "value": {
-          "latex": "On définit un échantillon $X_1,...,X_n$ et on considère la probabilité que cet échantillon réalise un ensemble de valeurs $V=\\{x_1,...,x_n\\}$. La fonction de vraisemblance s'écrit alors \n$$L(x_1,...,x_n,a) = \\PP(X_1=x_1,...,X_n=x_n) = \\prod_{k=1}^{n} \\PP(X=x_k) = \\prod_{k=1}^n \\frac{a^{x_k}}{(1+a)^{x_k+1}} = \\frac{a^{\\sum x_k}}{(1+a)^{\\sum x_k+1}}$$\n\nOn dérive ce quotient par rapport à $a$, on factorise par $a^{\\sum x_k-1}(1+a)^{n+\\sum x_k -1}$ et on trouve que \n$$\\frac{\\partial L}{\\partial a}(x_1,...,x_n,a) = 0 \\iff \\sum_{k=0}^n x_k(1+a) - a(n+\\sum_{k=0}^n x_k) = 0 \\iff a = \\frac{1}{n} \\sum_{k=0}^n x_k$$\n\nOn a donc trouvé un meilleur estimateur du paramètre $a$ selon la méthode du maximum de vraisemblance : il s'agit de l'estimateur $T = \\frac{1}{n} \\sum_{k=0}^n X_k$.\n\nReste à calculer le biais de cet estimateur, autrement dit à calculer $B(T) = \\mathbb{E}(T-a)$. Or pour tout entier $i$, $X_i$ suit la loi définie ci-dessus et on espérance se calcule de la manière suivante :\n$$\\mathbb{E}(X_i) = \\sum_{k=0}^n k\\PP(X_i=k) = \\sum_{k=0}^n k \\left( \\frac{a}{1+a}  \\right)^{k-1} \\frac{a}{(1+a)^2} = \\frac{1}{\\left(1-\\frac{a}{1+a}\\right)^2} \\times \\frac{a}{(1+a)^2} = a$$\nDonc $B(T) = \\frac{1}{n} \\times n \\times a - a = 0$ : la variable $T$ est donc un estimateur sans biais du paramètre $a$.",
-          "html": "<p>On définit un échantillon <span\nclass=\"math inline\">\\(X_1,...,X_n\\)</span> et on considère la\nprobabilité que cet échantillon réalise un ensemble de valeurs <span\nclass=\"math inline\">\\(V=\\{x_1,...,x_n\\}\\)</span>. La fonction de\nvraisemblance s’écrit alors <span\nclass=\"math display\">\\[L(x_1,...,x_n,a) = \\PP(X_1=x_1,...,X_n=x_n) =\n\\prod_{k=1}^{n} \\PP(X=x_k) = \\prod_{k=1}^n \\frac{a^{x_k}}{(1+a)^{x_k+1}}\n= \\frac{a^{\\sum x_k}}{(1+a)^{\\sum x_k+1}}\\]</span></p>\n<p>On dérive ce quotient par rapport à <span\nclass=\"math inline\">\\(a\\)</span>, on factorise par <span\nclass=\"math inline\">\\(a^{\\sum x_k-1}(1+a)^{n+\\sum x_k -1}\\)</span> et on\ntrouve que <span class=\"math display\">\\[\\frac{\\partial L}{\\partial\na}(x_1,...,x_n,a) = 0 \\iff \\sum_{k=0}^n x_k(1+a) - a(n+\\sum_{k=0}^n x_k)\n= 0 \\iff a = \\frac{1}{n} \\sum_{k=0}^n x_k\\]</span></p>\n<p>On a donc trouvé un meilleur estimateur du paramètre <span\nclass=\"math inline\">\\(a\\)</span> selon la méthode du maximum de\nvraisemblance : il s’agit de l’estimateur <span class=\"math inline\">\\(T\n= \\frac{1}{n} \\sum_{k=0}^n X_k\\)</span>.</p>\n<p>Reste à calculer le biais de cet estimateur, autrement dit à calculer\n<span class=\"math inline\">\\(B(T) = \\mathbb{E}(T-a)\\)</span>. Or pour\ntout entier <span class=\"math inline\">\\(i\\)</span>, <span\nclass=\"math inline\">\\(X_i\\)</span> suit la loi définie ci-dessus et on\nespérance se calcule de la manière suivante : <span\nclass=\"math display\">\\[\\mathbb{E}(X_i) = \\sum_{k=0}^n k\\PP(X_i=k) =\n\\sum_{k=0}^n k \\left( \\frac{a}{1+a}  \\right)^{k-1} \\frac{a}{(1+a)^2} =\n\\frac{1}{\\left(1-\\frac{a}{1+a}\\right)^2} \\times \\frac{a}{(1+a)^2} =\na\\]</span> Donc <span class=\"math inline\">\\(B(T) = \\frac{1}{n} \\times n\n\\times a - a = 0\\)</span> : la variable <span\nclass=\"math inline\">\\(T\\)</span> est donc un estimateur sans biais du\nparamètre <span class=\"math inline\">\\(a\\)</span>.</p>\n"
-        }
-      }
-    ],
-    "preview": "<p>On fixe un réel <span class=\"math inline\">\\(a&gt;0\\)</span> et on\ndéfinit une variable aléatoire <span class=\"math inline\">\\(X\\)</span>\nsur <span c ..."
   }
 }
